@@ -26,8 +26,8 @@ test('无效 source_paragraph 被忽略并产生 warning', () => {
   assert.equal(result.warning.code, 'SOURCE_HINT_IGNORED');
 });
 
-test('单段 source_ref 由后端生成真实页码、段落和 hash', () => {
-  const result = new SourceLocationResolver().resolve({ source_refs: ['C001-S001'] }, chunk);
+test('单段 source_range 由后端生成真实页码、段落和 hash', () => {
+  const result = new SourceLocationResolver().resolve({ source_range: { start_ref: 'C001-S001', end_ref: 'C001-S001' } }, chunk);
   assert.equal(result.warning, null);
   assert.equal(result.location.source_text, '5.1 系统应记录审计日志。');
   assert.equal(result.location.source_paragraph, 5);
@@ -37,8 +37,8 @@ test('单段 source_ref 由后端生成真实页码、段落和 hash', () => {
   assert.deepEqual(result.location.source_refs, ['C001-S001']);
 });
 
-test('连续多段 source_refs 反向映射段落、页码和上下文', () => {
-  const result = new SourceLocationResolver().resolve({ source_refs: ['C001-S001', 'C001-S002'] }, chunk);
+test('连续多段 source_range 反向映射段落、页码和上下文', () => {
+  const result = new SourceLocationResolver().resolve({ source_range: { start_ref: 'C001-S001', end_ref: 'C001-S002' } }, chunk);
   assert.equal(result.warning, null);
   assert.equal(result.location.source_paragraph_start, 5);
   assert.equal(result.location.source_paragraph_end, 8);
@@ -49,30 +49,24 @@ test('连续多段 source_refs 反向映射段落、页码和上下文', () => {
   assert.match(result.location.source_context_text, /操作记录/);
 });
 
-test('重复 source_ref 由 resolver fail closed', () => {
+test('未知 source_range 端点使当前 chunk fail closed', () => {
   assert.throws(
-    () => new SourceLocationResolver().resolve({ source_refs: ['C001-S001', 'C001-S001'] }, chunk),
-    (error) => error.code === 'GATEWAY_REQUIREMENTS_INVALID'
-  );
-});
-
-test('未知 source_ref 使当前 chunk fail closed', () => {
-  assert.throws(
-    () => new SourceLocationResolver().resolve({ source_refs: ['C001-S999'] }, chunk),
+    () => new SourceLocationResolver().resolve({ source_range: { start_ref: 'C001-S999', end_ref: 'C001-S999' } }, chunk),
     (error) => error.code === 'SOURCE_LOCATION_UNRESOLVED'
   );
 });
 
-test('非连续 source_refs 使当前 chunk fail closed', () => {
+test('反向 source_range 使当前 chunk fail closed', () => {
   assert.throws(
-    () => new SourceLocationResolver().resolve({ source_refs: ['C001-S001', 'C001-S003'] }, chunk),
+    () => new SourceLocationResolver().resolve({ source_range: { start_ref: 'C001-S003', end_ref: 'C001-S001' } }, chunk),
     (error) => error.code === 'SOURCE_LOCATION_UNRESOLVED'
   );
 });
 
-test('source_refs 为空或格式非法仍为非法候选', () => {
-  assert.throws(() => new SourceLocationResolver().resolve({ source_refs: [] }, chunk), (error) => error.code === 'GATEWAY_REQUIREMENTS_INVALID');
-  assert.throws(() => new SourceLocationResolver().resolve({ source_refs: ['SPAN-1'] }, chunk), (error) => error.code === 'GATEWAY_REQUIREMENTS_INVALID');
+test('source_range 缺失、额外字段或格式非法仍为非法候选', () => {
+  assert.throws(() => new SourceLocationResolver().resolve({}, chunk), (error) => error.code === 'GATEWAY_REQUIREMENTS_INVALID');
+  assert.throws(() => new SourceLocationResolver().resolve({ source_range: { start_ref: 'C001-S001', end_ref: 'C001-S001', extra: true } }, chunk), (error) => error.code === 'GATEWAY_REQUIREMENTS_INVALID');
+  assert.throws(() => new SourceLocationResolver().resolve({ source_range: { start_ref: 'SPAN-1', end_ref: 'SPAN-1' } }, chunk), (error) => error.code === 'GATEWAY_REQUIREMENTS_INVALID');
 });
 
 test('模型来源文本和历史别名不会被 resolver 接受', () => {
@@ -82,10 +76,10 @@ test('模型来源文本和历史别名不会被 resolver 接受', () => {
 
 test('Schema Adapter 拒绝 source_text/source_clause/content/source_excerpt 模型字段', () => {
   const envelope = (candidate) => ({
-    envelope: { schema_version: '4.3-requirement-extraction-v2.2', task_type: 'requirement_extraction', status: 'success', warnings: [], data: { requirements: [candidate] } },
+    envelope: { schema_version: '4.3-requirement-extraction-v3', task_type: 'requirement_extraction', status: 'success', warnings: [], data: { requirements: [candidate] } },
     audit: {}
   });
-  const base = { text: '记录日志', category: 'technical', source_refs: ['C001-S001'], mandatory_observed: true, requires_confirmation: false };
+  const base = { text: '记录日志', category: 'technical', source_range: { start_ref: 'C001-S001', end_ref: 'C001-S001' }, mandatory_observed: true, requires_confirmation: false };
   for (const candidate of [
     { ...base, source_text: '系统应记录审计日志。' },
     { ...base, source_clause: '5.1' },

@@ -119,30 +119,37 @@ function requirementValidationDiagnostics(data) {
         message: 'Candidate text must be non-empty text.'
       });
     }
-    if (!Array.isArray(candidate.source_refs) || candidate.source_refs.length === 0) {
+    const sourceRange = candidate.source_range;
+    if (!sourceRange || typeof sourceRange !== 'object' || Array.isArray(sourceRange)) {
       errors.push({
-        path: `${path}.source_refs`,
-        expected: 'non-empty array of unique Cxxx-Sxxx references',
-        observed_category: observedCategory(candidate.source_refs),
-        validator_code: Array.isArray(candidate.source_refs) ? 'minItems' : 'type',
-        message: 'Candidate source_refs must be a non-empty array.'
+        path: `${path}.source_range`,
+        expected: 'object with start_ref and end_ref',
+        observed_category: observedCategory(sourceRange),
+        validator_code: 'type',
+        message: 'Candidate source_range must be an object.'
       });
     } else {
-      if (new Set(candidate.source_refs).size !== candidate.source_refs.length) {
+      for (const key of Object.keys(sourceRange).filter(key => !['start_ref', 'end_ref'].includes(key))) {
         errors.push({
-          path: `${path}.source_refs`, expected: 'uniqueItems', observed_category: 'duplicate',
-          validator_code: 'uniqueItems', message: 'Candidate source_refs must be unique.'
+          path: `${path}.source_range.${key}`, expected: 'no additional properties', observed_category: observedCategory(sourceRange[key]),
+          validator_code: 'additionalProperties', message: 'Unsupported source_range field.'
         });
       }
-      candidate.source_refs.forEach((ref, refIndex) => {
-        if (typeof ref !== 'string' || !/^C\d{3}-S\d{3}$/.test(ref)) {
+      for (const key of ['start_ref', 'end_ref']) {
+        if (!Object.prototype.hasOwnProperty.call(sourceRange, key)) {
           errors.push({
-            path: `${path}.source_refs[${refIndex}]`,
-            expected: 'Cxxx-Sxxx string', observed_category: observedCategory(ref),
-            validator_code: 'pattern', message: 'Candidate source_ref is not a deterministic span reference.'
+            path: `${path}.source_range.${key}`,
+            expected: 'required field', observed_category: 'missing',
+            validator_code: 'required', message: 'Candidate source_range endpoint is required.'
+          });
+        } else if (typeof sourceRange[key] !== 'string' || !/^C\d{3}-S\d{3}$/.test(sourceRange[key])) {
+          errors.push({
+            path: `${path}.source_range.${key}`,
+            expected: 'Cxxx-Sxxx string', observed_category: observedCategory(sourceRange[key]),
+            validator_code: 'pattern', message: 'Candidate source_range endpoint is not a deterministic span reference.'
           });
         }
-      });
+      }
     }
     if (typeof candidate.category !== 'string' || !REQUIREMENT_CATEGORIES.includes(candidate.category)) {
       errors.push({

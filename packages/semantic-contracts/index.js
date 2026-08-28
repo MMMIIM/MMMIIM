@@ -99,7 +99,7 @@ export const SEMANTIC_TASK_INSTRUCTIONS = Object.freeze({
     '每条 Requirement 只允许包含：',
     '- text',
     '- category',
-    '- source_refs',
+    '- source_range',
     '- mandatory_observed',
     '- requires_confirmation',
     '',
@@ -123,10 +123,16 @@ export const SEMANTIC_TASK_INSTRUCTIONS = Object.freeze({
     '只能使用 Schema 中允许的类别。',
     '若同时涉及多类，选择主要类别。',
     '',
-    'source_refs：',
-    '必须返回一个非空数组，数组元素只能是 chunk_text 中明确提供的确定性段落标识，格式为 Cxxx-Sxxx。',
-    'source_refs 必须覆盖能够直接证明该 Requirement 的最小充分原文；可以引用连续的多个段落。',
-    '不得输出 source_text、source_clause、页码、段落号、哈希或任何其他来源字段；不得编造不存在的引用标识。',
+    'source_range：',
+    '必须返回一个对象，且只能包含 start_ref 和 end_ref；两个引用都必须是 chunk_text 中明确提供的确定性段落标识，格式为 Cxxx-Sxxx。',
+    'source_range 表示能够直接证明该 Requirement 的一个最小充分连续原文范围。',
+    '单段证据必须令 start_ref 与 end_ref 完全相同。',
+    '多段证据必须令 start_ref 为第一条直接支持该 Requirement 的段落，end_ref 为最后一条直接支持该 Requirement 的段落；范围语义包含两者之间的每一条段落。',
+    'start_ref 必须在 chunk_text 中位于 end_ref 之前或与其相同；不得反向引用。',
+    '不得跳过范围内的中间段落，也不得用一个 source_range 合并两个不相邻的证据区域。',
+    '如果不相邻区域分别表达独立义务，应拆分为不同 Requirement。',
+    '不得编造不存在的 start_ref 或 end_ref。',
+    '不得输出 source_refs、source_text、source_clause、页码、段落号、哈希或任何其他来源字段。',
     '',
     'mandatory_observed：',
     '仅表示原文中是否观察到“必须、应、须、不得、★”等明显强制表达。',
@@ -164,7 +170,7 @@ export const SEMANTIC_TASK_INSTRUCTIONS = Object.freeze({
     '不得将以下 Candidate 字段直接放在最外层：',
     '- text',
     '- category',
-    '- source_refs',
+    '- source_range',
     '- mandatory_observed',
     '- requires_confirmation',
     'requirements 必须始终为数组。',
@@ -172,7 +178,7 @@ export const SEMANTIC_TASK_INSTRUCTIONS = Object.freeze({
     '{',
     '  "requirements": []',
     '}',
-    '每个 requirements 数组元素必须严格符合现有 Candidate V2 五字段 Schema。',
+    '每个 requirements 数组元素必须严格符合 Candidate V3 五字段 Schema。',
     '',
     '【输出】',
     '',
@@ -212,14 +218,19 @@ export const REQUIREMENT_CANDIDATE_CATEGORIES = Object.freeze([
 
 export const REQUIREMENT_CANDIDATE_SCHEMA = Object.freeze({
   type: 'object',
-  required: Object.freeze(['text', 'category', 'source_refs', 'mandatory_observed', 'requires_confirmation']),
+  required: Object.freeze(['text', 'category', 'source_range', 'mandatory_observed', 'requires_confirmation']),
   additionalProperties: false,
   properties: Object.freeze({
     text: Object.freeze({ type: 'string', minLength: 1 }),
     category: Object.freeze({ type: 'string', enum: REQUIREMENT_CANDIDATE_CATEGORIES }),
-    source_refs: Object.freeze({
-      type: 'array', minItems: 1, uniqueItems: true,
-      items: Object.freeze({ type: 'string', pattern: '^C\\d{3}-S\\d{3}$' })
+    source_range: Object.freeze({
+      type: 'object',
+      required: Object.freeze(['start_ref', 'end_ref']),
+      additionalProperties: false,
+      properties: Object.freeze({
+        start_ref: Object.freeze({ type: 'string', pattern: '^C\\d{3}-S\\d{3}$' }),
+        end_ref: Object.freeze({ type: 'string', pattern: '^C\\d{3}-S\\d{3}$' })
+      })
     }),
     mandatory_observed: Object.freeze({ type: 'boolean' }),
     requires_confirmation: Object.freeze({ type: 'boolean' })
@@ -228,13 +239,13 @@ export const REQUIREMENT_CANDIDATE_SCHEMA = Object.freeze({
 
 // Diagnostics are derived from this exact shared schema object so the Gateway
 // cannot report an independently maintained Candidate contract fingerprint.
-export const REQUIREMENT_CANDIDATE_SCHEMA_VERSION = '4.3-requirement-candidate-v2';
+export const REQUIREMENT_CANDIDATE_SCHEMA_VERSION = '4.3-requirement-candidate-v3';
 export const REQUIREMENT_CANDIDATE_SCHEMA_SHA256 = sha256(JSON.stringify(REQUIREMENT_CANDIDATE_SCHEMA));
 
 export const SEMANTIC_TASK_CONTRACTS = Object.freeze({
   requirement_extraction: Object.freeze({
     task_type: 'requirement_extraction',
-    contract_version: '4.3-requirement-extraction-v2.2',
+    contract_version: '4.3-requirement-extraction-v3',
     instruction_hash: instructionHash('requirement_extraction'),
     data_required: Object.freeze(['requirements']),
     data_allowed: Object.freeze(['requirements']),
@@ -359,24 +370,24 @@ function validateRequirementExtractionData(data) {
     const label = `data.requirements[${index}]`;
     assertObject(candidate, label);
     assertExactKeys(candidate, [
-      'text', 'category', 'source_refs', 'mandatory_observed', 'requires_confirmation'
+      'text', 'category', 'source_range', 'mandatory_observed', 'requires_confirmation'
     ], label);
     for (const key of [
-      'text', 'category', 'source_refs', 'mandatory_observed', 'requires_confirmation'
+      'text', 'category', 'source_range', 'mandatory_observed', 'requires_confirmation'
     ]) {
       if (!Object.prototype.hasOwnProperty.call(candidate, key)) {
         throw new Error(`missing ${label}.${key}`);
       }
     }
     assertText(candidate.text, `${label}.text`);
-    assertArray(candidate.source_refs, `${label}.source_refs`);
-    if (!candidate.source_refs.length) throw new Error(`${label}.source_refs must be non-empty`);
-    if (new Set(candidate.source_refs).size !== candidate.source_refs.length) {
-      throw new Error(`${label}.source_refs must contain unique span references`);
-    }
-    for (const [refIndex, ref] of candidate.source_refs.entries()) {
-      if (typeof ref !== 'string' || !/^C\d{3}-S\d{3}$/.test(ref)) {
-        throw new Error(`${label}.source_refs[${refIndex}] must be a deterministic span reference`);
+    assertObject(candidate.source_range, `${label}.source_range`);
+    assertExactKeys(candidate.source_range, ['start_ref', 'end_ref'], `${label}.source_range`);
+    for (const key of ['start_ref', 'end_ref']) {
+      if (!Object.prototype.hasOwnProperty.call(candidate.source_range, key)) {
+        throw new Error(`missing ${label}.source_range.${key}`);
+      }
+      if (typeof candidate.source_range[key] !== 'string' || !/^C\d{3}-S\d{3}$/.test(candidate.source_range[key])) {
+        throw new Error(`${label}.source_range.${key} must be a deterministic span reference`);
       }
     }
     if (typeof candidate.category !== 'string'

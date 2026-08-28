@@ -1,6 +1,7 @@
 services:
   postgres:
     image: pgvector/pgvector:pg16
+    restart: unless-stopped
     environment:
       POSTGRES_DB: bid_platform
       POSTGRES_USER: bid_user
@@ -14,6 +15,68 @@ services:
       interval: 5s
       timeout: 5s
       retries: 10
+
+  semantic-gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    working_dir: /app
+    init: true
+    restart: unless-stopped
+    env_file:
+      - ./services/semantic-gateway/.env
+    environment:
+      SEMANTIC_GATEWAY_HOST: 0.0.0.0
+      SEMANTIC_GATEWAY_COMMIT: ${SEMANTIC_GATEWAY_COMMIT:-dev-working-tree}
+      SEMANTIC_GATEWAY_WORKTREE_DIRTY: ${SEMANTIC_GATEWAY_WORKTREE_DIRTY:-true}
+    ports:
+      - "18082:18082"
+    volumes:
+      - ./services/semantic-gateway/src:/app/services/semantic-gateway/src
+      - ./packages/semantic-contracts:/app/packages/semantic-contracts
+      - ./scripts:/app/scripts:ro
+    command: ["node", "scripts/semantic-gateway-watch.js"]
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:18082/health').then(r => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+      start_period: 5s
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    working_dir: /app
+    init: true
+    restart: unless-stopped
+    env_file:
+      - ./backend/.env
+    environment:
+      BACKEND_RUNTIME_MODE: container
+      HOST: 0.0.0.0
+      DATABASE_URL: postgresql://bid_user:bid_password@postgres:5432/bid_platform
+      SEMANTIC_GATEWAY_API_BASE: http://semantic-gateway:18082
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./backend/src:/app/backend/src
+      - ./packages/semantic-contracts:/app/packages/semantic-contracts
+      - ./scripts:/app/scripts:ro
+      - ./backend/.env:/app/backend/.env:ro
+      - ./uploads:/app/uploads
+    command: ["node", "scripts/backend-watch.js"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+      semantic-gateway:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3001/api/health').then(r => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+      start_period: 10s
 
 volumes:
   bid_postgres_data:

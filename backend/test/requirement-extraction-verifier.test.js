@@ -266,10 +266,10 @@ test('live success requires provider-chain diagnostics and uses the production c
   const mapped = mapValidatedCandidatesToCanonicalInput([{
     text: '系统应提供审计日志。',
     category: 'technical',
-    source_refs: ['C001-S001'],
+    source_range: { start_ref: 'C001-S001', end_ref: 'C001-S001' },
     mandatory_observed: true,
     requires_confirmation: false
-  }]);
+  }], { resolutions: [{ location: { source_refs: ['C001-S001'], source_verified: true } }] });
   assert.equal(mapped[0].content, '系统应提供审计日志。');
   assert.deepEqual(mapped[0].sources[0].source_refs, ['C001-S001']);
   assert.throws(
@@ -321,7 +321,7 @@ test('422 probe diagnostics are retained only as safe structural metadata', asyn
   const diagnostics = {
     provider_http_status: 200,
     schema_validation_errors: [{ path: 'data.requirements[0].extra', validator_code: 'additionalProperties', expected: 'no additional properties', observed_category: 'string', message: 'Unsupported candidate field.' }],
-    structural_summary: { available: true, top_level_type: 'object', top_level_keys: ['requirements'], requirements_present: true, requirements_type: 'array', requirements_count: 1, candidate_summaries: [{ candidate_index: 0, keys: ['text', 'extra'], extra_keys: ['extra'], text_type: 'string', text_empty: false, source_text_type: 'string', source_text_empty: false }] },
+    structural_summary: { available: true, top_level_type: 'object', top_level_keys: ['requirements'], requirements_present: true, requirements_type: 'array', requirements_count: 1, candidate_summaries: [{ candidate_index: 0, keys: ['text', 'extra'], extra_keys: ['extra'], text_type: 'string', text_empty: false, source_range_type: 'object', source_range_keys: ['start_ref', 'end_ref'], source_range_start_ref_type: 'string', source_range_end_ref_type: 'string' }] },
     model_content: 'PRIVATE_MODEL_OUTPUT',
     parsed_json: { secret: 'PRIVATE_MODEL_OUTPUT' }
   };
@@ -432,15 +432,16 @@ test('frozen prompt and candidate schema identities remain exact', () => {
   const contract = getSemanticTaskContract('requirement_extraction');
   assert.equal(contract.contract_version, FROZEN_REQUIREMENT_EXTRACTION_PROMPT_VERSION);
   assert.equal(contract.instruction_hash, FROZEN_REQUIREMENT_EXTRACTION_PROMPT_HASH);
-  assert.equal(FROZEN_REQUIREMENT_CANDIDATE_SCHEMA_VERSION, '4.3-requirement-candidate-v2');
+  assert.equal(FROZEN_REQUIREMENT_CANDIDATE_SCHEMA_VERSION, '4.3-requirement-candidate-v3');
   assert.match(FROZEN_REQUIREMENT_CANDIDATE_SCHEMA_HASH, /^[a-f0-9]{64}$/);
 });
 
 test('verification and consolidated development commands are registered', () => {
   const rootPackage = JSON.parse(readFileSync(new URL('../../package.json', import.meta.url), 'utf8'));
   const backendPackage = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8'));
-  assert.match(rootPackage.scripts['dev:full'], /concurrently/);
-  assert.match(rootPackage.scripts['dev:full'], /semantic-gateway:start/);
+  assert.equal(rootPackage.scripts['dev:full'], 'node scripts/dev-full.js');
+  const devFull = readFileSync(new URL('../../scripts/dev-full.js', import.meta.url), 'utf8');
+  assert.doesNotMatch(devFull, /semantic-gateway:start|run', 'dev', '-w', 'backend/);
   assert.equal(rootPackage.scripts['reqx:doctor'], 'npm run reqx:doctor -w backend');
   assert.equal(rootPackage.scripts['reqx:accept'], 'npm run reqx:accept -w backend');
   assert.equal(rootPackage.scripts['reqx:live'], 'npm run reqx:live -w backend --');

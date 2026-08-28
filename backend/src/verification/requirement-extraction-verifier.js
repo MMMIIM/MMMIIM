@@ -544,7 +544,8 @@ export function mapValidatedCandidatesToCanonicalInput(candidates, { resolutions
       || Object.hasOwn(candidate, 'content')
       || Object.hasOwn(candidate, 'source_excerpt')
       || Object.hasOwn(candidate, 'source_text')
-      || Object.hasOwn(candidate, 'source_clause')) {
+      || Object.hasOwn(candidate, 'source_clause')
+      || Object.hasOwn(candidate, 'source_refs')) {
       throw Object.assign(new Error('Candidate canonical mapping failed.'), { code: 'BACKEND_INGESTION_FAILED' });
     }
     return mapped;

@@ -16,9 +16,9 @@ function chunk(values) {
 test('来源 resolver 支持单段、跨2至8段及跨页确定性反向映射', () => {
   const resolver = new SourceLocationResolver();
   const value = chunk(['第一段要求', '第二段连续', '第三段跨页', '第四段结束']);
-  const single = resolver.resolve({ source_refs: ['C001-S001'] }, value).location;
+  const single = resolver.resolve({ source_range: { start_ref: 'C001-S001', end_ref: 'C001-S001' } }, value).location;
   assert.equal(single.source_match_type, 'exact_single_paragraph');
-  const multi = resolver.resolve({ source_refs: ['C001-S001', 'C001-S002', 'C001-S003', 'C001-S004'] }, value).location;
+  const multi = resolver.resolve({ source_range: { start_ref: 'C001-S001', end_ref: 'C001-S004' } }, value).location;
   assert.equal(multi.source_verified, true);
   assert.equal(multi.source_match_type, 'exact_multi_paragraph_span');
   assert.equal(multi.source_paragraph_start, 10);
@@ -28,19 +28,19 @@ test('来源 resolver 支持单段、跨2至8段及跨页确定性反向映射',
   assert.equal(multi.source_paragraphs_json.length, 4);
 });
 
-test('source refs 保持后端原文边界，不接受模型改写文本', () => {
+test('source range 保持后端原文边界，不接受模型改写文本', () => {
   const result = new SourceLocationResolver().resolve(
-    { source_refs: ['C001-S001', 'C001-S002'] },
+    { source_range: { start_ref: 'C001-S001', end_ref: 'C001-S002' } },
     chunk(['系统(含审计)应支持:', '日志查询.'])
   ).location;
   assert.equal(result.source_verified, true);
   assert.equal(result.source_match_type, 'exact_multi_paragraph_span');
 });
 
-test('未知来源使当前 chunk fail closed，不能进入 unresolved Candidate', () => {
+test('未知来源范围使当前 chunk fail closed，不能进入 unresolved Candidate', () => {
   const resolver = new SourceLocationResolver();
   assert.throws(
-    () => resolver.resolve({ source_refs: ['C001-S999'] }, chunk(['原文要求提供完整的审计能力和日志查询功能'])),
+    () => resolver.resolve({ source_range: { start_ref: 'C001-S999', end_ref: 'C001-S999' } }, chunk(['原文要求提供完整的审计能力和日志查询功能'])),
     (error) => error.code === 'SOURCE_LOCATION_UNRESOLVED'
   );
 });

@@ -30,7 +30,7 @@ function gatewayResponse(candidate, diagnosticOverrides = {}) {
     data: {
       outputs: {
         response_payload_json: JSON.stringify({
-          schema_version: '4.3-requirement-extraction-v2.2',
+          schema_version: '4.3-requirement-extraction-v3',
           task_type: 'requirement_extraction',
           status: 'success',
           data: { requirements: [candidate] },
@@ -66,19 +66,19 @@ function healthyFetch(url) {
   if (url.endsWith('/info')) return new Response(JSON.stringify({
     service: 'semantic-gateway', task_registry_loaded: true,
     task_types: ['requirement_extraction'],
-    requirement_extraction_contract_version: '4.3-requirement-extraction-v2.2',
+    requirement_extraction_contract_version: '4.3-requirement-extraction-v3',
     requirement_extraction_prompt_hash: FROZEN_REQUIREMENT_EXTRACTION_PROMPT_HASH,
-    candidate_schema_contract_version: '4.3-requirement-candidate-v2',
+    candidate_schema_contract_version: '4.3-requirement-candidate-v3',
     candidate_schema_sha256: FROZEN_REQUIREMENT_CANDIDATE_SCHEMA_HASH
   }), { status: 200 });
   throw new Error(`unexpected url ${url}`);
 }
 
-function candidate(sourceRefs = ['C001-S001']) {
+function candidate(sourceRange = { start_ref: 'C001-S001', end_ref: 'C001-S001' }) {
   return {
     text: '系统应提供审计日志。',
     category: 'technical',
-    source_refs: sourceRefs,
+    source_range: sourceRange,
     mandatory_observed: true,
     requires_confirmation: false
   };
@@ -143,7 +143,8 @@ test('multi-chunk executor uses bounded concurrency and resolves each candidate 
     maximumActive = Math.max(maximumActive, active);
     await new Promise((resolve) => setTimeout(resolve, 5));
     active -= 1;
-    return gatewayResponse(candidate([`C${String(payload.chunk_index).padStart(3, '0')}-S001`]));
+    const ref = `C${String(payload.chunk_index).padStart(3, '0')}-S001`;
+    return gatewayResponse(candidate({ start_ref: ref, end_ref: ref }));
   };
   const result = await defaultLiveExecutor({ env, liveRequest, fetchImpl });
   assert.equal(result.verification_run_count, 1);
@@ -169,8 +170,11 @@ test('one failed chunk blocks the run and stops scheduling remaining chunks', as
     const payload = JSON.parse(JSON.parse(options.body).inputs.task_payload_json);
     started.push(payload.chunk_index);
     await new Promise((resolve) => setTimeout(resolve, payload.chunk_index === 1 ? 30 : 5));
-    const refs = payload.chunk_index === 2 ? ['C002-S999'] : [`C${String(payload.chunk_index).padStart(3, '0')}-S001`];
-    return gatewayResponse(candidate(refs));
+    const ref = `C${String(payload.chunk_index).padStart(3, '0')}-S001`;
+    const range = payload.chunk_index === 2
+      ? { start_ref: 'C002-S999', end_ref: 'C002-S999' }
+      : { start_ref: ref, end_ref: ref };
+    return gatewayResponse(candidate(range));
   };
   const result = await defaultLiveExecutor({ env, liveRequest, fetchImpl });
   assert.equal(result.final_probe_status, 'BLOCKED');
@@ -218,19 +222,19 @@ test('unknown source ref blocks live before Canonical ingestion', async () => {
   const result = await defaultLiveExecutor({
     env,
     liveRequest,
-    fetchImpl: fetchFor(candidate(['C001-S999']))
+    fetchImpl: fetchFor(candidate({ start_ref: 'C001-S999', end_ref: 'C001-S999' }))
   });
   assert.equal(result.source_resolution_pass, false);
   assert.equal(result.backend_ingestion_pass, false);
   assert.equal(result.technical_error_code, 'SOURCE_LOCATION_UNRESOLVED');
 });
 
-test('non-contiguous source refs block live before Canonical ingestion', async () => {
+test('reversed source range blocks live before Canonical ingestion', async () => {
   const liveRequest = buildRequirementExtractionLiveRequest({ text: '第一段。\n第二段。\n第三段。' });
   const result = await defaultLiveExecutor({
     env,
     liveRequest,
-    fetchImpl: fetchFor(candidate(['C001-S001', 'C001-S003']))
+    fetchImpl: fetchFor(candidate({ start_ref: 'C001-S003', end_ref: 'C001-S001' }))
   });
   assert.equal(result.source_resolution_pass, false);
   assert.equal(result.backend_ingestion_pass, false);

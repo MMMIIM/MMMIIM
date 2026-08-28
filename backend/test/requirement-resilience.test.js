@@ -171,10 +171,10 @@ test('长文件以最多 2 个并发处理且按 chunk_number 稳定汇总', asy
         active -= 1;
         return {
           candidates: chunk.chunk_number === 1
-            ? [{ text: '提供审计日志。', source_refs: ['C001-S002'], source_text: '系统应提供审计日志。', category: 'technical', source_clause_id: null, mandatory_observed: false, requires_confirmation: false, source_page: 1, source_paragraph: 2 }]
+            ? [{ text: '提供审计日志。', source_range: { start_ref: 'C001-S002', end_ref: 'C001-S002' }, category: 'technical', mandatory_observed: false, requires_confirmation: false }]
             : [
-              { text: '提供审计日志。', source_refs: ['C002-S001'], source_text: '系统应提供审计日志。', category: 'technical', source_clause_id: null, mandatory_observed: false, requires_confirmation: false, source_page: 2, source_paragraph: 4 },
-              { text: '支持标准接口。', source_refs: ['C002-S002'], source_text: '支持标准接口。', category: 'technical', source_clause_id: null, mandatory_observed: false, requires_confirmation: false, source_page: 3, source_paragraph: 5 }
+              { text: '提供审计日志。', source_range: { start_ref: 'C002-S001', end_ref: 'C002-S001' }, category: 'technical', mandatory_observed: false, requires_confirmation: false },
+              { text: '支持标准接口。', source_range: { start_ref: 'C002-S002', end_ref: 'C002-S002' }, category: 'technical', mandatory_observed: false, requires_confirmation: false }
             ],
           warnings: [], audit: { provider: 'semantic_gateway' }
         };
@@ -193,10 +193,10 @@ test('长文件以最多 2 个并发处理且按 chunk_number 稳定汇总', asy
   assert.equal(repository.state.failedJob, null);
 });
 
-test('unknown 或非连续 source_ref 使当前 chunk 失败且不完成解析基线', async () => {
+test('unknown 或反向 source_range 使当前 chunk 失败且不完成解析基线', async () => {
   const cases = [
-    ['C001-S999'],
-    ['C001-S001', 'C001-S003']
+    ['C001-S999', 'C001-S999'],
+    ['C001-S003', 'C001-S001']
   ];
   for (const sourceRefs of cases) {
     const { service, repository } = serviceFor({
@@ -207,7 +207,8 @@ test('unknown 或非连续 source_ref 使当前 chunk 失败且不完成解析�
       gateway: {
         extract: async () => ({
           candidates: [{
-            text: '提供审计日志。', category: 'technical', source_refs: sourceRefs,
+            text: '提供审计日志。', category: 'technical',
+            source_range: { start_ref: sourceRefs[0], end_ref: sourceRefs.at(-1) },
             mandatory_observed: true, requires_confirmation: false
           }], warnings: [], audit: {}
         })
@@ -258,7 +259,7 @@ test('非法分片输出或汇总失败均不得完成任务', async () => {
       gateway: {
         extract: async () => {
           if (error) throw error;
-          return { candidates: [{ text: '', source_refs: ['C001-S001'], category: 'technical', mandatory_observed: false, requires_confirmation: false }], warnings: [], audit: {} };
+          return { candidates: [{ text: '', source_range: { start_ref: 'C001-S001', end_ref: 'C001-S001' }, category: 'technical', mandatory_observed: false, requires_confirmation: false }], warnings: [], audit: {} };
         }
       }
     });
@@ -350,7 +351,7 @@ test('数据库任务领取锁保证同一 job/chunk 不会被重复调用', asy
   const { service, repository } = serviceFor({
     extraction: extractionFor(['第四章 项目要求和有关说明', '系统应记录审计日志。']),
     chunkBudget: { singleCallThreshold: 8000, characterBudget: 8000, tokenBudget: 8000 },
-    gateway: { extract: async () => { gatewayCalls += 1; await Promise.resolve(); return { candidates: [{ text: '记录审计日志。', source_refs: ['C001-S002'], source_text: '系统应记录审计日志。', category: 'technical', source_clause_id: null, mandatory_observed: false, requires_confirmation: false, source_page: 1, source_paragraph: 2 }], warnings: [], audit: {} }; } }
+    gateway: { extract: async () => { gatewayCalls += 1; await Promise.resolve(); return { candidates: [{ text: '记录审计日志。', source_range: { start_ref: 'C001-S002', end_ref: 'C001-S002' }, category: 'technical', mandatory_observed: false, requires_confirmation: false }], warnings: [], audit: {} }; } }
   });
   let claimed = false;
   repository.claimParseJob = async () => {

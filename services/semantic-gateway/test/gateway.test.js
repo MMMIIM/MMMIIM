@@ -50,14 +50,14 @@ test('standalone gateway /info exposes safe runtime and contract diagnostics', a
     const info = await response.json();
     assert.equal(info.service, 'semantic-gateway');
     assert.equal(info.gateway_schema_version, 'semantic-gateway-envelope-v1');
-    assert.equal(info.requirement_extraction_contract_version, '4.3-requirement-extraction-v2.2');
-    assert.equal(info.requirement_extraction_prompt_version, '4.3-requirement-extraction-v2.2');
+    assert.equal(info.requirement_extraction_contract_version, '4.3-requirement-extraction-v3');
+    assert.equal(info.requirement_extraction_prompt_version, '4.3-requirement-extraction-v3');
     assert.match(info.requirement_extraction_instruction_hash, /^[a-f0-9]{64}$/);
     assert.equal(info.requirement_extraction_prompt_hash, info.requirement_extraction_instruction_hash);
     assert.equal(info.candidate_schema_contract_version, REQUIREMENT_CANDIDATE_SCHEMA_VERSION);
     assert.equal(info.candidate_schema_sha256, REQUIREMENT_CANDIDATE_SCHEMA_SHA256);
     assert.equal(info.service_version, '0.1.0');
-    assert.equal(info.build_revision, 'unknown');
+    assert.equal(info.build_revision, 'dev-working-tree');
     assert.ok(Array.isArray(info.task_types));
     assert.equal(Object.hasOwn(info, 'api_key'), false);
     assert.equal(Object.hasOwn(info, 'provider_api_key'), false);
@@ -70,7 +70,8 @@ test('standalone gateway /info exposes injected build revision without secrets',
       SEMANTIC_GATEWAY_PROVIDER: 'mock',
       SEMANTIC_GATEWAY_API_KEY: 'service-only',
       SEMANTIC_GATEWAY_BUILD_VERSION: '0.1.0-test',
-      SEMANTIC_GATEWAY_COMMIT: 'fixture-revision-123'
+      SEMANTIC_GATEWAY_COMMIT: 'fixture-revision-123',
+      SEMANTIC_GATEWAY_WORKTREE_DIRTY: 'true'
     }
   });
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
@@ -78,6 +79,7 @@ test('standalone gateway /info exposes injected build revision without secrets',
     const info = await (await fetch(`http://127.0.0.1:${server.address().port}/info`)).json();
     assert.equal(info.service_version, '0.1.0-test');
     assert.equal(info.build_revision, 'fixture-revision-123');
+    assert.equal(info.working_tree_dirty, true);
     assert.equal(Object.hasOwn(info, 'api_key'), false);
     assert.equal(Object.hasOwn(info, 'provider_api_key'), false);
   } finally {
@@ -134,7 +136,7 @@ test('OpenAI-compatible readiness fails closed when Provider key is missing', as
 test('backend SemanticGatewayClient uses the same /workflows/run transport contract', async () => {
   await withGateway(async ({ port, key }) => {
     const result = await client(port, key).run({ task_type: 'requirement_extraction', task_instruction: 'backend instruction', task_payload_json: '{}' });
-    assert.equal(result.envelope.schema_version, '4.3-requirement-extraction-v2.2');
+    assert.equal(result.envelope.schema_version, '4.3-requirement-extraction-v3');
     assert.equal(result.envelope.task_type, 'requirement_extraction');
     assert.deepEqual(result.envelope.data, { requirements: [] });
   });
@@ -143,7 +145,7 @@ test('backend SemanticGatewayClient uses the same /workflows/run transport contr
 test('all existing formal tasks dispatch through the same mock provider contract', async () => {
   await withGateway(async ({ port, key }) => {
     const cases = [
-      ['requirement_extraction', {}, '4.3-requirement-extraction-v2.2', data => Array.isArray(data.requirements)],
+      ['requirement_extraction', {}, '4.3-requirement-extraction-v3', data => Array.isArray(data.requirements)],
       ['response_planning', { requirements: [{ req_id: 'REQ-001' }] }, '4.3-response-planning', data => Array.isArray(data.response_plans)],
       ['claim_generation', { plans: [{ requirement_id: 'REQ-001', response_summary: 'x' }] }, '4.3-claim-generation', data => Array.isArray(data.claims)],
       ['section_drafting', { chapter_id: 'chapter-1' }, '4.3-section-drafting', data => typeof data.content_markdown === 'string'],
@@ -246,7 +248,7 @@ test('requirement candidate schema is strict at the Gateway boundary', async () 
   const candidate = {
     text: '系统应提供审计日志。',
     category: 'technical',
-    source_refs: ['C001-S001'],
+    source_range: { start_ref: 'C001-S001', end_ref: 'C001-S001' },
     mandatory_observed: true,
     requires_confirmation: false
   };
@@ -254,7 +256,7 @@ test('requirement candidate schema is strict at the Gateway boundary', async () 
     { ...candidate, content: candidate.text },
     { ...candidate, mandatory_observed: 'true' },
     { ...candidate, source_text: candidate.text },
-    (() => { const copy = { ...candidate }; delete copy.source_refs; return copy; })()
+    (() => { const copy = { ...candidate }; delete copy.source_range; return copy; })()
   ]) {
     const server = createStandaloneGatewayServer({
       config: {
@@ -278,12 +280,12 @@ test('requirement candidate schema is strict at the Gateway boundary', async () 
   }
 });
 
-test('Gateway preserves only the five canonical Candidate v2 fields', async () => {
+test('Gateway preserves only the five canonical Candidate v3 fields', async () => {
   const key = 'gateway-canonical-candidate-key';
   const candidate = {
     text: '系统应提供审计日志。',
     category: 'technical',
-    source_refs: ['C001-S001'],
+    source_range: { start_ref: 'C001-S001', end_ref: 'C001-S001' },
     mandatory_observed: true,
     requires_confirmation: false
   };
@@ -304,7 +306,7 @@ test('Gateway preserves only the five canonical Candidate v2 fields', async () =
     assert.equal(response.status, 200);
     const envelope = JSON.parse((await response.json()).data.outputs.response_payload_json);
     assert.deepEqual(Object.keys(envelope.data.requirements[0]).sort(), [
-      'category', 'mandatory_observed', 'requires_confirmation', 'source_refs', 'text'
+      'category', 'mandatory_observed', 'requires_confirmation', 'source_range', 'text'
     ]);
   } finally {
     await new Promise(resolve => server.close(resolve));
@@ -320,7 +322,7 @@ test('probe-only diagnostics expose safe structure and validator details without
         requirements: [{
           text: '系统应提供审计日志。',
           category: 'technical',
-          source_refs: ['C001-S001'],
+          source_range: { start_ref: 'C001-S001', end_ref: 'C001-S001' },
           mandatory_observed: true,
           requires_confirmation: false,
           extra: 'must not be echoed'
@@ -383,7 +385,7 @@ test('Requirement Extraction probe diagnostics distinguish candidate schema fail
   const candidate = {
     text: '系统应提供审计日志。',
     category: 'technical',
-    source_refs: ['C001-S001'],
+    source_range: { start_ref: 'C001-S001', end_ref: 'C001-S001' },
     mandatory_observed: true,
     requires_confirmation: false
   };
@@ -396,9 +398,9 @@ test('Requirement Extraction probe diagnostics distinguish candidate schema fail
     },
     {
       name: 'missing field',
-      candidate: (() => { const value = { ...candidate }; delete value.source_refs; return value; })(),
+      candidate: (() => { const value = { ...candidate }; delete value.source_range; return value; })(),
       validator: 'required',
-      path: 'data.requirements[0].source_refs'
+      path: 'data.requirements[0].source_range'
     },
     {
       name: 'wrong enum',
@@ -417,6 +419,12 @@ test('Requirement Extraction probe diagnostics distinguish candidate schema fail
       candidate: { ...candidate, source_clause: 12 },
       validator: 'additionalProperties',
       path: 'data.requirements[0].source_clause'
+    },
+    {
+      name: 'superseded source_refs field',
+      candidate: { ...candidate, source_refs: ['C001-S001'] },
+      validator: 'additionalProperties',
+      path: 'data.requirements[0].source_refs'
     }
   ];
   for (const invalidCase of invalidCases) {

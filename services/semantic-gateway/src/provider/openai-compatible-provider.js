@@ -23,12 +23,14 @@ const PROVIDER_STAGES = Object.freeze({
 // only bound and stabilize the provider request.
 export const DEFAULT_GENERATION_CONFIG = Object.freeze({
   response_format: Object.freeze({ type: 'json_object' }),
+  enable_thinking: false,
   max_tokens: 3200,
   temperature: 0.1,
   top_p: 0.9,
   top_k: 20,
   frequency_penalty: 0,
-  stream: false
+  stream: false,
+  n: 1
 });
 
 const LEGACY_SCHEMA_DIAGNOSTIC_TOKENS = Object.freeze([
@@ -219,6 +221,7 @@ export class OpenAICompatibleProvider {
     this.logger = logger;
     this.generationConfig = Object.freeze({
       response_format: normalizedResponseFormat(generationConfig.response_format),
+      enable_thinking: generationConfig.enable_thinking === true,
       max_tokens: Number.isInteger(Number(generationConfig.max_tokens)) && Number(generationConfig.max_tokens) > 0
         ? Number(generationConfig.max_tokens) : DEFAULT_GENERATION_CONFIG.max_tokens,
       temperature: Number.isFinite(Number(generationConfig.temperature))
@@ -229,7 +232,9 @@ export class OpenAICompatibleProvider {
         ? Number(generationConfig.top_k) : DEFAULT_GENERATION_CONFIG.top_k,
       frequency_penalty: Number.isFinite(Number(generationConfig.frequency_penalty))
         ? Number(generationConfig.frequency_penalty) : DEFAULT_GENERATION_CONFIG.frequency_penalty,
-      stream: generationConfig.stream === true
+      stream: generationConfig.stream === true,
+      n: Number.isInteger(Number(generationConfig.n)) && Number(generationConfig.n) > 0
+        ? Number(generationConfig.n) : DEFAULT_GENERATION_CONFIG.n
     });
   }
 
@@ -292,12 +297,14 @@ export class OpenAICompatibleProvider {
             { role: 'user', content: JSON.stringify(payload) }
           ],
           response_format: generationConfig.response_format,
+          enable_thinking: generationConfig.enable_thinking,
           max_tokens: generationConfig.max_tokens,
           temperature: generationConfig.temperature,
           top_p: generationConfig.top_p,
           top_k: generationConfig.top_k,
           frequency_penalty: generationConfig.frequency_penalty,
-          stream: generationConfig.stream
+          stream: generationConfig.stream,
+          n: generationConfig.n
         };
         audit.current_stage = PROVIDER_STAGES.REQUEST_BODY_BUILT;
       } catch (error) {

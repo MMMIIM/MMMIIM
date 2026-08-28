@@ -20,6 +20,35 @@ import {
 
 const safeErrorCodes = new Set(SEMANTIC_GATEWAY_ERROR_CODES);
 
+function parseBooleanEnv(value, fallback) {
+  if (value === true || value === 'true') return true;
+  if (value === false || value === 'false') return false;
+  return fallback;
+}
+
+function parseFiniteEnv(value, fallback) {
+  const parsed = Number(value);
+  return Number.isFinite(parsed) ? parsed : fallback;
+}
+
+function parsePositiveIntegerEnv(value, fallback) {
+  const parsed = Number(value);
+  return Number.isInteger(parsed) && parsed > 0 ? parsed : fallback;
+}
+
+function generationConfigFromEnv(env = process.env) {
+  return {
+    enable_thinking: parseBooleanEnv(env.SEMANTIC_GATEWAY_ENABLE_THINKING, false),
+    temperature: parseFiniteEnv(env.SEMANTIC_GATEWAY_TEMPERATURE, 0.1),
+    top_p: parseFiniteEnv(env.SEMANTIC_GATEWAY_TOP_P, 0.9),
+    top_k: parsePositiveIntegerEnv(env.SEMANTIC_GATEWAY_TOP_K, 20),
+    frequency_penalty: parseFiniteEnv(env.SEMANTIC_GATEWAY_FREQUENCY_PENALTY, 0),
+    max_tokens: parsePositiveIntegerEnv(env.SEMANTIC_GATEWAY_MAX_TOKENS, 3200),
+    stream: parseBooleanEnv(env.SEMANTIC_GATEWAY_STREAM, false),
+    n: parsePositiveIntegerEnv(env.SEMANTIC_GATEWAY_N, 1)
+  };
+}
+
 function configFromEnv(env = process.env) {
   const runtime = readSemanticGatewayRuntimeConfig(env);
   const providerName = runtime.provider;
@@ -37,6 +66,7 @@ function configFromEnv(env = process.env) {
         apiKey: runtime.providerApiKey,
         model: runtime.model,
         timeoutMs,
+        generationConfig: generationConfigFromEnv(env),
         logger: console
       }),
     timeoutMs,
@@ -134,7 +164,7 @@ function safeStructuralCandidate(candidate, index) {
     ? Object.keys(objectCandidate).filter(key => !REQUIREMENT_CANDIDATE_FIELDS.includes(key)).map(safeStructuralKey)
     : [];
   const text = objectCandidate?.text;
-  const sourceRefs = objectCandidate?.source_refs;
+  const sourceRange = objectCandidate?.source_range;
   return {
     candidate_index: index,
     keys,
@@ -144,9 +174,11 @@ function safeStructuralCandidate(candidate, index) {
     text_empty: typeof text === 'string' ? text.trim().length === 0 : null,
     category_type: observedType(objectCandidate?.category),
     category_value: typeof objectCandidate?.category === 'string' ? objectCandidate.category.slice(0, 80) : null,
-    source_refs_type: observedType(sourceRefs),
-    source_refs_empty: Array.isArray(sourceRefs) ? sourceRefs.length === 0 : null,
-    source_refs_count: Array.isArray(sourceRefs) ? sourceRefs.length : null,
+    source_range_type: observedType(sourceRange),
+    source_range_keys: sourceRange && typeof sourceRange === 'object' && !Array.isArray(sourceRange)
+      ? Object.keys(sourceRange).map(safeStructuralKey) : [],
+    source_range_start_ref_type: observedType(sourceRange?.start_ref),
+    source_range_end_ref_type: observedType(sourceRange?.end_ref),
     mandatory_observed_type: observedType(objectCandidate?.mandatory_observed),
     requires_confirmation_type: observedType(objectCandidate?.requires_confirmation)
   };
@@ -257,7 +289,9 @@ function safeProbeDiagnostics({ providerAudit = null, validationErrors = [], env
         top_p: Number.isFinite(audit.generation_config.top_p) ? audit.generation_config.top_p : null,
         top_k: Number.isInteger(audit.generation_config.top_k) ? audit.generation_config.top_k : null,
         frequency_penalty: Number.isFinite(audit.generation_config.frequency_penalty) ? audit.generation_config.frequency_penalty : null,
-        stream: audit.generation_config.stream === true
+        stream: audit.generation_config.stream === true,
+        enable_thinking: audit.generation_config.enable_thinking === true,
+        n: Number.isInteger(audit.generation_config.n) ? audit.generation_config.n : null
       }
       : null,
     outbound_prompt_diagnostics: audit.outbound_prompt_diagnostics && typeof audit.outbound_prompt_diagnostics === 'object'
@@ -305,13 +339,16 @@ export function createStandaloneGatewayHandler({ env = process.env, config = con
     if (request.method === 'GET' && request.url === '/info') {
       const requirementContract = getSemanticTaskContract('requirement_extraction');
       const serviceVersion = String(env.SEMANTIC_GATEWAY_BUILD_VERSION || env.SEMANTIC_GATEWAY_VERSION || '0.1.0');
-      const buildRevision = String(env.SEMANTIC_GATEWAY_COMMIT || env.GIT_COMMIT || 'unknown');
+      const buildRevision = String(env.SEMANTIC_GATEWAY_COMMIT || env.GIT_COMMIT || 'dev-working-tree');
+      const workingTreeDirty = env.SEMANTIC_GATEWAY_WORKTREE_DIRTY === 'true'
+        ? true : env.SEMANTIC_GATEWAY_WORKTREE_DIRTY === 'false' ? false : null;
       const promptVersion = requirementContract?.contract_version || null;
       const promptHash = requirementContract?.instruction_hash || null;
       writeJson(response, 200, {
         service: 'semantic-gateway',
         service_version: serviceVersion,
         build_revision: buildRevision,
+        working_tree_dirty: workingTreeDirty,
         // Keep the original aliases for existing diagnostic consumers.
         version: serviceVersion,
         commit: buildRevision,

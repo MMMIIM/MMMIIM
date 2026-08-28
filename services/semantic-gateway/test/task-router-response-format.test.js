@@ -10,7 +10,7 @@ import {
 const candidate = {
   text: '系统应提供审计日志。',
   category: 'technical',
-  source_refs: ['C001-S001'],
+  source_range: { start_ref: 'C001-S001', end_ref: 'C001-S001' },
   mandatory_observed: true,
   requires_confirmation: false
 };
@@ -35,12 +35,12 @@ test('requirement extraction dispatch derives strict json_schema from canonical 
   assert.deepEqual(invocation.response_format.json_schema.schema, canonicalSchema);
 });
 
-test('canonical requirement extraction schema keeps requirements-only top-level and exact Candidate v2 fields', () => {
+test('canonical requirement extraction schema keeps requirements-only top-level and exact Candidate v3 fields', () => {
   const schema = getSemanticTaskContract('requirement_extraction').data_schema;
   assert.deepEqual(Object.keys(schema.properties), ['requirements']);
   assert.equal(schema.additionalProperties, false);
   assert.deepEqual(schema.properties.requirements.items.required, [
-    'text', 'category', 'source_refs', 'mandatory_observed', 'requires_confirmation'
+    'text', 'category', 'source_range', 'mandatory_observed', 'requires_confirmation'
   ]);
   assert.equal(schema.properties.requirements.items.additionalProperties, false);
   assert.deepEqual(validateTaskData('requirement_extraction', { requirements: [candidate] }), { requirements: [candidate] });

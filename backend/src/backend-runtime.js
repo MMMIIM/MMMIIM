@@ -12,7 +12,12 @@ export function loadBackendEnvironment({
   dotenvConfig = dotenv.config
 } = {}) {
   if (!isAbsolute(envPath)) throw new Error('backend env path must be absolute');
-  const result = dotenvConfig({ path: envPath, processEnv: env, override: true });
+  // Local development keeps the historical backend/.env precedence.  The
+  // persistent Compose runtime injects container-only host/database/gateway
+  // endpoints, so its process environment must remain authoritative even
+  // though the same file is mounted for local configuration parity.
+  const override = env.BACKEND_RUNTIME_MODE !== 'container';
+  const result = dotenvConfig({ path: envPath, processEnv: env, override });
   if (result?.error) {
     throw Object.assign(new Error('backend/.env 加载失败。'), { code: 'BACKEND_ENV_LOAD_FAILED' });
   }

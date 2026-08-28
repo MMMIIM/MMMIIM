@@ -30,7 +30,7 @@ test('Requirement Extraction has exactly one canonical instruction and explicit 
   assert.match(metadata.instruction_hash, /^[a-f0-9]{64}$/);
   const schema = getSemanticTaskContract('requirement_extraction').data_schema;
   assert.deepEqual(schema.properties.requirements.items.required, [
-    'text', 'category', 'source_refs', 'mandatory_observed', 'requires_confirmation'
+    'text', 'category', 'source_range', 'mandatory_observed', 'requires_confirmation'
   ]);
   assert.equal(schema.properties.requirements.items.additionalProperties, false);
   assert.match(requirementExtractionSource, /resolveSemanticTaskInstruction/);
@@ -52,10 +52,10 @@ test('Requirement Extraction prompt requires a complete requirements-only top-le
   assert.match(instruction, /所有明确存在且符合提取范围的独立响应义务都应进入 requirements/);
 });
 
-test('Requirement Extraction v2.2 prompt forbids placeholder candidates', () => {
+test('Requirement Extraction v3 prompt forbids placeholder candidates and requires source ranges', () => {
   const contract = getSemanticTaskContract('requirement_extraction');
   const instruction = resolveSemanticTaskInstruction('requirement_extraction');
-  assert.equal(contract.contract_version, '4.3-requirement-extraction-v2.2');
+  assert.equal(contract.contract_version, '4.3-requirement-extraction-v3');
   assert.match(instruction, /只返回实际识别出的 Requirement/);
   assert.match(instruction, /不得生成占位 Candidate/);
   assert.match(instruction, /text 必须是非空/);
@@ -63,6 +63,11 @@ test('Requirement Extraction v2.2 prompt forbids placeholder candidates', () => 
   assert.match(instruction, /候选数量不必等于来源段落数量/);
   assert.match(instruction, /不得用空 Candidate 表示已检查的段落/);
   assert.match(instruction, /一个来源段落可以支持零条、一条或多条独立 Requirement/);
+  assert.match(instruction, /source_range 表示能够直接证明该 Requirement 的一个最小充分连续原文范围/);
+  assert.match(instruction, /start_ref.*end_ref/);
+  assert.match(instruction, /不得跳过范围内的中间段落/);
+  assert.match(instruction, /不得.*两个不相邻的证据区域/);
+  assert.match(instruction, /不得编造不存在的 start_ref 或 end_ref/);
 });
 
 test('Gateway Task Router resolves the canonical instruction and emits contract metadata', async () => {
@@ -82,11 +87,11 @@ test('Gateway Task Router resolves the canonical instruction and emits contract 
   assert.equal(result.provider_audit.instruction_sha256, contract.instruction_hash);
 });
 
-test('Requirement Extraction shared validator enforces the five-field Candidate v2 schema', () => {
+test('Requirement Extraction shared validator enforces the five-field Candidate v3 schema', () => {
   const candidate = {
     text: '系统应提供审计日志。',
     category: 'technical',
-    source_refs: ['C001-S001'],
+    source_range: { start_ref: 'C001-S001', end_ref: 'C001-S001' },
     mandatory_observed: true,
     requires_confirmation: false
   };
@@ -98,8 +103,10 @@ test('Requirement Extraction shared validator enforces the five-field Candidate 
     { ...candidate, category: 'not-a-category' },
     { ...candidate, text: '' },
     { ...candidate, text: '   ' },
-    { ...candidate, source_refs: [] },
-    (() => { const copy = { ...candidate }; delete copy.source_refs; return copy; })()
+    { ...candidate, source_range: { start_ref: 'C001-S001', end_ref: 'C001-S002', extra: true } },
+    { ...candidate, source_range: { start_ref: 'bad', end_ref: 'C001-S001' } },
+    { ...candidate, source_refs: ['C001-S001'] },
+    (() => { const copy = { ...candidate }; delete copy.source_range; return copy; })()
   ]) {
     assert.throws(() => validateTaskData('requirement_extraction', { requirements: [invalid] }), /unsupported fields|missing|required|canonical categories|boolean|non-empty|deterministic/);
   }

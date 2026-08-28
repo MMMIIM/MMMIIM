@@ -83,19 +83,21 @@ test('4,930 字符 FAST-01 窗口按自然段分片，单片同时受 token 上�
   }), (error) => error.code === 'REQUIREMENT_SOURCE_SPAN_EXCEEDS_BUDGET');
 });
 
-test('model Candidate cannot inject canonical source_text/source_clause, while source_refs remain accepted', () => {
+test('model Candidate v3 requires backend-derived provenance before Canonical mapping', () => {
   const candidate = {
-    text: '系统应记录日志。', category: 'technical', source_refs: ['C001-S001'],
+    text: '系统应记录日志。', category: 'technical',
+    source_range: { start_ref: 'C001-S001', end_ref: 'C001-S001' },
     mandatory_observed: true, requires_confirmation: false
   };
-  const mapped = mapRequirementCandidateToCanonicalInput(candidate, 1);
+  assert.equal(mapRequirementCandidateToCanonicalInput(candidate, 1), null);
+  const resolved = { ...candidate, source_refs: ['C001-S001'], source_text: '系统应记录日志。' };
+  const mapped = mapRequirementCandidateToCanonicalInput(resolved, 1, { allowBackendProvenance: true });
   assert.equal(mapped.content, candidate.text);
-  assert.deepEqual(mapped.sources[0].source_refs, candidate.source_refs);
-  assert.equal(mapped.sources[0].source_text, null);
-  assert.equal(mapRequirementCandidateToCanonicalInput({ ...candidate, source_text: '伪造原文' }, 1), null);
-  assert.equal(mapRequirementCandidateToCanonicalInput({ ...candidate, source_clause: '5.1' }, 1), null);
-  assert.equal(mapRequirementCandidateToCanonicalInput({ ...candidate, content: 'legacy' }, 1), null);
-  assert.equal(mapRequirementCandidateToCanonicalInput({ ...candidate, source_excerpt: 'legacy' }, 1), null);
+  assert.deepEqual(mapped.sources[0].source_refs, resolved.source_refs);
+  assert.equal(mapRequirementCandidateToCanonicalInput({ ...resolved, source_text: '伪造原文' }, 1), null);
+  assert.equal(mapRequirementCandidateToCanonicalInput({ ...resolved, source_clause: '5.1' }, 1), null);
+  assert.equal(mapRequirementCandidateToCanonicalInput({ ...resolved, content: 'legacy' }, 1), null);
+  assert.equal(mapRequirementCandidateToCanonicalInput({ ...resolved, source_excerpt: 'legacy' }, 1), null);
 });
 
 test('production semantic budget of 2,000 chars and 50 spans splits a dense 4,930-char window without losing spans', () => {
@@ -126,7 +128,10 @@ test('production semantic budget of 2,000 chars and 50 spans splits a dense 4,93
   assert.deepEqual(chunkExtractedText({ text, paragraphs, ...budget }), chunks);
   const resolver = new SourceLocationResolver();
   for (const chunk of chunks) {
-    const resolved = resolver.resolve({ source_refs: chunk.segments.map((segment) => segment.source_ref) }, chunk);
+    const resolved = resolver.resolve({ source_range: {
+      start_ref: chunk.segments[0].source_ref,
+      end_ref: chunk.segments.at(-1).source_ref
+    } }, chunk);
     assert.equal(resolved.location.source_verified, true);
   }
 });

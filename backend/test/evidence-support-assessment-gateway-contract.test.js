@@ -344,7 +344,7 @@ test('formal task registry preserves existing tasks and registers evidence suppo
     assert.ok(SEMANTIC_GATEWAY_TASK_REGISTRY[taskType]);
     assert.equal(SEMANTIC_GATEWAY_TASK_REGISTRY[taskType].input_schema.required.join(','), 'task_type,task_instruction,task_payload_json');
   }
-  assert.equal(SEMANTIC_GATEWAY_TASK_REGISTRY.requirement_extraction.schema_version, '4.3-requirement-extraction-v2.2');
+  assert.equal(SEMANTIC_GATEWAY_TASK_REGISTRY.requirement_extraction.schema_version, '4.3-requirement-extraction-v3');
   assert.equal(SEMANTIC_GATEWAY_TASK_REGISTRY[EVIDENCE_SUPPORT_GATEWAY_TASK_TYPE].schema_version, EVIDENCE_SUPPORT_GATEWAY_CONTRACT_VERSION);
   assert.ok(listSemanticGatewayTaskTypes().includes(EVIDENCE_SUPPORT_GATEWAY_TASK_TYPE));
   assert.equal(SEMANTIC_GATEWAY_TASK_REGISTRY[EVIDENCE_SUPPORT_GATEWAY_TASK_TYPE].transport_normalization, 'strict');

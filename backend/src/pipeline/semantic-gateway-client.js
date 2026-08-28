@@ -100,9 +100,11 @@ function safeStructuralSummary(value) {
       text_empty: typeof candidate?.text_empty === 'boolean' ? candidate.text_empty : null,
       category_type: safeDiagnosticScalar(candidate?.category_type, 40),
       category_value: safeDiagnosticScalar(candidate?.category_value, 80),
-      source_refs_type: safeDiagnosticScalar(candidate?.source_refs_type, 40),
-      source_refs_empty: typeof candidate?.source_refs_empty === 'boolean' ? candidate.source_refs_empty : null,
-      source_refs_count: Number.isInteger(candidate?.source_refs_count) ? candidate.source_refs_count : null,
+      source_range_type: safeDiagnosticScalar(candidate?.source_range_type, 40),
+      source_range_keys: Array.isArray(candidate?.source_range_keys)
+        ? candidate.source_range_keys.filter(key => typeof key === 'string').slice(0, 10).map(key => key.slice(0, 80)) : [],
+      source_range_start_ref_type: safeDiagnosticScalar(candidate?.source_range_start_ref_type, 40),
+      source_range_end_ref_type: safeDiagnosticScalar(candidate?.source_range_end_ref_type, 40),
       mandatory_observed_type: safeDiagnosticScalar(candidate?.mandatory_observed_type, 40),
       requires_confirmation_type: safeDiagnosticScalar(candidate?.requires_confirmation_type, 40)
     }))
@@ -147,6 +149,27 @@ function safeProbeDiagnostics(value) {
     provider_trace_id: safeDiagnosticScalar(value.provider_trace_id, 128),
     model_content_length_chars: Number.isInteger(value.model_content_length_chars) ? value.model_content_length_chars : null,
     output_truncated: value.output_truncated === true,
+    response_format_type: value.response_format_type === 'json_schema' || value.response_format_type === 'json_object'
+      ? value.response_format_type : null,
+    generation_config: value.generation_config && typeof value.generation_config === 'object'
+      ? {
+        response_format: value.generation_config.response_format?.type === 'json_schema'
+          ? {
+            type: 'json_schema',
+            name: safeDiagnosticScalar(value.generation_config.response_format.name, 120),
+            strict: value.generation_config.response_format.strict === true
+          }
+          : value.generation_config.response_format?.type === 'json_object'
+            ? { type: 'json_object' } : null,
+        enable_thinking: value.generation_config.enable_thinking === true,
+        max_tokens: Number.isInteger(value.generation_config.max_tokens) ? value.generation_config.max_tokens : null,
+        temperature: Number.isFinite(value.generation_config.temperature) ? value.generation_config.temperature : null,
+        top_p: Number.isFinite(value.generation_config.top_p) ? value.generation_config.top_p : null,
+        top_k: Number.isInteger(value.generation_config.top_k) ? value.generation_config.top_k : null,
+        frequency_penalty: Number.isFinite(value.generation_config.frequency_penalty) ? value.generation_config.frequency_penalty : null,
+        stream: value.generation_config.stream === true,
+        n: Number.isInteger(value.generation_config.n) ? value.generation_config.n : null
+      } : null,
     json_parse_error_offset: Number.isInteger(value.json_parse_error_offset) ? value.json_parse_error_offset : null,
     schema_validation_errors: safeValidationDiagnostics(value.schema_validation_errors),
     envelope_validation_errors: safeValidationDiagnostics(value.envelope_validation_errors),

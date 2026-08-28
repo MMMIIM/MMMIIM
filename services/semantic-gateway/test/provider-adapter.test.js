@@ -6,13 +6,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { EVIDENCE_SUPPORT_PROVIDER_JSON_SCHEMA } from '../../../backend/src/pipeline/evidence-support-assessment-gateway-contract-v1.js';
+import { gatewayConfigFromEnv } from '../src/gateway.js';
 
 test('shared task registry exposes one canonical contract set', () => {
   assert.deepEqual(SEMANTIC_TASK_TYPES.filter(task => task !== 'draft_sections'), [
     'requirement_extraction', 'response_planning', 'claim_generation',
     'section_drafting', 'targeted_revision', 'evidence_support_assessment'
   ]);
-  assert.equal(getSemanticTaskContract('requirement_extraction').contract_version, '4.3-requirement-extraction-v2.2');
+  assert.equal(getSemanticTaskContract('requirement_extraction').contract_version, '4.3-requirement-extraction-v3');
   assert.equal(getSemanticTaskContract('evidence_support_assessment').contract_version, '4.3-evidence-support-assessment-v1');
 });
 
@@ -78,6 +79,74 @@ test('eval-only json_schema override is forwarded while default remains json_obj
   assert.equal(request.response_format.json_schema.strict, true);
   assert.deepEqual(request.response_format.json_schema.schema, EVIDENCE_SUPPORT_PROVIDER_JSON_SCHEMA);
   assert.equal(request.stream, false);
+});
+
+test('DeepSeek Flash generation controls include non-thinking mode and single completion', async () => {
+  let request;
+  const provider = new OpenAICompatibleProvider({
+    baseUrl: 'https://provider.invalid/v1', apiKey: 'secret-test-key', model: 'deepseek-ai/DeepSeek-V4-Flash',
+    generationConfig: {
+      response_format: {
+        type: 'json_schema',
+        json_schema: { name: 'requirement_extraction_data', strict: true, schema: { type: 'object' } }
+      },
+      enable_thinking: false,
+      temperature: 0.1,
+      top_p: 1,
+      top_k: 50,
+      frequency_penalty: 0,
+      max_tokens: 3200,
+      stream: false,
+      n: 1
+    },
+    fetchImpl: async (_url, options) => {
+      request = JSON.parse(options.body);
+      return new Response(JSON.stringify({ choices: [{ finish_reason: 'stop', message: { content: '{"requirements":[]}' } }] }), { status: 200 });
+    }
+  });
+
+  const result = await provider.invoke({ instruction: 'instruction', payload: {} });
+  assert.equal(request.model, 'deepseek-ai/DeepSeek-V4-Flash');
+  assert.equal(request.enable_thinking, false);
+  assert.equal(request.temperature, 0.1);
+  assert.equal(request.top_p, 1);
+  assert.equal(request.top_k, 50);
+  assert.equal(request.frequency_penalty, 0);
+  assert.equal(request.max_tokens, 3200);
+  assert.equal(request.stream, false);
+  assert.equal(request.n, 1);
+  assert.equal(Object.hasOwn(request, 'thinking_budget'), false);
+  assert.equal(Object.hasOwn(request, 'reasoning_effort'), false);
+  assert.equal(request.response_format.type, 'json_schema');
+  assert.equal(request.response_format.json_schema.strict, true);
+  assert.equal(result.provider_audit.generation_config.enable_thinking, false);
+  assert.equal(result.provider_audit.generation_config.n, 1);
+});
+
+test('Gateway maps explicit runtime generation controls into the generic Provider adapter', () => {
+  const config = gatewayConfigFromEnv({
+    SEMANTIC_GATEWAY_PROVIDER: 'openai_compatible',
+    SEMANTIC_GATEWAY_API_KEY: 'service-key',
+    SEMANTIC_GATEWAY_PROVIDER_API_BASE: 'https://provider.invalid/v1',
+    SEMANTIC_GATEWAY_PROVIDER_API_KEY: 'provider-key',
+    SEMANTIC_GATEWAY_MODEL: 'deepseek-ai/DeepSeek-V4-Flash',
+    SEMANTIC_GATEWAY_ENABLE_THINKING: 'false',
+    SEMANTIC_GATEWAY_TEMPERATURE: '0.1',
+    SEMANTIC_GATEWAY_TOP_P: '1',
+    SEMANTIC_GATEWAY_TOP_K: '50',
+    SEMANTIC_GATEWAY_FREQUENCY_PENALTY: '0',
+    SEMANTIC_GATEWAY_MAX_TOKENS: '3200',
+    SEMANTIC_GATEWAY_STREAM: 'false',
+    SEMANTIC_GATEWAY_N: '1'
+  });
+  assert.equal(config.provider.generationConfig.enable_thinking, false);
+  assert.equal(config.provider.generationConfig.temperature, 0.1);
+  assert.equal(config.provider.generationConfig.top_p, 1);
+  assert.equal(config.provider.generationConfig.top_k, 50);
+  assert.equal(config.provider.generationConfig.frequency_penalty, 0);
+  assert.equal(config.provider.generationConfig.max_tokens, 3200);
+  assert.equal(config.provider.generationConfig.stream, false);
+  assert.equal(config.provider.generationConfig.n, 1);
 });
 
 test('OpenAI-compatible adapter preserves HTTP 400/401 status after one request', async () => {

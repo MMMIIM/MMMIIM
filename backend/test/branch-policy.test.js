@@ -41,10 +41,10 @@ function healthyFetch(url) {
     service: 'semantic-gateway',
     task_registry_loaded: true,
     task_types: ['requirement_extraction'],
-    requirement_extraction_contract_version: '4.3-requirement-extraction-v2.2',
-    requirement_extraction_prompt_hash: 'ffbdc1b02cee96389b16c452c183595197db18c1ad583a86c96b99529ed57517',
-    candidate_schema_contract_version: '4.3-requirement-candidate-v2',
-    candidate_schema_sha256: '366a466202f828ca97cae771a6bc34eb9f926a071ade509294ccb85139ac37da'
+    requirement_extraction_contract_version: '4.3-requirement-extraction-v3',
+    requirement_extraction_prompt_hash: 'de424ed7fa81a476c2021f35b6c63babd654c32e48bf3d42ec0380356fd4c589',
+    candidate_schema_contract_version: '4.3-requirement-candidate-v3',
+    candidate_schema_sha256: '1f5bd20f624a34a5f0bfd76e226f24d3595cc8a1e06bdc176c3d40e9694edbba'
   });
   throw new Error(`unexpected url ${url}`);
 }

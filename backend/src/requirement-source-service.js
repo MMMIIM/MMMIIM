@@ -82,7 +82,10 @@ export class RequirementSourceService {
       const sourceRefs = Array.isArray(candidate.source_refs)
         ? candidate.source_refs
         : persistedSources.flatMap((source) => Array.isArray(source?.source_refs) ? source.source_refs : []);
-      return sourceUpdate(candidate, this.resolver.resolve({ source_refs: sourceRefs }, {
+      const sourceRange = sourceRefs.length
+        ? { start_ref: sourceRefs[0], end_ref: sourceRefs.at(-1) }
+        : null;
+      return sourceUpdate(candidate, this.resolver.resolve({ source_range: sourceRange }, {
         id: candidate.source_chunk_id, chunk_number: chunk?.chunk_number, segments
       }));
     });

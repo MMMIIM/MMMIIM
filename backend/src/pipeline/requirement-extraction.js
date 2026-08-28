@@ -66,7 +66,10 @@ export function validateRequirementExtractionEnvelope(gatewayResponse) {
     return {
       text: text.trim(),
       category: candidate.category,
-      source_refs: [...candidate.source_refs],
+      source_range: {
+        start_ref: candidate.source_range.start_ref,
+        end_ref: candidate.source_range.end_ref
+      },
       mandatory_observed: candidate.mandatory_observed,
       requires_confirmation: candidate.requires_confirmation
     };

@@ -53,25 +53,28 @@ export class SourceLocationResolver {
   constructor() {}
 
   resolve(candidate, chunk) {
-    const sourceRefs = Array.isArray(candidate?.source_refs) ? candidate.source_refs : [];
+    const sourceRange = candidate?.source_range;
     const segments = (chunk?.segments || []).filter((item) => raw(item.text));
     const byRef = new Map(segments.map((item, index) => [item.source_ref || item.span_id, { item, index }]));
-    if (!sourceRefs.length || sourceRefs.some((ref) => typeof ref !== 'string' || !/^C\d{3}-S\d{3}$/.test(ref))) {
-      throw Object.assign(new Error('候选需求必须提供有效 source_refs。'), { code: 'GATEWAY_REQUIREMENTS_INVALID' });
+    if (!sourceRange || typeof sourceRange !== 'object' || Array.isArray(sourceRange)
+      || Object.keys(sourceRange).some((key) => !['start_ref', 'end_ref'].includes(key))
+      || typeof sourceRange.start_ref !== 'string'
+      || typeof sourceRange.end_ref !== 'string'
+      || !/^C\d{3}-S\d{3}$/.test(sourceRange.start_ref)
+      || !/^C\d{3}-S\d{3}$/.test(sourceRange.end_ref)) {
+      throw Object.assign(new Error('候选需求必须提供有效 source_range。'), { code: 'GATEWAY_REQUIREMENTS_INVALID' });
     }
-    if (new Set(sourceRefs).size !== sourceRefs.length) {
-      throw Object.assign(new Error('source_refs 含重复引用，无法确定性定位。'), { code: 'GATEWAY_REQUIREMENTS_INVALID' });
+    const start = byRef.get(sourceRange.start_ref);
+    const end = byRef.get(sourceRange.end_ref);
+    if (!start || !end) {
+      throw Object.assign(new Error('来源范围端点不在当前分片窗口内，无法确定性定位。'), { code: 'SOURCE_LOCATION_UNRESOLVED' });
     }
-    const selected = sourceRefs.map((ref) => byRef.get(ref));
-    if (selected.some((value) => !value)) {
-      throw Object.assign(new Error('来源引用不在当前分片窗口内，无法确定性定位。'), { code: 'SOURCE_LOCATION_UNRESOLVED' });
+    if (start.index > end.index) {
+      throw Object.assign(new Error('来源范围端点顺序无效，无法确定性定位。'), { code: 'SOURCE_LOCATION_UNRESOLVED' });
     }
-    const ordered = [...selected].sort((left, right) => left.index - right.index);
-    const contiguous = ordered.every((value, index) => index === 0 || value.index === ordered[index - 1].index + 1);
-    if (!contiguous) {
-      throw Object.assign(new Error('来源引用不是当前分片中的连续段落范围。'), { code: 'SOURCE_LOCATION_UNRESOLVED' });
-    }
-    const match = { segments: ordered.map((value) => value.item) };
+    const ordered = segments.slice(start.index, end.index + 1);
+    const sourceRefs = ordered.map((segment) => segment.source_ref || segment.span_id);
+    const match = { segments: ordered };
     const matchType = match.segments.length === 1 ? SOURCE_MATCH_TYPES.EXACT_SINGLE : SOURCE_MATCH_TYPES.EXACT_MULTI;
     return { location: { source_text: match.segments.map((item) => item.text).join('\n'), ...location(match, chunk, matchType, 1, sourceRefs) }, warning: null };
   }

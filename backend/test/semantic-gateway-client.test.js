@@ -283,9 +283,10 @@ test('probe-v1 仅传递安全 Gateway 诊断，普通错误不暴露 probe 数�
         text_empty: false,
         category_type: 'missing',
         category_value: null,
-        source_text_type: 'string',
-        source_text_empty: false,
-        source_clause_type: 'null',
+        source_range_type: 'object',
+        source_range_keys: ['start_ref', 'end_ref'],
+        source_range_start_ref_type: 'string',
+        source_range_end_ref_type: 'string',
         mandatory_observed_type: 'boolean',
         requires_confirmation_type: 'boolean'
       }]
@@ -430,6 +431,34 @@ test('backend/.env 使用唯一绝对路径并覆盖长期进程继承的旧网�
   assert.equal(dotenvOptions.override, true);
   assert.equal(dotenvOptions.processEnv, env);
   assert.equal(runtime.env.V43_GATEWAY_API_BASE, 'http://127.0.0.1:18080/v1');
+});
+
+test('容器运行时保留 Compose 注入的内部连接覆盖，不被挂载 backend/.env 反向覆盖', () => {
+  const env = {
+    BACKEND_RUNTIME_MODE: 'container',
+    HOST: '0.0.0.0',
+    DATABASE_URL: 'postgresql://bid_user:bid_password@postgres:5432/bid_platform',
+    SEMANTIC_GATEWAY_API_BASE: 'http://semantic-gateway:18082'
+  };
+  let dotenvOptions;
+  const runtime = createBackendRuntime({
+    env,
+    dotenvConfig(options) {
+      dotenvOptions = options;
+      if (options.override) {
+        Object.assign(options.processEnv, {
+          HOST: '127.0.0.1',
+          DATABASE_URL: 'postgresql://localhost:5432/stale',
+          SEMANTIC_GATEWAY_API_BASE: 'http://127.0.0.1:18080/v1'
+        });
+      }
+      return { parsed: {} };
+    }
+  });
+  assert.equal(dotenvOptions.override, false);
+  assert.equal(runtime.env.HOST, '0.0.0.0');
+  assert.equal(runtime.env.DATABASE_URL, 'postgresql://bid_user:bid_password@postgres:5432/bid_platform');
+  assert.equal(runtime.env.SEMANTIC_GATEWAY_API_BASE, 'http://semantic-gateway:18082');
 });
 
 test('网关配置解析器只接受 V43_GATEWAY_*，绝不回退到旧 DIFY_*', async () => {
