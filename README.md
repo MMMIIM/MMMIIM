@@ -1,4 +1,4 @@
-# Bid Pilot
+# TenderFlow｜AI 标书生成与可信响应平台
 
 > A production-shaped AI workflow for enterprise bid response generation.
 
