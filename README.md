@@ -1,4 +1,4 @@
-# TenderFlow｜AI 标书生成与可信响应平台
+# TenderFlow
 
 > A production-shaped AI workflow for enterprise bid response generation.
 
@@ -231,7 +231,7 @@ I also maintain [`ai-agent-skills`](https://github.com/MMMIIM/ai-agent-skills), 
 
 ## 中文说明
 
-Bid Pilot 是一个围绕**政企标书专业工作流**构建的个人 AI 产品实践。
+TenderFlow 是一个围绕**政企标书专业工作流**构建的个人 AI 产品实践。
 
 重点不是“让模型一次生成完整标书”，而是探索如何把需求抽取、企业证据、声明、正文生成、风险控制与 Evaluation 拆成可追踪、可校验、可恢复的产品链路，并明确：
 
