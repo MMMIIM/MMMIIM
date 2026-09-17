@@ -13,9 +13,50 @@ test('Embedding Client 验证批量数量、维度和有限数值',async()=>{
 });
 
 test('Retrieval Query 只使用 Canonical Requirement 且不创建 Evidence',async()=>{
-  let completed;let evidenceWrites=0;const repository={getCanonicalRequirementForRetrieval:async()=>({id:REQUIREMENT_ID,project_id:PROJECT_ID,req_id:'REQ-001',text:'国产化部署',requirement_category:'technical'}),createRetrievalRun:async(value)=>({retrieval_run_id:'run',...value}),listChunksForRetrieval:async()=>[{chunk_id:'C1',chunk_hash:'H1',source_text:'部署环境：麒麟环境',material_type:'product_documentation',embedding_id:null}],prepareRetrievalCandidates:async(value)=>{assert.equal(value.candidateK,20);return[{chunk_id:'C1',material_id:'M1',source_text:'部署环境：麒麟环境',material_type:'product_documentation',embedding_id:'E1',similarity_score:.9,rank:1}]},completeRetrievalRun:async(value)=>{completed=value;return{run:{status:'succeeded'},raw_candidates:value.ranking.raw_candidates,final_candidates:value.ranking.final_candidates,results:value.ranking.final_candidates};},failRetrievalRun:async()=>{},createEvidenceRecord:async()=>{evidenceWrites+=1;}};
+  let created;let completed;let evidenceWrites=0;const repository={getCanonicalRequirementForRetrieval:async()=>({id:REQUIREMENT_ID,project_id:PROJECT_ID,req_id:'REQ-001',text:'国产化部署',requirement_category:'technical'}),createRetrievalRun:async(value)=>{created=value;return{retrieval_run_id:'run',...value};},listChunksForRetrieval:async()=>[{chunk_id:'C1',chunk_hash:'H1',source_text:'部署环境：麒麟环境',material_type:'product_documentation',embedding_id:null}],prepareRetrievalCandidates:async(value)=>{assert.equal(value.candidateK,20);return[{chunk_id:'C1',material_id:'M1',source_text:'部署环境：麒麟环境',material_type:'product_documentation',embedding_id:'E1',similarity_score:.9,rank:1}]},completeRetrievalRun:async(value)=>{completed=value;return{run:{status:'succeeded'},raw_candidates:value.ranking.raw_candidates,final_candidates:value.ranking.final_candidates,results:value.ranking.final_candidates};},failRetrievalRun:async()=>{},createEvidenceRecord:async()=>{evidenceWrites+=1;}};
   const embeddingClient={model:'fixture',version:'v1',dimension:3,embed:async(texts)=>{assert.deepEqual(texts,['国产化部署','部署环境：麒麟环境']);return[[1,0,0],[.9,.1,0]];}};const service=new EnterpriseRetrievalService({repository,embeddingClient,defaultTopK:4,clock:()=>10});
-  await assert.rejects(()=>service.retrieve(REQUIREMENT_ID,{query_text:'伪造'}),(error)=>error.code==='RETRIEVAL_QUERY_IMMUTABLE');const result=await service.retrieve(REQUIREMENT_ID,{});assert.equal(result.run.status,'succeeded');assert.equal(result.answer_status,'CANDIDATES_FOUND');assert.equal(completed.ranking.fallback_mode,'raw_vector');assert.equal(result.final_candidates.length,1);assert.equal(evidenceWrites,0);
+  await assert.rejects(()=>service.retrieve(REQUIREMENT_ID,{query_text:'伪造'}),(error)=>error.code==='RETRIEVAL_QUERY_IMMUTABLE');const result=await service.retrieve(REQUIREMENT_ID,{});assert.equal(result.run.status,'succeeded');assert.equal(result.answer_status,'CANDIDATES_FOUND');assert.equal(completed.ranking.fallback_mode,'raw_vector');assert.equal(result.semantic_rerank_activated,false);assert.equal(result.rerank_mode,'RAW_VECTOR_FALLBACK');assert.equal(result.rerank_fallback_reason,'BACKEND_SEMANTIC_CONTRACT_UNAVAILABLE');assert.deepEqual(created.semanticMetadata,{});assert.equal(result.final_candidates.length,1);assert.equal(evidenceWrites,0);
+});
+
+test('P1G caller semantic_metadata cannot activate or influence Production ranking',async()=>{
+  const variants=[
+    {},
+    {semantic_metadata:{requirement_role:{value:'project_case',status:'approved'},evidence_needs:[{value:'project_case',status:'approved'}],candidate_roles:{business:{value:'project_case',status:'approved'}}}},
+    {semantic_metadata:{requirement_role:{value:'qualification',status:'approved'},evidence_needs:[{value:'qualification',status:'approved'}],candidate_roles:{business:{value:'qualification',status:'approved'},second:{value:'personnel_profile',status:'approved'}}}},
+    {semantic_metadata:{requirement_role:{value:'unknown',status:'unknown'},evidence_needs:[],candidate_roles:{}}}
+  ];
+  const runWithVariant=async(input)=>{
+    let created;let completed;
+    const repository={
+      getCanonicalRequirementForRetrieval:async()=>({id:REQUIREMENT_ID,project_id:PROJECT_ID,req_id:'REQ-001',text:'系统应提供可核验的测试记录。',requirement_category:'technical'}),
+      createRetrievalRun:async(value)=>{created=value;return{retrieval_run_id:'run',...value};},
+      listChunksForRetrieval:async()=>[],
+      prepareRetrievalCandidates:async()=>[
+        {chunk_id:'heading',chunk_hash:'H1',source_text:'# 测试记录',material_id:'M1',material_type:'qualification',embedding_id:'E1',similarity_score:.99,rank:1},
+        {chunk_id:'business',chunk_hash:'H2',source_text:'测试记录：已完成并可核验。',material_id:'M1',material_type:'qualification',embedding_id:'E2',similarity_score:.8,rank:2},
+        {chunk_id:'second',chunk_hash:'H3',source_text:'测试结果归档于项目资料。',material_id:'M2',material_type:'qualification',embedding_id:'E3',similarity_score:.7,rank:3}
+      ],
+      completeRetrievalRun:async(value)=>{completed=value;return{run:{status:'succeeded'},raw_candidates:value.ranking.raw_candidates,final_candidates:value.ranking.final_candidates,results:value.ranking.final_candidates};},
+      failRetrievalRun:async()=>{}
+    };
+    const embeddingClient={model:'fixture',version:'v1',dimension:3,embed:async()=>[[1,0,0]]};
+    const result=await new EnterpriseRetrievalService({repository,embeddingClient,defaultTopK:8}).retrieve(REQUIREMENT_ID,input);
+    return{created,completed,result};
+  };
+  const runs=await Promise.all(variants.map(runWithVariant));
+  const finalOrder=runs[0].result.final_candidates.map((item)=>item.chunk_id);
+  const survivorOrder=runs[0].result.candidate_hygiene.eligible_candidates.map((item)=>item.chunk_id);
+  for(const [index,run] of runs.entries()){
+    assert.deepEqual(run.result.final_candidates.map((item)=>item.chunk_id),finalOrder,`variant ${index} final order`);
+    assert.deepEqual(run.result.candidate_hygiene.eligible_candidates.map((item)=>item.chunk_id),survivorOrder,`variant ${index} hygiene survivors`);
+    assert.deepEqual(run.completed.ranking.final_candidates.map((item)=>item.chunk_id),finalOrder,`variant ${index} persisted order`);
+    assert.deepEqual(run.created.semanticMetadata,{});
+    assert.equal(run.completed.ranking.fallback_mode,'raw_vector');
+    assert.equal(run.result.semantic_rerank_activated,false);
+    assert.equal(run.result.rerank_mode,'RAW_VECTOR_FALLBACK');
+    assert.equal(run.result.rerank_fallback_reason,'BACKEND_SEMANTIC_CONTRACT_UNAVAILABLE');
+    assert.equal(run.result.caller_semantic_metadata_ignored,index>0);
+  }
 });
 
 test('Retrieval material scope is explicit and empty scope returns no-answer',async()=>{

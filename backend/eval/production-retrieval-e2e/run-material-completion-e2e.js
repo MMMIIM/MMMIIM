@@ -46,8 +46,8 @@ try{
   const material=await materialService.upload({projectId:project.id,file:{originalname:'stage12-iso27001-proof.md',mimetype:'text/markdown',size:buffer.length,buffer},materialType:'qualification'});
   const requirement=(await pool.query(`SELECT id FROM requirements WHERE project_id=$1 AND req_id=$2`,[project.id,REQUIREMENT_ID])).rows[0];
   const embeddingClient={model:'stage12-deterministic-embedding',version:'v1',dimension:3,embed:async inputs=>inputs.map(()=>[1,0,0])};
-  const retrievalService=new EnterpriseRetrievalService({repository,embeddingClient}),chunks=(await repository.listMaterialChunks(material.id));
-  const retrieval=await retrievalService.retrieve(requirement.id,{semantic_metadata:{requirement_role:{value:'atomic_requirement',status:'approved'},evidence_needs:[{value:'qualification',status:'approved'}],candidate_roles:Object.fromEntries(chunks.map(x=>[x.chunk_id,{value:'qualification',status:'approved'}]))}});
+  const retrievalService=new EnterpriseRetrievalService({repository,embeddingClient});
+  const retrieval=await retrievalService.retrieve(requirement.id);
   const anchor=retrieval.final_candidates?.[0]||retrieval.results?.[0];if(!anchor)throw Object.assign(new Error('No retrieval candidate'),{code:'STAGE12_RETRIEVAL_EMPTY'});
   const span=await new EvidenceSourceSpanService({repository}).resolveFromRetrieval({projectId:project.id,requirementId:REQUIREMENT_ID,retrievalRunId:retrieval.run.retrieval_run_id,anchorChunkId:anchor.chunk_id});
   const reviewService=new EvidenceReviewService({repository,semanticReviewer:new FixtureReviewer(),reviewerVersion:'stage12-deterministic-reviewer-v1'});

@@ -1,0 +1,121 @@
+{
+  "artifact_type": "V43_RAG_RETRIEVAL_P1G_ORPHANED_SEMANTIC_RERANK_AUTHORITY_CONTAINMENT_CHECKPOINT_V1",
+  "artifact_version": "1.0.0",
+  "status": "PASS",
+  "primary_gate": "GATE_A_ORPHANED_RERANK_AUTHORITY_CONTAINED",
+  "mode": "PRODUCTION_CONTRACT_CLOSURE_FAIL_CLOSED_ENGINEERING",
+  "repository": {
+    "canonical": "MMMIIM/MMMIIM",
+    "branch": "feat/v4.3-semantic-boundary-routing",
+    "starting_head": "b5bb1aedbda87105973cf35a48f3c859358cbeb8",
+    "durable_engineering_authority": "b5bb1aedbda87105973cf35a48f3c859358cbeb8",
+    "tracked_authority_parity": "PASS",
+    "untracked_external_raw_archive_scope": "LOCAL_ONLY_OUT_OF_SCOPE"
+  },
+  "production_path": {
+    "route": "POST /api/requirements/:requirementId/enterprise-retrieval",
+    "service": "backend/src/pipeline/enterprise-retrieval-service.js",
+    "retrieve_function": "EnterpriseRetrievalService.retrieve",
+    "readback_function": "EnterpriseRetrievalService.get",
+    "retrieval_contract_version": "4.3-production-retrieval-v1",
+    "rerank_version": "4.3-role-need-rerank-v1",
+    "candidate_k": 20,
+    "final_k": 8
+  },
+  "authority_containment": {
+    "caller_semantic_metadata_accepted_for_compatibility": true,
+    "caller_semantic_metadata_persisted_as_authority": false,
+    "caller_semantic_metadata_reaches_reranker": false,
+    "caller_semantic_metadata_effect_on_ranking": 0,
+    "production_semantic_metadata": "EMPTY_BACKEND_CONTRACT",
+    "semantic_rerank_activated": false,
+    "rerank_mode": "RAW_VECTOR_FALLBACK",
+    "rerank_fallback_reason": "BACKEND_SEMANTIC_CONTRACT_UNAVAILABLE",
+    "old_reranker_status": "CONTRACT_STRANDED_NOT_PRODUCTION_AUTHORITY_NOT_ACTIVE_WITH_CALLER_METADATA",
+    "old_reranker_algorithm_changed": false
+  },
+  "invariance_test": {
+    "test": "backend/test/enterprise-retrieval.test.js",
+    "input_variants": [
+      "NO_SEMANTIC_METADATA",
+      "APPARENTLY_VALID_APPROVED_METADATA",
+      "CONFLICTING_APPROVED_METADATA",
+      "UNKNOWN_INCOMPLETE_METADATA"
+    ],
+    "same_canonical_requirement": true,
+    "same_fixture_vector_path": true,
+    "same_raw_candidate_ids_and_ranks": true,
+    "same_hygiene_survivors": true,
+    "same_final_order": true,
+    "caller_metadata_ranking_invariance": "PASS",
+    "caller_metadata_authority_escape": 0,
+    "production_fallback_determinism": "PASS"
+  },
+  "eval_parity": {
+    "current_baseline": "DENSE_PLUS_HYGIENE_PLUS_RAW_VECTOR_FALLBACK",
+    "production_shaped_runners_updated": [
+      "backend/eval/production-retrieval-e2e/run-production-e2e.js",
+      "backend/eval/production-retrieval-e2e/run-material-completion-e2e.js"
+    ],
+    "historical_p1d_artifacts_mutated": false,
+    "direct_dormant_reranker_component_tests_retained": true,
+    "provider_calls": 0,
+    "embedding_provider_calls": 0,
+    "llm_calls": 0
+  },
+  "verification": {
+    "node_check_updated_e2e_runners": "PASS",
+    "related_test_count": 26,
+    "related_test_pass": 26,
+    "related_test_fail": 0,
+    "git_diff_check": "PASS",
+    "known_existing_test_debt": {
+      "retrieval_baseline_fixture_failures": 7,
+      "reason": "tracked historical eval/corpus and eval/retrieval-baseline fixtures absent",
+      "p1g_cause": false
+    }
+  },
+  "safety": {
+    "production_retrieval_changed": true,
+    "production_change_kind": "CALLER_SEMANTIC_AUTHORITY_CONTAINMENT_ONLY",
+    "vector_similarity_changed": false,
+    "candidate_k_changed": false,
+    "final_k_changed": false,
+    "hygiene_changed": false,
+    "gold_mutated": false,
+    "corpus_mutated": false,
+    "embedding_changed": false,
+    "fact_changed": false,
+    "mapping_changed": false,
+    "claim_changed": false,
+    "writer_changed": false,
+    "db_writes": 0,
+    "push": 0,
+    "merge": 0,
+    "deploy": 0,
+    "migration_required": false
+  },
+  "changed_files": [
+    "backend/src/pipeline/enterprise-retrieval-service.js",
+    "backend/test/enterprise-retrieval.test.js",
+    "backend/eval/production-retrieval-e2e/run-production-e2e.js",
+    "backend/eval/production-retrieval-e2e/run-material-completion-e2e.js",
+    "docs/handoff/V43_RAG_RETRIEVAL_P1G_ORPHANED_SEMANTIC_RERANK_AUTHORITY_CONTAINMENT_V1/V43_RAG_RETRIEVAL_P1G_ORPHANED_SEMANTIC_RERANK_AUTHORITY_CONTAINMENT_CHECKPOINT_V1.md",
+    "docs/handoff/V43_RAG_RETRIEVAL_P1G_ORPHANED_SEMANTIC_RERANK_AUTHORITY_CONTAINMENT_V1/V43_RAG_RETRIEVAL_P1G_ORPHANED_SEMANTIC_RERANK_AUTHORITY_CONTAINMENT_CHECKPOINT_V1.json"
+  ],
+  "file_sha256": {
+    "backend/src/pipeline/enterprise-retrieval-service.js": "213C1A30E7772AC81D1E4F5060C38BA5577631D848B0983CC8FAE4A7A5E8CAF1",
+    "backend/src/pipeline/semantic-retrieval-reranker.js": "F5447CE21E98409D62F8B35837638424B99DC706EA777B8A5CD29AC1DF67E884",
+    "backend/test/enterprise-retrieval.test.js": "5E68263C99C605B75CD6E0363A48187990C3F2035356DDF2D00995D20426F88E",
+    "backend/eval/production-retrieval-e2e/run-production-e2e.js": "4A425CBF659BB523B7E9B7675AF030057E746B56EDF6A77C1B8CC709C1E5C232",
+    "backend/eval/production-retrieval-e2e/run-material-completion-e2e.js": "C73D8DA03E1B38ED70708D6355A5C8008FB3FE28C54CC99A61FD5E0E4E74537C"
+  },
+  "local_commit_sha": null,
+  "network_operations": {
+    "push": 0,
+    "merge": 0,
+    "rebase": 0,
+    "force_push": 0,
+    "deploy": 0
+  }
+}
