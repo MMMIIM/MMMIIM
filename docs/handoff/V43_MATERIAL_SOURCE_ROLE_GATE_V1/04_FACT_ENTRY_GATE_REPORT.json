@@ -1,0 +1,35 @@
+{
+  "artifact_type": "V43_MATERIAL_SOURCE_ROLE_GATE_V1_FACT_ENTRY_GATE",
+  "entry_owner": "backend/src/evidence-source-fact-service.js",
+  "entry_function": "EvidenceSourceFactService.extract",
+  "role_owner": "backend/src/pipeline/material-source-authority-policy.js",
+  "reference_behavior": {
+    "result_status": "FACT_SKIPPED_REFERENCE_ONLY",
+    "provider_calls": 0,
+    "fact_persistence": 0,
+    "fatal_error": false,
+    "audit_fields": [
+      "material_id",
+      "material_type",
+      "source_role",
+      "policy_version",
+      "role_reason"
+    ]
+  },
+  "evidence_candidate_behavior": {
+    "enters_existing_fact_provider_and_gate": true,
+    "existing_gates_preserved": [
+      "strict contract",
+      "grounding",
+      "canonicalization",
+      "review",
+      "fact authority"
+    ]
+  },
+  "quarantine_precedence": "lifecycle/material authority checks run before role skip; quarantined material remains forbidden",
+  "direct_legacy_fact_guard": "backend/src/evidence-fact-service.js create/decide rejects Reference-only authority",
+  "tests": [
+    "backend/test/material-source-role-gate.test.js",
+    "backend/test/evidence-fact-contract-v1.test.js"
+  ]
+}

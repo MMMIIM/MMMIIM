@@ -1,0 +1,47 @@
+{
+  "checkpoint": "V43_FACT_REVIEW_BURDEN_DETERMINISTIC_REDUCTION_V1",
+  "source_run_id": "v43-targeted-fact-host-replay-v3-20260914134908-13b290ae",
+  "source_artifact_sha256": "aa0d6d82632b5563f852454391a783321a2856c461600e83a5a6c36ceeb8328a",
+  "prior_v1_checkpoint_sha256": "e1e43772b8b73d1eba8322e9ce08dc41af4a3b35eb925d0e77c4c6b5a0b8b6b8",
+  "prior_v2_checkpoint_sha256": "f8621c1b08ace9235389196b46354a600e284bcf239af3e6d165af54bb0e1090",
+  "current_code_sha256": {
+    "backend/src/pipeline/evidence-fact-candidate-v2.js": "e735520e9e407d7516ed47800a8ccb1138028186cf4ae8a2c1377916b66ddc61",
+    "backend/src/pipeline/evidence-fact-candidate-v2-1.js": "373f3af06f31027c40f874bc15fd84dd9e58622efe421847f132290bbf879262",
+    "backend/test/evidence-fact-candidate-v2-1.test.js": "6d5e24e41f8037872c586d5f182410ede0d903d7f4c7840f523b08c892f613c1"
+  },
+  "candidate_count": 31,
+  "decision_distribution": {
+    "ACCEPT": 19,
+    "REVIEW_REQUIRED": 12
+  },
+  "review_required_rate": 0.3870967741935484,
+  "review_reason_counts": {
+    "QUANTITY_QUALIFIER_CONTRACT_GAP": 8,
+    "STATUS_ENUM_UNRESOLVED": 1,
+    "STATEMENT_SEMANTIC_GROUNDING_UNRESOLVED": 8,
+    "SOURCE_BOUNDARY_COMPLETION_UNRESOLVED": 1
+  },
+  "quantity_normalized_count": 14,
+  "quantity_unresolved_count": 0,
+  "quantity_qualifier_contract_gap_count": 9,
+  "event_temporal_preserved_count": 6,
+  "validity_mapped_count": 0,
+  "unsupported_autoaccept_count": 0,
+  "hard_contradiction_escape_count": 0,
+  "source_boundary_guard_pass": true,
+  "negative_safety_all_fail_closed": true,
+  "canonical_contract_changed": false,
+  "prompt_changed": false,
+  "schema_changed": false,
+  "provider_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "fact_persistence": 0,
+  "gold_mutations": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "semantic_root_cause": "PENDING_GPT",
+  "status": "BLOCKED_QUANTITY_QUALIFIER_CONTRACT_GAP"
+}

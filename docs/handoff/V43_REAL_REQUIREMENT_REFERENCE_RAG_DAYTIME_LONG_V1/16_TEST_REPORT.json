@@ -1,0 +1,33 @@
+{
+  "artifact_type": "V43_TEST_REPORT",
+  "focused_tests": {
+    "status": "PASS",
+    "passed": 63,
+    "failed": 0,
+    "command": "node --test test/writer-reference-hygiene.test.js test/writer-v2-composition.test.js test/writer-authority-p0.test.js test/retrieval-chunk-role.test.js test/retrieval-substantive-hygiene-offline.test.js test/retrieval-source-eligibility.test.js test/enterprise-retrieval.test.js test/production-retrieval-contract.test.js"
+  },
+  "full_backend_regression": {
+    "status": "FAIL_PRE_EXISTING_UNRELATED_BASELINE",
+    "classification": "PRE_EXISTING_UNRELATED_BASELINE",
+    "command": "npm test -w backend",
+    "current_task_regressions_observed": 0,
+    "notes": "Existing path/fixture/governance failures were not changed or repaired."
+  },
+  "build": {
+    "status": "PASS",
+    "command": "npm run build"
+  },
+  "lint": {
+    "status": "PASS",
+    "command": "npm run lint",
+    "notes": "Line-ending warnings only."
+  },
+  "diff_check": {
+    "status": "PASS",
+    "command": "git diff --check"
+  },
+  "production_retrieval_regression": "NOT_EXECUTED_REAL_REQUIREMENT_SOURCE_BREADTH",
+  "provider_calls": 0,
+  "db_writes": 0,
+  "gold_mutations": 0
+}

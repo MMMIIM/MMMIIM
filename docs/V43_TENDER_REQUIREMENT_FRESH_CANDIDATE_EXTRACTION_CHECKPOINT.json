@@ -1,0 +1,57 @@
+{
+  "checkpoint": "V43_TENDER_REQUIREMENT_FRESH_CANDIDATE_EXTRACTION_CHECKPOINT",
+  "packet": "docs/V43_TENDER_REQUIREMENT_FRESH_CANDIDATE_EXTRACTION_PACKET.json",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "requirement_extraction_status": "PARTIAL_BLOCKED",
+  "tender_results": {
+    "JY-001": {
+      "parser": "PASS",
+      "candidates": 193,
+      "exact_source_excerpt_count": 193,
+      "missing_source_span_count": 0,
+      "status": "CANDIDATE_PENDING_HUMAN_AUTHORITY"
+    },
+    "TB-003": {
+      "parser": "PASS",
+      "candidates": 0,
+      "chunk_count": 33,
+      "fresh_extraction": "BLOCKED",
+      "failure_class": "environment",
+      "error_code": "GATEWAY_NETWORK_ERROR",
+      "status": "FRESH_EXTRACTION_BLOCKED"
+    },
+    "FAST-04": {
+      "parser": "PASS",
+      "candidates": 0,
+      "chunk_count": 50,
+      "fresh_extraction": "BLOCKED",
+      "failure_class": "environment",
+      "error_code": "GATEWAY_NETWORK_ERROR",
+      "status": "FRESH_EXTRACTION_BLOCKED"
+    }
+  },
+  "candidate_count": 193,
+  "source_coverage": {
+    "JY-001": "193/193 spans; 193/193 exact parser excerpts",
+    "TB-003": "0 candidates; parser/chunker PASS; fresh semantic extraction blocked by environment",
+    "FAST-04": "0 candidates; parser/chunker PASS; fresh semantic extraction blocked by environment"
+  },
+  "formal_req_id_assignments": 0,
+  "gold_promotion": "NOT_AUTHORIZED",
+  "production_db_writes": 0,
+  "provider_calls": 0,
+  "gateway_request_attempts": 2,
+  "retries": 0,
+  "blockers": [
+    "TB-003 fresh semantic extraction blocked by local Semantic Gateway network unavailability.",
+    "FAST-04 fresh semantic extraction blocked by local Semantic Gateway network unavailability.",
+    "JY-001 confidence is absent from historical artifact and remains Human-review required.",
+    "JY-001 historical source span hashes are retained for comparison; current parser excerpts are captured without asserting historical hash parity."
+  ],
+  "failure_classification": {
+    "TB-003": "environment",
+    "FAST-04": "environment"
+  },
+  "authority_status": "NO_AUTHORITATIVE_UPGRADE"
+}

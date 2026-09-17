@@ -1,0 +1,84 @@
+{
+  "artifact_type": "V43_E2E_EMBEDDING_REUSE_AUDIT",
+  "version": "v1",
+  "generated_at": "2026-09-15T16:45:25.907Z",
+  "reuse_policy": "Reuse only vectors whose source/chunk/model/version/dimension identity is already evidenced; do not re-embed in preflight.",
+  "corpora": [
+    {
+      "corpus_id": "CHENGCHUAN-SYNTHETIC-BASE-COM-01-16",
+      "source_classification": "SYNTHETIC_ENTERPRISE_EVIDENCE",
+      "material_count": 16,
+      "chunk_count": 160,
+      "embedding_row_count": 160,
+      "embedding_model": "Qwen/Qwen3-Embedding-0.6B",
+      "embedding_version": "1",
+      "dimension": 1024,
+      "source_chunk_identity_parity": "PASS",
+      "valid_vector_reuse": true,
+      "evidence": [
+        "docs/V43_CHENGCHUAN_REAL_FACT_ZERO_AUDIT.md",
+        "backend/eval/rag-pilot/V43_REAL_RAG_IMPORT_RETRIEVAL_SMOKE_REPORT.json"
+      ]
+    },
+    {
+      "corpus_id": "CHENGCHUAN-SYNTHETIC-V2-EXTENSION",
+      "source_classification": "SYNTHETIC_ENTERPRISE_EVIDENCE",
+      "material_count": 92,
+      "chunk_count": 676,
+      "embedding_row_count": null,
+      "embedding_rows_recorded": false,
+      "embedding_model": null,
+      "embedding_version": null,
+      "dimension": null,
+      "source_chunk_identity_parity": "SOURCE_AND_CHUNK_IDENTITY_PRESENT; VECTOR_ROWS_NOT_RECORDED_IN_IMPORT_ARTIFACT",
+      "valid_vector_reuse": false,
+      "evidence": [
+        "docs/V43_CHENGCHUAN_V2_IMPORT_CHECKPOINT.json",
+        "docs/V43_CHENGCHUAN_CONTROLLED_REAL_FACT_INVENTORY.json"
+      ]
+    },
+    {
+      "corpus_id": "HUAWEI-PUBLIC-REAL-PDF-PILOT-V1",
+      "source_classification": "REAL_PUBLIC_FIRST_PARTY",
+      "material_count": 6,
+      "chunk_count": 590,
+      "embedding_row_count": 590,
+      "embedding_model": "Qwen/Qwen3-Embedding-0.6B",
+      "embedding_version": "1",
+      "dimension": 1024,
+      "source_chunk_identity_parity": "PASS_IN_STORED_BINDING_AND_HOST_RETRIEVAL_ARTIFACTS",
+      "valid_vector_reuse": true,
+      "evidence": [
+        "docs/handoff/V43_REAL_E2E_AUTHORITY_AND_PROJECT_MATERIAL_BINDING_IMPLEMENTATION_V1/04_TB006_HUAWEI_BINDINGS.json",
+        "docs/handoff/V43_REAL_E2E_AUTHORITY_AND_PROJECT_MATERIAL_BINDING_IMPLEMENTATION_V1/host-retrieval-utf8.json"
+      ]
+    },
+    {
+      "corpus_id": "H3C-REFERENCE-CORPUS",
+      "source_classification": "REFERENCE_ONLY",
+      "material_count": null,
+      "chunk_count": null,
+      "embedding_row_count": 0,
+      "embedding_model": "Qwen/Qwen3-Embedding-0.6B",
+      "embedding_version": "1",
+      "dimension": 1024,
+      "source_chunk_identity_parity": "NOT_APPLICABLE_TO_REUSE; NO_VALID_REFERENCE_VECTORS_RECORDED",
+      "valid_vector_reuse": false,
+      "evidence": [
+        "docs/handoff/V43_REFERENCE_RETRIEVAL_SCHEMA_PARITY_CORE6_REPLAY_V2/14_PROVIDER_EMBEDDING_AUDIT.json"
+      ]
+    }
+  ],
+  "synthetic_evidence_embedding_reuse": {
+    "decision": "PARTIAL",
+    "reason": "COM-01..COM-16 base vectors are evidenced and reusable; V2 extension vector rows are not evidenced and are not reused.",
+    "reembed_performed": false
+  },
+  "reference_embedding_reuse": {
+    "decision": "NO_VALID_REFERENCE_VECTORS",
+    "reason": "Existing reference embedding audit records no valid reusable H3C vectors.",
+    "reembed_performed": false
+  },
+  "provider_calls": 0,
+  "db_writes": 0
+}

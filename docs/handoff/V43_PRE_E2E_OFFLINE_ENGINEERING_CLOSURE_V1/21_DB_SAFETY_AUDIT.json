@@ -1,0 +1,127 @@
+{
+  "artifact_type": "V43_DB_SAFETY_AUDIT_V1",
+  "generated_at": "2026-09-16",
+  "execution_mode": "OFFLINE_ONLY",
+  "provider_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "gold_mutations": 0,
+  "production_semantic_changes": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "commit": 0,
+  "push": 0,
+  "merge": 0,
+  "deploy": 0,
+  "production_target": "bid_platform",
+  "eval_targets_observed_in_artifacts": [
+    "bid_platform_flow_audit_test",
+    "bid_platform_reference_eval_v3",
+    "bid_platform_eval_chengchuan_v2"
+  ],
+  "migration_parity": {
+    "artifact_type": "V43_E2E_ENGINEERING_CONSISTENCY_AUDIT_V1_MIGRATION_SCHEMA_PARITY",
+    "inspection_mode": "READ_ONLY",
+    "migration_inventory": {
+      "directory": "backend/migrations",
+      "file_count": 52,
+      "latest_file": "052_requirement_scope_authority_and_project_material_bindings.sql",
+      "migration_runner": "backend/src/migrate.js",
+      "migration_ledger_table": "NOT_PRESENT_IN_INSPECTED_SCHEMA",
+      "executed_by_this_audit": 0
+    },
+    "company_materials_contract": {
+      "database_columns_relevant_to_version": [
+        "id",
+        "project_id",
+        "original_name",
+        "storage_key",
+        "file_hash",
+        "source_version",
+        "supersedes",
+        "superseded_by",
+        "effective_from",
+        "effective_to",
+        "effective_status",
+        "authority_level",
+        "usage_status",
+        "review_status",
+        "lifecycle_status",
+        "index_status",
+        "quarantine_reason",
+        "quarantined_at"
+      ],
+      "material_version_column": "ABSENT_IN_BOTH_INSPECTED_DATABASES",
+      "source_version_column": "PRESENT_IN_BOTH_INSPECTED_DATABASES"
+    },
+    "migration_evidence": [
+      {
+        "file": "backend/migrations/041_corpus_l3_public_materials.sql",
+        "table": "company_materials",
+        "operation": "ADD COLUMN IF NOT EXISTS source_version text",
+        "material_version_definition": false
+      },
+      {
+        "file": "backend/migrations/052_requirement_scope_authority_and_project_material_bindings.sql",
+        "creates": [
+          "requirement_scope_authority_decisions",
+          "project_material_bindings"
+        ],
+        "material_version_definition": false
+      },
+      {
+        "file": "backend/migrations/019_enterprise_evidence_contract.sql",
+        "creates_or_updates": [
+          "material_chunks",
+          "requirement_evidence_mappings",
+          "company_materials source metadata"
+        ],
+        "material_version_definition": false
+      }
+    ],
+    "query_parity": {
+      "reported_query_fragment": "m.material_version",
+      "read_only_reproduction": "SELECT m.material_version FROM company_materials m LIMIT 1",
+      "reproduction_sqlstate": "42703",
+      "current_checked_out_canary_query": "SELECT ... m.source_version ... FROM material_chunks c JOIN company_materials m ...",
+      "current_checked_out_canary_references_material_version": false,
+      "schema_contract_result": "source_version is the database material-version authority; material_version is not a database column"
+    },
+    "parity_classification": {
+      "test_db_schema_behind": false,
+      "code_schema_drift": true,
+      "query_contract_drift": false,
+      "wrong_database_target": true,
+      "runtime_emitting_query_identity": "NOT_VERIFIED; reported fragment absent from current checkout"
+    }
+  },
+  "migration_052": {
+    "file": "backend/migrations/052_requirement_scope_authority_and_project_material_bindings.sql",
+    "executed_by_this_task": false,
+    "production_execution": false,
+    "review_required_if_bundled": true
+  },
+  "write_policy": "no migration, DDL, INSERT, UPDATE, DELETE, or production DB connection from this task",
+  "evidence": [
+    {
+      "path": "docs/handoff/V43_E2E_ENGINEERING_CONSISTENCY_AUDIT_V1/03_MIGRATION_SCHEMA_PARITY.json",
+      "exists": true,
+      "bytes": 2647,
+      "sha256": "6db638b00de6e379b35d612ce6810d90280f93c16f7a0fb23c2f7d4938a145ae",
+      "status": "CURRENT_REUSABLE",
+      "roles": [],
+      "notes": []
+    },
+    {
+      "path": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/02_SCHEMA_MIGRATION_REPORT.json",
+      "exists": true,
+      "bytes": 9195,
+      "sha256": "1f61eb74bae42ec92e6d5a9cb44181c5f9f7c2e0789f32e2daf2d5f9fbd9a6a0",
+      "status": "HISTORICAL_ARCHIVE_ONLY",
+      "roles": [],
+      "notes": []
+    }
+  ]
+}

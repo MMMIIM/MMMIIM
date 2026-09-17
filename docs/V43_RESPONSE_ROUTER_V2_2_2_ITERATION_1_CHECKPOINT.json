@@ -1,0 +1,82 @@
+{
+  "checkpoint": "V43_RESPONSE_ROUTER_V2_2_2_DAYTIME_CLOSURE",
+  "run_id": "V43-RR-V2_2_2-V3-REPLAY-053ca92b0f8a111d",
+  "router_version": "v43-response-router-v2.2.2",
+  "implementation_id": "v43-response-router-v2.2.2-general-safety-closure",
+  "repair_iterations": 1,
+  "full_replay_count": 2178,
+  "safety_scope": {
+    "critical_p0_ids": [
+      "TB-003:REQ-215",
+      "HOLDOUT-REQ-01-CAN-0203",
+      "HOLDOUT-REQ-01-CAN-0205",
+      "HOLDOUT-REQ-01-CAN-0206",
+      "HOLDOUT-REQ-01-CAN-0208",
+      "HOLDOUT-REQ-02-CAN-0064",
+      "HOLDOUT-REQ-02-CAN-0068",
+      "HOLDOUT-REQ-02-CAN-0069",
+      "HOLDOUT-REQ-02-CAN-0070",
+      "HOLDOUT-REQ-02-CAN-0083",
+      "HOLDOUT-REQ-V2-01-CAN-0460",
+      "HOLDOUT-REQ-V2-02-CAN-0218",
+      "HOLDOUT-REQ-V2-02-CAN-0221",
+      "HOLDOUT-REQ-V2-02-CAN-0222"
+    ],
+    "high_safety_ids": [
+      "TB-006:REQ-043",
+      "HOLDOUT-REQ-01-CAN-0169",
+      "HOLDOUT-REQ-01-CAN-0225",
+      "HOLDOUT-REQ-V2-02-CAN-0042",
+      "HOLDOUT-REQ-V2-02-CAN-0230"
+    ],
+    "critical_p0_gate_missing": [],
+    "high_safety_gate_missing": [],
+    "reference_p0_human_gate_missing": 9
+  },
+  "metrics": {
+    "overall_primary_mode_agreement": {
+      "matched": 1796,
+      "total": 2178,
+      "rate": 0.82461
+    },
+    "per_cohort": {
+      "CORE6": {
+        "matched": 829,
+        "total": 1009,
+        "rate": 0.821606
+      },
+      "HOLDOUT_V1": {
+        "matched": 279,
+        "total": 397,
+        "rate": 0.702771
+      },
+      "HOLDOUT_V2": {
+        "matched": 688,
+        "total": 772,
+        "rate": 0.891192
+      }
+    },
+    "v221_correct_v222_wrong": 0,
+    "v221_wrong_v222_correct": 26,
+    "true_high_risk_evidence_false_negative": 0,
+    "true_future_commitment_as_existing_fact": 0,
+    "p0_compliance_escape": 0,
+    "overlay_primary_mode_mismatch": 0,
+    "overlay_evidence_dependency_mismatch": 0,
+    "need_review_count": 17,
+    "p0_human_gate_missing": 9,
+    "critical_p0_gate_missing": 0,
+    "high_safety_gate_missing": 0,
+    "reference_p0_human_gate_missing": 9
+  },
+  "side_effects": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "requirement_mutations": 0,
+    "source_truth_mutations": 0,
+    "reference_v3_mutations": 0
+  },
+  "status": "DETERMINISTIC_SAFETY_GATES_PASS_PENDING_SEMANTIC_REVIEW"
+}

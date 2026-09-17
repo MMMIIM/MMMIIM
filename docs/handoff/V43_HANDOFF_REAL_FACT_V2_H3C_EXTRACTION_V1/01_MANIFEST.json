@@ -1,0 +1,88 @@
+{
+  "run_id": "V43-H3C-REAL-FACT-V2-20260913064801",
+  "artifact_type": "V43_HANDOFF_REAL_FACT_V2_H3C_EXTRACTION_V1",
+  "source_foundation": {
+    "pack_id": "H3C_PUBLIC_REAL_ENTERPRISE_PACK_V1",
+    "enterprise_id": "H3C-PUBLIC-REAL-V1",
+    "source_count": 20,
+    "source_role": "REAL_PUBLIC_FIRST_PARTY"
+  },
+  "provider_runtime": {
+    "provider": "openai_compatible",
+    "gateway_base_url": "http://127.0.0.1:18082",
+    "provider_base_url": "https://api.siliconflow.cn/v1",
+    "provider_host": "api.siliconflow.cn",
+    "provider_port": "443",
+    "model": "deepseek-ai/DeepSeek-V4-Flash",
+    "service_key_present": true,
+    "provider_key_present": true,
+    "deepseek_official_api_base": "https://api.deepseek.com",
+    "deepseek_official_fact_model": "deepseek-v4-pro",
+    "deepseek_official_key_present": true,
+    "timeout_ms": 120000
+  },
+  "database": "bid_platform_flow_audit_test",
+  "provider_calls": 20,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "status": "READY_FOR_GPT_REAL_FACT_V2_H3C_SEMANTIC_ADJUDICATION",
+  "fact_extraction": {
+    "source_count": 20,
+    "material_processed": 20,
+    "total_chunks": 4929,
+    "provider_calls": 20,
+    "provider_failures": 0,
+    "gateway_failures": 3,
+    "retries": 0,
+    "raw_fact_candidates": 4,
+    "canonical_fact_candidates": 4,
+    "fact_review_required_count": 18,
+    "controlled_approved_fact_count": 4,
+    "semantic_failure_breakdown": {
+      "valid_empty_result": 13,
+      "strict_schema_failure": 3,
+      "contract_grounding_failure": 2
+    }
+  },
+  "persistence": {
+    "eval_db": "bid_platform_flow_audit_test",
+    "eval_db_writes": true,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "fact_production_writes": 0,
+    "downstream_actions": {
+      "mapping": 0,
+      "claim": 0,
+      "writer": 0
+    }
+  },
+  "requirement_blind_extraction": "PASS",
+  "source_snapshot": {
+    "source_role": "REAL_PUBLIC_FIRST_PARTY",
+    "enterprise_id": "H3C-PUBLIC-REAL-V1",
+    "duplicate_raw_artifacts": 0,
+    "requirement_tender_leakage": 0
+  },
+  "artifact_files": [
+    "00_GPT_README.md",
+    "01_MANIFEST.json",
+    "02_MATERIAL_LIFECYCLE_RECERT.json",
+    "03_PARSE_CHUNK_REPORT.json",
+    "04_PROVIDER_EXECUTION_REPORT.json",
+    "05_FACT_EXTRACTION_REPORT.json",
+    "06_REAL_FACT_V2_CANDIDATES.json",
+    "07_GPT_SEMANTIC_REVIEW_PACKET.json",
+    "08_AUTHORITY_CURRENTNESS_AUDIT.json",
+    "09_REQUIREMENT_BLIND_LEAKAGE_AUDIT.json",
+    "10_TEST_REPORT.json",
+    "11_CHECKPOINT.json",
+    "SHA256SUMS.txt"
+  ],
+  "parser_fidelity_note": "Frozen H3C snapshots are HTML; the existing plain-text/Markdown parser path was used under an isolated Eval filename without changing Production parser code.",
+  "provider_execution_identity": {
+    "gateway_adapter": "openai_compatible",
+    "routed_provider": "deepseek_official",
+    "model": "deepseek-v4-pro",
+    "endpoint": "/responses"
+  }
+}

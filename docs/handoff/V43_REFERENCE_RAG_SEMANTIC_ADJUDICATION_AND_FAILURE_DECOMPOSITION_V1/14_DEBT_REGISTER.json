@@ -1,0 +1,22 @@
+{
+  "artifact_type": "V43_REFERENCE_RAG_SEMANTIC_ADJUDICATION_DEBT_REGISTER",
+  "blockers": [
+    {
+      "code": "R1_REQUIREMENT_LEVEL_REFERENCE_FIDELITY_NOT_READY_FOR_PRODUCT_FREEZE",
+      "reason": "GPT R1 useful rate is 15%; weak corpus, near misses and ranking failures remain."
+    },
+    {
+      "code": "R2_TRUE_VECTOR_MMR_NOT_EXECUTED",
+      "reason": "ONE_OR_MORE_CASES_MISSING_VECTOR"
+    },
+    {
+      "code": "REFERENCE_NEED_ROUTING_DEBT",
+      "reason": "Six reference-not-needed SOLUTION cases remain in RAW_80 and are descriptive-only adjusted out."
+    }
+  ],
+  "non_blocking": [
+    "No Writer Reference Product Fidelity claim.",
+    "No threshold, reranker, MMR, corpus ingestion or Router change deployed."
+  ],
+  "semantic_root_cause": "PENDING_GPT"
+}

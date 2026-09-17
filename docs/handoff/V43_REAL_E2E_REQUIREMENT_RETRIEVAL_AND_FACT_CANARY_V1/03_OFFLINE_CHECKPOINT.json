@@ -1,0 +1,23 @@
+{
+  "artifact_type": "V43_REAL_E2E_REQUIREMENT_RETRIEVAL_FACT_CANARY_OFFLINE_CHECKPOINT_V1",
+  "status": "READY_FOR_HOST_RETRIEVAL_CANARY",
+  "source_snapshot_sha256": "5e7cf764f1e501fc0b1b81c5a337929d6950e414b31a33acd7239c009aa459db",
+  "source_snapshot_post_recert_count": 337,
+  "router_version": "v43-response-router-v2.2.3",
+  "router_implementation_id": "v43-response-router-v2.2.3-response-authority-closure",
+  "eligible_count": 115,
+  "selected_count": 20,
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "requirement_mutations": 0,
+  "notes": [
+    "No Provider or LLM call was made in the Codex environment.",
+    "Retrieval and Fact canary require the explicitly authorized Host environment.",
+    "The snapshot mechanically reports human_authority_persisted=false; this was not changed or inferred."
+  ],
+  "artifacts": {
+    "selection": "docs/handoff/V43_REAL_E2E_REQUIREMENT_RETRIEVAL_AND_FACT_CANARY_V1/01_REQUIREMENT_CANARY_SELECTION.json",
+    "host_instructions": "docs/handoff/V43_REAL_E2E_REQUIREMENT_RETRIEVAL_AND_FACT_CANARY_V1/02_HOST_EXECUTION.md"
+  }
+}

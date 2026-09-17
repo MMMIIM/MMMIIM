@@ -1,0 +1,50 @@
+{
+  "run_id": "V43-H3C-REAL-FACT-V2-20260913064801",
+  "provider_calls": 20,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "fact_persistence_scope": "bid_platform_flow_audit_test",
+  "material_import_and_hash": "PASS",
+  "lifecycle_gate": "PASS",
+  "source_span_traceability": "PASS",
+  "requirement_blindness": "PASS",
+  "fact_contract_and_validation": "PASS_WITH_REVIEW_REQUIRED_SOURCES",
+  "downstream_actions": {
+    "mapping": 0,
+    "claim": 0,
+    "writer": 0
+  },
+  "notes": "Mechanical post-run report repair only; 86 focused Fact tests passed separately; semantic adjudication remains pending GPT/Human review.",
+  "provider_failures": 0,
+  "material_processed": 20,
+  "parse_success_count": 20,
+  "total_chunks": 4929,
+  "controlled_approved_fact_count": 4,
+  "focused_unit_regression": {
+    "status": "PASS",
+    "tests": 86,
+    "passed": 86,
+    "failed": 0
+  },
+  "postgresql_regression": {
+    "status": "PASS_WITH_PRE_EXISTING_UNRELATED_FIXTURE_FAILURE",
+    "tests": 33,
+    "passed": 32,
+    "failed": 1,
+    "failure_classification": "PRE_EXISTING_UNRELATED_BASELINE / FIXTURE_AVAILABILITY",
+    "failure_signature": "Neusoft historical lineage fixture expected 4 rows but isolated Eval DB contains 0; no H3C production-task regression."
+  },
+  "build": {
+    "status": "PASS",
+    "command": "npm run build"
+  },
+  "lint": {
+    "status": "PASS",
+    "command": "npm run lint"
+  },
+  "diff_check": {
+    "status": "PASS_WITH_LINE_ENDING_WARNINGS",
+    "command": "git diff --check"
+  },
+  "gateway_failures": 3
+}

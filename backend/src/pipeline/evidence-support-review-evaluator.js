@@ -87,6 +87,7 @@ export function deriveSemanticAdjudicationFragmentSchema() {
 export const SEMANTIC_ADJUDICATION_FRAGMENT_SCHEMA = deriveSemanticAdjudicationFragmentSchema();
 
 const asText = value => String(value ?? '').trim();
+const asSourceText = value => String(value ?? '');
 
 function technicalUnavailable(message = 'Evidence Support 语义评估当前不可用。', details = {}) {
   return new AppError('ASSESSMENT_UNAVAILABLE', message, 503, {
@@ -101,7 +102,7 @@ function technicalUnavailable(message = 'Evidence Support 语义评估当前不�
  * context; no client or model field is trusted as a canonical identity.
  */
 export function createEvidenceSupportReviewAdapter(context = {}) {
-  const sourceText = asText(context.source_text);
+  const sourceText = asSourceText(context.source_text);
   return {
     adapter_version: ADAPTER_VERSION,
     input_kind: 'retrieval_candidate',

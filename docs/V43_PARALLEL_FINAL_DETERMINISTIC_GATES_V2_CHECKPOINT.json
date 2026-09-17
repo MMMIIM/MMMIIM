@@ -1,0 +1,89 @@
+{
+  "artifact_type": "V43_PARALLEL_FINAL_DETERMINISTIC_GATES_V2_CHECKPOINT",
+  "eval_only": true,
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "worktree": "DIRTY_EXISTING_CHANGES_PRESERVED",
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "fact_persistence": 0,
+  "gold_mutations": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "prompt_schema_model_provider_changes": 0,
+  "track_a_requirement_critical_structure": {
+    "status": "READY_FOR_GPT_FINAL_CRITICAL_STRUCTURE_ADJUDICATION",
+    "detector": "GOVERNING_CRITICAL_STRUCTURE_LIST_OR_TABLE",
+    "holdout_v1": {
+      "total": 397,
+      "before": { "accept": 258, "review_required": 139, "reject": 0 },
+      "after": { "accept": 256, "review_required": 141, "reject": 0 },
+      "transitions": { "ACCEPT->ACCEPT": 256, "REVIEW_REQUIRED->REVIEW_REQUIRED": 139, "ACCEPT->REVIEW_REQUIRED": 2 },
+      "source_unresolved": 0
+    },
+    "six_tender_1009_replay": {
+      "total": 1009,
+      "after": { "accept": 758, "review_required": 251, "reject": 0 },
+      "source_unresolved": 0,
+      "before_decision_available": false,
+      "interpretation": "OFFLINE_REPLAY_ONLY; UNKNOWN->ACCEPT/REVIEW"
+    },
+    "anchors": {
+      "CAN-0149": { "decision": "REVIEW_REQUIRED", "alignment": "GOVERNING_CRITICAL_LIST" },
+      "CAN-0208": { "decision": "REVIEW_REQUIRED", "alignment": "GOVERNING_CRITICAL_TABLE", "marker": "附表二", "relation": "全部内容，否则其投标无效" },
+      "POST-FIX-V2-015": { "decision": "REVIEW_REQUIRED", "reason": "NEGATION_DISTORTION" }
+    },
+    "controls": { "p0_governing_structure": "12/12", "negative_containment": "4/4", "number_controls": "4/4", "combined": "16/16", "source_unresolved": 0 },
+    "artifacts": {
+      "replay": "backend/eval/requirement-unseen-holdout-v1/results/unseen-holdout-v1-2026-09-08T06-21-08-203Z-5faac1ab/critical-structure-final-20260908094523/offline-replay.json",
+      "delta_gpt_packet": "backend/eval/requirement-unseen-holdout-v1/results/unseen-holdout-v1-2026-09-08T06-21-08-203Z-5faac1ab/critical-structure-final-20260908094523/V43_REQUIREMENT_CRITICAL_STRUCTURE_DELTA_GPT_PACKET.json",
+      "control_matrix": "backend/eval/requirement-unseen-holdout-v1/results/unseen-holdout-v1-2026-09-08T06-21-08-203Z-5faac1ab/critical-structure-final-20260908093747/deterministic-controls.json"
+    }
+  },
+  "track_b_fact_candidate_v2_1": {
+    "status": "READY_FOR_GPT_FACT_COMPOSITIONAL_GROUNDING_SOURCE_ROLE_ADJUDICATION",
+    "source_run": "backend/eval/rag-pilot/results/fact-candidate-v2-1-fresh-20260908085537-f852ae10",
+    "candidate_count": 26,
+    "old_grounding_decisions": { "ACCEPT": 5, "REVIEW_REQUIRED": 3, "REJECT": 18 },
+    "new_grounding_decisions": { "ACCEPT": 5, "REVIEW_REQUIRED": 13, "REJECT": 8 },
+    "final_source_role_decisions": { "ACCEPT": 4, "REVIEW_REQUIRED": 6, "EXCLUDED_REFERENCE": 8, "EXCLUDED_GOVERNANCE": 8, "REJECT": 0 },
+    "classification_counts": { "FALSE_REJECT_FIXED": 3, "TRUE_ACCEPT": 4, "TRUE_REVIEW": 3, "REFERENCE_CONTEXT_EXCLUDED": 8, "GOVERNANCE_CONTEXT_EXCLUDED": 8 },
+    "source_role_distribution": { "ENTERPRISE_PROFILE_ELIGIBLE": 1, "ENTERPRISE_CAPABILITY_ELIGIBLE": 3, "ENTERPRISE_PERFORMANCE_ELIGIBLE": 6, "REFERENCE_CONTEXT_ONLY": 8, "GOVERNANCE_CONTEXT_ONLY": 8, "SOURCE_ROLE_UNKNOWN": 0 },
+    "grounding_reject_before": 18,
+    "false_reject_anchors_fixed": 3,
+    "source_role_unknown_review_count": 0,
+    "reference_authority_escapes": 0,
+    "governance_authority_escapes": 0,
+    "canonicalizer_new_business_semantics": 0,
+    "source_ref_mutation": 0,
+    "synthetic_claim_permission_escalation": 0,
+    "required_anchors": {
+      "COM01-C0": { "source_grounded": true, "grounding": "BOUNDED_COMPOSITIONAL", "eligibility": "ENTERPRISE_FACT_ELIGIBLE", "decision": "REVIEW_REQUIRED", "reason": "NEGATED_OR_UNCERTAIN_STATUS" },
+      "COM01-C1": { "source_grounded": true, "grounding": "EXACT", "eligibility": "ENTERPRISE_FACT_ELIGIBLE", "decision": "ACCEPT" },
+      "COM01-C2": { "source_grounded": true, "role": "REFERENCE_CONTEXT_ONLY", "decision": "EXCLUDED_REFERENCE" },
+      "COM01-C3": { "source_grounded": true, "role": "REFERENCE_CONTEXT_ONLY", "decision": "EXCLUDED_REFERENCE" },
+      "COM06-A": { "source_grounded": true, "grounding": "GENERIC_REFERENTIAL_PREFIX", "eligibility": "ENTERPRISE_FACT_ELIGIBLE", "decision": "REVIEW_REQUIRED", "reason": "NEGATED_OR_UNCERTAIN_STATUS" },
+      "COM06-B": { "source_grounded": true, "grounding": "EXACT", "eligibility": "ENTERPRISE_FACT_ELIGIBLE", "decision": "REVIEW_REQUIRED", "reason": "NEGATED_OR_UNCERTAIN_STATUS" },
+      "CCV2-820ms": { "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE", "decision": "REVIEW_REQUIRED" },
+      "CCV2-1650tps-0.18pct": { "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE", "decision": "REVIEW_REQUIRED" },
+      "CCV2-120min": { "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE", "decision": "REVIEW_REQUIRED", "grounding": "EXACT", "unit_alias": "分钟 -> MINUTE" }
+    },
+    "artifacts": {
+      "offline_replay": "backend/eval/rag-pilot/results/fact-candidate-v2-1-fresh-20260908085537-f852ae10/deterministic-delta-20260908095841/offline-replay.json",
+      "delta_gpt_packet": "backend/eval/rag-pilot/results/fact-candidate-v2-1-fresh-20260908085537-f852ae10/deterministic-delta-20260908095841/V43_FACT_V21_CANONICALIZER_GROUNDING_DELTA_GPT_PACKET.json"
+    }
+  },
+  "regression": {
+    "focused_requirement_fact_suite": "92/92 PASS",
+    "focused_requirement_suite": "46/48 PASS; 2 PRE_EXISTING_UNRELATED_BASELINE source-parity fixture failures",
+    "frontend": "51/51 PASS",
+    "build": "PASS",
+    "lint": "PASS",
+    "git_diff_check": "PASS",
+    "npm_test": "FAIL_PRE_EXISTING_UNRELATED_BASELINE",
+    "npm_test_observed_unrelated_failures": ["missing historical P1 calibration packet fixtures", "governance instruction/runtime fixture assertions", "source-role projection and Mapping V2 fixture path assumptions", "existing Gold governance/parity fixture assertions"]
+  },
+  "changed_files_for_this_v2_task": ["backend/src/pipeline/evidence-fact-candidate-v2.js", "backend/src/pipeline/enterprise-evidence-source-router.js", "backend/eval/rag-pilot/replay-fact-v21-deterministic-delta.mjs", "backend/test/evidence-fact-candidate-v2.test.js", "backend/test/evidence-fact-source-role.test.js", "docs/V43_PARALLEL_FINAL_DETERMINISTIC_GATES_V2_CHECKPOINT.json", "docs/V43_PARALLEL_FINAL_DETERMINISTIC_GATES_V2_CHECKPOINT.md"],
+  "readiness": { "requirement_production_certified": "NO", "fact_production_ready": "NO", "mapping_ready": "NO", "new_holdout_v2": "NOT_STARTED", "fixed12": "NOT_STARTED", "next_step": "GPT semantic adjudication only; no automatic promotion or live execution" }
+}

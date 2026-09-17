@@ -1,0 +1,1888 @@
+{
+  "run_id": "V43-H3C-REAL-FACT-V2-20260913064801",
+  "generated_at": "2026-09-13T06:49:07.341Z",
+  "database": "bid_platform_flow_audit_test",
+  "project_id": "3476f73a-49b7-4cc0-8a95-f3cdede7a2d2",
+  "enterprise_id": "H3C-PUBLIC-REAL-V1",
+  "data_classification": "REAL_PUBLIC_FIRST_PARTY_EVAL_ONLY",
+  "source_authority": "REAL_PUBLIC_FIRST_PARTY",
+  "source_count": 20,
+  "eligible_material_count": 20,
+  "parse_success_count": 20,
+  "total_chunks": 4929,
+  "provider_calls": 20,
+  "provider_failures": 0,
+  "raw_fact_candidates": 4,
+  "normalized_facts": 4,
+  "deduplicated_facts": 4,
+  "canonical_fact_candidates": 4,
+  "rejected_fact_candidates": 0,
+  "zero_fact_source_count": 13,
+  "provenance_complete_rate": 1,
+  "source_span_resolution_rate": 1,
+  "enterprise_identity_match_rate": 1,
+  "authority_escalation_violation": 0,
+  "requirement_tender_leakage": 0,
+  "currentness_unknown_count": 2,
+  "review_required_count": 18,
+  "conflict_count": 0,
+  "duplicate_rate": 0,
+  "candidate_status": "GPT/HUMAN_REVIEW_PENDING",
+  "requirement_blind_extraction": "PASS",
+  "material_summaries": [
+    {
+      "source_id": "H3C-001",
+      "material_id": "f06cfb1c-2be6-47dd-bb01-0593fd6781e8",
+      "enterprise_id": "H3C-PUBLIC-REAL-V1",
+      "source_role": "REAL_PUBLIC_FIRST_PARTY",
+      "authority_level": "official",
+      "lifecycle_status": "ACTIVE",
+      "eligibility_status": "FAILED",
+      "eligibility_reason": "FACT_SEMANTIC_EMPTY",
+      "parse_status": "succeeded",
+      "content_length": 126180,
+      "content_hash": "1b9eb23df8b0880f914a4f418d9edcef2574b24d43dc6399ce8147726806e57a",
+      "source_hash": "08d6723aae077525f9c3cc1fe8cd515059119d0e74e4062425bfff7392cac1a3",
+      "source_url": "https://www.h3c.com/cn/about_h3c/company_information/company_introduce/",
+      "synthetic_test_material": false,
+      "failure": {
+        "code": "FACT_SEMANTIC_EMPTY",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "VALID_EMPTY_RESULT",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 200,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 3212,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2595,
+          "completion_tokens": 7,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": null
+          }
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "source_id": "H3C-002",
+      "material_id": "7f48f070-6c69-40d3-84ac-b8a3abb8ea53",
+      "enterprise_id": "H3C-PUBLIC-REAL-V1",
+      "source_role": "REAL_PUBLIC_FIRST_PARTY",
+      "authority_level": "official",
+      "lifecycle_status": "ACTIVE",
+      "eligibility_status": "FAILED",
+      "eligibility_reason": "FACT_SEMANTIC_EMPTY",
+      "parse_status": "succeeded",
+      "content_length": 124368,
+      "content_hash": "46cef6cfb18154cb8cf29ad75bbaeb7ee8aac7022fd333f711e0425d66916131",
+      "source_hash": "31b010c500b295a80bfe0fda3b61b61192d274b780aa821ab6911cbaaf847d99",
+      "source_url": "https://www.h3c.com/cn/Products_And_Solution/Operation/Service/U_Center_Intelligence/",
+      "synthetic_test_material": false,
+      "failure": {
+        "code": "FACT_SEMANTIC_EMPTY",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "VALID_EMPTY_RESULT",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 200,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 1613,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2610,
+          "completion_tokens": 7,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": null
+          }
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "source_id": "H3C-003",
+      "material_id": "eaea8c57-ed2b-452d-b9f7-ec26d8ec910d",
+      "enterprise_id": "H3C-PUBLIC-REAL-V1",
+      "source_role": "REAL_PUBLIC_FIRST_PARTY",
+      "authority_level": "official",
+      "lifecycle_status": "ACTIVE",
+      "eligibility_status": "FAILED",
+      "eligibility_reason": "FACT_SEMANTIC_EMPTY",
+      "parse_status": "succeeded",
+      "content_length": 336914,
+      "content_hash": "3cc5ab9430169eedec2f1876ccc0a9a234cba6fb3474d64116f02279173941d1",
+      "source_hash": "6f19b927fe5be63cd67a30f02d7cce3dfa224676380e073a20d53de954bb8483",
+      "source_url": "https://www.h3c.com/cn/d_202507/2589262_30005_0.htm",
+      "synthetic_test_material": false,
+      "failure": {
+        "code": "FACT_SEMANTIC_EMPTY",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "VALID_EMPTY_RESULT",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 200,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 848,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2609,
+          "completion_tokens": 7,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": null
+          }
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "source_id": "H3C-004",
+      "material_id": "1d7095d9-6cb1-4c26-ac15-5924b1f1b44f",
+      "enterprise_id": "H3C-PUBLIC-REAL-V1",
+      "source_role": "REAL_PUBLIC_FIRST_PARTY",
+      "authority_level": "official",
+      "lifecycle_status": "ACTIVE",
+      "eligibility_status": "FAILED",
+      "eligibility_reason": "FACT_SEMANTIC_EMPTY",
+      "parse_status": "succeeded",
+      "content_length": 275606,
+      "content_hash": "3caa07807a653d7a23b0c67ae2da27f34167e1db60223589fe83cbbb1deea469",
+      "source_hash": "06dcaefa5359a6c191699de8b0e12e6a44974ef1114a954e28a76ebb3367626f",
+      "source_url": "https://www.h3c.com/cn/d_201811/1131761_30005_0.htm",
+      "synthetic_test_material": false,
+      "failure": {
+        "code": "FACT_SEMANTIC_EMPTY",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "VALID_EMPTY_RESULT",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 200,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 821,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2558,
+          "completion_tokens": 5,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": null
+          }
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "source_id": "H3C-005",
+      "material_id": "9b6100df-0204-4e7d-b21e-8bd0de0e8bab",
+      "enterprise_id": "H3C-PUBLIC-REAL-V1",
+      "source_role": "REAL_PUBLIC_FIRST_PARTY",
+      "authority_level": "official",
+      "lifecycle_status": "ACTIVE",
+      "eligibility_status": "FAILED",
+      "eligibility_reason": "FACT_SEMANTIC_EMPTY",
+      "parse_status": "succeeded",
+      "content_length": 135591,
+      "content_hash": "6a27c200cba81f54e5d9e52a6f2b9478cbcc7479aedd7040d49925f646dbd602",
+      "source_hash": "f4751ecc15307bf0e212336bf7a49b4641a5536fefb8b46288b4e36e6dc58eb7",
+      "source_url": "https://www.h3c.com/cn/Service/Service_Product/Catalog/Operational_service/U-Center_service/U-Center_custom_service/",
+      "synthetic_test_material": false,
+      "failure": {
+        "code": "FACT_SEMANTIC_EMPTY",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "VALID_EMPTY_RESULT",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 200,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 1114,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2616,
+          "completion_tokens": 5,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": null
+          }
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "source_id": "H3C-006",
+      "material_id": "bf2fae9b-2860-4b04-ab3d-e329a7c9084e",
+      "enterprise_id": "H3C-PUBLIC-REAL-V1",
+      "source_role": "REAL_PUBLIC_FIRST_PARTY",
+      "authority_level": "official",
+      "lifecycle_status": "ACTIVE",
+      "eligibility_status": "FAILED",
+      "eligibility_reason": "FACT_SEMANTIC_EMPTY",
+      "parse_status": "succeeded",
+      "content_length": 122898,
+      "content_hash": "cada558c27cbfad2b7919c88a8e508d60e029281216959cd2dd6b1a222315fd1",
+      "source_hash": "c03736a7164d533b91a1f70e35e8b58163f5ae814df21f8471040afd48ee86d4",
+      "source_url": "https://www.h3c.com/cn/Technical_Service/Operation_And_Maintenance/",
+      "synthetic_test_material": false,
+      "failure": {
+        "code": "FACT_SEMANTIC_EMPTY",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "VALID_EMPTY_RESULT",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 200,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 1990,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2590,
+          "completion_tokens": 7,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": null
+          }
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "source_id": "H3C-007",
+      "material_id": "fea646f6-c0d7-480c-8404-c0136dca04b4",
+      "enterprise_id": "H3C-PUBLIC-REAL-V1",
+      "source_role": "REAL_PUBLIC_FIRST_PARTY",
+      "authority_level": "official",
+      "lifecycle_status": "ACTIVE",
+      "eligibility_status": "FAILED",
+      "eligibility_reason": "FACT_SEMANTIC_EMPTY",
+      "parse_status": "succeeded",
+      "content_length": 136431,
+      "content_hash": "bea7ae36a572469cf5e75c447eff23148e98fa0b02ccb5561540333ec7cb056e",
+      "source_hash": "82037ea2faf0cb9a60202b63e781338599de48c57a656baacb8aea128277a544",
+      "source_url": "https://www.h3c.com/cn/Technical_Service/Operation_And_Maintenance/Intelligent_Remote/",
+      "synthetic_test_material": false,
+      "failure": {
+        "code": "FACT_SEMANTIC_EMPTY",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "VALID_EMPTY_RESULT",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 200,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 1183,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2596,
+          "completion_tokens": 7,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": null
+          }
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "source_id": "H3C-008",
+      "material_id": "607f4cd3-a5b9-4ea1-a2d4-3c55bf7c8a29",
+      "enterprise_id": "H3C-PUBLIC-REAL-V1",
+      "source_role": "REAL_PUBLIC_FIRST_PARTY",
+      "authority_level": "official",
+      "lifecycle_status": "ACTIVE",
+      "eligibility_status": "FAILED",
+      "eligibility_reason": "FACT_SEMANTIC_EXTRACTION_FAILED",
+      "parse_status": "succeeded",
+      "content_length": 134802,
+      "content_hash": "cd186e4904e2acc86cc319de55e355adc8fcbf28a0b0b1b2d4e9a06b67044576",
+      "source_hash": "9874fd6465572172a604849c84f9e4e40d15d10c08206b65a97bdec13f52ba8b",
+      "source_url": "https://www.h3c.com/cn/Products_And_Solution/Storage/H3C/Products/All-flash_Storage_Array/Products_Series/CF22000_G2/",
+      "synthetic_test_material": false,
+      "failure": {
+        "code": "FACT_SEMANTIC_EXTRACTION_FAILED",
+        "status": 502,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "OUTPUT_SCHEMA_INVALID",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 422,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 15914,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 3009,
+          "completion_tokens": 2521,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": "data.facts[0].quantities[4].value"
+          }
+        },
+        "schema_validation_errors": [
+          {
+            "path": "data.facts[0].quantities[4].value",
+            "keyword": "OUTPUT_SCHEMA_INVALID",
+            "expected": "canonical task data",
+            "actual_type": "string",
+            "additional_property": null
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "H3C-009",
+      "material_id": "4b55bf79-7a14-42d2-82eb-df2b05f756a4",
+      "enterprise_id": "H3C-PUBLIC-REAL-V1",
+      "source_role": "REAL_PUBLIC_FIRST_PARTY",
+      "authority_level": "official",
+      "lifecycle_status": "ACTIVE",
+      "eligibility_status": "FAILED",
+      "eligibility_reason": "FACT_SEMANTIC_EMPTY",
+      "parse_status": "succeeded",
+      "content_length": 117488,
+      "content_hash": "6d2f722d3b40fb4b5486aea3fd5c96724517146776b63385ceac5b4353fcb6a0",
+      "source_hash": "329fb46356ee9ab47a7c9702493e7bf96215270223c4b4b1e34de3045c80d056",
+      "source_url": "https://www.h3c.com/cn/Products_And_Solution/Storage/H3C/Products/All-flash_Storage_Array/Products_Series/CF22000_G2/Datasheet/",
+      "synthetic_test_material": false,
+      "failure": {
+        "code": "FACT_SEMANTIC_EMPTY",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "VALID_EMPTY_RESULT",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 200,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 1614,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2577,
+          "completion_tokens": 7,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": null
+          }
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "source_id": "H3C-010",
+      "material_id": "35485aca-59ac-4665-84a9-c6566236b1ef",
+      "enterprise_id": "H3C-PUBLIC-REAL-V1",
+      "source_role": "REAL_PUBLIC_FIRST_PARTY",
+      "authority_level": "official",
+      "lifecycle_status": "ACTIVE",
+      "eligibility_status": "FAILED",
+      "eligibility_reason": "FACT_SEMANTIC_EMPTY",
+      "parse_status": "succeeded",
+      "content_length": 125924,
+      "content_hash": "0eb942915a7a08c6bd553940cd9f24599b0ac1829eb266c810cfb2b72d4f8225",
+      "source_hash": "c3fc853f7c5684821acb56851fd9d7fc0d054f6d8e895a91739f5319088e8755",
+      "source_url": "https://www.h3c.com/cn/Products_And_Solution/Storage/H3C/Products/Data_Backup/",
+      "synthetic_test_material": false,
+      "failure": {
+        "code": "FACT_SEMANTIC_EMPTY",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "VALID_EMPTY_RESULT",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 200,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 1503,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2603,
+          "completion_tokens": 7,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": null
+          }
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "source_id": "H3C-011",
+      "material_id": "c6a4a287-3162-447b-a6c3-3e6f92a142e6",
+      "enterprise_id": "H3C-PUBLIC-REAL-V1",
+      "source_role": "REAL_PUBLIC_FIRST_PARTY",
+      "authority_level": "official",
+      "lifecycle_status": "ACTIVE",
+      "eligibility_status": "FAILED",
+      "eligibility_reason": "FACT_SEMANTIC_EMPTY",
+      "parse_status": "succeeded",
+      "content_length": 113424,
+      "content_hash": "a8db355b8bea712203dbed1cdc74b98f153783bcd29e073d050f3c3d8e8c6c84",
+      "source_hash": "4a9c2f3dab42b8eae73c2db0f99b537a5dde54ab336c0ed495ed9b47f2ebe29d",
+      "source_url": "https://www.h3c.com/cn/d_202101/1371961_961592_0.htm",
+      "synthetic_test_material": false,
+      "failure": {
+        "code": "FACT_SEMANTIC_EMPTY",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "VALID_EMPTY_RESULT",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 200,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 1522,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2463,
+          "completion_tokens": 5,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": null
+          }
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "source_id": "H3C-012",
+      "material_id": "a21237a3-eec0-4472-9fb9-3b2bf7ed988a",
+      "enterprise_id": "H3C-PUBLIC-REAL-V1",
+      "source_role": "REAL_PUBLIC_FIRST_PARTY",
+      "authority_level": "official",
+      "lifecycle_status": "ACTIVE",
+      "eligibility_status": "FAILED",
+      "eligibility_reason": "FACT_SEMANTIC_EXTRACTION_FAILED",
+      "parse_status": "succeeded",
+      "content_length": 117928,
+      "content_hash": "5d3911d8e78ba36ef5c4ef3c337a9a4158d7de211e57e7f623ad11d73529cd27",
+      "source_hash": "0c33de5af7054c3704dd0673fe5ea52280f812951d50aee5df29e04a58908cc0",
+      "source_url": "https://www.h3c.com/cn/d_202010/1349525_961592_0.htm",
+      "synthetic_test_material": false,
+      "failure": {
+        "code": "FACT_SEMANTIC_EXTRACTION_FAILED",
+        "status": 502,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "OUTPUT_SCHEMA_INVALID",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 422,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 2503,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2394,
+          "completion_tokens": 208,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": "data.facts[0].quantities[0].value"
+          }
+        },
+        "schema_validation_errors": [
+          {
+            "path": "data.facts[0].quantities[0].value",
+            "keyword": "OUTPUT_SCHEMA_INVALID",
+            "expected": "canonical task data",
+            "actual_type": "string",
+            "additional_property": null
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "H3C-013",
+      "material_id": "cab62a4e-ba56-48f5-979f-5007bc9a58e7",
+      "enterprise_id": "H3C-PUBLIC-REAL-V1",
+      "source_role": "REAL_PUBLIC_FIRST_PARTY",
+      "authority_level": "official",
+      "lifecycle_status": "ACTIVE",
+      "eligibility_status": "FAILED",
+      "eligibility_reason": "FACT_SEMANTIC_EXTRACTION_FAILED",
+      "parse_status": "succeeded",
+      "content_length": 26852,
+      "content_hash": "11b3a934e3f5fbdba4ab1e71e2762c74b1d409695e29ffcc6c46996c2ec7d7a6",
+      "source_hash": "4fd8da2c61d609ded484db5c45cfbe0fad1df143e40ef298e38c234a32c8684f",
+      "source_url": "https://www.h3c.com/business/zf3.htm",
+      "synthetic_test_material": false,
+      "failure": {
+        "code": "FACT_SEMANTIC_EXTRACTION_FAILED",
+        "status": 502,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "OUTPUT_SCHEMA_INVALID",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 422,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 8886,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2646,
+          "completion_tokens": 1268,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": "data.facts[2].quantities[0].value"
+          }
+        },
+        "schema_validation_errors": [
+          {
+            "path": "data.facts[2].quantities[0].value",
+            "keyword": "OUTPUT_SCHEMA_INVALID",
+            "expected": "canonical task data",
+            "actual_type": "string",
+            "additional_property": null
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "H3C-014",
+      "material_id": "a2fd5cd6-b79f-4426-8326-f655cfc68dcb",
+      "enterprise_id": "H3C-PUBLIC-REAL-V1",
+      "source_role": "REAL_PUBLIC_FIRST_PARTY",
+      "canonical_role_equivalent": "ENTERPRISE_CAPABILITY_ELIGIBLE",
+      "authority_level": "official",
+      "lifecycle_status": "ACTIVE",
+      "eligibility_status": "ELIGIBLE",
+      "eligibility_reason": null,
+      "parse_status": "succeeded",
+      "content_length": 115517,
+      "content_hash": "d42af2db8845691dbe3c869d6ce45a1651480acca819344e8390cf7152bf8f9c",
+      "source_hash": "2d92c0b49561a7d2eb2f9dbf96f07fc586e06b2fdcc405095344457723ef88b3",
+      "source_url": "https://www.h3c.com/cn/d_202208/1664075_961592_0.htm",
+      "synthetic_test_material": false
+    },
+    {
+      "source_id": "H3C-015",
+      "material_id": "277d3c6c-4ccf-470c-a7bf-3ec3e1b18b9c",
+      "enterprise_id": "H3C-PUBLIC-REAL-V1",
+      "source_role": "REAL_PUBLIC_FIRST_PARTY",
+      "authority_level": "official",
+      "lifecycle_status": "ACTIVE",
+      "eligibility_status": "FAILED",
+      "eligibility_reason": "FACT_SEMANTIC_EMPTY",
+      "parse_status": "succeeded",
+      "content_length": 113365,
+      "content_hash": "fa1532dc2a3bdb1b9419f065a86418db674d7019a9423d12d9c33debde7111b4",
+      "source_hash": "282585da9e994b262801c7292f84744f7c7f8470e5d80118aea7d2ac1dd264c9",
+      "source_url": "https://www.h3c.com/cn/d_202101/1380949_473305_0.htm",
+      "synthetic_test_material": false,
+      "failure": {
+        "code": "FACT_SEMANTIC_EMPTY",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "VALID_EMPTY_RESULT",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 200,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 2201,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2472,
+          "completion_tokens": 5,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": null
+          }
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "source_id": "H3C-016",
+      "material_id": "b5b83e98-c80d-4144-b1b2-7000312e5517",
+      "enterprise_id": "H3C-PUBLIC-REAL-V1",
+      "source_role": "REAL_PUBLIC_FIRST_PARTY",
+      "authority_level": "official",
+      "lifecycle_status": "ACTIVE",
+      "eligibility_status": "FAILED",
+      "eligibility_reason": "FACT_SEMANTIC_EMPTY",
+      "parse_status": "succeeded",
+      "content_length": 118993,
+      "content_hash": "fb11a5125ccc55277ab9d26d20a601612fd8f26204b9f571d4adf5a5baacddef",
+      "source_hash": "1c8c0ba72fde8bb19216a6f17c80dad64882d521450e254eaa8381a6912ccef1",
+      "source_url": "https://www.h3c.com/cn/d_202010/1347070_961592_0.htm",
+      "synthetic_test_material": false,
+      "failure": {
+        "code": "FACT_SEMANTIC_EMPTY",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "VALID_EMPTY_RESULT",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 200,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 1210,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2546,
+          "completion_tokens": 5,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": null
+          }
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "source_id": "H3C-017",
+      "material_id": "79880aa4-4504-4142-8dd3-436ad96b372f",
+      "enterprise_id": "H3C-PUBLIC-REAL-V1",
+      "source_role": "REAL_PUBLIC_FIRST_PARTY",
+      "authority_level": "official",
+      "lifecycle_status": "ACTIVE",
+      "eligibility_status": "FAILED",
+      "eligibility_reason": "EVIDENCE_FACT_SOURCE_UNGROUNDED",
+      "parse_status": "succeeded",
+      "content_length": 118522,
+      "content_hash": "7e01665d5d1e1d3d07df85e35ac373cdbf1b9ab7d1083892dffaa29c3bbee892",
+      "source_hash": "897a7f202de5e47b7a1dd952137b183e41b5a00878e6022bfcba5081343167ba",
+      "source_url": "https://www.h3c.com/cn/d_202311/1959660_30008_0.htm",
+      "synthetic_test_material": false,
+      "failure": {
+        "code": "EVIDENCE_FACT_SOURCE_UNGROUNDED",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": null,
+        "cause_code": null,
+        "provider_audit": null,
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "source_id": "H3C-018",
+      "material_id": "fdfbe467-dfe9-4662-b799-902cb06eca7c",
+      "enterprise_id": "H3C-PUBLIC-REAL-V1",
+      "source_role": "REAL_PUBLIC_FIRST_PARTY",
+      "canonical_role_equivalent": "ENTERPRISE_PROJECT_ELIGIBLE",
+      "authority_level": "official",
+      "lifecycle_status": "ACTIVE",
+      "eligibility_status": "ELIGIBLE",
+      "eligibility_reason": null,
+      "parse_status": "succeeded",
+      "content_length": 114914,
+      "content_hash": "e7708efb296f99386e0d84c3ddfc7831ee57798686eb66e135f96ef2e4202e5a",
+      "source_hash": "a9f135558f6f6a4dcb54b1e87f96c2562578fcaac086cd7c91831c2899be0678",
+      "source_url": "https://www.h3c.com/cn/d_202103/1390806_473262_0.htm",
+      "synthetic_test_material": false
+    },
+    {
+      "source_id": "H3C-019",
+      "material_id": "2a88c80d-12f2-4a78-b561-2e861030a566",
+      "enterprise_id": "H3C-PUBLIC-REAL-V1",
+      "source_role": "REAL_PUBLIC_FIRST_PARTY",
+      "authority_level": "official",
+      "lifecycle_status": "ACTIVE",
+      "eligibility_status": "FAILED",
+      "eligibility_reason": "EVIDENCE_FACT_STATUS_UNGROUNDED",
+      "parse_status": "succeeded",
+      "content_length": 113915,
+      "content_hash": "ed2edf49922c5ea5d93a737205364943c7684e5dc4d4e130f2645dbb78f396da",
+      "source_hash": "27963e9ee45dde361595709bca150f9babd2f02fd6166607fca7971ecd8b189a",
+      "source_url": "https://www.h3c.com/cn/d_202211/1722196_473262_0.htm",
+      "synthetic_test_material": false,
+      "failure": {
+        "code": "EVIDENCE_FACT_STATUS_UNGROUNDED",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": null,
+        "cause_code": null,
+        "provider_audit": null,
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "source_id": "H3C-020",
+      "material_id": "a302bac4-770c-4f91-82e1-e72644eedbaa",
+      "enterprise_id": "H3C-PUBLIC-REAL-V1",
+      "source_role": "REAL_PUBLIC_FIRST_PARTY",
+      "authority_level": "official",
+      "lifecycle_status": "ACTIVE",
+      "eligibility_status": "FAILED",
+      "eligibility_reason": "FACT_SEMANTIC_EMPTY",
+      "parse_status": "succeeded",
+      "content_length": 114307,
+      "content_hash": "a0764210161e123e21a28bea3f40ec0e4b40f5f9fd2b5680b98620d0b5aec356",
+      "source_hash": "1716a5c2da1ed2e69d6696ea8e80c6c3c205a41aa130ac2ed5d76b894985ffcf",
+      "source_url": "https://www.h3c.com/cn/d_202304/1823666_473262_0.htm",
+      "synthetic_test_material": false,
+      "failure": {
+        "code": "FACT_SEMANTIC_EMPTY",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "VALID_EMPTY_RESULT",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 200,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 1382,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2546,
+          "completion_tokens": 5,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": null
+          }
+        },
+        "schema_validation_errors": []
+      }
+    }
+  ],
+  "fact_candidates": [
+    {
+      "fact_id": "EFACT-F337529EE8432C04294CD03F42AF6BCF",
+      "fact_text": "智慧医院解决方案",
+      "fact_type": "solution",
+      "enterprise_id": "H3C-PUBLIC-REAL-V1",
+      "source_id": "H3C-014",
+      "source_title": "智慧医院解决方案",
+      "authority_level": "official",
+      "supporting_source_text": "ank\" href=\"https://www.h3cmall.com\">新华三商城 </a></li>\n            <li class=\"ns-mb-login ns-menu-mb\">\n                <a target=\"_blank\" href=\"/cn/home/login/\" class=\"ns-mb-admin\"><i class=\"icon iconfont iconziyuan2\"></i>登录</a>\n                <div class=\"ns-user-text\">\n                    <i class=\"icon iconfont iconziyuan2\"></i>\n                    <p>欢迎<span>user</span></p>\n                </div>\n                <a href=\"#\" class=\"ns-mb-layout\"><i class=\"icon iconfont icontuichu\"></i>退出</a>\n            </li>\n            <li class=\"ns-mb-language-region ns-menu-mb\">\n                <ul>\n                    <li><a class=\"active\" href=\"#\">China - 简体中文</a></li>\n                    <li><a href=\"/en/\">Global - English</a></li>\n                    <li><a href=\"/ru/\">Russia - Русский</a></li>\n                    <li><a href=\"/jp/\">Japan - 日本語</a></li>\n                </ul>\n                <h2><i class=\"icon iconfont iconziyuan3\"></i>国家/地区</h2>\n            </li>\n        </ul>\n        <div class=\"wide-menu-content\">\n        </div>\n    </div>\n    <div class=\"ns-search-layer\">\n        <form action=\"https://www.h3c.com/cn/search/\">\n            <div class=\"ns-search-box\">\n                <div class=\"ns-search-keyword\">\n                    <input type=\"text\" name=\"q0\" placeholder=\"请输入关键字\">\n                </div>\n                <input type=\"submit\" class=\"ns-search-submit\" value=\"搜索\">\n            </div>\n        </form>\n    </div>\n    <!-- 主导航结束-->\n    <!-- icon -->\n    <!--NavBar Begin-->\n<div class=\"crumbs hidden-xs noindex\">\n   <ul class=\"container grayA\">\n        <div class=\"nowpage\">\n            <a class='nolink' href=\"#\">解决方案</a>\n        </div>\n        <!--NavBar Begin-->\n<div class=\"koli\"><a class=\"blue3\" href=\"/cn/\" >首页</a><img src=\"https://resource.h3c.com/cn/tres/images/arrow.gif\" border=\"0\" /><a class=\"blue3\" href=\"/cn/IndustrySolution/\" >行业解决方案</a><img src=\"https://resource.h3c.com/cn/tres/images/arrow.gif\" border=\"0\" /><a class=\"blue3\" href=\"/cn/IndustrySolution/Medical/\" >医疗</a><img src=\"https://resource.h3c.com/cn/tres/images/arrow.gif\" border=\"0\" />解决方案</div>\n<!--NavBar End-->\n   </ul>\n</div>\n<!--NavBar End-->\n    <div class=\"pro_product\">\n        <div class=\"container-fluid padding0\">\n            <!-- detail-->\n            <div class=\"container\">\n                <div class=\"row prolist_container\">\n                    <div class=\"par_left col-xs-12 col-sm-9 col-md-9\">\n                        <div class=\"article\">\n                            <DIV style=\"DISPLAY: none\" data-longurl=\"/cn/IndustrySolution/Medical/Solution/202208/1664075_961592_0.htm\"></DIV>\n<DIV id=newsContentHead class=clearFix>\n<DIV class=subNewsTitle>\n<H1>智慧医院解决方案</H1>\n<!-- content Begin -->\n<DIV style=\"FONT-SIZE: 12px; COLOR: #999999; TEXT-ALIGN: right; LINE-HEIGHT: 24px; MARGIN-RIGHT: 20px\">【发布时间：2022-08-11】</DIV>\n<DIV id=detailBody class=detailBody><DIV><H2>建设背景</H2><P class=MsoNormal>我国通过一系列的政策和标准的发布推动新医改不断落地和实施，伴随着城乡居民的医疗支出的增加，人民对更高品质的医疗服务有了更多需求，云计算、大数据、物联网、人工智能等新技术的发展带动医疗行业发展和升级。智慧医院的建设也成为趋势，多元化、综合化、智能化也成为智慧医院建设的新特性。由于诊疗需求的日益增长，临床、服务及管理业务都存在亟需解决的问题，院区运行保障运行状况难以及时掌握，维护管理效率低，各个业务系统之间联动差；医院当前的各项资源利用率低，难以完成预期诊疗目标；医生、护士、药师等多角色诊疗流程配合效率低，难以通过精益化管理提升医疗质量和患者服务体验；医疗数据质量差，不能直接被用以医学科研的研究。这些问题都对智慧医院建设提出新的挑战和要求。</P><H2>方案概述</H2><P class=MsoNormal>基于对医疗行业的理解和实践，新华三构建“医院数字大脑”：由智能数字平台（数字基础设施、业务能力平台、主动安全、统一运维），搭载合作伙伴N个生态应用构成，简称“4+N”。</P><P class=MsoNormal align=center><IMG id=\"图片 1\" src=\"https://resource.h3c.com/cn/202208/11/20220811_7610392_image001_1664075_473305_0.png\" width=554 height=264></P><P class=MsoNormal>总体遵循面向医院业务需求的设计思路，基于医院业务特性，通过智能计算存储、智能网络、智能边缘、智能终端形成医院完整的数字基础设施体系，为医院临床、服务及运营管理业务提供稳固的运行“基石”。医疗业务能力平台可实现医院多源异构数据的采集、治理和分析，运用AI、大数据、物联网、智能视觉等能力构建医院数字中台体系，为智慧医疗、智慧服务及智慧管理提供标准化的数据服务，支撑医院临床辅助、智能导诊、运营决策及医学科研等应用系统的全面建设。面向医院的安全防护以及等保三级的要求，也有完备的主动安全方案。由于医院设备种类繁多，对运维的要求也很高，同时也为医院提供全场景统一运维方案和服务。</P><P class=MsoNormal>新华三智慧医院解决方案采用成熟、具有国内先进水平，符合医疗行业发展趋势的技术、软件和设备，积极吸纳了业界最新的架构思想和建设理念，在设计过程中充分依据国际、国内的各项技术、业务和数据规范标准。</P><H2>方案亮点</H2><P class=MsoNormal><B>1. </B><B>整体顶层规划架构设计，",
+      "source_locator": {
+        "material_id": "a2fd5cd6-b79f-4426-8326-f655cfc68dcb",
+        "source_span_id": "ESPAN-773BFF6C3A8055384A95F1CAE8C14D75",
+        "anchor_chunk_id": "MCH-FFD733C7B6873BC8D98C7BEE3B24B9AD",
+        "start_offset": 96786,
+        "end_offset": 100786,
+        "source_text_hash": "8c43e6f3ab4574d3cb38c19f472a686ad57e21a541c0c83e38738c5f83ef03e6"
+      },
+      "subject": {
+        "name": "智慧医院解决方案",
+        "type": "solution"
+      },
+      "entities": [
+        {
+          "name": "新华三",
+          "type": "organization"
+        }
+      ],
+      "scopes": [
+        "智慧医院建设"
+      ],
+      "quantities": [],
+      "validity": {
+        "status": "known",
+        "valid_from": "2022-08-11",
+        "valid_until": null
+      },
+      "domain_metadata": {
+        "material": {
+          "material_type": "technical_solution"
+        }
+      },
+      "review_status": "approved",
+      "validation_status": "TRACEABLE",
+      "authority_status": "PENDING_GPT_HUMAN_REVIEW",
+      "currentness_status": "KNOWN_IN_SOURCE",
+      "candidate_origin": "H3C_PUBLIC_REAL_V1"
+    },
+    {
+      "fact_id": "EFACT-5C316A0C1477ADD3A1C546B247D69EB8",
+      "fact_text": "医院数字大脑",
+      "fact_type": "architecture",
+      "enterprise_id": "H3C-PUBLIC-REAL-V1",
+      "source_id": "H3C-014",
+      "source_title": "智慧医院解决方案",
+      "authority_level": "official",
+      "supporting_source_text": "ank\" href=\"https://www.h3cmall.com\">新华三商城 </a></li>\n            <li class=\"ns-mb-login ns-menu-mb\">\n                <a target=\"_blank\" href=\"/cn/home/login/\" class=\"ns-mb-admin\"><i class=\"icon iconfont iconziyuan2\"></i>登录</a>\n                <div class=\"ns-user-text\">\n                    <i class=\"icon iconfont iconziyuan2\"></i>\n                    <p>欢迎<span>user</span></p>\n                </div>\n                <a href=\"#\" class=\"ns-mb-layout\"><i class=\"icon iconfont icontuichu\"></i>退出</a>\n            </li>\n            <li class=\"ns-mb-language-region ns-menu-mb\">\n                <ul>\n                    <li><a class=\"active\" href=\"#\">China - 简体中文</a></li>\n                    <li><a href=\"/en/\">Global - English</a></li>\n                    <li><a href=\"/ru/\">Russia - Русский</a></li>\n                    <li><a href=\"/jp/\">Japan - 日本語</a></li>\n                </ul>\n                <h2><i class=\"icon iconfont iconziyuan3\"></i>国家/地区</h2>\n            </li>\n        </ul>\n        <div class=\"wide-menu-content\">\n        </div>\n    </div>\n    <div class=\"ns-search-layer\">\n        <form action=\"https://www.h3c.com/cn/search/\">\n            <div class=\"ns-search-box\">\n                <div class=\"ns-search-keyword\">\n                    <input type=\"text\" name=\"q0\" placeholder=\"请输入关键字\">\n                </div>\n                <input type=\"submit\" class=\"ns-search-submit\" value=\"搜索\">\n            </div>\n        </form>\n    </div>\n    <!-- 主导航结束-->\n    <!-- icon -->\n    <!--NavBar Begin-->\n<div class=\"crumbs hidden-xs noindex\">\n   <ul class=\"container grayA\">\n        <div class=\"nowpage\">\n            <a class='nolink' href=\"#\">解决方案</a>\n        </div>\n        <!--NavBar Begin-->\n<div class=\"koli\"><a class=\"blue3\" href=\"/cn/\" >首页</a><img src=\"https://resource.h3c.com/cn/tres/images/arrow.gif\" border=\"0\" /><a class=\"blue3\" href=\"/cn/IndustrySolution/\" >行业解决方案</a><img src=\"https://resource.h3c.com/cn/tres/images/arrow.gif\" border=\"0\" /><a class=\"blue3\" href=\"/cn/IndustrySolution/Medical/\" >医疗</a><img src=\"https://resource.h3c.com/cn/tres/images/arrow.gif\" border=\"0\" />解决方案</div>\n<!--NavBar End-->\n   </ul>\n</div>\n<!--NavBar End-->\n    <div class=\"pro_product\">\n        <div class=\"container-fluid padding0\">\n            <!-- detail-->\n            <div class=\"container\">\n                <div class=\"row prolist_container\">\n                    <div class=\"par_left col-xs-12 col-sm-9 col-md-9\">\n                        <div class=\"article\">\n                            <DIV style=\"DISPLAY: none\" data-longurl=\"/cn/IndustrySolution/Medical/Solution/202208/1664075_961592_0.htm\"></DIV>\n<DIV id=newsContentHead class=clearFix>\n<DIV class=subNewsTitle>\n<H1>智慧医院解决方案</H1>\n<!-- content Begin -->\n<DIV style=\"FONT-SIZE: 12px; COLOR: #999999; TEXT-ALIGN: right; LINE-HEIGHT: 24px; MARGIN-RIGHT: 20px\">【发布时间：2022-08-11】</DIV>\n<DIV id=detailBody class=detailBody><DIV><H2>建设背景</H2><P class=MsoNormal>我国通过一系列的政策和标准的发布推动新医改不断落地和实施，伴随着城乡居民的医疗支出的增加，人民对更高品质的医疗服务有了更多需求，云计算、大数据、物联网、人工智能等新技术的发展带动医疗行业发展和升级。智慧医院的建设也成为趋势，多元化、综合化、智能化也成为智慧医院建设的新特性。由于诊疗需求的日益增长，临床、服务及管理业务都存在亟需解决的问题，院区运行保障运行状况难以及时掌握，维护管理效率低，各个业务系统之间联动差；医院当前的各项资源利用率低，难以完成预期诊疗目标；医生、护士、药师等多角色诊疗流程配合效率低，难以通过精益化管理提升医疗质量和患者服务体验；医疗数据质量差，不能直接被用以医学科研的研究。这些问题都对智慧医院建设提出新的挑战和要求。</P><H2>方案概述</H2><P class=MsoNormal>基于对医疗行业的理解和实践，新华三构建“医院数字大脑”：由智能数字平台（数字基础设施、业务能力平台、主动安全、统一运维），搭载合作伙伴N个生态应用构成，简称“4+N”。</P><P class=MsoNormal align=center><IMG id=\"图片 1\" src=\"https://resource.h3c.com/cn/202208/11/20220811_7610392_image001_1664075_473305_0.png\" width=554 height=264></P><P class=MsoNormal>总体遵循面向医院业务需求的设计思路，基于医院业务特性，通过智能计算存储、智能网络、智能边缘、智能终端形成医院完整的数字基础设施体系，为医院临床、服务及运营管理业务提供稳固的运行“基石”。医疗业务能力平台可实现医院多源异构数据的采集、治理和分析，运用AI、大数据、物联网、智能视觉等能力构建医院数字中台体系，为智慧医疗、智慧服务及智慧管理提供标准化的数据服务，支撑医院临床辅助、智能导诊、运营决策及医学科研等应用系统的全面建设。面向医院的安全防护以及等保三级的要求，也有完备的主动安全方案。由于医院设备种类繁多，对运维的要求也很高，同时也为医院提供全场景统一运维方案和服务。</P><P class=MsoNormal>新华三智慧医院解决方案采用成熟、具有国内先进水平，符合医疗行业发展趋势的技术、软件和设备，积极吸纳了业界最新的架构思想和建设理念，在设计过程中充分依据国际、国内的各项技术、业务和数据规范标准。</P><H2>方案亮点</H2><P class=MsoNormal><B>1. </B><B>整体顶层规划架构设计，",
+      "source_locator": {
+        "material_id": "a2fd5cd6-b79f-4426-8326-f655cfc68dcb",
+        "source_span_id": "ESPAN-773BFF6C3A8055384A95F1CAE8C14D75",
+        "anchor_chunk_id": "MCH-FFD733C7B6873BC8D98C7BEE3B24B9AD",
+        "start_offset": 96786,
+        "end_offset": 100786,
+        "source_text_hash": "8c43e6f3ab4574d3cb38c19f472a686ad57e21a541c0c83e38738c5f83ef03e6"
+      },
+      "subject": {
+        "name": "医院数字大脑",
+        "type": "architecture"
+      },
+      "entities": [
+        {
+          "name": "新华三",
+          "type": "organization"
+        }
+      ],
+      "scopes": [
+        "智慧医院解决方案"
+      ],
+      "quantities": [],
+      "validity": {
+        "status": "known",
+        "valid_from": "2022-08-11",
+        "valid_until": null
+      },
+      "domain_metadata": {
+        "material": {
+          "material_type": "technical_solution"
+        }
+      },
+      "review_status": "approved",
+      "validation_status": "TRACEABLE",
+      "authority_status": "PENDING_GPT_HUMAN_REVIEW",
+      "currentness_status": "KNOWN_IN_SOURCE",
+      "candidate_origin": "H3C_PUBLIC_REAL_V1"
+    },
+    {
+      "fact_id": "EFACT-2EE4AF49A76573A9453043D1980E1DE5",
+      "fact_text": "河北医科大学第三医院",
+      "fact_type": "organization",
+      "enterprise_id": "H3C-PUBLIC-REAL-V1",
+      "source_id": "H3C-018",
+      "source_title": "河北医大三院X10000案例",
+      "authority_level": "official",
+      "supporting_source_text": "ank\" href=\"https://www.h3cmall.com\">新华三商城 </a></li>\n            <li class=\"ns-mb-login ns-menu-mb\">\n                <a target=\"_blank\" href=\"/cn/home/login/\" class=\"ns-mb-admin\"><i class=\"icon iconfont iconziyuan2\"></i>登录</a>\n                <div class=\"ns-user-text\">\n                    <i class=\"icon iconfont iconziyuan2\"></i>\n                    <p>欢迎<span>user</span></p>\n                </div>\n                <a href=\"#\" class=\"ns-mb-layout\"><i class=\"icon iconfont icontuichu\"></i>退出</a>\n            </li>\n            <li class=\"ns-mb-language-region ns-menu-mb\">\n                <ul>\n                    <li><a class=\"active\" href=\"#\">China - 简体中文</a></li>\n                    <li><a href=\"/en/\">Global - English</a></li>\n                    <li><a href=\"/ru/\">Russia - Русский</a></li>\n                    <li><a href=\"/jp/\">Japan - 日本語</a></li>\n                </ul>\n                <h2><i class=\"icon iconfont iconziyuan3\"></i>国家/地区</h2>\n            </li>\n        </ul>\n        <div class=\"wide-menu-content\">\n        </div>\n    </div>\n    <div class=\"ns-search-layer\">\n        <form action=\"https://www.h3c.com/cn/search/\">\n            <div class=\"ns-search-box\">\n                <div class=\"ns-search-keyword\">\n                    <input type=\"text\" name=\"q0\" placeholder=\"请输入关键字\">\n                </div>\n                <input type=\"submit\" class=\"ns-search-submit\" value=\"搜索\">\n            </div>\n        </form>\n    </div>\n    <!-- 主导航结束-->\n    <!-- icon -->\n    <!--NavBar Begin-->\n<div class=\"crumbs hidden-xs noindex\">\n   <ul class=\"container grayA\">\n        <div class=\"nowpage\">\n            <a class='nolink' href=\"#\">成功案例</a>\n        </div>\n        <!--NavBar Begin-->\n<div class=\"koli\"><a class=\"blue3\" href=\"/cn/\" >首页</a><img src=\"https://resource.h3c.com/cn/tres/images/arrow.gif\" border=\"0\" /><a class=\"blue3\" href=\"/cn/Products_And_Solution/\" >产品与解决方案</a><img src=\"https://resource.h3c.com/cn/tres/images/arrow.gif\" border=\"0\" /><a class=\"blue3\" href=\"/cn/Products_And_Solution/Storage/\" >智慧存储</a><img src=\"https://resource.h3c.com/cn/tres/images/arrow.gif\" border=\"0\" />成功案例</div>\n<!--NavBar End-->\n   </ul>\n</div>\n<!--NavBar End-->\n    <div class=\"pro_product\">\n        <div class=\"container-fluid padding0\">\n            <!-- detail-->\n            <div class=\"container\">\n                <div class=\"row prolist_container\">\n                    <div class=\"par_left col-xs-12 col-sm-9 col-md-9\">\n                        <div class=\"article\">\n                            <DIV style=\"DISPLAY: none\" data-longurl=\"/cn/Products_And_Solution/Storage/Success_Stories/202103/1390806_473262_0.htm\"></DIV>\n<DIV id=newsContentHead class=clearFix>\n<DIV class=subNewsTitle>\n<H1>突破存储瓶颈 新华三X10000 助力河北医科大学第三医院数字化转型</H1><!-- content Begin -->\n<DIV style=\"FONT-SIZE: 12px; COLOR: #999999; TEXT-ALIGN: right; LINE-HEIGHT: 24px; MARGIN-RIGHT: 20px\">&nbsp;</DIV>\n<DIV id=detailBody class=detailBody><DIV><P class=MsoNormal align=left>河北医科大学第三医院是一所知名的省级综合性三级医院，每年收治大量患者。作为一家以骨科见长的医疗机构，院方的日常诊断需要经常使用PACS系统（影像归档和通信系统），然而存储却成为影响PACS系统的一块短板：</P><P class=MsoNormal align=left></P><P class=MsoNormal align=left><B>不够快</B>—院内有众多骨科科室，每天有大量骨科医生调取骨科影像资料进行诊断，当访问高峰时，存储读取性能的不足可能导致系统的卡顿</P><P class=MsoNormal align=left><B>不够大</B>—大型医院每年需要收治大量患者，医学影像信息的增长达到50TB，而现有的系统容量已经捉襟见肘，也无法根据业务进行灵活的扩容</P><P class=MsoNormal align=left></P><P class=MsoNormal align=left>面对未来的业务的需要，院方决定构建全新的双活数据中心，提供高可用的计算资源和存储资源。尤其是针对PACS系统，将传统FC存储切换为分布式存储，充分满足PACS系统对大容量、低并发、高带宽的要求，为以后系统容量扩容提供基础。由紫光股份旗下新华三集团推出的X10000 G3分布式融合存储，同时具备块、文件、对象存储功能，可同时满足PACS系统对文件存储和块存储的要求，实现动态扩容，帮助院方实现了完善的数据全数据生命周期管理。</P><P class=MsoNormal align=center><IMG id=\"图片 1\" src=\"https://resource.h3c.com/cn/202103/12/20210312_5632361_image001_1390806_473262_0.jpg\" width=524 height=931></P><P class=MsoNormal align=left><B>专业服务 实现业务顺利迁移</B></P><P class=MsoNormal></P><P class=MsoNormal>河北医科大学第三医院新建了全新信息机房，并利用原有信息机房做组建双活数据中心，两组数据中心通过裸光纤联通，为医院未来5到10年的发展奠定安全、稳定、可靠的数据IT 基础架构。而在建设过程中，原有的业务系统和数据也需要从传统FC存储迁移到新华三X10000 G3分布式融合存储上。对此，新华三集团出动专业团队，也与院方紧密配合，提供专业的迁移",
+      "source_locator": {
+        "material_id": "fdfbe467-dfe9-4662-b799-902cb06eca7c",
+        "source_span_id": "ESPAN-C41E21E75431C61BD110B124EE4ABD88",
+        "anchor_chunk_id": "MCH-3DFDACBA137FF09BF085DCE478333200",
+        "start_offset": 96751,
+        "end_offset": 100751,
+        "source_text_hash": "5db17d31e8e1d005bb554164a2b38cb95f01489b185d111436599eecb46fb137"
+      },
+      "subject": {
+        "name": "河北医科大学第三医院",
+        "type": "organization"
+      },
+      "entities": [
+        {
+          "name": "河北医科大学第三医院",
+          "type": "organization"
+        }
+      ],
+      "scopes": [
+        "数字化转型"
+      ],
+      "quantities": [
+        {
+          "unit": "TB",
+          "value": "50",
+          "metric": "医学影像信息增长"
+        }
+      ],
+      "validity": {
+        "status": "unknown",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "domain_metadata": {
+        "project_case": {
+          "material_type": "project_case"
+        }
+      },
+      "review_status": "approved",
+      "validation_status": "TRACEABLE",
+      "authority_status": "PENDING_GPT_HUMAN_REVIEW",
+      "currentness_status": "CURRENTNESS_UNKNOWN",
+      "candidate_origin": "H3C_PUBLIC_REAL_V1"
+    },
+    {
+      "fact_id": "EFACT-97C98F557651573DF84B88380F9EF63B",
+      "fact_text": "X10000 G3分布式融合存储",
+      "fact_type": "product",
+      "enterprise_id": "H3C-PUBLIC-REAL-V1",
+      "source_id": "H3C-018",
+      "source_title": "河北医大三院X10000案例",
+      "authority_level": "official",
+      "supporting_source_text": "ank\" href=\"https://www.h3cmall.com\">新华三商城 </a></li>\n            <li class=\"ns-mb-login ns-menu-mb\">\n                <a target=\"_blank\" href=\"/cn/home/login/\" class=\"ns-mb-admin\"><i class=\"icon iconfont iconziyuan2\"></i>登录</a>\n                <div class=\"ns-user-text\">\n                    <i class=\"icon iconfont iconziyuan2\"></i>\n                    <p>欢迎<span>user</span></p>\n                </div>\n                <a href=\"#\" class=\"ns-mb-layout\"><i class=\"icon iconfont icontuichu\"></i>退出</a>\n            </li>\n            <li class=\"ns-mb-language-region ns-menu-mb\">\n                <ul>\n                    <li><a class=\"active\" href=\"#\">China - 简体中文</a></li>\n                    <li><a href=\"/en/\">Global - English</a></li>\n                    <li><a href=\"/ru/\">Russia - Русский</a></li>\n                    <li><a href=\"/jp/\">Japan - 日本語</a></li>\n                </ul>\n                <h2><i class=\"icon iconfont iconziyuan3\"></i>国家/地区</h2>\n            </li>\n        </ul>\n        <div class=\"wide-menu-content\">\n        </div>\n    </div>\n    <div class=\"ns-search-layer\">\n        <form action=\"https://www.h3c.com/cn/search/\">\n            <div class=\"ns-search-box\">\n                <div class=\"ns-search-keyword\">\n                    <input type=\"text\" name=\"q0\" placeholder=\"请输入关键字\">\n                </div>\n                <input type=\"submit\" class=\"ns-search-submit\" value=\"搜索\">\n            </div>\n        </form>\n    </div>\n    <!-- 主导航结束-->\n    <!-- icon -->\n    <!--NavBar Begin-->\n<div class=\"crumbs hidden-xs noindex\">\n   <ul class=\"container grayA\">\n        <div class=\"nowpage\">\n            <a class='nolink' href=\"#\">成功案例</a>\n        </div>\n        <!--NavBar Begin-->\n<div class=\"koli\"><a class=\"blue3\" href=\"/cn/\" >首页</a><img src=\"https://resource.h3c.com/cn/tres/images/arrow.gif\" border=\"0\" /><a class=\"blue3\" href=\"/cn/Products_And_Solution/\" >产品与解决方案</a><img src=\"https://resource.h3c.com/cn/tres/images/arrow.gif\" border=\"0\" /><a class=\"blue3\" href=\"/cn/Products_And_Solution/Storage/\" >智慧存储</a><img src=\"https://resource.h3c.com/cn/tres/images/arrow.gif\" border=\"0\" />成功案例</div>\n<!--NavBar End-->\n   </ul>\n</div>\n<!--NavBar End-->\n    <div class=\"pro_product\">\n        <div class=\"container-fluid padding0\">\n            <!-- detail-->\n            <div class=\"container\">\n                <div class=\"row prolist_container\">\n                    <div class=\"par_left col-xs-12 col-sm-9 col-md-9\">\n                        <div class=\"article\">\n                            <DIV style=\"DISPLAY: none\" data-longurl=\"/cn/Products_And_Solution/Storage/Success_Stories/202103/1390806_473262_0.htm\"></DIV>\n<DIV id=newsContentHead class=clearFix>\n<DIV class=subNewsTitle>\n<H1>突破存储瓶颈 新华三X10000 助力河北医科大学第三医院数字化转型</H1><!-- content Begin -->\n<DIV style=\"FONT-SIZE: 12px; COLOR: #999999; TEXT-ALIGN: right; LINE-HEIGHT: 24px; MARGIN-RIGHT: 20px\">&nbsp;</DIV>\n<DIV id=detailBody class=detailBody><DIV><P class=MsoNormal align=left>河北医科大学第三医院是一所知名的省级综合性三级医院，每年收治大量患者。作为一家以骨科见长的医疗机构，院方的日常诊断需要经常使用PACS系统（影像归档和通信系统），然而存储却成为影响PACS系统的一块短板：</P><P class=MsoNormal align=left></P><P class=MsoNormal align=left><B>不够快</B>—院内有众多骨科科室，每天有大量骨科医生调取骨科影像资料进行诊断，当访问高峰时，存储读取性能的不足可能导致系统的卡顿</P><P class=MsoNormal align=left><B>不够大</B>—大型医院每年需要收治大量患者，医学影像信息的增长达到50TB，而现有的系统容量已经捉襟见肘，也无法根据业务进行灵活的扩容</P><P class=MsoNormal align=left></P><P class=MsoNormal align=left>面对未来的业务的需要，院方决定构建全新的双活数据中心，提供高可用的计算资源和存储资源。尤其是针对PACS系统，将传统FC存储切换为分布式存储，充分满足PACS系统对大容量、低并发、高带宽的要求，为以后系统容量扩容提供基础。由紫光股份旗下新华三集团推出的X10000 G3分布式融合存储，同时具备块、文件、对象存储功能，可同时满足PACS系统对文件存储和块存储的要求，实现动态扩容，帮助院方实现了完善的数据全数据生命周期管理。</P><P class=MsoNormal align=center><IMG id=\"图片 1\" src=\"https://resource.h3c.com/cn/202103/12/20210312_5632361_image001_1390806_473262_0.jpg\" width=524 height=931></P><P class=MsoNormal align=left><B>专业服务 实现业务顺利迁移</B></P><P class=MsoNormal></P><P class=MsoNormal>河北医科大学第三医院新建了全新信息机房，并利用原有信息机房做组建双活数据中心，两组数据中心通过裸光纤联通，为医院未来5到10年的发展奠定安全、稳定、可靠的数据IT 基础架构。而在建设过程中，原有的业务系统和数据也需要从传统FC存储迁移到新华三X10000 G3分布式融合存储上。对此，新华三集团出动专业团队，也与院方紧密配合，提供专业的迁移",
+      "source_locator": {
+        "material_id": "fdfbe467-dfe9-4662-b799-902cb06eca7c",
+        "source_span_id": "ESPAN-C41E21E75431C61BD110B124EE4ABD88",
+        "anchor_chunk_id": "MCH-3DFDACBA137FF09BF085DCE478333200",
+        "start_offset": 96751,
+        "end_offset": 100751,
+        "source_text_hash": "5db17d31e8e1d005bb554164a2b38cb95f01489b185d111436599eecb46fb137"
+      },
+      "subject": {
+        "name": "X10000 G3分布式融合存储",
+        "type": "product"
+      },
+      "entities": [
+        {
+          "name": "X10000 G3分布式融合存储",
+          "type": "product"
+        },
+        {
+          "name": "新华三集团",
+          "type": "organization"
+        }
+      ],
+      "scopes": [
+        "分布式融合存储",
+        "块、文件、对象存储"
+      ],
+      "quantities": [],
+      "validity": {
+        "status": "unknown",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "domain_metadata": {
+        "project_case": {
+          "material_type": "project_case"
+        }
+      },
+      "review_status": "approved",
+      "validation_status": "TRACEABLE",
+      "authority_status": "PENDING_GPT_HUMAN_REVIEW",
+      "currentness_status": "CURRENTNESS_UNKNOWN",
+      "candidate_origin": "H3C_PUBLIC_REAL_V1"
+    }
+  ],
+  "semantic_extraction_failure_count": 5,
+  "semantic_extraction_failure_breakdown": {
+    "valid_empty_result": 13,
+    "strict_schema_failure": 3,
+    "contract_grounding_failure": 2
+  },
+  "fact_review_required_count": 18,
+  "material_semantic_outcomes": [
+    {
+      "source_id": "H3C-001",
+      "failure": {
+        "code": "FACT_SEMANTIC_EMPTY",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "VALID_EMPTY_RESULT",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 200,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 3212,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2595,
+          "completion_tokens": 7,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": null
+          }
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "source_id": "H3C-002",
+      "failure": {
+        "code": "FACT_SEMANTIC_EMPTY",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "VALID_EMPTY_RESULT",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 200,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 1613,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2610,
+          "completion_tokens": 7,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": null
+          }
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "source_id": "H3C-003",
+      "failure": {
+        "code": "FACT_SEMANTIC_EMPTY",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "VALID_EMPTY_RESULT",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 200,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 848,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2609,
+          "completion_tokens": 7,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": null
+          }
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "source_id": "H3C-004",
+      "failure": {
+        "code": "FACT_SEMANTIC_EMPTY",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "VALID_EMPTY_RESULT",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 200,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 821,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2558,
+          "completion_tokens": 5,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": null
+          }
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "source_id": "H3C-005",
+      "failure": {
+        "code": "FACT_SEMANTIC_EMPTY",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "VALID_EMPTY_RESULT",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 200,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 1114,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2616,
+          "completion_tokens": 5,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": null
+          }
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "source_id": "H3C-006",
+      "failure": {
+        "code": "FACT_SEMANTIC_EMPTY",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "VALID_EMPTY_RESULT",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 200,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 1990,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2590,
+          "completion_tokens": 7,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": null
+          }
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "source_id": "H3C-007",
+      "failure": {
+        "code": "FACT_SEMANTIC_EMPTY",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "VALID_EMPTY_RESULT",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 200,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 1183,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2596,
+          "completion_tokens": 7,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": null
+          }
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "source_id": "H3C-008",
+      "failure": {
+        "code": "FACT_SEMANTIC_EXTRACTION_FAILED",
+        "status": 502,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "OUTPUT_SCHEMA_INVALID",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 422,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 15914,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 3009,
+          "completion_tokens": 2521,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": "data.facts[0].quantities[4].value"
+          }
+        },
+        "schema_validation_errors": [
+          {
+            "path": "data.facts[0].quantities[4].value",
+            "keyword": "OUTPUT_SCHEMA_INVALID",
+            "expected": "canonical task data",
+            "actual_type": "string",
+            "additional_property": null
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "H3C-009",
+      "failure": {
+        "code": "FACT_SEMANTIC_EMPTY",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "VALID_EMPTY_RESULT",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 200,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 1614,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2577,
+          "completion_tokens": 7,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": null
+          }
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "source_id": "H3C-010",
+      "failure": {
+        "code": "FACT_SEMANTIC_EMPTY",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "VALID_EMPTY_RESULT",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 200,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 1503,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2603,
+          "completion_tokens": 7,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": null
+          }
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "source_id": "H3C-011",
+      "failure": {
+        "code": "FACT_SEMANTIC_EMPTY",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "VALID_EMPTY_RESULT",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 200,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 1522,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2463,
+          "completion_tokens": 5,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": null
+          }
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "source_id": "H3C-012",
+      "failure": {
+        "code": "FACT_SEMANTIC_EXTRACTION_FAILED",
+        "status": 502,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "OUTPUT_SCHEMA_INVALID",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 422,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 2503,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2394,
+          "completion_tokens": 208,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": "data.facts[0].quantities[0].value"
+          }
+        },
+        "schema_validation_errors": [
+          {
+            "path": "data.facts[0].quantities[0].value",
+            "keyword": "OUTPUT_SCHEMA_INVALID",
+            "expected": "canonical task data",
+            "actual_type": "string",
+            "additional_property": null
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "H3C-013",
+      "failure": {
+        "code": "FACT_SEMANTIC_EXTRACTION_FAILED",
+        "status": 502,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "OUTPUT_SCHEMA_INVALID",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 422,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 8886,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2646,
+          "completion_tokens": 1268,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": "data.facts[2].quantities[0].value"
+          }
+        },
+        "schema_validation_errors": [
+          {
+            "path": "data.facts[2].quantities[0].value",
+            "keyword": "OUTPUT_SCHEMA_INVALID",
+            "expected": "canonical task data",
+            "actual_type": "string",
+            "additional_property": null
+          }
+        ]
+      }
+    },
+    {
+      "source_id": "H3C-015",
+      "failure": {
+        "code": "FACT_SEMANTIC_EMPTY",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "VALID_EMPTY_RESULT",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 200,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 2201,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2472,
+          "completion_tokens": 5,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": null
+          }
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "source_id": "H3C-016",
+      "failure": {
+        "code": "FACT_SEMANTIC_EMPTY",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "VALID_EMPTY_RESULT",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 200,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 1210,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2546,
+          "completion_tokens": 5,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": null
+          }
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "source_id": "H3C-017",
+      "failure": {
+        "code": "EVIDENCE_FACT_SOURCE_UNGROUNDED",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": null,
+        "cause_code": null,
+        "provider_audit": null,
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "source_id": "H3C-019",
+      "failure": {
+        "code": "EVIDENCE_FACT_STATUS_UNGROUNDED",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": null,
+        "cause_code": null,
+        "provider_audit": null,
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "source_id": "H3C-020",
+      "failure": {
+        "code": "FACT_SEMANTIC_EMPTY",
+        "status": 422,
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "VALID_EMPTY_RESULT",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 200,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 1382,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "completed",
+          "prompt_tokens": 2546,
+          "completion_tokens": 5,
+          "output_truncated": false,
+          "json_parse_success": true,
+          "empty_domain_namespace_normalized_count": 0,
+          "safe_error_code": null,
+          "cause_code": null,
+          "fact_normalization_diagnostic": {
+            "normalizer_invoked": true,
+            "projection_invoked": true,
+            "unexpected_property_names": [],
+            "exact_validation_path": null
+          }
+        },
+        "schema_validation_errors": []
+      }
+    }
+  ]
+}

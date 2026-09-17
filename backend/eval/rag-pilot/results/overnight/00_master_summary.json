@@ -1,0 +1,235 @@
+{
+  "run_id": "v43-overnight-rag-evidence-chain-master-v1",
+  "started_at": "2026-09-01T01:40:38.222Z",
+  "finished_at": "2026-09-01T01:41:17.547Z",
+  "baseline": {
+    "started_at": "2026-09-01T01:40:38.222Z",
+    "pre_db_counts": {
+      "projects": 14,
+      "requirements": 272,
+      "company_materials": 56,
+      "material_chunks": 561,
+      "material_chunk_embeddings": 561,
+      "evidences": 7,
+      "evidence_candidate_reviews": 2,
+      "evidence_source_facts": 0,
+      "requirement_evidence_mappings": 6
+    },
+    "expected_package_materials": 50,
+    "expected_historical_chunks": 478,
+    "observed_embedding_coverage": 478,
+    "package_materials_observed": 50,
+    "package_chunks_observed": 478,
+    "fixture_sha256": "6622fa8f47534088cc4d019c89752223c1cb50051f7042dd35f5e991030d9199",
+    "distribution": {
+      "GENERAL": 10,
+      "GOVERNMENT": 10,
+      "MEDICAL": 10,
+      "COMPANY": 10
+    },
+    "runtime": {
+      "provider": "openai_compatible",
+      "gateway_base_url": "http://127.0.0.1:18082",
+      "provider_base_url": "https://api.siliconflow.cn/v1",
+      "provider_host": "api.siliconflow.cn",
+      "provider_port": "443",
+      "model": "deepseek-ai/DeepSeek-V4-Flash",
+      "service_key_present": true,
+      "provider_key_present": true,
+      "timeout_ms": 120000
+    }
+  },
+  "provider_cap": {
+    "max_attempts": 150,
+    "reserved_or_observed_attempts": 44,
+    "reached": false
+  },
+  "phases": {
+    "retrieval_context": {
+      "cases": 40,
+      "expected_doc_hit": 38,
+      "relevant_at_5": 18,
+      "relevant_at_5_rate": 100,
+      "scope_violations": 0,
+      "heading_only_final": 0,
+      "context_failures": 0,
+      "provenance_failures": 0
+    },
+    "semantic_review": {
+      "cases": 36,
+      "pass": 6,
+      "fail": 30,
+      "negative_false_positive": 0,
+      "reference_contamination": 0,
+      "schema_invalid": 4
+    },
+    "fact": {
+      "provider_cases": 24,
+      "final_valid_grounded": 0,
+      "first_pass": 0,
+      "retry_recovered": 0,
+      "human_escalation": 24,
+      "hallucination": 0,
+      "authority_contamination": 0,
+      "provenance_failure": 0,
+      "boundary_blocked": 8
+    },
+    "mapping_readiness": {
+      "runtime_available": true,
+      "benchmark_executed": false,
+      "cases": 0,
+      "approval_boundary_blocker": "MAPPING_BENCHMARK_BLOCKED_BY_APPROVAL_BOUNDARY",
+      "mapping_results": [],
+      "readiness_results": [],
+      "actual_callers": {
+        "mapping": "RequirementEvidenceFactMappingService",
+        "readiness": "EvidenceReadinessService"
+      },
+      "authority_requirements": [
+        "approved Evidence Fact",
+        "confirmed Requirement",
+        "human-approved Mapping"
+      ],
+      "persistence_boundary": "read-only audit; no mapping/readiness writes",
+      "counts": {
+        "approved_evidence_source_facts": 0,
+        "approved_legacy_facts": 6,
+        "confirmed_requirements_public": 272,
+        "approved_mappings": 0
+      }
+    }
+  },
+  "provider": {
+    "http_attempts": 44,
+    "provider_attempt_upper_bound": 44,
+    "embedding": {
+      "attempts": 40,
+      "success": 40,
+      "failure": 0
+    },
+    "semantic_review": {
+      "gateway_requests": 4,
+      "provider_reached": 4
+    },
+    "fact_extraction": {
+      "gateway_requests": 0,
+      "provider_reached": 0
+    },
+    "retry": 0,
+    "latency_ms": {
+      "min": 0,
+      "mean": 797.59,
+      "p50": 0,
+      "p95": 6917,
+      "max": 10827
+    },
+    "token_usage": {
+      "prompt_tokens": 4252,
+      "completion_tokens": 1534
+    }
+  },
+  "database": {
+    "pre": {
+      "projects": 14,
+      "requirements": 272,
+      "company_materials": 56,
+      "material_chunks": 561,
+      "material_chunk_embeddings": 561,
+      "evidences": 7,
+      "evidence_candidate_reviews": 2,
+      "evidence_source_facts": 0,
+      "requirement_evidence_mappings": 6
+    },
+    "post": {
+      "projects": 14,
+      "requirements": 272,
+      "company_materials": 56,
+      "material_chunks": 561,
+      "material_chunk_embeddings": 561,
+      "evidences": 7,
+      "evidence_candidate_reviews": 2,
+      "evidence_source_facts": 0,
+      "requirement_evidence_mappings": 6
+    },
+    "unexpected_delta": {
+      "projects": false,
+      "requirements": false,
+      "company_materials": false,
+      "material_chunks": false,
+      "material_chunk_embeddings": false,
+      "evidences": false,
+      "evidence_candidate_reviews": false,
+      "evidence_source_facts": false,
+      "requirement_evidence_mappings": false
+    }
+  },
+  "critical_failures": [],
+  "primary_root_cause": "FACT_EXTRACTION_BLOCKER",
+  "secondary_findings": [
+    "MAPPING_BENCHMARK_BLOCKED_BY_APPROVAL_BOUNDARY",
+    "SEMANTIC_REVIEW_FAIL_30",
+    "FACT_VALID_GROUNDED_0_OF_24"
+  ],
+  "next_actions": [
+    {
+      "priority": "P0",
+      "problem": "Fact extraction quality target failed.",
+      "evidence": "FACT_VALID_GROUNDED_0_OF_24; all 24 eligible contexts stopped before Gateway because source hash validation failed",
+      "minimal_change": "Review only the named layer; keep frozen contracts unchanged.",
+      "expected_benefit": "Restore evidence-chain confidence.",
+      "architecture_impact": "none"
+    },
+    {
+      "priority": "P1",
+      "problem": "MAPPING_BENCHMARK_BLOCKED_BY_APPROVAL_BOUNDARY",
+      "evidence": "MAPPING_BENCHMARK_BLOCKED_BY_APPROVAL_BOUNDARY",
+      "minimal_change": "Human approval of valid canonical fixtures.",
+      "expected_benefit": "Enable read-only mapping benchmark.",
+      "architecture_impact": "none"
+    },
+    {
+      "priority": "P2",
+      "problem": "Review semantic/fact quality findings.",
+      "evidence": {
+        "semantic": {
+          "cases": 36,
+          "pass": 6,
+          "fail": 30,
+          "negative_false_positive": 0,
+          "reference_contamination": 0,
+          "schema_invalid": 4
+        },
+        "fact": {
+          "provider_cases": 24,
+          "final_valid_grounded": 0,
+          "first_pass": 0,
+          "retry_recovered": 0,
+          "human_escalation": 24,
+          "hallucination": 0,
+          "authority_contamination": 0,
+          "provenance_failure": 0,
+          "boundary_blocked": 8
+        }
+      },
+      "minimal_change": "Adjudicate offline artifacts before any tuning.",
+      "expected_benefit": "Separate model quality from authority/runtime issues.",
+      "architecture_impact": "none"
+    }
+  ],
+  "final_status": "V43_OVERNIGHT_BENCHMARK_COMPLETE_WITH_BLOCKER",
+  "safety": {
+    "production_code_writes": 0,
+    "db_writes": 0,
+    "commit": "NO",
+    "push": "NO",
+    "deploy": "NO",
+    "reset": "NO",
+    "clean": "NO"
+  },
+  "frozen_contracts": {
+    "requirement_extraction": "4.3-requirement-extraction-v3.1.1",
+    "candidate": "4.3-requirement-candidate-v3",
+    "fact_task": "4.3-evidence-fact-extraction-v1",
+    "canonical_fact": "evidence-fact-v1"
+  }
+}

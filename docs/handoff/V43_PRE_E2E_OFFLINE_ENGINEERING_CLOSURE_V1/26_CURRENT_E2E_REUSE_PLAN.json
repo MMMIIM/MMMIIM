@@ -1,0 +1,140 @@
+{
+  "artifact_type": "V43_CURRENT_E2E_REUSE_PLAN_V2",
+  "refresh_decision": "V43_CURRENT_E2E_REUSE_PLAN_REFRESH_V2",
+  "generated_at": "2026-09-16",
+  "execution_mode": "OFFLINE_ONLY",
+  "e2e_enterprise_corpus": "CHENGCHUAN_BASE16",
+  "chengchuan_base16": {
+    "enterprise_id": "SYNTH-CHENGCHUAN-001",
+    "material_count": 16,
+    "reference_only_count": 7,
+    "evidence_candidate_count": 9,
+    "review_required": ["COM-06"],
+    "authority": "SYNTHETIC_EVAL_ONLY",
+    "production_authority": "NONE",
+    "embedding_reuse": "REUSE_EXISTING_160_EXACT_SNAPSHOT_VECTORS",
+    "embedding_identity": {
+      "model": "Qwen/Qwen3-Embedding-0.6B",
+      "version": "1",
+      "dimension": 1024,
+      "material_count": 16,
+      "chunk_count": 160,
+      "embedding_count": 160
+    },
+    "embedding_identity_status": "PASS",
+    "reembed": "FORBIDDEN_WHEN_IDENTITY_PARITY_PASS",
+    "current_canonical_fact_conclusion": "LIVE_FACT_EXTRACTION_REQUIRED",
+    "fact_authority_status": "NO_CURRENT_CANONICAL_FACT_AVAILABLE",
+    "fact_action_reason": "Fresh-read artifacts contain only partial/diagnostic Fact results and no current canonical Fact covering the Base16 material identities; the recorded reuse decision limits those artifacts to Eval diagnostic evidence, so live Fact extraction remains the explicit next Fact action.",
+    "fact_evidence": [
+      {
+        "path": "docs/handoff/V43_PRE_E2E_GOVERNANCE_AND_MAPPING_READINESS_CLOSURE_V1/14_FACT_E2E_REUSE_DECISION.json",
+        "existing_fact_count": 5,
+        "base16_fact_material_id_exact_matches": 0,
+        "recorded_decision": "NO_FACT_EXTRACTION_IN_THIS_OFFLINE_TASK; HOST_FACT_EXTRACTION_REMAINS_LATER_OPTION"
+      },
+      {
+        "path": "backend/eval/rag-pilot/results/post-hash-fix/CONTROLLED_RERUN_SUMMARY.json",
+        "canonical_fact_count": 0,
+        "final_valid_grounded": 0
+      },
+      {
+        "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/13_FACT_REUSE_INDEX.json",
+        "current_task_execution": "NO_FACT_EXTRACTION",
+        "reuse_decision": "Reuse only as Eval diagnostic evidence; no canonical Fact production or promotion."
+      }
+    ]
+  },
+  "corpus_policy": {
+    "default_e2e": "CHENGCHUAN_BASE16",
+    "huawei": "REAL_DOCUMENT_SMOKE_ONLY",
+    "huawei_in_chengchuan_main_chain": false,
+    "h3c_in_chengchuan_main_chain": false,
+    "chengchuan_v2_extension_in_main_chain": false
+  },
+  "stage_dependencies": {
+    "mapping_successor": "NON_BLOCKING_EVAL_GOLD_GOVERNANCE_DEBT",
+    "human_requirement_gold": "NON_BLOCKING_FOR_SYNTHETIC_ENGINEERING_E2E",
+    "real_fact_authority": "NON_BLOCKING_FOR_SYNTHETIC_ENGINEERING_E2E"
+  },
+  "actual_first_host_gate": {
+    "stage": "RETRIEVAL_QUERY_EMBEDDING_HOST_PREFLIGHT",
+    "reason": "Base16 has 160 reusable vectors with model/version/dimension identity parity PASS; the first new network operation is the retrieval query embedding request.",
+    "host_required": true,
+    "reembed": false,
+    "status": "NOT_EXECUTED_HOST_NETWORK_BOUNDARY"
+  },
+  "remaining_engineering_blockers": [
+    "HOST_NETWORK_ACCESS_FOR_RETRIEVAL_QUERY_EMBEDDING",
+    "LIVE_FACT_EXTRACTION_REQUIRED_FOR_CURRENT_CHENGCHUAN_CANONICAL_FACT"
+  ],
+  "evaluation_read_policy": {
+    "chengchuan_base16": "LOAD_FROZEN_ROLE_SNAPSHOT",
+    "legacy_material_type_inference": "FORBIDDEN",
+    "snapshot_mismatch": "FAIL_CLOSED"
+  },
+  "provider_calls": 0,
+  "llm_calls": 0,
+  "embedding_calls": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "gold_mutations": 0,
+  "production_semantic_changes": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "e2e_runs": 0,
+  "commit": 0,
+  "push": 0,
+  "merge": 0,
+  "deploy": 0,
+  "chengchuan_base16_role_snapshot": {
+    "snapshot_id": "V43_CHENGCHUAN_BASE16_CONTENT_ROLE_FREEZE_V1",
+    "path": "docs/handoff/V43_PRE_E2E_GOVERNANCE_AND_MAPPING_READINESS_CLOSURE_V1/21_CHENGCHUAN_SOURCE_ROLE_MODEL_CORRECTED.json",
+    "status": "FROZEN_FOR_ENGINEERING_E2E",
+    "material_count": 16,
+    "reference_only_count": 7,
+    "evidence_candidate_count": 9,
+    "review_required_count": 1,
+    "read_policy": "All Chengchuan Base16 Eval/E2E consumers must load this snapshot; legacy material_type/evidence_category role inference is forbidden; mismatch fails closed."
+  },
+  "sequence": [
+    {
+      "order": 1,
+      "stage": "Requirement source/canonical snapshot",
+      "asset": "16_CORE6_REQUIREMENT_FREEZE.json",
+      "action": "offline reuse only; no extraction"
+    },
+    {
+      "order": 2,
+      "stage": "Deterministic Router V2.2.3",
+      "asset": "07_FULL_REPLAY.json",
+      "action": "offline reuse; deep-chain preselection only"
+    },
+    {
+      "order": 3,
+      "stage": "Embedding/indexing",
+      "asset": "Chengchuan Base16 exact snapshot (160 chunks / 160 embeddings)",
+      "action": "reuse only when identity/model/version/dimension parity PASS; no re-embed. Huawei is REAL_DOCUMENT_SMOKE_ONLY and excluded from the Chengchuan synthetic E2E main chain."
+    },
+    {
+      "order": 4,
+      "stage": "Retrieval",
+      "asset": "existing RAG result registry",
+      "action": "first Host gate is RETRIEVAL_QUERY_EMBEDDING_HOST_PREFLIGHT using reused Base16 vectors; then run only the authorized Requirement-level retrieval path."
+    },
+    {
+      "order": 5,
+      "stage": "Fact",
+      "asset": "synthetic Chengchuan diagnostics + frozen Base16 role snapshot",
+      "action": "current_canonical_fact_conclusion=LIVE_FACT_EXTRACTION_REQUIRED; no Fact execution in this refresh. Existing partial/diagnostic facts are not canonical Base16 facts and must not be promoted."
+    },
+    {
+      "order": 6,
+      "stage": "Mapping/Claim/Writer",
+      "asset": "existing successor/eval assets",
+      "action": "not executed. Mapping successor is NON_BLOCKING_EVAL_GOLD_GOVERNANCE_DEBT; Human Requirement Gold and Real Fact authority are NON_BLOCKING_FOR_SYNTHETIC_ENGINEERING_E2E."
+    }
+  ],
+  "current_run_status": "PRE_E2E_OFFLINE_REUSE_PLAN_REFRESHED"
+}

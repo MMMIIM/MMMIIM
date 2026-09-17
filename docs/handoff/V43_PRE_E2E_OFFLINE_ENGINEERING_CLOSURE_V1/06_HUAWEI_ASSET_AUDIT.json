@@ -1,0 +1,82 @@
+{
+  "artifact_type": "V43_HUAWEI_ASSET_AUDIT_V1",
+  "generated_at": "2026-09-16",
+  "execution_mode": "OFFLINE_ONLY",
+  "provider_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "gold_mutations": 0,
+  "production_semantic_changes": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "commit": 0,
+  "push": 0,
+  "merge": 0,
+  "deploy": 0,
+  "source": {
+    "path": "docs/handoff/V43_REAL_E2E_AUTHORITY_AND_PROJECT_MATERIAL_BINDING_IMPLEMENTATION_V1/04_TB006_HUAWEI_BINDINGS.json",
+    "exists": true,
+    "bytes": 1084,
+    "sha256": "f17277b4a7cf71f4ae2080351bbafad349e4a7fdfccc31581bfaea69b8f10cd8",
+    "status": "CURRENT_REUSABLE",
+    "roles": [
+      "HUAWEI_BINDINGS"
+    ],
+    "notes": []
+  },
+  "bindings": {
+    "artifact_type": "V43_TB006_HUAWEI_BINDINGS",
+    "database_target": "bid_platform_flow_audit_test",
+    "binding_source": "REAL_E2E_CASE_01",
+    "consuming_project_id": "7a038c5d-38e4-46ae-b24d-39437bb3b545",
+    "material_project_id": "5d724373-3d88-41ec-b72d-0d7a01107af7",
+    "status": "ACTIVE",
+    "bindings": [
+      {
+        "material_id": "da4b0715-9d47-4853-ab2f-df5eee22c597",
+        "original_name": "HW-001.pdf"
+      },
+      {
+        "material_id": "2f84fdcc-4f27-4fc6-91a4-746d8a11a6a7",
+        "original_name": "HW-002.pdf"
+      },
+      {
+        "material_id": "3a45227d-c7ff-4e43-8b87-a2a1f5f1c730",
+        "original_name": "HW-003.pdf"
+      },
+      {
+        "material_id": "08612896-881e-4c65-a39e-b4acc5056614",
+        "original_name": "HW-004.pdf"
+      },
+      {
+        "material_id": "637f748c-8a43-4ca2-be9f-1461f00a1536",
+        "original_name": "HW-005.pdf"
+      },
+      {
+        "material_id": "a6db2fd3-0bc7-4d2a-bde3-b0c4ef744b80",
+        "original_name": "HW-006.pdf"
+      }
+    ],
+    "binding_count": 6,
+    "material_count": 6,
+    "chunk_count": 590,
+    "embedding_count": 590,
+    "duplicate_material_copies": 0,
+    "duplicate_chunk_copies": 0,
+    "new_embedding_calls": 0,
+    "production_db_writes": 0
+  },
+  "retrieval_snapshot": {
+    "status": "PASS",
+    "database": "bid_platform_flow_audit_test",
+    "project_id": "7a038c5d-38e4-46ae-b24d-39437bb3b545",
+    "material_count": 6,
+    "authorized_chunk_count": 590,
+    "embedding_model": "Qwen/Qwen3-Embedding-0.6B",
+    "embedding_dimension": 1024
+  },
+  "reuse_decision": "REUSE_EXACT_SNAPSHOT_IF_HOST_GATE_PASSES; NO_RECHUNK_OR_REEMBED",
+  "host_gate_dependency": "ENTERPRISE_INDEXING_EMBEDDING_PREFLIGHT"
+}

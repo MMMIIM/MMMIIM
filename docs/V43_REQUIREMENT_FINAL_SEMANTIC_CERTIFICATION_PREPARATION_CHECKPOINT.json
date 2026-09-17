@@ -1,0 +1,102 @@
+{
+  "checkpoint": "V43_REQUIREMENT_FINAL_SEMANTIC_CERTIFICATION_PREPARATION_CHECKPOINT",
+  "artifact_version": "v1",
+  "generated_at": "2026-09-07T08:26:23.901Z",
+  "fixed48_runtime_gate": "PASS",
+  "fixed48_evidence": {
+    "artifact": "docs/V43_REQUIREMENT_FIXED48_LIVE_CERTIFICATION_RUN_req-fixed48-live-20260907080143328-71904882.json",
+    "finalized_cases": 48,
+    "provider_calls_existing_run": 48,
+    "retries_existing_run": 0,
+    "schema_valid_rate_existing_run": 1,
+    "telemetry_debt": "NON_BLOCKING_EVAL_TELEMETRY_DEBT"
+  },
+  "output_side": {
+    "frozen_asset": "docs/V43_REQUIREMENT_OUTPUT_SIDE_REVIEW.jsonl",
+    "case_count": 239,
+    "packet": "docs/V43_REQUIREMENT_FINAL_SEMANTIC_CERTIFICATION_OUTPUT_PACKET.jsonl",
+    "packet_case_count": 239,
+    "packet_status": "READY_FOR_INDEPENDENT_ADJUDICATION",
+    "label_status": "PENDING_INDEPENDENT_ADJUDICATION",
+    "quality_gate_decision_persisted_count": 0,
+    "quality_gate_decision_unavailable_count": 239,
+    "quality_gate_telemetry_note": "The output-side asset has no per-case quality_gate_decision; Fixed-48 rows are not safely joinable by canonical requirement ID."
+  },
+  "source_side": {
+    "frozen_asset": "docs/V43_REQUIREMENT_SOURCE_SIDE_BLIND_RECALL.jsonl",
+    "case_count": 72,
+    "manifest": "docs/V43_REQUIREMENT_FINAL_SEMANTIC_CERTIFICATION_SOURCE_PACKET_MANIFEST.json",
+    "packet_status": "FROZEN_BLIND_INPUT",
+    "canonical_visibility": "HIDDEN_FIRST_PASS",
+    "alignment_status": "DEFERRED_UNTIL_EXPECTED_REQUIREMENTS_ARE_FROZEN"
+  },
+  "zero_candidate_special_review": {
+    "decision_reference_cases": [
+      "FIXED48-20",
+      "FIXED48-26",
+      "FIXED48-41"
+    ],
+    "cases": [
+      {
+        "case_id": "FIXED48-26",
+        "tender_id": "FAST-01",
+        "chunk_number": 20,
+        "quality_gate_decision": "REVIEW_REQUIRED_OR_EMPTY",
+        "interpretation": "REQUIRES_INDEPENDENT_SOURCE_REVIEW; NOT_CLASSIFIED_BY_CODEX"
+      },
+      {
+        "case_id": "FIXED48-28",
+        "tender_id": "FAST-01",
+        "chunk_number": 19,
+        "quality_gate_decision": "REVIEW_REQUIRED_OR_EMPTY",
+        "interpretation": "REQUIRES_INDEPENDENT_SOURCE_REVIEW; NOT_CLASSIFIED_BY_CODEX"
+      },
+      {
+        "case_id": "FIXED48-41",
+        "tender_id": "FAST-WATER-01",
+        "chunk_number": 15,
+        "quality_gate_decision": "REVIEW_REQUIRED_OR_EMPTY",
+        "interpretation": "REQUIRES_INDEPENDENT_SOURCE_REVIEW; NOT_CLASSIFIED_BY_CODEX"
+      }
+    ],
+    "count": 3,
+    "decision_reference_matches_artifact": false,
+    "discrepancy_note": "The frozen runtime artifact is authoritative for counts; the Decision reference list is retained for audit and is not used to classify cases.",
+    "semantic_classification": "PENDING_INDEPENDENT_SOURCE_REVIEW"
+  },
+  "semantic_certification": "PENDING_INDEPENDENT_ADJUDICATION",
+  "human_packet": {
+    "status": "NOT_YET_SELECTED; SELECT ONLY AFTER INDEPENDENT ADJUDICATION",
+    "target_max_cases": 30
+  },
+  "readiness": {
+    "requirement_producer_runtime": "PASS",
+    "requirement_engineering_quality": "PASS",
+    "requirement_semantic_quality": "PENDING_INDEPENDENT_ADJUDICATION",
+    "requirement_performance": "CONDITIONAL_PROVIDER_IDENTITY",
+    "requirement_review_burden": "PENDING_INDEPENDENT_ADJUDICATION",
+    "requirement_extraction_production_readiness": "NOT_CERTIFIED",
+    "requirement_mapping_input_ready": "NO"
+  },
+  "side_effects_this_task": {
+    "provider_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "production_semantic_changes": 0
+  },
+  "next_authority": "INDEPENDENT_GPT_ADJUDICATION_THEN_LIMITED_HUMAN_PACKET",
+  "blockers": [
+    "239 output-side cases require independent semantic adjudication before metrics or human triage.",
+    "72 source-side windows require blind expected-requirement adjudication before canonical alignment.",
+    "Fixed-48 per-case provider identity/truncation/tender telemetry remains a non-blocking evaluation debt.",
+    "No semantic Gold promotion or Mapping input activation is authorized by this preparation artifact."
+  ],
+  "input_asset_hashes": {
+    "output_side_review_sha256": "ff12f2c1f77349daee5adf4b1aedb7069dc1143be2ac53b30a90c98f3d010029",
+    "source_side_blind_sha256": "ca1581455882b441ee755d5af32c537c8ba454baf28847e7ef4408dcc7b88dea",
+    "fixed48_runtime_sha256": "d77b6c842f5c3958ffbe2e8c284cabe489090d54b18af3b8c1d465fb130a58d2"
+  },
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0
+}

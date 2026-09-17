@@ -1,0 +1,3220 @@
+{
+  "artifact_type": "V43_P0_BADCASE_44_REPLAY_INPUT_AUTHORITY_V4",
+  "artifact_version": "v4",
+  "source_truth_id": "GPT_SOURCE_TRUTH_P0_CORE6_V1",
+  "source_truth_sha256": "9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+  "production_run_id": "V43-CORE6-20260911",
+  "replay_run_id": "V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V2",
+  "replay_input_authority": "ORIGINAL_PROVIDER_INPUT > ORIGINAL_PRODUCTION_PARSE_CHUNK > DETERMINISTIC_PARSE_RECONSTRUCTION",
+  "forbidden_authority_sources": [
+    "R3 mechanical output lineage",
+    "same_page_span_only",
+    "shared-ngram output linkage",
+    "Canonical Requirement source excerpt"
+  ],
+  "target_source_evidence_in_provider_input_gate": "REQUIRED",
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "semantic_adjudication_performed": false,
+  "rows": [
+    {
+      "atom_id": "JY-001-P0-0002",
+      "tender_id": "JY-001",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 3,
+        "source_excerpt": "2、未被“信用中国”网站、“中国政府采购网”列入失信被执行人、重大税收违法\n失信主体、政府采购严重违法失信行为信息记录名单；",
+        "source_excerpt_sha256": "a94b92faafb92ac05132708095405c26e034f3ffa6095780b8a1afda94980bd6",
+        "atomic_requirement": "不得被信用中国或中国政府采购网列入失信被执行人、重大税收违法失信主体、政府采购严重违法失信行为信息记录名单。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "QUALIFICATION"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": true,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "27d6438c-9789-4aff-b348-0fe5acb0da1d"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-00192344fab2d1be.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "27d6438c-9789-4aff-b348-0fe5acb0da1d",
+          "chunk_number": 1,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1820,
+          "persisted_chunk_text_sha256": "f52f6b1f8dfef7e842752a750a6c5a298f0d86101baa2a57bca67a8bbace2680",
+          "persisted_source_start_page": 3,
+          "persisted_source_end_page": 6,
+          "persisted_source_start_paragraph": 22,
+          "persisted_source_end_paragraph": 114,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-00192344fab2d1be.json",
+          "provider_input_snapshot_sha256": "2822c171665d34d5894883ec10aa0ea1e6b57d04b7ca58c0136573ded7bb6429",
+          "provider_input_source_chunk_id": "27d6438c-9789-4aff-b348-0fe5acb0da1d",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1647,
+          "provider_task_payload_chunk_text_sha256": "320077f3f0fc960307f9cabcfbfa690dbb96870fa89864271fafd5320fb265ae",
+          "provider_input_declared_char_count": 1647,
+          "provider_input_declared_sha256": "320077f3f0fc960307f9cabcfbfa690dbb96870fa89864271fafd5320fb265ae",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": true,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 52,
+              "haystack_normalized_char_count": 1422,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 52,
+              "haystack_normalized_char_count": 1192,
+              "contains": true
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "EVAL_REPLAY_JOIN_MISALIGNMENT"
+        }
+      ],
+      "authority_status": "EVAL_REPLAY_JOIN_MISALIGNMENT",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "JY-001-P0-0007",
+      "tender_id": "JY-001",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 7,
+        "source_excerpt": "（3）*报价明细表；\n（4）*详细配置一览表；\n（5）*商务、技术要求响应及偏离表；\n（6）*项目实施方案及需要说明的其他内容；\n（7）*资格证明文件：\n文件 \t1：提供格式条款《关于资格的声明函》\n文件 \t2：法定代表人授权委托书（法定代表人签署投标文件且亲自参与的必须",
+        "source_excerpt_sha256": "86a3f57695b07819e1e7e0eff95c375ec687ebebc69020adc77e8c7d8fcca242",
+        "atomic_requirement": "投标文件须包含*报价明细表。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "MANDATORY_FILE_COMPONENT"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "b646f4eb-8d7c-4066-b907-21cf7f344b7b"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-588cba4fdf1e6921.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "b646f4eb-8d7c-4066-b907-21cf7f344b7b",
+          "chunk_number": 2,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1290,
+          "persisted_chunk_text_sha256": "90059a94dd3b3ea8cd4d8cd545d93ddaa9a1fde6e5966e4af2c6e769e4744ac2",
+          "persisted_source_start_page": 6,
+          "persisted_source_end_page": 7,
+          "persisted_source_start_paragraph": 115,
+          "persisted_source_end_paragraph": 170,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-588cba4fdf1e6921.json",
+          "provider_input_snapshot_sha256": "3d851263189fdd6ae3a49e8c187ca4df6ef0d618779281572f1e018f61b5763a",
+          "provider_input_source_chunk_id": "b646f4eb-8d7c-4066-b907-21cf7f344b7b",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1003,
+          "provider_task_payload_chunk_text_sha256": "40baf12be8791d67e679e6ff36c05024d3fa6c1e5231fef4ed68c66d68316f99",
+          "provider_input_declared_char_count": 1003,
+          "provider_input_declared_sha256": "40baf12be8791d67e679e6ff36c05024d3fa6c1e5231fef4ed68c66d68316f99",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 100,
+              "haystack_normalized_char_count": 1096,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 100,
+              "haystack_normalized_char_count": 762,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "JY-001-P0-0013",
+      "tender_id": "JY-001",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 9,
+        "source_excerpt": "1、投标文件未按招标文件要求签署、盖章的；",
+        "source_excerpt_sha256": "f42e2fd12dd0c1c7cadaf838e078376cc45a5933c1e2d7ec7c537586b38451ad",
+        "atomic_requirement": "投标文件须按招标文件要求签署、盖章。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY"
+      },
+      "source_truth_located_parse_chunk_ids": [
+        "300d9687-4703-4f07-947d-c5d13abe30b5"
+      ],
+      "source_truth_located_parse_chunk_numbers": [
+        4
+      ],
+      "source_truth_location_method": "SINGLE_CHUNK_CONTAINMENT",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": true,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [
+        "300d9687-4703-4f07-947d-c5d13abe30b5"
+      ],
+      "replay_selected_parse_chunk_ids": [
+        "300d9687-4703-4f07-947d-c5d13abe30b5"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-cc66cb6a84507c5c.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "300d9687-4703-4f07-947d-c5d13abe30b5",
+          "chunk_number": 4,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1716,
+          "persisted_chunk_text_sha256": "ad686f622cedced217c7c80ddb1048c56847e58cf67fdb19cd357937f684cc31",
+          "persisted_source_start_page": 9,
+          "persisted_source_end_page": 12,
+          "persisted_source_start_paragraph": 222,
+          "persisted_source_end_paragraph": 328,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-cc66cb6a84507c5c.json",
+          "provider_input_snapshot_sha256": "72821b60217335cdcbf9431e5fca8b46f1e2f8f6bf2c1075a216c1398052b6bd",
+          "provider_input_source_chunk_id": "300d9687-4703-4f07-947d-c5d13abe30b5",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1857,
+          "provider_task_payload_chunk_text_sha256": "371080094da273df3a9d201085281fc67a083114e06994cb04c2986341bbe9fc",
+          "provider_input_declared_char_count": 1857,
+          "provider_input_declared_sha256": "371080094da273df3a9d201085281fc67a083114e06994cb04c2986341bbe9fc",
+          "source_excerpt_present_in_parse_chunk": true,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 18,
+              "haystack_normalized_char_count": 1483,
+              "contains": true
+            },
+            "provider_input": {
+              "target_normalized_char_count": 18,
+              "haystack_normalized_char_count": 1567,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "JY-001-P0-0015",
+      "tender_id": "JY-001",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 9,
+        "source_excerpt": "3、报价超过招标文件中规定的预算金额或者最高限价的；",
+        "source_excerpt_sha256": "e0dba6bfb64498dae88ef9deca485329a67c73f8789a6f319313ba07d5b17bec",
+        "atomic_requirement": "报价不得超过预算金额或最高限价。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "300d9687-4703-4f07-947d-c5d13abe30b5"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-cc66cb6a84507c5c.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "300d9687-4703-4f07-947d-c5d13abe30b5",
+          "chunk_number": 4,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1716,
+          "persisted_chunk_text_sha256": "ad686f622cedced217c7c80ddb1048c56847e58cf67fdb19cd357937f684cc31",
+          "persisted_source_start_page": 9,
+          "persisted_source_end_page": 12,
+          "persisted_source_start_paragraph": 222,
+          "persisted_source_end_paragraph": 328,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-cc66cb6a84507c5c.json",
+          "provider_input_snapshot_sha256": "72821b60217335cdcbf9431e5fca8b46f1e2f8f6bf2c1075a216c1398052b6bd",
+          "provider_input_source_chunk_id": "300d9687-4703-4f07-947d-c5d13abe30b5",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1857,
+          "provider_task_payload_chunk_text_sha256": "371080094da273df3a9d201085281fc67a083114e06994cb04c2986341bbe9fc",
+          "provider_input_declared_char_count": 1857,
+          "provider_input_declared_sha256": "371080094da273df3a9d201085281fc67a083114e06994cb04c2986341bbe9fc",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 24,
+              "haystack_normalized_char_count": 1483,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 24,
+              "haystack_normalized_char_count": 1567,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "JY-001-P0-0016",
+      "tender_id": "JY-001",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 9,
+        "source_excerpt": "4、投标文件含有采购人不能接受的附加条件的；",
+        "source_excerpt_sha256": "0dbf58f8ac853ab271989dda7ad409967f8af6c9eb60fd3937f78ac86ef8b134",
+        "atomic_requirement": "投标文件不得含采购人不能接受的附加条件。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY"
+      },
+      "source_truth_located_parse_chunk_ids": [
+        "300d9687-4703-4f07-947d-c5d13abe30b5"
+      ],
+      "source_truth_located_parse_chunk_numbers": [
+        4
+      ],
+      "source_truth_location_method": "SINGLE_CHUNK_CONTAINMENT",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": true,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [
+        "300d9687-4703-4f07-947d-c5d13abe30b5"
+      ],
+      "replay_selected_parse_chunk_ids": [
+        "300d9687-4703-4f07-947d-c5d13abe30b5"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-cc66cb6a84507c5c.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "300d9687-4703-4f07-947d-c5d13abe30b5",
+          "chunk_number": 4,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1716,
+          "persisted_chunk_text_sha256": "ad686f622cedced217c7c80ddb1048c56847e58cf67fdb19cd357937f684cc31",
+          "persisted_source_start_page": 9,
+          "persisted_source_end_page": 12,
+          "persisted_source_start_paragraph": 222,
+          "persisted_source_end_paragraph": 328,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-cc66cb6a84507c5c.json",
+          "provider_input_snapshot_sha256": "72821b60217335cdcbf9431e5fca8b46f1e2f8f6bf2c1075a216c1398052b6bd",
+          "provider_input_source_chunk_id": "300d9687-4703-4f07-947d-c5d13abe30b5",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1857,
+          "provider_task_payload_chunk_text_sha256": "371080094da273df3a9d201085281fc67a083114e06994cb04c2986341bbe9fc",
+          "provider_input_declared_char_count": 1857,
+          "provider_input_declared_sha256": "371080094da273df3a9d201085281fc67a083114e06994cb04c2986341bbe9fc",
+          "source_excerpt_present_in_parse_chunk": true,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 20,
+              "haystack_normalized_char_count": 1483,
+              "contains": true
+            },
+            "provider_input": {
+              "target_normalized_char_count": 20,
+              "haystack_normalized_char_count": 1567,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "JY-001-P0-0019",
+      "tender_id": "JY-001",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 9,
+        "source_excerpt": "7、投标文件中同一方案有选择性报价且未声明以哪一个为准的；",
+        "source_excerpt_sha256": "13c81e4f51cc2ca262a837be6e203b09d3368379556780e1a74f5057e1ff0b2c",
+        "atomic_requirement": "同一方案有选择性报价时须明确以哪一个为准。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "300d9687-4703-4f07-947d-c5d13abe30b5"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-cc66cb6a84507c5c.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "300d9687-4703-4f07-947d-c5d13abe30b5",
+          "chunk_number": 4,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1716,
+          "persisted_chunk_text_sha256": "ad686f622cedced217c7c80ddb1048c56847e58cf67fdb19cd357937f684cc31",
+          "persisted_source_start_page": 9,
+          "persisted_source_end_page": 12,
+          "persisted_source_start_paragraph": 222,
+          "persisted_source_end_paragraph": 328,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-cc66cb6a84507c5c.json",
+          "provider_input_snapshot_sha256": "72821b60217335cdcbf9431e5fca8b46f1e2f8f6bf2c1075a216c1398052b6bd",
+          "provider_input_source_chunk_id": "300d9687-4703-4f07-947d-c5d13abe30b5",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1857,
+          "provider_task_payload_chunk_text_sha256": "371080094da273df3a9d201085281fc67a083114e06994cb04c2986341bbe9fc",
+          "provider_input_declared_char_count": 1857,
+          "provider_input_declared_sha256": "371080094da273df3a9d201085281fc67a083114e06994cb04c2986341bbe9fc",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 27,
+              "haystack_normalized_char_count": 1483,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 27,
+              "haystack_normalized_char_count": 1567,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "JY-001-P0-0020",
+      "tender_id": "JY-001",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 9,
+        "source_excerpt": "8、不响应招标文件中的付款方式的；",
+        "source_excerpt_sha256": "9b34413d605a5faf2adc43670c1a84348b93d85bbe63edd4a0a6e9cb17372ee3",
+        "atomic_requirement": "须响应招标文件中的付款方式。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "300d9687-4703-4f07-947d-c5d13abe30b5"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-cc66cb6a84507c5c.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "300d9687-4703-4f07-947d-c5d13abe30b5",
+          "chunk_number": 4,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1716,
+          "persisted_chunk_text_sha256": "ad686f622cedced217c7c80ddb1048c56847e58cf67fdb19cd357937f684cc31",
+          "persisted_source_start_page": 9,
+          "persisted_source_end_page": 12,
+          "persisted_source_start_paragraph": 222,
+          "persisted_source_end_paragraph": 328,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-cc66cb6a84507c5c.json",
+          "provider_input_snapshot_sha256": "72821b60217335cdcbf9431e5fca8b46f1e2f8f6bf2c1075a216c1398052b6bd",
+          "provider_input_source_chunk_id": "300d9687-4703-4f07-947d-c5d13abe30b5",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1857,
+          "provider_task_payload_chunk_text_sha256": "371080094da273df3a9d201085281fc67a083114e06994cb04c2986341bbe9fc",
+          "provider_input_declared_char_count": 1857,
+          "provider_input_declared_sha256": "371080094da273df3a9d201085281fc67a083114e06994cb04c2986341bbe9fc",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 15,
+              "haystack_normalized_char_count": 1483,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 15,
+              "haystack_normalized_char_count": 1567,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "JY-001-P0-0022",
+      "tender_id": "JY-001",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 9,
+        "source_excerpt": "8、不响应招标文件中的付款方式的；\n9、未通过江阴市公共资源交易平台会员系统确认参加投标的。\n（二）投标人有下列情形之一的，视为串通投标，其投标无效，并参照《政府采购\n法》第七十七条规定追究法律责任：\n1、投标单位直接或间接从采购人或采购代理机构处获得其他投标单位的投标情况，",
+        "source_excerpt_sha256": "dd5eb72c67bc86fd42cca3fcd01b1db9142ed16eb555c7fad13cfc806c2f4bc0",
+        "atomic_requirement": "不得存在招标文件列举的串通投标情形。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "300d9687-4703-4f07-947d-c5d13abe30b5"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-cc66cb6a84507c5c.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "300d9687-4703-4f07-947d-c5d13abe30b5",
+          "chunk_number": 4,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1716,
+          "persisted_chunk_text_sha256": "ad686f622cedced217c7c80ddb1048c56847e58cf67fdb19cd357937f684cc31",
+          "persisted_source_start_page": 9,
+          "persisted_source_end_page": 12,
+          "persisted_source_start_paragraph": 222,
+          "persisted_source_end_paragraph": 328,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-cc66cb6a84507c5c.json",
+          "provider_input_snapshot_sha256": "72821b60217335cdcbf9431e5fca8b46f1e2f8f6bf2c1075a216c1398052b6bd",
+          "provider_input_source_chunk_id": "300d9687-4703-4f07-947d-c5d13abe30b5",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1857,
+          "provider_task_payload_chunk_text_sha256": "371080094da273df3a9d201085281fc67a083114e06994cb04c2986341bbe9fc",
+          "provider_input_declared_char_count": 1857,
+          "provider_input_declared_sha256": "371080094da273df3a9d201085281fc67a083114e06994cb04c2986341bbe9fc",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 120,
+              "haystack_normalized_char_count": 1483,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 120,
+              "haystack_normalized_char_count": 1567,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "JY-001-P0-0023",
+      "tender_id": "JY-001",
+      "frozen_semantic_label": "PARTIAL",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 18,
+        "source_excerpt": " \t《计算机软件文档编制规范》（GB/T8567-2006）\n \t《计算机软件需求规格说明规范》（GB/T9385-2008）\n \t《软件工程术语》（GB/T11457-2006）\n \t《计算机软件测试规范》（GB/T15532-2008）\n \t《计算机软件测试文档编制规范》（GB/T9386-2008）\n \t《质量管理体系要求》（GB/T19001-2016）\n \t《软件工程软件产品质量要求与评价（SQuaRE）SQuaRE \t指南》(GB/T25000.1-2010)\n \t《计算机软件可靠性和可维护性管理》（GB/T12394-2008）\n \t《政府热线服务规范》（GB/T33358-2016）\n \t《质检举报处置热线服务规范》（GB/T33359-2016）",
+        "source_excerpt_sha256": "a24b12f4d5b84ddb72b375b7c987bba1efb99e2a59b4acb848b621c5e94907fe",
+        "atomic_requirement": "项目系统功能设计/建设方案应遵循招标文件列举的政策文件和技术标准。",
+        "p0_basis": "INHERITED_GOVERNING_SUBSTANTIVE",
+        "family": "INHERITED_SUBSTANTIVE"
+      },
+      "source_truth_located_parse_chunk_ids": [
+        "f8938643-ed83-410e-b91d-372a6c51886a"
+      ],
+      "source_truth_located_parse_chunk_numbers": [
+        8
+      ],
+      "source_truth_location_method": "SINGLE_CHUNK_CONTAINMENT",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": true,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [
+        "f8938643-ed83-410e-b91d-372a6c51886a"
+      ],
+      "replay_selected_parse_chunk_ids": [
+        "f8938643-ed83-410e-b91d-372a6c51886a"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-9094c9160768e9d9.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "f8938643-ed83-410e-b91d-372a6c51886a",
+          "chunk_number": 8,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1973,
+          "persisted_chunk_text_sha256": "24070f1b4c0c689349820231f6c4b3e0146643abf5e8f360060970f2930d0772",
+          "persisted_source_start_page": 17,
+          "persisted_source_end_page": 19,
+          "persisted_source_start_paragraph": 499,
+          "persisted_source_end_paragraph": 566,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-9094c9160768e9d9.json",
+          "provider_input_snapshot_sha256": "e151594962772775d5131f6ab49f20550ee667c792378f21b1ac74eaba9feb3d",
+          "provider_input_source_chunk_id": "f8938643-ed83-410e-b91d-372a6c51886a",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1495,
+          "provider_task_payload_chunk_text_sha256": "55130e1f0b193b8c96a911fbca2b97b87f10f0a3759cedb0fcc106ee64a44e5d",
+          "provider_input_declared_char_count": 1495,
+          "provider_input_declared_sha256": "55130e1f0b193b8c96a911fbca2b97b87f10f0a3759cedb0fcc106ee64a44e5d",
+          "source_excerpt_present_in_parse_chunk": true,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 242,
+              "haystack_normalized_char_count": 1496,
+              "contains": true
+            },
+            "provider_input": {
+              "target_normalized_char_count": 242,
+              "haystack_normalized_char_count": 1281,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "JY-001-P0-0089",
+      "tender_id": "JY-001",
+      "frozen_semantic_label": "PARTIAL",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 60,
+        "source_excerpt": "1.无此表或对此表作实质性修改，投标无效。\n2.投标人须对此表中内容作出承诺，否则投标无效。",
+        "source_excerpt_sha256": "69abff994a78028b76972c2925f4852eba556668abae021eff8ade9be923797f",
+        "atomic_requirement": "资格声明函不得缺失或实质性修改，且投标人须对表中内容作出承诺。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "MANDATORY_FILE_COMPONENT"
+      },
+      "source_truth_located_parse_chunk_ids": [
+        "6119e013-d56c-4b41-a40a-a529a79b1050",
+        "146d0a57-ee10-41f6-ba37-dbc3889948df"
+      ],
+      "source_truth_located_parse_chunk_numbers": [
+        27,
+        28
+      ],
+      "source_truth_location_method": "ADJACENT_CHUNK_CONCATENATION",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": true,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [
+        "6119e013-d56c-4b41-a40a-a529a79b1050",
+        "146d0a57-ee10-41f6-ba37-dbc3889948df"
+      ],
+      "replay_selected_parse_chunk_ids": [
+        "6119e013-d56c-4b41-a40a-a529a79b1050",
+        "146d0a57-ee10-41f6-ba37-dbc3889948df"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-1d1a445bb8d219f7.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "6119e013-d56c-4b41-a40a-a529a79b1050",
+          "chunk_number": 27,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1997,
+          "persisted_chunk_text_sha256": "df6ca9a5986ff10407b377eead360d274d537e91f5719990035b885b824aef74",
+          "persisted_source_start_page": 56,
+          "persisted_source_end_page": 60,
+          "persisted_source_start_paragraph": 2038,
+          "persisted_source_end_paragraph": 2136,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-1d1a445bb8d219f7.json",
+          "provider_input_snapshot_sha256": "6fdad31fc6d35d14a39c8a7e8291ea0c183cef07d7d05784a1f36b752ec497b4",
+          "provider_input_source_chunk_id": "6119e013-d56c-4b41-a40a-a529a79b1050",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1817,
+          "provider_task_payload_chunk_text_sha256": "ab28e10a74ad7a07b1e5812a1c2a533b09da2212e672f18a6867d944848bb3b3",
+          "provider_input_declared_char_count": 1817,
+          "provider_input_declared_sha256": "ab28e10a74ad7a07b1e5812a1c2a533b09da2212e672f18a6867d944848bb3b3",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 39,
+              "haystack_normalized_char_count": 1573,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 39,
+              "haystack_normalized_char_count": 1387,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        },
+        {
+          "chunk_id": "146d0a57-ee10-41f6-ba37-dbc3889948df",
+          "chunk_number": 28,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 52,
+          "persisted_chunk_text_sha256": "8a8a07d75c083f21208e84b46852e259657d7c7b6b7c725f1eacddfcacd1d696",
+          "persisted_source_start_page": 60,
+          "persisted_source_end_page": 60,
+          "persisted_source_start_paragraph": 2137,
+          "persisted_source_end_paragraph": 2138,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-1d1a445bb8d219f7.json",
+          "provider_input_snapshot_sha256": "6fdad31fc6d35d14a39c8a7e8291ea0c183cef07d7d05784a1f36b752ec497b4",
+          "provider_input_source_chunk_id": "6119e013-d56c-4b41-a40a-a529a79b1050",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1817,
+          "provider_task_payload_chunk_text_sha256": "ab28e10a74ad7a07b1e5812a1c2a533b09da2212e672f18a6867d944848bb3b3",
+          "provider_input_declared_char_count": 1817,
+          "provider_input_declared_sha256": "ab28e10a74ad7a07b1e5812a1c2a533b09da2212e672f18a6867d944848bb3b3",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 39,
+              "haystack_normalized_char_count": 46,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 39,
+              "haystack_normalized_char_count": 1387,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "EVAL_REPLAY_JOIN_MISALIGNMENT"
+        }
+      ],
+      "authority_status": "MULTI_CHUNK_BOUNDARY_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "TB-003-P0-0001",
+      "tender_id": "TB-003",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 14,
+        "source_excerpt": "1、满足《中华人民共和国政府采购法》第二十二条规定；",
+        "source_excerpt_sha256": "bd19db2f9a6811879a9f2b84b63586b98edee53fb3506a6f5d9fc27cc3870f46",
+        "atomic_requirement": "满足《中华人民共和国政府采购法》第二十二条规定。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "QUALIFICATION"
+      },
+      "source_truth_located_parse_chunk_ids": [
+        "84230774-3f61-4ef1-8ecc-4cb2866b79d5"
+      ],
+      "source_truth_located_parse_chunk_numbers": [
+        3
+      ],
+      "source_truth_location_method": "SINGLE_CHUNK_CONTAINMENT",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": true,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [
+        "84230774-3f61-4ef1-8ecc-4cb2866b79d5"
+      ],
+      "replay_selected_parse_chunk_ids": [
+        "84230774-3f61-4ef1-8ecc-4cb2866b79d5"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-0f947318323a7e72.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "84230774-3f61-4ef1-8ecc-4cb2866b79d5",
+          "chunk_number": 3,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 799,
+          "persisted_chunk_text_sha256": "1560775bd30ae3f85ddf62cc0800b178040ef0cc171d4cc359ce230683571f16",
+          "persisted_source_start_page": 13,
+          "persisted_source_end_page": 14,
+          "persisted_source_start_paragraph": 152,
+          "persisted_source_end_paragraph": 187,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-0f947318323a7e72.json",
+          "provider_input_snapshot_sha256": "0f697b08eea28a775f8cb9e6d67eaa16b7f95f23343a8fe7d4ec10d62eb7484f",
+          "provider_input_source_chunk_id": "84230774-3f61-4ef1-8ecc-4cb2866b79d5",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 794,
+          "provider_task_payload_chunk_text_sha256": "c06862bc6641ec764acdbdde8fdaa40b63ec407b9e3a6fb4742c68acead5c491",
+          "provider_input_declared_char_count": 794,
+          "provider_input_declared_sha256": "c06862bc6641ec764acdbdde8fdaa40b63ec407b9e3a6fb4742c68acead5c491",
+          "source_excerpt_present_in_parse_chunk": true,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 22,
+              "haystack_normalized_char_count": 558,
+              "contains": true
+            },
+            "provider_input": {
+              "target_normalized_char_count": 22,
+              "haystack_normalized_char_count": 413,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "TB-003-P0-0002",
+      "tender_id": "TB-003",
+      "frozen_semantic_label": "PARTIAL",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 14,
+        "source_excerpt": "3.1 投标人行贿犯罪档案记录（开标当日中国裁判文书网的信息）；",
+        "source_excerpt_sha256": "dc91536ad8dd1bac2dbe8bb657aa49ec717005e8f51acbeed42fb5e8b17c52a6",
+        "atomic_requirement": "不得存在投标人行贿犯罪档案记录。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "QUALIFICATION"
+      },
+      "source_truth_located_parse_chunk_ids": [
+        "84230774-3f61-4ef1-8ecc-4cb2866b79d5"
+      ],
+      "source_truth_located_parse_chunk_numbers": [
+        3
+      ],
+      "source_truth_location_method": "SINGLE_CHUNK_CONTAINMENT",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": true,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [
+        "84230774-3f61-4ef1-8ecc-4cb2866b79d5"
+      ],
+      "replay_selected_parse_chunk_ids": [
+        "84230774-3f61-4ef1-8ecc-4cb2866b79d5"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-0f947318323a7e72.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "84230774-3f61-4ef1-8ecc-4cb2866b79d5",
+          "chunk_number": 3,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 799,
+          "persisted_chunk_text_sha256": "1560775bd30ae3f85ddf62cc0800b178040ef0cc171d4cc359ce230683571f16",
+          "persisted_source_start_page": 13,
+          "persisted_source_end_page": 14,
+          "persisted_source_start_paragraph": 152,
+          "persisted_source_end_paragraph": 187,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-0f947318323a7e72.json",
+          "provider_input_snapshot_sha256": "0f697b08eea28a775f8cb9e6d67eaa16b7f95f23343a8fe7d4ec10d62eb7484f",
+          "provider_input_source_chunk_id": "84230774-3f61-4ef1-8ecc-4cb2866b79d5",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 794,
+          "provider_task_payload_chunk_text_sha256": "c06862bc6641ec764acdbdde8fdaa40b63ec407b9e3a6fb4742c68acead5c491",
+          "provider_input_declared_char_count": 794,
+          "provider_input_declared_sha256": "c06862bc6641ec764acdbdde8fdaa40b63ec407b9e3a6fb4742c68acead5c491",
+          "source_excerpt_present_in_parse_chunk": true,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 27,
+              "haystack_normalized_char_count": 558,
+              "contains": true
+            },
+            "provider_input": {
+              "target_normalized_char_count": 27,
+              "haystack_normalized_char_count": 413,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "TB-003-P0-0006",
+      "tender_id": "TB-003",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 15,
+        "source_excerpt": "4.按要求进行网上获取并下载招标文件,凡未在规定时间内获取招标\n文件者视为无效标。",
+        "source_excerpt_sha256": "387c4dc2266c6031d373dd8780019cb74cb8fe32f53c992abd1f9b4c463bda31",
+        "atomic_requirement": "须在规定时间内获取并下载招标文件，否则视为无效标。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "QUALIFICATION"
+      },
+      "source_truth_located_parse_chunk_ids": [
+        "0ffec45b-c3ad-45ec-8055-e4e278057ee5"
+      ],
+      "source_truth_located_parse_chunk_numbers": [
+        4
+      ],
+      "source_truth_location_method": "SINGLE_CHUNK_CONTAINMENT",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": true,
+      "source_excerpt_present_in_provider_input_set": true,
+      "production_parse_chunk_ids": [
+        "0ffec45b-c3ad-45ec-8055-e4e278057ee5"
+      ],
+      "replay_selected_parse_chunk_ids": [
+        "0ffec45b-c3ad-45ec-8055-e4e278057ee5"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-91c1e7f254ed74f0.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "0ffec45b-c3ad-45ec-8055-e4e278057ee5",
+          "chunk_number": 4,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1998,
+          "persisted_chunk_text_sha256": "6b5fcd1816bc72e2cbdb3ebc8e7569ba7582cfd8f1cb6100ee724aaae1aae268",
+          "persisted_source_start_page": 14,
+          "persisted_source_end_page": 17,
+          "persisted_source_start_paragraph": 188,
+          "persisted_source_end_paragraph": 260,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-91c1e7f254ed74f0.json",
+          "provider_input_snapshot_sha256": "f7e97fd5d03f43634f1c29a9f87e815b8f64afeb202c47bffccbf49402990930",
+          "provider_input_source_chunk_id": "0ffec45b-c3ad-45ec-8055-e4e278057ee5",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1895,
+          "provider_task_payload_chunk_text_sha256": "3769aee856ed9b2fc0f23a79f9cc89b8d4f9672aa9fec240f675937750d9ec5b",
+          "provider_input_declared_char_count": 1895,
+          "provider_input_declared_sha256": "3769aee856ed9b2fc0f23a79f9cc89b8d4f9672aa9fec240f675937750d9ec5b",
+          "source_excerpt_present_in_parse_chunk": true,
+          "source_excerpt_present_in_provider_input": true,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 37,
+              "haystack_normalized_char_count": 1353,
+              "contains": true
+            },
+            "provider_input": {
+              "target_normalized_char_count": 37,
+              "haystack_normalized_char_count": 1286,
+              "contains": true
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "EVAL_REPLAY_JOIN_MISALIGNMENT"
+        }
+      ],
+      "authority_status": "EVAL_REPLAY_JOIN_MISALIGNMENT",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "TB-003-P0-0023",
+      "tender_id": "TB-003",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 32,
+        "source_excerpt": "同时出现两种以上不一致的，按照前款规定的顺序修正。修正后的报\n价经投标人确认后产生约束力，投标人不确认的，其投标无效。",
+        "source_excerpt_sha256": "eacb5fd876279c781f09fc0bc57036f5855e81512ed56d59444bab4a7955149f",
+        "atomic_requirement": "报价修正后须由投标人确认，否则投标无效。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY"
+      },
+      "source_truth_located_parse_chunk_ids": [
+        "0626fd0c-f197-4a9a-b894-5a0e4072c31d"
+      ],
+      "source_truth_located_parse_chunk_numbers": [
+        10
+      ],
+      "source_truth_location_method": "SINGLE_CHUNK_CONTAINMENT",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": true,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [
+        "0626fd0c-f197-4a9a-b894-5a0e4072c31d"
+      ],
+      "replay_selected_parse_chunk_ids": [
+        "0626fd0c-f197-4a9a-b894-5a0e4072c31d"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-2ff7c96a48077e35.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "0626fd0c-f197-4a9a-b894-5a0e4072c31d",
+          "chunk_number": 10,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 962,
+          "persisted_chunk_text_sha256": "6d3fe034447e90933a7ffa7a854e2fdbc23b36b3f49d65004c64b2b2da86571b",
+          "persisted_source_start_page": 31,
+          "persisted_source_end_page": 33,
+          "persisted_source_start_paragraph": 656,
+          "persisted_source_end_paragraph": 703,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-2ff7c96a48077e35.json",
+          "provider_input_snapshot_sha256": "6c73bee2c4f786b221029d51918b22cfde7e8475e95c7d1277bbde0ab58fe5ee",
+          "provider_input_source_chunk_id": "0626fd0c-f197-4a9a-b894-5a0e4072c31d",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 947,
+          "provider_task_payload_chunk_text_sha256": "627039d94044b3245b64b2ae80c66a711f81b45f29b64a07b0c547385b93098d",
+          "provider_input_declared_char_count": 947,
+          "provider_input_declared_sha256": "627039d94044b3245b64b2ae80c66a711f81b45f29b64a07b0c547385b93098d",
+          "source_excerpt_present_in_parse_chunk": true,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 53,
+              "haystack_normalized_char_count": 632,
+              "contains": true
+            },
+            "provider_input": {
+              "target_normalized_char_count": 53,
+              "haystack_normalized_char_count": 724,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "TB-003-P0-0024",
+      "tender_id": "TB-003",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 33,
+        "source_excerpt": "或者由法定代表人或其委托代理人签字。投标人的澄清、说明或者补正不\n得超出投标文件的范围或者改变投标文件的实质性内容。投标人拒不按照\n要求对投标文件进行澄清、说明或者补正的，评标委员会可拒绝该投标。",
+        "source_excerpt_sha256": "230bdc75155d16f709e6a628e0d08cc5f43527d55a128601d54a2455c56a52a8",
+        "atomic_requirement": "评审委员会要求澄清、说明或补正时不得拒绝；拒不按要求澄清可被拒绝投标。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "0626fd0c-f197-4a9a-b894-5a0e4072c31d"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-2ff7c96a48077e35.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "0626fd0c-f197-4a9a-b894-5a0e4072c31d",
+          "chunk_number": 10,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 962,
+          "persisted_chunk_text_sha256": "6d3fe034447e90933a7ffa7a854e2fdbc23b36b3f49d65004c64b2b2da86571b",
+          "persisted_source_start_page": 31,
+          "persisted_source_end_page": 33,
+          "persisted_source_start_paragraph": 656,
+          "persisted_source_end_paragraph": 703,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-2ff7c96a48077e35.json",
+          "provider_input_snapshot_sha256": "6c73bee2c4f786b221029d51918b22cfde7e8475e95c7d1277bbde0ab58fe5ee",
+          "provider_input_source_chunk_id": "0626fd0c-f197-4a9a-b894-5a0e4072c31d",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 947,
+          "provider_task_payload_chunk_text_sha256": "627039d94044b3245b64b2ae80c66a711f81b45f29b64a07b0c547385b93098d",
+          "provider_input_declared_char_count": 947,
+          "provider_input_declared_sha256": "627039d94044b3245b64b2ae80c66a711f81b45f29b64a07b0c547385b93098d",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 90,
+              "haystack_normalized_char_count": 632,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 90,
+              "haystack_normalized_char_count": 724,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "TB-003-P0-0025",
+      "tender_id": "TB-003",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 33,
+        "source_excerpt": "能证明其报价合理性的，评标委员会应当将其作为无效投标处理。",
+        "source_excerpt_sha256": "28dd55c6730664c507664d3958f4f9baa2e7f08d7a1ccbf39adbcfac967b1dc2",
+        "atomic_requirement": "异常低价时须证明报价合理性，否则作为无效投标处理。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "0626fd0c-f197-4a9a-b894-5a0e4072c31d"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-2ff7c96a48077e35.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "0626fd0c-f197-4a9a-b894-5a0e4072c31d",
+          "chunk_number": 10,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 962,
+          "persisted_chunk_text_sha256": "6d3fe034447e90933a7ffa7a854e2fdbc23b36b3f49d65004c64b2b2da86571b",
+          "persisted_source_start_page": 31,
+          "persisted_source_end_page": 33,
+          "persisted_source_start_paragraph": 656,
+          "persisted_source_end_paragraph": 703,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-2ff7c96a48077e35.json",
+          "provider_input_snapshot_sha256": "6c73bee2c4f786b221029d51918b22cfde7e8475e95c7d1277bbde0ab58fe5ee",
+          "provider_input_source_chunk_id": "0626fd0c-f197-4a9a-b894-5a0e4072c31d",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 947,
+          "provider_task_payload_chunk_text_sha256": "627039d94044b3245b64b2ae80c66a711f81b45f29b64a07b0c547385b93098d",
+          "provider_input_declared_char_count": 947,
+          "provider_input_declared_sha256": "627039d94044b3245b64b2ae80c66a711f81b45f29b64a07b0c547385b93098d",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 27,
+              "haystack_normalized_char_count": 632,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 27,
+              "haystack_normalized_char_count": 724,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "TB-006-P0-0005",
+      "tender_id": "TB-006",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 25,
+        "source_excerpt": "信用信息的使用原则：经认定的被列入失信\n被执行人、重大税收违法案件当事人名单、\n政府采购严重违法失信行为记录名单的投标\n人，其投标无效。联合体形式投标的，联合\n体成员存在不良信用记录，视同联合体存在",
+        "source_excerpt_sha256": "28a828fef2a6e99ca149f02fd79a33cc71e831dd58578fb73443e12983cb32da",
+        "atomic_requirement": "不得属于信用记录认定的失信被执行人、重大税收违法案件当事人或政府采购严重违法失信主体。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "QUALIFICATION"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "23c38f12-260a-41f0-98c7-ffb80159216c"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-605bb83879e17966.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "23c38f12-260a-41f0-98c7-ffb80159216c",
+          "chunk_number": 7,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1151,
+          "persisted_chunk_text_sha256": "c0fa7170040dbffa625474c7d2e65715d965d74cc2ce0f0e52d505f5e39f37b3",
+          "persisted_source_start_page": 24,
+          "persisted_source_end_page": 25,
+          "persisted_source_start_paragraph": 654,
+          "persisted_source_end_paragraph": 744,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-605bb83879e17966.json",
+          "provider_input_snapshot_sha256": "48a1e953363af3e6fd1ebd1308f58b53d41147ce20f18b9e849d7967e6f336dc",
+          "provider_input_source_chunk_id": "23c38f12-260a-41f0-98c7-ffb80159216c",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1872,
+          "provider_task_payload_chunk_text_sha256": "78110eaed6e7f868f2715c0c802e979daf88b523bcb6b46b9d21718168d4a962",
+          "provider_input_declared_char_count": 1872,
+          "provider_input_declared_sha256": "78110eaed6e7f868f2715c0c802e979daf88b523bcb6b46b9d21718168d4a962",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 88,
+              "haystack_normalized_char_count": 930,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 88,
+              "haystack_normalized_char_count": 1596,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "TB-006-P0-0010",
+      "tender_id": "TB-006",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 28,
+        "source_excerpt": "3 投标报价 投标报价未超过招标文件中规定的项目/采购包预算金额或者\n项目/采购包最高限价；",
+        "source_excerpt_sha256": "1ba4dd9d5bfdd36357ea32b2133e01b54ec7ca5834717fc7857560dfba792eee",
+        "atomic_requirement": "投标报价不得超过预算金额或最高限价。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "ff8cb695-52c6-49bc-b4fc-24e80fa1ed92"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-61a68390447b846e.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "ff8cb695-52c6-49bc-b4fc-24e80fa1ed92",
+          "chunk_number": 9,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1993,
+          "persisted_chunk_text_sha256": "3efc3ecaa2154f73d6c1dbf6d87dae6e33520abc07bddb0e9cd4fbc2483988b0",
+          "persisted_source_start_page": 28,
+          "persisted_source_end_page": 31,
+          "persisted_source_start_paragraph": 836,
+          "persisted_source_end_paragraph": 963,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-61a68390447b846e.json",
+          "provider_input_snapshot_sha256": "bfdcce9075b62b8554f3a57b5b9daf748ccddf6f15aa11a66c235444d55f24cd",
+          "provider_input_source_chunk_id": "ff8cb695-52c6-49bc-b4fc-24e80fa1ed92",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1445,
+          "provider_task_payload_chunk_text_sha256": "fab8e9dff2b0b015d465b4d066513999c679ee56e4a9cfbd665ca2364a2b89eb",
+          "provider_input_declared_char_count": 1445,
+          "provider_input_declared_sha256": "fab8e9dff2b0b015d465b4d066513999c679ee56e4a9cfbd665ca2364a2b89eb",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 40,
+              "haystack_normalized_char_count": 1677,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 40,
+              "haystack_normalized_char_count": 1224,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "TB-006-P0-0011",
+      "tender_id": "TB-006",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 28,
+        "source_excerpt": "1 授权委托书 按招标文件要求提供授权委托书；\n2 投标完整性 未将一个采购包中的内容拆分投标；\n3 投标报价 投标报价未超过招标文件中规定的项目/采购包预算金额或者\n项目/采购包最高限价；\n4 报价唯一性 投标文件未出现可选择性或可调整的报价（招标文件另有规定",
+        "source_excerpt_sha256": "3a02d473eed98bafe5a0ccc1a760c73ed63aaa9ca6f8327fcade6a7d4231f3ef",
+        "atomic_requirement": "不得提供可选择性或可调整的报价。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "ff8cb695-52c6-49bc-b4fc-24e80fa1ed92"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-61a68390447b846e.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "ff8cb695-52c6-49bc-b4fc-24e80fa1ed92",
+          "chunk_number": 9,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1993,
+          "persisted_chunk_text_sha256": "3efc3ecaa2154f73d6c1dbf6d87dae6e33520abc07bddb0e9cd4fbc2483988b0",
+          "persisted_source_start_page": 28,
+          "persisted_source_end_page": 31,
+          "persisted_source_start_paragraph": 836,
+          "persisted_source_end_paragraph": 963,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-61a68390447b846e.json",
+          "provider_input_snapshot_sha256": "bfdcce9075b62b8554f3a57b5b9daf748ccddf6f15aa11a66c235444d55f24cd",
+          "provider_input_source_chunk_id": "ff8cb695-52c6-49bc-b4fc-24e80fa1ed92",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1445,
+          "provider_task_payload_chunk_text_sha256": "fab8e9dff2b0b015d465b4d066513999c679ee56e4a9cfbd665ca2364a2b89eb",
+          "provider_input_declared_char_count": 1445,
+          "provider_input_declared_sha256": "fab8e9dff2b0b015d465b4d066513999c679ee56e4a9cfbd665ca2364a2b89eb",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 113,
+              "haystack_normalized_char_count": 1677,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 113,
+              "haystack_normalized_char_count": 1224,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "TB-006-P0-0014",
+      "tender_id": "TB-006",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 28,
+        "source_excerpt": "不涉及报价修正，或投标文件报价出现前后不一致时，投标人\n对修正后的报价予以确认；（如有）",
+        "source_excerpt_sha256": "5bec2bf73a1c56cf79360b8a438ad2fb9dd005c94bef7d176c6cce419aa7d0e5",
+        "atomic_requirement": "涉及报价修正时须对修正后的报价予以确认。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "ff8cb695-52c6-49bc-b4fc-24e80fa1ed92"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-61a68390447b846e.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "ff8cb695-52c6-49bc-b4fc-24e80fa1ed92",
+          "chunk_number": 9,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1993,
+          "persisted_chunk_text_sha256": "3efc3ecaa2154f73d6c1dbf6d87dae6e33520abc07bddb0e9cd4fbc2483988b0",
+          "persisted_source_start_page": 28,
+          "persisted_source_end_page": 31,
+          "persisted_source_start_paragraph": 836,
+          "persisted_source_end_paragraph": 963,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-61a68390447b846e.json",
+          "provider_input_snapshot_sha256": "bfdcce9075b62b8554f3a57b5b9daf748ccddf6f15aa11a66c235444d55f24cd",
+          "provider_input_source_chunk_id": "ff8cb695-52c6-49bc-b4fc-24e80fa1ed92",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1445,
+          "provider_task_payload_chunk_text_sha256": "fab8e9dff2b0b015d465b4d066513999c679ee56e4a9cfbd665ca2364a2b89eb",
+          "provider_input_declared_char_count": 1445,
+          "provider_input_declared_sha256": "fab8e9dff2b0b015d465b4d066513999c679ee56e4a9cfbd665ca2364a2b89eb",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 38,
+              "haystack_normalized_char_count": 1677,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 38,
+              "haystack_normalized_char_count": 1224,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "TB-006-P0-0015",
+      "tender_id": "TB-006",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 28,
+        "source_excerpt": "评标委员会要求在规定时间内证明其报价合理性的；",
+        "source_excerpt_sha256": "248e470e432051c15fca36030f9404b4939ada7dde2297aef4b6cbdb3e23babe",
+        "atomic_requirement": "报价异常低时须在规定时间内证明报价合理性。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "ff8cb695-52c6-49bc-b4fc-24e80fa1ed92"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-61a68390447b846e.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "ff8cb695-52c6-49bc-b4fc-24e80fa1ed92",
+          "chunk_number": 9,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1993,
+          "persisted_chunk_text_sha256": "3efc3ecaa2154f73d6c1dbf6d87dae6e33520abc07bddb0e9cd4fbc2483988b0",
+          "persisted_source_start_page": 28,
+          "persisted_source_end_page": 31,
+          "persisted_source_start_paragraph": 836,
+          "persisted_source_end_paragraph": 963,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-61a68390447b846e.json",
+          "provider_input_snapshot_sha256": "bfdcce9075b62b8554f3a57b5b9daf748ccddf6f15aa11a66c235444d55f24cd",
+          "provider_input_source_chunk_id": "ff8cb695-52c6-49bc-b4fc-24e80fa1ed92",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1445,
+          "provider_task_payload_chunk_text_sha256": "fab8e9dff2b0b015d465b4d066513999c679ee56e4a9cfbd665ca2364a2b89eb",
+          "provider_input_declared_char_count": 1445,
+          "provider_input_declared_sha256": "fab8e9dff2b0b015d465b4d066513999c679ee56e4a9cfbd665ca2364a2b89eb",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 22,
+              "haystack_normalized_char_count": 1677,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 22,
+              "haystack_normalized_char_count": 1224,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "TB-006-P0-0019",
+      "tender_id": "TB-006",
+      "frozen_semantic_label": "PARTIAL",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 20,
+        "source_excerpt": "料表》规定的时间内对投标文件进行解密，因非系统原因导致的解密失败，\n视为投标无效。\n18.3 开标过程将使用电子交易平台宣布投标人名称、投标价格和招标文件规定的\n需要宣布的其他内容并进行记录，并由参加开标的各投标人确认。投标人未\n在规定时间内提出疑义或确认一览表的，视同认可开标结果。",
+        "source_excerpt_sha256": "12dfab77093b5c3d1e2da9f75b89ff3889ba8c22277ada751db820e946e9e49b",
+        "atomic_requirement": "须在规定时间内完成电子投标文件解密；因非系统原因导致解密失败视为投标无效。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "f432eb7b-618c-4118-a7ef-0ed76281b0aa"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-9c3281cf4c1f4d13.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "f432eb7b-618c-4118-a7ef-0ed76281b0aa",
+          "chunk_number": 6,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1615,
+          "persisted_chunk_text_sha256": "2beb175164e760e8993e29b53b4e0f517da2ab6baff4eb35416991a52630b1b2",
+          "persisted_source_start_page": 20,
+          "persisted_source_end_page": 24,
+          "persisted_source_start_paragraph": 552,
+          "persisted_source_end_paragraph": 648,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-9c3281cf4c1f4d13.json",
+          "provider_input_snapshot_sha256": "a3974be8267d262fd4fb19319a2f0034b51857e559b4566ece4076469fdb36cc",
+          "provider_input_source_chunk_id": "f432eb7b-618c-4118-a7ef-0ed76281b0aa",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1674,
+          "provider_task_payload_chunk_text_sha256": "01f5d2edb2564adaa41f39b0c4346cecf691143c34a440236c11f67630b142e4",
+          "provider_input_declared_char_count": 1674,
+          "provider_input_declared_sha256": "01f5d2edb2564adaa41f39b0c4346cecf691143c34a440236c11f67630b142e4",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 127,
+              "haystack_normalized_char_count": 1387,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 127,
+              "haystack_normalized_char_count": 1407,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "FAST-01-P0-0001",
+      "tender_id": "FAST-01",
+      "frozen_semantic_label": "PARTIAL",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 11,
+        "source_excerpt": "1.具有独立承担民事责任的能力（提供营业执照或事业单位法人证书等证明资料扫描",
+        "source_excerpt_sha256": "aabb87fa823c7e7c7d358e0d21b79583637d67fe5fdb415b7ebe9374115e30f6",
+        "atomic_requirement": "具有独立承担民事责任的能力并提供相应主体证明资料。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "QUALIFICATION"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "621f8f8f-c7b4-4726-a55c-a69774235484"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-7ca89dc299a412a5.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "621f8f8f-c7b4-4726-a55c-a69774235484",
+          "chunk_number": 1,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1024,
+          "persisted_chunk_text_sha256": "18b691e5f1091363a1e814c39b3e88ca835dd01e96f1e06ceb906c08f17263c8",
+          "persisted_source_start_page": 10,
+          "persisted_source_end_page": 12,
+          "persisted_source_start_paragraph": 329,
+          "persisted_source_end_paragraph": 386,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-7ca89dc299a412a5.json",
+          "provider_input_snapshot_sha256": "c1183ed05318d6850439a8ebb9dea749f548a25c89af1e1440d126db30aba53d",
+          "provider_input_source_chunk_id": "621f8f8f-c7b4-4726-a55c-a69774235484",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 989,
+          "provider_task_payload_chunk_text_sha256": "3c4f2e5717d8fcc335a98868d1065d97496cdd97dd3d1deadebde367ecc2f6b3",
+          "provider_input_declared_char_count": 989,
+          "provider_input_declared_sha256": "3c4f2e5717d8fcc335a98868d1065d97496cdd97dd3d1deadebde367ecc2f6b3",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 36,
+              "haystack_normalized_char_count": 833,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 36,
+              "haystack_normalized_char_count": 844,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "FAST-01-P0-0005",
+      "tender_id": "FAST-01",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 11,
+        "source_excerpt": "5.未被列入失信被执行人、重大税收违法案件当事人名单、政府采购严重违法失信行\n为记录名单（由供应商在《采购投标及履约承诺函》中作出声明）；\n6.不存在《深圳市财政局政府采购供应商信用信息管理办法》（深财规〔2023〕3 号）\n列明的严重违法失信行为（由供应商在《采购投标及履约承诺函》中作出声明）；;\n7.为采购项目提供整体设计、规范编制或者项目管理、监理、检测等服务的供应商，\n不得再参加该采购项目的其他采购活动（由供应商在《采购投标及履约承诺函》中作出声",
+        "source_excerpt_sha256": "294dc130e534c1f6d4c7cd15e16116ae5c0fc67f34b3309191bb4e8dace9c6fe",
+        "atomic_requirement": "不得被列入失信被执行人、重大税收违法案件当事人、政府采购严重违法失信行为记录名单。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "QUALIFICATION"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "621f8f8f-c7b4-4726-a55c-a69774235484"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-7ca89dc299a412a5.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "621f8f8f-c7b4-4726-a55c-a69774235484",
+          "chunk_number": 1,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1024,
+          "persisted_chunk_text_sha256": "18b691e5f1091363a1e814c39b3e88ca835dd01e96f1e06ceb906c08f17263c8",
+          "persisted_source_start_page": 10,
+          "persisted_source_end_page": 12,
+          "persisted_source_start_paragraph": 329,
+          "persisted_source_end_paragraph": 386,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-7ca89dc299a412a5.json",
+          "provider_input_snapshot_sha256": "c1183ed05318d6850439a8ebb9dea749f548a25c89af1e1440d126db30aba53d",
+          "provider_input_source_chunk_id": "621f8f8f-c7b4-4726-a55c-a69774235484",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 989,
+          "provider_task_payload_chunk_text_sha256": "3c4f2e5717d8fcc335a98868d1065d97496cdd97dd3d1deadebde367ecc2f6b3",
+          "provider_input_declared_char_count": 989,
+          "provider_input_declared_sha256": "3c4f2e5717d8fcc335a98868d1065d97496cdd97dd3d1deadebde367ecc2f6b3",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 194,
+              "haystack_normalized_char_count": 833,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 194,
+              "haystack_normalized_char_count": 844,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "FAST-01-P0-0011",
+      "tender_id": "FAST-01",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 2,
+        "source_excerpt": "3 分项报价或投标总价不得高于相应预算金额（或设定的预算金额下的最高限价）；",
+        "source_excerpt_sha256": "97b428f4bcf8dc3a7a937eb7a669dd457d9c18aa3b69a81876ab3017217d770c",
+        "atomic_requirement": "分项报价或投标总价不得高于预算金额或最高限价。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": true,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "reconstructed:FAST-01:1:cbf6a90fa97b3d86"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-3bb10c215c6dbe5a.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "reconstructed:FAST-01:1:cbf6a90fa97b3d86",
+          "chunk_number": 1,
+          "replay_input_authority_level": 3,
+          "persisted_parse_chunk_present": false,
+          "persisted_chunk_text_char_count": null,
+          "persisted_chunk_text_sha256": null,
+          "persisted_source_start_page": null,
+          "persisted_source_end_page": null,
+          "persisted_source_start_paragraph": null,
+          "persisted_source_end_paragraph": null,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-3bb10c215c6dbe5a.json",
+          "provider_input_snapshot_sha256": "2f1fd4a5eb1f5350e050d29e95d986f30c26063fa2299aa1570debe0e2d4dc72",
+          "provider_input_source_chunk_id": "reconstructed:FAST-01:1:cbf6a90fa97b3d86",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1792,
+          "provider_task_payload_chunk_text_sha256": "cbf6a90fa97b3d862a1b0e4d02289a0bd172c0b608b1cf2d8c33080f40149ae9",
+          "provider_input_declared_char_count": 1792,
+          "provider_input_declared_sha256": "cbf6a90fa97b3d862a1b0e4d02289a0bd172c0b608b1cf2d8c33080f40149ae9",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": true,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 34,
+              "haystack_normalized_char_count": 0,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 34,
+              "haystack_normalized_char_count": 1450,
+              "contains": true
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "LEVEL3_RECONSTRUCTION"
+        }
+      ],
+      "authority_status": "LEVEL3_RECONSTRUCTION",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 3,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "FAST-01-P0-0017",
+      "tender_id": "FAST-01",
+      "frozen_semantic_label": "DISTORTED",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 2,
+        "source_excerpt": "8 投标文件电子文档不得带病毒；\n9 不同投标供应商投标文件“文件制作机器码”一致；",
+        "source_excerpt_sha256": "6f29d58c370187c54256d9123a0d0204dbed9b1010eab168d72e9ae0c87236fb",
+        "atomic_requirement": "不同投标供应商投标文件的文件制作机器码不得一致。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": true,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "reconstructed:FAST-01:1:cbf6a90fa97b3d86"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-3bb10c215c6dbe5a.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "reconstructed:FAST-01:1:cbf6a90fa97b3d86",
+          "chunk_number": 1,
+          "replay_input_authority_level": 3,
+          "persisted_parse_chunk_present": false,
+          "persisted_chunk_text_char_count": null,
+          "persisted_chunk_text_sha256": null,
+          "persisted_source_start_page": null,
+          "persisted_source_end_page": null,
+          "persisted_source_start_paragraph": null,
+          "persisted_source_end_paragraph": null,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-3bb10c215c6dbe5a.json",
+          "provider_input_snapshot_sha256": "2f1fd4a5eb1f5350e050d29e95d986f30c26063fa2299aa1570debe0e2d4dc72",
+          "provider_input_source_chunk_id": "reconstructed:FAST-01:1:cbf6a90fa97b3d86",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1792,
+          "provider_task_payload_chunk_text_sha256": "cbf6a90fa97b3d862a1b0e4d02289a0bd172c0b608b1cf2d8c33080f40149ae9",
+          "provider_input_declared_char_count": 1792,
+          "provider_input_declared_sha256": "cbf6a90fa97b3d862a1b0e4d02289a0bd172c0b608b1cf2d8c33080f40149ae9",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": true,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 35,
+              "haystack_normalized_char_count": 0,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 35,
+              "haystack_normalized_char_count": 1450,
+              "contains": true
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "LEVEL3_RECONSTRUCTION"
+        }
+      ],
+      "authority_status": "LEVEL3_RECONSTRUCTION",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 3,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "FAST-01-P0-0018",
+      "tender_id": "FAST-01",
+      "frozen_semantic_label": "DISTORTED",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 2,
+        "source_excerpt": "8 投标文件电子文档不得带病毒；\n9 不同投标供应商投标文件“文件制作机器码”一致；\n10 不同投标供应商投标文件“文件创建标识码”一致；",
+        "source_excerpt_sha256": "c9200d81f96759e080d90ff46e7244b41afb6ee651862bd40777622507f21ce2",
+        "atomic_requirement": "不同投标供应商投标文件的文件创建标识码不得一致。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": true,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "reconstructed:FAST-01:1:cbf6a90fa97b3d86"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-3bb10c215c6dbe5a.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "reconstructed:FAST-01:1:cbf6a90fa97b3d86",
+          "chunk_number": 1,
+          "replay_input_authority_level": 3,
+          "persisted_parse_chunk_present": false,
+          "persisted_chunk_text_char_count": null,
+          "persisted_chunk_text_sha256": null,
+          "persisted_source_start_page": null,
+          "persisted_source_end_page": null,
+          "persisted_source_start_paragraph": null,
+          "persisted_source_end_paragraph": null,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-3bb10c215c6dbe5a.json",
+          "provider_input_snapshot_sha256": "2f1fd4a5eb1f5350e050d29e95d986f30c26063fa2299aa1570debe0e2d4dc72",
+          "provider_input_source_chunk_id": "reconstructed:FAST-01:1:cbf6a90fa97b3d86",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1792,
+          "provider_task_payload_chunk_text_sha256": "cbf6a90fa97b3d862a1b0e4d02289a0bd172c0b608b1cf2d8c33080f40149ae9",
+          "provider_input_declared_char_count": 1792,
+          "provider_input_declared_sha256": "cbf6a90fa97b3d862a1b0e4d02289a0bd172c0b608b1cf2d8c33080f40149ae9",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": true,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 57,
+              "haystack_normalized_char_count": 0,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 57,
+              "haystack_normalized_char_count": 1450,
+              "contains": true
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "LEVEL3_RECONSTRUCTION"
+        }
+      ],
+      "authority_status": "LEVEL3_RECONSTRUCTION",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 3,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "FAST-01-P0-0019",
+      "tender_id": "FAST-01",
+      "frozen_semantic_label": "DISTORTED",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 2,
+        "source_excerpt": "8 投标文件电子文档不得带病毒；\n9 不同投标供应商投标文件“文件制作机器码”一致；\n10 不同投标供应商投标文件“文件创建标识码”一致；\n11 法律、法规、规章、规范性文件规定的其他情形。",
+        "source_excerpt_sha256": "6d65ad17eb36238ae7a92e3164a9b0fc608134b423c2f2fd48e54b5eafc9a038",
+        "atomic_requirement": "不得存在法律、法规、规章、规范性文件规定的其他无效情形。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": true,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "reconstructed:FAST-01:1:cbf6a90fa97b3d86"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-3bb10c215c6dbe5a.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "reconstructed:FAST-01:1:cbf6a90fa97b3d86",
+          "chunk_number": 1,
+          "replay_input_authority_level": 3,
+          "persisted_parse_chunk_present": false,
+          "persisted_chunk_text_char_count": null,
+          "persisted_chunk_text_sha256": null,
+          "persisted_source_start_page": null,
+          "persisted_source_end_page": null,
+          "persisted_source_start_paragraph": null,
+          "persisted_source_end_paragraph": null,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-3bb10c215c6dbe5a.json",
+          "provider_input_snapshot_sha256": "2f1fd4a5eb1f5350e050d29e95d986f30c26063fa2299aa1570debe0e2d4dc72",
+          "provider_input_source_chunk_id": "reconstructed:FAST-01:1:cbf6a90fa97b3d86",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1792,
+          "provider_task_payload_chunk_text_sha256": "cbf6a90fa97b3d862a1b0e4d02289a0bd172c0b608b1cf2d8c33080f40149ae9",
+          "provider_input_declared_char_count": 1792,
+          "provider_input_declared_sha256": "cbf6a90fa97b3d862a1b0e4d02289a0bd172c0b608b1cf2d8c33080f40149ae9",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": true,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 77,
+              "haystack_normalized_char_count": 0,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 77,
+              "haystack_normalized_char_count": 1450,
+              "contains": true
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "LEVEL3_RECONSTRUCTION"
+        }
+      ],
+      "authority_status": "LEVEL3_RECONSTRUCTION",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 3,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "FAST-01-P0-0022",
+      "tender_id": "FAST-01",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 12,
+        "source_excerpt": "20 投标有效期 120 个日历日",
+        "source_excerpt_sha256": "51f01b9d84a2b6a5695f27f4a0165dfb8a312ac577ce177a44790568668acca2",
+        "atomic_requirement": "投标有效期为120个日历日。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY"
+      },
+      "source_truth_located_parse_chunk_ids": [
+        "a71888e4-476b-44c5-9e5b-5e91a6e3f848"
+      ],
+      "source_truth_located_parse_chunk_numbers": [
+        2
+      ],
+      "source_truth_location_method": "SINGLE_CHUNK_CONTAINMENT",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": true,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [
+        "a71888e4-476b-44c5-9e5b-5e91a6e3f848"
+      ],
+      "replay_selected_parse_chunk_ids": [
+        "a71888e4-476b-44c5-9e5b-5e91a6e3f848"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-d36634f089f4d33f.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "a71888e4-476b-44c5-9e5b-5e91a6e3f848",
+          "chunk_number": 2,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1992,
+          "persisted_chunk_text_sha256": "e90d80c0054fafb8aa51a17cd67fb37e63dcd0c35068310a6dc2902a4c89f346",
+          "persisted_source_start_page": 12,
+          "persisted_source_end_page": 13,
+          "persisted_source_start_paragraph": 387,
+          "persisted_source_end_paragraph": 468,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-d36634f089f4d33f.json",
+          "provider_input_snapshot_sha256": "2301fa3d11b5be895026c3588f443068e325c96233880f35bed95d8ad910b38c",
+          "provider_input_source_chunk_id": "a71888e4-476b-44c5-9e5b-5e91a6e3f848",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1285,
+          "provider_task_payload_chunk_text_sha256": "874b75265a1eac07527ddf66c54fe882aea8100b98982dd25f5506d12132ded0",
+          "provider_input_declared_char_count": 1285,
+          "provider_input_declared_sha256": "874b75265a1eac07527ddf66c54fe882aea8100b98982dd25f5506d12132ded0",
+          "source_excerpt_present_in_parse_chunk": true,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 14,
+              "haystack_normalized_char_count": 1547,
+              "contains": true
+            },
+            "provider_input": {
+              "target_normalized_char_count": 14,
+              "haystack_normalized_char_count": 992,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "FAST-04-P0-0203",
+      "tender_id": "FAST-04",
+      "frozen_semantic_label": "DISTORTED",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 65,
+        "source_excerpt": "92 兼容\n要求 ★ODBC 支持 ODBC\n93 兼容\n要求\n标准兼\n容 ★JDBC 支持 JDBC",
+        "source_excerpt_sha256": "873c7965933c38460f1e6242e7eaaa31b3d0f74431e513e979a7cc170ba1ffcc",
+        "atomic_requirement": "92 ★ODBC 支持 ODBC 要求 标准兼 兼容 容 93 ★JDBC 支持 JDBC 要求 以光盘、便携式移动设备、镜像",
+        "p0_basis": "EXPLICIT_STAR_SUBSTANTIVE",
+        "family": "EXPLICIT_SUBSTANTIVE_TECHNICAL_OR_BUSINESS"
+      },
+      "source_truth_located_parse_chunk_ids": [
+        "5014cc94-baf5-402b-a5d6-75e1e544caa4"
+      ],
+      "source_truth_located_parse_chunk_numbers": [
+        35
+      ],
+      "source_truth_location_method": "SINGLE_CHUNK_CONTAINMENT",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": true,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [
+        "5014cc94-baf5-402b-a5d6-75e1e544caa4"
+      ],
+      "replay_selected_parse_chunk_ids": [
+        "5014cc94-baf5-402b-a5d6-75e1e544caa4"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-af152f89a8006ce2.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "5014cc94-baf5-402b-a5d6-75e1e544caa4",
+          "chunk_number": 35,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 934,
+          "persisted_chunk_text_sha256": "f0c694e0dcce75a38de9251823a6f13a77bcc81461026107d2e8649b083b81b4",
+          "persisted_source_start_page": 64,
+          "persisted_source_end_page": 66,
+          "persisted_source_start_paragraph": 3330,
+          "persisted_source_end_paragraph": 3429,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-af152f89a8006ce2.json",
+          "provider_input_snapshot_sha256": "d9e67e21e96b4775837f44086553b472d38de6d4de763248a26ab68655dcb855",
+          "provider_input_source_chunk_id": "5014cc94-baf5-402b-a5d6-75e1e544caa4",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 972,
+          "provider_task_payload_chunk_text_sha256": "28bbea6a95efe2a77f7f593c53b5657a1c9aa1cc44c614120009f5f1ad479ee4",
+          "provider_input_declared_char_count": 972,
+          "provider_input_declared_sha256": "28bbea6a95efe2a77f7f593c53b5657a1c9aa1cc44c614120009f5f1ad479ee4",
+          "source_excerpt_present_in_parse_chunk": true,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 36,
+              "haystack_normalized_char_count": 730,
+              "contains": true
+            },
+            "provider_input": {
+              "target_normalized_char_count": 36,
+              "haystack_normalized_char_count": 780,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "FAST-04-P0-0204",
+      "tender_id": "FAST-04",
+      "frozen_semantic_label": "DISTORTED",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 65,
+        "source_excerpt": "容 ★JDBC 支持 JDBC\n94 服务\n要求\n交付方\n式 ★交付方式\n以光盘、便携式移动设备、镜像\n文件、在线下载等交付方式提供",
+        "source_excerpt_sha256": "7025d8ccb4575d13c5fef401660021ac126ddbc46237c196bccd0e96306faa16",
+        "atomic_requirement": "93 ★JDBC 支持 JDBC 要求 以光盘、便携式移动设备、镜像 服务 交付方 94 ★交付方式 文件、在线下载等交付方式提供 要求 式",
+        "p0_basis": "EXPLICIT_STAR_SUBSTANTIVE",
+        "family": "EXPLICIT_SUBSTANTIVE_TECHNICAL_OR_BUSINESS"
+      },
+      "source_truth_located_parse_chunk_ids": [
+        "5014cc94-baf5-402b-a5d6-75e1e544caa4"
+      ],
+      "source_truth_located_parse_chunk_numbers": [
+        35
+      ],
+      "source_truth_location_method": "SINGLE_CHUNK_CONTAINMENT",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": true,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [
+        "5014cc94-baf5-402b-a5d6-75e1e544caa4"
+      ],
+      "replay_selected_parse_chunk_ids": [
+        "5014cc94-baf5-402b-a5d6-75e1e544caa4"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-af152f89a8006ce2.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "5014cc94-baf5-402b-a5d6-75e1e544caa4",
+          "chunk_number": 35,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 934,
+          "persisted_chunk_text_sha256": "f0c694e0dcce75a38de9251823a6f13a77bcc81461026107d2e8649b083b81b4",
+          "persisted_source_start_page": 64,
+          "persisted_source_end_page": 66,
+          "persisted_source_start_paragraph": 3330,
+          "persisted_source_end_paragraph": 3429,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-af152f89a8006ce2.json",
+          "provider_input_snapshot_sha256": "d9e67e21e96b4775837f44086553b472d38de6d4de763248a26ab68655dcb855",
+          "provider_input_source_chunk_id": "5014cc94-baf5-402b-a5d6-75e1e544caa4",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 972,
+          "provider_task_payload_chunk_text_sha256": "28bbea6a95efe2a77f7f593c53b5657a1c9aa1cc44c614120009f5f1ad479ee4",
+          "provider_input_declared_char_count": 972,
+          "provider_input_declared_sha256": "28bbea6a95efe2a77f7f593c53b5657a1c9aa1cc44c614120009f5f1ad479ee4",
+          "source_excerpt_present_in_parse_chunk": true,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 50,
+              "haystack_normalized_char_count": 730,
+              "contains": true
+            },
+            "provider_input": {
+              "target_normalized_char_count": 50,
+              "haystack_normalized_char_count": 780,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "FAST-04-P0-0216",
+      "tender_id": "FAST-04",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 24,
+        "source_excerpt": "信用信息的使用原则：经认定的被列入失信\n被执行人、重大税收违法案件当事人名单、\n政府采购严重违法失信行为记录名单的投标\n人，其投标无效。联合体形式投标的，联合\n体成员存在不良信用记录，视同联合体存在",
+        "source_excerpt_sha256": "28a828fef2a6e99ca149f02fd79a33cc71e831dd58578fb73443e12983cb32da",
+        "atomic_requirement": "不得属于信用记录中被认定的失信被执行人、重大税收违法案件当事人或政府采购严重违法失信主体。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "QUALIFICATION"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "6eb53b24-56fd-4aae-b1be-32ed4aabc603"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-02be053d555261af.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "6eb53b24-56fd-4aae-b1be-32ed4aabc603",
+          "chunk_number": 7,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1151,
+          "persisted_chunk_text_sha256": "57a263db62426a63538f00b41d0cfe0a0e6701fbb5734f27240292c94646d30f",
+          "persisted_source_start_page": 23,
+          "persisted_source_end_page": 24,
+          "persisted_source_start_paragraph": 643,
+          "persisted_source_end_paragraph": 733,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-02be053d555261af.json",
+          "provider_input_snapshot_sha256": "6721a034a2fffbdff44e0acb90bab1ac97645a9c694c761da758d43a6a3b60d0",
+          "provider_input_source_chunk_id": "6eb53b24-56fd-4aae-b1be-32ed4aabc603",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1872,
+          "provider_task_payload_chunk_text_sha256": "55763189da1ac7e34b54d7e38c5c5d627b5701941492523937f7a5540a733e6d",
+          "provider_input_declared_char_count": 1872,
+          "provider_input_declared_sha256": "55763189da1ac7e34b54d7e38c5c5d627b5701941492523937f7a5540a733e6d",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 88,
+              "haystack_normalized_char_count": 930,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 88,
+              "haystack_normalized_char_count": 1596,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "FAST-04-P0-0221",
+      "tender_id": "FAST-04",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 27,
+        "source_excerpt": "3 投标报价 投标报价未超过招标文件中规定的项目/采购包预算金额或者\n项目/采购包最高限价；",
+        "source_excerpt_sha256": "1ba4dd9d5bfdd36357ea32b2133e01b54ec7ca5834717fc7857560dfba792eee",
+        "atomic_requirement": "投标报价不得超过项目/采购包预算金额或最高限价。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "9a38f9d5-42b3-4f25-bd23-2c3dae72ad5b"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-06886a855a322234.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "9a38f9d5-42b3-4f25-bd23-2c3dae72ad5b",
+          "chunk_number": 9,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1961,
+          "persisted_chunk_text_sha256": "1c0107303ef99a069c9ef4ed0bc9bd64154b7cfde54ba259bd4ec01b4a734237",
+          "persisted_source_start_page": 27,
+          "persisted_source_end_page": 30,
+          "persisted_source_start_paragraph": 826,
+          "persisted_source_end_paragraph": 958,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-06886a855a322234.json",
+          "provider_input_snapshot_sha256": "4fd85419a4c4432a2b8ad538628f9185aa33930cebdf5cdd15c018ad275e6593",
+          "provider_input_source_chunk_id": "9a38f9d5-42b3-4f25-bd23-2c3dae72ad5b",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1438,
+          "provider_task_payload_chunk_text_sha256": "fc748f2779de44bbd7e617525ce1c257a350a5998721917fa6beaf32a3a412f9",
+          "provider_input_declared_char_count": 1438,
+          "provider_input_declared_sha256": "fc748f2779de44bbd7e617525ce1c257a350a5998721917fa6beaf32a3a412f9",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 40,
+              "haystack_normalized_char_count": 1642,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 40,
+              "haystack_normalized_char_count": 1217,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "FAST-04-P0-0222",
+      "tender_id": "FAST-04",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 27,
+        "source_excerpt": "4 报价唯一性 投标文件未出现可选择性或可调整的报价（招标文件另有规定\n的除外）；\n5 投标有效期 投标文件中承诺的投标有效期满足招标文件中载明的投标有效\n期的；\n6 实质性格式 标记为“实质性格式”的文件均按招标文件要求提供且签署、盖",
+        "source_excerpt_sha256": "3a7d7c12473d345d75a234a98e8e0fdc5c396bd76186f64208e8996233c623bf",
+        "atomic_requirement": "不得提供可选择性或可调整的报价（招标文件另有规定除外）。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "9a38f9d5-42b3-4f25-bd23-2c3dae72ad5b"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-06886a855a322234.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "9a38f9d5-42b3-4f25-bd23-2c3dae72ad5b",
+          "chunk_number": 9,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1961,
+          "persisted_chunk_text_sha256": "1c0107303ef99a069c9ef4ed0bc9bd64154b7cfde54ba259bd4ec01b4a734237",
+          "persisted_source_start_page": 27,
+          "persisted_source_end_page": 30,
+          "persisted_source_start_paragraph": 826,
+          "persisted_source_end_paragraph": 958,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-06886a855a322234.json",
+          "provider_input_snapshot_sha256": "4fd85419a4c4432a2b8ad538628f9185aa33930cebdf5cdd15c018ad275e6593",
+          "provider_input_source_chunk_id": "9a38f9d5-42b3-4f25-bd23-2c3dae72ad5b",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1438,
+          "provider_task_payload_chunk_text_sha256": "fc748f2779de44bbd7e617525ce1c257a350a5998721917fa6beaf32a3a412f9",
+          "provider_input_declared_char_count": 1438,
+          "provider_input_declared_sha256": "fc748f2779de44bbd7e617525ce1c257a350a5998721917fa6beaf32a3a412f9",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 101,
+              "haystack_normalized_char_count": 1642,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 101,
+              "haystack_normalized_char_count": 1217,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "FAST-04-P0-0225",
+      "tender_id": "FAST-04",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 27,
+        "source_excerpt": "不涉及报价修正，或投标文件报价出现前后不一致时，投标人\n对修正后的报价予以确认；（如有）",
+        "source_excerpt_sha256": "5bec2bf73a1c56cf79360b8a438ad2fb9dd005c94bef7d176c6cce419aa7d0e5",
+        "atomic_requirement": "涉及报价修正时须对修正后的报价予以确认。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "9a38f9d5-42b3-4f25-bd23-2c3dae72ad5b"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-06886a855a322234.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "9a38f9d5-42b3-4f25-bd23-2c3dae72ad5b",
+          "chunk_number": 9,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1961,
+          "persisted_chunk_text_sha256": "1c0107303ef99a069c9ef4ed0bc9bd64154b7cfde54ba259bd4ec01b4a734237",
+          "persisted_source_start_page": 27,
+          "persisted_source_end_page": 30,
+          "persisted_source_start_paragraph": 826,
+          "persisted_source_end_paragraph": 958,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-06886a855a322234.json",
+          "provider_input_snapshot_sha256": "4fd85419a4c4432a2b8ad538628f9185aa33930cebdf5cdd15c018ad275e6593",
+          "provider_input_source_chunk_id": "9a38f9d5-42b3-4f25-bd23-2c3dae72ad5b",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1438,
+          "provider_task_payload_chunk_text_sha256": "fc748f2779de44bbd7e617525ce1c257a350a5998721917fa6beaf32a3a412f9",
+          "provider_input_declared_char_count": 1438,
+          "provider_input_declared_sha256": "fc748f2779de44bbd7e617525ce1c257a350a5998721917fa6beaf32a3a412f9",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 38,
+              "haystack_normalized_char_count": 1642,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 38,
+              "haystack_normalized_char_count": 1217,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "FAST-WATER-01-P0-0008",
+      "tender_id": "FAST-WATER-01",
+      "frozen_semantic_label": "PARTIAL",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 39,
+        "source_excerpt": "项目管理系统数据备份 每天\n项目管理系统安全加固\n项目管理系统功能完善及流程调整\n项目管理系统安全检查\n项目管理系统应急故障处理\n4 项目管理系统\n使用技术咨询",
+        "source_excerpt_sha256": "e1879950e709adb890013824974194d9611fbbeb76df9018ea627d9a21c1e55b",
+        "atomic_requirement": "对项目管理系统实施数据备份、安全加固、功能/流程完善、安全检查、应急故障处理和使用技术咨询。",
+        "p0_basis": "INHERITED_STAR",
+        "family": "EXPLICIT_OR_INHERITED_SUBSTANTIVE"
+      },
+      "source_truth_located_parse_chunk_ids": [
+        "0a4b60d9-3aea-4df0-bea0-27ad4dddefc3"
+      ],
+      "source_truth_located_parse_chunk_numbers": [
+        10
+      ],
+      "source_truth_location_method": "SINGLE_CHUNK_CONTAINMENT",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": true,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [
+        "0a4b60d9-3aea-4df0-bea0-27ad4dddefc3"
+      ],
+      "replay_selected_parse_chunk_ids": [
+        "0a4b60d9-3aea-4df0-bea0-27ad4dddefc3"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-4f6ac0e1e1f055a8.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "0a4b60d9-3aea-4df0-bea0-27ad4dddefc3",
+          "chunk_number": 10,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1712,
+          "persisted_chunk_text_sha256": "d693251c00f9d83b3a99e6e261ef18832d276bfbd35c096160f5db65ff4a5a8e",
+          "persisted_source_start_page": 38,
+          "persisted_source_end_page": 41,
+          "persisted_source_start_paragraph": 1253,
+          "persisted_source_end_paragraph": 1360,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-4f6ac0e1e1f055a8.json",
+          "provider_input_snapshot_sha256": "a6d1580f3227c06857dbeb9cec917d8ac972f91fc65b5969c373ced621bfcb56",
+          "provider_input_source_chunk_id": "0a4b60d9-3aea-4df0-bea0-27ad4dddefc3",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 695,
+          "provider_task_payload_chunk_text_sha256": "49a1da43b48e1f354f2988f05a46ae5ec2f8f10abd881daeb37a45a8796ff9c2",
+          "provider_input_declared_char_count": 695,
+          "provider_input_declared_sha256": "49a1da43b48e1f354f2988f05a46ae5ec2f8f10abd881daeb37a45a8796ff9c2",
+          "source_excerpt_present_in_parse_chunk": true,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 72,
+              "haystack_normalized_char_count": 1462,
+              "contains": true
+            },
+            "provider_input": {
+              "target_normalized_char_count": 72,
+              "haystack_normalized_char_count": 558,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "FAST-WATER-01-P0-0072",
+      "tender_id": "FAST-WATER-01",
+      "frozen_semantic_label": "DISTORTED",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 48,
+        "source_excerpt": "次数/年 0 1 >2\n平均每季度发\n生严重故障次",
+        "source_excerpt_sha256": "af88eceea371b64709b36a1d2e7e0d26fd862ed53fe946005d3881219b9ceb41",
+        "atomic_requirement": "严重故障次数目标0次/年。",
+        "p0_basis": "INHERITED_STAR",
+        "family": "EXPLICIT_OR_INHERITED_SUBSTANTIVE"
+      },
+      "source_truth_located_parse_chunk_ids": [
+        "2509f76d-3bf9-401b-8a2a-d6231f41590e"
+      ],
+      "source_truth_located_parse_chunk_numbers": [
+        15
+      ],
+      "source_truth_location_method": "SINGLE_CHUNK_CONTAINMENT",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": true,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [
+        "2509f76d-3bf9-401b-8a2a-d6231f41590e"
+      ],
+      "replay_selected_parse_chunk_ids": [
+        "2509f76d-3bf9-401b-8a2a-d6231f41590e"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-035850332c29f250.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "2509f76d-3bf9-401b-8a2a-d6231f41590e",
+          "chunk_number": 15,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 582,
+          "persisted_chunk_text_sha256": "8305dc6fdd26b8268bb7d67589a742d299fccc5f7e21a8105cea204806307fbd",
+          "persisted_source_start_page": 47,
+          "persisted_source_end_page": 48,
+          "persisted_source_start_paragraph": 1575,
+          "persisted_source_end_paragraph": 1674,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-035850332c29f250.json",
+          "provider_input_snapshot_sha256": "a7cc8fd7c8eaf58bdd81909faeef8a332ab4f274beefd981b1561cd79f771ab7",
+          "provider_input_source_chunk_id": "2509f76d-3bf9-401b-8a2a-d6231f41590e",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 722,
+          "provider_task_payload_chunk_text_sha256": "2193a7706c1c5b9b7e257bbc1cb443dbbd7d66e5ad07e480c1f487f14899fef8",
+          "provider_input_declared_char_count": 722,
+          "provider_input_declared_sha256": "2193a7706c1c5b9b7e257bbc1cb443dbbd7d66e5ad07e480c1f487f14899fef8",
+          "source_excerpt_present_in_parse_chunk": true,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 18,
+              "haystack_normalized_char_count": 407,
+              "contains": true
+            },
+            "provider_input": {
+              "target_normalized_char_count": 18,
+              "haystack_normalized_char_count": 590,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "FAST-WATER-01-P0-0078",
+      "tender_id": "FAST-WATER-01",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 53,
+        "source_excerpt": "（1）付款进度：\n1）本合同生效后的 10 个工作日内，采购人向供应商支付 2025 年度合同价款的 70%\n作为首付款。\n2）采购人于合同执行第 5 个月后 7 个工作日内，向供应商支付合同金额的 20%。\n3）采购人于 2025 年 12 月底前，向供应商支付合同金额的 10%。\n（2）付款方式：转账支票或汇款方式。\n（3）付款要求：供应商必须在采购人支付每笔款项前提供符合税法规定并符合采\n购人财务要求的正规合法有效的税务发票，采购人收到发票后 10 日内支付，否则采购",
+        "source_excerpt_sha256": "0a624150c357e5e9753526bead729d10795f0969dd1d16dc37ea6e117871cb4b",
+        "atomic_requirement": "合同价款付款进度为生效后10个工作日70%、第5个月后7个工作日20%、2025年12月底前10%。",
+        "p0_basis": "EXPLICIT_STAR",
+        "family": "EXPLICIT_OR_INHERITED_SUBSTANTIVE"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "809b3fc1-fdd2-49a6-bb27-17131bb28c5c"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-9da8b134b2fb012e.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "809b3fc1-fdd2-49a6-bb27-17131bb28c5c",
+          "chunk_number": 16,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1788,
+          "persisted_chunk_text_sha256": "6482b10c1a191a98b7abc7ea2ed641f9c1856788a22f44a26e22068eb1ba19df",
+          "persisted_source_start_page": 48,
+          "persisted_source_end_page": 58,
+          "persisted_source_start_paragraph": 1675,
+          "persisted_source_end_paragraph": 1931,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-9da8b134b2fb012e.json",
+          "provider_input_snapshot_sha256": "dbfa9301752372aed6a149aa52b47d634f25f0c758c389e9852bb760ea741fa5",
+          "provider_input_source_chunk_id": "809b3fc1-fdd2-49a6-bb27-17131bb28c5c",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1497,
+          "provider_task_payload_chunk_text_sha256": "ce63c3fde97fe97c88f296935a0236d7b8208a2aa5289c7603e739bc81913730",
+          "provider_input_declared_char_count": 1497,
+          "provider_input_declared_sha256": "ce63c3fde97fe97c88f296935a0236d7b8208a2aa5289c7603e739bc81913730",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 191,
+              "haystack_normalized_char_count": 1424,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 191,
+              "haystack_normalized_char_count": 1196,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "FAST-WATER-01-P0-0079",
+      "tender_id": "FAST-WATER-01",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 53,
+        "source_excerpt": "（2）付款方式：转账支票或汇款方式。",
+        "source_excerpt_sha256": "0ee535a4f6714216c8cfd89803eaf2812f15bcbfe559d1dfd45bb66c9533513c",
+        "atomic_requirement": "付款方式为转账支票或汇款。",
+        "p0_basis": "EXPLICIT_STAR",
+        "family": "EXPLICIT_OR_INHERITED_SUBSTANTIVE"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "809b3fc1-fdd2-49a6-bb27-17131bb28c5c"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-9da8b134b2fb012e.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "809b3fc1-fdd2-49a6-bb27-17131bb28c5c",
+          "chunk_number": 16,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1788,
+          "persisted_chunk_text_sha256": "6482b10c1a191a98b7abc7ea2ed641f9c1856788a22f44a26e22068eb1ba19df",
+          "persisted_source_start_page": 48,
+          "persisted_source_end_page": 58,
+          "persisted_source_start_paragraph": 1675,
+          "persisted_source_end_paragraph": 1931,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-9da8b134b2fb012e.json",
+          "provider_input_snapshot_sha256": "dbfa9301752372aed6a149aa52b47d634f25f0c758c389e9852bb760ea741fa5",
+          "provider_input_source_chunk_id": "809b3fc1-fdd2-49a6-bb27-17131bb28c5c",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1497,
+          "provider_task_payload_chunk_text_sha256": "ce63c3fde97fe97c88f296935a0236d7b8208a2aa5289c7603e739bc81913730",
+          "provider_input_declared_char_count": 1497,
+          "provider_input_declared_sha256": "ce63c3fde97fe97c88f296935a0236d7b8208a2aa5289c7603e739bc81913730",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 14,
+              "haystack_normalized_char_count": 1424,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 14,
+              "haystack_normalized_char_count": 1196,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "FAST-WATER-01-P0-0080",
+      "tender_id": "FAST-WATER-01",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 53,
+        "source_excerpt": "（3）付款要求：供应商必须在采购人支付每笔款项前提供符合税法规定并符合采\n购人财务要求的正规合法有效的税务发票，采购人收到发票后 10 日内支付，否则采购",
+        "source_excerpt_sha256": "afb30ac5803acf40cc6eb639820a58bf990ba1a461ae772b16252563de538e54",
+        "atomic_requirement": "供应商须在每笔付款前提供合规发票。",
+        "p0_basis": "EXPLICIT_STAR",
+        "family": "EXPLICIT_OR_INHERITED_SUBSTANTIVE"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "809b3fc1-fdd2-49a6-bb27-17131bb28c5c"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-9da8b134b2fb012e.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "809b3fc1-fdd2-49a6-bb27-17131bb28c5c",
+          "chunk_number": 16,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1788,
+          "persisted_chunk_text_sha256": "6482b10c1a191a98b7abc7ea2ed641f9c1856788a22f44a26e22068eb1ba19df",
+          "persisted_source_start_page": 48,
+          "persisted_source_end_page": 58,
+          "persisted_source_start_paragraph": 1675,
+          "persisted_source_end_paragraph": 1931,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-9da8b134b2fb012e.json",
+          "provider_input_snapshot_sha256": "dbfa9301752372aed6a149aa52b47d634f25f0c758c389e9852bb760ea741fa5",
+          "provider_input_source_chunk_id": "809b3fc1-fdd2-49a6-bb27-17131bb28c5c",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1497,
+          "provider_task_payload_chunk_text_sha256": "ce63c3fde97fe97c88f296935a0236d7b8208a2aa5289c7603e739bc81913730",
+          "provider_input_declared_char_count": 1497,
+          "provider_input_declared_sha256": "ce63c3fde97fe97c88f296935a0236d7b8208a2aa5289c7603e739bc81913730",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 69,
+              "haystack_normalized_char_count": 1424,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 69,
+              "haystack_normalized_char_count": 1196,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "FAST-WATER-01-P0-0087",
+      "tender_id": "FAST-WATER-01",
+      "frozen_semantic_label": "PARTIAL",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 25,
+        "source_excerpt": "信用信息的使用原则：经认定的被列入失信被执行人、\n重大税收违法案件当事人名单、政府采购严重违法失\n信行为记录名单的投标人，其投标无效。联合体形式\n投标的，联合体成员存在不良信用记录，视同联合体",
+        "source_excerpt_sha256": "685fc9da0a538e3b27c24e62e75009dcaa23fc661f1d3bbbd0cb27445b65f1af",
+        "atomic_requirement": "不得属于信用记录认定的失信被执行人、重大税收违法案件当事人或政府采购严重违法失信主体。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "QUALIFICATION"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "873b4868-64fc-44a6-a04c-f9bebdc04283"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-86d4aacfda86834b.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "873b4868-64fc-44a6-a04c-f9bebdc04283",
+          "chunk_number": 6,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1055,
+          "persisted_chunk_text_sha256": "4d1b8d98d3f7534993ef62ec6781841bee725a91878068f1b37ae1fe83dee935",
+          "persisted_source_start_page": 24,
+          "persisted_source_end_page": 26,
+          "persisted_source_start_paragraph": 640,
+          "persisted_source_end_paragraph": 736,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-86d4aacfda86834b.json",
+          "provider_input_snapshot_sha256": "452f3a27922aadcbe680d4cabe11a1e373816045521ad87881def71e0f19d6b9",
+          "provider_input_source_chunk_id": "873b4868-64fc-44a6-a04c-f9bebdc04283",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1852,
+          "provider_task_payload_chunk_text_sha256": "b218dfff8a60bdad20233628eeae76d36ed48d0a5585929f917726657d322436",
+          "provider_input_declared_char_count": 1852,
+          "provider_input_declared_sha256": "b218dfff8a60bdad20233628eeae76d36ed48d0a5585929f917726657d322436",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 86,
+              "haystack_normalized_char_count": 831,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 86,
+              "haystack_normalized_char_count": 1591,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "FAST-WATER-01-P0-0092",
+      "tender_id": "FAST-WATER-01",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 26,
+        "source_excerpt": "3 投标报价 投标报价未超过招标文件中规定的项目/采购包预算金额或者\n项目/采购包最高限价；",
+        "source_excerpt_sha256": "1ba4dd9d5bfdd36357ea32b2133e01b54ec7ca5834717fc7857560dfba792eee",
+        "atomic_requirement": "投标报价不得超过预算金额或最高限价。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "af4f9abe-50c7-48c6-be35-795eaa227e19"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-fab51a83995a6294.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "af4f9abe-50c7-48c6-be35-795eaa227e19",
+          "chunk_number": 7,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1987,
+          "persisted_chunk_text_sha256": "f31f0a3a702ec7dc556e97ae31409e019557c207297ad59594d45dd8c3008433",
+          "persisted_source_start_page": 26,
+          "persisted_source_end_page": 30,
+          "persisted_source_start_paragraph": 738,
+          "persisted_source_end_paragraph": 879,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-fab51a83995a6294.json",
+          "provider_input_snapshot_sha256": "9d79ef096a5d5f2bb405f81cf35a64495126b1b0d67a0e7ae639ef09ba837647",
+          "provider_input_source_chunk_id": "af4f9abe-50c7-48c6-be35-795eaa227e19",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1959,
+          "provider_task_payload_chunk_text_sha256": "188d5ccee822f8fa1d999c88f11d8ce7d4dc77d2bb64a0fe2678ed0ef3e6b48c",
+          "provider_input_declared_char_count": 1959,
+          "provider_input_declared_sha256": "188d5ccee822f8fa1d999c88f11d8ce7d4dc77d2bb64a0fe2678ed0ef3e6b48c",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 40,
+              "haystack_normalized_char_count": 1657,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 40,
+              "haystack_normalized_char_count": 1671,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "FAST-WATER-01-P0-0093",
+      "tender_id": "FAST-WATER-01",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 26,
+        "source_excerpt": "4 报价唯一性 投标文件未出现可选择性或可调整的报价（招标文件另有规定",
+        "source_excerpt_sha256": "f1fb5dd3c44a22d2e30934d7a1f167f0398cdc304795b8b14419988ee718a4b5",
+        "atomic_requirement": "不得出现可选择性或可调整报价。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "af4f9abe-50c7-48c6-be35-795eaa227e19"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-fab51a83995a6294.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "af4f9abe-50c7-48c6-be35-795eaa227e19",
+          "chunk_number": 7,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1987,
+          "persisted_chunk_text_sha256": "f31f0a3a702ec7dc556e97ae31409e019557c207297ad59594d45dd8c3008433",
+          "persisted_source_start_page": 26,
+          "persisted_source_end_page": 30,
+          "persisted_source_start_paragraph": 738,
+          "persisted_source_end_paragraph": 879,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-fab51a83995a6294.json",
+          "provider_input_snapshot_sha256": "9d79ef096a5d5f2bb405f81cf35a64495126b1b0d67a0e7ae639ef09ba837647",
+          "provider_input_source_chunk_id": "af4f9abe-50c7-48c6-be35-795eaa227e19",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1959,
+          "provider_task_payload_chunk_text_sha256": "188d5ccee822f8fa1d999c88f11d8ce7d4dc77d2bb64a0fe2678ed0ef3e6b48c",
+          "provider_input_declared_char_count": 1959,
+          "provider_input_declared_sha256": "188d5ccee822f8fa1d999c88f11d8ce7d4dc77d2bb64a0fe2678ed0ef3e6b48c",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 32,
+              "haystack_normalized_char_count": 1657,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 32,
+              "haystack_normalized_char_count": 1671,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    },
+    {
+      "atom_id": "FAST-WATER-01-P0-0097",
+      "tender_id": "FAST-WATER-01",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_label_provenance": "V2_HISTORICAL_INPUT_NOT_NEW_ADJUDICATION",
+      "source_truth": {
+        "page": 26,
+        "source_excerpt": "不涉及报价修正，或投标文件报价出现前后不一致时，投标人\n对修正后的报价予以确认（如有）；",
+        "source_excerpt_sha256": "874207c6c410d7cb1b4c6de710570d7b83e15d10026c451b2e54fb69544e412e",
+        "atomic_requirement": "涉及报价修正时须对修正后的报价予以确认。",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY"
+      },
+      "source_truth_located_parse_chunk_ids": [],
+      "source_truth_located_parse_chunk_numbers": [],
+      "source_truth_location_method": "NOT_FOUND_IN_PERSISTED_PARSE_CHUNKS",
+      "source_truth_present_in_full_extraction": true,
+      "source_excerpt_present_in_persisted_parse_chunk_set": false,
+      "source_excerpt_present_in_provider_input_set": false,
+      "production_parse_chunk_ids": [],
+      "replay_selected_parse_chunk_ids": [
+        "af4f9abe-50c7-48c6-be35-795eaa227e19"
+      ],
+      "provider_input_snapshot_ids": [
+        "PROVIDER_INPUT_SNAPSHOT-fab51a83995a6294.json"
+      ],
+      "chunks": [
+        {
+          "chunk_id": "af4f9abe-50c7-48c6-be35-795eaa227e19",
+          "chunk_number": 7,
+          "replay_input_authority_level": 2,
+          "persisted_parse_chunk_present": true,
+          "persisted_chunk_text_char_count": 1987,
+          "persisted_chunk_text_sha256": "f31f0a3a702ec7dc556e97ae31409e019557c207297ad59594d45dd8c3008433",
+          "persisted_source_start_page": 26,
+          "persisted_source_end_page": 30,
+          "persisted_source_start_paragraph": 738,
+          "persisted_source_end_paragraph": 879,
+          "provider_input_snapshot_id": "PROVIDER_INPUT_SNAPSHOT-fab51a83995a6294.json",
+          "provider_input_snapshot_sha256": "9d79ef096a5d5f2bb405f81cf35a64495126b1b0d67a0e7ae639ef09ba837647",
+          "provider_input_source_chunk_id": "af4f9abe-50c7-48c6-be35-795eaa227e19",
+          "provider_input_task_type": "requirement_extraction",
+          "provider_task_payload_chunk_text_char_count": 1959,
+          "provider_task_payload_chunk_text_sha256": "188d5ccee822f8fa1d999c88f11d8ce7d4dc77d2bb64a0fe2678ed0ef3e6b48c",
+          "provider_input_declared_char_count": 1959,
+          "provider_input_declared_sha256": "188d5ccee822f8fa1d999c88f11d8ce7d4dc77d2bb64a0fe2678ed0ef3e6b48c",
+          "source_excerpt_present_in_parse_chunk": false,
+          "source_excerpt_present_in_provider_input": false,
+          "normalized_lexical_containment_evidence": {
+            "parse_chunk": {
+              "target_normalized_char_count": 38,
+              "haystack_normalized_char_count": 1657,
+              "contains": false
+            },
+            "provider_input": {
+              "target_normalized_char_count": 38,
+              "haystack_normalized_char_count": 1671,
+              "contains": false
+            }
+          },
+          "provider_text_matches_persisted_chunk": false,
+          "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS"
+        }
+      ],
+      "authority_status": "PARSE_TO_PROVIDER_INPUT_COVERAGE_LOSS",
+      "authority_reason": "Mechanical authority gate did not establish that the frozen Source Truth excerpt was present in the matching actual provider input; no semantic conclusion is made.",
+      "source_identity_authority": "BACKEND_PRODUCTION_PARSE_CHUNK",
+      "replay_input_authority_level": 2,
+      "restricted_evidence_errors": []
+    }
+  ]
+}

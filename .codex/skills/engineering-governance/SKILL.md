@@ -1,64 +1,54 @@
 ---
 name: engineering-governance
-description: Review risky engineering changes at implementation and completion checkpoints without supervising ordinary local work.
-metadata:
-  short-description: Checkpoint governance for risky changes
+description: Use when a change may affect shared meaning, boundaries, runtime identity, production contracts, or evaluation parity.
 ---
 
 # Engineering Governance
 
-Use this skill as a checkpoint reviewer, not as a continuous supervisor.
+This Skill routes anti-drift checks at risk checkpoints. `AGENTS.md`, architecture/ADR/formal contracts, and explicit user authorization outrank it. TDD, debugging, and planning remain with the applicable development tools when separately active.
 
 ## Routing
 
-- GREEN: ordinary, local, low-risk edits. Skip governance and proceed normally.
-- YELLOW: API, schema, prompt contract, database, gateway, module boundary,
-  concurrency, dependency, or similar interface/runtime changes. Run a focused
-  FAST CHECK before implementation and a COMPLETION CHECK before handoff.
-- RED: architecture, migrations, hard contract cuts, security, production
-  deploy/restart, or destructive data changes. Use the applicable plan,
-  pre-merge, and runtime gates; stop when authority or evidence is missing.
+- **GREEN** — local implementation detail with no shared meaning, boundary, or runtime impact. Result: `SKIP GOVERNANCE`; do zero governance and Runtime Identity checks.
+- **YELLOW** — shared API, Schema, Prompt, Eval, Gateway, duplicated transformation, compatibility, or runtime-facing change. Run only a focused anti-drift check.
+- **RED** — canonical authority/identity/persistence, migration, security, destructive action, production contract cut, or deploy. If authority or evidence is unclear, STOP.
 
-Classify the change by its highest-risk affected surface. Do not escalate a
-task merely because the repository contains a related high-risk subsystem.
+Do not perform repository-wide audits for GREEN work, refactor opportunistically, expand architecture for standards, or enlarge task scope.
 
-## Focused checks
+## Anti-drift invariants
 
-Inspect only the change-relevant evidence across these dimensions:
+Check only affected surfaces:
 
-1. Authority — correct owner and decision authority.
-2. Boundary — service/module/entry-point ownership and isolation.
-3. Contract — input/output, persistence, and compatibility semantics.
-4. Compatibility — existing callers, flags, fixtures, and migrations.
-5. Runtime — configuration, rollout, restart, and failure behavior.
-6. Evidence — targeted tests, persistence assertions, and reproducible proof.
+1. **Definition** — one canonical business meaning. Before creating a new
+   business or domain term, search the existing canonical contract, schema,
+   and concept definitions, and reuse an existing canonical concept when one
+   exists.
+2. **Authority** — the owning service controls identity, state, persistence, approval, and critical transforms.
+3. **Identity** — use stable contract/source/runtime identity; when comparison
+   matters, identity explicitly includes runtime, contract, prompt, schema,
+   and evaluator identity. Do not invent aliases.
+4. **Parity** — reuse the shared canonical implementation. If reuse is impossible, require an executable parity assertion; documentation or developer intention is not proof.
+5. **Stable Identity** — run-local refs, chunk/index/rank IDs are not cross-run identity.
+6. **Exact/Canonical vs Derived Representation** — canonical identity/provenance remain authoritative; derived or model-facing forms cannot redefine them.
+7. **No Silent Fallback** — no hidden alias, bypass, coercion, repair, retry, or state promotion that masks a break.
 
-Do not scan the whole repository unless the task explicitly requires it. Do
-not invoke this review after every edit, enlarge scope, refactor opportunistically,
-add architecture for “standards”, or speculate about future-proofing.
+## Event-triggered Runtime Identity
 
-## Checkpoint protocol
+Runtime Identity is not continuous. Before relying on Live/Provider/E2E results, check it only when:
 
-FAST CHECK (YELLOW/RED before implementation): identify the owner, affected
-boundary, contract impact, compatibility risk, required authorization, and the
-smallest validation set. For RED changes, establish a plan and explicit runtime
-or destructive-action gate before execution.
+- runtime-loaded code/config/Prompt/Schema/Contract changed;
+- endpoint, environment, server/container, branch, or runtime target changed;
+- observed behavior contradicts current code; or
+- the result will support Benchmark, Freeze, or Release.
 
-COMPLETION CHECK (YELLOW/RED before handoff): confirm the owner still governs
-the behavior, no bypass or compatibility weakening was introduced, and the
-targeted evidence proves the changed boundary. For state-mutating invariants,
-require service behavior, a real entry-point negative control, and persistence
-assertion. RED changes additionally require the applicable pre-merge/runtime
-evidence and an explicit stop if it is absent.
+For an unchanged session/Eval Run, reuse a passing Runtime Certification. After an invalidating event (relevant code/Prompt/Schema/Contract, Gateway restart/deploy, endpoint/base URL/environment, or branch/runtime target), re-certify only when a live result is needed. Start with cheap endpoint/base URL/started_at/build checks; inspect hashes, provider, model, or detailed config only on mismatch, certification, or an issue requiring them. Do not run a full Runtime audit by default.
+
+Code on disk != code proven in execution. A confirmed mismatch is `RUNTIME_PARITY_VIOLATION`; stale runtime is a Runtime/Parity failure, not a Semantic Model failure.
+
+## Failure discipline
+
+Use the First Failure Boundary: identify one primary root cause, apply the smallest owner-level fix, replay affected cases, and run affected-layer regression only. Do not reopen passed/frozen layers without invalidating evidence.
 
 ## Boundaries
 
-The project `AGENTS.md`, architecture documents, ADRs, and explicit user
-authorization remain authoritative. This skill does not grant merge, push,
-deploy, external-provider, destructive database, or contract-change authority.
-If evidence conflicts or a required owner is unclear, stop and report the
-minimum decision needed.
-
-Superpowers (TDD, debugging, planning, and general review mechanics) remains
-the execution method when separately active; this skill only routes when
-governance checkpoints are required and does not duplicate those mechanics.
+This Skill grants no commit, push, merge, deploy, destructive DB, external Provider, or contract-change authority. No continuous hooks, agents, services, watchers, or governance framework are implied.

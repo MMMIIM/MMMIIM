@@ -1,0 +1,33 @@
+{
+  "artifact_type": "V43_FACT_REVIEW_BURDEN_DETERMINISTIC_REDUCTION_V1_CURRENT_REVIEW_ROOT_CAUSE",
+  "semantic_authority": "GPT",
+  "source_artifacts": [
+    "docs/handoff/V43_FACT_GROUNDING_REVIEW_BOUNDARY_V2/07_CHECKPOINT.json",
+    "docs/handoff/V43_FACT_GROUNDING_FALSE_NEGATIVE_CLOSURE_V1/09_CHECKPOINT.json"
+  ],
+  "frozen_root_cause": "CANONICALIZER_AUXILIARY_DIMENSION_OVER_ESCALATION",
+  "grounding_false_reject_root_cause": "CLOSED",
+  "current_targeted_candidate_count": 31,
+  "prior_v1_distribution": {
+    "ACCEPT": 9,
+    "REVIEW_REQUIRED": 22
+  },
+  "prior_v2_distribution": {
+    "ACCEPT": 9,
+    "REVIEW_REQUIRED": 22
+  },
+  "current_offline_distribution": {
+    "ACCEPT": 19,
+    "REVIEW_REQUIRED": 12
+  },
+  "review_reasons": [
+    "STATUS_ENUM_UNRESOLVED",
+    "QUANTITY_CONDITION_UNRESOLVED",
+    "QUANTITY_VALUE_OR_UNIT_UNRESOLVED",
+    "TEMPORAL_ROLE_OR_DATE_UNRESOLVED",
+    "STATEMENT_SEMANTIC_GROUNDING_UNRESOLVED",
+    "SOURCE_BOUNDARY_COMPLETION_UNRESOLVED"
+  ],
+  "codex_semantic_rejudication": false,
+  "semantic_root_cause": "PENDING_GPT"
+}

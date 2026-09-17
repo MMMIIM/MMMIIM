@@ -1,0 +1,51 @@
+{
+  "artifact_type": "V43_REFERENCE_PARTIAL_INTERVENTION_AND_CONNECTIVITY_RECOVERY_CHECKPOINT",
+  "status": "BLOCKED_EMBEDDING_PROVIDER_CONNECTIVITY",
+  "run_id": "V43-REFERENCE-PARTIAL-INTERVENTION-20260915140344",
+  "scope": "DEVELOPMENT_PAIRED_RETEST_ONLY",
+  "source_coverage_status": "PARTIAL_READY",
+  "physical_corpus_gap": "PHYSICAL_CORPUS_GAP_NOT_OBSERVED",
+  "activated_source_count": 11,
+  "source_review_content_count": 3,
+  "case_count": 80,
+  "intervention_coverage_counts": {
+    "INTERVENTION_COVERED": 15,
+    "SOURCE_GAP_UNCOVERED": 4,
+    "NO_INTERVENTION_EXISTING_CORPUS": 61
+  },
+  "known_source_gap_topics": [
+    "call_center_speech_ai",
+    "document_material_platform",
+    "electronic_signature_ca"
+  ],
+  "connectivity": {
+    "provider": "siliconflow",
+    "model": "Qwen/Qwen3-Embedding-0.6B",
+    "dimension": 1024,
+    "attempts": 1,
+    "reached": 0,
+    "error_code": "EMBEDDING_NETWORK_ERROR"
+  },
+  "b0_immutable": true,
+  "b1_executed": false,
+  "b2a_executed": false,
+  "b2b_executed": false,
+  "semantic_labels_created": 0,
+  "provider_calls": 1,
+  "llm_calls": 0,
+  "eval_db_writes": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "router_mutations": 0,
+  "requirement_mutations": 0,
+  "fact_mapping_claim_writer_mutations": 0,
+  "reference_assertion_escape": 0,
+  "third_party_capability_escape": 0,
+  "third_party_brand_to_bidder_escape": 0,
+  "project_scope_escape": 0,
+  "quarantine_escape": 0,
+  "final_rag_product_fidelity_claim": false,
+  "final_writer_fidelity_claim": false,
+  "final_threshold_frozen": false,
+  "next_gate": "EMBEDDING_PROVIDER_CONNECTIVITY_RECOVERY"
+}

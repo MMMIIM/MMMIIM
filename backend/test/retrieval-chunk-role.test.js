@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {
   classifyRetrievalChunkRole,
   classifySubstantiveCandidate,
+  isCitationIndexLike,
   isFormalEvidenceChunkEligible,
   partitionRetrievalCandidates
 } from '../src/pipeline/retrieval-chunk-role.js';
@@ -55,4 +56,22 @@ test('substantive hygiene excludes noise but keeps legitimate topic-only busines
   assert.equal(result.all_candidates.find((item) => item.chunk_id === 'label').substantive_class, 'LABEL_ONLY');
   assert.equal(result.all_candidates.find((item) => item.chunk_id === 'topic').substantive_candidate, true);
   assert.equal(result.all_candidates.find((item) => item.chunk_id === 'topic').evidence_source_class, 'NON_AUDITABLE_CLAIM');
+});
+
+test('boilerplate summary disclaimers are fail-closed and do not consume reference slots', () => {
+  const source = '官方资料结构化摘要。正式投标与合规判断需回到原始法律、标准、政策或项目文件核验。';
+  const classified = classifySubstantiveCandidate({ source_text: source });
+  assert.equal(classified.substantive_candidate, false);
+  assert.equal(classified.substantive_class, 'BOILERPLATE');
+});
+
+test('citation index rows with URL query parameters are recognized as non-substantive', () => {
+  const source = '- **OFF-U08｜GB/T 22239-2019**｜国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2019-12-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=ABC123';
+  assert.equal(isCitationIndexLike(source), true);
+  const result = partitionRetrievalCandidates({ requirement: { text: '企业应提供安全设计。' }, candidates: [
+    { chunk_id: 'citation', source_text: source, material_type: 'technical_whitepaper' },
+    { chunk_id: 'business', source_text: '系统支持安全设计并保留审计记录。', material_type: 'technical_whitepaper' }
+  ] });
+  assert.deepEqual(result.eligible_candidates.map((item) => item.chunk_id), ['business']);
+  assert.equal(result.all_candidates.find((item) => item.chunk_id === 'citation').substantive_candidate, false);
 });

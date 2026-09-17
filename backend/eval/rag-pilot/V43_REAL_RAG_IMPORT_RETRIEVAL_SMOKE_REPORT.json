@@ -1,0 +1,832 @@
+{
+  "task": "V43_REAL_RAG_IMPORT_RETRIEVAL_SMOKE",
+  "provider_generation_calls": 0,
+  "deepseek_calls": 0,
+  "dify_calls": 0,
+  "pre_db_counts": {
+    "projects": 14,
+    "company_materials": 56,
+    "material_chunks": 561,
+    "material_chunk_embeddings": 83
+  },
+  "embedding_config": {
+    "model": "Qwen/Qwen3-Embedding-0.6B",
+    "dimension": 1024,
+    "version": "1",
+    "timeout_ms": 30000,
+    "provider_host": "api.siliconflow.cn"
+  },
+  "synthetic_project_id": "d22e95d8-3a2e-450d-a5ef-27f83a283aff",
+  "import": {
+    "GENERAL": {
+      "expected": 16,
+      "imported": 0,
+      "existing": 16,
+      "failed": 0,
+      "actual_chunks": 162
+    },
+    "GOVERNMENT_ENTERPRISE": {
+      "expected": 8,
+      "imported": 0,
+      "existing": 8,
+      "failed": 0,
+      "actual_chunks": 64
+    },
+    "HEALTHCARE": {
+      "expected": 10,
+      "imported": 0,
+      "existing": 10,
+      "failed": 0,
+      "actual_chunks": 92
+    },
+    "ENTERPRISE_PRIVATE": {
+      "expected": 16,
+      "imported": 0,
+      "existing": 16,
+      "failed": 0,
+      "actual_chunks": 160
+    }
+  },
+  "post_db_counts_before_retrieval": {
+    "projects": 14,
+    "company_materials": 56,
+    "material_chunks": 561,
+    "material_chunk_embeddings": 83
+  },
+  "embedding_calls": [
+    {
+      "call_index": 1,
+      "smoke_case": "GENERAL",
+      "input_count": 323,
+      "missing_chunk_count": 322,
+      "query_count": 1,
+      "started_at": "2026-08-31T15:41:11.057Z",
+      "http": 200,
+      "latency_ms": 1053,
+      "completed_at": "2026-08-31T15:41:12.114Z"
+    },
+    {
+      "call_index": 2,
+      "smoke_case": "GOVERNMENT",
+      "input_count": 65,
+      "missing_chunk_count": 64,
+      "query_count": 1,
+      "started_at": "2026-08-31T15:41:13.040Z",
+      "http": 200,
+      "latency_ms": 285,
+      "completed_at": "2026-08-31T15:41:13.325Z"
+    },
+    {
+      "call_index": 3,
+      "smoke_case": "MEDICAL",
+      "input_count": 93,
+      "missing_chunk_count": 92,
+      "query_count": 1,
+      "started_at": "2026-08-31T15:41:13.477Z",
+      "http": 200,
+      "latency_ms": 538,
+      "completed_at": "2026-08-31T15:41:14.015Z"
+    },
+    {
+      "call_index": 4,
+      "smoke_case": "COMPANY",
+      "input_count": 1,
+      "missing_chunk_count": 0,
+      "query_count": 1,
+      "started_at": "2026-08-31T15:41:14.204Z",
+      "http": 200,
+      "latency_ms": 62,
+      "completed_at": "2026-08-31T15:41:14.266Z"
+    }
+  ],
+  "smoke": [
+    {
+      "name": "GENERAL",
+      "query": "政府信息化项目的采购需求、验收和证明材料通常需要注意什么？",
+      "requested_scopes": [
+        "GENERAL"
+      ],
+      "returned_scopes": [
+        "GENERAL",
+        "ENTERPRISE_PRIVATE"
+      ],
+      "top_k": 5,
+      "results": [
+        {
+          "rank": 1,
+          "doc": "UNI-01",
+          "material_id": "da0524ff-46a1-4266-a1f7-29ffcd3545ae",
+          "scope": "GENERAL",
+          "industry": null,
+          "score": 0.6487473249435471,
+          "chunk_id": "MCH-46C2386CA239E1D893BEECD206D32C34",
+          "chunk_chars": 30,
+          "relevance": "CLEARLY_RELEVANT",
+          "excerpt": "验收应与采购需求、合同、测试、试运行和交付物形成可追溯关系。"
+        },
+        {
+          "rank": 2,
+          "doc": "UNI-13",
+          "material_id": "61eeaf03-dcab-4d32-a3e1-39c561201c5a",
+          "scope": "GENERAL",
+          "industry": null,
+          "score": 0.5986755251095023,
+          "chunk_id": "MCH-AF9EA12360D013EE0D9183A380A20A65",
+          "chunk_chars": 351,
+          "relevance": "PLAUSIBLY_RELEVANT",
+          "excerpt": "- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项"
+        },
+        {
+          "rank": 3,
+          "doc": "COM-09",
+          "material_id": "f32d71e5-37db-496f-9050-dd7b52fd3804",
+          "scope": "ENTERPRISE_PRIVATE",
+          "industry": "government+medical",
+          "score": 0.598675465504854,
+          "chunk_id": "MCH-F95A1B49C78845275EDBC1F7CF3A465E",
+          "chunk_chars": 351,
+          "relevance": "PLAUSIBLY_RELEVANT",
+          "excerpt": "- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项"
+        },
+        {
+          "rank": 4,
+          "doc": "COM-01",
+          "material_id": "adde4515-c4bd-4fba-9269-efa94cf6ac2a",
+          "scope": "ENTERPRISE_PRIVATE",
+          "industry": "government+medical",
+          "score": 0.598675465504854,
+          "chunk_id": "MCH-C42E9860210EB32DBF96C005AA814AEE",
+          "chunk_chars": 351,
+          "relevance": "PLAUSIBLY_RELEVANT",
+          "excerpt": "- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项"
+        },
+        {
+          "rank": 5,
+          "doc": "COM-03",
+          "material_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd",
+          "scope": "ENTERPRISE_PRIVATE",
+          "industry": "government+medical",
+          "score": 0.5931458715709619,
+          "chunk_id": "MCH-BEB81A1EE2C55E0DEC03943613B233BF",
+          "chunk_chars": 504,
+          "relevance": "PLAUSIBLY_RELEVANT",
+          "excerpt": "- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n- **OFF-U12｜数据库政府采购需求标准（2023"
+        }
+      ],
+      "raw_top5": [
+        {
+          "rank": 1,
+          "doc": "UNI-01",
+          "material_id": "da0524ff-46a1-4266-a1f7-29ffcd3545ae",
+          "scope": "GENERAL",
+          "industry": null,
+          "score": 0.6487473249435471,
+          "chunk_id": "MCH-46C2386CA239E1D893BEECD206D32C34",
+          "chunk_chars": 30,
+          "relevance": "CLEARLY_RELEVANT",
+          "excerpt": "验收应与采购需求、合同、测试、试运行和交付物形成可追溯关系。"
+        },
+        {
+          "rank": 2,
+          "doc": "UNI-13",
+          "material_id": "61eeaf03-dcab-4d32-a3e1-39c561201c5a",
+          "scope": "GENERAL",
+          "industry": null,
+          "score": 0.5986755251095023,
+          "chunk_id": "MCH-AF9EA12360D013EE0D9183A380A20A65",
+          "chunk_chars": 351,
+          "relevance": "PLAUSIBLY_RELEVANT",
+          "excerpt": "- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项"
+        },
+        {
+          "rank": 3,
+          "doc": "COM-09",
+          "material_id": "f32d71e5-37db-496f-9050-dd7b52fd3804",
+          "scope": "ENTERPRISE_PRIVATE",
+          "industry": "government+medical",
+          "score": 0.598675465504854,
+          "chunk_id": "MCH-F95A1B49C78845275EDBC1F7CF3A465E",
+          "chunk_chars": 351,
+          "relevance": "PLAUSIBLY_RELEVANT",
+          "excerpt": "- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项"
+        },
+        {
+          "rank": 4,
+          "doc": "COM-01",
+          "material_id": "adde4515-c4bd-4fba-9269-efa94cf6ac2a",
+          "scope": "ENTERPRISE_PRIVATE",
+          "industry": "government+medical",
+          "score": 0.598675465504854,
+          "chunk_id": "MCH-C42E9860210EB32DBF96C005AA814AEE",
+          "chunk_chars": 351,
+          "relevance": "PLAUSIBLY_RELEVANT",
+          "excerpt": "- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项"
+        },
+        {
+          "rank": 5,
+          "doc": "COM-03",
+          "material_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd",
+          "scope": "ENTERPRISE_PRIVATE",
+          "industry": "government+medical",
+          "score": 0.5931458715709619,
+          "chunk_id": "MCH-BEB81A1EE2C55E0DEC03943613B233BF",
+          "chunk_chars": 504,
+          "relevance": "PLAUSIBLY_RELEVANT",
+          "excerpt": "- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n- **OFF-U12｜数据库政府采购需求标准（2023"
+        }
+      ],
+      "top1_relevant": true,
+      "relevant_at_3": 3,
+      "relevant_at_5": 5,
+      "expected_doc_hit": true,
+      "unexpected_scope_count": 3,
+      "short_chunks_lt50": 1,
+      "short_chunks_lt100": 1,
+      "heading_only_hits": 5,
+      "embedding_call": {
+        "call_index": 1,
+        "smoke_case": "GENERAL",
+        "input_count": 323,
+        "missing_chunk_count": 322,
+        "query_count": 1,
+        "started_at": "2026-08-31T15:41:11.057Z",
+        "http": 200,
+        "latency_ms": 1053,
+        "completed_at": "2026-08-31T15:41:12.114Z"
+      }
+    },
+    {
+      "name": "GOVERNMENT",
+      "query": "政务数据共享、数据目录、跨部门协同和系统接口建设通常需要哪些能力？",
+      "requested_scopes": [
+        "GENERAL",
+        "GOVERNMENT_ENTERPRISE"
+      ],
+      "returned_scopes": [
+        "GOVERNMENT_ENTERPRISE",
+        "GENERAL"
+      ],
+      "top_k": 5,
+      "results": [
+        {
+          "rank": 1,
+          "doc": "GOV-02",
+          "material_id": "08d5580a-d81b-491f-8c9b-d37ca4251840",
+          "scope": "GOVERNMENT_ENTERPRISE",
+          "industry": "government",
+          "score": 0.7974401470947498,
+          "chunk_id": "MCH-9B1EE59AC49517697E22459FF10EF20E",
+          "chunk_chars": 17,
+          "relevance": "CLEARLY_RELEVANT",
+          "excerpt": "# 政务数据目录、共享与跨部门协同"
+        },
+        {
+          "rank": 2,
+          "doc": "UNI-03",
+          "material_id": "02001ebe-6272-45ca-b641-d33e3bfcec24",
+          "scope": "GENERAL",
+          "industry": null,
+          "score": 0.6782368421554565,
+          "chunk_id": "MCH-BD2BEECFAE57C2A4782752DF9DE6EECD",
+          "chunk_chars": 12,
+          "relevance": "CLEARLY_RELEVANT",
+          "excerpt": "# 数据共享、目录与治理"
+        },
+        {
+          "rank": 3,
+          "doc": "GOV-06",
+          "material_id": "4c324fa0-1d08-447f-bc3d-1f239fe5a064",
+          "scope": "GOVERNMENT_ENTERPRISE",
+          "industry": "government",
+          "score": 0.6181202530860901,
+          "chunk_id": "MCH-5587D60D1D42A1B961453B0A55B05D5F",
+          "chunk_chars": 16,
+          "relevance": "CLEARLY_RELEVANT",
+          "excerpt": "# 政务系统接口迁移、联调与上线"
+        },
+        {
+          "rank": 4,
+          "doc": "GOV-02",
+          "material_id": "08d5580a-d81b-491f-8c9b-d37ca4251840",
+          "scope": "GOVERNMENT_ENTERPRISE",
+          "industry": "government",
+          "score": 0.6084815626431453,
+          "chunk_id": "MCH-B7204C620F6A0CF603CEE34E625A583C",
+          "chunk_chars": 27,
+          "relevance": "CLEARLY_RELEVANT",
+          "excerpt": "需明确数据目录、共享属性、使用条件、授权、安全和记录。"
+        },
+        {
+          "rank": 5,
+          "doc": "UNI-03",
+          "material_id": "02001ebe-6272-45ca-b641-d33e3bfcec24",
+          "scope": "GENERAL",
+          "industry": null,
+          "score": 0.59197998046875,
+          "chunk_id": "MCH-21587AB044DB961052FBC5EDF7EA8302",
+          "chunk_chars": 44,
+          "relevance": "CLEARLY_RELEVANT",
+          "excerpt": "数据目录需描述数据项、提供单位、格式、更新频率、共享属性、共享方式、使用条件和分类分级。"
+        }
+      ],
+      "raw_top5": [
+        {
+          "rank": 1,
+          "doc": "GOV-02",
+          "material_id": "08d5580a-d81b-491f-8c9b-d37ca4251840",
+          "scope": "GOVERNMENT_ENTERPRISE",
+          "industry": "government",
+          "score": 0.7974401470947498,
+          "chunk_id": "MCH-9B1EE59AC49517697E22459FF10EF20E",
+          "chunk_chars": 17,
+          "relevance": "CLEARLY_RELEVANT",
+          "excerpt": "# 政务数据目录、共享与跨部门协同"
+        },
+        {
+          "rank": 2,
+          "doc": "UNI-03",
+          "material_id": "02001ebe-6272-45ca-b641-d33e3bfcec24",
+          "scope": "GENERAL",
+          "industry": null,
+          "score": 0.6782368421554565,
+          "chunk_id": "MCH-BD2BEECFAE57C2A4782752DF9DE6EECD",
+          "chunk_chars": 12,
+          "relevance": "CLEARLY_RELEVANT",
+          "excerpt": "# 数据共享、目录与治理"
+        },
+        {
+          "rank": 3,
+          "doc": "GOV-06",
+          "material_id": "4c324fa0-1d08-447f-bc3d-1f239fe5a064",
+          "scope": "GOVERNMENT_ENTERPRISE",
+          "industry": "government",
+          "score": 0.6181202530860901,
+          "chunk_id": "MCH-5587D60D1D42A1B961453B0A55B05D5F",
+          "chunk_chars": 16,
+          "relevance": "CLEARLY_RELEVANT",
+          "excerpt": "# 政务系统接口迁移、联调与上线"
+        },
+        {
+          "rank": 4,
+          "doc": "GOV-02",
+          "material_id": "08d5580a-d81b-491f-8c9b-d37ca4251840",
+          "scope": "GOVERNMENT_ENTERPRISE",
+          "industry": "government",
+          "score": 0.6084815626431453,
+          "chunk_id": "MCH-B7204C620F6A0CF603CEE34E625A583C",
+          "chunk_chars": 27,
+          "relevance": "CLEARLY_RELEVANT",
+          "excerpt": "需明确数据目录、共享属性、使用条件、授权、安全和记录。"
+        },
+        {
+          "rank": 5,
+          "doc": "UNI-03",
+          "material_id": "02001ebe-6272-45ca-b641-d33e3bfcec24",
+          "scope": "GENERAL",
+          "industry": null,
+          "score": 0.59197998046875,
+          "chunk_id": "MCH-21587AB044DB961052FBC5EDF7EA8302",
+          "chunk_chars": 44,
+          "relevance": "CLEARLY_RELEVANT",
+          "excerpt": "数据目录需描述数据项、提供单位、格式、更新频率、共享属性、共享方式、使用条件和分类分级。"
+        }
+      ],
+      "top1_relevant": true,
+      "relevant_at_3": 3,
+      "relevant_at_5": 5,
+      "expected_doc_hit": true,
+      "unexpected_scope_count": 0,
+      "short_chunks_lt50": 5,
+      "short_chunks_lt100": 5,
+      "heading_only_hits": 5,
+      "embedding_call": {
+        "call_index": 2,
+        "smoke_case": "GOVERNMENT",
+        "input_count": 65,
+        "missing_chunk_count": 64,
+        "query_count": 1,
+        "started_at": "2026-08-31T15:41:13.040Z",
+        "http": 200,
+        "latency_ms": 285,
+        "completed_at": "2026-08-31T15:41:13.325Z"
+      }
+    },
+    {
+      "name": "MEDICAL",
+      "query": "医院信息平台互联互通、电子病历和医疗数据安全通常有哪些建设要求？",
+      "requested_scopes": [
+        "GENERAL",
+        "HEALTHCARE"
+      ],
+      "returned_scopes": [
+        "ENTERPRISE_PRIVATE",
+        "HEALTHCARE"
+      ],
+      "top_k": 5,
+      "results": [
+        {
+          "rank": 1,
+          "doc": "COM-14",
+          "material_id": "04738608-0aa8-4e12-b37b-fc5084e0428b",
+          "scope": "ENTERPRISE_PRIVATE",
+          "industry": "government+medical",
+          "score": 0.7223133064005768,
+          "chunk_id": "MCH-63EA0AB0B6642FBB7331046C199AF04A",
+          "chunk_chars": 584,
+          "relevance": "PLAUSIBLY_RELEVANT",
+          "excerpt": "- **OFF-M03｜WS/T 447-2014 基于电子病历的医院信息平台技术规范**｜国家卫生健康委员会｜状态 `CURRENTNESS_UNCONFIRMED`｜实施 `2014-06-20`｜最后核验 `2026-08-31`｜https://www.nhc.gov.cn/wjw/s9497/201406/a2014514701f4e76b14f3446f6318937.shtml\n- "
+        },
+        {
+          "rank": 2,
+          "doc": "MED-03",
+          "material_id": "c8a97e64-c235-4522-beee-87a8be697328",
+          "scope": "HEALTHCARE",
+          "industry": "medical",
+          "score": 0.7141530896975697,
+          "chunk_id": "MCH-3E7D468B9E1DC1A415C6AEF9AC540CED",
+          "chunk_chars": 595,
+          "relevance": "CLEARLY_RELEVANT",
+          "excerpt": "- **OFF-M03｜WS/T 447-2014 基于电子病历的医院信息平台技术规范**｜国家卫生健康委员会｜状态 `CURRENTNESS_UNCONFIRMED`｜实施 `2014-06-20`｜最后核验 `2026-08-31`｜https://www.nhc.gov.cn/wjw/s9497/201406/a2014514701f4e76b14f3446f6318937.shtml\n- "
+        },
+        {
+          "rank": 3,
+          "doc": "MED-09",
+          "material_id": "867d6da7-09bd-490b-b349-63acf35f9fed",
+          "scope": "HEALTHCARE",
+          "industry": "medical",
+          "score": 0.7102498027756755,
+          "chunk_id": "MCH-D1B1106E2AC828537BAC702CFD7FF67C",
+          "chunk_chars": 604,
+          "relevance": "PLAUSIBLY_RELEVANT",
+          "excerpt": "- **OFF-M04｜WS/T 501-2016 电子病历与医院信息平台标准符合性测试规范**｜国家卫生健康委员会｜状态 `CURRENTNESS_UNCONFIRMED`｜实施 `2017-02-01`｜最后核验 `2026-08-31`｜https://www.nhc.gov.cn/wjw/s9497/202305/efb7592cff2241acb82e87cb922a7ba1.shtml"
+        },
+        {
+          "rank": 4,
+          "doc": "MED-07",
+          "material_id": "3cd85f3c-89b7-4b95-8b8d-38ead65cee23",
+          "scope": "HEALTHCARE",
+          "industry": "medical",
+          "score": 0.7046781988346043,
+          "chunk_id": "MCH-E1B90AC5869B6D115FF8D7AB28375071",
+          "chunk_chars": 394,
+          "relevance": "PLAUSIBLY_RELEVANT",
+          "excerpt": "- **OFF-M03｜WS/T 447-2014 基于电子病历的医院信息平台技术规范**｜国家卫生健康委员会｜状态 `CURRENTNESS_UNCONFIRMED`｜实施 `2014-06-20`｜最后核验 `2026-08-31`｜https://www.nhc.gov.cn/wjw/s9497/201406/a2014514701f4e76b14f3446f6318937.shtml\n- "
+        },
+        {
+          "rank": 5,
+          "doc": "MED-01",
+          "material_id": "6b0456ff-0a60-4214-9811-c225fc78e942",
+          "scope": "HEALTHCARE",
+          "industry": "medical",
+          "score": 0.6467897681468587,
+          "chunk_id": "MCH-85128F1140026803AD6C33E6571EE7A2",
+          "chunk_chars": 30,
+          "relevance": "PLAUSIBLY_RELEVANT",
+          "excerpt": "统筹临床业务、医院管理、数据平台、基础设施、安全与便民服务。"
+        }
+      ],
+      "raw_top5": [
+        {
+          "rank": 1,
+          "doc": "MED-03",
+          "material_id": "c8a97e64-c235-4522-beee-87a8be697328",
+          "scope": "HEALTHCARE",
+          "industry": "medical",
+          "score": 0.7576976644306682,
+          "chunk_id": "MCH-FF434CC901224F851B6A4F4A0DD80775",
+          "chunk_chars": 13,
+          "relevance": "CLEARLY_RELEVANT",
+          "excerpt": "# 医院信息平台与互联互通"
+        },
+        {
+          "rank": 2,
+          "doc": "COM-14",
+          "material_id": "04738608-0aa8-4e12-b37b-fc5084e0428b",
+          "scope": "ENTERPRISE_PRIVATE",
+          "industry": "government+medical",
+          "score": 0.7223133064005768,
+          "chunk_id": "MCH-63EA0AB0B6642FBB7331046C199AF04A",
+          "chunk_chars": 584,
+          "relevance": "PLAUSIBLY_RELEVANT",
+          "excerpt": "- **OFF-M03｜WS/T 447-2014 基于电子病历的医院信息平台技术规范**｜国家卫生健康委员会｜状态 `CURRENTNESS_UNCONFIRMED`｜实施 `2014-06-20`｜最后核验 `2026-08-31`｜https://www.nhc.gov.cn/wjw/s9497/201406/a2014514701f4e76b14f3446f6318937.shtml\n- "
+        },
+        {
+          "rank": 3,
+          "doc": "MED-03",
+          "material_id": "c8a97e64-c235-4522-beee-87a8be697328",
+          "scope": "HEALTHCARE",
+          "industry": "medical",
+          "score": 0.7141530896975697,
+          "chunk_id": "MCH-3E7D468B9E1DC1A415C6AEF9AC540CED",
+          "chunk_chars": 595,
+          "relevance": "CLEARLY_RELEVANT",
+          "excerpt": "- **OFF-M03｜WS/T 447-2014 基于电子病历的医院信息平台技术规范**｜国家卫生健康委员会｜状态 `CURRENTNESS_UNCONFIRMED`｜实施 `2014-06-20`｜最后核验 `2026-08-31`｜https://www.nhc.gov.cn/wjw/s9497/201406/a2014514701f4e76b14f3446f6318937.shtml\n- "
+        },
+        {
+          "rank": 4,
+          "doc": "MED-09",
+          "material_id": "867d6da7-09bd-490b-b349-63acf35f9fed",
+          "scope": "HEALTHCARE",
+          "industry": "medical",
+          "score": 0.7102498027756755,
+          "chunk_id": "MCH-D1B1106E2AC828537BAC702CFD7FF67C",
+          "chunk_chars": 604,
+          "relevance": "PLAUSIBLY_RELEVANT",
+          "excerpt": "- **OFF-M04｜WS/T 501-2016 电子病历与医院信息平台标准符合性测试规范**｜国家卫生健康委员会｜状态 `CURRENTNESS_UNCONFIRMED`｜实施 `2017-02-01`｜最后核验 `2026-08-31`｜https://www.nhc.gov.cn/wjw/s9497/202305/efb7592cff2241acb82e87cb922a7ba1.shtml"
+        },
+        {
+          "rank": 5,
+          "doc": "MED-07",
+          "material_id": "3cd85f3c-89b7-4b95-8b8d-38ead65cee23",
+          "scope": "HEALTHCARE",
+          "industry": "medical",
+          "score": 0.7046781988346043,
+          "chunk_id": "MCH-E1B90AC5869B6D115FF8D7AB28375071",
+          "chunk_chars": 394,
+          "relevance": "PLAUSIBLY_RELEVANT",
+          "excerpt": "- **OFF-M03｜WS/T 447-2014 基于电子病历的医院信息平台技术规范**｜国家卫生健康委员会｜状态 `CURRENTNESS_UNCONFIRMED`｜实施 `2014-06-20`｜最后核验 `2026-08-31`｜https://www.nhc.gov.cn/wjw/s9497/201406/a2014514701f4e76b14f3446f6318937.shtml\n- "
+        }
+      ],
+      "top1_relevant": true,
+      "relevant_at_3": 3,
+      "relevant_at_5": 5,
+      "expected_doc_hit": true,
+      "unexpected_scope_count": 1,
+      "short_chunks_lt50": 1,
+      "short_chunks_lt100": 1,
+      "heading_only_hits": 5,
+      "embedding_call": {
+        "call_index": 3,
+        "smoke_case": "MEDICAL",
+        "input_count": 93,
+        "missing_chunk_count": 92,
+        "query_count": 1,
+        "started_at": "2026-08-31T15:41:13.477Z",
+        "http": 200,
+        "latency_ms": 538,
+        "completed_at": "2026-08-31T15:41:14.015Z"
+      }
+    },
+    {
+      "name": "COMPANY",
+      "query": "企业是否具备 API 接口集成、第三方系统对接和数据治理能力？有哪些可核验材料？",
+      "requested_scopes": [
+        "GENERAL",
+        "GOVERNMENT_ENTERPRISE",
+        "HEALTHCARE"
+      ],
+      "returned_scopes": [
+        "ENTERPRISE_PRIVATE"
+      ],
+      "top_k": 5,
+      "results": [
+        {
+          "rank": 1,
+          "doc": "COM-14",
+          "material_id": "04738608-0aa8-4e12-b37b-fc5084e0428b",
+          "scope": "ENTERPRISE_PRIVATE",
+          "industry": "government+medical",
+          "score": 0.5897438281621831,
+          "chunk_id": "MCH-9BD85ED0A87D7C6B058D4EE89A4A1303",
+          "chunk_chars": 40,
+          "relevance": "PLAUSIBLY_RELEVANT",
+          "excerpt": "某虚构三级医院接口与数据平台，包含接口治理、患者主索引、历史迁移、联调和试运行。"
+        },
+        {
+          "rank": 2,
+          "doc": "COM-01",
+          "material_id": "adde4515-c4bd-4fba-9269-efa94cf6ac2a",
+          "scope": "ENTERPRISE_PRIVATE",
+          "industry": "government+medical",
+          "score": 0.5733552745984579,
+          "chunk_id": "MCH-3EDDDF27D0B75EE6F91A2BEAB76012FC",
+          "chunk_chars": 37,
+          "relevance": "PLAUSIBLY_RELEVANT",
+          "excerpt": "测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。"
+        },
+        {
+          "rank": 3,
+          "doc": "COM-11",
+          "material_id": "b94aca0b-a314-4f71-a54b-e6d31e4ef702",
+          "scope": "ENTERPRISE_PRIVATE",
+          "industry": "government+medical",
+          "score": 0.5623179506564774,
+          "chunk_id": "MCH-D06343ED00C2802BEB0CC954418DB047",
+          "chunk_chars": 32,
+          "relevance": "PLAUSIBLY_RELEVANT",
+          "excerpt": "支持功能、接口、迁移、性能、安全、UAT、培训、交付和验收记录。"
+        },
+        {
+          "rank": 4,
+          "doc": "COM-04",
+          "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+          "scope": "ENTERPRISE_PRIVATE",
+          "industry": "government+medical",
+          "score": 0.531070427032424,
+          "chunk_id": "MCH-99497AE6286B2BAC390E35611FEE3A8A",
+          "chunk_chars": 18,
+          "relevance": "CLEARLY_RELEVANT",
+          "excerpt": "不代表已对接任何真实政务或医院系统。"
+        },
+        {
+          "rank": 5,
+          "doc": "COM-08",
+          "material_id": "4ba1c701-7c4f-415b-9186-28b25c4472ce",
+          "scope": "ENTERPRISE_PRIVATE",
+          "industry": "government+medical",
+          "score": 0.5304087874658814,
+          "chunk_id": "MCH-1E7333C6035E531EC2A8E86A09A34F4A",
+          "chunk_chars": 76,
+          "relevance": "PLAUSIBLY_RELEVANT",
+          "excerpt": "> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。"
+        }
+      ],
+      "raw_top5": [
+        {
+          "rank": 1,
+          "doc": "COM-04",
+          "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+          "scope": "ENTERPRISE_PRIVATE",
+          "industry": "government+medical",
+          "score": 0.7070063563289155,
+          "chunk_id": "MCH-EE13BCB24F6A977A2B054A4FB85DE7B4",
+          "chunk_chars": 14,
+          "relevance": "CLEARLY_RELEVANT",
+          "excerpt": "# API与系统集成能力报告"
+        },
+        {
+          "rank": 2,
+          "doc": "UNI-06",
+          "material_id": "b2c89530-fc68-4149-9db2-3e8aa4a0ad44",
+          "scope": "GENERAL",
+          "industry": null,
+          "score": 0.6269552147130546,
+          "chunk_id": "MCH-5C82AEC6CB61AB2F60510CBBF943F1EC",
+          "chunk_chars": 35,
+          "relevance": "PLAUSIBLY_RELEVANT",
+          "excerpt": "制度、资产梳理、分类分级、风险评估、技术控制和审计记录可共同证明能力。"
+        },
+        {
+          "rank": 3,
+          "doc": "UNI-15",
+          "material_id": "f2ee34ca-8fd8-4c40-b532-9af049d73139",
+          "scope": "GENERAL",
+          "industry": null,
+          "score": 0.6146245185918965,
+          "chunk_id": "MCH-4C6C837E901212BE6C41DEEF0D8DBB1C",
+          "chunk_chars": 13,
+          "relevance": "IRRELEVANT",
+          "excerpt": "# 业绩、资质与可核验证明"
+        },
+        {
+          "rank": 4,
+          "doc": "UNI-08",
+          "material_id": "31d40c70-2f1a-4155-b829-a1e8ccca3cc6",
+          "scope": "GENERAL",
+          "industry": null,
+          "score": 0.6072439136279798,
+          "chunk_id": "MCH-213550ED95CEB3140D030B0E214105E1",
+          "chunk_chars": 10,
+          "relevance": "PLAUSIBLY_RELEVANT",
+          "excerpt": "# 接口集成与互操作"
+        },
+        {
+          "rank": 5,
+          "doc": "COM-05",
+          "material_id": "81990289-5472-4c41-a68e-b16035013a9a",
+          "scope": "ENTERPRISE_PRIVATE",
+          "industry": "government+medical",
+          "score": 0.5918715176544048,
+          "chunk_id": "MCH-2ACF4A33E5EDCD4D467087C2B796D46D",
+          "chunk_chars": 13,
+          "relevance": "CLEARLY_RELEVANT",
+          "excerpt": "# 数据治理与迁移能力材料"
+        }
+      ],
+      "top1_relevant": true,
+      "relevant_at_3": 3,
+      "relevant_at_5": 5,
+      "expected_doc_hit": true,
+      "unexpected_scope_count": 5,
+      "short_chunks_lt50": 4,
+      "short_chunks_lt100": 5,
+      "heading_only_hits": 5,
+      "embedding_call": {
+        "call_index": 4,
+        "smoke_case": "COMPANY",
+        "input_count": 1,
+        "missing_chunk_count": 0,
+        "query_count": 1,
+        "started_at": "2026-08-31T15:41:14.204Z",
+        "http": 200,
+        "latency_ms": 62,
+        "completed_at": "2026-08-31T15:41:14.266Z"
+      },
+      "raw_reference_context_present": true,
+      "private_raw_results": 10,
+      "public_guidance_raw_results": 10,
+      "enterprise_proof_candidates": [
+        {
+          "doc": "COM-14",
+          "scope": "ENTERPRISE_PRIVATE",
+          "chunk_id": "MCH-9BD85ED0A87D7C6B058D4EE89A4A1303"
+        },
+        {
+          "doc": "COM-01",
+          "scope": "ENTERPRISE_PRIVATE",
+          "chunk_id": "MCH-3EDDDF27D0B75EE6F91A2BEAB76012FC"
+        },
+        {
+          "doc": "COM-11",
+          "scope": "ENTERPRISE_PRIVATE",
+          "chunk_id": "MCH-D06343ED00C2802BEB0CC954418DB047"
+        },
+        {
+          "doc": "COM-04",
+          "scope": "ENTERPRISE_PRIVATE",
+          "chunk_id": "MCH-99497AE6286B2BAC390E35611FEE3A8A"
+        },
+        {
+          "doc": "COM-08",
+          "scope": "ENTERPRISE_PRIVATE",
+          "chunk_id": "MCH-1E7333C6035E531EC2A8E86A09A34F4A"
+        }
+      ],
+      "reference_context": [
+        {
+          "doc": "UNI-06",
+          "scope": "GENERAL",
+          "chunk_id": "MCH-5C82AEC6CB61AB2F60510CBBF943F1EC"
+        },
+        {
+          "doc": "UNI-09",
+          "scope": "GENERAL",
+          "chunk_id": "MCH-14A9FA20DA83A8C3A5A4E103C912FBE7"
+        },
+        {
+          "doc": "UNI-13",
+          "scope": "GENERAL",
+          "chunk_id": "MCH-A971FB80C243C94F3BED2A207A228F6D"
+        },
+        {
+          "doc": "UNI-08",
+          "scope": "GENERAL",
+          "chunk_id": "MCH-4D7FE56908AF9124D9F2F1415B0E176C"
+        },
+        {
+          "doc": "MED-10",
+          "scope": "HEALTHCARE",
+          "chunk_id": "MCH-1A8E5EEF13F3F51FAE1CE9992328A197"
+        },
+        {
+          "doc": "UNI-16",
+          "scope": "GENERAL",
+          "chunk_id": "MCH-C4DBA7BF28ADBF6365A66E80DA468022"
+        },
+        {
+          "doc": "MED-10",
+          "scope": "HEALTHCARE",
+          "chunk_id": "MCH-92AB6373B2C3EF33CC01B4997A6D9B0E"
+        },
+        {
+          "doc": "GOV-02",
+          "scope": "GOVERNMENT_ENTERPRISE",
+          "chunk_id": "MCH-B7204C620F6A0CF603CEE34E625A583C"
+        }
+      ],
+      "public_guidance_promoted_to_proof": false,
+      "reference_only_promoted": false
+    }
+  ],
+  "index_coverage": {
+    "package_materials": 50,
+    "package_chunks": 478,
+    "indexed_package_chunks": 478,
+    "embedding_coverage": 1,
+    "missing_embeddings": 0
+  },
+  "post_db_counts": {
+    "projects": 14,
+    "company_materials": 56,
+    "material_chunks": 561,
+    "material_chunk_embeddings": 561
+  },
+  "db_delta": {
+    "projects": 0,
+    "company_materials": 0,
+    "material_chunks": 0,
+    "material_chunk_embeddings": 478
+  },
+  "authority": {
+    "guidance_to_enterprise_proof": "NO",
+    "synthetic_as_real": "NO",
+    "fact": "NO",
+    "mapping": "NO",
+    "sufficiency": "NO",
+    "claim": "NO"
+  },
+  "temporal": {
+    "descriptive_metadata": "preserved where DB fields exist; remaining fields retained in manifest",
+    "runtime_logic": "NO"
+  }
+}

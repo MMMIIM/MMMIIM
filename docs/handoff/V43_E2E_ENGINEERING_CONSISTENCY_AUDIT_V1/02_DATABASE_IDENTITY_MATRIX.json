@@ -1,0 +1,57 @@
+{
+  "artifact_type": "V43_E2E_ENGINEERING_CONSISTENCY_AUDIT_V1_DATABASE_IDENTITY_MATRIX",
+  "inspection_mode": "READ_ONLY",
+  "databases": [
+    {
+      "database": "bid_platform",
+      "schema": "public",
+      "role": "backend/.env configured database",
+      "configured_by_backend_env": true,
+      "expected_canary_database": false,
+      "project_id": "7a038c5d-38e4-46ae-b24d-39437bb3b545",
+      "project_exists": false,
+      "requirements_total_for_expected_project": 0,
+      "requirements_confirmed_for_expected_project": 0,
+      "company_materials_total": 56,
+      "hw_material_count": 0,
+      "target_chunk_count": 0,
+      "requirement_scope_authority_decisions_relation": "ABSENT",
+      "project_material_bindings_relation": "ABSENT",
+      "material_version_column": "ABSENT",
+      "source_version_column": "PRESENT",
+      "safe_to_use_for_current_canary": false,
+      "reason": "Configured production database does not contain the expected canary project or HW material snapshot."
+    },
+    {
+      "database": "bid_platform_flow_audit_test",
+      "schema": "public",
+      "role": "expected isolated flow-audit canary database",
+      "configured_by_backend_env": false,
+      "expected_canary_database": true,
+      "project_id": "7a038c5d-38e4-46ae-b24d-39437bb3b545",
+      "project_exists": true,
+      "project_name": "V43 Real E2E Case 01 Requirement Run V3 REAL_E2E_CASE_01_REQUIREMENT_RUN_V3",
+      "project_status": "requirements_review",
+      "requirements_total_for_expected_project": 0,
+      "requirements_confirmed_for_expected_project": 0,
+      "company_materials_total": "NOT_CAPTURED_IN_THIS_AUDIT",
+      "hw_material_count": 6,
+      "target_chunk_count": 590,
+      "active_project_material_bindings": 6,
+      "direct_materials_on_canary_project": 0,
+      "requirement_scope_authority_decisions_relation": "PRESENT",
+      "requirement_scope_authority_decision_count": 5,
+      "project_material_bindings_relation": "PRESENT",
+      "material_version_column": "ABSENT",
+      "source_version_column": "PRESENT",
+      "safe_to_use_for_current_canary": "MATERIALS_AND_BINDINGS_PRESENT; CANONICAL_REQUIREMENTS_ABSENT",
+      "reason": "This database contains the six HW materials and active bindings, but no canonical Requirement rows for the expected project."
+    }
+  ],
+  "identity_conclusion": {
+    "backend_configured_database_matches_expected_canary": false,
+    "database_identity_alignment": "FAIL",
+    "first_blocking_boundary": "PRE_PROVIDER_DATABASE_TARGET_AND_SCHEMA_QUERY",
+    "production_database_writes": 0
+  }
+}

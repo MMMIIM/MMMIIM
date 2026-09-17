@@ -1,0 +1,43 @@
+{
+  "artifact_type": "V43_REFERENCE_HTML_TEXT_SHAPE_DIAGNOSTIC_V1_EXECUTION_MANIFEST",
+  "diagnostic_only": true,
+  "source_unit_artifact": "docs/handoff/V43_REFERENCE_SOURCE_UNIT_REPAIR_V1/01_SOURCE_UNIT_RESOLUTION.json",
+  "chunk_plan_artifact": "docs/handoff/V43_REFERENCE_SOURCE_UNIT_REPAIR_V1/03_CANONICAL_CHUNK_PLAN.json",
+  "preflight_artifact": "docs/handoff/V43_REFERENCE_SOURCE_UNIT_REPAIR_V1/06_POST_REPAIR_CHUNK_MASS_PREFLIGHT.json",
+  "target_sources": [
+    "H3C-003",
+    "H3C-004",
+    "H3C-010",
+    "H3C-013"
+  ],
+  "sampling": [
+    {
+      "bucket": "UNDER_30",
+      "label": "<30",
+      "deterministic_order": "ascending chunk_index",
+      "limit": 10
+    },
+    {
+      "bucket": "FROM_30_TO_99",
+      "label": "30-99",
+      "deterministic_order": "ascending chunk_index",
+      "limit": 10
+    },
+    {
+      "bucket": "AT_LEAST_100",
+      "label": ">=100",
+      "deterministic_order": "ascending chunk_index",
+      "limit": 5
+    }
+  ],
+  "side_effects": {
+    "provider_calls": 0,
+    "embedding_calls": 0,
+    "db_writes": 0,
+    "production_db_writes": 0,
+    "source_mutations": 0,
+    "chunker_mutations": 0,
+    "semantic_labels_created": 0
+  },
+  "next_gate": "GPT_REVIEW_BEFORE_HOST_EMBEDDING"
+}

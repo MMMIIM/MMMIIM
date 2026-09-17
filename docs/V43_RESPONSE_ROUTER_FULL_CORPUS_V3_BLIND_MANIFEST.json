@@ -1,0 +1,70 @@
+{
+  "artifact_type": "V43_RESPONSE_ROUTER_FULL_CORPUS_V3_BLIND_MANIFEST",
+  "artifact_version": "v3",
+  "semantic_contract_version": "V43_RESPONSE_ROUTER_GPT_SEMANTIC_CONTRACT_V3",
+  "blind": true,
+  "generated_at": "2026-09-09T15:04:23.725Z",
+  "total_rows": 2178,
+  "unique_case_ids": 2178,
+  "CORE6_count": 1009,
+  "HOLDOUT_V1_count": 397,
+  "HOLDOUT_V2_count": 772,
+  "missing_source_context_count": 0,
+  "blind_key_violation_count": 0,
+  "audit_fields_null": true,
+  "v3_audit_fields": [
+    "v3_semantic_primary_mode",
+    "v3_semantic_status",
+    "v3_expected_router_mode",
+    "v3_risk_tier",
+    "v3_secondary_dependencies",
+    "v3_evidence_dependency",
+    "v3_human_required",
+    "v3_response_required",
+    "v3_scoring_related",
+    "v3_scoring_priority",
+    "v3_reason"
+  ],
+  "reference_v2_sha256": "b6faf37c1ed33e5d8c26d830d6cf9d25f139b4bafeb4f78ac9294f13acb40507",
+  "router_v2_eval_run_id": "V43-RR-V2-DEV-5cab74957e63926f",
+  "source_artifacts": [
+    {
+      "cohort": "CORE6",
+      "path": "docs/V43_REQUIREMENT_GOLD_V2_SIX_TENDER_CANONICAL_INPUT.json",
+      "sha256": "ff07402688a3013af9a9b8be01f613f76848b7ea905208c1955a604432422fe1",
+      "row_count": 1009
+    },
+    {
+      "cohort": "HOLDOUT_V1",
+      "path": "backend/eval/requirement-unseen-holdout-v1/results/unseen-holdout-v1-2026-09-08T06-21-08-203Z-5faac1ab/canonical-requirements.json",
+      "sha256": "20bd8af5e9226a70a5ffa2cd3ad0c20b991fe69a452dea9a09a4dc932b326407",
+      "row_count": 397
+    },
+    {
+      "cohort": "HOLDOUT_V2",
+      "path": "backend/eval/requirement-unseen-holdout-v2/results/unseen-holdout-v2-2026-09-08T16-24-57-426Z-69cf5c50/canonical-requirements.json",
+      "sha256": "afe390510a4700c9d099087ad0143aa0436f7933b1638daff89cc0a292b8cb1e",
+      "row_count": 772
+    }
+  ],
+  "side_effects": {
+    "PROVIDER_CALLS": 0,
+    "LLM_CALLS": 0,
+    "PRODUCTION_DB_WRITES": 0,
+    "GOLD_MUTATIONS": 0,
+    "REFERENCE_V2_MUTATIONS": 0,
+    "ROUTER_V1_MUTATIONS": 0,
+    "ROUTER_V2_MUTATIONS": 0,
+    "REQUIREMENT_MUTATIONS": 0,
+    "FACT_MUTATIONS": 0,
+    "MAPPING": 0,
+    "CLAIM": 0,
+    "WRITER": 0,
+    "PRODUCTION_ROUTING_CHANGE": 0,
+    "COMMIT": 0,
+    "PUSH": 0,
+    "MERGE": 0,
+    "DEPLOY": 0
+  },
+  "status": "READY_FOR_GPT_RESPONSE_ROUTER_FULL_CORPUS_V3_SEMANTIC_ADJUDICATION"
+}

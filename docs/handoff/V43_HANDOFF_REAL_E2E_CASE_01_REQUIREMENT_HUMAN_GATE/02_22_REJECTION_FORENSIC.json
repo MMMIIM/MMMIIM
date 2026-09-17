@@ -1,0 +1,1169 @@
+{
+  "artifact_type": "V43_CASE_01_22_ROW_SCOPE_FORENSIC",
+  "run_id": "REAL_E2E_CASE_01_REQUIREMENT_RUN_V2",
+  "tender_id": "TB-006",
+  "source_file": "TB-006-beijing-emergency-model-cloud.pdf",
+  "source_sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+  "row_count": 22,
+  "classification_distribution": {
+    "DETERMINISTIC_IN_SCOPE": 17,
+    "DETERMINISTIC_OUT_OF_SCOPE": 0,
+    "AMBIGUOUS_GPT_REVIEW": 5
+  },
+  "rows": [
+    {
+      "case_id": "REAL_E2E_CASE_01",
+      "rejection_index": 1,
+      "chunk_number": 4,
+      "candidate_index": 4,
+      "candidate_identity": null,
+      "candidate_text": null,
+      "candidate_text_recoverability": "NOT_PERSISTED_IN_V2_SCOPE_AUDIT",
+      "exact_source_text": "3.1 若《投标人须知资料表》中规定了组织现场考察、召开开标前答疑会，则投",
+      "source_context": "2.4 核心产品见《投标人须知资料表》。\n3 现场考察、开标前答疑会\n3.1 若《投标人须知资料表》中规定了组织现场考察、召开开标前答疑会，则投\n标人应按要求在规定的时间和地点参加。\n3.2 由于未参加现场考察或开标前答疑会而导致对项目实际情况不了解，影响投",
+      "source_role": [
+        "QUALIFICATION"
+      ],
+      "page": {
+        "start": 11,
+        "end": 11
+      },
+      "paragraph_range": {
+        "start": 278,
+        "end": 278
+      },
+      "offset_range": {
+        "start": 6106,
+        "end": 6143
+      },
+      "source_refs": [
+        "C004-S061"
+      ],
+      "source_hash": "96833a8aed0704596879313ad085d32c435184f69b73dd353844ac76ef583e2a",
+      "source_hash_recomputed_from_reconstructed_span": "96833a8aed0704596879313ad085d32c435184f69b73dd353844ac76ef583e2a",
+      "detected_actors": [
+        "投标人"
+      ],
+      "obligation_markers": [
+        "须"
+      ],
+      "prohibition_or_consequence_markers": [],
+      "conditionality_markers": [
+        "若"
+      ],
+      "current_scope_rule_path": "RequirementParseService.processChunk → SourceLocationResolver.resolve → validateCandidateSourceScope",
+      "current_rejection_rule": "all resolved source roles are in EXCLUDED_ONLY_ROLES → REQUIREMENT_SCOPE_EXCLUDED",
+      "historical_auxiliary_overlap": true,
+      "historical_matching_source_span": null,
+      "historical_requirement_text": null,
+      "historical_category": null,
+      "contract_family_candidate": "AMBIGUOUS",
+      "recertification_classification": "DETERMINISTIC_IN_SCOPE",
+      "scope_decision_basis": "Frozen Decision negative-filter rule only; source role/category alone is not treated as authority.",
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "REAL_E2E_CASE_01",
+      "rejection_index": 2,
+      "chunk_number": 6,
+      "candidate_index": 4,
+      "candidate_identity": null,
+      "candidate_text": null,
+      "candidate_text_recoverability": "NOT_PERSISTED_IN_V2_SCOPE_AUDIT",
+      "exact_source_text": "5.8.1 如本项目采购产品属于《强制性产品认证目录》的产品，则投标人所\n报产品必须获得经国家市场监督管理总局指定的认证机构出具的、处\n于有效期之内的强制性产品认证证书，否则投标无效。",
+      "source_context": "第五章《采购需求》），否则投标无效；属于推荐性标准的，优先采\n5.8 强制性产品认证\n5.8.1 如本项目采购产品属于《强制性产品认证目录》的产品，则投标人所\n报产品必须获得经国家市场监督管理总局指定的认证机构出具的、处\n于有效期之内的强制性产品认证证书，否则投标无效。\n6 投标费用\n6.1 投标人应自行承担所有与准备和参加投标有关的费用，无论投标的结果如何，",
+      "source_role": [
+        "PROCUREMENT"
+      ],
+      "page": {
+        "start": 16,
+        "end": 16
+      },
+      "paragraph_range": {
+        "start": 418,
+        "end": 420
+      },
+      "offset_range": {
+        "start": 9754,
+        "end": 9846
+      },
+      "source_refs": [
+        "C006-S026",
+        "C006-S027",
+        "C006-S028"
+      ],
+      "source_hash": "e5b84f443c9de5ba70970f1f5dc4269af4675fa0b7acc1fdac1a0c300d5bff5f",
+      "source_hash_recomputed_from_reconstructed_span": "e5b84f443c9de5ba70970f1f5dc4269af4675fa0b7acc1fdac1a0c300d5bff5f",
+      "detected_actors": [
+        "投标人"
+      ],
+      "obligation_markers": [
+        "必须"
+      ],
+      "prohibition_or_consequence_markers": [
+        "无效"
+      ],
+      "conditionality_markers": [
+        "如",
+        "否则"
+      ],
+      "current_scope_rule_path": "RequirementParseService.processChunk → SourceLocationResolver.resolve → validateCandidateSourceScope",
+      "current_rejection_rule": "all resolved source roles are in EXCLUDED_ONLY_ROLES → REQUIREMENT_SCOPE_EXCLUDED",
+      "historical_auxiliary_overlap": false,
+      "historical_matching_source_span": null,
+      "historical_requirement_text": null,
+      "historical_category": null,
+      "contract_family_candidate": "BID_INVALIDITY",
+      "recertification_classification": "DETERMINISTIC_IN_SCOPE",
+      "scope_decision_basis": "Frozen Decision negative-filter rule only; source role/category alone is not treated as authority.",
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "REAL_E2E_CASE_01",
+      "rejection_index": 3,
+      "chunk_number": 6,
+      "candidate_index": 5,
+      "candidate_identity": null,
+      "candidate_text": null,
+      "candidate_text_recoverability": "NOT_PERSISTED_IN_V2_SCOPE_AUDIT",
+      "exact_source_text": "6.1 投标人应自行承担所有与准备和参加投标有关的费用，无论投标的结果如何，\n采购人或采购代理机构在任何情况下均无承担这些费用的义务和责任。",
+      "source_context": "于有效期之内的强制性产品认证证书，否则投标无效。\n6 投标费用\n6.1 投标人应自行承担所有与准备和参加投标有关的费用，无论投标的结果如何，\n采购人或采购代理机构在任何情况下均无承担这些费用的义务和责任。\n第一章 投标邀请\n第二章 投标人须知",
+      "source_role": [
+        "PROCUREMENT"
+      ],
+      "page": {
+        "start": 16,
+        "end": 16
+      },
+      "paragraph_range": {
+        "start": 422,
+        "end": 423
+      },
+      "offset_range": {
+        "start": 9854,
+        "end": 9924
+      },
+      "source_refs": [
+        "C006-S030",
+        "C006-S031"
+      ],
+      "source_hash": "1a46f87496a5a27d8e8d3950d5de87d42c07cb8bd7de571bbd884a5d32933e72",
+      "source_hash_recomputed_from_reconstructed_span": "1a46f87496a5a27d8e8d3950d5de87d42c07cb8bd7de571bbd884a5d32933e72",
+      "detected_actors": [
+        "投标人"
+      ],
+      "obligation_markers": [
+        "应",
+        "承担"
+      ],
+      "prohibition_or_consequence_markers": [
+        "承担这些费用的义务和责任"
+      ],
+      "conditionality_markers": [
+        "如",
+        "在任何情况下"
+      ],
+      "current_scope_rule_path": "RequirementParseService.processChunk → SourceLocationResolver.resolve → validateCandidateSourceScope",
+      "current_rejection_rule": "all resolved source roles are in EXCLUDED_ONLY_ROLES → REQUIREMENT_SCOPE_EXCLUDED",
+      "historical_auxiliary_overlap": false,
+      "historical_matching_source_span": null,
+      "historical_requirement_text": null,
+      "historical_category": null,
+      "contract_family_candidate": "AMBIGUOUS",
+      "recertification_classification": "DETERMINISTIC_IN_SCOPE",
+      "scope_decision_basis": "Frozen Decision negative-filter rule only; source role/category alone is not treated as authority.",
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "REAL_E2E_CASE_01",
+      "rejection_index": 4,
+      "chunk_number": 7,
+      "candidate_index": 8,
+      "candidate_identity": null,
+      "candidate_text": null,
+      "candidate_text_recoverability": "NOT_PERSISTED_IN_V2_SCOPE_AUDIT",
+      "exact_source_text": "12.1 投标人应按《投标人须知资料表》中规定的金额及要求交纳投标保证金。投\n标人自愿超额缴纳投标保证金的，投标文件不做无效处理。",
+      "source_context": "否则其投标无效。\n12 投标保证金（本项目不涉及）\n12.1 投标人应按《投标人须知资料表》中规定的金额及要求交纳投标保证金。投\n标人自愿超额缴纳投标保证金的，投标文件不做无效处理。\n12.2 交纳投标保证金可采用的形式：政府采购法律法规接受的支票、汇票、本票、\n网上银行支付或者金融机构、担保机构出具的保函等非现金形式。",
+      "source_role": [
+        "QUALIFICATION",
+        "PROCUREMENT"
+      ],
+      "page": {
+        "start": 18,
+        "end": 18
+      },
+      "paragraph_range": {
+        "start": 492,
+        "end": 493
+      },
+      "offset_range": {
+        "start": 11576,
+        "end": 11641
+      },
+      "source_refs": [
+        "C007-S021",
+        "C007-S022"
+      ],
+      "source_hash": "2494d14c94e2bff38697147ca4555ab907c717bb9c6c72e8a0c2bb68eae42466",
+      "source_hash_recomputed_from_reconstructed_span": "2494d14c94e2bff38697147ca4555ab907c717bb9c6c72e8a0c2bb68eae42466",
+      "detected_actors": [
+        "投标人"
+      ],
+      "obligation_markers": [
+        "应",
+        "须",
+        "保证",
+        "缴纳"
+      ],
+      "prohibition_or_consequence_markers": [
+        "无效"
+      ],
+      "conditionality_markers": [],
+      "current_scope_rule_path": "RequirementParseService.processChunk → SourceLocationResolver.resolve → validateCandidateSourceScope",
+      "current_rejection_rule": "all resolved source roles are in EXCLUDED_ONLY_ROLES → REQUIREMENT_SCOPE_EXCLUDED",
+      "historical_auxiliary_overlap": true,
+      "historical_matching_source_span": null,
+      "historical_requirement_text": null,
+      "historical_category": null,
+      "contract_family_candidate": "BID_INVALIDITY",
+      "recertification_classification": "DETERMINISTIC_IN_SCOPE",
+      "scope_decision_basis": "Frozen Decision negative-filter rule only; source role/category alone is not treated as authority.",
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "REAL_E2E_CASE_01",
+      "rejection_index": 5,
+      "chunk_number": 7,
+      "candidate_index": 9,
+      "candidate_identity": null,
+      "candidate_text": null,
+      "candidate_text_recoverability": "NOT_PERSISTED_IN_V2_SCOPE_AUDIT",
+      "exact_source_text": "12.2 交纳投标保证金可采用的形式：政府采购法律法规接受的支票、汇票、本票、\n网上银行支付或者金融机构、担保机构出具的保函等非现金形式。",
+      "source_context": "12.1 投标人应按《投标人须知资料表》中规定的金额及要求交纳投标保证金。投\n标人自愿超额缴纳投标保证金的，投标文件不做无效处理。\n12.2 交纳投标保证金可采用的形式：政府采购法律法规接受的支票、汇票、本票、\n网上银行支付或者金融机构、担保机构出具的保函等非现金形式。\n12.3 投标保证金到账（保函提交）截止时间同投标截止时间。以支票、汇票、本\n票、网上银行支付等形式提交投标保证金的，应在投标截止时间前到账；以",
+      "source_role": [
+        "PROCUREMENT",
+        "COMMERCIAL"
+      ],
+      "page": {
+        "start": 18,
+        "end": 18
+      },
+      "paragraph_range": {
+        "start": 494,
+        "end": 495
+      },
+      "offset_range": {
+        "start": 11642,
+        "end": 11711
+      },
+      "source_refs": [
+        "C007-S023",
+        "C007-S024"
+      ],
+      "source_hash": "a1e08b02891863903e5fe6c5aae80dab339dc81d30388c5314740977b800c600",
+      "source_hash_recomputed_from_reconstructed_span": "a1e08b02891863903e5fe6c5aae80dab339dc81d30388c5314740977b800c600",
+      "detected_actors": [],
+      "obligation_markers": [
+        "保证"
+      ],
+      "prohibition_or_consequence_markers": [],
+      "conditionality_markers": [],
+      "current_scope_rule_path": "RequirementParseService.processChunk → SourceLocationResolver.resolve → validateCandidateSourceScope",
+      "current_rejection_rule": "all resolved source roles are in EXCLUDED_ONLY_ROLES → REQUIREMENT_SCOPE_EXCLUDED",
+      "historical_auxiliary_overlap": true,
+      "historical_matching_source_span": null,
+      "historical_requirement_text": null,
+      "historical_category": null,
+      "contract_family_candidate": "BID_COMMERCIAL",
+      "recertification_classification": "AMBIGUOUS_GPT_REVIEW",
+      "scope_decision_basis": "Frozen Decision negative-filter rule only; source role/category alone is not treated as authority.",
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "REAL_E2E_CASE_01",
+      "rejection_index": 6,
+      "chunk_number": 7,
+      "candidate_index": 12,
+      "candidate_identity": null,
+      "candidate_text": null,
+      "candidate_text_recoverability": "NOT_PERSISTED_IN_V2_SCOPE_AUDIT",
+      "exact_source_text": "12.5 投标保证金有效期同投标有效期。",
+      "source_context": "件”。\n18\n12.5 投标保证金有效期同投标有效期。\n12.6 投标人为联合体的，可以由联合体中的一方或者多方共同交纳投标保证金，\n其交纳的投标保证金对联合体各方均具有约束力。",
+      "source_role": [
+        "PROCUREMENT"
+      ],
+      "page": {
+        "start": 19,
+        "end": 19
+      },
+      "paragraph_range": {
+        "start": 506,
+        "end": 506
+      },
+      "offset_range": {
+        "start": 11993,
+        "end": 12013
+      },
+      "source_refs": [
+        "C007-S035"
+      ],
+      "source_hash": "ace6e47b5cab2aecdfa4097c42adfc6acf1b73e9ae298afb55fa2136acbcb7aa",
+      "source_hash_recomputed_from_reconstructed_span": "ace6e47b5cab2aecdfa4097c42adfc6acf1b73e9ae298afb55fa2136acbcb7aa",
+      "detected_actors": [],
+      "obligation_markers": [
+        "保证"
+      ],
+      "prohibition_or_consequence_markers": [],
+      "conditionality_markers": [],
+      "current_scope_rule_path": "RequirementParseService.processChunk → SourceLocationResolver.resolve → validateCandidateSourceScope",
+      "current_rejection_rule": "all resolved source roles are in EXCLUDED_ONLY_ROLES → REQUIREMENT_SCOPE_EXCLUDED",
+      "historical_auxiliary_overlap": true,
+      "historical_matching_source_span": null,
+      "historical_requirement_text": null,
+      "historical_category": null,
+      "contract_family_candidate": "AMBIGUOUS",
+      "recertification_classification": "AMBIGUOUS_GPT_REVIEW",
+      "scope_decision_basis": "Frozen Decision negative-filter rule only; source role/category alone is not treated as authority.",
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "REAL_E2E_CASE_01",
+      "rejection_index": 7,
+      "chunk_number": 7,
+      "candidate_index": 13,
+      "candidate_identity": null,
+      "candidate_text": null,
+      "candidate_text_recoverability": "NOT_PERSISTED_IN_V2_SCOPE_AUDIT",
+      "exact_source_text": "12.6 投标人为联合体的，可以由联合体中的一方或者多方共同交纳投标保证金，\n其交纳的投标保证金对联合体各方均具有约束力。",
+      "source_context": "18\n12.5 投标保证金有效期同投标有效期。\n12.6 投标人为联合体的，可以由联合体中的一方或者多方共同交纳投标保证金，\n其交纳的投标保证金对联合体各方均具有约束力。\n12.7 采购人、采购代理机构将及时退还投标人的投标保证金，采用银行保函、担\n保机构担保函等形式递交的投标保证金，经投标人同意后采购人、采购代理",
+      "source_role": [
+        "PROCUREMENT"
+      ],
+      "page": {
+        "start": 19,
+        "end": 19
+      },
+      "paragraph_range": {
+        "start": 507,
+        "end": 508
+      },
+      "offset_range": {
+        "start": 12014,
+        "end": 12075
+      },
+      "source_refs": [
+        "C007-S036",
+        "C007-S037"
+      ],
+      "source_hash": "ddd2572b06ecef33fae581b243daf75cbe6e25a5079b110ecfcb52efb52e7258",
+      "source_hash_recomputed_from_reconstructed_span": "ddd2572b06ecef33fae581b243daf75cbe6e25a5079b110ecfcb52efb52e7258",
+      "detected_actors": [
+        "投标人"
+      ],
+      "obligation_markers": [
+        "保证"
+      ],
+      "prohibition_or_consequence_markers": [],
+      "conditionality_markers": [],
+      "current_scope_rule_path": "RequirementParseService.processChunk → SourceLocationResolver.resolve → validateCandidateSourceScope",
+      "current_rejection_rule": "all resolved source roles are in EXCLUDED_ONLY_ROLES → REQUIREMENT_SCOPE_EXCLUDED",
+      "historical_auxiliary_overlap": true,
+      "historical_matching_source_span": null,
+      "historical_requirement_text": null,
+      "historical_category": null,
+      "contract_family_candidate": "BID_QUALIFICATION",
+      "recertification_classification": "DETERMINISTIC_IN_SCOPE",
+      "scope_decision_basis": "Frozen Decision negative-filter rule only; source role/category alone is not treated as authority.",
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "REAL_E2E_CASE_01",
+      "rejection_index": 8,
+      "chunk_number": 7,
+      "candidate_index": 15,
+      "candidate_identity": null,
+      "candidate_text": null,
+      "candidate_text_recoverability": "NOT_PERSISTED_IN_V2_SCOPE_AUDIT",
+      "exact_source_text": "12.7.1 投标人在投标截止时间前撤回已提交的投标文件的，自收到投标人书\n面撤回通知之日起 5 个工作日内退还已收取的投标保证金；",
+      "source_context": "保机构担保函等形式递交的投标保证金，经投标人同意后采购人、采购代理\n机构可以不再退还，但因投标人自身原因导致无法及时退还的除外：\n12.7.1 投标人在投标截止时间前撤回已提交的投标文件的，自收到投标人书\n面撤回通知之日起 5 个工作日内退还已收取的投标保证金；\n12.7.2 中标人的投标保证金，自采购合同签订之日起 5 个工作日内退还中标\n人；",
+      "source_role": [
+        "PROCUREMENT"
+      ],
+      "page": {
+        "start": 19,
+        "end": 19
+      },
+      "paragraph_range": {
+        "start": 512,
+        "end": 513
+      },
+      "offset_range": {
+        "start": 12180,
+        "end": 12246
+      },
+      "source_refs": [
+        "C007-S041",
+        "C007-S042"
+      ],
+      "source_hash": "e1440c7901c0a195dafc07952c89ecbea9291533597db0c1d2e8127ddba8c523",
+      "source_hash_recomputed_from_reconstructed_span": "e1440c7901c0a195dafc07952c89ecbea9291533597db0c1d2e8127ddba8c523",
+      "detected_actors": [
+        "投标人"
+      ],
+      "obligation_markers": [
+        "提交",
+        "保证"
+      ],
+      "prohibition_or_consequence_markers": [],
+      "conditionality_markers": [],
+      "current_scope_rule_path": "RequirementParseService.processChunk → SourceLocationResolver.resolve → validateCandidateSourceScope",
+      "current_rejection_rule": "all resolved source roles are in EXCLUDED_ONLY_ROLES → REQUIREMENT_SCOPE_EXCLUDED",
+      "historical_auxiliary_overlap": false,
+      "historical_matching_source_span": null,
+      "historical_requirement_text": null,
+      "historical_category": null,
+      "contract_family_candidate": "BID_FORMALITY",
+      "recertification_classification": "DETERMINISTIC_IN_SCOPE",
+      "scope_decision_basis": "Frozen Decision negative-filter rule only; source role/category alone is not treated as authority.",
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "REAL_E2E_CASE_01",
+      "rejection_index": 9,
+      "chunk_number": 7,
+      "candidate_index": 18,
+      "candidate_identity": null,
+      "candidate_text": null,
+      "candidate_text_recoverability": "NOT_PERSISTED_IN_V2_SCOPE_AUDIT",
+      "exact_source_text": "12.7.4 终止招标项目已经收取投标保证金的，自终止采购活动后 5 个工作日\n内退还已收取的投标保证金及其在银行产生的孳息。",
+      "source_context": "12.7.3 未中标投标人的投标保证金，自中标通知书发出之日起 5 个工作日内\n退还未中标人；\n12.7.4 终止招标项目已经收取投标保证金的，自终止采购活动后 5 个工作日\n内退还已收取的投标保证金及其在银行产生的孳息。\n12.8 有下列情形之一的，采购人或采购代理机构可以不予退还投标保证金：\n12.8.1 投标有效期内投标人撤销投标文件的；",
+      "source_role": [
+        "PROCUREMENT"
+      ],
+      "page": {
+        "start": 19,
+        "end": 19
+      },
+      "paragraph_range": {
+        "start": 518,
+        "end": 519
+      },
+      "offset_range": {
+        "start": 12338,
+        "end": 12401
+      },
+      "source_refs": [
+        "C007-S047",
+        "C007-S048"
+      ],
+      "source_hash": "1243d2b2a3cf5c74fd91aba9bebe457a0f805524a406cab0e3976e2c7b9d6ddc",
+      "source_hash_recomputed_from_reconstructed_span": "1243d2b2a3cf5c74fd91aba9bebe457a0f805524a406cab0e3976e2c7b9d6ddc",
+      "detected_actors": [],
+      "obligation_markers": [
+        "保证"
+      ],
+      "prohibition_or_consequence_markers": [],
+      "conditionality_markers": [],
+      "current_scope_rule_path": "RequirementParseService.processChunk → SourceLocationResolver.resolve → validateCandidateSourceScope",
+      "current_rejection_rule": "all resolved source roles are in EXCLUDED_ONLY_ROLES → REQUIREMENT_SCOPE_EXCLUDED",
+      "historical_auxiliary_overlap": false,
+      "historical_matching_source_span": null,
+      "historical_requirement_text": null,
+      "historical_category": null,
+      "contract_family_candidate": "AMBIGUOUS",
+      "recertification_classification": "AMBIGUOUS_GPT_REVIEW",
+      "scope_decision_basis": "Frozen Decision negative-filter rule only; source role/category alone is not treated as authority.",
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "REAL_E2E_CASE_01",
+      "rejection_index": 10,
+      "chunk_number": 7,
+      "candidate_index": 24,
+      "candidate_identity": null,
+      "candidate_text": null,
+      "candidate_text_recoverability": "NOT_PERSISTED_IN_V2_SCOPE_AUDIT",
+      "exact_source_text": "15.2 采购人及采购代理机构拒绝接受通过电子交易平台以外任何形式提交的投标\n文件，投标保证金除外。",
+      "source_context": "19\n平台供应商操作手册要求编制、生成并提交电子投标文件。\n15.2 采购人及采购代理机构拒绝接受通过电子交易平台以外任何形式提交的投标\n文件，投标保证金除外。\n16.1 投标人应在招标文件要求提交投标文件截止时间前，将电子投标文件提交至\n电子交易平台。",
+      "source_role": [
+        "PROCUREMENT"
+      ],
+      "page": {
+        "start": 20,
+        "end": 20
+      },
+      "paragraph_range": {
+        "start": 537,
+        "end": 538
+      },
+      "offset_range": {
+        "start": 12826,
+        "end": 12876
+      },
+      "source_refs": [
+        "C007-S066",
+        "C007-S067"
+      ],
+      "source_hash": "6e2d65e9834f8ab11011b7809022f078ba540d20e7b678946551a424c2a33db8",
+      "source_hash_recomputed_from_reconstructed_span": "6e2d65e9834f8ab11011b7809022f078ba540d20e7b678946551a424c2a33db8",
+      "detected_actors": [],
+      "obligation_markers": [
+        "提交",
+        "保证"
+      ],
+      "prohibition_or_consequence_markers": [
+        "拒绝"
+      ],
+      "conditionality_markers": [],
+      "current_scope_rule_path": "RequirementParseService.processChunk → SourceLocationResolver.resolve → validateCandidateSourceScope",
+      "current_rejection_rule": "all resolved source roles are in EXCLUDED_ONLY_ROLES → REQUIREMENT_SCOPE_EXCLUDED",
+      "historical_auxiliary_overlap": true,
+      "historical_matching_source_span": null,
+      "historical_requirement_text": null,
+      "historical_category": null,
+      "contract_family_candidate": "BID_FORMALITY",
+      "recertification_classification": "AMBIGUOUS_GPT_REVIEW",
+      "scope_decision_basis": "Frozen Decision negative-filter rule only; source role/category alone is not treated as authority.",
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "REAL_E2E_CASE_01",
+      "rejection_index": 11,
+      "chunk_number": 9,
+      "candidate_index": 4,
+      "candidate_identity": null,
+      "candidate_text": null,
+      "candidate_text_recoverability": "NOT_PERSISTED_IN_V2_SCOPE_AUDIT",
+      "exact_source_text": "27.1 收费对象、收费标准及缴纳时间见《投标人须知资料表》。由中标人支付的，\n中标人须一次性向采购代理机构缴纳代理费，投标报价应包含代理费用。",
+      "source_context": "26.3 接收询问和质疑的联系部门、联系电话和通讯地址见《投标人须知资料表》。\n27 代理费\n27.1 收费对象、收费标准及缴纳时间见《投标人须知资料表》。由中标人支付的，\n中标人须一次性向采购代理机构缴纳代理费，投标报价应包含代理费用。\n23\n第三章 资格审查",
+      "source_role": [
+        "QUALIFICATION",
+        "COMMERCIAL"
+      ],
+      "page": {
+        "start": 23,
+        "end": 23
+      },
+      "paragraph_range": {
+        "start": 646,
+        "end": 647
+      },
+      "offset_range": {
+        "start": 15635,
+        "end": 15707
+      },
+      "source_refs": [
+        "C009-S014",
+        "C009-S015"
+      ],
+      "source_hash": "94d9e8e7afe317e4b7b760f7b782392663071bd3a693d777cb2ed288f6abc35e",
+      "source_hash_recomputed_from_reconstructed_span": "94d9e8e7afe317e4b7b760f7b782392663071bd3a693d777cb2ed288f6abc35e",
+      "detected_actors": [
+        "投标人",
+        "中标人"
+      ],
+      "obligation_markers": [
+        "缴纳",
+        "须",
+        "报价",
+        "应"
+      ],
+      "prohibition_or_consequence_markers": [],
+      "conditionality_markers": [],
+      "current_scope_rule_path": "RequirementParseService.processChunk → SourceLocationResolver.resolve → validateCandidateSourceScope",
+      "current_rejection_rule": "all resolved source roles are in EXCLUDED_ONLY_ROLES → REQUIREMENT_SCOPE_EXCLUDED",
+      "historical_auxiliary_overlap": true,
+      "historical_matching_source_span": null,
+      "historical_requirement_text": null,
+      "historical_category": null,
+      "contract_family_candidate": "BID_COMMERCIAL",
+      "recertification_classification": "DETERMINISTIC_IN_SCOPE",
+      "scope_decision_basis": "Frozen Decision negative-filter rule only; source role/category alone is not treated as authority.",
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "REAL_E2E_CASE_01",
+      "rejection_index": 12,
+      "chunk_number": 10,
+      "candidate_index": 15,
+      "candidate_identity": null,
+      "candidate_text": null,
+      "candidate_text_recoverability": "NOT_PERSISTED_IN_V2_SCOPE_AUDIT",
+      "exact_source_text": "4 投标保证金（本\n项目不涉及） 按照招标文件的规定提交投标保证金。",
+      "source_context": "件 的 电 子 件\n或电子证照\n4 投标保证金（本\n项目不涉及） 按照招标文件的规定提交投标保证金。\n5 获取招标文件\n在规定期限内通过北京市政府采购电子交易",
+      "source_role": [
+        "PROCUREMENT"
+      ],
+      "page": {
+        "start": 27,
+        "end": 27
+      },
+      "paragraph_range": {
+        "start": 821,
+        "end": 822
+      },
+      "offset_range": {
+        "start": 18150,
+        "end": 18184
+      },
+      "source_refs": [
+        "C010-S093",
+        "C010-S094"
+      ],
+      "source_hash": "6f58ec3c3b6e1e0a4d2ff0cc74dc64905ed217d9eef866ea11f6942b03bfdb7e",
+      "source_hash_recomputed_from_reconstructed_span": "6f58ec3c3b6e1e0a4d2ff0cc74dc64905ed217d9eef866ea11f6942b03bfdb7e",
+      "detected_actors": [],
+      "obligation_markers": [
+        "保证",
+        "提交"
+      ],
+      "prohibition_or_consequence_markers": [],
+      "conditionality_markers": [],
+      "current_scope_rule_path": "RequirementParseService.processChunk → SourceLocationResolver.resolve → validateCandidateSourceScope",
+      "current_rejection_rule": "all resolved source roles are in EXCLUDED_ONLY_ROLES → REQUIREMENT_SCOPE_EXCLUDED",
+      "historical_auxiliary_overlap": true,
+      "historical_matching_source_span": null,
+      "historical_requirement_text": null,
+      "historical_category": null,
+      "contract_family_candidate": "BID_FORMALITY",
+      "recertification_classification": "AMBIGUOUS_GPT_REVIEW",
+      "scope_decision_basis": "Frozen Decision negative-filter rule only; source role/category alone is not treated as authority.",
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "REAL_E2E_CASE_01",
+      "rejection_index": 13,
+      "chunk_number": 11,
+      "candidate_index": 4,
+      "candidate_identity": null,
+      "candidate_text": null,
+      "candidate_text_recoverability": "NOT_PERSISTED_IN_V2_SCOPE_AUDIT",
+      "exact_source_text": "3 投标报价 投标报价未超过招标文件中规定的项目/采购包预算金额或者\n项目/采购包最高限价；",
+      "source_context": "要求的，投标无效。\n2 投标完整性 未将一个采购包中的内容拆分投标；\n3 投标报价 投标报价未超过招标文件中规定的项目/采购包预算金额或者\n项目/采购包最高限价；\n4 报价唯一性 投标文件未出现可选择性或可调整的报价（招标文件另有规定\n的除外）；",
+      "source_role": [
+        "COMMERCIAL"
+      ],
+      "page": {
+        "start": 28,
+        "end": 28
+      },
+      "paragraph_range": {
+        "start": 843,
+        "end": 844
+      },
+      "offset_range": {
+        "start": 18557,
+        "end": 18603
+      },
+      "source_refs": [
+        "C011-S010",
+        "C011-S011"
+      ],
+      "source_hash": "1ba4dd9d5bfdd36357ea32b2133e01b54ec7ca5834717fc7857560dfba792eee",
+      "source_hash_recomputed_from_reconstructed_span": "1ba4dd9d5bfdd36357ea32b2133e01b54ec7ca5834717fc7857560dfba792eee",
+      "detected_actors": [],
+      "obligation_markers": [
+        "报价",
+        "超过"
+      ],
+      "prohibition_or_consequence_markers": [],
+      "conditionality_markers": [
+        "未"
+      ],
+      "current_scope_rule_path": "RequirementParseService.processChunk → SourceLocationResolver.resolve → validateCandidateSourceScope",
+      "current_rejection_rule": "all resolved source roles are in EXCLUDED_ONLY_ROLES → REQUIREMENT_SCOPE_EXCLUDED",
+      "historical_auxiliary_overlap": false,
+      "historical_matching_source_span": null,
+      "historical_requirement_text": null,
+      "historical_category": null,
+      "contract_family_candidate": "BID_COMMERCIAL",
+      "recertification_classification": "DETERMINISTIC_IN_SCOPE",
+      "scope_decision_basis": "Frozen Decision negative-filter rule only; source role/category alone is not treated as authority.",
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "REAL_E2E_CASE_01",
+      "rejection_index": 14,
+      "chunk_number": 11,
+      "candidate_index": 10,
+      "candidate_identity": null,
+      "candidate_text": null,
+      "candidate_text_recoverability": "NOT_PERSISTED_IN_V2_SCOPE_AUDIT",
+      "exact_source_text": "11 报价合理性\n报价合理，或投标人的报价明显低于其他通过符合性审查投标\n人的报价，有可能影响产品质量或者不能诚信履约的，能够应\n评标委员会要求在规定时间内证明其报价合理性的；",
+      "source_context": "不涉及报价修正，或投标文件报价出现前后不一致时，投标人\n对修正后的报价予以确认；（如有）\n11 报价合理性\n报价合理，或投标人的报价明显低于其他通过符合性审查投标\n人的报价，有可能影响产品质量或者不能诚信履约的，能够应\n评标委员会要求在规定时间内证明其报价合理性的；\n28\n12 进口产品",
+      "source_role": [
+        "COMMERCIAL",
+        "SCORING"
+      ],
+      "page": {
+        "start": 28,
+        "end": 28
+      },
+      "paragraph_range": {
+        "start": 866,
+        "end": 869
+      },
+      "offset_range": {
+        "start": 18980,
+        "end": 19068
+      },
+      "source_refs": [
+        "C011-S027",
+        "C011-S028",
+        "C011-S029",
+        "C011-S030"
+      ],
+      "source_hash": "f8b1efac3270357458ad9089208631a2f59b143d578fff7b5604540288930c97",
+      "source_hash_recomputed_from_reconstructed_span": "f8b1efac3270357458ad9089208631a2f59b143d578fff7b5604540288930c97",
+      "detected_actors": [
+        "投标人"
+      ],
+      "obligation_markers": [
+        "报价",
+        "符合",
+        "应"
+      ],
+      "prohibition_or_consequence_markers": [],
+      "conditionality_markers": [],
+      "current_scope_rule_path": "RequirementParseService.processChunk → SourceLocationResolver.resolve → validateCandidateSourceScope",
+      "current_rejection_rule": "all resolved source roles are in EXCLUDED_ONLY_ROLES → REQUIREMENT_SCOPE_EXCLUDED",
+      "historical_auxiliary_overlap": false,
+      "historical_matching_source_span": null,
+      "historical_requirement_text": null,
+      "historical_category": null,
+      "contract_family_candidate": "BID_SCORING_ACTION",
+      "recertification_classification": "DETERMINISTIC_IN_SCOPE",
+      "scope_decision_basis": "Frozen Decision negative-filter rule only; source role/category alone is not treated as authority.",
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "REAL_E2E_CASE_01",
+      "rejection_index": 15,
+      "chunk_number": 11,
+      "candidate_index": 22,
+      "candidate_identity": null,
+      "candidate_text": null,
+      "candidate_text_recoverability": "NOT_PERSISTED_IN_V2_SCOPE_AUDIT",
+      "exact_source_text": "2.2 评标委员会认为投标人的报价明显低于其他通过符合性审查投标人的\n报价，有可能影响产品质量或者不能诚信履约的，有权要求该投标人\n若投标人不能证明其报价合理性，评标委员会将其作为无效投标处理。",
+      "source_context": "投标人的澄清、说明或者补正不得超出投标文件的范围或者改变投标\n文件的实质性内容。澄清文件将作为投标文件内容的一部分。\n2.2 评标委员会认为投标人的报价明显低于其他通过符合性审查投标人的\n报价，有可能影响产品质量或者不能诚信履约的，有权要求该投标人\n若投标人不能证明其报价合理性，评标委员会将其作为无效投标处理。\n2.3 投标报价须包含招标文件全部内容，如分项报价表有缺漏视为已含在\n其他各项报价中，将不对投标总价进行调整。评标委员会有权要求投",
+      "source_role": [
+        "SCORING",
+        "COMMERCIAL"
+      ],
+      "page": {
+        "start": 30,
+        "end": 30
+      },
+      "paragraph_range": {
+        "start": 924,
+        "end": 927
+      },
+      "offset_range": {
+        "start": 20215,
+        "end": 20343
+      },
+      "source_refs": [
+        "C011-S080",
+        "C011-S081",
+        "C011-S082"
+      ],
+      "source_hash": "4bdf7a33a5d76a7d33ccdcabc152ebdca223d07895460ec922a8e60dd840ab0e",
+      "source_hash_recomputed_from_reconstructed_span": "4bdf7a33a5d76a7d33ccdcabc152ebdca223d07895460ec922a8e60dd840ab0e",
+      "detected_actors": [
+        "投标人"
+      ],
+      "obligation_markers": [
+        "报价",
+        "符合"
+      ],
+      "prohibition_or_consequence_markers": [
+        "无效"
+      ],
+      "conditionality_markers": [
+        "若"
+      ],
+      "current_scope_rule_path": "RequirementParseService.processChunk → SourceLocationResolver.resolve → validateCandidateSourceScope",
+      "current_rejection_rule": "all resolved source roles are in EXCLUDED_ONLY_ROLES → REQUIREMENT_SCOPE_EXCLUDED",
+      "historical_auxiliary_overlap": false,
+      "historical_matching_source_span": null,
+      "historical_requirement_text": null,
+      "historical_category": null,
+      "contract_family_candidate": "BID_SCORING_ACTION",
+      "recertification_classification": "DETERMINISTIC_IN_SCOPE",
+      "scope_decision_basis": "Frozen Decision negative-filter rule only; source role/category alone is not treated as authority.",
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "REAL_E2E_CASE_01",
+      "rejection_index": 16,
+      "chunk_number": 12,
+      "candidate_index": 5,
+      "candidate_identity": null,
+      "candidate_text": null,
+      "candidate_text_recoverability": "NOT_PERSISTED_IN_V2_SCOPE_AUDIT",
+      "exact_source_text": "☑综合评分法，指投标文件满足招标文件全部实质性要求，且\n按照评审因素的量化指标评审得分最高的投标人为中标候选\n□最低评标价法，指投标文件满足招标文件全部实质性要求，\n且投标报价最低的投标人为中标候选人的评标方法。",
+      "source_context": "合格的投标文件进行商务和技术评估，综合比较与评价；未通过符合\n性审查的投标文件不得进入比较与评价。\n☑综合评分法，指投标文件满足招标文件全部实质性要求，且\n按照评审因素的量化指标评审得分最高的投标人为中标候选\n□最低评标价法，指投标文件满足招标文件全部实质性要求，\n且投标报价最低的投标人为中标候选人的评标方法。\n产品品牌相同）的不同投标人参加同一合同项下投标的，以\n其中通过资格审查、符合性审查且报价最低的参加评标；报",
+      "source_role": [
+        "SCORING"
+      ],
+      "page": {
+        "start": 32,
+        "end": 32
+      },
+      "paragraph_range": {
+        "start": 983,
+        "end": 988
+      },
+      "offset_range": {
+        "start": 21645,
+        "end": 21792
+      },
+      "source_refs": [
+        "C012-S027",
+        "C012-S028",
+        "C012-S029",
+        "C012-S030"
+      ],
+      "source_hash": "18108f772dd72aecb1d4cf0b9bd37cce9f97775656cf86795a6a050a8995d02d",
+      "source_hash_recomputed_from_reconstructed_span": "18108f772dd72aecb1d4cf0b9bd37cce9f97775656cf86795a6a050a8995d02d",
+      "detected_actors": [
+        "投标人"
+      ],
+      "obligation_markers": [
+        "满足",
+        "报价"
+      ],
+      "prohibition_or_consequence_markers": [],
+      "conditionality_markers": [],
+      "current_scope_rule_path": "RequirementParseService.processChunk → SourceLocationResolver.resolve → validateCandidateSourceScope",
+      "current_rejection_rule": "all resolved source roles are in EXCLUDED_ONLY_ROLES → REQUIREMENT_SCOPE_EXCLUDED",
+      "historical_auxiliary_overlap": true,
+      "historical_matching_source_span": null,
+      "historical_requirement_text": null,
+      "historical_category": null,
+      "contract_family_candidate": "BID_COMMERCIAL",
+      "recertification_classification": "DETERMINISTIC_IN_SCOPE",
+      "scope_decision_basis": "Frozen Decision negative-filter rule only; source role/category alone is not treated as authority.",
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "REAL_E2E_CASE_01",
+      "rejection_index": 17,
+      "chunk_number": 12,
+      "candidate_index": 8,
+      "candidate_identity": null,
+      "candidate_text": null,
+      "candidate_text_recoverability": "NOT_PERSISTED_IN_V2_SCOPE_AUDIT",
+      "exact_source_text": "☑其他方式，具体要求：投标人评审得分相同的，按投标报价由低向\n高顺序排列。得分且投标报价相同的，以技术部分得分顺序排列。",
+      "source_context": "人推荐资格；评审得分相同的，评标委员会按照下述规定确定一个投\n标人获得中标人推荐资格，其他同品牌投标人不作为中标候选人。\n☑其他方式，具体要求：投标人评审得分相同的，按投标报价由低向\n高顺序排列。得分且投标报价相同的，以技术部分得分顺序排列。\n32\n相同的，按投标报价由低到高顺序排列。得分且投标报价相同的并列。",
+      "source_role": [
+        "SCORING"
+      ],
+      "page": {
+        "start": 32,
+        "end": 32
+      },
+      "paragraph_range": {
+        "start": 1006,
+        "end": 1007
+      },
+      "offset_range": {
+        "start": 22216,
+        "end": 22276
+      },
+      "source_refs": [
+        "C012-S039",
+        "C012-S040"
+      ],
+      "source_hash": "5bac84ecbfdd953b5d5cf56c8f1262a1f841f9bda53bff114046b265af1dfb59",
+      "source_hash_recomputed_from_reconstructed_span": "5bac84ecbfdd953b5d5cf56c8f1262a1f841f9bda53bff114046b265af1dfb59",
+      "detected_actors": [
+        "投标人"
+      ],
+      "obligation_markers": [
+        "报价"
+      ],
+      "prohibition_or_consequence_markers": [],
+      "conditionality_markers": [],
+      "current_scope_rule_path": "RequirementParseService.processChunk → SourceLocationResolver.resolve → validateCandidateSourceScope",
+      "current_rejection_rule": "all resolved source roles are in EXCLUDED_ONLY_ROLES → REQUIREMENT_SCOPE_EXCLUDED",
+      "historical_auxiliary_overlap": true,
+      "historical_matching_source_span": null,
+      "historical_requirement_text": null,
+      "historical_category": null,
+      "contract_family_candidate": "BID_SCORING_ACTION",
+      "recertification_classification": "DETERMINISTIC_IN_SCOPE",
+      "scope_decision_basis": "Frozen Decision negative-filter rule only; source role/category alone is not treated as authority.",
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "REAL_E2E_CASE_01",
+      "rejection_index": 18,
+      "chunk_number": 12,
+      "candidate_index": 10,
+      "candidate_identity": null,
+      "candidate_text": null,
+      "candidate_text_recoverability": "NOT_PERSISTED_IN_V2_SCOPE_AUDIT",
+      "exact_source_text": "4.3 采用最低评标价法时，评标结果按本章 2.4、2.5 调整后的投标报价由\n低到高顺序排列。投标报价相同的并列。投标文件满足招标文件全部\n实质性要求且投标报价最低的投标人为排名第一的中标候选人。",
+      "source_context": "评审得分最高的投标人为排名第一的中标候选人。评分分值计算保留\n小数点后两位，第三位四舍五入。\n4.3 采用最低评标价法时，评标结果按本章 2.4、2.5 调整后的投标报价由\n低到高顺序排列。投标报价相同的并列。投标文件满足招标文件全部\n实质性要求且投标报价最低的投标人为排名第一的中标候选人。\n4.4 评标委员会要对评分汇总情况进行复核，特别是对排名第一的、报价\n最低的、投标或响应文件被认定为无效的情形进行重点复核。",
+      "source_role": [
+        "SCORING",
+        "COMMERCIAL"
+      ],
+      "page": {
+        "start": 33,
+        "end": 33
+      },
+      "paragraph_range": {
+        "start": 1014,
+        "end": 1016
+      },
+      "offset_range": {
+        "start": 22426,
+        "end": 22525
+      },
+      "source_refs": [
+        "C012-S046",
+        "C012-S047",
+        "C012-S048"
+      ],
+      "source_hash": "c08366deb47b81abf01b048c57ef1611fedf292ea99989e9f38adcc0c3dfceb5",
+      "source_hash_recomputed_from_reconstructed_span": "c08366deb47b81abf01b048c57ef1611fedf292ea99989e9f38adcc0c3dfceb5",
+      "detected_actors": [
+        "投标人"
+      ],
+      "obligation_markers": [
+        "报价",
+        "满足"
+      ],
+      "prohibition_or_consequence_markers": [],
+      "conditionality_markers": [],
+      "current_scope_rule_path": "RequirementParseService.processChunk → SourceLocationResolver.resolve → validateCandidateSourceScope",
+      "current_rejection_rule": "all resolved source roles are in EXCLUDED_ONLY_ROLES → REQUIREMENT_SCOPE_EXCLUDED",
+      "historical_auxiliary_overlap": false,
+      "historical_matching_source_span": null,
+      "historical_requirement_text": null,
+      "historical_category": null,
+      "contract_family_candidate": "BID_COMMERCIAL",
+      "recertification_classification": "DETERMINISTIC_IN_SCOPE",
+      "scope_decision_basis": "Frozen Decision negative-filter rule only; source role/category alone is not treated as authority.",
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "REAL_E2E_CASE_01",
+      "rejection_index": 19,
+      "chunk_number": 15,
+      "candidate_index": 6,
+      "candidate_identity": null,
+      "candidate_text": null,
+      "candidate_text_recoverability": "NOT_PERSISTED_IN_V2_SCOPE_AUDIT",
+      "exact_source_text": "2、采购人应于本合同签订且财政经费下达后 15 个工作日内，向中标人支付\n合同服务费的 70%，金额为人民币小写： 元，大写：人民币 ；",
+      "source_context": "本合同服务费已经包含中标人完成本合同项下服务的全部费用，除前述款项外，\n采购人不再支付其他任何费用。\n2、采购人应于本合同签订且财政经费下达后 15 个工作日内，向中标人支付\n合同服务费的 70%，金额为人民币小写： 元，大写：人民币 ；\n3、合同服务到期后，通过项目验收且财政经费下达后 15 个工作日内，采购\n40",
+      "source_role": [
+        "COMMERCIAL"
+      ],
+      "page": {
+        "start": 40,
+        "end": 40
+      },
+      "paragraph_range": {
+        "start": 1333,
+        "end": 1334
+      },
+      "offset_range": {
+        "start": 26762,
+        "end": 26830
+      },
+      "source_refs": [
+        "C015-S028",
+        "C015-S029"
+      ],
+      "source_hash": "37e1876529483df0779cfc28e9ea35bb101f9a0ed6bfe05837382acae1473de2",
+      "source_hash_recomputed_from_reconstructed_span": "37e1876529483df0779cfc28e9ea35bb101f9a0ed6bfe05837382acae1473de2",
+      "detected_actors": [
+        "中标人"
+      ],
+      "obligation_markers": [
+        "应"
+      ],
+      "prohibition_or_consequence_markers": [],
+      "conditionality_markers": [],
+      "current_scope_rule_path": "RequirementParseService.processChunk → SourceLocationResolver.resolve → validateCandidateSourceScope",
+      "current_rejection_rule": "all resolved source roles are in EXCLUDED_ONLY_ROLES → REQUIREMENT_SCOPE_EXCLUDED",
+      "historical_auxiliary_overlap": true,
+      "historical_matching_source_span": null,
+      "historical_requirement_text": null,
+      "historical_category": null,
+      "contract_family_candidate": "BID_COMMERCIAL",
+      "recertification_classification": "DETERMINISTIC_IN_SCOPE",
+      "scope_decision_basis": "Frozen Decision negative-filter rule only; source role/category alone is not treated as authority.",
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "REAL_E2E_CASE_01",
+      "rejection_index": 20,
+      "chunk_number": 15,
+      "candidate_index": 8,
+      "candidate_identity": null,
+      "candidate_text": null,
+      "candidate_text_recoverability": "NOT_PERSISTED_IN_V2_SCOPE_AUDIT",
+      "exact_source_text": "4、中标人在采购人付款前需向采购人提供等额的法定正规发票，如中标人\n未向采购人提供合格发票，采购人有权延迟付款，且不承担违约责任。",
+      "source_context": "人向中标人支付合同服务费的 30%，金额为人民币小写： 元，大写：人\n民币 ；\n4、中标人在采购人付款前需向采购人提供等额的法定正规发票，如中标人\n未向采购人提供合格发票，采购人有权延迟付款，且不承担违约责任。\n三、技术要求\n（一）政务云基础服务",
+      "source_role": [
+        "COMMERCIAL",
+        "LEGAL"
+      ],
+      "page": {
+        "start": 41,
+        "end": 41
+      },
+      "paragraph_range": {
+        "start": 1339,
+        "end": 1340
+      },
+      "offset_range": {
+        "start": 26912,
+        "end": 26977
+      },
+      "source_refs": [
+        "C015-S034",
+        "C015-S035"
+      ],
+      "source_hash": "c0d3fda832a4fce6deda85488a086bcf90839f8bc9bcde4f2227c87aa40a64a9",
+      "source_hash_recomputed_from_reconstructed_span": "c0d3fda832a4fce6deda85488a086bcf90839f8bc9bcde4f2227c87aa40a64a9",
+      "detected_actors": [
+        "中标人"
+      ],
+      "obligation_markers": [
+        "提供",
+        "承担"
+      ],
+      "prohibition_or_consequence_markers": [
+        "承担违约责任"
+      ],
+      "conditionality_markers": [
+        "如",
+        "未"
+      ],
+      "current_scope_rule_path": "RequirementParseService.processChunk → SourceLocationResolver.resolve → validateCandidateSourceScope",
+      "current_rejection_rule": "all resolved source roles are in EXCLUDED_ONLY_ROLES → REQUIREMENT_SCOPE_EXCLUDED",
+      "historical_auxiliary_overlap": true,
+      "historical_matching_source_span": null,
+      "historical_requirement_text": null,
+      "historical_category": null,
+      "contract_family_candidate": "BID_COMMERCIAL",
+      "recertification_classification": "DETERMINISTIC_IN_SCOPE",
+      "scope_decision_basis": "Frozen Decision negative-filter rule only; source role/category alone is not treated as authority.",
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "REAL_E2E_CASE_01",
+      "rejection_index": 21,
+      "chunk_number": 19,
+      "candidate_index": 8,
+      "candidate_identity": null,
+      "candidate_text": null,
+      "candidate_text_recoverability": "NOT_PERSISTED_IN_V2_SCOPE_AUDIT",
+      "exact_source_text": "4、乙方在甲方付款前需向甲方提供等额的法定正规发票，如乙方未向甲方提供合\n格发票，甲方有权延迟付款，且不承担违约责任。",
+      "source_context": "3、合同服务到期后，通过项目验收且财政经费下达后 15 个工作日内，甲方向乙方\n支付合同服务费的 30%，金额为人民币小写： 元，大写：人民币 ；\n4、乙方在甲方付款前需向甲方提供等额的法定正规发票，如乙方未向甲方提供合\n格发票，甲方有权延迟付款，且不承担违约责任。\n第八条 甲方权利义务\n1、甲方有权对乙方提供的各项服务进行监督、检查和评价。",
+      "source_role": [
+        "COMMERCIAL",
+        "LEGAL"
+      ],
+      "page": {
+        "start": 51,
+        "end": 51
+      },
+      "paragraph_range": {
+        "start": 1640,
+        "end": 1641
+      },
+      "offset_range": {
+        "start": 33068,
+        "end": 33127
+      },
+      "source_refs": [
+        "C019-S025",
+        "C019-S026"
+      ],
+      "source_hash": "da2f4ced520d9bc5af0ad1d4765ee88f4a6cae300d64b45b18aca9598ed109dc",
+      "source_hash_recomputed_from_reconstructed_span": "da2f4ced520d9bc5af0ad1d4765ee88f4a6cae300d64b45b18aca9598ed109dc",
+      "detected_actors": [
+        "乙方"
+      ],
+      "obligation_markers": [
+        "提供",
+        "承担"
+      ],
+      "prohibition_or_consequence_markers": [
+        "承担违约责任"
+      ],
+      "conditionality_markers": [
+        "如",
+        "未"
+      ],
+      "current_scope_rule_path": "RequirementParseService.processChunk → SourceLocationResolver.resolve → validateCandidateSourceScope",
+      "current_rejection_rule": "all resolved source roles are in EXCLUDED_ONLY_ROLES → REQUIREMENT_SCOPE_EXCLUDED",
+      "historical_auxiliary_overlap": false,
+      "historical_matching_source_span": null,
+      "historical_requirement_text": null,
+      "historical_category": null,
+      "contract_family_candidate": "BID_COMMERCIAL",
+      "recertification_classification": "DETERMINISTIC_IN_SCOPE",
+      "scope_decision_basis": "Frozen Decision negative-filter rule only; source role/category alone is not treated as authority.",
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "REAL_E2E_CASE_01",
+      "rejection_index": 22,
+      "chunk_number": 21,
+      "candidate_index": 11,
+      "candidate_identity": null,
+      "candidate_text": null,
+      "candidate_text_recoverability": "NOT_PERSISTED_IN_V2_SCOPE_AUDIT",
+      "exact_source_text": "8、乙方承担上述保密义务的期限为合同履行期间及合同终止后 5 年。",
+      "source_context": "情况、安全监控分析、IP 管理、重大活动值守、工作建议等，此时如涉及甲方信息，不\n属于违反保密义务。\n8、乙方承担上述保密义务的期限为合同履行期间及合同终止后 5 年。\n56\n9、承担上述保密义务的责任主体为乙方（含乙方工作人员），乙方须与甲方签订",
+      "source_role": [
+        "LEGAL"
+      ],
+      "page": {
+        "start": 56,
+        "end": 56
+      },
+      "paragraph_range": {
+        "start": 1814,
+        "end": 1814
+      },
+      "offset_range": {
+        "start": 38156,
+        "end": 38189
+      },
+      "source_refs": [
+        "C021-S057"
+      ],
+      "source_hash": "6abff0ab3b162513e86b22ac5c2cd36c5ea8691f156d1d0f2ecd855cefc16968",
+      "source_hash_recomputed_from_reconstructed_span": "6abff0ab3b162513e86b22ac5c2cd36c5ea8691f156d1d0f2ecd855cefc16968",
+      "detected_actors": [
+        "乙方"
+      ],
+      "obligation_markers": [
+        "承担",
+        "履行"
+      ],
+      "prohibition_or_consequence_markers": [],
+      "conditionality_markers": [],
+      "current_scope_rule_path": "RequirementParseService.processChunk → SourceLocationResolver.resolve → validateCandidateSourceScope",
+      "current_rejection_rule": "all resolved source roles are in EXCLUDED_ONLY_ROLES → REQUIREMENT_SCOPE_EXCLUDED",
+      "historical_auxiliary_overlap": true,
+      "historical_matching_source_span": null,
+      "historical_requirement_text": null,
+      "historical_category": null,
+      "contract_family_candidate": "BID_CONTRACTUAL",
+      "recertification_classification": "DETERMINISTIC_IN_SCOPE",
+      "scope_decision_basis": "Frozen Decision negative-filter rule only; source role/category alone is not treated as authority.",
+      "semantic_root_cause": "PENDING_GPT"
+    }
+  ],
+  "no_semantic_labels_created": true,
+  "historical_reference_role": "HISTORICAL_PRODUCTION_AUXILIARY_REFERENCE"
+}

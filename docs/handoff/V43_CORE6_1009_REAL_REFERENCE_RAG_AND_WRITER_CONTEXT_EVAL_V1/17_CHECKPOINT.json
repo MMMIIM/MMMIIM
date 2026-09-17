@@ -1,0 +1,142 @@
+{
+  "artifact_type": "V43_CORE6_1009_REAL_REFERENCE_RAG_AND_WRITER_CONTEXT_EVAL_V1_CHECKPOINT",
+  "run_id": "V43-CORE6-REAL-REFERENCE-RAG-WRITER-20260915071233",
+  "status": "BLOCKED_PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+  "blockers": [
+    { "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE", "detail": "project_material_bindings is absent in bid_platform.public; current production searchWriterReferenceChunks query cannot execute (SQLSTATE 42P01)." },
+    { "code": "REFERENCE_EVAL_SET_BELOW_MINIMUM", "detail": "36 selected cases / 6 tenders; minimum is 45 with no cross-tender backfill." }
+  ],
+  "A_core6_1009_used_without_rebuild": true,
+  "B_all_six_tenders_represented": true,
+  "C_reference_eligible_requirements_entered_final_eval_set": 36,
+  "C1_reference_denominator_eligible_count": 59,
+  "C2_selection_constraint": {
+    "minimum_total": 45,
+    "selected_case_count": 36,
+    "required_tender_count": 6,
+    "selected_tender_count": 6,
+    "selection_blocked": true,
+    "selection_blocker": {
+      "code": "REFERENCE_EVAL_SET_BELOW_MINIMUM",
+      "message": "Current production response semantics yielded 36 cases across 6/6 tenders; minimum is 45 cases and 6/6 tenders."
+    }
+  },
+  "D_production_query_semantics_used": true,
+  "E_r0_vs_r1_mechanical_delta": {
+    "mean_reference_count": 0,
+    "heading_escape_delta": 0,
+    "front_matter_escape_delta": 0,
+    "citation_index_escape_delta": 0
+  },
+  "F_true_vector_mmr_executable": false,
+  "G_r2_mechanical_delta": "NOT_EXECUTED",
+  "H_wrong_role_scope_quarantine_escape": {
+    "R0": {
+      "wrong_role": 0,
+      "wrong_scope": 0,
+      "quarantined": 0
+    },
+    "R1": {
+      "wrong_role": 0,
+      "wrong_scope": 0,
+      "quarantined": 0
+    },
+    "R2": {
+      "wrong_role": 0,
+      "wrong_scope": 0,
+      "quarantined": 0
+    }
+  },
+  "I_non_substantive_writer_slot_escape": {
+    "R0": 0,
+    "R1": 0
+  },
+  "J_reference_to_assertion_authority_escape": 0,
+  "K_safe_context_namespaces_separate": true,
+  "L_provider": {
+    "calls": 0,
+    "failures": 0,
+    "retries": 0,
+    "latency_ms": [],
+    "current_run_query_embedding_calls": 0,
+    "task_cumulative_query_embedding_calls": 2
+  },
+  "M_mutations": {
+    "production_db_writes": 0,
+    "eval_db_writes": 0,
+    "requirement": 0,
+    "gold": 0,
+    "fact": 0,
+    "mapping": 0,
+    "claim": 0,
+    "writer_generation": 0,
+    "prompt": 0,
+    "schema": 0,
+    "migration": 0
+  },
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "gold_mutations": 0,
+  "requirement_mutations": 0,
+  "fact_mapping_claim_writer_mutations": 0,
+  "semantic_labels_created": 0,
+  "r2_status": "NOT_EXECUTED_VECTOR_UNAVAILABLE_OR_RETRIEVAL_BLOCKED",
+  "source_identity": {
+    "artifact": "docs\\V43_REQUIREMENT_GOLD_V2_SIX_TENDER_CANONICAL_INPUT.json",
+    "sha256": "ff07402688a3013af9a9b8be01f613f76848b7ea905208c1955a604432422fe1",
+    "expected_sha256_from_prior_identity_reconciliation": "ff07402688a3013af9a9b8be01f613f76848b7ea905208c1955a604432422fe1",
+    "row_count": 1009,
+    "unique_requirement_ids": 1009,
+    "tender_ids": [
+      "JY-001",
+      "TB-003",
+      "TB-006",
+      "FAST-01",
+      "FAST-04",
+      "FAST-WATER-01"
+    ],
+    "eval_only": true,
+    "human_gold_authority": false,
+    "semantic_labels_created": 0
+  },
+  "database_schema": {
+    "required_tables": [
+      "company_materials",
+      "material_chunks",
+      "material_chunk_embeddings",
+      "project_material_bindings"
+    ],
+    "missing_tables": [
+      "project_material_bindings"
+    ]
+  },
+  "query_identity": {
+    "artifact_type": "V43_PRODUCTION_QUERY_PATH_AUDIT",
+    "response_router_owner": "backend/src/pipeline/response-decision-v1.js::projectResponseDecisionV1",
+    "response_router_version": "v43-response-router-v2.2.3",
+    "response_router_implementation_id": "v43-response-router-v2.2.3-response-authority-closure",
+    "response_router_sha256": "ff34a72ca1929cac7d99d0c12674216bd9686e97a1e9727e9eee2a9e1554ab1f",
+    "writer_query_owner": "backend/src/pipeline/writer-reference-selector.js::WriterReferenceSelector.select",
+    "writer_query_sha256": "1ad5e0aa19bad1dba1023d6bc38a4f34b4fd94cbb5c9f5f42fe0332b7efca875",
+    "source_role_owner": "backend/src/pipeline/material-source-authority-policy.js::resolveMaterialSourceRole",
+    "source_role_sha256": "e0cbe41d9adec50a54d0b632bad8c8e382246157725cab0b872bbed3658e6885",
+    "hygiene_owner": "backend/src/pipeline/retrieval-chunk-role.js::isWriterReferenceContentEligible",
+    "hygiene_sha256": "3b1dcf1278a36f1ffcfcbe7a3e8c89f6d46dee94a347ef7cd29013ac6fc98a2d",
+    "production_query_semantics": {
+      "query_text": "[section.title, ...requirements.map(item => item.text)].filter(Boolean).join(\"\\n\")",
+      "section_title_source": "NO_SECTION_FIELD_IN_CORE6_ARTIFACT; section.title omitted rather than fabricated",
+      "effective_eval_query": "canonical requirement text only",
+      "material_types": [
+        "technical_solution",
+        "technical_whitepaper"
+      ],
+      "top_k": 4,
+      "candidate_limit": 20,
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_id_role": "PUBLIC_CORPUS_READ_ONLY_CONTEXT",
+      "no_eval_enrichment": true,
+      "no_retrieval_result_used_for_selection": true
+    }
+  },
+  "next_gate": "BLOCKED_FIRST_FAILURE"
+}

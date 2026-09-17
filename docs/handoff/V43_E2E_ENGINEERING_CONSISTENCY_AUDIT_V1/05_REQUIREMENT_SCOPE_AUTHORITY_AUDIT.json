@@ -1,0 +1,47 @@
+{
+  "artifact_type": "V43_E2E_ENGINEERING_CONSISTENCY_AUDIT_V1_REQUIREMENT_SCOPE_AUTHORITY_AUDIT",
+  "inspection_mode": "READ_ONLY",
+  "service": {
+    "file": "backend/src/requirement-scope-authority-service.js",
+    "class": "RequirementScopeAuthorityService",
+    "entry_method": "recordDecision",
+    "http_route": "POST /api/projects/:projectId/requirement-scope-authority",
+    "repository_method": "backend/src/db.js upsertRequirementScopeAuthority",
+    "migration": "backend/migrations/052_requirement_scope_authority_and_project_material_bindings.sql",
+    "authority_checks": ["project UUID", "candidate/source identity", "source page range", "IN_SCOPE or OUT_OF_SCOPE", "formal actor"]
+  },
+  "expected_project": {
+    "project_id": "7a038c5d-38e4-46ae-b24d-39437bb3b545",
+    "production_bid_platform": {
+      "project_exists": false,
+      "canonical_requirement_count": 0,
+      "scope_authority_relation": "ABSENT"
+    },
+    "flow_audit_test": {
+      "project_exists": true,
+      "canonical_requirement_count": 0,
+      "scope_authority_decision_count": 5,
+      "scope_authority_decisions": {
+        "authority_type": "HUMAN",
+        "decision_source": "REAL_E2E_CASE_01",
+        "authority_reference": "explicit_user_confirmation",
+        "decision_values": {"IN_SCOPE": 1, "OUT_OF_SCOPE": 4},
+        "confirmed_at": "2026-09-14T00:00:00Z"
+      }
+    }
+  },
+  "human_exception_evidence": {
+    "tender": "TB-006",
+    "requirement_ids": ["REQ-041", "REQ-048"],
+    "decisions": ["OUT_OF_SCOPE", "OUT_OF_SCOPE"],
+    "production_persistence": "NOT_PERSISTED",
+    "eval_gap_artifact_status": "GPT/HUMAN_RESOLVED_OUT_OF_SCOPE",
+    "canonical_requirement_rows_in_production": false
+  },
+  "authority_conclusion": {
+    "material_authority_gate": "PRESENT_IN_INSPECTED_RETRIEVAL_AND_BINDING_PATH",
+    "requirement_scope_authority_persistence_in_production": "UNAVAILABLE",
+    "canonical_requirement_authority_for_expected_canary": "ABSENT",
+    "safe_downstream_continuation": false
+  }
+}

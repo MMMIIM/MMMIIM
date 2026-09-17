@@ -1,0 +1,142 @@
+{
+  "artifact_type": "V43_AUTHORITY_MATRIX_V1",
+  "generated_at": "2026-09-16",
+  "execution_mode": "OFFLINE_ONLY",
+  "provider_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "gold_mutations": 0,
+  "production_semantic_changes": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "commit": 0,
+  "push": 0,
+  "merge": 0,
+  "deploy": 0,
+  "objects": [
+    {
+      "object": "Material",
+      "owner": "CompanyMaterialService + material-source-authority-policy",
+      "table": "company_materials",
+      "authority_bearing": true,
+      "production_bid_platform": "56 rows; target HW absent",
+      "flow_audit_test": "6 HW rows; active/approved/official/non-quarantined",
+      "status": "ENFORCED_ON_INSPECTED_PATH"
+    },
+    {
+      "object": "Project Material Binding",
+      "owner": "ProjectMaterialBindingService",
+      "table": "project_material_bindings",
+      "authority_bearing": true,
+      "production_bid_platform": "RELATION ABSENT",
+      "flow_audit_test": "6 ACTIVE bindings",
+      "status": "TARGET_DB_DEPENDENT"
+    },
+    {
+      "object": "Canonical Requirement",
+      "owner": "RequirementParseService/RequirementSourceService",
+      "table": "requirements + requirement_baselines",
+      "authority_bearing": true,
+      "production_bid_platform": "272 requirements / 8 baselines; expected project absent",
+      "flow_audit_test": "0 for expected project",
+      "status": "EXPECTED_CANARY_AUTHORITY_ABSENT"
+    },
+    {
+      "object": "Requirement Scope Authority",
+      "owner": "RequirementScopeAuthorityService",
+      "table": "requirement_scope_authority_decisions",
+      "authority_bearing": true,
+      "production_bid_platform": "RELATION ABSENT",
+      "flow_audit_test": "5 HUMAN decisions",
+      "status": "PRODUCTION_PERSISTENCE_UNAVAILABLE"
+    },
+    {
+      "object": "Evidence Review",
+      "owner": "EvidenceReviewService",
+      "table": "evidence_candidate_reviews",
+      "authority_bearing": true,
+      "production_bid_platform": "2 approved",
+      "flow_audit_test": "20 approved",
+      "status": "PRESENT_READ_ONLY"
+    },
+    {
+      "object": "Evidence Source Fact",
+      "owner": "EvidenceSourceFactService",
+      "table": "evidence_source_facts",
+      "authority_bearing": true,
+      "production_bid_platform": "0",
+      "flow_audit_test": "4 approved machine facts",
+      "status": "NO_CURRENT_REPLAY_FACT"
+    },
+    {
+      "object": "Canonical Mapping",
+      "owner": "RequirementEvidenceFactMappingService",
+      "table": "requirement_evidence_fact_mappings",
+      "authority_bearing": true,
+      "production_bid_platform": "0",
+      "flow_audit_test": "0",
+      "status": "NO_CURRENT_REPLAY_MAPPING"
+    },
+    {
+      "object": "Legacy Mapping",
+      "owner": "legacy compatibility path",
+      "table": "requirement_evidence_mappings",
+      "authority_bearing": "LEGACY_NON_CANONICAL",
+      "production_bid_platform": "6 approved",
+      "flow_audit_test": "0",
+      "status": "SEPARATE_FROM_CANONICAL"
+    },
+    {
+      "object": "Claim",
+      "owner": "Claim Gate",
+      "table": "claims + claim_decisions",
+      "authority_bearing": true,
+      "production_bid_platform": "202 rows",
+      "flow_audit_test": "0",
+      "status": "NO_CURRENT_REPLAY_CLAIM"
+    },
+    {
+      "object": "Writer Safe Context/Output",
+      "owner": "Writer authorization + document generation",
+      "table": "writer_safe_contexts + writer_outputs",
+      "authority_bearing": true,
+      "production_bid_platform": "0",
+      "flow_audit_test": "0",
+      "status": "NO_CURRENT_REPLAY_WRITER"
+    }
+  ],
+  "material_source_roles": {
+    "matrix_official": "REFERENCE_CONTEXT",
+    "synthetic_company": "SYNTHETIC_ENTERPRISE_EVIDENCE",
+    "huawei_public_pdf": "REAL_ENTERPRISE_SMOKE",
+    "h3c_html": "EXPLORATORY_WEB"
+  },
+  "migration_052": {
+    "status": "REVIEW_ONLY",
+    "source": {
+      "path": "backend/migrations/052_requirement_scope_authority_and_project_material_bindings.sql",
+      "exists": true,
+      "bytes": 1825,
+      "sha256": "3a2fabb3a709cbb438d2e34c8f0b8828e9528706ec798d744b6e5cd918575d95",
+      "status": "CURRENT_REUSABLE",
+      "roles": [
+        "MIGRATION_AUDIT"
+      ],
+      "notes": []
+    },
+    "executed_by_task": false
+  },
+  "evidence": [
+    {
+      "path": "docs/handoff/V43_E2E_ENGINEERING_CONSISTENCY_AUDIT_V1/07_AUTHORITY_PERSISTENCE_MATRIX.json",
+      "exists": true,
+      "bytes": 3244,
+      "sha256": "c3771d960e996be208862111c3a6f46b99f62a091e5631e47f40cfc0c722f844",
+      "status": "CURRENT_REUSABLE",
+      "roles": [],
+      "notes": []
+    }
+  ]
+}

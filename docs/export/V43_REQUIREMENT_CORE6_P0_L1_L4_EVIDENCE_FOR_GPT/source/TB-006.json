@@ -1,0 +1,3182 @@
+{
+  "packet_version": "reqx-v3-real-tender-gold-packet-v1",
+  "annotation_status": "GPT_GOLD_REVIEWED",
+  "tender_id": "TB-006",
+  "title": "北京市应急指挥调度能力提升工程项目大模型软件政务云租用项目",
+  "industry": "AI_LLM_RAG_AGENT",
+  "project_type": "EMERGENCY_MODEL_CLOUD_SERVICE",
+  "source_file": "backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf",
+  "source_file_sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+  "source_extraction": {
+    "extractor": "tender-text-extractor-v1",
+    "extracted_character_count": 56927,
+    "extracted_paragraph_count": 2750,
+    "selected_window_character_count": 4921,
+    "selected_window_paragraph_count": 237,
+    "selection": {
+      "type": "classified_technical_section",
+      "section_key": "technical_requirements",
+      "title": "技术与项目要求",
+      "source_start_page": 2,
+      "source_end_page": 46,
+      "source_start_paragraph": 17,
+      "source_end_paragraph": 1516
+    },
+    "warning": null
+  },
+  "chunk_budget": {
+    "singleCallThreshold": 2000,
+    "characterBudget": 2000,
+    "tokenBudget": 8000,
+    "sourceSpanBudget": 50
+  },
+  "gold_item_schema": {
+    "gold_id": "string",
+    "text": "string",
+    "category": "canonical requirement category",
+    "source_range": {
+      "start_ref": "Cxxx-Sxxx",
+      "end_ref": "Cxxx-Sxxx"
+    },
+    "mandatory_observed": "boolean",
+    "requires_confirmation": "boolean"
+  },
+  "gold_requirements": [
+    {
+      "gold_id": "TB-006-G001",
+      "text": "大模型软件需部署至市级政务云平台。",
+      "category": "implementation",
+      "source_range": {
+        "start_ref": "C002-S002",
+        "end_ref": "C002-S004"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G002",
+      "text": "服务地点为北京市通州区。",
+      "category": "constraint",
+      "source_range": {
+        "start_ref": "C002-S005",
+        "end_ref": "C002-S007"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G003",
+      "text": "服务期限自合同签订之日起10个月。",
+      "category": "constraint",
+      "source_range": {
+        "start_ref": "C002-S008",
+        "end_ref": "C002-S009"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G004",
+      "text": "合同期内系统应安全稳定运行，不得因硬件故障导致服务中断12小时。",
+      "category": "performance",
+      "source_range": {
+        "start_ref": "C002-S010",
+        "end_ref": "C002-S012"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G005",
+      "text": "服务期满后30个工作日开始验收；中标人应在采购人指定验收日前提交验收报告，内容至少包括合同服务清单和各系统设备运行情况。",
+      "category": "acceptance",
+      "source_range": {
+        "start_ref": "C002-S012",
+        "end_ref": "C002-S015"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G006",
+      "text": "政务云平台云主机vCPU应满足ARM架构主频不低于2.4GHz、C86和x86主频不低于2.2GHz，物理CPU/虚拟CPU平均虚拟化率不低于1/4，虚拟CPU利用率不低于物理CPU的25%。",
+      "category": "technical",
+      "source_range": {
+        "start_ref": "C002-S038",
+        "end_ref": "C003-S006"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G007",
+      "text": "应按采购需求提供平台云主机内存资源，按表列数量和10个月期限提供服务。",
+      "category": "technical",
+      "source_range": {
+        "start_ref": "C003-S007",
+        "end_ref": "C003-S010"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G008",
+      "text": "应提供GPU显存资源，并与算力资源、云主机或物理服务器资源联合使用，按表列数量和10个月期限提供服务。",
+      "category": "technical",
+      "source_range": {
+        "start_ref": "C003-S011",
+        "end_ref": "C003-S015"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G009",
+      "text": "应提供适配X86、ARM、C86的GPU卡半精度浮点算力服务，并与GPU显存、云主机或物理服务器资源联合使用。",
+      "category": "technical",
+      "source_range": {
+        "start_ref": "C003-S016",
+        "end_ref": "C003-S027"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G010",
+      "text": "应提供普通性能存储服务，单盘IOPS指标为2000-5000，按表列数量和10个月期限提供。",
+      "category": "performance",
+      "source_range": {
+        "start_ref": "C003-S028",
+        "end_ref": "C003-S030"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G011",
+      "text": "应提供高性能存储服务，单盘IOPS指标为10000-25000，按表列数量和10个月期限提供。",
+      "category": "performance",
+      "source_range": {
+        "start_ref": "C003-S031",
+        "end_ref": "C003-S038"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G012",
+      "text": "应提供本地备份服务，按表列容量和10个月期限提供。",
+      "category": "data",
+      "source_range": {
+        "start_ref": "C003-S039",
+        "end_ref": "C003-S043"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G013",
+      "text": "应提供远程接入服务账号，按表列数量和10个月期限提供。",
+      "category": "technical",
+      "source_range": {
+        "start_ref": "C003-S044",
+        "end_ref": "C003-S048"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G014",
+      "text": "应提供计算、存储、网络等政务云基础环境的日常维护和应急响应服务。",
+      "category": "service",
+      "source_range": {
+        "start_ref": "C003-S049",
+        "end_ref": "C004-S005"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G015",
+      "text": "应提供7×24运维保障，并做好重大活动和节假日应急值守，确保系统在政务云环境中可靠稳定运行。",
+      "category": "service",
+      "source_range": {
+        "start_ref": "C004-S006",
+        "end_ref": "C004-S007"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G016",
+      "text": "服务期内应完成信息系统日常运维和安全运维，包括云平台服务、技术支持、系统维护、服务规范、安全保密和及时响应。",
+      "category": "service",
+      "source_range": {
+        "start_ref": "C004-S008",
+        "end_ref": "C004-S010"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G017",
+      "text": "应提供平台云主机服务（X86、ARM、C86）和GPU卡算力服务（适配X86、ARM、C86），并按采购人要求动态调整vCPU和内存，工单下达到完成调整不超过4小时。",
+      "category": "technical",
+      "source_range": {
+        "start_ref": "C004-S011",
+        "end_ref": "C004-S016"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G018",
+      "text": "应提供普通性能存储、高性能存储和本地备份服务。",
+      "category": "technical",
+      "source_range": {
+        "start_ref": "C004-S017",
+        "end_ref": "C004-S019"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G019",
+      "text": "普通性能存储单盘IOPS应为1000-3000，并能按采购人要求动态调整存储空间和配置。",
+      "category": "performance",
+      "source_range": {
+        "start_ref": "C004-S020",
+        "end_ref": "C004-S021"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G020",
+      "text": "高性能存储单盘IOPS应为3000-20000，并能按采购人要求动态调整存储空间和配置。",
+      "category": "performance",
+      "source_range": {
+        "start_ref": "C004-S022",
+        "end_ref": "C004-S023"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G021",
+      "text": "本地备份服务应通过备份策略实现文件、操作系统和数据库的本地备份。",
+      "category": "data",
+      "source_range": {
+        "start_ref": "C004-S024",
+        "end_ref": "C004-S025"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G022",
+      "text": "远程接入服务应通过身份验证后经VPN远程接入堡垒机维护应用系统。",
+      "category": "security",
+      "source_range": {
+        "start_ref": "C004-S026",
+        "end_ref": "C004-S028"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G023",
+      "text": "政务云环境应在等保三级基础上，根据各业务系统安全需求开展等保评估、检查和整改。",
+      "category": "security",
+      "source_range": {
+        "start_ref": "C004-S029",
+        "end_ref": "C004-S031"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G024",
+      "text": "应严格按照《北京市市级政务云管理办法》及采购人管理制度和流程开展标准化运维。",
+      "category": "constraint",
+      "source_range": {
+        "start_ref": "C004-S032",
+        "end_ref": "C004-S035"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G025",
+      "text": "应利用监控系统或人工对机房环境、硬件设备和应用系统进行7×24不间断巡检监控，及时发现并处理安全隐患并形成监控报告。",
+      "category": "service",
+      "source_range": {
+        "start_ref": "C004-S036",
+        "end_ref": "C004-S039"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G026",
+      "text": "应设立技术支持热线并安排专人7×24值守，指定专业技术能力较强的工程师按采购人要求配合开展维护服务。",
+      "category": "service",
+      "source_range": {
+        "start_ref": "C004-S040",
+        "end_ref": "C004-S042"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G027",
+      "text": "应遵守采购人信息安全规定，不得利用维护便利擅自修改采购人数据或向第三方泄露采购人数据及其他信息。",
+      "category": "security",
+      "source_range": {
+        "start_ref": "C004-S043",
+        "end_ref": "C004-S045"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G028",
+      "text": "非宕机故障发生时应协调人力在1小时内到达运维现场；系统宕机时5分钟内响应并在1小时内恢复正常，处理完成后提交宕机报告。",
+      "category": "performance",
+      "source_range": {
+        "start_ref": "C004-S046",
+        "end_ref": "C005-S001"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G029",
+      "text": "业务高峰期应根据业务周期特点加大运维保障力度，保证系统平稳运行。",
+      "category": "service",
+      "source_range": {
+        "start_ref": "C005-S002",
+        "end_ref": "C005-S005"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G030",
+      "text": "如涉及跨云平台迁移，应在保障业务系统正常运行前提下，自合同生效之日起7个工作日内完成全部系统迁移并提供迁移服务承诺函。",
+      "category": "implementation",
+      "source_range": {
+        "start_ref": "C005-S006",
+        "end_ref": "C005-S009"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G031",
+      "text": "迁移方案应明确是否需要采购人投入人员、时间和工作，并提供承诺；投标人应具备类似项目经验并制定迁移部署方案，配合完成迁移部署、运行和安全保障。",
+      "category": "implementation",
+      "source_range": {
+        "start_ref": "C005-S009",
+        "end_ref": "C005-S013"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G032",
+      "text": "迁移过程中应保证应用系统正常运行，并在合同生效之日起7日内完成迁移，不得改变或影响原系统功能、技术状态和用户使用习惯。",
+      "category": "implementation",
+      "source_range": {
+        "start_ref": "C005-S014",
+        "end_ref": "C005-S019"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G033",
+      "text": "迁移已运行在政务云平台的应用系统时，应确保数据不丢失和业务正常运行，并主动与原政务云平台服务商对接。",
+      "category": "data",
+      "source_range": {
+        "start_ref": "C005-S020",
+        "end_ref": "C005-S024"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G034",
+      "text": "服务期内应提供7×24电话响应和运维团队售后保障，团队职责明确、架构清晰、岗位合理并具备相关项目经验。",
+      "category": "implementation",
+      "source_range": {
+        "start_ref": "C005-S025",
+        "end_ref": "C005-S028"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G035",
+      "text": "应配置1名项目经理及若干专职项目人员；项目经理承担云资源服务保障工作。",
+      "category": "implementation",
+      "source_range": {
+        "start_ref": "C005-S029",
+        "end_ref": "C005-S031"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G036",
+      "text": "项目经理应具有信息系统项目管理师（高级）证书，技术负责人应具有CISP证书，其他团队成员应具有CISP等证书。",
+      "category": "implementation",
+      "source_range": {
+        "start_ref": "C005-S032",
+        "end_ref": "C005-S034"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G037",
+      "text": "中标人应对项目及采购人相关保密信息承担保密义务，不得擅自修改或向第三方泄露采购人数据和其他信息。",
+      "category": "security",
+      "source_range": {
+        "start_ref": "C005-S035",
+        "end_ref": "C005-S040"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G038",
+      "text": "保密信息仅可用于履行本项目，应至少采取与保护自身商业秘密同等的保护措施和谨慎程度。",
+      "category": "security",
+      "source_range": {
+        "start_ref": "C005-S041",
+        "end_ref": "C005-S044"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G039",
+      "text": "保密信息披露范围应严格限制在直接从事项目且确有知悉必要的工作人员范围内。",
+      "category": "security",
+      "source_range": {
+        "start_ref": "C005-S045",
+        "end_ref": "C005-S048"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G040",
+      "text": "向工作人员披露保密信息前应开展保密教育，明确保密义务和法律责任，并要求全部项目参与人员签署书面《保密协议》。",
+      "category": "security",
+      "source_range": {
+        "start_ref": "C005-S049",
+        "end_ref": "C006-S002"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G041",
+      "text": "采购人要求时，中标人应在收到书面通知后5日内归还含保密信息的全部文件或资料，且不得擅自复制留存。",
+      "category": "security",
+      "source_range": {
+        "start_ref": "C006-S003",
+        "end_ref": "C006-S005"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G042",
+      "text": "采购人提供保密信息不构成对其中专利权、商标权、著作权、商业秘密或其他知识产权的授权。",
+      "category": "constraint",
+      "source_range": {
+        "start_ref": "C006-S006",
+        "end_ref": "C006-S008"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "TB-006-G043",
+      "text": "供应商应提供在本项目中落实ESG理念的工作措施。",
+      "category": "constraint",
+      "source_range": {
+        "start_ref": "C006-S009",
+        "end_ref": "C006-S012"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    }
+  ],
+  "windows": [
+    {
+      "chunk_number": 1,
+      "character_count": 780,
+      "estimated_token_count": 716,
+      "source_start_offset": 0,
+      "source_end_offset": 780,
+      "spans": [
+        {
+          "span_id": "C001-S001",
+          "text": "第五章 采购需求 ..............................................................................................................39",
+          "page": 2,
+          "paragraph": 17,
+          "source_section": "采购需求 ..............................................................................................................39",
+          "source_clause_id": null,
+          "source_start_offset": 0,
+          "source_end_offset": 121,
+          "source_text_sha256": "a24e16c2e28128175c12f22d40044d2efdf5314f28b5fdf21619454cdbff9449"
+        },
+        {
+          "span_id": "C001-S002",
+          "text": "第五章《采购需求》），否则投标无效；属于推荐性标准的，优先采",
+          "page": 15,
+          "paragraph": 404,
+          "source_section": "《采购需求》），否则投标无效；属于推荐性标准的，优先采",
+          "source_clause_id": null,
+          "source_start_offset": 122,
+          "source_end_offset": 152,
+          "source_text_sha256": "c17899a4658ed6dae321fb79acf5fbce0d051f78a8b6d127a97a14e719032964"
+        },
+        {
+          "span_id": "C001-S003",
+          "text": "购，具体见第四章《评标程序、评标方法和评标标准》。",
+          "page": 15,
+          "paragraph": 405,
+          "source_section": "《采购需求》），否则投标无效；属于推荐性标准的，优先采",
+          "source_clause_id": null,
+          "source_start_offset": 153,
+          "source_end_offset": 178,
+          "source_text_sha256": "392d374ee4846c5843829499026b45d9ebb55924613d3e566e6d087b8555697c"
+        },
+        {
+          "span_id": "C001-S004",
+          "text": "5.7 采购需求标准",
+          "page": 15,
+          "paragraph": 406,
+          "source_section": "《采购需求》），否则投标无效；属于推荐性标准的，优先采",
+          "source_clause_id": "5.7",
+          "source_start_offset": 179,
+          "source_end_offset": 189,
+          "source_text_sha256": "1bf984761053463a24c10200c51d6faa2da4fbaa998f8153881f039e51c9d7b6"
+        },
+        {
+          "span_id": "C001-S005",
+          "text": "5.7.1 商品包装、快递包装政府采购需求标准（试行）",
+          "page": 15,
+          "paragraph": 407,
+          "source_section": "《采购需求》），否则投标无效；属于推荐性标准的，优先采",
+          "source_clause_id": "5.7.1",
+          "source_start_offset": 190,
+          "source_end_offset": 217,
+          "source_text_sha256": "f5027111c7a5aa0c4c05070c9825a0c246e2405d5da8e65b54fe11eabaa5f05e"
+        },
+        {
+          "span_id": "C001-S006",
+          "text": "为助力打好污染防治攻坚战，推广使用绿色包装，根据财政部关于印",
+          "page": 15,
+          "paragraph": 408,
+          "source_section": "《采购需求》），否则投标无效；属于推荐性标准的，优先采",
+          "source_clause_id": "5.7.1",
+          "source_start_offset": 218,
+          "source_end_offset": 248,
+          "source_text_sha256": "f9ee95958d1a9b3dbc6b1835963f1f06eb684d7aa2aefd9e63ee70c7f9816724"
+        },
+        {
+          "span_id": "C001-S007",
+          "text": "发《商品包装政府采购需求标准（试行）》、《快递包装政府采购需",
+          "page": 15,
+          "paragraph": 409,
+          "source_section": "《采购需求》），否则投标无效；属于推荐性标准的，优先采",
+          "source_clause_id": "5.7.1",
+          "source_start_offset": 249,
+          "source_end_offset": 279,
+          "source_text_sha256": "832050cffadf5e85f1f4ebd9259253d25d1a9c1061d0bdb79cd2454aa78bd4cf"
+        },
+        {
+          "span_id": "C001-S008",
+          "text": "求标准（试行）》的通知（财办库〔2020〕123 号），本项目如涉及",
+          "page": 15,
+          "paragraph": 410,
+          "source_section": "《采购需求》），否则投标无效；属于推荐性标准的，优先采",
+          "source_clause_id": "5.7.1",
+          "source_start_offset": 280,
+          "source_end_offset": 314,
+          "source_text_sha256": "889623816bfed0505ed07abc3ce4e54e67a08113aa735d71af3bf1c57c9b4493"
+        },
+        {
+          "span_id": "C001-S009",
+          "text": "商品包装和快递包装的，则其具体要求见第五章《采购需求》。",
+          "page": 15,
+          "paragraph": 411,
+          "source_section": "《采购需求》），否则投标无效；属于推荐性标准的，优先采",
+          "source_clause_id": "5.7.1",
+          "source_start_offset": 315,
+          "source_end_offset": 343,
+          "source_text_sha256": "76af44fcf62d7a5a00ceed1531a451bd10ca55ece64f0305cd0d717fdaad0146"
+        },
+        {
+          "span_id": "C001-S010",
+          "text": "5.7.2 其他政府采购需求标准",
+          "page": 15,
+          "paragraph": 412,
+          "source_section": "《采购需求》），否则投标无效；属于推荐性标准的，优先采",
+          "source_clause_id": "5.7.2",
+          "source_start_offset": 344,
+          "source_end_offset": 360,
+          "source_text_sha256": "268bfdade85e261c41c6a7d628567f3469a932a0ad6b9ef972a1a67cf4dfeff9"
+        },
+        {
+          "span_id": "C001-S011",
+          "text": "为贯彻落实《深化政府采购制度改革方案》有关要求，推动政府采购",
+          "page": 15,
+          "paragraph": 413,
+          "source_section": "《采购需求》），否则投标无效；属于推荐性标准的，优先采",
+          "source_clause_id": "5.7.2",
+          "source_start_offset": 361,
+          "source_end_offset": 391,
+          "source_text_sha256": "adb54b6c50b9333d508599200cd4749c663620eca6fd08c5f21b7ad97546f406"
+        },
+        {
+          "span_id": "C001-S012",
+          "text": "15",
+          "page": 16,
+          "paragraph": 414,
+          "source_section": "《采购需求》），否则投标无效；属于推荐性标准的，优先采",
+          "source_clause_id": "5.7.2",
+          "source_start_offset": 392,
+          "source_end_offset": 394,
+          "source_text_sha256": "e629fa6598d732768f7c726b4b621285f9c3b85303900aa912017db7617d8bdb"
+        },
+        {
+          "span_id": "C001-S013",
+          "text": "需求标准建设，财政部门会同有关部门制定发布的其他政府采购需求",
+          "page": 16,
+          "paragraph": 415,
+          "source_section": "《采购需求》），否则投标无效；属于推荐性标准的，优先采",
+          "source_clause_id": "5.7.2",
+          "source_start_offset": 395,
+          "source_end_offset": 425,
+          "source_text_sha256": "47e1150620330caa9e248fa5a9cea54faa6d8f4af6043bd144f983cb6c799653"
+        },
+        {
+          "span_id": "C001-S014",
+          "text": "标准，本项目如涉及，则具体要求见第五章《采购需求》。",
+          "page": 16,
+          "paragraph": 416,
+          "source_section": "《采购需求》），否则投标无效；属于推荐性标准的，优先采",
+          "source_clause_id": "5.7.2",
+          "source_start_offset": 426,
+          "source_end_offset": 452,
+          "source_text_sha256": "b64427d67d4d56f3ba6eca7f522ef63f041fb75c9d9dad42d636b2790f5bb74e"
+        },
+        {
+          "span_id": "C001-S015",
+          "text": "5.8 强制性产品认证",
+          "page": 16,
+          "paragraph": 417,
+          "source_section": "《采购需求》），否则投标无效；属于推荐性标准的，优先采",
+          "source_clause_id": "5.8",
+          "source_start_offset": 453,
+          "source_end_offset": 464,
+          "source_text_sha256": "18e23c7ec894ba4d636bc877ab6202687ee0446d99705d11e60707cf12ab40cf"
+        },
+        {
+          "span_id": "C001-S016",
+          "text": "5.8.1 如本项目采购产品属于《强制性产品认证目录》的产品，则投标人所",
+          "page": 16,
+          "paragraph": 418,
+          "source_section": "《采购需求》），否则投标无效；属于推荐性标准的，优先采",
+          "source_clause_id": "5.8.1",
+          "source_start_offset": 465,
+          "source_end_offset": 501,
+          "source_text_sha256": "ad57a3853fbc8c66cca0b7c4e5059a4f6a20021dd57a9ab5f91a409283d71cf3"
+        },
+        {
+          "span_id": "C001-S017",
+          "text": "报产品必须获得经国家市场监督管理总局指定的认证机构出具的、处",
+          "page": 16,
+          "paragraph": 419,
+          "source_section": "《采购需求》），否则投标无效；属于推荐性标准的，优先采",
+          "source_clause_id": "5.8.1",
+          "source_start_offset": 502,
+          "source_end_offset": 532,
+          "source_text_sha256": "f6ec4189594390bbfaa884b78aa755970253c76e8e9cbaf32bec53c7fbd9f465"
+        },
+        {
+          "span_id": "C001-S018",
+          "text": "于有效期之内的强制性产品认证证书，否则投标无效。",
+          "page": 16,
+          "paragraph": 420,
+          "source_section": "《采购需求》），否则投标无效；属于推荐性标准的，优先采",
+          "source_clause_id": "5.8.1",
+          "source_start_offset": 533,
+          "source_end_offset": 557,
+          "source_text_sha256": "636646d43d86a921d307791920979bfdffd001e68a45c3ea1e3b7b0b052a276a"
+        },
+        {
+          "span_id": "C001-S019",
+          "text": "6 投标费用",
+          "page": 16,
+          "paragraph": 421,
+          "source_section": "《采购需求》），否则投标无效；属于推荐性标准的，优先采",
+          "source_clause_id": "5.8.1",
+          "source_start_offset": 558,
+          "source_end_offset": 564,
+          "source_text_sha256": "1225c90f8bb1a4a0e3bf0314aa57c24c9bf7796a2e51b2dc7d9764bed50772b0"
+        },
+        {
+          "span_id": "C001-S020",
+          "text": "6.1 投标人应自行承担所有与准备和参加投标有关的费用，无论投标的结果如何，",
+          "page": 16,
+          "paragraph": 422,
+          "source_section": "《采购需求》），否则投标无效；属于推荐性标准的，优先采",
+          "source_clause_id": "6.1",
+          "source_start_offset": 565,
+          "source_end_offset": 603,
+          "source_text_sha256": "1aba7745bf38c54aecec06dc1eaaf8e2bc8b5e82d5aae3b4ed98a894ce23b218"
+        },
+        {
+          "span_id": "C001-S021",
+          "text": "采购人或采购代理机构在任何情况下均无承担这些费用的义务和责任。",
+          "page": 16,
+          "paragraph": 423,
+          "source_section": "《采购需求》），否则投标无效；属于推荐性标准的，优先采",
+          "source_clause_id": "6.1",
+          "source_start_offset": 604,
+          "source_end_offset": 635,
+          "source_text_sha256": "6329a41478f3e6c7a06ec644c0331454deab28d78208665851b659e29446b559"
+        },
+        {
+          "span_id": "C001-S022",
+          "text": "二 招标文件",
+          "page": 16,
+          "paragraph": 424,
+          "source_section": "《采购需求》），否则投标无效；属于推荐性标准的，优先采",
+          "source_clause_id": "6.1",
+          "source_start_offset": 636,
+          "source_end_offset": 642,
+          "source_text_sha256": "825bc9f33ee9c506c9e1dbefeff767cd1890a80ab981057fd9ac21886dcf73e8"
+        },
+        {
+          "span_id": "C001-S023",
+          "text": "7 招标文件构成",
+          "page": 16,
+          "paragraph": 425,
+          "source_section": "《采购需求》），否则投标无效；属于推荐性标准的，优先采",
+          "source_clause_id": "6.1",
+          "source_start_offset": 643,
+          "source_end_offset": 651,
+          "source_text_sha256": "094c9719876c37e6ab1ad4bcab33a637e5225778d9adc4de27130151a247f07f"
+        },
+        {
+          "span_id": "C001-S024",
+          "text": "7.1 招标文件包括以下部分：",
+          "page": 16,
+          "paragraph": 426,
+          "source_section": "《采购需求》），否则投标无效；属于推荐性标准的，优先采",
+          "source_clause_id": "7.1",
+          "source_start_offset": 652,
+          "source_end_offset": 667,
+          "source_text_sha256": "a40bc32dcc58ba23299aa2ea0b1d7fb6636ad89d4019192309724b761db7eec9"
+        },
+        {
+          "span_id": "C001-S025",
+          "text": "第五章 采购需求",
+          "page": 16,
+          "paragraph": 431,
+          "source_section": "采购需求",
+          "source_clause_id": "7.1",
+          "source_start_offset": 668,
+          "source_end_offset": 676,
+          "source_text_sha256": "a75e22fa6084e78c177d7afde20a535f53b8cd39cc2fd697a0afd404dd3c0d72"
+        },
+        {
+          "span_id": "C001-S026",
+          "text": "第五章 采购需求",
+          "page": 40,
+          "paragraph": 1305,
+          "source_section": "采购需求",
+          "source_clause_id": "7.1",
+          "source_start_offset": 677,
+          "source_end_offset": 685,
+          "source_text_sha256": "a75e22fa6084e78c177d7afde20a535f53b8cd39cc2fd697a0afd404dd3c0d72"
+        },
+        {
+          "span_id": "C001-S027",
+          "text": "一、采购标的",
+          "page": 40,
+          "paragraph": 1306,
+          "source_section": "采购需求",
+          "source_clause_id": "7.1",
+          "source_start_offset": 686,
+          "source_end_offset": 692,
+          "source_text_sha256": "ac8e30f4eaa5c6369ab0250675bbcdf3c2c23fe5a2477e426fd76e5e703ab0d5"
+        },
+        {
+          "span_id": "C001-S028",
+          "text": "（一）项目情况",
+          "page": 40,
+          "paragraph": 1307,
+          "source_section": "采购需求",
+          "source_clause_id": "7.1",
+          "source_start_offset": 693,
+          "source_end_offset": 700,
+          "source_text_sha256": "3caff1c18b0a62428b4b6aab7063e61a4c1d272226b5adffdbbd13c9d9d1f32e"
+        },
+        {
+          "span_id": "C001-S029",
+          "text": "包号 标的名称 采购包预算金额",
+          "page": 40,
+          "paragraph": 1308,
+          "source_section": "采购需求",
+          "source_clause_id": "7.1",
+          "source_start_offset": 701,
+          "source_end_offset": 716,
+          "source_text_sha256": "220944ec766c2b552d1ca4d270418100f2ece67a3bed49795e9a62ad81a3551a"
+        },
+        {
+          "span_id": "C001-S030",
+          "text": "（万元） 数量",
+          "page": 40,
+          "paragraph": 1309,
+          "source_section": "采购需求",
+          "source_clause_id": "7.1",
+          "source_start_offset": 717,
+          "source_end_offset": 724,
+          "source_text_sha256": "b9f11e2997348a28a67923b663144896aec3889ae79b88863875f34ed8e3b74d"
+        },
+        {
+          "span_id": "C001-S031",
+          "text": "1",
+          "page": 40,
+          "paragraph": 1310,
+          "source_section": "采购需求",
+          "source_clause_id": "7.1",
+          "source_start_offset": 725,
+          "source_end_offset": 726,
+          "source_text_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+        },
+        {
+          "span_id": "C001-S032",
+          "text": "北京市应急指挥保障中心2025-2026年",
+          "page": 40,
+          "paragraph": 1311,
+          "source_section": "采购需求",
+          "source_clause_id": "7.1",
+          "source_start_offset": 727,
+          "source_end_offset": 748,
+          "source_text_sha256": "c365a0607c607524108dc5cf6219e9c9cefb5af4d4aa21aea8e46008c894a7d0"
+        },
+        {
+          "span_id": "C001-S033",
+          "text": "度北京市应急指挥调度能力提升工程项",
+          "page": 40,
+          "paragraph": 1312,
+          "source_section": "采购需求",
+          "source_clause_id": "7.1",
+          "source_start_offset": 749,
+          "source_end_offset": 766,
+          "source_text_sha256": "deefd823511e88646089b9d5b6159465d6692e63a73dcf17f302000b39379789"
+        },
+        {
+          "span_id": "C001-S034",
+          "text": "目大模型软件政务云租用项目",
+          "page": 40,
+          "paragraph": 1313,
+          "source_section": "采购需求",
+          "source_clause_id": "7.1",
+          "source_start_offset": 767,
+          "source_end_offset": 780,
+          "source_text_sha256": "4920452a62e3c213dc82d662912227db3056827686ef960729ddbbda547f2ae2"
+        }
+      ]
+    },
+    {
+      "chunk_number": 2,
+      "character_count": 703,
+      "estimated_token_count": 607,
+      "source_start_offset": 781,
+      "source_end_offset": 1484,
+      "spans": [
+        {
+          "span_id": "C002-S001",
+          "text": "174.0352 1",
+          "page": 40,
+          "paragraph": 1314,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 781,
+          "source_end_offset": 791,
+          "source_text_sha256": "ffefbba505fd8119048a66c7b890da547188f084942556a3fc78aadb7fbc7cc9"
+        },
+        {
+          "span_id": "C002-S002",
+          "text": "（二）项目背景或概况",
+          "page": 40,
+          "paragraph": 1315,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 792,
+          "source_end_offset": 802,
+          "source_text_sha256": "8a30ab4a2c38f561c65ea5d1f58a21389fce2a711f957c78ee3af7dd437af89c"
+        },
+        {
+          "span_id": "C002-S003",
+          "text": "根据北京市相关文件要求，北京市应急指挥调度能力提升工程项目购置的大",
+          "page": 40,
+          "paragraph": 1316,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 803,
+          "source_end_offset": 836,
+          "source_text_sha256": "d8595b5e6b03ced9421ec1b4e6d6d4e7485115331bc344539bf55115882a70f8"
+        },
+        {
+          "span_id": "C002-S004",
+          "text": "模型软件需部署至市级政务云平台。",
+          "page": 40,
+          "paragraph": 1317,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 837,
+          "source_end_offset": 853,
+          "source_text_sha256": "a8ceee515b948fe3b39b390259415fec6c8c8d81a17b79cff8b77a6e5d6c526b"
+        },
+        {
+          "span_id": "C002-S005",
+          "text": "二、商务要求",
+          "page": 40,
+          "paragraph": 1318,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 854,
+          "source_end_offset": 860,
+          "source_text_sha256": "467776de1b240cae704b2bacfefd53618ed656cdfa2b9ca6710f20bdca278ab3"
+        },
+        {
+          "span_id": "C002-S006",
+          "text": "（一）服务地点",
+          "page": 40,
+          "paragraph": 1319,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 861,
+          "source_end_offset": 868,
+          "source_text_sha256": "6e09d738aa1af5a867e23d91555d1588f04e50c08ca76c38f7fe4f2bbda1b4bf"
+        },
+        {
+          "span_id": "C002-S007",
+          "text": "服务地点：北京市通州区。",
+          "page": 40,
+          "paragraph": 1320,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 869,
+          "source_end_offset": 881,
+          "source_text_sha256": "ad060ca2011aa43d15cd7b1898f2f5fed67ee943837d29ccd10d72d0ed7ce074"
+        },
+        {
+          "span_id": "C002-S008",
+          "text": "（二）服务期限",
+          "page": 40,
+          "paragraph": 1321,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 882,
+          "source_end_offset": 889,
+          "source_text_sha256": "84f9da71e7a8300e58d5029d6f41660019cb41329dc35052f138ab2d00e5fa74"
+        },
+        {
+          "span_id": "C002-S009",
+          "text": "服务期限：自合同签订之日起 10 个月。",
+          "page": 40,
+          "paragraph": 1322,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 890,
+          "source_end_offset": 910,
+          "source_text_sha256": "fbb7364e06a7e799db03398de490b6b610d78f9ec2b07a07da52602f7c2fefc4"
+        },
+        {
+          "span_id": "C002-S010",
+          "text": "（三）验收服务标准",
+          "page": 40,
+          "paragraph": 1323,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 911,
+          "source_end_offset": 920,
+          "source_text_sha256": "100c1d929ab15d90c60daeeee55ae22e9978937032bec3fddc1a2a5165e8e3ed"
+        },
+        {
+          "span_id": "C002-S011",
+          "text": "中标人所提供资源应满足招标文件及相关合同规定的要求。保证合同期内系",
+          "page": 40,
+          "paragraph": 1324,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 921,
+          "source_end_offset": 954,
+          "source_text_sha256": "ad9971ae48aebe114328587f6360e68a05ee2fc7ee211fe7725826709708379b"
+        },
+        {
+          "span_id": "C002-S012",
+          "text": "统安全稳定运行，不因硬件故障导致服务中断 12 小时。服务期满后 30 个工作日",
+          "page": 40,
+          "paragraph": 1325,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 955,
+          "source_end_offset": 995,
+          "source_text_sha256": "40997523841a17f5b28dffb564308312a5a795e59027766d2b4f13fb113601f4"
+        },
+        {
+          "span_id": "C002-S013",
+          "text": "开始对合同项目进行验收。中标人应当在采购人指定的验收日前向采购人提交验",
+          "page": 40,
+          "paragraph": 1326,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 996,
+          "source_end_offset": 1031,
+          "source_text_sha256": "1fd8948ff5de98ffa7621797abc25c592fa87aca3bb5d79d330c8625aac3f349"
+        },
+        {
+          "span_id": "C002-S014",
+          "text": "收报告。验收报告的内容包括但不限于，合同规定的各项服务清单，各系统设备",
+          "page": 40,
+          "paragraph": 1327,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 1032,
+          "source_end_offset": 1067,
+          "source_text_sha256": "78e0224aef82a7499366896575d0cb724e872f06a974176d6e6dbfaad7508113"
+        },
+        {
+          "span_id": "C002-S015",
+          "text": "运行情况。",
+          "page": 40,
+          "paragraph": 1328,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 1068,
+          "source_end_offset": 1073,
+          "source_text_sha256": "d77e4e3119a6594490e733c626c774e73194ad8a2b42aadc4e3fbc7d750b0f4b"
+        },
+        {
+          "span_id": "C002-S016",
+          "text": "（四）服务费用及支付方式",
+          "page": 40,
+          "paragraph": 1329,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 1074,
+          "source_end_offset": 1086,
+          "source_text_sha256": "c0bb844fcb9e1712530e000d21063c7dd87fd749c76c834df59851978900357a"
+        },
+        {
+          "span_id": "C002-S017",
+          "text": "1、本合同服务费用共计人民币小写： 元，大写：人民币 ，",
+          "page": 40,
+          "paragraph": 1330,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 1087,
+          "source_end_offset": 1115,
+          "source_text_sha256": "09a075efa29da1dbcad14706636033c37edbf3d2291e0cc2a7b08ba8267219be"
+        },
+        {
+          "span_id": "C002-S018",
+          "text": "本合同服务费已经包含中标人完成本合同项下服务的全部费用，除前述款项外，",
+          "page": 40,
+          "paragraph": 1331,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 1116,
+          "source_end_offset": 1151,
+          "source_text_sha256": "79c60eb76c6e68e053d53230399e52b6bf8c62ae363dc71e798484a17c5160c7"
+        },
+        {
+          "span_id": "C002-S019",
+          "text": "采购人不再支付其他任何费用。",
+          "page": 40,
+          "paragraph": 1332,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 1152,
+          "source_end_offset": 1166,
+          "source_text_sha256": "5d32847784838d4485a6a2dfb2326bdaed5e52c3486452f30a43efced2203f68"
+        },
+        {
+          "span_id": "C002-S020",
+          "text": "2、采购人应于本合同签订且财政经费下达后 15 个工作日内，向中标人支付",
+          "page": 40,
+          "paragraph": 1333,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 1167,
+          "source_end_offset": 1203,
+          "source_text_sha256": "2bc53a90ce62bdd1375b24e4fd977a36064c10eb47047d5b4ad4833c2e38e8bb"
+        },
+        {
+          "span_id": "C002-S021",
+          "text": "合同服务费的 70%，金额为人民币小写： 元，大写：人民币 ；",
+          "page": 40,
+          "paragraph": 1334,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 1204,
+          "source_end_offset": 1235,
+          "source_text_sha256": "4c654f3cba05c421bea0e9cd347bbc30f2f08b56919e44e8aba0fcf6db80521a"
+        },
+        {
+          "span_id": "C002-S022",
+          "text": "3、合同服务到期后，通过项目验收且财政经费下达后 15 个工作日内，采购",
+          "page": 40,
+          "paragraph": 1335,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 1236,
+          "source_end_offset": 1272,
+          "source_text_sha256": "b6c6c11574645bab508648eb9efe74baa8125dd8382de8f873c5cac3e49b079b"
+        },
+        {
+          "span_id": "C002-S023",
+          "text": "40",
+          "page": 41,
+          "paragraph": 1336,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 1273,
+          "source_end_offset": 1275,
+          "source_text_sha256": "d59eced1ded07f84c145592f65bdf854358e009c5cd705f5215bf18697fed103"
+        },
+        {
+          "span_id": "C002-S024",
+          "text": "人向中标人支付合同服务费的 30%，金额为人民币小写： 元，大写：人",
+          "page": 41,
+          "paragraph": 1337,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 1276,
+          "source_end_offset": 1310,
+          "source_text_sha256": "fa8f3a2e91e92d35d0984e43f4379b782f12d7b22eac0bbd014adcfdb98e516f"
+        },
+        {
+          "span_id": "C002-S025",
+          "text": "民币 ；",
+          "page": 41,
+          "paragraph": 1338,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 1311,
+          "source_end_offset": 1315,
+          "source_text_sha256": "2878c46371a489db8908ea83f31f156d686288074e523019bae6bc8b0b112a16"
+        },
+        {
+          "span_id": "C002-S026",
+          "text": "4、中标人在采购人付款前需向采购人提供等额的法定正规发票，如中标人",
+          "page": 41,
+          "paragraph": 1339,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 1316,
+          "source_end_offset": 1349,
+          "source_text_sha256": "5a39c76df814ada832ee2ac683444ee69477daa39854a3f88381986a77c38025"
+        },
+        {
+          "span_id": "C002-S027",
+          "text": "未向采购人提供合格发票，采购人有权延迟付款，且不承担违约责任。",
+          "page": 41,
+          "paragraph": 1340,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 1350,
+          "source_end_offset": 1381,
+          "source_text_sha256": "74a7911bec1c6f1429c39fc2448eb1174af16d627893921ab686d4cc7b226acd"
+        },
+        {
+          "span_id": "C002-S028",
+          "text": "三、技术要求",
+          "page": 41,
+          "paragraph": 1341,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 1382,
+          "source_end_offset": 1388,
+          "source_text_sha256": "fb4b025e2974d096ba8b3797d3fc8e9971b09e815d1ec52ca6757ba9a3ed9d1e"
+        },
+        {
+          "span_id": "C002-S029",
+          "text": "（一）政务云基础服务",
+          "page": 41,
+          "paragraph": 1342,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 1389,
+          "source_end_offset": 1399,
+          "source_text_sha256": "6c74c638e2b65384ec2f9258f44a8cc588a73bfc645d9ecce7fe60387d4eb294"
+        },
+        {
+          "span_id": "C002-S030",
+          "text": "服务类别 服务子类 服务项 计价单",
+          "page": 41,
+          "paragraph": 1343,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 1400,
+          "source_end_offset": 1417,
+          "source_text_sha256": "16c6ed121be3ad2014ec74c702c2afb3135396014af1e6f959e1e3bf954ae606"
+        },
+        {
+          "span_id": "C002-S031",
+          "text": "位",
+          "page": 41,
+          "paragraph": 1344,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 1418,
+          "source_end_offset": 1419,
+          "source_text_sha256": "1aa9c4170bddb16e01b1727623dbd03c48bd4558c7e8419d671a3db994d10440"
+        },
+        {
+          "span_id": "C002-S032",
+          "text": "报价",
+          "page": 41,
+          "paragraph": 1345,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 1420,
+          "source_end_offset": 1422,
+          "source_text_sha256": "f618ad85121287886919508765f100d5d8e054902cda2b63d497d8ce2a463cd5"
+        },
+        {
+          "span_id": "C002-S033",
+          "text": "单位 数量",
+          "page": 41,
+          "paragraph": 1346,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 1423,
+          "source_end_offset": 1428,
+          "source_text_sha256": "0c325d2b0d0ab02316a8bd121ac6f183f3941e01c36cf75e47f181f8c287bc54"
+        },
+        {
+          "span_id": "C002-S034",
+          "text": "期",
+          "page": 41,
+          "paragraph": 1347,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 1429,
+          "source_end_offset": 1430,
+          "source_text_sha256": "c0ccb452d3bc73071be2fcc72b194cfd8c69da06fdbd410bf129169c3b2f0e30"
+        },
+        {
+          "span_id": "C002-S035",
+          "text": "限",
+          "page": 41,
+          "paragraph": 1348,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 1431,
+          "source_end_offset": 1432,
+          "source_text_sha256": "065742f30c952b5cc13b060441acd380df62ead7a154832f8eb661aa91875082"
+        },
+        {
+          "span_id": "C002-S036",
+          "text": "（",
+          "page": 41,
+          "paragraph": 1349,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 1433,
+          "source_end_offset": 1434,
+          "source_text_sha256": "da047c04c9b5e27e78ff208247d6606ea098526d165f12be6e39e8ec8d022e18"
+        },
+        {
+          "span_id": "C002-S037",
+          "text": "月）",
+          "page": 41,
+          "paragraph": 1350,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 1435,
+          "source_end_offset": 1437,
+          "source_text_sha256": "96fa82cdfda936fdd84b4dd56cbeb32503cb633ca69f3b13e17b0ae94480084e"
+        },
+        {
+          "span_id": "C002-S038",
+          "text": "vCPU（vCPU ARM 架构主频",
+          "page": 41,
+          "paragraph": 1351,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 1438,
+          "source_end_offset": 1456,
+          "source_text_sha256": "b69cc4c062c3fb711541176f575dfe2a75561d77a42d9a6aaafd309434209104"
+        },
+        {
+          "span_id": "C002-S039",
+          "text": "不低于 2.4GHz，",
+          "page": 41,
+          "paragraph": 1352,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 1457,
+          "source_end_offset": 1468,
+          "source_text_sha256": "cd70f07aec33acfaf641b747e88929ef7334cba7a00ab3e210de08f4cf1f3045"
+        },
+        {
+          "span_id": "C002-S040",
+          "text": "C86 和 x86 主频不低于",
+          "page": 41,
+          "paragraph": 1353,
+          "source_section": "采购需求",
+          "source_clause_id": "174.0352",
+          "source_start_offset": 1469,
+          "source_end_offset": 1484,
+          "source_text_sha256": "9c37c6838ada7c15cfef6e91242ba6d5a80bddb9f3617a099c8342332b373f35"
+        }
+      ]
+    },
+    {
+      "chunk_number": 3,
+      "character_count": 552,
+      "estimated_token_count": 346,
+      "source_start_offset": 1485,
+      "source_end_offset": 2037,
+      "spans": [
+        {
+          "span_id": "C003-S001",
+          "text": "2.2GHz，平均虚拟化率，",
+          "page": 41,
+          "paragraph": 1354,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1485,
+          "source_end_offset": 1499,
+          "source_text_sha256": "059ac8c36238f734e7f5f25b371b6bbef074eb907b9feebd3925b54c96e3ad4e"
+        },
+        {
+          "span_id": "C003-S002",
+          "text": "即物理 CPU/虚拟 CPU≥",
+          "page": 41,
+          "paragraph": 1355,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1500,
+          "source_end_offset": 1515,
+          "source_text_sha256": "28b65bfdb0100b41d5b52021be522a637fc84df4b8d8be784a00e7fe4e2aca4f"
+        },
+        {
+          "span_id": "C003-S003",
+          "text": "1/4，虚拟 CPU 利用率不低",
+          "page": 41,
+          "paragraph": 1356,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1516,
+          "source_end_offset": 1532,
+          "source_text_sha256": "3d00c157739e7ff5d7d80b087acbc0780a0fd4215bbf547f76b7881298c8723f"
+        },
+        {
+          "span_id": "C003-S004",
+          "text": "于物理 CPU 的 25% ）",
+          "page": 41,
+          "paragraph": 1357,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1533,
+          "source_end_offset": 1548,
+          "source_text_sha256": "af97b640174beae3de16dd1991c23599b9a91fa679894e6a8fa620e05d0584f2"
+        },
+        {
+          "span_id": "C003-S005",
+          "text": "1 CPU 元/",
+          "page": 41,
+          "paragraph": 1358,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1549,
+          "source_end_offset": 1557,
+          "source_text_sha256": "ddf75be88374b2b215a12e71fcb15a03c757929d4d85032375cce2227631a96d"
+        },
+        {
+          "span_id": "C003-S006",
+          "text": "月 504 10\t平台云主机服",
+          "page": 41,
+          "paragraph": 1359,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1558,
+          "source_end_offset": 1573,
+          "source_text_sha256": "d2780b8b064f8399c2a7bc22e5f0bb0398cc8bd659b51358fab6d50e92e05b4c"
+        },
+        {
+          "span_id": "C003-S007",
+          "text": "务（包含 X86、",
+          "page": 41,
+          "paragraph": 1360,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1574,
+          "source_end_offset": 1583,
+          "source_text_sha256": "4d4040fc5e51112583140bdf45165720e0158e115a566680d66c48d663f4bc08"
+        },
+        {
+          "span_id": "C003-S008",
+          "text": "ARM、C86）",
+          "page": 41,
+          "paragraph": 1361,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1584,
+          "source_end_offset": 1592,
+          "source_text_sha256": "77152498a08643b6b519da62f3c617878db6041a400308eddd5017112b4a3e7e"
+        },
+        {
+          "span_id": "C003-S009",
+          "text": "内存 1 GB 元/",
+          "page": 41,
+          "paragraph": 1362,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1593,
+          "source_end_offset": 1603,
+          "source_text_sha256": "aa2ba6ad7397ad175e9c251887e26142d32902b5cefab4ed6d9d517833d28284"
+        },
+        {
+          "span_id": "C003-S010",
+          "text": "月 1728 10",
+          "page": 41,
+          "paragraph": 1363,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1604,
+          "source_end_offset": 1613,
+          "source_text_sha256": "b784fa78fdd4f51f337b7b1fc81bb575766e9c5e7f597c5f94409162dde1aecd"
+        },
+        {
+          "span_id": "C003-S011",
+          "text": "GPU 显存（需同时租用算",
+          "page": 41,
+          "paragraph": 1364,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1614,
+          "source_end_offset": 1627,
+          "source_text_sha256": "5a0c7a8f7306f0a0c48a1c21df6dad68ace1b7f3d7b11a9e6112b18951cea5cc"
+        },
+        {
+          "span_id": "C003-S012",
+          "text": "力资源、云主机或物理",
+          "page": 41,
+          "paragraph": 1365,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1628,
+          "source_end_offset": 1638,
+          "source_text_sha256": "e5ecef5c6e56d94295887550ea124a637fc0fa8ec772e20aa423c63cb68c6452"
+        },
+        {
+          "span_id": "C003-S013",
+          "text": "服务器资源，联合使用）",
+          "page": 41,
+          "paragraph": 1366,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1639,
+          "source_end_offset": 1650,
+          "source_text_sha256": "264bd610239984260c1b9ed6ef8a5766e4ef6dbc8059ec2e71de75b6d1c79d41"
+        },
+        {
+          "span_id": "C003-S014",
+          "text": "1 GB 元/",
+          "page": 41,
+          "paragraph": 1367,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1651,
+          "source_end_offset": 1658,
+          "source_text_sha256": "c4eb9076606cb887f21104a32a77d8cfed783eccc2fffb0964635c42c7d9a8d0"
+        },
+        {
+          "span_id": "C003-S015",
+          "text": "月 1024 10",
+          "page": 41,
+          "paragraph": 1368,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1659,
+          "source_end_offset": 1668,
+          "source_text_sha256": "d83aa199acf35859f2fd4ba2cddb1c613b89352b8dd5e0e688bd240114328c22"
+        },
+        {
+          "span_id": "C003-S016",
+          "text": "计算服务",
+          "page": 41,
+          "paragraph": 1369,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1669,
+          "source_end_offset": 1673,
+          "source_text_sha256": "a5121d9c573d3f03a55e78619a4ef253961e7aaa55de5f127f2d3737441e9c03"
+        },
+        {
+          "span_id": "C003-S017",
+          "text": "GPU 卡算力服务",
+          "page": 41,
+          "paragraph": 1370,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1674,
+          "source_end_offset": 1683,
+          "source_text_sha256": "711dffcfa086d3cc773aff901b42d42c6b540b16436260bcd74e03997cc3678f"
+        },
+        {
+          "span_id": "C003-S018",
+          "text": "（适配 X86、ARM、",
+          "page": 41,
+          "paragraph": 1371,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1684,
+          "source_end_offset": 1696,
+          "source_text_sha256": "656e3605e71c207bb7cb03498ac10b7258828a2543b49c3f02213c37efc05bef"
+        },
+        {
+          "span_id": "C003-S019",
+          "text": "C86）",
+          "page": 41,
+          "paragraph": 1372,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1697,
+          "source_end_offset": 1701,
+          "source_text_sha256": "dc239fecf34f3ec8603d8d8bea12024e9a878bbf69fab25f631f709549f0eaea"
+        },
+        {
+          "span_id": "C003-S020",
+          "text": "半精度浮点运算能力（需",
+          "page": 41,
+          "paragraph": 1373,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1702,
+          "source_end_offset": 1713,
+          "source_text_sha256": "4bcf899bfe19606ecb6796e6a86338beff96c625fe08e7ee5c239439754ba9d3"
+        },
+        {
+          "span_id": "C003-S021",
+          "text": "同时租用 GPU 显存、云主",
+          "page": 41,
+          "paragraph": 1374,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1714,
+          "source_end_offset": 1728,
+          "source_text_sha256": "99f533bb898c22de401664140a9997bb92c9b874961c22e93a03c4757863ea9f"
+        },
+        {
+          "span_id": "C003-S022",
+          "text": "机或物理服务器资源，联",
+          "page": 41,
+          "paragraph": 1375,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1729,
+          "source_end_offset": 1740,
+          "source_text_sha256": "9fd3e8025cc653c1cfc714a2cd60965a1047ff3840c2fcc39966316559a1b4a8"
+        },
+        {
+          "span_id": "C003-S023",
+          "text": "合使用）",
+          "page": 41,
+          "paragraph": 1376,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1741,
+          "source_end_offset": 1745,
+          "source_text_sha256": "9e72dce44ec1eb65dfcc6ea697dfbbd618cbf5a5d3053c63a79c3bec59a5f4d3"
+        },
+        {
+          "span_id": "C003-S024",
+          "text": "1",
+          "page": 41,
+          "paragraph": 1377,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1746,
+          "source_end_offset": 1747,
+          "source_text_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+        },
+        {
+          "span_id": "C003-S025",
+          "text": "TFLOPS",
+          "page": 41,
+          "paragraph": 1378,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1748,
+          "source_end_offset": 1754,
+          "source_text_sha256": "ecba456d7d6e69a8c110383bad46b7b0378a7435a4eddb6d102e39e6e3edf9ad"
+        },
+        {
+          "span_id": "C003-S026",
+          "text": "元/",
+          "page": 41,
+          "paragraph": 1379,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1755,
+          "source_end_offset": 1757,
+          "source_text_sha256": "b8adbb84875281e457ad9775ac75eb90956030d87a69ef522bdabf852cb2321f"
+        },
+        {
+          "span_id": "C003-S027",
+          "text": "月 3712 10",
+          "page": 41,
+          "paragraph": 1380,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1758,
+          "source_end_offset": 1767,
+          "source_text_sha256": "59d97c8e7a1fab35c9465077b8e42013228fbc665ab7f5b2bed67fbef23afdbb"
+        },
+        {
+          "span_id": "C003-S028",
+          "text": "普通性能存储 普通存储（单盘技术指标:",
+          "page": 41,
+          "paragraph": 1381,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1768,
+          "source_end_offset": 1787,
+          "source_text_sha256": "7917cdb8a918ea9a665b8b5918e7b5f2bbfad9fb9b3d10250fe68a8cdd93e6bb"
+        },
+        {
+          "span_id": "C003-S029",
+          "text": "单盘 IOPS 2000-5000） 100 GB 元/",
+          "page": 41,
+          "paragraph": 1382,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1788,
+          "source_end_offset": 1816,
+          "source_text_sha256": "f9b39d189220ee4b106ec4a96a0a357b7e374d3df4c32e4c6cdbf5b59c26ac96"
+        },
+        {
+          "span_id": "C003-S030",
+          "text": "月 68 10",
+          "page": 41,
+          "paragraph": 1383,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1817,
+          "source_end_offset": 1824,
+          "source_text_sha256": "8e675ae9bfd7887f58a1a89e3f124a8cca50e2daee3690385fdad746d2afea9d"
+        },
+        {
+          "span_id": "C003-S031",
+          "text": "高性能存储",
+          "page": 41,
+          "paragraph": 1384,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1825,
+          "source_end_offset": 1830,
+          "source_text_sha256": "b48193b7fa1fc787f51124bded9dbc278126e443f96f2a10e8eb5924565c4ae7"
+        },
+        {
+          "span_id": "C003-S032",
+          "text": "高性能存储（单盘技术指",
+          "page": 41,
+          "paragraph": 1385,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1831,
+          "source_end_offset": 1842,
+          "source_text_sha256": "8b087b80261c2f7eb5d70c76e3fff1ac78b09e4e388d5da808e6539c90f00118"
+        },
+        {
+          "span_id": "C003-S033",
+          "text": "标：单盘 IOPS",
+          "page": 41,
+          "paragraph": 1386,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1843,
+          "source_end_offset": 1852,
+          "source_text_sha256": "79d919bb9c8a9ec85ceecb32071027e0b4b884a7653853e0076defc24375db83"
+        },
+        {
+          "span_id": "C003-S034",
+          "text": "10000-25000）",
+          "page": 41,
+          "paragraph": 1387,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1853,
+          "source_end_offset": 1865,
+          "source_text_sha256": "a34fdbfff5d7121631ab65d777f84277d9dbbe832912957439c0c36fbcc47dfa"
+        },
+        {
+          "span_id": "C003-S035",
+          "text": "100 GB 元/",
+          "page": 41,
+          "paragraph": 1388,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1866,
+          "source_end_offset": 1875,
+          "source_text_sha256": "b0b84034fc37f2b0f024645b3d873bd3bb90f89a89de5ee1edb6bd8295828acc"
+        },
+        {
+          "span_id": "C003-S036",
+          "text": "月",
+          "page": 41,
+          "paragraph": 1389,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1876,
+          "source_end_offset": 1877,
+          "source_text_sha256": "1625179badc027f0d0a26df9da3d4ae1be4483cc0a9365e54faab22fbe250055"
+        },
+        {
+          "span_id": "C003-S037",
+          "text": "259.",
+          "page": 41,
+          "paragraph": 1390,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1878,
+          "source_end_offset": 1882,
+          "source_text_sha256": "5a30362c234239a7153bed46ab5cd5f8ecfd62f5ca0195ef5b73e9a6328891c1"
+        },
+        {
+          "span_id": "C003-S038",
+          "text": "72 10",
+          "page": 41,
+          "paragraph": 1391,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1883,
+          "source_end_offset": 1888,
+          "source_text_sha256": "79b0d0313c4a788a03c38b52531ce60a0a74b28effd9227f98d2224403e675f6"
+        },
+        {
+          "span_id": "C003-S039",
+          "text": "存储服务（兼",
+          "page": 41,
+          "paragraph": 1392,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1889,
+          "source_end_offset": 1895,
+          "source_text_sha256": "fcd24b7e0c70fd4b5ebbbdeaa35c61bbc88d16f0510b4577a021591b9b51d003"
+        },
+        {
+          "span_id": "C003-S040",
+          "text": "容 X86、ARM、",
+          "page": 41,
+          "paragraph": 1393,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1896,
+          "source_end_offset": 1906,
+          "source_text_sha256": "2afa61b88610e325245faef70887a61bc880f766cf9263ff84229269d3821f91"
+        },
+        {
+          "span_id": "C003-S041",
+          "text": "C86）",
+          "page": 41,
+          "paragraph": 1394,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1907,
+          "source_end_offset": 1911,
+          "source_text_sha256": "dc239fecf34f3ec8603d8d8bea12024e9a878bbf69fab25f631f709549f0eaea"
+        },
+        {
+          "span_id": "C003-S042",
+          "text": "本地备份服务 本地备份服务 100 GB 元/",
+          "page": 41,
+          "paragraph": 1395,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1912,
+          "source_end_offset": 1935,
+          "source_text_sha256": "bb7f3ecba58f47b0905b1c3f950729e921cec9d40401781ae7a7e99de07523d5"
+        },
+        {
+          "span_id": "C003-S043",
+          "text": "月 68 10",
+          "page": 41,
+          "paragraph": 1396,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1936,
+          "source_end_offset": 1943,
+          "source_text_sha256": "8e675ae9bfd7887f58a1a89e3f124a8cca50e2daee3690385fdad746d2afea9d"
+        },
+        {
+          "span_id": "C003-S044",
+          "text": "网络服务（兼",
+          "page": 41,
+          "paragraph": 1397,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1944,
+          "source_end_offset": 1950,
+          "source_text_sha256": "2e9043b612f09e53f1df6e5d674817ebc149394308875cd7246fdf2f21c33afb"
+        },
+        {
+          "span_id": "C003-S045",
+          "text": "容 X86、ARM、",
+          "page": 41,
+          "paragraph": 1398,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1951,
+          "source_end_offset": 1961,
+          "source_text_sha256": "2afa61b88610e325245faef70887a61bc880f766cf9263ff84229269d3821f91"
+        },
+        {
+          "span_id": "C003-S046",
+          "text": "C86）",
+          "page": 41,
+          "paragraph": 1399,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1962,
+          "source_end_offset": 1966,
+          "source_text_sha256": "dc239fecf34f3ec8603d8d8bea12024e9a878bbf69fab25f631f709549f0eaea"
+        },
+        {
+          "span_id": "C003-S047",
+          "text": "远程接入服务 远程接入服务 1 账号 元/",
+          "page": 41,
+          "paragraph": 1400,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1967,
+          "source_end_offset": 1988,
+          "source_text_sha256": "4b10789391376dae5e2dab9341caf7d633fcbffdceb7148158d19bcb5592fb26"
+        },
+        {
+          "span_id": "C003-S048",
+          "text": "月 4 10",
+          "page": 41,
+          "paragraph": 1401,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1989,
+          "source_end_offset": 1995,
+          "source_text_sha256": "fea74195b5d37eb9303d2bd0a4f027086efecabc336cdb4038bccf7aca1aede9"
+        },
+        {
+          "span_id": "C003-S049",
+          "text": "（二）采购目标",
+          "page": 41,
+          "paragraph": 1402,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 1996,
+          "source_end_offset": 2003,
+          "source_text_sha256": "3d0733b5bb8f363a1af08a442678c9a5c43b799bcefe43aafa6eaea6313b3938"
+        },
+        {
+          "span_id": "C003-S050",
+          "text": "本项目的总体目标是通过租用政务云平台基础服务，对北京市应急管理局应",
+          "page": 41,
+          "paragraph": 1403,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2004,
+          "source_end_offset": 2037,
+          "source_text_sha256": "f1ce431feb55ed93218b9ff45e1588fcd914f325c691919d74f297ef34254f7d"
+        }
+      ]
+    },
+    {
+      "chunk_number": 4,
+      "character_count": 1252,
+      "estimated_token_count": 1135,
+      "source_start_offset": 2038,
+      "source_end_offset": 3290,
+      "spans": [
+        {
+          "span_id": "C004-S001",
+          "text": "急指挥调度能力提升工程项目的文字大模型和视觉智能平台运行环境进行持续",
+          "page": 41,
+          "paragraph": 1404,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2038,
+          "source_end_offset": 2072,
+          "source_text_sha256": "68b8110d47157467e6103fbead1e7cdeb1e6fc4fcc7a0d169ce2d3000edfccf1"
+        },
+        {
+          "span_id": "C004-S002",
+          "text": "优化，提供可靠、稳定、安全的政务云基础服务，具体包括：",
+          "page": 41,
+          "paragraph": 1405,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2073,
+          "source_end_offset": 2100,
+          "source_text_sha256": "e9f209e90856b32613af2c577b95bcb04113c823a1634c2fc91aef590d60abbc"
+        },
+        {
+          "span_id": "C004-S003",
+          "text": "41",
+          "page": 42,
+          "paragraph": 1406,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2101,
+          "source_end_offset": 2103,
+          "source_text_sha256": "3d914f9348c9cc0ff8a79716700b9fcd4d2f3e711608004eb8f138bcba7f14d9"
+        },
+        {
+          "span_id": "C004-S004",
+          "text": "1、提供政务云基础服务，包括计算服务、存储服务和网络服务等基础环境",
+          "page": 42,
+          "paragraph": 1407,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2104,
+          "source_end_offset": 2137,
+          "source_text_sha256": "f83bbadf016427f8ca2bfb9a4f330c33cf1211c128c8e1edcd4dc75a45c6702a"
+        },
+        {
+          "span_id": "C004-S005",
+          "text": "日常维护、应急响应等工作。",
+          "page": 42,
+          "paragraph": 1408,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2138,
+          "source_end_offset": 2151,
+          "source_text_sha256": "458b6d66d7d00c30229bd18875d6827b334f353c9478adae467369e1d4d6b94e"
+        },
+        {
+          "span_id": "C004-S006",
+          "text": "2、提供 7*24 运维保障，做好重大活动和节假日应急值守保障服务，确保各",
+          "page": 42,
+          "paragraph": 1409,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2152,
+          "source_end_offset": 2189,
+          "source_text_sha256": "41eb0d9b386e3dc35f8d4ba1c593413407c361080dd29d65228c273226c6ec7c"
+        },
+        {
+          "span_id": "C004-S007",
+          "text": "系统在政务云环境中可靠稳定运行。",
+          "page": 42,
+          "paragraph": 1410,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2190,
+          "source_end_offset": 2206,
+          "source_text_sha256": "bc73504ca816bdc8b4bd0b75bd5fa6e8d14ed971f828e5879285107b1c753475"
+        },
+        {
+          "span_id": "C004-S008",
+          "text": "3、服务期内，投标人须完成信息系统的日常运维和安全运维服务工作（包",
+          "page": 42,
+          "paragraph": 1411,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2207,
+          "source_end_offset": 2240,
+          "source_text_sha256": "25de30c930db92da8532a2e580142a479b4b2951f0b9f583c310558dd39949d0"
+        },
+        {
+          "span_id": "C004-S009",
+          "text": "括但不限于：云平台服务、日常技术支持、系统日常维护、服务规范、安全及保",
+          "page": 42,
+          "paragraph": 1412,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2241,
+          "source_end_offset": 2276,
+          "source_text_sha256": "8eb02aa3016270e2ba06748e725b30219877c4f2442f327e0c764b392b141fc0"
+        },
+        {
+          "span_id": "C004-S010",
+          "text": "密要求、响应的及时性），确保入云系统安全、稳定的运行。",
+          "page": 42,
+          "paragraph": 1413,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2277,
+          "source_end_offset": 2304,
+          "source_text_sha256": "84b6d070403b66bfd5aebe3ad621d6906e569a7d3b9d8255abb6df373af1fcea"
+        },
+        {
+          "span_id": "C004-S011",
+          "text": "（三）服务内容",
+          "page": 42,
+          "paragraph": 1414,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2305,
+          "source_end_offset": 2312,
+          "source_text_sha256": "6f946e504ea53e11ffab6443032cc4cee7c77deb5e7e8ebb5c3404e737b41798"
+        },
+        {
+          "span_id": "C004-S012",
+          "text": "1.计算服务",
+          "page": 42,
+          "paragraph": 1415,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2313,
+          "source_end_offset": 2319,
+          "source_text_sha256": "14e8c4e060ec5bb1fe17a4e06eb13a6a2d557235ea7c2366e7b26bb480c95f6e"
+        },
+        {
+          "span_id": "C004-S013",
+          "text": "投标人需根据采购需求，提供计算服务，包括：平台云主机服务（包含",
+          "page": 42,
+          "paragraph": 1416,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2320,
+          "source_end_offset": 2351,
+          "source_text_sha256": "92d4baf06ebb9875ed2db3ab72ff6cf2522cf880d6b05f6615b0d07095495a75"
+        },
+        {
+          "span_id": "C004-S014",
+          "text": "X86、ARM、C86）和 GPU 卡算力服务（适配 X86、ARM、C86），实现合理的计算",
+          "page": 42,
+          "paragraph": 1417,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2352,
+          "source_end_offset": 2399,
+          "source_text_sha256": "07c7c0962ab9fc980b56c3d0fda7cc133aa100231fcf832896bbcf70270016c5"
+        },
+        {
+          "span_id": "C004-S015",
+          "text": "资源配置。按照采购人要求对 vCPU 及内存进行动态调整，自接到工单至完成调",
+          "page": 42,
+          "paragraph": 1418,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2400,
+          "source_end_offset": 2438,
+          "source_text_sha256": "6ebaa243ecf85d0596dcb4da774438be88bebce5e3e7441d49f6766691d66be7"
+        },
+        {
+          "span_id": "C004-S016",
+          "text": "整时间不超过 4 小时。",
+          "page": 42,
+          "paragraph": 1419,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2439,
+          "source_end_offset": 2451,
+          "source_text_sha256": "ad11738b182f798a5bb879a8421fc5dc706e9319fa402b1ede5cfc15d069ebb6"
+        },
+        {
+          "span_id": "C004-S017",
+          "text": "2.存储服务",
+          "page": 42,
+          "paragraph": 1420,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2452,
+          "source_end_offset": 2458,
+          "source_text_sha256": "b4a86de1b6b725f7088f7fa91a26bd2854dad84c665993e737c3e503defd2adb"
+        },
+        {
+          "span_id": "C004-S018",
+          "text": "投标人需根据采购需求，提供存储服务，包括：普通性能存储、高性能存储",
+          "page": 42,
+          "paragraph": 1421,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2459,
+          "source_end_offset": 2492,
+          "source_text_sha256": "e8c4fdb1d2ca01ef7fa2013c763bed2c2ec4e007fb916f21230b383404331037"
+        },
+        {
+          "span_id": "C004-S019",
+          "text": "和本地备份服务。",
+          "page": 42,
+          "paragraph": 1422,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2493,
+          "source_end_offset": 2501,
+          "source_text_sha256": "06a2838c80af88016cfeb86882aa007b00aa8549d331c7b5f46bacb60fcc278e"
+        },
+        {
+          "span_id": "C004-S020",
+          "text": "投标人需根据采购需求，提供单盘 IOPS1000-3000 的普通性能存储服务，按",
+          "page": 42,
+          "paragraph": 1423,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2502,
+          "source_end_offset": 2543,
+          "source_text_sha256": "d4a60e98d86dd9de044a32d1038eeaa42d6341306988935a38a5627f9af711b8"
+        },
+        {
+          "span_id": "C004-S021",
+          "text": "照采购人要求对存储空间和配置进行动态调整。",
+          "page": 42,
+          "paragraph": 1424,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2544,
+          "source_end_offset": 2565,
+          "source_text_sha256": "b3b12c78bb0a256dff5777fcb0293a35c9f333ca9e8fef5bd39d20132ce21356"
+        },
+        {
+          "span_id": "C004-S022",
+          "text": "投标人需根据采购需求，提供单盘 IOPS 3000-20000 的高性能存储服务，按",
+          "page": 42,
+          "paragraph": 1425,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2566,
+          "source_end_offset": 2608,
+          "source_text_sha256": "16645aed53d73aec7adf12dda947bfc982b04561ea368c9ad7961e5bd69eb4b4"
+        },
+        {
+          "span_id": "C004-S023",
+          "text": "照采购人要求对存储空间和配置进行动态调整。",
+          "page": 42,
+          "paragraph": 1426,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2609,
+          "source_end_offset": 2630,
+          "source_text_sha256": "b3b12c78bb0a256dff5777fcb0293a35c9f333ca9e8fef5bd39d20132ce21356"
+        },
+        {
+          "span_id": "C004-S024",
+          "text": "投标人需根据采购需求，提供本地备份服务，通过备份策略实现文件、操作",
+          "page": 42,
+          "paragraph": 1427,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2631,
+          "source_end_offset": 2664,
+          "source_text_sha256": "79e1aad436029711f8a6cdec1cacb0cae11dc313e5b806c94c3c4d76fd65b62d"
+        },
+        {
+          "span_id": "C004-S025",
+          "text": "系统、数据库的本地备份。",
+          "page": 42,
+          "paragraph": 1428,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2665,
+          "source_end_offset": 2677,
+          "source_text_sha256": "1c837af2ef03a22908e217a9a547b0935e243fddbd4938381ca488cec0cf800d"
+        },
+        {
+          "span_id": "C004-S026",
+          "text": "3.网络服务",
+          "page": 42,
+          "paragraph": 1429,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2678,
+          "source_end_offset": 2684,
+          "source_text_sha256": "8d76d260701babafd0d7e265f1275b76bb4812673fc8e6b11f6eb3315dcb5501"
+        },
+        {
+          "span_id": "C004-S027",
+          "text": "投标人需根据采购需求，提供远程接入服务，每个账号结合身份验证通过 VPN",
+          "page": 42,
+          "paragraph": 1430,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2685,
+          "source_end_offset": 2721,
+          "source_text_sha256": "00a3eef6c5d6a4da9f0262998fb307d85deb2f47307ef0cfb65449205e6f8ed5"
+        },
+        {
+          "span_id": "C004-S028",
+          "text": "远程接入堡垒机维护应用系统。",
+          "page": 42,
+          "paragraph": 1431,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2722,
+          "source_end_offset": 2736,
+          "source_text_sha256": "c013a595a81b8cb9ea237a456c5901fab3167f21d210aa678fe0ddb308ce923d"
+        },
+        {
+          "span_id": "C004-S029",
+          "text": "4.运维服务",
+          "page": 42,
+          "paragraph": 1432,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2737,
+          "source_end_offset": 2743,
+          "source_text_sha256": "65339897a7201d1efc607d88e2857b66c341d8ba93dfade1032dd10f61deff7b"
+        },
+        {
+          "span_id": "C004-S030",
+          "text": "投标人提供的政务云环境应在安全等保三级基础上，按各业务系统具体安全",
+          "page": 42,
+          "paragraph": 1433,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2744,
+          "source_end_offset": 2777,
+          "source_text_sha256": "01c8d23b931c9d3dd1ef7a23f6cd372a7828a6d6700701d7b75091cd534e3402"
+        },
+        {
+          "span_id": "C004-S031",
+          "text": "需求，开展相应等保评估、检查、整改等工作。",
+          "page": 42,
+          "paragraph": 1434,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2778,
+          "source_end_offset": 2799,
+          "source_text_sha256": "2a03af7153d1de654a9ae7983b61c74ae55f3bce858c5b1d4ac95d0bbadf8bec"
+        },
+        {
+          "span_id": "C004-S032",
+          "text": "（1）服务规范",
+          "page": 42,
+          "paragraph": 1435,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2800,
+          "source_end_offset": 2807,
+          "source_text_sha256": "20befd64b6395cc6a0833e265f4a37deda344766f327794912439494588f3381"
+        },
+        {
+          "span_id": "C004-S033",
+          "text": "投标人须严格按照《北京市市级政务云管理办法》以及采购人制定的管理办",
+          "page": 42,
+          "paragraph": 1436,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2808,
+          "source_end_offset": 2841,
+          "source_text_sha256": "e92f9451bc029233400b0c066624dd5ad100bbdeaa6adc16e8383958d3548ff9"
+        },
+        {
+          "span_id": "C004-S034",
+          "text": "42",
+          "page": 43,
+          "paragraph": 1437,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2842,
+          "source_end_offset": 2844,
+          "source_text_sha256": "73475cb40a568e8da8a045ced110137e159f890ac4da883b6b17dc651b3a8049"
+        },
+        {
+          "span_id": "C004-S035",
+          "text": "法及流程等相关制度，开展标准化运维工作。",
+          "page": 43,
+          "paragraph": 1438,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2845,
+          "source_end_offset": 2865,
+          "source_text_sha256": "44599e7201abf61a32a0725fbe8f3f35eeaab10a02f337b77e4d19a7a2e149fe"
+        },
+        {
+          "span_id": "C004-S036",
+          "text": "（2）服务方式",
+          "page": 43,
+          "paragraph": 1439,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2866,
+          "source_end_offset": 2873,
+          "source_text_sha256": "ae72a9b7627e42fd309352b28db5f90857572e369a99c29f0c2b23f1236d324a"
+        },
+        {
+          "span_id": "C004-S037",
+          "text": "投标人需利用监控系统或人工对机房环境、硬件设备及应用系统的运行情况",
+          "page": 43,
+          "paragraph": 1440,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2874,
+          "source_end_offset": 2907,
+          "source_text_sha256": "4661ca61366152021be7e92c86b053cc0339c926f11a3837cb34535b90ae2c01"
+        },
+        {
+          "span_id": "C004-S038",
+          "text": "进行 7×24 小时的不间断巡检监控，及时发现安全隐患，通知相关人员及时处理，",
+          "page": 43,
+          "paragraph": 1441,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2908,
+          "source_end_offset": 2947,
+          "source_text_sha256": "b8bc24bb5a00234ea81789ed960881d066b7bf8ea827ef4b6611bb1bc79bea22"
+        },
+        {
+          "span_id": "C004-S039",
+          "text": "并形成监控报告。",
+          "page": 43,
+          "paragraph": 1442,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2948,
+          "source_end_offset": 2956,
+          "source_text_sha256": "5058f4c63673da22ef4ff93936df0f171fb219d063eb2ea5052cd8f84c09d40b"
+        },
+        {
+          "span_id": "C004-S040",
+          "text": "投标人负责设立技术支持热线，并安排专人值守，为运维工作提供 7×24 小",
+          "page": 43,
+          "paragraph": 1443,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2957,
+          "source_end_offset": 2993,
+          "source_text_sha256": "7898705c6dd7bce35036c575363888af3f3cd406f494ce167cdfe32ee1002137"
+        },
+        {
+          "span_id": "C004-S041",
+          "text": "时热线支持服务。投标人针对采购人要求的云平台运维服务相关内容，需指定专",
+          "page": 43,
+          "paragraph": 1444,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 2994,
+          "source_end_offset": 3029,
+          "source_text_sha256": "a3db8c6f19191fef64c5ef9c5fc146b3d5e3240b7c90642f9aae602195543fb8"
+        },
+        {
+          "span_id": "C004-S042",
+          "text": "业技术能力较强的工程师，根据采购人要求配合开展相关维护服务。",
+          "page": 43,
+          "paragraph": 1445,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3030,
+          "source_end_offset": 3060,
+          "source_text_sha256": "5f7edcca757047ea37dca7522caf948d6b8428e83686e0a92b0432da881e0378"
+        },
+        {
+          "span_id": "C004-S043",
+          "text": "（3）安全及保密要求",
+          "page": 43,
+          "paragraph": 1446,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3061,
+          "source_end_offset": 3071,
+          "source_text_sha256": "e738579cc70b351b9476420f337645802a807d0baeca90723b7318488b940331"
+        },
+        {
+          "span_id": "C004-S044",
+          "text": "投标人须严格遵守采购人的相关信息安全规定，不得利用系统维护服务时的",
+          "page": 43,
+          "paragraph": 1447,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3072,
+          "source_end_offset": 3105,
+          "source_text_sha256": "dd71452e6c6ccd92a1750d737431f051641bc6aaeb5e790e0b12a3677b9ad464"
+        },
+        {
+          "span_id": "C004-S045",
+          "text": "便利对采购人数据及其他信息擅自修改或透漏给第三方。",
+          "page": 43,
+          "paragraph": 1448,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3106,
+          "source_end_offset": 3131,
+          "source_text_sha256": "9ff1ddc797164126379b77c462ccc4ec03cb29da37e0eaec0736a069d61b6cfa"
+        },
+        {
+          "span_id": "C004-S046",
+          "text": "（4）响应的及时性",
+          "page": 43,
+          "paragraph": 1449,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3132,
+          "source_end_offset": 3141,
+          "source_text_sha256": "fcf7bdcac7a054e60b166082a2261f57f5f2d37750808afa8667dddbfe0aa3ff"
+        },
+        {
+          "span_id": "C004-S047",
+          "text": "投标人应当提供高效的系统维护服务，有效防范系统风险，系统对应负责人",
+          "page": 43,
+          "paragraph": 1450,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3142,
+          "source_end_offset": 3175,
+          "source_text_sha256": "507c9a3bbaab534f0f67de0ef75f3630a6770d7c022b480c69c0427b791ba3de"
+        },
+        {
+          "span_id": "C004-S048",
+          "text": "7×24 小时电话畅通，能够在系统发生除宕机外的其他故障问题时，能够协调人",
+          "page": 43,
+          "paragraph": 1451,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3176,
+          "source_end_offset": 3213,
+          "source_text_sha256": "6a35034824d290af0b9b253d6d03e3465d3689edc21119a1e1331a613c8bfb76"
+        },
+        {
+          "span_id": "C004-S049",
+          "text": "力资源在 1 小时内到达运维现场提供服务。系统发生宕机问题时，投标人应在 5",
+          "page": 43,
+          "paragraph": 1452,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3214,
+          "source_end_offset": 3252,
+          "source_text_sha256": "13bc44b03b5764d226415c93eec422f47d49b8cd088cd0655c73fce172a78ebf"
+        },
+        {
+          "span_id": "C004-S050",
+          "text": "分钟内响应，在 1 个小时之内使系统恢复正常。故障处理完毕后提供相关系统宕",
+          "page": 43,
+          "paragraph": 1453,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3253,
+          "source_end_offset": 3290,
+          "source_text_sha256": "27e18742258877dfb1f14fb00132053198aebfeb790de245c9c5b437783d141e"
+        }
+      ]
+    },
+    {
+      "chunk_number": 5,
+      "character_count": 1303,
+      "estimated_token_count": 1233,
+      "source_start_offset": 3291,
+      "source_end_offset": 4594,
+      "spans": [
+        {
+          "span_id": "C005-S001",
+          "text": "机报告。",
+          "page": 43,
+          "paragraph": 1454,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3291,
+          "source_end_offset": 3295,
+          "source_text_sha256": "3494287cc5710c5d6cc0c6a6c059ddd38552a803f2a5cfe2b4a0f79cdf6458fc"
+        },
+        {
+          "span_id": "C005-S002",
+          "text": "（5）重点保障要求",
+          "page": 43,
+          "paragraph": 1455,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3296,
+          "source_end_offset": 3305,
+          "source_text_sha256": "1365e232f7801d110ef6365695d19214e2a1a7ffeec90a03d6586f1d31b31d1f"
+        },
+        {
+          "span_id": "C005-S003",
+          "text": "为保障业务高峰期内系统平稳运行，缓解系统高峰期内因业务发生量增大而",
+          "page": 43,
+          "paragraph": 1456,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3306,
+          "source_end_offset": 3339,
+          "source_text_sha256": "7c58e19cd7bf73a0b0f8f497c6d50d4cfc7f7a8f4423f7db136e45374bfb0748"
+        },
+        {
+          "span_id": "C005-S004",
+          "text": "带来系统压力风险，要求投标人根据业务周期性特点，加大运维保障力度，保证",
+          "page": 43,
+          "paragraph": 1457,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3340,
+          "source_end_offset": 3375,
+          "source_text_sha256": "55354eb0015d8506feae11318a2fc2dc88e64bfe69b48d6ca6fb165ce91828ff"
+        },
+        {
+          "span_id": "C005-S005",
+          "text": "在业务高峰期内系统平稳运行。",
+          "page": 43,
+          "paragraph": 1458,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3376,
+          "source_end_offset": 3390,
+          "source_text_sha256": "7b3ebed344d7d8a21034de2a57c544147e21cd0662ae625cac3234a4b0b75bbd"
+        },
+        {
+          "span_id": "C005-S006",
+          "text": "5.迁移服务",
+          "page": 43,
+          "paragraph": 1459,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3391,
+          "source_end_offset": 3397,
+          "source_text_sha256": "0513ba00265a66273cd14b898f90f0b0c714a0ee736b0fd038943b7be2484a7b"
+        },
+        {
+          "span_id": "C005-S007",
+          "text": "由于目前业务系统属于生产系统，保障业务系统正常运行是关键。如涉及跨",
+          "page": 43,
+          "paragraph": 1460,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3398,
+          "source_end_offset": 3431,
+          "source_text_sha256": "8c6d71bd2afdf82ec49360d26cb1a9b1ddd7bb66e888f942face9b0078e5610e"
+        },
+        {
+          "span_id": "C005-S008",
+          "text": "云平台迁移，在系统业务正常运行的前提下，自合同生效之日起 7 个工作日内完",
+          "page": 43,
+          "paragraph": 1461,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3432,
+          "source_end_offset": 3469,
+          "source_text_sha256": "e18d71e3bb4fb119d1ce7c9f70d42da396d5e5df6c671556632c60516756491a"
+        },
+        {
+          "span_id": "C005-S009",
+          "text": "成全部系统迁移，投标人需提供迁移服务承诺函，投标人需在迁移服务方案中明",
+          "page": 43,
+          "paragraph": 1462,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3470,
+          "source_end_offset": 3505,
+          "source_text_sha256": "2630e647746721b90802e3c6252a3839cbc42789519fd0b3a024b1c020b637fa"
+        },
+        {
+          "span_id": "C005-S010",
+          "text": "确是否需要采购人投入专人、时间及工作，并提供承诺书，投标人需具备类似项",
+          "page": 43,
+          "paragraph": 1463,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3506,
+          "source_end_offset": 3541,
+          "source_text_sha256": "3f90937169ff3a8dfbbea27f9ecddcb61c60ffd523b6c7eef8c953a61c1903d5"
+        },
+        {
+          "span_id": "C005-S011",
+          "text": "目经验，可根据业务特点制定应用系统迁移部署方案，配合用户完成系统迁移部",
+          "page": 43,
+          "paragraph": 1464,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3542,
+          "source_end_offset": 3577,
+          "source_text_sha256": "52770aa41178d49dfdb5d52336863dce716f8a5213291b485bfc02c3bd01c669"
+        },
+        {
+          "span_id": "C005-S012",
+          "text": "署、运行和安全保障，最终保证现有业务系统可平滑迁移至中标单位云平台。具",
+          "page": 43,
+          "paragraph": 1465,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3578,
+          "source_end_offset": 3613,
+          "source_text_sha256": "19ff735420ecffdbe82dbeb4a465bf14873442614ea234e33ec06edaa50895dc"
+        },
+        {
+          "span_id": "C005-S013",
+          "text": "体要求如下：",
+          "page": 43,
+          "paragraph": 1466,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3614,
+          "source_end_offset": 3620,
+          "source_text_sha256": "91365e46e3b82e5b324acca801063a3a793763dde226ffe456fcd5c1f706b1a5"
+        },
+        {
+          "span_id": "C005-S014",
+          "text": "根据采购人需求，完成应用系统的迁移部署，迁移过程中保证应用系统正常",
+          "page": 43,
+          "paragraph": 1467,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3621,
+          "source_end_offset": 3654,
+          "source_text_sha256": "2e5f4abdc1fc5372d7ee2653e943ac994174af71cfb73f66bdcedc9d47eb8b10"
+        },
+        {
+          "span_id": "C005-S015",
+          "text": "43",
+          "page": 44,
+          "paragraph": 1468,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3655,
+          "source_end_offset": 3657,
+          "source_text_sha256": "44cb730c420480a0477b505ae68af508fb90f96cf0ec54c6ad16949dd427f13a"
+        },
+        {
+          "span_id": "C005-S016",
+          "text": "运行。",
+          "page": 44,
+          "paragraph": 1469,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3658,
+          "source_end_offset": 3661,
+          "source_text_sha256": "88f7ba75a154ea18101ffff676d88a467fd3fd66414d7a7c65037f7581d18d9e"
+        },
+        {
+          "span_id": "C005-S017",
+          "text": "自合同生效之日起 7 日内，根据用户需求完成系统迁移工作，并且不能改变",
+          "page": 44,
+          "paragraph": 1470,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3662,
+          "source_end_offset": 3697,
+          "source_text_sha256": "ea76ea0ab7baec61a788fafb9006bb18c576448e193901771bf55220ad7f49e0"
+        },
+        {
+          "span_id": "C005-S018",
+          "text": "和影响原有系统的功能、技术状态以及用户的使用习惯。未按时完成系统迁移工",
+          "page": 44,
+          "paragraph": 1471,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3698,
+          "source_end_offset": 3733,
+          "source_text_sha256": "11b6d106c55417d62d58e61aeb40f5c98e6faff357b10e3821d2b44fc51b3309"
+        },
+        {
+          "span_id": "C005-S019",
+          "text": "作的，采购人有权解除合同并有权要求供应商按合同首付款双倍支付违约金。",
+          "page": 44,
+          "paragraph": 1472,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3734,
+          "source_end_offset": 3768,
+          "source_text_sha256": "2913dd795e4e444798374a55bb19feb2c73bc49b00581419f84e6cbca872fb37"
+        },
+        {
+          "span_id": "C005-S020",
+          "text": "针对已经运行在政务云平台上的应用系统，为确保迁移过程中数据不丢失、",
+          "page": 44,
+          "paragraph": 1473,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3769,
+          "source_end_offset": 3802,
+          "source_text_sha256": "ede35bba98fa78ae5d647755b23a1bd1123fdecc9fcd645add9dd4f1ea888d1d"
+        },
+        {
+          "span_id": "C005-S021",
+          "text": "系统业务正常运行，本次中标人负责与原政务云平台的服务商进行主动对接，系",
+          "page": 44,
+          "paragraph": 1474,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3803,
+          "source_end_offset": 3838,
+          "source_text_sha256": "af8a58e75038ed5300eb39cac9a3117825a6d920f54d0f9b396a074049e32703"
+        },
+        {
+          "span_id": "C005-S022",
+          "text": "统迁移涉及的所有费用（包括但不限于中标人迁移测试阶段的云资源费用，系统",
+          "page": 44,
+          "paragraph": 1475,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3839,
+          "source_end_offset": 3874,
+          "source_text_sha256": "7a716798bbe9c041f91db1cc8ccc5246428108f57a8124435e2c87daf737c6ee"
+        },
+        {
+          "span_id": "C005-S023",
+          "text": "开发商对业务系统的部署、调试费用，原服务商配合迁出系统的服务费用等）由",
+          "page": 44,
+          "paragraph": 1476,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3875,
+          "source_end_offset": 3910,
+          "source_text_sha256": "38712b65e31c1bd02257849405ad108997e659c1dd35d8609b244952dc9419c4"
+        },
+        {
+          "span_id": "C005-S024",
+          "text": "本次中标人负责解决。",
+          "page": 44,
+          "paragraph": 1477,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3911,
+          "source_end_offset": 3921,
+          "source_text_sha256": "826457604c9ab38f8a2cee45aad8c09b468b3e8d56ffaa3d41d48865a87252ef"
+        },
+        {
+          "span_id": "C005-S025",
+          "text": "(四）运维团队要求",
+          "page": 44,
+          "paragraph": 1478,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3922,
+          "source_end_offset": 3931,
+          "source_text_sha256": "b0efd9c284248c9a001b928a7157e9d1bd2380d6ad328a1b7bf71e004517c32f"
+        },
+        {
+          "span_id": "C005-S026",
+          "text": "服务期内，投标人须设有 7×24 小时电话响应服务、具备运维团队，提供售",
+          "page": 44,
+          "paragraph": 1479,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3932,
+          "source_end_offset": 3968,
+          "source_text_sha256": "fc1ead070e21238efac3f3235c7baf61102311e531bd2a1de765a1506d6c37f0"
+        },
+        {
+          "span_id": "C005-S027",
+          "text": "后服务保障。团队成员应明确职责，架构清晰，岗位设置合理，且具备与本项相",
+          "page": 44,
+          "paragraph": 1480,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 3969,
+          "source_end_offset": 4004,
+          "source_text_sha256": "b1aee1631caebd83d2026f65dd7d8e3fa01a93447a7da1a67e56c8c2e3fd086d"
+        },
+        {
+          "span_id": "C005-S028",
+          "text": "关的项目经验。",
+          "page": 44,
+          "paragraph": 1481,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4005,
+          "source_end_offset": 4012,
+          "source_text_sha256": "68b65346d691dc904af82b035f780209d27f91d277e466452e3d25056aa40ef6"
+        },
+        {
+          "span_id": "C005-S029",
+          "text": "投标人须提供 1 名项目经理及若干名项目团队专职人员，为本项目提供服务。",
+          "page": 44,
+          "paragraph": 1482,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4013,
+          "source_end_offset": 4049,
+          "source_text_sha256": "84de43f1113f3a299f69e23aca0fb0131132324eb1031c660c27154e18dbdffb"
+        },
+        {
+          "span_id": "C005-S030",
+          "text": "项目经理需按照采购人要求，承担云资源服务保障具体工作，技术支持人员要求",
+          "page": 44,
+          "paragraph": 1483,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4050,
+          "source_end_offset": 4085,
+          "source_text_sha256": "d57bc90ce4df63e9e6748ce58d720207b8f4101a2cdfdbd9652632e26be8bf80"
+        },
+        {
+          "span_id": "C005-S031",
+          "text": "如下：",
+          "page": 44,
+          "paragraph": 1484,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4086,
+          "source_end_offset": 4089,
+          "source_text_sha256": "676436020536a7b915034f2d6aada70d439e2b587c83cc5068abd8c718522e5e"
+        },
+        {
+          "span_id": "C005-S032",
+          "text": "项目经理具有信息系统项目管理师（高级）证书；",
+          "page": 44,
+          "paragraph": 1485,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4090,
+          "source_end_offset": 4112,
+          "source_text_sha256": "af2e2b2935a139dd80382776f9b8ace07fd3dc286350880392fc4b4bb71d5aa5"
+        },
+        {
+          "span_id": "C005-S033",
+          "text": "技术负责人具有 CISP 证书；",
+          "page": 44,
+          "paragraph": 1486,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4113,
+          "source_end_offset": 4129,
+          "source_text_sha256": "d13abeed342de4157d207d84984be9043801a1e5dbe9e9ab35577d8243eaafbb"
+        },
+        {
+          "span_id": "C005-S034",
+          "text": "团队成员（除项目经理和技术负责人之外）具有 CISP 等证书。",
+          "page": 44,
+          "paragraph": 1487,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4130,
+          "source_end_offset": 4161,
+          "source_text_sha256": "3c6e01c072664d03a477aa0dca8f050ca40c2f83f3e497c752b074b4fffc035b"
+        },
+        {
+          "span_id": "C005-S035",
+          "text": "（五）保密要求",
+          "page": 44,
+          "paragraph": 1488,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4162,
+          "source_end_offset": 4169,
+          "source_text_sha256": "ee71e1a2de9c4c7e2aa2b5b9e887465666d0948f45c2ab4422820b3dea97a8bd"
+        },
+        {
+          "span_id": "C005-S036",
+          "text": "1、中标人因承接本合同约定项目所知悉的该项目信息或采购人信息，以及",
+          "page": 44,
+          "paragraph": 1489,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4170,
+          "source_end_offset": 4203,
+          "source_text_sha256": "301d77ad70fb9ab901825726e2afb4c003b29f1446fc48b6074639f3e76ee4fd"
+        },
+        {
+          "span_id": "C005-S037",
+          "text": "在项目实施过程中所产生的与该项目有关的全部信息均为采购人的保密信息，中",
+          "page": 44,
+          "paragraph": 1490,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4204,
+          "source_end_offset": 4239,
+          "source_text_sha256": "7505deda8f6e1440aeeb0ea69ecd00fe36ad33c09999b2b3883ef3f8a132a6da"
+        },
+        {
+          "span_id": "C005-S038",
+          "text": "标人应按照采购人关于保密工作的相关要求，对上述保密信息承担保密义务。中",
+          "page": 44,
+          "paragraph": 1491,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4240,
+          "source_end_offset": 4275,
+          "source_text_sha256": "3759591703a377721b002ac013a39f01e860712b09aa77ab82469927d358bf57"
+        },
+        {
+          "span_id": "C005-S039",
+          "text": "标人须严格遵守信息安全规定，不得利用系统维护服务时的便利对采购人数据及",
+          "page": 44,
+          "paragraph": 1492,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4276,
+          "source_end_offset": 4311,
+          "source_text_sha256": "f6daada09234ced7c7ba82d896920c53304bb023da014cd5ca2097635f2e972e"
+        },
+        {
+          "span_id": "C005-S040",
+          "text": "其他信息擅自修改或透漏给第三方。",
+          "page": 44,
+          "paragraph": 1493,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4312,
+          "source_end_offset": 4328,
+          "source_text_sha256": "ecb4520828e42403b40d7111ec7f1f7278bf7ff92f128a34342dd5f98af0a545"
+        },
+        {
+          "span_id": "C005-S041",
+          "text": "2、中标人应对上述保密信息予以妥善保存，并保证仅将其用于与完成本合",
+          "page": 44,
+          "paragraph": 1494,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4329,
+          "source_end_offset": 4362,
+          "source_text_sha256": "3213bda36b011ca34586b49d226ac1b638d868521efe8bb2632f002a6d99a4b8"
+        },
+        {
+          "span_id": "C005-S042",
+          "text": "同项下约定项目实施有关的用途或目的。在缺少相关保密条款约定时，对上述保",
+          "page": 44,
+          "paragraph": 1495,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4363,
+          "source_end_offset": 4398,
+          "source_text_sha256": "a1ef50936f28b2371dd73541111b6b7b967253fef11f29596030c368a40db034"
+        },
+        {
+          "span_id": "C005-S043",
+          "text": "密信息,中标人应至少采取适用于对自己商业秘密进行保护的同等保护措施和审",
+          "page": 44,
+          "paragraph": 1496,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4399,
+          "source_end_offset": 4434,
+          "source_text_sha256": "782f05f31b6bb4877e8ce46103b05729b3266354156213566df01327eb18fde0"
+        },
+        {
+          "span_id": "C005-S044",
+          "text": "慎程度进行保密。",
+          "page": 44,
+          "paragraph": 1497,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4435,
+          "source_end_offset": 4443,
+          "source_text_sha256": "c96985e67105f7171d2f322698f04e445cd07b1c8ac6439556761e381b128060"
+        },
+        {
+          "span_id": "C005-S045",
+          "text": "3、中标人保证将保密信息的披露范围严格控制在直接从事该项目工作且因",
+          "page": 44,
+          "paragraph": 1498,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4444,
+          "source_end_offset": 4477,
+          "source_text_sha256": "9d5ef4dd3c04df08827b801a08f42165cb5025ae08d4d4c9252658d104231641"
+        },
+        {
+          "span_id": "C005-S046",
+          "text": "44",
+          "page": 45,
+          "paragraph": 1499,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4478,
+          "source_end_offset": 4480,
+          "source_text_sha256": "71ee45a3c0db9a9865f7313dd3372cf60dca6479d46261f3542eb9346e4a04d6"
+        },
+        {
+          "span_id": "C005-S047",
+          "text": "工作需要有必要知悉保密信息的工作人员范围内,对中标人非从事该项目的人员",
+          "page": 45,
+          "paragraph": 1500,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4481,
+          "source_end_offset": 4516,
+          "source_text_sha256": "d61a5432cd3755ae86d974a383a9c7b72cdbdecdac5713d3141b446b52ac69e2"
+        },
+        {
+          "span_id": "C005-S048",
+          "text": "一律严格保密。",
+          "page": 45,
+          "paragraph": 1501,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4517,
+          "source_end_offset": 4524,
+          "source_text_sha256": "95cd0a3122b40b1c41831660a5dd168708ad8bf9d1edab588a1ecc2280789f3f"
+        },
+        {
+          "span_id": "C005-S049",
+          "text": "4、中标人应保证在向其工作人员披露采购人的保密信息前，认真做好员工",
+          "page": 45,
+          "paragraph": 1502,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4525,
+          "source_end_offset": 4558,
+          "source_text_sha256": "d84d90ffa4368e8ac2a7ae44e8094593235f3a3343453676f4ca3cc72de51593"
+        },
+        {
+          "span_id": "C005-S050",
+          "text": "的保密教育工作，明确告知其将知悉的为采购人的保密信息，并明确告知其需承",
+          "page": 45,
+          "paragraph": 1503,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4559,
+          "source_end_offset": 4594,
+          "source_text_sha256": "6e9fa77462d89738daad48201238a79e9e47befbfa164d2e0dad3439a7f47f84"
+        }
+      ]
+    },
+    {
+      "chunk_number": 6,
+      "character_count": 326,
+      "estimated_token_count": 305,
+      "source_start_offset": 4595,
+      "source_end_offset": 4921,
+      "spans": [
+        {
+          "span_id": "C006-S001",
+          "text": "担的保密义务及泄密所应承担的法律责任，并要求全体参与该项目的人员签署书",
+          "page": 45,
+          "paragraph": 1504,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4595,
+          "source_end_offset": 4630,
+          "source_text_sha256": "40275364fc150128656164e84ae117276d7e0bb81c0814af7fb8a135b71dc9c7"
+        },
+        {
+          "span_id": "C006-S002",
+          "text": "面《保密协议》。",
+          "page": 45,
+          "paragraph": 1505,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4631,
+          "source_end_offset": 4639,
+          "source_text_sha256": "c9eb87b3ab1f328709fb52e9cb71aabe1cabbf83b7f42cdb5a28cebecd216048"
+        },
+        {
+          "span_id": "C006-S003",
+          "text": "5、任何时间内，一经采购人提出要求，中标人应按照采购人指示在收到采",
+          "page": 45,
+          "paragraph": 1506,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4640,
+          "source_end_offset": 4673,
+          "source_text_sha256": "595cbd20763743e99a50a92fbc5a022399faccbdcc83b19655132ef7307449e5"
+        },
+        {
+          "span_id": "C006-S004",
+          "text": "购人书面通知后 5 日内将含有保密信息的所有文件或其他资料归还采购人，且不",
+          "page": 45,
+          "paragraph": 1507,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4674,
+          "source_end_offset": 4711,
+          "source_text_sha256": "768bcd6c13dbe47d36c32ccdc308b3af6d35565f882dae2b954b7a7d76b78a4a"
+        },
+        {
+          "span_id": "C006-S005",
+          "text": "得擅自复制留存。",
+          "page": 45,
+          "paragraph": 1508,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4712,
+          "source_end_offset": 4720,
+          "source_text_sha256": "ca01bd1b83cdc50aa28f281b24399ec0042a67b598d352af134e12291fe00f06"
+        },
+        {
+          "span_id": "C006-S006",
+          "text": "6、非经采购人特别授权，采购人向中标人提供的任何保密信息并不包括授",
+          "page": 45,
+          "paragraph": 1509,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4721,
+          "source_end_offset": 4754,
+          "source_text_sha256": "473bef8ef96d78f904238da927046acb316b1bf9ad5e49a1d860143e1b59b228"
+        },
+        {
+          "span_id": "C006-S007",
+          "text": "予中标人该保密信息包含的任何专利权、商标权、著作权、商业秘密或其它类型",
+          "page": 45,
+          "paragraph": 1510,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4755,
+          "source_end_offset": 4790,
+          "source_text_sha256": "ea6680411b166a04b82318afe90436f3171414a1ddd8f931cde1204f6b71ed88"
+        },
+        {
+          "span_id": "C006-S008",
+          "text": "的知识产权。",
+          "page": 45,
+          "paragraph": 1511,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4791,
+          "source_end_offset": 4797,
+          "source_text_sha256": "4cc0245bcf7955e959777feb4af8c052a8f5c3e6b49f61ad621d1f0fa71cb2f6"
+        },
+        {
+          "span_id": "C006-S009",
+          "text": "四、政策性采购需求",
+          "page": 45,
+          "paragraph": 1512,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4798,
+          "source_end_offset": 4807,
+          "source_text_sha256": "d30a54e58b1b1373a64fb0ec63579ef64f9fa09e54e4e3183b9354bc922e5f4a"
+        },
+        {
+          "span_id": "C006-S010",
+          "text": "为在项目中充分落实《政府采购法》规定的“政府采购应当有助于实现国家",
+          "page": 45,
+          "paragraph": 1513,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4808,
+          "source_end_offset": 4841,
+          "source_text_sha256": "33828e4a4eb196fe63a70402d4f673c6d9b0e4ead5e5019d23bddbccd5e19562"
+        },
+        {
+          "span_id": "C006-S011",
+          "text": "的经济和社会发展政策目标”等相关要求，以项目为载体推动北京市环境社会治",
+          "page": 45,
+          "paragraph": 1514,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4842,
+          "source_end_offset": 4877,
+          "source_text_sha256": "d95f8c86f97b406dfb0c4f433d7e8ec475ee810684daf6e8fe0946d0b9320783"
+        },
+        {
+          "span_id": "C006-S012",
+          "text": "理(ESG)体系高质量发展，请供应商提供在本项目中落实 ESG 理念的工作措施。",
+          "page": 45,
+          "paragraph": 1515,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4878,
+          "source_end_offset": 4918,
+          "source_text_sha256": "83e32cac104128d81deb5154197da27d975b37448f5dc25925cc72bb4b58999d"
+        },
+        {
+          "span_id": "C006-S013",
+          "text": "45",
+          "page": 46,
+          "paragraph": 1516,
+          "source_section": "采购需求",
+          "source_clause_id": "2.2",
+          "source_start_offset": 4919,
+          "source_end_offset": 4921,
+          "source_text_sha256": "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "artifact_type": "V43_PRODUCTION_QUERY_PATH_AUDIT",
+  "response_router_owner": "backend/src/pipeline/response-decision-v1.js::projectResponseDecisionV1",
+  "response_router_version": "v43-response-router-v2.2.3",
+  "response_router_implementation_id": "v43-response-router-v2.2.3-response-authority-closure",
+  "response_router_sha256": "ff34a72ca1929cac7d99d0c12674216bd9686e97a1e9727e9eee2a9e1554ab1f",
+  "writer_query_owner": "backend/src/pipeline/writer-reference-selector.js::WriterReferenceSelector.select",
+  "writer_query_sha256": "1ad5e0aa19bad1dba1023d6bc38a4f34b4fd94cbb5c9f5f42fe0332b7efca875",
+  "source_role_owner": "backend/src/pipeline/material-source-authority-policy.js::resolveMaterialSourceRole",
+  "source_role_sha256": "e0cbe41d9adec50a54d0b632bad8c8e382246157725cab0b872bbed3658e6885",
+  "hygiene_owner": "backend/src/pipeline/retrieval-chunk-role.js::isWriterReferenceContentEligible",
+  "hygiene_sha256": "3b1dcf1278a36f1ffcfcbe7a3e8c89f6d46dee94a347ef7cd29013ac6fc98a2d",
+  "production_query_semantics": {
+    "query_text": "[section.title, ...requirements.map(item => item.text)].filter(Boolean).join(\"\\n\")",
+    "section_title_source": "NO_SECTION_FIELD_IN_CORE6_ARTIFACT; section.title omitted rather than fabricated",
+    "effective_eval_query": "canonical requirement text only",
+    "material_types": [
+      "technical_solution",
+      "technical_whitepaper"
+    ],
+    "top_k": 4,
+    "candidate_limit": 20,
+    "project_id": "00000000-0000-4000-8000-000000000001",
+    "project_id_role": "PUBLIC_CORPUS_READ_ONLY_CONTEXT",
+    "no_eval_enrichment": true,
+    "no_retrieval_result_used_for_selection": true
+  }
+}

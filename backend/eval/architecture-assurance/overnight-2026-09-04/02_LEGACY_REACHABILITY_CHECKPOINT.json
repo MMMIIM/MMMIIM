@@ -1,0 +1,15 @@
+{
+  "phase": "02",
+  "baseline_fingerprint": "318d53c8a8785952d38a173dc086efd1d044c5871e288e305614e52e14a19641",
+  "confirmed_current": ["legacy fact/mapping routes remain reachable", "canonical claim generation reads canonical approved fact support", "legacy production-beta route is compatibility-gated", "no canonical claim authorization from legacy rows observed"],
+  "historical_fixed": ["mapping authority escalation blocked by claim-gate-input-adapter-v1"],
+  "open": ["operational isolation/deprecation of legacy writable surfaces", "Dify compatibility reachability"],
+  "conflicting": ["documentation implies retired paths while app retains routes"],
+  "unknown": ["flag distribution in deployed environments", "external consumers"],
+  "risks": ["P1-LEGACY-001", "P1-DIFY-001"],
+  "evidence_refs": ["backend/src/app.js", "backend/src/pipeline/production-beta-service.js", "LEGACY_REACHABILITY_MATRIX.md"],
+  "fact_revisions": ["legacy paths are WRITE_COMPAT_FENCED, not inert"],
+  "next_dependencies": ["03_STALENESS_PROPAGATION_CHECKPOINT"],
+  "gate": "CANONICAL_CLAIM_LEGACY_AUTHORITY=FAIL_CLOSED; LEGACY_ISOLATION=PARTIAL",
+  "safe_to_continue": true
+}

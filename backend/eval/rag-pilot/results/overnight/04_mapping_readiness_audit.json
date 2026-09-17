@@ -1,0 +1,24 @@
+{
+  "runtime_available": true,
+  "benchmark_executed": false,
+  "cases": 0,
+  "approval_boundary_blocker": "MAPPING_BENCHMARK_BLOCKED_BY_APPROVAL_BOUNDARY",
+  "mapping_results": [],
+  "readiness_results": [],
+  "actual_callers": {
+    "mapping": "RequirementEvidenceFactMappingService",
+    "readiness": "EvidenceReadinessService"
+  },
+  "authority_requirements": [
+    "approved Evidence Fact",
+    "confirmed Requirement",
+    "human-approved Mapping"
+  ],
+  "persistence_boundary": "read-only audit; no mapping/readiness writes",
+  "counts": {
+    "approved_evidence_source_facts": 0,
+    "approved_legacy_facts": 6,
+    "confirmed_requirements_public": 272,
+    "approved_mappings": 0
+  }
+}

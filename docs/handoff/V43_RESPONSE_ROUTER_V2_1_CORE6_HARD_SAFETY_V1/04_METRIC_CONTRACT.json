@@ -1,0 +1,49 @@
+{
+  "artifact_type": "V43_RESPONSE_ROUTER_V2_1_CORE6_HARD_SAFETY_METRIC_CONTRACT",
+  "artifact_version": "v1",
+  "deterministic": true,
+  "source_file": "backend/eval/response-router-v2-1-replay-reference-v3.mjs",
+  "source_sha256": "1458713bc389341bbda777e7492611a315e1d41fcb9bef1d4d1a2509219bc175",
+  "metric_contract_drift": false,
+  "primary_modes": [
+    "SOLUTION",
+    "EVIDENCE",
+    "COMMITMENT",
+    "COMPLIANCE"
+  ],
+  "need_review_is_abstention_not_primary_mode": true,
+  "metrics": [
+    {
+      "metric_name": "HIGH_RISK_EVIDENCE_FALSE_NEGATIVE",
+      "exact_predicate": "row.v3.evidence_dependency === true && ['HIGH', 'P0'].includes(row.v3.risk_tier) && row.router.evidence_dependency !== true",
+      "equivalent_deterministic_pseudocode": "Select CORE6 rows where reference evidence_dependency is true, reference risk_tier is HIGH or P0, and router evidence_dependency is not true.",
+      "input_fields": [
+        "cohort",
+        "v3.evidence_dependency",
+        "v3.risk_tier",
+        "router.evidence_dependency"
+      ],
+      "target_value": 0,
+      "observed_value": 31,
+      "mechanical_split": {
+        "PRIMARY_MODE_EVIDENCE_MISS": 16,
+        "EVIDENCE_DEPENDENCY_MISS_WITH_PRIMARY_NOT_EVIDENCE": 15,
+        "OTHER_EXACT_MECHANICAL_FORM": 0
+      }
+    },
+    {
+      "metric_name": "FUTURE_COMMITMENT_AS_EXISTING_FACT",
+      "exact_predicate": "row.v3.primary_response_mode === 'COMMITMENT' && row.router.response_mode === 'EVIDENCE'",
+      "equivalent_deterministic_pseudocode": "Select CORE6 rows where reference primary response mode is COMMITMENT and router response mode is EVIDENCE.",
+      "input_fields": [
+        "cohort",
+        "v3.primary_response_mode",
+        "router.response_mode"
+      ],
+      "target_value": 0,
+      "observed_value": 45
+    }
+  ],
+  "source_artifact": "docs/V43_RESPONSE_ROUTER_V2_1_VS_REFERENCE_V3_FULL_CORPUS_EVAL.json",
+  "source_artifact_sha256": "8068e0d6d7df207d030cf8b6481d4e9c8c9c354f51dcf280124c09ddc587618d"
+}

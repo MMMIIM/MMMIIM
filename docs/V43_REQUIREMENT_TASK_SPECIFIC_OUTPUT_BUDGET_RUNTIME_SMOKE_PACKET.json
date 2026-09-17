@@ -1,0 +1,56 @@
+{
+  "artifact_type": "V43_REQUIREMENT_TASK_SPECIFIC_OUTPUT_BUDGET_RUNTIME_SMOKE_PACKET",
+  "blind": true,
+  "run_id": "requirement-task-budget-smoke-2026-09-09T10-30-53-366Z-5714c943",
+  "case": {
+    "tender_id": "HOLDOUT-REQ-V2-01",
+    "chunk_number": 45,
+    "source_file_sha256": "f63221be9a38b64bfa6a90a59a428cf15b8211427965adee35967f7f8cd75aa5",
+    "source_chunk_hash": "4e7b360135fc5e8f998e539c06cf022a7695346a961ba717fb073e8531892697"
+  },
+  "result": {
+    "final_verdict": "READY_FOR_GPT_REQUIREMENT_TASK_BUDGET_CLOSURE",
+    "status": "PASS",
+    "candidate_count": 67,
+    "source_resolution_pass": true
+  },
+  "runtime_identity": {
+    "provider": "openai_compatible",
+    "configured_provider": "openai_compatible",
+    "requested_provider": "openai_compatible",
+    "requested_model": "deepseek-ai/DeepSeek-V4-Flash",
+    "response_model": "deepseek-ai/DeepSeek-V4-Flash",
+    "gateway_http_status": 200,
+    "provider_http_status": 200,
+    "finish_reason": "stop",
+    "json_parse": true,
+    "schema": true,
+    "latency_ms": 22548,
+    "started_at": "2026-09-09T10:30:55.226Z",
+    "completed_at": "2026-09-09T10:31:17.822Z",
+    "failure_stage": "MODEL_CONTENT_EXTRACTED",
+    "error": null
+  },
+  "generation": {
+    "shared_default_max_output_tokens": 4800,
+    "resolved_max_output_tokens": 9600,
+    "task_override_applied": true,
+    "eval_override_only": true
+  },
+  "contract": {
+    "task_contract_version": "4.3-requirement-extraction-v3.1.1",
+    "instruction_hash": "9b8fe6582e774a64f36b2be307274e297fafb309cf17270a4d8fc463da817305",
+    "candidate_schema_hash": "9ee6ebb2a34e5ff3131d3b0bdbbcee45b1c8c33ac38d8325bd8925836abb7acc",
+    "response_format": "json_schema",
+    "strict": true
+  },
+  "provider": {
+    "category": "openai_compatible",
+    "host": "api.siliconflow.cn",
+    "model": "deepseek-ai/DeepSeek-V4-Flash",
+    "endpoint": "/v1/chat/completions",
+    "provider_calls": 1,
+    "retries": 0,
+    "concurrency": 1
+  }
+}

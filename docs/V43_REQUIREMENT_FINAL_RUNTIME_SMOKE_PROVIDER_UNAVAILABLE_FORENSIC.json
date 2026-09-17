@@ -1,0 +1,125 @@
+{
+  "checkpoint": "V43_REQUIREMENT_FINAL_RUNTIME_SMOKE_PROVIDER_UNAVAILABLE_FORENSIC",
+  "generated_at": "2026-09-09T17:31:37+08:00",
+  "mode": "READ_ONLY_FORENSIC",
+  "failed_execution": {
+    "run_id": "requirement-task-budget-smoke-2026-09-09T09-01-08-432Z-cc4d3e1e",
+    "execution_id": null,
+    "execution_id_status": "NOT_RECORDED_IN_FAILED_ARTIFACT",
+    "task_type": "requirement_extraction",
+    "target": {
+      "tender_id": "HOLDOUT-REQ-V2-01",
+      "chunk_number": 45,
+      "source_file_sha256": "f63221be9a38b64bfa6a90a59a428cf15b8211427965adee35967f7f8cd75aa5",
+      "source_chunk_hash": "4e7b360135fc5e8f998e539c06cf022a7695346a961ba717fb073e8531892697"
+    },
+    "provider": {
+      "requested_provider": "openai_compatible",
+      "requested_model": "deepseek-ai/DeepSeek-V4-Flash",
+      "provider_base_host": "api.siliconflow.cn",
+      "endpoint": "/chat/completions"
+    },
+    "generation": {
+      "failed_artifact_configured_default_max_output_tokens": 4800,
+      "failed_artifact_resolved_max_output_tokens": null,
+      "failed_artifact_task_override_applied": false,
+      "failed_artifact_budget_observation": "NOT_OBSERVED_BECAUSE_PROVIDER_AUDIT_DID_NOT_RETURN_ON_TRANSPORT_FAILURE"
+    },
+    "runtime": {
+      "execution_environment": "Codex sandbox local command execution",
+      "network_namespace": "sandbox",
+      "gateway_http_status": 502,
+      "provider_http_status": null,
+      "provider_http_received": false,
+      "failure_stage": "FETCH_INVOKED",
+      "safe_error_code": "PROVIDER_UNAVAILABLE",
+      "safe_error_message": "Semantic Gateway request failed: PROVIDER_UNAVAILABLE.",
+      "underlying_fetch_error_type": "NOT_RECORDED_IN_FAILED_ARTIFACT",
+      "underlying_os_network_error_code": "NOT_RECORDED_IN_FAILED_ARTIFACT",
+      "latency_ms": 31,
+      "dns_attempted": "NOT_RECORDED_IN_FAILED_ARTIFACT",
+      "tcp_reached": false,
+      "tls_reached": false,
+      "http_request_body_constructed": true,
+      "http_request_headers_constructed": true,
+      "request_headers_or_body_persisted": false
+    },
+    "side_effects_of_failed_run": {
+      "provider_calls": 1,
+      "llm_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0,
+      "raw_provider_response_persisted": false
+    }
+  },
+  "budget_construction_verification": {
+    "method": "offline production-shaped task-router and provider request-body construction with local fake provider",
+    "external_provider_called": false,
+    "requirement_extraction": {
+      "configured_default_max_output_tokens": 4800,
+      "resolved_max_output_tokens": 9600,
+      "task_override_applied": true,
+      "outbound_request_body_max_output_tokens": 9600,
+      "status": "PASS"
+    },
+    "representative_non_requirement_defaults": {
+      "evidence_fact_extraction": 4800,
+      "requirement_evidence_mapping": 4800,
+      "claim_generation": 4800,
+      "section_drafting": 4800
+    },
+    "global_budget_regression": false
+  },
+  "historical_comparison": {
+    "artifact": "docs/V43_REQUIREMENT_PROVIDER_CONNECTIVITY_FORENSIC_CHECKPOINT.json",
+    "historical_root_classification": "E_ISOLATED_GATEWAY_ENVIRONMENT_MISMATCH",
+    "sandbox_dns": "PASS",
+    "sandbox_tcp_443": "FAIL_EACCES",
+    "sandbox_tls_https": "FAIL_EACCES",
+    "host_dns": "PASS",
+    "host_tcp_443": "PASS",
+    "host_tls_https": "PASS",
+    "host_probe_http_status": 404,
+    "provider_host": "api.siliconflow.cn",
+    "comparison_result": "SAME_ISOLATED_ENVIRONMENT_PATTERN_SUPPORTED",
+    "caveat": "The failed smoke artifact did not retain the underlying OS error; classification uses the same sandbox execution topology and the previously captured direct transport probes."
+  },
+  "network_probes": {
+    "performed_in_this_forensic": 0,
+    "reused_existing_probe_set": true,
+    "existing_probe_set_count": 3,
+    "model_inference_calls": 0,
+    "payload_transmitted": false
+  },
+  "root_cause_class": "A_SAME_ISOLATED_ENVIRONMENT_EACCES",
+  "root_cause_basis": [
+    "The smoke request reached FETCH_INVOKED but received no provider HTTP response.",
+    "The current Codex sandbox has a previously observed EACCES failure for TCP/TLS to api.siliconflow.cn:443.",
+    "The corresponding host execution probes reached TCP/TLS successfully.",
+    "Offline request construction independently confirms the task budget wiring is correct."
+  ],
+  "code_changes": 0,
+  "prompt_schema_provider_changes": 0,
+  "tests": {
+    "offline_task_budget_probe": "PASS",
+    "requirement_resolved_budget": 9600,
+    "shared_default_budget": 4800,
+    "non_requirement_budget_regression": "PASS"
+  },
+  "side_effects_this_forensic": {
+    "PROVIDER_CALLS": 0,
+    "LLM_CALLS": 0,
+    "PRODUCTION_DB_WRITES": 0,
+    "GOLD_MUTATIONS": 0,
+    "MAPPING": 0,
+    "CLAIM": 0,
+    "WRITER": 0,
+    "ROUTER_V2_CHANGES": 0,
+    "COMMIT": 0,
+    "PUSH": 0,
+    "MERGE": 0,
+    "DEPLOY": 0
+  },
+  "next_allowed_action": "READY_FOR_USER_AUTHORIZATION_FOR_FINAL_REQUIREMENT_RUNTIME_SMOKE_RETRY_IN_HOST_ENV",
+  "automatic_retry_performed": false
+}

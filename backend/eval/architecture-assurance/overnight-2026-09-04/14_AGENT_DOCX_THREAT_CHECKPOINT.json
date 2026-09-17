@@ -1,0 +1,15 @@
+{
+  "phase": "14",
+  "baseline_fingerprint": "318d53c8a8785952d38a173dc086efd1d044c5871e288e305614e52e14a19641",
+  "confirmed_current": ["Agent formal mutations require human approval", "Agent has no direct Fact/Mapping/Claim/Gold approval", "DOCX delivery projects approved facts and checks version/risk", "chapter regeneration reuses auth snapshot"],
+  "historical_fixed": ["agent stale preview prevention", "writer authorization snapshot"],
+  "open": ["provider fidelity", "future tool registration discipline"],
+  "conflicting": [],
+  "unknown": ["operational export policy"],
+  "risks": ["P1-DOCX-001", "P1-AGENT-001"],
+  "evidence_refs": ["backend/src/agent-action-policy.js", "backend/src/agent-action-service.js", "backend/src/pipeline/document-delivery-service.js", "backend/src/pipeline/document-generation-service.js", "backend/test/agent-actions.test.js"],
+  "fact_revisions": [],
+  "next_dependencies": ["15_DRIFT_AND_REGRESSION_CHECKPOINT"],
+  "gate": "AGENT_AUTHORITY=FAIL_CLOSED; DOCX=IMPLEMENTED_WITH_DEBT",
+  "safe_to_continue": true
+}

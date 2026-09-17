@@ -1,0 +1,15 @@
+{
+  "phase": "09",
+  "baseline_fingerprint": "318d53c8a8785952d38a173dc086efd1d044c5871e288e305614e52e14a19641",
+  "confirmed_current": ["deterministic mutation sensitivity exists", "REAL/SYNTHETIC/FIXTURE/DISPUTED denominator separation", "evaluator provenance fields are recorded", "Requirement 100% metrics are fixture-scoped"],
+  "historical_fixed": ["source packet parity and chunk-targeting bugs"],
+  "open": ["Real Mapping/Claim Gold semantic certification", "missing authoritative tender packets"],
+  "conflicting": ["aggregate PASS labels versus artifact completeness"],
+  "unknown": ["human-truth semantic accuracy"],
+  "risks": ["P0-GOLD-001", "P1-EVAL-001", "P1-REQ-001"],
+  "evidence_refs": ["docs/EVAL_POLICY.md", "backend/test/gold-governance-harness.test.js", "backend/eval/gold-governance/00_gold_v2_governance_checkpoint.json"],
+  "fact_revisions": ["EVAL_RULER_TRUST=STRONG_WITH_DEBT, not certified"],
+  "next_dependencies": ["10_GOLD_GOVERNANCE_ENFORCEMENT_CHECKPOINT"],
+  "gate": "EVAL_RULER_TRUST=STRONG_WITH_DEBT",
+  "safe_to_continue": true
+}

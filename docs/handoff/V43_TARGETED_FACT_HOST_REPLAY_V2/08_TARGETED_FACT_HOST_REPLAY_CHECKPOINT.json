@@ -1,0 +1,56 @@
+{
+  "artifact_type": "V43_TARGETED_FACT_HOST_REPLAY_V2_CHECKPOINT",
+  "run_id": "v43-targeted-fact-host-replay-v2-20260914124306-source-gate",
+  "status": "BLOCKED_SOURCE_IDENTITY",
+  "database_identity": {
+    "requested_database": "bid_platform_flow_audit_test",
+    "actual_database": "bid_platform_flow_audit_test",
+    "actual_schema": "public"
+  },
+  "requirement_authority": {
+    "project_id": "7a038c5d-38e4-46ae-b24d-39437bb3b545",
+    "baseline_id": "80e88ce3-8002-42db-8cca-abf47b3e3949",
+    "baseline_status": "confirmed",
+    "canonical_requirement_count": 337,
+    "target_requirement_ids": [
+      "REQ-099",
+      "REQ-139",
+      "REQ-014",
+      "REQ-023"
+    ],
+    "all_target_requirements_present": true,
+    "all_target_requirements_confirmed": true
+  },
+  "source_identity": {
+    "total_chunks": 3,
+    "pass_count": 2,
+    "fail_count": 1,
+    "failed_chunk_ids": [
+      "MCH-586AF54E29E13328B1D105D03FF08957"
+    ]
+  },
+  "provider_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "fact_persistence": 0,
+  "gold_mutations": 0,
+  "requirement_mutations": 0,
+  "scope_authority_writes": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "final_decision": "BLOCKED_SOURCE_IDENTITY",
+  "stop_reason": "FROZEN_PLAN_MATERIAL_ID_DIFFERS_FROM_CURRENT_EVAL_DB_CHUNK_IDENTITY",
+  "artifacts": [
+    "01_REPLAY_PRECONDITION.json",
+    "02_SOURCE_IDENTITY_CHECK.json",
+    "03_PROVIDER_EXECUTION_REPORT.json",
+    "04_RAW_FACT_CANDIDATES.json",
+    "05_FACT_VALIDATION_REPORT.json",
+    "06_GPT_FACT_SEMANTIC_REVIEW_PACKET.json",
+    "07_PROVIDER_FAILURE_DIAGNOSTIC.json",
+    "08_TARGETED_FACT_HOST_REPLAY_CHECKPOINT.json",
+    "08_TARGETED_FACT_HOST_REPLAY_CHECKPOINT.md"
+  ]
+}

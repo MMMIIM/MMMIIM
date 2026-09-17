@@ -21,7 +21,7 @@ This matrix is the audit dictionary required before remediation. Runtime names a
 | Evidence Support Assessment | shared contract + evaluator | available/unavailable, sufficiency statuses | transient (no formal DB write) | adapter input/output | calibration cases | source → observation → aggregate | assessment → approval/fact | ENFORCED |
 | Evidence Review | `EvidenceReviewService` | proposed/needs_review/approved/rejected/invalidated | `evidence_candidate_reviews` | review DTO | review case | candidate → human decision | machine assessment → approved | ENFORCED |
 | Approved Evidence Fact | `EvidenceSourceFactService` | draft/approved/rejected/invalidated | `evidence_source_facts` | fact DTO | Fact Gold | review → draft → human decision | review alone → approved Fact | ENFORCED |
-| Mapping | `RequirementEvidenceFactMappingService` + legacy `EvidenceService` | proposed/approved/rejected/invalidated; support levels | mapping tables | mapping DTO | mapping Gold | approved Fact → proposed → human decision | Mapping → Claim permission automatically | PARTIAL (legacy coexistence) |
+| Mapping | `RequirementEvidenceFactMappingService` | proposed/approved/rejected/invalidated; support levels | `requirement_evidence_fact_mappings` (canonical); legacy table retained for compatibility | mapping DTO | mapping Gold | approved Fact → proposed → human decision | Mapping → Claim permission automatically | CANONICAL; LEGACY_COMPATIBILITY |
 | Claim Permission | Claim Gate | allow/restrict + writer_eligible | `claim_gate_evaluations` | gate result | claim safety eval | approved mapping/claim → evaluated | mapping approval → allow without gate | ENFORCED |
 | Claim Gate | `claim-gate.js`, `claim-gate-v2.js` | decision/reason codes | gate evaluation | claim gate DTO | Claim Gold | candidate → evaluated | gate creates Evidence | ENFORCED |
 | Writer Authorization | writer input authorization + safe context | active/invalidated, writer eligibility | writer_safe_contexts/bindings | authorized task input | writer E2E | gate allow → task | writer expands refs/claims | ENFORCED |
@@ -41,3 +41,43 @@ This matrix is the audit dictionary required before remediation. Runtime names a
 2. Generation pipeline states and persisted task statuses share names but have separate owners/registries.
 3. A server-configured development actor is an explicit non-authenticated adapter; production readiness remains blocked until an authenticated request actor is integrated. Client reviewer/editor fields are non-authoritative.
 4. Material/Document identity is one-to-one in the current source span schema.
+
+## ADR-017 authority freeze
+
+This table supersedes ambiguity for canonical authority while preserving the
+historical audit rows above. Every business fact has at most one canonical
+write authority.
+
+| Business Fact | Canonical Owner | Legacy | Write Authority |
+|---|---|---|---|
+| Requirement | `requirements` | none | Canonical Requirement path |
+| Evidence Fact | `evidence_source_facts` | `evidence_facts` | `EvidenceSourceFactService` |
+| Requirement-Evidence Mapping | `requirement_evidence_fact_mappings` | `requirement_evidence_mappings` | `RequirementEvidenceFactMappingService` |
+| Sufficiency | Evidence Support + Readiness | none | Backend derived (`aggregateEvidenceSufficiency`) |
+| Claim permission | Claim Gate | none | `ClaimGateService` / Enterprise Claim Gate |
+| Coverage | CoverageValidator / `requirement_coverages` | none | Coverage lifecycle |
+
+Legacy Evidence Facts and legacy Mappings are limited to historical
+compatibility, audit/read and temporary legacy UI/API compatibility. Their
+approval fields are not formal authority for Claim, Sufficiency, Readiness,
+Writer or canonical Mapping support. Canonical Mapping writes require the
+database FK `requirements.id` and a Fact FK into `evidence_source_facts`;
+display IDs, retrieval candidates, old `evidence_facts`, `evidences`, chunks
+and source refs cannot substitute for those identities.
+
+Sufficiency is derived through Evidence Support aggregation and
+`EvidenceReadinessService`; it is not granted by a Mapping row or persisted as
+an LLM assessment. Mapping approval remains distinct from Claim approval, and
+Claim permission is decided only by the Claim Gate.
+
+### Consumer authority confirmation
+
+| Consumer | Canonical path | Legacy Mapping Authority | Result |
+|---|---|---|---|
+| `EvidenceReadinessService` | `listRequirementEvidenceFactMappings` + source facts/reviews | NO | canonical readiness only |
+| `ReviewCenterService` | review/fact/mapping review services | NO | review/compatibility view only |
+| `PgRepository.getApprovedRequirementFactSupport()` | approved canonical Fact Mapping joins | NO | canonical Claim support only |
+| `ProductionBetaService.generateClaims()` | canonical support lookup, fail closed | NO | legacy support cannot authorize |
+| `ClaimGateService` | Claim Gate evaluation | NO | mapping approval is insufficient |
+| `EnterpriseClaimGateV2` | Enterprise Claim Gate evaluation | NO | canonical gated path |
+| `DocumentGenerationService` | Writer authorization after Claim Gate | NO | no legacy Writer authority |

@@ -1,0 +1,54 @@
+{
+  "checkpoint": "V43_GOLD_POOL_RECONCILIATION_CHECKPOINT",
+  "audit_mode": "READ_ONLY",
+  "generated_at": "2026-09-05T12:13:20Z",
+  "side_effects": {
+    "provider_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "production_files_changed": 0,
+    "new_gold_types": 0,
+    "tests_run": false
+  },
+  "requirement_gold_parity_matrix": [
+    {"tender_id": "FAST-01", "current_status": "A_AUTHORITATIVE_PACKET_RECOVERED", "source_packet": "backend/eval/requirement-extraction-real-tender-pilot-v1/packets/FAST-01.json", "gold_status": "GPT_GOLD_REVIEWED_FROZEN", "gold_requirement_count": 39, "human_action_required": false},
+    {"tender_id": "FAST-WATER-01", "current_status": "A_AUTHORITATIVE_PACKET_RECOVERED", "source_packet": "backend/eval/requirement-extraction-real-tender-pilot-v1/packets/FAST-WATER-01.json", "gold_status": "GPT_GOLD_REVIEWED_FROZEN", "gold_requirement_count": 80, "human_action_required": false},
+    {"tender_id": "TB-006", "current_status": "A_AUTHORITATIVE_PACKET_RECOVERED", "source_packet": "backend/eval/requirement-extraction-real-tender-pilot-v1/packets/TB-006.json", "gold_status": "GPT_GOLD_REVIEWED_FROZEN", "gold_requirement_count": 43, "human_action_required": false},
+    {"tender_id": "JY-001", "current_status": "B_HUMAN_RECONSTRUCTION_POSSIBLE", "source_packet": "backend/eval/gold-governance/v43-gold-v2-foundation/REQUIREMENT_SOURCE_RECONSTRUCTION_BLIND_PACKET.json", "gold_status": "CANDIDATE_PENDING_NOT_GOLD", "human_action_required": true},
+    {"tender_id": "TB-003", "current_status": "B_HUMAN_RECONSTRUCTION_POSSIBLE", "source_packet": "backend/eval/gold-governance/v43-gold-v2-foundation/REQUIREMENT_SOURCE_RECONSTRUCTION_BLIND_PACKET.json", "gold_status": "CANDIDATE_PENDING_NOT_GOLD", "human_action_required": true},
+    {"tender_id": "FAST-04", "current_status": "B_HUMAN_RECONSTRUCTION_POSSIBLE", "source_packet": "backend/eval/gold-governance/v43-gold-v2-foundation/REQUIREMENT_SOURCE_RECONSTRUCTION_BLIND_PACKET.json", "gold_status": "CANDIDATE_PENDING_NOT_GOLD", "human_action_required": true}
+  ],
+  "requirement_gold": {
+    "manifest": "backend/eval/requirement-extraction-real-tender-pilot-v1/manifest.json",
+    "authoritative_tender_count": 3,
+    "authoritative_gold_requirement_count": 162,
+    "six_tender_packet_parity": "FAIL_MISSING_AUTHORITATIVE_PACKETS",
+    "promotion": "NOT_PERFORMED"
+  },
+  "fact_eval_pool_matrix": [
+    {"fact_pool": "real-derived-gold-v1", "count": {"cases": 12, "fact_records": 14, "distinct_fact_refs": 6}, "origin": "HUMAN_ADJUDICATED_REAL_DERIVED_EVAL", "synthetic_flag": false, "authority_level": "EVAL_ONLY_NOT_REAL_FACT_GOLD", "allowed_eval_usage": "MAPPING_V2_REAL_SEMANTIC_DENOMINATOR_PARTITION", "blocked_usage": ["PRODUCTION_IMPORT", "REAL_FACT_GOLD"]},
+    {"fact_pool": "representative-sme-facts-v1", "count": 21, "origin": "enterprise_representative_sme", "synthetic_flag": true, "authority_level": "SYNTHETIC_FIXTURE", "allowed_eval_usage": ["BOUNDARY", "REGRESSION", "CONTROLLED_EVAL"], "blocked_usage": ["REAL_GOLD", "REAL_SEMANTIC_DENOMINATOR"]},
+    {"fact_pool": "l3-synthetic-enterprise", "count": {"controlled_cases": 6, "materials_context": 17}, "origin": "synthetic_enterprise", "synthetic_flag": true, "authority_level": "SYNTHETIC_CONTROLLED_FIXTURE", "allowed_eval_usage": ["BOUNDARY", "NEGATIVE", "REGRESSION"], "blocked_usage": ["REAL_GOLD", "ENTERPRISE_FACT_AUTHORITY"]},
+    {"fact_pool": "synthetic-boundary-gold-v2", "count": 29, "origin": "MAPPING_SYNTHETIC_BOUNDARY_GOLD_V2", "synthetic_flag": true, "authority_level": "EVAL_ONLY_SEMANTIC_BOUNDARY", "allowed_eval_usage": "MAPPING_V2_SYNTHETIC_SEMANTIC_DENOMINATOR_PARTITION", "blocked_usage": ["REAL_DERIVED_DENOMINATOR_MERGE", "PRODUCTION_IMPORT"]}
+  ],
+  "mapping_gold_v2_readiness": [
+    {"dataset": "requirement-evidence-mapping-v1/gold-cases.json", "cases": 36, "scored": "UNDECLARED_IN_V1", "human_review": "STATIC_HUMAN_AUTHORED", "allowed_denominator": "V1_CONTRACT_EVAL_ONLY"},
+    {"dataset": "requirement-evidence-mapping-v2/real-derived-gold-v1.json", "cases": 12, "scored": 12, "human_review": "12/12_ACCEPTED; ACCEPT_FOR_GOLD_POOL", "allowed_denominator": "YES_REAL_DERIVED_PARTITION_EVAL_ONLY"},
+    {"dataset": "requirement-evidence-mapping-v2/synthetic-boundary-gold-v2.json", "cases": 29, "scored": 29, "human_review": "29/29_ACCEPTED", "allowed_denominator": "YES_SYNTHETIC_PARTITION_ONLY"},
+    {"dataset": "requirement-evidence-mapping-v2/engineering-fixtures-v2.json", "cases": 6, "scored": 0, "human_review": "ACCEPTED_FIXTURE_STATUS", "allowed_denominator": "NO_ENGINEERING_REGRESSION_ONLY"}
+  ],
+  "REQUIREMENT_GOLD_STATUS": "PARTIAL/BLOCKED_FOR_AUTHORITATIVE_PARITY",
+  "FACT_EVAL_POOL_STATUS": "PRESENT_EVAL_ONLY; REAL_FACT_GOLD_NOT_ESTABLISHED",
+  "MAPPING_GOLD_V2_READINESS": "SUCCESSOR_BUILT_NOT_ACTIVATED",
+  "BLOCKERS_ONLY": [
+    "JY-001, TB-003 and FAST-04 lack Human-authorized authoritative Requirement packets; six-tender parity is incomplete.",
+    "Real Fact V2 eligible candidates = 0; no real enterprise Fact Gold is available.",
+    "Mapping Gold V2 successor is not activated or frozen; engineering fixtures remain excluded from semantic denominator."
+  ],
+  "source_files": {
+    "requirement_manifest": "backend/eval/requirement-extraction-real-tender-pilot-v1/manifest.json",
+    "requirement_foundation_checkpoint": "backend/eval/gold-governance/v43-gold-v2-foundation/requirement-source-foundation-checkpoint.json",
+    "fact_manifest": "backend/eval/gold-governance/v43-gold-v2-foundation/REAL_FACT_V2_CANDIDATE_MANIFEST.json",
+    "mapping_successor_manifest": "backend/eval/requirement-evidence-mapping-v2/successor-manifest.json"
+  }
+}

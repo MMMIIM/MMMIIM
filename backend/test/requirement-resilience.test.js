@@ -25,6 +25,17 @@ function extractionFor(paragraphTexts) {
   };
 }
 
+function extractionWithParagraphs(paragraphs) {
+  return {
+    text: paragraphs.map((paragraph) => paragraph.text).join('\n'),
+    paragraphs: paragraphs.map((paragraph, index) => ({
+      paragraph: index + 1, page: paragraph.page || 1, ...paragraph
+    })),
+    pages: [],
+    warnings: []
+  };
+}
+
 function createRepository() {
   const state = { chunks: [], completedChunks: [], failedChunks: [], completedJob: null, failedJob: null };
   return {
@@ -51,7 +62,7 @@ function createRepository() {
   };
 }
 
-function serviceFor({ extraction, gateway, chunkBudget }) {
+function serviceFor({ extraction, gateway, chunkBudget, scopeValidator }) {
   const repository = createRepository();
   return {
     repository,
@@ -61,6 +72,7 @@ function serviceFor({ extraction, gateway, chunkBudget }) {
       textExtractor: async () => extraction,
       extractionGateway: gateway,
       chunkBudget,
+      scopeValidator,
       logger: { error: () => {} }
     })
   };
@@ -149,6 +161,117 @@ test('所有候选均为空时汇总失败', () => {
     () => aggregateRequirementCandidates([{ chunk_number: 1, candidates: [{ text: '', source_refs: ['C001-S001'], category: 'technical', mandatory_observed: false, requires_confirmation: false }] }]),
     (error) => error.code === 'NO_REQUIREMENTS_EXTRACTED'
   );
+});
+
+test('仅被范围排除的候选会审计并以 succeeded_empty 完成分片', async () => {
+  const { service, repository } = serviceFor({
+    extraction: extractionFor(['第一章 技术要求', '系统应提供审计日志。']),
+    chunkBudget: { singleCallThreshold: 1, characterBudget: 200, tokenBudget: 200 },
+    scopeValidator: () => {
+      throw Object.assign(new Error('候选来源范围仅包含非需求范围内容。'), {
+        code: 'REQUIREMENT_SCOPE_EXCLUDED', status: 422, scope_roles: ['SCORING']
+      });
+    },
+    gateway: {
+      extract: async () => ({
+        candidates: [{ text: '评分项', source_range: { start_ref: 'C001-S002', end_ref: 'C001-S002' }, category: 'technical', mandatory_observed: false, requires_confirmation: false }],
+        warnings: [], audit: { provider: 'semantic_gateway' }
+      })
+    }
+  });
+  await assert.rejects(
+    () => service.start({ projectId: 'project-1', tenderFileId: 'file-1', waitForCompletion: true }),
+    (error) => error.code === 'NO_REQUIREMENTS_EXTRACTED'
+  );
+  assert.equal(repository.state.completedChunks.length, 1);
+  assert.equal(repository.state.completedChunks[0].candidateCount, 0);
+  assert.equal(repository.state.completedChunks[0].gatewayAudit.scope_audit.scope_rejected, 1);
+  assert.equal(repository.state.completedChunks[0].gatewayAudit.scope_audit.outcome, 'SUCCESS_EMPTY_AFTER_SCOPE_FILTER');
+  assert.equal(repository.state.completedChunks[0].gatewayAudit.scope_audit.rejections[0].scope_decision, 'OUT_OF_SCOPE');
+  assert.equal(repository.state.failedJob.errorCode, 'NO_REQUIREMENTS_EXTRACTED');
+});
+
+test('混合范围候选只保留可接受候选并记录范围拒绝', async () => {
+  const { service, repository } = serviceFor({
+    extraction: extractionFor(['第一章 技术要求', '系统应提供审计日志。', '系统应保留操作记录。']),
+    chunkBudget: { singleCallThreshold: 1, characterBudget: 200, tokenBudget: 200 },
+    scopeValidator: (candidate) => {
+      if (candidate.text === '评分项') {
+        throw Object.assign(new Error('候选来源范围仅包含非需求范围内容。'), {
+          code: 'REQUIREMENT_SCOPE_EXCLUDED', status: 422, scope_roles: ['SCORING']
+        });
+      }
+      return { eligible: true, roles: ['REQUIREMENT_ELIGIBLE'] };
+    },
+    gateway: {
+      extract: async () => ({
+        candidates: [
+          { text: '提供审计日志。', source_range: { start_ref: 'C001-S002', end_ref: 'C001-S002' }, category: 'technical', mandatory_observed: false, requires_confirmation: false },
+          { text: '评分项', source_range: { start_ref: 'C001-S003', end_ref: 'C001-S003' }, category: 'technical', mandatory_observed: false, requires_confirmation: false }
+        ], warnings: [], audit: { provider: 'semantic_gateway' }
+      })
+    }
+  });
+  const result = await service.start({ projectId: 'project-1', tenderFileId: 'file-1', waitForCompletion: true });
+  assert.equal(result.status, 'succeeded');
+  assert.deepEqual(result.candidates.map((candidate) => candidate.content), ['提供审计日志。']);
+  assert.equal(repository.state.completedChunks[0].gatewayAudit.scope_audit.raw_candidates, 2);
+  assert.equal(repository.state.completedChunks[0].gatewayAudit.scope_audit.scope_accepted, 1);
+  assert.equal(repository.state.completedChunks[0].gatewayAudit.scope_audit.scope_rejected, 1);
+});
+
+test('模型返回空候选时以 SUCCESS_EMPTY 完成分片并继续后续分片', async () => {
+  const { service, repository } = serviceFor({
+    extraction: extractionFor(['第一章 技术要求', '没有可抽取的需求。', '系统应提供审计日志。', '系统应保留操作记录。']),
+    chunkBudget: { singleCallThreshold: 1, characterBudget: 35, tokenBudget: 35 },
+    gateway: { extract: async ({ chunk }) => ({
+      candidates: chunk.chunk_number === 1 ? [] : [{
+        text: '保留操作记录。', source_range: { start_ref: chunk.segments.at(-1).source_ref, end_ref: chunk.segments.at(-1).source_ref },
+        category: 'technical', mandatory_observed: false, requires_confirmation: false
+      }], warnings: [], audit: { provider: 'semantic_gateway' }
+    }) }
+  });
+  const result = await service.start({ projectId: 'project-1', tenderFileId: 'file-1', waitForCompletion: true });
+  assert.equal(result.status, 'succeeded');
+  assert.ok(repository.state.chunks.length > 1);
+  assert.equal(repository.state.completedChunks[0].gatewayAudit.scope_audit.outcome, 'SUCCESS_EMPTY');
+  assert.ok(repository.state.completedChunks.some((item) => item.candidateCount > 0));
+  assert.equal(repository.state.failedJob, null);
+});
+
+test('多分片中的仅范围排除分片不会阻断后续有效分片', async () => {
+  const paragraphs = [
+    { text: '第一章 技术要求' },
+    ...Array.from({ length: 8 }, (_, index) => ({ text: `系统应提供审计日志${index + 1}。` }))
+  ];
+  const { service, repository } = serviceFor({
+    extraction: extractionWithParagraphs(paragraphs),
+    chunkBudget: { singleCallThreshold: 1, characterBudget: 35, tokenBudget: 35 },
+    scopeValidator: (_candidate, chunk) => {
+      if (chunk.chunk_number === 1) {
+        throw Object.assign(new Error('候选来源范围仅包含非需求范围内容。'), {
+          code: 'REQUIREMENT_SCOPE_EXCLUDED', status: 422, scope_roles: ['SCORING']
+        });
+      }
+      return { eligible: true, roles: ['REQUIREMENT_ELIGIBLE'] };
+    },
+    gateway: {
+      extract: async ({ chunk }) => {
+        const ref = chunk.segments[0].source_ref;
+        return {
+          candidates: [{ text: `有效候选${chunk.chunk_number}`, source_range: { start_ref: ref, end_ref: ref }, category: 'technical', mandatory_observed: false, requires_confirmation: false }],
+          warnings: [], audit: { provider: 'semantic_gateway' }
+        };
+      }
+    }
+  });
+  const result = await service.start({ projectId: 'project-1', tenderFileId: 'file-1', waitForCompletion: true });
+  assert.ok(repository.state.chunks.length > 1);
+  assert.equal(result.status, 'succeeded');
+  assert.ok(result.candidates.length > 0);
+  assert.equal(repository.state.failedJob, null);
+  assert.equal(repository.state.completedChunks.length, repository.state.chunks.length);
+  assert.ok(repository.state.completedChunks.some((item) => item.gatewayAudit.scope_audit.outcome === 'SUCCESS_EMPTY_AFTER_SCOPE_FILTER'));
 });
 
 test('长文件以最多 2 个并发处理且按 chunk_number 稳定汇总', async () => {
@@ -303,9 +426,9 @@ test('5,610 中文字符与 134 段按来源段预算形成稳定分片', () => 
     characterBudget: 8000,
     tokenBudget: 8000
   });
-  assert.equal(chunks.length, 3);
+  assert.equal(chunks.length, 2);
   assert.ok(chunks.every((chunk) => chunk.character_count <= 8000));
-  assert.ok(chunks.every((chunk) => chunk.segments.length <= 50));
+  assert.ok(chunks.every((chunk) => chunk.segments.length <= 100));
 });
 
 test('超过 8,000 字符才启用 8,000 字符确定性分片', () => {
@@ -343,7 +466,7 @@ test('requirement_extraction 默认 300 秒、healthcheck 15 秒且配置传入 
   assert.deepEqual(resolveRequirementChunkBudget({
     REQUIREMENT_SINGLE_CALL_CHAR_THRESHOLD: '8000',
     REQUIREMENT_CHUNK_CHAR_BUDGET: '8000', REQUIREMENT_CHUNK_TOKEN_BUDGET: '8000'
-  }), { singleCallThreshold: 8000, characterBudget: 8000, tokenBudget: 8000, sourceSpanBudget: 50 });
+  }), { singleCallThreshold: 8000, characterBudget: 8000, tokenBudget: 8000, sourceSpanBudget: 100 });
 });
 
 test('数据库任务领取锁保证同一 job/chunk 不会被重复调用', async () => {

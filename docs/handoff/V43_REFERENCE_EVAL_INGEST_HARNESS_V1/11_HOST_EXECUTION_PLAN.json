@@ -1,0 +1,20 @@
+{
+  "artifact_type": "V43_HOST_EXECUTION_PLAN",
+  "status": "READY_AFTER_DRY_RUN_AND_FOCUSED_TESTS",
+  "working_directory": "D:\\AI工作\\AI\\标书平台\\标书平台",
+  "command": "if (-not $env:SOURCE_DATABASE_URL) { $env:SOURCE_DATABASE_URL = $env:DATABASE_URL }; if (-not $env:SOURCE_DATABASE_URL) { throw 'SOURCE_DATABASE_URL or DATABASE_URL is required' }; if (-not $env:EVAL_DATABASE_URL) { throw 'EVAL_DATABASE_URL must target bid_platform_reference_eval_v4' }; node .\\backend\\eval\\rag-governance\\reference-eval-ingest-v4.mjs --execute",
+  "required_environment": [
+    "SOURCE_DATABASE_URL (read-only bid_platform)",
+    "EVAL_DATABASE_URL (must be bid_platform_reference_eval_v4)",
+    "EVAL_ADMIN_DATABASE_URL (optional admin connection for CREATE DATABASE)",
+    "V43_EMBEDDING_API_BASE",
+    "V43_EMBEDDING_API_KEY",
+    "V43_EMBEDDING_MODEL=Qwen/Qwen3-Embedding-0.6B",
+    "V43_EMBEDDING_VERSION=1",
+    "V43_EMBEDDING_DIMENSION=1024",
+    "EMBEDDING_PROXY_URL (existing host setting)"
+  ],
+  "output_report": "docs/handoff/V43_REFERENCE_EVAL_INGEST_HARNESS_V1/13_HOST_EXECUTION_REPORT.json",
+  "network_execution_from_codex": false,
+  "secrets_printed": false
+}

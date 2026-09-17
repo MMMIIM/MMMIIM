@@ -52,10 +52,10 @@ test('Requirement Extraction prompt requires a complete requirements-only top-le
   assert.match(instruction, /所有明确存在且符合提取范围的独立响应义务都应进入 requirements/);
 });
 
-test('Requirement Extraction v3 prompt forbids placeholder candidates and requires source ranges', () => {
+test('Requirement Extraction v3.1.1 prompt preserves completeness and source ranges', () => {
   const contract = getSemanticTaskContract('requirement_extraction');
   const instruction = resolveSemanticTaskInstruction('requirement_extraction');
-  assert.equal(contract.contract_version, '4.3-requirement-extraction-v3');
+  assert.equal(contract.contract_version, '4.3-requirement-extraction-v3.1.1');
   assert.match(instruction, /只返回实际识别出的 Requirement/);
   assert.match(instruction, /不得生成占位 Candidate/);
   assert.match(instruction, /text 必须是非空/);
@@ -68,6 +68,38 @@ test('Requirement Extraction v3 prompt forbids placeholder candidates and requir
   assert.match(instruction, /不得跳过范围内的中间段落/);
   assert.match(instruction, /不得.*两个不相邻的证据区域/);
   assert.match(instruction, /不得编造不存在的 start_ref 或 end_ref/);
+  assert.match(instruction, /数量、期限|quantity|deadline|duration/);
+  assert.match(instruction, /SLA|阈值|性能约束/);
+  assert.match(instruction, /分别满足|不同能力|不同证据|不同验收|不同风险/);
+  assert.match(instruction, /禁止按动词机械拆分/);
+});
+
+test('Requirement Extraction v3.1.1 adds table material completeness and explicit background constraints', () => {
+  const instruction = resolveSemanticTaskInstruction('requirement_extraction');
+  assert.match(instruction, /需求来自表格行时/);
+  assert.match(instruction, /实施范围、资源规模、性能判断、SLA、验收、成本\/投入/);
+  assert.match(instruction, /数量、单位、服务期限、频率、容量、阈值、性能指标/);
+  assert.match(instruction, /价格、单价、评分等非 Requirement 范围字段/);
+  assert.match(instruction, /无论明确要求出现于/);
+  assert.match(instruction, /项目背景、项目概况、建设背景、总体说明/);
+  assert.match(instruction, /部署位置\/部署方式、运行环境、实施边界、交付边界/);
+  assert.match(instruction, /普通事实性背景描述仍不提取/);
+});
+
+test('Requirement Extraction v3.1.1 preserves meaning-critical values in recognized table requirements', () => {
+  const instruction = resolveSemanticTaskInstruction('requirement_extraction');
+  assert.match(instruction, /已经识别为 Requirement 的需求型表格项/);
+  assert.match(instruction, /改变履约范围、资源规模、服务周期、性能或验收条件/);
+  assert.match(instruction, /关联单元格或结构上明确继承的共享\/合并单元格/);
+  assert.match(instruction, /计费周期、价格或相似的商业字段不得替代服务期限/);
+});
+
+test('Requirement Extraction v3.1.1 covers explicit definitional delivery scope without duty keywords', () => {
+  const instruction = resolveSemanticTaskInstruction('requirement_extraction');
+  assert.match(instruction, /若原文明确定义本项目需要提供的服务、建设、实施或运维范围/);
+  assert.match(instruction, /包括、涵盖、由……组成、服务内容为/);
+  assert.match(instruction, /不得仅因该段未使用/);
+  assert.match(instruction, /概念解释、背景介绍、政策说明或一般性定义不得因此提取/);
 });
 
 test('Gateway Task Router resolves the canonical instruction and emits contract metadata', async () => {
@@ -178,4 +210,13 @@ test('Unrelated semantic task instructions continue to resolve through the same 
   const metadata = getSemanticTaskInstructionMetadata('section_drafting');
   assert.equal(metadata.instruction, resolveSemanticTaskInstruction('section_drafting'));
   assert.match(metadata.instruction_hash, /^[a-f0-9]{64}$/);
+});
+
+test('Evidence Support prompt permits direct only for relevant capable full support', () => {
+  const instruction = SEMANTIC_TASK_INSTRUCTIONS.evidence_support_assessment;
+  assert.match(instruction, /semantic_relationship=direct/);
+  assert.match(instruction, /semantic_relevance=relevant/);
+  assert.match(instruction, /evidence_capability=capable/);
+  assert.match(instruction, /support_level=full_support/);
+  assert.match(instruction, /任一条件不成立[，；;：:]?\s*(?:不得|不能)输出 direct/);
 });

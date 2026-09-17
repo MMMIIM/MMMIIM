@@ -5,6 +5,8 @@ export const EVIDENCE_REVIEW_CONTRACT_VERSION='evidence-review-v1';
 export const SEMANTIC_RELEVANCE=Object.freeze(['relevant','weakly_relevant','irrelevant','unknown']);
 export const EVIDENCE_CAPABILITY=Object.freeze(['capable','reference_only','not_capable','unknown']);
 export const EVIDENCE_SUPPORT_LEVEL=Object.freeze(['full_support','partial_support','conflict','insufficient','reference_only','unknown']);
+// ADR-020: support_sufficiency ownership remains under evaluation; do not
+// derive it from support_level without an explicit parity decision.
 export const REVIEW_DIMENSIONS=Object.freeze(['subject_match','scope_match','status_match','quantitative_match','entity_match','validity_match','source_authority','support_sufficiency']);
 export const REVIEW_DIMENSION_VALUES=Object.freeze(['match','mismatch','unknown']);
 export const EVIDENCE_REVIEW_REASON_CODES=Object.freeze(['SEMANTICALLY_IRRELEVANT','SOURCE_NOT_EVIDENCE_CAPABLE','REFERENCE_ONLY_SOURCE','SUBJECT_MISMATCH','SCOPE_MISMATCH','ENTITY_MISMATCH','STATUS_MISMATCH','STATUS_UNKNOWN','QUANTITATIVE_MISMATCH','QUANTITATIVE_UNKNOWN','VALIDITY_MISMATCH','VALIDITY_UNKNOWN','SOURCE_AUTHORITY_INSUFFICIENT','SUPPORT_PARTIAL','SUPPORT_INSUFFICIENT','HUMAN_REVIEW_REQUIRED']);

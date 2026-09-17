@@ -28,11 +28,11 @@ const plan = {
   target_sections: ['chapter-05']
 };
 
-function canonicalSupport() {
+function canonicalSupport(support_level = 'full_support') {
   return {
     mapping_id: 'MAP-001', project_id: PROJECT, requirement_id: 'REQ-001', evidence_id: 'FACT-001',
     mapping_status: 'approved', mapping_current: true, approval_status: 'approved', is_current: true,
-    support_level: 'full_support', source_lineage_verified: true, usable_for_claims: true,
+    support_level, source_lineage_verified: true, usable_for_claims: true,
     source_text: '相关项目中标并完成交付。', content: '相关项目中标并完成交付。',
     material_type: 'project_case', evidence_scope: ['award_fact'], metadata: {}, evidence_facts: []
   };
@@ -60,7 +60,7 @@ function repository({ canonical = [], legacy = [] } = {}) {
 
 async function withServer(repository, run) {
   const service = new ProductionBetaService({ repository });
-  const app = createApp({ repository, productionBetaService: service, actorResolver: () => ({ actor_id: 'trusted-test', actor_type: 'test', source: 'test' }) });
+  const app = createApp({ repository, productionBetaService: service, projectAuthorizationService: { assertProjectAccess: async () => {} }, actorResolver: () => ({ actor_id: 'trusted-test', actor_type: 'test', source: 'test' }) });
   const server = await new Promise((resolve) => {
     const listener = app.listen(0, '127.0.0.1', () => resolve(listener));
   });
@@ -85,6 +85,20 @@ test('production Claim route uses canonical Fact Mapping and persists its suppor
     assert.deepEqual(repo.persisted.evaluatedClaims.find((item) => item.claim.claim_type === 'evidence_support').v2_evaluation.mapping_ids, ['MAP-001']);
   });
 });
+
+for (const support_level of ['partial_support', 'insufficient', 'conflict', 'unknown']) {
+  test(`production Claim route cannot promote ${support_level} Mapping support`, async () => {
+    const repo = repository({ canonical: [canonicalSupport(support_level)] });
+    await withServer(repo, async (base) => {
+      const result = await generate(base);
+      assert.equal(result.response.status, 201, JSON.stringify(result.body));
+      const evidenceSupport = repo.persisted.evaluatedClaims.find((item) => item.claim.claim_type === 'evidence_support');
+      assert.ok(evidenceSupport, `expected evidence_support result for ${support_level}`);
+      assert.notEqual(evidenceSupport.v2_evaluation.decision, 'allow');
+      assert.equal(evidenceSupport.v2_evaluation.writer_eligible, false);
+    });
+  });
+}
 
 test('production Claim route cannot fall back to legacy Mapping when canonical support is absent', async () => {
   const repo = repository({ legacy: [{ mapping_id: 'LEGACY-MAP', project_id: PROJECT, requirement_id: 'REQ-001', evidence_id: 'LEGACY-EVIDENCE', approval_status: 'approved', content: 'legacy support' }] });

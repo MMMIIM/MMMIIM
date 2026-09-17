@@ -76,7 +76,9 @@ test('project Copilot HTTP contract carries explicit context and safe errors', a
     const app = createApp({
       repository: { listAgentExecutionAudits: async () => [] },
       agentOrchestrator: { async run(input) { calls.push(input); return { status: 'SUCCESS', summary: '已读取项目状态。', tasks: [], actions: [], sources: [], blockers: [] }; } },
-      agentContextResolver: { async resolve(input) { return input; } }
+      agentContextResolver: { async resolve(input) { return input; } },
+      projectAuthorizationService: { assertProjectAccess: async () => {} },
+      actorResolver: () => ({ actor_id: 'agent-test', actor_type: 'test', source: 'test' })
     });
     const listener = app.listen(0, '127.0.0.1', () => resolve(listener));
   });

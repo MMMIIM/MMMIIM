@@ -1,0 +1,33 @@
+{
+  "checkpoint": "V43_FACT_FINAL_OBSERVABILITY_AND_GROUNDING_DELTA_CHECKPOINT",
+  "generated_at": "2026-09-08T16:54:18.893Z",
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "fact_persistence": 0,
+  "gold_mutations": 0,
+  "focus_candidate_count": 7,
+  "semantic_empty_execution_count": 4,
+  "metrics": {
+    "framing_false_reject_count": 0,
+    "cross_heading_grounding_count": 0,
+    "full_document_fallback_count": 0,
+    "reference_authority_escape_count": 0,
+    "governance_authority_escape_count": 0,
+    "critical_false_accept_count": 0,
+    "grounding_distribution_after": {
+      "ACCEPT": 2,
+      "REVIEW_REQUIRED": 5
+    },
+    "source_ref_total": 42,
+    "source_ref_resolved": 42,
+    "source_ref_resolution_rate": 1
+  },
+  "statuses": {
+    "FACT_OBSERVABILITY": "READY_FOR_GPT_ADJUDICATION",
+    "FACT_BOUNDED_GROUNDING": "READY_FOR_GPT_ADJUDICATION"
+  },
+  "files": {
+    "packet": "docs\\V43_FACT_FINAL_OBSERVABILITY_AND_GROUNDING_DELTA_GPT_PACKET.json",
+    "script": "backend\\eval\\rag-pilot\\fact-final-observability-grounding-delta.mjs"
+  }
+}

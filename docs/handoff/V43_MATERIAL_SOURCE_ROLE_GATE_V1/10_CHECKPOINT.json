@@ -1,0 +1,40 @@
+{
+  "checkpoint": "V43_MATERIAL_SOURCE_ROLE_GATE_V1",
+  "status": "READY_FOR_GPT_MATERIAL_SOURCE_ROLE_GATE_REVIEW",
+  "policy_owner": "backend/src/pipeline/material-source-authority-policy.js",
+  "policy_version": "material-source-role-v1",
+  "taxonomy_sufficient": true,
+  "current_material_count": 56,
+  "source_role_counts": {
+    "EVIDENCE_CANDIDATE": 5,
+    "REFERENCE_ONLY": 51
+  },
+  "reference_authority_escape": false,
+  "synthetic_real_authority_escalation": false,
+  "huawei_reclassification": "REFERENCE_ONLY",
+  "huawei_existing_31_fixture": "ENGINEERING_FACT_BOUNDARY_REGRESSION_FIXTURE",
+  "fact_entry_reference_behavior": "FACT_SKIPPED_REFERENCE_ONLY",
+  "writer_reference_context": "ALLOWED_CONTEXT_ONLY",
+  "downstream_formal_authority": "REQUIRES_EVIDENCE_CANDIDATE_AND_EXISTING_FACT_MAPPING_CLAIM_GATES",
+  "focused_tests": "PASS",
+  "build": "PASS",
+  "lint": "PASS",
+  "diff_check": "PASS",
+  "side_effects": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "eval_db_writes": 0,
+    "fact_persistence": 0,
+    "gold_mutations": 0,
+    "mapping_actions": 0,
+    "claim_actions": 0,
+    "writer_actions": 0,
+    "migrations": 0,
+    "commits": 0,
+    "pushes": 0,
+    "merges": 0,
+    "deploys": 0
+  },
+  "next_gate": "GPT/Human review of taxonomy, authority boundary and Eval artifacts only"
+}

@@ -1,0 +1,37 @@
+{
+  "run_id": "V43-REAL-PDF-PILOT-V1.1-20260913093510-fed5c5eb",
+  "artifact_type": "V43_HANDOFF_REAL_FACT_V2_REAL_PDF_PILOT_V1",
+  "source_manifest": "data/eval/real-enterprise-upload-test-v1/01_REAL_DOCUMENT_MANIFEST.json",
+  "source_ids": [
+    "HW-001",
+    "HW-002",
+    "HW-003",
+    "HW-004",
+    "HW-005",
+    "HW-006"
+  ],
+  "source_role": "REAL_PUBLIC_FIRST_PARTY",
+  "authority": "FIRST_PARTY_OFFICIAL",
+  "enterprise_id": "HUAWEI-PUBLIC-REAL-PDF-PILOT-V1",
+  "enterprise_name": "Huawei",
+  "database": "bid_platform_flow_audit_test",
+  "provider_runtime": {
+    "provider": "openai_compatible",
+    "gateway_base_url": "http://127.0.0.1:18082",
+    "provider_base_url": "https://api.siliconflow.cn/v1",
+    "provider_host": "api.siliconflow.cn",
+    "provider_port": "443",
+    "model": "deepseek-ai/DeepSeek-V4-Flash",
+    "service_key_present": true,
+    "provider_key_present": true,
+    "deepseek_official_api_base": "https://api.deepseek.com",
+    "deepseek_official_fact_model": "deepseek-v4-pro",
+    "deepseek_official_key_present": true,
+    "timeout_ms": 120000
+  },
+  "semantic_window_max_chars": 6000,
+  "provider_call_cap": 120,
+  "requirement_blind": true,
+  "production_db_writes": 0,
+  "gold_mutations": 0
+}

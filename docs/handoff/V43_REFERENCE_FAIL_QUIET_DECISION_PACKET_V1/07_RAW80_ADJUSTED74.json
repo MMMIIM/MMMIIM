@@ -1,0 +1,51 @@
+{
+  "artifact_type": "V43_RAW80_VS_REFERENCE_NEEDED_ADJUSTED74_METRICS",
+  "source_artifact": "docs/handoff/V43_REFERENCE_RAG_SEMANTIC_ADJUDICATION_AND_FAILURE_DECOMPOSITION_V1/12_RAW80_VS_ADJUSTED74_METRICS.json",
+  "source_sha256": "762e454cf39c948fd67f6fcc873eb1f7ae3ef2145e78755e6eda8190c6a204a6",
+  "raw_80": {
+    "case_count": 80,
+    "label_counts": {
+      "PARTIAL": 37,
+      "NOT_USEFUL": 31,
+      "USEFUL": 12
+    },
+    "family_counts": {
+      "TOO_GENERIC": 19,
+      "WEAK_CORPUS": 25,
+      "REFERENCE_NOT_NEEDED": 6,
+      "GOOD_REFERENCE": 12,
+      "RANKING_FAILURE": 7,
+      "SEMANTIC_NEAR_MISS": 9,
+      "OTHER": 2
+    },
+    "useful_rate": 0.15
+  },
+  "reference_needed_adjusted_74": {
+    "case_count": 74,
+    "label_counts": {
+      "PARTIAL": 37,
+      "USEFUL": 12,
+      "NOT_USEFUL": 25
+    },
+    "family_counts": {
+      "TOO_GENERIC": 19,
+      "WEAK_CORPUS": 25,
+      "GOOD_REFERENCE": 12,
+      "RANKING_FAILURE": 7,
+      "SEMANTIC_NEAR_MISS": 9,
+      "OTHER": 2
+    },
+    "useful_rate": 0.16216216216216217
+  },
+  "excluded_case_ids": [
+    "RAG-TB-003-TB-003-REQ-035",
+    "RAG-JY-001-JY-001-REQ-039",
+    "RAG-JY-001-JY-001-REQ-130",
+    "RAG-TB-003-TB-003-REQ-020",
+    "RAG-TB-003-TB-003-REQ-225",
+    "RAG-TB-003-TB-003-REQ-226"
+  ],
+  "denominator_change_only": true,
+  "router_mutated": false,
+  "benchmark_rewritten": false
+}

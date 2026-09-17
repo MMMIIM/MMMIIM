@@ -1,0 +1,60 @@
+{
+  "artifact_type": "V43_AUTHORITY_CLASSIFICATION",
+  "rows": [
+    {
+      "artifact": "docs/V43_RESPONSE_ROUTER_BLIND_GPT_V2_CORE6_1009.json",
+      "source_authority": "DERIVED_FROM_SOURCE",
+      "semantic_authority": "NO",
+      "human_gold_authority": "NO",
+      "development_reference": "YES",
+      "production_runtime": "NO",
+      "note": "blind mechanical Router input; GPT fields null"
+    },
+    {
+      "artifact": "docs/V43_REQUIREMENT_GOLD_V2_SIX_TENDER_CANONICAL_INPUT.json",
+      "source_authority": "DERIVED_FROM_SOURCE",
+      "semantic_authority": "NO",
+      "human_gold_authority": "NO",
+      "development_reference": "YES",
+      "production_runtime": "NO",
+      "note": "Eval-only canonical input; non-authoritative notice"
+    },
+    {
+      "artifact": "docs/REQUIREMENT_CANDIDATE_POOL_V2_COMPLETED.json",
+      "source_authority": "SOURCE_DERIVED_CANDIDATES",
+      "semantic_authority": "NO",
+      "human_gold_authority": "NO",
+      "development_reference": "YES",
+      "production_runtime": "NO",
+      "note": "PENDING_HUMAN_AUTHORITY"
+    },
+    {
+      "artifact": "backend/eval/requirement-extraction-real-tender-pilot-v1/recovered-source-authority-v1/manifest.json",
+      "source_authority": "SOURCE_CANONICAL_AUTHORITY_READY",
+      "semantic_authority": "NO",
+      "human_gold_authority": "NO",
+      "development_reference": "YES",
+      "production_runtime": "NO",
+      "note": "JY/TB/FAST04 pending Human review"
+    },
+    {
+      "artifact": "backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/manifest.json",
+      "source_authority": "YES",
+      "semantic_authority": "YES",
+      "human_gold_authority": "YES_FOR_THREE_TENDERS",
+      "development_reference": "YES",
+      "production_runtime": "NO",
+      "note": "199 rows; 198 clear + 1 ambiguous"
+    },
+    {
+      "artifact": "docs/eval/requirement-production-core6-20260911/CORE6_RUNTIME_MANIFEST.json",
+      "source_authority": "RUNTIME_SNAPSHOT",
+      "semantic_authority": "NO",
+      "human_gold_authority": "NO",
+      "development_reference": "YES",
+      "production_runtime": "YES",
+      "note": "semantic adjudication not performed"
+    }
+  ],
+  "rule": "Development reference is never promoted to Human Gold; authority is artifact-specific and upstream-bounded."
+}

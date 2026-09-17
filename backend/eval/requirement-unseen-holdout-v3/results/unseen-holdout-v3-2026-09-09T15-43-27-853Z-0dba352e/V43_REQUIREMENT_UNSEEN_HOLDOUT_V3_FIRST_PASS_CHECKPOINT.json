@@ -1,0 +1,112 @@
+{
+  "checkpoint": "V43_REQUIREMENT_UNSEEN_HOLDOUT_V3_FIRST_PASS_CHECKPOINT",
+  "run_id": "unseen-holdout-v3-2026-09-09T15-43-27-853Z-0dba352e",
+  "started_at": "2026-09-09T15:43:27.857Z",
+  "completed_at": "2026-09-09T16:04:09.331Z",
+  "source_count": 2,
+  "source_manifest_path": "backend/eval/requirement-unseen-holdout-v3/results/unseen-holdout-v3-2026-09-09T15-43-27-853Z-0dba352e/source-manifest.json",
+  "sources": [
+    {
+      "holdout_id": "HOLDOUT-REQ-V3-01",
+      "original_filename": "2534675652264.pdf",
+      "source_sha256": "1302525341f471bbf960ded663a9334a80c0d1f79a562a1849bc3e9c7433c920",
+      "source_type": "PDF",
+      "parsed_source_paragraph_count": 8305,
+      "production_window_count": 116,
+      "provider_executions": 116,
+      "successful_executions": 116,
+      "failed_executions": 0,
+      "finish_reason_distribution": {
+        "stop": 116
+      },
+      "output_truncation_count": 0,
+      "schema_failure_count": 0,
+      "candidate_count": 1095,
+      "canonical_requirement_count": 1082,
+      "source_resolution_pass_count": 1095,
+      "source_resolution_fail_count": 0,
+      "source_resolution_pass_rate": 1,
+      "quality_gate_distribution": {
+        "REVIEW_REQUIRED": 247,
+        "PASS": 835
+      }
+    },
+    {
+      "holdout_id": "HOLDOUT-REQ-V3-02",
+      "original_filename": "长春新区教育局学校实验室设备及实验仪器设备采购项目-招标文件.docx",
+      "source_sha256": "ee40e55239d182ffb681d8cdb8c9b3010c8a5b422fe55a599f1a11a995bc201b",
+      "source_type": "DOCX",
+      "parsed_source_paragraph_count": 4152,
+      "production_window_count": 64,
+      "provider_executions": 64,
+      "successful_executions": 64,
+      "failed_executions": 0,
+      "finish_reason_distribution": {
+        "stop": 64
+      },
+      "output_truncation_count": 0,
+      "schema_failure_count": 0,
+      "candidate_count": 858,
+      "canonical_requirement_count": 855,
+      "source_resolution_pass_count": 858,
+      "source_resolution_fail_count": 0,
+      "source_resolution_pass_rate": 1,
+      "quality_gate_distribution": {
+        "PASS": 331,
+        "REVIEW_REQUIRED": 524
+      }
+    }
+  ],
+  "total_provider_executions": 180,
+  "successful_executions": 180,
+  "failed_executions": 0,
+  "finish_reason_distribution": {
+    "stop": 180
+  },
+  "output_truncation_count": 0,
+  "schema_failure_count": 0,
+  "transport_or_provider_failure_count": 0,
+  "total_candidates": 1953,
+  "total_canonical_requirements": 1937,
+  "source_resolution_pass_rate": 1,
+  "quality_gate_distribution": {
+    "REVIEW_REQUIRED": 771,
+    "PASS": 1166
+  },
+  "artifact_paths": {
+    "source_manifest": "backend/eval/requirement-unseen-holdout-v3/results/unseen-holdout-v3-2026-09-09T15-43-27-853Z-0dba352e/source-manifest.json",
+    "parsed_sources": "backend/eval/requirement-unseen-holdout-v3/results/unseen-holdout-v3-2026-09-09T15-43-27-853Z-0dba352e/parsed-sources",
+    "source_segment_ledgers": "backend/eval/requirement-unseen-holdout-v3/results/unseen-holdout-v3-2026-09-09T15-43-27-853Z-0dba352e/source-segment-ledgers",
+    "production_window_ledgers": "backend/eval/requirement-unseen-holdout-v3/results/unseen-holdout-v3-2026-09-09T15-43-27-853Z-0dba352e/production-window-ledgers",
+    "candidate_artifacts": "backend/eval/requirement-unseen-holdout-v3/results/unseen-holdout-v3-2026-09-09T15-43-27-853Z-0dba352e/candidate-artifacts",
+    "source_resolution_artifacts": "backend/eval/requirement-unseen-holdout-v3/results/unseen-holdout-v3-2026-09-09T15-43-27-853Z-0dba352e/source-resolution-artifacts",
+    "canonical_requirements": "backend/eval/requirement-unseen-holdout-v3/results/unseen-holdout-v3-2026-09-09T15-43-27-853Z-0dba352e/canonical-requirements",
+    "quality_gate_artifacts": "backend/eval/requirement-unseen-holdout-v3/results/unseen-holdout-v3-2026-09-09T15-43-27-853Z-0dba352e/quality-gate-artifacts",
+    "execution_runtime_ledger": "backend/eval/requirement-unseen-holdout-v3/results/unseen-holdout-v3-2026-09-09T15-43-27-853Z-0dba352e/execution-runtime-ledger.json",
+    "runtime_telemetry": "backend/eval/requirement-unseen-holdout-v3/results/unseen-holdout-v3-2026-09-09T15-43-27-853Z-0dba352e/runtime-telemetry.json",
+    "gpt_review_packet": "backend/eval/requirement-unseen-holdout-v3/results/unseen-holdout-v3-2026-09-09T15-43-27-853Z-0dba352e/V43_REQUIREMENT_UNSEEN_HOLDOUT_V3_GPT_REVIEW_PACKET.json",
+    "checkpoint": "backend/eval/requirement-unseen-holdout-v3/results/unseen-holdout-v3-2026-09-09T15-43-27-853Z-0dba352e/V43_REQUIREMENT_UNSEEN_HOLDOUT_V3_FIRST_PASS_CHECKPOINT.json"
+  },
+  "task_budget": {
+    "requirement_extraction_resolved_max_output_tokens": 9600,
+    "shared_default_non_requirement_max_output_tokens": 4800,
+    "eval_override_used": false
+  },
+  "side_effects": {
+    "PRODUCTION_DB_WRITES": 0,
+    "GOLD_MUTATIONS": 0,
+    "PROMPT_MUTATIONS": 0,
+    "SCHEMA_MUTATIONS": 0,
+    "REQUIREMENT_PRODUCTION_LOGIC_MUTATIONS": 0,
+    "FACT_MUTATIONS": 0,
+    "MAPPING": 0,
+    "CLAIM": 0,
+    "WRITER": 0,
+    "RESPONSE_ROUTER_MUTATIONS": 0,
+    "COMMIT": 0,
+    "PUSH": 0,
+    "MERGE": 0,
+    "DEPLOY": 0
+  },
+  "final_status": "READY_FOR_GPT_REQUIREMENT_UNSEEN_HOLDOUT_V3_FIRST_PASS_ADJUDICATION"
+}

@@ -1,0 +1,109 @@
+{
+  "checkpoint": "V43_RESPONSE_ROUTER_V2_2_BOUNDED_SEMANTIC_CLOSURE",
+  "run_id": "V43-RR-V2_2-V3-REPLAY-b0f598700e89b030",
+  "generated_at": "2026-09-12T17:19:45.579Z",
+  "reference_v3_identity": {
+    "sha256": "3c7f151678c8c99aee25ab995d438496b4a0e5fc661386b70204f3be72e2e744",
+    "rows": 2178,
+    "unique_case_ids": 2178,
+    "cohort_counts": {
+      "CORE6": 1009,
+      "HOLDOUT_V1": 397,
+      "HOLDOUT_V2": 772
+    }
+  },
+  "gpt_adjudication_identity": {
+    "sha256": "372eeb3f192a47dfa1fe633d1187f25641eabf8c6489b40680508f8d7b97baa5",
+    "rows": 76,
+    "unique_case_ids": 76,
+    "true_router_defect_count": 56,
+    "overlay_rows": 20
+  },
+  "router_identity": {
+    "path": "backend\\src\\pipeline\\requirement-response-router-v2-2.js",
+    "sha256": "88eb370529d0d9d7ce6bb4028668e59f519c60d2f829ecdd5d2bc409fbc326f6",
+    "projection_version": "v43-response-router-v2.2",
+    "implementation_id": "v43-response-router-v2.2-bounded-semantic-closure"
+  },
+  "metrics": {
+    "response_decision_coverage": {
+      "actual": 2178,
+      "expected": 2178,
+      "pass": true
+    },
+    "gpt_adjudicated": {
+      "adjudicated_case_count": 76,
+      "true_router_defect_count": 56,
+      "reference_v3_semantic_debt_count": 20,
+      "true_high_risk_evidence_false_negative": {
+        "target": 0,
+        "actual": 0,
+        "case_ids": [],
+        "pass": true
+      },
+      "true_future_commitment_as_existing_fact": {
+        "target": 0,
+        "actual": 0,
+        "case_ids": [],
+        "pass": true
+      },
+      "p0_compliance_escape": {
+        "target": 0,
+        "actual": 0,
+        "case_ids": [],
+        "pass": true
+      },
+      "compliance_to_normal_writer_direct": {
+        "target": 0,
+        "actual": 0,
+        "case_ids": [],
+        "pass": true,
+        "basis": "no writer path invoked by deterministic router replay"
+      },
+      "writer_lineage_violation": {
+        "target": 0,
+        "actual": 0,
+        "pass": true,
+        "basis": "deterministic router replay emits no writer output"
+      },
+      "enterprise_authority_lineage_violation": {
+        "target": 0,
+        "actual": 0,
+        "pass": true,
+        "basis": "deterministic router replay emits no enterprise assertions"
+      }
+    },
+    "legacy_reference_v3_mechanical": {
+      "high_risk_evidence_false_negative": 105,
+      "future_commitment_as_existing_fact": 32,
+      "p0_compliance_escape": 0
+    },
+    "requirement_id_closure": {
+      "pass": true
+    }
+  },
+  "execution_layer": {
+    "status": "PASS",
+    "recert_artifact": "docs/V43_RESPONSE_ROUTER_V2_2_EXECUTION_LAYER_RECERT.json",
+    "provider_calls": 0,
+    "db_writes": 0
+  },
+  "side_effects": {
+    "PROVIDER_CALLS": 0,
+    "LLM_CALLS": 0,
+    "PRODUCTION_DB_WRITES": 0,
+    "GOLD_MUTATIONS": 0,
+    "SOURCE_TRUTH_MUTATIONS": 0,
+    "REQUIREMENT_MUTATIONS": 0,
+    "REFERENCE_V3_MUTATIONS": 0,
+    "ROUTER_MUTATIONS": 0,
+    "MAPPING": 0,
+    "CLAIM": 0,
+    "WRITER": 0,
+    "COMMIT": 0,
+    "PUSH": 0,
+    "MERGE": 0,
+    "DEPLOY": 0
+  },
+  "status": "READY_FOR_GPT_RESPONSE_ROUTER_V2_2_FINAL_ADJUDICATION"
+}

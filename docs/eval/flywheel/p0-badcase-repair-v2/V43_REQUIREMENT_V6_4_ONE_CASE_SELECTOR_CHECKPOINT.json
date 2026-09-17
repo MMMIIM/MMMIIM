@@ -1,0 +1,65 @@
+{
+  "artifact_type": "V43_REQUIREMENT_V6_4_ONE_CASE_SELECTOR_CHECKPOINT",
+  "run_id": "V43-REQUIREMENT-V6.4-ONE-CASE-20260912161048",
+  "source_truth_sha256": "9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+  "selector_correction": {
+    "atom_id": "FAST-01-P0-0019",
+    "previous_wrong_chunk_id": "FAST-01:reconstructed:23",
+    "corrected_chunk_id": "FAST-01:reconstructed:1",
+    "resolution_method": "V6_3_GPT_AUTHORIZED_PROVIDER_INPUT_IDENTITY",
+    "input_sha256": "sha256:315970f238fffa20954b5099b5ab44309fa47331737c6f80fb740e8af4439197",
+    "authoritative_source_span": [
+      {
+        "support_span_id": "SUPPORT-FAST-01-P0-0019-1",
+        "source_document_sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "page": 2,
+        "paragraph_start": 35,
+        "paragraph_end": 35,
+        "source_start_offset": 791,
+        "source_end_offset": 816,
+        "raw_source_text_sha256": "0eb94510f793e19b1394058f6fb9dd48cccb48fed44343ed0238481a56ba89e8"
+      },
+      {
+        "support_span_id": "SUPPORT-FAST-01-P0-0019-2",
+        "source_document_sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "page": 43,
+        "paragraph_start": 1689,
+        "paragraph_end": 1689,
+        "source_start_offset": 39169,
+        "source_end_offset": 39209,
+        "raw_source_text_sha256": "ba7470170963eb29a28eb574820761e87a72e10bd3e1bc8d549c2c54da0c1f32"
+      }
+    ]
+  },
+  "runtime_identity": {
+    "contract_version": "4.3-requirement-extraction-v3.1.1",
+    "instruction_hash": "cae64eb027365f1e9d39a9ef8b6375af20dc7b274d62ddc54c07ece3f39fc00d",
+    "candidate_schema_hash": "1f5bd20f624a34a5f0bfd76e226f24d3595cc8a1e06bdc176c3d40e9694edbba",
+    "ready_http_status": 200,
+    "info_http_status": 200,
+    "runtime_preflight_duration_ms": 12363,
+    "production_semantic_changes": 0
+  },
+  "provider_calls": 1,
+  "retries": 0,
+  "provider_http_status": 200,
+  "gateway_http_status": 200,
+  "provider_request_reached": true,
+  "finish_reason": "stop",
+  "schema_validation": "PASS",
+  "source_resolution": "PASS",
+  "canonicalization": "PASS",
+  "quality_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "production_semantic_changes": 0,
+  "final_status": "READY_FOR_GPT_REQUIREMENT_V6_4_FINAL_ONE_CASE_ADJUDICATION",
+  "evidence_root": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-one-case-evidence-20260913/V43-REQUIREMENT-V6.4-ONE-CASE-20260912161048",
+  "handoff": {
+    "directory": "docs/handoff/V43_REQUIREMENT_V6_4_FINAL_ONE_CASE_RECERT",
+    "zip": "docs/handoff/V43_HANDOFF_REQUIREMENT_V6_4_FINAL_ONE_CASE_RECERT.zip",
+    "decision_packet": "docs/handoff/V43_REQUIREMENT_V6_4_FINAL_ONE_CASE_RECERT/02_GPT_SEMANTIC_REVIEW_PACKET.json"
+  },
+  "prior_stage1_verdicts_preserved": true,
+  "other_cases_rerun": 0
+}

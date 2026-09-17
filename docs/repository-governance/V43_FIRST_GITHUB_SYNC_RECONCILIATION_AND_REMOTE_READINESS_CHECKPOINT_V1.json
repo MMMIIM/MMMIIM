@@ -1,0 +1,119 @@
+{
+  "artifact_type": "V43_FIRST_GITHUB_SYNC_RECONCILIATION_AND_REMOTE_READINESS_CHECKPOINT_V1",
+  "status": "BLOCKED_GITHUB_AUTH_INTERACTIVE_REQUIRED",
+  "mode": "FIRST-SYNC CORRECTION / REMOTE READINESS / NO BULK PUSH",
+  "repository": {
+    "repository_full_name": "MMMIIM/MMMIIM",
+    "canonical_url": "https://github.com/MMMIIM/MMMIIM.git",
+    "origin_url": "https://github.com/MMMIIM/MMMIIM.git",
+    "branch": "feat/v4.3-semantic-boundary-routing",
+    "local_head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+    "remote_branch": "feat/v4.3-semantic-boundary-routing",
+    "remote_head": null,
+    "local_remote_relationship": "UNKNOWN_REMOTE_HEAD_UNAVAILABLE"
+  },
+  "state_reconciliation": {
+    "architecture": {
+      "checkpoint": "docs/handoff/V43_ARCHITECTURE_ENGINEERING_CLOSURE_V1/18_ARCHITECTURE_ENGINEERING_CLOSURE_CHECKPOINT.json",
+      "status": "ARCHITECTURE_ENGINEERING_COMPLETE_PENDING_RAG_QUALITY_ACCEPTANCE"
+    },
+    "rag": {
+      "p0": "COMPLETE / FROZEN",
+      "p1a": "PASS / COMPLETE / EVAL ONLY",
+      "p1a_production_promotion": "NOT AUTHORIZED",
+      "p1b": "NEXT AUTHORIZED / ENGINEERING VALIDATION COMPLETE / GPT REVIEW PENDING",
+      "p1b_checkpoint": "docs/handoff/V43_RAG_RETRIEVAL_P1B_PRODUCTION_SHAPE_HYGIENE_CANARY_V1/V43_RAG_RETRIEVAL_P1B_PRODUCTION_SHAPE_HYGIENE_CANARY_CHECKPOINT_V1.json"
+    },
+    "e2e": {
+      "checkpoint": "docs/handoff/V43_OVERNIGHT_FACT_AUTHORITY_REPRO_TO_BOUNDED_E2E_V2/19_CHECKPOINT.json",
+      "primary_status": "GATE0_FACT_BOUNDARY_PASS_E2E_CONTINUED",
+      "current_e2e_gate": "BOUNDED_3_CASE_E2E_COMPLETED_PROVIDER_OFF_FAIL_CLOSED; STOP_BEFORE_WRITER_CANARY",
+      "current_exact_blocker": null,
+      "stale_audit_not_current": "docs/handoff/V43_E2E_ENGINEERING_CONSISTENCY_AUDIT_V1/10_E2E_ENGINEERING_AUDIT_CHECKPOINT.json"
+    }
+  },
+  "manifest": {
+    "path": "docs/repository-governance/FIRST_GITHUB_SYNC_MANIFEST_V2.json",
+    "sha256": "869C8566004BEC3A065B4B6C05E28507B8695EB9511E3CA06D783469BB63C21A",
+    "classification_groups": [
+      "SYNC_APPROVED",
+      "LOCAL_ONLY_SECRET",
+      "LOCAL_ONLY_EXTERNAL_ARTIFACT",
+      "PRIVATE_SOURCE_EXCLUDED",
+      "LARGE_RAW_ARTIFACT_EXCLUDED",
+      "AMBIGUOUS_REVIEW_REQUIRED"
+    ]
+  },
+  "private_pdf_duplicate_groups": [
+    {
+      "identity": "HW-001",
+      "sha256": "525BA4ED4CB5AABDACB18ABF2D8BC3A03AE5808365E1C3B20AB49486D1667D44",
+      "bytes": 37180178,
+      "source_url": "https://www.huawei.com/minisite/annual-report-download/annual_report_2024_cn.pdf",
+      "redistribution_status": "UNKNOWN_LICENSE_REVIEW",
+      "paths": [
+        "data/eval/real-enterprise-upload-test-v1/raw/HW-001.pdf",
+        "data/eval/real-pdf-pilot-storage/5d724373-3d88-41ec-b72d-0d7a01107af7/061de778-001c-48c7-a30b-ffd2e0a6bfb4.pdf"
+      ]
+    },
+    {
+      "identity": "HW-003",
+      "sha256": "8081099E23478068E7E43A55C6C93BD6D5EFD8456670494D363BF949D3FE3990",
+      "bytes": 12891442,
+      "source_url": "https://www-file.huawei.com/admin/asset/v1/pro/view/69461adcb6364954a697f250678a64ad.pdf",
+      "redistribution_status": "UNKNOWN_LICENSE_REVIEW",
+      "paths": [
+        "data/eval/real-enterprise-upload-test-v1/raw/HW-003.pdf",
+        "data/eval/real-pdf-pilot-storage/5d724373-3d88-41ec-b72d-0d7a01107af7/13c1eb7e-4ab4-48c7-864d-354abf50a8aa.pdf"
+      ]
+    }
+  ],
+  "large_artifact_exclusion": {
+    "decision_listed_json_count": 11,
+    "raw_sync": false,
+    "git_lfs": 0,
+    "additional_exact_duplicate_observed": "docs/handoff/V43_REFERENCE_RETRIEVAL_SCHEMA_PARITY_CORE6_REPLAY_V2/10_R1_RESULTS.json",
+    "additional_duplicate_sha256": "0AAA30B27A93E521209DE0227AE8462A23D1F5667A7D9D7FD74D95A9AE401A15"
+  },
+  "secret_history_scan": {
+    "tracked_secret_suspicion_count": 0,
+    "historical_env_inclusion_count": 0,
+    "credential_pattern_suspicion_count": 0,
+    "affected_commit_path": [],
+    "redacted_fingerprint_only": true,
+    "history_rewrite": 0,
+    "credential_rotation": 0
+  },
+  "remote_readiness": {
+    "credential_helper": "manager",
+    "github_cli_status": "UNAUTHENTICATED",
+    "probe": "git ls-remote --heads origin feat/v4.3-semantic-boundary-routing",
+    "probe_result": "SEC_E_NO_CREDENTIALS",
+    "remote_branch_head": null,
+    "classification": "BLOCKED_GITHUB_AUTH_INTERACTIVE_REQUIRED",
+    "interactive_auth_required": true,
+    "hardcoded_token_used": false
+  },
+  "safety": {
+    "gold_mutation": 0,
+    "corpus_mutation": 0,
+    "production_db_write": 0,
+    "provider_call": 0,
+    "migration": 0,
+    "commit": 0,
+    "push": 0,
+    "merge": 0,
+    "rebase": 0,
+    "force_push": 0,
+    "destructive_git": 0,
+    "deploy": 0
+  },
+  "historical_records": {
+    "v1_manifest_preserved": true,
+    "v1_foundation_checkpoint_preserved": true,
+    "stale_canonical_url_in_historical_records_allowed": true,
+    "active_canonical_identity_corrected": true
+  },
+  "next_action": "Restore the existing supported GitHub credential mechanism, rerun non-interactive ls-remote, then classify remote state before any separately authorized baseline commit or push.",
+  "exact_blocker": "BLOCKED_GITHUB_AUTH_INTERACTIVE_REQUIRED"
+}

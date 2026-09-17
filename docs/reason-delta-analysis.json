@@ -1,0 +1,93 @@
+{
+  "artifact_type": "V43_REQUIREMENT_QUALITY_GATE_REASON_DELTA_ANALYSIS",
+  "before": {
+    "ACCEPT": 273,
+    "REVIEW_REQUIRED": 736,
+    "REJECT": 0,
+    "review_rate": 0.7294350842418236
+  },
+  "after": {
+    "ACCEPT": 734,
+    "REVIEW_REQUIRED": 275,
+    "REJECT": 0,
+    "review_rate": 0.27254707631318137
+  },
+  "quality_gate_product_burden_target": "FAIL",
+  "review_rate_reduction_abs": 0.4568880079286422,
+  "review_rate_reduction_rel": 0.626358695652174,
+  "reasons": [
+    {
+      "reason_code": "ENTITY_MISMATCH_REVIEW",
+      "before_trigger_count": 310,
+      "after_trigger_count": 30,
+      "delta": -280,
+      "delta_percentage": -90.32258064516128
+    },
+    {
+      "reason_code": "MODALITY_ADDITION_REVIEW",
+      "before_trigger_count": 170,
+      "after_trigger_count": 58,
+      "delta": -112,
+      "delta_percentage": -65.88235294117646
+    },
+    {
+      "reason_code": "MODALITY_OMISSION_REVIEW",
+      "before_trigger_count": 16,
+      "after_trigger_count": 19,
+      "delta": 3,
+      "delta_percentage": 18.75
+    },
+    {
+      "reason_code": "NEGATION_DISTORTION",
+      "before_trigger_count": 38,
+      "after_trigger_count": 38,
+      "delta": 0,
+      "delta_percentage": 0
+    },
+    {
+      "reason_code": "NUMBER_DISTORTION",
+      "before_trigger_count": 26,
+      "after_trigger_count": 26,
+      "delta": 0,
+      "delta_percentage": 0
+    },
+    {
+      "reason_code": "NUMBER_OMISSION_REVIEW",
+      "before_trigger_count": 543,
+      "after_trigger_count": 179,
+      "delta": -364,
+      "delta_percentage": -67.03499079189686
+    },
+    {
+      "reason_code": "OBVIOUS_SEMANTIC_MUTATION",
+      "before_trigger_count": 1,
+      "after_trigger_count": 0,
+      "delta": -1,
+      "delta_percentage": -100
+    },
+    {
+      "reason_code": "SCOPE_EXPANSION_REVIEW",
+      "before_trigger_count": 5,
+      "after_trigger_count": 5,
+      "delta": 0,
+      "delta_percentage": 0
+    },
+    {
+      "reason_code": "STATUS_DISTORTION",
+      "before_trigger_count": 5,
+      "after_trigger_count": 5,
+      "delta": 0,
+      "delta_percentage": 0
+    },
+    {
+      "reason_code": "TABLE_HEADER_CONTEXT_MISSING",
+      "before_trigger_count": 0,
+      "after_trigger_count": 3,
+      "delta": 3,
+      "delta_percentage": null
+    }
+  ],
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0
+}

@@ -1,0 +1,155 @@
+{
+  "checkpoint": "V43_FACT_SECOND_SCHEMA_VIOLATION_DIAGNOSTIC_CHECKPOINT",
+  "run_id": "fact-second-schema-diagnostic-20260907105153088-8f8a070b",
+  "case_id": "COM-01",
+  "correlation_id": "5ad73567-8d04-480e-a518-45dfc4a9ae6f",
+  "source_file": "COM-01_公司概况与业务范围.md",
+  "source_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+  "provider_calls": 1,
+  "retries": 0,
+  "provider_reached": true,
+  "provider_request_reached": true,
+  "provider_content_present": true,
+  "finish_reason": "stop",
+  "json_parse": true,
+  "provider_http_status": 200,
+  "gateway_http_status": 422,
+  "provider_identity": {
+    "provider": "semantic_gateway",
+    "model": "deepseek-ai/DeepSeek-V4-Flash"
+  },
+  "normalizer_invoked": true,
+  "projection_invoked": true,
+  "normalizer_invoked_static_path": "CURRENT_SOURCE_CODE_PROJECTS_BEFORE_VALIDATE",
+  "runtime_telemetry_status": "OBSERVED",
+  "pre_normalization_fact_keys": [
+    [
+      "domain_metadata",
+      "entities",
+      "object",
+      "predicate",
+      "quantities",
+      "scopes",
+      "status",
+      "subject_name",
+      "subject_type",
+      "validity"
+    ],
+    [
+      "domain_metadata",
+      "entities",
+      "object",
+      "predicate",
+      "quantities",
+      "scopes",
+      "status",
+      "subject_name",
+      "subject_type",
+      "validity"
+    ],
+    [
+      "domain_metadata",
+      "entities",
+      "object",
+      "predicate",
+      "quantities",
+      "scopes",
+      "status",
+      "subject_name",
+      "subject_type",
+      "validity"
+    ]
+  ],
+  "post_normalization_fact_keys": [
+    [
+      "domain_metadata",
+      "entities",
+      "object",
+      "predicate",
+      "quantities",
+      "scopes",
+      "status",
+      "subject_name",
+      "subject_type",
+      "validity"
+    ],
+    [
+      "domain_metadata",
+      "entities",
+      "object",
+      "predicate",
+      "quantities",
+      "scopes",
+      "status",
+      "subject_name",
+      "subject_type",
+      "validity"
+    ],
+    [
+      "domain_metadata",
+      "entities",
+      "object",
+      "predicate",
+      "quantities",
+      "scopes",
+      "status",
+      "subject_name",
+      "subject_type",
+      "validity"
+    ]
+  ],
+  "unexpected_property_names": [
+    "predicate",
+    "object"
+  ],
+  "allowed_property_names": [
+    "subject_type",
+    "subject_name",
+    "entities",
+    "status",
+    "status_source_text",
+    "scopes",
+    "quantities",
+    "validity",
+    "domain_metadata"
+  ],
+  "removed_property_names": [],
+  "exact_validation_path": "data.facts[0]",
+  "schema_validation": "FAIL",
+  "schema_validation_detail": {
+    "valid": false,
+    "first_path": "data.facts[0]",
+    "first_keyword": "additionalProperties",
+    "first_expected": "no additional properties",
+    "first_actual_type": "object",
+    "first_additional_property": "predicate"
+  },
+  "semantic_grounding_gate": "NOT_RUN",
+  "classification": "CONTRACT_DRIFT_REQUIRES_DECISION",
+  "observed_property_classification": "CONTRACT_DRIFT_REQUIRES_DECISION",
+  "stop_reason": "Strict Fact Schema failed; fail-fast after the single permitted Provider call.",
+  "error_code": "FACT_SEMANTIC_EXTRACTION_FAILED",
+  "error_cause_code": "OUTPUT_SCHEMA_INVALID",
+  "backend_error_code": "FACT_SEMANTIC_EXTRACTION_FAILED",
+  "backend_cause_code": "OUTPUT_SCHEMA_INVALID",
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "raw_provider_content_persisted": false,
+  "provider_response_content_hash": "da5f402497df0e698c6ad7fb410b8dda0b9489e3b942a26b0d96638d70d074d9",
+  "provider_response_content_length": 3686,
+  "preflight": {
+    "ready_status": 200,
+    "info_status": null,
+    "gateway_api_base_present": true,
+    "checked_at": "2026-09-07T10:51:53.091Z"
+  },
+  "outbound_input": {
+    "task_type": "evidence_fact_extraction",
+    "source_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+    "payload_hash": "52e3ee5fe9eaee75f298af58b77a15c84017e84ef6ef345c9bce47a5ea0f8fbe",
+    "requirement_blind": true
+  }
+}

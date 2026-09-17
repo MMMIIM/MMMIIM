@@ -1,0 +1,45 @@
+{
+  "artifact_type": "V43_TEST_REPORT",
+  "focused_tests": {
+    "status": "PASS",
+    "tests": 76,
+    "passed": 76,
+    "failed": 0,
+    "command": "node --test --test-concurrency=1 test/authority-binding-loop.test.js test/retrieval-runner-binding.test.js test/writer-reference-hygiene.test.js test/retrieval-source-eligibility.test.js test/retrieval-substantive-hygiene-offline.test.js test/writer-v2-composition.test.js test/writer-authority-p0.test.js test/material-source-role-gate.test.js test/production-retrieval-contract.test.js"
+  },
+  "relevant_backend_regression": {
+    "status": "FAIL_WITH_PRE_EXISTING_UNRELATED_BASELINE",
+    "current_task_regressions": 0,
+    "command": "npm test -w backend",
+    "classification": "PRE_EXISTING_UNRELATED_BASELINE",
+    "notes": "Full suite failures are missing legacy Eval artifact paths, runtime/config governance fixtures, and unrelated baseline assumptions; no failure implicating this Retrieval Eval implementation was identified."
+  },
+  "build": {
+    "status": "PASS",
+    "command": "npm run build"
+  },
+  "lint": {
+    "status": "PASS",
+    "command": "npm run lint"
+  },
+  "diff_check": {
+    "status": "PASS_WITH_LINE_ENDING_WARNINGS",
+    "command": "git diff --check",
+    "warnings_only": true
+  },
+  "provider_calls_current_run": 80,
+  "query_embedding_calls": 80,
+  "generative_llm_calls": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": {
+    "operation_count": 3,
+    "materials": 34,
+    "chunks": 318,
+    "embeddings": 382
+  },
+  "migrations_eval_only": 52,
+  "production_migrations": 0,
+  "gold_mutations": 0,
+  "requirement_mutations": 0,
+  "fact_mapping_claim_writer_mutations": 0
+}

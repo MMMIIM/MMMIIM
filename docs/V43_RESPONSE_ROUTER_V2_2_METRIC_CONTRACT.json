@@ -1,0 +1,52 @@
+{
+  "artifact_type": "V43_RESPONSE_ROUTER_V2_2_METRIC_CONTRACT",
+  "version": "v1",
+  "source_file": "backend/eval/response-router-v2-1-replay-reference-v3.mjs",
+  "source_sha256": "1458713bc389341bbda777e7492611a315e1d41fcb9bef1d4d1a2509219bc175",
+  "metrics": [
+    {
+      "metric_name": "HIGH_RISK_EVIDENCE_FALSE_NEGATIVE",
+      "predicate": "expected_view.evidence_dependency === true AND expected_view.risk_tier IN {HIGH,P0} AND router.evidence_dependency !== true",
+      "input_fields": ["expected_view.evidence_dependency", "expected_view.risk_tier", "router.evidence_dependency"],
+      "target": 0,
+      "legacy_scope": "CORE6 rows evaluated against Reference V3",
+      "adjudicated_scope": "GPT rows with hard_safety_gate=HIGH_RISK_EVIDENCE_FALSE_NEGATIVE and gpt_gate_verdict != REFERENCE_V3_SEMANTIC_DEBT"
+    },
+    {
+      "metric_name": "FUTURE_COMMITMENT_AS_EXISTING_FACT",
+      "predicate": "expected_view.primary_response_mode === COMMITMENT AND router.response_mode === EVIDENCE",
+      "input_fields": ["expected_view.primary_response_mode", "router.response_mode"],
+      "target": 0,
+      "legacy_scope": "CORE6 rows evaluated against Reference V3",
+      "adjudicated_scope": "GPT rows with hard_safety_gate=FUTURE_COMMITMENT_AS_EXISTING_FACT and gpt_gate_verdict != REFERENCE_V3_SEMANTIC_DEBT"
+    },
+    {
+      "metric_name": "P0_COMPLIANCE_ESCAPE",
+      "predicate": "cohort === CORE6 AND expected_view.primary_response_mode === COMPLIANCE AND expected_view.risk_tier === P0 AND router.response_mode NOT IN {COMPLIANCE,NEED_REVIEW}",
+      "input_fields": ["cohort", "expected_view.primary_response_mode", "expected_view.risk_tier", "router.response_mode"],
+      "target": 0
+    },
+    {
+      "metric_name": "COMPLIANCE_TO_NORMAL_WRITER_DIRECT",
+      "predicate": "execution-layer recertification finds a COMPLIANCE row with writer_target.eligible === true or a Writer packet produced directly from a compliance route",
+      "input_fields": ["matrix.writer_target.eligible", "safe_packet.authority.creates_authority", "execution_layer writer path"],
+      "target": 0,
+      "note": "Router replay itself invokes no Writer path; execution-layer recertification supplies the measured zero."
+    },
+    {
+      "metric_name": "WRITER_LINEAGE_VIOLATION",
+      "predicate": "Writer output without requirement/authority lineage",
+      "input_fields": ["Writer output lineage", "execution-layer recertification"],
+      "target": 0,
+      "note": "No Writer output is generated in deterministic Router replay."
+    },
+    {
+      "metric_name": "ENTERPRISE_AUTHORITY_LINEAGE_VIOLATION",
+      "predicate": "Enterprise assertion emitted without authorized Claim/Gate lineage",
+      "input_fields": ["Safe Response Packet allowed_enterprise_assertions", "Claim/Gate lineage"],
+      "target": 0,
+      "note": "No enterprise assertion is emitted in this read-only recertification."
+    }
+  ],
+  "side_effects": { "provider_calls": 0, "llm_calls": 0, "production_db_writes": 0, "gold_mutations": 0 }
+}

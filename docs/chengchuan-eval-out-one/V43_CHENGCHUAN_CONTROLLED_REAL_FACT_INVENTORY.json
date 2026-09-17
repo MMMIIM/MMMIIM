@@ -1,0 +1,48 @@
+{
+  "run_id": "chengchuan-controlled-real-fact-1788679892690",
+  "generated_at": "2026-09-06T07:31:32.690Z",
+  "database": "bid_platform_eval_chengchuan_v2",
+  "project_id": "19979c0e-45c0-443d-b504-09f28543fdfc",
+  "enterprise_id": "SYNTH-CHENGCHUAN-001",
+  "data_classification": "CONTROLLED_REAL_TEST",
+  "source_authority": "SYNTHETIC_DEVELOPMENT_ONLY",
+  "requirement_blind_extraction": true,
+  "material_count": 1,
+  "processed_material_count": 0,
+  "failed_material_count": 1,
+  "extraction_windows_total": 1,
+  "processed_windows": 0,
+  "failed_windows": 1,
+  "provider_calls": 0,
+  "provider_failures": 0,
+  "facts": [],
+  "material_summaries": [
+    {
+      "doc_id": "COM-01",
+      "material_id": null,
+      "original_name": "COM-01_公司概况与业务范围.md",
+      "material_type": "company_profile",
+      "source_hash": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+      "chunk_count": 0,
+      "extraction_status": "failed",
+      "source_class": "base_existing_com",
+      "synthetic": true,
+      "enterprise_id": "SYNTH-CHENGCHUAN-001",
+      "failure": {
+        "code": "23503",
+        "message": "Fact extraction failed.",
+        "status": null,
+        "details": {
+          "stage": null,
+          "cause_code": null,
+          "provider_http_status": null,
+          "retry_attempted": false,
+          "attempt_count": null,
+          "constraint": "enterprise_retrieval_results_chunk_id_fkey",
+          "table": "enterprise_retrieval_results",
+          "detail": "Key (chunk_id)=(MCH-9C5A7B5A391BB865E63EFFBFA0D651A0) is still referenced from table \"enterprise_retrieval_results\"."
+        }
+      }
+    }
+  ]
+}

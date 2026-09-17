@@ -1,0 +1,51 @@
+{
+  "artifact_type": "V43_GATE_RECLASSIFICATION_V1",
+  "execution_mode": "OFFLINE_ONLY",
+  "provider_calls": 0,
+  "embedding_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "gold_mutations": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "commit": 0,
+  "push": 0,
+  "merge": 0,
+  "deploy": 0,
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "gates": [
+    {
+      "gate": "DEEP_CHAIN_500_SELECTION",
+      "class": "A_ENGINEERING_EXECUTION_BLOCKER",
+      "status": "PASS_OFFLINE"
+    },
+    {
+      "gate": "HOST_QUERY_EMBEDDING_EGRESS",
+      "class": "B_HOST_LIVE_EXECUTION_BOUNDARY",
+      "status": "PENDING_HOST"
+    },
+    {
+      "gate": "REAL_FACT_AUTHORITY",
+      "class": "C_PRODUCTION_GOLD_GOVERNANCE_ONLY",
+      "status": "NOT_ESTABLISHED_NONBLOCKING_FOR_SYNTHETIC_ENGINEERING_E2E"
+    },
+    {
+      "gate": "HUMAN_AUTHORITY_CANONICAL_REQUIREMENT",
+      "class": "C_PRODUCTION_GOLD_GOVERNANCE_ONLY",
+      "status": "PENDING_NONBLOCKING_FOR_SYNTHETIC_ENGINEERING_E2E"
+    },
+    {
+      "gate": "MAPPING_SUCCESSOR_ACTIVATION",
+      "class": "C_PRODUCTION_GOLD_GOVERNANCE_ONLY",
+      "status": "NOT_ACTIVATED"
+    },
+    {
+      "gate": "STORAGE_CLEANUP",
+      "class": "D_NON_BLOCKING_DEBT",
+      "status": "POST_E2E_ONLY"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "artifact_type": "V43_TEST_REPORT",
+  "status": "PASS",
+  "test_count": 58,
+  "passed": 58,
+  "failed": 0,
+  "command": "node --test --test-concurrency=1 backend/test/material-source-authority-policy.test.js backend/test/material-source-role-gate.test.js backend/test/retrieval-chunk-role.test.js backend/test/retrieval-source-eligibility.test.js backend/test/retrieval-substantive-hygiene-offline.test.js backend/test/production-retrieval-contract.test.js backend/test/reference-eval-html-adapter.test.js backend/test/reference-eval-ingest-v4.test.js",
+  "harness_focused": {
+    "test_count": 9,
+    "passed": 9,
+    "failed": 0
+  },
+  "relevant_existing_regressions": {
+    "test_count": 49,
+    "passed": 49,
+    "failed": 0
+  },
+  "postgres": {
+    "status": "NOT_RUN_NO_ISOLATED_EVAL_DB_IN_CODEX",
+    "provider_calls": 0,
+    "production_db_writes": 0
+  },
+  "build": {
+    "status": "PASS",
+    "command": "npm run build"
+  },
+  "lint": {
+    "status": "PASS",
+    "command": "npm run lint"
+  },
+  "diff_check": {
+    "status": "PASS_WITH_LINE_ENDING_WARNINGS",
+    "command": "git diff --check",
+    "warnings_only": true
+  },
+  "required_tests": [
+    "HTML adapter deterministic output",
+    "HTML adapter no synthetic content",
+    "source SHA mismatch fail-closed",
+    "Reference-only role preservation",
+    "Fact path unreachable",
+    "production chunk-contract parity",
+    "idempotency",
+    "wrong DB target rejection",
+    "Production DB target rejection",
+    "placeholder embedding forbidden",
+    "baseline identity preservation",
+    "retrieval hygiene/source-role/authority negative regressions"
+  ],
+  "provider_calls": 0,
+  "production_db_writes": 0
+}

@@ -1,0 +1,15 @@
+{
+  "phase": "08",
+  "baseline_fingerprint": "318d53c8a8785952d38a173dc086efd1d044c5871e288e305614e52e14a19641",
+  "confirmed_current": ["writer authorization snapshot in generation identity", "same identity idempotent reuse", "changed claim/gate/project fact identity prevents reuse", "regeneration uses frozen context references"],
+  "historical_fixed": ["P1-001 authorization snapshot loss", "P1-002 generation identity reuse"],
+  "open": ["complete reference mutation matrix", "universal relational identity FKs"],
+  "conflicting": [],
+  "unknown": ["exhaustive reference projection mutations"],
+  "risks": ["P1-REUSE-001", "P1-LINEAGE-001"],
+  "evidence_refs": ["backend/src/pipeline/document-generation-service.js", "backend/src/pipeline/writer-authorization-snapshot.js", "backend/test/writer-authorization-snapshot.test.js", "backend/integration/deterministic.integration.js"],
+  "fact_revisions": [],
+  "next_dependencies": ["09_EVAL_RULER_TRUST_CHECKPOINT"],
+  "gate": "GENERATION_REUSE_SAFETY=STRONG_WITH_DEBT",
+  "safe_to_continue": true
+}

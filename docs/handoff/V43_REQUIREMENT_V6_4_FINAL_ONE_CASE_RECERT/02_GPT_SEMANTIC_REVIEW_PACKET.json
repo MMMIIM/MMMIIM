@@ -1,0 +1,919 @@
+{
+  "artifact_type": "V43_REQUIREMENT_V6_4_FINAL_ONE_CASE_GPT_SEMANTIC_REVIEW_PACKET",
+  "artifact_version": "v6.4-one-case",
+  "blind_semantic_adjudication": true,
+  "run_id": "V43-REQUIREMENT-V6.4-ONE-CASE-20260912161048",
+  "source_truth_sha256": "9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+  "case_count": 1,
+  "rows": [
+    {
+      "atom_id": "FAST-01-P0-0019",
+      "tender_id": "FAST-01",
+      "frozen_stage1_gpt_context": {
+        "frozen_anchor_decision": "GPT_SEMANTIC_ANCHOR_APPROVED_PENDING_MECHANICAL_MATERIALIZATION",
+        "frozen_semantic_label": "DISTORTED",
+        "frozen_semantic_reason": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "source_truth": {
+          "atomic_requirement": "不得存在法律、法规、规章、规范性文件规定的其他无效情形。",
+          "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+          "family": "CONFORMITY",
+          "source_page": 2,
+          "authoritative_minimum_support_raw_source_text": [
+            {
+              "page": 2,
+              "paragraph_start": 33,
+              "paragraph_end": 37,
+              "raw_source_text": "9 不同投标供应商投标文件“文件制作机器码”一致；\n10 不同投标供应商投标文件“文件创建标识码”一致；\n11 法律、法规、规章、规范性文件规定的其他情形。\n2 / 56\n评标信息",
+              "raw_source_text_sha256": "3bf799e66893a7c643833a903eb5a3dd51c941f969ca9a72dc860460b2efb827",
+              "source_document_sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+              "match_type": "DETERMINISTIC_PAGE_LOCAL_TOKEN_OVERLAP",
+              "support_method": null
+            },
+            {
+              "page": 43,
+              "paragraph_start": 1688,
+              "paragraph_end": 1692,
+              "raw_source_text": "程度进行审查，以确定是否满足符合性审查的要求。\n32.2 投标文件初审内容请详见《资格性审查表》和《符合性审查表》部分。投标人若\n有一条审查不通过则按投标无效处理。\n32.3 投标文件初审中关于供应商家数的计算:\n32.3.1 采用最低价法的采购项目，提供相同品牌产品的不同投标人参加同一合同项下",
+              "raw_source_text_sha256": "f8916f4dce285e6ac70765dbd5386ae28f4987892e7f968cf0ad68129777ef48",
+              "source_document_sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+              "match_type": "DETERMINISTIC_PAGE_LOCAL_TOKEN_OVERLAP",
+              "support_method": null
+            }
+          ]
+        }
+      },
+      "selector_correction": {
+        "artifact_type": "V43_REQUIREMENT_V6_4_ONE_CASE_SELECTOR_CORRECTION",
+        "source_truth_sha256": "9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+        "atom_id": "FAST-01-P0-0019",
+        "tender_id": "FAST-01",
+        "previous_wrong_chunk_id": "FAST-01:reconstructed:23",
+        "corrected_chunk_id": "FAST-01:reconstructed:1",
+        "resolution_method": "V6_3_GPT_AUTHORIZED_PROVIDER_INPUT_IDENTITY",
+        "authority_source": "V6_3_GPT_RELEVANT_PROVIDER_INPUT",
+        "authoritative_source_span": [
+          {
+            "support_span_id": "SUPPORT-FAST-01-P0-0019-1",
+            "source_document_sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+            "page": 2,
+            "paragraph_start": 35,
+            "paragraph_end": 35,
+            "source_start_offset": 791,
+            "source_end_offset": 816,
+            "raw_source_text_sha256": "0eb94510f793e19b1394058f6fb9dd48cccb48fed44343ed0238481a56ba89e8"
+          },
+          {
+            "support_span_id": "SUPPORT-FAST-01-P0-0019-2",
+            "source_document_sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+            "page": 43,
+            "paragraph_start": 1689,
+            "paragraph_end": 1689,
+            "source_start_offset": 39169,
+            "source_end_offset": 39209,
+            "raw_source_text_sha256": "ba7470170963eb29a28eb574820761e87a72e10bd3e1bc8d549c2c54da0c1f32"
+          }
+        ],
+        "authoritative_support_span_count": 2,
+        "selected_support_span_present": true,
+        "selected_support_span": {
+          "page": 2,
+          "paragraph_start": 35,
+          "paragraph_end": 35,
+          "raw_source_text_sha256": "0eb94510f793e19b1394058f6fb9dd48cccb48fed44343ed0238481a56ba89e8"
+        },
+        "expected_provider_payload_chunk_text_sha256": "315970f238fffa20954b5099b5ab44309fa47331737c6f80fb740e8af4439197",
+        "expected_content_sha256": "f5e7d95a93d425427aa9d2ea81f87e5fa64ee791b597008cc864ae600e8bd4a8",
+        "input_sha256": "sha256:315970f238fffa20954b5099b5ab44309fa47331737c6f80fb740e8af4439197",
+        "input_length": 3011,
+        "source_refs": [
+          "C001-S001",
+          "C001-S002",
+          "C001-S003",
+          "C001-S004",
+          "C001-S005",
+          "C001-S006",
+          "C001-S007",
+          "C001-S008",
+          "C001-S009",
+          "C001-S010",
+          "C001-S011",
+          "C001-S012",
+          "C001-S013",
+          "C001-S014",
+          "C001-S015",
+          "C001-S016",
+          "C001-S017",
+          "C001-S018",
+          "C001-S019",
+          "C001-S020",
+          "C001-S021",
+          "C001-S022",
+          "C001-S023",
+          "C001-S024",
+          "C001-S025",
+          "C001-S026",
+          "C001-S027",
+          "C001-S028",
+          "C001-S029",
+          "C001-S030",
+          "C001-S031",
+          "C001-S032",
+          "C001-S033",
+          "C001-S034",
+          "C001-S035",
+          "C001-S036",
+          "C001-S037",
+          "C001-S038",
+          "C001-S039",
+          "C001-S040",
+          "C001-S041",
+          "C001-S042",
+          "C001-S043",
+          "C001-S044",
+          "C001-S045",
+          "C001-S046",
+          "C001-S047",
+          "C001-S048",
+          "C001-S049",
+          "C001-S050",
+          "C001-S051",
+          "C001-S052",
+          "C001-S053",
+          "C001-S054",
+          "C001-S055",
+          "C001-S056",
+          "C001-S057",
+          "C001-S058",
+          "C001-S059",
+          "C001-S060",
+          "C001-S061",
+          "C001-S062",
+          "C001-S063",
+          "C001-S064",
+          "C001-S065",
+          "C001-S066",
+          "C001-S067",
+          "C001-S068",
+          "C001-S069",
+          "C001-S070",
+          "C001-S071",
+          "C001-S072",
+          "C001-S073",
+          "C001-S074",
+          "C001-S075",
+          "C001-S076",
+          "C001-S077",
+          "C001-S078",
+          "C001-S079",
+          "C001-S080",
+          "C001-S081",
+          "C001-S082",
+          "C001-S083",
+          "C001-S084",
+          "C001-S085",
+          "C001-S086",
+          "C001-S087",
+          "C001-S088",
+          "C001-S089",
+          "C001-S090",
+          "C001-S091",
+          "C001-S092",
+          "C001-S093",
+          "C001-S094",
+          "C001-S095",
+          "C001-S096",
+          "C001-S097",
+          "C001-S098",
+          "C001-S099"
+        ],
+        "source_hashes": [],
+        "production_selector_modified": false,
+        "production_db_writes": 0,
+        "gold_mutations": 0
+      },
+      "production_provider_input": {
+        "task_type": "requirement_extraction",
+        "chunk_id": "FAST-01:reconstructed:1",
+        "replay_input_authority_level": "LEVEL3_DETERMINISTIC_PARSE_RECONSTRUCTION",
+        "source_refs": [
+          "C001-S001",
+          "C001-S002",
+          "C001-S003",
+          "C001-S004",
+          "C001-S005",
+          "C001-S006",
+          "C001-S007",
+          "C001-S008",
+          "C001-S009",
+          "C001-S010",
+          "C001-S011",
+          "C001-S012",
+          "C001-S013",
+          "C001-S014",
+          "C001-S015",
+          "C001-S016",
+          "C001-S017",
+          "C001-S018",
+          "C001-S019",
+          "C001-S020",
+          "C001-S021",
+          "C001-S022",
+          "C001-S023",
+          "C001-S024",
+          "C001-S025",
+          "C001-S026",
+          "C001-S027",
+          "C001-S028",
+          "C001-S029",
+          "C001-S030",
+          "C001-S031",
+          "C001-S032",
+          "C001-S033",
+          "C001-S034",
+          "C001-S035",
+          "C001-S036",
+          "C001-S037",
+          "C001-S038",
+          "C001-S039",
+          "C001-S040",
+          "C001-S041",
+          "C001-S042",
+          "C001-S043",
+          "C001-S044",
+          "C001-S045",
+          "C001-S046",
+          "C001-S047",
+          "C001-S048",
+          "C001-S049",
+          "C001-S050",
+          "C001-S051",
+          "C001-S052",
+          "C001-S053",
+          "C001-S054",
+          "C001-S055",
+          "C001-S056",
+          "C001-S057",
+          "C001-S058",
+          "C001-S059",
+          "C001-S060",
+          "C001-S061",
+          "C001-S062",
+          "C001-S063",
+          "C001-S064",
+          "C001-S065",
+          "C001-S066",
+          "C001-S067",
+          "C001-S068",
+          "C001-S069",
+          "C001-S070",
+          "C001-S071",
+          "C001-S072",
+          "C001-S073",
+          "C001-S074",
+          "C001-S075",
+          "C001-S076",
+          "C001-S077",
+          "C001-S078",
+          "C001-S079",
+          "C001-S080",
+          "C001-S081",
+          "C001-S082",
+          "C001-S083",
+          "C001-S084",
+          "C001-S085",
+          "C001-S086",
+          "C001-S087",
+          "C001-S088",
+          "C001-S089",
+          "C001-S090",
+          "C001-S091",
+          "C001-S092",
+          "C001-S093",
+          "C001-S094",
+          "C001-S095",
+          "C001-S096",
+          "C001-S097",
+          "C001-S098",
+          "C001-S099"
+        ],
+        "input_sha256": "sha256:315970f238fffa20954b5099b5ab44309fa47331737c6f80fb740e8af4439197",
+        "input_length": 3011,
+        "input_excerpt": "[C001-S001] 招标文件信息\n[C001-S002] 项目编号： DPZXCG-2025-00020\n[C001-S003] 项目名称： 大鹏医疗健康集团信息化建设一期（含七娘山\n[C001-S004] 护理院）信息系统运维服务项目\n[C001-S005] 包 号： A\n[C001-S006] 项目类型： 服务类\n[C001-S007] 采购方式： 公开招标\n[C001-S008] 货币类型： 人民币\n[C001-S009] 1 / 56\n[C001-S010] 资格性审查表\n[C001-S011] 序号 内容\n[C001-S012] 1 投标人不符合资格要求，或未提交相应的资格证明资料（详见招标公告投标人资格要求，\n[C001-S013] 即申请人的资格要求）\n[C001-S014] 符合性审查表\n[C001-S015] 序号 内容\n[C001-S016] 1 不得将一个包的内容拆开投标；\n[C001-S017] 2 对同一项目投标时，不得提供两套以上的投标方案（招标文件另有规定的除外）；\n[C001-S018] 3 分项报价或投标总价不得高于相应预算金额（或设定的预算金额下的最高限价）；\n[C001-S019] 4 评审委员会认为投标人的报价明显低于其他通过符合性审查投标人的报价，有可能影响产\n[C001-S020] 品质量或者不能诚信履约的，应当要求其在评审现场合理的时间内提供书面说明，必要时\n[C001-S021] 提交相关证明材料；在此情况下，投标人仍不能证明其报价合理性的（评审委员会成员对\n[C001-S022] 投标人提供的说明材料判断不一致的，按照“少数服从多数”的原则确定评审委员会的意\n[C001-S023] 见）；\n[C001-S024] 5 所投货物、服务在技术、商务等方面没有实质性满足招标文件要求的（是否实质性满足招\n[C001-S025] 条款，不得据此做投标无效处理）；\n[C001-S026] 6 未按招标文件所提供的样式填写《投标函》；未按招标文件所提供的《采购投标及履约承\n[C001-S027] 诺函》进行承诺；未按招标文件对投标文件组成的要求提供投标文件；\n[C001-S028] 7 采购标的/服务清单/报价等任意一类有缺漏项或响应不全，或者对招标文件规定的项目需求\n[C001-S029] 内容或者需求数量进行修改，评审委员会判定投标响应不满足采购需求；\n[C001-S030] 8 投标文件电子文档不得带病毒；\n[C001-S031] 9 不同投标供应商投标文件“文件制作机器码”一致；\n[C001-S032] 10 不同投标供应商投标文件“文件创建标识码”一致；\n[C001-S033] 11 法律、法规、规章、规范性文件规定的其他情形。\n[C001-S034] 2 / 56\n[C001-S035] 综合评分法，是指投标文件满足招标文件全部实质性要求，且按照招标文件规定的各项因素进\n[C001-S036] 行综合评审，评标总得分排名前列的投标人为中标候选人的评标方法。\n[C001-S037] 价格分计算方法：\n[C001-S038] 采用低价优先法计算，即满足招标文件要求且投标价格最低的投标报价为评标基准价，其价格\n[C001-S039] 分为满分。其他投标人的价格分统一按照下列公式计算：\n[C001-S040] 投标报价得分=(评标基准价／投标报价)×100\n[C001-S041] 评标过程中，不得去掉报价中的最高报价和最低报价。\n[C001-S042] 因落实政府采购政策进行价格调整的，以调整后的价格计算评标基准价和投标报价。\n[C001-S043] 1 价格 20\n[C001-S044] 技术部分 55\n[C001-S045] 1 项目服务方案 20\n[C001-S046] 投标人提供的项目服务方案包含但不限于以\n[C001-S047] 下内容：\n[C001-S048] 1.对本项目服务原则、项目背景和维护目标及\n[C001-S049] 任务的理解；\n[C001-S050] 2.维护服务方案；\n[C001-S051] 3.应急处理预案；\n[C001-S052] 4.项目组建运维服务团队方案，明确管理架构\n[C001-S053] 及分工。\n[C001-S054] 1.考察以上项目服务方案，每满足任意一点得\n[C001-S055] 15 分，最高得 60 分。\n[C001-S056] 2.在此基础上，专家根据各供应商的具体响应\n[C001-S057] 作性强）的加 40 分；\n[C001-S058] 理、具有可操作性）的加 20 分；\n[C001-S059] 理、可操作性一般）的加 10 分；\n[C001-S060] 不具备可操作性）的不加分。\n[C001-S061] 2\n[C001-S062] 2 项目重点难点分析、应对措施\n[C001-S063] 及相关的合理化建议 10\n[C001-S064] 投标人提供的项目重点难点分析、应对措施\n[C001-S065] 及相关的合理化建议包含但不限于以下内容：\n[C001-S066] 1.针对本项目信息安全管理的重点难点分析\n[C001-S067] 及应对措施；\n[C001-S068] 2.针对本项目 HIS 系统维护的重点难点分析\n[C001-S069] 及应对措施。\n[C001-S070] 3 / 56\n[C001-S071] - 4 -\n[C001-S072] 1、考察以上项目重点难点分析、应对措施及\n[C001-S073] 相关的合理化建议，每满足任意一点得 30 分，\n[C001-S074] 最高得 60 分。\n[C001-S075] 案科学合理且贴切本项目实际情况），加 40\n[C001-S076] 分；\n[C001-S077] 案较科学合理且较贴切本项目实际情况），\n[C001-S078] 加 20 分；\n[C001-S079] 案一般科学合理且一般贴切本项目实际情\n[C001-S080] 况），加 10 分；\n[C001-S081] 案不科学合理且不贴切本项目实际情况），\n[C001-S082] 不加分。\n[C001-S083] 3 质量保障措施 10\n[C001-S084] 投标人提供质量保障措施及方案，包括但不\n[C001-S085] 限于以下内容：\n[C001-S086] 1、项目交付进度管控；\n[C001-S087] 2、项目交付质量管控；\n[C001-S088] 3、项目过程风险管控；\n[C001-S089] 4、项目质量保障体系及方案。\n[C001-S090] 1.考察以上质量保障措施，每满足任意一点得\n[C001-S091] 15 分，最高得 60 分。\n[C001-S092] 可行性强），加 40 分；\n[C001-S093] 可行性较强），加 20 分；\n[C001-S094] 可行性一般），加 10 分；\n[C001-S095] 可行性差），不加分。\n[C001-S096] 4 拟安排的项目负责人情况（仅\n[C001-S097] 限一人） 5\n[C001-S098] 1.具有研究生学历（硕士或以上）的得 50 分；\n[C001-S099] 具有本科学历的得 30 分；本项最高得 50 分；"
+      },
+      "raw_provider_candidate_text": [
+        {
+          "category": "delivery",
+          "mandatory_observed": true,
+          "requires_confirmation": false,
+          "source_range": {
+            "end_ref": "C001-S013",
+            "start_ref": "C001-S012"
+          },
+          "text": "投标人必须符合资格要求，并提交相应的资格证明资料（详见招标公告投标人资格要求，即申请人的资格要求）。"
+        },
+        {
+          "category": "delivery",
+          "mandatory_observed": true,
+          "requires_confirmation": false,
+          "source_range": {
+            "end_ref": "C001-S016",
+            "start_ref": "C001-S016"
+          },
+          "text": "投标人不得将一个包的内容拆开投标。"
+        },
+        {
+          "category": "delivery",
+          "mandatory_observed": true,
+          "requires_confirmation": false,
+          "source_range": {
+            "end_ref": "C001-S017",
+            "start_ref": "C001-S017"
+          },
+          "text": "对同一项目投标时，投标人不得提供两套以上的投标方案（招标文件另有规定的除外）。"
+        },
+        {
+          "category": "delivery",
+          "mandatory_observed": true,
+          "requires_confirmation": false,
+          "source_range": {
+            "end_ref": "C001-S018",
+            "start_ref": "C001-S018"
+          },
+          "text": "投标人的分项报价或投标总价不得高于相应预算金额（或设定的预算金额下的最高限价）。"
+        },
+        {
+          "category": "delivery",
+          "mandatory_observed": true,
+          "requires_confirmation": false,
+          "source_range": {
+            "end_ref": "C001-S023",
+            "start_ref": "C001-S019"
+          },
+          "text": "当评审委员会认为投标人的报价明显低于其他通过符合性审查投标人的报价，有可能影响产品质量或者不能诚信履约时，投标人应当应要求在评审现场合理的时间内提供书面说明，必要时提交相关证明材料；若投标人仍不能证明其报价合理性，则按少数服从多数原则确定评审意见。"
+        },
+        {
+          "category": "delivery",
+          "mandatory_observed": true,
+          "requires_confirmation": false,
+          "source_range": {
+            "end_ref": "C001-S025",
+            "start_ref": "C001-S024"
+          },
+          "text": "投标人所投货物、服务在技术、商务等方面必须实质性满足招标文件要求。"
+        },
+        {
+          "category": "delivery",
+          "mandatory_observed": true,
+          "requires_confirmation": false,
+          "source_range": {
+            "end_ref": "C001-S027",
+            "start_ref": "C001-S026"
+          },
+          "text": "投标人必须按招标文件所提供的样式填写《投标函》，按招标文件所提供的《采购投标及履约承诺函》进行承诺，并按招标文件对投标文件组成的要求提供投标文件。"
+        },
+        {
+          "category": "delivery",
+          "mandatory_observed": true,
+          "requires_confirmation": false,
+          "source_range": {
+            "end_ref": "C001-S029",
+            "start_ref": "C001-S028"
+          },
+          "text": "投标人的采购标的、服务清单、报价等不得有缺漏项或响应不全，且不得对招标文件规定的项目需求内容或需求数量进行修改。"
+        },
+        {
+          "category": "delivery",
+          "mandatory_observed": true,
+          "requires_confirmation": false,
+          "source_range": {
+            "end_ref": "C001-S030",
+            "start_ref": "C001-S030"
+          },
+          "text": "投标文件电子文档不得带病毒。"
+        },
+        {
+          "category": "delivery",
+          "mandatory_observed": true,
+          "requires_confirmation": false,
+          "source_range": {
+            "end_ref": "C001-S031",
+            "start_ref": "C001-S031"
+          },
+          "text": "不同投标供应商的投标文件不得具有一致的“文件制作机器码”。"
+        },
+        {
+          "category": "delivery",
+          "mandatory_observed": true,
+          "requires_confirmation": false,
+          "source_range": {
+            "end_ref": "C001-S032",
+            "start_ref": "C001-S032"
+          },
+          "text": "不同投标供应商的投标文件不得具有一致的“文件创建标识码”。"
+        },
+        {
+          "category": "delivery",
+          "mandatory_observed": true,
+          "requires_confirmation": false,
+          "source_range": {
+            "end_ref": "C001-S033",
+            "start_ref": "C001-S033"
+          },
+          "text": "投标人不得存在法律、法规、规章、规范性文件规定的其他情形。"
+        },
+        {
+          "category": "delivery",
+          "mandatory_observed": true,
+          "requires_confirmation": false,
+          "source_range": {
+            "end_ref": "C001-S041",
+            "start_ref": "C001-S041"
+          },
+          "text": "评标过程中不得去掉报价中的最高报价和最低报价。"
+        },
+        {
+          "category": "delivery",
+          "mandatory_observed": true,
+          "requires_confirmation": false,
+          "source_range": {
+            "end_ref": "C001-S042",
+            "start_ref": "C001-S042"
+          },
+          "text": "因落实政府采购政策进行价格调整的，以调整后的价格计算评标基准价和投标报价。"
+        },
+        {
+          "category": "delivery",
+          "mandatory_observed": true,
+          "requires_confirmation": false,
+          "source_range": {
+            "end_ref": "C001-S053",
+            "start_ref": "C001-S046"
+          },
+          "text": "投标人提供的项目服务方案必须包含但不限于：对本项目服务原则、项目背景和维护目标及任务的理解；维护服务方案；应急处理预案；项目组建运维服务团队方案，明确管理架构及分工。"
+        },
+        {
+          "category": "delivery",
+          "mandatory_observed": true,
+          "requires_confirmation": false,
+          "source_range": {
+            "end_ref": "C001-S069",
+            "start_ref": "C001-S064"
+          },
+          "text": "投标人提供的项目重点难点分析、应对措施及相关的合理化建议必须包含但不限于：针对本项目信息安全管理的重点难点分析及应对措施；针对本项目HIS系统维护的重点难点分析及应对措施。"
+        },
+        {
+          "category": "delivery",
+          "mandatory_observed": true,
+          "requires_confirmation": false,
+          "source_range": {
+            "end_ref": "C001-S089",
+            "start_ref": "C001-S084"
+          },
+          "text": "投标人必须提供质量保障措施及方案，包括但不限于：项目交付进度管控；项目交付质量管控；项目过程风险管控；项目质量保障体系及方案。"
+        },
+        {
+          "category": "delivery",
+          "mandatory_observed": true,
+          "requires_confirmation": false,
+          "source_range": {
+            "end_ref": "C001-S099",
+            "start_ref": "C001-S096"
+          },
+          "text": "拟安排的项目负责人（仅限一人）必须满足：具有研究生学历（硕士或以上）或本科学历。"
+        }
+      ],
+      "normalized_candidate_text": [
+        {
+          "text": "投标人必须符合资格要求，并提交相应的资格证明资料（详见招标公告投标人资格要求，即申请人的资格要求）。",
+          "category": "delivery",
+          "source_range": {
+            "start_ref": "C001-S012",
+            "end_ref": "C001-S013"
+          },
+          "mandatory_observed": true,
+          "requires_confirmation": false
+        },
+        {
+          "text": "投标人不得将一个包的内容拆开投标。",
+          "category": "delivery",
+          "source_range": {
+            "start_ref": "C001-S016",
+            "end_ref": "C001-S016"
+          },
+          "mandatory_observed": true,
+          "requires_confirmation": false
+        },
+        {
+          "text": "对同一项目投标时，投标人不得提供两套以上的投标方案（招标文件另有规定的除外）。",
+          "category": "delivery",
+          "source_range": {
+            "start_ref": "C001-S017",
+            "end_ref": "C001-S017"
+          },
+          "mandatory_observed": true,
+          "requires_confirmation": false
+        },
+        {
+          "text": "投标人的分项报价或投标总价不得高于相应预算金额（或设定的预算金额下的最高限价）。",
+          "category": "delivery",
+          "source_range": {
+            "start_ref": "C001-S018",
+            "end_ref": "C001-S018"
+          },
+          "mandatory_observed": true,
+          "requires_confirmation": false
+        },
+        {
+          "text": "当评审委员会认为投标人的报价明显低于其他通过符合性审查投标人的报价，有可能影响产品质量或者不能诚信履约时，投标人应当应要求在评审现场合理的时间内提供书面说明，必要时提交相关证明材料；若投标人仍不能证明其报价合理性，则按少数服从多数原则确定评审意见。",
+          "category": "delivery",
+          "source_range": {
+            "start_ref": "C001-S019",
+            "end_ref": "C001-S023"
+          },
+          "mandatory_observed": true,
+          "requires_confirmation": false
+        },
+        {
+          "text": "投标人所投货物、服务在技术、商务等方面必须实质性满足招标文件要求。",
+          "category": "delivery",
+          "source_range": {
+            "start_ref": "C001-S024",
+            "end_ref": "C001-S025"
+          },
+          "mandatory_observed": true,
+          "requires_confirmation": false
+        },
+        {
+          "text": "投标人必须按招标文件所提供的样式填写《投标函》，按招标文件所提供的《采购投标及履约承诺函》进行承诺，并按招标文件对投标文件组成的要求提供投标文件。",
+          "category": "delivery",
+          "source_range": {
+            "start_ref": "C001-S026",
+            "end_ref": "C001-S027"
+          },
+          "mandatory_observed": true,
+          "requires_confirmation": false
+        },
+        {
+          "text": "投标人的采购标的、服务清单、报价等不得有缺漏项或响应不全，且不得对招标文件规定的项目需求内容或需求数量进行修改。",
+          "category": "delivery",
+          "source_range": {
+            "start_ref": "C001-S028",
+            "end_ref": "C001-S029"
+          },
+          "mandatory_observed": true,
+          "requires_confirmation": false
+        },
+        {
+          "text": "投标文件电子文档不得带病毒。",
+          "category": "delivery",
+          "source_range": {
+            "start_ref": "C001-S030",
+            "end_ref": "C001-S030"
+          },
+          "mandatory_observed": true,
+          "requires_confirmation": false
+        },
+        {
+          "text": "不同投标供应商的投标文件不得具有一致的“文件制作机器码”。",
+          "category": "delivery",
+          "source_range": {
+            "start_ref": "C001-S031",
+            "end_ref": "C001-S031"
+          },
+          "mandatory_observed": true,
+          "requires_confirmation": false
+        },
+        {
+          "text": "不同投标供应商的投标文件不得具有一致的“文件创建标识码”。",
+          "category": "delivery",
+          "source_range": {
+            "start_ref": "C001-S032",
+            "end_ref": "C001-S032"
+          },
+          "mandatory_observed": true,
+          "requires_confirmation": false
+        },
+        {
+          "text": "投标人不得存在法律、法规、规章、规范性文件规定的其他情形。",
+          "category": "delivery",
+          "source_range": {
+            "start_ref": "C001-S033",
+            "end_ref": "C001-S033"
+          },
+          "mandatory_observed": true,
+          "requires_confirmation": false
+        },
+        {
+          "text": "评标过程中不得去掉报价中的最高报价和最低报价。",
+          "category": "delivery",
+          "source_range": {
+            "start_ref": "C001-S041",
+            "end_ref": "C001-S041"
+          },
+          "mandatory_observed": true,
+          "requires_confirmation": false
+        },
+        {
+          "text": "因落实政府采购政策进行价格调整的，以调整后的价格计算评标基准价和投标报价。",
+          "category": "delivery",
+          "source_range": {
+            "start_ref": "C001-S042",
+            "end_ref": "C001-S042"
+          },
+          "mandatory_observed": true,
+          "requires_confirmation": false
+        },
+        {
+          "text": "投标人提供的项目服务方案必须包含但不限于：对本项目服务原则、项目背景和维护目标及任务的理解；维护服务方案；应急处理预案；项目组建运维服务团队方案，明确管理架构及分工。",
+          "category": "delivery",
+          "source_range": {
+            "start_ref": "C001-S046",
+            "end_ref": "C001-S053"
+          },
+          "mandatory_observed": true,
+          "requires_confirmation": false
+        },
+        {
+          "text": "投标人提供的项目重点难点分析、应对措施及相关的合理化建议必须包含但不限于：针对本项目信息安全管理的重点难点分析及应对措施；针对本项目HIS系统维护的重点难点分析及应对措施。",
+          "category": "delivery",
+          "source_range": {
+            "start_ref": "C001-S064",
+            "end_ref": "C001-S069"
+          },
+          "mandatory_observed": true,
+          "requires_confirmation": false
+        },
+        {
+          "text": "投标人必须提供质量保障措施及方案，包括但不限于：项目交付进度管控；项目交付质量管控；项目过程风险管控；项目质量保障体系及方案。",
+          "category": "delivery",
+          "source_range": {
+            "start_ref": "C001-S084",
+            "end_ref": "C001-S089"
+          },
+          "mandatory_observed": true,
+          "requires_confirmation": false
+        },
+        {
+          "text": "拟安排的项目负责人（仅限一人）必须满足：具有研究生学历（硕士或以上）或本科学历。",
+          "category": "delivery",
+          "source_range": {
+            "start_ref": "C001-S096",
+            "end_ref": "C001-S099"
+          },
+          "mandatory_observed": true,
+          "requires_confirmation": false
+        }
+      ],
+      "canonical_output_text": [
+        "投标人必须符合资格要求，并提交相应的资格证明资料（详见招标公告投标人资格要求，即申请人的资格要求）。",
+        "投标人不得将一个包的内容拆开投标。",
+        "对同一项目投标时，投标人不得提供两套以上的投标方案（招标文件另有规定的除外）。",
+        "投标人的分项报价或投标总价不得高于相应预算金额（或设定的预算金额下的最高限价）。",
+        "当评审委员会认为投标人的报价明显低于其他通过符合性审查投标人的报价，有可能影响产品质量或者不能诚信履约时，投标人应当应要求在评审现场合理的时间内提供书面说明，必要时提交相关证明材料；若投标人仍不能证明其报价合理性，则按少数服从多数原则确定评审意见。",
+        "投标人所投货物、服务在技术、商务等方面必须实质性满足招标文件要求。",
+        "投标人必须按招标文件所提供的样式填写《投标函》，按招标文件所提供的《采购投标及履约承诺函》进行承诺，并按招标文件对投标文件组成的要求提供投标文件。",
+        "投标人的采购标的、服务清单、报价等不得有缺漏项或响应不全，且不得对招标文件规定的项目需求内容或需求数量进行修改。",
+        "投标文件电子文档不得带病毒。",
+        "不同投标供应商的投标文件不得具有一致的“文件制作机器码”。",
+        "不同投标供应商的投标文件不得具有一致的“文件创建标识码”。",
+        "投标人不得存在法律、法规、规章、规范性文件规定的其他情形。",
+        "评标过程中不得去掉报价中的最高报价和最低报价。",
+        "因落实政府采购政策进行价格调整的，以调整后的价格计算评标基准价和投标报价。",
+        "投标人提供的项目服务方案必须包含但不限于：对本项目服务原则、项目背景和维护目标及任务的理解；维护服务方案；应急处理预案；项目组建运维服务团队方案，明确管理架构及分工。",
+        "投标人提供的项目重点难点分析、应对措施及相关的合理化建议必须包含但不限于：针对本项目信息安全管理的重点难点分析及应对措施；针对本项目HIS系统维护的重点难点分析及应对措施。",
+        "投标人必须提供质量保障措施及方案，包括但不限于：项目交付进度管控；项目交付质量管控；项目过程风险管控；项目质量保障体系及方案。",
+        "拟安排的项目负责人（仅限一人）必须满足：具有研究生学历（硕士或以上）或本科学历。"
+      ],
+      "canonical_output_provenance": "MECHANICAL_IDENTITY_PROJECTION_FROM_NORMALIZED_CANDIDATE_TEXT; NO_NEW_SEMANTIC_JUDGMENT",
+      "canonicalization_outcome": {
+        "source_resolution_success": true,
+        "source_resolution_failure_code": null,
+        "source_resolution_failed_candidate_index": null,
+        "canonicalization_success": true,
+        "canonicalization_failure_code": null,
+        "canonicalization_failed_candidate_index": null,
+        "quality_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+        "quality_gate_reason_codes": [
+          "NUMBER_OMISSION_REVIEW",
+          "NEGATION_DISTORTION",
+          "MODALITY_ADDITION_REVIEW",
+          "ENTITY_MISMATCH_REVIEW"
+        ],
+        "failure_stage": "QUALITY_GATE",
+        "canonical_count": 18,
+        "duplicate_count": 0
+      },
+      "source_resolution_outcome": {
+        "source_resolution_success": true,
+        "source_resolution_failure_code": null,
+        "source_refs": [
+          "C001-S001",
+          "C001-S002",
+          "C001-S003",
+          "C001-S004",
+          "C001-S005",
+          "C001-S006",
+          "C001-S007",
+          "C001-S008",
+          "C001-S009",
+          "C001-S010",
+          "C001-S011",
+          "C001-S012",
+          "C001-S013",
+          "C001-S014",
+          "C001-S015",
+          "C001-S016",
+          "C001-S017",
+          "C001-S018",
+          "C001-S019",
+          "C001-S020",
+          "C001-S021",
+          "C001-S022",
+          "C001-S023",
+          "C001-S024",
+          "C001-S025",
+          "C001-S026",
+          "C001-S027",
+          "C001-S028",
+          "C001-S029",
+          "C001-S030",
+          "C001-S031",
+          "C001-S032",
+          "C001-S033",
+          "C001-S034",
+          "C001-S035",
+          "C001-S036",
+          "C001-S037",
+          "C001-S038",
+          "C001-S039",
+          "C001-S040",
+          "C001-S041",
+          "C001-S042",
+          "C001-S043",
+          "C001-S044",
+          "C001-S045",
+          "C001-S046",
+          "C001-S047",
+          "C001-S048",
+          "C001-S049",
+          "C001-S050",
+          "C001-S051",
+          "C001-S052",
+          "C001-S053",
+          "C001-S054",
+          "C001-S055",
+          "C001-S056",
+          "C001-S057",
+          "C001-S058",
+          "C001-S059",
+          "C001-S060",
+          "C001-S061",
+          "C001-S062",
+          "C001-S063",
+          "C001-S064",
+          "C001-S065",
+          "C001-S066",
+          "C001-S067",
+          "C001-S068",
+          "C001-S069",
+          "C001-S070",
+          "C001-S071",
+          "C001-S072",
+          "C001-S073",
+          "C001-S074",
+          "C001-S075",
+          "C001-S076",
+          "C001-S077",
+          "C001-S078",
+          "C001-S079",
+          "C001-S080",
+          "C001-S081",
+          "C001-S082",
+          "C001-S083",
+          "C001-S084",
+          "C001-S085",
+          "C001-S086",
+          "C001-S087",
+          "C001-S088",
+          "C001-S089",
+          "C001-S090",
+          "C001-S091",
+          "C001-S092",
+          "C001-S093",
+          "C001-S094",
+          "C001-S095",
+          "C001-S096",
+          "C001-S097",
+          "C001-S098",
+          "C001-S099"
+        ],
+        "source_hashes": []
+      },
+      "canonical_output_outcome": {
+        "quality_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+        "canonical_count": 18,
+        "canonicalization_failure_code": null
+      },
+      "current_mechanical_divergence": {
+        "previous_wrong_chunk_id": "FAST-01:reconstructed:23",
+        "corrected_chunk_id": "FAST-01:reconstructed:1",
+        "quality_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+        "quality_gate_reason_codes": [
+          "NUMBER_OMISSION_REVIEW",
+          "NEGATION_DISTORTION",
+          "MODALITY_ADDITION_REVIEW",
+          "ENTITY_MISMATCH_REVIEW"
+        ],
+        "mechanical_failure_stage": "QUALITY_GATE",
+        "semantic_root_cause": "PENDING_GPT"
+      },
+      "runtime_observation": {
+        "contract_version": "4.3-requirement-extraction-v3.1.1",
+        "instruction_hash": "cae64eb027365f1e9d39a9ef8b6375af20dc7b274d62ddc54c07ece3f39fc00d",
+        "candidate_schema_hash": "1f5bd20f624a34a5f0bfd76e226f24d3595cc8a1e06bdc176c3d40e9694edbba",
+        "provider": "openai_compatible",
+        "requested_provider": "openai_compatible",
+        "model": "deepseek-ai/DeepSeek-V4-Flash",
+        "requested_model": "deepseek-ai/DeepSeek-V4-Flash",
+        "response_model": "deepseek-ai/DeepSeek-V4-Flash",
+        "endpoint": "/chat/completions",
+        "finish_reason": "stop",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "source_resolution_pass": true,
+        "canonicalization_pass": true,
+        "quality_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+        "candidate_count": 18,
+        "probe_audit": {
+          "provider": "openai_compatible",
+          "model": "deepseek-ai/DeepSeek-V4-Flash",
+          "configured_provider": "openai_compatible",
+          "configured_model": "deepseek-ai/DeepSeek-V4-Flash",
+          "requested_provider": "openai_compatible",
+          "requested_model": "deepseek-ai/DeepSeek-V4-Flash",
+          "response_model": "deepseek-ai/DeepSeek-V4-Flash",
+          "endpoint": "/chat/completions",
+          "finish_reason": "stop",
+          "current_stage": "MODEL_CONTENT_EXTRACTED",
+          "response_id": "01a09662d711df0608006f8900ccc59f",
+          "provider_trace_id": "ti_azv60808hr8lojdbm1",
+          "response_format_type": "json_schema",
+          "json_parse_success": true,
+          "provider_adapter_invoked": true,
+          "fetch_invoked": true,
+          "provider_http_reached": true,
+          "output_truncated": false,
+          "task_override_applied": true,
+          "gateway_http_status": 200,
+          "provider_http_status": 200,
+          "prompt_tokens": 3596,
+          "completion_tokens": 1676,
+          "total_tokens": 5272,
+          "latency_ms": 12281,
+          "model_content_length_chars": 5031,
+          "generation_config": {
+            "response_format": "json_schema",
+            "strict": true,
+            "enable_thinking": false,
+            "max_tokens": 9600,
+            "temperature": 0.1,
+            "top_p": 1,
+            "top_k": 50
+          }
+        },
+        "provider_calls": 1,
+        "retries": 0,
+        "duration_ms": 12323,
+        "semantic_root_cause": "PENDING_GPT"
+      },
+      "evidence_refs": [
+        {
+          "path": "evidence/PROVIDER_INPUT_SNAPSHOT-dad20d51b3b32400.json",
+          "sha256": "sha256:600cfc4a8f9ab176cc840d00acc6b32b0b8052e3c0df651aefb64f63e4693c5b"
+        },
+        {
+          "path": "evidence/RAW_PROVIDER_RESPONSE_SNAPSHOT-c8fa32779b9c9074.json",
+          "sha256": "sha256:696762d5daae4be9975185417f03658fc6b1f4a33004b1bb253858a4e13aa24c"
+        },
+        {
+          "path": "evidence/NORMALIZED_CANDIDATE_SNAPSHOT-2e75506dc9900879.json",
+          "sha256": "sha256:fa350574ee81a63a3a489cc06c9eb00293939acf55028c638e67d8b3a7bafda7"
+        },
+        {
+          "path": "evidence/CANONICALIZATION_DECISION_SNAPSHOT-912a6f47ce3c2563.json",
+          "sha256": "sha256:812af4edfb96c868f6af683481a8d7cdbde3831aab638911b1ee6c9b3ded3c64"
+        },
+        {
+          "path": "evidence/SOURCE_RESOLUTION_SNAPSHOT-f2eb8512546c50a4.json",
+          "sha256": "sha256:27ede3b0fbb4f4914ea130b1b97cf10394ffae60545dd7e7b727a9d87d1abff5"
+        },
+        {
+          "path": "evidence/CANONICAL_OUTPUT_SNAPSHOT-bec6074bdc7c520e.json",
+          "sha256": "sha256:bf74b07f1ad6be938f2fefc9d96ac65feb2dfff54d7f71f5c970378d2adffa9a"
+        }
+      ],
+      "semantic_root_cause": "PENDING_GPT"
+    }
+  ]
+}

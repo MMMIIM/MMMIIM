@@ -1,0 +1,66 @@
+{
+  "checkpoint": "V43_FACT_CANDIDATE_V2_TARGET_LIVE_GATE",
+  "run_id": "fact-candidate-v2-target-live-blocked-runtime-task-not-routed",
+  "status": "BLOCKED_RUNTIME_TASK_NOT_ROUTED_V2",
+  "decision_scope": "TARGET_LIVE_GATE",
+  "planned_executions": 4,
+  "planned_cases": [
+    "COM-01",
+    "COM-06-A",
+    "COM-06-B",
+    "CCV2-U13-01"
+  ],
+  "first_attempt_provider_calls": 0,
+  "transient_retry_calls": 0,
+  "total_provider_calls": 0,
+  "runtime_preflight": {
+    "ready_http_status": 200,
+    "info_http_status": 200,
+    "fact_provider": "deepseek_official",
+    "fact_provider_configured": true,
+    "fact_provider_endpoint": "/responses",
+    "fact_model": "deepseek-v4-pro",
+    "build_revision": "dev-working-tree",
+    "observed_running_task_types": [
+      "requirement_extraction",
+      "response_planning",
+      "claim_generation",
+      "section_drafting",
+      "targeted_revision",
+      "evidence_fact_extraction",
+      "draft_sections",
+      "evidence_support_assessment",
+      "requirement_evidence_mapping"
+    ]
+  },
+  "local_contract_preflight": {
+    "candidate_task_type": "evidence_fact_candidate_v2",
+    "candidate_contract_version": "4.3-evidence-fact-candidate-v2",
+    "candidate_schema_sha256": "9b40ac9be7d5a262e39d1a142bb5165ba113e213cfa9f56b7888ae241693f834",
+    "candidate_prompt_version": "4.3-evidence-fact-candidate-v2-prompt-v1",
+    "candidate_task_present_in_local_registry": true,
+    "candidate_task_present_in_running_registry": false
+  },
+  "failed_precondition": {
+    "code": "CANDIDATE_TASK_NOT_ROUTED_V2",
+    "expected": "running /info task_types includes evidence_fact_candidate_v2",
+    "actual": "running /info task_types does not include evidence_fact_candidate_v2",
+    "classification": "SYSTEMIC_RUNTIME_PRECONDITION_FAILURE"
+  },
+  "case_results": [],
+  "artifacts": {
+    "raw_candidate_packet": null,
+    "canonicalization_packet": null,
+    "grounding_packet": null,
+    "provider_telemetry": null,
+    "com06_dual_run_diff": null
+  },
+  "production_db_writes": 0,
+  "fact_persistence": 0,
+  "gold_mutations": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "prompt_or_schema_changes": 0,
+  "next_action": "Reload the running semantic gateway from the current worktree, then rerun this gate only after /info advertises evidence_fact_candidate_v2."
+}

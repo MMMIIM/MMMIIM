@@ -1,0 +1,64 @@
+{
+  "artifact_type": "V43_REAL_E2E_AUTHORITY_AND_PROJECT_MATERIAL_BINDING_TEST_REPORT",
+  "focused_unit_tests": {
+    "files": [
+      "backend/test/authority-binding-loop.test.js",
+      "backend/test/retrieval-runner-binding.test.js"
+    ],
+    "passed": 10,
+    "failed": 0
+  },
+  "syntax_checks": {"db": "PASS", "app": "PASS", "server": "PASS", "services": "PASS", "utf8_runner": "PASS", "binding_runner": "PASS"},
+  "retrieval_regressions": {"suite": "material-source-authority-policy + retrieval focused", "passed": 13, "failed": 0},
+  "runner_binding_wiring": {
+    "host_database_preserved": true,
+    "root_cause": "createBackendRuntime default dotenv override replaced Host DATABASE_URL with backend/.env; raw company_materials discovery bypassed binding-aware retrieval path",
+    "consuming_project_id": "7a038c5d-38e4-46ae-b24d-39437bb3b545",
+    "material_owner_project_id": "5d724373-3d88-41ec-b72d-0d7a01107af7",
+    "material_discovery_path": "PgRepository.listChunksForRetrieval",
+    "binding_aware": true,
+    "offline_authorized_material_count": 6,
+    "offline_authorized_chunk_count": 590,
+    "provider_calls": 0
+  },
+  "eval_database_verification": {"migration": "PASS", "tb006_bindings": "PASS", "bound_chunks": 590, "unbound_chunks": 0, "authority_decisions": 5},
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "new_task_regression": 0,
+  "full_unit_regression": {
+    "command": "npm test",
+    "status": "FAIL_PRE_EXISTING_UNRELATED_BASELINE",
+    "exit_code": 1,
+    "current_task_regression": 0,
+    "failure_families": [
+      "historical Gold/Eval artifact path missing",
+      "runtime governance instruction expectation",
+      "static runtime configuration guard",
+      "source-role projection artifact path missing",
+      "pre-existing Writer authorization snapshot identity expectations"
+    ],
+    "action": "record_only_no_unrelated_repairs"
+  },
+  "postgres_full_suite": {
+    "database_target": "bid_platform_flow_audit_test",
+    "tests": 61,
+    "passed": 61,
+    "failed": 0,
+    "production_database_targeted": false
+  },
+  "requirement_eval": {
+    "command": "npm run eval:requirements",
+    "status": "PASS",
+    "provider_calls": 0,
+    "metrics": {
+      "schema_pass_rate": 1,
+      "expected_requirement_recall": 1,
+      "precision": 1,
+      "source_verified_rate": 1
+    }
+  },
+  "build": "PASS",
+  "lint": "PASS_NO_LINT_SCRIPTS_DEFINED",
+  "git_diff_check": "PASS_WITH_PREEXISTING_CRLF_WARNINGS"
+}

@@ -83,6 +83,7 @@ export class MockSemanticProvider {
   async invoke({ taskType, payload }) {
     if (taskType === 'evidence_support_assessment') return { data: evidenceData(payload), provider_audit: { model: this.model } };
     if (taskType === 'requirement_extraction') return { data: { requirements: [] }, provider_audit: { model: this.model } };
+    if (taskType === 'evidence_fact_extraction') return { data: { facts: [] }, provider_audit: { model: this.model } };
     if (taskType === 'response_planning') {
       return { data: {
         response_plans: (payload.requirements || []).map(requirement => ({

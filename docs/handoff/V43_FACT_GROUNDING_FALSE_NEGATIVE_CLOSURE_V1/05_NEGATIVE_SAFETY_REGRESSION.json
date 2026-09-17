@@ -1,0 +1,461 @@
+{
+  "artifact_type": "V43_FACT_GROUNDING_FALSE_NEGATIVE_CLOSURE_V1_NEGATIVE_SAFETY_REGRESSION",
+  "candidate_17": {
+    "candidate_id": "MCH-CE770B545973FB9CF092951FCDC402B5#candidate-17",
+    "gpt_statement_supported": "NO",
+    "grounding_decision_after": "REVIEW_REQUIRED",
+    "accepted": false,
+    "pass": true
+  },
+  "mutations": [
+    {
+      "mutation": "unsupported_suffix",
+      "result": {
+        "canonicalization": {
+          "status": "CANONICALIZED",
+          "canonical": {
+            "subject": {
+              "type": "product",
+              "name": "华为平台"
+            },
+            "entities": [
+              {
+                "type": "product",
+                "name": "华为平台"
+              }
+            ],
+            "status": "unknown",
+            "scopes": [],
+            "scope_source_texts": {},
+            "quantities": [
+              {
+                "metric": "用户数",
+                "value": "100",
+                "unit": "users",
+                "source_text": "华为平台支持100个用户并获得ISO 9001证书。"
+              }
+            ],
+            "validity": {
+              "status": "unknown",
+              "valid_from": null,
+              "valid_until": null
+            },
+            "domain_metadata": {}
+          },
+          "observation": {
+            "statement": "华为平台支持100个用户并获得ISO 9001证书及ISO 27001证书。"
+          },
+          "temporal_observations": [],
+          "observation_provenance": {
+            "entity_mentions": [
+              {
+                "source_text": "华为平台支持100个用户并获得ISO 9001证书。",
+                "source_refs": [
+                  "snapshot://safety/001"
+                ]
+              }
+            ],
+            "scope_items": [],
+            "quantity_items": [
+              {
+                "source_text": "华为平台支持100个用户并获得ISO 9001证书。",
+                "source_refs": [
+                  "snapshot://safety/001"
+                ]
+              }
+            ],
+            "temporal_items": []
+          },
+          "review_reasons": []
+        },
+        "grounding": {
+          "decision": "REVIEW_REQUIRED",
+          "reasons": [
+            "STATEMENT_SEMANTIC_GROUNDING_UNRESOLVED"
+          ],
+          "source_grounding": {
+            "mode": "UNKNOWN",
+            "unit": null
+          }
+        }
+      },
+      "fail_closed": true
+    },
+    {
+      "mutation": "wrong_number",
+      "result": {
+        "canonicalization": {
+          "status": "CANONICALIZED",
+          "canonical": {
+            "subject": {
+              "type": "product",
+              "name": "华为平台"
+            },
+            "entities": [
+              {
+                "type": "product",
+                "name": "华为平台"
+              }
+            ],
+            "status": "unknown",
+            "scopes": [],
+            "scope_source_texts": {},
+            "quantities": [
+              {
+                "metric": "用户数",
+                "value": "101",
+                "unit": "users",
+                "source_text": "华为平台支持100个用户并获得ISO 9001证书。"
+              }
+            ],
+            "validity": {
+              "status": "unknown",
+              "valid_from": null,
+              "valid_until": null
+            },
+            "domain_metadata": {}
+          },
+          "observation": {
+            "statement": "华为平台支持100个用户并获得ISO 9001证书。"
+          },
+          "temporal_observations": [],
+          "observation_provenance": {
+            "entity_mentions": [
+              {
+                "source_text": "华为平台支持100个用户并获得ISO 9001证书。",
+                "source_refs": [
+                  "snapshot://safety/001"
+                ]
+              }
+            ],
+            "scope_items": [],
+            "quantity_items": [
+              {
+                "source_text": "华为平台支持100个用户并获得ISO 9001证书。",
+                "source_refs": [
+                  "snapshot://safety/001"
+                ]
+              }
+            ],
+            "temporal_items": []
+          },
+          "review_reasons": []
+        },
+        "grounding": {
+          "decision": "REJECT",
+          "reasons": [
+            "quantity.value is not grounded"
+          ],
+          "source_grounding": {
+            "mode": "EXACT",
+            "unit": null
+          }
+        }
+      },
+      "fail_closed": true
+    },
+    {
+      "mutation": "wrong_certificate",
+      "result": {
+        "canonicalization": {
+          "status": "CANONICALIZED",
+          "canonical": {
+            "subject": {
+              "type": "product",
+              "name": "华为平台"
+            },
+            "entities": [
+              {
+                "type": "product",
+                "name": "华为平台"
+              }
+            ],
+            "status": "unknown",
+            "scopes": [],
+            "scope_source_texts": {},
+            "quantities": [
+              {
+                "metric": "用户数",
+                "value": "100",
+                "unit": "users",
+                "source_text": "华为平台支持100个用户并获得ISO 9001证书。"
+              }
+            ],
+            "validity": {
+              "status": "unknown",
+              "valid_from": null,
+              "valid_until": null
+            },
+            "domain_metadata": {}
+          },
+          "observation": {
+            "statement": "华为平台支持100个用户并获得ISO 27001证书。"
+          },
+          "temporal_observations": [],
+          "observation_provenance": {
+            "entity_mentions": [
+              {
+                "source_text": "华为平台支持100个用户并获得ISO 9001证书。",
+                "source_refs": [
+                  "snapshot://safety/001"
+                ]
+              }
+            ],
+            "scope_items": [],
+            "quantity_items": [
+              {
+                "source_text": "华为平台支持100个用户并获得ISO 9001证书。",
+                "source_refs": [
+                  "snapshot://safety/001"
+                ]
+              }
+            ],
+            "temporal_items": []
+          },
+          "review_reasons": []
+        },
+        "grounding": {
+          "decision": "REVIEW_REQUIRED",
+          "reasons": [
+            "STATEMENT_SEMANTIC_GROUNDING_UNRESOLVED"
+          ],
+          "source_grounding": {
+            "mode": "UNKNOWN",
+            "unit": null
+          }
+        }
+      },
+      "fail_closed": true
+    },
+    {
+      "mutation": "wrong_product",
+      "result": {
+        "canonicalization": {
+          "status": "CANONICALIZED",
+          "canonical": {
+            "subject": {
+              "type": "product",
+              "name": "华为另一平台"
+            },
+            "entities": [
+              {
+                "type": "product",
+                "name": "华为另一平台"
+              }
+            ],
+            "status": "unknown",
+            "scopes": [],
+            "scope_source_texts": {},
+            "quantities": [
+              {
+                "metric": "用户数",
+                "value": "100",
+                "unit": "users",
+                "source_text": "华为平台支持100个用户并获得ISO 9001证书。"
+              }
+            ],
+            "validity": {
+              "status": "unknown",
+              "valid_from": null,
+              "valid_until": null
+            },
+            "domain_metadata": {}
+          },
+          "observation": {
+            "statement": "华为平台支持100个用户并获得ISO 9001证书。"
+          },
+          "temporal_observations": [],
+          "observation_provenance": {
+            "entity_mentions": [
+              {
+                "source_text": "华为平台支持100个用户并获得ISO 9001证书。",
+                "source_refs": [
+                  "snapshot://safety/001"
+                ]
+              }
+            ],
+            "scope_items": [],
+            "quantity_items": [
+              {
+                "source_text": "华为平台支持100个用户并获得ISO 9001证书。",
+                "source_refs": [
+                  "snapshot://safety/001"
+                ]
+              }
+            ],
+            "temporal_items": []
+          },
+          "review_reasons": []
+        },
+        "grounding": {
+          "decision": "REJECT",
+          "reasons": [
+            "subject.name is not grounded",
+            "entity.name is not grounded"
+          ],
+          "source_grounding": {
+            "mode": "EXACT",
+            "unit": null
+          }
+        }
+      },
+      "fail_closed": true
+    },
+    {
+      "mutation": "wrong_enterprise",
+      "result": {
+        "canonicalization": {
+          "status": "CANONICALIZED",
+          "canonical": {
+            "subject": {
+              "type": "product",
+              "name": "某企业平台"
+            },
+            "entities": [
+              {
+                "type": "product",
+                "name": "某企业平台"
+              }
+            ],
+            "status": "unknown",
+            "scopes": [],
+            "scope_source_texts": {},
+            "quantities": [
+              {
+                "metric": "用户数",
+                "value": "100",
+                "unit": "users",
+                "source_text": "华为平台支持100个用户并获得ISO 9001证书。"
+              }
+            ],
+            "validity": {
+              "status": "unknown",
+              "valid_from": null,
+              "valid_until": null
+            },
+            "domain_metadata": {}
+          },
+          "observation": {
+            "statement": "华为平台支持100个用户并获得ISO 9001证书。"
+          },
+          "temporal_observations": [],
+          "observation_provenance": {
+            "entity_mentions": [
+              {
+                "source_text": "华为平台支持100个用户并获得ISO 9001证书。",
+                "source_refs": [
+                  "snapshot://safety/001"
+                ]
+              }
+            ],
+            "scope_items": [],
+            "quantity_items": [
+              {
+                "source_text": "华为平台支持100个用户并获得ISO 9001证书。",
+                "source_refs": [
+                  "snapshot://safety/001"
+                ]
+              }
+            ],
+            "temporal_items": []
+          },
+          "review_reasons": []
+        },
+        "grounding": {
+          "decision": "REJECT",
+          "reasons": [
+            "subject.name is not grounded",
+            "entity.name is not grounded"
+          ],
+          "source_grounding": {
+            "mode": "EXACT",
+            "unit": null
+          }
+        }
+      },
+      "fail_closed": true
+    },
+    {
+      "mutation": "negation_mutation",
+      "result": {
+        "canonicalization": {
+          "status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonical": {
+            "subject": {
+              "type": "product",
+              "name": "华为平台"
+            },
+            "entities": [
+              {
+                "type": "product",
+                "name": "华为平台"
+              }
+            ],
+            "status": "unknown",
+            "scopes": [],
+            "scope_source_texts": {},
+            "quantities": [
+              {
+                "metric": "用户数",
+                "value": "100",
+                "unit": "users",
+                "source_text": "华为平台支持100个用户并获得ISO 9001证书。"
+              }
+            ],
+            "validity": {
+              "status": "unknown",
+              "valid_from": null,
+              "valid_until": null
+            },
+            "domain_metadata": {}
+          },
+          "observation": {
+            "statement": "华为平台不支持100个用户并获得ISO 9001证书。"
+          },
+          "temporal_observations": [],
+          "observation_provenance": {
+            "entity_mentions": [
+              {
+                "source_text": "华为平台支持100个用户并获得ISO 9001证书。",
+                "source_refs": [
+                  "snapshot://safety/001"
+                ]
+              }
+            ],
+            "scope_items": [],
+            "quantity_items": [
+              {
+                "source_text": "华为平台支持100个用户并获得ISO 9001证书。",
+                "source_refs": [
+                  "snapshot://safety/001"
+                ]
+              }
+            ],
+            "temporal_items": []
+          },
+          "review_reasons": [
+            "NEGATED_OR_LIMITED_SCOPE"
+          ]
+        },
+        "grounding": {
+          "decision": "REJECT",
+          "reasons": [
+            "statement is not grounded",
+            "NEGATED_OR_LIMITED_SCOPE"
+          ],
+          "source_grounding": {
+            "mode": "UNKNOWN",
+            "unit": null
+          }
+        }
+      },
+      "fail_closed": true
+    },
+    {
+      "mutation": "source_ref_mismatch",
+      "fail_closed": true,
+      "error": "unknown source alias S002 at statement.source_refs"
+    }
+  ],
+  "all_fail_closed": true
+}

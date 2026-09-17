@@ -1,0 +1,1674 @@
+{
+  "report_version": "context-recovery-24case-benchmark-v1",
+  "mode": "READ_ONLY_DETERMINISTIC_BENCHMARK",
+  "generated_at": "2026-08-31T16:47:48.663Z",
+  "sample": {
+    "total_cases": 24,
+    "total_materials_observed": 50,
+    "total_chunks_observed": 478,
+    "scopes_represented": [
+      "GENERAL",
+      "GOVERNMENT_ENTERPRISE",
+      "HEALTHCARE",
+      "ENTERPRISE_PRIVATE"
+    ],
+    "docs_represented": [
+      "UNI-08",
+      "GOV-02",
+      "MED-07",
+      "COM-04",
+      "UNI-03",
+      "GOV-06",
+      "MED-08",
+      "COM-03",
+      "COM-02",
+      "COM-06",
+      "COM-08",
+      "COM-12",
+      "MED-01",
+      "COM-07"
+    ],
+    "production_chunks_only": true,
+    "synthetic_fixture_created": false
+  },
+  "category_results": [
+    {
+      "category": "HEADING_TO_BODY",
+      "cases": 4,
+      "pass": 4,
+      "fail": 0,
+      "pass_rate": 1
+    },
+    {
+      "category": "BODY_TO_HEADING",
+      "cases": 4,
+      "pass": 4,
+      "fail": 0,
+      "pass_rate": 1
+    },
+    {
+      "category": "POSITIVE_CAPABILITY",
+      "cases": 4,
+      "pass": 4,
+      "fail": 0,
+      "pass_rate": 1
+    },
+    {
+      "category": "NEGATIVE_BOUNDARY",
+      "cases": 4,
+      "pass": 4,
+      "fail": 0,
+      "pass_rate": 1
+    },
+    {
+      "category": "MULTI_PARAGRAPH",
+      "cases": 4,
+      "pass": 4,
+      "fail": 0,
+      "pass_rate": 1
+    },
+    {
+      "category": "METADATA_SECTION_BOUNDARY",
+      "cases": 4,
+      "pass": 4,
+      "fail": 0,
+      "pass_rate": 1
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "CR-01",
+      "category": "HEADING_TO_BODY",
+      "doc_id": "UNI-08",
+      "scope": "GENERAL",
+      "material_id": "31d40c70-2f1a-4155-b829-a1e8ccca3cc6",
+      "anchor_chunk_id": "MCH-971F98DA72D5D0C1BA1EC350A6D99964",
+      "anchor_chunk_index": 2,
+      "anchor_text": "## 接口",
+      "resolver_scope": "PARENT_HEADING_GROUP",
+      "resolver_span": {
+        "text": "## 接口\n\n明确对象、方式、字段、鉴权、错误处理和责任边界。\n\n",
+        "char_start": 56,
+        "char_end": 89,
+        "paragraph_start": 3,
+        "paragraph_end": 4,
+        "source_chunk_ids": [
+          "MCH-971F98DA72D5D0C1BA1EC350A6D99964",
+          "MCH-7268779AABDC11305CC58176D6F4B989"
+        ],
+        "heading_path": [
+          "接口集成与互操作",
+          "接口"
+        ],
+        "resolver_strategy": "heading_group"
+      },
+      "expanded_context": [
+        {
+          "origin": "SECTION_HEADING",
+          "text": "接口",
+          "chunk_id": "MCH-971F98DA72D5D0C1BA1EC350A6D99964"
+        },
+        {
+          "origin": "SAME_CHUNK_CONTEXT",
+          "text": "## 接口",
+          "chunk_id": "MCH-971F98DA72D5D0C1BA1EC350A6D99964"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "> 官方资料结构化摘要。正式投标与合规判断需回到原始法律、标准、政策或项目文件核验。",
+          "chunk_id": "MCH-AFAC3EB94B7916A172224BF6C304041E"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "明确对象、方式、字段、鉴权、错误处理和责任边界。",
+          "chunk_id": "MCH-7268779AABDC11305CC58176D6F4B989"
+        },
+        {
+          "origin": "MATERIAL_METADATA",
+          "text": "material_name=UNI-08_接口集成与互操作.md；material_type=technical_whitepaper；corpus_scope=GENERAL；source_type=official_standard；source_org=OFF-U02,OFF-U03",
+          "material_id": "31d40c70-2f1a-4155-b829-a1e8ccca3cc6"
+        }
+      ],
+      "signals": {
+        "heading_present": true,
+        "body_present": true,
+        "anchor_retained": true,
+        "same_section": true,
+        "cross_section_contamination": false,
+        "provenance_complete": true,
+        "expanded_context_chars": 256
+      },
+      "status": "PASS",
+      "failure_reason": null
+    },
+    {
+      "case_id": "CR-02",
+      "category": "HEADING_TO_BODY",
+      "doc_id": "GOV-02",
+      "scope": "GOVERNMENT_ENTERPRISE",
+      "material_id": "08d5580a-d81b-491f-8c9b-d37ca4251840",
+      "anchor_chunk_id": "MCH-9B1EE59AC49517697E22459FF10EF20E",
+      "anchor_chunk_index": 0,
+      "anchor_text": "# 政务数据目录、共享与跨部门协同",
+      "resolver_scope": "TOP_LEVEL_HEADING_GROUP",
+      "resolver_span": {
+        "text": "# 政务数据目录、共享与跨部门协同\n\n> 官方资料结构化摘要。正式投标与合规判断需回到原始法律、标准、政策或项目文件核验。\n\n## 目录与共享\n\n需明确数据目录、共享属性、使用条件、授权、安全和记录。\n\n## 官方来源 / 依据\n\n- **OFF-U03｜政务数据共享条例**｜国务院｜状态 `CURRENT_CONFIRMED`｜实施 `2025-08-01`｜最后核验 `2026-08-31`｜https://www.stats.gov.cn/gk/tjfg/xgfxfg/202506/t20250609_1960124.html\n- **OFF-U06｜中华人民共和国数据安全法**｜全国人大常委会｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-09-01`｜最后核验 `2026-08-31`｜https://www.npc.gov.cn/npc/c2/c30834/202106/t20210610_311888.html\n- **OFF-U07｜中华人民共和国个人信息保护法**｜全国人大常委会｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-11-01`｜最后核验 `2026-08-31`｜https://www.miit.gov.cn/zwgk/zcwj/flfg/art/2022/art_04a0f1fb5df244e39688fd5372623a8d.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+        "char_start": 0,
+        "char_end": 859,
+        "paragraph_start": 1,
+        "paragraph_end": 8,
+        "source_chunk_ids": [
+          "MCH-9B1EE59AC49517697E22459FF10EF20E",
+          "MCH-F10ED69DC3BF77C66D6A0EA805EC99AA",
+          "MCH-10E05647593D617773818984CFB50208",
+          "MCH-B7204C620F6A0CF603CEE34E625A583C",
+          "MCH-839D2B25854C0D1C9B5BB49408B32F22",
+          "MCH-257ECF848FECAB04572BF502D68A1173",
+          "MCH-26B5F534B4D5091391A9D8B4EC47FFCB",
+          "MCH-1FAE191CF4949121A8D999CFF59DB104"
+        ],
+        "heading_path": [
+          "政务数据目录、共享与跨部门协同"
+        ],
+        "resolver_strategy": "heading_group"
+      },
+      "expanded_context": [
+        {
+          "origin": "SECTION_HEADING",
+          "text": "政务数据目录、共享与跨部门协同",
+          "chunk_id": "MCH-9B1EE59AC49517697E22459FF10EF20E"
+        },
+        {
+          "origin": "SAME_CHUNK_CONTEXT",
+          "text": "# 政务数据目录、共享与跨部门协同",
+          "chunk_id": "MCH-9B1EE59AC49517697E22459FF10EF20E"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "> 官方资料结构化摘要。正式投标与合规判断需回到原始法律、标准、政策或项目文件核验。",
+          "chunk_id": "MCH-F10ED69DC3BF77C66D6A0EA805EC99AA"
+        },
+        {
+          "origin": "MATERIAL_METADATA",
+          "text": "material_name=GOV-02_政务数据目录、共享与跨部门协同.md；material_type=technical_whitepaper；corpus_scope=GOVERNMENT_ENTERPRISE；source_type=government_guidance；source_org=OFF-U03,OFF-U06,OFF-U07",
+          "material_id": "08d5580a-d81b-491f-8c9b-d37ca4251840"
+        }
+      ],
+      "signals": {
+        "heading_present": true,
+        "body_present": true,
+        "anchor_retained": true,
+        "same_section": true,
+        "cross_section_contamination": false,
+        "provenance_complete": true,
+        "expanded_context_chars": 1113
+      },
+      "status": "PASS",
+      "failure_reason": null
+    },
+    {
+      "case_id": "CR-03",
+      "category": "HEADING_TO_BODY",
+      "doc_id": "MED-07",
+      "scope": "HEALTHCARE",
+      "material_id": "3cd85f3c-89b7-4b95-8b8d-38ead65cee23",
+      "anchor_chunk_id": "MCH-AC847A56E48C08A82F4458CFDC189227",
+      "anchor_chunk_index": 2,
+      "anchor_text": "## 接口与迁移",
+      "resolver_scope": "PARENT_HEADING_GROUP",
+      "resolver_span": {
+        "text": "## 接口与迁移\n\n患者、就诊、医嘱、申请、预约、文档等交互对象需要规范、联调、核验和回退证据。\n\n",
+        "char_start": 60,
+        "char_end": 110,
+        "paragraph_start": 3,
+        "paragraph_end": 4,
+        "source_chunk_ids": [
+          "MCH-AC847A56E48C08A82F4458CFDC189227",
+          "MCH-8735AFE7839FE3051CE36ED2973B8B3F"
+        ],
+        "heading_path": [
+          "医疗接口、迁移与上线切换",
+          "接口与迁移"
+        ],
+        "resolver_strategy": "heading_group"
+      },
+      "expanded_context": [
+        {
+          "origin": "SECTION_HEADING",
+          "text": "接口与迁移",
+          "chunk_id": "MCH-AC847A56E48C08A82F4458CFDC189227"
+        },
+        {
+          "origin": "SAME_CHUNK_CONTEXT",
+          "text": "## 接口与迁移",
+          "chunk_id": "MCH-AC847A56E48C08A82F4458CFDC189227"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "> 官方资料结构化摘要。正式投标与合规判断需回到原始法律、标准、政策或项目文件核验。",
+          "chunk_id": "MCH-14BF9C725FF760A5B4D9477E9001DF45"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "患者、就诊、医嘱、申请、预约、文档等交互对象需要规范、联调、核验和回退证据。",
+          "chunk_id": "MCH-8735AFE7839FE3051CE36ED2973B8B3F"
+        },
+        {
+          "origin": "MATERIAL_METADATA",
+          "text": "material_name=MED-07_医疗接口、迁移与上线切换.md；material_type=technical_whitepaper；corpus_scope=HEALTHCARE；source_type=industry_guidance；source_org=OFF-M03,OFF-M05",
+          "material_id": "3cd85f3c-89b7-4b95-8b8d-38ead65cee23"
+        }
+      ],
+      "signals": {
+        "heading_present": true,
+        "body_present": true,
+        "anchor_retained": true,
+        "same_section": true,
+        "cross_section_contamination": false,
+        "provenance_complete": true,
+        "expanded_context_chars": 300
+      },
+      "status": "PASS",
+      "failure_reason": null
+    },
+    {
+      "case_id": "CR-04",
+      "category": "HEADING_TO_BODY",
+      "doc_id": "COM-04",
+      "scope": "ENTERPRISE_PRIVATE",
+      "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+      "anchor_chunk_id": "MCH-FB52222056B272025DB89E56558E3B76",
+      "anchor_chunk_index": 2,
+      "anchor_text": "## 接口",
+      "resolver_scope": "PARENT_HEADING_GROUP",
+      "resolver_span": {
+        "text": "## 接口\n\n支持REST API、Webhook和批量文件交换；2026-07-12完成12个模拟接口联调。\n\n",
+        "char_start": 94,
+        "char_end": 151,
+        "paragraph_start": 3,
+        "paragraph_end": 4,
+        "source_chunk_ids": [
+          "MCH-FB52222056B272025DB89E56558E3B76",
+          "MCH-0663AA700C01FD958515713C21CF5F5E"
+        ],
+        "heading_path": [
+          "API与系统集成能力报告",
+          "接口"
+        ],
+        "resolver_strategy": "heading_group"
+      },
+      "expanded_context": [
+        {
+          "origin": "SECTION_HEADING",
+          "text": "接口",
+          "chunk_id": "MCH-FB52222056B272025DB89E56558E3B76"
+        },
+        {
+          "origin": "SAME_CHUNK_CONTEXT",
+          "text": "## 接口",
+          "chunk_id": "MCH-FB52222056B272025DB89E56558E3B76"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。",
+          "chunk_id": "MCH-F46EAFE6F29CB4A6F2E7BFE20FEA2B3D"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "支持REST API、Webhook和批量文件交换；2026-07-12完成12个模拟接口联调。",
+          "chunk_id": "MCH-0663AA700C01FD958515713C21CF5F5E"
+        },
+        {
+          "origin": "MATERIAL_METADATA",
+          "text": "material_name=COM-04_API与系统集成能力报告.md；material_type=technical_solution；corpus_scope=ENTERPRISE_PRIVATE；source_type=synthetic_company_evidence；source_org=OFF-U03",
+          "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c"
+        }
+      ],
+      "signals": {
+        "heading_present": true,
+        "body_present": true,
+        "anchor_retained": true,
+        "same_section": true,
+        "cross_section_contamination": false,
+        "provenance_complete": true,
+        "expanded_context_chars": 352
+      },
+      "status": "PASS",
+      "failure_reason": null
+    },
+    {
+      "case_id": "CR-05",
+      "category": "BODY_TO_HEADING",
+      "doc_id": "UNI-03",
+      "scope": "GENERAL",
+      "material_id": "02001ebe-6272-45ca-b641-d33e3bfcec24",
+      "anchor_chunk_id": "MCH-21587AB044DB961052FBC5EDF7EA8302",
+      "anchor_chunk_index": 3,
+      "anchor_text": "数据目录需描述数据项、提供单位、格式、更新频率、共享属性、共享方式、使用条件和分类分级。",
+      "resolver_scope": "PARENT_HEADING_GROUP",
+      "resolver_span": {
+        "text": "## 目录\n\n数据目录需描述数据项、提供单位、格式、更新频率、共享属性、共享方式、使用条件和分类分级。\n\n",
+        "char_start": 58,
+        "char_end": 111,
+        "paragraph_start": 3,
+        "paragraph_end": 4,
+        "source_chunk_ids": [
+          "MCH-83189846855D30C91192B6402799C2DD",
+          "MCH-21587AB044DB961052FBC5EDF7EA8302"
+        ],
+        "heading_path": [
+          "数据共享、目录与治理",
+          "目录"
+        ],
+        "resolver_strategy": "heading_group"
+      },
+      "expanded_context": [
+        {
+          "origin": "SECTION_HEADING",
+          "text": "目录",
+          "chunk_id": "MCH-21587AB044DB961052FBC5EDF7EA8302"
+        },
+        {
+          "origin": "SAME_CHUNK_CONTEXT",
+          "text": "数据目录需描述数据项、提供单位、格式、更新频率、共享属性、共享方式、使用条件和分类分级。",
+          "chunk_id": "MCH-21587AB044DB961052FBC5EDF7EA8302"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 目录",
+          "chunk_id": "MCH-83189846855D30C91192B6402799C2DD"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 共享边界",
+          "chunk_id": "MCH-3FEBCEEC2EB35AEB0D2D3BE6400E5041"
+        },
+        {
+          "origin": "MATERIAL_METADATA",
+          "text": "material_name=UNI-03_数据共享、目录与治理.md；material_type=technical_whitepaper；corpus_scope=GENERAL；source_type=official_standard；source_org=OFF-U03,OFF-U06",
+          "material_id": "02001ebe-6272-45ca-b641-d33e3bfcec24"
+        }
+      ],
+      "signals": {
+        "heading_present": true,
+        "body_present": true,
+        "anchor_retained": true,
+        "same_section": true,
+        "cross_section_contamination": false,
+        "provenance_complete": true,
+        "expanded_context_chars": 263
+      },
+      "status": "PASS",
+      "failure_reason": null
+    },
+    {
+      "case_id": "CR-06",
+      "category": "BODY_TO_HEADING",
+      "doc_id": "GOV-06",
+      "scope": "GOVERNMENT_ENTERPRISE",
+      "material_id": "4c324fa0-1d08-447f-bc3d-1f239fe5a064",
+      "anchor_chunk_id": "MCH-F69BC8F50CBFFBF7F50171405A879F1D",
+      "anchor_chunk_index": 3,
+      "anchor_text": "旧系统替换需处理数据迁移、接口切换、并行运行、回滚与业务连续性。",
+      "resolver_scope": "PARENT_HEADING_GROUP",
+      "resolver_span": {
+        "text": "## 上线\n\n旧系统替换需处理数据迁移、接口切换、并行运行、回滚与业务连续性。\n\n",
+        "char_start": 62,
+        "char_end": 103,
+        "paragraph_start": 3,
+        "paragraph_end": 4,
+        "source_chunk_ids": [
+          "MCH-410BB378159BC975E6AF4BB1BD8D9B36",
+          "MCH-F69BC8F50CBFFBF7F50171405A879F1D"
+        ],
+        "heading_path": [
+          "政务系统接口迁移、联调与上线",
+          "上线"
+        ],
+        "resolver_strategy": "heading_group"
+      },
+      "expanded_context": [
+        {
+          "origin": "SECTION_HEADING",
+          "text": "上线",
+          "chunk_id": "MCH-F69BC8F50CBFFBF7F50171405A879F1D"
+        },
+        {
+          "origin": "SAME_CHUNK_CONTEXT",
+          "text": "旧系统替换需处理数据迁移、接口切换、并行运行、回滚与业务连续性。",
+          "chunk_id": "MCH-F69BC8F50CBFFBF7F50171405A879F1D"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 上线",
+          "chunk_id": "MCH-410BB378159BC975E6AF4BB1BD8D9B36"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 官方来源 / 依据",
+          "chunk_id": "MCH-A31D73516D7E6F0D672E50ECDCD74C02"
+        },
+        {
+          "origin": "MATERIAL_METADATA",
+          "text": "material_name=GOV-06_政务系统接口迁移、联调与上线.md；material_type=technical_whitepaper；corpus_scope=GOVERNMENT_ENTERPRISE；source_type=government_guidance；source_org=OFF-U02,OFF-U03",
+          "material_id": "4c324fa0-1d08-447f-bc3d-1f239fe5a064"
+        }
+      ],
+      "signals": {
+        "heading_present": true,
+        "body_present": true,
+        "anchor_retained": true,
+        "same_section": true,
+        "cross_section_contamination": false,
+        "provenance_complete": true,
+        "expanded_context_chars": 264
+      },
+      "status": "PASS",
+      "failure_reason": null
+    },
+    {
+      "case_id": "CR-07",
+      "category": "BODY_TO_HEADING",
+      "doc_id": "MED-08",
+      "scope": "HEALTHCARE",
+      "material_id": "27a41b4e-a6d6-4f64-9374-8b3f5d10f2fa",
+      "anchor_chunk_id": "MCH-738F8C8A97E4DCE801F3C7DEE19A16E7",
+      "anchor_chunk_index": 3,
+      "anchor_text": "关键临床业务应具备备份恢复、故障处置和应急机制；演练报告具有明显时效。",
+      "resolver_scope": "PARENT_HEADING_GROUP",
+      "resolver_span": {
+        "text": "## 连续性\n\n关键临床业务应具备备份恢复、故障处置和应急机制；演练报告具有明显时效。\n\n",
+        "char_start": 61,
+        "char_end": 106,
+        "paragraph_start": 3,
+        "paragraph_end": 4,
+        "source_chunk_ids": [
+          "MCH-A651B1FB391325B3DB17159F55B41549",
+          "MCH-738F8C8A97E4DCE801F3C7DEE19A16E7"
+        ],
+        "heading_path": [
+          "医疗业务连续性、备份与应急",
+          "连续性"
+        ],
+        "resolver_strategy": "heading_group"
+      },
+      "expanded_context": [
+        {
+          "origin": "SECTION_HEADING",
+          "text": "连续性",
+          "chunk_id": "MCH-738F8C8A97E4DCE801F3C7DEE19A16E7"
+        },
+        {
+          "origin": "SAME_CHUNK_CONTEXT",
+          "text": "关键临床业务应具备备份恢复、故障处置和应急机制；演练报告具有明显时效。",
+          "chunk_id": "MCH-738F8C8A97E4DCE801F3C7DEE19A16E7"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 连续性",
+          "chunk_id": "MCH-A651B1FB391325B3DB17159F55B41549"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 官方来源 / 依据",
+          "chunk_id": "MCH-66E82CACA7D23B32D19E5E1AE9051E3E"
+        },
+        {
+          "origin": "MATERIAL_METADATA",
+          "text": "material_name=MED-08_医疗业务连续性、备份与应急.md；material_type=technical_whitepaper；corpus_scope=HEALTHCARE；source_type=industry_guidance；source_org=OFF-M06,OFF-U08",
+          "material_id": "27a41b4e-a6d6-4f64-9374-8b3f5d10f2fa"
+        }
+      ],
+      "signals": {
+        "heading_present": true,
+        "body_present": true,
+        "anchor_retained": true,
+        "same_section": true,
+        "cross_section_contamination": false,
+        "provenance_complete": true,
+        "expanded_context_chars": 259
+      },
+      "status": "PASS",
+      "failure_reason": null
+    },
+    {
+      "case_id": "CR-08",
+      "category": "BODY_TO_HEADING",
+      "doc_id": "COM-03",
+      "scope": "ENTERPRISE_PRIVATE",
+      "material_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd",
+      "anchor_chunk_id": "MCH-AA94BB7D153A30F95E869D78DC45A0E5",
+      "anchor_chunk_index": 5,
+      "anchor_text": "Synthetic记录：Linux x86_64、某国产Linux测试环境、PostgreSQL兼容数据库完成安装与核心功能验证；未列版本不得推断。",
+      "resolver_scope": "PARENT_HEADING_GROUP",
+      "resolver_span": {
+        "text": "## 适配\n\nSynthetic记录：Linux x86_64、某国产Linux测试环境、PostgreSQL兼容数据库完成安装与核心功能验证；未列版本不得推断。\n\n",
+        "char_start": 133,
+        "char_end": 216,
+        "paragraph_start": 5,
+        "paragraph_end": 6,
+        "source_chunk_ids": [
+          "MCH-81DCFAE5EB396F201DD37F0DA83F825D",
+          "MCH-AA94BB7D153A30F95E869D78DC45A0E5"
+        ],
+        "heading_path": [
+          "技术架构与部署适配报告",
+          "适配"
+        ],
+        "resolver_strategy": "heading_group"
+      },
+      "expanded_context": [
+        {
+          "origin": "SECTION_HEADING",
+          "text": "适配",
+          "chunk_id": "MCH-AA94BB7D153A30F95E869D78DC45A0E5"
+        },
+        {
+          "origin": "SAME_CHUNK_CONTEXT",
+          "text": "Synthetic记录：Linux x86_64、某国产Linux测试环境、PostgreSQL兼容数据库完成安装与核心功能验证；未列版本不得推断。",
+          "chunk_id": "MCH-AA94BB7D153A30F95E869D78DC45A0E5"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 适配",
+          "chunk_id": "MCH-81DCFAE5EB396F201DD37F0DA83F825D"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 官方来源 / 依据",
+          "chunk_id": "MCH-46C1A1589F6A960D1EAD177B02A8644C"
+        },
+        {
+          "origin": "MATERIAL_METADATA",
+          "text": "material_name=COM-03_技术架构与部署适配报告.md；material_type=technical_solution；corpus_scope=ENTERPRISE_PRIVATE；source_type=synthetic_company_evidence；source_org=OFF-U02,OFF-U12,OFF-U13",
+          "material_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd"
+        }
+      ],
+      "signals": {
+        "heading_present": true,
+        "body_present": true,
+        "anchor_retained": true,
+        "same_section": true,
+        "cross_section_contamination": false,
+        "provenance_complete": true,
+        "expanded_context_chars": 355
+      },
+      "status": "PASS",
+      "failure_reason": null
+    },
+    {
+      "case_id": "CR-09",
+      "category": "POSITIVE_CAPABILITY",
+      "doc_id": "COM-02",
+      "scope": "ENTERPRISE_PRIVATE",
+      "material_id": "7dc70fee-13e0-4b7d-b95f-202665c241d0",
+      "anchor_chunk_id": "MCH-369C7BBCDB79203D29F37E8A524E41D5",
+      "anchor_chunk_index": 3,
+      "anchor_text": "Synthetic产品含组织权限、流程、表单、接口、日志、报表、知识库、RAG和Agent工具管理。",
+      "resolver_scope": "PARENT_HEADING_GROUP",
+      "resolver_span": {
+        "text": "## 产品\n\nSynthetic产品含组织权限、流程、表单、接口、日志、报表、知识库、RAG和Agent工具管理。\n\n",
+        "char_start": 90,
+        "char_end": 149,
+        "paragraph_start": 3,
+        "paragraph_end": 4,
+        "source_chunk_ids": [
+          "MCH-7BC3D75382C9BBF605E8033A7D57547D",
+          "MCH-369C7BBCDB79203D29F37E8A524E41D5"
+        ],
+        "heading_path": [
+          "产品平台能力说明",
+          "产品"
+        ],
+        "resolver_strategy": "heading_group"
+      },
+      "expanded_context": [
+        {
+          "origin": "SECTION_HEADING",
+          "text": "产品",
+          "chunk_id": "MCH-369C7BBCDB79203D29F37E8A524E41D5"
+        },
+        {
+          "origin": "SAME_CHUNK_CONTEXT",
+          "text": "Synthetic产品含组织权限、流程、表单、接口、日志、报表、知识库、RAG和Agent工具管理。",
+          "chunk_id": "MCH-369C7BBCDB79203D29F37E8A524E41D5"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 产品",
+          "chunk_id": "MCH-7BC3D75382C9BBF605E8033A7D57547D"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 版本",
+          "chunk_id": "MCH-71192B6183D8352D70BCCB1EC5EEC07D"
+        },
+        {
+          "origin": "MATERIAL_METADATA",
+          "text": "material_name=COM-02_产品平台能力说明.md；material_type=product_documentation；corpus_scope=ENTERPRISE_PRIVATE；source_type=synthetic_company_evidence；source_org=OFF-U01,OFF-U04",
+          "material_id": "7dc70fee-13e0-4b7d-b95f-202665c241d0"
+        }
+      ],
+      "signals": {
+        "heading_present": true,
+        "body_present": true,
+        "anchor_retained": true,
+        "same_section": true,
+        "cross_section_contamination": false,
+        "provenance_complete": true,
+        "expanded_context_chars": 292
+      },
+      "status": "PASS",
+      "failure_reason": null
+    },
+    {
+      "case_id": "CR-10",
+      "category": "POSITIVE_CAPABILITY",
+      "doc_id": "COM-04",
+      "scope": "ENTERPRISE_PRIVATE",
+      "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+      "anchor_chunk_id": "MCH-0663AA700C01FD958515713C21CF5F5E",
+      "anchor_chunk_index": 3,
+      "anchor_text": "支持REST API、Webhook和批量文件交换；2026-07-12完成12个模拟接口联调。",
+      "resolver_scope": "PARENT_HEADING_GROUP",
+      "resolver_span": {
+        "text": "## 接口\n\n支持REST API、Webhook和批量文件交换；2026-07-12完成12个模拟接口联调。\n\n",
+        "char_start": 94,
+        "char_end": 151,
+        "paragraph_start": 3,
+        "paragraph_end": 4,
+        "source_chunk_ids": [
+          "MCH-FB52222056B272025DB89E56558E3B76",
+          "MCH-0663AA700C01FD958515713C21CF5F5E"
+        ],
+        "heading_path": [
+          "API与系统集成能力报告",
+          "接口"
+        ],
+        "resolver_strategy": "heading_group"
+      },
+      "expanded_context": [
+        {
+          "origin": "SECTION_HEADING",
+          "text": "接口",
+          "chunk_id": "MCH-0663AA700C01FD958515713C21CF5F5E"
+        },
+        {
+          "origin": "SAME_CHUNK_CONTEXT",
+          "text": "支持REST API、Webhook和批量文件交换；2026-07-12完成12个模拟接口联调。",
+          "chunk_id": "MCH-0663AA700C01FD958515713C21CF5F5E"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 接口",
+          "chunk_id": "MCH-FB52222056B272025DB89E56558E3B76"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 边界",
+          "chunk_id": "MCH-12DA2A7EF1D137EFB87E1170768F9B31"
+        },
+        {
+          "origin": "MATERIAL_METADATA",
+          "text": "material_name=COM-04_API与系统集成能力报告.md；material_type=technical_solution；corpus_scope=ENTERPRISE_PRIVATE；source_type=synthetic_company_evidence；source_org=OFF-U03",
+          "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c"
+        }
+      ],
+      "signals": {
+        "heading_present": true,
+        "body_present": true,
+        "anchor_retained": true,
+        "same_section": true,
+        "cross_section_contamination": false,
+        "provenance_complete": true,
+        "expanded_context_chars": 281
+      },
+      "status": "PASS",
+      "failure_reason": null
+    },
+    {
+      "case_id": "CR-11",
+      "category": "POSITIVE_CAPABILITY",
+      "doc_id": "MED-07",
+      "scope": "HEALTHCARE",
+      "material_id": "3cd85f3c-89b7-4b95-8b8d-38ead65cee23",
+      "anchor_chunk_id": "MCH-8735AFE7839FE3051CE36ED2973B8B3F",
+      "anchor_chunk_index": 3,
+      "anchor_text": "患者、就诊、医嘱、申请、预约、文档等交互对象需要规范、联调、核验和回退证据。",
+      "resolver_scope": "PARENT_HEADING_GROUP",
+      "resolver_span": {
+        "text": "## 接口与迁移\n\n患者、就诊、医嘱、申请、预约、文档等交互对象需要规范、联调、核验和回退证据。\n\n",
+        "char_start": 60,
+        "char_end": 110,
+        "paragraph_start": 3,
+        "paragraph_end": 4,
+        "source_chunk_ids": [
+          "MCH-AC847A56E48C08A82F4458CFDC189227",
+          "MCH-8735AFE7839FE3051CE36ED2973B8B3F"
+        ],
+        "heading_path": [
+          "医疗接口、迁移与上线切换",
+          "接口与迁移"
+        ],
+        "resolver_strategy": "heading_group"
+      },
+      "expanded_context": [
+        {
+          "origin": "SECTION_HEADING",
+          "text": "接口与迁移",
+          "chunk_id": "MCH-8735AFE7839FE3051CE36ED2973B8B3F"
+        },
+        {
+          "origin": "SAME_CHUNK_CONTEXT",
+          "text": "患者、就诊、医嘱、申请、预约、文档等交互对象需要规范、联调、核验和回退证据。",
+          "chunk_id": "MCH-8735AFE7839FE3051CE36ED2973B8B3F"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 接口与迁移",
+          "chunk_id": "MCH-AC847A56E48C08A82F4458CFDC189227"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 官方来源 / 依据",
+          "chunk_id": "MCH-4F4B37E4CF89BE75A919D9553A86F47A"
+        },
+        {
+          "origin": "MATERIAL_METADATA",
+          "text": "material_name=MED-07_医疗接口、迁移与上线切换.md；material_type=technical_whitepaper；corpus_scope=HEALTHCARE；source_type=industry_guidance；source_org=OFF-M03,OFF-M05",
+          "material_id": "3cd85f3c-89b7-4b95-8b8d-38ead65cee23"
+        }
+      ],
+      "signals": {
+        "heading_present": true,
+        "body_present": true,
+        "anchor_retained": true,
+        "same_section": true,
+        "cross_section_contamination": false,
+        "provenance_complete": true,
+        "expanded_context_chars": 270
+      },
+      "status": "PASS",
+      "failure_reason": null
+    },
+    {
+      "case_id": "CR-12",
+      "category": "POSITIVE_CAPABILITY",
+      "doc_id": "GOV-06",
+      "scope": "GOVERNMENT_ENTERPRISE",
+      "material_id": "4c324fa0-1d08-447f-bc3d-1f239fe5a064",
+      "anchor_chunk_id": "MCH-F69BC8F50CBFFBF7F50171405A879F1D",
+      "anchor_chunk_index": 3,
+      "anchor_text": "旧系统替换需处理数据迁移、接口切换、并行运行、回滚与业务连续性。",
+      "resolver_scope": "PARENT_HEADING_GROUP",
+      "resolver_span": {
+        "text": "## 上线\n\n旧系统替换需处理数据迁移、接口切换、并行运行、回滚与业务连续性。\n\n",
+        "char_start": 62,
+        "char_end": 103,
+        "paragraph_start": 3,
+        "paragraph_end": 4,
+        "source_chunk_ids": [
+          "MCH-410BB378159BC975E6AF4BB1BD8D9B36",
+          "MCH-F69BC8F50CBFFBF7F50171405A879F1D"
+        ],
+        "heading_path": [
+          "政务系统接口迁移、联调与上线",
+          "上线"
+        ],
+        "resolver_strategy": "heading_group"
+      },
+      "expanded_context": [
+        {
+          "origin": "SECTION_HEADING",
+          "text": "上线",
+          "chunk_id": "MCH-F69BC8F50CBFFBF7F50171405A879F1D"
+        },
+        {
+          "origin": "SAME_CHUNK_CONTEXT",
+          "text": "旧系统替换需处理数据迁移、接口切换、并行运行、回滚与业务连续性。",
+          "chunk_id": "MCH-F69BC8F50CBFFBF7F50171405A879F1D"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 上线",
+          "chunk_id": "MCH-410BB378159BC975E6AF4BB1BD8D9B36"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 官方来源 / 依据",
+          "chunk_id": "MCH-A31D73516D7E6F0D672E50ECDCD74C02"
+        },
+        {
+          "origin": "MATERIAL_METADATA",
+          "text": "material_name=GOV-06_政务系统接口迁移、联调与上线.md；material_type=technical_whitepaper；corpus_scope=GOVERNMENT_ENTERPRISE；source_type=government_guidance；source_org=OFF-U02,OFF-U03",
+          "material_id": "4c324fa0-1d08-447f-bc3d-1f239fe5a064"
+        }
+      ],
+      "signals": {
+        "heading_present": true,
+        "body_present": true,
+        "anchor_retained": true,
+        "same_section": true,
+        "cross_section_contamination": false,
+        "provenance_complete": true,
+        "expanded_context_chars": 264
+      },
+      "status": "PASS",
+      "failure_reason": null
+    },
+    {
+      "case_id": "CR-13",
+      "category": "NEGATIVE_BOUNDARY",
+      "doc_id": "COM-04",
+      "scope": "ENTERPRISE_PRIVATE",
+      "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+      "anchor_chunk_id": "MCH-99497AE6286B2BAC390E35611FEE3A8A",
+      "anchor_chunk_index": 5,
+      "anchor_text": "不代表已对接任何真实政务或医院系统。",
+      "resolver_scope": "PARENT_HEADING_GROUP",
+      "resolver_span": {
+        "text": "## 边界\n\n不代表已对接任何真实政务或医院系统。\n\n",
+        "char_start": 151,
+        "char_end": 178,
+        "paragraph_start": 5,
+        "paragraph_end": 6,
+        "source_chunk_ids": [
+          "MCH-12DA2A7EF1D137EFB87E1170768F9B31",
+          "MCH-99497AE6286B2BAC390E35611FEE3A8A"
+        ],
+        "heading_path": [
+          "API与系统集成能力报告",
+          "边界"
+        ],
+        "resolver_strategy": "heading_group"
+      },
+      "expanded_context": [
+        {
+          "origin": "SECTION_HEADING",
+          "text": "边界",
+          "chunk_id": "MCH-99497AE6286B2BAC390E35611FEE3A8A"
+        },
+        {
+          "origin": "SAME_CHUNK_CONTEXT",
+          "text": "不代表已对接任何真实政务或医院系统。",
+          "chunk_id": "MCH-99497AE6286B2BAC390E35611FEE3A8A"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 边界",
+          "chunk_id": "MCH-12DA2A7EF1D137EFB87E1170768F9B31"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 官方来源 / 依据",
+          "chunk_id": "MCH-1AF2E1849D13143E1105E44079F4463E"
+        },
+        {
+          "origin": "MATERIAL_METADATA",
+          "text": "material_name=COM-04_API与系统集成能力报告.md；material_type=technical_solution；corpus_scope=ENTERPRISE_PRIVATE；source_type=synthetic_company_evidence；source_org=OFF-U03",
+          "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c"
+        }
+      ],
+      "signals": {
+        "heading_present": true,
+        "body_present": true,
+        "anchor_retained": true,
+        "same_section": true,
+        "cross_section_contamination": false,
+        "provenance_complete": true,
+        "expanded_context_chars": 228
+      },
+      "status": "PASS",
+      "failure_reason": null
+    },
+    {
+      "case_id": "CR-14",
+      "category": "NEGATIVE_BOUNDARY",
+      "doc_id": "COM-06",
+      "scope": "ENTERPRISE_PRIVATE",
+      "material_id": "3ec066d3-679a-4232-ba6d-364038658c81",
+      "anchor_chunk_id": "MCH-48BA8BF36C74047C6F344C134357DA37",
+      "anchor_chunk_index": 5,
+      "anchor_text": "不代表通过等保、密评或第三方认证。",
+      "resolver_scope": "PARENT_HEADING_GROUP",
+      "resolver_span": {
+        "text": "## 边界\n\n不代表通过等保、密评或第三方认证。\n\n",
+        "char_start": 152,
+        "char_end": 178,
+        "paragraph_start": 5,
+        "paragraph_end": 6,
+        "source_chunk_ids": [
+          "MCH-DC5EFA1A85827ED4FD45615F8BAFAA31",
+          "MCH-48BA8BF36C74047C6F344C134357DA37"
+        ],
+        "heading_path": [
+          "权限、安全与审计测试报告",
+          "边界"
+        ],
+        "resolver_strategy": "heading_group"
+      },
+      "expanded_context": [
+        {
+          "origin": "SECTION_HEADING",
+          "text": "边界",
+          "chunk_id": "MCH-48BA8BF36C74047C6F344C134357DA37"
+        },
+        {
+          "origin": "SAME_CHUNK_CONTEXT",
+          "text": "不代表通过等保、密评或第三方认证。",
+          "chunk_id": "MCH-48BA8BF36C74047C6F344C134357DA37"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 边界",
+          "chunk_id": "MCH-DC5EFA1A85827ED4FD45615F8BAFAA31"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 官方来源 / 依据",
+          "chunk_id": "MCH-E60793CC060C5B58B3629AF7E64B0D78"
+        },
+        {
+          "origin": "MATERIAL_METADATA",
+          "text": "material_name=COM-06_权限、安全与审计测试报告.md；material_type=technical_solution；corpus_scope=ENTERPRISE_PRIVATE；source_type=synthetic_company_evidence；source_org=OFF-U05,OFF-U08,OFF-U10",
+          "material_id": "3ec066d3-679a-4232-ba6d-364038658c81"
+        }
+      ],
+      "signals": {
+        "heading_present": true,
+        "body_present": true,
+        "anchor_retained": true,
+        "same_section": true,
+        "cross_section_contamination": false,
+        "provenance_complete": true,
+        "expanded_context_chars": 242
+      },
+      "status": "PASS",
+      "failure_reason": null
+    },
+    {
+      "case_id": "CR-15",
+      "category": "NEGATIVE_BOUNDARY",
+      "doc_id": "COM-08",
+      "scope": "ENTERPRISE_PRIVATE",
+      "material_id": "4ba1c701-7c4f-415b-9186-28b25c4472ce",
+      "anchor_chunk_id": "MCH-06BA7B4AA35AE9E3B89097C7EA4CD3EF",
+      "anchor_chunk_index": 5,
+      "anchor_text": "未形成真实客户RTO/RPO或可用率承诺。",
+      "resolver_scope": "PARENT_HEADING_GROUP",
+      "resolver_span": {
+        "text": "## 边界\n\n未形成真实客户RTO/RPO或可用率承诺。\n\n",
+        "char_start": 140,
+        "char_end": 170,
+        "paragraph_start": 5,
+        "paragraph_end": 6,
+        "source_chunk_ids": [
+          "MCH-86B6338331A1A56937F90A6D3237E2F6",
+          "MCH-06BA7B4AA35AE9E3B89097C7EA4CD3EF"
+        ],
+        "heading_path": [
+          "备份恢复与容灾演练记录",
+          "边界"
+        ],
+        "resolver_strategy": "heading_group"
+      },
+      "expanded_context": [
+        {
+          "origin": "SECTION_HEADING",
+          "text": "边界",
+          "chunk_id": "MCH-06BA7B4AA35AE9E3B89097C7EA4CD3EF"
+        },
+        {
+          "origin": "SAME_CHUNK_CONTEXT",
+          "text": "未形成真实客户RTO/RPO或可用率承诺。",
+          "chunk_id": "MCH-06BA7B4AA35AE9E3B89097C7EA4CD3EF"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 边界",
+          "chunk_id": "MCH-86B6338331A1A56937F90A6D3237E2F6"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 官方来源 / 依据",
+          "chunk_id": "MCH-770176FAD341D1B79C80D70DE8D68BC9"
+        },
+        {
+          "origin": "MATERIAL_METADATA",
+          "text": "material_name=COM-08_备份恢复与容灾演练记录.md；material_type=delivery_capability；corpus_scope=ENTERPRISE_PRIVATE；source_type=synthetic_company_evidence；source_org=OFF-U08,OFF-U09",
+          "material_id": "4ba1c701-7c4f-415b-9186-28b25c4472ce"
+        }
+      ],
+      "signals": {
+        "heading_present": true,
+        "body_present": true,
+        "anchor_retained": true,
+        "same_section": true,
+        "cross_section_contamination": false,
+        "provenance_complete": true,
+        "expanded_context_chars": 242
+      },
+      "status": "PASS",
+      "failure_reason": null
+    },
+    {
+      "case_id": "CR-16",
+      "category": "NEGATIVE_BOUNDARY",
+      "doc_id": "COM-12",
+      "scope": "ENTERPRISE_PRIVATE",
+      "material_id": "45d3a548-516a-4349-a50b-e67ccef7930a",
+      "anchor_chunk_id": "MCH-170F20D1FD733BEE32B62D0D019A0FBB",
+      "anchor_chunk_index": 5,
+      "anchor_text": "无真实客户合同，因此不提供可对外使用的7×24、分钟级响应或赔付承诺。",
+      "resolver_scope": "PARENT_HEADING_GROUP",
+      "resolver_span": {
+        "text": "## 边界\n\n无真实客户合同，因此不提供可对外使用的7×24、分钟级响应或赔付承诺。\n\n",
+        "char_start": 122,
+        "char_end": 166,
+        "paragraph_start": 5,
+        "paragraph_end": 6,
+        "source_chunk_ids": [
+          "MCH-C6AF91FBA2CF22777F7851314C4B8833",
+          "MCH-170F20D1FD733BEE32B62D0D019A0FBB"
+        ],
+        "heading_path": [
+          "运维、SLA与应急服务说明",
+          "边界"
+        ],
+        "resolver_strategy": "heading_group"
+      },
+      "expanded_context": [
+        {
+          "origin": "SECTION_HEADING",
+          "text": "边界",
+          "chunk_id": "MCH-170F20D1FD733BEE32B62D0D019A0FBB"
+        },
+        {
+          "origin": "SAME_CHUNK_CONTEXT",
+          "text": "无真实客户合同，因此不提供可对外使用的7×24、分钟级响应或赔付承诺。",
+          "chunk_id": "MCH-170F20D1FD733BEE32B62D0D019A0FBB"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 边界",
+          "chunk_id": "MCH-C6AF91FBA2CF22777F7851314C4B8833"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 官方来源 / 依据",
+          "chunk_id": "MCH-892D9A9F6A352553C666218F6765E284"
+        },
+        {
+          "origin": "MATERIAL_METADATA",
+          "text": "material_name=COM-12_运维、SLA与应急服务说明.md；material_type=delivery_capability；corpus_scope=ENTERPRISE_PRIVATE；source_type=synthetic_company_evidence；source_org=OFF-U05",
+          "material_id": "45d3a548-516a-4349-a50b-e67ccef7930a"
+        }
+      ],
+      "signals": {
+        "heading_present": true,
+        "body_present": true,
+        "anchor_retained": true,
+        "same_section": true,
+        "cross_section_contamination": false,
+        "provenance_complete": true,
+        "expanded_context_chars": 264
+      },
+      "status": "PASS",
+      "failure_reason": null
+    },
+    {
+      "case_id": "CR-17",
+      "category": "MULTI_PARAGRAPH",
+      "doc_id": "UNI-03",
+      "scope": "GENERAL",
+      "material_id": "02001ebe-6272-45ca-b641-d33e3bfcec24",
+      "anchor_chunk_id": "MCH-BEC5E7916953D3313C434F698745A81A",
+      "anchor_chunk_index": 7,
+      "anchor_text": "- **OFF-U03｜政务数据共享条例**｜国务院｜状态 `CURRENT_CONFIRMED`｜实施 `2025-08-01`｜最后核验 `2026-08-31`｜https://www.stats.gov.cn/gk/tjfg/xgfxfg/202506/t20250609_1960124.html\n- **OFF-U06｜中华人民共和国数据安全法**｜全国人大常委会｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-09-01`｜最后核验 `2026-08-31`｜https://www.npc.gov.cn/npc/c2/c30834/202106/t20210610_311888.html",
+      "resolver_scope": "PARENT_HEADING_GROUP",
+      "resolver_span": {
+        "text": "## 官方来源 / 依据\n\n- **OFF-U03｜政务数据共享条例**｜国务院｜状态 `CURRENT_CONFIRMED`｜实施 `2025-08-01`｜最后核验 `2026-08-31`｜https://www.stats.gov.cn/gk/tjfg/xgfxfg/202506/t20250609_1960124.html\n- **OFF-U06｜中华人民共和国数据安全法**｜全国人大常委会｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-09-01`｜最后核验 `2026-08-31`｜https://www.npc.gov.cn/npc/c2/c30834/202106/t20210610_311888.html\n\n",
+        "char_start": 151,
+        "char_end": 484,
+        "paragraph_start": 7,
+        "paragraph_end": 8,
+        "source_chunk_ids": [
+          "MCH-758AC26CB7B5AB1199944E9172742641",
+          "MCH-BEC5E7916953D3313C434F698745A81A"
+        ],
+        "heading_path": [
+          "数据共享、目录与治理",
+          "官方来源 / 依据"
+        ],
+        "resolver_strategy": "heading_group"
+      },
+      "expanded_context": [
+        {
+          "origin": "SECTION_HEADING",
+          "text": "官方来源 / 依据",
+          "chunk_id": "MCH-BEC5E7916953D3313C434F698745A81A"
+        },
+        {
+          "origin": "SAME_CHUNK_CONTEXT",
+          "text": "- **OFF-U03｜政务数据共享条例**｜国务院｜状态 `CURRENT_CONFIRMED`｜实施 `2025-08-01`｜最后核验 `2026-08-31`｜https://www.stats.gov.cn/gk/tjfg/xgfxfg/202506/t20250609_1960124.html\n- **OFF-U06｜中华人民共和国数据安全法**｜全国人大常委会｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-09-01`｜最后核验 `2026-08-31`｜https://www.npc.gov.cn/npc/c2/c30834/202106/t20210610_311888.html",
+          "chunk_id": "MCH-BEC5E7916953D3313C434F698745A81A"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 官方来源 / 依据",
+          "chunk_id": "MCH-758AC26CB7B5AB1199944E9172742641"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 时效使用规则",
+          "chunk_id": "MCH-161A4E31A4E47C28FBFEA23586A14A0A"
+        },
+        {
+          "origin": "MATERIAL_METADATA",
+          "text": "material_name=UNI-03_数据共享、目录与治理.md；material_type=technical_whitepaper；corpus_scope=GENERAL；source_type=official_standard；source_org=OFF-U03,OFF-U06",
+          "material_id": "02001ebe-6272-45ca-b641-d33e3bfcec24"
+        }
+      ],
+      "signals": {
+        "heading_present": true,
+        "body_present": true,
+        "anchor_retained": true,
+        "same_section": true,
+        "cross_section_contamination": false,
+        "provenance_complete": true,
+        "expanded_context_chars": 832
+      },
+      "status": "PASS",
+      "failure_reason": null
+    },
+    {
+      "case_id": "CR-18",
+      "category": "MULTI_PARAGRAPH",
+      "doc_id": "GOV-02",
+      "scope": "GOVERNMENT_ENTERPRISE",
+      "material_id": "08d5580a-d81b-491f-8c9b-d37ca4251840",
+      "anchor_chunk_id": "MCH-1FAE191CF4949121A8D999CFF59DB104",
+      "anchor_chunk_index": 7,
+      "anchor_text": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+      "resolver_scope": "PARENT_HEADING_GROUP",
+      "resolver_span": {
+        "text": "## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+        "char_start": 625,
+        "char_end": 859,
+        "paragraph_start": 7,
+        "paragraph_end": 8,
+        "source_chunk_ids": [
+          "MCH-26B5F534B4D5091391A9D8B4EC47FFCB",
+          "MCH-1FAE191CF4949121A8D999CFF59DB104"
+        ],
+        "heading_path": [
+          "政务数据目录、共享与跨部门协同",
+          "时效使用规则"
+        ],
+        "resolver_strategy": "heading_group"
+      },
+      "expanded_context": [
+        {
+          "origin": "SECTION_HEADING",
+          "text": "时效使用规则",
+          "chunk_id": "MCH-1FAE191CF4949121A8D999CFF59DB104"
+        },
+        {
+          "origin": "SAME_CHUNK_CONTEXT",
+          "text": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+          "chunk_id": "MCH-1FAE191CF4949121A8D999CFF59DB104"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 时效使用规则",
+          "chunk_id": "MCH-26B5F534B4D5091391A9D8B4EC47FFCB"
+        },
+        {
+          "origin": "MATERIAL_METADATA",
+          "text": "material_name=GOV-02_政务数据目录、共享与跨部门协同.md；material_type=technical_whitepaper；corpus_scope=GOVERNMENT_ENTERPRISE；source_type=government_guidance；source_org=OFF-U03,OFF-U06,OFF-U07",
+          "material_id": "08d5580a-d81b-491f-8c9b-d37ca4251840"
+        }
+      ],
+      "signals": {
+        "heading_present": true,
+        "body_present": true,
+        "anchor_retained": true,
+        "same_section": true,
+        "cross_section_contamination": false,
+        "provenance_complete": true,
+        "expanded_context_chars": 652
+      },
+      "status": "PASS",
+      "failure_reason": null
+    },
+    {
+      "case_id": "CR-19",
+      "category": "MULTI_PARAGRAPH",
+      "doc_id": "MED-07",
+      "scope": "HEALTHCARE",
+      "material_id": "3cd85f3c-89b7-4b95-8b8d-38ead65cee23",
+      "anchor_chunk_id": "MCH-E1B90AC5869B6D115FF8D7AB28375071",
+      "anchor_chunk_index": 5,
+      "anchor_text": "- **OFF-M03｜WS/T 447-2014 基于电子病历的医院信息平台技术规范**｜国家卫生健康委员会｜状态 `CURRENTNESS_UNCONFIRMED`｜实施 `2014-06-20`｜最后核验 `2026-08-31`｜https://www.nhc.gov.cn/wjw/s9497/201406/a2014514701f4e76b14f3446f6318937.shtml\n- **OFF-M05｜医院信息平台交互标准 第1-11部分 + 医学电子文档数字签名技术标准**｜国家卫生健康委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2025-04-01`｜最后核验 `2026-08-31`｜https://www.nhc.gov.cn/wjw/zcwjtg/202411/308603c60d554dd49052b5bfb3a9d391.shtml",
+      "resolver_scope": "PARENT_HEADING_GROUP",
+      "resolver_span": {
+        "text": "## 官方来源 / 依据\n\n- **OFF-M03｜WS/T 447-2014 基于电子病历的医院信息平台技术规范**｜国家卫生健康委员会｜状态 `CURRENTNESS_UNCONFIRMED`｜实施 `2014-06-20`｜最后核验 `2026-08-31`｜https://www.nhc.gov.cn/wjw/s9497/201406/a2014514701f4e76b14f3446f6318937.shtml\n- **OFF-M05｜医院信息平台交互标准 第1-11部分 + 医学电子文档数字签名技术标准**｜国家卫生健康委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2025-04-01`｜最后核验 `2026-08-31`｜https://www.nhc.gov.cn/wjw/zcwjtg/202411/308603c60d554dd49052b5bfb3a9d391.shtml\n\n",
+        "char_start": 110,
+        "char_end": 520,
+        "paragraph_start": 5,
+        "paragraph_end": 6,
+        "source_chunk_ids": [
+          "MCH-4F4B37E4CF89BE75A919D9553A86F47A",
+          "MCH-E1B90AC5869B6D115FF8D7AB28375071"
+        ],
+        "heading_path": [
+          "医疗接口、迁移与上线切换",
+          "官方来源 / 依据"
+        ],
+        "resolver_strategy": "heading_group"
+      },
+      "expanded_context": [
+        {
+          "origin": "SECTION_HEADING",
+          "text": "官方来源 / 依据",
+          "chunk_id": "MCH-E1B90AC5869B6D115FF8D7AB28375071"
+        },
+        {
+          "origin": "SAME_CHUNK_CONTEXT",
+          "text": "- **OFF-M03｜WS/T 447-2014 基于电子病历的医院信息平台技术规范**｜国家卫生健康委员会｜状态 `CURRENTNESS_UNCONFIRMED`｜实施 `2014-06-20`｜最后核验 `2026-08-31`｜https://www.nhc.gov.cn/wjw/s9497/201406/a2014514701f4e76b14f3446f6318937.shtml\n- **OFF-M05｜医院信息平台交互标准 第1-11部分 + 医学电子文档数字签名技术标准**｜国家卫生健康委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2025-04-01`｜最后核验 `2026-08-31`｜https://www.nhc.gov.cn/wjw/zcwjtg/202411/308603c60d554dd49052b5bfb3a9d391.shtml",
+          "chunk_id": "MCH-E1B90AC5869B6D115FF8D7AB28375071"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 官方来源 / 依据",
+          "chunk_id": "MCH-4F4B37E4CF89BE75A919D9553A86F47A"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 时效使用规则",
+          "chunk_id": "MCH-90D41C1774122C173D1ACC0E6C0F1DE3"
+        },
+        {
+          "origin": "MATERIAL_METADATA",
+          "text": "material_name=MED-07_医疗接口、迁移与上线切换.md；material_type=technical_whitepaper；corpus_scope=HEALTHCARE；source_type=industry_guidance；source_org=OFF-M03,OFF-M05",
+          "material_id": "3cd85f3c-89b7-4b95-8b8d-38ead65cee23"
+        }
+      ],
+      "signals": {
+        "heading_present": true,
+        "body_present": true,
+        "anchor_retained": true,
+        "same_section": true,
+        "cross_section_contamination": false,
+        "provenance_complete": true,
+        "expanded_context_chars": 991
+      },
+      "status": "PASS",
+      "failure_reason": null
+    },
+    {
+      "case_id": "CR-20",
+      "category": "MULTI_PARAGRAPH",
+      "doc_id": "COM-04",
+      "scope": "ENTERPRISE_PRIVATE",
+      "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+      "anchor_chunk_id": "MCH-963DB5E23E18716684C5726572029882",
+      "anchor_chunk_index": 9,
+      "anchor_text": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+      "resolver_scope": "PARENT_HEADING_GROUP",
+      "resolver_span": {
+        "text": "## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+        "char_start": 347,
+        "char_end": 581,
+        "paragraph_start": 9,
+        "paragraph_end": 10,
+        "source_chunk_ids": [
+          "MCH-04323E281C77264076D6284CE598A90C",
+          "MCH-963DB5E23E18716684C5726572029882"
+        ],
+        "heading_path": [
+          "API与系统集成能力报告",
+          "时效使用规则"
+        ],
+        "resolver_strategy": "heading_group"
+      },
+      "expanded_context": [
+        {
+          "origin": "SECTION_HEADING",
+          "text": "时效使用规则",
+          "chunk_id": "MCH-963DB5E23E18716684C5726572029882"
+        },
+        {
+          "origin": "SAME_CHUNK_CONTEXT",
+          "text": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+          "chunk_id": "MCH-963DB5E23E18716684C5726572029882"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 时效使用规则",
+          "chunk_id": "MCH-04323E281C77264076D6284CE598A90C"
+        },
+        {
+          "origin": "MATERIAL_METADATA",
+          "text": "material_name=COM-04_API与系统集成能力报告.md；material_type=technical_solution；corpus_scope=ENTERPRISE_PRIVATE；source_type=synthetic_company_evidence；source_org=OFF-U03",
+          "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c"
+        }
+      ],
+      "signals": {
+        "heading_present": true,
+        "body_present": true,
+        "anchor_retained": true,
+        "same_section": true,
+        "cross_section_contamination": false,
+        "provenance_complete": true,
+        "expanded_context_chars": 635
+      },
+      "status": "PASS",
+      "failure_reason": null
+    },
+    {
+      "case_id": "CR-21",
+      "category": "METADATA_SECTION_BOUNDARY",
+      "doc_id": "UNI-08",
+      "scope": "GENERAL",
+      "material_id": "31d40c70-2f1a-4155-b829-a1e8ccca3cc6",
+      "anchor_chunk_id": "MCH-4D7FE56908AF9124D9F2F1415B0E176C",
+      "anchor_chunk_index": 5,
+      "anchor_text": "接口规范、联调记录、问题单、测试报告比“支持接口”更强。",
+      "resolver_scope": "PARENT_HEADING_GROUP",
+      "resolver_span": {
+        "text": "## 证据\n\n接口规范、联调记录、问题单、测试报告比“支持接口”更强。\n\n",
+        "char_start": 89,
+        "char_end": 126,
+        "paragraph_start": 5,
+        "paragraph_end": 6,
+        "source_chunk_ids": [
+          "MCH-34CCD0D665C78990FAAAAF2776B2D3F9",
+          "MCH-4D7FE56908AF9124D9F2F1415B0E176C"
+        ],
+        "heading_path": [
+          "接口集成与互操作",
+          "证据"
+        ],
+        "resolver_strategy": "heading_group"
+      },
+      "expanded_context": [
+        {
+          "origin": "SECTION_HEADING",
+          "text": "证据",
+          "chunk_id": "MCH-4D7FE56908AF9124D9F2F1415B0E176C"
+        },
+        {
+          "origin": "SAME_CHUNK_CONTEXT",
+          "text": "接口规范、联调记录、问题单、测试报告比“支持接口”更强。",
+          "chunk_id": "MCH-4D7FE56908AF9124D9F2F1415B0E176C"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 证据",
+          "chunk_id": "MCH-34CCD0D665C78990FAAAAF2776B2D3F9"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 官方来源 / 依据",
+          "chunk_id": "MCH-E1E51FB844382A4AF775BF179CE2D910"
+        },
+        {
+          "origin": "MATERIAL_METADATA",
+          "text": "material_name=UNI-08_接口集成与互操作.md；material_type=technical_whitepaper；corpus_scope=GENERAL；source_type=official_standard；source_org=OFF-U02,OFF-U03",
+          "material_id": "31d40c70-2f1a-4155-b829-a1e8ccca3cc6"
+        }
+      ],
+      "signals": {
+        "heading_present": true,
+        "body_present": true,
+        "anchor_retained": true,
+        "same_section": true,
+        "cross_section_contamination": false,
+        "provenance_complete": true,
+        "expanded_context_chars": 234
+      },
+      "status": "PASS",
+      "failure_reason": null
+    },
+    {
+      "case_id": "CR-22",
+      "category": "METADATA_SECTION_BOUNDARY",
+      "doc_id": "GOV-02",
+      "scope": "GOVERNMENT_ENTERPRISE",
+      "material_id": "08d5580a-d81b-491f-8c9b-d37ca4251840",
+      "anchor_chunk_id": "MCH-B7204C620F6A0CF603CEE34E625A583C",
+      "anchor_chunk_index": 3,
+      "anchor_text": "需明确数据目录、共享属性、使用条件、授权、安全和记录。",
+      "resolver_scope": "PARENT_HEADING_GROUP",
+      "resolver_span": {
+        "text": "## 目录与共享\n\n需明确数据目录、共享属性、使用条件、授权、安全和记录。\n\n",
+        "char_start": 63,
+        "char_end": 102,
+        "paragraph_start": 3,
+        "paragraph_end": 4,
+        "source_chunk_ids": [
+          "MCH-10E05647593D617773818984CFB50208",
+          "MCH-B7204C620F6A0CF603CEE34E625A583C"
+        ],
+        "heading_path": [
+          "政务数据目录、共享与跨部门协同",
+          "目录与共享"
+        ],
+        "resolver_strategy": "heading_group"
+      },
+      "expanded_context": [
+        {
+          "origin": "SECTION_HEADING",
+          "text": "目录与共享",
+          "chunk_id": "MCH-B7204C620F6A0CF603CEE34E625A583C"
+        },
+        {
+          "origin": "SAME_CHUNK_CONTEXT",
+          "text": "需明确数据目录、共享属性、使用条件、授权、安全和记录。",
+          "chunk_id": "MCH-B7204C620F6A0CF603CEE34E625A583C"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 目录与共享",
+          "chunk_id": "MCH-10E05647593D617773818984CFB50208"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 官方来源 / 依据",
+          "chunk_id": "MCH-839D2B25854C0D1C9B5BB49408B32F22"
+        },
+        {
+          "origin": "MATERIAL_METADATA",
+          "text": "material_name=GOV-02_政务数据目录、共享与跨部门协同.md；material_type=technical_whitepaper；corpus_scope=GOVERNMENT_ENTERPRISE；source_type=government_guidance；source_org=OFF-U03,OFF-U06,OFF-U07",
+          "material_id": "08d5580a-d81b-491f-8c9b-d37ca4251840"
+        }
+      ],
+      "signals": {
+        "heading_present": true,
+        "body_present": true,
+        "anchor_retained": true,
+        "same_section": true,
+        "cross_section_contamination": false,
+        "provenance_complete": true,
+        "expanded_context_chars": 272
+      },
+      "status": "PASS",
+      "failure_reason": null
+    },
+    {
+      "case_id": "CR-23",
+      "category": "METADATA_SECTION_BOUNDARY",
+      "doc_id": "MED-01",
+      "scope": "HEALTHCARE",
+      "material_id": "6b0456ff-0a60-4214-9811-c225fc78e942",
+      "anchor_chunk_id": "MCH-85128F1140026803AD6C33E6571EE7A2",
+      "anchor_chunk_index": 3,
+      "anchor_text": "统筹临床业务、医院管理、数据平台、基础设施、安全与便民服务。",
+      "resolver_scope": "PARENT_HEADING_GROUP",
+      "resolver_span": {
+        "text": "## 建设\n\n统筹临床业务、医院管理、数据平台、基础设施、安全与便民服务。\n\n",
+        "char_start": 59,
+        "char_end": 98,
+        "paragraph_start": 3,
+        "paragraph_end": 4,
+        "source_chunk_ids": [
+          "MCH-1CF4340A9EABEDC26797FA17AA09A6CF",
+          "MCH-85128F1140026803AD6C33E6571EE7A2"
+        ],
+        "heading_path": [
+          "医院信息化总体建设框架",
+          "建设"
+        ],
+        "resolver_strategy": "heading_group"
+      },
+      "expanded_context": [
+        {
+          "origin": "SECTION_HEADING",
+          "text": "建设",
+          "chunk_id": "MCH-85128F1140026803AD6C33E6571EE7A2"
+        },
+        {
+          "origin": "SAME_CHUNK_CONTEXT",
+          "text": "统筹临床业务、医院管理、数据平台、基础设施、安全与便民服务。",
+          "chunk_id": "MCH-85128F1140026803AD6C33E6571EE7A2"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 建设",
+          "chunk_id": "MCH-1CF4340A9EABEDC26797FA17AA09A6CF"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 时效",
+          "chunk_id": "MCH-45969C5CF77583A714975E12224E8DED"
+        },
+        {
+          "origin": "MATERIAL_METADATA",
+          "text": "material_name=MED-01_医院信息化总体建设框架.md；material_type=technical_whitepaper；corpus_scope=HEALTHCARE；source_type=industry_guidance；source_org=OFF-M01,OFF-M10",
+          "material_id": "6b0456ff-0a60-4214-9811-c225fc78e942"
+        }
+      ],
+      "signals": {
+        "heading_present": true,
+        "body_present": true,
+        "anchor_retained": true,
+        "same_section": true,
+        "cross_section_contamination": false,
+        "provenance_complete": true,
+        "expanded_context_chars": 237
+      },
+      "status": "PASS",
+      "failure_reason": null
+    },
+    {
+      "case_id": "CR-24",
+      "category": "METADATA_SECTION_BOUNDARY",
+      "doc_id": "COM-07",
+      "scope": "ENTERPRISE_PRIVATE",
+      "material_id": "42debef7-084f-471c-8fa5-1f9dcbf4c2f7",
+      "anchor_chunk_id": "MCH-D09A2FC0D82F6D27ED11B48CBDA4B06C",
+      "anchor_chunk_index": 5,
+      "anchor_text": "100个虚拟用户标准查询场景P95=1.8秒；导入10000条合成记录耗时42秒。",
+      "resolver_scope": "PARENT_HEADING_GROUP",
+      "resolver_span": {
+        "text": "## 结果\n\n100个虚拟用户标准查询场景P95=1.8秒；导入10000条合成记录耗时42秒。\n\n",
+        "char_start": 138,
+        "char_end": 188,
+        "paragraph_start": 5,
+        "paragraph_end": 6,
+        "source_chunk_ids": [
+          "MCH-7292707ADFE23D2A5D2AEC00FE7794F5",
+          "MCH-D09A2FC0D82F6D27ED11B48CBDA4B06C"
+        ],
+        "heading_path": [
+          "性能与容量测试报告",
+          "结果"
+        ],
+        "resolver_strategy": "heading_group"
+      },
+      "expanded_context": [
+        {
+          "origin": "SECTION_HEADING",
+          "text": "结果",
+          "chunk_id": "MCH-D09A2FC0D82F6D27ED11B48CBDA4B06C"
+        },
+        {
+          "origin": "SAME_CHUNK_CONTEXT",
+          "text": "100个虚拟用户标准查询场景P95=1.8秒；导入10000条合成记录耗时42秒。",
+          "chunk_id": "MCH-D09A2FC0D82F6D27ED11B48CBDA4B06C"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 结果",
+          "chunk_id": "MCH-7292707ADFE23D2A5D2AEC00FE7794F5"
+        },
+        {
+          "origin": "ADJACENT_CHUNK",
+          "text": "## 时效",
+          "chunk_id": "MCH-825C1EFE5FF1E3AE15ABAC31FE558D47"
+        },
+        {
+          "origin": "MATERIAL_METADATA",
+          "text": "material_name=COM-07_性能与容量测试报告.md；material_type=technical_solution；corpus_scope=ENTERPRISE_PRIVATE；source_type=synthetic_company_evidence；source_org=OFF-U01",
+          "material_id": "42debef7-084f-471c-8fa5-1f9dcbf4c2f7"
+        }
+      ],
+      "signals": {
+        "heading_present": true,
+        "body_present": true,
+        "anchor_retained": true,
+        "same_section": true,
+        "cross_section_contamination": false,
+        "provenance_complete": true,
+        "expanded_context_chars": 264
+      },
+      "status": "PASS",
+      "failure_reason": null
+    }
+  ],
+  "failures": [],
+  "quality_signals": {
+    "heading_missing": 0,
+    "body_missing": 0,
+    "anchor_missing": 0,
+    "cross_section_contamination": 0,
+    "provenance_failure": 0,
+    "wrong_material": 0,
+    "invalid_bounds": 0
+  },
+  "top_level_heading_cases": {
+    "count": 1,
+    "max_resolved_chars": 859,
+    "max_paragraphs": 8,
+    "max_source_chunks": 8,
+    "unexpected_whole_document_expansion": false
+  },
+  "provenance": {
+    "material_identity": "PASS",
+    "source_chunk_ids": "PASS",
+    "char_bounds": "PASS",
+    "paragraph_bounds": "PASS",
+    "cross_material_contamination": "NONE"
+  },
+  "semantic_polarity": "OUT_OF_SCOPE",
+  "calls": {
+    "siliconflow_embedding": 0,
+    "provider_generation": 0,
+    "deepseek": 0,
+    "dify": 0
+  },
+  "acceptance": {
+    "overall_pass": true,
+    "overall_pass_count": 24,
+    "minimum_overall": 22,
+    "minimum_each_category": 3,
+    "provenance_failures": 0,
+    "status": "CONTEXT_RECOVERY_24CASE_PASS"
+  },
+  "git": {
+    "production_writes": 0,
+    "db_writes": 0,
+    "commit_push_deploy": false
+  }
+}

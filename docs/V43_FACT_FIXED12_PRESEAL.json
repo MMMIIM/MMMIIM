@@ -1,0 +1,279 @@
+{
+  "checkpoint": "V43_FACT_FIXED12_PRESEAL",
+  "generated_at": "2026-09-08T11:09:57.422Z",
+  "run_id": "fact-v21-fixed12-20260908110957-e4f158f6",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "worktree_status": "M .codex/skills/engineering-governance/SKILL.md\n M .env.example\n M .gitignore\n M AGENTS.md\n M backend/.env.example\n M backend/eval/evidence-gold/README.md\n M backend/integration/deterministic.integration.js\n M backend/integration/mapping-claim-authority.integration.js\n M backend/integration/postgres.integration.js\n M backend/integration/sem-p1-004-entry-matrix.integration.js\n M backend/migrations/041_corpus_l3_public_materials.sql\n M backend/package.json\n M backend/src/app.js\n M backend/src/company-material-service.js\n M backend/src/db.js\n M backend/src/evidence-fact-service.js\n M backend/src/evidence-review-service.js\n M backend/src/evidence-service.js\n M backend/src/evidence-source-fact-service.js\n M backend/src/pipeline/batch-generation-router.js\n M backend/src/pipeline/canonical-requirements.js\n M backend/src/pipeline/claim-gate-input-adapter-v1.js\n M backend/src/pipeline/claim-gate-v2-contract.js\n M backend/src/pipeline/document-generation-service.js\n M backend/src/pipeline/enterprise-evidence-source-router.js\n M backend/src/pipeline/evidence-fact-contract-v1.js\n M backend/src/pipeline/evidence-review-contract.js\n M backend/src/pipeline/evidence-source-context-resolver.js\n M backend/src/pipeline/evidence-support-assessment-contract-v1.js\n M backend/src/pipeline/evidence-support-assessment-gateway-contract-v1.js\n M backend/src/pipeline/evidence-support-responsibility.js\n M backend/src/pipeline/evidence-support-review-evaluator.js\n M backend/src/pipeline/external-writer-preflight-v1.js\n M backend/src/pipeline/production-beta-service.js\n M backend/src/pipeline/requirement-chunker.js\n M backend/src/pipeline/requirement-evidence-mapping-contract-v1.js\n M backend/src/pipeline/requirement-extraction.js\n M backend/src/pipeline/semantic-gateway-client.js\n M backend/src/pipeline/source-location-resolver.js\n M backend/src/pipeline/tender-section-classifier.js\n M backend/src/pipeline/writer-execution-contract-v1.js\n M backend/src/pipeline/writer-input-authorization-v1.js\n M backend/src/pipeline/writer-provider.js\n M backend/src/requirement-evidence-fact-mapping-service.js\n M backend/src/requirement-parse-service.js\n M backend/src/requirement-source-service.js\n M backend/src/server.js\n M backend/src/verification/requirement-extraction-verifier.js\n M backend/src/writer-execution-service.js\n M backend/test/agent-actions.test.js\n M backend/test/agent-foundation.test.js\n M backend/test/branch-policy.test.js\n M backend/test/claim-gate-input-adapter-v1.test.js\n M backend/test/deterministic-plan-claim.test.js\n M backend/test/document-delivery.test.js\n M backend/test/evidence-fact-contract-v1.test.js\n M backend/test/evidence-support-assessment-gateway-contract.test.js\n M backend/test/evidence-support-assessment.test.js\n M backend/test/fixtures/stage13-material-acceptance.js\n M backend/test/gateway-smoke.test.js\n M backend/test/mapping-to-claim-canonical.test.js\n M backend/test/mapping-to-claim-entrypoint.test.js\n M backend/test/p0-framework-remediation.test.js\n M backend/test/pdf-section-extraction.test.js\n M backend/test/requirement-chunker-v2.test.js\n M backend/test/requirement-evaluation.test.js\n M backend/test/requirement-evidence-mapping-contract-v1.test.js\n M backend/test/requirement-extraction-contract-owner.test.js\n M backend/test/requirement-extraction-live-harness.test.js\n M backend/test/requirement-resilience.test.js\n M backend/test/review-center.test.js\n M backend/test/sem-p1-004-canonical-entrypoint.test.js\n M backend/test/semantic-gateway-client.test.js\n M backend/test/source-location-resolver.test.js\n M backend/test/tender-parse.test.js\n M backend/test/writer-execution-pre-v1.test.js\n M backend/test/writer-input-authorization-v1.test.js\n M docs/CONCEPT_REGISTRY.md\n M docs/REQUIREMENT_EXTRACTION_RUNTIME_DECISION.md\n M docs/audits/CONCEPT_OWNERSHIP_MATRIX.md\n M docs/decisions/008-curated-corpus-governance.md\n M docs/v4.3-semantic-architecture.md\n M packages/semantic-contracts/index.js\n M packages/semantic-contracts/runtime-config.js\n M services/semantic-gateway/.env.example\n M services/semantic-gateway/src/gateway.js\n M services/semantic-gateway/src/provider/mock-provider.js\n M services/semantic-gateway/src/provider/openai-compatible-provider.js\n M services/semantic-gateway/src/task-router.js\n M services/semantic-gateway/test/gateway.test.js\n M services/semantic-gateway/test/provider-adapter.test.js\n M services/semantic-gateway/test/task-router-response-format.test.js\n?? backend/eval/architecture-assurance/\n?? backend/eval/claim-eval-v1/\n?? backend/eval/evidence-gold/claim-quality-cases.js\n?? backend/eval/gold-governance/\n?? backend/eval/gold-human-review/\n?? backend/eval/mapping-benchmark-v1/\n?? backend/eval/rag-governance/\n?? backend/eval/rag-pilot/\n?? backend/eval/requirement-evidence-mapping-v1/\n?? backend/eval/requirement-evidence-mapping-v2/\n?? backend/eval/requirement-extraction-real-tender-pilot-v1/\n?? backend/eval/requirement-output-p1-audit/\n?? backend/eval/requirement-p1-semantic-calibration/\n?? backend/eval/requirement-production-quality-gate/\n?? backend/eval/requirement-semantic-quality-v1/\n?? backend/eval/requirement-unseen-holdout-v1/\n?? backend/integration/claim-eval-v1.integration.js\n?? backend/integration/material-source-authority-quarantine.integration.js\n?? backend/integration/track-a-authority-remediation.integration.js\n?? backend/migrations/048_requirement_evidence_fact_mapping_v1_1.sql\n?? backend/migrations/049_claim_gate_identity_v1.sql\n?? backend/migrations/050_writer_generation_identity.sql\n?? backend/migrations/051_material_source_authority_quarantine.sql\n?? backend/src/pipeline/document-plan.js\n?? backend/src/pipeline/evidence-fact-candidate-v2-1.js\n?? backend/src/pipeline/evidence-fact-candidate-v2.js\n?? backend/src/pipeline/mapping-candidate-builder.js\n?? backend/src/pipeline/mapping-decision-policy-v1.js\n?? backend/src/pipeline/material-source-authority-policy.js\n?? backend/src/pipeline/pdf-table-layout-annotator.js\n?? backend/src/pipeline/requirement-quality-gate.js\n?? backend/src/pipeline/requirement-scope-router.js\n?? backend/src/pipeline/section-context-builder.js\n?? backend/src/pipeline/semantic-gateway-evidence-fact-extractor.js\n?? backend/src/pipeline/semantic-gateway-mapping-evaluator.js\n?? backend/src/pipeline/writer-authorization-snapshot.js\n?? backend/src/pipeline/writer-generation-batch-builder-v2.js\n?? backend/src/pipeline/writer-output-markers.js\n?? backend/src/pipeline/writer-reference-selector.js\n?? backend/test/canonical-persistence-atomicity.test.js\n?? backend/test/claim-eval-v1.test.js\n?? backend/test/claim-gate-targeted-remediation.test.js\n?? backend/test/claim-writer-gold-v2-source-authority.test.js\n?? backend/test/engineering-governance-parity.test.js\n?? backend/test/evidence-fact-candidate-v2-1.test.js\n?? backend/test/evidence-fact-candidate-v2.test.js\n?? backend/test/evidence-fact-corrective-retry.test.js\n?? backend/test/evidence-fact-domain-metadata-parity.test.js\n?? backend/test/evidence-fact-execution-observability.test.js\n?? backend/test/evidence-fact-producer-v1.test.js\n?? backend/test/evidence-fact-source-role.test.js\n?? backend/test/evidence-fact-transport-v2.test.js\n?? backend/test/fact-canary-durable-runner.test.js\n?? backend/test/fact-candidate-v2-1-dispatch-journal.test.js\n?? backend/test/fact-input-window-selection.test.js\n?? backend/test/fact-output-schema-diagnostic-e2e.test.js\n?? backend/test/fact-precert-engineering-audit.test.js\n?? backend/test/fact-provider-shape-canary.test.js\n?? backend/test/final-semantic-certification-packet-v2.test.js\n?? backend/test/final-semantic-certification-prep.test.js\n?? backend/test/fixed48-live-certification.test.js\n?? backend/test/fixed48-runner-durability.test.js\n?? backend/test/formal-mutation-authorization.test.js\n?? backend/test/gold-governance-harness.test.js\n?? backend/test/gold-v2-foundation-orchestrator.test.js\n?? backend/test/mapping-eval-v1.test.js\n?? backend/test/mapping-gold-full-human-review-export.test.js\n?? backend/test/mapping-gold-v2-successor.test.js\n?? backend/test/mapping-live-diagnostic-integrity.test.js\n?? backend/test/mapping-producer-gold.test.js\n?? backend/test/mapping-producer-v1.test.js\n?? backend/test/material-source-authority-policy.test.js\n?? backend/test/pdf-table-layout-annotator.test.js\n?? backend/test/post-hash-fix-controlled-runner.test.js\n?? backend/test/rag-pilot-controlled-rerun.test.js\n?? backend/test/rag-retrieval-currentness-packet.test.js\n?? backend/test/real-fact-v2-foundation.test.js\n?? backend/test/real-gold-v2-authority-adjudication.test.js\n?? backend/test/real-gold-v2-source-and-fact-closure.test.js\n?? backend/test/real-gold-v2-source-fact-closure.test.js\n?? backend/test/real-mapping-source-foundation.test.js\n?? backend/test/requirement-downstream-impact.test.js\n?? backend/test/requirement-eval-artifact-capture.test.js\n?? backend/test/requirement-evaluation-integrity.test.js\n?? backend/test/requirement-evidence-authority-freeze.test.js\n?? backend/test/requirement-extraction-target-chunk-selector.test.js\n?? backend/test/requirement-gold-eligibility.test.js\n?? backend/test/requirement-miss-attribution.test.js\n?? backend/test/requirement-number-omission-final.test.js\n?? backend/test/requirement-production-quality-gate.test.js\n?? backend/test/requirement-production-readiness-recovery.test.js\n?? backend/test/requirement-quality-gate.test.js\n?? backend/test/requirement-real-path-preflight.test.js\n?? backend/test/requirement-scope-table.test.js\n?? backend/test/requirement-source-parity-v2.test.js\n?? backend/test/requirement-source-reconstruction.test.js\n?? backend/test/source-first-fact-inventory-v1.test.js\n?? backend/test/source-role-projection.test.js\n?? backend/test/source-text-hash-boundary.test.js\n?? backend/test/writer-authority-p0.test.js\n?? backend/test/writer-authorization-snapshot.test.js\n?? backend/test/writer-eval-provider-off-foundation.test.js\n?? backend/test/writer-overnight.test.js\n?? backend/test/writer-provider-fidelity-authority-gap-audit.test.js\n?? backend/test/writer-v2-composition.test.js\n?? docs/FAST04_REQUIREMENT_CANDIDATE_PACKET.json\n?? docs/REQUIREMENT_CANDIDATE_POOL_V2.json\n?? docs/REQUIREMENT_CANDIDATE_POOL_V2_COMPLETED.json\n?? docs/REQUIREMENT_GOLD_V2_DRAFT.json\n?? docs/REQUIREMENT_GOLD_V2_DRAFT_COMPLETED.json\n?? docs/REQUIREMENT_GOLD_V2_SUITABILITY_REVIEW.json\n?? docs/REQUIREMENT_GOLD_V2_SUITABILITY_REVIEW_COMPLETED.json\n?? docs/TB003_FAST04_REQUIREMENT_CANDIDATE_PACKET.json\n?? docs/TB003_FAST04_REQUIREMENT_CANDIDATE_PACKET.md\n?? docs/TB003_REQUIREMENT_CANDIDATE_PACKET.json\n?? docs/V43_CHENGCHUAN_CONTROLLED_REAL_FACT_CHECKPOINT.json\n?? docs/V43_CHENGCHUAN_CONTROLLED_REAL_FACT_CHECKPOINT.md\n?? docs/V43_CHENGCHUAN_CONTROLLED_REAL_FACT_INVENTORY.json\n?? docs/V43_CHENGCHUAN_CONTROLLED_REAL_FACT_QUALITY_AUDIT.json\n?? docs/V43_CHENGCHUAN_CONTROLLED_REAL_FACT_RAW_RESPONSES.jsonl\n?? docs/V43_CHENGCHUAN_FULL_FACT_INVENTORY_V2.json\n?? docs/V43_CHENGCHUAN_REAL_FACT_ZERO_AUDIT.json\n?? docs/V43_CHENGCHUAN_REAL_FACT_ZERO_AUDIT.md\n?? docs/V43_CHENGCHUAN_V2_IMPORT_CHECKPOINT.json\n?? docs/V43_CHENGCHUAN_V2_IMPORT_CHECKPOINT.md\n?? docs/V43_ENGINEERING_HANDOFF_FACT_CHECKPOINT.json\n?? docs/V43_ENGINEERING_HANDOFF_FACT_CHECKPOINT.md\n?? docs/V43_EXISTING_GOLD_ASSET_RECONCILIATION_CHECKPOINT.json\n?? docs/V43_EXISTING_GOLD_ASSET_RECONCILIATION_CHECKPOINT.md\n?? docs/V43_FACT_CANDIDATE_V2_1_INTERRUPTED_STAGE1_RECOVERY_CHECKPOINT.json\n?? docs/V43_FACT_CANDIDATE_V2_1_INTERRUPTED_STAGE1_RECOVERY_CHECKPOINT.md\n?? docs/V43_FACT_CANDIDATE_V2_MODEL_IDENTITY_FORENSIC_AND_CONTRACT_SLIMMING_CHECKPOINT.json\n?? docs/V43_FACT_CANDIDATE_V2_MODEL_IDENTITY_FORENSIC_AND_CONTRACT_SLIMMING_CHECKPOINT.md\n?? docs/V43_FACT_DOMAIN_METADATA_SEMANTICS_AUDIT.json\n?? docs/V43_FACT_DOMAIN_METADATA_SEMANTICS_AUDIT.md\n?? docs/V43_FACT_EMPTY_DOMAIN_NAMESPACE_NORMALIZATION_GATE_CHECKPOINT.json\n?? docs/V43_FACT_EMPTY_DOMAIN_NAMESPACE_NORMALIZATION_GATE_CHECKPOINT.md\n?? docs/V43_FACT_FIXED12_PRESEAL.json\n?? docs/V43_FACT_FIXED12_PRESEAL.md\n?? docs/V43_FACT_OUTPUT_CONTRACT_RECOVERY_CHECKPOINT.json\n?? docs/V43_FACT_OUTPUT_CONTRACT_RECOVERY_CHECKPOINT.md\n?? docs/V43_FACT_POST_NORMALIZATION_CANARY_DIAGNOSTIC_CLOSE_CHECKPOINT.json\n?? docs/V43_FACT_POST_NORMALIZATION_CANARY_DIAGNOSTIC_CLOSE_CHECKPOINT.md\n?? docs/V43_FACT_PRODUCER_ROOT_CAUSE_AUDIT.json\n?? docs/V43_FACT_PRODUCER_TARGETED_REMEDIATION.json\n?? docs/V43_FACT_PROVIDER_SHAPE_CANARY_GATE_CHECKPOINT.json\n?? docs/V43_FACT_PROVIDER_SHAPE_CANARY_GATE_CHECKPOINT.md\n?? docs/V43_FACT_SOURCE_EVIDENCE_AUDIT_CHECKPOINT.json\n?? docs/V43_FACT_SOURCE_EVIDENCE_AUDIT_CHECKPOINT.md\n?? docs/V43_FACT_V21_STAGE1_RECONCILIATION_CHECKPOINT.json\n?? docs/V43_FACT_V21_STAGE1_RECONCILIATION_CHECKPOINT.md\n?? docs/V43_GOLD_POOL_RECONCILIATION_CHECKPOINT.json\n?? docs/V43_GOLD_POOL_RECONCILIATION_CHECKPOINT.md\n?? docs/V43_JY001_REQUIREMENT_AUTHORITY_REVIEW_PACKET.json\n?? docs/V43_JY001_REQUIREMENT_AUTHORITY_REVIEW_PACKET.md\n?? docs/V43_MAPPING_V2_ACTIVATION_READINESS_CHECKPOINT.json\n?? docs/V43_MAPPING_V2_ACTIVATION_READINESS_CHECKPOINT.md\n?? docs/V43_PARALLEL_FINAL_DETERMINISTIC_GATES_CHECKPOINT.json\n?? docs/V43_PARALLEL_FINAL_DETERMINISTIC_GATES_CHECKPOINT.md\n?? docs/V43_PARALLEL_FINAL_DETERMINISTIC_GATES_V2_CHECKPOINT.json\n?? docs/V43_PARALLEL_FINAL_DETERMINISTIC_GATES_V2_CHECKPOINT.md\n?? docs/V43_PARALLEL_UPSTREAM_GATES_CHECKPOINT.json\n?? docs/V43_PARALLEL_UPSTREAM_GATES_CHECKPOINT.md\n?? docs/V43_RAG_CURRENT_PRODUCTION_CALL_GRAPH.md\n?? docs/V43_RAG_FACT_COMPONENT_STATUS_MATRIX.json\n?? docs/V43_RAG_FACT_EXTRACTION_RAW_RESPONSES.jsonl\n?? docs/V43_RAG_FACT_INVENTORY_CHECKPOINT.json\n?? docs/V43_RAG_FACT_INVENTORY_CHECKPOINT.md\n?? docs/V43_RAG_FACT_PERFORMANCE_REPORT.json\n?? docs/V43_RAG_FACT_PRODUCTION_QUALITY_AUDIT.json\n?? docs/V43_RAG_FACT_PRODUCTION_READINESS_CHECKPOINT.json\n?? docs/V43_RAG_FACT_PRODUCTION_READINESS_CHECKPOINT.md\n?? docs/V43_RAG_FACT_PRODUCTION_READINESS_RECOVERY_CHECKPOINT.json\n?? docs/V43_RAG_FACT_PRODUCTION_READINESS_RECOVERY_CHECKPOINT.md\n?? docs/V43_RAG_FACT_QUALITY_AUDIT.json\n?? docs/V43_RAG_FACT_SOURCE_INVENTORY.json\n?? docs/V43_RAG_FACT_TARGETED_LIVE_CHECKPOINT.json\n?? docs/V43_RAG_FACT_TARGETED_LIVE_RUN_20260907/\n?? docs/V43_RAG_RETRIEVAL_CURRENTNESS_24_EXPECTED_SOURCE_PACKET.json\n?? docs/V43_RAG_RETRIEVAL_CURRENTNESS_AUDIT.json\n?? docs/V43_RAG_SOURCE_FIRST_FACT_CANDIDATES.json\n?? docs/V43_RAG_SOURCE_FIRST_FACT_INVENTORY_CHECKPOINT.json\n?? docs/V43_RAG_SOURCE_FIRST_FACT_INVENTORY_CHECKPOINT.md\n?? docs/V43_RAG_STAGE17_TO_CURRENT_DEVELOPMENT_AUDIT.md\n?? docs/V43_REQUIREMENT_1009_CRITICAL_CONSEQUENCE_OFFLINE_REPLAY.json\n?? docs/V43_REQUIREMENT_21_MISS_MANIFEST.json\n?? docs/V43_REQUIREMENT_21_MISS_MANIFEST_GPT_DEVELOPMENT_COHORT.json\n?? docs/V43_REQUIREMENT_21_MISS_S0_S5_ATTRIBUTION.json\n?? docs/V43_REQUIREMENT_21_MISS_S0_S5_ATTRIBUTION_CHECKPOINT.md\n?? docs/V43_REQUIREMENT_CANONICAL_CHANGE_MANIFEST.json\n?? docs/V43_REQUIREMENT_CORE6_FRESH_REPRODUCTION_req-core6-fresh-20260907133003259-49044f2a.json\n?? docs/V43_REQUIREMENT_CORE6_GPT_SEMANTIC_REVIEW_PACKET.json\n?? docs/V43_REQUIREMENT_CORE6_ROUTER_REACHABILITY_AUDIT.json\n?? docs/V43_REQUIREMENT_CORE6_SEMANTIC_ADJUDICATION_CHECKPOINT.json\n?? docs/V43_REQUIREMENT_CORE6_SEMANTIC_ADJUDICATION_CHECKPOINT.md\n?? docs/V43_REQUIREMENT_FINAL_NUMBER_OMISSION_MICRO_FIX_CHECKPOINT_V2.json\n?? docs/V43_REQUIREMENT_FINAL_SEMANTIC_CERTIFICATION_OUTPUT_PACKET.jsonl\n?? docs/V43_REQUIREMENT_FINAL_SEMANTIC_CERTIFICATION_OUTPUT_PACKET_V2.jsonl\n?? docs/V43_REQUIREMENT_FINAL_SEMANTIC_CERTIFICATION_PACKET_V2_CHECKPOINT.json\n?? docs/V43_REQUIREMENT_FINAL_SEMANTIC_CERTIFICATION_PACKET_V2_CHECKPOINT.md\n?? docs/V43_REQUIREMENT_FINAL_SEMANTIC_CERTIFICATION_PREPARATION_CHECKPOINT.json\n?? docs/V43_REQUIREMENT_FINAL_SEMANTIC_CERTIFICATION_PREPARATION_CHECKPOINT.md\n?? docs/V43_REQUIREMENT_FINAL_SEMANTIC_CERTIFICATION_SOURCE_PACKET_MANIFEST.json\n?? docs/V43_REQUIREMENT_FIXED48_LIVE_CERTIFICATION_RUN_req-fixed48-live-20260907080143328-71904882.json\n?? docs/V43_REQUIREMENT_FIXED48_LIVE_CERTIFICATION_RUN_req-fixed48-live-20260907080143328-71904882.md\n?? docs/V43_REQUIREMENT_FIXED48_LIVE_INPUT_IDENTITY.json\n?? docs/V43_REQUIREMENT_FIXED48_RUNNER_DURABILITY_RECOVERY_GATE_CHECKPOINT.json\n?? docs/V43_REQUIREMENT_FIXED48_RUNNER_DURABILITY_RECOVERY_GATE_CHECKPOINT.md\n?? docs/V43_REQUIREMENT_FIXED_48_RUNTIME_AND_SEMANTIC_CERTIFICATION_GATE_CHECKPOINT.json\n?? docs/V43_REQUIREMENT_FIXED_48_RUNTIME_AND_SEMANTIC_CERTIFICATION_GATE_CHECKPOINT.md\n?? docs/V43_REQUIREMENT_FIXED_48_RUNTIME_RUN.json\n?? docs/V43_REQUIREMENT_GOLD_PARITY_COMPLETION_CHECKPOINT.json\n?? docs/V43_REQUIREMENT_GOLD_PARITY_COMPLETION_CHECKPOINT.md\n?? docs/V43_REQUIREMENT_GOLD_PARITY_HUMAN_AUTHORITY_REVIEW_PACKET.json\n?? docs/V43_REQUIREMENT_GOLD_PARITY_HUMAN_AUTHORITY_REVIEW_PACKET.md\n?? docs/V43_REQUIREMENT_GOLD_V2_CANDIDATE_POOL_CHECKPOINT.json\n?? docs/V43_REQUIREMENT_GOLD_V2_COMPLETION_CHECKPOINT.json\n?? docs/V43_REQUIREMENT_GOLD_V2_PRECLASSIFICATION_QUEUE.json\n?? docs/V43_REQUIREMENT_GOLD_V2_PRECLASSIFICATION_QUEUE.md\n?? docs/V43_REQUIREMENT_GOLD_V2_SIX_TENDER_CANONICAL_INPUT.json\n?? docs/V43_REQUIREMENT_GPT_CALIBRATION_SAFETY_CONTROL_PREP_CHECKPOINT.json\n?? docs/V43_REQUIREMENT_GPT_CALIBRATION_SAFETY_CONTROL_PREP_CHECKPOINT.md\n?? docs/V43_REQUIREMENT_HUMAN_ADJUDICATION_PACKET.json\n?? docs/V43_REQUIREMENT_JY_PROVENANCE_FULL_PARITY_AND_SAFETY_FIXTURE_INTEGRITY_CHECKPOINT.json\n?? docs/V43_REQUIREMENT_JY_PROVENANCE_FULL_PARITY_AND_SAFETY_FIXTURE_INTEGRITY_CHECKPOINT.md\n?? docs/V43_REQUIREMENT_JY_PROVENANCE_FULL_PARITY_REPORT.json\n?? docs/V43_REQUIREMENT_LIVE_BENCHMARK.json\n?? docs/V43_REQUIREMENT_LIVE_PIPELINE_DIAGNOSTICS.json\n?? docs/V43_REQUIREMENT_LIVE_SMOKE_COMPLETION_GATE_CHECKPOINT.json\n?? docs/V43_REQUIREMENT_MODULE_CAPABILITY_AUDIT.json\n?? docs/V43_REQUIREMENT_MODULE_CAPABILITY_AUDIT.md\n?? docs/V43_REQUIREMENT_MUTATION_OWNERSHIP_AUDIT.json\n?? docs/V43_REQUIREMENT_NUMBER_OMISSION_TRUE_ERROR_CONTROLS_V2.json\n?? docs/V43_REQUIREMENT_OUTPUT_P1_MANIFEST.json\n?? docs/V43_REQUIREMENT_OUTPUT_SIDE_ADJUDICATED.jsonl\n?? docs/V43_REQUIREMENT_OUTPUT_SIDE_REVIEW.jsonl\n?? docs/V43_REQUIREMENT_P1_GPT_SEMANTIC_CALIBRATION_PACKET.json\n?? docs/V43_REQUIREMENT_P1_GPT_SEMANTIC_CALIBRATION_PACKET_RECOVERED.json\n?? docs/V43_REQUIREMENT_P1_SAFETY_EXECUTABLE_BASELINE.json\n?? docs/V43_REQUIREMENT_P1_SAFETY_EXECUTABLE_BASELINE_V2.json\n?? docs/V43_REQUIREMENT_P1_SAFETY_POSITIVE_CONTROLS.json\n?? docs/V43_REQUIREMENT_PARITY_AND_FACT_COVERAGE_CHECKPOINT.json\n?? docs/V43_REQUIREMENT_PARITY_AND_FACT_COVERAGE_CHECKPOINT.md\n?? docs/V43_REQUIREMENT_PERFORMANCE_REPORT.json\n?? docs/V43_REQUIREMENT_POST_FIX_VALIDATION_V2_CASE_RESULTS.json\n?? docs/V43_REQUIREMENT_POST_FIX_VALIDATION_V2_PRESEAL.json\n?? docs/V43_REQUIREMENT_PRODUCTION_QUALITY_AUDIT.json\n?? docs/V43_REQUIREMENT_PRODUCTION_QUALITY_GATE_CANONICAL_AFTER.json\n?? docs/V43_REQUIREMENT_PRODUCTION_QUALITY_GATE_CHECKPOINT.json\n?? docs/V43_REQUIREMENT_PRODUCTION_QUALITY_GATE_CHECKPOINT.md\n?? docs/V43_REQUIREMENT_PRODUCTION_QUALITY_ROOT_CAUSE_MATRIX.json\n?? docs/V43_REQUIREMENT_PRODUCTION_READINESS_RECOVERY_CHECKPOINT.json\n?? docs/V43_REQUIREMENT_PRODUCTION_READINESS_RECOVERY_CHECKPOINT.md\n?? docs/V43_REQUIREMENT_PRODUCTION_SEMANTIC_AUDIT_CHECKPOINT.json\n?? docs/V43_REQUIREMENT_PRODUCTION_SEMANTIC_AUDIT_CHECKPOINT.md\n?? docs/V43_REQUIREMENT_PROVENANCE_REPAIR_AND_EXECUTABLE_SAFETY_BASELINE_CHECKPOINT.json\n?? docs/V43_REQUIREMENT_PROVENANCE_REPAIR_AND_EXECUTABLE_SAFETY_BASELINE_CHECKPOINT.md\n?? docs/V43_REQUIREMENT_PROVENANCE_REPAIR_REPORT.json\n?? docs/V43_REQUIREMENT_REEXTRACTION_CANDIDATE_CHECKPOINT.json\n?? docs/V43_REQUIREMENT_REEXTRACTION_CANDIDATE_CHECKPOINT.md\n?? docs/V43_REQUIREMENT_REEXTRACTION_CANDIDATE_PACKET.json\n?? docs/V43_REQUIREMENT_REEXTRACTION_CANDIDATE_PACKET.md\n?? docs/V43_REQUIREMENT_REVIEW_REQUIRED_PACKET.json\n?? docs/V43_REQUIREMENT_RUNTIME_IDENTITY_AUDIT.json\n?? docs/V43_REQUIREMENT_SAFETY_CONTROL_FIXTURE_MANIFEST_V2.json\n?? docs/V43_REQUIREMENT_SEMANTIC_FAILURE_INVENTORY.json\n?? docs/V43_REQUIREMENT_SIX_TENDER_AUTHORITY_COMPLETION_CHECKPOINT.json\n?? docs/V43_REQUIREMENT_SIX_TENDER_AUTHORITY_COMPLETION_CHECKPOINT.md\n?? docs/V43_REQUIREMENT_SIX_TENDER_SOURCE_PARITY_V2_CHECKPOINT.json\n?? docs/V43_REQUIREMENT_SIX_TENDER_SOURCE_PARITY_V2_CHECKPOINT.md\n?? docs/V43_REQUIREMENT_SIX_TENDER_SOURCE_PARITY_V2_MANIFEST.json\n?? docs/V43_REQUIREMENT_SOURCE_RESOLUTION_CANONICALIZATION_GATE_CHECKPOINT.json\n?? docs/V43_REQUIREMENT_SOURCE_RESOLUTION_CANONICALIZATION_GATE_CHECKPOINT.md\n?? docs/V43_REQUIREMENT_SOURCE_RESOLUTION_FINAL_CLOSE_AND_LIVE_SMOKE_CHECKPOINT.json\n?? docs/V43_REQUIREMENT_SOURCE_RESOLUTION_FINAL_CLOSE_AND_LIVE_SMOKE_CHECKPOINT.md\n?? docs/V43_REQUIREMENT_SOURCE_SIDE_BLIND_RECALL.jsonl\n?? docs/V43_REQUIREMENT_SOURCE_SIDE_BLIND_RECALL_ADJUDICATED.jsonl\n?? docs/V43_REQUIREMENT_TB003_OFFLINE_ROOT_CAUSE_CHECKPOINT.json\n?? docs/V43_REQUIREMENT_THREE_TENDER_RECOVERY_MATRIX.json\n?? docs/V43_REQUIREMENT_VALIDATION_V2_ADJUDICATION_AND_UNSEEN_HOLDOUT_PREFLIGHT_CHECKPOINT.json\n?? docs/V43_REQUIREMENT_VALIDATION_V2_ADJUDICATION_AND_UNSEEN_HOLDOUT_PREFLIGHT_CHECKPOINT.md\n?? docs/V43_TB_FAST_GATEWAY_BLOCK_DIAGNOSIS_CHECKPOINT.json\n?? docs/V43_TB_FAST_GATEWAY_BLOCK_DIAGNOSIS_CHECKPOINT.md\n?? docs/V43_TB_FAST_GATEWAY_BLOCK_DIAGNOSIS_DOCTOR.json\n?? docs/V43_TENDER_REQUIREMENT_FRESH_CANDIDATE_EXTRACTION_CHECKPOINT.json\n?? docs/V43_TENDER_REQUIREMENT_FRESH_CANDIDATE_EXTRACTION_CHECKPOINT.md\n?? docs/V43_TENDER_REQUIREMENT_FRESH_CANDIDATE_EXTRACTION_PACKET.json\n?? docs/V43_TENDER_REQUIREMENT_FRESH_CANDIDATE_EXTRACTION_PACKET.md\n?? docs/V43_UPSTREAM_DUAL_GATE_PRESEAL.json\n?? docs/V43_UPSTREAM_DUAL_GATE_PRESEAL.md\n?? docs/V43_UPSTREAM_FINAL_CERTIFICATION_PREP_CHECKPOINT.json\n?? docs/V43_UPSTREAM_FINAL_CERTIFICATION_PREP_CHECKPOINT.md\n?? docs/calibration-post-fix.json\n?? docs/chengchuan-eval-out-final/\n?? docs/chengchuan-eval-out-one/\n?? docs/chengchuan-eval-out/\n?? docs/cooccurrence-post-fix.json\n?? docs/decisions/013-evaluation-metric-authority-and-namespace.md\n?? docs/decisions/014-canonical-production-path-and-isolated-test-instances.md\n?? docs/decisions/015-source-ambiguity-must-not-be-silently-resolved.md\n?? docs/decisions/016-source-ambiguous-cases-are-not-evaluable-gold.md\n?? docs/decisions/017-canonical-requirement-evidence-fact-mapping-authority.md\n?? docs/decisions/018-fact-subject-semantic-representation-flat.md\n?? docs/decisions/019-semantic-dependent-field-logic-review.md\n?? docs/decisions/020-evidence-support-field-contract-and-invariants.md\n?? docs/decisions/021-evidence-fact-semantic-authority-and-requirement-independence.md\n?? docs/decisions/022-mapping-producer-and-evaluation-architecture.md\n?? docs/decisions/023-requirement-extraction-and-canonical-authority.md\n?? docs/decisions/024-requirement-gold-v1-1-known-annotation-debt.md\n?? docs/decisions/025-gold-v2-evaluation-governance.md\n?? docs/fact-authority-boundary-audit.json\n?? docs/fact-contract-inventory.json\n?? docs/fact-drift-regression-results.json\n?? docs/fact-precert-engineering-audit-checkpoint.json\n?? docs/fact-precert-engineering-audit-checkpoint.md\n?? docs/fact-retry-persistence-audit.json\n?? docs/fact-runtime-routing-audit.json\n?? docs/quality-gate-micro-fix-checkpoint.json\n?? docs/quality-gate-micro-fix-pre-fix-safety-baseline.json\n?? docs/reason-delta-analysis.json\n?? docs/requirement-1009-post-fix-replay-v2.json\n?? docs/requirement-1009-post-fix-replay.json\n?? docs/requirement-post-fix-validation-checkpoint-v2.json\n?? docs/safety-controls-post-fix.json\n?? docs/superpowers/\n?? docs/validation-case-results-v2.json\n?? docs/validation-confusion-matrix-v2.json\n?? docs/validation-reason-analysis-v2.json\n?? services/semantic-gateway/test/contract-parity.test.js\n?? services/semantic-gateway/test/deepseek-official-provider.test.js\n?? services/semantic-gateway/test/fact-domain-metadata-normalization.test.js\n?? services/semantic-gateway/test/task-router-candidate-v2.test.js",
+  "production_code_mutation_after_preseal": "FORBIDDEN",
+  "track_a": {
+    "status": "BLOCKED_INSUFFICIENT_ELIGIBLE_UNSEEN_TENDERS",
+    "eligible_tenders": 0,
+    "required_tenders": 2,
+    "evidence": "docs/V43_REQUIREMENT_VALIDATION_V2_ADJUDICATION_AND_UNSEEN_HOLDOUT_PREFLIGHT_CHECKPOINT.json",
+    "rejected_source": "TB-016",
+    "rejection": "REJECTED_NOT_VERIFIED_TENDER"
+  },
+  "track_b": {
+    "status": "AUTHORIZED_FIXED12",
+    "cohort_definition": "docs/V43_RAG_FACT_TARGETED_LIVE_CHECKPOINT.json",
+    "cohort_identity": [
+      {
+        "doc_id": "COM-01",
+        "source_hash": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+        "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+        "source_file": "backend\\eval\\rag-pilot\\V43_RAG_CODEX_HANDOFF_1\\03_company_case_rag\\COM-01_公司概况与业务范围.md"
+      },
+      {
+        "doc_id": "COM-06",
+        "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+        "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+        "source_file": "backend\\eval\\rag-pilot\\V43_RAG_CODEX_HANDOFF_1\\03_company_case_rag\\COM-06_权限_安全与审计测试报告.md"
+      },
+      {
+        "doc_id": "COM-07",
+        "source_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f",
+        "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-07_性能与容量测试报告.md#full-document",
+        "source_file": "backend\\eval\\rag-pilot\\V43_RAG_CODEX_HANDOFF_1\\03_company_case_rag\\COM-07_性能与容量测试报告.md"
+      },
+      {
+        "doc_id": "COM-08",
+        "source_hash": "afd00a30e6a46e9e09d42ac1f7eeae36be26420a40da12a42ecd0cb0d8ba9041",
+        "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-08_备份恢复与容灾演练记录.md#full-document",
+        "source_file": "backend\\eval\\rag-pilot\\V43_RAG_CODEX_HANDOFF_1\\03_company_case_rag\\COM-08_备份恢复与容灾演练记录.md"
+      },
+      {
+        "doc_id": "COM-12",
+        "source_hash": "2689d0870f813b00849e6da5daca12cdf56064b4655b2d46bdc110b5ca3d9814",
+        "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document",
+        "source_file": "backend\\eval\\rag-pilot\\V43_RAG_CODEX_HANDOFF_1\\03_company_case_rag\\COM-12_运维_SLA与应急服务说明.md"
+      },
+      {
+        "doc_id": "CCV2-U09-02",
+        "source_hash": "b3a47ddf0ea788c4af955fba4c33314bb9e0f1c32830feb39b68b2ba960a778b",
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document",
+        "source_file": "backend\\eval\\rag-pilot\\V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION\\materials\\CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md"
+      },
+      {
+        "doc_id": "CCV2-U13-01",
+        "source_hash": "9408fc5a50ffcad28def68d844c2d701405b99655f2d5904aeb89874f55ae575",
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document",
+        "source_file": "backend\\eval\\rag-pilot\\V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION\\materials\\CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md"
+      },
+      {
+        "doc_id": "CCV2-U17-01",
+        "source_hash": "fa9f45848cabbe6801fcfd76fe5879038c79ad1437a8219e1724720c20ee3066",
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U17-01_操作系统数据库中间件兼容_COMPATIBILITY_MATRIX.md#full-document",
+        "source_file": "backend\\eval\\rag-pilot\\V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION\\materials\\CCV2-U17-01_操作系统数据库中间件兼容_COMPATIBILITY_MATRIX.md"
+      },
+      {
+        "doc_id": "CCV2-U20-02",
+        "source_hash": "78c12a1f20c5da1af195345c33fd960f5e12293da0f1483afb970440e99f2320",
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U20-02_质量管理_QUALITY_AUDIT_RECORD.md#full-document",
+        "source_file": "backend\\eval\\rag-pilot\\V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION\\materials\\CCV2-U20-02_质量管理_QUALITY_AUDIT_RECORD.md"
+      },
+      {
+        "doc_id": "CCV2-U29-02",
+        "source_hash": "8739b2aae923a268faf4d655330cc4aa9c937ee3d4a6073db0b622135771c171",
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md#full-document",
+        "source_file": "backend\\eval\\rag-pilot\\V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION\\materials\\CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md"
+      },
+      {
+        "doc_id": "CCV2-U30-02",
+        "source_hash": "d0bc96847439b1d2f4baa87c2f92010d9d11882528a906cefb86edc21ac9c808",
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U30-02_企业资质与认证_CERTIFICATION_STATUS_RECORD.md#full-document",
+        "source_file": "backend\\eval\\rag-pilot\\V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION\\materials\\CCV2-U30-02_企业资质与认证_CERTIFICATION_STATUS_RECORD.md"
+      },
+      {
+        "doc_id": "CCV2-U34-02",
+        "source_hash": "723e01a83e793e28b1e92745c0239f2700ccc218a8b6d5ce320904842178a444",
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U34-02_行业专项能力_INDUSTRY_MEDICAL_CASE.md#full-document",
+        "source_file": "backend\\eval\\rag-pilot\\V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION\\materials\\CCV2-U34-02_行业专项能力_INDUSTRY_MEDICAL_CASE.md"
+      }
+    ],
+    "planned_executions": [
+      "fact-v21-fixed12-20260908110957-e4f158f6-COM-01",
+      "fact-v21-fixed12-20260908110957-e4f158f6-COM-06",
+      "fact-v21-fixed12-20260908110957-e4f158f6-COM-07",
+      "fact-v21-fixed12-20260908110957-e4f158f6-COM-08",
+      "fact-v21-fixed12-20260908110957-e4f158f6-COM-12",
+      "fact-v21-fixed12-20260908110957-e4f158f6-CCV2-U09-02",
+      "fact-v21-fixed12-20260908110957-e4f158f6-CCV2-U13-01",
+      "fact-v21-fixed12-20260908110957-e4f158f6-CCV2-U17-01",
+      "fact-v21-fixed12-20260908110957-e4f158f6-CCV2-U20-02",
+      "fact-v21-fixed12-20260908110957-e4f158f6-CCV2-U29-02",
+      "fact-v21-fixed12-20260908110957-e4f158f6-CCV2-U30-02",
+      "fact-v21-fixed12-20260908110957-e4f158f6-CCV2-U34-02"
+    ],
+    "provider_call_cap": 12,
+    "concurrency": 1,
+    "retries": 0,
+    "provider": "deepseek_official",
+    "requested_model": "deepseek-v4-pro",
+    "endpoint": "/responses",
+    "prompt_version": "4.3-evidence-fact-candidate-v2-prompt-v2",
+    "prompt_hash": "ba1ab6d2a298176ee27528b0e3d1bfe71f373fa99bb82c06cda780ba4272d642",
+    "schema_version": "4.3-evidence-fact-candidate-v2.1",
+    "schema_sha256": "3dcece82464fcbd0351fe4444cc66994d36e40ca6ca97a3f2d0ba01e5e44f0b3",
+    "canonicalizer_version": "4.3-evidence-fact-canonicalizer-v2.1",
+    "grounding_version": "4.3-evidence-fact-grounding-v2.1",
+    "runtime_preflight": {
+      "gateway_base": "http://127.0.0.1:18082",
+      "ready_status": 200,
+      "info_status": 200,
+      "fact_provider": "deepseek_official",
+      "fact_provider_configured": true,
+      "fact_provider_endpoint": "/responses",
+      "fact_model": "deepseek-v4-pro",
+      "build_revision": "f509514",
+      "task_types": [
+        "requirement_extraction",
+        "response_planning",
+        "claim_generation",
+        "section_drafting",
+        "targeted_revision",
+        "evidence_fact_extraction",
+        "evidence_fact_candidate_v2",
+        "evidence_fact_candidate_v2_1",
+        "draft_sections",
+        "evidence_support_assessment",
+        "requirement_evidence_mapping"
+      ]
+    },
+    "cohort_identity_unique": true,
+    "cohort_identity_evidence": [
+      "docs/V43_RAG_FACT_TARGETED_LIVE_CHECKPOINT.json scope",
+      "docs/V43_RAG_FACT_TARGETED_LIVE_RUN_20260907/V43_CHENGCHUAN_CONTROLLED_REAL_FACT_INVENTORY.json material_summaries"
+    ],
+    "historical_run_not_reused": true
+  },
+  "runtime_identity": {
+    "gateway_base": "http://127.0.0.1:18082",
+    "ready_status": 200,
+    "info_status": 200,
+    "fact_provider": "deepseek_official",
+    "fact_provider_configured": true,
+    "fact_provider_endpoint": "/responses",
+    "fact_model": "deepseek-v4-pro",
+    "build_revision": "f509514",
+    "task_types": [
+      "requirement_extraction",
+      "response_planning",
+      "claim_generation",
+      "section_drafting",
+      "targeted_revision",
+      "evidence_fact_extraction",
+      "evidence_fact_candidate_v2",
+      "evidence_fact_candidate_v2_1",
+      "draft_sections",
+      "evidence_support_assessment",
+      "requirement_evidence_mapping"
+    ]
+  },
+  "component_hashes": {
+    "packages/semantic-contracts/index.js": {
+      "path": "packages/semantic-contracts/index.js",
+      "exists": true,
+      "sha256": "7e8be5baeb08e5b1b120cd6b4f13918ad196b82b75863b733080cc878564b115",
+      "bytes": 75523
+    },
+    "backend/src/pipeline/requirement-extraction.js": {
+      "path": "backend/src/pipeline/requirement-extraction.js",
+      "exists": true,
+      "sha256": "54a3be043763114ba8517bf30f29e123236dd7057178605962283170cb6017fa",
+      "bytes": 5384
+    },
+    "backend/src/pipeline/requirement-chunker.js": {
+      "path": "backend/src/pipeline/requirement-chunker.js",
+      "exists": true,
+      "sha256": "9256a9914ebdf09200025019c29ee93754f04fe97b917c0d2fad568b5283fe2f",
+      "bytes": 19662
+    },
+    "backend/src/pipeline/canonical-requirements.js": {
+      "path": "backend/src/pipeline/canonical-requirements.js",
+      "exists": true,
+      "sha256": "9d21df8a18163f960d565df4a088232b60c669f101d5a776e60b5647103e1c99",
+      "bytes": 14040
+    },
+    "backend/src/pipeline/requirement-quality-gate.js": {
+      "path": "backend/src/pipeline/requirement-quality-gate.js",
+      "exists": true,
+      "sha256": "f84fe3c76ae704e3c33960b83ac3b8f1652649852e6b1958401e452d6fe381ed",
+      "bytes": 27589
+    },
+    "backend/src/pipeline/source-location-resolver.js": {
+      "path": "backend/src/pipeline/source-location-resolver.js",
+      "exists": true,
+      "sha256": "6acac0ad8d027a9dae5b4868714230556c0da02dffa5e1cd7f69cc2f349a065c",
+      "bytes": 5903
+    },
+    "backend/src/pipeline/pdf-table-layout-annotator.js": {
+      "path": "backend/src/pipeline/pdf-table-layout-annotator.js",
+      "exists": true,
+      "sha256": "7cde4205148c5c857f97546cbed0991610f0885264774e18dbc6d79e9b74b035",
+      "bytes": 23557
+    },
+    "backend/src/pipeline/tender-section-classifier.js": {
+      "path": "backend/src/pipeline/tender-section-classifier.js",
+      "exists": true,
+      "sha256": "1a09cb8b832a178ffd572bb26547e6ba17ffc34e59dfd706a549e197e96d7b44",
+      "bytes": 7656
+    },
+    "backend/src/pipeline/semantic-gateway-evidence-fact-extractor.js": {
+      "path": "backend/src/pipeline/semantic-gateway-evidence-fact-extractor.js",
+      "exists": true,
+      "sha256": "d1363cea8b4e1d0c66f92bc875cad49ffc0d5e4c61be066dfcf0932bdb70826f",
+      "bytes": 27469
+    },
+    "backend/src/pipeline/evidence-fact-candidate-v2.js": {
+      "path": "backend/src/pipeline/evidence-fact-candidate-v2.js",
+      "exists": true,
+      "sha256": "c88a2fd6e70ac47fb2f13d10f27bfc9c313ecd677bcd9bf52529ae43fb3f8df8",
+      "bytes": 17728
+    },
+    "backend/src/pipeline/evidence-fact-candidate-v2-1.js": {
+      "path": "backend/src/pipeline/evidence-fact-candidate-v2-1.js",
+      "exists": true,
+      "sha256": "bb1c1e49c7b832bb0e914a4a081d17d99c60f9e0a730f28517f49c4a0d49ac13",
+      "bytes": 6869
+    },
+    "backend/src/pipeline/enterprise-evidence-source-router.js": {
+      "path": "backend/src/pipeline/enterprise-evidence-source-router.js",
+      "exists": true,
+      "sha256": "9df8a169e1febb49797f1261c716718c7cb22ce0d95718cd1917c98d4e1af633",
+      "bytes": 17000
+    },
+    "services/semantic-gateway/src/task-router.js": {
+      "path": "services/semantic-gateway/src/task-router.js",
+      "exists": true,
+      "sha256": "cad8077807d7e6859de04d0eb69dc0d88d096c23f3ae57806b007702c38f1509",
+      "bytes": 22433
+    },
+    "services/semantic-gateway/src/gateway.js": {
+      "path": "services/semantic-gateway/src/gateway.js",
+      "exists": true,
+      "sha256": "0d232cb34379b6de16ee5b043e7dfb7ede4350ac7f0d1c1ab4d43a28423b8fcc",
+      "bytes": 33859
+    }
+  },
+  "contract": {
+    "task_type": "evidence_fact_candidate_v2_1",
+    "schema_version": "4.3-evidence-fact-candidate-v2.1",
+    "schema_sha256": "3dcece82464fcbd0351fe4444cc66994d36e40ca6ca97a3f2d0ba01e5e44f0b3",
+    "prompt_version": "4.3-evidence-fact-candidate-v2-prompt-v2",
+    "prompt_hash": "ba1ab6d2a298176ee27528b0e3d1bfe71f373fa99bb82c06cda780ba4272d642",
+    "canonicalizer_version": "4.3-evidence-fact-canonicalizer-v2.1",
+    "grounding_version": "4.3-evidence-fact-grounding-v2.1",
+    "model_source_text": false,
+    "source_refs_only": true
+  },
+  "side_effect_policy": {
+    "provider_calls_before_dispatch": 0,
+    "production_db_writes": 0,
+    "fact_persistence": 0,
+    "gold_mutations": 0,
+    "mapping_actions": 0,
+    "claim_actions": 0,
+    "writer_actions": 0
+  }
+}

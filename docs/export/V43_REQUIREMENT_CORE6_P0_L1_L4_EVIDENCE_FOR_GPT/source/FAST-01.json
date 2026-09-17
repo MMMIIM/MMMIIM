@@ -1,0 +1,3341 @@
+{
+  "packet_version": "reqx-v3-real-tender-gold-packet-v1",
+  "annotation_status": "GPT_GOLD_REVIEWED",
+  "tender_id": "FAST-01",
+  "title": "大鹏医疗健康集团信息化建设一期（含七娘山护理院）信息系统运维服务项目",
+  "industry": "HEALTHCARE_INFORMATION_SYSTEM",
+  "project_type": "OPERATION_MAINTENANCE",
+  "source_file": "backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf",
+  "source_file_sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+  "source_extraction": {
+    "extractor": "tender-text-extractor-v1",
+    "extracted_character_count": 53622,
+    "extracted_paragraph_count": 2402,
+    "selected_window_character_count": 4930,
+    "selected_window_paragraph_count": 255,
+    "selection": {
+      "type": "controlled_paragraph_window",
+      "start_paragraph": 469,
+      "end_paragraph": 723
+    },
+    "warning": "NO_TECHNICAL_REQUIREMENTS_FOUND; existing controlled evaluation window retained."
+  },
+  "chunk_budget": {
+    "singleCallThreshold": 2000,
+    "characterBudget": 2000,
+    "tokenBudget": 8000,
+    "sourceSpanBudget": 50
+  },
+  "gold_item_schema": {
+    "gold_id": "string",
+    "text": "string",
+    "category": "canonical requirement category",
+    "source_range": {
+      "start_ref": "Cxxx-Sxxx",
+      "end_ref": "Cxxx-Sxxx"
+    },
+    "mandatory_observed": "boolean",
+    "requires_confirmation": "boolean"
+  },
+  "gold_requirements": [
+    {
+      "gold_id": "FAST-01-G001",
+      "text": "本项目服务期限为1年，服务时间为2025年12月1日至2026年11月30日；续签不超过两次且长期服务合同履行期限最长不超过36个月。",
+      "category": "constraint",
+      "source_range": {
+        "start_ref": "C001-S032",
+        "end_ref": "C001-S035"
+      },
+      "mandatory_observed": true,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G002",
+      "text": "项目负责人须为投标人自有员工，并与供应商基本情况表填报一致；须按要求提供近一个月社保证明，注册不足1个月时可提供承诺函。",
+      "category": "implementation",
+      "source_range": {
+        "start_ref": "C001-S037",
+        "end_ref": "C001-S040"
+      },
+      "mandatory_observed": true,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G003",
+      "text": "维护服务范围应覆盖HIS、电子病历、PACS-RIS、LIS、体检、手术麻醉、心电、输血、院感、药事等10个业务软件系统及相关接口。",
+      "category": "service",
+      "source_range": {
+        "start_ref": "C002-S009",
+        "end_ref": "C002-S012"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G004",
+      "text": "应及时处理信息系统使用过程中出现的问题。",
+      "category": "service",
+      "source_range": {
+        "start_ref": "C002-S013",
+        "end_ref": "C002-S013"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G005",
+      "text": "应及时优化处理信息系统操作变慢、性能降低等性能问题。",
+      "category": "performance",
+      "source_range": {
+        "start_ref": "C002-S014",
+        "end_ref": "C002-S015"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G006",
+      "text": "应按院方要求指导培训使用人员熟练使用信息系统。",
+      "category": "service",
+      "source_range": {
+        "start_ref": "C002-S016",
+        "end_ref": "C002-S017"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G007",
+      "text": "应协助院方按照需求进行相关数据处理。",
+      "category": "data",
+      "source_range": {
+        "start_ref": "C002-S018",
+        "end_ref": "C002-S018"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G008",
+      "text": "应每天检查服务器、应用系统使用情况和运行日志，并每季度进行一次深度检查。",
+      "category": "service",
+      "source_range": {
+        "start_ref": "C002-S019",
+        "end_ref": "C002-S020"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G009",
+      "text": "应配合院方完成系统安全相关工作，包括补丁升级、漏洞修复和安全检查协助等。",
+      "category": "security",
+      "source_range": {
+        "start_ref": "C002-S021",
+        "end_ref": "C002-S023"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G010",
+      "text": "应派驻3名软件维护工程师分别驻点用户指定地点，提供系统轮巡、现场及远程故障处理等服务。",
+      "category": "implementation",
+      "source_range": {
+        "start_ref": "C003-S003",
+        "end_ref": "C003-S005"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G011",
+      "text": "驻点服务人员须遵守医院规章制度，并对工作期间接触的医院资料、信息或秘密保密。",
+      "category": "security",
+      "source_range": {
+        "start_ref": "C003-S006",
+        "end_ref": "C003-S008"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G012",
+      "text": "工作日驻场维护时间为8:00-17:00，其他时间可远程协助，必要时现场处理，紧急或临时任务需配合加班。",
+      "category": "service",
+      "source_range": {
+        "start_ref": "C003-S008",
+        "end_ref": "C003-S011"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G013",
+      "text": "合同期间应保持驻点人员稳定；特殊情况调整须提前一个月书面通知，经院方同意并完成交接后方可离开。",
+      "category": "implementation",
+      "source_range": {
+        "start_ref": "C003-S012",
+        "end_ref": "C003-S015"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G014",
+      "text": "院方要求调整驻点人员时，投标人应在一个月内更换并确保新人员满足院方要求。",
+      "category": "implementation",
+      "source_range": {
+        "start_ref": "C003-S015",
+        "end_ref": "C003-S016"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G015",
+      "text": "驻点人员休假或请假期间，应安排临时人员顶替以保证系统故障及时处理。",
+      "category": "service",
+      "source_range": {
+        "start_ref": "C003-S017",
+        "end_ref": "C003-S018"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G016",
+      "text": "信息系统宕机等严重影响业务且现场人员预计30分钟内无法排除时，应安排技术人员2小时内到场处理。",
+      "category": "performance",
+      "source_range": {
+        "start_ref": "C003-S018",
+        "end_ref": "C003-S020"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G017",
+      "text": "应为驻点人员配备值班手机，保证24小时通讯通畅，并提供应急电话和投诉电话，对问题及时跟踪处理。",
+      "category": "service",
+      "source_range": {
+        "start_ref": "C003-S021",
+        "end_ref": "C003-S023"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G018",
+      "text": "驻点人员应详细记录问题处理过程，包括问题描述、提出人、提出时间、解决时间和解决办法等。",
+      "category": "delivery",
+      "source_range": {
+        "start_ref": "C003-S024",
+        "end_ref": "C003-S026"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G019",
+      "text": "应按规定提交服务报告：周报每周四17:00前、月报每月5日17:00前、季度巡检报告巡检后15个工作日内、服务到期后提交年度整体报告。",
+      "category": "delivery",
+      "source_range": {
+        "start_ref": "C003-S026",
+        "end_ref": "C003-S029"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G020",
+      "text": "问题处理应遵循故障分级响应机制；一级故障或其他级别超时未解决时应及时报告指定人员，一级故障解决后一天内提交重大信息事件报告。",
+      "category": "service",
+      "source_range": {
+        "start_ref": "C003-S030",
+        "end_ref": "C003-S032"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G021",
+      "text": "一级故障应立即响应、立即处理，并在30分钟内解决。",
+      "category": "performance",
+      "source_range": {
+        "start_ref": "C003-S042",
+        "end_ref": "C003-S048"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G022",
+      "text": "二级故障应立即响应，处理时间不超过10分钟，解决时间不超过50分钟。",
+      "category": "performance",
+      "source_range": {
+        "start_ref": "C003-S049",
+        "end_ref": "C004-S007"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G023",
+      "text": "三级故障响应时间不超过10分钟、处理时间不超过30分钟、解决时间不超过2小时。",
+      "category": "performance",
+      "source_range": {
+        "start_ref": "C004-S008",
+        "end_ref": "C004-S017"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G024",
+      "text": "四级故障响应时间不超过20分钟、处理时间不超过1小时、解决时间不超过24小时。",
+      "category": "performance",
+      "source_range": {
+        "start_ref": "C004-S018",
+        "end_ref": "C004-S028"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G025",
+      "text": "适应性调整维护应充分调研和分析需求，提出解决方案并明确解决时间，经需求提出者确认后方可实施。",
+      "category": "implementation",
+      "source_range": {
+        "start_ref": "C004-S029",
+        "end_ref": "C004-S031"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G026",
+      "text": "适应性调整维护仅限现有功能模块、政策类需求、接口优化及数据报表统计处理，不包括新增功能模块。",
+      "category": "constraint",
+      "source_range": {
+        "start_ref": "C004-S031",
+        "end_ref": "C004-S033"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G027",
+      "text": "一般需求应一周内完成，重大需求最长不超过一个月；特殊情况不能按时完成时应提前告知并协商完成时间。",
+      "category": "performance",
+      "source_range": {
+        "start_ref": "C004-S033",
+        "end_ref": "C004-S035"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G028",
+      "text": "应定期开展软件和数据库巡检并按时提交巡检报告，检查内容包括性能、功能正确性、可用性、安全性、参数合理性和性能优化等。",
+      "category": "service",
+      "source_range": {
+        "start_ref": "C004-S036",
+        "end_ref": "C004-S039"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G029",
+      "text": "巡检发现的问题应依据双方确认的故障分类标准，由现场技术服务工程师进行相应故障排除。",
+      "category": "service",
+      "source_range": {
+        "start_ref": "C004-S039",
+        "end_ref": "C004-S040"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G030",
+      "text": "非工作时间一级故障须立即到场处理；其他问题可远程处理，30分钟仍不能远程解决时二级故障应立即到场，三级和四级故障可协商工作时间处理。",
+      "category": "service",
+      "source_range": {
+        "start_ref": "C004-S041",
+        "end_ref": "C004-S044"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G031",
+      "text": "现场人员应遵守用户各项规章制度并按相应制度办事。",
+      "category": "constraint",
+      "source_range": {
+        "start_ref": "C004-S045",
+        "end_ref": "C004-S047"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G032",
+      "text": "应与用户运行维护体系其他部门和环节协同配合开展技术支持。",
+      "category": "service",
+      "source_range": {
+        "start_ref": "C004-S048",
+        "end_ref": "C004-S049"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G033",
+      "text": "出现疑难技术、业务问题和重大紧急情况时应及时向负责人报告。",
+      "category": "service",
+      "source_range": {
+        "start_ref": "C004-S050",
+        "end_ref": "C005-S001"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G034",
+      "text": "现场技术支持及电话服务应保持规范、文明的职业行为和沟通。",
+      "category": "constraint",
+      "source_range": {
+        "start_ref": "C005-S002",
+        "end_ref": "C005-S003"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G035",
+      "text": "应遵守信息安全和保密原则，对网络、主机、系统软件、应用软件的密码、核心参数及业务数据等承担保密责任，不得随意复制和传播。",
+      "category": "security",
+      "source_range": {
+        "start_ref": "C005-S004",
+        "end_ref": "C005-S007"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G036",
+      "text": "项目工作团队不少于3人（含项目负责人），团队成员均应为投标人自有员工。",
+      "category": "implementation",
+      "source_range": {
+        "start_ref": "C005-S008",
+        "end_ref": "C005-S010"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G037",
+      "text": "项目负责人至少具有本科（或以上）学历，负责信息系统运维、驻场服务及管理等工作。",
+      "category": "implementation",
+      "source_range": {
+        "start_ref": "C005-S010",
+        "end_ref": "C005-S012"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G038",
+      "text": "项目组员负责信息系统运维服务及驻场服务等工作。",
+      "category": "implementation",
+      "source_range": {
+        "start_ref": "C005-S012",
+        "end_ref": "C005-S015"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    },
+    {
+      "gold_id": "FAST-01-G039",
+      "text": "服务地点为深圳市大鹏新区医疗健康集团。",
+      "category": "constraint",
+      "source_range": {
+        "start_ref": "C006-S009",
+        "end_ref": "C006-S009"
+      },
+      "mandatory_observed": false,
+      "requires_confirmation": false
+    }
+  ],
+  "windows": [
+    {
+      "chunk_number": 1,
+      "character_count": 780,
+      "estimated_token_count": 684,
+      "source_start_offset": 0,
+      "source_end_offset": 780,
+      "spans": [
+        {
+          "span_id": "C001-S001",
+          "text": "第三章 用户需求书",
+          "page": 14,
+          "paragraph": 469,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 0,
+          "source_end_offset": 9,
+          "source_text_sha256": "635b3e121e10e61052eb7a2b5a5ff9a6634e8a410c5c1855ecccef18d9d24241"
+        },
+        {
+          "span_id": "C001-S002",
+          "text": "一、项目基本信息",
+          "page": 14,
+          "paragraph": 470,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 10,
+          "source_end_offset": 18,
+          "source_text_sha256": "8c319c533e55250f104c54453eac3a959110aa3ba82f5b39e1efb1337c5eaeea"
+        },
+        {
+          "span_id": "C001-S003",
+          "text": "序",
+          "page": 14,
+          "paragraph": 471,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 19,
+          "source_end_offset": 20,
+          "source_text_sha256": "6f47a97d45b03124f1d03c53deceed3aa01689a5e20ba55b84a8a76683bac1fd"
+        },
+        {
+          "span_id": "C001-S004",
+          "text": "号 采购项目名称 预算金额（元/年）",
+          "page": 14,
+          "paragraph": 472,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 21,
+          "source_end_offset": 39,
+          "source_text_sha256": "cef9990df716283baab925c6581af50480f3cfd5475df2563574630540adfd80"
+        },
+        {
+          "span_id": "C001-S005",
+          "text": "1",
+          "page": 14,
+          "paragraph": 473,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 40,
+          "source_end_offset": 41,
+          "source_text_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+        },
+        {
+          "span_id": "C001-S006",
+          "text": "大鹏医疗健康集团信息化建设一期",
+          "page": 14,
+          "paragraph": 474,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 42,
+          "source_end_offset": 57,
+          "source_text_sha256": "b2a33761d76143a501e267f98af503cb88f1cc4f54df50dd82759db3f67639e4"
+        },
+        {
+          "span_id": "C001-S007",
+          "text": "（含七娘山护理院）信息系统运维服",
+          "page": 14,
+          "paragraph": 475,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 58,
+          "source_end_offset": 74,
+          "source_text_sha256": "40385d1f95b0ca09ccd97439c54626b6d26e526e0395a6ca1adc0ea743f3ef9d"
+        },
+        {
+          "span_id": "C001-S008",
+          "text": "务项目",
+          "page": 14,
+          "paragraph": 476,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 75,
+          "source_end_offset": 78,
+          "source_text_sha256": "eaa522fa382bccb61762eebbdfb7d22d62cf7669bba5e43d9f0494c1564634d2"
+        },
+        {
+          "span_id": "C001-S009",
+          "text": "795000",
+          "page": 14,
+          "paragraph": 477,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 79,
+          "source_end_offset": 85,
+          "source_text_sha256": "0bb48f4a914426d6a12faed86828abdba563e3659cbc8433a284539499d6419a"
+        },
+        {
+          "span_id": "C001-S010",
+          "text": "二、项目概况",
+          "page": 14,
+          "paragraph": 478,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 86,
+          "source_end_offset": 92,
+          "source_text_sha256": "daa36feb6133f2ab7aa58536cb774e76bee67cca321ced1152d5d7766295961b"
+        },
+        {
+          "span_id": "C001-S011",
+          "text": "《深圳市大鹏新区人口健康信息化建设（一期）项目（应用软件）采购》项目于 2018",
+          "page": 14,
+          "paragraph": 479,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 93,
+          "source_end_offset": 133,
+          "source_text_sha256": "9e91fbbe567fdaec60e180b4a86e65f186798526819a4a1a8f384820352a4070"
+        },
+        {
+          "span_id": "C001-S012",
+          "text": "由深圳市大鹏新区医疗健康集团承建，建设内容包括医院十大应用系统：HIS 系统、电子病",
+          "page": 14,
+          "paragraph": 480,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 134,
+          "source_end_offset": 176,
+          "source_text_sha256": "fd5e73621c442a004e66a85ab00c4cfdbe77bf1a041e0d4f1719a80e64d961fc"
+        },
+        {
+          "span_id": "C001-S013",
+          "text": "历系统、PACS-RIS 系统、LIS 系统、体检信息系统、手术麻醉信息系统、心电管理系统、输",
+          "page": 14,
+          "paragraph": 481,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 177,
+          "source_end_offset": 224,
+          "source_text_sha256": "c1c6a90d17e46996fc0489c97633b3676d91409133662a6ad4aef0b9ab1ebcd7"
+        },
+        {
+          "span_id": "C001-S014",
+          "text": "血管理系统、院感管理系统、药事管理系统。项目建设成果显著，为及时解决三家医院及七",
+          "page": 14,
+          "paragraph": 482,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 225,
+          "source_end_offset": 265,
+          "source_text_sha256": "d2d83dc3d0b6f3dd73cd2201ca7e854b75cef6275a2d9edbafe4647299166c6c"
+        },
+        {
+          "span_id": "C001-S015",
+          "text": "娘山护理院信息系统日常操作中出现的各种问题以及满足集团信息一体化管理要求进行软",
+          "page": 14,
+          "paragraph": 483,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 266,
+          "source_end_offset": 305,
+          "source_text_sha256": "5aa9979c98409b34391bc85d3eb940ce993f81b4c2f7b5df8154e693195bac1a"
+        },
+        {
+          "span_id": "C001-S016",
+          "text": "件维护服务。",
+          "page": 14,
+          "paragraph": 484,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 306,
+          "source_end_offset": 312,
+          "source_text_sha256": "0c0c6bb6f3e8ee20af4bcacb66ecce814c0e058290d1426cdb571f9383504509"
+        },
+        {
+          "span_id": "C001-S017",
+          "text": "三、服务需求明细",
+          "page": 14,
+          "paragraph": 485,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 313,
+          "source_end_offset": 321,
+          "source_text_sha256": "2588cd911859a2aa92e1b184fc9ce7bddddc8460ff070a9a9ec79fef8aec78cb"
+        },
+        {
+          "span_id": "C001-S018",
+          "text": "序",
+          "page": 14,
+          "paragraph": 486,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 322,
+          "source_end_offset": 323,
+          "source_text_sha256": "6f47a97d45b03124f1d03c53deceed3aa01689a5e20ba55b84a8a76683bac1fd"
+        },
+        {
+          "span_id": "C001-S019",
+          "text": "号 服务需求名称（标的名称） 数量 单位 是否专门面",
+          "page": 14,
+          "paragraph": 487,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 324,
+          "source_end_offset": 350,
+          "source_text_sha256": "140a8ef2c1e016e8b3389e9ea320395ea21430906de47db16b6ef6228093113c"
+        },
+        {
+          "span_id": "C001-S020",
+          "text": "向中小企业",
+          "page": 14,
+          "paragraph": 488,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 351,
+          "source_end_offset": 356,
+          "source_text_sha256": "96ad2bd63e47aa1e553d011c06e615479d6afd7e96643fd2d4d9ef652151f042"
+        },
+        {
+          "span_id": "C001-S021",
+          "text": "标的所属",
+          "page": 14,
+          "paragraph": 489,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 357,
+          "source_end_offset": 361,
+          "source_text_sha256": "7e2178ea401f7844dcb905254b4c0a06ecb847117474f2a25327941a90202129"
+        },
+        {
+          "span_id": "C001-S022",
+          "text": "行业",
+          "page": 14,
+          "paragraph": 490,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 362,
+          "source_end_offset": 364,
+          "source_text_sha256": "20333b8655f19dee865fa35337f9ddfbde3c25c57c441773275b7904c4dda083"
+        },
+        {
+          "span_id": "C001-S023",
+          "text": "1",
+          "page": 14,
+          "paragraph": 491,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 365,
+          "source_end_offset": 366,
+          "source_text_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+        },
+        {
+          "span_id": "C001-S024",
+          "text": "大鹏医疗健康集团信息化建设一期",
+          "page": 14,
+          "paragraph": 492,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 367,
+          "source_end_offset": 382,
+          "source_text_sha256": "b2a33761d76143a501e267f98af503cb88f1cc4f54df50dd82759db3f67639e4"
+        },
+        {
+          "span_id": "C001-S025",
+          "text": "（含七娘山护理院）信息系统运维服",
+          "page": 14,
+          "paragraph": 493,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 383,
+          "source_end_offset": 399,
+          "source_text_sha256": "40385d1f95b0ca09ccd97439c54626b6d26e526e0395a6ca1adc0ea743f3ef9d"
+        },
+        {
+          "span_id": "C001-S026",
+          "text": "务项目",
+          "page": 14,
+          "paragraph": 494,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 400,
+          "source_end_offset": 403,
+          "source_text_sha256": "eaa522fa382bccb61762eebbdfb7d22d62cf7669bba5e43d9f0494c1564634d2"
+        },
+        {
+          "span_id": "C001-S027",
+          "text": "1 项 否 软件和信息",
+          "page": 14,
+          "paragraph": 495,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 404,
+          "source_end_offset": 415,
+          "source_text_sha256": "672d23355a4c0c43391a67b7733ea1bd12e3561d7535f2f8fa4b0dc7c2b04f7b"
+        },
+        {
+          "span_id": "C001-S028",
+          "text": "技术服务业",
+          "page": 14,
+          "paragraph": 496,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 416,
+          "source_end_offset": 421,
+          "source_text_sha256": "8616a80809c90dea4e1e12366445cae26f11f8660764e6faa55dd6e8c0cf4759"
+        },
+        {
+          "span_id": "C001-S029",
+          "text": "四、实质性条款",
+          "page": 14,
+          "paragraph": 497,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 422,
+          "source_end_offset": 429,
+          "source_text_sha256": "0e5d8d28530f7478b55368c2474abb2d172c501db15b91306fea5bd31822e163"
+        },
+        {
+          "span_id": "C001-S030",
+          "text": "序号 实质性条款具体内容",
+          "page": 14,
+          "paragraph": 498,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 430,
+          "source_end_offset": 442,
+          "source_text_sha256": "a185bbdc6d52b7208226952a6d3a964829dfb309558f168f69dd3b712a5fdc86"
+        },
+        {
+          "span_id": "C001-S031",
+          "text": "1",
+          "page": 14,
+          "paragraph": 499,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 443,
+          "source_end_offset": 444,
+          "source_text_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+        },
+        {
+          "span_id": "C001-S032",
+          "text": "★服务期限：本项目服务期限为 1 年，服务时间为 2025 年 12 月 1 日至 2026 年 11",
+          "page": 14,
+          "paragraph": 500,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 445,
+          "source_end_offset": 496,
+          "source_text_sha256": "598a9c3979e4f863163eb3909ff8ca2f2a69faf5a8b1e1deecf89e40a1963129"
+        },
+        {
+          "span_id": "C001-S033",
+          "text": "月 30 日。服务期满后，根据中标供应商履约及考核情况确定是否续签，续签不超过",
+          "page": 14,
+          "paragraph": 501,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 497,
+          "source_end_offset": 536,
+          "source_text_sha256": "53b4e07656627b19e90cc3b75bae3554d51d84b9635daf1a7b3f6fd2649b4714"
+        },
+        {
+          "span_id": "C001-S034",
+          "text": "两次（一年一签），长期服务政府采购合同履行期限最长不得超过三十六个月，如",
+          "page": 14,
+          "paragraph": 502,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 537,
+          "source_end_offset": 573,
+          "source_text_sha256": "3fffbe1e5378acdc178f8a13fa78e7377476bc0445c210a12709809021c1fc04"
+        },
+        {
+          "span_id": "C001-S035",
+          "text": "采购方对履约情况不满意，采购方不再续约。",
+          "page": 14,
+          "paragraph": 503,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 574,
+          "source_end_offset": 594,
+          "source_text_sha256": "994b93819a01a4cf8c2003bf1c559f4528cd0ee99f5006fa3803a137bd967abb"
+        },
+        {
+          "span_id": "C001-S036",
+          "text": "2",
+          "page": 14,
+          "paragraph": 504,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 595,
+          "source_end_offset": 596,
+          "source_text_sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"
+        },
+        {
+          "span_id": "C001-S037",
+          "text": "★项目负责人为投标人自有员工且与招标文件中五、供应商基本情况表的项目负责",
+          "page": 14,
+          "paragraph": 505,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 597,
+          "source_end_offset": 633,
+          "source_text_sha256": "99d2ce34d278647e84f479d7f155d034c47259902e3b9f41f56e90b5c8d6e1ce"
+        },
+        {
+          "span_id": "C001-S038",
+          "text": "人填报一致。要求提供社保部门出具的投标人为其缴纳的近一个月（含开标当月）",
+          "page": 14,
+          "paragraph": 506,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 634,
+          "source_end_offset": 670,
+          "source_text_sha256": "c653b3593c6fdf24dc66c76fe3080a4395800461f4b2213fa4c59de734dc591e"
+        },
+        {
+          "span_id": "C001-S039",
+          "text": "的社保证明作为本单位员工的证明依据；如投标人注册成立时间不足 1 个月的，可",
+          "page": 14,
+          "paragraph": 507,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 671,
+          "source_end_offset": 709,
+          "source_text_sha256": "e1f941259666fc1c633e8fe39f07c41d5f679b5a7e354bd13a1a9c1aa6ea37cb"
+        },
+        {
+          "span_id": "C001-S040",
+          "text": "提供承诺函(格式自拟)，无需提供相关人员社保证明。",
+          "page": 14,
+          "paragraph": 508,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 710,
+          "source_end_offset": 735,
+          "source_text_sha256": "2df597ef2c91351bd8e539ef05692ee48b3b29222cbfbdf87a663d99d351aaaa"
+        },
+        {
+          "span_id": "C001-S041",
+          "text": "注：上表所列内容为不可负偏离条款，负偏离将视为未实质性满足招标文件要求作投标无效",
+          "page": 14,
+          "paragraph": 509,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 736,
+          "source_end_offset": 776,
+          "source_text_sha256": "07916beb7fd9f6cca99e91bfca18463027fa6826f0062fb5037fa3b3057fee81"
+        },
+        {
+          "span_id": "C001-S042",
+          "text": "处理。",
+          "page": 14,
+          "paragraph": 510,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 777,
+          "source_end_offset": 780,
+          "source_text_sha256": "141b3808fc9d3372e627770111599b82aac9bfbe868c4a167f109bb40e34c285"
+        }
+      ]
+    },
+    {
+      "chunk_number": 2,
+      "character_count": 462,
+      "estimated_token_count": 415,
+      "source_start_offset": 781,
+      "source_end_offset": 1243,
+      "spans": [
+        {
+          "span_id": "C002-S001",
+          "text": "五、技术要求",
+          "page": 14,
+          "paragraph": 511,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 781,
+          "source_end_offset": 787,
+          "source_text_sha256": "f0eafdee8e22eb2d09104bcf8181d7c9e6ce69c2f09a7d90220d4f3e6bfa2e71"
+        },
+        {
+          "span_id": "C002-S002",
+          "text": "序号 名称 具体内容",
+          "page": 14,
+          "paragraph": 512,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 788,
+          "source_end_offset": 798,
+          "source_text_sha256": "df5b264ec5c57779c2e93b0d8a5e5533899dc956afa1f6649f55eac6f14e873f"
+        },
+        {
+          "span_id": "C002-S003",
+          "text": "1 服务内容",
+          "page": 14,
+          "paragraph": 513,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 799,
+          "source_end_offset": 805,
+          "source_text_sha256": "d8b2fa98f37f3e91de1bf9bdac913ff1c5dd9b24d2698c04788e0c5398867a24"
+        },
+        {
+          "span_id": "C002-S004",
+          "text": "一、信息系统运维服务要求",
+          "page": 14,
+          "paragraph": 514,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 806,
+          "source_end_offset": 818,
+          "source_text_sha256": "e2891b4e05368ae98178ccf84ec46af9b8874e4ea1078dcdb3cf5f86050db684"
+        },
+        {
+          "span_id": "C002-S005",
+          "text": "要求投标人针对大鹏新区各区属公立医院（含七娘山护理院）",
+          "page": 14,
+          "paragraph": 515,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 819,
+          "source_end_offset": 846,
+          "source_text_sha256": "bdb155bbda222c97c02e0bd16d1aef41c6ef957cbe832764b9d44638091e3913"
+        },
+        {
+          "span_id": "C002-S006",
+          "text": "信息化建设情况有深入的了解，并能提供针对性的维护服务，",
+          "page": 14,
+          "paragraph": 516,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 847,
+          "source_end_offset": 874,
+          "source_text_sha256": "16abbdd0b063926d3b28c3628165a75df9a33b788c64d5dd03a26e95576d15d5"
+        },
+        {
+          "span_id": "C002-S007",
+          "text": "14 / 56",
+          "page": 14,
+          "paragraph": 517,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 875,
+          "source_end_offset": 882,
+          "source_text_sha256": "ca8cd39707c89ec0235c03d466dad7e50bb9d798852a6a44e70047fc93a6f29e"
+        },
+        {
+          "span_id": "C002-S008",
+          "text": "- 15 -",
+          "page": 15,
+          "paragraph": 518,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 883,
+          "source_end_offset": 889,
+          "source_text_sha256": "46c92d11278e290104b8c5b272f5682002a875f744f52d8210f08b379c805ae7"
+        },
+        {
+          "span_id": "C002-S009",
+          "text": "本次项目维护服务内容包括对 HIS 系统、电子病历系统、",
+          "page": 15,
+          "paragraph": 519,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 890,
+          "source_end_offset": 918,
+          "source_text_sha256": "14043203f42bb130f726a78651f5acdf448218a340fad4543673293578d05c3b"
+        },
+        {
+          "span_id": "C002-S010",
+          "text": "PACS-RIS 系统、LIS 系统、体检信息系统、手术麻醉信息系统、",
+          "page": 15,
+          "paragraph": 520,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 919,
+          "source_end_offset": 954,
+          "source_text_sha256": "2b36bef45e00fcf612213eb3d5501a75a63e4d3d6455f6b38264ec844dde5aea"
+        },
+        {
+          "span_id": "C002-S011",
+          "text": "心电管理系统、输血管理系统、院感管理系统、药事管理系统",
+          "page": 15,
+          "paragraph": 521,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 955,
+          "source_end_offset": 982,
+          "source_text_sha256": "64f30dc0c603fe48f1ac41e0d4d0a728b732e8e3625a0cff2f2774ad5727b626"
+        },
+        {
+          "span_id": "C002-S012",
+          "text": "10 个业务软件系统及相关接口维护，主要服务内容要求如下：",
+          "page": 15,
+          "paragraph": 522,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 983,
+          "source_end_offset": 1012,
+          "source_text_sha256": "d61dc785ed24f3f73b56f6cbc17d0ca892ef8e910c064832662efe5199874dd1"
+        },
+        {
+          "span_id": "C002-S013",
+          "text": "（1）问题处理，及时解决信息系统在使用过程中出现的问题。",
+          "page": 15,
+          "paragraph": 523,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1013,
+          "source_end_offset": 1041,
+          "source_text_sha256": "ed7d801526522d482c61969e8ef5f54bdc3a8091f56d2c6af35dd566783ea62f"
+        },
+        {
+          "span_id": "C002-S014",
+          "text": "（2）性能优化，及时优化处理信息系统操作变慢、性能降低",
+          "page": 15,
+          "paragraph": 524,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1042,
+          "source_end_offset": 1069,
+          "source_text_sha256": "5d49cf4fe85d251400262fcc388c7da36adc51f0484dc344d233e5df6dac8f24"
+        },
+        {
+          "span_id": "C002-S015",
+          "text": "等问题。",
+          "page": 15,
+          "paragraph": 525,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1070,
+          "source_end_offset": 1074,
+          "source_text_sha256": "4ae5a38db5eed1884fe3e9c8536a3dcccd3031176cab1056f9723f863688c218"
+        },
+        {
+          "span_id": "C002-S016",
+          "text": "（3）操作培训，按院方要求指导培训使用人员熟练使用信息",
+          "page": 15,
+          "paragraph": 526,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1075,
+          "source_end_offset": 1102,
+          "source_text_sha256": "78ab0af5fa5363b32b5e795fd51816aeb675a91e3388bf64989ebdc198f13c5f"
+        },
+        {
+          "span_id": "C002-S017",
+          "text": "系统。",
+          "page": 15,
+          "paragraph": 527,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1103,
+          "source_end_offset": 1106,
+          "source_text_sha256": "e7ad6b03017c0ae91808554ab3f7bc966f9aa32e58d2ab526351f9d65bc1176b"
+        },
+        {
+          "span_id": "C002-S018",
+          "text": "（4）数据处理，协助院方按照需求进行相关数据处理。",
+          "page": 15,
+          "paragraph": 528,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1107,
+          "source_end_offset": 1132,
+          "source_text_sha256": "7dab9b9b7eff8818f79d74f974cfe6aa78a177def96423053ec6feb2752040b2"
+        },
+        {
+          "span_id": "C002-S019",
+          "text": "（5）定期巡检，每天检查服务器、应用系统的使用情况和运",
+          "page": 15,
+          "paragraph": 529,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1133,
+          "source_end_offset": 1160,
+          "source_text_sha256": "3cae8f83ebfad58cc7ff6cd845072c97f5d4cabdd2f2bb49cc0aab5a171c8e7b"
+        },
+        {
+          "span_id": "C002-S020",
+          "text": "行日志，每季度进行一次深度检查。",
+          "page": 15,
+          "paragraph": 530,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1161,
+          "source_end_offset": 1177,
+          "source_text_sha256": "58de6c4ce99fc2ad25f5ec6b9234daa0c39d62c6a209b2bd809506c84b4bc822"
+        },
+        {
+          "span_id": "C002-S021",
+          "text": "（6）系统安全问题处理，配合院方完成系统安全相关工作，",
+          "page": 15,
+          "paragraph": 531,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1178,
+          "source_end_offset": 1205,
+          "source_text_sha256": "ee046e1a4b70c524653c984f2f1fde0f519303b615d81e0ffb586f58021e367e"
+        },
+        {
+          "span_id": "C002-S022",
+          "text": "包括但不限于运维相关系统及主机的补丁升级、漏洞修复以及",
+          "page": 15,
+          "paragraph": 532,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1206,
+          "source_end_offset": 1233,
+          "source_text_sha256": "912de193c47769f4b1d2ea3003277228f851b668175a179f10c5ec6bd01c8bf8"
+        },
+        {
+          "span_id": "C002-S023",
+          "text": "安全检查的协助等。",
+          "page": 15,
+          "paragraph": 533,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1234,
+          "source_end_offset": 1243,
+          "source_text_sha256": "b1531316a3c63d439f2007dba524abb897ac447d724d3bef22eac196465351a9"
+        }
+      ]
+    },
+    {
+      "chunk_number": 3,
+      "character_count": 936,
+      "estimated_token_count": 843,
+      "source_start_offset": 1244,
+      "source_end_offset": 2180,
+      "spans": [
+        {
+          "span_id": "C003-S001",
+          "text": "二、人员驻场服务要求：",
+          "page": 15,
+          "paragraph": 534,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1244,
+          "source_end_offset": 1255,
+          "source_text_sha256": "1461da0778fc139cc33b396a3883ffc797cec7eeb639db71e4135c85e766f2ef"
+        },
+        {
+          "span_id": "C003-S002",
+          "text": "（一）服务内容：",
+          "page": 15,
+          "paragraph": 535,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1256,
+          "source_end_offset": 1264,
+          "source_text_sha256": "d179270ee8ddb19f542fb7aafe658ecb06111d62a1c64abc636ea37ae6c7b911"
+        },
+        {
+          "span_id": "C003-S003",
+          "text": "（1）要求派驻 3 名软件维护工程师分别驻点在用户指定地点，",
+          "page": 15,
+          "paragraph": 536,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1265,
+          "source_end_offset": 1295,
+          "source_text_sha256": "154407f29a8ebb72efc581d561c579080253de59e521b10fda31c14968ed10c7"
+        },
+        {
+          "span_id": "C003-S004",
+          "text": "提供巡检服务，主要包括各医院信息系统轮巡、现场系统故障",
+          "page": 15,
+          "paragraph": 537,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1296,
+          "source_end_offset": 1323,
+          "source_text_sha256": "eee495e7ff1ce09b720e26b42d06c582729e8c29a177c742f1785cba9d1d0d9b"
+        },
+        {
+          "span_id": "C003-S005",
+          "text": "处理、远程故障处理等服务，以便出现故障及时响应。",
+          "page": 15,
+          "paragraph": 538,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1324,
+          "source_end_offset": 1348,
+          "source_text_sha256": "97c2dbb7cd4aedc3064cd4b036b4ae8d0704909fa90eb8748d3a64eddbd0aafc"
+        },
+        {
+          "span_id": "C003-S006",
+          "text": "（2）要求驻点服务人员应严格遵守医院各项规章制度，对工",
+          "page": 15,
+          "paragraph": 539,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1349,
+          "source_end_offset": 1376,
+          "source_text_sha256": "7d22ce5f634708d8d93019d1b462ff78632173a18eea2d0feb99c415794c98bd"
+        },
+        {
+          "span_id": "C003-S007",
+          "text": "作期间接触到的医院的各项资料信息或秘密等进行保密。投标",
+          "page": 15,
+          "paragraph": 540,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1377,
+          "source_end_offset": 1404,
+          "source_text_sha256": "58400aaa9c1f5e6e4bfcee95008bdf6e49ee13deb7eaf55d185d972266dac0b4"
+        },
+        {
+          "span_id": "C003-S008",
+          "text": "人应在工作日提供驻场维护服务，要求按照医院工作日时间为",
+          "page": 15,
+          "paragraph": 541,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1405,
+          "source_end_offset": 1432,
+          "source_text_sha256": "6d47ab49b9c6bc713c24040c77bd595614353ad36772d47356324dbbf7a675b4"
+        },
+        {
+          "span_id": "C003-S009",
+          "text": "上午 8：00-下午 17：00，其它时间可远程协助处理，必要时",
+          "page": 15,
+          "paragraph": 542,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1433,
+          "source_end_offset": 1465,
+          "source_text_sha256": "0fe06a47461ca6dd475b4fb8e7cd51ccec7bf729e872f40fef294f0ee830a2bc"
+        },
+        {
+          "span_id": "C003-S010",
+          "text": "现场处理，如遇紧急情况或临时工作任务等需要加班时，驻点",
+          "page": 15,
+          "paragraph": 543,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1466,
+          "source_end_offset": 1493,
+          "source_text_sha256": "3fb36e4ecd2ff1830d8cd70ecdd54f447e457ab3497ed0dfb3d201436b937169"
+        },
+        {
+          "span_id": "C003-S011",
+          "text": "人员需积极配合院方。",
+          "page": 15,
+          "paragraph": 544,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1494,
+          "source_end_offset": 1504,
+          "source_text_sha256": "c183c454c96e8207a3dd70888bd257dd038bf544dd8621df25bb4ad5d3672239"
+        },
+        {
+          "span_id": "C003-S012",
+          "text": "（3）在合同期间，投标人需保证驻点服务人员的稳定，不得",
+          "page": 15,
+          "paragraph": 545,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1505,
+          "source_end_offset": 1532,
+          "source_text_sha256": "a39a1dbd83ca2738e34f1a12a291c1d61031abd9a8d9bc7c8cc9e75d694e3226"
+        },
+        {
+          "span_id": "C003-S013",
+          "text": "随意进行人员调整，如果因人员离职等特殊情况需要调整时，",
+          "page": 15,
+          "paragraph": 546,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1533,
+          "source_end_offset": 1560,
+          "source_text_sha256": "6b44f9d3ae3061845a48034c1e80d038ffc615bc287fe2fd4642e80fff9d2860"
+        },
+        {
+          "span_id": "C003-S014",
+          "text": "要提前一个月书面通知院方，经院方同意并工作交接完成后才",
+          "page": 15,
+          "paragraph": 547,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1561,
+          "source_end_offset": 1588,
+          "source_text_sha256": "4985e6df02796d9ae2d7ccb7ae94ee372689578d70c843ab57ad14349a141657"
+        },
+        {
+          "span_id": "C003-S015",
+          "text": "能离开，如院方对驻点人员不满意要求调整时，投标人应一个",
+          "page": 15,
+          "paragraph": 548,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1589,
+          "source_end_offset": 1616,
+          "source_text_sha256": "48e058e0134333054b00bfb80c25a38203757090dded9ed095d7dfd5bd2e6b5a"
+        },
+        {
+          "span_id": "C003-S016",
+          "text": "月内进行更换，并确保调整后的人员满足院方要求。",
+          "page": 15,
+          "paragraph": 549,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1617,
+          "source_end_offset": 1640,
+          "source_text_sha256": "cba89aff0f207bb8ca9d0f27a98f5c4244662f7b3436377d8150cbb410119045"
+        },
+        {
+          "span_id": "C003-S017",
+          "text": "（4）驻点服务人员休假和请假期间，投标人需安排临时人员",
+          "page": 15,
+          "paragraph": 550,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1641,
+          "source_end_offset": 1668,
+          "source_text_sha256": "5e40ce20ab9386562e4cc9e4730a6880be51221c9c4e6f15cbadcc6a9e72599b"
+        },
+        {
+          "span_id": "C003-S018",
+          "text": "顶替，保证系统故障及时处理。信息系统发生宕机等意外事件",
+          "page": 15,
+          "paragraph": 551,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1669,
+          "source_end_offset": 1696,
+          "source_text_sha256": "191b1bc57e4d838177d102ecb3fbd007f74a45a33cf896bc9b66e0045139d056"
+        },
+        {
+          "span_id": "C003-S019",
+          "text": "严重影响医院业务，现场驻点维护人员预计 30 分钟内不能排",
+          "page": 15,
+          "paragraph": 552,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1697,
+          "source_end_offset": 1726,
+          "source_text_sha256": "838198e164ff4cbb07aba8b3bfae16281e53eb25e535227c53cca5c4e10eba6d"
+        },
+        {
+          "span_id": "C003-S020",
+          "text": "除故障时，投标人应安排技术人员 2 小时内赶到现场处理。",
+          "page": 15,
+          "paragraph": 553,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1727,
+          "source_end_offset": 1755,
+          "source_text_sha256": "48986036d88788079e0e83b3047909d1ff864ad8d025f65caa772c9bc16b5ebb"
+        },
+        {
+          "span_id": "C003-S021",
+          "text": "（5）要求投标人为驻点服务人员配备值班手机，保证 24 小时",
+          "page": 15,
+          "paragraph": 554,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1756,
+          "source_end_offset": 1786,
+          "source_text_sha256": "98918c093210f26129b0ee2a7e944f59966d520a11a44834be0695b75f917bd6"
+        },
+        {
+          "span_id": "C003-S022",
+          "text": "通讯通畅，需提供应急电话和投诉电话，对反馈的问题及时跟",
+          "page": 15,
+          "paragraph": 555,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1787,
+          "source_end_offset": 1814,
+          "source_text_sha256": "546b51a9a2617eac84954864dccdbdd64078520cc54ed36e4eac9c675c154be9"
+        },
+        {
+          "span_id": "C003-S023",
+          "text": "踪处理。",
+          "page": 15,
+          "paragraph": 556,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1815,
+          "source_end_offset": 1819,
+          "source_text_sha256": "1c94b8102f5529ec3ef6f4f93d6093e0362d95268784e95941ca49db12cf6248"
+        },
+        {
+          "span_id": "C003-S024",
+          "text": "（6）驻点服务人员应详细记录问题处理过程，包括问题描述、",
+          "page": 15,
+          "paragraph": 557,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1820,
+          "source_end_offset": 1848,
+          "source_text_sha256": "3b4369980f5c8c0549bc898e4e0d4438d7d3bc737c8a889bf0909bbf68d1e782"
+        },
+        {
+          "span_id": "C003-S025",
+          "text": "提出人、提出时间、解决时间、解决办法等内容，按时递交工",
+          "page": 15,
+          "paragraph": 558,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1849,
+          "source_end_offset": 1876,
+          "source_text_sha256": "d28e100d111409a3b61229276401f74f9aaedb07e7d29bab978379fd3f73e0a9"
+        },
+        {
+          "span_id": "C003-S026",
+          "text": "作报告，要求每周四下 17：00 前递交上周的服务工作周报，",
+          "page": 15,
+          "paragraph": 559,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1877,
+          "source_end_offset": 1907,
+          "source_text_sha256": "1313ec61acbb6ce38a77d372e0fe049cc07189140b98550e996741945c5f73c2"
+        },
+        {
+          "span_id": "C003-S027",
+          "text": "每月 5 号下午 17：00 前递交服务工作月报，季度巡检报告要",
+          "page": 15,
+          "paragraph": 560,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1908,
+          "source_end_offset": 1940,
+          "source_text_sha256": "71946678ccbdaed4daede5238445745945a8598d01ae48423a0502f887ab206e"
+        },
+        {
+          "span_id": "C003-S028",
+          "text": "求巡检后 15 个工作日内提供，服务到期后递交年度服务整体",
+          "page": 15,
+          "paragraph": 561,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1941,
+          "source_end_offset": 1970,
+          "source_text_sha256": "3896964593e6e89cfed96d686ee1edcd410f4d6c3b24e030a2049870b8c34c2c"
+        },
+        {
+          "span_id": "C003-S029",
+          "text": "报告。",
+          "page": 15,
+          "paragraph": 562,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1971,
+          "source_end_offset": 1974,
+          "source_text_sha256": "14f244d12581965dde5fe0fedc82d2235803c056441cd68df20450747e51bf82"
+        },
+        {
+          "span_id": "C003-S030",
+          "text": "（7）问题处理按照《表 1：故障分级及响应机制》，一级故",
+          "page": 15,
+          "paragraph": 563,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 1975,
+          "source_end_offset": 2003,
+          "source_text_sha256": "a84d444f38f49c0c33878bd83e7d28c711515756af3725552b322bb5c8410bb5"
+        },
+        {
+          "span_id": "C003-S031",
+          "text": "障或未能在规定时间内解决其它级别故障，应及时报告院方指",
+          "page": 15,
+          "paragraph": 564,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2004,
+          "source_end_offset": 2031,
+          "source_text_sha256": "82147dbf07acc0ec461a5de5b5c109877e18b80ab10461fa2d2ad11b2b400c09"
+        },
+        {
+          "span_id": "C003-S032",
+          "text": "定人员，一级故障解决后应一天内递交重大信息事件报告。",
+          "page": 15,
+          "paragraph": 565,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2032,
+          "source_end_offset": 2058,
+          "source_text_sha256": "e650bec17a3eded70e2f2c1504590025189f668dc643eb32f9d0c5205fd131c8"
+        },
+        {
+          "span_id": "C003-S033",
+          "text": "表 1：故障分级及响应机制",
+          "page": 15,
+          "paragraph": 566,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2059,
+          "source_end_offset": 2072,
+          "source_text_sha256": "32c36953ec080d16f13dbfec413ebf79e1818f671139d755c1d36c6e644b48fb"
+        },
+        {
+          "span_id": "C003-S034",
+          "text": "故障分",
+          "page": 15,
+          "paragraph": 567,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2073,
+          "source_end_offset": 2076,
+          "source_text_sha256": "6e5dc4a8f3d85ef1d9c4224f53d0b10bc153c00ac6895965df41f0df33b9f3c4"
+        },
+        {
+          "span_id": "C003-S035",
+          "text": "级",
+          "page": 15,
+          "paragraph": 568,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2077,
+          "source_end_offset": 2078,
+          "source_text_sha256": "6e2d7f7c077c9511572a83005db793a0891d1eee91a9f7cbd0b868599afc02c7"
+        },
+        {
+          "span_id": "C003-S036",
+          "text": "问题描述 响应时",
+          "page": 15,
+          "paragraph": 569,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2079,
+          "source_end_offset": 2087,
+          "source_text_sha256": "8ec8cdd855e8e9a2b006c96c6f4d40cef2550cdf52d4a288ecdce52acb8bcb1e"
+        },
+        {
+          "span_id": "C003-S037",
+          "text": "间",
+          "page": 15,
+          "paragraph": 570,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2088,
+          "source_end_offset": 2089,
+          "source_text_sha256": "f5b64b1a649787370d0d5925ed32c23a7c4c9941648bd2cb53bd4d0bedc01cd2"
+        },
+        {
+          "span_id": "C003-S038",
+          "text": "处理",
+          "page": 15,
+          "paragraph": 571,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2090,
+          "source_end_offset": 2092,
+          "source_text_sha256": "e99a6717b6917534c1c18542e6402fcdc19a69d5c2922b017dba4a9cc9968d98"
+        },
+        {
+          "span_id": "C003-S039",
+          "text": "时间",
+          "page": 15,
+          "paragraph": 572,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2093,
+          "source_end_offset": 2095,
+          "source_text_sha256": "8b6ff498515bcc2ffdefa4f7b2efbe5edfcf8ba146e99308bc72024b52349ba0"
+        },
+        {
+          "span_id": "C003-S040",
+          "text": "解决",
+          "page": 15,
+          "paragraph": 573,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2096,
+          "source_end_offset": 2098,
+          "source_text_sha256": "5516eb8280b50ab4b294e123897a163807b6fa6c83b84fa0b9f3ff81a6ad7b2e"
+        },
+        {
+          "span_id": "C003-S041",
+          "text": "时间",
+          "page": 15,
+          "paragraph": 574,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2099,
+          "source_end_offset": 2101,
+          "source_text_sha256": "8b6ff498515bcc2ffdefa4f7b2efbe5edfcf8ba146e99308bc72024b52349ba0"
+        },
+        {
+          "span_id": "C003-S042",
+          "text": "一级 数据库、应用信 立即 立即 ≦30",
+          "page": 15,
+          "paragraph": 575,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2102,
+          "source_end_offset": 2122,
+          "source_text_sha256": "742a8227b6e2a0b590a9946603b55890ce4f5db66b0919ea76501456752e14ae"
+        },
+        {
+          "span_id": "C003-S043",
+          "text": "15 / 56",
+          "page": 15,
+          "paragraph": 576,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2123,
+          "source_end_offset": 2130,
+          "source_text_sha256": "54ddafd284ef0a27daacdc670b959316151b9029f86d0fbd9b055a0ad8d26a21"
+        },
+        {
+          "span_id": "C003-S044",
+          "text": "- 16 -",
+          "page": 16,
+          "paragraph": 577,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2131,
+          "source_end_offset": 2137,
+          "source_text_sha256": "668ce09a6771bf17ae35457ecd4cc3030f8feae5b3cd2af3f294314ce5c970a5"
+        },
+        {
+          "span_id": "C003-S045",
+          "text": "息系统等故障，",
+          "page": 16,
+          "paragraph": 578,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2138,
+          "source_end_offset": 2145,
+          "source_text_sha256": "cf8dd53769ada857d28b83afec05e08cbb83975939744b417ea2c0bcc4cf904e"
+        },
+        {
+          "span_id": "C003-S046",
+          "text": "造成全院业务整",
+          "page": 16,
+          "paragraph": 579,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2146,
+          "source_end_offset": 2153,
+          "source_text_sha256": "03f419137af05c1eb8cda11dc77a2121aa213b61d5a74c2c7bb0c5be6a70dcdd"
+        },
+        {
+          "span_id": "C003-S047",
+          "text": "体受影响",
+          "page": 16,
+          "paragraph": 580,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2154,
+          "source_end_offset": 2158,
+          "source_text_sha256": "869c1733103dfab66ac3bc5368c861e477efe0c22f48c7df47caadaa6d989c8c"
+        },
+        {
+          "span_id": "C003-S048",
+          "text": "分钟",
+          "page": 16,
+          "paragraph": 581,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2159,
+          "source_end_offset": 2161,
+          "source_text_sha256": "bd957bc497aa1a4101b19975d9ab6f227c71b2101bc201dd0a8ff0664d94b778"
+        },
+        {
+          "span_id": "C003-S049",
+          "text": "二级 信息系统故障，",
+          "page": 16,
+          "paragraph": 582,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2162,
+          "source_end_offset": 2172,
+          "source_text_sha256": "affaa4b10f88378a72d12029785a21273116e8487481e1555dba948139bd51bf"
+        },
+        {
+          "span_id": "C003-S050",
+          "text": "导致单项业务整",
+          "page": 16,
+          "paragraph": 583,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2173,
+          "source_end_offset": 2180,
+          "source_text_sha256": "7cc7019f334c35cb809e82395f9afeb78994b07d118cccc8fa36e0433ce508c6"
+        }
+      ]
+    },
+    {
+      "chunk_number": 4,
+      "character_count": 679,
+      "estimated_token_count": 614,
+      "source_start_offset": 2181,
+      "source_end_offset": 2860,
+      "spans": [
+        {
+          "span_id": "C004-S001",
+          "text": "体受影响或不能",
+          "page": 16,
+          "paragraph": 584,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2181,
+          "source_end_offset": 2188,
+          "source_text_sha256": "bacb1e39cc8de98d94a0bd68c5c1bef6cb6b2db88a583257443dc96e009e2b56"
+        },
+        {
+          "span_id": "C004-S002",
+          "text": "中断的临床业务",
+          "page": 16,
+          "paragraph": 585,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2189,
+          "source_end_offset": 2196,
+          "source_text_sha256": "cfadb46cec8aa97d0fa9689473c46461ff9709d56455fd351b8ec025257b4665"
+        },
+        {
+          "span_id": "C004-S003",
+          "text": "受影响",
+          "page": 16,
+          "paragraph": 586,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2197,
+          "source_end_offset": 2200,
+          "source_text_sha256": "122a18fc9a3b79ba3f30eb6ea5dc2b362c0c11c0b7ab245518d52164b8e7bf82"
+        },
+        {
+          "span_id": "C004-S004",
+          "text": "立即 ≦10",
+          "page": 16,
+          "paragraph": 587,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2201,
+          "source_end_offset": 2207,
+          "source_text_sha256": "2438125bd9e3f9daca96cb54e90c86aad2c33431b122ee9a0ea981b5c6caf73a"
+        },
+        {
+          "span_id": "C004-S005",
+          "text": "分钟",
+          "page": 16,
+          "paragraph": 588,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2208,
+          "source_end_offset": 2210,
+          "source_text_sha256": "bd957bc497aa1a4101b19975d9ab6f227c71b2101bc201dd0a8ff0664d94b778"
+        },
+        {
+          "span_id": "C004-S006",
+          "text": "≦50",
+          "page": 16,
+          "paragraph": 589,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2211,
+          "source_end_offset": 2214,
+          "source_text_sha256": "1a2856d8a31bb883e59ebd982acd244c10cdf9a0f69e99f9b1751d846b596bbf"
+        },
+        {
+          "span_id": "C004-S007",
+          "text": "分钟",
+          "page": 16,
+          "paragraph": 590,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2215,
+          "source_end_offset": 2217,
+          "source_text_sha256": "bd957bc497aa1a4101b19975d9ab6f227c71b2101bc201dd0a8ff0664d94b778"
+        },
+        {
+          "span_id": "C004-S008",
+          "text": "三级 信息系统故障，",
+          "page": 16,
+          "paragraph": 591,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2218,
+          "source_end_offset": 2228,
+          "source_text_sha256": "ee6a9512761403c90b88c2f8dc3bda3f21bd8e5f84d50f95f7d7c1966348ed89"
+        },
+        {
+          "span_id": "C004-S009",
+          "text": "导致个体工作站",
+          "page": 16,
+          "paragraph": 592,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2229,
+          "source_end_offset": 2236,
+          "source_text_sha256": "f2e1c115bebbcd1611537b95b0f1261bbad19dd6af28ee74dc580b0082fe7362"
+        },
+        {
+          "span_id": "C004-S010",
+          "text": "非紧急业务受影",
+          "page": 16,
+          "paragraph": 593,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2237,
+          "source_end_offset": 2244,
+          "source_text_sha256": "2afcadd11cc5af59a405e91d4e19a131d0926a23c442afc5dcb1b15e04a77e24"
+        },
+        {
+          "span_id": "C004-S011",
+          "text": "响",
+          "page": 16,
+          "paragraph": 594,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2245,
+          "source_end_offset": 2246,
+          "source_text_sha256": "604930a224e6b1e14fd9c8060c4a15221845eed8b743d4abf01e06911b6fd4dc"
+        },
+        {
+          "span_id": "C004-S012",
+          "text": "≦10 分",
+          "page": 16,
+          "paragraph": 595,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2247,
+          "source_end_offset": 2252,
+          "source_text_sha256": "e6e9b01039d551e13f5b985722fe6f89f89acbc08caa3f81283643581cd01863"
+        },
+        {
+          "span_id": "C004-S013",
+          "text": "钟",
+          "page": 16,
+          "paragraph": 596,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2253,
+          "source_end_offset": 2254,
+          "source_text_sha256": "13d02782bb6a4598133aa257da01f0c441cad7778b440f963d09ff00bb7065ad"
+        },
+        {
+          "span_id": "C004-S014",
+          "text": "≦30",
+          "page": 16,
+          "paragraph": 597,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2255,
+          "source_end_offset": 2258,
+          "source_text_sha256": "80707c84a80dea4aeb7088371a7c6d9c959f60991234a847fa7206075aaf9406"
+        },
+        {
+          "span_id": "C004-S015",
+          "text": "分钟",
+          "page": 16,
+          "paragraph": 598,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2259,
+          "source_end_offset": 2261,
+          "source_text_sha256": "bd957bc497aa1a4101b19975d9ab6f227c71b2101bc201dd0a8ff0664d94b778"
+        },
+        {
+          "span_id": "C004-S016",
+          "text": "≦2 小",
+          "page": 16,
+          "paragraph": 599,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2262,
+          "source_end_offset": 2266,
+          "source_text_sha256": "326316537a9d3f2f95fda006f1c39710df208ea16afdf6b54795ce1262e7ec96"
+        },
+        {
+          "span_id": "C004-S017",
+          "text": "时",
+          "page": 16,
+          "paragraph": 600,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2267,
+          "source_end_offset": 2268,
+          "source_text_sha256": "7d58b6422cacedbcdf5e255d0357c07a63cd50bde4f17efaf24b0458c0987499"
+        },
+        {
+          "span_id": "C004-S018",
+          "text": "四级 信息系统故障，",
+          "page": 16,
+          "paragraph": 601,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2269,
+          "source_end_offset": 2279,
+          "source_text_sha256": "aa368e18fb23bbe96039ae8f1fe5aca785d6a3887a1b394249a88bc498368c98"
+        },
+        {
+          "span_id": "C004-S019",
+          "text": "导致个体工作站",
+          "page": 16,
+          "paragraph": 602,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2280,
+          "source_end_offset": 2287,
+          "source_text_sha256": "f2e1c115bebbcd1611537b95b0f1261bbad19dd6af28ee74dc580b0082fe7362"
+        },
+        {
+          "span_id": "C004-S020",
+          "text": "单个业务不能开",
+          "page": 16,
+          "paragraph": 603,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2288,
+          "source_end_offset": 2295,
+          "source_text_sha256": "0e39c3d10948d52d0eaa35c0cdaf2a6db5d847819f83bd5b652faf5108202727"
+        },
+        {
+          "span_id": "C004-S021",
+          "text": "展，日程工作不",
+          "page": 16,
+          "paragraph": 604,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2296,
+          "source_end_offset": 2303,
+          "source_text_sha256": "b117bde115e8cd7ac14adb9ff4822396a486cfa0fc42cafc1e96f2d18201fb1c"
+        },
+        {
+          "span_id": "C004-S022",
+          "text": "受影响",
+          "page": 16,
+          "paragraph": 605,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2304,
+          "source_end_offset": 2307,
+          "source_text_sha256": "122a18fc9a3b79ba3f30eb6ea5dc2b362c0c11c0b7ab245518d52164b8e7bf82"
+        },
+        {
+          "span_id": "C004-S023",
+          "text": "≦20 分",
+          "page": 16,
+          "paragraph": 606,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2308,
+          "source_end_offset": 2313,
+          "source_text_sha256": "89ff7869b9fa5b0582320933eccd91ee680849111a1cb17be0c92e28e8ffbaf9"
+        },
+        {
+          "span_id": "C004-S024",
+          "text": "钟",
+          "page": 16,
+          "paragraph": 607,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2314,
+          "source_end_offset": 2315,
+          "source_text_sha256": "13d02782bb6a4598133aa257da01f0c441cad7778b440f963d09ff00bb7065ad"
+        },
+        {
+          "span_id": "C004-S025",
+          "text": "≦1 小",
+          "page": 16,
+          "paragraph": 608,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2316,
+          "source_end_offset": 2320,
+          "source_text_sha256": "9ea15a9f382b8ae9805b3f9c008782ecba07921aaefa834bb6c9fdfd279728e6"
+        },
+        {
+          "span_id": "C004-S026",
+          "text": "时",
+          "page": 16,
+          "paragraph": 609,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2321,
+          "source_end_offset": 2322,
+          "source_text_sha256": "7d58b6422cacedbcdf5e255d0357c07a63cd50bde4f17efaf24b0458c0987499"
+        },
+        {
+          "span_id": "C004-S027",
+          "text": "≦24",
+          "page": 16,
+          "paragraph": 610,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2323,
+          "source_end_offset": 2326,
+          "source_text_sha256": "f3fcae3174518d0d50f7f151f6762f2962e0a4a87be004345762d4315d4e27ae"
+        },
+        {
+          "span_id": "C004-S028",
+          "text": "小时",
+          "page": 16,
+          "paragraph": 611,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2327,
+          "source_end_offset": 2329,
+          "source_text_sha256": "3b6fefc50febace4472333c87df059024ef94bbe22c6a0afb32014f7fd330e16"
+        },
+        {
+          "span_id": "C004-S029",
+          "text": "（1）适应性调整维护应详细了解需求目的，进行充分调研和",
+          "page": 16,
+          "paragraph": 612,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2330,
+          "source_end_offset": 2357,
+          "source_text_sha256": "972b244ad6e8aaa55b01d4561e7bb3d2ccbd76661154267d839fe43454ae6264"
+        },
+        {
+          "span_id": "C004-S030",
+          "text": "需求分析后，提出解决方案，明确解决时间，经需求提出者确",
+          "page": 16,
+          "paragraph": 613,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2358,
+          "source_end_offset": 2385,
+          "source_text_sha256": "125cceacdf71f0315423ae1ab16e4ac18006b4dc0fe14207ef417dba5c88a028"
+        },
+        {
+          "span_id": "C004-S031",
+          "text": "认后方可进行调整维护。维护内容只限于现有功能模块及政策",
+          "page": 16,
+          "paragraph": 614,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2386,
+          "source_end_offset": 2413,
+          "source_text_sha256": "864d3fcb5044249d07c72333c2552df5a34c344090cfd34bc83b4fc278f08d83"
+        },
+        {
+          "span_id": "C004-S032",
+          "text": "类的需求、各类接口优化及数据报表统计处理，不包括新增功",
+          "page": 16,
+          "paragraph": 615,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2414,
+          "source_end_offset": 2441,
+          "source_text_sha256": "f8e8a23a96ed50497f479545c65a0586dd868b892bde856bbe5985e8978ae1d2"
+        },
+        {
+          "span_id": "C004-S033",
+          "text": "能模块需求。一般需求要求一周内完成，重大需求最长不超过",
+          "page": 16,
+          "paragraph": 616,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2442,
+          "source_end_offset": 2469,
+          "source_text_sha256": "d028f41ee0556223536d01713f5cafe4876abb0266b0b3268e0b6c114cef3d04"
+        },
+        {
+          "span_id": "C004-S034",
+          "text": "一个月。因特殊情况不能按时完成时，应提前告知需求提出者，",
+          "page": 16,
+          "paragraph": 617,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2470,
+          "source_end_offset": 2498,
+          "source_text_sha256": "f4f8038ecaf57cbcfc6ef149f01b38eb8518f6dd114e0df6f1d6be622dcb6147"
+        },
+        {
+          "span_id": "C004-S035",
+          "text": "并协商完成时间，否则按未按时完成处理。",
+          "page": 16,
+          "paragraph": 618,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2499,
+          "source_end_offset": 2518,
+          "source_text_sha256": "c2f6ff2bafa90e6b3dd2485e3d6963abfa1df8089af86bef1b9c6cef48f3f6c6"
+        },
+        {
+          "span_id": "C004-S036",
+          "text": "（2）定期巡检，按时提交巡检报告，巡检服务主要指软件检",
+          "page": 16,
+          "paragraph": 619,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2519,
+          "source_end_offset": 2546,
+          "source_text_sha256": "8bcc16d166f87f1ae8476d44807666fcdfc55a6347002c36856550d29866b04c"
+        },
+        {
+          "span_id": "C004-S037",
+          "text": "查和数据库检查，内容包括：系统性能指标检查、功能正确性",
+          "page": 16,
+          "paragraph": 620,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2547,
+          "source_end_offset": 2574,
+          "source_text_sha256": "90cbb9303ebeea87fff033f2665448679e8c53ae3a899c449ecdbb576776876a"
+        },
+        {
+          "span_id": "C004-S038",
+          "text": "检查、软件可用性与安全性检查、参数的合理性、性能优化等；",
+          "page": 16,
+          "paragraph": 621,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2575,
+          "source_end_offset": 2603,
+          "source_text_sha256": "927b1d31b10c0723e2e156fe67fe69c7a1a648914c87c1bedbb85f90fb7db00b"
+        },
+        {
+          "span_id": "C004-S039",
+          "text": "巡检过程中发现的问题，依据服务方与院方确认的故障分类标",
+          "page": 16,
+          "paragraph": 622,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2604,
+          "source_end_offset": 2631,
+          "source_text_sha256": "2884945d7f1bfa9f4cd62be692b6b1e12047d6f68766f3344fe29e52c6a9f528"
+        },
+        {
+          "span_id": "C004-S040",
+          "text": "准，由现场技术服务工程师进行相应的故障排除。",
+          "page": 16,
+          "paragraph": 623,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2632,
+          "source_end_offset": 2654,
+          "source_text_sha256": "f6d15298e720f37e26187ab6c25153227ac8cbb2bfe24dc5127d356678aee694"
+        },
+        {
+          "span_id": "C004-S041",
+          "text": "（3）非工作时间出现一级故障需立即赶往现场处理，其它问",
+          "page": 16,
+          "paragraph": 624,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2655,
+          "source_end_offset": 2682,
+          "source_text_sha256": "5cf3dc6271db66f484c4b9b4d1c79b58b4852f0a5ae700bb4638d10bf48822a7"
+        },
+        {
+          "span_id": "C004-S042",
+          "text": "题可以通过电话远程指导处理，如果 30 分钟内仍不能远程解",
+          "page": 16,
+          "paragraph": 625,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2683,
+          "source_end_offset": 2712,
+          "source_text_sha256": "1cd2d579160f63bb8d628add0e038c510567ee37989cd2d263d0e84dcd3467d0"
+        },
+        {
+          "span_id": "C004-S043",
+          "text": "决时，二级故障应立即赶到现场处理，三级和四故障可协商工",
+          "page": 16,
+          "paragraph": 626,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2713,
+          "source_end_offset": 2740,
+          "source_text_sha256": "2ed115ca04b9820b76ff9a84e79d00426c2b8a665f66f2fa24960b9c1a684993"
+        },
+        {
+          "span_id": "C004-S044",
+          "text": "作时间处理。",
+          "page": 16,
+          "paragraph": 627,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2741,
+          "source_end_offset": 2747,
+          "source_text_sha256": "00b7c9557fd319e4c82527e6adb11d8c6d7d83db34083b2e23016e85cd361d38"
+        },
+        {
+          "span_id": "C004-S045",
+          "text": "（二）行为规范要求",
+          "page": 16,
+          "paragraph": 628,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2748,
+          "source_end_offset": 2757,
+          "source_text_sha256": "01da8509afd1b286a56e115089cc1c153bf4110aba1bb367d2b23ff9bdf23c54"
+        },
+        {
+          "span_id": "C004-S046",
+          "text": "（1）遵守用户的各项规章制度，严格按照用户相应的规章制",
+          "page": 16,
+          "paragraph": 629,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2758,
+          "source_end_offset": 2785,
+          "source_text_sha256": "be5dc5725fab605b493d4c3ab3f141628ce84b814dfccbd8db8abf284390539d"
+        },
+        {
+          "span_id": "C004-S047",
+          "text": "度办事。",
+          "page": 16,
+          "paragraph": 630,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2786,
+          "source_end_offset": 2790,
+          "source_text_sha256": "01684162df1fc66dd8fdfa005110d409021a7158189400367b0b962d1164c4d6"
+        },
+        {
+          "span_id": "C004-S048",
+          "text": "（2）与用户运行维护体系其他部门和环节协同工作，密切配",
+          "page": 16,
+          "paragraph": 631,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2791,
+          "source_end_offset": 2818,
+          "source_text_sha256": "1b4c080692d258f329cac97fe6dddf80f3f42fdf3380c883025a84d72b2c3d52"
+        },
+        {
+          "span_id": "C004-S049",
+          "text": "合，共同开展技术支持工作。",
+          "page": 16,
+          "paragraph": 632,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2819,
+          "source_end_offset": 2832,
+          "source_text_sha256": "88e5121cfc8fa272df19f14537743e2078aff3339d428f8bec91692364b6b5fa"
+        },
+        {
+          "span_id": "C004-S050",
+          "text": "（3）出现疑难技术、业务问题和重大紧急情况时，及时向负",
+          "page": 16,
+          "paragraph": 633,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2833,
+          "source_end_offset": 2860,
+          "source_text_sha256": "1b62d6d5f27493dc4afb06ebf36fc7c0087eb9f46f6276d82437fd1d70044c21"
+        }
+      ]
+    },
+    {
+      "chunk_number": 5,
+      "character_count": 450,
+      "estimated_token_count": 417,
+      "source_start_offset": 2861,
+      "source_end_offset": 3311,
+      "spans": [
+        {
+          "span_id": "C005-S001",
+          "text": "责人报告。",
+          "page": 16,
+          "paragraph": 634,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2861,
+          "source_end_offset": 2866,
+          "source_text_sha256": "402e2f573ad6a5fb8e46a7cc60abf99fcd96817191d28f1a508803eb0604cdc2"
+        },
+        {
+          "span_id": "C005-S002",
+          "text": "（4）现场技术支持时要精神饱满，穿着得体，谈吐文明，举",
+          "page": 16,
+          "paragraph": 635,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2867,
+          "source_end_offset": 2894,
+          "source_text_sha256": "3b832cd4350316519f8ca75a2914584ad6704c762f1bceda62048d13310e22cd"
+        },
+        {
+          "span_id": "C005-S003",
+          "text": "止庄重。接听电话时要文明礼貌，语言清晰明了，语气和善。",
+          "page": 16,
+          "paragraph": 636,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2895,
+          "source_end_offset": 2922,
+          "source_text_sha256": "ae603b70f46fb34ab558b1ed64f99d074169473bc6027e4c8a28fcf39e7fc40a"
+        },
+        {
+          "span_id": "C005-S004",
+          "text": "（5）遵守信息安全和保密原则。对工作期间接触到的医院的",
+          "page": 16,
+          "paragraph": 637,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2923,
+          "source_end_offset": 2950,
+          "source_text_sha256": "bca2a14a6e7ed62ee8c0ac8339a743d439f5781062c81b0eee200324f66564ee"
+        },
+        {
+          "span_id": "C005-S005",
+          "text": "各项资料信息或秘密等进行保密，包括对被支持单位的网络、",
+          "page": 16,
+          "paragraph": 638,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2951,
+          "source_end_offset": 2978,
+          "source_text_sha256": "171a635c868cc86edb879914744eed7a8f1ef9278e21421bbf610df0f11530cc"
+        },
+        {
+          "span_id": "C005-S006",
+          "text": "主机、系统软件、应用软件等的密码、核心参数、业务数据等",
+          "page": 16,
+          "paragraph": 639,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 2979,
+          "source_end_offset": 3006,
+          "source_text_sha256": "220f7ce0e434202b0b0a96156a9fe900231433152aedfe844cc25903a5d95c98"
+        },
+        {
+          "span_id": "C005-S007",
+          "text": "负有保密责任，不得随意复制和传播。",
+          "page": 16,
+          "paragraph": 640,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3007,
+          "source_end_offset": 3024,
+          "source_text_sha256": "820251702b01e67e1143235eda3a1b9254086ae6242a4d6d8ed796eeaa74bc19"
+        },
+        {
+          "span_id": "C005-S008",
+          "text": "2 人员要求",
+          "page": 16,
+          "paragraph": 641,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3025,
+          "source_end_offset": 3031,
+          "source_text_sha256": "742ff5f0d06a4fe509b0e3a559ddf9d3e51ce665a96b0bf84ac2fd38f792fb1d"
+        },
+        {
+          "span_id": "C005-S009",
+          "text": "投标人为本项目安排不少于 3 人（含项目负责人）的工作团队，",
+          "page": 16,
+          "paragraph": 642,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3032,
+          "source_end_offset": 3062,
+          "source_text_sha256": "116632abc082f2dc41062034de3e9f2ebd1a10b8b27404fa8c036e779728e376"
+        },
+        {
+          "span_id": "C005-S010",
+          "text": "团队成员均为投标人自有员工。其中 1 人为项目负责人，至少",
+          "page": 16,
+          "paragraph": 643,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3063,
+          "source_end_offset": 3092,
+          "source_text_sha256": "691a3317a54f46780722ab326bd5e5ca3d1d4b24b0762923c568e70f033dda2b"
+        },
+        {
+          "span_id": "C005-S011",
+          "text": "具有本科（或以上）学历，负责信息系统运维、人员驻场服务",
+          "page": 16,
+          "paragraph": 644,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3093,
+          "source_end_offset": 3120,
+          "source_text_sha256": "79a47082923c8e0c19a6eee5744325f28ba871864a175fc74c5613ba6864ff66"
+        },
+        {
+          "span_id": "C005-S012",
+          "text": "及管理等工作；项目组员的职责是负责信息系统运维服务及驻",
+          "page": 16,
+          "paragraph": 645,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3121,
+          "source_end_offset": 3148,
+          "source_text_sha256": "8d991be19f9f7f1889c5a38cb213cf7f3a5202b17a78bc3f536b69481ccc9a96"
+        },
+        {
+          "span_id": "C005-S013",
+          "text": "16 / 56",
+          "page": 16,
+          "paragraph": 646,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3149,
+          "source_end_offset": 3156,
+          "source_text_sha256": "2231f873c7bd221bdef180c2a9f3ea9035369e21fd2f6a68d6d347d6c10f0425"
+        },
+        {
+          "span_id": "C005-S014",
+          "text": "- 17 -",
+          "page": 17,
+          "paragraph": 647,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3157,
+          "source_end_offset": 3163,
+          "source_text_sha256": "bbc1bed52507968ae039b3b2d1f0bf73cce280bb436e41dd45bd4820cdb9b8ac"
+        },
+        {
+          "span_id": "C005-S015",
+          "text": "场服务等工作。",
+          "page": 17,
+          "paragraph": 648,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3164,
+          "source_end_offset": 3171,
+          "source_text_sha256": "3c930a843493dfb40d2f89e1148116fabd9c9f12ce0f2c3debc13b24f5404564"
+        },
+        {
+          "span_id": "C005-S016",
+          "text": "★项目负责人为投标人自有员工且与招标文件中五、供应商基",
+          "page": 17,
+          "paragraph": 649,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3172,
+          "source_end_offset": 3199,
+          "source_text_sha256": "5adb72b20e95cb2692e6260788c3f561cf5449445668f6e9ff05a7a0a571f906"
+        },
+        {
+          "span_id": "C005-S017",
+          "text": "本情况表的项目负责人填报一致。要求提供社保部门出具的投",
+          "page": 17,
+          "paragraph": 650,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3200,
+          "source_end_offset": 3227,
+          "source_text_sha256": "7dcf92baea8da4c0032d4734e9c4b902276bc081a9ead49f1c53e11f70f81dba"
+        },
+        {
+          "span_id": "C005-S018",
+          "text": "标人为其缴纳的近一个月（含开标当月）的社保证明作为本单",
+          "page": 17,
+          "paragraph": 651,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3228,
+          "source_end_offset": 3255,
+          "source_text_sha256": "af4f67b54cf92fe77f13af9d1dc509abea37a8c88d1303b81f27332ecb4e9ff9"
+        },
+        {
+          "span_id": "C005-S019",
+          "text": "位员工的证明依据；如投标人注册成立时间不足 1 个月的，可",
+          "page": 17,
+          "paragraph": 652,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3256,
+          "source_end_offset": 3285,
+          "source_text_sha256": "7a3e0e4c1f55ac0841e1d81ef01264e852c232d2c9a382975e65d474d6c6143c"
+        },
+        {
+          "span_id": "C005-S020",
+          "text": "提供承诺函(格式自拟)，无需提供相关人员社保证明。",
+          "page": 17,
+          "paragraph": 653,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3286,
+          "source_end_offset": 3311,
+          "source_text_sha256": "2df597ef2c91351bd8e539ef05692ee48b3b29222cbfbdf87a663d99d351aaaa"
+        }
+      ]
+    },
+    {
+      "chunk_number": 6,
+      "character_count": 991,
+      "estimated_token_count": 880,
+      "source_start_offset": 3312,
+      "source_end_offset": 4303,
+      "spans": [
+        {
+          "span_id": "C006-S001",
+          "text": "六、商务要求",
+          "page": 17,
+          "paragraph": 654,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3312,
+          "source_end_offset": 3318,
+          "source_text_sha256": "80b61bd8ed066008ba54b08a971b3b9e92e393e024aef251ec5f4283e1c070c0"
+        },
+        {
+          "span_id": "C006-S002",
+          "text": "序号 具体内容 商务要求",
+          "page": 17,
+          "paragraph": 655,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3319,
+          "source_end_offset": 3331,
+          "source_text_sha256": "7283e10fc049f5ad4db178546c2c8c4ae6431e8c50db6c33d7d06e65396a8f01"
+        },
+        {
+          "span_id": "C006-S003",
+          "text": "1 ★服务期限",
+          "page": 17,
+          "paragraph": 656,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3332,
+          "source_end_offset": 3339,
+          "source_text_sha256": "3888df9beefd70ccf1c7f86209ecfa3761f910870db32aae51973a2037355c7d"
+        },
+        {
+          "span_id": "C006-S004",
+          "text": "本项目服务期限为 1 年，服务时间为 2025 年 12 月 1 日至 2026",
+          "page": 17,
+          "paragraph": 657,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3340,
+          "source_end_offset": 3380,
+          "source_text_sha256": "a8d955c20ab1d81dced20925dfdaebca3c7a591687a149f9bd2b9d80c4d82dea"
+        },
+        {
+          "span_id": "C006-S005",
+          "text": "年 11 月 30 日。服务期满后，根据中标供应商履约及考核情",
+          "page": 17,
+          "paragraph": 658,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3381,
+          "source_end_offset": 3412,
+          "source_text_sha256": "613ee89f502d3e8070be74c724e581016cc04d47455f717cd868662682b31eba"
+        },
+        {
+          "span_id": "C006-S006",
+          "text": "况确定是否续签，续签不超过两次（一年一签），长期服务",
+          "page": 17,
+          "paragraph": 659,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3413,
+          "source_end_offset": 3439,
+          "source_text_sha256": "9e7554343f26a18d3d83bc56f407d9183a0ad0f100aea3025b8a83f1c6b30ee1"
+        },
+        {
+          "span_id": "C006-S007",
+          "text": "政府采购合同履行期限最长不得超过三十六个月，如采购方",
+          "page": 17,
+          "paragraph": 660,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3440,
+          "source_end_offset": 3466,
+          "source_text_sha256": "0a3e48636309afc16810bfeb6ca4d76b40949a7dff0ba5797f87dc6d3acf2c2f"
+        },
+        {
+          "span_id": "C006-S008",
+          "text": "对履约情况不满意，采购方不再续约。",
+          "page": 17,
+          "paragraph": 661,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3467,
+          "source_end_offset": 3484,
+          "source_text_sha256": "f0af3a1a54faa32cdea4763da206df76311bc44c58af2e46f8371d836f603208"
+        },
+        {
+          "span_id": "C006-S009",
+          "text": "2 服务地点 深圳市大鹏新区医疗健康集团",
+          "page": 17,
+          "paragraph": 662,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3485,
+          "source_end_offset": 3505,
+          "source_text_sha256": "5a9c09cade1cbe2b3ea35e0b4b9b3a97cbd85df70277afc5963d2d6e8d9f25bf"
+        },
+        {
+          "span_id": "C006-S010",
+          "text": "3 报价要求",
+          "page": 17,
+          "paragraph": 663,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3506,
+          "source_end_offset": 3512,
+          "source_text_sha256": "9240a1fe82cd68f6e5cf24fb64fdcabafd8f49eea9d107f2f8f8bce55b50fd66"
+        },
+        {
+          "span_id": "C006-S011",
+          "text": "本项目服务费采用包干制，应包括服务成本、法定税费和企",
+          "page": 17,
+          "paragraph": 664,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3513,
+          "source_end_offset": 3539,
+          "source_text_sha256": "ff2954b2270839c5038ddf7131ad3bf5f27d60cee18912a25b17080fefc2118c"
+        },
+        {
+          "span_id": "C006-S012",
+          "text": "业的利润等。由投标人根据招标文件所提供的资料自行测算",
+          "page": 17,
+          "paragraph": 665,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3540,
+          "source_end_offset": 3566,
+          "source_text_sha256": "2f7fd7d8abe7e78085d5c30159d0837d9185d507ec5ac1506b7500297f65a0c9"
+        },
+        {
+          "span_id": "C006-S013",
+          "text": "投标报价。",
+          "page": 17,
+          "paragraph": 666,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3567,
+          "source_end_offset": 3572,
+          "source_text_sha256": "b6e2edc97e982e26843f7465b35055e7f10e7446e0cb677b29a5a81332fd1e06"
+        },
+        {
+          "span_id": "C006-S014",
+          "text": "4 付款方式",
+          "page": 17,
+          "paragraph": 667,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3573,
+          "source_end_offset": 3579,
+          "source_text_sha256": "1c0d3dce8579fc2b8f7ffdab412aa1e857276c17e3c58ace1cd7060ea4b57f40"
+        },
+        {
+          "span_id": "C006-S015",
+          "text": "（一）合同签订且中标人提供等额有效发票后支付合同总价",
+          "page": 17,
+          "paragraph": 668,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3580,
+          "source_end_offset": 3606,
+          "source_text_sha256": "c85dfa89fd9104e29948c45709c92ad1f7a7b7bc8d46c89bb0615262b79bd320"
+        },
+        {
+          "span_id": "C006-S016",
+          "text": "30%的款项；",
+          "page": 17,
+          "paragraph": 669,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3607,
+          "source_end_offset": 3614,
+          "source_text_sha256": "8071316aa49f455bac371d8201f3550ee06d06022cc931fcc2024a3be72d746c"
+        },
+        {
+          "span_id": "C006-S017",
+          "text": "（二）合同签订后满 6 个月，采购人在收到中标人提供等额",
+          "page": 17,
+          "paragraph": 670,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3615,
+          "source_end_offset": 3643,
+          "source_text_sha256": "bcfbab626f2b598ae4eb583be2deba359865b1c8d9057cbbe190deafd7a19f9d"
+        },
+        {
+          "span_id": "C006-S018",
+          "text": "有效发票后向中标人支付合同总价 40%的款项；",
+          "page": 17,
+          "paragraph": 671,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3644,
+          "source_end_offset": 3667,
+          "source_text_sha256": "2334a57169819b23f51d3f9251f21ca8f7fe858424331bfd20e8f79017222816"
+        },
+        {
+          "span_id": "C006-S019",
+          "text": "（三）合同期满 12 个月，通过服务考核并向采购人提供用",
+          "page": 17,
+          "paragraph": 672,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3668,
+          "source_end_offset": 3696,
+          "source_text_sha256": "31df96b2caac8bec53ea7f301e6591f39abf2129955d00bf4eebcb2a6006df5e"
+        },
+        {
+          "span_id": "C006-S020",
+          "text": "户考核报告后的三十个工作日内，中标人开具对应金额的发",
+          "page": 17,
+          "paragraph": 673,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3697,
+          "source_end_offset": 3723,
+          "source_text_sha256": "25920b2b046df896a3797cf968012e68f3ba0e437e7437dd55be45eab3248e6e"
+        },
+        {
+          "span_id": "C006-S021",
+          "text": "票给采购人，采购人支付考核扣除罚款后的全部合同余款。",
+          "page": 17,
+          "paragraph": 674,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3724,
+          "source_end_offset": 3750,
+          "source_text_sha256": "34a15181c6b6ebd6ace9bcfc1262681d49b664208e47aaa8c6cc54989c492a42"
+        },
+        {
+          "span_id": "C006-S022",
+          "text": "注：中标人应在接到采购人通知后提供请款材料（含发",
+          "page": 17,
+          "paragraph": 675,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3751,
+          "source_end_offset": 3775,
+          "source_text_sha256": "07d400d2dbb041bc8477599e334a8539e8370909de1e3fe8c62f8409e1833170"
+        },
+        {
+          "span_id": "C006-S023",
+          "text": "票）；",
+          "page": 17,
+          "paragraph": 676,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3776,
+          "source_end_offset": 3779,
+          "source_text_sha256": "135bb1042b082a03d3622106a0a967b7dad62d2a7c8438880a4400c4acabd520"
+        },
+        {
+          "span_id": "C006-S024",
+          "text": "具体付款方式按深圳市大鹏新区发展和财政局有关规定执",
+          "page": 17,
+          "paragraph": 677,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3780,
+          "source_end_offset": 3805,
+          "source_text_sha256": "3361e78daa3a4bb4b9f75eecdf76a5ba528083d43c515948479e34efa83bc631"
+        },
+        {
+          "span_id": "C006-S025",
+          "text": "行。",
+          "page": 17,
+          "paragraph": 678,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3806,
+          "source_end_offset": 3808,
+          "source_text_sha256": "c784c3a7bfd5b34ac4c90d6edb81abf171c519be0da3c4e4337cd94e861e7d47"
+        },
+        {
+          "span_id": "C006-S026",
+          "text": "5 违约责任",
+          "page": 17,
+          "paragraph": 679,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3809,
+          "source_end_offset": 3815,
+          "source_text_sha256": "e8db83e184e4a94ce4524cb7eec6c409feaed767e6a14c5e808f07d0431e3a05"
+        },
+        {
+          "span_id": "C006-S027",
+          "text": "1.采购人的违约责任",
+          "page": 17,
+          "paragraph": 680,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3816,
+          "source_end_offset": 3826,
+          "source_text_sha256": "14ee26faefed64dde20662ca2e2632e11af1d66a654c573a9046b8813e60634a"
+        },
+        {
+          "span_id": "C006-S028",
+          "text": "1.1 如因采购人的原因未按本合同约定的项目进度要求完成",
+          "page": 17,
+          "paragraph": 681,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3827,
+          "source_end_offset": 3855,
+          "source_text_sha256": "820afb163b3d79b1552eddf2a5d7aade78add654482af6947d49bf7567f3fbf0"
+        },
+        {
+          "span_id": "C006-S029",
+          "text": "工作或采购人延期付款的，每延期 1 个工作日，允许中标人",
+          "page": 17,
+          "paragraph": 682,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3856,
+          "source_end_offset": 3884,
+          "source_text_sha256": "fe8508dfe358e84a4a95fdcc005cd6d954617bf3c2dc7515836a5deb843f9bcf"
+        },
+        {
+          "span_id": "C006-S030",
+          "text": "对等延期 1 个工作日；如果因相关对接机构的原因导致业务",
+          "page": 17,
+          "paragraph": 683,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3885,
+          "source_end_offset": 3913,
+          "source_text_sha256": "ba72ff3467908ba244968f2f51b6edc44a3f64cc8151a4ab3a8ec982ebad1c9e"
+        },
+        {
+          "span_id": "C006-S031",
+          "text": "系统接口上线延期，合同工期同样顺延。",
+          "page": 17,
+          "paragraph": 684,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3914,
+          "source_end_offset": 3932,
+          "source_text_sha256": "cc3efb965988e9bfa928f0e13a8f71d8c95f927968b59cb2b6a3bb83b148617c"
+        },
+        {
+          "span_id": "C006-S032",
+          "text": "1.2 非因中标人原因采购人单方面终止合同，中标人有权要",
+          "page": 17,
+          "paragraph": 685,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3933,
+          "source_end_offset": 3961,
+          "source_text_sha256": "ea764fbc8bb4f223d87bf63a34d3347f41d08f79f4788fc18abea9080d3e821a"
+        },
+        {
+          "span_id": "C006-S033",
+          "text": "求采购人就其终止前已完成的工作支付费用。",
+          "page": 17,
+          "paragraph": 686,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3962,
+          "source_end_offset": 3982,
+          "source_text_sha256": "2c407b2ecebce9b59a8443d50cc2f2d318c383dfa8bf8dae99e705336f3d1b23"
+        },
+        {
+          "span_id": "C006-S034",
+          "text": "1.3 若采购人侵害了中标人知识产权，则应负责赔偿由此而",
+          "page": 17,
+          "paragraph": 687,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 3983,
+          "source_end_offset": 4011,
+          "source_text_sha256": "7df991fe6f54a03df5fe206362104b3b91a25e42f6b977c8344aeeaec5f11461"
+        },
+        {
+          "span_id": "C006-S035",
+          "text": "给中标人造成的经济损失。",
+          "page": 17,
+          "paragraph": 688,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4012,
+          "source_end_offset": 4024,
+          "source_text_sha256": "d4885f49a0f206bc8781b1963699d3b8d14e55d4962c9f6556a5fe87606ef87b"
+        },
+        {
+          "span_id": "C006-S036",
+          "text": "1.4 因采购人未能履行合同中规定的保密条款造成中标人损",
+          "page": 17,
+          "paragraph": 689,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4025,
+          "source_end_offset": 4053,
+          "source_text_sha256": "0dd1ef26d17c1b5228932f2db98cc33c9d26707d6cce3f931346e63e5d761a42"
+        },
+        {
+          "span_id": "C006-S037",
+          "text": "失的，采购人应赔偿中标人因此遭受的实际损失。",
+          "page": 17,
+          "paragraph": 690,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4054,
+          "source_end_offset": 4076,
+          "source_text_sha256": "e686a31fb0ed6f60c88b7860938fea4863e441754801b3917ae7e9a741cb0692"
+        },
+        {
+          "span_id": "C006-S038",
+          "text": "2.中标人的违约责任",
+          "page": 17,
+          "paragraph": 691,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4077,
+          "source_end_offset": 4087,
+          "source_text_sha256": "f62417a5728ed5d789d169df1f9732d3cc52853d0ada2e03bbbadf8507db6d0e"
+        },
+        {
+          "span_id": "C006-S039",
+          "text": "2.1 如因中标人的原因未按本合同规定的项目阶段进度要求",
+          "page": 17,
+          "paragraph": 692,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4088,
+          "source_end_offset": 4116,
+          "source_text_sha256": "b664b27af387cb81504462c83b517a4de1647c7b1c99465d82d8fdd92a65c75f"
+        },
+        {
+          "span_id": "C006-S040",
+          "text": "完成工作，每延期 1 个工作日，由中标人按合同总额的万分",
+          "page": 17,
+          "paragraph": 693,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4117,
+          "source_end_offset": 4145,
+          "source_text_sha256": "aad70c0386fecc7123754fdd10ce957aeea34c5ac0938980e1e3887b6f1330f5"
+        },
+        {
+          "span_id": "C006-S041",
+          "text": "之四向采购人支付违约金。延期 30 个工作日后，采购人有",
+          "page": 17,
+          "paragraph": 694,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4146,
+          "source_end_offset": 4174,
+          "source_text_sha256": "73db1d4aa48001265a3824e8bad5a1de5e66cf406aaa2d132b874e06cdbe84bd"
+        },
+        {
+          "span_id": "C006-S042",
+          "text": "权解除合同。采购人解除合同后，中标人应立即全额退还采",
+          "page": 17,
+          "paragraph": 695,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4175,
+          "source_end_offset": 4201,
+          "source_text_sha256": "8d4b4656d784062a6ea29fe57768ba95cc9a3d5f60ea03ef5f0c1861d4305d74"
+        },
+        {
+          "span_id": "C006-S043",
+          "text": "购人已付款项，并支付合同总额 20%的违约金。",
+          "page": 17,
+          "paragraph": 696,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4202,
+          "source_end_offset": 4225,
+          "source_text_sha256": "515d371d805fb7374d95e8af59cb0abaa63a0812a7ed6f59a4c219b67d07559e"
+        },
+        {
+          "span_id": "C006-S044",
+          "text": "2.2 若中标人侵害了采购人知识产权，则应负责赔偿由此而",
+          "page": 17,
+          "paragraph": 697,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4226,
+          "source_end_offset": 4254,
+          "source_text_sha256": "dde764cdf041e988c8306c35aa467fff3eb1320faec8d27c7d9801e2ed71fd85"
+        },
+        {
+          "span_id": "C006-S045",
+          "text": "给采购人造成的经济损失，且中标人应支付合同总额 20%的",
+          "page": 17,
+          "paragraph": 698,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4255,
+          "source_end_offset": 4283,
+          "source_text_sha256": "18a5a152ef18793070bf8b2729258073e2811844e1ed14580bb167da6740e61e"
+        },
+        {
+          "span_id": "C006-S046",
+          "text": "17 / 56",
+          "page": 17,
+          "paragraph": 699,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4284,
+          "source_end_offset": 4291,
+          "source_text_sha256": "19b4389956f5b32a0c8dba0de8f9c58cf980e50077e7c1e79018ee3e61845260"
+        },
+        {
+          "span_id": "C006-S047",
+          "text": "- 18 -",
+          "page": 18,
+          "paragraph": 700,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4292,
+          "source_end_offset": 4298,
+          "source_text_sha256": "82e886703f35c208c1e1a7c69d4724dfe752d26d9f5a56bf779d757472db399e"
+        },
+        {
+          "span_id": "C006-S048",
+          "text": "违约金。",
+          "page": 18,
+          "paragraph": 701,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4299,
+          "source_end_offset": 4303,
+          "source_text_sha256": "818a54c1a0b46e5815f2807cc5e7b1242a6f93bb1d6a69c1b4d01a804c24d43a"
+        }
+      ]
+    },
+    {
+      "chunk_number": 7,
+      "character_count": 626,
+      "estimated_token_count": 592,
+      "source_start_offset": 4304,
+      "source_end_offset": 4930,
+      "spans": [
+        {
+          "span_id": "C007-S001",
+          "text": "2.3 因中标人未能履行合同中规定的保密条款，造成采购人",
+          "page": 18,
+          "paragraph": 702,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4304,
+          "source_end_offset": 4332,
+          "source_text_sha256": "72cd11cff69f5bd0aac4d293ca24db43e7939cfe4e65ff344547ae5fd7e45dc1"
+        },
+        {
+          "span_id": "C007-S002",
+          "text": "损失的，中标人应向采购人支付 20%的违约金，如不足以弥",
+          "page": 18,
+          "paragraph": 703,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4333,
+          "source_end_offset": 4361,
+          "source_text_sha256": "990ef1df784675d0a310dd2f5a9ff9f398624f33b724ab9e8c087cb56bc7e55a"
+        },
+        {
+          "span_id": "C007-S003",
+          "text": "补实际损失，中标人还应赔偿超过违约金部分的损失。",
+          "page": 18,
+          "paragraph": 704,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4362,
+          "source_end_offset": 4386,
+          "source_text_sha256": "139b620dfa17a06288d463597f61eb31294b03c323fb07c6c80849545fd8e564"
+        },
+        {
+          "span_id": "C007-S004",
+          "text": "2.4 中标人在履行售后服务过程中，因不按照合同约定整改",
+          "page": 18,
+          "paragraph": 705,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4387,
+          "source_end_offset": 4415,
+          "source_text_sha256": "788a06dd7de077e26a943ef97ffdf3350ffdcee32eb845ed7c36814bf1516313"
+        },
+        {
+          "span_id": "C007-S005",
+          "text": "而造成采购人损失的，除应承担修复和赔偿责任，还须向采",
+          "page": 18,
+          "paragraph": 706,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4416,
+          "source_end_offset": 4442,
+          "source_text_sha256": "eba2f24f4cb25ba36e875780836c21360de4052d5012bd51a731b7420fefa421"
+        },
+        {
+          "span_id": "C007-S006",
+          "text": "购人支付合同总额 20%的违约金。",
+          "page": 18,
+          "paragraph": 707,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4443,
+          "source_end_offset": 4460,
+          "source_text_sha256": "4889f58594af565e0d379a4a536c5eb350ec1b15ef21fc680156196c329c489e"
+        },
+        {
+          "span_id": "C007-S007",
+          "text": "七、其他重要条款",
+          "page": 18,
+          "paragraph": 708,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4461,
+          "source_end_offset": 4469,
+          "source_text_sha256": "18fc49839c39c6e889724b8b5a71f169c3c91448dc1c12bff266a0ff6b5eb2a2"
+        },
+        {
+          "span_id": "C007-S008",
+          "text": "1、本项目投标报价采用包干制，应包括成本、法定税费和相应的利润，应涵盖本项目",
+          "page": 18,
+          "paragraph": 709,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4470,
+          "source_end_offset": 4508,
+          "source_text_sha256": "790cf0b03b4b3e6e3ecac6bc6445ef1e806c91298ddfb2e5c2d09c12832ec28c"
+        },
+        {
+          "span_id": "C007-S009",
+          "text": "招标范围和招标文件所列的各项内容中所述的全部。由投标人根据招标需求自行测算投标报",
+          "page": 18,
+          "paragraph": 710,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4509,
+          "source_end_offset": 4549,
+          "source_text_sha256": "da697dec50f167e453203acef0883bb8a8182480a71d2fcfda895f66ac99fba9"
+        },
+        {
+          "span_id": "C007-S010",
+          "text": "价；一经中标，投标报价即作为中标单位与采购人签订的合同金额。",
+          "page": 18,
+          "paragraph": 711,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4550,
+          "source_end_offset": 4580,
+          "source_text_sha256": "3097f40c5036db01046dfa53587864ca10a71abe2a1a5711efd8ae89fbd833fb"
+        },
+        {
+          "span_id": "C007-S011",
+          "text": "2、投标人应充分了解项目的位置、情况、道路及任何其它足以影响投标报价的情况，",
+          "page": 18,
+          "paragraph": 712,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4581,
+          "source_end_offset": 4619,
+          "source_text_sha256": "f6952406d4a783e4fc962daa60b30c2a8e0b1889a4fcf69285e6ee2adda79e2f"
+        },
+        {
+          "span_id": "C007-S012",
+          "text": "任何因忽视或误解项目情况而导致的索赔或服务期限延长申请将不获批准。",
+          "page": 18,
+          "paragraph": 713,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4620,
+          "source_end_offset": 4653,
+          "source_text_sha256": "5823e0f6bb31ab594c87378c6ce5c8543823f68fe7c29f1148c6afa27c91fa6b"
+        },
+        {
+          "span_id": "C007-S013",
+          "text": "3、投标人不得期望通过索赔等方式获取补偿，否则，除可能遭到拒绝外，还可能将被",
+          "page": 18,
+          "paragraph": 714,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4654,
+          "source_end_offset": 4692,
+          "source_text_sha256": "f9e8fb5f084f4bc5b108a29a0611d4277a5966b19934687183699f63b27f60dc"
+        },
+        {
+          "span_id": "C007-S014",
+          "text": "作为不良行为记录在案，并可能影响其以后参加政府采购的项目投标。各投标人在投标报价",
+          "page": 18,
+          "paragraph": 715,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4693,
+          "source_end_offset": 4733,
+          "source_text_sha256": "1bc2d2304ee1bfd319b597483cb0ba9a974b6d29d45fed36873983359f954ae5"
+        },
+        {
+          "span_id": "C007-S015",
+          "text": "时，应充分考虑投标报价的风险。",
+          "page": 18,
+          "paragraph": 716,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4734,
+          "source_end_offset": 4749,
+          "source_text_sha256": "3e742a906e7d4140f8d2b5b41741f5bdad25645a0985d107e0c78a7a60c2bbf9"
+        },
+        {
+          "span_id": "C007-S016",
+          "text": "4、除采购合同继续履行将损害国家利益和社会公共利益外，双方当事人不得擅自变更、",
+          "page": 18,
+          "paragraph": 717,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4750,
+          "source_end_offset": 4789,
+          "source_text_sha256": "3b39fc2ab0fbd3c23e2423527df3ae1bb41b88e9f2f0aa5a3df1a172b85c34cb"
+        },
+        {
+          "span_id": "C007-S017",
+          "text": "中止或者终止合同。",
+          "page": 18,
+          "paragraph": 718,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4790,
+          "source_end_offset": 4799,
+          "source_text_sha256": "dfab31988e298cc6007c88189d132dd421dfa75f5f05653be5ce97679de1803d"
+        },
+        {
+          "span_id": "C007-S018",
+          "text": "5、“信用中国”中“信用服务”栏的“重大税收违法失信主体”“失信被执行人”，",
+          "page": 18,
+          "paragraph": 719,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4800,
+          "source_end_offset": 4838,
+          "source_text_sha256": "964c9b6b4de62fd7b08cab606410d1c923bbc58c3c37b6ec1505286235b20858"
+        },
+        {
+          "span_id": "C007-S019",
+          "text": "“中国政府采购网”中的“政府采购严重违法失信行为记录名单”，以及“深圳市政府采购",
+          "page": 18,
+          "paragraph": 720,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4839,
+          "source_end_offset": 4879,
+          "source_text_sha256": "6a7c5411d81a804d8a10c81e200244d9ca55ae502220ea71808fbbea099342a0"
+        },
+        {
+          "span_id": "C007-S020",
+          "text": "监管网”为供应商信用信息的查询渠道，相关信息以开标当日的查询结果为准。",
+          "page": 18,
+          "paragraph": 721,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4880,
+          "source_end_offset": 4915,
+          "source_text_sha256": "96d612326d9613665dcbe415d292a965c5ebfffae9b6e65fac216973749a739c"
+        },
+        {
+          "span_id": "C007-S021",
+          "text": "18 / 56",
+          "page": 18,
+          "paragraph": 722,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4916,
+          "source_end_offset": 4923,
+          "source_text_sha256": "f387c4e7df0bb7477a08353e13b7d299d2c9935f3c671a1a1bea938e822005c2"
+        },
+        {
+          "span_id": "C007-S022",
+          "text": "- 19 -",
+          "page": 19,
+          "paragraph": 723,
+          "source_section": null,
+          "source_clause_id": null,
+          "source_start_offset": 4924,
+          "source_end_offset": 4930,
+          "source_text_sha256": "bc7a8354f92cb5f0d686c350556356f3ba9e5596c26fa0957004a6567f99c7fd"
+        }
+      ]
+    }
+  ]
+}

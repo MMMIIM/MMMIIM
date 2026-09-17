@@ -1,0 +1,1754 @@
+{
+  "artifact": "V43_FACT_V21_COM01_GPT_SEMANTIC_REVIEW_PACKET",
+  "review_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+  "blind": true,
+  "generated_at": "2026-09-08T09:12:19.081Z",
+  "execution_identity": {
+    "run_id": "fact-candidate-v2-1-fresh-20260908064040-06620586",
+    "execution_id": "fact-candidate-v2-1-fresh-20260908064040-06620586-COM-01",
+    "case_id": "COM-01",
+    "source_snapshot_id": "EVAL-SNAPSHOT-C7F1A4E58C970A4B",
+    "source_hash": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+    "prompt_version": "4.3-evidence-fact-candidate-v2-prompt-v2",
+    "prompt_hash": "ba1ab6d2a298176ee27528b0e3d1bfe71f373fa99bb82c06cda780ba4272d642",
+    "schema_version": "4.3-evidence-fact-candidate-v2.1",
+    "schema_hash": "3dcece82464fcbd0351fe4444cc66994d36e40ca6ca97a3f2d0ba01e5e44f0b3",
+    "configured_provider": "deepseek_official",
+    "runtime_resolved_provider": "deepseek_official",
+    "response_provider": null,
+    "response_provider_observability": "NOT_EMITTED_BY_RESPONSE",
+    "configured_model": "deepseek-v4-pro",
+    "requested_model": "deepseek-v4-pro",
+    "response_model": "deepseek-v4-pro",
+    "endpoint": "/responses"
+  },
+  "authoritative_source": {
+    "snapshot_id": "EVAL-SNAPSHOT-C7F1A4E58C970A4B",
+    "source_hash": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+    "source_file": "backend\\eval\\rag-pilot\\V43_RAG_CODEX_HANDOFF_1\\03_company_case_rag\\COM-01_公司概况与业务范围.md",
+    "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+    "exact_source_text": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。\n",
+    "line_start": 1,
+    "line_end": 51,
+    "source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c"
+  },
+  "raw_model_output": {
+    "raw_provider_response_retained": false,
+    "raw_provider_response": null,
+    "raw_provider_response_limitation": "The safe client retained provider audit metadata and parsed V2.1 data, not the complete HTTP response body; no raw response is fabricated.",
+    "raw_candidate_v2_1": [
+      {
+        "statement": "澄川数智科技有限公司为虚构测试企业，定位政企与医疗信息化软件服务商。",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "subject_name": "澄川数智科技有限公司",
+        "subject_type_hint": "公司",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "entity_mentions": [
+          {
+            "name": "澄川数智科技有限公司",
+            "type_hint": "公司",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          }
+        ],
+        "status_text": "虚构测试企业",
+        "status_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "scope_items": [
+          {
+            "text": "政企与医疗信息化软件服务商",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          }
+        ],
+        "quantity_items": [],
+        "temporal_items": []
+      },
+      {
+        "statement": "测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "subject_name": "澄川数智科技有限公司",
+        "subject_type_hint": "公司",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "entity_mentions": [
+          {
+            "name": "澄川数智科技有限公司",
+            "type_hint": "公司",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          }
+        ],
+        "status_text": "",
+        "status_source_refs": [],
+        "scope_items": [
+          {
+            "text": "业务平台",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          },
+          {
+            "text": "数据治理",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          },
+          {
+            "text": "接口集成",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          },
+          {
+            "text": "RAG/Agent",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          },
+          {
+            "text": "实施与运维",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          }
+        ],
+        "quantity_items": [],
+        "temporal_items": []
+      },
+      {
+        "statement": "OFF-U01 为政府采购需求管理办法，发布单位为财政部，状态为 CURRENT_NO_REPEAL_FOUND，实施日期为 2021-07-01，最后核验日期为 2026-08-31。",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "subject_name": "OFF-U01",
+        "subject_type_hint": "官方来源",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "entity_mentions": [
+          {
+            "name": "OFF-U01",
+            "type_hint": "官方来源",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          },
+          {
+            "name": "财政部",
+            "type_hint": "发布单位",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          }
+        ],
+        "status_text": "CURRENT_NO_REPEAL_FOUND",
+        "status_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "scope_items": [
+          {
+            "text": "政府采购需求管理办法",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          }
+        ],
+        "quantity_items": [],
+        "temporal_items": [
+          {
+            "value_text": "2021-07-01",
+            "event_text": "实施",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          },
+          {
+            "value_text": "2026-08-31",
+            "event_text": "最后核验",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          }
+        ]
+      },
+      {
+        "statement": "OFF-U02 为国家政务信息化项目建设管理办法，发布单位为国务院办公厅，状态为 CURRENT_CONFIRMED，实施日期为 2020-02-01，最后核验日期为 2026-08-31。",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "subject_name": "OFF-U02",
+        "subject_type_hint": "官方来源",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "entity_mentions": [
+          {
+            "name": "OFF-U02",
+            "type_hint": "官方来源",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          },
+          {
+            "name": "国务院办公厅",
+            "type_hint": "发布单位",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          }
+        ],
+        "status_text": "CURRENT_CONFIRMED",
+        "status_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "scope_items": [
+          {
+            "text": "国家政务信息化项目建设管理办法",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          }
+        ],
+        "quantity_items": [],
+        "temporal_items": [
+          {
+            "value_text": "2020-02-01",
+            "event_text": "实施",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          },
+          {
+            "value_text": "2026-08-31",
+            "event_text": "最后核验",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "candidates": [
+    {
+      "candidate_index": 0,
+      "raw_candidate": {
+        "statement": "澄川数智科技有限公司为虚构测试企业，定位政企与医疗信息化软件服务商。",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "subject_name": "澄川数智科技有限公司",
+        "subject_type_hint": "公司",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "entity_mentions": [
+          {
+            "name": "澄川数智科技有限公司",
+            "type_hint": "公司",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          }
+        ],
+        "status_text": "虚构测试企业",
+        "status_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "scope_items": [
+          {
+            "text": "政企与医疗信息化软件服务商",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          }
+        ],
+        "quantity_items": [],
+        "temporal_items": []
+      },
+      "source_resolution": {
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "resolution_rate": 1,
+        "resolved": [
+          {
+            "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+            "exact_resolved_source_text": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。\n",
+            "line_start": 1,
+            "line_end": 51,
+            "context_before": "",
+            "context_after": ""
+          }
+        ]
+      },
+      "canonicalization": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "exact_deterministic_transformation": "V2.1 source_refs projection -> existing V2 canonicalizer; no model text accepted as provenance",
+        "canonical_output": {
+          "subject": {
+            "type": "公司",
+            "name": "澄川数智科技有限公司"
+          },
+          "entities": [
+            {
+              "type": "公司",
+              "name": "澄川数智科技有限公司"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "虚构测试企业",
+          "scopes": [
+            "政企与医疗信息化软件服务商"
+          ],
+          "scope_source_texts": {
+            "政企与医疗信息化软件服务商": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。"
+          },
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "observation": {
+          "statement": "澄川数智科技有限公司为虚构测试企业，定位政企与医疗信息化软件服务商。"
+        },
+        "temporal_observations": [],
+        "observation_provenance": {
+          "entity_mentions": [
+            {
+              "source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+              "source_text_length": 1441,
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ],
+          "scope_items": [
+            {
+              "source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+              "source_text_length": 1441,
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": []
+        }
+      },
+      "grounding": {
+        "decision": "REJECT",
+        "reasons": [
+          "statement is not grounded"
+        ],
+        "resolved_evidence": [
+          {
+            "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+            "exact_resolved_source_text": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。\n",
+            "line_start": 1,
+            "line_end": 51,
+            "context_before": "",
+            "context_after": ""
+          }
+        ],
+        "field_level_grounding_results": [
+          {
+            "field": "statement",
+            "observed_value": "澄川数智科技有限公司为虚构测试企业，定位政企与医疗信息化软件服务商。",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": false
+          },
+          {
+            "field": "subject",
+            "observed_value": "澄川数智科技有限公司",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "entity",
+            "observed_value": "澄川数智科技有限公司",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "status",
+            "observed_value": "虚构测试企业",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "scope",
+            "observed_value": "政企与医疗信息化软件服务商",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          }
+        ],
+        "rejected_observations": [
+          "statement"
+        ]
+      },
+      "semantic_difference_view": {
+        "source": [
+          {
+            "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+            "exact_resolved_source_text": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。\n",
+            "line_start": 1,
+            "line_end": 51,
+            "context_before": "",
+            "context_after": ""
+          }
+        ],
+        "raw_candidate": {
+          "statement": "澄川数智科技有限公司为虚构测试企业，定位政企与医疗信息化软件服务商。",
+          "source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "subject_name": "澄川数智科技有限公司",
+          "subject_type_hint": "公司",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "澄川数智科技有限公司",
+              "type_hint": "公司",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "虚构测试企业",
+          "status_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "scope_items": [
+            {
+              "text": "政企与医疗信息化软件服务商",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "canonical_projection": {
+          "subject": {
+            "type": "公司",
+            "name": "澄川数智科技有限公司"
+          },
+          "entities": [
+            {
+              "type": "公司",
+              "name": "澄川数智科技有限公司"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "虚构测试企业",
+          "scopes": [
+            "政企与医疗信息化软件服务商"
+          ],
+          "scope_source_texts": {
+            "政企与医疗信息化软件服务商": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。"
+          },
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "grounding_verdict": {
+          "decision": "REJECT",
+          "reasons": [
+            "statement is not grounded"
+          ]
+        }
+      }
+    },
+    {
+      "candidate_index": 1,
+      "raw_candidate": {
+        "statement": "测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "subject_name": "澄川数智科技有限公司",
+        "subject_type_hint": "公司",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "entity_mentions": [
+          {
+            "name": "澄川数智科技有限公司",
+            "type_hint": "公司",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          }
+        ],
+        "status_text": "",
+        "status_source_refs": [],
+        "scope_items": [
+          {
+            "text": "业务平台",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          },
+          {
+            "text": "数据治理",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          },
+          {
+            "text": "接口集成",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          },
+          {
+            "text": "RAG/Agent",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          },
+          {
+            "text": "实施与运维",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          }
+        ],
+        "quantity_items": [],
+        "temporal_items": []
+      },
+      "source_resolution": {
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "resolution_rate": 1,
+        "resolved": [
+          {
+            "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+            "exact_resolved_source_text": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。\n",
+            "line_start": 1,
+            "line_end": 51,
+            "context_before": "",
+            "context_after": ""
+          }
+        ]
+      },
+      "canonicalization": {
+        "status": "CANONICALIZED",
+        "review_reasons": [],
+        "exact_deterministic_transformation": "V2.1 source_refs projection -> existing V2 canonicalizer; no model text accepted as provenance",
+        "canonical_output": {
+          "subject": {
+            "type": "公司",
+            "name": "澄川数智科技有限公司"
+          },
+          "entities": [
+            {
+              "type": "公司",
+              "name": "澄川数智科技有限公司"
+            }
+          ],
+          "status": "unknown",
+          "scopes": [
+            "业务平台",
+            "数据治理",
+            "接口集成",
+            "RAG/Agent",
+            "实施与运维"
+          ],
+          "scope_source_texts": {
+            "业务平台": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "数据治理": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "接口集成": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "RAG/Agent": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "实施与运维": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。"
+          },
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "observation": {
+          "statement": "测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。"
+        },
+        "temporal_observations": [],
+        "observation_provenance": {
+          "entity_mentions": [
+            {
+              "source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+              "source_text_length": 1441,
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ],
+          "scope_items": [
+            {
+              "source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+              "source_text_length": 1441,
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+              "source_text_length": 1441,
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+              "source_text_length": 1441,
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+              "source_text_length": 1441,
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+              "source_text_length": 1441,
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": []
+        }
+      },
+      "grounding": {
+        "decision": "ACCEPT",
+        "reasons": [],
+        "resolved_evidence": [
+          {
+            "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+            "exact_resolved_source_text": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。\n",
+            "line_start": 1,
+            "line_end": 51,
+            "context_before": "",
+            "context_after": ""
+          }
+        ],
+        "field_level_grounding_results": [
+          {
+            "field": "statement",
+            "observed_value": "测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "subject",
+            "observed_value": "澄川数智科技有限公司",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "entity",
+            "observed_value": "澄川数智科技有限公司",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "status",
+            "observed_value": "",
+            "source_refs": [],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": null
+          },
+          {
+            "field": "scope",
+            "observed_value": "业务平台",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "scope",
+            "observed_value": "数据治理",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "scope",
+            "observed_value": "接口集成",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "scope",
+            "observed_value": "RAG/Agent",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "scope",
+            "observed_value": "实施与运维",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          }
+        ],
+        "rejected_observations": []
+      },
+      "semantic_difference_view": {
+        "source": [
+          {
+            "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+            "exact_resolved_source_text": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。\n",
+            "line_start": 1,
+            "line_end": 51,
+            "context_before": "",
+            "context_after": ""
+          }
+        ],
+        "raw_candidate": {
+          "statement": "测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。",
+          "source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "subject_name": "澄川数智科技有限公司",
+          "subject_type_hint": "公司",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "澄川数智科技有限公司",
+              "type_hint": "公司",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "",
+          "status_source_refs": [],
+          "scope_items": [
+            {
+              "text": "业务平台",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "text": "数据治理",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "text": "接口集成",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "text": "RAG/Agent",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "text": "实施与运维",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "canonical_projection": {
+          "subject": {
+            "type": "公司",
+            "name": "澄川数智科技有限公司"
+          },
+          "entities": [
+            {
+              "type": "公司",
+              "name": "澄川数智科技有限公司"
+            }
+          ],
+          "status": "unknown",
+          "scopes": [
+            "业务平台",
+            "数据治理",
+            "接口集成",
+            "RAG/Agent",
+            "实施与运维"
+          ],
+          "scope_source_texts": {
+            "业务平台": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "数据治理": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "接口集成": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "RAG/Agent": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "实施与运维": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。"
+          },
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "grounding_verdict": {
+          "decision": "ACCEPT",
+          "reasons": []
+        }
+      }
+    },
+    {
+      "candidate_index": 2,
+      "raw_candidate": {
+        "statement": "OFF-U01 为政府采购需求管理办法，发布单位为财政部，状态为 CURRENT_NO_REPEAL_FOUND，实施日期为 2021-07-01，最后核验日期为 2026-08-31。",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "subject_name": "OFF-U01",
+        "subject_type_hint": "官方来源",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "entity_mentions": [
+          {
+            "name": "OFF-U01",
+            "type_hint": "官方来源",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          },
+          {
+            "name": "财政部",
+            "type_hint": "发布单位",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          }
+        ],
+        "status_text": "CURRENT_NO_REPEAL_FOUND",
+        "status_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "scope_items": [
+          {
+            "text": "政府采购需求管理办法",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          }
+        ],
+        "quantity_items": [],
+        "temporal_items": [
+          {
+            "value_text": "2021-07-01",
+            "event_text": "实施",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          },
+          {
+            "value_text": "2026-08-31",
+            "event_text": "最后核验",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          }
+        ]
+      },
+      "source_resolution": {
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "resolution_rate": 1,
+        "resolved": [
+          {
+            "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+            "exact_resolved_source_text": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。\n",
+            "line_start": 1,
+            "line_end": 51,
+            "context_before": "",
+            "context_after": ""
+          }
+        ]
+      },
+      "canonicalization": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "exact_deterministic_transformation": "V2.1 source_refs projection -> existing V2 canonicalizer; no model text accepted as provenance",
+        "canonical_output": {
+          "subject": {
+            "type": "官方来源",
+            "name": "OFF-U01"
+          },
+          "entities": [
+            {
+              "type": "官方来源",
+              "name": "OFF-U01"
+            },
+            {
+              "type": "发布单位",
+              "name": "财政部"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "CURRENT_NO_REPEAL_FOUND",
+          "scopes": [
+            "政府采购需求管理办法"
+          ],
+          "scope_source_texts": {
+            "政府采购需求管理办法": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。"
+          },
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "observation": {
+          "statement": "OFF-U01 为政府采购需求管理办法，发布单位为财政部，状态为 CURRENT_NO_REPEAL_FOUND，实施日期为 2021-07-01，最后核验日期为 2026-08-31。"
+        },
+        "temporal_observations": [
+          {
+            "value_text": "2021-07-01",
+            "context_text": "实施",
+            "event_date": "2021-07-01",
+            "source_text": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。\n"
+          },
+          {
+            "value_text": "2026-08-31",
+            "context_text": "最后核验",
+            "event_date": "2026-08-31",
+            "source_text": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。\n"
+          }
+        ],
+        "observation_provenance": {
+          "entity_mentions": [
+            {
+              "source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+              "source_text_length": 1441,
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+              "source_text_length": 1441,
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ],
+          "scope_items": [
+            {
+              "source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+              "source_text_length": 1441,
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": [
+            {
+              "source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+              "source_text_length": 1441,
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+              "source_text_length": 1441,
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ]
+        }
+      },
+      "grounding": {
+        "decision": "REJECT",
+        "reasons": [
+          "statement is not grounded"
+        ],
+        "resolved_evidence": [
+          {
+            "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+            "exact_resolved_source_text": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。\n",
+            "line_start": 1,
+            "line_end": 51,
+            "context_before": "",
+            "context_after": ""
+          }
+        ],
+        "field_level_grounding_results": [
+          {
+            "field": "statement",
+            "observed_value": "OFF-U01 为政府采购需求管理办法，发布单位为财政部，状态为 CURRENT_NO_REPEAL_FOUND，实施日期为 2021-07-01，最后核验日期为 2026-08-31。",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": false
+          },
+          {
+            "field": "subject",
+            "observed_value": "OFF-U01",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "entity",
+            "observed_value": "OFF-U01",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "entity",
+            "observed_value": "财政部",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "status",
+            "observed_value": "CURRENT_NO_REPEAL_FOUND",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "scope",
+            "observed_value": "政府采购需求管理办法",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "temporal",
+            "observed_value": "2021-07-01",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "temporal",
+            "observed_value": "2021-07-01",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "temporal",
+            "observed_value": "实施",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "temporal",
+            "observed_value": "2026-08-31",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "temporal",
+            "observed_value": "2026-08-31",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "temporal",
+            "observed_value": "最后核验",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          }
+        ],
+        "rejected_observations": [
+          "statement"
+        ]
+      },
+      "semantic_difference_view": {
+        "source": [
+          {
+            "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+            "exact_resolved_source_text": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。\n",
+            "line_start": 1,
+            "line_end": 51,
+            "context_before": "",
+            "context_after": ""
+          }
+        ],
+        "raw_candidate": {
+          "statement": "OFF-U01 为政府采购需求管理办法，发布单位为财政部，状态为 CURRENT_NO_REPEAL_FOUND，实施日期为 2021-07-01，最后核验日期为 2026-08-31。",
+          "source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "subject_name": "OFF-U01",
+          "subject_type_hint": "官方来源",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "OFF-U01",
+              "type_hint": "官方来源",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "name": "财政部",
+              "type_hint": "发布单位",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "CURRENT_NO_REPEAL_FOUND",
+          "status_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "scope_items": [
+            {
+              "text": "政府采购需求管理办法",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": [
+            {
+              "value_text": "2021-07-01",
+              "event_text": "实施",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "value_text": "2026-08-31",
+              "event_text": "最后核验",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ]
+        },
+        "canonical_projection": {
+          "subject": {
+            "type": "官方来源",
+            "name": "OFF-U01"
+          },
+          "entities": [
+            {
+              "type": "官方来源",
+              "name": "OFF-U01"
+            },
+            {
+              "type": "发布单位",
+              "name": "财政部"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "CURRENT_NO_REPEAL_FOUND",
+          "scopes": [
+            "政府采购需求管理办法"
+          ],
+          "scope_source_texts": {
+            "政府采购需求管理办法": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。"
+          },
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "grounding_verdict": {
+          "decision": "REJECT",
+          "reasons": [
+            "statement is not grounded"
+          ]
+        }
+      }
+    },
+    {
+      "candidate_index": 3,
+      "raw_candidate": {
+        "statement": "OFF-U02 为国家政务信息化项目建设管理办法，发布单位为国务院办公厅，状态为 CURRENT_CONFIRMED，实施日期为 2020-02-01，最后核验日期为 2026-08-31。",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "subject_name": "OFF-U02",
+        "subject_type_hint": "官方来源",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "entity_mentions": [
+          {
+            "name": "OFF-U02",
+            "type_hint": "官方来源",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          },
+          {
+            "name": "国务院办公厅",
+            "type_hint": "发布单位",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          }
+        ],
+        "status_text": "CURRENT_CONFIRMED",
+        "status_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "scope_items": [
+          {
+            "text": "国家政务信息化项目建设管理办法",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          }
+        ],
+        "quantity_items": [],
+        "temporal_items": [
+          {
+            "value_text": "2020-02-01",
+            "event_text": "实施",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          },
+          {
+            "value_text": "2026-08-31",
+            "event_text": "最后核验",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          }
+        ]
+      },
+      "source_resolution": {
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "resolution_rate": 1,
+        "resolved": [
+          {
+            "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+            "exact_resolved_source_text": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。\n",
+            "line_start": 1,
+            "line_end": 51,
+            "context_before": "",
+            "context_after": ""
+          }
+        ]
+      },
+      "canonicalization": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "exact_deterministic_transformation": "V2.1 source_refs projection -> existing V2 canonicalizer; no model text accepted as provenance",
+        "canonical_output": {
+          "subject": {
+            "type": "官方来源",
+            "name": "OFF-U02"
+          },
+          "entities": [
+            {
+              "type": "官方来源",
+              "name": "OFF-U02"
+            },
+            {
+              "type": "发布单位",
+              "name": "国务院办公厅"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "CURRENT_CONFIRMED",
+          "scopes": [
+            "国家政务信息化项目建设管理办法"
+          ],
+          "scope_source_texts": {
+            "国家政务信息化项目建设管理办法": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。"
+          },
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "observation": {
+          "statement": "OFF-U02 为国家政务信息化项目建设管理办法，发布单位为国务院办公厅，状态为 CURRENT_CONFIRMED，实施日期为 2020-02-01，最后核验日期为 2026-08-31。"
+        },
+        "temporal_observations": [
+          {
+            "value_text": "2020-02-01",
+            "context_text": "实施",
+            "event_date": "2020-02-01",
+            "source_text": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。\n"
+          },
+          {
+            "value_text": "2026-08-31",
+            "context_text": "最后核验",
+            "event_date": "2026-08-31",
+            "source_text": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。\n"
+          }
+        ],
+        "observation_provenance": {
+          "entity_mentions": [
+            {
+              "source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+              "source_text_length": 1441,
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+              "source_text_length": 1441,
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ],
+          "scope_items": [
+            {
+              "source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+              "source_text_length": 1441,
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": [
+            {
+              "source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+              "source_text_length": 1441,
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+              "source_text_length": 1441,
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ]
+        }
+      },
+      "grounding": {
+        "decision": "REJECT",
+        "reasons": [
+          "statement is not grounded"
+        ],
+        "resolved_evidence": [
+          {
+            "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+            "exact_resolved_source_text": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。\n",
+            "line_start": 1,
+            "line_end": 51,
+            "context_before": "",
+            "context_after": ""
+          }
+        ],
+        "field_level_grounding_results": [
+          {
+            "field": "statement",
+            "observed_value": "OFF-U02 为国家政务信息化项目建设管理办法，发布单位为国务院办公厅，状态为 CURRENT_CONFIRMED，实施日期为 2020-02-01，最后核验日期为 2026-08-31。",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": false
+          },
+          {
+            "field": "subject",
+            "observed_value": "OFF-U02",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "entity",
+            "observed_value": "OFF-U02",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "entity",
+            "observed_value": "国务院办公厅",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "status",
+            "observed_value": "CURRENT_CONFIRMED",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "scope",
+            "observed_value": "国家政务信息化项目建设管理办法",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "temporal",
+            "observed_value": "2020-02-01",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "temporal",
+            "observed_value": "2020-02-01",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "temporal",
+            "observed_value": "实施",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "temporal",
+            "observed_value": "2026-08-31",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "temporal",
+            "observed_value": "2026-08-31",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          },
+          {
+            "field": "temporal",
+            "observed_value": "最后核验",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ],
+            "resolved_source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+            "value_present_in_resolved_source": true
+          }
+        ],
+        "rejected_observations": [
+          "statement"
+        ]
+      },
+      "semantic_difference_view": {
+        "source": [
+          {
+            "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+            "exact_resolved_source_text": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。\n",
+            "line_start": 1,
+            "line_end": 51,
+            "context_before": "",
+            "context_after": ""
+          }
+        ],
+        "raw_candidate": {
+          "statement": "OFF-U02 为国家政务信息化项目建设管理办法，发布单位为国务院办公厅，状态为 CURRENT_CONFIRMED，实施日期为 2020-02-01，最后核验日期为 2026-08-31。",
+          "source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "subject_name": "OFF-U02",
+          "subject_type_hint": "官方来源",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "OFF-U02",
+              "type_hint": "官方来源",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "name": "国务院办公厅",
+              "type_hint": "发布单位",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "CURRENT_CONFIRMED",
+          "status_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "scope_items": [
+            {
+              "text": "国家政务信息化项目建设管理办法",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": [
+            {
+              "value_text": "2020-02-01",
+              "event_text": "实施",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "value_text": "2026-08-31",
+              "event_text": "最后核验",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ]
+        },
+        "canonical_projection": {
+          "subject": {
+            "type": "官方来源",
+            "name": "OFF-U02"
+          },
+          "entities": [
+            {
+              "type": "官方来源",
+              "name": "OFF-U02"
+            },
+            {
+              "type": "发布单位",
+              "name": "国务院办公厅"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "CURRENT_CONFIRMED",
+          "scopes": [
+            "国家政务信息化项目建设管理办法"
+          ],
+          "scope_source_texts": {
+            "国家政务信息化项目建设管理办法": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。"
+          },
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "grounding_verdict": {
+          "decision": "REJECT",
+          "reasons": [
+            "statement is not grounded"
+          ]
+        }
+      }
+    }
+  ],
+  "mechanical_execution_evidence": {
+    "provider_http_reached": true,
+    "provider_http_status": 200,
+    "gateway_http_status": 200,
+    "json_parse_success": true,
+    "finish_reason": "completed",
+    "source_text_output_bytes": 0,
+    "source_ref_resolution_rate": 1,
+    "canonicalization_packet": "backend\\eval\\rag-pilot\\results\\fact-candidate-v2-1-fresh-20260908064040-06620586\\canonicalization-packet.json",
+    "pre_dispatch_ledger": "backend\\eval\\rag-pilot\\results\\fact-candidate-v2-1-fresh-20260908064040-06620586\\pre-dispatch-ledger.json",
+    "response_provider_raw": null
+  },
+  "review_questions": [
+    "Q1: Are all four Candidates explicitly supported by the authoritative source?",
+    "Q2: Is the atomicity of each Candidate appropriate?",
+    "Q3: Are the three canonicalization REVIEW_REQUIRED outcomes reasonable ambiguity or over-conservative canonicalization?",
+    "Q4: Are the three grounding REJECT outcomes true safety rejections or false rejects?",
+    "Q5: Is the single grounding ACCEPT complete and free of authority expansion?",
+    "Q6: Does Candidate V2.1 retain sufficient business semantics compared with the historical Fact Candidate?"
+  ],
+  "forbidden_in_packet": [
+    "expected Fact answer",
+    "old Gold",
+    "recommended semantic verdict",
+    "Mapping output",
+    "Claim output",
+    "Writer output"
+  ]
+}

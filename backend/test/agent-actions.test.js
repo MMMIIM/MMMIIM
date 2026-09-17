@@ -99,7 +99,9 @@ test('copilot action HTTP endpoints keep project context and safe preview shape'
         async listAgentActionAudits() { return []; }
       },
       agentContextResolver: { async resolve(input) { return input; } },
-      agentActionExecutor: { async execute(input) { calls.push(input); return { result: 'EXECUTED', tool: input.tool, risk_level: 'L1' }; }, async executePlan() { return { results: [], summary: {}, plan: [] }; } }
+      agentActionExecutor: { async execute(input) { calls.push(input); return { result: 'EXECUTED', tool: input.tool, risk_level: 'L1' }; }, async executePlan() { return { results: [], summary: {}, plan: [] }; } },
+      projectAuthorizationService: { assertProjectAccess: async () => {} },
+      actorResolver: () => ({ actor_id: 'agent-test', actor_type: 'test', source: 'test' })
     });
     const listener = app.listen(0, '127.0.0.1', () => resolve(listener));
   });

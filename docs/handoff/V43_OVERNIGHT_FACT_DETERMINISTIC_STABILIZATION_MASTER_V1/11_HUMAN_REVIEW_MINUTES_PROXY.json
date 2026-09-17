@@ -1,0 +1,30 @@
+{
+  "artifact_type": "V43_HUMAN_REVIEW_MINUTES_PROXY",
+  "method": "proxy_minutes = 3 + one minute per deterministic review reason + one minute for multi-quantity relation",
+  "measured_human_time": false,
+  "groups": [
+    {
+      "authority_class": "REAL_CURRENT",
+      "candidate_count": 31,
+      "accept_count": 19,
+      "review_count": 12,
+      "reject_count": 0,
+      "review_rate": 0.3870967741935484,
+      "review_minutes_proxy_total": 55,
+      "review_minutes_proxy_median": 4.5
+    },
+    {
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "candidate_count": 8,
+      "accept_count": 3,
+      "review_count": 5,
+      "reject_count": 0,
+      "review_rate": 0.625,
+      "review_minutes_proxy_total": 30,
+      "review_minutes_proxy_median": 7
+    }
+  ],
+  "semantic_gold_denominator_included": false,
+  "provider_calls": 0,
+  "db_writes": 0
+}

@@ -1,0 +1,61 @@
+{
+  "run_id": "fact-candidate-v2-1-fresh-20260908064040-06620586",
+  "checkpoint": "V43_FACT_CANDIDATE_V2_1_AMBIGUOUS_INTERRUPTION_QUARANTINE_AND_FRESH_CANARY_RUN",
+  "generated_at": "2026-09-08T06:40:40.615Z",
+  "historical_interruption_status": "QUARANTINED_UNRECOVERABLE",
+  "historical_interrupted_provider_calls": "UNKNOWN_0_OR_1",
+  "runtime_preflight": {
+    "gateway_base": "http://127.0.0.1:18082",
+    "ready_status": 200,
+    "info_status": 200,
+    "fact_provider": "deepseek_official",
+    "fact_provider_configured": true,
+    "fact_provider_endpoint": "/responses",
+    "fact_model": "deepseek-v4-pro",
+    "build_revision": "f509514",
+    "task_types": [
+      "requirement_extraction",
+      "response_planning",
+      "claim_generation",
+      "section_drafting",
+      "targeted_revision",
+      "evidence_fact_extraction",
+      "evidence_fact_candidate_v2",
+      "evidence_fact_candidate_v2_1",
+      "draft_sections",
+      "evidence_support_assessment",
+      "requirement_evidence_mapping"
+    ]
+  },
+  "contract": {
+    "task_type": "evidence_fact_candidate_v2_1",
+    "schema_version": "4.3-evidence-fact-candidate-v2.1",
+    "schema_sha256": "3dcece82464fcbd0351fe4444cc66994d36e40ca6ca97a3f2d0ba01e5e44f0b3",
+    "prompt_version": "4.3-evidence-fact-candidate-v2-prompt-v2",
+    "prompt_hash": "ba1ab6d2a298176ee27528b0e3d1bfe71f373fa99bb82c06cda780ba4272d642",
+    "canonicalizer_version": "4.3-evidence-fact-canonicalizer-v2.1",
+    "grounding_version": "4.3-evidence-fact-grounding-v2.1",
+    "model_source_text": false,
+    "source_refs_only": true
+  },
+  "planned_executions": 4,
+  "planned_cases": [
+    "COM-01",
+    "COM-06-A",
+    "COM-06-B",
+    "CCV2-U13-01"
+  ],
+  "provider": "deepseek_official",
+  "configured_model": "deepseek-v4-pro",
+  "requested_model": "deepseek-v4-pro",
+  "endpoint": "/responses",
+  "concurrency": 1,
+  "retries": 0,
+  "total_provider_call_cap": 4,
+  "production_db_writes": 0,
+  "fact_persistence": 0,
+  "gold_mutations": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0
+}

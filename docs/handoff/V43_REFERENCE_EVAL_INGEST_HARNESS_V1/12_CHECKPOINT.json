@@ -1,0 +1,56 @@
+{
+  "artifact_type": "V43_REFERENCE_EVAL_INGEST_HARNESS_V1_CHECKPOINT",
+  "status": "READY_FOR_HUMAN_HOST_REFERENCE_EVAL_INGEST_EXECUTION",
+  "mode": "DRY_RUN",
+  "source_count": 11,
+  "source_ids": [
+    "HW-002",
+    "HW-003",
+    "HW-004",
+    "HW-005",
+    "HW-006",
+    "H3C-003",
+    "H3C-004",
+    "H3C-010",
+    "H3C-011",
+    "H3C-012",
+    "H3C-013"
+  ],
+  "planned_material_count": 11,
+  "planned_chunk_count": 5211,
+  "html_adapter_count": 6,
+  "production_parser_count": 5,
+  "baseline_v3": {
+    "manifest_sha256": "c2087cd46a1642452915658ff1e687be27e40e4c674008a85ad63f780b7fcdae",
+    "counts": {
+      "materials": 34,
+      "chunks": 318,
+      "embeddings": 382
+    },
+    "exact_snapshot": true,
+    "clone_required": true
+  },
+  "source_identity": {
+    "all_sha_verified": true,
+    "source_role": "REFERENCE_ONLY",
+    "all_requirement_blind": true,
+    "all_non_synthetic": true,
+    "all_provenance_resolvable": true
+  },
+  "fidelity": "PARTIAL_EVAL_ADAPTER",
+  "provider_calls": 0,
+  "embedding_calls": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "fact_mapping_claim_writer_actions": 0,
+  "verification": {
+    "harness_focused": "9/9 PASS",
+    "relevant_existing_regressions": "49/49 PASS",
+    "build": "PASS",
+    "lint": "PASS",
+    "diff_check": "PASS_WITH_LINE_ENDING_WARNINGS",
+    "current_task_regressions": 0,
+    "postgres": "NOT_RUN_NO_ISOLATED_EVAL_DB_IN_CODEX"
+  },
+  "next_step": "Human host executes 11-source v4 isolated Eval ingestion; Codex must not execute host network command."
+}

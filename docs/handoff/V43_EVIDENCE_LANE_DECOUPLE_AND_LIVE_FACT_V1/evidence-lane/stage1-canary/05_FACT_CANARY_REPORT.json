@@ -1,0 +1,227 @@
+{
+  "run_id": "real-e2e-retrieval-fact-20260916095708-3ca473a0-stage1-canary",
+  "status": "PASS",
+  "task_type": "evidence_fact_candidate_v2_2",
+  "schema_version": "4.3-evidence-fact-candidate-v2.2",
+  "schema_hash": "3dcece82464fcbd0351fe4444cc66994d36e40ca6ca97a3f2d0ba01e5e44f0b3",
+  "prompt_version": "4.3-evidence-fact-candidate-v2.2-prompt-v1",
+  "prompt_hash": "e4acf5f9f8180bf355ee3c5e5e55852749b51c649e9f8c1d321ee53d048762e7",
+  "contexts_available": 3,
+  "contexts_processed": 3,
+  "requirements_represented": 3,
+  "source_context_dedup": {
+    "key": "material_id+chunk_id+chunk_hash",
+    "input_requirement_contexts": 3,
+    "unique_contexts": 3,
+    "duplicate_requirement_contexts_removed": 0,
+    "targeted_chunk_filter": [
+      "MCH-369C7BBCDB79203D29F37E8A524E41D5",
+      "MCH-FE0AD69A95643C6E508A4F7E5147D0D3",
+      "MCH-78E4EA708EBC05B9E2731B7736CF9B2E"
+    ],
+    "targeted_unique_contexts": 3
+  },
+  "provider_calls": 3,
+  "provider_failures": 0,
+  "candidate_total": 1,
+  "candidate_success_empty": 2,
+  "canonicalized_count": 1,
+  "canonicalization_review_required_count": 0,
+  "grounding_accept_count": 1,
+  "grounding_review_count": 0,
+  "grounding_reject_count": 0,
+  "unknown_source_alias_count": 0,
+  "provenance_complete_rate": 1,
+  "authority_escalation_count": 0,
+  "project_design_as_enterprise_fact_count": 0,
+  "future_commitment_as_existing_fact_count": 0,
+  "lineage_only_external_outcome_auto_promotion_count": 0,
+  "unresolved_output_truncation_count": 0,
+  "cases": [
+    {
+      "requirement_id": "FACT-SOURCE-COM-02",
+      "requirement_ids": [
+        "FACT-SOURCE-COM-02"
+      ],
+      "source_context_key": "7dc70fee-13e0-4b7d-b95f-202665c241d0\u0000MCH-369C7BBCDB79203D29F37E8A524E41D5\u0000644ec25fde2d5afb4a7d6b59720c4e643f933e9bfa267417a52a565cf998b084",
+      "source_material_id": "7dc70fee-13e0-4b7d-b95f-202665c241d0",
+      "source_chunk_id": "MCH-369C7BBCDB79203D29F37E8A524E41D5",
+      "source_hash": "644ec25fde2d5afb4a7d6b59720c4e643f933e9bfa267417a52a565cf998b084",
+      "source_ref": "MCH-369C7BBCDB79203D29F37E8A524E41D5",
+      "provider_call": 1,
+      "status": "PASS",
+      "candidate_count": 1,
+      "candidate_success_empty": false,
+      "duration_ms": 5137,
+      "error_code": null,
+      "provider_audit": {
+        "provider": "deepseek_official",
+        "model": "deepseek-v4-pro",
+        "requested_provider": "deepseek_official",
+        "requested_model": "deepseek-v4-pro",
+        "response_provider": null,
+        "response_model": "deepseek-v4-pro",
+        "endpoint": "/responses",
+        "provider_http_reached": true,
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "latency_ms": 5026,
+        "finish_reason": "completed",
+        "output_truncated": false,
+        "json_parse_success": true,
+        "safe_error_code": null,
+        "cause_code": null,
+        "response_envelope_hash": null,
+        "contract_validation_failure_family": null
+      },
+      "canonicalization": [
+        {
+          "canonicalization_status": "CANONICALIZED",
+          "grounding_decision": "ACCEPT",
+          "review_reasons": [],
+          "grounding_reasons": [],
+          "canonical_output": {
+            "subject": {
+              "type": "产品",
+              "name": "Synthetic产品"
+            },
+            "entities": [
+              {
+                "type": "产品",
+                "name": "Synthetic产品"
+              }
+            ],
+            "status": "unknown",
+            "scopes": [
+              "组织权限",
+              "流程",
+              "表单",
+              "接口",
+              "日志",
+              "报表",
+              "知识库",
+              "RAG",
+              "Agent工具管理"
+            ],
+            "scope_source_texts": {
+              "组织权限": "Synthetic产品含组织权限、流程、表单、接口、日志、报表、知识库、RAG和Agent工具管理。",
+              "流程": "Synthetic产品含组织权限、流程、表单、接口、日志、报表、知识库、RAG和Agent工具管理。",
+              "表单": "Synthetic产品含组织权限、流程、表单、接口、日志、报表、知识库、RAG和Agent工具管理。",
+              "接口": "Synthetic产品含组织权限、流程、表单、接口、日志、报表、知识库、RAG和Agent工具管理。",
+              "日志": "Synthetic产品含组织权限、流程、表单、接口、日志、报表、知识库、RAG和Agent工具管理。",
+              "报表": "Synthetic产品含组织权限、流程、表单、接口、日志、报表、知识库、RAG和Agent工具管理。",
+              "知识库": "Synthetic产品含组织权限、流程、表单、接口、日志、报表、知识库、RAG和Agent工具管理。",
+              "RAG": "Synthetic产品含组织权限、流程、表单、接口、日志、报表、知识库、RAG和Agent工具管理。",
+              "Agent工具管理": "Synthetic产品含组织权限、流程、表单、接口、日志、报表、知识库、RAG和Agent工具管理。"
+            },
+            "quantities": [],
+            "validity": {
+              "status": "unknown",
+              "valid_from": null,
+              "valid_until": null
+            },
+            "domain_metadata": {}
+          }
+        }
+      ]
+    },
+    {
+      "requirement_id": "FACT-SOURCE-COM-06",
+      "requirement_ids": [
+        "FACT-SOURCE-COM-06"
+      ],
+      "source_context_key": "3ec066d3-679a-4232-ba6d-364038658c81\u0000MCH-FE0AD69A95643C6E508A4F7E5147D0D3\u00008172afa05be1a2a8801c023b948d6673b68de1cb1414ac008e42d1afa7db4e5e",
+      "source_material_id": "3ec066d3-679a-4232-ba6d-364038658c81",
+      "source_chunk_id": "MCH-FE0AD69A95643C6E508A4F7E5147D0D3",
+      "source_hash": "8172afa05be1a2a8801c023b948d6673b68de1cb1414ac008e42d1afa7db4e5e",
+      "source_ref": "MCH-FE0AD69A95643C6E508A4F7E5147D0D3",
+      "provider_call": 2,
+      "status": "PASS",
+      "candidate_count": 0,
+      "candidate_success_empty": true,
+      "duration_ms": 1791,
+      "error_code": null,
+      "provider_audit": {
+        "provider": "deepseek_official",
+        "model": "deepseek-v4-pro",
+        "requested_provider": "deepseek_official",
+        "requested_model": "deepseek-v4-pro",
+        "response_provider": null,
+        "response_model": "deepseek-v4-pro",
+        "endpoint": "/responses",
+        "provider_http_reached": true,
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "latency_ms": 1782,
+        "finish_reason": "completed",
+        "output_truncated": false,
+        "json_parse_success": true,
+        "safe_error_code": null,
+        "cause_code": null,
+        "response_envelope_hash": null,
+        "contract_validation_failure_family": null
+      },
+      "canonicalization": []
+    },
+    {
+      "requirement_id": "FACT-SOURCE-COM-13",
+      "requirement_ids": [
+        "FACT-SOURCE-COM-13"
+      ],
+      "source_context_key": "a5510db7-bb22-46e3-aa7f-13b77f1206a6\u0000MCH-78E4EA708EBC05B9E2731B7736CF9B2E\u0000599301a3312c6cda42f0d6ffc1a20c759915ad29da4a9843a6f4e131395eaaaa",
+      "source_material_id": "a5510db7-bb22-46e3-aa7f-13b77f1206a6",
+      "source_chunk_id": "MCH-78E4EA708EBC05B9E2731B7736CF9B2E",
+      "source_hash": "599301a3312c6cda42f0d6ffc1a20c759915ad29da4a9843a6f4e131395eaaaa",
+      "source_ref": "MCH-78E4EA708EBC05B9E2731B7736CF9B2E",
+      "provider_call": 3,
+      "status": "PASS",
+      "candidate_count": 0,
+      "candidate_success_empty": true,
+      "duration_ms": 1273,
+      "error_code": null,
+      "provider_audit": {
+        "provider": "deepseek_official",
+        "model": "deepseek-v4-pro",
+        "requested_provider": "deepseek_official",
+        "requested_model": "deepseek-v4-pro",
+        "response_provider": null,
+        "response_model": "deepseek-v4-pro",
+        "endpoint": "/responses",
+        "provider_http_reached": true,
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "latency_ms": 1263,
+        "finish_reason": "completed",
+        "output_truncated": false,
+        "json_parse_success": true,
+        "safe_error_code": null,
+        "cause_code": null,
+        "response_envelope_hash": null,
+        "contract_validation_failure_family": null
+      },
+      "canonicalization": []
+    }
+  ],
+  "runtime_preflight": {
+    "gateway_base": "http://127.0.0.1:18082",
+    "ready_status": 200,
+    "info_status": 200,
+    "info": {
+      "fact_provider": "deepseek_official",
+      "fact_provider_configured": true,
+      "fact_provider_endpoint": "/responses",
+      "fact_model": "deepseek-v4-pro",
+      "build_revision": "dev-working-tree"
+    }
+  },
+  "safety": {
+    "fact_persistence": 0,
+    "production_db_writes": 0,
+    "eval_db_writes": 0,
+    "gold_mutations": 0,
+    "requirement_mutations": 0,
+    "mapping_actions": 0,
+    "claim_actions": 0,
+    "writer_actions": 0
+  }
+}

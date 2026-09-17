@@ -1,0 +1,2450 @@
+{
+  "artifact_type": "V43_RAG_RETRIEVAL_P1C_BOUNDED_OVERFETCH_CHALLENGER_CHECKPOINT_V1",
+  "artifact_version": "v1",
+  "status": "P1C_ENGINEERING_VALIDATION_COMPLETE_GPT_REVIEW_PENDING",
+  "execution_mode": "EVAL_ENGINEERING_CHALLENGER_ONLY",
+  "decision": "V43_RAG_RETRIEVAL_P1C_BOUNDED_OVERFETCH_CHALLENGER_V1",
+  "p1b_review": {
+    "P1B_ENGINEERING_VALIDATION": "PASS",
+    "CODEX_GATE_RESULT": "P1A_PRODUCTION_SAFE_AS_IS",
+    "GPT_GATE_RESULT": "P1A_NEEDS_BOUNDED_OVERFETCH",
+    "P1A_PRODUCTION_PROMOTION": "NOT_AUTHORIZED"
+  },
+  "frozen_candidate_k_ladder": [
+    20,
+    32,
+    48,
+    64
+  ],
+  "baseline_identity": {
+    "snapshot_id": "EVSNAP-D98FA52C-952F-416F-B57F-92C41EF9731D",
+    "snapshot_file_sha256": "5D0A7F451D4090DEDBD8E9EE4F3B5851565F01F7A4170D5A40C673031BCC4578",
+    "material_count": 9,
+    "chunk_count": 94,
+    "embedding_provider": "api.siliconflow.cn",
+    "embedding_model": "Qwen/Qwen3-Embedding-0.6B",
+    "vector_dimension": 1024
+  },
+  "corpus_identity": {
+    "loader": "backend/eval/real-e2e/chengchuan-evidence-source-loader.mjs",
+    "source_chunk_count": 94,
+    "source_identity_sha256": "ec659099e70e6c00e5cebd664732be815b8447de3e4a86dca3ed16c6f28772e8"
+  },
+  "gold_identity": {
+    "path": "backend/eval/retrieval-quality-p0/GPT_SEMANTIC_GOLD_V1.json",
+    "file_sha256": "7576C1D9A9FECD19F032AD49085E61E48BB008EFF4788E225A2CCEE3087492E7",
+    "authority": "DEVELOPMENT_EVAL_ONLY",
+    "status": "FROZEN_DEVELOPMENT_EVAL",
+    "semantic_gold_mutated": false,
+    "projection_version": "GPT_SEMANTIC_GOLD_V1_EXACT_SPAN_PROJECTION_V1"
+  },
+  "evidence_matcher": {
+    "version": "EVIDENCE_MATCHER_V1_EXACT_ACCEPTED_SPAN_GRADE",
+    "hash": "ce675a8756ea325fe208a32a8143d5889586fb26a343c7dd430dce378fe5c4f2",
+    "contract": {
+      "candidate_unit": "snapshot material_id + chunk_id + chunk_hash",
+      "accepted_match": "candidate chunk identity equals a frozen Gold evidence item accepted span_ref chunk identity",
+      "alternative_match": "any frozen Gold evidence item span_ref listed for the atom is acceptable; no semantic expansion is permitted",
+      "relevance_source": "frozen Gold evidence item grade only",
+      "precision_relevant_grade": "grade >= 2",
+      "ndcg_grades": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "atom_recall_source": "frozen Gold evidence atom acceptable_span_refs only",
+      "post_hoc_rules": false
+    }
+  },
+  "query_batch_freeze": {
+    "path": "backend/eval/retrieval-quality-p1c/results/V43_RAG_RETRIEVAL_P1C_BOUNDED_OVERFETCH_QUERY_BATCH_FREEZE_V1.json",
+    "file_sha256": "2844924B2237B21503A9314CD5D4C6A512087D4B008FA0926FB7E6DFD16D4AB4",
+    "deterministic_content_hash": "d2ab7da2762ceecafcd0c65995f67b4dc00c96bfe029047462b9ef3b7313c444",
+    "exact_case_order_frozen": true,
+    "all_query_vectors_loaded_before_retrieval_inspection": true
+  },
+  "existing_production_hygiene": {
+    "version": "retrieval-chunk-role-v1",
+    "p1a_rule_version": "P1A_HYGIENE_RULE_V1_GENERIC_DETERMINISTIC",
+    "p1a_rule_hash": "8320c40c28fa5052f6ea9abe3843a2544b6c929a955a252b97ee56b5180a79c2",
+    "new_hygiene_rules": 0
+  },
+  "production_shape": {
+    "raw_candidate_k": 20,
+    "current_hygiene_position": "POST_TRUNCATION",
+    "current_slot_replenishment": "NO",
+    "final_k": 8,
+    "additional_vector_db_call": false
+  },
+  "full_corpus_candidate_retrieval": false,
+  "max_candidate_depth_used": 64,
+  "production_shape_replay": {
+    "path": "backend/eval/retrieval-quality-p1c/results/V43_RAG_RETRIEVAL_P1C_BOUNDED_OVERFETCH_REPLAY_V1.json",
+    "file_sha256": "2C95BBF90942C1665580A2AEF73E7CCBE70A6A0A1F0919CB8B11F0A3B6ABB42B",
+    "metrics_by_depth": {
+      "20": {
+        "candidate_k": 20,
+        "raw_candidate_count": {
+          "total": 200,
+          "mean": 20,
+          "per_case": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ]
+        },
+        "hygiene_filtered_count": {
+          "total": 135,
+          "mean": 13.5,
+          "per_case": [
+            14,
+            18,
+            11,
+            12,
+            15,
+            16,
+            9,
+            11,
+            12,
+            17
+          ]
+        },
+        "hygiene_survivor_count": {
+          "total": 65,
+          "mean": 6.5,
+          "min": 2,
+          "max": 11,
+          "per_case": [
+            6,
+            2,
+            9,
+            8,
+            5,
+            4,
+            11,
+            9,
+            8,
+            3
+          ]
+        },
+        "final_returned_candidate_count": {
+          "total": 60,
+          "mean": 6,
+          "min": 2,
+          "max": 8,
+          "per_case": [
+            6,
+            2,
+            8,
+            8,
+            5,
+            4,
+            8,
+            8,
+            8,
+            3
+          ]
+        },
+        "final_pool_fill_rate": 0.75,
+        "cases_final_pool_lt_8": 5,
+        "raw_to_final_survival_ratio": 0.3,
+        "grade_gte_2_entering_from_gt20": {
+          "raw_pool_entry_count": 0,
+          "post_hygiene_survivor_count": 0,
+          "post_hygiene_case_count": 0,
+          "final_review_candidate_count": 0,
+          "final_review_case_count": 0,
+          "candidates_in_survivor_pool": [],
+          "candidates_in_final_review": []
+        },
+        "metrics_at_k": {
+          "1": {
+            "case_count": 10,
+            "evidence_atom_recall": 0.571428571429,
+            "candidate_precision": 0.4,
+            "ndcg": 0.444444444444,
+            "expected_retrieval_k0_count": 3,
+            "expected_no_sufficient_evidence_count": 9,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "3": {
+            "case_count": 10,
+            "evidence_atom_recall": 0.642857142857,
+            "candidate_precision": 0.2,
+            "ndcg": 0.425137184125,
+            "expected_retrieval_k0_count": 3,
+            "expected_no_sufficient_evidence_count": 9,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "5": {
+            "case_count": 10,
+            "evidence_atom_recall": 0.642857142857,
+            "candidate_precision": 0.12,
+            "ndcg": 0.451492485544,
+            "expected_retrieval_k0_count": 3,
+            "expected_no_sufficient_evidence_count": 9,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "8": {
+            "case_count": 10,
+            "evidence_atom_recall": 0.714285714286,
+            "candidate_precision": 0.0875,
+            "ndcg": 0.494476130793,
+            "expected_retrieval_k0_count": 3,
+            "expected_no_sufficient_evidence_count": 9,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          }
+        },
+        "mrr_final_at_8": {
+          "value": 0.45,
+          "hit_count": 5,
+          "case_count": 10,
+          "contract": "MRR_FINAL@8; misses contribute 0; final-review set is capped at 8"
+        },
+        "mrr_raw_at_depth": {
+          "value": 0.316666666667,
+          "hit_count": 5,
+          "case_count": 10,
+          "metric": "MRR_RAW@20",
+          "contract": "dense raw candidate pool only; never mixed with final-review MRR"
+        }
+      },
+      "32": {
+        "candidate_k": 32,
+        "raw_candidate_count": {
+          "total": 320,
+          "mean": 32,
+          "per_case": [
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32
+          ]
+        },
+        "hygiene_filtered_count": {
+          "total": 212,
+          "mean": 21.2,
+          "per_case": [
+            25,
+            26,
+            20,
+            19,
+            23,
+            24,
+            12,
+            18,
+            19,
+            26
+          ]
+        },
+        "hygiene_survivor_count": {
+          "total": 108,
+          "mean": 10.8,
+          "min": 6,
+          "max": 20,
+          "per_case": [
+            7,
+            6,
+            12,
+            13,
+            9,
+            8,
+            20,
+            14,
+            13,
+            6
+          ]
+        },
+        "final_returned_candidate_count": {
+          "total": 75,
+          "mean": 7.5,
+          "min": 6,
+          "max": 8,
+          "per_case": [
+            7,
+            6,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            6
+          ]
+        },
+        "final_pool_fill_rate": 0.9375,
+        "cases_final_pool_lt_8": 3,
+        "raw_to_final_survival_ratio": 0.234375,
+        "grade_gte_2_entering_from_gt20": {
+          "raw_pool_entry_count": 2,
+          "post_hygiene_survivor_count": 2,
+          "post_hygiene_case_count": 2,
+          "final_review_candidate_count": 0,
+          "final_review_case_count": 0,
+          "candidates_in_survivor_pool": [
+            {
+              "source_chunk_id": "MCH-AA94BB7D153A30F95E869D78DC45A0E5",
+              "dense_rank": 27,
+              "post_hygiene_rank": 17,
+              "gold_grade": 2,
+              "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+              "requirement_id": "TB-003:REQ-119"
+            },
+            {
+              "source_chunk_id": "MCH-2EEFA4F9B214B94D417935EEB260A88E",
+              "dense_rank": 25,
+              "post_hygiene_rank": 11,
+              "gold_grade": 2,
+              "case_id": "RAG-P0-HOLD-TB-003-REQ-170",
+              "requirement_id": "TB-003:REQ-170"
+            }
+          ],
+          "candidates_in_final_review": []
+        },
+        "metrics_at_k": {
+          "1": {
+            "case_count": 10,
+            "evidence_atom_recall": 0.571428571429,
+            "candidate_precision": 0.4,
+            "ndcg": 0.444444444444,
+            "expected_retrieval_k0_count": 3,
+            "expected_no_sufficient_evidence_count": 9,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "3": {
+            "case_count": 10,
+            "evidence_atom_recall": 0.642857142857,
+            "candidate_precision": 0.2,
+            "ndcg": 0.425137184125,
+            "expected_retrieval_k0_count": 3,
+            "expected_no_sufficient_evidence_count": 9,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "5": {
+            "case_count": 10,
+            "evidence_atom_recall": 0.642857142857,
+            "candidate_precision": 0.12,
+            "ndcg": 0.451492485544,
+            "expected_retrieval_k0_count": 3,
+            "expected_no_sufficient_evidence_count": 9,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "8": {
+            "case_count": 10,
+            "evidence_atom_recall": 0.714285714286,
+            "candidate_precision": 0.0875,
+            "ndcg": 0.504129760952,
+            "expected_retrieval_k0_count": 3,
+            "expected_no_sufficient_evidence_count": 9,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          }
+        },
+        "mrr_final_at_8": {
+          "value": 0.45,
+          "hit_count": 5,
+          "case_count": 10,
+          "contract": "MRR_FINAL@8; misses contribute 0; final-review set is capped at 8"
+        },
+        "mrr_raw_at_depth": {
+          "value": 0.32037037037,
+          "hit_count": 6,
+          "case_count": 10,
+          "metric": "MRR_RAW@32",
+          "contract": "dense raw candidate pool only; never mixed with final-review MRR"
+        }
+      },
+      "48": {
+        "candidate_k": 48,
+        "raw_candidate_count": {
+          "total": 480,
+          "mean": 48,
+          "per_case": [
+            48,
+            48,
+            48,
+            48,
+            48,
+            48,
+            48,
+            48,
+            48,
+            48
+          ]
+        },
+        "hygiene_filtered_count": {
+          "total": 318,
+          "mean": 31.8,
+          "per_case": [
+            38,
+            31,
+            34,
+            27,
+            35,
+            37,
+            26,
+            30,
+            24,
+            36
+          ]
+        },
+        "hygiene_survivor_count": {
+          "total": 162,
+          "mean": 16.2,
+          "min": 10,
+          "max": 24,
+          "per_case": [
+            10,
+            17,
+            14,
+            21,
+            13,
+            11,
+            22,
+            18,
+            24,
+            12
+          ]
+        },
+        "final_returned_candidate_count": {
+          "total": 80,
+          "mean": 8,
+          "min": 8,
+          "max": 8,
+          "per_case": [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8
+          ]
+        },
+        "final_pool_fill_rate": 1,
+        "cases_final_pool_lt_8": 0,
+        "raw_to_final_survival_ratio": 0.166666666667,
+        "grade_gte_2_entering_from_gt20": {
+          "raw_pool_entry_count": 4,
+          "post_hygiene_survivor_count": 4,
+          "post_hygiene_case_count": 3,
+          "final_review_candidate_count": 0,
+          "final_review_case_count": 0,
+          "candidates_in_survivor_pool": [
+            {
+              "source_chunk_id": "MCH-D09A2FC0D82F6D27ED11B48CBDA4B06C",
+              "dense_rank": 40,
+              "post_hygiene_rank": 11,
+              "gold_grade": 2,
+              "case_id": "RAG-P0-CAL-FAST-01-REQ-005",
+              "requirement_id": "FAST-01:REQ-005"
+            },
+            {
+              "source_chunk_id": "MCH-AA94BB7D153A30F95E869D78DC45A0E5",
+              "dense_rank": 27,
+              "post_hygiene_rank": 17,
+              "gold_grade": 2,
+              "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+              "requirement_id": "TB-003:REQ-119"
+            },
+            {
+              "source_chunk_id": "MCH-2EEFA4F9B214B94D417935EEB260A88E",
+              "dense_rank": 46,
+              "post_hygiene_rank": 22,
+              "gold_grade": 2,
+              "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+              "requirement_id": "TB-003:REQ-119"
+            },
+            {
+              "source_chunk_id": "MCH-2EEFA4F9B214B94D417935EEB260A88E",
+              "dense_rank": 25,
+              "post_hygiene_rank": 11,
+              "gold_grade": 2,
+              "case_id": "RAG-P0-HOLD-TB-003-REQ-170",
+              "requirement_id": "TB-003:REQ-170"
+            }
+          ],
+          "candidates_in_final_review": []
+        },
+        "metrics_at_k": {
+          "1": {
+            "case_count": 10,
+            "evidence_atom_recall": 0.571428571429,
+            "candidate_precision": 0.4,
+            "ndcg": 0.444444444444,
+            "expected_retrieval_k0_count": 3,
+            "expected_no_sufficient_evidence_count": 9,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "3": {
+            "case_count": 10,
+            "evidence_atom_recall": 0.642857142857,
+            "candidate_precision": 0.2,
+            "ndcg": 0.425137184125,
+            "expected_retrieval_k0_count": 3,
+            "expected_no_sufficient_evidence_count": 9,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "5": {
+            "case_count": 10,
+            "evidence_atom_recall": 0.642857142857,
+            "candidate_precision": 0.12,
+            "ndcg": 0.451492485544,
+            "expected_retrieval_k0_count": 3,
+            "expected_no_sufficient_evidence_count": 9,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "8": {
+            "case_count": 10,
+            "evidence_atom_recall": 0.714285714286,
+            "candidate_precision": 0.0875,
+            "ndcg": 0.504129760952,
+            "expected_retrieval_k0_count": 3,
+            "expected_no_sufficient_evidence_count": 9,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          }
+        },
+        "mrr_final_at_8": {
+          "value": 0.45,
+          "hit_count": 5,
+          "case_count": 10,
+          "contract": "MRR_FINAL@8; misses contribute 0; final-review set is capped at 8"
+        },
+        "mrr_raw_at_depth": {
+          "value": 0.32287037037,
+          "hit_count": 7,
+          "case_count": 10,
+          "metric": "MRR_RAW@48",
+          "contract": "dense raw candidate pool only; never mixed with final-review MRR"
+        }
+      },
+      "64": {
+        "candidate_k": 64,
+        "raw_candidate_count": {
+          "total": 640,
+          "mean": 64,
+          "per_case": [
+            64,
+            64,
+            64,
+            64,
+            64,
+            64,
+            64,
+            64,
+            64,
+            64
+          ]
+        },
+        "hygiene_filtered_count": {
+          "total": 401,
+          "mean": 40.1,
+          "per_case": [
+            40,
+            40,
+            47,
+            38,
+            44,
+            40,
+            32,
+            40,
+            37,
+            43
+          ]
+        },
+        "hygiene_survivor_count": {
+          "total": 239,
+          "mean": 23.9,
+          "min": 17,
+          "max": 32,
+          "per_case": [
+            24,
+            24,
+            17,
+            26,
+            20,
+            24,
+            32,
+            24,
+            27,
+            21
+          ]
+        },
+        "final_returned_candidate_count": {
+          "total": 80,
+          "mean": 8,
+          "min": 8,
+          "max": 8,
+          "per_case": [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8
+          ]
+        },
+        "final_pool_fill_rate": 1,
+        "cases_final_pool_lt_8": 0,
+        "raw_to_final_survival_ratio": 0.125,
+        "grade_gte_2_entering_from_gt20": {
+          "raw_pool_entry_count": 4,
+          "post_hygiene_survivor_count": 4,
+          "post_hygiene_case_count": 3,
+          "final_review_candidate_count": 0,
+          "final_review_case_count": 0,
+          "candidates_in_survivor_pool": [
+            {
+              "source_chunk_id": "MCH-D09A2FC0D82F6D27ED11B48CBDA4B06C",
+              "dense_rank": 40,
+              "post_hygiene_rank": 11,
+              "gold_grade": 2,
+              "case_id": "RAG-P0-CAL-FAST-01-REQ-005",
+              "requirement_id": "FAST-01:REQ-005"
+            },
+            {
+              "source_chunk_id": "MCH-AA94BB7D153A30F95E869D78DC45A0E5",
+              "dense_rank": 27,
+              "post_hygiene_rank": 17,
+              "gold_grade": 2,
+              "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+              "requirement_id": "TB-003:REQ-119"
+            },
+            {
+              "source_chunk_id": "MCH-2EEFA4F9B214B94D417935EEB260A88E",
+              "dense_rank": 46,
+              "post_hygiene_rank": 22,
+              "gold_grade": 2,
+              "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+              "requirement_id": "TB-003:REQ-119"
+            },
+            {
+              "source_chunk_id": "MCH-2EEFA4F9B214B94D417935EEB260A88E",
+              "dense_rank": 25,
+              "post_hygiene_rank": 11,
+              "gold_grade": 2,
+              "case_id": "RAG-P0-HOLD-TB-003-REQ-170",
+              "requirement_id": "TB-003:REQ-170"
+            }
+          ],
+          "candidates_in_final_review": []
+        },
+        "metrics_at_k": {
+          "1": {
+            "case_count": 10,
+            "evidence_atom_recall": 0.571428571429,
+            "candidate_precision": 0.4,
+            "ndcg": 0.444444444444,
+            "expected_retrieval_k0_count": 3,
+            "expected_no_sufficient_evidence_count": 9,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "3": {
+            "case_count": 10,
+            "evidence_atom_recall": 0.642857142857,
+            "candidate_precision": 0.2,
+            "ndcg": 0.425137184125,
+            "expected_retrieval_k0_count": 3,
+            "expected_no_sufficient_evidence_count": 9,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "5": {
+            "case_count": 10,
+            "evidence_atom_recall": 0.642857142857,
+            "candidate_precision": 0.12,
+            "ndcg": 0.451492485544,
+            "expected_retrieval_k0_count": 3,
+            "expected_no_sufficient_evidence_count": 9,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "8": {
+            "case_count": 10,
+            "evidence_atom_recall": 0.714285714286,
+            "candidate_precision": 0.0875,
+            "ndcg": 0.504129760952,
+            "expected_retrieval_k0_count": 3,
+            "expected_no_sufficient_evidence_count": 9,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          }
+        },
+        "mrr_final_at_8": {
+          "value": 0.45,
+          "hit_count": 5,
+          "case_count": 10,
+          "contract": "MRR_FINAL@8; misses contribute 0; final-review set is capped at 8"
+        },
+        "mrr_raw_at_depth": {
+          "value": 0.32287037037,
+          "hit_count": 7,
+          "case_count": 10,
+          "metric": "MRR_RAW@64",
+          "contract": "dense raw candidate pool only; never mixed with final-review MRR"
+        }
+      }
+    },
+    "R0": {
+      "candidate_k": 20,
+      "raw_candidate_count": {
+        "total": 200,
+        "mean": 20,
+        "per_case": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ]
+      },
+      "hygiene_filtered_count": {
+        "total": 135,
+        "mean": 13.5,
+        "per_case": [
+          14,
+          18,
+          11,
+          12,
+          15,
+          16,
+          9,
+          11,
+          12,
+          17
+        ]
+      },
+      "hygiene_survivor_count": {
+        "total": 65,
+        "mean": 6.5,
+        "min": 2,
+        "max": 11,
+        "per_case": [
+          6,
+          2,
+          9,
+          8,
+          5,
+          4,
+          11,
+          9,
+          8,
+          3
+        ]
+      },
+      "final_returned_candidate_count": {
+        "total": 60,
+        "mean": 6,
+        "min": 2,
+        "max": 8,
+        "per_case": [
+          6,
+          2,
+          8,
+          8,
+          5,
+          4,
+          8,
+          8,
+          8,
+          3
+        ]
+      },
+      "final_pool_fill_rate": 0.75,
+      "cases_final_pool_lt_8": 5,
+      "raw_to_final_survival_ratio": 0.3,
+      "grade_gte_2_entering_from_gt20": {
+        "raw_pool_entry_count": 0,
+        "post_hygiene_survivor_count": 0,
+        "post_hygiene_case_count": 0,
+        "final_review_candidate_count": 0,
+        "final_review_case_count": 0,
+        "candidates_in_survivor_pool": [],
+        "candidates_in_final_review": []
+      },
+      "metrics_at_k": {
+        "1": {
+          "case_count": 10,
+          "evidence_atom_recall": 0.571428571429,
+          "candidate_precision": 0.4,
+          "ndcg": 0.444444444444,
+          "expected_retrieval_k0_count": 3,
+          "expected_no_sufficient_evidence_count": 9,
+          "false_positive_retrieval_candidate_rate": 0,
+          "false_negative_retrieval_k0_rate": 0
+        },
+        "3": {
+          "case_count": 10,
+          "evidence_atom_recall": 0.642857142857,
+          "candidate_precision": 0.2,
+          "ndcg": 0.425137184125,
+          "expected_retrieval_k0_count": 3,
+          "expected_no_sufficient_evidence_count": 9,
+          "false_positive_retrieval_candidate_rate": 0,
+          "false_negative_retrieval_k0_rate": 0
+        },
+        "5": {
+          "case_count": 10,
+          "evidence_atom_recall": 0.642857142857,
+          "candidate_precision": 0.12,
+          "ndcg": 0.451492485544,
+          "expected_retrieval_k0_count": 3,
+          "expected_no_sufficient_evidence_count": 9,
+          "false_positive_retrieval_candidate_rate": 0,
+          "false_negative_retrieval_k0_rate": 0
+        },
+        "8": {
+          "case_count": 10,
+          "evidence_atom_recall": 0.714285714286,
+          "candidate_precision": 0.0875,
+          "ndcg": 0.494476130793,
+          "expected_retrieval_k0_count": 3,
+          "expected_no_sufficient_evidence_count": 9,
+          "false_positive_retrieval_candidate_rate": 0,
+          "false_negative_retrieval_k0_rate": 0
+        }
+      },
+      "mrr_final_at_8": {
+        "value": 0.45,
+        "hit_count": 5,
+        "case_count": 10,
+        "contract": "MRR_FINAL@8; misses contribute 0; final-review set is capped at 8"
+      },
+      "mrr_raw_at_depth": {
+        "value": 0.316666666667,
+        "hit_count": 5,
+        "case_count": 10,
+        "metric": "MRR_RAW@20",
+        "contract": "dense raw candidate pool only; never mixed with final-review MRR"
+      }
+    },
+    "R32": {
+      "candidate_k": 32,
+      "raw_candidate_count": {
+        "total": 320,
+        "mean": 32,
+        "per_case": [
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32
+        ]
+      },
+      "hygiene_filtered_count": {
+        "total": 212,
+        "mean": 21.2,
+        "per_case": [
+          25,
+          26,
+          20,
+          19,
+          23,
+          24,
+          12,
+          18,
+          19,
+          26
+        ]
+      },
+      "hygiene_survivor_count": {
+        "total": 108,
+        "mean": 10.8,
+        "min": 6,
+        "max": 20,
+        "per_case": [
+          7,
+          6,
+          12,
+          13,
+          9,
+          8,
+          20,
+          14,
+          13,
+          6
+        ]
+      },
+      "final_returned_candidate_count": {
+        "total": 75,
+        "mean": 7.5,
+        "min": 6,
+        "max": 8,
+        "per_case": [
+          7,
+          6,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          6
+        ]
+      },
+      "final_pool_fill_rate": 0.9375,
+      "cases_final_pool_lt_8": 3,
+      "raw_to_final_survival_ratio": 0.234375,
+      "grade_gte_2_entering_from_gt20": {
+        "raw_pool_entry_count": 2,
+        "post_hygiene_survivor_count": 2,
+        "post_hygiene_case_count": 2,
+        "final_review_candidate_count": 0,
+        "final_review_case_count": 0,
+        "candidates_in_survivor_pool": [
+          {
+            "source_chunk_id": "MCH-AA94BB7D153A30F95E869D78DC45A0E5",
+            "dense_rank": 27,
+            "post_hygiene_rank": 17,
+            "gold_grade": 2,
+            "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+            "requirement_id": "TB-003:REQ-119"
+          },
+          {
+            "source_chunk_id": "MCH-2EEFA4F9B214B94D417935EEB260A88E",
+            "dense_rank": 25,
+            "post_hygiene_rank": 11,
+            "gold_grade": 2,
+            "case_id": "RAG-P0-HOLD-TB-003-REQ-170",
+            "requirement_id": "TB-003:REQ-170"
+          }
+        ],
+        "candidates_in_final_review": []
+      },
+      "metrics_at_k": {
+        "1": {
+          "case_count": 10,
+          "evidence_atom_recall": 0.571428571429,
+          "candidate_precision": 0.4,
+          "ndcg": 0.444444444444,
+          "expected_retrieval_k0_count": 3,
+          "expected_no_sufficient_evidence_count": 9,
+          "false_positive_retrieval_candidate_rate": 0,
+          "false_negative_retrieval_k0_rate": 0
+        },
+        "3": {
+          "case_count": 10,
+          "evidence_atom_recall": 0.642857142857,
+          "candidate_precision": 0.2,
+          "ndcg": 0.425137184125,
+          "expected_retrieval_k0_count": 3,
+          "expected_no_sufficient_evidence_count": 9,
+          "false_positive_retrieval_candidate_rate": 0,
+          "false_negative_retrieval_k0_rate": 0
+        },
+        "5": {
+          "case_count": 10,
+          "evidence_atom_recall": 0.642857142857,
+          "candidate_precision": 0.12,
+          "ndcg": 0.451492485544,
+          "expected_retrieval_k0_count": 3,
+          "expected_no_sufficient_evidence_count": 9,
+          "false_positive_retrieval_candidate_rate": 0,
+          "false_negative_retrieval_k0_rate": 0
+        },
+        "8": {
+          "case_count": 10,
+          "evidence_atom_recall": 0.714285714286,
+          "candidate_precision": 0.0875,
+          "ndcg": 0.504129760952,
+          "expected_retrieval_k0_count": 3,
+          "expected_no_sufficient_evidence_count": 9,
+          "false_positive_retrieval_candidate_rate": 0,
+          "false_negative_retrieval_k0_rate": 0
+        }
+      },
+      "mrr_final_at_8": {
+        "value": 0.45,
+        "hit_count": 5,
+        "case_count": 10,
+        "contract": "MRR_FINAL@8; misses contribute 0; final-review set is capped at 8"
+      },
+      "mrr_raw_at_depth": {
+        "value": 0.32037037037,
+        "hit_count": 6,
+        "case_count": 10,
+        "metric": "MRR_RAW@32",
+        "contract": "dense raw candidate pool only; never mixed with final-review MRR"
+      }
+    },
+    "R48": {
+      "candidate_k": 48,
+      "raw_candidate_count": {
+        "total": 480,
+        "mean": 48,
+        "per_case": [
+          48,
+          48,
+          48,
+          48,
+          48,
+          48,
+          48,
+          48,
+          48,
+          48
+        ]
+      },
+      "hygiene_filtered_count": {
+        "total": 318,
+        "mean": 31.8,
+        "per_case": [
+          38,
+          31,
+          34,
+          27,
+          35,
+          37,
+          26,
+          30,
+          24,
+          36
+        ]
+      },
+      "hygiene_survivor_count": {
+        "total": 162,
+        "mean": 16.2,
+        "min": 10,
+        "max": 24,
+        "per_case": [
+          10,
+          17,
+          14,
+          21,
+          13,
+          11,
+          22,
+          18,
+          24,
+          12
+        ]
+      },
+      "final_returned_candidate_count": {
+        "total": 80,
+        "mean": 8,
+        "min": 8,
+        "max": 8,
+        "per_case": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ]
+      },
+      "final_pool_fill_rate": 1,
+      "cases_final_pool_lt_8": 0,
+      "raw_to_final_survival_ratio": 0.166666666667,
+      "grade_gte_2_entering_from_gt20": {
+        "raw_pool_entry_count": 4,
+        "post_hygiene_survivor_count": 4,
+        "post_hygiene_case_count": 3,
+        "final_review_candidate_count": 0,
+        "final_review_case_count": 0,
+        "candidates_in_survivor_pool": [
+          {
+            "source_chunk_id": "MCH-D09A2FC0D82F6D27ED11B48CBDA4B06C",
+            "dense_rank": 40,
+            "post_hygiene_rank": 11,
+            "gold_grade": 2,
+            "case_id": "RAG-P0-CAL-FAST-01-REQ-005",
+            "requirement_id": "FAST-01:REQ-005"
+          },
+          {
+            "source_chunk_id": "MCH-AA94BB7D153A30F95E869D78DC45A0E5",
+            "dense_rank": 27,
+            "post_hygiene_rank": 17,
+            "gold_grade": 2,
+            "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+            "requirement_id": "TB-003:REQ-119"
+          },
+          {
+            "source_chunk_id": "MCH-2EEFA4F9B214B94D417935EEB260A88E",
+            "dense_rank": 46,
+            "post_hygiene_rank": 22,
+            "gold_grade": 2,
+            "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+            "requirement_id": "TB-003:REQ-119"
+          },
+          {
+            "source_chunk_id": "MCH-2EEFA4F9B214B94D417935EEB260A88E",
+            "dense_rank": 25,
+            "post_hygiene_rank": 11,
+            "gold_grade": 2,
+            "case_id": "RAG-P0-HOLD-TB-003-REQ-170",
+            "requirement_id": "TB-003:REQ-170"
+          }
+        ],
+        "candidates_in_final_review": []
+      },
+      "metrics_at_k": {
+        "1": {
+          "case_count": 10,
+          "evidence_atom_recall": 0.571428571429,
+          "candidate_precision": 0.4,
+          "ndcg": 0.444444444444,
+          "expected_retrieval_k0_count": 3,
+          "expected_no_sufficient_evidence_count": 9,
+          "false_positive_retrieval_candidate_rate": 0,
+          "false_negative_retrieval_k0_rate": 0
+        },
+        "3": {
+          "case_count": 10,
+          "evidence_atom_recall": 0.642857142857,
+          "candidate_precision": 0.2,
+          "ndcg": 0.425137184125,
+          "expected_retrieval_k0_count": 3,
+          "expected_no_sufficient_evidence_count": 9,
+          "false_positive_retrieval_candidate_rate": 0,
+          "false_negative_retrieval_k0_rate": 0
+        },
+        "5": {
+          "case_count": 10,
+          "evidence_atom_recall": 0.642857142857,
+          "candidate_precision": 0.12,
+          "ndcg": 0.451492485544,
+          "expected_retrieval_k0_count": 3,
+          "expected_no_sufficient_evidence_count": 9,
+          "false_positive_retrieval_candidate_rate": 0,
+          "false_negative_retrieval_k0_rate": 0
+        },
+        "8": {
+          "case_count": 10,
+          "evidence_atom_recall": 0.714285714286,
+          "candidate_precision": 0.0875,
+          "ndcg": 0.504129760952,
+          "expected_retrieval_k0_count": 3,
+          "expected_no_sufficient_evidence_count": 9,
+          "false_positive_retrieval_candidate_rate": 0,
+          "false_negative_retrieval_k0_rate": 0
+        }
+      },
+      "mrr_final_at_8": {
+        "value": 0.45,
+        "hit_count": 5,
+        "case_count": 10,
+        "contract": "MRR_FINAL@8; misses contribute 0; final-review set is capped at 8"
+      },
+      "mrr_raw_at_depth": {
+        "value": 0.32287037037,
+        "hit_count": 7,
+        "case_count": 10,
+        "metric": "MRR_RAW@48",
+        "contract": "dense raw candidate pool only; never mixed with final-review MRR"
+      }
+    },
+    "R64": {
+      "candidate_k": 64,
+      "raw_candidate_count": {
+        "total": 640,
+        "mean": 64,
+        "per_case": [
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64
+        ]
+      },
+      "hygiene_filtered_count": {
+        "total": 401,
+        "mean": 40.1,
+        "per_case": [
+          40,
+          40,
+          47,
+          38,
+          44,
+          40,
+          32,
+          40,
+          37,
+          43
+        ]
+      },
+      "hygiene_survivor_count": {
+        "total": 239,
+        "mean": 23.9,
+        "min": 17,
+        "max": 32,
+        "per_case": [
+          24,
+          24,
+          17,
+          26,
+          20,
+          24,
+          32,
+          24,
+          27,
+          21
+        ]
+      },
+      "final_returned_candidate_count": {
+        "total": 80,
+        "mean": 8,
+        "min": 8,
+        "max": 8,
+        "per_case": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ]
+      },
+      "final_pool_fill_rate": 1,
+      "cases_final_pool_lt_8": 0,
+      "raw_to_final_survival_ratio": 0.125,
+      "grade_gte_2_entering_from_gt20": {
+        "raw_pool_entry_count": 4,
+        "post_hygiene_survivor_count": 4,
+        "post_hygiene_case_count": 3,
+        "final_review_candidate_count": 0,
+        "final_review_case_count": 0,
+        "candidates_in_survivor_pool": [
+          {
+            "source_chunk_id": "MCH-D09A2FC0D82F6D27ED11B48CBDA4B06C",
+            "dense_rank": 40,
+            "post_hygiene_rank": 11,
+            "gold_grade": 2,
+            "case_id": "RAG-P0-CAL-FAST-01-REQ-005",
+            "requirement_id": "FAST-01:REQ-005"
+          },
+          {
+            "source_chunk_id": "MCH-AA94BB7D153A30F95E869D78DC45A0E5",
+            "dense_rank": 27,
+            "post_hygiene_rank": 17,
+            "gold_grade": 2,
+            "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+            "requirement_id": "TB-003:REQ-119"
+          },
+          {
+            "source_chunk_id": "MCH-2EEFA4F9B214B94D417935EEB260A88E",
+            "dense_rank": 46,
+            "post_hygiene_rank": 22,
+            "gold_grade": 2,
+            "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+            "requirement_id": "TB-003:REQ-119"
+          },
+          {
+            "source_chunk_id": "MCH-2EEFA4F9B214B94D417935EEB260A88E",
+            "dense_rank": 25,
+            "post_hygiene_rank": 11,
+            "gold_grade": 2,
+            "case_id": "RAG-P0-HOLD-TB-003-REQ-170",
+            "requirement_id": "TB-003:REQ-170"
+          }
+        ],
+        "candidates_in_final_review": []
+      },
+      "metrics_at_k": {
+        "1": {
+          "case_count": 10,
+          "evidence_atom_recall": 0.571428571429,
+          "candidate_precision": 0.4,
+          "ndcg": 0.444444444444,
+          "expected_retrieval_k0_count": 3,
+          "expected_no_sufficient_evidence_count": 9,
+          "false_positive_retrieval_candidate_rate": 0,
+          "false_negative_retrieval_k0_rate": 0
+        },
+        "3": {
+          "case_count": 10,
+          "evidence_atom_recall": 0.642857142857,
+          "candidate_precision": 0.2,
+          "ndcg": 0.425137184125,
+          "expected_retrieval_k0_count": 3,
+          "expected_no_sufficient_evidence_count": 9,
+          "false_positive_retrieval_candidate_rate": 0,
+          "false_negative_retrieval_k0_rate": 0
+        },
+        "5": {
+          "case_count": 10,
+          "evidence_atom_recall": 0.642857142857,
+          "candidate_precision": 0.12,
+          "ndcg": 0.451492485544,
+          "expected_retrieval_k0_count": 3,
+          "expected_no_sufficient_evidence_count": 9,
+          "false_positive_retrieval_candidate_rate": 0,
+          "false_negative_retrieval_k0_rate": 0
+        },
+        "8": {
+          "case_count": 10,
+          "evidence_atom_recall": 0.714285714286,
+          "candidate_precision": 0.0875,
+          "ndcg": 0.504129760952,
+          "expected_retrieval_k0_count": 3,
+          "expected_no_sufficient_evidence_count": 9,
+          "false_positive_retrieval_candidate_rate": 0,
+          "false_negative_retrieval_k0_rate": 0
+        }
+      },
+      "mrr_final_at_8": {
+        "value": 0.45,
+        "hit_count": 5,
+        "case_count": 10,
+        "contract": "MRR_FINAL@8; misses contribute 0; final-review set is capped at 8"
+      },
+      "mrr_raw_at_depth": {
+        "value": 0.32287037037,
+        "hit_count": 7,
+        "case_count": 10,
+        "metric": "MRR_RAW@64",
+        "contract": "dense raw candidate pool only; never mixed with final-review MRR"
+      }
+    }
+  },
+  "MRR_FINAL_AT_8_BY_DEPTH": {
+    "20": {
+      "value": 0.45,
+      "hit_count": 5,
+      "case_count": 10,
+      "contract": "MRR_FINAL@8; misses contribute 0; final-review set is capped at 8"
+    },
+    "32": {
+      "value": 0.45,
+      "hit_count": 5,
+      "case_count": 10,
+      "contract": "MRR_FINAL@8; misses contribute 0; final-review set is capped at 8"
+    },
+    "48": {
+      "value": 0.45,
+      "hit_count": 5,
+      "case_count": 10,
+      "contract": "MRR_FINAL@8; misses contribute 0; final-review set is capped at 8"
+    },
+    "64": {
+      "value": 0.45,
+      "hit_count": 5,
+      "case_count": 10,
+      "contract": "MRR_FINAL@8; misses contribute 0; final-review set is capped at 8"
+    }
+  },
+  "RAW_MRR_DIAGNOSTICS": {
+    "MRR_RAW@20": {
+      "value": 0.316666666667,
+      "hit_count": 5,
+      "case_count": 10,
+      "metric": "MRR_RAW@20",
+      "contract": "dense raw candidate pool only; never mixed with final-review MRR"
+    },
+    "MRR_RAW@32": {
+      "value": 0.32037037037,
+      "hit_count": 6,
+      "case_count": 10,
+      "metric": "MRR_RAW@32",
+      "contract": "dense raw candidate pool only; never mixed with final-review MRR"
+    },
+    "MRR_RAW@48": {
+      "value": 0.32287037037,
+      "hit_count": 7,
+      "case_count": 10,
+      "metric": "MRR_RAW@48",
+      "contract": "dense raw candidate pool only; never mixed with final-review MRR"
+    },
+    "MRR_RAW@64": {
+      "value": 0.32287037037,
+      "hit_count": 7,
+      "case_count": 10,
+      "metric": "MRR_RAW@64",
+      "contract": "dense raw candidate pool only; never mixed with final-review MRR"
+    }
+  },
+  "FINAL_POOL_FILL_RATE_BY_DEPTH": {
+    "20": 0.75,
+    "32": 0.9375,
+    "48": 1,
+    "64": 1
+  },
+  "GRADE_GTE_2_ENTERING_FROM_GT20_BY_DEPTH": {
+    "20": {
+      "raw_pool_entry_count": 0,
+      "post_hygiene_survivor_count": 0,
+      "post_hygiene_case_count": 0,
+      "final_review_candidate_count": 0,
+      "final_review_case_count": 0,
+      "candidates_in_survivor_pool": [],
+      "candidates_in_final_review": []
+    },
+    "32": {
+      "raw_pool_entry_count": 2,
+      "post_hygiene_survivor_count": 2,
+      "post_hygiene_case_count": 2,
+      "final_review_candidate_count": 0,
+      "final_review_case_count": 0,
+      "candidates_in_survivor_pool": [
+        {
+          "source_chunk_id": "MCH-AA94BB7D153A30F95E869D78DC45A0E5",
+          "dense_rank": 27,
+          "post_hygiene_rank": 17,
+          "gold_grade": 2,
+          "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+          "requirement_id": "TB-003:REQ-119"
+        },
+        {
+          "source_chunk_id": "MCH-2EEFA4F9B214B94D417935EEB260A88E",
+          "dense_rank": 25,
+          "post_hygiene_rank": 11,
+          "gold_grade": 2,
+          "case_id": "RAG-P0-HOLD-TB-003-REQ-170",
+          "requirement_id": "TB-003:REQ-170"
+        }
+      ],
+      "candidates_in_final_review": []
+    },
+    "48": {
+      "raw_pool_entry_count": 4,
+      "post_hygiene_survivor_count": 4,
+      "post_hygiene_case_count": 3,
+      "final_review_candidate_count": 0,
+      "final_review_case_count": 0,
+      "candidates_in_survivor_pool": [
+        {
+          "source_chunk_id": "MCH-D09A2FC0D82F6D27ED11B48CBDA4B06C",
+          "dense_rank": 40,
+          "post_hygiene_rank": 11,
+          "gold_grade": 2,
+          "case_id": "RAG-P0-CAL-FAST-01-REQ-005",
+          "requirement_id": "FAST-01:REQ-005"
+        },
+        {
+          "source_chunk_id": "MCH-AA94BB7D153A30F95E869D78DC45A0E5",
+          "dense_rank": 27,
+          "post_hygiene_rank": 17,
+          "gold_grade": 2,
+          "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+          "requirement_id": "TB-003:REQ-119"
+        },
+        {
+          "source_chunk_id": "MCH-2EEFA4F9B214B94D417935EEB260A88E",
+          "dense_rank": 46,
+          "post_hygiene_rank": 22,
+          "gold_grade": 2,
+          "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+          "requirement_id": "TB-003:REQ-119"
+        },
+        {
+          "source_chunk_id": "MCH-2EEFA4F9B214B94D417935EEB260A88E",
+          "dense_rank": 25,
+          "post_hygiene_rank": 11,
+          "gold_grade": 2,
+          "case_id": "RAG-P0-HOLD-TB-003-REQ-170",
+          "requirement_id": "TB-003:REQ-170"
+        }
+      ],
+      "candidates_in_final_review": []
+    },
+    "64": {
+      "raw_pool_entry_count": 4,
+      "post_hygiene_survivor_count": 4,
+      "post_hygiene_case_count": 3,
+      "final_review_candidate_count": 0,
+      "final_review_case_count": 0,
+      "candidates_in_survivor_pool": [
+        {
+          "source_chunk_id": "MCH-D09A2FC0D82F6D27ED11B48CBDA4B06C",
+          "dense_rank": 40,
+          "post_hygiene_rank": 11,
+          "gold_grade": 2,
+          "case_id": "RAG-P0-CAL-FAST-01-REQ-005",
+          "requirement_id": "FAST-01:REQ-005"
+        },
+        {
+          "source_chunk_id": "MCH-AA94BB7D153A30F95E869D78DC45A0E5",
+          "dense_rank": 27,
+          "post_hygiene_rank": 17,
+          "gold_grade": 2,
+          "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+          "requirement_id": "TB-003:REQ-119"
+        },
+        {
+          "source_chunk_id": "MCH-2EEFA4F9B214B94D417935EEB260A88E",
+          "dense_rank": 46,
+          "post_hygiene_rank": 22,
+          "gold_grade": 2,
+          "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+          "requirement_id": "TB-003:REQ-119"
+        },
+        {
+          "source_chunk_id": "MCH-2EEFA4F9B214B94D417935EEB260A88E",
+          "dense_rank": 25,
+          "post_hygiene_rank": 11,
+          "gold_grade": 2,
+          "case_id": "RAG-P0-HOLD-TB-003-REQ-170",
+          "requirement_id": "TB-003:REQ-170"
+        }
+      ],
+      "candidates_in_final_review": []
+    }
+  },
+  "RAW_TO_FINAL_SURVIVAL_RATIO_BY_DEPTH": {
+    "20": 0.3,
+    "32": 0.234375,
+    "48": 0.166666666667,
+    "64": 0.125
+  },
+  "special_case_diagnostic": [
+    {
+      "requirement_id": "FAST-01:REQ-005",
+      "case_id": "RAG-P0-CAL-FAST-01-REQ-005",
+      "first_grade_gte_2_dense_rank": 40,
+      "first_grade_gte_2_outside_top20_dense_rank": 40,
+      "raw_candidate_k_required_for_entry": null,
+      "raw_candidate_k_required_for_survivor_entry": 48,
+      "raw_candidate_k_required_for_gt20_final_review_entry": null,
+      "post_hygiene_rank_by_depth": {
+        "20": null,
+        "32": null,
+        "48": 11,
+        "64": 11
+      },
+      "final_review_rank_by_depth": {
+        "20": null,
+        "32": null,
+        "48": null,
+        "64": null
+      },
+      "outside_top20_post_hygiene_rank_by_depth": {
+        "20": null,
+        "32": null,
+        "48": 11,
+        "64": 11
+      },
+      "outside_top20_final_review_rank_by_depth": {
+        "20": null,
+        "32": null,
+        "48": null,
+        "64": null
+      },
+      "atom_recall_at_8_by_depth": {
+        "20": 0,
+        "32": 0,
+        "48": 0,
+        "64": 0
+      },
+      "atom_recall_movement_vs_r0_at_8": {
+        "20": 0,
+        "32": 0,
+        "48": 0,
+        "64": 0
+      }
+    },
+    {
+      "requirement_id": "TB-003:REQ-119",
+      "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+      "first_grade_gte_2_dense_rank": 27,
+      "first_grade_gte_2_outside_top20_dense_rank": 27,
+      "raw_candidate_k_required_for_entry": null,
+      "raw_candidate_k_required_for_survivor_entry": 32,
+      "raw_candidate_k_required_for_gt20_final_review_entry": null,
+      "post_hygiene_rank_by_depth": {
+        "20": null,
+        "32": 17,
+        "48": 17,
+        "64": 17
+      },
+      "final_review_rank_by_depth": {
+        "20": null,
+        "32": null,
+        "48": null,
+        "64": null
+      },
+      "outside_top20_post_hygiene_rank_by_depth": {
+        "20": null,
+        "32": 17,
+        "48": 17,
+        "64": 17
+      },
+      "outside_top20_final_review_rank_by_depth": {
+        "20": null,
+        "32": null,
+        "48": null,
+        "64": null
+      },
+      "atom_recall_at_8_by_depth": {
+        "20": 0,
+        "32": 0,
+        "48": 0,
+        "64": 0
+      },
+      "atom_recall_movement_vs_r0_at_8": {
+        "20": 0,
+        "32": 0,
+        "48": 0,
+        "64": 0
+      }
+    },
+    {
+      "requirement_id": "JY-001:REQ-027",
+      "case_id": "RAG-P0-HOLD-JY-001-REQ-027",
+      "first_grade_gte_2_dense_rank": 6,
+      "first_grade_gte_2_outside_top20_dense_rank": null,
+      "raw_candidate_k_required_for_entry": 20,
+      "raw_candidate_k_required_for_survivor_entry": null,
+      "raw_candidate_k_required_for_gt20_final_review_entry": null,
+      "post_hygiene_rank_by_depth": {
+        "20": 2,
+        "32": 2,
+        "48": 2,
+        "64": 2
+      },
+      "final_review_rank_by_depth": {
+        "20": 2,
+        "32": 2,
+        "48": 2,
+        "64": 2
+      },
+      "outside_top20_post_hygiene_rank_by_depth": {
+        "20": null,
+        "32": null,
+        "48": null,
+        "64": null
+      },
+      "outside_top20_final_review_rank_by_depth": {
+        "20": null,
+        "32": null,
+        "48": null,
+        "64": null
+      },
+      "atom_recall_at_8_by_depth": {
+        "20": 1,
+        "32": 1,
+        "48": 1,
+        "64": 1
+      },
+      "atom_recall_movement_vs_r0_at_8": {
+        "20": 0,
+        "32": 0,
+        "48": 0,
+        "64": 0
+      }
+    },
+    {
+      "requirement_id": "TB-003:REQ-170",
+      "case_id": "RAG-P0-HOLD-TB-003-REQ-170",
+      "first_grade_gte_2_dense_rank": 2,
+      "first_grade_gte_2_outside_top20_dense_rank": 25,
+      "raw_candidate_k_required_for_entry": 20,
+      "raw_candidate_k_required_for_survivor_entry": 32,
+      "raw_candidate_k_required_for_gt20_final_review_entry": null,
+      "post_hygiene_rank_by_depth": {
+        "20": 1,
+        "32": 1,
+        "48": 1,
+        "64": 1
+      },
+      "final_review_rank_by_depth": {
+        "20": 1,
+        "32": 1,
+        "48": 1,
+        "64": 1
+      },
+      "outside_top20_post_hygiene_rank_by_depth": {
+        "20": null,
+        "32": 11,
+        "48": 11,
+        "64": 11
+      },
+      "outside_top20_final_review_rank_by_depth": {
+        "20": null,
+        "32": null,
+        "48": null,
+        "64": null
+      },
+      "atom_recall_at_8_by_depth": {
+        "20": 1,
+        "32": 1,
+        "48": 1,
+        "64": 1
+      },
+      "atom_recall_movement_vs_r0_at_8": {
+        "20": 0,
+        "32": 0,
+        "48": 0,
+        "64": 0
+      }
+    }
+  ],
+  "regression_gates": {
+    "20": {
+      "depth": 20,
+      "no_frozen_grade_gte_2_candidate_removed": true,
+      "recall_at_5_no_regression": true,
+      "recall_at_8_no_regression": true,
+      "product_capability_success_no_regression": true,
+      "product_capability_case_ids": [
+        "JY-001:REQ-057",
+        "JY-001:REQ-077",
+        "JY-001:REQ-051"
+      ],
+      "grade_gte_2_entering_from_gt20_count": 0,
+      "grade_gte_2_post_hygiene_survivor_entry_count": 0,
+      "missing_atom_entered_final_review_count": 0,
+      "final_pool_underfill_reduction": 0,
+      "all_regression_gates_pass": true,
+      "gate_e_missing_atom_pass": false
+    },
+    "32": {
+      "depth": 32,
+      "no_frozen_grade_gte_2_candidate_removed": true,
+      "recall_at_5_no_regression": true,
+      "recall_at_8_no_regression": true,
+      "product_capability_success_no_regression": true,
+      "product_capability_case_ids": [
+        "JY-001:REQ-057",
+        "JY-001:REQ-077",
+        "JY-001:REQ-051"
+      ],
+      "grade_gte_2_entering_from_gt20_count": 0,
+      "grade_gte_2_post_hygiene_survivor_entry_count": 2,
+      "missing_atom_entered_final_review_count": 0,
+      "final_pool_underfill_reduction": 2,
+      "all_regression_gates_pass": true,
+      "gate_e_missing_atom_pass": false
+    },
+    "48": {
+      "depth": 48,
+      "no_frozen_grade_gte_2_candidate_removed": true,
+      "recall_at_5_no_regression": true,
+      "recall_at_8_no_regression": true,
+      "product_capability_success_no_regression": true,
+      "product_capability_case_ids": [
+        "JY-001:REQ-057",
+        "JY-001:REQ-077",
+        "JY-001:REQ-051"
+      ],
+      "grade_gte_2_entering_from_gt20_count": 0,
+      "grade_gte_2_post_hygiene_survivor_entry_count": 4,
+      "missing_atom_entered_final_review_count": 0,
+      "final_pool_underfill_reduction": 5,
+      "all_regression_gates_pass": true,
+      "gate_e_missing_atom_pass": false
+    },
+    "64": {
+      "depth": 64,
+      "no_frozen_grade_gte_2_candidate_removed": true,
+      "recall_at_5_no_regression": true,
+      "recall_at_8_no_regression": true,
+      "product_capability_success_no_regression": true,
+      "product_capability_case_ids": [
+        "JY-001:REQ-057",
+        "JY-001:REQ-077",
+        "JY-001:REQ-051"
+      ],
+      "grade_gte_2_entering_from_gt20_count": 0,
+      "grade_gte_2_post_hygiene_survivor_entry_count": 4,
+      "missing_atom_entered_final_review_count": 0,
+      "final_pool_underfill_reduction": 5,
+      "all_regression_gates_pass": true,
+      "gate_e_missing_atom_pass": false
+    }
+  },
+  "DEVELOPMENT_SELECTED_CANDIDATE_K": null,
+  "R64_DIAGNOSTIC_ONLY": true,
+  "OVERFETCH_GAIN_SATURATION_POINT": "NONE",
+  "next_recommendation_candidate": "NO_CHANGE_YET",
+  "selection": {
+    "selection_contract_version": "P1C_DEVELOPMENT_SELECTION_V1",
+    "selection_contract": "Smallest challenger in 32/48 that passes all regression gates, admits at least one previously Top20-truncated Gold atom into final review, reduces underfill, and captures >=90% of the combined positive Recall@8+nDCG@8 gain available at R64. The selected value is development-only and is not a production config or release threshold.",
+    "development_selected_candidate_k": null,
+    "r64_diagnostic_only": true,
+    "overfetch_gain_saturation_point": "NONE",
+    "development_validation_case_count": 7,
+    "development_metrics_by_depth": {
+      "20": {
+        "candidate_k": 20,
+        "raw_candidate_count": {
+          "total": 140,
+          "mean": 20,
+          "per_case": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ]
+        },
+        "hygiene_filtered_count": {
+          "total": 92,
+          "mean": 13.142857142857,
+          "per_case": [
+            12,
+            15,
+            16,
+            9,
+            11,
+            12,
+            17
+          ]
+        },
+        "hygiene_survivor_count": {
+          "total": 48,
+          "mean": 6.857142857143,
+          "min": 3,
+          "max": 11,
+          "per_case": [
+            8,
+            5,
+            4,
+            11,
+            9,
+            8,
+            3
+          ]
+        },
+        "final_returned_candidate_count": {
+          "total": 44,
+          "mean": 6.285714285714,
+          "min": 3,
+          "max": 8,
+          "per_case": [
+            8,
+            5,
+            4,
+            8,
+            8,
+            8,
+            3
+          ]
+        },
+        "final_pool_fill_rate": 0.785714285714,
+        "cases_final_pool_lt_8": 3,
+        "raw_to_final_survival_ratio": 0.314285714286,
+        "grade_gte_2_entering_from_gt20": {
+          "raw_pool_entry_count": 0,
+          "post_hygiene_survivor_count": 0,
+          "post_hygiene_case_count": 0,
+          "final_review_candidate_count": 0,
+          "final_review_case_count": 0,
+          "candidates_in_survivor_pool": [],
+          "candidates_in_final_review": []
+        },
+        "metrics_at_k": {
+          "1": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.6,
+            "candidate_precision": 0.428571428571,
+            "ndcg": 0.5,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "3": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.7,
+            "candidate_precision": 0.190476190476,
+            "ndcg": 0.471039109522,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "5": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.7,
+            "candidate_precision": 0.114285714286,
+            "ndcg": 0.471039109522,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "8": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.8,
+            "candidate_precision": 0.089285714286,
+            "ndcg": 0.503276843458,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          }
+        },
+        "mrr_final_at_8": {
+          "value": 0.5,
+          "hit_count": 4,
+          "case_count": 7,
+          "contract": "MRR_FINAL@8; misses contribute 0; final-review set is capped at 8"
+        },
+        "mrr_raw_at_depth": {
+          "value": 0.380952380952,
+          "hit_count": 4,
+          "case_count": 7,
+          "metric": "MRR_RAW@20",
+          "contract": "dense raw candidate pool only; never mixed with final-review MRR"
+        }
+      },
+      "32": {
+        "candidate_k": 32,
+        "raw_candidate_count": {
+          "total": 224,
+          "mean": 32,
+          "per_case": [
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32
+          ]
+        },
+        "hygiene_filtered_count": {
+          "total": 141,
+          "mean": 20.142857142857,
+          "per_case": [
+            19,
+            23,
+            24,
+            12,
+            18,
+            19,
+            26
+          ]
+        },
+        "hygiene_survivor_count": {
+          "total": 83,
+          "mean": 11.857142857143,
+          "min": 6,
+          "max": 20,
+          "per_case": [
+            13,
+            9,
+            8,
+            20,
+            14,
+            13,
+            6
+          ]
+        },
+        "final_returned_candidate_count": {
+          "total": 54,
+          "mean": 7.714285714286,
+          "min": 6,
+          "max": 8,
+          "per_case": [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            6
+          ]
+        },
+        "final_pool_fill_rate": 0.964285714286,
+        "cases_final_pool_lt_8": 1,
+        "raw_to_final_survival_ratio": 0.241071428571,
+        "grade_gte_2_entering_from_gt20": {
+          "raw_pool_entry_count": 2,
+          "post_hygiene_survivor_count": 2,
+          "post_hygiene_case_count": 2,
+          "final_review_candidate_count": 0,
+          "final_review_case_count": 0,
+          "candidates_in_survivor_pool": [
+            {
+              "source_chunk_id": "MCH-AA94BB7D153A30F95E869D78DC45A0E5",
+              "dense_rank": 27,
+              "post_hygiene_rank": 17,
+              "gold_grade": 2,
+              "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+              "requirement_id": "TB-003:REQ-119"
+            },
+            {
+              "source_chunk_id": "MCH-2EEFA4F9B214B94D417935EEB260A88E",
+              "dense_rank": 25,
+              "post_hygiene_rank": 11,
+              "gold_grade": 2,
+              "case_id": "RAG-P0-HOLD-TB-003-REQ-170",
+              "requirement_id": "TB-003:REQ-170"
+            }
+          ],
+          "candidates_in_final_review": []
+        },
+        "metrics_at_k": {
+          "1": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.6,
+            "candidate_precision": 0.428571428571,
+            "ndcg": 0.5,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "3": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.7,
+            "candidate_precision": 0.190476190476,
+            "ndcg": 0.471039109522,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "5": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.7,
+            "candidate_precision": 0.114285714286,
+            "ndcg": 0.471039109522,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "8": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.8,
+            "candidate_precision": 0.089285714286,
+            "ndcg": 0.517757288697,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          }
+        },
+        "mrr_final_at_8": {
+          "value": 0.5,
+          "hit_count": 4,
+          "case_count": 7,
+          "contract": "MRR_FINAL@8; misses contribute 0; final-review set is capped at 8"
+        },
+        "mrr_raw_at_depth": {
+          "value": 0.386243386243,
+          "hit_count": 5,
+          "case_count": 7,
+          "metric": "MRR_RAW@32",
+          "contract": "dense raw candidate pool only; never mixed with final-review MRR"
+        }
+      },
+      "48": {
+        "candidate_k": 48,
+        "raw_candidate_count": {
+          "total": 336,
+          "mean": 48,
+          "per_case": [
+            48,
+            48,
+            48,
+            48,
+            48,
+            48,
+            48
+          ]
+        },
+        "hygiene_filtered_count": {
+          "total": 215,
+          "mean": 30.714285714286,
+          "per_case": [
+            27,
+            35,
+            37,
+            26,
+            30,
+            24,
+            36
+          ]
+        },
+        "hygiene_survivor_count": {
+          "total": 121,
+          "mean": 17.285714285714,
+          "min": 11,
+          "max": 24,
+          "per_case": [
+            21,
+            13,
+            11,
+            22,
+            18,
+            24,
+            12
+          ]
+        },
+        "final_returned_candidate_count": {
+          "total": 56,
+          "mean": 8,
+          "min": 8,
+          "max": 8,
+          "per_case": [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8
+          ]
+        },
+        "final_pool_fill_rate": 1,
+        "cases_final_pool_lt_8": 0,
+        "raw_to_final_survival_ratio": 0.166666666667,
+        "grade_gte_2_entering_from_gt20": {
+          "raw_pool_entry_count": 3,
+          "post_hygiene_survivor_count": 3,
+          "post_hygiene_case_count": 2,
+          "final_review_candidate_count": 0,
+          "final_review_case_count": 0,
+          "candidates_in_survivor_pool": [
+            {
+              "source_chunk_id": "MCH-AA94BB7D153A30F95E869D78DC45A0E5",
+              "dense_rank": 27,
+              "post_hygiene_rank": 17,
+              "gold_grade": 2,
+              "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+              "requirement_id": "TB-003:REQ-119"
+            },
+            {
+              "source_chunk_id": "MCH-2EEFA4F9B214B94D417935EEB260A88E",
+              "dense_rank": 46,
+              "post_hygiene_rank": 22,
+              "gold_grade": 2,
+              "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+              "requirement_id": "TB-003:REQ-119"
+            },
+            {
+              "source_chunk_id": "MCH-2EEFA4F9B214B94D417935EEB260A88E",
+              "dense_rank": 25,
+              "post_hygiene_rank": 11,
+              "gold_grade": 2,
+              "case_id": "RAG-P0-HOLD-TB-003-REQ-170",
+              "requirement_id": "TB-003:REQ-170"
+            }
+          ],
+          "candidates_in_final_review": []
+        },
+        "metrics_at_k": {
+          "1": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.6,
+            "candidate_precision": 0.428571428571,
+            "ndcg": 0.5,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "3": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.7,
+            "candidate_precision": 0.190476190476,
+            "ndcg": 0.471039109522,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "5": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.7,
+            "candidate_precision": 0.114285714286,
+            "ndcg": 0.471039109522,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "8": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.8,
+            "candidate_precision": 0.089285714286,
+            "ndcg": 0.517757288697,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          }
+        },
+        "mrr_final_at_8": {
+          "value": 0.5,
+          "hit_count": 4,
+          "case_count": 7,
+          "contract": "MRR_FINAL@8; misses contribute 0; final-review set is capped at 8"
+        },
+        "mrr_raw_at_depth": {
+          "value": 0.386243386243,
+          "hit_count": 5,
+          "case_count": 7,
+          "metric": "MRR_RAW@48",
+          "contract": "dense raw candidate pool only; never mixed with final-review MRR"
+        }
+      },
+      "64": {
+        "candidate_k": 64,
+        "raw_candidate_count": {
+          "total": 448,
+          "mean": 64,
+          "per_case": [
+            64,
+            64,
+            64,
+            64,
+            64,
+            64,
+            64
+          ]
+        },
+        "hygiene_filtered_count": {
+          "total": 274,
+          "mean": 39.142857142857,
+          "per_case": [
+            38,
+            44,
+            40,
+            32,
+            40,
+            37,
+            43
+          ]
+        },
+        "hygiene_survivor_count": {
+          "total": 174,
+          "mean": 24.857142857143,
+          "min": 20,
+          "max": 32,
+          "per_case": [
+            26,
+            20,
+            24,
+            32,
+            24,
+            27,
+            21
+          ]
+        },
+        "final_returned_candidate_count": {
+          "total": 56,
+          "mean": 8,
+          "min": 8,
+          "max": 8,
+          "per_case": [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8
+          ]
+        },
+        "final_pool_fill_rate": 1,
+        "cases_final_pool_lt_8": 0,
+        "raw_to_final_survival_ratio": 0.125,
+        "grade_gte_2_entering_from_gt20": {
+          "raw_pool_entry_count": 3,
+          "post_hygiene_survivor_count": 3,
+          "post_hygiene_case_count": 2,
+          "final_review_candidate_count": 0,
+          "final_review_case_count": 0,
+          "candidates_in_survivor_pool": [
+            {
+              "source_chunk_id": "MCH-AA94BB7D153A30F95E869D78DC45A0E5",
+              "dense_rank": 27,
+              "post_hygiene_rank": 17,
+              "gold_grade": 2,
+              "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+              "requirement_id": "TB-003:REQ-119"
+            },
+            {
+              "source_chunk_id": "MCH-2EEFA4F9B214B94D417935EEB260A88E",
+              "dense_rank": 46,
+              "post_hygiene_rank": 22,
+              "gold_grade": 2,
+              "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+              "requirement_id": "TB-003:REQ-119"
+            },
+            {
+              "source_chunk_id": "MCH-2EEFA4F9B214B94D417935EEB260A88E",
+              "dense_rank": 25,
+              "post_hygiene_rank": 11,
+              "gold_grade": 2,
+              "case_id": "RAG-P0-HOLD-TB-003-REQ-170",
+              "requirement_id": "TB-003:REQ-170"
+            }
+          ],
+          "candidates_in_final_review": []
+        },
+        "metrics_at_k": {
+          "1": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.6,
+            "candidate_precision": 0.428571428571,
+            "ndcg": 0.5,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "3": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.7,
+            "candidate_precision": 0.190476190476,
+            "ndcg": 0.471039109522,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "5": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.7,
+            "candidate_precision": 0.114285714286,
+            "ndcg": 0.471039109522,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "8": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.8,
+            "candidate_precision": 0.089285714286,
+            "ndcg": 0.517757288697,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          }
+        },
+        "mrr_final_at_8": {
+          "value": 0.5,
+          "hit_count": 4,
+          "case_count": 7,
+          "contract": "MRR_FINAL@8; misses contribute 0; final-review set is capped at 8"
+        },
+        "mrr_raw_at_depth": {
+          "value": 0.386243386243,
+          "hit_count": 5,
+          "case_count": 7,
+          "metric": "MRR_RAW@64",
+          "contract": "dense raw candidate pool only; never mixed with final-review MRR"
+        }
+      }
+    },
+    "challenger_evaluations": {
+      "32": {
+        "depth": 32,
+        "recall_at_8_delta": 0,
+        "ndcg_at_8_delta": 0.014480445239,
+        "material_gain": false,
+        "underfill_reduced": true,
+        "useful_gain_score": 0.014480445239,
+        "reference_useful_gain_score": 0.014480445239,
+        "saturation_ratio_vs_r64": 1,
+        "captures_essential_gain": true,
+        "qualifies": false
+      },
+      "48": {
+        "depth": 48,
+        "recall_at_8_delta": 0,
+        "ndcg_at_8_delta": 0.014480445239,
+        "material_gain": false,
+        "underfill_reduced": true,
+        "useful_gain_score": 0.014480445239,
+        "reference_useful_gain_score": 0.014480445239,
+        "saturation_ratio_vs_r64": 1,
+        "captures_essential_gain": true,
+        "qualifies": false
+      }
+    },
+    "r64_only_material_gain": false,
+    "bounded_overfetch_too_deep_for_direct_promotion": false,
+    "recommendation_candidate": "NO_CHANGE_YET"
+  },
+  "safety": {
+    "source_role_escape_count": 0,
+    "quarantine_escape_count": 0,
+    "cross_enterprise_escape_count": 0,
+    "authority_scope_escape_count": 0,
+    "lineage_incomplete_count": 0,
+    "source_corpus_count": 94,
+    "source_span_identity_preserved": true,
+    "fact_mapping_claim_writer_mutations": 0,
+    "production_db_writes": 0,
+    "eval_db_writes": 0,
+    "gold_mutations": 0,
+    "corpus_mutations": 0,
+    "authority_changes": 0,
+    "lineage_changes": 0,
+    "provider_calls": 0,
+    "embedding_calls": 0,
+    "llm_calls": 0,
+    "production_retrieval_changes": 0
+  },
+  "reproducibility": {
+    "replay_parity": true,
+    "replay_hash": "acd1161ad4689dd923285e584dc13b450eae3b6a8979acdbdcf192aac2bbdfb3",
+    "query_batch_freeze_hash": "d2ab7da2762ceecafcd0c65995f67b4dc00c96bfe029047462b9ef3b7313c444"
+  },
+  "stop_conditions": [
+    "Do not implement bounded overfetch yet.",
+    "Do not convert DEVELOPMENT_SELECTED_CANDIDATE_K into a production config or release threshold.",
+    "Do not use R64 as a direct Production candidate.",
+    "Do not start P2, P3, P4, MMR, hybrid, or reranker.",
+    "Do not treat retrieved candidates as supported evidence or claim authorization."
+  ],
+  "deterministic_content_hash": "3d6f2e516919520c7294565a1c61290049640bc2ee27d25601f335aa28e2d1f8"
+}

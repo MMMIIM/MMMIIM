@@ -1,0 +1,30 @@
+{
+  "artifact_type": "V43_TEST_REPORT",
+  "focused_tests": {
+    "status": "PENDING_POST_RUN",
+    "command": "node --test test/writer-reference-hygiene.test.js test/retrieval-chunk-role.test.js test/retrieval-source-eligibility.test.js test/writer-v2-composition.test.js test/writer-authority-p0.test.js"
+  },
+  "relevant_backend_regression": {
+    "status": "PENDING_POST_RUN",
+    "command": "npm test -w backend",
+    "current_task_regressions": "NOT_DETERMINED"
+  },
+  "build": {
+    "status": "PENDING_POST_RUN",
+    "command": "npm run build"
+  },
+  "lint": {
+    "status": "PENDING_POST_RUN",
+    "command": "npm run lint"
+  },
+  "diff_check": {
+    "status": "PENDING_POST_RUN",
+    "command": "git diff --check"
+  },
+  "provider_calls_during_artifact_generation": 80,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "gold_mutations": 0,
+  "requirement_mutations": 0,
+  "fact_mapping_claim_writer_mutations": 0
+}

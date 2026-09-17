@@ -1,0 +1,31 @@
+{
+  "artifact_type": "V43_EVIDENCE_LANE_DECOUPLE_AND_LIVE_FACT_DOWNSTREAM_CHECKPOINT_V1",
+  "status": "BLOCKED_ENGINEERING_E2E_MAPPING",
+  "stage": "MAPPING",
+  "error_code": "MAPPING_SEMANTIC_FAILED",
+  "error_message": "Mapping semantic worker request failed.",
+  "requirement_id": "JY-001:REQ-002",
+  "provider_calls": 1,
+  "diagnostic": {
+    "cause_code": "MAPPING_SEMANTIC_INCONSISTENT",
+    "attempt_count": 1,
+    "stage": "MAPPING",
+    "safe_error": null,
+    "provider_response": null,
+    "retry_safe": false,
+    "minimum_deterministic_fix": "NONE_AUTHORIZED; inspect the existing Mapping semantic response/contract diagnostics before any code change"
+  },
+  "input_identity": {
+    "task_type": "requirement_evidence_mapping",
+    "project_id": "chengchuan-base16-evidence-eval",
+    "requirement_id": "JY-001:REQ-002",
+    "fact_id": "EFACT-EVAL-30FE5146FFEF789D0D728A62A6C34DA6",
+    "material_id": "7dc70fee-13e0-4b7d-b95f-202665c241d0",
+    "source_span_id": "MCH-369C7BBCDB79203D29F37E8A524E41D5:FULL",
+    "source_hash": "644ec25fde2d5afb4a7d6b59720c4e643f933e9bfa267417a52a565cf998b084",
+    "reference_retrieval_dependency": false
+  },
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "gold_mutations": 0
+}

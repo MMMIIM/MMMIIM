@@ -1,0 +1,61 @@
+{
+  "checkpoint": "V43_MAPPING_GOLD_V2_HUMAN_AUTHORITY_NOVELTY_REPAIR_CHECKPOINT",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "batch01_case_level_authority_count": "24/24",
+  "batch01_case_level_authority_status": "COMPLETE",
+  "batch01_case_level_aggregate_parity": "PASS",
+  "final_gold_promotion": "NOT_YET_AUTHORIZED",
+  "supplemental_packet": {
+    "path": "backend/eval/gold-human-review/v2/03_mapping_real_supplemental_source_packet.json",
+    "original_count": 10,
+    "sha256": "a3a0c1abb4f98eef4d77fd120f4d4e47639fa1680a1a17139c65077756032bd0",
+    "duplicate_parent_pair_count": 7,
+    "novel_count": 2,
+    "fact_set_changed_count": 1,
+    "duplicate_classification": "DUPLICATE_PARENT_PAIR",
+    "novelty_gate": "REAL_GOLD_NOVELTY_GATE"
+  },
+  "verified_duplicate_pairs": [
+    { "supplemental": "REAL-MAP-SUPP-001", "parent": "REAL-MAP-CAND-015" },
+    { "supplemental": "REAL-MAP-SUPP-002", "parent": "REAL-MAP-CAND-008" },
+    { "supplemental": "REAL-MAP-SUPP-003", "parent": "REAL-MAP-CAND-017" },
+    { "supplemental": "REAL-MAP-SUPP-004", "parent": "REAL-MAP-CAND-012" },
+    { "supplemental": "REAL-MAP-SUPP-005", "parent": "REAL-MAP-CAND-013" },
+    { "supplemental": "REAL-MAP-SUPP-006", "parent": "REAL-MAP-CAND-018" },
+    { "supplemental": "REAL-MAP-SUPP-008", "parent": "REAL-MAP-CAND-023" }
+  ],
+  "human_review_packet": {
+    "path": "backend/eval/gold-human-review/v2/05_mapping_real_supplemental_human_review_packet.json",
+    "case_count": 3,
+    "candidates": ["REAL-MAP-SUPP-007", "REAL-MAP-SUPP-009", "REAL-MAP-SUPP-010"],
+    "source_excerpt_completeness": "PASS"
+  },
+  "blindness_gate": "PASS",
+  "parent_packet_sha_parity": {
+    "before": "5ca994228f7d4bfedb61aed0c0aac5ef5cf0b284aa573c7732ce4383ecde4acb",
+    "after": "5ca994228f7d4bfedb61aed0c0aac5ef5cf0b284aa573c7732ce4383ecde4acb",
+    "status": "PASS"
+  },
+  "supplemental_packet_sha_parity": {
+    "before": "a3a0c1abb4f98eef4d77fd120f4d4e47639fa1680a1a17139c65077756032bd0",
+    "after": "a3a0c1abb4f98eef4d77fd120f4d4e47639fa1680a1a17139c65077756032bd0",
+    "status": "PASS"
+  },
+  "current_mapping_gold_sha_parity": {
+    "before": "5a6d9eb7c4e7b23f347da111b5276060375b3de2e07716b9cee88d15d5431707",
+    "after": "5a6d9eb7c4e7b23f347da111b5276060375b3de2e07716b9cee88d15d5431707",
+    "status": "PASS"
+  },
+  "corpus_gaps": [
+    "SOURCE_PROJECT_DIVERSITY=1",
+    "PERFORMANCE_MEASUREMENT_FACT=MISSING",
+    "REAL_CONFLICT_FACT=MISSING"
+  ],
+  "production_files_changed": 0,
+  "provider_calls": 0,
+  "db_writes": 0,
+  "focused_tests": "36/36 PASS (gold-governance + Mapping Eval + Mapping producer + live diagnostic integrity)",
+  "final_verdict": "BATCH01_CASE_LEVEL_HUMAN_AUTHORITY_COMPLETE; SUPPLEMENTAL_NOVELTY_REVIEW_REQUIRED",
+  "git_safety": "NO_GIT_MUTATIONS; DIRTY_WORKTREE_PRESERVED"
+}

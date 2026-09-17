@@ -41,7 +41,7 @@ ALTER TABLE company_materials ADD CONSTRAINT company_materials_review_status_che
   CHECK (review_status IN ('pending','approved','rejected'));
 ALTER TABLE company_materials DROP CONSTRAINT IF EXISTS company_materials_lifecycle_status_check;
 ALTER TABLE company_materials ADD CONSTRAINT company_materials_lifecycle_status_check
-  CHECK (lifecycle_status IN ('DISCOVERED','SCREENED','APPROVED_FOR_PROCESSING','PROCESSED','EVAL_PASSED','ACTIVE'));
+  CHECK (lifecycle_status IN ('DISCOVERED','SCREENED','APPROVED_FOR_PROCESSING','PROCESSED','EVAL_PASSED','ACTIVE','QUARANTINED'));
 ALTER TABLE company_materials DROP CONSTRAINT IF EXISTS company_materials_index_status_check;
 ALTER TABLE company_materials ADD CONSTRAINT company_materials_index_status_check
   CHECK (index_status IN ('NOT_INDEXED','INDEXED','FAILED'));

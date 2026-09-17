@@ -1,0 +1,184 @@
+{
+  "artifact_type": "synthetic_corrections_manifest",
+  "artifact_version": "synthetic-corrections-v1",
+  "source_dataset": "requirement-evidence-mapping-v1-gold-2026-09-02",
+  "source_sha256": "5a6d9eb7c4e7b23f347da111b5276060375b3de2e07716b9cee88d15d5431707",
+  "production_contract_changed": false,
+  "corrections": [
+    {
+      "case_id": "MAP-G004",
+      "old_expected": {
+        "decision": "related_reference",
+        "dimensions": {
+          "subject": "match",
+          "scope": "unknown",
+          "status": "not_applicable",
+          "quantity": "not_applicable",
+          "entity": "not_applicable",
+          "validity": "not_applicable"
+        }
+      },
+      "new_expected": {
+        "decision": "related_reference",
+        "dimensions": {
+          "subject": "unknown",
+          "scope": "unknown",
+          "status": "not_applicable",
+          "quantity": "not_applicable",
+          "entity": "not_applicable",
+          "validity": "not_applicable"
+        }
+      },
+      "change_type": "GOLD_CORRECTION_EXPECTED_DELTA",
+      "human_rationale": "Human-approved correction: broad subject similarity is not sufficient to assert subject match; decision remains related_reference.",
+      "review_status": "ACCEPTED",
+      "production_contract_changed": false
+    },
+    {
+      "case_id": "MAP-G005",
+      "old_expected": {
+        "decision": "related_insufficient",
+        "dimensions": {
+          "subject": "match",
+          "scope": "match",
+          "status": "mismatch",
+          "quantity": "not_applicable",
+          "entity": "not_applicable",
+          "validity": "unknown"
+        }
+      },
+      "new_expected": {
+        "decision": "conflict",
+        "dimensions": {
+          "subject": "match",
+          "scope": "match",
+          "status": "mismatch",
+          "quantity": "not_applicable",
+          "entity": "not_applicable",
+          "validity": "unknown"
+        }
+      },
+      "change_type": "GOLD_CORRECTION_EXPECTED_DELTA",
+      "human_rationale": "Human-approved correction: in-progress fact conflicts with the requirement for an accepted/completed project.",
+      "review_status": "ACCEPTED",
+      "production_contract_changed": false
+    },
+    {
+      "case_id": "MAP-G008",
+      "old_expected": {
+        "decision": "partial_support",
+        "dimensions": {
+          "subject": "match",
+          "scope": "match",
+          "status": "mismatch",
+          "quantity": "not_applicable",
+          "entity": "not_applicable",
+          "validity": "match"
+        }
+      },
+      "new_expected": {
+        "decision": "conflict",
+        "dimensions": {
+          "subject": "match",
+          "scope": "match",
+          "status": "mismatch",
+          "quantity": "not_applicable",
+          "entity": "not_applicable",
+          "validity": "match"
+        }
+      },
+      "change_type": "GOLD_CORRECTION_EXPECTED_DELTA",
+      "human_rationale": "Human-approved correction: in-progress fact conflicts with the completed-and-accepted requirement.",
+      "review_status": "ACCEPTED",
+      "production_contract_changed": false
+    },
+    {
+      "case_id": "MAP-G016",
+      "old_expected": {
+        "decision": "unrelated",
+        "dimensions": {
+          "subject": "mismatch",
+          "scope": "unknown",
+          "status": "not_applicable",
+          "quantity": "not_applicable",
+          "entity": "not_applicable",
+          "validity": "not_applicable"
+        }
+      },
+      "new_expected": {
+        "decision": "related_insufficient",
+        "dimensions": {
+          "subject": "mismatch",
+          "scope": "unknown",
+          "status": "not_applicable",
+          "quantity": "not_applicable",
+          "entity": "not_applicable",
+          "validity": "not_applicable"
+        }
+      },
+      "change_type": "GOLD_CORRECTION_EXPECTED_DELTA",
+      "human_rationale": "Human-approved correction: backup capability is topically related to disaster recovery but insufficient to support the requested service.",
+      "review_status": "ACCEPTED",
+      "production_contract_changed": false
+    },
+    {
+      "case_id": "MAP-G017",
+      "old_expected": {
+        "decision": "conflict",
+        "dimensions": {
+          "subject": "match",
+          "scope": "match",
+          "status": "not_applicable",
+          "quantity": "mismatch",
+          "entity": "not_applicable",
+          "validity": "not_applicable"
+        }
+      },
+      "new_expected": {
+        "decision": "related_insufficient",
+        "dimensions": {
+          "subject": "match",
+          "scope": "match",
+          "status": "not_applicable",
+          "quantity": "unknown",
+          "entity": "not_applicable",
+          "validity": "not_applicable"
+        }
+      },
+      "change_type": "GOLD_CORRECTION_EXPECTED_DELTA",
+      "human_rationale": "Human-approved correction: registered users do not establish concurrent users; quantity remains unknown rather than an explicit conflict.",
+      "review_status": "ACCEPTED",
+      "production_contract_changed": false
+    },
+    {
+      "case_id": "MAP-G033",
+      "old_expected": {
+        "decision": "partial_support",
+        "dimensions": {
+          "subject": "mismatch",
+          "scope": "unknown",
+          "status": "unknown",
+          "quantity": "not_applicable",
+          "entity": "unknown",
+          "validity": "unknown"
+        }
+      },
+      "new_expected": {
+        "decision": "related_insufficient",
+        "dimensions": {
+          "subject": "mismatch",
+          "scope": "unknown",
+          "status": "unknown",
+          "quantity": "not_applicable",
+          "entity": "unknown",
+          "validity": "unknown"
+        }
+      },
+      "change_type": "GOLD_CORRECTION_EXPECTED_DELTA",
+      "human_rationale": "Human-approved correction: a generic product fact is related but cannot support the specified brand/model commitment.",
+      "review_status": "ACCEPTED",
+      "production_contract_changed": false
+    }
+  ]
+}
+

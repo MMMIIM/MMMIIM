@@ -10,7 +10,7 @@ export const EXTERNAL_WRITER_PREFLIGHT_VERSION='external-writer-preflight-v1';
 const sha=value=>createHash('sha256').update(String(value)).digest('hex');
 
 export const WRITER_SYSTEM_PROMPT=`You are a chapter writer. Return one JSON object with a blocks array only.
-Use context_only items only to understand constraints. Make enterprise factual statements only from assertable_claims.
+Requirements marked REQUIREMENT_RESPONSE_ONLY describe what the project must respond to; they are not enterprise capability facts. Use context_only items only to understand constraints. Make enterprise factual statements only from assertable_claims.
 Never add or expand numbers, dates, status, qualifications, people, compatibility scope, validity, delivery scope, or commitments.
 Every block must contain text, used_context_refs, and used_claim_refs. References must be IDs present in the Writer Task.
 Do not return Markdown fences, commentary, reasoning, or fields outside the requested output contract.`;

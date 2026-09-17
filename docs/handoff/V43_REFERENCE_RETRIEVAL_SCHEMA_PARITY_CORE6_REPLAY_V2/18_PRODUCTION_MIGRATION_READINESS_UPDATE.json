@@ -1,0 +1,25 @@
+{
+  "artifact_type": "V43_PRODUCTION_MIGRATION_READINESS",
+  "migration": "backend\\migrations\\052_requirement_scope_authority_and_project_material_bindings.sql",
+  "migration_sha256": "3a2fabb3a709cbb438d2e34c8f0b8828e9528706ec798d744b6e5cd918575d95",
+  "production_schema_missing_project_material_bindings": true,
+  "canonical_owner_verified": true,
+  "bundled_authority_changes": [
+    "requirement_scope_authority_decisions",
+    "project_material_bindings"
+  ],
+  "status": "PRODUCTION_MIGRATION_BUNDLE_REVIEW_REQUIRED",
+  "production_execution": false,
+  "production_writes": 0,
+  "prerequisite_evidence": {
+    "production_tables": {
+      "company_materials": true,
+      "material_chunks": true,
+      "material_chunk_embeddings": true,
+      "project_material_bindings": false
+    },
+    "eval_table_after_isolated_migration": true
+  },
+  "seeding_rows_required": "NONE_FOR_PUBLIC_CORPUS_BRANCH; project bindings remain an authority-controlled production decision",
+  "rollback_verification": "Human-controlled later decision required; no rollback executed"
+}

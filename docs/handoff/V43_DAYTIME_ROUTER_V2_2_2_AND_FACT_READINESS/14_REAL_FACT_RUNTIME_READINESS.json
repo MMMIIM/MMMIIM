@@ -1,0 +1,44 @@
+{
+  "artifact": "V43_REAL_FACT_V2_RUNTIME_READINESS",
+  "eval_only": true,
+  "evidence": "docs/fact-precert-engineering-audit-checkpoint.json",
+  "gateway_info": {
+    "configured_model": "deepseek-v4-pro",
+    "dry_requested_model": "deepseek-v4-pro",
+    "model_telemetry_conflation": "NO",
+    "observation": "not fetched by this artifact builder; existing safe runtime audit is used",
+    "provider": "deepseek_official",
+    "resolved_model": "deepseek-v4-pro",
+    "runtime_code_parity": "PASS",
+    "runtime_observation": {
+      "build_revision": "dev-working-tree",
+      "http_status": 200,
+      "task_types": [
+        "requirement_extraction",
+        "response_planning",
+        "claim_generation",
+        "section_drafting",
+        "targeted_revision",
+        "evidence_fact_extraction",
+        "evidence_fact_candidate_v2",
+        "evidence_fact_candidate_v2_1",
+        "draft_sections",
+        "evidence_support_assessment",
+        "requirement_evidence_mapping"
+      ]
+    },
+    "source": "http://127.0.0.1:18082/info",
+    "task_config_version_pairing": "PASS"
+  },
+  "prompt_instruction_identity": "see packages/semantic-contracts/index.js task metadata; no prompt text copied",
+  "provider_calls": 0,
+  "provider_model_routing": {
+    "endpoint": "/responses",
+    "model": "deepseek-v4-pro",
+    "provider": "deepseek_official"
+  },
+  "runtime_result": "REGISTERED_AND_WIRED_OFFLINE; LIVE_PROVIDER_SEMANTIC_READINESS_NOT_CERTIFIED",
+  "schema_identity": "see packages/semantic-contracts/index.js task contract; strict validation enabled",
+  "task_registration": "REGISTERED",
+  "task_type": "evidence_fact_extraction"
+}

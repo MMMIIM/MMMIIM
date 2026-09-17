@@ -1,0 +1,108 @@
+{
+  "run_id": "fact-v21-fixed12-20260908110957-e4f158f6",
+  "checkpoint": "V43_FACT_FIXED12_PRESEAL",
+  "generated_at": "2026-09-08T11:09:57.535Z",
+  "runtime": {
+    "gateway_base": "http://127.0.0.1:18082",
+    "ready_status": 200,
+    "info_status": 200,
+    "fact_provider": "deepseek_official",
+    "fact_provider_configured": true,
+    "fact_provider_endpoint": "/responses",
+    "fact_model": "deepseek-v4-pro",
+    "build_revision": "f509514",
+    "task_types": [
+      "requirement_extraction",
+      "response_planning",
+      "claim_generation",
+      "section_drafting",
+      "targeted_revision",
+      "evidence_fact_extraction",
+      "evidence_fact_candidate_v2",
+      "evidence_fact_candidate_v2_1",
+      "draft_sections",
+      "evidence_support_assessment",
+      "requirement_evidence_mapping"
+    ]
+  },
+  "cohort": [
+    {
+      "doc_id": "COM-01",
+      "source_hash": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+      "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+    },
+    {
+      "doc_id": "COM-06",
+      "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+      "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+    },
+    {
+      "doc_id": "COM-07",
+      "source_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f",
+      "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-07_性能与容量测试报告.md#full-document"
+    },
+    {
+      "doc_id": "COM-08",
+      "source_hash": "afd00a30e6a46e9e09d42ac1f7eeae36be26420a40da12a42ecd0cb0d8ba9041",
+      "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-08_备份恢复与容灾演练记录.md#full-document"
+    },
+    {
+      "doc_id": "COM-12",
+      "source_hash": "2689d0870f813b00849e6da5daca12cdf56064b4655b2d46bdc110b5ca3d9814",
+      "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+    },
+    {
+      "doc_id": "CCV2-U09-02",
+      "source_hash": "b3a47ddf0ea788c4af955fba4c33314bb9e0f1c32830feb39b68b2ba960a778b",
+      "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document"
+    },
+    {
+      "doc_id": "CCV2-U13-01",
+      "source_hash": "9408fc5a50ffcad28def68d844c2d701405b99655f2d5904aeb89874f55ae575",
+      "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+    },
+    {
+      "doc_id": "CCV2-U17-01",
+      "source_hash": "fa9f45848cabbe6801fcfd76fe5879038c79ad1437a8219e1724720c20ee3066",
+      "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U17-01_操作系统数据库中间件兼容_COMPATIBILITY_MATRIX.md#full-document"
+    },
+    {
+      "doc_id": "CCV2-U20-02",
+      "source_hash": "78c12a1f20c5da1af195345c33fd960f5e12293da0f1483afb970440e99f2320",
+      "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U20-02_质量管理_QUALITY_AUDIT_RECORD.md#full-document"
+    },
+    {
+      "doc_id": "CCV2-U29-02",
+      "source_hash": "8739b2aae923a268faf4d655330cc4aa9c937ee3d4a6073db0b622135771c171",
+      "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md#full-document"
+    },
+    {
+      "doc_id": "CCV2-U30-02",
+      "source_hash": "d0bc96847439b1d2f4baa87c2f92010d9d11882528a906cefb86edc21ac9c808",
+      "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U30-02_企业资质与认证_CERTIFICATION_STATUS_RECORD.md#full-document"
+    },
+    {
+      "doc_id": "CCV2-U34-02",
+      "source_hash": "723e01a83e793e28b1e92745c0239f2700ccc218a8b6d5ce320904842178a444",
+      "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U34-02_行业专项能力_INDUSTRY_MEDICAL_CASE.md#full-document"
+    }
+  ],
+  "contract": {
+    "task_type": "evidence_fact_candidate_v2_1",
+    "schema_version": "4.3-evidence-fact-candidate-v2.1",
+    "schema_sha256": "3dcece82464fcbd0351fe4444cc66994d36e40ca6ca97a3f2d0ba01e5e44f0b3",
+    "prompt_version": "4.3-evidence-fact-candidate-v2-prompt-v2",
+    "prompt_hash": "ba1ab6d2a298176ee27528b0e3d1bfe71f373fa99bb82c06cda780ba4272d642",
+    "canonicalizer_version": "4.3-evidence-fact-canonicalizer-v2.1",
+    "grounding_version": "4.3-evidence-fact-grounding-v2.1",
+    "model_source_text": false,
+    "source_refs_only": true
+  },
+  "provider": "deepseek_official",
+  "requested_model": "deepseek-v4-pro",
+  "endpoint": "/responses",
+  "calls_planned": 12,
+  "retries": 0,
+  "concurrency": 1,
+  "preflight_failure": false
+}

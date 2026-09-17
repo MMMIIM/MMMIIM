@@ -1,0 +1,139 @@
+{
+  "checkpoint": "V43_DEEPSEEK_OFFICIAL_FACT3_CHECKPOINT",
+  "generated_at": "2026-09-07T16:13:47.173Z",
+  "connectivity_checkpoint": "D:\\AI工作\\AI\\标书平台\\标书平台\\backend\\eval\\rag-pilot\\results\\deepseek-official-connectivity-1788797434916\\checkpoint.json",
+  "provider": "deepseek_official",
+  "model": "deepseek-v4-pro",
+  "endpoint": "/responses",
+  "thinking": "OFF",
+  "runtime_preflight": {
+    "ready_status": 200,
+    "info_status": 200,
+    "fact_provider": "deepseek_official",
+    "fact_provider_configured": true,
+    "fact_provider_endpoint": "/responses",
+    "fact_model": "deepseek-v4-pro",
+    "build_revision": "dev-working-tree"
+  },
+  "provider_calls": 2,
+  "retry_count": 0,
+  "cases": [
+    {
+      "case_id": "COM-01",
+      "source_file": "V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md",
+      "source_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+      "source_length": 1441,
+      "request_hash": "2dc6b8d43b9166f482e51516024dce8616406df7657408feb3b417bf8694942f",
+      "provider": "deepseek_official",
+      "model": "deepseek-v4-pro",
+      "status": "PASS",
+      "fact_count": 1,
+      "facts": [
+        {
+          "subject": {
+            "type": "company",
+            "name": "澄川数智科技有限公司"
+          },
+          "entities": [
+            {
+              "type": "company",
+              "name": "澄川数智科技有限公司",
+              "identifier": "Synthetic Demo Company"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": null,
+          "scopes": [
+            "政企与医疗信息化软件服务商",
+            "业务平台",
+            "数据治理",
+            "接口集成",
+            "RAG/Agent",
+            "实施与运维"
+          ],
+          "scope_source_texts": {
+            "政企与医疗信息化软件服务商": "定位政企与医疗信息化软件服务商",
+            "业务平台": "业务平台",
+            "数据治理": "数据治理",
+            "接口集成": "接口集成",
+            "RAG/Agent": "RAG/Agent",
+            "实施与运维": "实施与运维"
+          },
+          "quantities": [],
+          "validity": {
+            "status": "known",
+            "valid_from": "2026-01-01",
+            "valid_until": null
+          },
+          "domain_metadata": {
+            "company_case": {
+              "doc_id": "COM-01",
+              "title": "公司概况与业务范围",
+              "evidence_category": "COMPANY_PROFILE",
+              "evidence_status": "synthetic_pilot_evidence",
+              "synthetic_company_evidence": true,
+              "evidence_temporal_status": "CURRENT",
+              "freshness_sensitivity": "LOW",
+              "last_verified_at": "2026-08-31",
+              "next_review_at": "2027-02-28",
+              "supersession_check_required": true,
+              "chunking_hint": "heading_then_paragraph"
+            }
+          }
+        }
+      ],
+      "attempts": 1,
+      "duration_ms": 5081,
+      "error_code": null,
+      "audit": {
+        "provider_http_status": 200,
+        "provider_http_reached": true,
+        "gateway_http_status": 200,
+        "gateway_error_code": null,
+        "semantic_error_code": null,
+        "finish_reason": "completed",
+        "normalizer_invoked": true,
+        "projection_invoked": true,
+        "unexpected_property_names": [],
+        "exact_validation_path": null,
+        "response_format_type": null,
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "case_id": "COM-06",
+      "source_file": "V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md",
+      "source_sha256": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+      "source_length": 1659,
+      "request_hash": "3bfeeb2bf550537571171d694c1fcc4cc89828e8fcb2d718a06a7a78badb174a",
+      "provider": "deepseek_official",
+      "model": "deepseek-v4-pro",
+      "status": "FAIL",
+      "fact_count": 0,
+      "facts": [],
+      "attempts": 1,
+      "duration_ms": 924,
+      "error_code": "FACT_SEMANTIC_EMPTY",
+      "audit": {
+        "provider_http_status": 200,
+        "provider_http_reached": true,
+        "gateway_http_status": 200,
+        "gateway_error_code": null,
+        "semantic_error_code": null,
+        "finish_reason": "completed",
+        "normalizer_invoked": true,
+        "projection_invoked": true,
+        "unexpected_property_names": [],
+        "exact_validation_path": null,
+        "response_format_type": null,
+        "schema_validation_errors": []
+      }
+    }
+  ],
+  "production_db_writes": 0,
+  "fact_persistence": 0,
+  "gold_mutations": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0
+}

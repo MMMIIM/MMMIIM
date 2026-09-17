@@ -1,0 +1,77 @@
+{
+  "artifact_type": "V43_RESPONSE_ROUTER_V2_DISAGREEMENT_AUDIT_MANIFEST",
+  "artifact_version": "v1",
+  "generated_at": "2026-09-09T10:20:22.355Z",
+  "read_only": true,
+  "safety_union_count": 370,
+  "safety_family_counts": {
+    "P0_COMPLIANCE_ESCAPE": 31,
+    "HIGH_RISK_EVIDENCE_FALSE_NEGATIVE": 139,
+    "FUTURE_COMMITMENT_AS_EXISTING_FACT": 90,
+    "PROJECT_DESIGN_AS_ENTERPRISE_FACT": 117
+  },
+  "ordinary_disagreement_count": 95,
+  "control_count": 40,
+  "total_blind_cases": 502,
+  "duplicate_count": 10,
+  "duplicate_count_definition": "duplicate input occurrences removed while forming the unique blind case set",
+  "duplicate_count_breakdown": {
+    "safety_family_overlap_occurrences": 7,
+    "selection_group_overlap_occurrences": 3,
+    "raw_selection_occurrences": 512,
+    "deduplicated_case_count": 502
+  },
+  "missing_source_context_count": 0,
+  "reference_sha256": "b6faf37c1ed33e5d8c26d830d6cf9d25f139b4bafeb4f78ac9294f13acb40507",
+  "eval_run_id": "V43-RR-V2-DEV-5cab74957e63926f",
+  "source_artifacts": {
+    "reference": "docs/V43_RESPONSE_ROUTER_FULL_CORPUS_GPT_SEMANTIC_REFERENCE_V2_2178.json",
+    "evaluation": "docs/V43_RESPONSE_ROUTER_V2_DEV_CORPUS_EVAL.json",
+    "failure_families": "docs/V43_RESPONSE_ROUTER_V2_FAILURE_FAMILIES.json",
+    "v1_context_fallback": "backend/eval/requirement-unseen-holdout-v1/results/unseen-holdout-v1-2026-09-08T06-21-08-203Z-5faac1ab/canonical-requirements.json"
+  },
+  "ordinary_confusion_directions": {
+    "COMMITMENT -> COMPLIANCE": 17,
+    "COMMITMENT -> EVIDENCE": 25,
+    "COMMITMENT -> SOLUTION": 61,
+    "COMPLIANCE -> COMMITMENT": 45,
+    "COMPLIANCE -> EVIDENCE": 5,
+    "COMPLIANCE -> SOLUTION": 30,
+    "EVIDENCE -> COMPLIANCE": 14,
+    "SOLUTION -> COMMITMENT": 55,
+    "SOLUTION -> COMPLIANCE": 18,
+    "SOLUTION -> EVIDENCE": 62
+  },
+  "ordinary_sample_counts": {
+    "COMMITMENT -> COMPLIANCE": 10,
+    "COMMITMENT -> EVIDENCE": 10,
+    "COMMITMENT -> SOLUTION": 10,
+    "COMPLIANCE -> COMMITMENT": 10,
+    "COMPLIANCE -> EVIDENCE": 5,
+    "COMPLIANCE -> SOLUTION": 10,
+    "EVIDENCE -> COMPLIANCE": 10,
+    "SOLUTION -> COMMITMENT": 10,
+    "SOLUTION -> COMPLIANCE": 10,
+    "SOLUTION -> EVIDENCE": 10
+  },
+  "blinding_verification": {
+    "forbidden_key_violations": [],
+    "forbidden_key_scan_pass": true,
+    "audit_fields_null_pass": true,
+    "source_context_field_present": true
+  },
+  "side_effects": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "reference_mutations": 0,
+    "router_mutations": 0,
+    "production_routing_change": 0,
+    "commit": 0,
+    "push": 0,
+    "merge": 0,
+    "deploy": 0
+  },
+  "safety_overlap_count": 7
+}

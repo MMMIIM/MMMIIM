@@ -1,0 +1,33 @@
+{
+  "manifest_version": "production-boundary-fingerprint-v1",
+  "created_for": "gold-v2-governance-harness",
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "entries": [
+    {
+      "file": "backend/src/pipeline/requirement-evidence-mapping-contract-v1.js",
+      "sha256": "f22362f22a668997fac365e97e12f530957827b97ee4b5cc7ad3c14ad0e4a2c8",
+      "authority_role": "mapping_task_contract"
+    },
+    {
+      "file": "backend/src/pipeline/semantic-gateway-mapping-evaluator.js",
+      "sha256": "f5f4f0b1317204caff1e8d6fb42219fb2812f9905e6acf434b7a7901cfbc9b5c",
+      "authority_role": "mapping_evaluator_and_gateway_boundary"
+    },
+    {
+      "file": "backend/src/pipeline/semantic-gateway-client.js",
+      "sha256": "3b868b6b16c0bbabb08e5f6a382fff1a6cbdd37dc938598084c72ceb7f36d877",
+      "authority_role": "semantic_transport_contract"
+    },
+    {
+      "file": "backend/src/pipeline/claim-gate-v2-contract.js",
+      "sha256": "37b7ca1cc19c180e7ca9883acce71711f158277a7ba54493d5cb0cb69b8af951",
+      "authority_role": "claim_gate_authority"
+    },
+    {
+      "file": "backend/src/pipeline/writer-input-authorization-v1.js",
+      "sha256": "6ed13fb1751ea1e878bda15b1ddf772a5797a99dbd489e954a7da42989014e8a",
+      "authority_role": "writer_authorization_boundary"
+    }
+  ]
+}

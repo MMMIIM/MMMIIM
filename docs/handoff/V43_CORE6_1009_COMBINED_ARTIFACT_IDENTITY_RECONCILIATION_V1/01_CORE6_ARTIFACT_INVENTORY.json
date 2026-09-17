@@ -1,0 +1,235 @@
+{
+  "artifact_type": "V43_CORE6_1009_COMBINED_ARTIFACT_INVENTORY",
+  "generated_at": "2026-09-15T05:17:39.661Z",
+  "target": "docs/V43_RESPONSE_ROUTER_BLIND_GPT_V2_CORE6_1009.json",
+  "artifacts": [
+    {
+      "path": "docs/V43_RESPONSE_ROUTER_BLIND_GPT_V2_CORE6_1009.json",
+      "role": "CORE6_COMBINED_BLIND_ROUTER_INPUT",
+      "exists": true,
+      "sha256": "49f161d5f13561e78fdbea3b9a647130735f820b32809b0425097486f7939243",
+      "rows": 1009,
+      "source_artifact": "docs/V43_REQUIREMENT_GOLD_V2_SIX_TENDER_CANONICAL_INPUT.json",
+      "source_artifact_sha256": "ff07402688a3013af9a9b8be01f613f76848b7ea905208c1955a604432422fe1",
+      "authority": {
+        "source": "DERIVED_EVAL_INPUT",
+        "semantic": false,
+        "human_gold": false,
+        "development_reference": true,
+        "production_runtime": false
+      }
+    },
+    {
+      "path": "docs/V43_REQUIREMENT_GOLD_V2_SIX_TENDER_CANONICAL_INPUT.json",
+      "role": "DIRECT_UPSTREAM_CORE6_CANONICAL_INPUT",
+      "exists": true,
+      "sha256": "ff07402688a3013af9a9b8be01f613f76848b7ea905208c1955a604432422fe1",
+      "rows": 1009,
+      "tender_counts": {
+        "JY-001": 193,
+        "TB-003": 265,
+        "TB-006": 46,
+        "FAST-01": 39,
+        "FAST-04": 353,
+        "FAST-WATER-01": 113
+      },
+      "authority": {
+        "source": "DERIVED_EVAL_INPUT",
+        "semantic": false,
+        "human_gold": false,
+        "development_reference": true,
+        "production_runtime": false
+      }
+    },
+    {
+      "path": "docs/REQUIREMENT_CANDIDATE_POOL_V2_COMPLETED.json",
+      "role": "DIRECT_UPSTREAM_EVAL_CANDIDATE_POOL",
+      "exists": true,
+      "sha256": "de5dfbaafb9b0a3ae094b0168987624e53533cb5f0853afa4a5b365477671c27",
+      "rows": 1010,
+      "tender_counts": {
+        "JY-001": 193,
+        "FAST-01": 39,
+        "FAST-WATER-01": 114,
+        "TB-006": 46,
+        "TB-003": 265,
+        "FAST-04": 353
+      },
+      "source_verified_count": 1009,
+      "authority": {
+        "source": "SOURCE_DERIVED_CANDIDATES",
+        "semantic": false,
+        "human_gold": false,
+        "development_reference": true,
+        "production_runtime": false
+      }
+    },
+    {
+      "path": "backend/eval/gold-governance/v43-requirement-six-tender/build-six-tender-canonical-input.js",
+      "role": "CANONICAL_INPUT_BUILD_SCRIPT",
+      "exists": true,
+      "sha256": "83c32cab26f03fea5c2cee88c0c88222250928133c366cea1bcdb7a09b10a531",
+      "authority": {
+        "source": false,
+        "semantic": false,
+        "human_gold": false,
+        "development_reference": true,
+        "production_runtime": false
+      }
+    },
+    {
+      "path": "backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/manifest.json",
+      "role": "FROZEN_THREE_TENDER_SEMANTIC_BOUNDARY_MANIFEST",
+      "exists": true,
+      "sha256": "c97124551bc7d8b6c0bd7456e17aefec23da8b446c7fdeeb821b66f880fd41b9",
+      "rows": 199,
+      "tender_counts": {
+        "FAST-01": 39,
+        "FAST-WATER-01": 114,
+        "TB-006": 46
+      },
+      "authority": {
+        "source": true,
+        "semantic": true,
+        "human_gold": "YES_FOR_THREE_TENDERS",
+        "development_reference": true,
+        "production_runtime": false
+      }
+    },
+    {
+      "path": "backend/eval/requirement-extraction-real-tender-pilot-v1/recovered-source-authority-v1/manifest.json",
+      "role": "RECOVERED_SOURCE_AUTHORITY_MANIFEST",
+      "exists": true,
+      "sha256": "21dbc314642b6121f2cfd8d3518512711a24a670d2449e1513e046054b0ca6c3",
+      "rows": 811,
+      "tender_counts": {
+        "JY-001": 193,
+        "TB-003": 265,
+        "FAST-04": 353
+      },
+      "authority": {
+        "source": true,
+        "semantic": false,
+        "human_gold": false,
+        "development_reference": true,
+        "production_runtime": false
+      }
+    },
+    {
+      "path": "docs/eval/requirement-production-core6-20260911/CORE6_RUNTIME_MANIFEST.json",
+      "role": "20260911_RUNTIME_CANONICAL_MANIFEST",
+      "exists": true,
+      "sha256": "2420be8a598a1c8aa4e4200a80ac9ac634fe0ed8fb580fc7cfba807c34dad822",
+      "rows": 1998,
+      "tender_counts": {
+        "JY-001": 320,
+        "TB-003": 257,
+        "TB-006": 341,
+        "FAST-01": 220,
+        "FAST-04": 606,
+        "FAST-WATER-01": 254
+      },
+      "authority": {
+        "source": "RUNTIME_SNAPSHOT",
+        "semantic": false,
+        "human_gold": false,
+        "development_reference": true,
+        "production_runtime": true
+      }
+    },
+    {
+      "path": "docs/eval/requirement-production-core6-20260911/CORE6_REQUIREMENT_RUNTIME_SUMMARY.json",
+      "role": "20260911_RUNTIME_CANONICAL_SUMMARY",
+      "exists": true,
+      "sha256": "1b06b36b80bfe0cb8bc611f6c787d26cd54fda5714ebf514644a03531e41c9e2",
+      "rows": 1998,
+      "provider_calls": 197,
+      "authority": {
+        "source": "RUNTIME_SNAPSHOT",
+        "semantic": false,
+        "human_gold": false,
+        "development_reference": true,
+        "production_runtime": true
+      }
+    },
+    {
+      "path": "backend/eval/reports/reqx-v311-source-ambiguity-gold-audit-v1.json",
+      "role": "LEGACY_HUMAN_GOLD_SOURCE_AMBIGUITY_AUDIT",
+      "exists": true,
+      "sha256": "3866fc65c2363cb0c33fa4a3d9d34bf7a1a317d21c63d75a500e2fe684f0e5b7",
+      "rows": 199,
+      "classification": {
+        "SOURCE_CLEAR": 198,
+        "SOURCE_AMBIGUOUS": 1,
+        "SOURCE_ERROR_SUSPECTED": 0,
+        "UNRESOLVED": 0,
+        "TOTAL": 199
+      },
+      "authority": {
+        "source": true,
+        "semantic": true,
+        "human_gold": true,
+        "development_reference": true,
+        "production_runtime": false
+      }
+    },
+    {
+      "path": "docs/V43_PRODUCTION_CANONICAL_CORE6_REQUIREMENTS_READONLY_EXPORT.json",
+      "role": "PRODUCTION_CANONICAL_READONLY_EXPORT",
+      "exists": true,
+      "sha256": "078357535d7374a0ad3f8c47dde45a94007a2164df94d59069b6d063c4cd305a",
+      "authority": {
+        "source": false,
+        "semantic": false,
+        "human_gold": false,
+        "development_reference": false,
+        "production_runtime": true
+      }
+    }
+  ],
+  "source_pdfs": [
+    {
+      "tender_id": "JY-001",
+      "path": "backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf",
+      "exists": true,
+      "sha256": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145"
+    },
+    {
+      "tender_id": "TB-003",
+      "path": "backend/eval/tender-benchmark-v1/sources/TB-003-jiaozuo-sidian.pdf",
+      "exists": true,
+      "sha256": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1"
+    },
+    {
+      "tender_id": "TB-006",
+      "path": "backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf",
+      "exists": true,
+      "sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480"
+    },
+    {
+      "tender_id": "FAST-01",
+      "path": "backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf",
+      "exists": true,
+      "sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29"
+    },
+    {
+      "tender_id": "FAST-04",
+      "path": "backend/eval/tender-benchmark-v1/sources/FAST-04-beijing-software.pdf",
+      "exists": true,
+      "sha256": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "path": "backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf",
+      "exists": true,
+      "sha256": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535"
+    }
+  ],
+  "side_effects": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "db_writes": 0,
+    "gold_mutations": 0,
+    "requirement_mutations": 0
+  }
+}

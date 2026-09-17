@@ -1,0 +1,35 @@
+{
+  "artifact_type": "V43_FACT_NORMALIZATION_SAFETY",
+  "normalization_function": "normalizeGroundingComparisonText",
+  "checks": [
+    {
+      "name": "CRLF_LF",
+      "pass": true
+    },
+    {
+      "name": "SOFT_LINE_WRAP",
+      "pass": true
+    },
+    {
+      "name": "CONTINUATION_PUNCTUATION",
+      "pass": true
+    },
+    {
+      "name": "HEADING_BOUNDARY_PRESERVED",
+      "pass": true
+    },
+    {
+      "name": "BLANK_PARAGRAPH_BOUNDARY_PRESERVED",
+      "pass": true
+    },
+    {
+      "name": "SENTENCE_BOUNDARY_PRESERVED",
+      "pass": true
+    }
+  ],
+  "all_checks_pass": true,
+  "source_mutation_count": 0,
+  "cross_paragraph_join_count": 0,
+  "source_snapshot_mutated": false,
+  "no_semantic_rewrite": true
+}

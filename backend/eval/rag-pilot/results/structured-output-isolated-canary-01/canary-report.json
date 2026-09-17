@@ -1,0 +1,565 @@
+{
+  "run_id": "STRUCTURED_OUTPUT_ISOLATED_CANARY_01",
+  "started_at": "2026-09-01T04:46:50.992Z",
+  "runtime": {
+    "parity": {
+      "health": 200,
+      "ready": 200,
+      "task_registry_loaded": true,
+      "support_task": {
+        "task_type": "evidence_support_assessment",
+        "contract_version": "4.3-evidence-support-assessment-v1",
+        "candidate_schema_sha256": "a2e027c46825d2a45fc09ffaf2fc2dfbe1b7358f5867e57893825854755614d1",
+        "task_data_schema_sha256": "15276121aed6a8337384618a3939d66a7802815163f676e193ff8775a8486578",
+        "instruction_hash": "984653f19d08c2cb0d405c6c133416410f5ba82f6f6f1c2f111bb9c14b92502a"
+      },
+      "fact_task": {
+        "task_type": "evidence_fact_extraction",
+        "contract_version": "4.3-evidence-fact-extraction-v1",
+        "candidate_schema_sha256": "c1068e6251131f3218419ae2e3ef6f0b2ef529d6740d59799d7232031948c3ee",
+        "task_data_schema_sha256": "2cc97797765c5f1892ac91b2109e15549aedeb23736a786e5189735a1c23713d",
+        "instruction_hash": "86cb8d243b0e0f8ed83ecba67dd6aff8532958a14a7723c1a2f1192c663c301b"
+      },
+      "expected_support_schema_hash": "15276121aed6a8337384618a3939d66a7802815163f676e193ff8775a8486578",
+      "expected_fact_schema_hash": "2cc97797765c5f1892ac91b2109e15549aedeb23736a786e5189735a1c23713d",
+      "model": "deepseek-ai/DeepSeek-V4-Flash",
+      "provider": "openai_compatible",
+      "provider_host": "api.siliconflow.cn",
+      "gateway_target": "http://127.0.0.1:18083"
+    },
+    "info_revision": "dev-working-tree",
+    "info_working_tree_dirty": null,
+    "semantic_contract": {
+      "task_type": "evidence_support_assessment",
+      "contract_version": "4.3-evidence-support-assessment-v1",
+      "instruction_hash": "984653f19d08c2cb0d405c6c133416410f5ba82f6f6f1c2f111bb9c14b92502a",
+      "schema_hash": "15276121aed6a8337384618a3939d66a7802815163f676e193ff8775a8486578",
+      "provider": "openai_compatible",
+      "model": "deepseek-ai/DeepSeek-V4-Flash",
+      "provider_host": "api.siliconflow.cn",
+      "response_format": {
+        "type": "json_schema",
+        "strict": true
+      }
+    },
+    "fact_contract": {
+      "task_type": "evidence_fact_extraction",
+      "contract_version": "4.3-evidence-fact-extraction-v1",
+      "instruction_hash": "86cb8d243b0e0f8ed83ecba67dd6aff8532958a14a7723c1a2f1192c663c301b",
+      "schema_hash": "2cc97797765c5f1892ac91b2109e15549aedeb23736a786e5189735a1c23713d",
+      "provider": "openai_compatible",
+      "model": "deepseek-ai/DeepSeek-V4-Flash",
+      "provider_host": "api.siliconflow.cn",
+      "response_format": {
+        "type": "json_schema",
+        "strict": true
+      }
+    }
+  },
+  "semantic": {
+    "cases": [
+      {
+        "case_id": "B-P01",
+        "expected": "EXPECTED_POSITIVE",
+        "actual": null,
+        "provider_called": false,
+        "source": {
+          "doc_id": "COM-04",
+          "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+          "chunk_id": "MCH-0663AA700C01FD958515713C21CF5F5E",
+          "source_span_id": "ESPAN-709632A1A25EF2E14625CFCFB00A3D4A",
+          "source_text": "## 接口\n\n支持REST API、Webhook和批量文件交换；2026-07-12完成12个模拟接口联调。\n\n"
+        },
+        "assessment": null,
+        "error": {
+          "code": "ASSESSMENT_UNAVAILABLE",
+          "message": "Evidence Support 评估服务当前不可用。",
+          "audit": {
+            "provider": "semantic_gateway",
+            "task_type": "evidence_support_assessment",
+            "http_status": 502,
+            "gateway_error_code": "PROVIDER_UNAVAILABLE",
+            "request_id": "8017b205-195a-4185-b77f-a9540e20a083",
+            "error_code": "ASSESSMENT_UNAVAILABLE",
+            "technical_error_code": "PROVIDER_UNAVAILABLE"
+          }
+        }
+      },
+      {
+        "case_id": "B-L01",
+        "expected": "EXPECTED_LIMITED",
+        "actual": null,
+        "provider_called": false,
+        "source": {
+          "doc_id": "COM-03",
+          "material_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd",
+          "chunk_id": "MCH-AA94BB7D153A30F95E869D78DC45A0E5",
+          "source_span_id": "ESPAN-FB231E6D00D7BA0D84531011C5CD9802",
+          "source_text": "## 适配\n\nSynthetic记录：Linux x86_64、某国产Linux测试环境、PostgreSQL兼容数据库完成安装与核心功能验证；未列版本不得推断。\n\n"
+        },
+        "assessment": null,
+        "error": {
+          "code": "ASSESSMENT_UNAVAILABLE",
+          "message": "Evidence Support 评估服务当前不可用。",
+          "audit": {
+            "provider": "semantic_gateway",
+            "task_type": "evidence_support_assessment",
+            "http_status": 502,
+            "gateway_error_code": "PROVIDER_UNAVAILABLE",
+            "request_id": "825f22fc-2240-4183-8007-e94381e05d9d",
+            "error_code": "ASSESSMENT_UNAVAILABLE",
+            "technical_error_code": "PROVIDER_UNAVAILABLE"
+          }
+        }
+      },
+      {
+        "case_id": "B-N01",
+        "expected": "EXPECTED_NEGATIVE",
+        "actual": null,
+        "provider_called": false,
+        "source": {
+          "doc_id": "COM-04",
+          "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+          "chunk_id": "MCH-99497AE6286B2BAC390E35611FEE3A8A",
+          "source_span_id": "ESPAN-D1A99A1CD1ACC1F465B25CFC2D6AD390",
+          "source_text": "## 边界\n\n不代表已对接任何真实政务或医院系统。\n\n"
+        },
+        "assessment": null,
+        "error": {
+          "code": "ASSESSMENT_UNAVAILABLE",
+          "message": "Evidence Support 评估服务当前不可用。",
+          "audit": {
+            "provider": "semantic_gateway",
+            "task_type": "evidence_support_assessment",
+            "http_status": 502,
+            "gateway_error_code": "PROVIDER_UNAVAILABLE",
+            "request_id": "83e7e5e9-2750-4d9e-a13a-b601465e0d42",
+            "error_code": "ASSESSMENT_UNAVAILABLE",
+            "technical_error_code": "PROVIDER_UNAVAILABLE"
+          }
+        }
+      },
+      {
+        "case_id": "B-R01",
+        "expected": "EXPECTED_REFERENCE_ONLY",
+        "actual": "EXPECTED_REFERENCE_ONLY",
+        "provider_called": false,
+        "source": {
+          "doc_id": "GOV-01",
+          "material_id": "434265bb-f3e6-4341-9a5d-57546997ae68",
+          "chunk_id": "MCH-0A4BFFC7419309FA3FD1735D26D1B1F6",
+          "source_span_id": "ESPAN-EDFBDBDF9102248BB2E62E7EA262F77F",
+          "source_text": "# 政务信息化项目全生命周期管理\n\n> 官方资料结构化摘要。正式投标与合规判断需回到原始法律、标准、政策或项目文件核验。\n\n## 行业要求\n\n政务信息化强调统筹、共享、协同、安全、绩效和全生命周期治理。\n\n## 官方来源 / 依据\n\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。"
+        },
+        "assessment": {
+          "assessment_id": "ESA-7121DEC9E702044023785BDAD31A2F9A",
+          "assessment_version": "evidence-support-assessment-v1",
+          "evaluator_version": "4.3-evidence-support-assessment-v1",
+          "assessment_status": "available",
+          "input_kind": "retrieval_candidate",
+          "requirement": {
+            "requirement_id": "SEM-B-R01",
+            "text": "企业已具备政务项目实施能力。",
+            "text_hash": "821f089614317056046792289faf230df1ef0cea3f9a55b08c19a6957b092670"
+          },
+          "source": {
+            "source_id": "SEM-SOURCE-B-R01",
+            "source_kind": "retrieval_candidate",
+            "source_span_id": "ESPAN-EDFBDBDF9102248BB2E62E7EA262F77F",
+            "source_text_hash": "b28664cf17ae0c76a2013301375c968d7a6ad0a7173cc5793519206d5bbf5389",
+            "lineage": {
+              "project_id": "00000000-0000-4000-8000-000000000001",
+              "material_id": "434265bb-f3e6-4341-9a5d-57546997ae68",
+              "document_id": "434265bb-f3e6-4341-9a5d-57546997ae68",
+              "anchor_chunk_id": "MCH-0A4BFFC7419309FA3FD1735D26D1B1F6"
+            },
+            "material": {
+              "material_id": "434265bb-f3e6-4341-9a5d-57546997ae68",
+              "material_type": "technical_whitepaper",
+              "corpus_scope": "GOVERNMENT_ENTERPRISE",
+              "source_type": "government_guidance",
+              "source_authority": "official"
+            }
+          },
+          "semantic_relevance": "relevant",
+          "evidence_capability": "reference_only",
+          "support_level": "reference_only",
+          "semantic_relationship": "related",
+          "review_dimensions": {
+            "subject_match": "unknown",
+            "scope_match": "unknown",
+            "status_match": "unknown",
+            "quantitative_match": "unknown",
+            "entity_match": "unknown",
+            "validity_match": "unknown",
+            "source_authority": "unknown",
+            "support_sufficiency": "unknown"
+          },
+          "reason_codes": [
+            "REFERENCE_ONLY_SOURCE"
+          ],
+          "support_observations": [],
+          "conflict_observations": []
+        },
+        "error": null
+      }
+    ],
+    "metrics": {
+      "total": 4,
+      "pass": 1,
+      "fail": 3,
+      "provider_reached": 0,
+      "schema_invalid": 3,
+      "negative_false_positive": 0,
+      "reference_contamination": 0
+    }
+  },
+  "fact": {
+    "cases": [
+      {
+        "case_id": "C01",
+        "provider_called": false,
+        "attempts": null,
+        "first_pass": false,
+        "retry_attempted": null,
+        "final_success": false,
+        "semantic_candidates": [],
+        "canonical_facts": [],
+        "provider_audit": {
+          "provider_adapter_invoked": true,
+          "fetch_invoked": true,
+          "provider_http_reached": false,
+          "provider_http_status": null,
+          "finish_reason": null,
+          "prompt_tokens": null,
+          "completion_tokens": null,
+          "output_truncated": false,
+          "json_parse_success": null,
+          "safe_error_code": "FETCH_FAILED",
+          "cause_code": "EACCES"
+        },
+        "source": {
+          "doc_id": "COM-04",
+          "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+          "chunk_id": "MCH-0663AA700C01FD958515713C21CF5F5E",
+          "source_span_id": "ESPAN-709632A1A25EF2E14625CFCFB00A3D4A",
+          "source_text": "## 接口\n\n支持REST API、Webhook和批量文件交换；2026-07-12完成12个模拟接口联调。\n\n"
+        },
+        "error": {
+          "code": "FACT_SEMANTIC_EXTRACTION_FAILED",
+          "message": "Fact semantic extraction failed.",
+          "details": {
+            "stage": "FACT",
+            "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+            "cause_code": "PROVIDER_UNAVAILABLE",
+            "provider_audit": {
+              "provider_adapter_invoked": true,
+              "fetch_invoked": true,
+              "provider_http_reached": false,
+              "provider_http_status": null,
+              "finish_reason": null,
+              "prompt_tokens": null,
+              "completion_tokens": null,
+              "output_truncated": false,
+              "json_parse_success": null,
+              "safe_error_code": "FETCH_FAILED",
+              "cause_code": "EACCES"
+            }
+          }
+        }
+      },
+      {
+        "case_id": "C07",
+        "provider_called": false,
+        "attempts": null,
+        "first_pass": false,
+        "retry_attempted": null,
+        "final_success": false,
+        "semantic_candidates": [],
+        "canonical_facts": [],
+        "provider_audit": {
+          "provider_adapter_invoked": true,
+          "fetch_invoked": true,
+          "provider_http_reached": false,
+          "provider_http_status": null,
+          "finish_reason": null,
+          "prompt_tokens": null,
+          "completion_tokens": null,
+          "output_truncated": false,
+          "json_parse_success": null,
+          "safe_error_code": "FETCH_FAILED",
+          "cause_code": "EACCES"
+        },
+        "source": {
+          "doc_id": "COM-05",
+          "material_id": "81990289-5472-4c41-a68e-b16035013a9a",
+          "chunk_id": "MCH-19D4CA86EF48631FD4A3D61C157A2069",
+          "source_span_id": "ESPAN-8D55AB16DE71C7C49357FD5FC02096B9",
+          "source_text": "## 迁移\n\n采用盘点、映射、清洗、预迁移、核验、正式迁移和回滚准备。\n\n"
+        },
+        "error": {
+          "code": "FACT_SEMANTIC_EXTRACTION_FAILED",
+          "message": "Fact semantic extraction failed.",
+          "details": {
+            "stage": "FACT",
+            "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+            "cause_code": "PROVIDER_UNAVAILABLE",
+            "provider_audit": {
+              "provider_adapter_invoked": true,
+              "fetch_invoked": true,
+              "provider_http_reached": false,
+              "provider_http_status": null,
+              "finish_reason": null,
+              "prompt_tokens": null,
+              "completion_tokens": null,
+              "output_truncated": false,
+              "json_parse_success": null,
+              "safe_error_code": "FETCH_FAILED",
+              "cause_code": "EACCES"
+            }
+          }
+        }
+      },
+      {
+        "case_id": "C12",
+        "provider_called": false,
+        "attempts": null,
+        "first_pass": false,
+        "retry_attempted": null,
+        "final_success": false,
+        "semantic_candidates": [],
+        "canonical_facts": [],
+        "provider_audit": {
+          "provider_adapter_invoked": true,
+          "fetch_invoked": true,
+          "provider_http_reached": false,
+          "provider_http_status": null,
+          "finish_reason": null,
+          "prompt_tokens": null,
+          "completion_tokens": null,
+          "output_truncated": false,
+          "json_parse_success": null,
+          "safe_error_code": "FETCH_FAILED",
+          "cause_code": "EACCES"
+        },
+        "source": {
+          "doc_id": "COM-07",
+          "material_id": "42debef7-084f-471c-8fa5-1f9dcbf4c2f7",
+          "chunk_id": "MCH-D09A2FC0D82F6D27ED11B48CBDA4B06C",
+          "source_span_id": "ESPAN-D0BC89F0DCA4285297BA8B43ABC5E41E",
+          "source_text": "## 结果\n\n100个虚拟用户标准查询场景P95=1.8秒；导入10000条合成记录耗时42秒。\n\n"
+        },
+        "error": {
+          "code": "FACT_SEMANTIC_EXTRACTION_FAILED",
+          "message": "Fact semantic extraction failed.",
+          "details": {
+            "stage": "FACT",
+            "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+            "cause_code": "PROVIDER_UNAVAILABLE",
+            "provider_audit": {
+              "provider_adapter_invoked": true,
+              "fetch_invoked": true,
+              "provider_http_reached": false,
+              "provider_http_status": null,
+              "finish_reason": null,
+              "prompt_tokens": null,
+              "completion_tokens": null,
+              "output_truncated": false,
+              "json_parse_success": null,
+              "safe_error_code": "FETCH_FAILED",
+              "cause_code": "EACCES"
+            }
+          }
+        }
+      },
+      {
+        "case_id": "C23",
+        "provider_called": false,
+        "attempts": null,
+        "first_pass": false,
+        "retry_attempted": null,
+        "final_success": false,
+        "semantic_candidates": [],
+        "canonical_facts": [],
+        "provider_audit": {
+          "provider_adapter_invoked": true,
+          "fetch_invoked": true,
+          "provider_http_reached": false,
+          "provider_http_status": null,
+          "finish_reason": null,
+          "prompt_tokens": null,
+          "completion_tokens": null,
+          "output_truncated": false,
+          "json_parse_success": null,
+          "safe_error_code": "FETCH_FAILED",
+          "cause_code": "EACCES"
+        },
+        "source": {
+          "doc_id": "COM-14",
+          "material_id": "04738608-0aa8-4e12-b37b-fc5084e0428b",
+          "chunk_id": "MCH-9BD85ED0A87D7C6B058D4EE89A4A1303",
+          "source_span_id": "ESPAN-0C64749885777668FD1823D64CAE1159",
+          "source_text": "## 案例\n\n某虚构三级医院接口与数据平台，包含接口治理、患者主索引、历史迁移、联调和试运行。\n\n"
+        },
+        "error": {
+          "code": "FACT_SEMANTIC_EXTRACTION_FAILED",
+          "message": "Fact semantic extraction failed.",
+          "details": {
+            "stage": "FACT",
+            "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+            "cause_code": "PROVIDER_UNAVAILABLE",
+            "provider_audit": {
+              "provider_adapter_invoked": true,
+              "fetch_invoked": true,
+              "provider_http_reached": false,
+              "provider_http_status": null,
+              "finish_reason": null,
+              "prompt_tokens": null,
+              "completion_tokens": null,
+              "output_truncated": false,
+              "json_parse_success": null,
+              "safe_error_code": "FETCH_FAILED",
+              "cause_code": "EACCES"
+            }
+          }
+        }
+      }
+    ],
+    "metrics": {
+      "total": 4,
+      "provider_reached": 0,
+      "final_valid": 0,
+      "first_pass": 0,
+      "retry_recovered": 0,
+      "provider_schema_failures": 0
+    }
+  },
+  "provider": {
+    "request_count": 7,
+    "provider_reached": 0,
+    "retry_count": 0,
+    "fallback_count": 0,
+    "dify": 0,
+    "benchmark": 0,
+    "calls": [
+      {
+        "run_id": "STRUCTURED_OUTPUT_ISOLATED_CANARY_01",
+        "phase": "SEMANTIC",
+        "case_id": "B-P01",
+        "attempt": 1,
+        "gateway_http_status": 502,
+        "provider_http_reached": false,
+        "provider_http_status": null,
+        "finish_reason": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "output_truncated": false,
+        "response_format_type": null,
+        "latency_ms": 70,
+        "error_code": null
+      },
+      {
+        "run_id": "STRUCTURED_OUTPUT_ISOLATED_CANARY_01",
+        "phase": "SEMANTIC",
+        "case_id": "B-L01",
+        "attempt": 2,
+        "gateway_http_status": 502,
+        "provider_http_reached": false,
+        "provider_http_status": null,
+        "finish_reason": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "output_truncated": false,
+        "response_format_type": null,
+        "latency_ms": 8,
+        "error_code": null
+      },
+      {
+        "run_id": "STRUCTURED_OUTPUT_ISOLATED_CANARY_01",
+        "phase": "SEMANTIC",
+        "case_id": "B-N01",
+        "attempt": 3,
+        "gateway_http_status": 502,
+        "provider_http_reached": false,
+        "provider_http_status": null,
+        "finish_reason": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "output_truncated": false,
+        "response_format_type": null,
+        "latency_ms": 12,
+        "error_code": null
+      },
+      {
+        "run_id": "STRUCTURED_OUTPUT_ISOLATED_CANARY_01",
+        "phase": "FACT",
+        "case_id": "C01",
+        "attempt": 4,
+        "gateway_http_status": 502,
+        "provider_http_reached": false,
+        "provider_http_status": null,
+        "finish_reason": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "output_truncated": false,
+        "response_format_type": "json_schema",
+        "latency_ms": 13,
+        "error_code": null
+      },
+      {
+        "run_id": "STRUCTURED_OUTPUT_ISOLATED_CANARY_01",
+        "phase": "FACT",
+        "case_id": "C07",
+        "attempt": 5,
+        "gateway_http_status": 502,
+        "provider_http_reached": false,
+        "provider_http_status": null,
+        "finish_reason": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "output_truncated": false,
+        "response_format_type": "json_schema",
+        "latency_ms": 13,
+        "error_code": null
+      },
+      {
+        "run_id": "STRUCTURED_OUTPUT_ISOLATED_CANARY_01",
+        "phase": "FACT",
+        "case_id": "C12",
+        "attempt": 6,
+        "gateway_http_status": 502,
+        "provider_http_reached": false,
+        "provider_http_status": null,
+        "finish_reason": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "output_truncated": false,
+        "response_format_type": "json_schema",
+        "latency_ms": 13,
+        "error_code": null
+      },
+      {
+        "run_id": "STRUCTURED_OUTPUT_ISOLATED_CANARY_01",
+        "phase": "FACT",
+        "case_id": "C23",
+        "attempt": 7,
+        "gateway_http_status": 502,
+        "provider_http_reached": false,
+        "provider_http_status": null,
+        "finish_reason": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "output_truncated": false,
+        "response_format_type": "json_schema",
+        "latency_ms": 13,
+        "error_code": null
+      }
+    ]
+  },
+  "safety": {
+    "production_code_changes": 0,
+    "db_writes": 0,
+    "shared_gateway": "untouched",
+    "gateway_target": "http://127.0.0.1:18083"
+  }
+}

@@ -1,0 +1,1075 @@
+{
+  "artifact_type": "V43_REQUIREMENT_V6_4_ROOT_CAUSE_TRACE",
+  "artifact_version": "v6.4",
+  "source_truth_sha256": "9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+  "gpt_authority_artifact": "docs/handoff/V43_REQUIREMENT_V6_3_SEMANTIC_ADJUDICATION/02_GPT_DECISION_PACKET.json",
+  "replay_artifact": "docs/eval/flywheel/p0-badcase-repair-v2/V43_REQUIREMENT_V6_4_TARGETED_REPLAY.json",
+  "target_case_count": 15,
+  "targeted_unique_chunk_count": 9,
+  "provider_calls": 9,
+  "retry_count": 0,
+  "prompt_sha256": "cae64eb027365f1e9d39a9ef8b6375af20dc7b274d62ddc54c07ece3f39fc00d",
+  "contract_version": "4.3-requirement-extraction-v3.1.1",
+  "contract_schema_sha256": "9ee6ebb2a34e5ff3131d3b0bdbbcee45b1c8c33ac38d8325bd8925836abb7acc",
+  "rows": [
+    {
+      "atom_id": "JY-001-P0-0013",
+      "tender_id": "JY-001",
+      "gpt_authority_action": "INCLUDE_IN_GENERIC_PRODUCER_SCOPE_REPAIR",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_reason": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "historical_mechanical_first_divergence": {
+        "packet_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "replay_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "failure_mechanism": "QUALITY_GATE"
+      },
+      "current_replay": {
+        "run_id": "V43-REQUIREMENT-V6.4-TARGETED-20260912151026",
+        "chunk_id": "JY-001:reconstructed:5",
+        "replay_input_authority_level": "LEVEL3_DETERMINISTIC_PARSE_RECONSTRUCTION",
+        "input_sha256": "sha256:5fe7032e74766bc69089ee4a568fb193a304eb6f4403091f79217ca35b0782bb",
+        "source_ref_count": 72,
+        "source_hash_count": 0,
+        "provider_chain_reached": true,
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "response_received": true,
+        "finish_reason": "stop",
+        "schema_pass": true,
+        "candidate_count": 32,
+        "source_resolution_pass": true,
+        "canonicalization_pass": true,
+        "quality_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+        "error_class": "QUALITY_GATE",
+        "restricted_evidence_refs": [
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/PROVIDER_INPUT_SNAPSHOT-4ff0111db5b1553e.json",
+            "sha256": "sha256:2b0b97820b40ba386b1283683838e966cabc4e24c14f7c21bc3f62f6d93695e5"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/RAW_PROVIDER_RESPONSE_SNAPSHOT-9554844069ef1cc3.json",
+            "sha256": "sha256:62773b32eb1f61259ebf4253bce9b6ea26f044cfe35fc694beee2dac9d1515c8"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/NORMALIZED_CANDIDATE_SNAPSHOT-0ed06343e37cbbef.json",
+            "sha256": "sha256:1c16b2da60cdd8deccdd41addcfed2928f74953b0b00fd3d0ccb97e6a87a1110"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICALIZATION_DECISION_SNAPSHOT-df14f3b5735031d3.json",
+            "sha256": "sha256:2379dc2b4ea3f8d9b4ca8f2656517cd91455270afe34358ba83f241839014363"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/SOURCE_RESOLUTION_SNAPSHOT-1879e850e2873e6c.json",
+            "sha256": "sha256:13ae47d489823b189dfb24bb6b4fa13cf58f2bbff44e535d3a99b07182b078e8"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICAL_OUTPUT_SNAPSHOT-9474c9a223ee3fe7.json",
+            "sha256": "sha256:baff57df17ced12247141a9dbd8c7cdd666ad67dd9e868f57cf278b7d85572d9"
+          }
+        ]
+      },
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "atom_id": "JY-001-P0-0015",
+      "tender_id": "JY-001",
+      "gpt_authority_action": "INCLUDE_IN_GENERIC_PRODUCER_SCOPE_REPAIR",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_reason": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "historical_mechanical_first_divergence": {
+        "packet_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "replay_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "failure_mechanism": "QUALITY_GATE"
+      },
+      "current_replay": {
+        "run_id": "V43-REQUIREMENT-V6.4-TARGETED-20260912151026",
+        "chunk_id": "JY-001:reconstructed:5",
+        "replay_input_authority_level": "LEVEL3_DETERMINISTIC_PARSE_RECONSTRUCTION",
+        "input_sha256": "sha256:5fe7032e74766bc69089ee4a568fb193a304eb6f4403091f79217ca35b0782bb",
+        "source_ref_count": 72,
+        "source_hash_count": 0,
+        "provider_chain_reached": true,
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "response_received": true,
+        "finish_reason": "stop",
+        "schema_pass": true,
+        "candidate_count": 32,
+        "source_resolution_pass": true,
+        "canonicalization_pass": true,
+        "quality_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+        "error_class": "QUALITY_GATE",
+        "restricted_evidence_refs": [
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/PROVIDER_INPUT_SNAPSHOT-4ff0111db5b1553e.json",
+            "sha256": "sha256:2b0b97820b40ba386b1283683838e966cabc4e24c14f7c21bc3f62f6d93695e5"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/RAW_PROVIDER_RESPONSE_SNAPSHOT-9554844069ef1cc3.json",
+            "sha256": "sha256:62773b32eb1f61259ebf4253bce9b6ea26f044cfe35fc694beee2dac9d1515c8"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/NORMALIZED_CANDIDATE_SNAPSHOT-0ed06343e37cbbef.json",
+            "sha256": "sha256:1c16b2da60cdd8deccdd41addcfed2928f74953b0b00fd3d0ccb97e6a87a1110"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICALIZATION_DECISION_SNAPSHOT-df14f3b5735031d3.json",
+            "sha256": "sha256:2379dc2b4ea3f8d9b4ca8f2656517cd91455270afe34358ba83f241839014363"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/SOURCE_RESOLUTION_SNAPSHOT-1879e850e2873e6c.json",
+            "sha256": "sha256:13ae47d489823b189dfb24bb6b4fa13cf58f2bbff44e535d3a99b07182b078e8"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICAL_OUTPUT_SNAPSHOT-9474c9a223ee3fe7.json",
+            "sha256": "sha256:baff57df17ced12247141a9dbd8c7cdd666ad67dd9e868f57cf278b7d85572d9"
+          }
+        ]
+      },
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "atom_id": "JY-001-P0-0016",
+      "tender_id": "JY-001",
+      "gpt_authority_action": "INCLUDE_IN_GENERIC_PRODUCER_SCOPE_REPAIR",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_reason": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "historical_mechanical_first_divergence": {
+        "packet_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "replay_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "failure_mechanism": "QUALITY_GATE"
+      },
+      "current_replay": {
+        "run_id": "V43-REQUIREMENT-V6.4-TARGETED-20260912151026",
+        "chunk_id": "JY-001:reconstructed:5",
+        "replay_input_authority_level": "LEVEL3_DETERMINISTIC_PARSE_RECONSTRUCTION",
+        "input_sha256": "sha256:5fe7032e74766bc69089ee4a568fb193a304eb6f4403091f79217ca35b0782bb",
+        "source_ref_count": 72,
+        "source_hash_count": 0,
+        "provider_chain_reached": true,
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "response_received": true,
+        "finish_reason": "stop",
+        "schema_pass": true,
+        "candidate_count": 32,
+        "source_resolution_pass": true,
+        "canonicalization_pass": true,
+        "quality_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+        "error_class": "QUALITY_GATE",
+        "restricted_evidence_refs": [
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/PROVIDER_INPUT_SNAPSHOT-4ff0111db5b1553e.json",
+            "sha256": "sha256:2b0b97820b40ba386b1283683838e966cabc4e24c14f7c21bc3f62f6d93695e5"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/RAW_PROVIDER_RESPONSE_SNAPSHOT-9554844069ef1cc3.json",
+            "sha256": "sha256:62773b32eb1f61259ebf4253bce9b6ea26f044cfe35fc694beee2dac9d1515c8"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/NORMALIZED_CANDIDATE_SNAPSHOT-0ed06343e37cbbef.json",
+            "sha256": "sha256:1c16b2da60cdd8deccdd41addcfed2928f74953b0b00fd3d0ccb97e6a87a1110"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICALIZATION_DECISION_SNAPSHOT-df14f3b5735031d3.json",
+            "sha256": "sha256:2379dc2b4ea3f8d9b4ca8f2656517cd91455270afe34358ba83f241839014363"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/SOURCE_RESOLUTION_SNAPSHOT-1879e850e2873e6c.json",
+            "sha256": "sha256:13ae47d489823b189dfb24bb6b4fa13cf58f2bbff44e535d3a99b07182b078e8"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICAL_OUTPUT_SNAPSHOT-9474c9a223ee3fe7.json",
+            "sha256": "sha256:baff57df17ced12247141a9dbd8c7cdd666ad67dd9e868f57cf278b7d85572d9"
+          }
+        ]
+      },
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "atom_id": "JY-001-P0-0019",
+      "tender_id": "JY-001",
+      "gpt_authority_action": "INCLUDE_IN_GENERIC_PRODUCER_SCOPE_REPAIR",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_reason": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "historical_mechanical_first_divergence": {
+        "packet_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "replay_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "failure_mechanism": "QUALITY_GATE"
+      },
+      "current_replay": {
+        "run_id": "V43-REQUIREMENT-V6.4-TARGETED-20260912151026",
+        "chunk_id": "JY-001:reconstructed:5",
+        "replay_input_authority_level": "LEVEL3_DETERMINISTIC_PARSE_RECONSTRUCTION",
+        "input_sha256": "sha256:5fe7032e74766bc69089ee4a568fb193a304eb6f4403091f79217ca35b0782bb",
+        "source_ref_count": 72,
+        "source_hash_count": 0,
+        "provider_chain_reached": true,
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "response_received": true,
+        "finish_reason": "stop",
+        "schema_pass": true,
+        "candidate_count": 32,
+        "source_resolution_pass": true,
+        "canonicalization_pass": true,
+        "quality_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+        "error_class": "QUALITY_GATE",
+        "restricted_evidence_refs": [
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/PROVIDER_INPUT_SNAPSHOT-4ff0111db5b1553e.json",
+            "sha256": "sha256:2b0b97820b40ba386b1283683838e966cabc4e24c14f7c21bc3f62f6d93695e5"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/RAW_PROVIDER_RESPONSE_SNAPSHOT-9554844069ef1cc3.json",
+            "sha256": "sha256:62773b32eb1f61259ebf4253bce9b6ea26f044cfe35fc694beee2dac9d1515c8"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/NORMALIZED_CANDIDATE_SNAPSHOT-0ed06343e37cbbef.json",
+            "sha256": "sha256:1c16b2da60cdd8deccdd41addcfed2928f74953b0b00fd3d0ccb97e6a87a1110"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICALIZATION_DECISION_SNAPSHOT-df14f3b5735031d3.json",
+            "sha256": "sha256:2379dc2b4ea3f8d9b4ca8f2656517cd91455270afe34358ba83f241839014363"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/SOURCE_RESOLUTION_SNAPSHOT-1879e850e2873e6c.json",
+            "sha256": "sha256:13ae47d489823b189dfb24bb6b4fa13cf58f2bbff44e535d3a99b07182b078e8"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICAL_OUTPUT_SNAPSHOT-9474c9a223ee3fe7.json",
+            "sha256": "sha256:baff57df17ced12247141a9dbd8c7cdd666ad67dd9e868f57cf278b7d85572d9"
+          }
+        ]
+      },
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "atom_id": "JY-001-P0-0020",
+      "tender_id": "JY-001",
+      "gpt_authority_action": "INCLUDE_IN_GENERIC_PRODUCER_SCOPE_REPAIR",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_reason": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "historical_mechanical_first_divergence": {
+        "packet_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "replay_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "failure_mechanism": "QUALITY_GATE"
+      },
+      "current_replay": {
+        "run_id": "V43-REQUIREMENT-V6.4-TARGETED-20260912151026",
+        "chunk_id": "JY-001:reconstructed:5",
+        "replay_input_authority_level": "LEVEL3_DETERMINISTIC_PARSE_RECONSTRUCTION",
+        "input_sha256": "sha256:5fe7032e74766bc69089ee4a568fb193a304eb6f4403091f79217ca35b0782bb",
+        "source_ref_count": 72,
+        "source_hash_count": 0,
+        "provider_chain_reached": true,
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "response_received": true,
+        "finish_reason": "stop",
+        "schema_pass": true,
+        "candidate_count": 32,
+        "source_resolution_pass": true,
+        "canonicalization_pass": true,
+        "quality_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+        "error_class": "QUALITY_GATE",
+        "restricted_evidence_refs": [
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/PROVIDER_INPUT_SNAPSHOT-4ff0111db5b1553e.json",
+            "sha256": "sha256:2b0b97820b40ba386b1283683838e966cabc4e24c14f7c21bc3f62f6d93695e5"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/RAW_PROVIDER_RESPONSE_SNAPSHOT-9554844069ef1cc3.json",
+            "sha256": "sha256:62773b32eb1f61259ebf4253bce9b6ea26f044cfe35fc694beee2dac9d1515c8"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/NORMALIZED_CANDIDATE_SNAPSHOT-0ed06343e37cbbef.json",
+            "sha256": "sha256:1c16b2da60cdd8deccdd41addcfed2928f74953b0b00fd3d0ccb97e6a87a1110"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICALIZATION_DECISION_SNAPSHOT-df14f3b5735031d3.json",
+            "sha256": "sha256:2379dc2b4ea3f8d9b4ca8f2656517cd91455270afe34358ba83f241839014363"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/SOURCE_RESOLUTION_SNAPSHOT-1879e850e2873e6c.json",
+            "sha256": "sha256:13ae47d489823b189dfb24bb6b4fa13cf58f2bbff44e535d3a99b07182b078e8"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICAL_OUTPUT_SNAPSHOT-9474c9a223ee3fe7.json",
+            "sha256": "sha256:baff57df17ced12247141a9dbd8c7cdd666ad67dd9e868f57cf278b7d85572d9"
+          }
+        ]
+      },
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "atom_id": "JY-001-P0-0022",
+      "tender_id": "JY-001",
+      "gpt_authority_action": "INCLUDE_IN_GENERIC_PRODUCER_SCOPE_REPAIR",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_reason": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "historical_mechanical_first_divergence": {
+        "packet_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "replay_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "failure_mechanism": "QUALITY_GATE"
+      },
+      "current_replay": {
+        "run_id": "V43-REQUIREMENT-V6.4-TARGETED-20260912151026",
+        "chunk_id": "JY-001:reconstructed:5",
+        "replay_input_authority_level": "LEVEL3_DETERMINISTIC_PARSE_RECONSTRUCTION",
+        "input_sha256": "sha256:5fe7032e74766bc69089ee4a568fb193a304eb6f4403091f79217ca35b0782bb",
+        "source_ref_count": 72,
+        "source_hash_count": 0,
+        "provider_chain_reached": true,
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "response_received": true,
+        "finish_reason": "stop",
+        "schema_pass": true,
+        "candidate_count": 32,
+        "source_resolution_pass": true,
+        "canonicalization_pass": true,
+        "quality_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+        "error_class": "QUALITY_GATE",
+        "restricted_evidence_refs": [
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/PROVIDER_INPUT_SNAPSHOT-4ff0111db5b1553e.json",
+            "sha256": "sha256:2b0b97820b40ba386b1283683838e966cabc4e24c14f7c21bc3f62f6d93695e5"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/RAW_PROVIDER_RESPONSE_SNAPSHOT-9554844069ef1cc3.json",
+            "sha256": "sha256:62773b32eb1f61259ebf4253bce9b6ea26f044cfe35fc694beee2dac9d1515c8"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/NORMALIZED_CANDIDATE_SNAPSHOT-0ed06343e37cbbef.json",
+            "sha256": "sha256:1c16b2da60cdd8deccdd41addcfed2928f74953b0b00fd3d0ccb97e6a87a1110"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICALIZATION_DECISION_SNAPSHOT-df14f3b5735031d3.json",
+            "sha256": "sha256:2379dc2b4ea3f8d9b4ca8f2656517cd91455270afe34358ba83f241839014363"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/SOURCE_RESOLUTION_SNAPSHOT-1879e850e2873e6c.json",
+            "sha256": "sha256:13ae47d489823b189dfb24bb6b4fa13cf58f2bbff44e535d3a99b07182b078e8"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICAL_OUTPUT_SNAPSHOT-9474c9a223ee3fe7.json",
+            "sha256": "sha256:baff57df17ced12247141a9dbd8c7cdd666ad67dd9e868f57cf278b7d85572d9"
+          }
+        ]
+      },
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "atom_id": "TB-003-P0-0001",
+      "tender_id": "TB-003",
+      "gpt_authority_action": "INCLUDE_IN_GENERIC_PRODUCER_SCOPE_REPAIR",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_reason": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "historical_mechanical_first_divergence": {
+        "packet_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "replay_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "failure_mechanism": "QUALITY_GATE"
+      },
+      "current_replay": {
+        "run_id": "V43-REQUIREMENT-V6.4-TARGETED-20260912151026",
+        "chunk_id": "TB-003:reconstructed:3",
+        "replay_input_authority_level": "LEVEL3_DETERMINISTIC_PARSE_RECONSTRUCTION",
+        "input_sha256": "sha256:c69a823f1df21afd39c6450b33ef6c650d34c182e45350cdaa4618f686de12c2",
+        "source_ref_count": 35,
+        "source_hash_count": 0,
+        "provider_chain_reached": true,
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "response_received": true,
+        "finish_reason": "stop",
+        "schema_pass": true,
+        "candidate_count": 9,
+        "source_resolution_pass": true,
+        "canonicalization_pass": true,
+        "quality_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+        "error_class": "QUALITY_GATE",
+        "restricted_evidence_refs": [
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/PROVIDER_INPUT_SNAPSHOT-2a6c09f7343fec09.json",
+            "sha256": "sha256:f37e8cf38a3e1abc1603215fb1b76e17c88a4b4a9483f49955863a461cf8bcc0"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/RAW_PROVIDER_RESPONSE_SNAPSHOT-4b5f1bb0fd6963cc.json",
+            "sha256": "sha256:a217340d05e81f2f1f2b103933251b5d90dfc4c2cd417ab16771c4ec5a68d6b5"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/NORMALIZED_CANDIDATE_SNAPSHOT-4d86dfb400f7491e.json",
+            "sha256": "sha256:8f20f6354e351dab120f273063921561ac6e2daa4b7adff5707a7f3990c1cb6e"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICALIZATION_DECISION_SNAPSHOT-1d042fd7ae4d52ba.json",
+            "sha256": "sha256:013ea78299437f014c7dfeda175cc6331cba8d2c4ab39bb67995627a840ee188"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/SOURCE_RESOLUTION_SNAPSHOT-124179588b28f8f2.json",
+            "sha256": "sha256:a713e560e3c6ffcd8cef792747e22cc05e9eb37fd724fd812be0eeb502c4e4d9"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICAL_OUTPUT_SNAPSHOT-8316148ebc531655.json",
+            "sha256": "sha256:191cff47cba89a823bda1f9e0b9e478edd3b368c49b8a0008cf665743d8e884c"
+          }
+        ]
+      },
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "atom_id": "TB-003-P0-0006",
+      "tender_id": "TB-003",
+      "gpt_authority_action": "INCLUDE_IN_GENERIC_PRODUCER_SCOPE_REPAIR",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_reason": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "historical_mechanical_first_divergence": {
+        "packet_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "replay_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "failure_mechanism": "QUALITY_GATE"
+      },
+      "current_replay": {
+        "run_id": "V43-REQUIREMENT-V6.4-TARGETED-20260912151026",
+        "chunk_id": "TB-003:reconstructed:4",
+        "replay_input_authority_level": "LEVEL3_DETERMINISTIC_PARSE_RECONSTRUCTION",
+        "input_sha256": "sha256:ecdfacedea09cf9f09790d36b106288d1552c74e6d6194ce91d6108f158172b2",
+        "source_ref_count": 73,
+        "source_hash_count": 0,
+        "provider_chain_reached": true,
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "response_received": true,
+        "finish_reason": "stop",
+        "schema_pass": true,
+        "candidate_count": 5,
+        "source_resolution_pass": true,
+        "canonicalization_pass": true,
+        "quality_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+        "error_class": "QUALITY_GATE",
+        "restricted_evidence_refs": [
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/PROVIDER_INPUT_SNAPSHOT-ca8484586259ae27.json",
+            "sha256": "sha256:7c674edf257ed2c806009656e610f2edef3db36809a8c092e9b5f633b49d14e2"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/RAW_PROVIDER_RESPONSE_SNAPSHOT-e8edb71d0750e07e.json",
+            "sha256": "sha256:bf022a3df63edc75614983c0cbf1748f994a0bf2acab80221816994efd853fe7"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/NORMALIZED_CANDIDATE_SNAPSHOT-f78983492dc4d9c2.json",
+            "sha256": "sha256:530aa499db4f1688fd658401ede8af592f40f9223eff318d7ac6dbb42f3fe398"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICALIZATION_DECISION_SNAPSHOT-1c5d62fc23cbc88a.json",
+            "sha256": "sha256:1b1e107aca3b39bf43f33dcad6f68d4bbeb91b99543b9027f6fe7f45b1f0c5a9"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/SOURCE_RESOLUTION_SNAPSHOT-2b820e8f27145fb6.json",
+            "sha256": "sha256:32b1885ab7b3bf2a4ca7862bc98abf18d3b28bb765778dbedbdfdadd7875428e"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICAL_OUTPUT_SNAPSHOT-02578ae2c1214415.json",
+            "sha256": "sha256:5fd9470d7b419a34a26c887627954747010577c72bc2dde0718aacb6197612cb"
+          }
+        ]
+      },
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "atom_id": "TB-003-P0-0023",
+      "tender_id": "TB-003",
+      "gpt_authority_action": "INCLUDE_IN_GENERIC_PRODUCER_SCOPE_REPAIR",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_reason": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "historical_mechanical_first_divergence": {
+        "packet_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "replay_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "failure_mechanism": "QUALITY_GATE"
+      },
+      "current_replay": {
+        "run_id": "V43-REQUIREMENT-V6.4-TARGETED-20260912151026",
+        "chunk_id": "TB-003:reconstructed:11",
+        "replay_input_authority_level": "LEVEL3_DETERMINISTIC_PARSE_RECONSTRUCTION",
+        "input_sha256": "sha256:e1da99d1b67711c29ff072da302831d7b6580cc31631b6e8b187cf17e68ed8e8",
+        "source_ref_count": 32,
+        "source_hash_count": 0,
+        "provider_chain_reached": true,
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "response_received": true,
+        "finish_reason": "stop",
+        "schema_pass": true,
+        "candidate_count": 3,
+        "source_resolution_pass": true,
+        "canonicalization_pass": true,
+        "quality_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+        "error_class": "QUALITY_GATE",
+        "restricted_evidence_refs": [
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/PROVIDER_INPUT_SNAPSHOT-9fb93e1089a370fb.json",
+            "sha256": "sha256:45bf18d818bf99d30d7744718bc55eaf5aafe1ecda083fba2cad4967b30e371b"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/RAW_PROVIDER_RESPONSE_SNAPSHOT-878b340a83c12e5a.json",
+            "sha256": "sha256:09918d849b267465a4d72e9376240700bcbe2a77dfe055473a9a12ff7b150902"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/NORMALIZED_CANDIDATE_SNAPSHOT-39813562c8e84e51.json",
+            "sha256": "sha256:9f90d68cb36dbe9171591dcdd0dec63f3fa46973c423b249db9d26726dae1f3c"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICALIZATION_DECISION_SNAPSHOT-ef5fdb1500b5c49e.json",
+            "sha256": "sha256:c02be4d04a0c9947362c27fb27d5afe46592d3f14a62972542fa0dff03c9375b"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/SOURCE_RESOLUTION_SNAPSHOT-a14d1a4df6ab41ef.json",
+            "sha256": "sha256:c3e9236350b54ee14eeda0cff44ba34ecfcdf9743efb16655d8cd5207df27f1f"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICAL_OUTPUT_SNAPSHOT-8803f305c5a3de7e.json",
+            "sha256": "sha256:bec89603fd885786dafa35bc277171cfcdf293880a1cbe922499f0292c5b913f"
+          }
+        ]
+      },
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "atom_id": "TB-003-P0-0024",
+      "tender_id": "TB-003",
+      "gpt_authority_action": "INCLUDE_IN_GENERIC_PRODUCER_SCOPE_REPAIR",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_reason": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "historical_mechanical_first_divergence": {
+        "packet_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "replay_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "failure_mechanism": "QUALITY_GATE"
+      },
+      "current_replay": {
+        "run_id": "V43-REQUIREMENT-V6.4-TARGETED-20260912151026",
+        "chunk_id": "TB-003:reconstructed:11",
+        "replay_input_authority_level": "LEVEL3_DETERMINISTIC_PARSE_RECONSTRUCTION",
+        "input_sha256": "sha256:e1da99d1b67711c29ff072da302831d7b6580cc31631b6e8b187cf17e68ed8e8",
+        "source_ref_count": 32,
+        "source_hash_count": 0,
+        "provider_chain_reached": true,
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "response_received": true,
+        "finish_reason": "stop",
+        "schema_pass": true,
+        "candidate_count": 3,
+        "source_resolution_pass": true,
+        "canonicalization_pass": true,
+        "quality_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+        "error_class": "QUALITY_GATE",
+        "restricted_evidence_refs": [
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/PROVIDER_INPUT_SNAPSHOT-9fb93e1089a370fb.json",
+            "sha256": "sha256:45bf18d818bf99d30d7744718bc55eaf5aafe1ecda083fba2cad4967b30e371b"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/RAW_PROVIDER_RESPONSE_SNAPSHOT-878b340a83c12e5a.json",
+            "sha256": "sha256:09918d849b267465a4d72e9376240700bcbe2a77dfe055473a9a12ff7b150902"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/NORMALIZED_CANDIDATE_SNAPSHOT-39813562c8e84e51.json",
+            "sha256": "sha256:9f90d68cb36dbe9171591dcdd0dec63f3fa46973c423b249db9d26726dae1f3c"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICALIZATION_DECISION_SNAPSHOT-ef5fdb1500b5c49e.json",
+            "sha256": "sha256:c02be4d04a0c9947362c27fb27d5afe46592d3f14a62972542fa0dff03c9375b"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/SOURCE_RESOLUTION_SNAPSHOT-a14d1a4df6ab41ef.json",
+            "sha256": "sha256:c3e9236350b54ee14eeda0cff44ba34ecfcdf9743efb16655d8cd5207df27f1f"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICAL_OUTPUT_SNAPSHOT-8803f305c5a3de7e.json",
+            "sha256": "sha256:bec89603fd885786dafa35bc277171cfcdf293880a1cbe922499f0292c5b913f"
+          }
+        ]
+      },
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "atom_id": "TB-003-P0-0025",
+      "tender_id": "TB-003",
+      "gpt_authority_action": "INCLUDE_IN_GENERIC_PRODUCER_SCOPE_REPAIR",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_reason": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "historical_mechanical_first_divergence": {
+        "packet_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "replay_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "failure_mechanism": "QUALITY_GATE"
+      },
+      "current_replay": {
+        "run_id": "V43-REQUIREMENT-V6.4-TARGETED-20260912151026",
+        "chunk_id": "TB-003:reconstructed:11",
+        "replay_input_authority_level": "LEVEL3_DETERMINISTIC_PARSE_RECONSTRUCTION",
+        "input_sha256": "sha256:e1da99d1b67711c29ff072da302831d7b6580cc31631b6e8b187cf17e68ed8e8",
+        "source_ref_count": 32,
+        "source_hash_count": 0,
+        "provider_chain_reached": true,
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "response_received": true,
+        "finish_reason": "stop",
+        "schema_pass": true,
+        "candidate_count": 3,
+        "source_resolution_pass": true,
+        "canonicalization_pass": true,
+        "quality_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+        "error_class": "QUALITY_GATE",
+        "restricted_evidence_refs": [
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/PROVIDER_INPUT_SNAPSHOT-9fb93e1089a370fb.json",
+            "sha256": "sha256:45bf18d818bf99d30d7744718bc55eaf5aafe1ecda083fba2cad4967b30e371b"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/RAW_PROVIDER_RESPONSE_SNAPSHOT-878b340a83c12e5a.json",
+            "sha256": "sha256:09918d849b267465a4d72e9376240700bcbe2a77dfe055473a9a12ff7b150902"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/NORMALIZED_CANDIDATE_SNAPSHOT-39813562c8e84e51.json",
+            "sha256": "sha256:9f90d68cb36dbe9171591dcdd0dec63f3fa46973c423b249db9d26726dae1f3c"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICALIZATION_DECISION_SNAPSHOT-ef5fdb1500b5c49e.json",
+            "sha256": "sha256:c02be4d04a0c9947362c27fb27d5afe46592d3f14a62972542fa0dff03c9375b"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/SOURCE_RESOLUTION_SNAPSHOT-a14d1a4df6ab41ef.json",
+            "sha256": "sha256:c3e9236350b54ee14eeda0cff44ba34ecfcdf9743efb16655d8cd5207df27f1f"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICAL_OUTPUT_SNAPSHOT-8803f305c5a3de7e.json",
+            "sha256": "sha256:bec89603fd885786dafa35bc277171cfcdf293880a1cbe922499f0292c5b913f"
+          }
+        ]
+      },
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "atom_id": "TB-006-P0-0014",
+      "tender_id": "TB-006",
+      "gpt_authority_action": "INCLUDE_IN_GENERIC_PRODUCER_SCOPE_REPAIR",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_reason": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "historical_mechanical_first_divergence": {
+        "packet_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "replay_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "failure_mechanism": "QUALITY_GATE"
+      },
+      "current_replay": {
+        "run_id": "V43-REQUIREMENT-V6.4-TARGETED-20260912151026",
+        "chunk_id": "TB-006:reconstructed:12",
+        "replay_input_authority_level": "LEVEL3_DETERMINISTIC_PARSE_RECONSTRUCTION",
+        "input_sha256": "sha256:2bc213fe4e64029be5a17451506b7806d4ba21c4b65ffa67fd51917f2300029c",
+        "source_ref_count": 57,
+        "source_hash_count": 0,
+        "provider_chain_reached": true,
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "response_received": true,
+        "finish_reason": "stop",
+        "schema_pass": true,
+        "candidate_count": 14,
+        "source_resolution_pass": true,
+        "canonicalization_pass": true,
+        "quality_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+        "error_class": "QUALITY_GATE",
+        "restricted_evidence_refs": [
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/PROVIDER_INPUT_SNAPSHOT-45881d5108ba761a.json",
+            "sha256": "sha256:deebdeeb7c84c1b973aa2cf7e27099858bee4e579a841919827084d9f65bda29"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/RAW_PROVIDER_RESPONSE_SNAPSHOT-9920671a41cce43e.json",
+            "sha256": "sha256:ee31eb7182e3781ed8344f8bf6dca7c1aa81829f6c38a4ead6cadbd73834ca7e"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/NORMALIZED_CANDIDATE_SNAPSHOT-442c681b5af4b4f4.json",
+            "sha256": "sha256:3de1de46c1f9a36989a887a9e2f0f7506f6b183708c2bef6a203ea28362ed39e"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICALIZATION_DECISION_SNAPSHOT-fbe498f7020d0143.json",
+            "sha256": "sha256:27717cc1b0bc2aac30e4e9556f7b1b9543d2b42e48c7589538d73d4e0b44e86f"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/SOURCE_RESOLUTION_SNAPSHOT-7ca950881e2f9062.json",
+            "sha256": "sha256:06c62fdb2a8f40d24ff9a1cc30b057402778bc9e0815032ff67f9fd65b2a1a47"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICAL_OUTPUT_SNAPSHOT-60d3ead822b47ab3.json",
+            "sha256": "sha256:f82ecd6f3929c016f92089f9d7f9392475bae16acedde2572fc4c996390ba7a4"
+          }
+        ]
+      },
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "atom_id": "FAST-01-P0-0019",
+      "tender_id": "FAST-01",
+      "gpt_authority_action": "INCLUDE_IN_GENERIC_GOVERNING_CONTEXT_REPAIR",
+      "frozen_semantic_label": "DISTORTED",
+      "frozen_semantic_reason": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "historical_mechanical_first_divergence": {
+        "packet_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "replay_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "failure_mechanism": "QUALITY_GATE"
+      },
+      "current_replay": {
+        "run_id": "V43-REQUIREMENT-V6.4-TARGETED-20260912151026",
+        "chunk_id": "FAST-01:reconstructed:23",
+        "replay_input_authority_level": "LEVEL3_DETERMINISTIC_PARSE_RECONSTRUCTION",
+        "input_sha256": "sha256:10e6337f1e56196de68afd03968400c547f9fa41f4e8644946474457ac9d32de",
+        "source_ref_count": 74,
+        "source_hash_count": 0,
+        "provider_chain_reached": true,
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "response_received": true,
+        "finish_reason": "stop",
+        "schema_pass": true,
+        "candidate_count": 13,
+        "source_resolution_pass": true,
+        "canonicalization_pass": true,
+        "quality_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+        "error_class": "QUALITY_GATE",
+        "restricted_evidence_refs": [
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/PROVIDER_INPUT_SNAPSHOT-5c1be7f2f30e966d.json",
+            "sha256": "sha256:231b109e916b202e103aba57e016a393357106b69fded0dcfeb7a52970864dc9"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/RAW_PROVIDER_RESPONSE_SNAPSHOT-7d930177ea4b1ce7.json",
+            "sha256": "sha256:9e16490992d6a7e948bb06c526143bd942b4a14d28de6f38f9015fc0f21ecd28"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/NORMALIZED_CANDIDATE_SNAPSHOT-0231395f1a0374bb.json",
+            "sha256": "sha256:8f211bbcb5b08b725b90fadb12020fef43854524f40faced04621597c732d2ad"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICALIZATION_DECISION_SNAPSHOT-22f187874e39e573.json",
+            "sha256": "sha256:4ed481699bfca112902a792879d49288976056d8e5d221c5f95b877d7a8075d1"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/SOURCE_RESOLUTION_SNAPSHOT-24e73ef6030ecd47.json",
+            "sha256": "sha256:bc1973851dafe2bb7a498f48c71d04d0abed11d1bfa86ce6884849fb67455a66"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICAL_OUTPUT_SNAPSHOT-bb34de6775bfcdec.json",
+            "sha256": "sha256:64122b4aac8cb9bed307a66fd9f9b3cea00e52e3863efcc337086524b4801472"
+          }
+        ]
+      },
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "atom_id": "FAST-01-P0-0022",
+      "tender_id": "FAST-01",
+      "gpt_authority_action": "INCLUDE_IN_GENERIC_TABLE_ROW_SCOPE_REPAIR",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_reason": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "historical_mechanical_first_divergence": {
+        "packet_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "replay_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "failure_mechanism": "QUALITY_GATE"
+      },
+      "current_replay": {
+        "run_id": "V43-REQUIREMENT-V6.4-TARGETED-20260912151026",
+        "chunk_id": "FAST-01:reconstructed:5",
+        "replay_input_authority_level": "LEVEL3_DETERMINISTIC_PARSE_RECONSTRUCTION",
+        "input_sha256": "sha256:b32f168f43c66a9544ae130a95efef85f6edcbfa8695e4f9806381e6a7b2a8a8",
+        "source_ref_count": 48,
+        "source_hash_count": 0,
+        "provider_chain_reached": true,
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "response_received": true,
+        "finish_reason": "stop",
+        "schema_pass": true,
+        "candidate_count": 6,
+        "source_resolution_pass": true,
+        "canonicalization_pass": true,
+        "quality_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+        "error_class": "QUALITY_GATE",
+        "restricted_evidence_refs": [
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/PROVIDER_INPUT_SNAPSHOT-2b02fa7b66579bf9.json",
+            "sha256": "sha256:dd2c316c86b13be8e5e90ed109ea9950c10e1af6d754ab76d4e61d37e20e982f"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/RAW_PROVIDER_RESPONSE_SNAPSHOT-2cb541bd6b23c775.json",
+            "sha256": "sha256:a4afe17a61be9958f8342f90ab885c813b8e52e87512b507e981f13a21e75c45"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/NORMALIZED_CANDIDATE_SNAPSHOT-5f5c187c5af7b45a.json",
+            "sha256": "sha256:37e12c3743d6af4b52c40ae8c91ddf17ebeb86e3eca7acc3f1ae9e125f800b93"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICALIZATION_DECISION_SNAPSHOT-219516a72dd695b2.json",
+            "sha256": "sha256:0311c595200b6db57f304a04385ab80cbaac6aa2f8d49b8bce008845d90fb87f"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/SOURCE_RESOLUTION_SNAPSHOT-54c8409245c87a21.json",
+            "sha256": "sha256:205872643187691e7a9ec631852a100b2aa1c94a68e993d68dad4d6f584c3762"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICAL_OUTPUT_SNAPSHOT-47e5786a18b9ea4d.json",
+            "sha256": "sha256:6ad9f874ceabf330d4c22a02e459f40bc53afcc347e648db92d4f20ac2817c2b"
+          }
+        ]
+      },
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "atom_id": "FAST-WATER-01-P0-0097",
+      "tender_id": "FAST-WATER-01",
+      "gpt_authority_action": "INCLUDE_IN_GENERIC_PRODUCER_SCOPE_REPAIR",
+      "frozen_semantic_label": "MISS",
+      "frozen_semantic_reason": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "historical_mechanical_first_divergence": {
+        "packet_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "replay_observation": {
+          "status": "DETERMINED",
+          "scope": "EVAL_HARNESS",
+          "stage": "QUALITY_GATE",
+          "reason": "Eval quality gate did not produce an unconditional PASS.",
+          "failure_code": "QUALITY_GATE_NOT_PASS"
+        },
+        "failure_mechanism": "QUALITY_GATE"
+      },
+      "current_replay": {
+        "run_id": "V43-REQUIREMENT-V6.4-TARGETED-20260912151026",
+        "chunk_id": "FAST-WATER-01:reconstructed:10",
+        "replay_input_authority_level": "LEVEL3_DETERMINISTIC_PARSE_RECONSTRUCTION",
+        "input_sha256": "sha256:09b1e728a41611fbac07606a1cadcde3edd0b274b6e34c946920513a449cc2f5",
+        "source_ref_count": 61,
+        "source_hash_count": 0,
+        "provider_chain_reached": true,
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "response_received": true,
+        "finish_reason": "stop",
+        "schema_pass": true,
+        "candidate_count": 13,
+        "source_resolution_pass": true,
+        "canonicalization_pass": true,
+        "quality_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+        "error_class": "QUALITY_GATE",
+        "restricted_evidence_refs": [
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/PROVIDER_INPUT_SNAPSHOT-122cfbffa35a093e.json",
+            "sha256": "sha256:95df4d7eb7abd512ba94d85dcfbc76d5c8eec7b959c69e038806a0584e895059"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/RAW_PROVIDER_RESPONSE_SNAPSHOT-663f2a9d14732529.json",
+            "sha256": "sha256:8f264c650c1abb89d15bd6632ba73e7319cc49aa38cedced753f9bed28699524"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/NORMALIZED_CANDIDATE_SNAPSHOT-ac15ef02f3b3bcb3.json",
+            "sha256": "sha256:1b8f6f2a864254be632751afbd882d55c41f05f32c6933c52d63708452fc0aad"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICALIZATION_DECISION_SNAPSHOT-c0e597af9da53609.json",
+            "sha256": "sha256:e31fc8e51a92f479b716d483ecfdb8c665162a9a6fe2ca2d8ac0cd931f1efb18"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/SOURCE_RESOLUTION_SNAPSHOT-688fcaf96b377e35.json",
+            "sha256": "sha256:bf010ec0350cd0ede72000515bac6628d7100623b6a72c5f898dd32394db9a3e"
+          },
+          {
+            "path": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026/CANONICAL_OUTPUT_SNAPSHOT-bb34de6775bfcdec.json",
+            "sha256": "sha256:64122b4aac8cb9bed307a66fd9f9b3cea00e52e3863efcc337086524b4801472"
+          }
+        ]
+      },
+      "semantic_root_cause": "PENDING_GPT"
+    }
+  ],
+  "evidence_only_case": {
+    "atom_id": "JY-001-P0-0023",
+    "action": "REEXPORT_EXISTING_EVIDENCE_ONLY_NO_PROVIDER_CALL",
+    "status": "EXISTING_V6_3_EVIDENCE_RETAINED_NO_NEW_PROVIDER_CALL"
+  },
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "prompt_changes": 0,
+  "schema_changes": 0
+}

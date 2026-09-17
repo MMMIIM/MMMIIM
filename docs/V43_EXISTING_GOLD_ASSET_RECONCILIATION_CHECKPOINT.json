@@ -1,0 +1,78 @@
+{
+  "checkpoint": "V43_EXISTING_GOLD_ASSET_RECONCILIATION_CHECKPOINT",
+  "audit_mode": "READ_ONLY",
+  "generated_at": "2026-09-05T12:13:20.0972601Z",
+  "git": {
+    "branch": "feat/v4.3-semantic-boundary-routing",
+    "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+    "worktree": "DIRTY",
+    "status_entries_at_start": 183
+  },
+  "side_effects": {
+    "provider_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "production_files_changed": 0,
+    "new_migrations": 0,
+    "audit_artifacts_created": [
+      "docs/V43_EXISTING_GOLD_ASSET_RECONCILIATION_CHECKPOINT.md",
+      "docs/V43_EXISTING_GOLD_ASSET_RECONCILIATION_CHECKPOINT.json"
+    ]
+  },
+  "requirement_gold": {
+    "status": "PARTIAL/BLOCKED_FOR_AUTHORITATIVE_PARITY",
+    "manifest": "backend/eval/requirement-extraction-real-tender-pilot-v1/manifest.json",
+    "authoritative_tender_count": 3,
+    "authoritative_gold_requirement_count": 162,
+    "authoritative_tenders": [
+      {"tender_id": "FAST-01", "gold_requirement_count": 39, "gold_packet": "backend/eval/requirement-extraction-real-tender-pilot-v1/gpt-reviewed/FAST-01.gold-reviewed.json", "packet": "backend/eval/requirement-extraction-real-tender-pilot-v1/packets/FAST-01.json", "source_parity": "PASS", "authority": "A_AUTHORITATIVE_PACKET_RECOVERED"},
+      {"tender_id": "FAST-WATER-01", "gold_requirement_count": 80, "gold_packet": "backend/eval/requirement-extraction-real-tender-pilot-v1/gpt-reviewed/FAST-WATER-01.gold-reviewed.json", "packet": "backend/eval/requirement-extraction-real-tender-pilot-v1/packets/FAST-WATER-01.json", "source_parity": "PASS", "authority": "A_AUTHORITATIVE_PACKET_RECOVERED"},
+      {"tender_id": "TB-006", "gold_requirement_count": 43, "gold_packet": "backend/eval/requirement-extraction-real-tender-pilot-v1/gpt-reviewed/TB-006.gold-reviewed.json", "packet": "backend/eval/requirement-extraction-real-tender-pilot-v1/packets/TB-006.json", "source_parity": "PASS", "authority": "A_AUTHORITATIVE_PACKET_RECOVERED"}
+    ],
+    "reconstruction_tenders": [
+      {"tender_id": "JY-001", "status": "B_HUMAN_RECONSTRUCTION_POSSIBLE"},
+      {"tender_id": "TB-003", "status": "B_HUMAN_RECONSTRUCTION_POSSIBLE"},
+      {"tender_id": "FAST-04", "status": "B_HUMAN_RECONSTRUCTION_POSSIBLE"}
+    ],
+    "source_reconstruction_packet": "backend/eval/gold-governance/v43-gold-v2-foundation/REQUIREMENT_SOURCE_RECONSTRUCTION_BLIND_PACKET.json",
+    "source_parity": "FAIL_MISSING_AUTHORITATIVE_PACKETS",
+    "gold_v2_promotion": "NOT_PERFORMED"
+  },
+  "fact_gold": {
+    "real_fact": {"status": "NOT_ESTABLISHED", "eligible_count": 0, "candidate_count": 7, "rejected_count": 7, "manifest": "backend/eval/gold-governance/v43-gold-v2-foundation/REAL_FACT_V2_CANDIDATE_MANIFEST.json", "eval_usable": false},
+    "boundary_fact": {"status": "PRESENT_SYNTHETIC_EVAL_ONLY", "case_count": 29, "source": "backend/eval/requirement-evidence-mapping-v2/synthetic-boundary-gold-v2.json", "eval_usable": true},
+    "negative_fact": {"status": "PRESENT_CONTROL_FIXTURES_NOT_STANDALONE_GOLD", "standalone_canonical_dataset": false, "sources": ["backend/eval/evidence-support/calibration-v2/GPT_REVIEW_PACKET_EVIDENCE_SUFFICIENCY_OFFLINE_V3_1.json", "backend/eval/evidence-support/calibration-v2/targeted-evidence-bearing-regression-v2.json", "backend/eval/evidence-gold/claim-quality-cases.js"], "eval_usable": true},
+    "synthetic_fact_fixture": {"status": "PRESENT_EVAL_ONLY", "l3_material_count": 17, "l3_controlled_case_count": 6, "representative_sme_material_count": 20, "sources": ["backend/eval/corpus/l3-synthetic-enterprise/manifest.json", "backend/eval/corpus/representative-sme/representative-sme-corpus-manifest-v1.json", "backend/eval/corpus/representative-sme/representative-sme-facts-v1.json"], "eval_usable": true}
+  },
+  "mapping_gold": {
+    "status": "V1_36_CASES_PRESENT; V2_SUCCESSOR_PRESENT_NOT_FROZEN",
+    "v1": {"path": "backend/eval/requirement-evidence-mapping-v1/gold-cases.json", "case_count": 36, "fact_record_count": 41, "evidence_ref_field": "absent; fact_ref is the source identity", "authority": "human-authored-static"},
+    "v2_partitions": {
+      "real_derived": {"path": "backend/eval/requirement-evidence-mapping-v2/real-derived-gold-v1.json", "case_count": 12, "scored_count": 12, "review_status": "ACCEPTED", "human_authority": "ACCEPT_FOR_GOLD_POOL", "fact_record_count": 14, "distinct_fact_ref_count": 6, "distinct_source_ref_count": 3},
+      "synthetic_boundary": {"path": "backend/eval/requirement-evidence-mapping-v2/synthetic-boundary-gold-v2.json", "case_count": 29, "scored_count": 29, "classification": "SYNTHETIC_BOUNDARY_GOLD"},
+      "engineering": {"path": "backend/eval/requirement-evidence-mapping-v2/engineering-fixtures-v2.json", "case_count": 6, "scored_count": 0, "classification": "ENGINEERING_FIXTURE"},
+      "disputed": {"path": "backend/eval/requirement-evidence-mapping-v2/disputed-cases-v2.json", "case_count": 1, "scored_count": 0, "classification": "DISPUTED_CASE"}
+    },
+    "expected_decision_labels": ["direct_full", "partial_support", "related_reference", "related_insufficient", "unrelated", "conflict", "unknown"],
+    "successor_manifest": "backend/eval/requirement-evidence-mapping-v2/successor-manifest.json",
+    "gold_v2_activation": "NOT_PERFORMED"
+  },
+  "claim_writer_gold": {
+    "claim": {"status": "SOURCE_PACKET_PRESENT_SEMANTIC_GOLD_NOT_FROZEN", "quality_case_count": 24, "source_parity": "PASS", "legacy_source_case_count": 60, "legacy_approved_seed_count": 3, "source_parity_report": "backend/eval/gold-human-review/v2/claim/01_claim_quality_source_parity_report.md", "real_source_packet": "backend/eval/gold-human-review/v2/claim/02_claim_real_source_packet.json"},
+    "writer": {"status": "SOURCE_PACKET_PRESENT_PROVIDER_FIDELITY_NOT_ESTABLISHED", "provider_fidelity_source_candidate_count": 12, "provider_off_semantic_case_count": 15, "provider_off_engineering_case_count": 2, "engineering_in_semantic_denominator": 0, "source_manifest": "backend/eval/gold-human-review/v2/writer/00_writer_gold_v2_source_manifest.md", "provider_off_checkpoint": "backend/eval/gold-governance/v43-gold-v2-foundation/V43_WRITER_EVAL_PROVIDER_OFF_FOUNDATION_CHECKPOINT.json"}
+  },
+  "engineering_regression": {
+    "status": "PRESENT/PASS_FOR_DETERMINISTIC_CONTRACTS_WITH_PRE_EXISTING_UNRELATED_FAILURES",
+    "representative_tests": ["backend/test/canonical-requirements-v1.test.js", "backend/test/real-fact-v2-foundation.test.js", "backend/test/mapping-eval-v1.test.js", "backend/test/mapping-gold-v2-successor.test.js", "backend/test/claim-eval-v1.test.js", "backend/test/claim-gate-v2-contract.test.js", "backend/test/writer-eval-provider-off-foundation.test.js", "backend/test/writer-authority-p0.test.js", "backend/test/writer-authorization-snapshot.test.js", "backend/test/gold-governance-harness.test.js", "backend/test/gold-v2-foundation-orchestrator.test.js"],
+    "track_a_checkpoint": "backend/eval/architecture-assurance/overnight-2026-09-04/V43_TRACK_A_REMEDIATION_CLOSURE_CHECKPOINT.json",
+    "pre_existing_unrelated_unit_failures": 14,
+    "engineering_fixtures_in_semantic_gold_denominator": false
+  },
+  "gaps": [
+    "Three B-class tenders lack Human-authorized authoritative Requirement packets; six-tender parity is not complete.",
+    "No eligible Real Enterprise Fact V2 candidate; four enterprise sources remain quarantined/pending human authority.",
+    "Mapping Gold V2 successor is not activated/frozen; disputed and engineering partitions remain excluded from semantic scoring.",
+    "Writer Provider Fidelity Gold is not established; only provider-off deterministic foundation is available.",
+    "Fourteen pre-existing unrelated unit failures are recorded by the Track A checkpoint and were not changed in this audit."
+  ]
+}

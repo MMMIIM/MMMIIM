@@ -1,0 +1,74 @@
+{
+  "schema_version": "4.3-mapping-semantic-baseline-v1",
+  "baseline": "MAPPING_SEMANTIC_BASELINE_V1",
+  "status": "MAPPING_SEMANTIC_LIVE_BLOCKED_BY_INFRA",
+  "generated_at": "2026-09-02T15:22:53.315Z",
+  "dataset": {
+    "id": "requirement-evidence-mapping-v1-gold-2026-09-02",
+    "contract": "requirement-evidence-mapping-v1.1",
+    "cases_total": 36,
+    "semantic_cases": 35,
+    "sha256": "5a6d9eb7c4e7b23f347da111b5276060375b3de2e07716b9cee88d15d5431707"
+  },
+  "runtime_identity": {
+    "task": "requirement_evidence_mapping",
+    "contract_version": "4.3-requirement-evidence-mapping-v1",
+    "schema_version": "4.3-requirement-evidence-mapping-v1",
+    "instruction_hash": "e56895a6d6379da52f585d25b1ab68c8677d7941b89b980069f51240fe73ed1d",
+    "provider_category": "openai_compatible",
+    "model": "deepseek-ai/DeepSeek-V4-Flash",
+    "response_format": "json_schema",
+    "strict": true,
+    "enable_thinking": false,
+    "temperature": 0.1,
+    "max_tokens": 4800
+  },
+  "execution": {
+    "accepted_cases_before_stop": 1,
+    "provider_calls": 2,
+    "retries": 0,
+    "db_writes": 0
+  },
+  "schema_validity": "NOT_ESTABLISHED",
+  "decision_metrics": "NOT_ESTABLISHED",
+  "dimension_metrics": "NOT_ESTABLISHED",
+  "hard_safety": {
+    "false_full": "NOT_ESTABLISHED",
+    "authority_escalation": "NOT_ESTABLISHED",
+    "unauthorized_claim_allow": "NOT_ESTABLISHED",
+    "writer_bypass": "NOT_ESTABLISHED",
+    "cross_project_leakage": "NOT_ESTABLISHED"
+  },
+  "infra_failures": [
+    {
+      "case_id": "MAP-G002",
+      "error_code": "MAPPING_SEMANTIC_FAILED",
+      "cause_code": "INTERNAL_GATEWAY_ERROR",
+      "http_status": 500,
+      "attempt": 1
+    }
+  ],
+  "semantic_mismatches": [],
+  "first_failure_layers": {
+    "MAP-G002": "TRANSPORT"
+  },
+  "performance": {
+    "p50_ms": 1940,
+    "p90_ms": 1940,
+    "max_ms": 3620
+  },
+  "tokens": "NOT_EXPOSED",
+  "global_regression": "NOT_EXECUTED",
+  "gateway_error_classification_debt": "OPEN",
+  "safety_gate": "NOT_EXECUTED",
+  "git_safety": {
+    "commit": false,
+    "push": false,
+    "merge": false,
+    "deploy": false,
+    "reset": false,
+    "clean": false,
+    "stash": false,
+    "dirty_worktree_preserved": true
+  }
+}

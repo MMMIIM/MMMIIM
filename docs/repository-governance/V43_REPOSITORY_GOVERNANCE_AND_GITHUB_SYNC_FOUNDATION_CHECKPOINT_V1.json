@@ -1,0 +1,97 @@
+{
+  "artifact_type": "V43_REPOSITORY_GOVERNANCE_AND_GITHUB_SYNC_FOUNDATION_CHECKPOINT_V1",
+  "artifact_version": "v1",
+  "status": "READY_FOR_FIRST_GITHUB_SYNC_REVIEW",
+  "git": {
+    "branch": "feat/v4.3-semantic-boundary-routing",
+    "local_head_before": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+    "local_head_after": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+    "remote_name": "origin",
+    "remote_url_sanitized": "https://github.com/MMMIIM/Bid-Pilot.git",
+    "remote_branch": "feat/v4.3-semantic-boundary-routing",
+    "remote_head_before": null,
+    "remote_head_after": null,
+    "remote_head_probe": "BLOCKED_SEC_E_NO_CREDENTIALS",
+    "local_remote_parity": null,
+    "worktree_clean_or_dirty": "DIRTY",
+    "commit_sha": null,
+    "commit_status": "NOT_RUN",
+    "push_status": "NOT_RUN_BY_DECISION"
+  },
+  "fresh_audit": {
+    "repository_root": "D:/AI工作/AI/标书平台/标书平台",
+    "tracked_modified_count": 103,
+    "untracked_status_entry_count": 618,
+    "untracked_expanded_file_count": 3121,
+    "deleted_count": 0,
+    "ignored_status_entry_count": 88,
+    "ignored_expanded_file_count": 42979,
+    "tracked_file_count": 709,
+    "scanned_file_count_excluding_git_node_modules_pnpm_store": 4446,
+    "size_distribution": { "lt_10mb": 4430, "10_to_50mb": 15, "50_to_100mb": 1, "gt_100mb": 0 }
+  },
+  "repository_classification": {
+    "git_required": "source, tests, schemas, migrations, architecture, Decisions, handoffs, Eval harness, Gold, contracts, manifests, governance",
+    "git_lfs_candidate": "large binaries only after private-source and GPT review; approved now: 0",
+    "git_ignore_required": "secrets, runtime data, uploads, storage, temp, logs, databases, caches, node_modules, pnpm store",
+    "secret_or_private_review_required": "local env files, credentials, private/customer sources, large PDFs",
+    "external_storage_candidate": "very large generated raw JSON/JSONL payloads with manifest/SHA/recipe retained"
+  },
+  "secret_scan": {
+    "result": "PASS_WITH_LOCAL_SECRET_REVIEW",
+    "tracked_private_key_or_token_literal_reported": false,
+    "local_secret_bearing_files": [
+      { "path": "backend/.env", "tracked": false, "redacted_file_fingerprint": "97309F8DC2A18C01" },
+      { "path": "services/semantic-gateway/.env", "tracked": false, "redacted_file_fingerprint": "9E13FACCA33C68B2" }
+    ],
+    "values_printed": false,
+    "history_remediation_required": "NOT_DETERMINED_BY_CURRENT_SCAN"
+  },
+  "large_file_audit": {
+    "large_file_count": 15,
+    "git_lfs_approved_count": 0,
+    "generated_json_external_only_candidate_count": 11,
+    "private_source_pdf_review_count": 4,
+    "automatic_upload": false,
+    "manifest": "FIRST_GITHUB_SYNC_MANIFEST_V1.json"
+  },
+  "current_state_path": "docs/project-state/CURRENT_STATE.md",
+  "decision_registry_path": "docs/project-state/DECISION_REGISTRY.md",
+  "sync_policy_path": "docs/repository-governance/GIT_SYNC_POLICY.md",
+  "classification_path": "docs/repository-governance/REPOSITORY_CLASSIFICATION.md",
+  "first_sync_manifest_path": "docs/repository-governance/FIRST_GITHUB_SYNC_MANIFEST_V1.json",
+  "source_changes": {
+    "governance_files_created": 8,
+    "production_source_changes_by_this_task": 0,
+    "migration_changes_by_this_task": 0,
+    "gitignore_changes_by_this_task": 0,
+    "gitattributes_changes_by_this_task": 0
+  },
+  "test_results": {
+    "repository_inventory": "PASS",
+    "branch_policy_read": "PASS",
+    "remote_head_probe": "BLOCKED_SEC_E_NO_CREDENTIALS",
+    "secret_scan": "PASS_WITH_LOCAL_SECRET_REVIEW",
+    "large_file_audit": "PASS_WITH_REVIEW_REQUIRED",
+    "product_test_suite": "NOT_RUN; no production code change authorized"
+  },
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "known_debt": [
+    "origin branch HEAD and parity are unavailable until GitHub credentials work",
+    "dirty worktree contains broad pre-existing changes with ambiguous first-sync scope",
+    "local secret-bearing env files require exclusion and local review",
+    "private source PDFs and large generated payloads require explicit handling"
+  ],
+  "commit_count": 0,
+  "push_count": 0,
+  "merge_count": 0,
+  "deploy_count": 0,
+  "force_push_count": 0,
+  "history_rewrite_count": 0,
+  "destructive_git_count": 0,
+  "first_sync_blocker": "BLOCKED_REMOTE_HEAD_UNAVAILABLE_CREDENTIALS; FIRST_BULK_SYNC_GPT_REVIEW_REQUIRED; SECRET_AND_PRIVATE_SOURCE_REVIEW_REQUIRED",
+  "next_authorized_action": "GPT_REVIEW_FIRST_GITHUB_SYNC_MANIFEST",
+  "deterministic_content_hash": "2a254570e94e9160cc31c8b9f04c5c57a7e283db3c4c112e62415aa187b6e5a5"
+}

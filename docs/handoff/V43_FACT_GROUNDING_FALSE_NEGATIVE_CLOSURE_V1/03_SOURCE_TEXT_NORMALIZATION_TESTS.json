@@ -1,0 +1,55 @@
+{
+  "artifact_type": "V43_FACT_GROUNDING_FALSE_NEGATIVE_CLOSURE_V1_SOURCE_TEXT_NORMALIZATION_TESTS",
+  "function": "normalizeGroundingComparisonText",
+  "tests": [
+    {
+      "input": "智能汽\n车解决方案业务",
+      "expected": "智能汽车解决方案业务",
+      "actual": "智能汽车解决方案业务",
+      "pass": true
+    },
+    {
+      "input": "服\n务类质保",
+      "expected": "服务类质保",
+      "actual": "服务类质保",
+      "pass": true
+    },
+    {
+      "input": "建\n立了采购CSR管理体系",
+      "expected": "建立了采购CSR管理体系",
+      "actual": "建立了采购CSR管理体系",
+      "pass": true
+    },
+    {
+      "input": "社\n会责任",
+      "expected": "社会责任",
+      "actual": "社会责任",
+      "pass": true
+    },
+    {
+      "input": "1\n000",
+      "expected": "1000",
+      "actual": "1000",
+      "pass": true
+    },
+    {
+      "input": "1 000",
+      "expected": "1 000",
+      "actual": "1 000",
+      "pass": true
+    },
+    {
+      "input": "甲\n，乙",
+      "expected": "甲\n,乙",
+      "actual": "甲\n,乙",
+      "pass": true
+    }
+  ],
+  "source_snapshot_mutation": "raw source snapshots unchanged; normalization is comparison-only",
+  "safety_properties": {
+    "punctuation_preserved_except_NFKC_width_normalization": true,
+    "numeric_grouping_preserved_for_horizontal_whitespace": true,
+    "no_synonym_rewrite": true,
+    "no_llm_or_embedding": true
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "artifact_type": "FACT_CANDIDATE_V2_EXISTING_RUN_SCHEMA_FORENSIC",
+  "source_run_id": "fact-candidate-v2-target-live-20260908030331-0007eb67",
+  "schema_invalid_count": 3,
+  "current_run_exact_path_status": "NOT_OBSERVABLE",
+  "historical_family_evidence": {
+    "source": "backend/eval/rag-pilot/results/fact-provider-shape-canary-20260907/COM-01/V43_CHENGCHUAN_CONTROLLED_REAL_FACT_RAW_RESPONSES.jsonl",
+    "family": "KNOWN_EMPTY_NAMESPACE_FAMILY",
+    "path": "data.facts[0].domain_metadata",
+    "keyword": "shape",
+    "expected": "non-empty object namespaces",
+    "historical_actual_type": "object",
+    "not_current_run_proof": true
+  },
+  "cases": [
+    {
+      "case_id": "COM-01",
+      "provider_http_reached": "NOT_OBSERVABLE_IN_CURRENT_GATEWAY_LOG",
+      "provider_http_status": "NOT_OBSERVABLE_IN_CURRENT_GATEWAY_LOG",
+      "json_parse_success": "NOT_OBSERVABLE",
+      "schema_validation_stage": "NOT_OBSERVABLE",
+      "exact_json_path": "NOT_OBSERVABLE_IN_EXISTING_RUN",
+      "schema_keyword": "NOT_OBSERVABLE_IN_EXISTING_RUN",
+      "expected_shape": "NOT_OBSERVABLE_IN_EXISTING_RUN",
+      "actual_shape": "NOT_OBSERVABLE_IN_EXISTING_RUN",
+      "unexpected_property_name": null,
+      "candidate_raw_structured_fragment": "NOT_RETAINED",
+      "classification": "KNOWN_EMPTY_NAMESPACE_FAMILY_CANDIDATE_ONLY"
+    },
+    {
+      "case_id": "COM-06-A",
+      "provider_http_reached": "NOT_OBSERVABLE_IN_CURRENT_GATEWAY_LOG",
+      "provider_http_status": "NOT_OBSERVABLE_IN_CURRENT_GATEWAY_LOG",
+      "json_parse_success": "NOT_OBSERVABLE",
+      "schema_validation_stage": "NOT_OBSERVABLE",
+      "exact_json_path": "NOT_OBSERVABLE_IN_EXISTING_RUN",
+      "schema_keyword": "NOT_OBSERVABLE_IN_EXISTING_RUN",
+      "expected_shape": "NOT_OBSERVABLE_IN_EXISTING_RUN",
+      "actual_shape": "NOT_OBSERVABLE_IN_EXISTING_RUN",
+      "unexpected_property_name": null,
+      "candidate_raw_structured_fragment": "NOT_RETAINED",
+      "classification": "KNOWN_EMPTY_NAMESPACE_FAMILY_CANDIDATE_ONLY"
+    },
+    {
+      "case_id": "COM-06-B",
+      "provider_http_reached": "NOT_OBSERVABLE_IN_CURRENT_GATEWAY_LOG",
+      "provider_http_status": "NOT_OBSERVABLE_IN_CURRENT_GATEWAY_LOG",
+      "json_parse_success": "NOT_OBSERVABLE",
+      "schema_validation_stage": "NOT_OBSERVABLE",
+      "exact_json_path": "NOT_OBSERVABLE_IN_EXISTING_RUN",
+      "schema_keyword": "NOT_OBSERVABLE_IN_EXISTING_RUN",
+      "expected_shape": "NOT_OBSERVABLE_IN_EXISTING_RUN",
+      "actual_shape": "NOT_OBSERVABLE_IN_EXISTING_RUN",
+      "unexpected_property_name": null,
+      "candidate_raw_structured_fragment": "NOT_RETAINED",
+      "classification": "KNOWN_EMPTY_NAMESPACE_FAMILY_CANDIDATE_ONLY"
+    }
+  ],
+  "schema_changes": 0,
+  "prompt_changes": 0,
+  "canonicalizer_changes": 0,
+  "grounding_changes": 0,
+  "provider_calls_added": 0
+}

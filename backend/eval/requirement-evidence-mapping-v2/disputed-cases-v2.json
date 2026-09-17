@@ -1,0 +1,62 @@
+{
+  "dataset_id": "mapping-disputed-cases-v2",
+  "dataset_version": 1,
+  "contract_version": "requirement-evidence-mapping-v1.1",
+  "authorship": "human_adjudication_and_governance_projection",
+  "data_classification": "EVAL_DISPUTED_ONLY",
+  "source_dataset": {
+    "dataset_version": "requirement-evidence-mapping-v1-gold-2026-09-02",
+    "sha256": "5a6d9eb7c4e7b23f347da111b5276060375b3de2e07716b9cee88d15d5431707"
+  },
+  "cases": [
+    {
+      "case_id": "MAP-G032",
+      "label": "third-party dependency",
+      "requirement": {
+        "text": "由本企业直接交付平台"
+      },
+      "facts": [
+        {
+          "fact_ref": "F032",
+          "subject": {
+            "type": "service",
+            "name": "平台集成"
+          },
+          "entities": [
+            {
+              "type": "vendor",
+              "name": "第三方供应商"
+            }
+          ],
+          "fact_status": "completed",
+          "scopes": [
+            "enterprise"
+          ],
+          "quantities": [],
+          "validity": {
+            "status": "known"
+          }
+        }
+      ],
+      "expected": {
+        "decision": "partial_support",
+        "dimensions": {
+          "subject": "match",
+          "scope": "match",
+          "status": "match",
+          "quantity": "not_applicable",
+          "entity": "mismatch",
+          "validity": "match"
+        }
+      },
+      "classification": "DISPUTED_CASE",
+      "review_status": "DISPUTED",
+      "scored": false,
+      "exclusion_reason": "DISPUTED_HUMAN_REVIEW",
+      "governance_purpose": "third-party dependency and delivery-boundary semantics remain unresolved"
+    }
+  ],
+  "semantic_scoring": false,
+  "classification_rule": "DISPUTED_CASE remains auditable but unscored"
+}
+

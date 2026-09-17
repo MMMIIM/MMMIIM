@@ -1,0 +1,56 @@
+{
+  "artifact_type": "V43_EVIDENCE_RETRIEVAL_TEST_PLAN",
+  "lane": "EVIDENCE_CANDIDATE_ONLY",
+  "authority_boundary": {
+    "output": "EVIDENCE_RETRIEVAL_CANDIDATE",
+    "prohibited": [
+      "Fact approval",
+      "Mapping approval",
+      "Claim permission",
+      "Writer authorization"
+    ]
+  },
+  "cases": {
+    "enterprise_identity": "same enterprise vs foreign enterprise",
+    "material_type": [
+      "qualification",
+      "project_case",
+      "product_documentation",
+      "personnel",
+      "delivery_capability"
+    ],
+    "exact_identifier": [
+      "certificate",
+      "standard",
+      "product/model",
+      "acronym"
+    ],
+    "numeric_signal": [
+      "number + unit + operator"
+    ],
+    "lifecycle": [
+      "ACTIVE approved usable",
+      "quarantined",
+      "expired/revoked",
+      "superseded"
+    ],
+    "provenance": [
+      "source hash/span/lineage complete",
+      "missing or mismatched lineage"
+    ],
+    "reference_boundary": "Reference-only material must not enter enterprise assertion authority"
+  },
+  "metrics": {
+    "EVIDENCE_RELEVANCE_AT_K": "GPT/Human label required per requirement",
+    "EXACT_IDENTIFIER_HIT": "exact certificate/model/standard/identifier hit",
+    "NUMERIC_SIGNAL_HIT": "number+unit/operator signal hit",
+    "WRONG_ENTERPRISE_ESCAPE": "foreign/unapproved enterprise item rate",
+    "REFERENCE_ROLE_ESCAPE": "Reference-only item in Evidence lane rate",
+    "QUARANTINED_ESCAPE": "quarantined/ineligible item returned rate"
+  },
+  "execution_policy": {
+    "provider_calls": 0,
+    "db_writes": 0,
+    "semantic_labels_by_codex": 0
+  }
+}

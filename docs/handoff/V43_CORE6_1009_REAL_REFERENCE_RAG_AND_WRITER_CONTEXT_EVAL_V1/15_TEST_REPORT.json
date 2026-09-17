@@ -1,0 +1,50 @@
+{
+  "artifact_type": "V43_TEST_REPORT",
+  "eval_script_syntax": {
+    "status": "PASS",
+    "command": "node --check backend/eval/rag-governance/run-core6-real-reference-rag-writer-context-v1.mjs"
+  },
+  "focused_tests": {
+    "status": "PASS",
+    "tests": 63,
+    "passed": 63,
+    "failed": 0,
+    "command": "node --test test/writer-reference-hygiene.test.js test/retrieval-chunk-role.test.js test/retrieval-source-eligibility.test.js test/retrieval-substantive-hygiene-offline.test.js test/writer-v2-composition.test.js test/writer-authority-p0.test.js test/material-source-role-gate.test.js"
+  },
+  "relevant_backend_regression": {
+    "status": "FAIL_PRE_EXISTING_UNRELATED_BASELINE",
+    "tests": 1632,
+    "passed": 1598,
+    "failed": 34,
+    "command": "npm test -w backend",
+    "current_task_regressions": 0,
+    "classification": "Existing path/fixture/governance/runtime baseline failures; no production module was changed by this Eval-only task.",
+    "observed_failure_families": [
+      "MISSING_EVAL_FIXTURE_OR_GENERATED_PACKET",
+      "GOVERNANCE_OR_INSTRUCTION_BASELINE_DRIFT",
+      "WRITER_AUTHORIZATION_SNAPSHOT_BASELINE",
+      "RUNTIME_CONFIG_BASELINE",
+      "SOURCE_ROLE_OR_STAGE13_FIXTURE_PATH",
+      "REQUIREMENT_SOURCE_OR_CANONICAL_BASELINE"
+    ]
+  },
+  "build": {
+    "status": "PASS",
+    "command": "npm run build"
+  },
+  "lint": {
+    "status": "PASS",
+    "command": "npm run lint"
+  },
+  "diff_check": {
+    "status": "PASS_WITH_LINE_ENDING_WARNINGS",
+    "command": "git diff --check",
+    "warnings_only": true
+  },
+  "provider_calls_during_artifact_generation": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "gold_mutations": 0,
+  "requirement_mutations": 0,
+  "fact_mapping_claim_writer_mutations": 0
+}

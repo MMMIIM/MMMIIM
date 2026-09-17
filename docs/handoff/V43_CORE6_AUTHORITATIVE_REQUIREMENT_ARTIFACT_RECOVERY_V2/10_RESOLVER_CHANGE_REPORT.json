@@ -1,0 +1,15 @@
+{
+  "artifact_type": "V43_RESOLVER_CHANGE_REPORT",
+  "resolver_path": "backend/eval/gold-human-review/v2/mapping-real-rebuild/build-real-gold-source-foundation.js",
+  "current_manifest_path": "backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/manifest.json",
+  "current_packet_directory": "backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets",
+  "code_changed": false,
+  "reason": "Current resolver is bound to the frozen semantic-boundary manifest; blocker is missing Human adjudication identity for three recovered packets, not path-only drift.",
+  "resolver_visible_tenders": [
+    "FAST-01",
+    "TB-006",
+    "FAST-WATER-01"
+  ],
+  "resolver_coverage": "3/6",
+  "deterministic_identity_rule": "repo-relative manifest packet path + tender_id + source_file_sha256"
+}

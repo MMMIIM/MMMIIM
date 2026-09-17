@@ -1,0 +1,108 @@
+{
+  "run_id": "fact-candidate-v2-offline-v1",
+  "mode": "OFFLINE_ONLY",
+  "schema_version": "4.3-evidence-fact-candidate-v2",
+  "schema_sha256": "9b40ac9be7d5a262e39d1a142bb5165ba113e213cfa9f56b7888ae241693f834",
+  "canonicalizer_version": "4.3-evidence-fact-canonicalizer-v2",
+  "grounding_version": "4.3-evidence-fact-grounding-v2",
+  "fixture_count": 10,
+  "canonicalized_fixture_count": 6,
+  "review_required_fixture_count": 3,
+  "rejected_grounding_fixture_count": 1,
+  "historical_structural_failure_regression": "PASS",
+  "material_quarantine_regression": "PASS",
+  "fact_mapping_currentness_regression": "PASS",
+  "fact_mapping_claim_currentness_regression": "PASS",
+  "writer_snapshot_drift_regression": "PASS",
+  "drift_regression_evidence": "focused deterministic authority/mapping/claim/writer regression suite",
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "fact_persistence": 0,
+  "gold_mutations": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "results": [
+    {
+      "id": "COM-01-like",
+      "validation": "PASS",
+      "canonicalization": "CANONICALIZED",
+      "grounding": "ACCEPT",
+      "reasons": []
+    },
+    {
+      "id": "COM-06-like",
+      "validation": "PASS",
+      "canonicalization": "CANONICALIZED",
+      "grounding": "ACCEPT",
+      "reasons": []
+    },
+    {
+      "id": "CCV2-U13-01",
+      "validation": "PASS",
+      "canonicalization": "CANONICALIZATION_REVIEW_REQUIRED",
+      "grounding": "REVIEW_REQUIRED",
+      "reasons": [
+        "QUANTITY_VALUE_OR_UNIT_UNRESOLVED",
+        "QUANTITY_VALUE_OR_UNIT_UNRESOLVED"
+      ]
+    },
+    {
+      "id": "TEMPORAL-EVENT",
+      "validation": "PASS",
+      "canonicalization": "CANONICALIZED",
+      "grounding": "ACCEPT",
+      "reasons": []
+    },
+    {
+      "id": "QUANTITY-LOWER-BOUND",
+      "validation": "PASS",
+      "canonicalization": "CANONICALIZED",
+      "grounding": "ACCEPT",
+      "reasons": []
+    },
+    {
+      "id": "RESPONSE-VAGUE",
+      "validation": "PASS",
+      "canonicalization": "CANONICALIZATION_REVIEW_REQUIRED",
+      "grounding": "REVIEW_REQUIRED",
+      "reasons": [
+        "QUANTITY_VALUE_OR_UNIT_UNRESOLVED",
+        "QUANTITY_VALUE_OR_UNIT_UNRESOLVED"
+      ]
+    },
+    {
+      "id": "SECURITY-TEST",
+      "validation": "PASS",
+      "canonicalization": "CANONICALIZED",
+      "grounding": "ACCEPT",
+      "reasons": []
+    },
+    {
+      "id": "UNSUPPORTED",
+      "validation": "PASS",
+      "canonicalization": "CANONICALIZED",
+      "grounding": "REJECT",
+      "reasons": [
+        "statement is not grounded"
+      ]
+    },
+    {
+      "id": "SCOPE-TEST",
+      "validation": "PASS",
+      "canonicalization": "CANONICALIZED",
+      "grounding": "ACCEPT",
+      "reasons": []
+    },
+    {
+      "id": "STATUS-UNKNOWN",
+      "validation": "PASS",
+      "canonicalization": "CANONICALIZATION_REVIEW_REQUIRED",
+      "grounding": "REVIEW_REQUIRED",
+      "reasons": [
+        "STATUS_ENUM_UNRESOLVED",
+        "STATUS_ENUM_UNRESOLVED"
+      ]
+    }
+  ]
+}

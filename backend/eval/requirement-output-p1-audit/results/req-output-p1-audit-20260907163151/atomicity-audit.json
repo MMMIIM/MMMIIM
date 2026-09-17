@@ -1,0 +1,831 @@
+{
+  "artifact_type": "V43_REQUIREMENT_OUTPUT_P1_ATOMICITY_AUDIT",
+  "run_id": "req-output-p1-audit-20260907163151",
+  "metrics": {
+    "pass": 971,
+    "review": 18,
+    "high_confidence_overmerged": 20,
+    "review_rate": 0.03766105054509415,
+    "high_confidence_rate": 0.019821605550049554
+  },
+  "by_tender": {
+    "JY-001": 14,
+    "TB-003": 24
+  },
+  "cases": [
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-021",
+      "canonical_text": "单表查询(100万条左右),响应<1秒;数据多表关联查询<3秒。",
+      "source_refs": [],
+      "source_text": "数据处理性能：单表查询（100 万条左右），响应<1 秒；数据多表关联查询<3 秒。",
+      "current_category": "technical",
+      "classification": "HIGH_CONFIDENCE_OVERMERGED",
+      "independent_obligation_count": 2,
+      "obligation_units": [
+        "单表查询(100万条左右),响应<1秒",
+        "数据多表关联查询<3秒。"
+      ],
+      "confidence": "HIGH",
+      "mapping_risk": "HIGH",
+      "claim_risk": "HIGH",
+      "writer_risk": "MEDIUM"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-023",
+      "canonical_text": "简单报表(关联3张表数据,查询数据量百万级)响应时间1-5秒;复杂报表(关联3-5张表数据,查询数据量千万级)响应时间1-10秒。",
+      "source_refs": [],
+      "source_text": "3) 简单报表（关联 3 张表数据，查询数据量百万级）响应时间：1-5（秒）； 4) 复杂报表（关联 3-5 张表数据，查询数据量千万级）响应时间：1-10（秒）；",
+      "current_category": "technical",
+      "classification": "HIGH_CONFIDENCE_OVERMERGED",
+      "independent_obligation_count": 2,
+      "obligation_units": [
+        "简单报表(关联3张表数据,查询数据量百万级)响应时间1-5秒",
+        "复杂报表(关联3-5张表数据,查询数据量千万级)响应时间1-10秒。"
+      ],
+      "confidence": "HIGH",
+      "mapping_risk": "HIGH",
+      "claim_risk": "HIGH",
+      "writer_risk": "MEDIUM"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-073",
+      "canonical_text": "网格学院移动端应通过微信公众号的形式,以微信小程序为载体,打通江苏省网格化平台账号体系,方便对学习人员进行有效的管理;管理员可以在网格学院后台对移动端学习课程进行管理,包含课程分类和课程管理,为后续课程归类做划分,包括不限于考试增、删、改、查,试题分类、题库管理、试卷分类、考试管理、成绩统计和纠错管理等。",
+      "source_refs": [],
+      "source_text": "网格学院移动端通过微信公众号的形式，以微信小程序为载体，打通江苏省网格化 平台账号体系，方便对学习人员进行有效的管理。管理员可以在网格学院后台对移动端 学习课程进行管理，包含课程分类和课程管理，为后续课程归类做划分。包括不限于考 试增、删、改、查，试题分类、题库管理、试卷分类、考试管理、成绩统计和纠错管理 等。",
+      "current_category": "technical",
+      "classification": "HIGH_CONFIDENCE_OVERMERGED",
+      "independent_obligation_count": 2,
+      "obligation_units": [
+        "网格学院移动端应通过微信公众号的形式,以微信小程序为载体,打通江苏省网格化平台账号体系,方便对学习人员进行有效的管理",
+        "管理员可以在网格学院后台对移动端学习课程进行管理,包含课程分类和课程管理,为后续课程归类做划分,包括不限于考试增、删、改、查,试题分类、题库管理、试卷分类、考试管理、成绩统计和纠错管理等。"
+      ],
+      "confidence": "HIGH",
+      "mapping_risk": "HIGH",
+      "claim_risk": "HIGH",
+      "writer_risk": "MEDIUM"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-080",
+      "canonical_text": "12345数据库升级应通过架构升级、数据结构优化、查询性能优化、历史数据迁移,保证业务连续的基础上,提升数据库整体性能,升级后整体性能应满足以下指标要求:数据服务类接口响应时间需<=1秒,常规页面展示响应时间需<=3秒,事件类数据查询时间<1秒,统计分析类查询响应时间需<=10秒。",
+      "source_refs": [],
+      "source_text": "升级数据库，通过架构升级、数据结构优化、查询性能优化、历史数据迁移，保证业 务连续的基础上，提升数据库整体性能。升级后整体性能应满足一下指标要求： 数据服务类接口响应时间需<=1 秒。常规页面展示响应时间需<=3 秒。 数据查询：事件类数据查询时间<1 秒。统计分析类查询响应时间需<=10 秒。",
+      "current_category": "technical",
+      "classification": "ATOMIC_REVIEW",
+      "independent_obligation_count": 2,
+      "obligation_units": [
+        "12345数据库升级应通过架构升级、数据结构优化、查询性能优化、历史数据迁移,保证业务连续的基础上,提升数据库整体性能,升级后整体性能应满足以下指标要求:数据服务类接口响应时间需<=1秒,常规页面展示响应时间需<=3秒,事件类数据查询时间<1秒,统计分析类查询响应时间需<=10秒。"
+      ],
+      "confidence": "MEDIUM",
+      "mapping_risk": "MEDIUM",
+      "claim_risk": "LOW",
+      "writer_risk": "LOW"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-135",
+      "canonical_text": "球型鹰眼A最低照度需满足:【全景】0.0005 Lux/F1.0(彩色),0.0001 Lux/F1.0(黑白);【细节】0.0005 Lux/F1.5(彩色),0.0001 Lux/F1.5(黑白),0 Lux with IR。",
+      "source_refs": [],
+      "source_text": "4、最低照度: 【全景】0.0005 Lux/F1.0（彩色），0.0001 Lux/F1.0（黑白） 【细节】0.0005 Lux/F1.5（彩色），0.0001 Lux/F1.5（黑白），0 Lux with IR",
+      "current_category": "technical",
+      "classification": "ATOMIC_REVIEW",
+      "independent_obligation_count": 1,
+      "obligation_units": [
+        "球型鹰眼A最低照度需满足:【全景】"
+      ],
+      "confidence": "MEDIUM",
+      "mapping_risk": "MEDIUM",
+      "claim_risk": "LOW",
+      "writer_risk": "LOW"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-138",
+      "canonical_text": "球型鹰眼A水平速度需满足:水平键控速度0.1°~210°/s,速度可设;水平预置点速度240°/s。",
+      "source_refs": [],
+      "source_text": "13、水平速度: 水平键控速度：0.1°~210°/s，速度可设；水平预置点速度：240° /s",
+      "current_category": "technical",
+      "classification": "ATOMIC_REVIEW",
+      "independent_obligation_count": 1,
+      "obligation_units": [
+        "球型鹰眼A水平速度需满足:水平键控速度"
+      ],
+      "confidence": "MEDIUM",
+      "mapping_risk": "MEDIUM",
+      "claim_risk": "LOW",
+      "writer_risk": "LOW"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-139",
+      "canonical_text": "球型鹰眼A需具备AR视频标签添加、修改、删除和标准等系列管理功能,支持视频画面中添加最多500个标签;标签类型包括警务站视频标签、建筑物视频标签、卡口视频标签、普通视频标签等。",
+      "source_refs": [],
+      "source_text": "15、具备 AR 视频标签添加，修改，删除和标准等系列管理功能，支持视频画面中添 加最多 500 个标签；标签类型包括：警务站视频标签，建筑物视频标签，卡口视频标签， 普通视频标签等。",
+      "current_category": "technical",
+      "classification": "ATOMIC_REVIEW",
+      "independent_obligation_count": 1,
+      "obligation_units": [
+        "球型鹰眼A需具备AR视频标签添加、修改、删除和标准等系列管理功能,支持视频画面中添加最多500个标签"
+      ],
+      "confidence": "MEDIUM",
+      "mapping_risk": "MEDIUM",
+      "claim_risk": "LOW",
+      "writer_risk": "LOW"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-142",
+      "canonical_text": "球型鹰眼B最低照度需满足:【全景】0.0005 Lux/F1.0(彩色),0.0001 Lux/F1.0(黑白);【细节】0.0005 Lux/F1.5(彩色),0.0001 Lux/F1.5(黑白),0 Lux with IR。",
+      "source_refs": [],
+      "source_text": "3、最低照度: 【全景】0.0005 Lux/F1.0（彩色），0.0001 Lux/F1.0（黑白） 【细节】0.0005 Lux/F1.5（彩色），0.0001 Lux/F1.5（黑白），0 Lux with IR",
+      "current_category": "technical",
+      "classification": "ATOMIC_REVIEW",
+      "independent_obligation_count": 1,
+      "obligation_units": [
+        "球型鹰眼B最低照度需满足:【全景】"
+      ],
+      "confidence": "MEDIUM",
+      "mapping_risk": "MEDIUM",
+      "claim_risk": "LOW",
+      "writer_risk": "LOW"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-146",
+      "canonical_text": "球型鹰眼B水平速度需满足:水平键控速度0.1°~210°/s,速度可设;水平预置点速度240°/s。",
+      "source_refs": [],
+      "source_text": "13、水平速度: 水平键控速度：0.1°~210°/s，速度可设；水平预置点速度：240° /s",
+      "current_category": "technical",
+      "classification": "ATOMIC_REVIEW",
+      "independent_obligation_count": 1,
+      "obligation_units": [
+        "球型鹰眼B水平速度需满足:水平键控速度"
+      ],
+      "confidence": "MEDIUM",
+      "mapping_risk": "MEDIUM",
+      "claim_risk": "LOW",
+      "writer_risk": "LOW"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-147",
+      "canonical_text": "球型鹰眼B需具备AR视频标签添加、修改、删除和标准等系列管理功能,支持视频画面中添加最多500个标签;标签类型包括警务站视频标签、建筑物视频标签、卡口视频标签、普通视频标签等。",
+      "source_refs": [],
+      "source_text": "15、具备 AR 视频标签添加，修改，删除和标准等系列管理功能，支持视频画面中添 加最多 500 个标签；标签类型包括：警务站视频标签，建筑物视频标签，卡口视频标签， 普通视频标签等。",
+      "current_category": "technical",
+      "classification": "ATOMIC_REVIEW",
+      "independent_obligation_count": 1,
+      "obligation_units": [
+        "球型鹰眼B需具备AR视频标签添加、修改、删除和标准等系列管理功能,支持视频画面中添加最多500个标签"
+      ],
+      "confidence": "MEDIUM",
+      "mapping_risk": "MEDIUM",
+      "claim_risk": "LOW",
+      "writer_risk": "LOW"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-163",
+      "canonical_text": "防火墙需支持web界面下对攻击流量进行抓包分析,支持自定义抓包参数,至少包括数据报文长度、报文数量、抓包时间及采样频率等基本参数;支持根据协议、源目的IP、端口等参数进行数据报文过滤。",
+      "source_refs": [],
+      "source_text": "支持 web 界面下对攻击流量进行抓包分析，支持自定义抓包参数，至少包括 数据报文长度、报文数量、抓包时间及采样频率等基本参数；支持根据协议、 源目的 IP、端口等参数进行数据报文过滤。",
+      "current_category": "technical",
+      "classification": "HIGH_CONFIDENCE_OVERMERGED",
+      "independent_obligation_count": 2,
+      "obligation_units": [
+        "防火墙需支持web界面下对攻击流量进行抓包分析,支持自定义抓包参数,至少包括数据报文长度、报文数量、抓包时间及采样频率等基本参数",
+        "支持根据协议、源目的IP、端口等参数进行数据报文过滤。"
+      ],
+      "confidence": "HIGH",
+      "mapping_risk": "HIGH",
+      "claim_risk": "HIGH",
+      "writer_risk": "MEDIUM"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-182",
+      "canonical_text": "人员配置应科学、合理、有效、应充分保证人员的数量和质量。项目实施过程中,投标人应配备符合以下条件的人员:项目组主要人员不少于6人(即项目负责人1人,专业技术人员不少于5人,专业技术人员包括技术负责人、需求分析师等技术人员),另需配置至少10名的项目辅助人员。",
+      "source_refs": [],
+      "source_text": "人员配置应科学、合理、有效、应充分保证人员的数量和质量。项目实施过程中，投标人 应配备符合以下条件的人员： （1）项目组主要人员不少于 6 人（即项目负责人 1 人，专业技术人员不少于 5 人，专业 技术人员包括技术负责人、需求分析师等技术人员），另需配置至少 10 名的项目辅助人员。",
+      "current_category": "implementation",
+      "classification": "HIGH_CONFIDENCE_OVERMERGED",
+      "independent_obligation_count": 3,
+      "obligation_units": [
+        "人员配置应科学、合理、有效、应充分保证人员的数量和质量。项目实施过程中,投标人应配备符合以下条件的人员:项目组主要人员不少于6人(即项目负责人1人,专业技术人员不少于5人,专业技术人员包括技术负责人、需求分析师等技术人员),另需配置至少10名的项目辅助人员。"
+      ],
+      "confidence": "HIGH",
+      "mapping_risk": "HIGH",
+      "claim_risk": "HIGH",
+      "writer_risk": "MEDIUM"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-185",
+      "canonical_text": "未经采购方书面同意更换项目负责人的,一次扣10万元;未经采购方书面同意更换专业技术人员的,一人一次扣3万元;未按照要求配置相应人员的,扣5万元。",
+      "source_refs": [],
+      "source_text": "罚则：未经采购方书面同意更换项目负责人的，一次扣 10 万元；未经采购方书面同意更 换专业技术人员的，一人一次扣 3 万元；未按照要求配置相应人员的，扣 5 万元。",
+      "current_category": "other",
+      "classification": "ATOMIC_REVIEW",
+      "independent_obligation_count": 1,
+      "obligation_units": [
+        "未按照要求配置相应人员的,扣5万元。"
+      ],
+      "confidence": "MEDIUM",
+      "mapping_risk": "MEDIUM",
+      "claim_risk": "LOW",
+      "writer_risk": "LOW"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-186",
+      "canonical_text": "须提交的成果包括:(1)项目实施过程文档全套;(2)项目定制开发软件系统源代码电子文件(不加密,可编辑不限使用时间)1份源代码;(3)刻录上述文档和系统软件(包括江阴市市域社会治理现代化联勤联动指挥平台、智慧城市综合管理平台升级、12345语音智能化及业务系统升级、江阴市城市之眼系统平台软件平台)的光盘3份。",
+      "source_refs": [],
+      "source_text": "须提交的成果包括： （1）项目实施过程文档全套； （2）项目定制开发软件系统源代码电子文件（不加密，可编辑不限使用时间）1 份源代码； （3）刻录上述文档和系统软件（包括江阴市市域社会治理现代化联勤联动指挥平台、智 慧城市综合管理平台升级、12345 语音智能化及业务系统升级、江阴市城市之眼系统平台软件 平台）的光盘 3 份。",
+      "current_category": "delivery",
+      "classification": "HIGH_CONFIDENCE_OVERMERGED",
+      "independent_obligation_count": 3,
+      "obligation_units": [
+        "须提交的成果包括:",
+        "项目实施过程文档全套",
+        "刻录上述文档和系统软件(包括江阴市市域社会治理现代化联勤联动指挥平台、智慧城市综合管理平台升级、12345语音智能化及业务系统升级、江阴市城市之眼系统平台软件平台)的光盘3份。"
+      ],
+      "confidence": "HIGH",
+      "mapping_risk": "HIGH",
+      "claim_risk": "HIGH",
+      "writer_risk": "MEDIUM"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-001",
+      "canonical_text": "自收到供应商项目验收建议之日起1个工作日内组织验收；鼓励验收结束后1个工作日内出具《验收报告》，并在焦作市政府采购网公告验收结果。",
+      "source_refs": [
+        "C002-S001",
+        "C002-S002",
+        "C002-S003"
+      ],
+      "source_text": "十一、项目验收。鼓励自收到供应商项目验收建议之日 起 1 个工作日内组织验收；鼓励验收结束后 1 个工作日内出 具《验收报告》，并在焦作市政府采购网公告验收结果。",
+      "current_category": "delivery",
+      "classification": "ATOMIC_REVIEW",
+      "independent_obligation_count": 2,
+      "obligation_units": [
+        "自收到供应商项目验收建议之日起1个工作日内组织验收",
+        "鼓励验收结束后1个工作日内出具《验收报告》，并在焦作市政府采购网公告验收结果。"
+      ],
+      "confidence": "MEDIUM",
+      "mapping_risk": "MEDIUM",
+      "claim_risk": "LOW",
+      "writer_risk": "LOW"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-011",
+      "canonical_text": "投标人须提前办理CA数字证书，并学习电子投标文件制作；加密的电子投标文件须使用CA数字证书上传；为防止网络拥堵等不可控因素影响上传，须提前上传，因未能及时上传导致投标失败的责任由投标人自行承担。",
+      "source_refs": [
+        "C004-S031",
+        "C004-S032",
+        "C004-S033",
+        "C004-S034"
+      ],
+      "source_text": "3.请各投标人提前办理 CA 数字证书，并学习电子投标文件制作。加 密的电子投标文件须使用 CA 数字证书上传。为防止网络拥堵等不可控因 素影响加密的电子投标文件上传，请各投标人提前上传，因未能及时上传 导致投标失败的责任由投标人自行承担。",
+      "current_category": "other",
+      "classification": "HIGH_CONFIDENCE_OVERMERGED",
+      "independent_obligation_count": 3,
+      "obligation_units": [
+        "投标人须提前办理CA数字证书，并学习电子投标文件制作",
+        "加密的电子投标文件须使用CA数字证书上传",
+        "为防止网络拥堵等不可控因素影响上传，须提前上传，因未能及时上传导致投标失败的责任由投标人自行承担。"
+      ],
+      "confidence": "HIGH",
+      "mapping_risk": "HIGH",
+      "claim_risk": "HIGH",
+      "writer_risk": "MEDIUM"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-013",
+      "canonical_text": "获取招标文件后，投标人须下载并安装最新版本投标文件制作工具，制作电子投标文件，并在投标截止时间前上传加密的投标文件；供应商未在投标截止时间前完成上传的，视为逾期送达，焦作市电子招投标交易平台将拒绝接收。",
+      "source_refs": [
+        "C004-S042",
+        "C004-S043",
+        "C004-S044",
+        "C004-S045"
+      ],
+      "source_text": "6.获取招标文件后，请下载并安装最新版本投标文件制作工具，制作 电子投标文件，在投标截止时间前，上传加密的投标文件。供应商未在投 标截止时间前完成上传的，视为逾期送达，焦作市电子招投标交易平台将 拒绝接收。",
+      "current_category": "other",
+      "classification": "HIGH_CONFIDENCE_OVERMERGED",
+      "independent_obligation_count": 2,
+      "obligation_units": [
+        "获取招标文件后，投标人须下载并安装最新版本投标文件制作工具，制作电子投标文件，并在投标截止时间前上传加密的投标文件",
+        "供应商未在投标截止时间前完成上传的，视为逾期送达，焦作市电子招投标交易平台将拒绝接收。"
+      ],
+      "confidence": "HIGH",
+      "mapping_risk": "HIGH",
+      "claim_risk": "HIGH",
+      "writer_risk": "MEDIUM"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-014",
+      "canonical_text": "本项目采用远程不见面交易的模式，开标当日，供应商无需到现场参加开标会议，但应在投标截止时间前登录“不见面开标大厅系统”，在线准时参加开标活动并进行投标文件解密等；因供应商原因未能解密或解密失败的将被拒绝；除电子投标文件外，投标时不再接受任何纸质文件、资料等。",
+      "source_refs": [
+        "C004-S046",
+        "C004-S047",
+        "C004-S048",
+        "C004-S049",
+        "C004-S050",
+        "C004-S051"
+      ],
+      "source_text": "7.本项目采用远程不见面交易的模式，开标当日，供应商无需到现场 参加开标会议，应在投标截止时间前，登录“不见面开标大厅系统”，在 线准时参加开标活动并进行投标文件解密等。因供应商原因未能解密或解 密失败的将被拒绝。详见焦作市公共资源交易中心网站-公共服务-下载专 区《投标单位操作手册及视频》。除电子投标文件外，投标时不再接受任 何纸质文件、资料等。",
+      "current_category": "other",
+      "classification": "HIGH_CONFIDENCE_OVERMERGED",
+      "independent_obligation_count": 2,
+      "obligation_units": [
+        "本项目采用远程不见面交易的模式，开标当日，供应商无需到现场参加开标会议，但应在投标截止时间前登录“不见面开标大厅系统”，在线准时参加开标活动并进行投标文件解密等",
+        "因供应商原因未能解密或解密失败的将被拒绝"
+      ],
+      "confidence": "HIGH",
+      "mapping_risk": "HIGH",
+      "claim_risk": "HIGH",
+      "writer_risk": "MEDIUM"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-015",
+      "canonical_text": "分支机构参加投标的，应提供该分支机构或其所属法人/其他组织的相应证明文件；同时还应提供其所属法人/其他组织出具的授权其参与本项目的授权书（格式自拟，须加盖其所属法人/其他组织的公章）。",
+      "source_refs": [
+        "C005-S009",
+        "C005-S010",
+        "C005-S011",
+        "C005-S012"
+      ],
+      "source_text": "标的，指营业执照上注明的负责人或经营者。分支机构参加投标的，应提 供该分支机构或其所属法人/其他组织的相应证明文件；同时还应提供其 所属法人/其他组织出具的授权其参与本项目的授权书（格式自拟，须加 盖其所属法人/其他组织的公章）。",
+      "current_category": "other",
+      "classification": "ATOMIC_REVIEW",
+      "independent_obligation_count": 2,
+      "obligation_units": [
+        "分支机构参加投标的，应提供该分支机构或其所属法人/其他组织的相应证明文件",
+        "同时还应提供其所属法人/其他组织出具的授权其参与本项目的授权书（格式自拟，须加盖其所属法人/其他组织的公章）。"
+      ],
+      "confidence": "MEDIUM",
+      "mapping_risk": "MEDIUM",
+      "claim_risk": "LOW",
+      "writer_risk": "LOW"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-028",
+      "canonical_text": "关于投标计量单位，招标文件已有明确规定的，使用招标文件规定的计量单位；招标文件没有规定的，应采用中华人民共和国法定计量单位。",
+      "source_refs": [
+        "C006-S040",
+        "C006-S041",
+        "C006-S042",
+        "C006-S043",
+        "C006-S044",
+        "C006-S045"
+      ],
+      "source_text": "10.2 关于投标计量单位，招标文件已有明确规定的，使用招标文件 规定的计量单位；招标文件没有规定的，应采用中华人民共和国法定计量 ----------------------------------------------------- ---------------------------------------------------------- 采购代理机构：焦作市公共资源项目服务有限责任公司 项目编号：焦财招标采购-2025-50 11 单位。",
+      "current_category": "other",
+      "classification": "ATOMIC_REVIEW",
+      "independent_obligation_count": 1,
+      "obligation_units": [
+        "招标文件没有规定的，应采用中华人民共和国法定计量单位。"
+      ],
+      "confidence": "MEDIUM",
+      "mapping_risk": "MEDIUM",
+      "claim_risk": "LOW",
+      "writer_risk": "LOW"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-032",
+      "canonical_text": "投标人凭CA锁登录，并按网上提示自行下载招标文件。使用“新点投标文件制作软件”按要求制作电子投标文件。投标人在制作电子投标文件时，应按要求进行电子签章。投标人编辑电子投标文件时，根据招标文件要求用法定代表人CA锁和企业CA锁进行签章制作；最后一步生成电子投标文件时，只能用本单位的企业CA锁。联合体投标的，投标文件由联合体牵头人按上述规定进行签章。",
+      "source_refs": [
+        "C006-S060",
+        "C006-S061",
+        "C006-S062",
+        "C006-S063",
+        "C006-S064",
+        "C006-S065"
+      ],
+      "source_text": "12.3 投标人凭 CA 锁登录，并按网上提示自行下载招标文件。使用“新 点投标文件制作软件”按要求制作电子投标文件。投标人在制作电子投标 文件时，应按要求进行电子签章。投标人编辑电子投标文件时，根据招标 文件要求用法定代表人 CA 锁和企业 CA 锁进行签章制作；最后一步生成电 子投标文件时，只能用本单位的企业 CA 锁。联合体投标的，投标文件由 联合体牵头人按上述规定进行签章。",
+      "current_category": "other",
+      "classification": "ATOMIC_REVIEW",
+      "independent_obligation_count": 1,
+      "obligation_units": [
+        "投标人凭CA锁登录，并按网上提示自行下载招标文件。使用“新点投标文件制作软件”按要求制作电子投标文件。投标人在制作电子投标文件时，应按要求进行电子签章。投标人编辑电子投标文件时，根据招标文件要求用法定代表人CA锁和企业CA锁进行签章制作"
+      ],
+      "confidence": "MEDIUM",
+      "mapping_risk": "MEDIUM",
+      "claim_risk": "LOW",
+      "writer_risk": "LOW"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-034",
+      "canonical_text": "投标文件所附证明材料均为原件的扫描件（或照片），尺寸和清晰度应能够在电脑上被阅读、识别和判断；若投标人未按要求提供证明材料，将不予通过。",
+      "source_refs": [
+        "C007-S007",
+        "C007-S008",
+        "C007-S009"
+      ],
+      "source_text": "12.5 投标文件所附证明材料均为原件的扫描件（或照片），尺寸和 清晰度应该能够在电脑上被阅读、识别和判断；若投标人未按要求提供证 予通过。",
+      "current_category": "delivery",
+      "classification": "ATOMIC_REVIEW",
+      "independent_obligation_count": 2,
+      "obligation_units": [
+        "投标文件所附证明材料均为原件的扫描件（或照片），尺寸和清晰度应能够在电脑上被阅读、识别和判断",
+        "若投标人未按要求提供证明材料，将不予通过。"
+      ],
+      "confidence": "MEDIUM",
+      "mapping_risk": "MEDIUM",
+      "claim_risk": "LOW",
+      "writer_risk": "LOW"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-037",
+      "canonical_text": "开标一览表中标明的价格在政府采购合同执行过程中是固定不变的，投标人不得以任何理由予以变更；以可调整的价格提交的投标将被作为无效投标处理。",
+      "source_refs": [
+        "C007-S016",
+        "C007-S017",
+        "C007-S018"
+      ],
+      "source_text": "13.4 开标一览表中标明的价格在政府采购合同执行过程中是固定不 变的，投标人不得以任何理由予以变更。以可调整的价格提交的投标将被 作为无效投标处理。",
+      "current_category": "delivery",
+      "classification": "ATOMIC_REVIEW",
+      "independent_obligation_count": 1,
+      "obligation_units": [
+        "以可调整的价格提交的投标将被作为无效投标处理。"
+      ],
+      "confidence": "MEDIUM",
+      "mapping_risk": "MEDIUM",
+      "claim_risk": "LOW",
+      "writer_risk": "LOW"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-041",
+      "canonical_text": "投标有效期从提交投标文件截止之日起有效期为90日，投标文件有效期短于规定期限的，作为无效投标处理；中标人的投标文件有效期至合同完全履行止。",
+      "source_refs": [
+        "C007-S058",
+        "C007-S059",
+        "C007-S060",
+        "C007-S061"
+      ],
+      "source_text": "14.投标有效期 14.1 从提交投标文件截止之日起有效期为 90 日，投标文件有效期短 于规定期限的，作为无效投标处理。中标人的投标文件有效期至合同完全 履行止。",
+      "current_category": "delivery",
+      "classification": "ATOMIC_REVIEW",
+      "independent_obligation_count": 1,
+      "obligation_units": [
+        "投标有效期从提交投标文件截止之日起有效期为90日，投标文件有效期短于规定期限的，作为无效投标处理"
+      ],
+      "confidence": "MEDIUM",
+      "mapping_risk": "MEDIUM",
+      "claim_risk": "LOW",
+      "writer_risk": "LOW"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-043",
+      "canonical_text": "投标文件未按要求签字或加盖公章的视为无效文件；招标文件所表述（指定）的公章是指法人（投标人）行政公章，不包括专用章。",
+      "source_refs": [
+        "C008-S007",
+        "C008-S008",
+        "C008-S009",
+        "C008-S010",
+        "C008-S011"
+      ],
+      "source_text": "15.2 投标文件未按要求签字或加盖公章的视为无效文件。本招标文 ----------------------------------------------------- ---------------------------------------------------------- 采购代理机构：焦作市公共资源项目服务有限责任公司 项目编号：焦财招标采购-2025-50 15 件所表述（指定）的公章是指法人（投标人）行政公章，不包括专用章。",
+      "current_category": "other",
+      "classification": "ATOMIC_REVIEW",
+      "independent_obligation_count": 1,
+      "obligation_units": [],
+      "confidence": "MEDIUM",
+      "mapping_risk": "MEDIUM",
+      "claim_risk": "LOW",
+      "writer_risk": "LOW"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-044",
+      "canonical_text": "投标文件应无涂改和行间插字，除非这些改动是为改正投标人造成的必须修改的错误进行的；有改动时，修改处应由投标人法定代表人签署证明或加盖公章，但非投标人出具的材料，投标人改动无效。",
+      "source_refs": [
+        "C008-S012",
+        "C008-S013",
+        "C008-S014"
+      ],
+      "source_text": "15.3 投标文件应无涂改和行间插字，除非这些改动是为改正投标人 造成的必须修改的错误进行的。有改动时，修改处应由投标人法定代表人 签署证明或加盖公章，但非投标人出具的材料，投标人改动无效。",
+      "current_category": "other",
+      "classification": "ATOMIC_REVIEW",
+      "independent_obligation_count": 2,
+      "obligation_units": [
+        "投标文件应无涂改和行间插字，除非这些改动是为改正投标人造成的必须修改的错误进行的",
+        "有改动时，修改处应由投标人法定代表人签署证明或加盖公章，但非投标人出具的材料，投标人改动无效。"
+      ],
+      "confidence": "MEDIUM",
+      "mapping_risk": "MEDIUM",
+      "claim_risk": "LOW",
+      "writer_risk": "LOW"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-046",
+      "canonical_text": "加密电子投标文件须在投标截止时间前通过“焦作市公共资源交易中心（https://ggzy.jiaozuo.gov.cn/）”网站-交易平台加密上传；除电子投标文件外，投标时不再接受任何纸质文件、资料等。",
+      "source_refs": [
+        "C008-S020",
+        "C008-S021",
+        "C008-S022",
+        "C008-S023"
+      ],
+      "source_text": "本项目为不见面开标，加密电子投标文件须在投标截止时间前通过 “焦作市公共资源交易中心（https://ggzy.jiaozuo.gov.cn/）”网站- 交易平台加密上传。除电子投标文件外，投标时不再接受任何纸质文件、 资料等。",
+      "current_category": "other",
+      "classification": "HIGH_CONFIDENCE_OVERMERGED",
+      "independent_obligation_count": 2,
+      "obligation_units": [
+        "加密电子投标文件须在投标截止时间前通过“焦作市公共资源交易中心（https://ggzy.jiaozuo.gov.cn/）”网站-交易平台加密上传"
+      ],
+      "confidence": "HIGH",
+      "mapping_risk": "HIGH",
+      "claim_risk": "HIGH",
+      "writer_risk": "MEDIUM"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-047",
+      "canonical_text": "投标人须通过交易中心（https://ggzy.jiaozuo.gov.cn/）网站-交易平台加密上传投标文件；由于对网上投标操作程序不熟悉或自身电脑、网络的原因导致不能在投标截止时间之前上传投标文件，由投标人自行负责；逾期上传或未按规定方式上传加密的电子投标文件，投标无效。",
+      "source_refs": [
+        "C008-S025",
+        "C008-S026",
+        "C008-S027",
+        "C008-S028"
+      ],
+      "source_text": "交易中心（https://ggzy.jiaozuo.gov.cn/）”网站-交易平台加密上传。 由于对网上投标操作程序不熟悉或自身电脑、网络的原因导致不能在投标 截止时间之前上传投标文件，由投标人自行负责。 达。逾期上传或未按规定方式上传加密的电子投标文件，投标无效。",
+      "current_category": "other",
+      "classification": "HIGH_CONFIDENCE_OVERMERGED",
+      "independent_obligation_count": 3,
+      "obligation_units": [
+        "投标人须通过交易中心（https://ggzy.jiaozuo.gov.cn/）网站-交易平台加密上传投标文件",
+        "由于对网上投标操作程序不熟悉或自身电脑、网络的原因导致不能在投标截止时间之前上传投标文件，由投标人自行负责",
+        "逾期上传或未按规定方式上传加密的电子投标文件，投标无效。"
+      ],
+      "confidence": "HIGH",
+      "mapping_risk": "HIGH",
+      "claim_risk": "HIGH",
+      "writer_risk": "MEDIUM"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-049",
+      "canonical_text": "本项目采用“远程不见面”的开标方式，投标人无需到焦作市公共资源交易中心现场参加开标会议，无需到达现场提交原件资料；投标人应当投标截止前，登录不见面开标大厅系统，在线准时参加开标活动并进行文件解密、答疑澄清等；在规定时间内投标文件未解密的投标人，视为放弃投标。",
+      "source_refs": [
+        "C008-S038",
+        "C008-S039",
+        "C008-S040",
+        "C008-S041",
+        "C008-S042",
+        "C008-S043",
+        "C008-S044"
+      ],
+      "source_text": "19.1 招标人在招标文件中规定的时间和地点开标。本 项 目 采 用 “ 远程不见面”的开标方式,载明不见面开标大厅网址 （https://ggzy.jiaozuo.gov.cn/BidOpeningHall/bidhall/default/lo gin）投标人无需到焦作市公共资源交易中心现场参加开标会议，无需到 达现场提交原件资料。投标人应当投标截止前，登录不见面开标大厅系统， 在线准时参加开标活动并进行文件解密、答疑澄清等。在规定时间内投标 文件未解密的投标人，视为放弃投标。",
+      "current_category": "other",
+      "classification": "HIGH_CONFIDENCE_OVERMERGED",
+      "independent_obligation_count": 2,
+      "obligation_units": [
+        "本项目采用“远程不见面”的开标方式，投标人无需到焦作市公共资源交易中心现场参加开标会议，无需到达现场提交原件资料",
+        "投标人应当投标截止前，登录不见面开标大厅系统，在线准时参加开标活动并进行文件解密、答疑澄清等"
+      ],
+      "confidence": "HIGH",
+      "mapping_risk": "HIGH",
+      "claim_risk": "HIGH",
+      "writer_risk": "MEDIUM"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-064",
+      "canonical_text": "投标人或投标人所投产品厂商需具有大用户并发的相关技术支撑能力，在并发性能测试上模拟200个及以上用户同时登录系统，能够100%通过；须提供含CMA标识或CNAS标识的第三方检测机构出具的有效检测报告复印件并加盖公章作为佐证材料，报告出具日期需在本次招标开标前。",
+      "source_refs": [
+        "C013-S001",
+        "C013-S002",
+        "C013-S003",
+        "C013-S004",
+        "C013-S005",
+        "C013-S006",
+        "C013-S007",
+        "C013-S008"
+      ],
+      "source_text": "3、为满足系统需要承受大量用户同时并发压力的要求，投标人或投 标人所投产品厂商需具有大用户并发的相关的技术支撑能力。在并 发性能测试上模拟 200 个及以上用户同时登录系统，能够 100%通过 的得 3 分,模拟 150（含）～200 个用户同时登录系统，能够 100%通 过的得 2 分，模拟 100（含）～150 个用户同时登录系统，能够 100% 通过的得 1 分，不提供不得分。（须提供含 CMA 标识或 CNAS 标识的 第三方检测机构出具的有效检测报告复印件并加盖公章作为佐证材 料，未提供不得分。报告出具日期需在本次招标开标前）",
+      "current_category": "performance",
+      "classification": "HIGH_CONFIDENCE_OVERMERGED",
+      "independent_obligation_count": 2,
+      "obligation_units": [
+        "投标人或投标人所投产品厂商需具有大用户并发的相关技术支撑能力，在并发性能测试上模拟200个及以上用户同时登录系统，能够100%通过",
+        "须提供含CMA标识或CNAS标识的第三方检测机构出具的有效检测报告复印件并加盖公章作为佐证材料，报告出具日期需在本次招标开标前。"
+      ],
+      "confidence": "HIGH",
+      "mapping_risk": "HIGH",
+      "claim_risk": "HIGH",
+      "writer_risk": "MEDIUM"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-067",
+      "canonical_text": "投标人或投标人所投产品厂商所提供的焦作市“四电”平台项目相关应用需具备较强的成熟性和稳定性，须提供包含基于电子证照的“码上办”或“数字身份空间”或“电子材料”或“码上办场景集成”等类似产品相关著作权证书，每提供一项得2分，不提供不得分，满分8分；须提供获得的相关软件著作权登记证书并加盖公章作为佐证材料，同一类著作权证书不重复得分。",
+      "source_refs": [
+        "C013-S020",
+        "C013-S021",
+        "C013-S022",
+        "C013-S023",
+        "C013-S024",
+        "C013-S025",
+        "C013-S026",
+        "C013-S027",
+        "C013-S028",
+        "C013-S029"
+      ],
+      "source_text": "为保证系统的运行质量，需要投标人或投标人所投产品厂商提供的 焦作市“四电”平台项目应用具有一定的产品成熟度，基于运行数 据进行如下考核： 由于本项目涉及部门多，涉及事项和流程复杂，投标人或投标人所 投产品厂商所提供的焦作市“四电”平台项目相关应用需具备较强 的成熟性和稳定性，须提供包含基于电子证照的“码上办”或“数 字身份空间”或“电子材料”或“码上办场景集成”等类似产品相 关著作权证书，每提供一项得 2 分，不提供不得分，满分 8 分。（须 提供获得的相关软件著作权登记证书并加盖公章作为佐证材料，未 提供不得分，同一类著作权证书不重复得分）",
+      "current_category": "technical",
+      "classification": "HIGH_CONFIDENCE_OVERMERGED",
+      "independent_obligation_count": 3,
+      "obligation_units": [
+        "投标人或投标人所投产品厂商所提供的焦作市“四电”平台项目相关应用需具备较强的成熟性和稳定性，须提供包含基于电子证照的“码上办”或“数字身份空间”或“电子材料”或“码上办场景集成”等类似产品相关著作权证书，每提供一项得2分，不提供不得分，满分8分",
+        "须提供获得的相关软件著作权登记证书并加盖公章作为佐证材料，同一类著作权证书不重复得分。"
+      ],
+      "confidence": "HIGH",
+      "mapping_risk": "HIGH",
+      "claim_risk": "HIGH",
+      "writer_risk": "MEDIUM"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-068",
+      "canonical_text": "投标人或投标人所投产品厂商拟派项目负责人同时具有信息系统项目管理师(高级)、注册信息安全工程师（CISE）、IT服务项目经理（ITSS）认证的，每提供一项得1分，满分3分；须提供相关证明材料复印件和近三个月社保证明文件，并加盖投标人或投标人所投产品厂商公章。",
+      "source_refs": [
+        "C013-S039",
+        "C013-S040",
+        "C013-S041",
+        "C013-S042",
+        "C013-S043"
+      ],
+      "source_text": "1、投标人或投标人所投产品厂商拟派项目负责人同时具有信息系统 项目管理师(高级)、注册信息安全工程师（CISE）、IT 服务项目经 理（ITSS）认证的，每提供一项得 1 分，满分 3 分。（须提供相关 证明材料复印件和近三个月社保证明文件，并加盖投标人或投标人 所投产品厂商公章，未提供符合要求的证明材料不得分）",
+      "current_category": "technical",
+      "classification": "HIGH_CONFIDENCE_OVERMERGED",
+      "independent_obligation_count": 4,
+      "obligation_units": [
+        "投标人或投标人所投产品厂商拟派项目负责人同时具有信息系统项目管理师(高级)、注册信息安全工程师（CISE）、IT服务项目经理（ITSS）认证的，每提供一项得1分，满分3分",
+        "须提供相关证明材料复印件和近三个月社保证明文件，并加盖投标人或投标人所投产品厂商公章。"
+      ],
+      "confidence": "HIGH",
+      "mapping_risk": "HIGH",
+      "claim_risk": "HIGH",
+      "writer_risk": "MEDIUM"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-069",
+      "canonical_text": "投标人或投标人所投产品厂商拟派技术负责人（除项目负责人外）具有系统分析师、国产数据库认证证书，每提供一项得1分，满分2分；须提供相关证明材料复印件和近三个月社保证明文件，并加盖投标人或投标人所投产品厂商公章。",
+      "source_refs": [
+        "C013-S044",
+        "C013-S045",
+        "C013-S046",
+        "C013-S047",
+        "C013-S048",
+        "C013-S049",
+        "C013-S050",
+        "C013-S051"
+      ],
+      "source_text": "2、投标人或投标人所投产品厂商拟派技术负责人（除项目负责人外） 具有系统分析师、国产数据库认证证书，每提供一项得 1 分，满分 2 分。（须提供相关证明材料复印件和近三个月社保证明文件，并加 ----------------------------------------------------- ---------------------------------------------------------- 采购代理机构：焦作市公共资源项目服务有限责任公司 项目编号：焦财招标采购-2025-50 27 盖投标人或投标人所投产品厂商公章，未提供符合要求的证明材料 不得分）",
+      "current_category": "technical",
+      "classification": "HIGH_CONFIDENCE_OVERMERGED",
+      "independent_obligation_count": 4,
+      "obligation_units": [
+        "投标人或投标人所投产品厂商拟派技术负责人（除项目负责人外）具有系统分析师、国产数据库认证证书，每提供一项得1分，满分2分",
+        "须提供相关证明材料复印件和近三个月社保证明文件，并加盖投标人或投标人所投产品厂商公章。"
+      ],
+      "confidence": "HIGH",
+      "mapping_risk": "HIGH",
+      "claim_risk": "HIGH",
+      "writer_risk": "MEDIUM"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-070",
+      "canonical_text": "投标人或投标人所投产品厂商拟派项目团队中（除项目负责人、技术负责人外）包含系统架构设计师、信息系统项目管理师(高级)、高级UI设计师、高级软件技术开发工程师的技术人员，每提供一项得1分，满分4分；须提供人员证书复印件以及近三个月社保证明文件。",
+      "source_refs": [
+        "C013-S052",
+        "C013-S053",
+        "C013-S054",
+        "C013-S055",
+        "C013-S056"
+      ],
+      "source_text": "3、投标人或投标人所投产品厂商拟派项目团队中（除项目负责人、 技术负责人外）包含系统架构设计师、信息系统项目管理师(高级)、 高级 UI 设计师、高级软件技术开发工程师的技术人员，每提供一项 得 1 分，满分 4 分。（须提供人员证书复印件以及近三个月社保证 企业实",
+      "current_category": "technical",
+      "classification": "HIGH_CONFIDENCE_OVERMERGED",
+      "independent_obligation_count": 3,
+      "obligation_units": [
+        "投标人或投标人所投产品厂商拟派项目团队中（除项目负责人、技术负责人外）包含系统架构设计师、信息系统项目管理师(高级)、高级UI设计师、高级软件技术开发工程师的技术人员，每提供一项得1分，满分4分",
+        "须提供人员证书复印件以及近三个月社保证明文件。"
+      ],
+      "confidence": "HIGH",
+      "mapping_risk": "HIGH",
+      "claim_risk": "HIGH",
+      "writer_risk": "MEDIUM"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-071",
+      "canonical_text": "投标人或投标人所投产品厂商获得ISO9001质量管理体系认证证书、ISO14001环境管理体系认证证书、ISO45001职业健康安全管理体系认证证书、ISO/IEC27001信息安全管理体系认证证书，每提供一项得0.5分，满分2分；须提供证明材料复印件并加盖投标人或投标人所投产品厂商公章。",
+      "source_refs": [
+        "C013-S059",
+        "C013-S060",
+        "C013-S061",
+        "C013-S062",
+        "C013-S063"
+      ],
+      "source_text": "1、投标人或投标人所投产品厂商获得 ISO9001 质量管理体系认证证 书、ISO14001 环境管理体系认证证书、ISO45001 职业健康安全管理 体系认证证书、ISO/IEC27001 信息安全管理体系认证证书，每提供 一项得 0.5 分，满分 2 分。（须提供证明材料复印件并加盖章投标 人或投标人所投产品厂商公章，未提供证明材料不得分）",
+      "current_category": "technical",
+      "classification": "HIGH_CONFIDENCE_OVERMERGED",
+      "independent_obligation_count": 3,
+      "obligation_units": [
+        "投标人或投标人所投产品厂商获得ISO9001质量管理体系认证证书、ISO14001环境管理体系认证证书、ISO45001职业健康安全管理体系认证证书、ISO/IEC27001信息安全管理体系认证证书，每提供一项得",
+        "须提供证明材料复印件并加盖投标人或投标人所投产品厂商公章。"
+      ],
+      "confidence": "HIGH",
+      "mapping_risk": "HIGH",
+      "claim_risk": "HIGH",
+      "writer_risk": "MEDIUM"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-073",
+      "canonical_text": "投标人或投标人所投产品厂商具有信息系统安全运维、信息系统安全集成、软件安全开发方面的信息安全服务资质认证证书（CCRC），且符合一级服务资质要求的，每提供一项得1分，满分3分；须提供证明材料复印件并加盖投标人或所投产品厂商公章。",
+      "source_refs": [
+        "C013-S066",
+        "C013-S067",
+        "C013-S068",
+        "C013-S069",
+        "C013-S070"
+      ],
+      "source_text": "3、投标人或投标人所投产品厂商具有信息系统安全运维、信息系统 安全集成、软件安全开发方面的信息安全服务资质认证证书（CCRC）， 且符合一级服务资质要求的每提供一项得 1 分，满分 3 分。(须提供 证明材料复印件并加盖章投标人或所投产品厂商公章，未提供证明 材料不得分）",
+      "current_category": "security",
+      "classification": "HIGH_CONFIDENCE_OVERMERGED",
+      "independent_obligation_count": 5,
+      "obligation_units": [
+        "投标人或投标人所投产品厂商具有信息系统安全运维、信息系统安全集成、软件安全开发方面的信息安全服务资质认证证书（CCRC），且符合一级服务资质要求的，每提供一项得1分，满分3分",
+        "须提供证明材料复印件并加盖投标人或所投产品厂商公章。"
+      ],
+      "confidence": "HIGH",
+      "mapping_risk": "HIGH",
+      "claim_risk": "HIGH",
+      "writer_risk": "MEDIUM"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-074",
+      "canonical_text": "自2020年1月1日以来投标人或投标人所投产品厂商承担过的类似项目业绩（类似项目指合同中至少包含“电子证照”或“电子材料”或“电子印章”类似内容），每提供一项得3分，最多得9分；以采购合同文本为准，业绩以合同签订日期为准，投标文件中附合同扫描件。",
+      "source_refs": [
+        "C013-S074",
+        "C013-S075",
+        "C013-S076",
+        "C013-S077",
+        "C013-S078"
+      ],
+      "source_text": "1、自 2020 年 1 月 1 日以来投标人或投标人所投产品厂商承担过的 类似项目的业绩（类似项目指合同中至少包含“电子证照”或“电 子材料”或“电子印章”类似内容），每提供一项得３分，最多得 ９分（以采购合同文本为准。业绩以合同签订日期为准，投标文件 中附合同扫描件，否则不得分）",
+      "current_category": "technical",
+      "classification": "HIGH_CONFIDENCE_OVERMERGED",
+      "independent_obligation_count": 2,
+      "obligation_units": [
+        "自2020年1月1日以来投标人或投标人所投产品厂商承担过的类似项目业绩（类似项目指合同中至少包含“电子证照”或“电子材料”或“电子印章”类似内容），每提供一项得3分，最多得9分",
+        "以采购合同文本为准，业绩以合同签订日期为准，投标文件中附合同扫描件。"
+      ],
+      "confidence": "HIGH",
+      "mapping_risk": "HIGH",
+      "claim_risk": "HIGH",
+      "writer_risk": "MEDIUM"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-078",
+      "canonical_text": "鼓励招标人、中标人在发出中标通知书1个工作日内，根据招标文件确定的事项和中标人的投标文件签订书面合同；双方所签订的合同不得对招标文件和中标人的投标文件实质性修改。",
+      "source_refs": [
+        "C014-S038",
+        "C014-S039",
+        "C014-S040"
+      ],
+      "source_text": "29.1 鼓励招标人、中标人在发出中标通知书 1 个工作日，根据招标 文件确定的事项和中标人的投标文件签订书面合同。双方所签订的合同不 得对招标文件和中标人的投标文件实质性修改。",
+      "current_category": "delivery",
+      "classification": "ATOMIC_REVIEW",
+      "independent_obligation_count": 2,
+      "obligation_units": [
+        "鼓励招标人、中标人在发出中标通知书1个工作日内，根据招标文件确定的事项和中标人的投标文件签订书面合同",
+        "双方所签订的合同不得对招标文件和中标人的投标文件实质性修改。"
+      ],
+      "confidence": "MEDIUM",
+      "mapping_risk": "MEDIUM",
+      "claim_risk": "LOW",
+      "writer_risk": "LOW"
+    }
+  ]
+}

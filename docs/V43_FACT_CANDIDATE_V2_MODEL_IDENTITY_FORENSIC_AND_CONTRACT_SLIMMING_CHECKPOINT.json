@@ -1,0 +1,74 @@
+{
+  "checkpoint": "V43_FACT_CANDIDATE_V2_MODEL_IDENTITY_FORENSIC_AND_CONTRACT_SLIMMING_GATE",
+  "recorded_at": "2026-09-08",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "model_identity": {
+    "root_classification": "OTHER_EXACT_CAUSE",
+    "configured_model": "deepseek-v4-pro",
+    "resolved_task_model": "deepseek-v4-pro",
+    "dry_request_body_model": "deepseek-v4-pro",
+    "response_reported_model": "NOT_OBSERVABLE_FOR_HISTORICAL_FAILURES",
+    "historical_success_log_model": "deepseek-v4-flash",
+    "logged_model_field_source": "routed.provider_audit.model",
+    "evidence": [
+      "Current runtime config, task mapping, provider adapter, and dry request builder resolve deepseek-v4-pro.",
+      "Current source contains no deepseek-v4-flash fallback or alias for the official Fact route.",
+      "Historical CCV2 success telemetry reports deepseek-v4-flash, but no matching raw request/response model evidence is retained; stale runtime, logging attribution, or provider substitution cannot be distinguished safely."
+    ],
+    "live_identity_blocker": "HISTORICAL_PROVIDER_MODEL_CONFLICT_UNRESOLVED"
+  },
+  "contract_versions": {
+    "old_candidate_schema_version": "4.3-evidence-fact-candidate-v2",
+    "new_candidate_schema_version": "4.3-evidence-fact-candidate-v2.1",
+    "old_schema_sha": "9b40ac9be7d5a262e39d1a142bb5165ba113e213cfa9f56b7888ae241693f834",
+    "new_schema_sha": "3dcece82464fcbd0351fe4444cc66994d36e40ca6ca97a3f2d0ba01e5e44f0b3",
+    "old_candidate_schema_sha": "c2c13693bc44ef0ed9c4198aa939db4e6fe37530eddd597a613fa0fff16a03f0",
+    "new_candidate_schema_sha": "8c9bb1631d6ab70ff1b935a13e1c2033ee4fce32a6fb5a5ed85d2baa2c48e687",
+    "old_prompt_version": "4.3-evidence-fact-candidate-v2-prompt-v1",
+    "new_prompt_version": "4.3-evidence-fact-candidate-v2-prompt-v2",
+    "old_prompt_sha": "958f06d4eb3bf07379cffd77bff1ced76e5f778ae6e2967b9c65967ca616591e",
+    "new_prompt_sha": "ba1ab6d2a298176ee27528b0e3d1bfe71f373fa99bb82c06cda780ba4272d642",
+    "source_text_removed_from_model_contract": true,
+    "model_facing_max_nesting": 6,
+    "optional_property_count": 0,
+    "union_count": 0
+  },
+  "runtime": {
+    "reload": "PASS",
+    "ready": "PASS",
+    "task_registry_loaded": true,
+    "v21_task_registered": true,
+    "v21_resolved_provider": "deepseek_official",
+    "v21_configured_model": "deepseek-v4-pro",
+    "v21_dry_requested_model": "deepseek-v4-pro",
+    "endpoint": "/responses",
+    "thinking": "disabled",
+    "running_build_revision": "f509514",
+    "fact_provider_configured": true
+  },
+  "offline_tests": {
+    "focused": "75/75 PASS",
+    "provider_calls": 0,
+    "network": "NOT_USED"
+  },
+  "live_canary": {
+    "run_id": null,
+    "planned_executions": 4,
+    "completed_executions": 0,
+    "total_provider_calls": 0,
+    "status": "BLOCKED_MODEL_IDENTITY_CONFLICT",
+    "reason": "Historical deepseek-v4-flash success-log evidence conflicts with the configured/requested deepseek-v4-pro identity and cannot be resolved without a same-execution request/response record."
+  },
+  "side_effects": {
+    "production_db_writes": 0,
+    "fact_persistence": 0,
+    "gold_mutations": 0,
+    "mapping_actions": 0,
+    "claim_actions": 0,
+    "writer_actions": 0,
+    "prompt_or_schema_legacy_contract_changed": false,
+    "production_default_cutover": false
+  },
+  "status": "CONTRACT_SLIMMING_OFFLINE_PASS_LIVE_IDENTITY_BLOCKED"
+}

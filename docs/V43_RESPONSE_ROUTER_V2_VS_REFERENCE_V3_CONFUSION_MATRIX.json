@@ -1,0 +1,146 @@
+{
+  "artifact_type": "V43_RESPONSE_ROUTER_V2_VS_REFERENCE_V3_CONFUSION_MATRIX",
+  "artifact_version": "v3-replay",
+  "run_id": "V43-RR-V2-V3-REPLAY-1f606f817ef33ec0",
+  "reference_v3_sha256": "3c7f151678c8c99aee25ab995d438496b4a0e5fc661386b70204f3be72e2e744",
+  "router_sha256": "c2e787e361dd6e2a4e8c27b5f1def49821d4f869b46c4074c66229abb9bbefaa",
+  "case_count": 2178,
+  "primary_response_mode": {
+    "agreement_count": 1597,
+    "agreement_rate": 0.733242,
+    "per_mode_precision_recall": {
+      "SOLUTION": {
+        "true_positive": 85,
+        "false_positive": 184,
+        "false_negative": 115,
+        "precision": 0.315985,
+        "recall": 0.425
+      },
+      "EVIDENCE": {
+        "true_positive": 793,
+        "false_positive": 164,
+        "false_negative": 164,
+        "precision": 0.828631,
+        "recall": 0.828631
+      },
+      "COMMITMENT": {
+        "true_positive": 335,
+        "false_positive": 146,
+        "false_negative": 169,
+        "precision": 0.696466,
+        "recall": 0.664683
+      },
+      "COMPLIANCE": {
+        "true_positive": 384,
+        "false_positive": 87,
+        "false_negative": 130,
+        "precision": 0.815287,
+        "recall": 0.747082
+      },
+      "NEED_REVIEW": {
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 3,
+        "precision": 0,
+        "recall": 0
+      }
+    },
+    "confusion_matrix": {
+      "SOLUTION": {
+        "SOLUTION": 85,
+        "EVIDENCE": 73,
+        "COMMITMENT": 55,
+        "COMPLIANCE": 55,
+        "NEED_REVIEW": 1
+      },
+      "EVIDENCE": {
+        "SOLUTION": 67,
+        "EVIDENCE": 793,
+        "COMMITMENT": 73,
+        "COMPLIANCE": 23,
+        "NEED_REVIEW": 1
+      },
+      "COMMITMENT": {
+        "SOLUTION": 38,
+        "EVIDENCE": 55,
+        "COMMITMENT": 335,
+        "COMPLIANCE": 52,
+        "NEED_REVIEW": 1
+      },
+      "COMPLIANCE": {
+        "SOLUTION": 10,
+        "EVIDENCE": 36,
+        "COMMITMENT": 41,
+        "COMPLIANCE": 384,
+        "NEED_REVIEW": 0
+      },
+      "NEED_REVIEW": {
+        "SOLUTION": 0,
+        "EVIDENCE": 0,
+        "COMMITMENT": 0,
+        "COMPLIANCE": 0,
+        "NEED_REVIEW": 0
+      }
+    }
+  },
+  "risk_tier": {
+    "labels": [
+      "LOW",
+      "MEDIUM",
+      "HIGH",
+      "P0"
+    ],
+    "matrix_router_rows_reference_columns": {
+      "LOW": {
+        "LOW": 13,
+        "MEDIUM": 124,
+        "HIGH": 119,
+        "P0": 9
+      },
+      "MEDIUM": {
+        "LOW": 31,
+        "MEDIUM": 336,
+        "HIGH": 678,
+        "P0": 39
+      },
+      "HIGH": {
+        "LOW": 13,
+        "MEDIUM": 58,
+        "HIGH": 615,
+        "P0": 19
+      },
+      "P0": {
+        "LOW": 1,
+        "MEDIUM": 17,
+        "HIGH": 24,
+        "P0": 82
+      }
+    },
+    "agreement": {
+      "count": 1046,
+      "rate": 0.480257
+    }
+  },
+  "cross_cutting": {
+    "risk_tier": {
+      "count": 1046,
+      "rate": 0.480257
+    },
+    "response_required": {
+      "count": 2005,
+      "rate": 0.920569
+    },
+    "evidence_dependency": {
+      "count": 1707,
+      "rate": 0.783747
+    },
+    "human_required": {
+      "count": 1597,
+      "rate": 0.733242
+    },
+    "scoring_related": {
+      "count": 2148,
+      "rate": 0.986226
+    }
+  }
+}

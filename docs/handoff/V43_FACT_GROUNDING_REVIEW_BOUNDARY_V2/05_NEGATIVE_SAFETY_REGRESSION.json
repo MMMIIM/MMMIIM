@@ -1,0 +1,85 @@
+{
+  "artifact_type": "V43_FACT_GROUNDING_REVIEW_BOUNDARY_V2_NEGATIVE_SAFETY_REGRESSION",
+  "candidate_17": {
+    "candidate_id": "MCH-CE770B545973FB9CF092951FCDC402B5#candidate-17",
+    "gpt_statement_supported": "NO",
+    "grounding_decision_after": "REVIEW_REQUIRED",
+    "accepted": false,
+    "pass": true
+  },
+  "mutations": [
+    {
+      "mutation": "unsupported_suffix",
+      "grounding_decision": "REVIEW_REQUIRED",
+      "grounding_reasons": [
+        "STATEMENT_SEMANTIC_GROUNDING_UNRESOLVED"
+      ],
+      "accepted": false,
+      "fail_closed": true
+    },
+    {
+      "mutation": "wrong_number",
+      "grounding_decision": "REJECT",
+      "grounding_reasons": [
+        "statement is not grounded",
+        "quantity.value is not grounded"
+      ],
+      "accepted": false,
+      "fail_closed": true
+    },
+    {
+      "mutation": "wrong_certificate",
+      "grounding_decision": "REVIEW_REQUIRED",
+      "grounding_reasons": [
+        "STATEMENT_SEMANTIC_GROUNDING_UNRESOLVED"
+      ],
+      "accepted": false,
+      "fail_closed": true
+    },
+    {
+      "mutation": "wrong_product",
+      "grounding_decision": "REJECT",
+      "grounding_reasons": [
+        "statement is not grounded",
+        "subject.name is not grounded",
+        "entity.name is not grounded"
+      ],
+      "accepted": false,
+      "fail_closed": true
+    },
+    {
+      "mutation": "wrong_enterprise",
+      "grounding_decision": "REJECT",
+      "grounding_reasons": [
+        "statement is not grounded",
+        "subject.name is not grounded",
+        "entity.name is not grounded"
+      ],
+      "accepted": false,
+      "fail_closed": true
+    },
+    {
+      "mutation": "negation_mutation",
+      "grounding_decision": "REJECT",
+      "grounding_reasons": [
+        "statement is not grounded",
+        "NEGATED_OR_LIMITED_SCOPE"
+      ],
+      "accepted": false,
+      "fail_closed": true
+    },
+    {
+      "mutation": "source_ref_mismatch",
+      "accepted": false,
+      "fail_closed": true,
+      "error": "unknown source alias S002 at statement.source_refs"
+    }
+  ],
+  "hard_contradiction_mutations": [
+    "wrong_number",
+    "wrong_product",
+    "wrong_enterprise",
+    "negation_mutation"
+  ],
+  "all_fail_closed": true
+}

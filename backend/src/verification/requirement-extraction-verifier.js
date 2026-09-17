@@ -10,11 +10,14 @@ import {
 import { SEMANTIC_GATEWAY_RUNTIME_ENV_NAMES } from '../../../packages/semantic-contracts/runtime-config.js';
 import {
   buildRequirementExtractionPayload,
+  assertRequirementExtractionProviderInputParity,
   createRequirementExtractionGateway,
+  resolveRequirementExtractionProviderInput,
   validateRequirementExtractionEnvelope
 } from '../pipeline/requirement-extraction.js';
 import { mapRequirementCandidateToCanonicalInput } from '../pipeline/requirement-chunker.js';
 import { SourceLocationResolver } from '../pipeline/source-location-resolver.js';
+import { validateCandidateSourceScope } from '../pipeline/requirement-scope-router.js';
 import {
   createSemanticGatewayClientFromEnv,
   parseSemanticGatewayConfig
@@ -61,6 +64,7 @@ export const REQUIREMENT_EXTRACTION_BLOCKERS = Object.freeze([
   'DIAGNOSTIC_INSUFFICIENT',
   'LIVE_CONFIRMATION_REQUIRED',
   'LIVE_PAYLOAD_REQUIRED',
+  'PRODUCTION_PARITY_VIOLATION',
   'BRANCH_DRIFT',
   'BRANCH_LINEAGE_DRIFT'
 ]);
@@ -570,6 +574,39 @@ export async function defaultLiveExecutor({ env, liveRequest, fetchImpl = fetch 
     });
   }
 
+  // A production-like verifier may carry the exact input it intends to send
+  // as provider_input_text.  Compare it with the production resolver before
+  // any worker is scheduled; drift is a hard stop and cannot reach Provider.
+  const parityMismatch = chunks.find((chunk) => {
+    if (!Object.hasOwn(chunk, 'provider_input_text')) return false;
+    try {
+      assertRequirementExtractionProviderInputParity({
+        chunk,
+        fallbackText: chunk.text,
+        actualInput: chunk.provider_input_text
+      });
+      return false;
+    } catch (error) {
+      return error?.code === 'PRODUCTION_PARITY_VIOLATION';
+    }
+  });
+  if (parityMismatch) {
+    return safeLiveResult({
+      executed: false,
+      verification_run_count: 0,
+      production_chunk_count: chunks.length,
+      expected_chunk_count: chunks.length,
+      provider_request_count: 0,
+      max_provider_request_count: chunks.length,
+      concurrency_limit: Math.min(2, chunks.length),
+      schema_pass: false,
+      source_resolution_pass: false,
+      backend_ingestion_pass: false,
+      technical_error_code: 'PRODUCTION_PARITY_VIOLATION',
+      final_probe_status: 'BLOCKED'
+    });
+  }
+
   const concurrencyLimit = Math.min(2, chunks.length);
   const chunkResults = new Array(chunks.length);
   let nextIndex = 0;
@@ -584,7 +621,10 @@ export async function defaultLiveExecutor({ env, liveRequest, fetchImpl = fetch 
       gatewayResult = await gateway.extract({
         ...liveRequest,
         chunk,
-        text: chunk.text,
+        text: resolveRequirementExtractionProviderInput({
+          chunk,
+          fallbackText: chunk.text
+        }),
         chunkCount: chunks.length,
         diagnosticMode: 'probe-v1'
       });
@@ -593,9 +633,11 @@ export async function defaultLiveExecutor({ env, liveRequest, fetchImpl = fetch 
       const diagnostics = gatewayResult.audit?.probe_diagnostics || null;
       // Resolve every Candidate against this exact production chunk window
       // before invoking the production Candidate → Canonical projection.
-      const resolutions = gatewayResult.candidates.map((candidate) => (
-        sourceLocationResolver.resolve(candidate, chunk)
-      ));
+      const resolutions = gatewayResult.candidates.map((candidate) => {
+        const resolution = sourceLocationResolver.resolve(candidate, chunk);
+        validateCandidateSourceScope(candidate, chunk);
+        return resolution;
+      });
       const mappedCandidates = mapValidatedCandidatesToCanonicalInput(gatewayResult.candidates, { resolutions });
       const providerChainVerified = diagnostics?.provider_adapter_invoked === true
         && diagnostics?.fetch_invoked === true

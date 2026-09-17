@@ -29,6 +29,26 @@ function isMetadataOnly(value) {
 }
 
 /**
+ * Writer references may retain source lineage for audit while excluding
+ * citation/index rows from the final context.  This is a content-shape
+ * predicate only; it does not decide authority, scope or relevance.
+ */
+export function isCitationIndexLike(value) {
+  const source = text(value);
+  if (!source) return false;
+  const valueLines = lines(source);
+  // URL query strings may contain '?' and should not turn a citation row into
+  // sentence punctuation.  Evaluate punctuation only after removing URLs.
+  const sourceWithoutUrls = source.replace(/https?:\/\/\S+/giu, '');
+  if (valueLines.length > 3 || /[。！？!?；;]/u.test(sourceWithoutUrls)) return false;
+  const hasReferenceMarker = /(?:https?:\/\/|(?:OFF|REF|SRC|DOC)[-_]?[A-Z]?\d{1,4}\b|来源(?:单位|组织)?|发布单位|发布日期|最后核验|有效期|文号|出处|状态\s*[:：`]|实施\s*[:：`])/iu.test(source);
+  const hasIndexSeparator = /(?:\|+|｜+|\s[-—]\s|\*\*[^*]+\*\*)/u.test(source);
+  const bareMetadataLine = /^(?:[-*•\s]*(?:https?:\/\/\S+|(?:来源(?:单位|组织)?|发布单位|发布日期|最后核验|有效期|文号|出处|状态|实施)\s*[:：].*))$/iu;
+  const allBareMetadata = valueLines.every((line) => bareMetadataLine.test(line));
+  return hasReferenceMarker && (hasIndexSeparator || allBareMetadata);
+}
+
+/**
  * Classifies a retrieved chunk without changing its text or similarity order.
  * Heading/metadata roles are intentionally retained for context recovery and
  * audit, but can be excluded from the formal evidence lane by the service.
@@ -73,15 +93,34 @@ export function isFormalEvidenceChunkEligible({ requirement = {}, candidate = {}
   return true;
 }
 
+/**
+ * Final Writer Reference content gate.  Authority, lifecycle and scope are
+ * owned by the retrieval query; this gate only prevents non-substantive
+ * presentation/index content from consuming Writer slots.
+ */
+export function isWriterReferenceContentEligible(candidate = {}) {
+  const annotated = candidate.chunk_role && candidate.substantive_candidate !== undefined
+    ? candidate
+    : applyRetrievalChunkRole(candidate);
+  if (!text(annotated.source_text ?? annotated.raw_original_text)) return false;
+  if (['HEADING', 'FRONT_MATTER', 'METADATA'].includes(annotated.chunk_role)) return false;
+  if (annotated.substantive_candidate !== true) return false;
+  if (isCitationIndexLike(annotated.source_text ?? annotated.raw_original_text)) return false;
+  return true;
+}
+
 export function applyRetrievalChunkRole(candidate = {}) {
   const classified = classifyRetrievalChunkRole(candidate);
   const role = classified.role;
+  const substantive = applySubstantiveCandidate(candidate);
+  const citationIndex = isCitationIndexLike(candidate.source_text ?? candidate.raw_original_text);
   return {
     ...candidate,
     chunk_role: role,
     chunk_role_version: classified.version,
     chunk_role_reason: classified.reason,
-    ...applySubstantiveCandidate(candidate),
+    ...substantive,
+    ...(citationIndex ? { substantive_candidate: false, substantive_class: 'NON_SUBSTANTIVE', substantive_reason: 'CITATION_INDEX' } : {}),
     substantive_version: RETRIEVAL_SUBSTANTIVE_VERSION,
     ...applyEvidenceSourceEligibility(candidate),
     evidence_source_version: RETRIEVAL_SOURCE_ELIGIBILITY_VERSION

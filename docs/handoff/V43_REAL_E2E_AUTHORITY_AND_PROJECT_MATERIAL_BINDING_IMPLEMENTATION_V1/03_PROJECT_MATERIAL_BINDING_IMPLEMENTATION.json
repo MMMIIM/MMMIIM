@@ -1,0 +1,14 @@
+{
+  "artifact_type": "V43_PROJECT_MATERIAL_BINDING_IMPLEMENTATION",
+  "canonical_table": "project_material_bindings",
+  "canonical_service": "backend/src/project-material-binding-service.js",
+  "canonical_repository": ["PgRepository.upsertProjectMaterialBinding", "PgRepository.removeProjectMaterialBinding", "PgRepository.listProjectMaterialBindings"],
+  "migration": "backend/migrations/052_requirement_scope_authority_and_project_material_bindings.sql",
+  "authorization_rule": "same-project material OR ACTIVE explicit binding, with the existing Material Authority Gate still required",
+  "cross_project_access": "ACTIVE binding only",
+  "removed_binding": "DENIED",
+  "material_cloning": 0,
+  "embedding_recompute": 0,
+  "retrieval_sql_entrypoints_updated": ["listChunksForRetrieval", "listWriterReferenceChunks", "searchWriterReferenceChunks", "prepareRetrievalCandidates", "getRetrievalRun", "getRetrievalEvidenceSource", "getEvidenceReviewCandidate"],
+  "production_db_writes": 0
+}

@@ -1,0 +1,45 @@
+{
+  "artifact_type": "V43_MATERIAL_SOURCE_ROLE_GATE_V1_NEGATIVE_AUTHORITY_REGRESSION",
+  "cases": [
+    {
+      "id": "ROLE-NEG-01",
+      "input": "company_profile",
+      "expected": "REFERENCE_ONLY",
+      "downstream": "Fact Provider not called; formal Evidence rejected"
+    },
+    {
+      "id": "ROLE-NEG-02",
+      "input": "technical_whitepaper",
+      "expected": "REFERENCE_ONLY",
+      "downstream": "Fact Provider not called; Mapping authority excluded"
+    },
+    {
+      "id": "ROLE-NEG-03",
+      "input": "technical_solution",
+      "expected": "REFERENCE_ONLY",
+      "downstream": "Claim Gate rejects Reference authority"
+    },
+    {
+      "id": "ROLE-NEG-04",
+      "input": "unknown-new-type",
+      "expected": "REFERENCE_ONLY",
+      "downstream": "unknown cannot upgrade authority"
+    },
+    {
+      "id": "ROLE-NEG-05",
+      "input": "project_case + synthetic marker",
+      "expected": "REFERENCE_ONLY",
+      "downstream": "synthetic cannot become Real Evidence"
+    },
+    {
+      "id": "ROLE-NEG-06",
+      "input": "quarantined lifecycle + evidence type",
+      "expected": "MATERIAL_SOURCE_NOT_AUTHORIZED",
+      "downstream": "quarantine remains forbidden regardless of role"
+    }
+  ],
+  "test_artifact": "backend/test/material-source-role-gate.test.js",
+  "provider_calls": 0,
+  "persistence_writes": 0,
+  "gold_mutations": 0
+}

@@ -1,0 +1,132 @@
+{
+  "checkpoint": "V43_RAG_FACT_PRODUCTION_READINESS_RECOVERY_CHECKPOINT",
+  "generated_at": "2026-09-07T10:13:21+08:00",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "decision": "V43_RAG_FACT_PRODUCTION_READINESS_RECOVERY_AND_COMPLETION",
+  "scope": "deterministic blocker remediation, offline validation and packet preparation; no live Provider execution",
+  "deterministic_remediation": {
+    "gateway_provider_status_separation": "IMPLEMENTED",
+    "telemetry_fields": [
+      "gateway_http_status",
+      "provider_http_status",
+      "provider_error_code",
+      "gateway_error_code",
+      "semantic_error_code",
+      "retry_attempt",
+      "retry_reason"
+    ],
+    "fact_eval_input_window": "first substantive source chunk is selected deterministically; heading-only chunks are rejected",
+    "production_semantic_contract_changed": false,
+    "provider_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0
+  },
+  "focused_validation": {
+    "fact_and_gateway_suite": { "tests": 97, "passed": 97, "failed": 0 },
+    "gateway_regression": { "tests": 23, "passed": 23, "failed": 0 },
+    "retrieval_expected_source_packet": {
+      "status": "READY_NOT_EXECUTED",
+      "cases": 24,
+      "requirement_blind": true,
+      "path": "docs/V43_RAG_RETRIEVAL_CURRENTNESS_24_EXPECTED_SOURCE_PACKET.json"
+    }
+  },
+  "historical_replay": {
+    "grounding_false_reject": "NOT_REPLAYED_INSUFFICIENT_HISTORICAL_SOURCE_RESPONSE",
+    "status_grounding_false_reject": "NOT_REPLAYED_INSUFFICIENT_HISTORICAL_SOURCE_RESPONSE",
+    "validator_changes": 0,
+    "reason": "The retained audit classifies five rows but does not retain the exact source/response pairs required for deterministic replay."
+  },
+  "u20_granularity": {
+    "status": "SUSPECTED_DUPLICATE_ACTIVE_NOT_RESOLVED",
+    "fact_count": 5,
+    "shared_source_span": true,
+    "semantic_duplicate_active_count": "NOT_DETERMINED",
+    "production_dedup_changes": 0
+  },
+  "historical_baseline": {
+    "materials": 92,
+    "chunks": 676,
+    "extraction_windows": 92,
+    "prior_provider_calls": 140,
+    "processed_materials": 1,
+    "failed_or_review_materials": 91,
+    "controlled_approved_facts": 5
+  },
+  "regression": {
+    "backend_unit": {
+      "tests": 1260,
+      "passed": 1246,
+      "failed": 14,
+      "classification": "PRE_EXISTING_UNRELATED_BASELINE",
+      "reasons": [
+        "cwd-sensitive missing eval fixture paths",
+        "pre-existing governance/document expectation drift",
+        "pre-existing source-role/fixture expectation mismatch"
+      ]
+    },
+    "frontend": { "tests": 51, "passed": 51, "failed": 0 },
+    "postgres": {
+      "tests": 61,
+      "passed": 0,
+      "failed": 61,
+      "classification": "ENVIRONMENTAL",
+      "topology": "host Node pg to Docker-published port",
+      "reason": "connection terminated unexpectedly before query; no test rows were created"
+    },
+    "retrieval_focused": {
+      "tests": 69,
+      "passed": 62,
+      "failed": 7,
+      "classification": "PRE_EXISTING_UNRELATED_BASELINE",
+      "reason": "retrieval-baseline.test.js references missing root eval/... fixtures"
+    },
+    "requirement_eval": {
+      "status": "PASS",
+      "schema_pass_rate": 1,
+      "recall": 1,
+      "precision": 1,
+      "source_verified_rate": 1
+    },
+    "build": "PASS",
+    "lint": "PASS",
+    "diff_check": "PASS"
+  },
+  "targeted_provider_run": {
+    "scope": [
+      "COM-01", "COM-06", "COM-07", "COM-08", "COM-12",
+      "CCV2-U09-02", "CCV2-U13-01", "CCV2-U17-01", "CCV2-U20-02",
+      "CCV2-U29-02", "CCV2-U30-02", "CCV2-U34-02"
+    ],
+    "status": "BLOCKED_WAITING_FOR_SCOPED_AUTHORIZATION",
+    "provider_calls": 0,
+    "call_cap": 30,
+    "concurrency": 2,
+    "reason": "The latest Decision requires explicit task-scoped external egress authorization; none was supplied in this continuation."
+  },
+  "retrieval_currentness": {
+    "status": "NOT_EXECUTED",
+    "expected_source_packet": "READY",
+    "provider_calls": 0,
+    "db_writes": 0,
+    "reason": "Currentness execution requires external embedding egress and isolated Eval DB execution."
+  },
+  "readiness": {
+    "rag_fact_production_readiness": "FAIL",
+    "resume_remaining_80": "NO",
+    "mapping_actions": 0,
+    "claim_actions": 0,
+    "writer_actions": 0,
+    "next_gate": "obtain explicit scoped egress authorization, run only the fixed 12-material targeted Fact set, then stop on first gate failure"
+  },
+  "safety": {
+    "provider_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "mapping_actions": 0,
+    "claim_actions": 0,
+    "writer_actions": 0,
+    "no_prompt_or_schema_fallback": true
+  }
+}

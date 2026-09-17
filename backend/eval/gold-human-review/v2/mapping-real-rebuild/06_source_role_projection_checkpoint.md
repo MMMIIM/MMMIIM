@@ -1,0 +1,34 @@
+# V43_MAPPING_REAL_GOLD_SOURCE_ROLE_PROJECTION_CHECKPOINT
+
+- generated_at: 2026-09-03T10:22:05.700Z
+- total_materials: 56
+- quarantined_count: 4
+- synthetic_enterprise_evidence_count: 16
+- reference_context_only_count: 34
+- real_enterprise_evidence_candidate_count: 0
+- unknown_review_required_count: 2
+- real_requirement_source_count: 221
+- real_requirement_tender_count: 1
+- real_requirement_domain_distribution: {"UNKNOWN":221}
+- real_requirement_category_distribution: {"context":6,"contractual":19,"technical":178,"implementation":9,"delivery":9}
+- real_enterprise_evidence_material_count: 0
+- real_enterprise_evidence_substantive_chunk_count: 0
+- source_role_render_parity_gate: PASS
+- requirement_render_parity_gate: PASS
+- enterprise_evidence_render_parity_gate: PASS
+- official_reference_authority_laundering_gate: PASS
+- synthetic_enterprise_laundering_gate: PASS
+- quarantined_source_leakage_gate: PASS
+- active_gold_changed: 0
+- production_files_changed: 0
+- db_writes: 0
+- provider_calls: 0
+- focused_tests: 40/40 PASS (8 source-role + 32 Gold governance)
+- backend_test_delta: 1170/1183 PASS; 13 pre-existing baseline failures; no new failures
+- frontend: NOT_APPLICABLE
+- build: PASS
+- lint: PASS
+- git_diff_check: PASS
+- unknown_review_artifact: 05_unknown_source_role_review.md
+- output_files: ["00_source_role_projection.json","00_source_role_projection.md","01_real_requirement_source_universe.json","01_real_requirement_source_universe.md","02_real_enterprise_evidence_source_universe.json","02_real_enterprise_evidence_source_universe.md","03_reference_context_inventory.md","04_synthetic_enterprise_evidence_inventory.md","05_unknown_source_role_review.md","06_source_role_projection_checkpoint.json","06_source_role_projection_checkpoint.md"]
+- final_verdict: MAPPING_REAL_GOLD_SOURCE_UNIVERSES_READY_FOR_GPT_REVIEW

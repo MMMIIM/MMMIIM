@@ -1,0 +1,72 @@
+{
+  "generated_at": "2026-09-16T17:31:38.432Z",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "dirty_worktree": true,
+  "authority": "SYNTHETIC_EVAL_ONLY",
+  "production_authority": "NONE",
+  "schema_version": "v43-runtime-ownership-map-v1",
+  "owners": [
+    {
+      "stage": "Canonical Requirement",
+      "code": "backend/src/canonical-requirements.js",
+      "status": "FORMAL_ACTIVE"
+    },
+    {
+      "stage": "Router",
+      "code": "backend/src/response-router-service.js",
+      "status": "FROZEN_ADVISORY_V2.2.3"
+    },
+    {
+      "stage": "EvidenceNeedProfile",
+      "code": "backend/src/evidence-need-profile-builder.js",
+      "status": "DETERMINISTIC_PROJECTION"
+    },
+    {
+      "stage": "Production Evidence Search",
+      "code": "backend/src/pipeline/enterprise-retrieval-service.js",
+      "status": "FORMAL_ACTIVE"
+    },
+    {
+      "stage": "Eval Evidence Search",
+      "code": "backend/src/evidence-search-orchestrator.js",
+      "status": "EVAL_ONLY_ADAPTER"
+    },
+    {
+      "stage": "Fact",
+      "code": "backend/src/evidence-source-fact-service.js",
+      "status": "FORMAL_ACTIVE"
+    },
+    {
+      "stage": "Fact resolution",
+      "code": "backend/src/canonical-fact-resolution-service.js",
+      "status": "BOUNDARY_ACTIVE"
+    },
+    {
+      "stage": "Support Assessment",
+      "code": "backend/src/pipeline/evidence-support-assessment-contract-v1.js",
+      "status": "FORMAL_TRANSIENT_ASSESSMENT"
+    },
+    {
+      "stage": "Mapping",
+      "code": "backend/src/requirement-evidence-fact-mapping-service.js",
+      "status": "FORMAL_ACTIVE"
+    },
+    {
+      "stage": "Claim Gate",
+      "code": "backend/src/pipeline/enterprise-claim-gate-v2.js",
+      "status": "FORMAL_ACTIVE_WITH_COMPATIBILITY_SURFACE"
+    },
+    {
+      "stage": "Safe Response Packet",
+      "code": "backend/src/pipeline/safe-response-packet-builder.js",
+      "status": "FORMAL_PROJECTION"
+    },
+    {
+      "stage": "Writer authorization/generation",
+      "code": "backend/src/writer-input-authorization-service.js",
+      "status": "FORMAL_ACTIVE"
+    }
+  ],
+  "duplicate_formal_owner_count": 0
+}

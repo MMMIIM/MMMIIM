@@ -1,0 +1,15 @@
+{
+  "phase": "01",
+  "baseline_fingerprint": "318d53c8a8785952d38a173dc086efd1d044c5871e288e305614e52e14a19641",
+  "confirmed_current": ["canonical fact service wired", "canonical mapping service wired", "writerV2 authorization path wired", "ambiguous evidence support fails closed"],
+  "historical_fixed": ["formal mutation authorization", "fact/mapping atomicity", "writer snapshot identity"],
+  "open": ["real Fact/Mapping producer certification", "legacy dual writable surfaces", "clean authoritative baseline"],
+  "conflicting": ["handoff says fact/mapping producers not established but current server wires both semantic seams"],
+  "unknown": ["real provider fidelity", "legacy flag-on deployment behavior"],
+  "risks": ["P0-BASELINE-001", "P1-PRODUCER-001", "P1-PRODUCER-002", "P1-LEGACY-001"],
+  "evidence_refs": ["backend/src/server.js", "backend/src/app.js", "backend/src/pipeline/semantic-gateway-task-registry.js", "backend/migrations/019_*.sql..051_*.sql"],
+  "fact_revisions": ["evidence_fact_extraction is registered and wired", "mapping semantic evaluator is wired but uncertified"],
+  "next_dependencies": ["02_LEGACY_REACHABILITY_CHECKPOINT"],
+  "gate": "HANDOFF_LOCAL_CODE_PARITY=PARTIAL",
+  "safe_to_continue": true
+}

@@ -1,0 +1,36 @@
+{
+  "run_id": "chengchuan-controlled-real-fact-1788679892690",
+  "generated_at": "2026-09-06T07:31:32.690Z",
+  "source_span_mismatch": 0,
+  "numeric_mismatch": 0,
+  "entity_mismatch": 0,
+  "status_validity_mismatch": 0,
+  "traceability_rate": null,
+  "fact_candidate_total": 0,
+  "fact_usable_total": 0,
+  "fact_review_required_total": 1,
+  "fact_rejected_total": 0,
+  "windows": [
+    {
+      "doc_id": "COM-01",
+      "material_id": null,
+      "candidate_count": 0,
+      "failure": {
+        "code": "23503",
+        "message": "Fact extraction failed.",
+        "status": null,
+        "details": {
+          "stage": null,
+          "cause_code": null,
+          "provider_http_status": null,
+          "retry_attempted": false,
+          "attempt_count": null,
+          "constraint": "enterprise_retrieval_results_chunk_id_fkey",
+          "table": "enterprise_retrieval_results",
+          "detail": "Key (chunk_id)=(MCH-9C5A7B5A391BB865E63EFFBFA0D651A0) is still referenced from table \"enterprise_retrieval_results\"."
+        }
+      },
+      "traceability": false
+    }
+  ]
+}

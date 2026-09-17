@@ -1,0 +1,64 @@
+{
+  "artifact_type": "V43_RUNTIME_AND_DATABASE_IDENTITY_CLOSURE_V1_CHECKPOINT",
+  "mode": "READ_ONLY_PLUS_AUTHORIZED_RUNTIME_ALIGNMENT",
+  "RUNNING_EXECUTOR_IDENTITY": "LOCAL_NODE_RUNNER_CURRENT_WORKTREE",
+  "RUNTIME_CODE_DRIFT": "NOT_CONFIRMED_FOR_CURRENT_EXECUTOR",
+  "ENV_PROPAGATION_DRIFT": "CONFIRMED_FOR_PRIOR_UNSET_HOST_DATABASE_URL",
+  "HOST_RUNNER": "backend/eval/real-e2e/run-requirement-retrieval-fact-canary.mjs directly executes local imported modules",
+  "ACTUAL_CODE_LOCATION": "current dirty worktree; backend/container source mounts match current hashes",
+  "HOST_ENV_DB": "NOT_SET_DURING_PRIOR_DIAGNOSTIC",
+  "RUNNER_ENV_DB": "bid_platform_flow_audit_test when explicit host DATABASE_URL is supplied",
+  "EXECUTOR_ENV_DB": "bid_platform in compose backend container",
+  "ACTUAL_CONNECTION_DB": "bid_platform_flow_audit_test",
+  "ACTUAL_RUNTIME_QUERY": "m.source_version",
+  "CURRENT_WORKTREE_QUERY": "m.source_version",
+  "SQLSTATE_42703": "NOT_REPRODUCED_IN_AUTHORIZED_PRE_PROVIDER_SMOKE",
+  "P0_04_RUNTIME_SCHEMA_QUERY_IDENTITY_UNVERIFIED": "CLOSED_FOR_CURRENT_CANARY_EXECUTOR",
+  "P0_01_WRONG_DATABASE_TARGET": "CLOSED_FOR_CURRENT_CANARY_EXECUTOR_WITH_EXPLICIT_ISOLATED_DATABASE_URL",
+  "TARGETED_FACT_REPLAY_READY": "NO",
+  "REMAINING_BLOCKERS": [
+    "P0-02 PRODUCTION_CANONICAL_REQUIREMENT_ABSENT_FOR_EXPECTED_CANARY_PROJECT",
+    "P0-03 REQUIREMENT_SCOPE_AUTHORITY_PERSISTENCE_UNAVAILABLE_IN_bid_platform",
+    "The expected canary project has zero canonical Requirement rows in the isolated database; the Eval-only selection packet is not canonical authority."
+  ],
+  "ROOT_CAUSE_CLASSIFICATION": [
+    {
+      "classification": "ENV_PROPAGATION_DRIFT",
+      "status": "CONFIRMED",
+      "evidence": "Absent host DATABASE_URL caused dotenv fallback to bid_platform; explicit isolated URL selected bid_platform_flow_audit_test."
+    },
+    {
+      "classification": "RUNTIME_CODE_DRIFT",
+      "status": "NOT_CONFIRMED_FOR_CURRENT_EXECUTOR",
+      "evidence": "Current runner, mounted backend source and mounted gateway source do not emit m.material_version; reported emitter remains unidentified."
+    },
+    {
+      "classification": "STALE_CONTAINER_IMAGE",
+      "status": "NOT_EVIDENCED",
+      "evidence": "Inspected backend and gateway source paths are bind-mounted from the current worktree."
+    },
+    {
+      "classification": "STALE_RUNNING_PROCESS",
+      "status": "NOT_EVIDENCED",
+      "evidence": "Running processes are backend-watch/server.js and semantic-gateway-watch/server.js; no material_version query found in inspected mounted source."
+    }
+  ],
+  "MINIMAL_RUNTIME_ALIGNMENT_PERFORMED": "Explicit isolated DATABASE_URL supplied to pre-provider smoke only; no repository/config file changed.",
+  "safety": {
+    "PROVIDER_CALLS": 0,
+    "LLM_CALLS": 0,
+    "PRODUCTION_DB_WRITES": 0,
+    "EVAL_DB_WRITES": 0,
+    "MIGRATIONS_EXECUTED": 0,
+    "CODE_MODIFIED": 0,
+    "CONFIG_MODIFIED": 0,
+    "REQUIREMENT_MUTATIONS": 0,
+    "FACT_PERSISTENCE": 0,
+    "MAPPING_ACTIONS": 0,
+    "CLAIM_ACTIONS": 0,
+    "WRITER_ACTIONS": 0,
+    "GOLD_MUTATIONS": 0
+  },
+  "final_verdict": "P0_01_AND_P0_04_CLOSED_FOR_CURRENT_CANARY_EXECUTOR; DOWNSTREAM_E2E_REMAINS_BLOCKED",
+  "stop": true
+}

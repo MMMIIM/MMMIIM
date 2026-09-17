@@ -1,0 +1,108 @@
+{
+  "artifact_type": "V43_REQUIREMENT_CRITICAL_CONSEQUENCE_DELTA_GPT_PACKET",
+  "eval_only": true,
+  "expected_labels": "NOT_INCLUDED",
+  "codex_verdict": "NOT_INCLUDED",
+  "recommended_gold": "NOT_INCLUDED",
+  "provider_calls": 0,
+  "cases": [
+    {
+      "case_id": "HOLDOUT-REQ-01-CAN-0149",
+      "tender_id": "HOLDOUT-REQ-01",
+      "source_refs": [
+        "C014-S009"
+      ],
+      "source_resolved": true,
+      "atomic_source_text": "5) \t投标有效期不满足招标文件要求的；",
+      "natural_parent_context": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+      "candidate": "投标有效期须满足招标文件要求。",
+      "canonical": "投标有效期须满足招标文件要求。",
+      "old_decision": "ACCEPT",
+      "new_decision": "REVIEW_REQUIRED",
+      "old_reason_codes": [],
+      "new_reason_codes": [
+        "PARENT_CRITICAL_CONSEQUENCE_OMISSION_REVIEW"
+      ],
+      "matched_consequence": "投标将被否决",
+      "parent_consequence": {
+        "matched": true,
+        "reason_code": "PARENT_CRITICAL_CONSEQUENCE_OMISSION_REVIEW",
+        "alignment": "GOVERNING_CRITICAL_LIST",
+        "evidence": {
+          "source_index": 242,
+          "source_text": "5)投标有效期不满足招标文件要求的;",
+          "governing_list_marker": "之一",
+          "governing_consequence": "投标将被否决",
+          "governing_context_excerpt": "决。投标人不得通过修正或撤销不合要求的偏离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的,其投标将被否决:1)投标人未按时提交投标保证金、投标保证金的金额不足或投标保证",
+          "candidate_retains_consequence": false
+        }
+      },
+      "alignment_evidence": {
+        "source_index": 242,
+        "source_text": "5)投标有效期不满足招标文件要求的;",
+        "governing_list_marker": "之一",
+        "governing_consequence": "投标将被否决",
+        "governing_context_excerpt": "决。投标人不得通过修正或撤销不合要求的偏离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的,其投标将被否决:1)投标人未按时提交投标保证金、投标保证金的金额不足或投标保证",
+        "candidate_retains_consequence": false
+      },
+      "source_verified": true,
+      "source_text_hash": "9ef732dd1288ed57f96cf0119259facdeb673d3d0307b995beb24272a456e7be",
+      "candidate_text_hash": "8dda53c2fdd8b8bf91b784758c4a472f64e970b39aa99a754d77bf04a5b6a429"
+    },
+    {
+      "case_id": "HOLDOUT-REQ-01-CAN-0208",
+      "tender_id": "HOLDOUT-REQ-01",
+      "source_refs": [
+        "C015-S100"
+      ],
+      "source_resolved": true,
+      "atomic_source_text": "7 \t投标有效期 \t投标有效期满足招标文件要求的。",
+      "natural_parent_context": "3 \t投标无效情形\n投标人须满足附表二符合性审查表的全部内容，否则其投标无效。\n第 \t17 \t页\n1 \t投标人名称\n与投标登记、营业执照/《事业单位法人证\n书》/《社会团体法人登记证书》/《民办\n非企业单位登记证书》一致（符合法定工\n商变更程序除外）。\n2 \t具有独立承担民事责任的能力\n提供了有效期内的营业执照副本原件复印\n件/《事业单位法人证书》副本原件复印件\n/《社会团体法人登记证书》原件复印件/\n《民办非企业单位登记证书》原件复印件。\n3 \t具有健全的财务会计制度\n提供了满足招标文件要求的经审计的财务\n报告/或本年度基本账户开户银行出具的\n资信证明。\n4 具有履行合同所必需的设备和\n专业技术能力\n提供了可充分满足履行合同所需设备和专\n业技术能力的证明材料或承诺。\n5 有依法缴纳税收和社会保障资\n金的良好记录\n提供了企业依法纳税记录（近 \t6 \t个月内任\n意 \t1 \t个月）和社会保障资金缴纳记录（近\n6 \t个月内任意 \t1 \t个月）。\n6\n参加政府采购活动近三年内，\n在经营活动中没有重大违法记\n录\n提供了有效的参加政府采购活动近 \t3 \t年内\n在经营活动中没有重大违法记录的书面声\n明。\n7\n“信用中国”网站和中国政府\n采购网（www.ccgp.gov.cn）查\n询记录\n未被“信用中国”网站中列入失信被执行\n人或重大税收违法案件当事人名单的供应\n商、未被中国政府采购网列入政府采购严\n重违法失信行为记录名单中被财政部门禁\n止参加政府采购活动的供应商（处罚决定\n规定的时间和地域范围内）。\n8\n单位负责人为同一人或者存在\n控股、管理关系的不同单位，\n不得同时参加本项目的投标。\n提供了“投标人关联企业情况声明”。各\n投标人之间不存在单位负责人为同一人或\n者存在控股、管理关系情形。\n9\n为本项目提供整体设计、规范\n编制或者项目管理、监理、检\n测等服务的投标人，不得再参\n加本项目投标。不得是本项目\n的招标代理机构或其分支机\n构。不是联合体形式的投标。\n不以任何形式进行转包。\n投标人提供了是否属于为本项目提供整体\n设计、规范编制或者项目管理、监理、检\n测等服务，不是本项目的招标代理机构或\n其分支机构；不是联合体形式的投标；不\n以任何形式进行转包的投标人声明。\n结论\n注：符合要求用“√”表示，不符合用“×”表示。有一项不符合要求，结论为不合格。\n第 \t18 \t页\n附表二 \t符合性审查表\n序号 \t评审项目 \t评审标准 评审结论\n（√/×）\n1 \t投标保证金 \t按照招标文件的规定提交投标保证金。\n2 投 标 文 件 签 署\n盖章\n按招标文件要求在规定位置加盖投标人公章和/或有法\n定代表人或其授权代表签字或加盖人名章。\n3 \t投标报价 \t投标报价是固定价且未超过预算金额、相应最高限价。\n4 \t附加条件 \t投标文件不含有采购人不能接受的附加条件。\n5 \t公平竞争\n遵循公平竞争的原则，没有弄虚作假、恶意串通或妨碍\n其他投标人的竞争行为，损害采购人或者其他投标人的\n合法权益；弄虚作假、串通投标的情形见附注。\n7 \t投标有效期 \t投标有效期满足招标文件要求的。",
+      "candidate": "投标有效期须满足招标文件要求。",
+      "canonical": "投标有效期须满足招标文件要求。",
+      "old_decision": "ACCEPT",
+      "new_decision": "ACCEPT",
+      "old_reason_codes": [],
+      "new_reason_codes": [],
+      "matched_consequence": null,
+      "parent_consequence": {
+        "matched": false,
+        "reason_code": null,
+        "alignment": "NO_GOVERNING_CRITICAL_LIST"
+      },
+      "alignment_evidence": null,
+      "source_verified": true,
+      "source_text_hash": "e33af4eb3b9f402f1ca7d8a291bd27d0920d0f2e68813ddb9134806247d9ff5b",
+      "candidate_text_hash": "8dda53c2fdd8b8bf91b784758c4a472f64e970b39aa99a754d77bf04a5b6a429"
+    },
+    {
+      "case_id": "POST-FIX-V2-015",
+      "tender_id": "JY-001",
+      "source_refs": [
+        "C009-S035",
+        "C009-S036",
+        "C009-S037",
+        "C009-S038"
+      ],
+      "atomic_source_text": "阴市视频联网共享平台无缝对接。投标人须承诺中标后签订合同时提供无锡市社会稳定\n风险防范处置工作平台项目原厂商、市(县)区网格化联动处置平台 \t2020 \t年提升完善建设\n项目原厂商、江阴市视频联网共享平台原厂商出具的无缝对接证明函(加盖投标人及厂商\n公章)。（承诺书格式自拟，未提供将作为无效投标）",
+      "natural_parent_context": "阴市视频联网共享平台无缝对接。投标人须承诺中标后签订合同时提供无锡市社会稳定\n风险防范处置工作平台项目原厂商、市(县)区网格化联动处置平台 \t2020 \t年提升完善建设\n项目原厂商、江阴市视频联网共享平台原厂商出具的无缝对接证明函(加盖投标人及厂商\n公章)。（承诺书格式自拟，未提供将作为无效投标）",
+      "candidate": "投标人须承诺中标后签订合同时提供无锡市社会稳定风险防范处置工作平台项目原厂商、市(县)区网格化联动处置平台2020年提升完善建设项目原厂商、江阴市视频联网共享平台原厂商出具的无缝对接证明函(加盖投标人及厂商公章)。",
+      "canonical": "投标人须承诺中标后签订合同时提供无锡市社会稳定风险防范处置工作平台项目原厂商、市(县)区网格化联动处置平台2020年提升完善建设项目原厂商、江阴市视频联网共享平台原厂商出具的无缝对接证明函(加盖投标人及厂商公章)。",
+      "old_decision": "REVIEW_REQUIRED",
+      "new_decision": "REVIEW_REQUIRED",
+      "old_reason_codes": [
+        "NEGATION_DISTORTION"
+      ],
+      "new_reason_codes": [
+        "NEGATION_DISTORTION"
+      ],
+      "matched_consequence": null,
+      "parent_consequence": {
+        "matched": false,
+        "reason_code": null,
+        "alignment": "NO_GOVERNING_CRITICAL_LIST"
+      },
+      "alignment_evidence": null
+    }
+  ]
+}

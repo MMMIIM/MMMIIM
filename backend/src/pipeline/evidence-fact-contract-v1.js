@@ -11,6 +11,8 @@ const grounded=(value,source,name)=>{if(value&& !source.includes(value))throw ne
 const groundedDecimal=(value,source,name)=>{const escaped=value.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');if(!new RegExp(`(^|[^\\d.])${escaped}(?=$|[^\\d.])`).test(source))throw new AppError('EVIDENCE_FACT_SOURCE_UNGROUNDED',`${name} 必须作为完整数值逐字来自 Source Span。`,422);};
 const decimal=(value)=>{if(typeof value!=='string')throw new AppError('EVIDENCE_FACT_QUANTITY_INVALID','quantity value 必须是 exact decimal string。',422);const result=value;if(!/^-?(?:0|[1-9]\d*)(?:\.\d+)?$/.test(result))throw new AppError('EVIDENCE_FACT_QUANTITY_INVALID','quantity value 必须是 exact decimal string。',422);return result;};
 
+// Canonical Fact semantics are source-relative; Requirement relationships are
+// Mapping-owned. See ADR-021.
 export function createEvidenceFactContract(context,candidate,options={}){
   const contractVersion=options.contractVersion||EVIDENCE_FACT_CONTRACT_VERSION,extractorVersion=text(options.extractorVersion||'provider-neutral-stub-v1','extractor_version'),sourceText=context.source_text;
   const subject=candidate.subject&&typeof candidate.subject==='object'?{type:text(candidate.subject.type||'unknown','subject.type'),name:candidate.subject.name==null?null:text(candidate.subject.name,'subject.name')}:{type:'unknown',name:null};grounded(subject.name,sourceText,'subject.name');

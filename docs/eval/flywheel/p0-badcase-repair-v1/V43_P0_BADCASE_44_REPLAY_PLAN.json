@@ -1,0 +1,1380 @@
+{
+  "artifact_type": "V43_P0_BADCASE_44_REPLAY_PLAN",
+  "artifact_version": "v1",
+  "run_id": "V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1",
+  "created_at": "2026-09-11T09:58:39.418Z",
+  "source_truth_sha256": "sha256:9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+  "production_run_id": "V43-CORE6-20260911",
+  "scope": "P0 unsafe 44 only; no full Core6 rerun",
+  "provider_execution": {
+    "status": "COMPLETED",
+    "provider_calls": 39,
+    "llm_calls": 0,
+    "retry_count": 0,
+    "same_frozen_production_path_required": true,
+    "restricted_evidence_required": true,
+    "result_path": "docs/eval/flywheel/p0-badcase-repair-v1/V43_P0_BADCASE_44_REPLAY_RESULTS.json",
+    "restricted_evidence_root": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1"
+  },
+  "deduplication_key": "tender_id + source_chunk_id",
+  "case_count": 44,
+  "replay_chunk_count": 39,
+  "unresolved_case_count": 0,
+  "estimated_provider_calls_if_authorized": 39,
+  "estimated_input_tokens_total": 1074,
+  "chunks": [
+    {
+      "replay_key": "FAST-01|09205461-08a0-4b7a-8f85-5df9c67680f2",
+      "tender_id": "FAST-01",
+      "source_chunk_id": "09205461-08a0-4b7a-8f85-5df9c67680f2",
+      "source_hashes": [
+        "f04ffe6edf12ba783e6aa80e0e7c7b03a4686cd7c79aceb472a12b1eface30e1",
+        "0407ff184e9c4ee9d74cb3427af872318909e00a47ad3f8aa74c5173e27d5a9a"
+      ],
+      "source_refs": [
+        "C018-S009",
+        "C018-S024",
+        "C018-S025"
+      ],
+      "source_pages": [
+        40,
+        41
+      ],
+      "source_excerpt_sha256": "sha256:0407ff184e9c4ee9d74cb3427af872318909e00a47ad3f8aa74c5173e27d5a9a",
+      "source_excerpt_chars": 57,
+      "estimated_input_tokens": 15,
+      "badcase_ids": [
+        "FAST-01-P0-0011",
+        "FAST-01-P0-0017",
+        "FAST-01-P0-0018"
+      ],
+      "cases_per_chunk": 3,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "FAST-01|1464d5f6-24f5-4b80-a671-0a89d1c9607c",
+      "tender_id": "FAST-01",
+      "source_chunk_id": "1464d5f6-24f5-4b80-a671-0a89d1c9607c",
+      "source_hashes": [
+        "b7d7113d6a86c59ac2af6573bf90ac842110126ca3ece9a5de643c88555b5e4f"
+      ],
+      "source_refs": [
+        "C016-S059"
+      ],
+      "source_pages": [
+        38
+      ],
+      "source_excerpt_sha256": "sha256:b7d7113d6a86c59ac2af6573bf90ac842110126ca3ece9a5de643c88555b5e4f",
+      "source_excerpt_chars": 15,
+      "estimated_input_tokens": 4,
+      "badcase_ids": [
+        "FAST-01-P0-0011"
+      ],
+      "cases_per_chunk": 1,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "FAST-01|380eb289-f8c6-41a7-b0d4-acc1b20c0baa",
+      "tender_id": "FAST-01",
+      "source_chunk_id": "380eb289-f8c6-41a7-b0d4-acc1b20c0baa",
+      "source_hashes": [
+        "d6622d573868d98bbf5c54e1871aecb95852855f766872dd1348f4d4fad4088f",
+        "306a947cd558b0979cedf92fb1646ef6e6cd02e37f40597aa6458afe48482666",
+        "53495829ddc11f8467cdc6f32ebafe654a506ee01095bbd4854221a2ec959445",
+        "52154ac101462c8bef92c62a91dc707183a3a9297f4d42095b06852a50e368e4",
+        "62c0a85a928ba66da68bd3c7381bb6f4c0c837b6eb3cceb0406cff5f19d349f6",
+        "c16151596d23e0014ea91b39ec6ce1271784d51f18e168b07cc8d3be6ec41c62"
+      ],
+      "source_refs": [
+        "C023-S004",
+        "C023-S064",
+        "C023-S006",
+        "C023-S007",
+        "C023-S008",
+        "C023-S009",
+        "C023-S010",
+        "C023-S011",
+        "C023-S065",
+        "C023-S066",
+        "C023-S067",
+        "C023-S068",
+        "C023-S069",
+        "C023-S070",
+        "C023-S071",
+        "C023-S072",
+        "C023-S073"
+      ],
+      "source_pages": [
+        51
+      ],
+      "source_excerpt_sha256": "sha256:53495829ddc11f8467cdc6f32ebafe654a506ee01095bbd4854221a2ec959445",
+      "source_excerpt_chars": 77,
+      "estimated_input_tokens": 20,
+      "badcase_ids": [
+        "FAST-01-P0-0011",
+        "FAST-01-P0-0017",
+        "FAST-01-P0-0018",
+        "FAST-01-P0-0019"
+      ],
+      "cases_per_chunk": 4,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "FAST-01|61e5205c-efb4-4a51-94ba-3942fb8c44d2",
+      "tender_id": "FAST-01",
+      "source_chunk_id": "61e5205c-efb4-4a51-94ba-3942fb8c44d2",
+      "source_hashes": [
+        "b1188575224efd0fa4223833fa2ed93c1d9c1b86faa4732bc5187a43cd451822",
+        "8a41bb5449dbb621fb5cba78734ae544b62bb7372a22397f48037c0c73cf57fa"
+      ],
+      "source_refs": [
+        "C017-S014",
+        "C017-S015",
+        "C017-S038",
+        "C017-S039"
+      ],
+      "source_pages": [
+        39
+      ],
+      "source_excerpt_sha256": "sha256:8a41bb5449dbb621fb5cba78734ae544b62bb7372a22397f48037c0c73cf57fa",
+      "source_excerpt_chars": 54,
+      "estimated_input_tokens": 14,
+      "badcase_ids": [
+        "FAST-01-P0-0011",
+        "FAST-01-P0-0017",
+        "FAST-01-P0-0018",
+        "FAST-01-P0-0019"
+      ],
+      "cases_per_chunk": 4,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "FAST-01|621f8f8f-c7b4-4726-a55c-a69774235484",
+      "tender_id": "FAST-01",
+      "source_chunk_id": "621f8f8f-c7b4-4726-a55c-a69774235484",
+      "source_hashes": [
+        "f5036e70eb13e2defd3b8da77b88f8835f5670181c89e19fdc7e0ef56a00187d",
+        "4cec8c35ecfcf5e7d171a9ef4241faa3bfd2489773dd1e40783a4de3c06c1400",
+        "921b2868d324ba0ede17be28484f64475f5a2792f4452675631a47332de3b339",
+        "ab0eb4362b25b0e17eb040edc2d298c9f4774084a775c438519bb05a41b30689",
+        "3c84250c1c11d3e6680cab0e67e3323bfd55c0f634973c1d94376725a664b666",
+        "1b513ccfd0578dcc034c2957d0507a74483e83ba2f12fe91cd845d10aa5cb2c3"
+      ],
+      "source_refs": [
+        "C001-S016",
+        "C001-S017",
+        "C001-S020",
+        "C001-S021",
+        "C001-S022",
+        "C001-S032",
+        "C001-S033",
+        "C001-S034",
+        "C001-S013",
+        "C001-S014",
+        "C001-S015",
+        "C001-S028"
+      ],
+      "source_pages": [
+        11
+      ],
+      "source_excerpt_sha256": "sha256:921b2868d324ba0ede17be28484f64475f5a2792f4452675631a47332de3b339",
+      "source_excerpt_chars": 92,
+      "estimated_input_tokens": 23,
+      "badcase_ids": [
+        "FAST-01-P0-0001",
+        "FAST-01-P0-0005",
+        "FAST-01-P0-0019"
+      ],
+      "cases_per_chunk": 3,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "FAST-01|91303719-686d-4d84-afb3-8e257ce39181",
+      "tender_id": "FAST-01",
+      "source_chunk_id": "91303719-686d-4d84-afb3-8e257ce39181",
+      "source_hashes": [
+        "5adb1e013e991ab8a5664085a1180ef9c376ec02fa5cfec46ec9ae1bcff2fa8c",
+        "9e1103cdc4f9164790eb84fd9edf291ec66443e1949d30676d0efe088e2b1347"
+      ],
+      "source_refs": [
+        "C012-S033",
+        "C012-S034",
+        "C012-S011"
+      ],
+      "source_pages": [
+        29
+      ],
+      "source_excerpt_sha256": "sha256:5adb1e013e991ab8a5664085a1180ef9c376ec02fa5cfec46ec9ae1bcff2fa8c",
+      "source_excerpt_chars": 43,
+      "estimated_input_tokens": 11,
+      "badcase_ids": [
+        "FAST-01-P0-0011",
+        "FAST-01-P0-0017",
+        "FAST-01-P0-0018"
+      ],
+      "cases_per_chunk": 3,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "FAST-01|a71888e4-476b-44c5-9e5b-5e91a6e3f848",
+      "tender_id": "FAST-01",
+      "source_chunk_id": "a71888e4-476b-44c5-9e5b-5e91a6e3f848",
+      "source_hashes": [
+        "d42754702e0fe8a54d63c28fe856c5d9d0d87fd7f829307dbf8e553bfca2a168",
+        "6692c5a97398cf85e61b42f1d1c2a6b16ff066f3f3567d7647229309e93957d3",
+        "ed45b16bb960b6e182c5a1d8e87623f3b018a94f6c8cb45e748de0a44474fee6"
+      ],
+      "source_refs": [
+        "C002-S012",
+        "C002-S007",
+        "C002-S008",
+        "C002-S009",
+        "C002-S038",
+        "C002-S039",
+        "C002-S040",
+        "C002-S041"
+      ],
+      "source_pages": [
+        12
+      ],
+      "source_excerpt_sha256": "sha256:ed45b16bb960b6e182c5a1d8e87623f3b018a94f6c8cb45e748de0a44474fee6",
+      "source_excerpt_chars": 171,
+      "estimated_input_tokens": 43,
+      "badcase_ids": [
+        "FAST-01-P0-0011",
+        "FAST-01-P0-0017",
+        "FAST-01-P0-0018",
+        "FAST-01-P0-0022"
+      ],
+      "cases_per_chunk": 4,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "FAST-01|a7785295-74d4-4763-a924-d31c790416f2",
+      "tender_id": "FAST-01",
+      "source_chunk_id": "a7785295-74d4-4763-a924-d31c790416f2",
+      "source_hashes": [
+        "37d39940a5b08481117b9c7726f1ed70059a65bebfbfebd8d514e73633445416"
+      ],
+      "source_refs": [
+        "C020-S023",
+        "C020-S024",
+        "C020-S025"
+      ],
+      "source_pages": [
+        46
+      ],
+      "source_excerpt_sha256": "sha256:37d39940a5b08481117b9c7726f1ed70059a65bebfbfebd8d514e73633445416",
+      "source_excerpt_chars": 87,
+      "estimated_input_tokens": 22,
+      "badcase_ids": [
+        "FAST-01-P0-0019"
+      ],
+      "cases_per_chunk": 1,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "FAST-01|fabe0d43-f969-46bb-9037-b3fd715aa56e",
+      "tender_id": "FAST-01",
+      "source_chunk_id": "fabe0d43-f969-46bb-9037-b3fd715aa56e",
+      "source_hashes": [
+        "da8084e5c82f31a4862e60eb58338647afb743181c119369b3818e6e4fc8bf57",
+        "9f0df0ebf13e7f68ca589a8c2911834d197e4a5be0db492141decfb1677a120a"
+      ],
+      "source_refs": [
+        "C014-S011",
+        "C014-S012",
+        "C014-S013",
+        "C014-S014",
+        "C014-S015",
+        "C014-S016",
+        "C014-S017",
+        "C014-S018",
+        "C014-S019",
+        "C014-S020",
+        "C014-S048",
+        "C014-S049"
+      ],
+      "source_pages": [
+        33,
+        35
+      ],
+      "source_excerpt_sha256": "sha256:da8084e5c82f31a4862e60eb58338647afb743181c119369b3818e6e4fc8bf57",
+      "source_excerpt_chars": 185,
+      "estimated_input_tokens": 47,
+      "badcase_ids": [
+        "FAST-01-P0-0019"
+      ],
+      "cases_per_chunk": 1,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "FAST-04|34822c65-bb18-419e-bade-4b340b7153e4",
+      "tender_id": "FAST-04",
+      "source_chunk_id": "34822c65-bb18-419e-bade-4b340b7153e4",
+      "source_hashes": [
+        "a3686e6d35b44bbf8ce527067f32cc55033a8584b775d08c8540562a52f16b3c"
+      ],
+      "source_refs": [
+        "C008-S082",
+        "C008-S083"
+      ],
+      "source_pages": [
+        27
+      ],
+      "source_excerpt_sha256": "sha256:a3686e6d35b44bbf8ce527067f32cc55033a8584b775d08c8540562a52f16b3c",
+      "source_excerpt_chars": 15,
+      "estimated_input_tokens": 4,
+      "badcase_ids": [
+        "FAST-04-P0-0222",
+        "FAST-04-P0-0225"
+      ],
+      "cases_per_chunk": 2,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "FAST-04|5014cc94-baf5-402b-a5d6-75e1e544caa4",
+      "tender_id": "FAST-04",
+      "source_chunk_id": "5014cc94-baf5-402b-a5d6-75e1e544caa4",
+      "source_hashes": [
+        "7b015d11e3153b704036b9e3179a7888c96d92543f031a173bdfc2b9ef4ddffd",
+        "557cf8e13e42def75e421cb86a1099442c414f369c0f6f16252e0ba2c32b6afc",
+        "ead699202437c34be2e26b136611449f1526d5517d8ec44879a562149565a4bd",
+        "9fdba17116ad04aba238e8e01ce4ba026002f1d01073abb8062a56c4c4ceeaf1",
+        "923b70549bc6048c3e137a50305bc49bf794be0a573df8684915fda6029f8e81",
+        "651ee91e3f34ae170213ce333db28de0f112be7ac649a775ba827cc6f60c96fc"
+      ],
+      "source_refs": [
+        "C035-S004",
+        "C035-S005",
+        "C035-S010",
+        "C035-S011",
+        "C035-S012",
+        "C035-S013",
+        "C035-S014",
+        "C035-S015",
+        "C035-S016",
+        "C035-S006",
+        "C035-S007",
+        "C035-S008",
+        "C035-S009",
+        "C035-S073",
+        "C035-S074",
+        "C035-S075",
+        "C035-S076",
+        "C035-S077",
+        "C035-S078",
+        "C035-S017",
+        "C035-S018",
+        "C035-S019",
+        "C035-S020",
+        "C035-S021",
+        "C035-S022",
+        "C035-S070",
+        "C035-S071",
+        "C035-S072"
+      ],
+      "source_pages": [
+        65
+      ],
+      "source_excerpt_sha256": "sha256:923b70549bc6048c3e137a50305bc49bf794be0a573df8684915fda6029f8e81",
+      "source_excerpt_chars": 71,
+      "estimated_input_tokens": 18,
+      "badcase_ids": [
+        "FAST-04-P0-0203",
+        "FAST-04-P0-0204"
+      ],
+      "cases_per_chunk": 2,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "FAST-04|6eb53b24-56fd-4aae-b1be-32ed4aabc603",
+      "tender_id": "FAST-04",
+      "source_chunk_id": "6eb53b24-56fd-4aae-b1be-32ed4aabc603",
+      "source_hashes": [
+        "36acbd4115f73b2b202feab117556ee59f15db409a4cd5660d5450a72405e907"
+      ],
+      "source_refs": [
+        "C007-S064",
+        "C007-S065",
+        "C007-S066",
+        "C007-S067",
+        "C007-S068",
+        "C007-S069",
+        "C007-S070",
+        "C007-S071",
+        "C007-S072",
+        "C007-S073",
+        "C007-S074",
+        "C007-S075",
+        "C007-S076",
+        "C007-S077",
+        "C007-S078",
+        "C007-S079",
+        "C007-S080"
+      ],
+      "source_pages": [
+        24
+      ],
+      "source_excerpt_sha256": "sha256:36acbd4115f73b2b202feab117556ee59f15db409a4cd5660d5450a72405e907",
+      "source_excerpt_chars": 300,
+      "estimated_input_tokens": 75,
+      "badcase_ids": [
+        "FAST-04-P0-0216"
+      ],
+      "cases_per_chunk": 1,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "FAST-04|9a38f9d5-42b3-4f25-bd23-2c3dae72ad5b",
+      "tender_id": "FAST-04",
+      "source_chunk_id": "9a38f9d5-42b3-4f25-bd23-2c3dae72ad5b",
+      "source_hashes": [
+        "8fbcbfa61f2e910f495c0a774337f9a961c2d86bd2616508f1b9af6ce6391e74",
+        "aba2f59917b83c5e6f33c0eaaaaf8d3a5c7c8f190b812c71dabeabadc07aafb4",
+        "a8322f12689a1647f76d656c3406b1fd34f6895a55b8d3fa9dce96e6cf771b40",
+        "6b00a83d3ad79ff3dced940ad191cd71d6549b22ffe356e9609978746a716aa6",
+        "decdd32da3c0655ed8a6b8f12afef66aaea47e5b6c6760f9cbd983b46a8d011f",
+        "8bbc1f71a475f914588a3a7eeb692dee7664b3205602c0437b49c61fe48f8733",
+        "ccc25b948b5060de71f958328d166e1dcd3002e459f1343b8c259c03dad7999f",
+        "19e4164773381d2c53886b1f9302d45ca9bd60ac844570ced9a8d8ea8c928920"
+      ],
+      "source_refs": [
+        "C009-S007",
+        "C009-S008",
+        "C009-S013",
+        "C009-S014",
+        "C009-S019",
+        "C009-S020",
+        "C009-S021",
+        "C009-S022",
+        "C009-S023",
+        "C009-S024",
+        "C009-S015",
+        "C009-S016",
+        "C009-S017",
+        "C009-S018",
+        "C009-S009",
+        "C009-S010",
+        "C009-S006",
+        "C009-S011",
+        "C009-S012",
+        "C009-S001",
+        "C009-S002",
+        "C009-S003"
+      ],
+      "source_pages": [
+        27
+      ],
+      "source_excerpt_sha256": "sha256:a8322f12689a1647f76d656c3406b1fd34f6895a55b8d3fa9dce96e6cf771b40",
+      "source_excerpt_chars": 90,
+      "estimated_input_tokens": 23,
+      "badcase_ids": [
+        "FAST-04-P0-0221",
+        "FAST-04-P0-0222",
+        "FAST-04-P0-0225"
+      ],
+      "cases_per_chunk": 3,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "FAST-WATER-01|0a4b60d9-3aea-4df0-bea0-27ad4dddefc3",
+      "tender_id": "FAST-WATER-01",
+      "source_chunk_id": "0a4b60d9-3aea-4df0-bea0-27ad4dddefc3",
+      "source_hashes": [
+        "1a61e8c14e4ca5fdf99587e46c69c35362429c96371a152da64c749716c172ec",
+        "406a2621ad2c276b552321694d2233787307f0f627cec8f0de3137a28dd8a7a0",
+        "ae842c3e27aa3bf324d7201f5bbf5f6b55fe6dab33ef5765d8a2e80180198040",
+        "fb4b644b53580eabbc1f739086c1f17ff77fd79532a6874dcca5612ed047e9c6",
+        "1d28aa63427fbc98453938bc9bcc4a07c5561ff6a13ce9f5ec7cfdc7138c8480"
+      ],
+      "source_refs": [
+        "C010-S048",
+        "C010-S049",
+        "C010-S050",
+        "C010-S051",
+        "C010-S052",
+        "C010-S053",
+        "C010-S024",
+        "C010-S025",
+        "C010-S026",
+        "C010-S027",
+        "C010-S028",
+        "C010-S029",
+        "C010-S030",
+        "C010-S031",
+        "C010-S034",
+        "C010-S035",
+        "C010-S036",
+        "C010-S037",
+        "C010-S038",
+        "C010-S039",
+        "C010-S040",
+        "C010-S041",
+        "C010-S061",
+        "C010-S062",
+        "C010-S063",
+        "C010-S064",
+        "C010-S065",
+        "C010-S066",
+        "C010-S054",
+        "C010-S055",
+        "C010-S056",
+        "C010-S057",
+        "C010-S058",
+        "C010-S059",
+        "C010-S060"
+      ],
+      "source_pages": [
+        39,
+        40
+      ],
+      "source_excerpt_sha256": "sha256:406a2621ad2c276b552321694d2233787307f0f627cec8f0de3137a28dd8a7a0",
+      "source_excerpt_chars": 106,
+      "estimated_input_tokens": 27,
+      "badcase_ids": [
+        "FAST-WATER-01-P0-0008"
+      ],
+      "cases_per_chunk": 1,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "FAST-WATER-01|2509f76d-3bf9-401b-8a2a-d6231f41590e",
+      "tender_id": "FAST-WATER-01",
+      "source_chunk_id": "2509f76d-3bf9-401b-8a2a-d6231f41590e",
+      "source_hashes": [
+        "57321584a40dba6262ae5ff88b6cc743045a86009efd0f0583add6c1589522dc",
+        "6e31da82ab1dd8b2c9cd2f0f5718976092ad04e1a0d663782efc4bd66476268a",
+        "2a42e8e5f5fb0cd94a0c3737f45d860bb794977f096f9b41bc73801c4d12b7f5",
+        "703ae39f33a8da81d655d09490bda438b4ec91b1be3c4db0ee66947092d72bd0"
+      ],
+      "source_refs": [
+        "C015-S079",
+        "C015-S080",
+        "C015-S081",
+        "C015-S082",
+        "C015-S083",
+        "C015-S084",
+        "C015-S085",
+        "C015-S086",
+        "C015-S087",
+        "C015-S088",
+        "C015-S089",
+        "C015-S090",
+        "C015-S091",
+        "C015-S060",
+        "C015-S061",
+        "C015-S062",
+        "C015-S063",
+        "C015-S064",
+        "C015-S065",
+        "C015-S066",
+        "C015-S067",
+        "C015-S068",
+        "C015-S069",
+        "C015-S092",
+        "C015-S093",
+        "C015-S094",
+        "C015-S095",
+        "C015-S096",
+        "C015-S097",
+        "C015-S098",
+        "C015-S099",
+        "C015-S100",
+        "C015-S019",
+        "C015-S020",
+        "C015-S021",
+        "C015-S022",
+        "C015-S023",
+        "C015-S024",
+        "C015-S025",
+        "C015-S026",
+        "C015-S027",
+        "C015-S028"
+      ],
+      "source_pages": [
+        47,
+        48
+      ],
+      "source_excerpt_sha256": "sha256:57321584a40dba6262ae5ff88b6cc743045a86009efd0f0583add6c1589522dc",
+      "source_excerpt_chars": 61,
+      "estimated_input_tokens": 16,
+      "badcase_ids": [
+        "FAST-WATER-01-P0-0072"
+      ],
+      "cases_per_chunk": 1,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "FAST-WATER-01|809b3fc1-fdd2-49a6-bb27-17131bb28c5c",
+      "tender_id": "FAST-WATER-01",
+      "source_chunk_id": "809b3fc1-fdd2-49a6-bb27-17131bb28c5c",
+      "source_hashes": [
+        "5b50d7c4b5950dc523956237214f807de632f45334c3164d1e29956c7cfb03bd",
+        "d4dfb211d74ae948e7c7183ae1a27cd843789f7c7586a58c67e79c0d397619a1",
+        "79c46a3595488959092e3c52bae1396a7efed0e6f1c71c55cacb2c9e12955097",
+        "efb8d0247148affcc99b4d04b5188934e6d6c06b358ab6d77d2d05d29aa4e218"
+      ],
+      "source_refs": [
+        "C016-S001",
+        "C016-S010",
+        "C016-S011",
+        "C016-S014",
+        "C016-S015",
+        "C016-S016",
+        "C016-S017",
+        "C016-S018",
+        "C016-S019",
+        "C016-S020",
+        "C016-S021",
+        "C016-S012",
+        "C016-S013"
+      ],
+      "source_pages": [
+        48,
+        53,
+        54
+      ],
+      "source_excerpt_sha256": "sha256:79c46a3595488959092e3c52bae1396a7efed0e6f1c71c55cacb2c9e12955097",
+      "source_excerpt_chars": 218,
+      "estimated_input_tokens": 55,
+      "badcase_ids": [
+        "FAST-WATER-01-P0-0072",
+        "FAST-WATER-01-P0-0078",
+        "FAST-WATER-01-P0-0079",
+        "FAST-WATER-01-P0-0080"
+      ],
+      "cases_per_chunk": 4,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "FAST-WATER-01|873b4868-64fc-44a6-a04c-f9bebdc04283",
+      "tender_id": "FAST-WATER-01",
+      "source_chunk_id": "873b4868-64fc-44a6-a04c-f9bebdc04283",
+      "source_hashes": [
+        "9bf44873f9431a93370e48e8efe0f040bd71b9ef55dd697d2d68a1491525c45c",
+        "448b02fd5070e9bf1bc8cb7ccc672c6b0f42be8b686e9f746f78e1b9a2c6ebb5",
+        "fea4aa631cdcd8a0b755c864462216f09f2c102beaf16841f7560558726738b6",
+        "76f00170b6cf082b69f7dc594ed03646e969ba534170830dff32299f03d51a67"
+      ],
+      "source_refs": [
+        "C006-S043",
+        "C006-S044",
+        "C006-S045",
+        "C006-S046",
+        "C006-S047",
+        "C006-S048",
+        "C006-S049",
+        "C006-S050",
+        "C006-S069",
+        "C006-S070",
+        "C006-S071",
+        "C006-S072",
+        "C006-S073",
+        "C006-S076",
+        "C006-S077",
+        "C006-S078",
+        "C006-S067",
+        "C006-S068"
+      ],
+      "source_pages": [
+        25
+      ],
+      "source_excerpt_sha256": "sha256:9bf44873f9431a93370e48e8efe0f040bd71b9ef55dd697d2d68a1491525c45c",
+      "source_excerpt_chars": 172,
+      "estimated_input_tokens": 43,
+      "badcase_ids": [
+        "FAST-WATER-01-P0-0087"
+      ],
+      "cases_per_chunk": 1,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "FAST-WATER-01|af4f9abe-50c7-48c6-be35-795eaa227e19",
+      "tender_id": "FAST-WATER-01",
+      "source_chunk_id": "af4f9abe-50c7-48c6-be35-795eaa227e19",
+      "source_hashes": [
+        "5d76cdb74810b4615df6d7179f6b9b87c0055a1a6e2ef13f1b89fdc104ae3193",
+        "decdd32da3c0655ed8a6b8f12afef66aaea47e5b6c6760f9cbd983b46a8d011f",
+        "a01aebc20f94d0af192f15aca4d2d08c66251689b3e125ed37fe545470e6fe87",
+        "db33c167e0095cece80680896e3bfd82a68aa12b7f97b0066f8a6e2e7e4a8ad5",
+        "bfd94b76be13bb8fce259621eb4bbc5aa96dd2afe5933598715aa2a2421b9489",
+        "8bbc1f71a475f914588a3a7eeb692dee7664b3205602c0437b49c61fe48f8733",
+        "2a362b9da1cf38b882bd258492cddafed525151706aa9215a8124b00cd316f62"
+      ],
+      "source_refs": [
+        "C007-S007",
+        "C007-S009",
+        "C007-S010",
+        "C007-S023",
+        "C007-S024",
+        "C007-S025",
+        "C007-S026",
+        "C007-S027",
+        "C007-S028",
+        "C007-S029",
+        "C007-S030",
+        "C007-S013",
+        "C007-S014",
+        "C007-S017",
+        "C007-S018",
+        "C007-S006",
+        "C007-S011"
+      ],
+      "source_pages": [
+        26,
+        27
+      ],
+      "source_excerpt_sha256": "sha256:a01aebc20f94d0af192f15aca4d2d08c66251689b3e125ed37fe545470e6fe87",
+      "source_excerpt_chars": 157,
+      "estimated_input_tokens": 40,
+      "badcase_ids": [
+        "FAST-WATER-01-P0-0092",
+        "FAST-WATER-01-P0-0093",
+        "FAST-WATER-01-P0-0097"
+      ],
+      "cases_per_chunk": 3,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "JY-001|146d0a57-ee10-41f6-ba37-dbc3889948df",
+      "tender_id": "JY-001",
+      "source_chunk_id": "146d0a57-ee10-41f6-ba37-dbc3889948df",
+      "source_hashes": [
+        "71d421c4cada51fbfd0b1e0d667fd5c9670beeb3f43485a38ecd5c4fc53d4127",
+        "bf69eb911827db17f8da3a57f3ddf151098f75b3b920c8bdd3945bcf0f7fc0b6"
+      ],
+      "source_refs": [
+        "C028-S001",
+        "C028-S002"
+      ],
+      "source_pages": [
+        60
+      ],
+      "source_excerpt_sha256": "sha256:bf69eb911827db17f8da3a57f3ddf151098f75b3b920c8bdd3945bcf0f7fc0b6",
+      "source_excerpt_chars": 27,
+      "estimated_input_tokens": 7,
+      "badcase_ids": [
+        "JY-001-P0-0089"
+      ],
+      "cases_per_chunk": 1,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "JY-001|27d6438c-9789-4aff-b348-0fe5acb0da1d",
+      "tender_id": "JY-001",
+      "source_chunk_id": "27d6438c-9789-4aff-b348-0fe5acb0da1d",
+      "source_hashes": [
+        "bd19db2f9a6811879a9f2b84b63586b98edee53fb3506a6f5d9fc27cc3870f46",
+        "1576afa987cba350d9baf7950342b28e50f72a92644c74db92c7525b912df469"
+      ],
+      "source_refs": [
+        "C001-S011",
+        "C001-S010"
+      ],
+      "source_pages": [
+        3
+      ],
+      "source_excerpt_sha256": "sha256:bd19db2f9a6811879a9f2b84b63586b98edee53fb3506a6f5d9fc27cc3870f46",
+      "source_excerpt_chars": 26,
+      "estimated_input_tokens": 7,
+      "badcase_ids": [
+        "JY-001-P0-0002"
+      ],
+      "cases_per_chunk": 1,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "JY-001|3ea177bc-b7cb-4bc6-b686-a2bb1d1a8272",
+      "tender_id": "JY-001",
+      "source_chunk_id": "3ea177bc-b7cb-4bc6-b686-a2bb1d1a8272",
+      "source_hashes": [
+        "df960d029239d68836a81a766ac0ae3eb14b3f85d8540d3c1ba4e5350ee674bd",
+        "ba12d629b4ebd6c1b228f9861b4aba844037d061d3aa147c00644f390215f68d"
+      ],
+      "source_refs": [
+        "C003-S046",
+        "C003-S038",
+        "C003-S039",
+        "C003-S040",
+        "C003-S041",
+        "C003-S042",
+        "C003-S043",
+        "C003-S044",
+        "C003-S045"
+      ],
+      "source_pages": [
+        8,
+        9
+      ],
+      "source_excerpt_sha256": "sha256:ba12d629b4ebd6c1b228f9861b4aba844037d061d3aa147c00644f390215f68d",
+      "source_excerpt_chars": 355,
+      "estimated_input_tokens": 89,
+      "badcase_ids": [
+        "JY-001-P0-0013",
+        "JY-001-P0-0015",
+        "JY-001-P0-0016",
+        "JY-001-P0-0019",
+        "JY-001-P0-0020",
+        "JY-001-P0-0022"
+      ],
+      "cases_per_chunk": 6,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "JY-001|6119e013-d56c-4b41-a40a-a529a79b1050",
+      "tender_id": "JY-001",
+      "source_chunk_id": "6119e013-d56c-4b41-a40a-a529a79b1050",
+      "source_hashes": [
+        "77196bdc7d63a12ab33bb969b62a866cd48b621e8acaabca66ea2dcbc6f41085",
+        "4d09912682130dfd9302a0bd6114a41766a0d23e821559829b60469e8163df27"
+      ],
+      "source_refs": [
+        "C027-S074",
+        "C027-S075",
+        "C027-S076",
+        "C027-S077",
+        "C027-S078",
+        "C027-S079",
+        "C027-S091",
+        "C027-S092",
+        "C027-S093"
+      ],
+      "source_pages": [
+        60
+      ],
+      "source_excerpt_sha256": "sha256:77196bdc7d63a12ab33bb969b62a866cd48b621e8acaabca66ea2dcbc6f41085",
+      "source_excerpt_chars": 168,
+      "estimated_input_tokens": 42,
+      "badcase_ids": [
+        "JY-001-P0-0089"
+      ],
+      "cases_per_chunk": 1,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "JY-001|a893ca94-72e8-4b0b-aec7-3a974b5d1f00",
+      "tender_id": "JY-001",
+      "source_chunk_id": "a893ca94-72e8-4b0b-aec7-3a974b5d1f00",
+      "source_hashes": [
+        "1d88188c5765f4db1cd9208c0df2c94f6eb479bc69f8a3d34538961bc4ae3e5c"
+      ],
+      "source_refs": [
+        "C024-S035",
+        "C024-S036"
+      ],
+      "source_pages": [
+        48
+      ],
+      "source_excerpt_sha256": "sha256:1d88188c5765f4db1cd9208c0df2c94f6eb479bc69f8a3d34538961bc4ae3e5c",
+      "source_excerpt_chars": 70,
+      "estimated_input_tokens": 18,
+      "badcase_ids": [
+        "JY-001-P0-0023"
+      ],
+      "cases_per_chunk": 1,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "JY-001|b646f4eb-8d7c-4066-b907-21cf7f344b7b",
+      "tender_id": "JY-001",
+      "source_chunk_id": "b646f4eb-8d7c-4066-b907-21cf7f344b7b",
+      "source_hashes": [
+        "6c324d8d0ae30850768db19db0211cfe750b1498654272a1e8554cac6b9c2889",
+        "cfae429d65e90a7cb7a6d5821d9194ee2b6d9304bb5c4e55860275ec8ca7cc51",
+        "d7ecb6bc335b400e7039fcaca5a1334cbdf11945ca4a19c7fb22c714ad4887a3",
+        "39107bf49b1ee489645414feca458bbe85583ee34635bee4c06d2dc397ca786c",
+        "6d98aaabd5958cd1da4c61a2857ad56b23245af17ee3c9e2ae334b5d7bd507b2",
+        "4c11f7953e69c6610812a7e8b60e73d1557f4c412adf13c0da9abbae726207b4"
+      ],
+      "source_refs": [
+        "C002-S027",
+        "C002-S031",
+        "C002-S028",
+        "C002-S029",
+        "C002-S030",
+        "C002-S032"
+      ],
+      "source_pages": [
+        7
+      ],
+      "source_excerpt_sha256": "sha256:4c11f7953e69c6610812a7e8b60e73d1557f4c412adf13c0da9abbae726207b4",
+      "source_excerpt_chars": 22,
+      "estimated_input_tokens": 6,
+      "badcase_ids": [
+        "JY-001-P0-0007",
+        "JY-001-P0-0089"
+      ],
+      "cases_per_chunk": 2,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "JY-001|ee5d809e-b6a2-49fe-bb9f-bdc6613a24d8",
+      "tender_id": "JY-001",
+      "source_chunk_id": "ee5d809e-b6a2-49fe-bb9f-bdc6613a24d8",
+      "source_hashes": [
+        "3fd6dacd482f1079776f3a355b045439e1f0b10f32c852fef199c6519817c515"
+      ],
+      "source_refs": [
+        "C020-S013",
+        "C020-S014",
+        "C020-S015",
+        "C020-S016",
+        "C020-S017",
+        "C020-S018",
+        "C020-S019"
+      ],
+      "source_pages": [
+        40
+      ],
+      "source_excerpt_sha256": "sha256:3fd6dacd482f1079776f3a355b045439e1f0b10f32c852fef199c6519817c515",
+      "source_excerpt_chars": 158,
+      "estimated_input_tokens": 40,
+      "badcase_ids": [
+        "JY-001-P0-0023"
+      ],
+      "cases_per_chunk": 1,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "JY-001|f8938643-ed83-410e-b91d-372a6c51886a",
+      "tender_id": "JY-001",
+      "source_chunk_id": "f8938643-ed83-410e-b91d-372a6c51886a",
+      "source_hashes": [
+        "420af0da3beed2180b0c10e5f0a3ea49d5241a88d6a41a81e39dde20a4b0d191",
+        "6f1b762e9678a509544bce7c9e3027121852cf6f4828f8ff94f823b0c57a9d5e"
+      ],
+      "source_refs": [
+        "C008-S034",
+        "C008-S035"
+      ],
+      "source_pages": [
+        18
+      ],
+      "source_excerpt_sha256": "sha256:6f1b762e9678a509544bce7c9e3027121852cf6f4828f8ff94f823b0c57a9d5e",
+      "source_excerpt_chars": 48,
+      "estimated_input_tokens": 12,
+      "badcase_ids": [
+        "JY-001-P0-0023"
+      ],
+      "cases_per_chunk": 1,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "TB-003|0ffec45b-c3ad-45ec-8055-e4e278057ee5",
+      "tender_id": "TB-003",
+      "source_chunk_id": "0ffec45b-c3ad-45ec-8055-e4e278057ee5",
+      "source_hashes": [
+        "1b98e7a34e042101f5ab83cf8b625ebda0b70ace52aaab4c4c5728a93ff388eb"
+      ],
+      "source_refs": [
+        "C004-S001",
+        "C004-S002"
+      ],
+      "source_pages": [
+        14
+      ],
+      "source_excerpt_sha256": "sha256:1b98e7a34e042101f5ab83cf8b625ebda0b70ace52aaab4c4c5728a93ff388eb",
+      "source_excerpt_chars": 66,
+      "estimated_input_tokens": 17,
+      "badcase_ids": [
+        "TB-003-P0-0001",
+        "TB-003-P0-0002"
+      ],
+      "cases_per_chunk": 2,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "TB-003|186e200e-df96-41bd-9756-77fd117e5404",
+      "tender_id": "TB-003",
+      "source_chunk_id": "186e200e-df96-41bd-9756-77fd117e5404",
+      "source_hashes": [
+        "375292a282e3eb3c45ab15fa778d66b4b6014c93f5672ba9f17d2067b9e8aff5"
+      ],
+      "source_refs": [
+        "C024-S016",
+        "C024-S017"
+      ],
+      "source_pages": [
+        64
+      ],
+      "source_excerpt_sha256": "sha256:375292a282e3eb3c45ab15fa778d66b4b6014c93f5672ba9f17d2067b9e8aff5",
+      "source_excerpt_chars": 37,
+      "estimated_input_tokens": 10,
+      "badcase_ids": [
+        "TB-003-P0-0024"
+      ],
+      "cases_per_chunk": 1,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "TB-003|4233eee3-42e3-4923-8c66-be514f3d8136",
+      "tender_id": "TB-003",
+      "source_chunk_id": "4233eee3-42e3-4923-8c66-be514f3d8136",
+      "source_hashes": [
+        "80e9b210a25f8b39a0498a7f03db29a248ef73fa96b76c2ab1a491c66a226f29",
+        "89156f07663a46b62a93ae463eaaf390f7139c6154432a1208e2be4bf62a9c07",
+        "4fbb962532d9b04b61208340fb2d91c21bbb827b4b5ad3c7605e6f03b057478f",
+        "d24a2fcae07867be06f6fd49d509fa5c2a31e3525ddf4631577c30faa35f6910"
+      ],
+      "source_refs": [
+        "C006-S050",
+        "C006-S035",
+        "C006-S036",
+        "C006-S037",
+        "C006-S055",
+        "C006-S056",
+        "C006-S057",
+        "C006-S046",
+        "C006-S047",
+        "C006-S048",
+        "C006-S049"
+      ],
+      "source_pages": [
+        21,
+        22
+      ],
+      "source_excerpt_sha256": "sha256:d24a2fcae07867be06f6fd49d509fa5c2a31e3525ddf4631577c30faa35f6910",
+      "source_excerpt_chars": 122,
+      "estimated_input_tokens": 31,
+      "badcase_ids": [
+        "TB-003-P0-0006",
+        "TB-003-P0-0023",
+        "TB-003-P0-0024",
+        "TB-003-P0-0025"
+      ],
+      "cases_per_chunk": 4,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "TB-003|443b9db0-b311-40b4-b48d-e322a2ede0e2",
+      "tender_id": "TB-003",
+      "source_chunk_id": "443b9db0-b311-40b4-b48d-e322a2ede0e2",
+      "source_hashes": [
+        "d58ecbdc29c873bcb3aa5a6a032405a7c6e7fdddb0bcbad1b5dd31e035b4f73f",
+        "93e7ab510ff3d54b83d5e0daf0d0ea5290be17421caf0d2bb92f32c4ea604e77"
+      ],
+      "source_refs": [
+        "C030-S001",
+        "C030-S017"
+      ],
+      "source_pages": [
+        83,
+        84
+      ],
+      "source_excerpt_sha256": "sha256:d58ecbdc29c873bcb3aa5a6a032405a7c6e7fdddb0bcbad1b5dd31e035b4f73f",
+      "source_excerpt_chars": 29,
+      "estimated_input_tokens": 8,
+      "badcase_ids": [
+        "TB-003-P0-0006",
+        "TB-003-P0-0023",
+        "TB-003-P0-0024",
+        "TB-003-P0-0025"
+      ],
+      "cases_per_chunk": 4,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "TB-003|52fad0ed-7c0b-4cc2-b86a-e519b82fc31c",
+      "tender_id": "TB-003",
+      "source_chunk_id": "52fad0ed-7c0b-4cc2-b86a-e519b82fc31c",
+      "source_hashes": [
+        "acaceb90f39b1b04406d83a1f7d2e8e25babcfb85007a4632cfbeaae54f6f6f8",
+        "f791bb960b8005537d2e9feb173a32e143cd20091d429527a168d67c48408ff7",
+        "9244fca1568ef7e59bee040caaf9cca48c31c42a086b3e35ea53fe78d534e826"
+      ],
+      "source_refs": [
+        "C007-S014",
+        "C007-S058",
+        "C007-S059",
+        "C007-S060",
+        "C007-S061",
+        "C007-S016",
+        "C007-S017",
+        "C007-S018"
+      ],
+      "source_pages": [
+        23,
+        25
+      ],
+      "source_excerpt_sha256": "sha256:f791bb960b8005537d2e9feb173a32e143cd20091d429527a168d67c48408ff7",
+      "source_excerpt_chars": 82,
+      "estimated_input_tokens": 21,
+      "badcase_ids": [
+        "TB-003-P0-0023",
+        "TB-003-P0-0025"
+      ],
+      "cases_per_chunk": 2,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "TB-003|84230774-3f61-4ef1-8ecc-4cb2866b79d5",
+      "tender_id": "TB-003",
+      "source_chunk_id": "84230774-3f61-4ef1-8ecc-4cb2866b79d5",
+      "source_hashes": [
+        "7157cd086dd6483bbf5df240313397c10daba0e23dc06d2abbe4c6bcdb53fa68",
+        "dc91536ad8dd1bac2dbe8bb657aa49ec717005e8f51acbeed42fb5e8b17c52a6",
+        "acf1aadef3a3f802a06a37b8c5ac26b8719cd61cceed4b8400393472077bb2d3"
+      ],
+      "source_refs": [
+        "C003-S022",
+        "C003-S023",
+        "C003-S024",
+        "C003-S025",
+        "C003-S026",
+        "C003-S027",
+        "C003-S021",
+        "C003-S028",
+        "C003-S029",
+        "C003-S030"
+      ],
+      "source_pages": [
+        14
+      ],
+      "source_excerpt_sha256": "sha256:7157cd086dd6483bbf5df240313397c10daba0e23dc06d2abbe4c6bcdb53fa68",
+      "source_excerpt_chars": 202,
+      "estimated_input_tokens": 51,
+      "badcase_ids": [
+        "TB-003-P0-0001",
+        "TB-003-P0-0002"
+      ],
+      "cases_per_chunk": 2,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "TB-003|b936c734-7463-49a3-8b48-64afbe3e8fd1",
+      "tender_id": "TB-003",
+      "source_chunk_id": "b936c734-7463-49a3-8b48-64afbe3e8fd1",
+      "source_hashes": [
+        "14dd76fc7b3f714d542196d2609aeb8fade98acee9628d2d009e4752e0a83dd9",
+        "5bb58dfdd5ad42aa14daca6d953a3e57e0acb9c1e39f15d81952b8b1ed86db58"
+      ],
+      "source_refs": [
+        "C009-S018",
+        "C009-S019",
+        "C009-S052",
+        "C009-S053",
+        "C009-S054"
+      ],
+      "source_pages": [
+        29,
+        31
+      ],
+      "source_excerpt_sha256": "sha256:5bb58dfdd5ad42aa14daca6d953a3e57e0acb9c1e39f15d81952b8b1ed86db58",
+      "source_excerpt_chars": 72,
+      "estimated_input_tokens": 18,
+      "badcase_ids": [
+        "TB-003-P0-0006",
+        "TB-003-P0-0023",
+        "TB-003-P0-0024",
+        "TB-003-P0-0025"
+      ],
+      "cases_per_chunk": 4,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "TB-003|da002db2-b47c-40f9-a22e-d03a437c08fe",
+      "tender_id": "TB-003",
+      "source_chunk_id": "da002db2-b47c-40f9-a22e-d03a437c08fe",
+      "source_hashes": [
+        "cdab8b9812ae55b2f7c3bc902026ec36e74e8c421f6917bab384bc18dc218e84"
+      ],
+      "source_refs": [
+        "C005-S061",
+        "C005-S062"
+      ],
+      "source_pages": [
+        19
+      ],
+      "source_excerpt_sha256": "sha256:cdab8b9812ae55b2f7c3bc902026ec36e74e8c421f6917bab384bc18dc218e84",
+      "source_excerpt_chars": 48,
+      "estimated_input_tokens": 12,
+      "badcase_ids": [
+        "TB-003-P0-0006"
+      ],
+      "cases_per_chunk": 1,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "TB-003|ef11cb84-f699-470a-89a6-f0da72800b52",
+      "tender_id": "TB-003",
+      "source_chunk_id": "ef11cb84-f699-470a-89a6-f0da72800b52",
+      "source_hashes": [
+        "de1b76d8286f2ab5427ae06fc735975de2e1ffbf3d5cb5ec7fd0c88920eb7df7",
+        "92e8944f87c5e0be4563939ddbd97e3925e4a257a6404d3324b95c4fc6b86ded",
+        "d15f55fb4b307bc51e381395991d99f4b293c09bd91f5800c2977260cfdefcfe"
+      ],
+      "source_refs": [
+        "C008-S046",
+        "C008-S047",
+        "C008-S007",
+        "C008-S012",
+        "C008-S013",
+        "C008-S014"
+      ],
+      "source_pages": [
+        25,
+        26,
+        27
+      ],
+      "source_excerpt_sha256": "sha256:d15f55fb4b307bc51e381395991d99f4b293c09bd91f5800c2977260cfdefcfe",
+      "source_excerpt_chars": 95,
+      "estimated_input_tokens": 24,
+      "badcase_ids": [
+        "TB-003-P0-0006",
+        "TB-003-P0-0023",
+        "TB-003-P0-0024",
+        "TB-003-P0-0025"
+      ],
+      "cases_per_chunk": 4,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "TB-006|01e0ba3a-1325-4e58-8fe8-04836dcdfcde",
+      "tender_id": "TB-006",
+      "source_chunk_id": "01e0ba3a-1325-4e58-8fe8-04836dcdfcde",
+      "source_hashes": [
+        "670671cd97404156226e507973f2ab8330d3022ca96e0c93bdbdb320c41adcaf"
+      ],
+      "source_refs": [
+        "C008-S081"
+      ],
+      "source_pages": [
+        28
+      ],
+      "source_excerpt_sha256": "sha256:670671cd97404156226e507973f2ab8330d3022ca96e0c93bdbdb320c41adcaf",
+      "source_excerpt_chars": 2,
+      "estimated_input_tokens": 1,
+      "badcase_ids": [
+        "TB-006-P0-0010",
+        "TB-006-P0-0014",
+        "TB-006-P0-0015"
+      ],
+      "cases_per_chunk": 3,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "TB-006|23c38f12-260a-41f0-98c7-ffb80159216c",
+      "tender_id": "TB-006",
+      "source_chunk_id": "23c38f12-260a-41f0-98c7-ffb80159216c",
+      "source_hashes": [
+        "36acbd4115f73b2b202feab117556ee59f15db409a4cd5660d5450a72405e907"
+      ],
+      "source_refs": [
+        "C007-S064",
+        "C007-S065",
+        "C007-S066",
+        "C007-S067",
+        "C007-S068",
+        "C007-S069",
+        "C007-S070",
+        "C007-S071",
+        "C007-S072",
+        "C007-S073",
+        "C007-S074",
+        "C007-S075",
+        "C007-S076",
+        "C007-S077",
+        "C007-S078",
+        "C007-S079",
+        "C007-S080"
+      ],
+      "source_pages": [
+        25
+      ],
+      "source_excerpt_sha256": "sha256:36acbd4115f73b2b202feab117556ee59f15db409a4cd5660d5450a72405e907",
+      "source_excerpt_chars": 300,
+      "estimated_input_tokens": 75,
+      "badcase_ids": [
+        "TB-006-P0-0005"
+      ],
+      "cases_per_chunk": 1,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "TB-006|8d158f93-ed65-46e0-b308-cc978570a645",
+      "tender_id": "TB-006",
+      "source_chunk_id": "8d158f93-ed65-46e0-b308-cc978570a645",
+      "source_hashes": [
+        "e865a37974a0cf29edcc2a2e6de61934b88d2a551e9e370dedc89785ed254053",
+        "39a06184fcaa009f318a0307cc2bcbbec9efbd5e185192a3c847811ee437c39b",
+        "f82f50619b3400b44f0aea6a340897bfef39818cad25c98c97976cbc173ee864"
+      ],
+      "source_refs": [
+        "C005-S071",
+        "C005-S072",
+        "C005-S073",
+        "C005-S074",
+        "C005-S075",
+        "C005-S077",
+        "C005-S078"
+      ],
+      "source_pages": [
+        19,
+        20
+      ],
+      "source_excerpt_sha256": "sha256:e865a37974a0cf29edcc2a2e6de61934b88d2a551e9e370dedc89785ed254053",
+      "source_excerpt_chars": 68,
+      "estimated_input_tokens": 17,
+      "badcase_ids": [
+        "TB-006-P0-0019"
+      ],
+      "cases_per_chunk": 1,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    },
+    {
+      "replay_key": "TB-006|ff8cb695-52c6-49bc-b4fc-24e80fa1ed92",
+      "tender_id": "TB-006",
+      "source_chunk_id": "ff8cb695-52c6-49bc-b4fc-24e80fa1ed92",
+      "source_hashes": [
+        "a8322f12689a1647f76d656c3406b1fd34f6895a55b8d3fa9dce96e6cf771b40",
+        "a60e385f061c65d5236deb8123390dc1e219284b98f443e10ad103ce4906a8ef",
+        "8bbc1f71a475f914588a3a7eeb692dee7664b3205602c0437b49c61fe48f8733",
+        "decdd32da3c0655ed8a6b8f12afef66aaea47e5b6c6760f9cbd983b46a8d011f",
+        "ccc25b948b5060de71f958328d166e1dcd3002e459f1343b8c259c03dad7999f",
+        "6b00a83d3ad79ff3dced940ad191cd71d6549b22ffe356e9609978746a716aa6",
+        "c32044b4684c96833f706573360d8285d9d711dcf8982d39a75779301e7e28f4"
+      ],
+      "source_refs": [
+        "C009-S018",
+        "C009-S019",
+        "C009-S020",
+        "C009-S021",
+        "C009-S022",
+        "C009-S023",
+        "C009-S007",
+        "C009-S006",
+        "C009-S009",
+        "C009-S010",
+        "C009-S011",
+        "C009-S012",
+        "C009-S014",
+        "C009-S015",
+        "C009-S016",
+        "C009-S017",
+        "C009-S001",
+        "C009-S002",
+        "C009-S003",
+        "C009-S004",
+        "C009-S005",
+        "C009-S008",
+        "C009-S013"
+      ],
+      "source_pages": [
+        28
+      ],
+      "source_excerpt_sha256": "sha256:c32044b4684c96833f706573360d8285d9d711dcf8982d39a75779301e7e28f4",
+      "source_excerpt_chars": 272,
+      "estimated_input_tokens": 68,
+      "badcase_ids": [
+        "TB-006-P0-0010",
+        "TB-006-P0-0011",
+        "TB-006-P0-0014",
+        "TB-006-P0-0015"
+      ],
+      "cases_per_chunk": 4,
+      "replay_eligibility": "ELIGIBLE_FOR_TARGETED_REPLAY_PLAN_ONLY"
+    }
+  ],
+  "unresolved_cases": []
+}

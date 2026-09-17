@@ -1,0 +1,292 @@
+{
+  "audit": "V43_FACT_PRE_CERTIFICATION_ENGINEERING_BOUNDARY_AND_DRIFT_AUDIT",
+  "mode": "EVAL_ONLY_OFFLINE",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "contracts": [
+    {
+      "contract_name": "evidence_fact_extraction",
+      "version": "4.3-evidence-fact-extraction-v1",
+      "schema_hash": "322efee1bb0e909e407a668bfef6fdbb0f2c8a4833bac8f511302178acf8b91c",
+      "prompt_version": "evidence_fact_extraction",
+      "prompt_hash": "f3e047082cfe0481683e4f766985b6412e4b88e3d0cde9be4a9f0367b8246c0c",
+      "production_default": true,
+      "eval_only": false,
+      "downstream_consumable": true,
+      "historical_only": false
+    },
+    {
+      "contract_name": "evidence_fact_candidate_v2",
+      "version": "4.3-evidence-fact-candidate-v2",
+      "schema_hash": "3dcece82464fcbd0351fe4444cc66994d36e40ca6ca97a3f2d0ba01e5e44f0b3",
+      "prompt_version": "4.3-evidence-fact-candidate-v2-prompt-v2",
+      "prompt_hash": "480ea2763abef430d31cacf0a86c1e067afbd075d6c32ac49528ed655cbadb19",
+      "production_default": false,
+      "eval_only": true,
+      "downstream_consumable": false,
+      "historical_only": false
+    },
+    {
+      "contract_name": "evidence_fact_candidate_v2.1",
+      "version": "4.3-evidence-fact-candidate-v2.1",
+      "schema_hash": "3dcece82464fcbd0351fe4444cc66994d36e40ca6ca97a3f2d0ba01e5e44f0b3",
+      "prompt_version": "4.3-evidence-fact-candidate-v2.1-prompt-v1",
+      "prompt_hash": "56e83bf44b2bb720e32824e305860bfa16a0157262394d53be348ea483622218",
+      "production_default": false,
+      "eval_only": true,
+      "downstream_consumable": false,
+      "historical_only": false
+    },
+    {
+      "contract_name": "Canonical Evidence Fact",
+      "version": null,
+      "schema_hash": "11a98dad7da81321505e3eaaa99c3d9927a1a9da3afd0c647c2af50611826d7d",
+      "prompt_version": null,
+      "prompt_hash": null,
+      "production_default": true,
+      "eval_only": false,
+      "downstream_consumable": true,
+      "historical_only": false,
+      "source_path": "backend/src/pipeline/evidence-fact-contract-v1.js"
+    },
+    {
+      "contract_name": "Grounding result",
+      "version": null,
+      "schema_hash": "2bbcbef378efa025a9b5d510e4373860c69cc467f408312d04d192760ae9ff25",
+      "prompt_version": null,
+      "prompt_hash": null,
+      "production_default": true,
+      "eval_only": false,
+      "downstream_consumable": true,
+      "historical_only": false,
+      "source_path": "backend/src/pipeline/evidence-fact-candidate-v2.js"
+    },
+    {
+      "contract_name": "Fact persistence DTO/schema",
+      "version": null,
+      "schema_hash": "45b4c90857844fb8a6d933a845f953a8bd1e5fc9d3466c890f29d7229d48be00",
+      "prompt_version": null,
+      "prompt_hash": null,
+      "production_default": true,
+      "eval_only": false,
+      "downstream_consumable": true,
+      "historical_only": false,
+      "source_path": "backend/src/evidence-source-fact-service.js"
+    },
+    {
+      "contract_name": "Mapping input contract",
+      "version": null,
+      "schema_hash": "f22362f22a668997fac365e97e12f530957827b97ee4b5cc7ad3c14ad0e4a2c8",
+      "prompt_version": null,
+      "prompt_hash": null,
+      "production_default": true,
+      "eval_only": false,
+      "downstream_consumable": true,
+      "historical_only": false,
+      "source_path": "backend/src/pipeline/requirement-evidence-mapping-contract-v1.js"
+    },
+    {
+      "contract_name": "Claim input contract",
+      "version": null,
+      "schema_hash": "6aaf7d4224cf462449e8a1d312b4353a773cff9b0f6866d86d63cbbec27e7749",
+      "prompt_version": null,
+      "prompt_hash": null,
+      "production_default": true,
+      "eval_only": false,
+      "downstream_consumable": true,
+      "historical_only": false,
+      "source_path": "backend/src/pipeline/claim-gate-input-adapter-v1.js"
+    },
+    {
+      "contract_name": "Writer authorization snapshot",
+      "version": null,
+      "schema_hash": "36f9989c465fc75a12caad6cda73b5a3e37df0fad79ec31568ae1e956ea5dccd",
+      "prompt_version": null,
+      "prompt_hash": null,
+      "production_default": true,
+      "eval_only": false,
+      "downstream_consumable": true,
+      "historical_only": false,
+      "source_path": "backend/src/pipeline/writer-authorization-snapshot.js"
+    }
+  ],
+  "checks": [
+    {
+      "name": "unknown_source_ref_fail_closed",
+      "passed": true,
+      "error_code": "UNKNOWN_SOURCE_ALIAS"
+    },
+    {
+      "name": "valid_source_ref_dereference",
+      "passed": true
+    },
+    {
+      "name": "source_snapshot_same_identity_matches",
+      "passed": true
+    },
+    {
+      "name": "source_snapshot_drift_fails_closed",
+      "passed": true
+    },
+    {
+      "name": "material_authority_positive",
+      "passed": true
+    },
+    {
+      "name": "material_quarantine_fail_closed",
+      "passed": true
+    },
+    {
+      "name": "canonicalizer_does_not_invent_semantics",
+      "passed": true
+    },
+    {
+      "name": "grounding_accepts_backend_snapshot",
+      "passed": true
+    },
+    {
+      "name": "grounding_escape_is_rejected",
+      "passed": true
+    },
+    {
+      "name": "fact_mapping_currentness_detects_payload_drift",
+      "passed": true
+    },
+    {
+      "name": "mapping_policy_caps_reference_only",
+      "passed": true
+    },
+    {
+      "name": "claim_current_allow_positive",
+      "passed": true
+    },
+    {
+      "name": "claim_currentness_stale_gate_rejected",
+      "passed": true
+    },
+    {
+      "name": "writer_snapshot_changes_with_authorization_input",
+      "passed": true
+    },
+    {
+      "name": "writer_context_does_not_assert_without_current_binding",
+      "passed": true
+    },
+    {
+      "name": "v21_stale_field_references_absent",
+      "passed": true,
+      "stale_refs": []
+    },
+    {
+      "name": "candidate_direct_downstream_path_absent",
+      "passed": true,
+      "paths": []
+    },
+    {
+      "name": "v21_not_persisted",
+      "passed": true
+    },
+    {
+      "name": "v21_no_semantic_retry",
+      "passed": true
+    },
+    {
+      "name": "v21_no_provider_fallback",
+      "passed": true
+    },
+    {
+      "name": "provider_model_telemetry_is_distinct",
+      "passed": true
+    },
+    {
+      "name": "prompt_schema_pairing",
+      "passed": true
+    },
+    {
+      "name": "candidate_v21_is_eval_opt_in",
+      "passed": true
+    },
+    {
+      "name": "production_default_remains_legacy_fact_task",
+      "passed": true
+    },
+    {
+      "name": "no_generic_unknown_strip",
+      "passed": true
+    },
+    {
+      "name": "model_facing_source_text_disabled",
+      "passed": true
+    },
+    {
+      "name": "runtime_registry_parity",
+      "passed": true,
+      "http_status": 200,
+      "build_revision": "dev-working-tree"
+    }
+  ],
+  "score": {
+    "passed": 27,
+    "failed": 0,
+    "total": 27
+  },
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "fact_persistence": 0,
+  "gold_mutations": 0,
+  "mapping_production_actions": 0,
+  "claim_production_actions": 0,
+  "writer_production_actions": 0,
+  "stale_v2_field_reference_count": 0,
+  "stale_field_references": [],
+  "candidate_direct_downstream_path_count": 0,
+  "grounding_source_authority": "FROZEN_BACKEND_SNAPSHOT",
+  "unknown_source_ref_behavior": "FAIL_CLOSED",
+  "source_snapshot_drift_regression": "PASS",
+  "material_quarantine_regression": "PASS",
+  "canonicalizer_new_business_semantics": 0,
+  "critical_grounding_escape": 0,
+  "fact_identity_regression": "PASS",
+  "fact_mapping_currentness_regression": "PASS",
+  "downstream_authority_expansion_count": 0,
+  "claim_currentness_regression": "PASS",
+  "writer_snapshot_drift_regression": "PASS",
+  "v21_provider_route": "deepseek_official",
+  "v21_configured_model": "deepseek-v4-pro",
+  "v21_resolved_model": "deepseek-v4-pro",
+  "v21_dry_requested_model": "deepseek-v4-pro",
+  "model_telemetry_conflation": "NO",
+  "task_config_version_pairing": "PASS",
+  "runtime_code_parity": "PASS",
+  "schema_retry_path_count": 0,
+  "semantic_empty_retry_path_count": 0,
+  "grounding_retry_path_count": 0,
+  "auto_reextraction_path_count": 0,
+  "attempt_authority_model_gap": "NO",
+  "v21_production_persistence_path": "NONE",
+  "eval_artifact_production_import_path_count": 0,
+  "secret_scan": "PASS",
+  "focused_audit_tests": "27/27 PASS",
+  "p0_critical_drift_count": 0,
+  "p1_engineering_debt_count": 0,
+  "audit_status": "READY_FOR_GPT_REVIEW",
+  "fact_engineering_boundary": "PASS",
+  "fact_drift_control": "PASS",
+  "runtime_observation": {
+    "http_status": 200,
+    "build_revision": "dev-working-tree",
+    "task_types": [
+      "requirement_extraction",
+      "response_planning",
+      "claim_generation",
+      "section_drafting",
+      "targeted_revision",
+      "evidence_fact_extraction",
+      "evidence_fact_candidate_v2",
+      "evidence_fact_candidate_v2_1",
+      "draft_sections",
+      "evidence_support_assessment",
+      "requirement_evidence_mapping"
+    ]
+  }
+}

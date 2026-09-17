@@ -1,0 +1,146 @@
+{
+  "artifact_type": "V43_RAG_RETRIEVAL_P0_K0_CONTRACT_AMENDMENT_V1",
+  "artifact_version": "v1",
+  "contract_status": "ADDITIVE_EVAL_ONLY",
+  "created_by": "Codex",
+  "basis": {
+    "gold_artifact_type": "GPT_SEMANTIC_GOLD_V1",
+    "gold_artifact_version": "v1",
+    "gold_file_sha256": "7576C1D9A9FECD19F032AD49085E61E48BB008EFF4788E225A2CCEE3087492E7",
+    "gold_mutated": false,
+    "original_evidence_spans_and_atoms_unchanged": true
+  },
+  "rules": {
+    "expected_retrieval_k0": "TRUE only when the frozen corpus contains no grade >= 2 evidence-bearing candidate that Search should usefully surface.",
+    "expected_no_sufficient_evidence": "TRUE when the frozen corpus cannot fully support the Requirement.",
+    "partial_case": "A case with grade >= 2 evidence but incomplete Requirement support has expected_retrieval_k0=FALSE and expected_no_sufficient_evidence=TRUE.",
+    "corpus_gap_or_true_negative": "A case with no grade >= 2 evidence has expected_retrieval_k0=TRUE; no-sufficient-evidence is reported independently.",
+    "retrieval_k0_is_not_support_sufficiency": true
+  },
+  "projection_count": 10,
+  "expected_retrieval_k0_count": 2,
+  "expected_no_sufficient_evidence_count": 6,
+  "projections": [
+    {
+      "case_id": "RAG-P0-CAL-JY-001-REQ-057",
+      "requirement_id": "JY-001:REQ-057",
+      "split": "CALIBRATION_SET",
+      "case_class": "PARTIAL",
+      "profile_class": "PRODUCT_CAPABILITY",
+      "original_expected_k0": true,
+      "expected_retrieval_k0": false,
+      "expected_no_sufficient_evidence": true,
+      "grade_gte_2_evidence_item_count": 2,
+      "projection_rule": "expected_retrieval_k0=true iff frozen corpus has no Gold evidence item with grade >= 2; expected_no_sufficient_evidence is independent and reflects full Requirement sufficiency."
+    },
+    {
+      "case_id": "RAG-P0-CAL-FAST-01-REQ-005",
+      "requirement_id": "FAST-01:REQ-005",
+      "split": "CALIBRATION_SET",
+      "case_class": "PARTIAL",
+      "profile_class": "PERFORMANCE",
+      "original_expected_k0": true,
+      "expected_retrieval_k0": false,
+      "expected_no_sufficient_evidence": true,
+      "grade_gte_2_evidence_item_count": 1,
+      "projection_rule": "expected_retrieval_k0=true iff frozen corpus has no Gold evidence item with grade >= 2; expected_no_sufficient_evidence is independent and reflects full Requirement sufficiency."
+    },
+    {
+      "case_id": "RAG-P0-CAL-FAST-04-REQ-004",
+      "requirement_id": "FAST-04:REQ-004",
+      "split": "CALIBRATION_SET",
+      "case_class": "CORPUS_GAP",
+      "profile_class": "QUALIFICATION",
+      "original_expected_k0": true,
+      "expected_retrieval_k0": true,
+      "expected_no_sufficient_evidence": true,
+      "grade_gte_2_evidence_item_count": 0,
+      "projection_rule": "expected_retrieval_k0=true iff frozen corpus has no Gold evidence item with grade >= 2; expected_no_sufficient_evidence is independent and reflects full Requirement sufficiency."
+    },
+    {
+      "case_id": "RAG-P0-HOLD-JY-001-REQ-027",
+      "requirement_id": "JY-001:REQ-027",
+      "split": "UNTOUCHED_HOLDOUT_SET",
+      "case_class": "POSITIVE",
+      "profile_class": "SERVICE",
+      "original_expected_k0": false,
+      "expected_retrieval_k0": false,
+      "expected_no_sufficient_evidence": false,
+      "grade_gte_2_evidence_item_count": 2,
+      "projection_rule": "expected_retrieval_k0=true iff frozen corpus has no Gold evidence item with grade >= 2; expected_no_sufficient_evidence is independent and reflects full Requirement sufficiency."
+    },
+    {
+      "case_id": "RAG-P0-HOLD-JY-001-REQ-077",
+      "requirement_id": "JY-001:REQ-077",
+      "split": "UNTOUCHED_HOLDOUT_SET",
+      "case_class": "PARTIAL",
+      "profile_class": "PRODUCT_CAPABILITY",
+      "original_expected_k0": true,
+      "expected_retrieval_k0": false,
+      "expected_no_sufficient_evidence": true,
+      "grade_gte_2_evidence_item_count": 1,
+      "projection_rule": "expected_retrieval_k0=true iff frozen corpus has no Gold evidence item with grade >= 2; expected_no_sufficient_evidence is independent and reflects full Requirement sufficiency."
+    },
+    {
+      "case_id": "RAG-P0-HOLD-JY-001-REQ-051",
+      "requirement_id": "JY-001:REQ-051",
+      "split": "UNTOUCHED_HOLDOUT_SET",
+      "case_class": "PARTIAL",
+      "profile_class": "PRODUCT_CAPABILITY",
+      "original_expected_k0": true,
+      "expected_retrieval_k0": false,
+      "expected_no_sufficient_evidence": true,
+      "grade_gte_2_evidence_item_count": 1,
+      "projection_rule": "expected_retrieval_k0=true iff frozen corpus has no Gold evidence item with grade >= 2; expected_no_sufficient_evidence is independent and reflects full Requirement sufficiency."
+    },
+    {
+      "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+      "requirement_id": "TB-003:REQ-119",
+      "split": "UNTOUCHED_HOLDOUT_SET",
+      "case_class": "PARTIAL",
+      "profile_class": "PERFORMANCE",
+      "original_expected_k0": true,
+      "expected_retrieval_k0": false,
+      "expected_no_sufficient_evidence": true,
+      "grade_gte_2_evidence_item_count": 3,
+      "projection_rule": "expected_retrieval_k0=true iff frozen corpus has no Gold evidence item with grade >= 2; expected_no_sufficient_evidence is independent and reflects full Requirement sufficiency."
+    },
+    {
+      "case_id": "RAG-P0-HOLD-TB-003-REQ-170",
+      "requirement_id": "TB-003:REQ-170",
+      "split": "UNTOUCHED_HOLDOUT_SET",
+      "case_class": "PARTIAL",
+      "profile_class": "QUALIFICATION",
+      "original_expected_k0": true,
+      "expected_retrieval_k0": false,
+      "expected_no_sufficient_evidence": true,
+      "grade_gte_2_evidence_item_count": 2,
+      "projection_rule": "expected_retrieval_k0=true iff frozen corpus has no Gold evidence item with grade >= 2; expected_no_sufficient_evidence is independent and reflects full Requirement sufficiency."
+    },
+    {
+      "case_id": "RAG-P0-HOLD-TB-006-REQ-037",
+      "requirement_id": "TB-006:REQ-037",
+      "split": "UNTOUCHED_HOLDOUT_SET",
+      "case_class": "CORPUS_GAP",
+      "profile_class": "QUALIFICATION",
+      "original_expected_k0": true,
+      "expected_retrieval_k0": true,
+      "expected_no_sufficient_evidence": true,
+      "grade_gte_2_evidence_item_count": 0,
+      "projection_rule": "expected_retrieval_k0=true iff frozen corpus has no Gold evidence item with grade >= 2; expected_no_sufficient_evidence is independent and reflects full Requirement sufficiency."
+    },
+    {
+      "case_id": "RAG-P0-HOLD-JY-001-REQ-148",
+      "requirement_id": "JY-001:REQ-148",
+      "split": "UNTOUCHED_HOLDOUT_SET",
+      "case_class": "NEGATIVE",
+      "profile_class": "PRODUCT_CAPABILITY",
+      "original_expected_k0": true,
+      "expected_retrieval_k0": true,
+      "expected_no_sufficient_evidence": true,
+      "grade_gte_2_evidence_item_count": 0,
+      "projection_rule": "expected_retrieval_k0=true iff frozen corpus has no Gold evidence item with grade >= 2; expected_no_sufficient_evidence is independent and reflects full Requirement sufficiency."
+    }
+  ],
+  "amendment_content_hash": "9f0399cfa682806209ec7ffb3050d6ca3380f2297e8abe41dc99880f2c672da5"
+}

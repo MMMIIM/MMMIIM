@@ -1,0 +1,334 @@
+{
+  "artifact_type": "V43_REFERENCE_SOURCE_UNIT_REPAIR_V1_CHECKPOINT",
+  "status": "BLOCKED_SOURCE_INPUT_UNIT_NOT_COMPARABLE",
+  "review_status": "READY_FOR_GPT_REFERENCE_SOURCE_UNIT_REPAIR_REVIEW",
+  "source_unit_repair": {
+    "target_source_count": 6,
+    "target_source_ids": [
+      "H3C-003",
+      "H3C-004",
+      "H3C-010",
+      "H3C-011",
+      "H3C-012",
+      "H3C-013"
+    ],
+    "selectors_unique_and_resolved": true,
+    "ambiguity_count": 0,
+    "mechanical_exclusion_only": true,
+    "status": "PASS_MECHANICAL_PREPARATION",
+    "semantic_selection_used": false,
+    "requirement_query_used": false,
+    "tender_id_used": false
+  },
+  "input_unit_parity": {
+    "production_chunker_parity": "PASS",
+    "input_unit_parity": "MECHANICALLY_ESTABLISHED",
+    "non_comparable_source_ids": [],
+    "canonical_unit_rule": "one unique structural main-content container per H3C source; no semantic/manual selection"
+  },
+  "corpus": {
+    "source_count": 11,
+    "html_source_count": 6,
+    "pdf_source_count": 5,
+    "total_planned_chunks": 2197,
+    "html_planned_chunks": 1819,
+    "html_fragment_share": 0.960418,
+    "html_classification_counts": {
+      "LIKELY_SUBSTANTIVE": 72,
+      "LIKELY_NAVIGATION": 0,
+      "LIKELY_BOILERPLATE": 0,
+      "LIKELY_FRAGMENT": 1747,
+      "EMPTY": 0
+    },
+    "per_source": [
+      {
+        "source_id": "HW-002",
+        "source_file": "data/eval/real-enterprise-upload-test-v1/raw/HW-002.pdf",
+        "format": "PDF",
+        "source_sha256": "736cd73199dd8d89a9897b47dfa5347a3bb952c43491aed84d5aeb4fc94082d6",
+        "canonical_source_unit": "SINGLE_FROZEN_PDF_FILE",
+        "selector": null,
+        "parsed_substantive_chars": 75537,
+        "normalized_text_sha256": "f90ff3e991a59f6d6653149a80fea8c1ea160053025c56c352ea6a98f79b0394",
+        "planned_chunks": 109,
+        "median_chunk_length": 897,
+        "p95_chunk_length": 1200,
+        "under_100_char_share": 0.229358,
+        "min_chunk_length": 2,
+        "max_chunk_length": 1200
+      },
+      {
+        "source_id": "HW-003",
+        "source_file": "data/eval/real-enterprise-upload-test-v1/raw/HW-003.pdf",
+        "format": "PDF",
+        "source_sha256": "8081099e23478068e7e43a55c6c93bd6d5efd8456670494d363bf949d3fe3990",
+        "canonical_source_unit": "SINGLE_FROZEN_PDF_FILE",
+        "selector": null,
+        "parsed_substantive_chars": 70508,
+        "normalized_text_sha256": "5e4723acdd0a70dcfbc157a235c8769424fe9ce4237ce4dc32672e9fab76c02b",
+        "planned_chunks": 90,
+        "median_chunk_length": 917,
+        "p95_chunk_length": 1200,
+        "under_100_char_share": 0.1,
+        "min_chunk_length": 7,
+        "max_chunk_length": 1200
+      },
+      {
+        "source_id": "HW-004",
+        "source_file": "data/eval/real-enterprise-upload-test-v1/raw/HW-004.pdf",
+        "format": "PDF",
+        "source_sha256": "fcad3db24e3b8205842684935ad05b3338dedfa10367ac5388aa3df41a78ab5d",
+        "canonical_source_unit": "SINGLE_FROZEN_PDF_FILE",
+        "selector": null,
+        "parsed_substantive_chars": 77302,
+        "normalized_text_sha256": "493535f649ced24e4e28ca72fcddab7cac2c4c19bc4e3e7ef2e6512b738eaa76",
+        "planned_chunks": 96,
+        "median_chunk_length": 905.5,
+        "p95_chunk_length": 1200,
+        "under_100_char_share": 0.052083,
+        "min_chunk_length": 19,
+        "max_chunk_length": 1200
+      },
+      {
+        "source_id": "HW-005",
+        "source_file": "data/eval/real-enterprise-upload-test-v1/raw/HW-005.pdf",
+        "format": "PDF",
+        "source_sha256": "c6df081e4783e7c9f7efe736667394dd9392ab74a6f0aa582b56b98faca4c5fc",
+        "canonical_source_unit": "SINGLE_FROZEN_PDF_FILE",
+        "selector": null,
+        "parsed_substantive_chars": 35694,
+        "normalized_text_sha256": "c7807340d2b64059f8ee98fb85cdbb53e33d33cca5869208c8aa660038651cb4",
+        "planned_chunks": 65,
+        "median_chunk_length": 591,
+        "p95_chunk_length": 1031.2,
+        "under_100_char_share": 0.184615,
+        "min_chunk_length": 14,
+        "max_chunk_length": 1077
+      },
+      {
+        "source_id": "HW-006",
+        "source_file": "data/eval/real-enterprise-upload-test-v1/raw/HW-006.pdf",
+        "format": "PDF",
+        "source_sha256": "d262f8537f116f255e11f8a6b62783ed817eea585f5c6dd07c5763f044f36e2f",
+        "canonical_source_unit": "SINGLE_FROZEN_PDF_FILE",
+        "selector": null,
+        "parsed_substantive_chars": 12709,
+        "normalized_text_sha256": "14386d8d9faee60eae5eeeb11a201077ef129446bff99a6ed6b43f7fa4eee8e5",
+        "planned_chunks": 18,
+        "median_chunk_length": 712,
+        "p95_chunk_length": 1200,
+        "under_100_char_share": 0.111111,
+        "min_chunk_length": 42,
+        "max_chunk_length": 1200
+      },
+      {
+        "source_id": "H3C-003",
+        "source_file": "data/eval/h3c-public-real-v1/raw/H3C-003_H3C_U-Center_5.0安装部署指导.html",
+        "format": "HTML",
+        "source_sha256": "6f19b927fe5be63cd67a30f02d7cce3dfa224676380e073a20d53de954bb8483",
+        "canonical_source_unit": "ONE_DETERMINISTIC_MAIN_CONTENT_CONTAINER",
+        "selector": "#documentContent",
+        "parsed_substantive_chars": 14586,
+        "normalized_text_sha256": "820090b93d17cecf86fe9a199ce807aba9de3dc773cc3ead27d78fdadfaed3b1",
+        "planned_chunks": 558,
+        "median_chunk_length": 16,
+        "p95_chunk_length": 77.14999999999998,
+        "under_100_char_share": 0.962366,
+        "min_chunk_length": 1,
+        "max_chunk_length": 171
+      },
+      {
+        "source_id": "H3C-004",
+        "source_file": "data/eval/h3c-public-real-v1/raw/H3C-004_U-Center_NTA用户手册.html",
+        "format": "HTML",
+        "source_sha256": "06dcaefa5359a6c191699de8b0e12e6a44974ef1114a954e28a76ebb3367626f",
+        "canonical_source_unit": "ONE_DETERMINISTIC_MAIN_CONTENT_CONTAINER",
+        "selector": "#documentContent",
+        "parsed_substantive_chars": 38038,
+        "normalized_text_sha256": "cb75cf24bd4041e355a1dd1339944c797754246918008eee5a576cb753edeb68",
+        "planned_chunks": 1076,
+        "median_chunk_length": 22,
+        "p95_chunk_length": 85,
+        "under_100_char_share": 0.966543,
+        "min_chunk_length": 3,
+        "max_chunk_length": 217
+      },
+      {
+        "source_id": "H3C-010",
+        "source_file": "data/eval/h3c-public-real-v1/raw/H3C-010_数据备份与保护.html",
+        "format": "HTML",
+        "source_sha256": "c3fc853f7c5684821acb56851fd9d7fc0d054f6d8e895a91739f5319088e8755",
+        "canonical_source_unit": "ONE_DETERMINISTIC_MAIN_CONTENT_CONTAINER",
+        "selector": "#ns-page-body",
+        "parsed_substantive_chars": 2918,
+        "normalized_text_sha256": "331a9243c2a95dcc34afc8a432e3f30314da5c8e5c398ecf377226d2812ecf32",
+        "planned_chunks": 67,
+        "median_chunk_length": 23,
+        "p95_chunk_length": 130.49999999999997,
+        "under_100_char_share": 0.820896,
+        "min_chunk_length": 4,
+        "max_chunk_length": 163
+      },
+      {
+        "source_id": "H3C-011",
+        "source_file": "data/eval/h3c-public-real-v1/raw/H3C-011_新一代电子政务外网方案.html",
+        "format": "HTML",
+        "source_sha256": "4a9c2f3dab42b8eae73c2db0f99b537a5dde54ab336c0ed495ed9b47f2ebe29d",
+        "canonical_source_unit": "ONE_DETERMINISTIC_MAIN_CONTENT_CONTAINER",
+        "selector": ".detailBody",
+        "parsed_substantive_chars": 170,
+        "normalized_text_sha256": "256f129c8f4cc2c4b57f852ef3d7a0707eeb51455b20c7341c83edf1a1103651",
+        "planned_chunks": 3,
+        "median_chunk_length": 4,
+        "p95_chunk_length": 142.6,
+        "under_100_char_share": 0.666667,
+        "min_chunk_length": 4,
+        "max_chunk_length": 158
+      },
+      {
+        "source_id": "H3C-012",
+        "source_file": "data/eval/h3c-public-real-v1/raw/H3C-012_电子政务外网安全防护.html",
+        "format": "HTML",
+        "source_sha256": "0c33de5af7054c3704dd0673fe5ea52280f812951d50aee5df29e04a58908cc0",
+        "canonical_source_unit": "ONE_DETERMINISTIC_MAIN_CONTENT_CONTAINER",
+        "selector": ".detailBody",
+        "parsed_substantive_chars": 813,
+        "normalized_text_sha256": "e16dde81c9c5f40d2f9fe25580a4c962097bb24bb56b33ee2cfc8819b72b2383",
+        "planned_chunks": 18,
+        "median_chunk_length": 28,
+        "p95_chunk_length": 164.1999999999999,
+        "under_100_char_share": 0.888889,
+        "min_chunk_length": 4,
+        "max_chunk_length": 222
+      },
+      {
+        "source_id": "H3C-013",
+        "source_file": "data/eval/h3c-public-real-v1/raw/H3C-013_电子政务外网乡镇延伸.html",
+        "format": "HTML",
+        "source_sha256": "4fd8da2c61d609ded484db5c45cfbe0fad1df143e40ef298e38c234a32c8684f",
+        "canonical_source_unit": "ONE_DETERMINISTIC_MAIN_CONTENT_CONTAINER",
+        "selector": ".content > .main.pd",
+        "parsed_substantive_chars": 1974,
+        "normalized_text_sha256": "d6d41384826f2e76176dc655ecf37f02e6a048b284164e3b466f97f8558bda7c",
+        "planned_chunks": 97,
+        "median_chunk_length": 14,
+        "p95_chunk_length": 52.19999999999999,
+        "under_100_char_share": 1,
+        "min_chunk_length": 1,
+        "max_chunk_length": 79
+      }
+    ]
+  },
+  "duplication": {
+    "total_chunk_count": 2197,
+    "unique_chunk_hash_count": 1800,
+    "exact_duplicate_group_count": 164,
+    "exact_duplicate_count": 397,
+    "exact_duplicate_rate": 0.180701,
+    "cross_source_duplicate_group_count": 1,
+    "cross_source_duplicate_count": 3,
+    "cross_source_duplicate_rate": 0.001365,
+    "dedup_applied": false
+  },
+  "baseline_v3": {
+    "manifest_path": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/03_PRODUCTION_CORPUS_SNAPSHOT_MANIFEST.json",
+    "manifest_sha256": "c2087cd46a1642452915658ff1e687be27e40e4c674008a85ad63f780b7fcdae",
+    "materials": 34,
+    "chunks": 318,
+    "lengths_available": false
+  },
+  "source_independence": {
+    "source_snapshots_reused": true,
+    "source_bytes_modified": false,
+    "requirement_queries_used": false,
+    "content_generated": false,
+    "source_role_unchanged": true,
+    "requirement_blind_scan": [
+      {
+        "source_id": "HW-002",
+        "tender_id_tokens": 0,
+        "req_id_tokens": 0,
+        "mapping_label_tokens": 0
+      },
+      {
+        "source_id": "HW-003",
+        "tender_id_tokens": 0,
+        "req_id_tokens": 0,
+        "mapping_label_tokens": 0
+      },
+      {
+        "source_id": "HW-004",
+        "tender_id_tokens": 0,
+        "req_id_tokens": 0,
+        "mapping_label_tokens": 0
+      },
+      {
+        "source_id": "HW-005",
+        "tender_id_tokens": 0,
+        "req_id_tokens": 0,
+        "mapping_label_tokens": 0
+      },
+      {
+        "source_id": "HW-006",
+        "tender_id_tokens": 0,
+        "req_id_tokens": 0,
+        "mapping_label_tokens": 0
+      },
+      {
+        "source_id": "H3C-003",
+        "tender_id_tokens": 0,
+        "req_id_tokens": 0,
+        "mapping_label_tokens": 0
+      },
+      {
+        "source_id": "H3C-004",
+        "tender_id_tokens": 0,
+        "req_id_tokens": 0,
+        "mapping_label_tokens": 0
+      },
+      {
+        "source_id": "H3C-010",
+        "tender_id_tokens": 0,
+        "req_id_tokens": 0,
+        "mapping_label_tokens": 0
+      },
+      {
+        "source_id": "H3C-011",
+        "tender_id_tokens": 0,
+        "req_id_tokens": 0,
+        "mapping_label_tokens": 0
+      },
+      {
+        "source_id": "H3C-012",
+        "tender_id_tokens": 0,
+        "req_id_tokens": 0,
+        "mapping_label_tokens": 0
+      },
+      {
+        "source_id": "H3C-013",
+        "tender_id_tokens": 0,
+        "req_id_tokens": 0,
+        "mapping_label_tokens": 0
+      }
+    ],
+    "requirement_leakage_total": 0
+  },
+  "side_effects": {
+    "provider_calls": 0,
+    "embedding_calls": 0,
+    "db_writes": 0,
+    "production_db_writes": 0,
+    "fact_actions": 0,
+    "mapping_actions": 0,
+    "claim_actions": 0,
+    "writer_actions": 0,
+    "source_mutations": 0,
+    "chunker_mutations": 0,
+    "dedup_mutations": 0,
+    "commit": 0,
+    "push": 0,
+    "merge": 0,
+    "deploy": 0
+  },
+  "next_gate": "GPT_REVIEW_BEFORE_HOST_EMBEDDING"
+}

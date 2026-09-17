@@ -1,0 +1,1206 @@
+{
+  "artifact_type": "V43_OFFLINE_FACT_ARTIFACT_CORPUS_INVENTORY",
+  "scope": [
+    "backend/eval/**",
+    "docs/handoff/**"
+  ],
+  "excluded": [
+    "docs/handoff/V43_OVERNIGHT_FACT_DETERMINISTIC_STABILIZATION_MASTER_V1"
+  ],
+  "discovered_artifact_count": 143,
+  "counts_by_authority_class": {
+    "REAL_CURRENT": 1,
+    "REAL_HISTORICAL": 39,
+    "SYNTHETIC_ENGINEERING_FIXTURE": 29,
+    "REFERENCE_ONLY": 0,
+    "QUARANTINED": 2,
+    "UNKNOWN": 72
+  },
+  "total_candidates_discovered": 6614,
+  "replayable_artifact_count": 3,
+  "non_replayable_artifact_count": 140,
+  "artifacts": [
+    {
+      "path": "backend/eval/architecture-assurance/overnight-2026-09-04/04_FACT_PRODUCER_READINESS_CHECKPOINT.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "backend/eval/architecture-assurance/overnight-2026-09-04/12_TENDER_ARTIFACT_DRIFT_CHECKPOINT.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "backend/eval/architecture-assurance/overnight-2026-09-04/V43_TRACK_B_SIX_TENDER_AUTHORITATIVE_ARTIFACT_RECOVERY_MASTER_CHECKPOINT.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "backend/eval/candidate-rerank/candidate-rerank-benchmark-v1.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "backend/eval/corpus/representative-sme/representative-sme-facts-v1.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "backend/eval/evidence-gold/gold-candidates.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [
+        "4.3-evidence-claim-gold-v1"
+      ],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "backend/eval/evidence-support/calibration-v2/candidate-pool-v2-evidence-span-repaired.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 37,
+      "schema_versions": [
+        "4.3-evidence-support-calibration-v2-evidence-span-repaired-v1"
+      ],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "backend/eval/evidence-support/calibration-v2/candidate-pool-v2-remediated.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 37,
+      "schema_versions": [
+        "4.3-evidence-support-calibration-v2-remediated-v1"
+      ],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "backend/eval/gold-governance/v43-gold-v2-foundation/REAL_FACT_V2_BLIND_HUMAN_REVIEW_PACKET.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [
+        "v43-real-fact-v2-foundation-v1"
+      ],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "backend/eval/gold-governance/v43-gold-v2-foundation/REAL_FACT_V2_CANDIDATE_MANIFEST.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 7,
+      "schema_versions": [
+        "v43-real-fact-v2-foundation-v1"
+      ],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "backend/eval/gold-governance/v43-real-gold-v2-source-and-fact-closure/V43_REAL_GOLD_V2_SOURCE_AND_FACT_CLOSURE_CHECKPOINT.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [
+        "v43-real-gold-v2-source-and-fact-closure-v1"
+      ],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "backend/eval/gold-governance/v43-real-gold-v2-source-and-fact-closure/V43_REAL_GOLD_V2_SOURCE_AND_FACT_CLOSURE_INPUT_DIGEST.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [
+        "v43-real-gold-v2-source-and-fact-closure-v1"
+      ],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "backend/eval/gold-governance/v43-real-gold-v2-source-fact-closure/track-b-real-fact-v2-blind-human-review-packet.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [
+        "v43-real-gold-v2-source-fact-closure-v1"
+      ],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "backend/eval/gold-governance/v43-real-gold-v2-source-fact-closure/track-b-source-fact-closure-checkpoint.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [
+        "v43-real-gold-v2-source-fact-closure-v1"
+      ],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "backend/eval/gold-human-review/v2/mapping-real-rebuild/11_real_enterprise_source_candidate_manifest.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 7,
+      "schema_versions": [
+        "v43-real-enterprise-source-candidate-manifest-v1"
+      ],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "backend/eval/rag-pilot/results/fact-candidate-v2-1-fresh-20260908063855-e2e7964d/raw-candidate-packet.json",
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "replayable": false,
+      "candidate_count": 4,
+      "schema_versions": [
+        "4.3-evidence-fact-candidate-v2.1"
+      ],
+      "reason": "raw payload/source refs are incomplete for current replay contract"
+    },
+    {
+      "path": "backend/eval/rag-pilot/results/fact-candidate-v2-1-fresh-20260908064040-06620586/raw-candidate-packet.json",
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "replayable": false,
+      "candidate_count": 4,
+      "schema_versions": [
+        "4.3-evidence-fact-candidate-v2.1"
+      ],
+      "reason": "raw payload/source refs are incomplete for current replay contract"
+    },
+    {
+      "path": "backend/eval/rag-pilot/results/fact-candidate-v2-1-fresh-20260908064040-06620586/V43_FACT_V21_COM01_GPT_SEMANTIC_REVIEW_PACKET.json",
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "replayable": false,
+      "candidate_count": 4,
+      "schema_versions": [],
+      "reason": "discovered artifact is not a current replay authority"
+    },
+    {
+      "path": "backend/eval/rag-pilot/results/fact-candidate-v2-1-fresh-20260908064040-06620586/V43_FACT_V21_STAGE1_TELEMETRY_RECONCILIATION.json",
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "discovered artifact is not a current replay authority"
+    },
+    {
+      "path": "backend/eval/rag-pilot/results/fact-candidate-v2-1-fresh-20260908085537-f852ae10/deterministic-delta-20260908093846/V43_FACT_V21_CANONICALIZER_GROUNDING_DELTA_GPT_PACKET.json",
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "replayable": false,
+      "candidate_count": 26,
+      "schema_versions": [],
+      "reason": "discovered artifact is not a current replay authority"
+    },
+    {
+      "path": "backend/eval/rag-pilot/results/fact-candidate-v2-1-fresh-20260908085537-f852ae10/deterministic-delta-20260908093928/V43_FACT_V21_CANONICALIZER_GROUNDING_DELTA_GPT_PACKET.json",
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "replayable": false,
+      "candidate_count": 26,
+      "schema_versions": [],
+      "reason": "discovered artifact is not a current replay authority"
+    },
+    {
+      "path": "backend/eval/rag-pilot/results/fact-candidate-v2-1-fresh-20260908085537-f852ae10/deterministic-delta-20260908094528/V43_FACT_V21_CANONICALIZER_GROUNDING_DELTA_GPT_PACKET.json",
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "replayable": false,
+      "candidate_count": 26,
+      "schema_versions": [],
+      "reason": "discovered artifact is not a current replay authority"
+    },
+    {
+      "path": "backend/eval/rag-pilot/results/fact-candidate-v2-1-fresh-20260908085537-f852ae10/deterministic-delta-20260908095308/V43_FACT_V21_CANONICALIZER_GROUNDING_DELTA_GPT_PACKET.json",
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "replayable": false,
+      "candidate_count": 26,
+      "schema_versions": [],
+      "reason": "discovered artifact is not a current replay authority"
+    },
+    {
+      "path": "backend/eval/rag-pilot/results/fact-candidate-v2-1-fresh-20260908085537-f852ae10/deterministic-delta-20260908095541/V43_FACT_V21_CANONICALIZER_GROUNDING_DELTA_GPT_PACKET.json",
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "replayable": false,
+      "candidate_count": 26,
+      "schema_versions": [],
+      "reason": "discovered artifact is not a current replay authority"
+    },
+    {
+      "path": "backend/eval/rag-pilot/results/fact-candidate-v2-1-fresh-20260908085537-f852ae10/deterministic-delta-20260908095603/V43_FACT_V21_CANONICALIZER_GROUNDING_DELTA_GPT_PACKET.json",
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "replayable": false,
+      "candidate_count": 26,
+      "schema_versions": [],
+      "reason": "discovered artifact is not a current replay authority"
+    },
+    {
+      "path": "backend/eval/rag-pilot/results/fact-candidate-v2-1-fresh-20260908085537-f852ae10/deterministic-delta-20260908095726/V43_FACT_V21_CANONICALIZER_GROUNDING_DELTA_GPT_PACKET.json",
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "replayable": false,
+      "candidate_count": 26,
+      "schema_versions": [],
+      "reason": "discovered artifact is not a current replay authority"
+    },
+    {
+      "path": "backend/eval/rag-pilot/results/fact-candidate-v2-1-fresh-20260908085537-f852ae10/deterministic-delta-20260908095841/V43_FACT_V21_CANONICALIZER_GROUNDING_DELTA_GPT_PACKET.json",
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "replayable": false,
+      "candidate_count": 26,
+      "schema_versions": [],
+      "reason": "discovered artifact is not a current replay authority"
+    },
+    {
+      "path": "backend/eval/rag-pilot/results/fact-candidate-v2-1-fresh-20260908085537-f852ae10/deterministic-delta-20260908104256/V43_FACT_V21_CANONICALIZER_GROUNDING_DELTA_GPT_PACKET.json",
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "replayable": false,
+      "candidate_count": 26,
+      "schema_versions": [],
+      "reason": "discovered artifact is not a current replay authority"
+    },
+    {
+      "path": "backend/eval/rag-pilot/results/fact-candidate-v2-1-fresh-20260908085537-f852ae10/deterministic-delta-20260908104256/V43_FACT_V21_FINAL_AUTHORITY_BOUNDARY_GPT_PACKET.json",
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "replayable": false,
+      "candidate_count": 26,
+      "schema_versions": [],
+      "reason": "discovered artifact is not a current replay authority"
+    },
+    {
+      "path": "backend/eval/rag-pilot/results/fact-candidate-v2-1-fresh-20260908085537-f852ae10/raw-candidate-packet.json",
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "replayable": false,
+      "candidate_count": 26,
+      "schema_versions": [
+        "4.3-evidence-fact-candidate-v2.1"
+      ],
+      "reason": "raw payload/source refs are incomplete for current replay contract"
+    },
+    {
+      "path": "backend/eval/rag-pilot/results/fact-candidate-v2-target-live-20260908020847-25ea97d6/raw-candidate-packet.json",
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "replayable": true,
+      "candidate_count": 4,
+      "schema_versions": [
+        "4.3-evidence-fact-candidate-v2"
+      ],
+      "reason": "raw candidate payload plus fixture source snapshot"
+    },
+    {
+      "path": "backend/eval/rag-pilot/results/fact-candidate-v2-target-live-20260908030331-0007eb67/raw-candidate-packet.json",
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "replayable": true,
+      "candidate_count": 4,
+      "schema_versions": [
+        "4.3-evidence-fact-candidate-v2"
+      ],
+      "reason": "raw candidate payload plus fixture source snapshot"
+    },
+    {
+      "path": "backend/eval/rag-pilot/results/fact-provider-shape-canary-20260907/CCV2-U13-01/V43_CHENGCHUAN_CONTROLLED_REAL_FACT_CHECKPOINT.json",
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "discovered artifact is not a current replay authority"
+    },
+    {
+      "path": "backend/eval/rag-pilot/results/fact-provider-shape-canary-20260907/CCV2-U13-01/V43_CHENGCHUAN_CONTROLLED_REAL_FACT_INVENTORY.json",
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "discovered artifact is not a current replay authority"
+    },
+    {
+      "path": "backend/eval/rag-pilot/results/fact-provider-shape-canary-20260907/CCV2-U13-01/V43_CHENGCHUAN_CONTROLLED_REAL_FACT_QUALITY_AUDIT.json",
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "discovered artifact is not a current replay authority"
+    },
+    {
+      "path": "backend/eval/rag-pilot/results/fact-provider-shape-canary-20260907/COM-01/V43_CHENGCHUAN_CONTROLLED_REAL_FACT_CHECKPOINT.json",
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "discovered artifact is not a current replay authority"
+    },
+    {
+      "path": "backend/eval/rag-pilot/results/fact-provider-shape-canary-20260907/COM-01/V43_CHENGCHUAN_CONTROLLED_REAL_FACT_INVENTORY.json",
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "discovered artifact is not a current replay authority"
+    },
+    {
+      "path": "backend/eval/rag-pilot/results/fact-provider-shape-canary-20260907/COM-01/V43_CHENGCHUAN_CONTROLLED_REAL_FACT_QUALITY_AUDIT.json",
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "discovered artifact is not a current replay authority"
+    },
+    {
+      "path": "backend/eval/rag-pilot/results/fact-provider-shape-canary-20260907/COM-06/V43_CHENGCHUAN_CONTROLLED_REAL_FACT_CHECKPOINT.json",
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "discovered artifact is not a current replay authority"
+    },
+    {
+      "path": "backend/eval/rag-pilot/results/fact-provider-shape-canary-20260907/COM-06/V43_CHENGCHUAN_CONTROLLED_REAL_FACT_INVENTORY.json",
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "discovered artifact is not a current replay authority"
+    },
+    {
+      "path": "backend/eval/rag-pilot/results/fact-provider-shape-canary-20260907/COM-06/V43_CHENGCHUAN_CONTROLLED_REAL_FACT_QUALITY_AUDIT.json",
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "discovered artifact is not a current replay authority"
+    },
+    {
+      "path": "backend/eval/rag-pilot/results/overnight/03_fact_32case.json",
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "discovered artifact is not a current replay authority"
+    },
+    {
+      "path": "backend/eval/rag-pilot/results/overnight/03_fact_contract.json",
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "discovered artifact is not a current replay authority"
+    },
+    {
+      "path": "backend/eval/rag-pilot/results/post-hash-fix/FACT_CONTROLLED_RERUN.json",
+      "authority_class": "SYNTHETIC_ENGINEERING_FIXTURE",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "discovered artifact is not a current replay authority"
+    },
+    {
+      "path": "backend/eval/reports/current-gold-candidate-review.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "backend/eval/reports/reqx-v3-unmatched-candidates.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 123,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "backend/eval/reports/reqx-v31-final-unmatched-candidates.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 51,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "backend/eval/reports/reqx-v31-unmatched-candidates.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 123,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "backend/eval/reports/reqx-v311-canonical-post-fix-certified-live/reqx-v311-canonical-post-fix-live-1788026179424-583a8c74/unmatched-candidates.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 80,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "backend/eval/reports/reqx-v311-certified-live/reqx-v311-certified-live-1788008474459-b2806da0/candidate-quality-review.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 220,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "backend/eval/reports/reqx-v311-certified-live/reqx-v311-certified-live-1788008474459-b2806da0/unmatched-candidates.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 103,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "backend/eval/reports/reqx-v311-post-fix-certified-live/reqx-v311-post-fix-certified-live-1788025510484-ba6e1352/unmatched-candidates.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "backend/eval/requirement-unseen-holdout-v1/results/unseen-holdout-v1-2026-09-08T06-21-08-203Z-5faac1ab/candidate-lineage.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 398,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "backend/eval/requirement-unseen-holdout-v2/results/unseen-holdout-v2-2026-09-08T11-28-47-937Z-49fd034e/candidate-requirements.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 785,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "backend/eval/requirement-unseen-holdout-v2/results/unseen-holdout-v2-2026-09-08T16-24-57-426Z-69cf5c50/candidate-requirements.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 816,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "backend/eval/requirement-unseen-holdout-v3/results/unseen-holdout-v3-2026-09-09T15-43-27-853Z-0dba352e/candidate-artifacts/HOLDOUT-REQ-V3-01.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 1095,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "backend/eval/requirement-unseen-holdout-v3/results/unseen-holdout-v3-2026-09-09T15-43-27-853Z-0dba352e/candidate-artifacts/HOLDOUT-REQ-V3-02.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 858,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_DAYTIME_ROUTER_V2_2_2_AND_FACT_READINESS/10_REAL_FACT_PRODUCTION_PATH_TRACE.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_DAYTIME_ROUTER_V2_2_2_AND_FACT_READINESS/11_REAL_FACT_BLOCKER_ANALYSIS.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_DAYTIME_ROUTER_V2_2_2_AND_FACT_READINESS/12_REAL_FACT_MATERIAL_INVENTORY.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_DAYTIME_ROUTER_V2_2_2_AND_FACT_READINESS/13_REAL_FACT_CONTRACT_AUDIT.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_DAYTIME_ROUTER_V2_2_2_AND_FACT_READINESS/14_REAL_FACT_RUNTIME_READINESS.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_DAYTIME_ROUTER_V2_2_2_AND_FACT_READINESS/15_REAL_FACT_PERSISTENCE_READINESS.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_DAYTIME_ROUTER_V2_2_2_AND_FACT_READINESS/16_REAL_FACT_EVAL_READINESS.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_DAYTIME_ROUTER_V2_2_2_AND_FACT_READINESS/17_REAL_FACT_NEXT_DECISION_PACKET.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_E2E_ENGINEERING_CONSISTENCY_AUDIT_V1/08_ARTIFACT_IDENTITY_MATRIX.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_FACT_REVIEW_BURDEN_DETERMINISTIC_REDUCTION_V1/06_OFFLINE_BEFORE_AFTER.json",
+      "authority_class": "REAL_CURRENT",
+      "replayable": true,
+      "candidate_count": 31,
+      "schema_versions": [],
+      "reason": "current 31-case deterministic replay rows contain raw candidate and source text"
+    },
+    {
+      "path": "docs/handoff/V43_FACT_SOURCE_MATERIAL_IDENTITY_RECONCILIATION_V1/V43_FACT_SOURCE_MATERIAL_IDENTITY_RECONCILIATION_CHECKPOINT.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_1_TARGETED/06_FACT_EXTRACTION_REPORT.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 212,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_1_TARGETED/07_REAL_PDF_PILOT_CANDIDATES.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 212,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_1_TARGETED/08_GPT_REVIEW_PACKET.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 212,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_1_TRUNCATION_CLOSURE/10_GPT_REVIEW_PACKET.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 212,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_2_E2E_GATE_TARGETED/06_FACT_EXTRACTION_REPORT.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 194,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_2_E2E_GATE_TARGETED/07_REAL_PDF_PILOT_CANDIDATES.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 194,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_2_E2E_GATE_TARGETED/08_GPT_REVIEW_PACKET.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 194,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_2_E2E_GATE/10_FACT_PRODUCER_E2E_READINESS.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_REAL_PDF_GATE_TARGETED-FINAL/06_FACT_EXTRACTION_REPORT.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 8,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_REAL_PDF_GATE_TARGETED-FINAL/07_REAL_PDF_PILOT_CANDIDATES.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 8,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_REAL_PDF_GATE_TARGETED-FINAL/08_GPT_REVIEW_PACKET.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 8,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_REAL_PDF_GATE_TARGETED-POSTRESTART/06_FACT_EXTRACTION_REPORT.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 9,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_REAL_PDF_GATE_TARGETED-POSTRESTART/07_REAL_PDF_PILOT_CANDIDATES.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 9,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_REAL_PDF_GATE_TARGETED-POSTRESTART/08_GPT_REVIEW_PACKET.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 9,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_REAL_PDF_GATE_TARGETED/06_FACT_EXTRACTION_REPORT.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_REAL_PDF_GATE_TARGETED/07_REAL_PDF_PILOT_CANDIDATES.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_REAL_PDF_GATE/09_V2_CANDIDATES.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 9,
+      "schema_versions": [
+        "4.3-evidence-fact-candidate-v2"
+      ],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_REAL_PDF_GATE/11_GPT_REVIEW_PACKET.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 9,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_FACT_V2_2_1_E2E_RELEASE_CLOSURE/08_FACT_E2E_READINESS.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_FACT_V2_2_1_E2E_RELEASE_CLOSURE/residual-replay-provider-records.json",
+      "authority_class": "QUARANTINED",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "historical residual replay has no complete source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_FACT_V2_2_1_E2E_RELEASE_CLOSURE/residual-replay-result.json",
+      "authority_class": "QUARANTINED",
+      "replayable": false,
+      "candidate_count": 14,
+      "schema_versions": [
+        "4.3-evidence-fact-candidate-v2.2"
+      ],
+      "reason": "historical residual replay has no complete source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_REAL_FACT_V2_H3C_EXTRACTION_V1/05_FACT_EXTRACTION_REPORT.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_REAL_FACT_V2_H3C_EXTRACTION_V1/06_REAL_FACT_V2_CANDIDATES.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_REAL_FACT_V2_H3C_EXTRACTION_V1/07_GPT_SEMANTIC_REVIEW_PACKET.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 4,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_REAL_FACT_V2_REAL_PDF_PILOT_V1_1_RERUN/06_FACT_EXTRACTION_REPORT.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_REAL_FACT_V2_REAL_PDF_PILOT_V1_1_RERUN/07_REAL_PDF_PILOT_CANDIDATES.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_REAL_FACT_V2_REAL_PDF_PILOT_V1_1/06_FACT_EXTRACTION_REPORT.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_REAL_FACT_V2_REAL_PDF_PILOT_V1_1/07_REAL_PDF_PILOT_CANDIDATES.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_REAL_FACT_V2_REAL_PDF_PILOT_V1_1/09_REAL_FACT_CANDIDATES.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_REAL_FACT_V2_REAL_PDF_PILOT_V1/06_FACT_EXTRACTION_REPORT.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 5,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_REAL_FACT_V2_REAL_PDF_PILOT_V1/07_REAL_PDF_PILOT_CANDIDATES.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 5,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_REAL_FACT_V2_REAL_PDF_PILOT_V1/08_GPT_REVIEW_PACKET.json",
+      "authority_class": "REAL_HISTORICAL",
+      "replayable": false,
+      "candidate_count": 5,
+      "schema_versions": [],
+      "reason": "historical real-source artifact; current raw payload/source snapshot is not guaranteed"
+    },
+    {
+      "path": "docs/handoff/V43_OVERNIGHT_REAL_E2E_MASTER_V1/09_FACT_REPORT.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REAL_E2E_REQUIREMENT_RETRIEVAL_AND_FACT_CANARY_V1/05_FACT_CANARY_REPORT.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [
+        "4.3-evidence-fact-candidate-v2.2"
+      ],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REAL_E2E_REQUIREMENT_RETRIEVAL_AND_FACT_CANARY_V1/07_GPT_FACT_CANARY_REVIEW_PACKET.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 5,
+      "schema_versions": [
+        "4.3-evidence-fact-candidate-v2.2"
+      ],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REAL_E2E_REQUIREMENT_RETRIEVAL_AND_FACT_CANARY_V1/09_TARGETED_FACT_HOST_REPLAY_PLAN.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REAL_E2E_REQUIREMENT_RETRIEVAL_AND_FACT_CANARY_V1/10_FACT_CANARY_TARGETED_CLOSURE_CHECKPOINT.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_3_SEMANTIC_ADJUDICATION/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-194d848ec1f8389e.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_3_SEMANTIC_ADJUDICATION/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-3515e75ca99325c3.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_3_SEMANTIC_ADJUDICATION/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-3593b22e1644ba44.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_3_SEMANTIC_ADJUDICATION/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-3cb409beacd6f0be.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_3_SEMANTIC_ADJUDICATION/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-4f4f3e0181e19a21.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_3_SEMANTIC_ADJUDICATION/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-57eb1d142fda8e1a.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_3_SEMANTIC_ADJUDICATION/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-5ae5883f90c7f5b3.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_3_SEMANTIC_ADJUDICATION/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-5ddb48a9ed7f6df8.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_3_SEMANTIC_ADJUDICATION/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-5ea9e596fcb564b6.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_3_SEMANTIC_ADJUDICATION/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-663c775575fa691d.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_3_SEMANTIC_ADJUDICATION/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-6c2b96be8c745828.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_3_SEMANTIC_ADJUDICATION/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-7259780af967bdd3.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_3_SEMANTIC_ADJUDICATION/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-7c45789ddab83c3b.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_3_SEMANTIC_ADJUDICATION/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-80156927a8e708de.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_3_SEMANTIC_ADJUDICATION/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-848beec5f5f23940.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_3_SEMANTIC_ADJUDICATION/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-89fd0ec71315f3c1.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_3_SEMANTIC_ADJUDICATION/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-a73cbcf581433bf2.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_3_SEMANTIC_ADJUDICATION/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-b3555359b19b4055.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_3_SEMANTIC_ADJUDICATION/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-b51f20fe125f0863.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_3_SEMANTIC_ADJUDICATION/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-ee575172160f36b9.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_4_FINAL_ONE_CASE_RECERT/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-2e75506dc9900879.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_4_RUNTIME_RECERT/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-0231395f1a0374bb.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_4_RUNTIME_RECERT/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-0ed06343e37cbbef.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_4_RUNTIME_RECERT/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-39813562c8e84e51.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_4_RUNTIME_RECERT/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-442c681b5af4b4f4.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_4_RUNTIME_RECERT/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-4d86dfb400f7491e.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_4_RUNTIME_RECERT/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-5f5c187c5af7b45a.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_4_RUNTIME_RECERT/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-ac15ef02f3b3bcb3.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_4_RUNTIME_RECERT/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-f0b3541bbfda3e7a.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_4_RUNTIME_RECERT/evidence/NORMALIZED_CANDIDATE_SNAPSHOT-f78983492dc4d9c2.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_TARGETED_FACT_HOST_REPLAY_V2/04_RAW_FACT_CANDIDATES.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_TARGETED_FACT_HOST_REPLAY_V2/05_FACT_VALIDATION_REPORT.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_TARGETED_FACT_HOST_REPLAY_V2/06_GPT_FACT_SEMANTIC_REVIEW_PACKET.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_TARGETED_FACT_HOST_REPLAY_V2/08_TARGETED_FACT_HOST_REPLAY_CHECKPOINT.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_TARGETED_FACT_HOST_REPLAY_V3/04_RAW_FACT_CANDIDATES.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_TARGETED_FACT_HOST_REPLAY_V3/05_FACT_VALIDATION_REPORT.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_TARGETED_FACT_HOST_REPLAY_V3/06_GPT_FACT_SEMANTIC_REVIEW_PACKET.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    },
+    {
+      "path": "docs/handoff/V43_TARGETED_FACT_HOST_REPLAY_V3/08_TARGETED_FACT_HOST_REPLAY_V3_CHECKPOINT.json",
+      "authority_class": "UNKNOWN",
+      "replayable": false,
+      "candidate_count": 0,
+      "schema_versions": [],
+      "reason": "artifact shape did not expose a replayable model candidate and source snapshot"
+    }
+  ]
+}

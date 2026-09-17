@@ -1,0 +1,16 @@
+{
+  "v1_contract": "4.3-evidence-fact-extraction-v1",
+  "v2_contract": "4.3-evidence-fact-candidate-v2",
+  "changes": [
+    "Model-facing V2 uses source_refs resolved by Backend-owned snapshot instead of source_text/provenance objects.",
+    "Qualified quantities and temporal observations remain text observations for deterministic review.",
+    "Canonical Fact contract and downstream authority contracts are unchanged.",
+    "Valid empty facts array is a successful semantic completion."
+  ],
+  "unchanged": [
+    "provider route",
+    "canonicalizer boundary",
+    "grounding boundary",
+    "production Fact schema"
+  ]
+}

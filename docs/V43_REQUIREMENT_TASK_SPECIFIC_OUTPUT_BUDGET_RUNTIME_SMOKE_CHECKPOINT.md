@@ -1,0 +1,20 @@
+# Requirement task-specific output budget runtime smoke
+
+RUN_ID: requirement-task-budget-smoke-2026-09-09T10-30-53-366Z-5714c943
+FINAL_VERDICT: READY_FOR_GPT_REQUIREMENT_TASK_BUDGET_CLOSURE
+STATUS: PASS
+TARGET: HOLDOUT-REQ-V2-01 / Chunk 45
+PROVIDER_CALLS: 1
+RETRIES: 0
+PROVIDER_HTTP_STATUS: 200
+GATEWAY_HTTP_STATUS: 200
+RESOLVED_MAX_OUTPUT_TOKENS: 9600
+FINISH_REASON: stop
+JSON_PARSE: PASS
+SCHEMA: PASS
+SOURCE_RESOLUTION: PASS
+PRODUCTION_DB_WRITES: 0
+GOLD_MUTATIONS: 0
+RAW_PROVIDER_RESPONSE_PERSISTED: false
+
+Only safe metadata (hashes, lengths, statuses, and counts) is persisted; no prompt, secret, or raw provider content is included.

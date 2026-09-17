@@ -1,0 +1,85 @@
+{
+  "checkpoint": "V43_FACT_EMPTY_DOMAIN_NAMESPACE_NORMALIZATION_GATE_CHECKPOINT",
+  "generated_at": "2026-09-07",
+  "root_cause": "EMPTY_DOMAIN_NAMESPACE_NORMALIZATION_GAP",
+  "implementation": {
+    "owner": "services/semantic-gateway/src/task-router.js",
+    "normalization_order": "provider parsed data -> bounded structural normalization -> strict canonical schema validation",
+    "normalization_scope": "remove only valid-name namespaces whose value is a strict empty plain object",
+    "invalid_shape_behavior": "fail_closed",
+    "hash_identity_order": "canonical payload identity is computed after normalization"
+  },
+  "offline": {
+    "focused_tests": "83/83 PASS",
+    "git_diff_check": "PASS",
+    "provider_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0
+  },
+  "runtime": {
+    "gateway_ready_http_status": 200,
+    "gateway_info_http_status": 200,
+    "gateway_build_revision": "f509514",
+    "fact_contract_version": "4.3-evidence-fact-extraction-v1",
+    "fact_data_schema_sha256": "9b1c3dbe95e5817470032ce7594686bdc90e3d794babc7a207ced3ae443f42d9",
+    "fact_instruction_sha256": "f4303deae5b4382d26561d3cdadd29af4ef507496aa4200fe89e43307810925d"
+  },
+  "live_canary": {
+    "scope": ["COM-01", "COM-06", "CCV2-U13-01"],
+    "provider_call_cap": 4,
+    "provider_calls_consumed": 4,
+    "concurrency": 1,
+    "schema_retries": 0,
+    "input_classification": "SYNTHETIC_ENTERPRISE_EVAL_ONLY",
+    "provider": "openai_compatible",
+    "cases": [
+      {
+        "case_id": "COM-01",
+        "source_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+        "provider_reached": true,
+        "provider_http_status": 200,
+        "gateway_or_extractor_result": "FACT_SEMANTIC_EXTRACTION_FAILED",
+        "cause_class": "OUTPUT_SCHEMA_INVALID",
+        "normalized_count_observed": 0,
+        "retries_observed": 0,
+        "semantic_mutation_by_normalizer": 0
+      },
+      {
+        "case_id": "COM-06",
+        "source_sha256": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+        "attempted": true,
+        "safe_result_recorded": false,
+        "classification": "UNRECOVERED_TELEMETRY"
+      },
+      {
+        "case_id": "CCV2-U13-01",
+        "source_sha256": "9408fc5a50ffcad28def68d844c2d701405b99655f2d5904aeb89874f55ae575",
+        "attempted": true,
+        "safe_result_recorded": false,
+        "classification": "UNRECOVERED_TELEMETRY"
+      }
+    ],
+    "telemetry_note": "The initial three-case invocation consumed the bounded calls but its safe summary was not captured by the shell. No PASS is inferred for the two cases without recorded evidence.",
+    "wrong_shape_rate": null,
+    "output_contract_valid_rate": null,
+    "normalized_count_recorded": false,
+    "unexplained_422": 1,
+    "gateway_envelope_mismatch": null,
+    "schema_contract_retry": 0
+  },
+  "gate": {
+    "EMPTY_DOMAIN_NAMESPACE_NORMALIZATION_GAP": "NOT_CLOSED",
+    "FACT_PROVIDER_STRUCTURED_OUTPUT_INCOMPATIBLE": "REMAINS_OPEN",
+    "three_case_canary": "FAIL_CLOSED",
+    "fixed_12_material_gate": "NOT_STARTED",
+    "next_action": "STOP; preserve failure evidence and obtain a bounded, reliably captured canary run before any further live calls"
+  },
+  "safety": {
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "mapping_actions": 0,
+    "claim_actions": 0,
+    "writer_actions": 0,
+    "provider_calls_scope": "evidence_fact_extraction only"
+  }
+}

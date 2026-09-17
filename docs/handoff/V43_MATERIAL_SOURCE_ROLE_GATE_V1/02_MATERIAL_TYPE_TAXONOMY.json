@@ -1,0 +1,95 @@
+{
+  "artifact_type": "V43_MATERIAL_SOURCE_ROLE_GATE_V1_MATERIAL_TYPE_TAXONOMY",
+  "observed_material_types": [
+    "company_profile",
+    "delivery_capability",
+    "other",
+    "personnel",
+    "product_documentation",
+    "project_case",
+    "qualification",
+    "technical_solution",
+    "technical_whitepaper"
+  ],
+  "policy_version": "material-source-role-v1",
+  "mappings": [
+    {
+      "material_type": "company_profile",
+      "role": "REFERENCE_ONLY",
+      "reason": "material_type_reference_only",
+      "observed_in_inventory": true
+    },
+    {
+      "material_type": "delivery_capability",
+      "role": "EVIDENCE_CANDIDATE",
+      "reason": "material_type_evidence_candidate",
+      "observed_in_inventory": true
+    },
+    {
+      "material_type": "other",
+      "role": "REFERENCE_ONLY",
+      "reason": "material_type_reference_only",
+      "observed_in_inventory": true
+    },
+    {
+      "material_type": "personnel",
+      "role": "EVIDENCE_CANDIDATE",
+      "reason": "material_type_evidence_candidate",
+      "observed_in_inventory": true
+    },
+    {
+      "material_type": "product_documentation",
+      "role": "EVIDENCE_CANDIDATE",
+      "reason": "material_type_evidence_candidate",
+      "observed_in_inventory": true
+    },
+    {
+      "material_type": "project_case",
+      "role": "EVIDENCE_CANDIDATE",
+      "reason": "material_type_evidence_candidate",
+      "observed_in_inventory": true
+    },
+    {
+      "material_type": "qualification",
+      "role": "EVIDENCE_CANDIDATE",
+      "reason": "material_type_evidence_candidate",
+      "observed_in_inventory": true
+    },
+    {
+      "material_type": "technical_solution",
+      "role": "REFERENCE_ONLY",
+      "reason": "material_type_reference_only",
+      "observed_in_inventory": true
+    },
+    {
+      "material_type": "technical_whitepaper",
+      "role": "REFERENCE_ONLY",
+      "reason": "material_type_reference_only",
+      "observed_in_inventory": true
+    }
+  ],
+  "evidence_candidate_types_supported": [
+    "qualification",
+    "project_case",
+    "product_documentation",
+    "personnel",
+    "delivery_capability"
+  ],
+  "reference_only_types_supported": [
+    "company_profile",
+    "technical_solution",
+    "technical_whitepaper",
+    "other"
+  ],
+  "categories_not_represented_by_current_taxonomy": [
+    "product_certificate",
+    "contract",
+    "acceptance_report",
+    "performance_test",
+    "financial_proof",
+    "service_record"
+  ],
+  "unmapped_default": "REFERENCE_ONLY",
+  "taxonomy_sufficient_for_current_boundary": true,
+  "taxonomy_limitation": "Unrepresented high-value document categories remain Reference-only until a separately authorized material taxonomy decision."
+}

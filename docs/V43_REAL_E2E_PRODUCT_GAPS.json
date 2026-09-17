@@ -1,0 +1,32 @@
+{
+  "gaps": [
+    {
+      "gap_id": "GAP-01",
+      "stage": "RequirementParseService",
+      "description": "Candidate range containing only excluded scope fails the complete parse job instead of yielding a completed run.",
+      "owner": "Requirement / source-scope boundary",
+      "evidence": "04_TENDER_PARSE_REPORT.json"
+    },
+    {
+      "gap_id": "GAP-02",
+      "stage": "EnterpriseRetrievalService",
+      "description": "Existing Huawei Eval materials are parsed/chunked but not indexed or embedded in this baseline.",
+      "owner": "RAG ingestion/indexing",
+      "evidence": "07_ENTERPRISE_INGESTION_REPORT.json"
+    },
+    {
+      "gap_id": "GAP-03",
+      "stage": "CanonicalFact",
+      "description": "Fact V2.2 cannot start without retrieval-driven contexts and therefore remains unexecuted.",
+      "owner": "Fact pipeline",
+      "evidence": "08_RETRIEVAL_REPORT.json / 09_FACT_REPORT.json"
+    },
+    {
+      "gap_id": "GAP-04",
+      "stage": "Downstream authority",
+      "description": "Mapping, Claim, Writer and export remain safely blocked without authorized upstream state.",
+      "owner": "Cross-domain authority",
+      "evidence": "10_MAPPING_REPORT.json..15_EXPORT_REPORT.json"
+    }
+  ]
+}

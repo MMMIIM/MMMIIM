@@ -1,0 +1,18 @@
+{
+  "artifact_type": "V43_CURRENT_SCOPE_IMPLEMENTATION_AUDIT",
+  "implementation_path": "backend/src/pipeline/requirement-scope-router.js",
+  "entry_point": "validateCandidateSourceScope",
+  "current_source_sha256": "3e161d4dd62aec1504d2c6d7bd6a88515d0db65e86bae3e19cdb5205eaa152b5",
+  "frozen_contract": {
+    "in_scope": "BIDDER_ACTION_OR_CONSEQUENCE",
+    "out_of_scope": "PURE_PROCUREMENT_CONTEXT",
+    "source_role_is_authority": false,
+    "category_is_authority": false
+  },
+  "pre_fix_branch": "roles.every(EXCLUDED_ONLY_ROLES) → REQUIREMENT_SCOPE_EXCLUDED",
+  "post_fix_branch": "roles.every(EXCLUDED_ONLY_ROLES) && no bidder-facing action/consequence → REQUIREMENT_SCOPE_EXCLUDED",
+  "authority_owner": "Backend deterministic scope boundary; no new parallel authority",
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0
+}

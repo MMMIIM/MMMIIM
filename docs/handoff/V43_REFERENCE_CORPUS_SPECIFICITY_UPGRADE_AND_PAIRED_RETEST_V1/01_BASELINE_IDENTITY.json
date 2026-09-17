@@ -1,0 +1,81 @@
+{
+  "artifact_type": "V43_REFERENCE_CORPUS_SPECIFICITY_UPGRADE_BASELINE_IDENTITY",
+  "baseline_run_id": "V43-CORE6-REAL-REFERENCE-RAG-WRITER-20260915105535",
+  "baseline_manifest": {
+    "path": "docs/handoff/V43_REFERENCE_RAG_SEMANTIC_ADJUDICATION_AND_FAILURE_DECOMPOSITION_V1/00_EXECUTION_MANIFEST.json",
+    "sha256": "a10549f3adde4c371e358b2aff2b710f09e38397e58d2e02049c99375122f926"
+  },
+  "r1_results": {
+    "path": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/10_R1_RESULTS.json",
+    "sha256": "0aaa30b27a93e521209de0227ae8462a23d1f5667a7d9d7fd74d95a9ae401a15",
+    "case_count": 80
+  },
+  "gpt_semantic_labels": {
+    "path": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/14_GPT_SEMANTIC_REVIEW_PACKET.json",
+    "sha256": "357d4102eccac3faeaa3ae06bf896c4ceb9b275b377b12c18acc4865ed80a19e",
+    "useful": 12,
+    "partial": 37,
+    "not_useful": 31,
+    "total": 80
+  },
+  "raw80_adjusted74": {
+    "artifact_type": "V43_RAW80_VS_REFERENCE_NEEDED_ADJUSTED74_METRICS",
+    "raw_80": {
+      "case_count": 80,
+      "label_counts": {
+        "PARTIAL": 37,
+        "NOT_USEFUL": 31,
+        "USEFUL": 12
+      },
+      "family_counts": {
+        "TOO_GENERIC": 19,
+        "WEAK_CORPUS": 25,
+        "REFERENCE_NOT_NEEDED": 6,
+        "GOOD_REFERENCE": 12,
+        "RANKING_FAILURE": 7,
+        "SEMANTIC_NEAR_MISS": 9,
+        "OTHER": 2
+      },
+      "useful_rate": 0.15
+    },
+    "reference_needed_adjusted_74": {
+      "case_count": 74,
+      "label_counts": {
+        "PARTIAL": 37,
+        "USEFUL": 12,
+        "NOT_USEFUL": 25
+      },
+      "family_counts": {
+        "TOO_GENERIC": 19,
+        "WEAK_CORPUS": 25,
+        "GOOD_REFERENCE": 12,
+        "RANKING_FAILURE": 7,
+        "SEMANTIC_NEAR_MISS": 9,
+        "OTHER": 2
+      },
+      "useful_rate": 0.16216216216216217
+    },
+    "excluded_case_ids": [
+      "RAG-TB-003-TB-003-REQ-035",
+      "RAG-JY-001-JY-001-REQ-039",
+      "RAG-JY-001-JY-001-REQ-130",
+      "RAG-TB-003-TB-003-REQ-020",
+      "RAG-TB-003-TB-003-REQ-225",
+      "RAG-TB-003-TB-003-REQ-226"
+    ],
+    "denominator_change_only": true,
+    "router_mutated": false
+  },
+  "v3_snapshot": {
+    "path": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/03_PRODUCTION_CORPUS_SNAPSHOT_MANIFEST.json",
+    "sha256": "c2087cd46a1642452915658ff1e687be27e40e4c674008a85ad63f780b7fcdae",
+    "materials": 34,
+    "chunks": 318,
+    "embeddings": 382
+  },
+  "threshold_054": {
+    "status": "SHADOW_ONLY",
+    "source": "prior fail-quiet decision",
+    "promoted": false
+  }
+}

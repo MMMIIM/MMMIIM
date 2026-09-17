@@ -1,0 +1,68 @@
+{
+  "artifact_type": "V43_WRITER_REFERENCE_PATH_AUDIT",
+  "audit_mode": "READ_ONLY_CURRENT_DIRTY_WORKTREE",
+  "identity": {
+    "writer_entrypoint": "backend/src/pipeline/writer-reference-selector.js::WriterReferenceSelector.select",
+    "repository_entrypoint": "backend/src/db.js::searchWriterReferenceChunks/listWriterReferenceChunks",
+    "source_role_owner": "backend/src/pipeline/material-source-authority-policy.js",
+    "source_role_policy_version": "material-source-role-v1",
+    "code_identities": {
+      "backend/src/pipeline/writer-reference-selector.js": {
+        "path": "backend/src/pipeline/writer-reference-selector.js",
+        "sha256": "b961c9b840e81db7e58b7a31ff6fd1b449456f947f49e41560007f1bef013215"
+      },
+      "backend/src/pipeline/retrieval-chunk-role.js": {
+        "path": "backend/src/pipeline/retrieval-chunk-role.js",
+        "sha256": "4a9c3f0a0e9e919bd53076d1cbb0a863791cd0212ce08ecc729e413ffcb239aa"
+      },
+      "backend/src/pipeline/retrieval-substantive-candidate.js": {
+        "path": "backend/src/pipeline/retrieval-substantive-candidate.js",
+        "sha256": "ebc55d1ccc0c491e9f62ca9436d90e0e32ec31b61c0354de0395535392378fed"
+      },
+      "backend/src/pipeline/retrieval-source-eligibility.js": {
+        "path": "backend/src/pipeline/retrieval-source-eligibility.js",
+        "sha256": "7441803f7308c70519339a52681ee172e62474adf8d0231f69c708dd2304a9d3"
+      },
+      "backend/src/pipeline/material-source-authority-policy.js": {
+        "path": "backend/src/pipeline/material-source-authority-policy.js",
+        "sha256": "e0cbe41d9adec50a54d0b632bad8c8e382246157725cab0b872bbed3658e6885"
+      },
+      "backend/src/db.js": {
+        "path": "backend/src/db.js",
+        "sha256": "ac8e21997edcc15ae52818c598e0aa549d2610f25ae7f5531b44db2c84b8349e"
+      }
+    }
+  },
+  "observed_reuse": {
+    "writer_material_type_filter": {
+      "status": "REUSED",
+      "evidence": "WriterReferenceSelector.WRITER_REFERENCE_MATERIAL_TYPES = technical_solution, technical_whitepaper"
+    },
+    "writer_exact_chunk_hash_dedup": {
+      "status": "REUSED",
+      "evidence": "WriterReferenceSelector deduplicates rows by chunk_hash or material_id:chunk_id"
+    },
+    "retrieval_chunk_role_eligibility": {
+      "status": "NOT_REUSED_DIRECTLY",
+      "evidence": "WriterReferenceSelector does not call retrieval-chunk-role.js; repository reference query does not expose a chunk-role filter"
+    },
+    "substantive_content_filter": {
+      "status": "NOT_REUSED_DIRECTLY",
+      "evidence": "WriterReferenceSelector does not call retrieval-substantive-candidate.js"
+    },
+    "source_role_policy": {
+      "status": "INDIRECT_LIFECYCLE_ONLY",
+      "evidence": "searchWriterReferenceChunks applies lifecycle/approval/usage/index predicates; explicit source-role projection is not performed in WriterReferenceSelector"
+    },
+    "embedding_path": {
+      "status": "REUSED",
+      "evidence": "WriterReferenceSelector uses EmbeddingClient.embed then repository.searchWriterReferenceChunks when configured"
+    }
+  },
+  "authority_boundary": {
+    "reference_only": "CONTEXT_ONLY",
+    "enterprise_assertion_authority": "not granted by retrieval or WriterReferenceSelector",
+    "no_production_change": true
+  },
+  "path_identity": "CONFIRMED"
+}

@@ -1,0 +1,126 @@
+{
+  "artifact_type": "V43_EVAL_BADCASE_FLYWHEEL_V1_CHECKPOINT",
+  "artifact_version": "v1",
+  "decision": "V43_EVAL_BADCASE_FLYWHEEL_V1_AUTONOMOUS_MASTER_IMPLEMENTATION",
+  "implementation_status": "READY_FOR_GPT_EVAL_FLYWHEEL_V1_IMPLEMENTATION_REVIEW",
+  "final_review": "PASS_WITH_NON_BLOCKING_FINDINGS",
+  "git": {
+    "branch": "feat/v4.3-semantic-boundary-routing",
+    "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+    "dirty": true,
+    "identity_source": "docs/eval/flywheel/V43-FLYWHEEL-P0-487-R2/eval-run.json"
+  },
+  "task_status": {
+    "task_0_contract_identity": "PASS",
+    "task_1_eval_run_artifact_evidence_boundary": "PASS",
+    "task_2_trace_requirement_adapter": "PASS",
+    "task_3_deterministic_evaluators": "PASS",
+    "task_4_badcase_registry": "PASS",
+    "task_5_failure_family_registry": "PASS",
+    "task_5a_known_baseline_registry": "PASS",
+    "task_6_regression_runner": "PASS",
+    "task_7_cli": "PASS",
+    "task_8_p0_487_trace": "PASS",
+    "task_9_seed_import": "SEED_LEDGER_INPUT_PENDING_GPT",
+    "task_10_full_regression_handoff": "PASS_WITH_NON_BLOCKING_FINDINGS"
+  },
+  "tests": {
+    "focused_command": "node --test backend/test/eval-flywheel/*.test.js",
+    "focused_total": 16,
+    "focused_pass": 16,
+    "focused_fail": 0,
+    "frontend_command": "npm test -w frontend",
+    "frontend_total": 51,
+    "frontend_pass": 51,
+    "frontend_fail": 0,
+    "backend_full_command": "npm test -w backend",
+    "backend_full_exit_code": 1,
+    "backend_full_classification": "PRE_EXISTING_UNRELATED_BASELINE",
+    "backend_full_known_failure_count": 23,
+    "backend_full_registry": "docs/eval/flywheel/KNOWN_BASELINE_FAILURE_REGISTRY.json",
+    "postgres_regression": "NOT_RUN_SAFE_GUARD",
+    "postgres_regression_reason": "Existing integration suite writes to bid_platform; this Decision requires PRODUCTION_DB_WRITES=0.",
+    "build": "PASS",
+    "lint": "PASS",
+    "diff_check": "PASS"
+  },
+  "p0_trace": {
+    "eval_run_id": "V43-FLYWHEEL-P0-487-R2",
+    "dataset_id": "V43_P0_SOURCE_TRUTH_487",
+    "dataset_partition": "TARGETED_BADCASE",
+    "source_truth_sha256": "sha256:9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+    "atom_count": 487,
+    "unique_atom_count": 487,
+    "tender_counts": { "JY-001": 89, "TB-003": 25, "TB-006": 19, "FAST-01": 24, "FAST-04": 229, "FAST-WATER-01": 101 },
+    "evidence_gaps": {
+      "Tender Source": 0,
+      "Section": 0,
+      "Chunk": 483,
+      "Provider Input": 487,
+      "Raw Candidate": 487,
+      "Normalization": 487,
+      "Source Resolution": 483,
+      "Canonical Requirement": 483
+    },
+    "canonical_linked_count": 4,
+    "source_hash_present_count": 487,
+    "deterministic_evaluation_rows": 487,
+    "deterministic_evaluation_fail_count": 0,
+    "risk_signals_observed": [],
+    "evidence_gap_policy": "EVIDENCE_NOT_PERSISTED; no regeneration or semantic inference"
+  },
+  "badcase_and_failure_families": {
+    "badcase_registry": "PASS",
+    "failure_family_registry": "PASS",
+    "seed_import_status": "SEED_LEDGER_INPUT_PENDING_GPT",
+    "seed_imported_rows": 0,
+    "semantic_labels_created_by_codex": 0
+  },
+  "artifact_refs": [
+    { "path": "docs/architecture/V43_EVAL_BADCASE_FLYWHEEL_V1.md", "kind": "architecture_spec" },
+    { "path": "docs/architecture/V43_EVAL_BADCASE_FLYWHEEL_V1_IMPLEMENTATION_PLAN.md", "kind": "implementation_plan" },
+    { "path": "docs/architecture/V43_EVAL_FLYWHEEL_REPO_REUSE_MAP.json", "kind": "reuse_map" },
+    { "path": "docs/eval/flywheel/V43-FLYWHEEL-P0-487-R2/eval-run.json", "kind": "eval_run" },
+    { "path": "docs/eval/flywheel/V43-FLYWHEEL-P0-487-R2/V43_P0_487_PROVENANCE_TRACE_INDEX.json", "kind": "trace" },
+    { "path": "docs/eval/flywheel/V43-FLYWHEEL-P0-487-R2/deterministic-evaluations.json", "kind": "deterministic_evaluation" },
+    { "path": "docs/eval/flywheel/V43-FLYWHEEL-P0-487-R2/manifest.json", "kind": "artifact_manifest" },
+    { "path": "docs/eval/flywheel/V43-FLYWHEEL-P0-487-R2/regression-results.json", "kind": "regression" },
+    { "path": "docs/eval/flywheel/KNOWN_BASELINE_FAILURE_REGISTRY.json", "kind": "known_baseline_registry" },
+    { "path": "docs/eval/flywheel/V43_EVAL_BADCASE_FLYWHEEL_V1_INDEPENDENT_REVIEW.json", "kind": "independent_review" }
+  ],
+  "model_routing": {
+    "LUNA_XHIGH": "fixtures, hashing, artifact and CLI wiring",
+    "TERRA_MEDIUM": "contracts, evidence boundaries, trace/evaluator isolation",
+    "escalations": 0
+  },
+  "side_effects": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "migrations": 0,
+    "production_semantic_changes": 0,
+    "commits": 0,
+    "pushes": 0,
+    "merges": 0,
+    "deploys": 0
+  },
+  "production_observability": {
+    "default_sink": "NOOP",
+    "production_imports_of_flywheel": 0,
+    "restricted_evidence_default": false
+  },
+  "readiness_gates": {
+    "SAFE_TO_START_HUMAN_FACT_V2_REVIEW": "NO",
+    "SAFE_TO_FREEZE_REAL_FACT_V2": "NO",
+    "SAFE_TO_BUILD_MAPPING_GOLD_V2": "NO",
+    "SAFE_TO_RUN_WRITER_LIVE_EVAL": "NO",
+    "SAFE_TO_START_BID_PILOT_HITL": "NO"
+  },
+  "remaining_blockers": [
+    { "id": "SEED_LEDGER_INPUT_PENDING_GPT", "impact": "non-blocking_for_foundation", "detail": "Exact frozen 44-row GPT/Human BadCase ledger is not present; no rows were invented." },
+    { "id": "PRE_EXISTING_UNRELATED_BASELINE", "impact": "non-blocking_for_foundation", "detail": "23 existing backend unit failures are recorded in the machine-readable registry and were not changed." },
+    { "id": "POSTGRES_REGRESSION_SAFE_GUARD", "impact": "requires_separate_decision", "detail": "Existing PostgreSQL suite performs writes to bid_platform and was not run under the zero-production-write constraint." }
+  ],
+  "next_status": "READY_FOR_GPT_EVAL_FLYWHEEL_V1_IMPLEMENTATION_REVIEW"
+}

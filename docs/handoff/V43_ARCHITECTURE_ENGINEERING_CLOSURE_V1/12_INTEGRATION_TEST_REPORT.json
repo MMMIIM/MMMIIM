@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-09-16T17:31:38.432Z",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "dirty_worktree": true,
+  "authority": "SYNTHETIC_EVAL_ONLY",
+  "production_authority": "NONE",
+  "schema_version": "v43-integration-test-report-v1",
+  "execution_status": "PASS_WITH_PRE_EXISTING_UNRELATED_FAILURES",
+  "focused_scope": "owner/boundary tests only; no provider or DB path",
+  "fixture_probe": {
+    "candidates": 2,
+    "search_run_id_count": 1,
+    "embedded_rows": 2,
+    "k0_status": "NO_EVIDENCE_FOUND",
+    "fact_reuse": "FACT_REUSED",
+    "extraction_boundary": "FACT_REVIEW_REQUIRED",
+    "extraction_calls": 1,
+    "support_route": "NEEDS_SEMANTIC_ADJUDICATION",
+    "support_partial": "INSUFFICIENT_EVIDENCE",
+    "support_empty": "NO_RELEVANT_EVIDENCE",
+    "claim_decision": "reject",
+    "claim_writer_eligible": false,
+    "safe_allowed_assertions": 0,
+    "safe_forbidden_assertions": 1,
+    "writer_identity_changes": true
+  },
+  "known_pre_existing_failure": "evidence-fact-execution-observability.test.js FACT_SEMANTIC_EMPTY assertion mismatch; not changed here",
+  "focused_command": {
+    "status": "PASS",
+    "tests": 176,
+    "passed": 176,
+    "failed": 0,
+    "scope": "Evidence Search, Fact, Support, Mapping, Claim, Safe Response, Writer boundary and authority regression"
+  },
+  "broader_guard_command": {
+    "status": "PASS_WITH_PRE_EXISTING_UNRELATED_FAILURES",
+    "tests": 218,
+    "passed": 213,
+    "failed": 5,
+    "failures": [
+      "engineering-governance-parity.test.js: 3 existing documentation expectation mismatches",
+      "writer-authorization-snapshot.test.js: 2 existing authorization identity assertions"
+    ],
+    "scope_relation": "not caused by the EvidenceSearchOrchestrator search_run_id change"
+  },
+  "new_failures_introduced": 0
+}

@@ -18,12 +18,172 @@ function sendData(res, data, status = 200) {
   return res.status(status).json({ ok: true, data });
 }
 
-export function createApp({ repository, storage, generationService, requirementParseService, requirementSourceService, productionBetaService, companyMaterialService, evidenceService, evidenceFactService, enterpriseRetrievalService, documentGenerationService, reviewCenterService, evidenceReadinessService, materialProcessingCenterService, evidenceReviewService, evidenceSourceFactService, requirementEvidenceFactMappingService, projectFactControlService, documentDeliveryService, agentContextResolver, agentOrchestrator, agentActionExecutor, connectivityPreflight, projectAuthorizationService: projectAuthorizationServiceInput, actorResolver = createServerActorResolver({ actorId: process.env.BACKEND_DEV_ACTOR_ID, actorType: 'development' }), legacyGenerationCompat = false, corsOrigin }) {
+function safeFactDiagnostic(error) {
+  const details = error?.details;
+  if (!details || details.stage !== 'FACT') return null;
+  const diagnostic = {
+    error_code: typeof error.code === 'string' ? error.code : null,
+    stage: 'FACT',
+    boundary: typeof details.boundary === 'string' ? details.boundary.slice(0, 160) : null,
+    cause_code: typeof details.cause_code === 'string' ? details.cause_code.slice(0, 80) : null,
+    provider_invocation: typeof details.provider_invocation === 'string' ? details.provider_invocation.slice(0, 80) : null
+  };
+  if (details.provider_audit && typeof details.provider_audit === 'object' && !Array.isArray(details.provider_audit)) {
+    const audit = details.provider_audit;
+    diagnostic.provider_audit = {
+      provider_adapter_invoked: audit.provider_adapter_invoked === true,
+      fetch_invoked: audit.fetch_invoked === true,
+      provider_http_reached: audit.provider_http_reached === true,
+      provider_http_status: Number.isInteger(audit.provider_http_status) ? audit.provider_http_status : null,
+      finish_reason: typeof audit.finish_reason === 'string' ? audit.finish_reason.slice(0, 40) : null,
+      prompt_tokens: Number.isInteger(audit.prompt_tokens) ? audit.prompt_tokens : null,
+      completion_tokens: Number.isInteger(audit.completion_tokens) ? audit.completion_tokens : null,
+      output_truncated: audit.output_truncated === true,
+      json_parse_success: typeof audit.json_parse_success === 'boolean' ? audit.json_parse_success : null,
+      safe_error_code: typeof audit.safe_error_code === 'string' ? audit.safe_error_code.slice(0, 80) : null,
+      cause_code: typeof audit.cause_code === 'string' ? audit.cause_code.slice(0, 80) : null
+    };
+  }
+  if (Array.isArray(details.schema_validation_errors)) {
+    diagnostic.schema_validation_errors = details.schema_validation_errors.slice(0, 20).map(item => ({
+      stage: item?.stage === 'FACT' ? 'FACT' : null,
+      path: typeof item?.path === 'string' ? item.path.slice(0, 200) : null,
+      keyword: typeof item?.keyword === 'string' ? item.keyword.slice(0, 80) : null,
+      expected: typeof item?.expected === 'string' ? item.expected.slice(0, 240) : null,
+      actual_type: typeof item?.actual_type === 'string' ? item.actual_type.slice(0, 80) : null,
+      additional_property: typeof item?.additional_property === 'string' ? item.additional_property.slice(0, 120) : null,
+      missing_property: typeof item?.missing_property === 'string' ? item.missing_property.slice(0, 120) : null,
+      pattern: typeof item?.pattern === 'string' ? item.pattern.slice(0, 160) : null
+    }));
+  }
+  if (Number.isInteger(details.attempt_count)) {
+    const safeFailure = failure => {
+      if (!failure || typeof failure !== 'object' || Array.isArray(failure)) return null;
+      return {
+        stage: failure.stage === 'FACT' ? 'FACT' : null,
+        boundary: typeof failure.boundary === 'string' ? failure.boundary.slice(0, 160) : null,
+        error_code: typeof failure.error_code === 'string' ? failure.error_code.slice(0, 100) : null,
+        cause_code: typeof failure.cause_code === 'string' ? failure.cause_code.slice(0, 100) : null,
+        ...(Array.isArray(failure.schema_validation_errors) ? {
+          schema_validation_errors: failure.schema_validation_errors.slice(0, 20).map(item => ({
+            path: typeof item?.path === 'string' ? item.path.slice(0, 200) : null,
+            keyword: typeof item?.keyword === 'string' ? item.keyword.slice(0, 80) : null,
+            expected: typeof item?.expected === 'string' ? item.expected.slice(0, 240) : null,
+            actual_type: typeof item?.actual_type === 'string' ? item.actual_type.slice(0, 80) : null
+          }))
+        } : {})
+      };
+    };
+    diagnostic.retry = {
+      attempt_count: details.attempt_count,
+      first_pass: details.first_pass === true,
+      retry_eligible: details.retry_eligible === true,
+      retry_attempted: details.retry_attempted === true,
+      retry_success: details.retry_success === true,
+      auto_recovered: details.auto_recovered === true,
+      final_auto_success: details.final_auto_success === true,
+      human_escalation: details.human_escalation === true,
+      final_status: typeof details.final_status === 'string' ? details.final_status.slice(0, 80) : null,
+      initial_failure: safeFailure(details.initial_failure),
+      retry_result: safeFailure(details.retry_result)
+    };
+  }
+  return diagnostic;
+}
+
+export function createApp({ repository, storage, generationService, requirementParseService, requirementSourceService, requirementScopeAuthorityService, projectMaterialBindingService, productionBetaService, companyMaterialService, evidenceService, evidenceFactService, enterpriseRetrievalService, documentGenerationService, reviewCenterService, evidenceReadinessService, materialProcessingCenterService, evidenceReviewService, evidenceSourceFactService, requirementEvidenceFactMappingService, projectFactControlService, documentDeliveryService, responseRouterService, safeResponsePacketService, finalRequirementReconciliationService, flowProjectionService, agentContextResolver, agentOrchestrator, agentActionExecutor, connectivityPreflight, projectAuthorizationService: projectAuthorizationServiceInput, actorResolver = createServerActorResolver({ actorId: process.env.BACKEND_DEV_ACTOR_ID, actorType: 'development' }), legacyGenerationCompat = false, corsOrigin }) {
   const app = express();
   app.use(cors({ origin: corsOrigin || 'http://localhost:5173' }));
   app.use(express.json({ limit: '2mb' }));
   const trustedActor = (req) => requireTrustedActor(actorResolver, req);
   const projectAuthorizationService = projectAuthorizationServiceInput || (repository ? new ProjectAuthorizationService({ repository }) : null);
+
+  const assertProjectWrite = async (req, projectId) => {
+    if (!projectAuthorizationService) {
+      throw new AppError('PROJECT_AUTHORIZATION_REQUIRED', '项目授权服务尚未配置。', 503);
+    }
+    return projectAuthorizationService.assertProjectAccess({
+      actor: trustedActor(req), projectId, action: 'WRITE'
+    });
+  };
+  const mutationRequest = req => ['POST', 'PUT', 'PATCH', 'DELETE'].includes(req.method);
+  const authorizeResolvedMutation = (resolver, code, message, { skip = () => false } = {}) => async (req, _res, next) => {
+    if (!mutationRequest(req) || skip(req)) return next();
+    try {
+      const target = await resolver(req);
+      if (!target?.project_id) throw new AppError(code, message, 404);
+      await assertProjectWrite(req, target.project_id);
+      next();
+    } catch (error) { next(error); }
+  };
+
+  // Formal project-scoped mutations share one HTTP authorization boundary. Canonical
+  // Review -> Fact extraction is excluded because its owning service already enforces it.
+  app.use('/api/projects/:projectId', async (req, _res, next) => {
+    const isExportWrite = req.method === 'GET' && /\/document-versions\/[^/]+\/export-word(?:\?|$)/.test(req.originalUrl);
+    const ownedFactExtraction = /\/evidence-reviews\/[^/]+\/facts(?:\?|$)/.test(req.originalUrl);
+    if ((!mutationRequest(req) && !isExportWrite) || ownedFactExtraction) return next();
+    try { await assertProjectWrite(req, req.params.projectId); next(); }
+    catch (error) { next(error); }
+  });
+  app.use('/api/evidence-reviews/:reviewId', authorizeResolvedMutation(
+    req => repository.getEvidenceReviewProject(req.params.reviewId),
+    'EVIDENCE_REVIEW_NOT_FOUND', 'Evidence Review 不存在。',
+    { skip: req => /^\/facts(?:\?|$)/.test(req.url) }
+  ));
+  app.use('/api/evidence-source-facts/:factId', authorizeResolvedMutation(
+    req => repository.getEvidenceSourceFactCurrent(req.params.factId),
+    'EVIDENCE_FACT_NOT_FOUND', 'Fact 不存在。'
+  ));
+  app.use('/api/requirement-evidence-fact-mappings/:mappingId', authorizeResolvedMutation(
+    req => repository.getRequirementEvidenceFactMappingCurrent(req.params.mappingId),
+    'MAPPING_NOT_FOUND', 'Mapping 不存在。'
+  ));
+  app.use('/api/project-facts/:factId', authorizeResolvedMutation(
+    req => repository.getProjectFactCurrent(req.params.factId),
+    'PROJECT_FACT_NOT_FOUND', 'Project Fact 不存在。'
+  ));
+  app.use('/api/claims/:claimId', authorizeResolvedMutation(
+    req => repository.getClaimProject(req.params.claimId),
+    'CLAIM_NOT_FOUND', 'Claim 不存在。'
+  ));
+  app.use('/api/document-generations/:generationId', authorizeResolvedMutation(
+    req => repository.getDocumentGeneration(req.params.generationId),
+    'DOCUMENT_GENERATION_NOT_FOUND', '正文生成任务不存在。'
+  ));
+  app.use('/api/document-versions/:versionId', authorizeResolvedMutation(
+    req => repository.getPipelineDocumentVersion(req.params.versionId),
+    'VERSION_NOT_FOUND', '文档版本不存在。'
+  ));
+  app.use('/api/evidences/:evidenceId', authorizeResolvedMutation(
+    req => repository.getEvidenceRecord(req.params.evidenceId),
+    'EVIDENCE_NOT_FOUND', 'Evidence 不存在。'
+  ));
+  app.use('/api/evidence-mappings/:mappingId', authorizeResolvedMutation(
+    req => repository.getRequirementEvidenceMappingProject(req.params.mappingId),
+    'MAPPING_NOT_FOUND', 'Mapping 不存在。'
+  ));
+  app.use('/api/evidence-facts/:factId', authorizeResolvedMutation(
+    req => repository.getEvidenceFactByIdentifier(req.params.factId),
+    'EVIDENCE_FACT_NOT_FOUND', 'Fact 不存在。'
+  ));
+  app.use('/api/tender-parse-jobs/:jobId', authorizeResolvedMutation(
+    req => repository.getParseJob(req.params.jobId),
+    'PARSE_JOB_NOT_FOUND', '解析任务不存在。'
+  ));
+  app.use('/api/requirement-candidates/:candidateId', authorizeResolvedMutation(
+    async req => {
+      const sourceReview = await repository.getCandidateSourceReview(req.params.candidateId);
+      return sourceReview?.candidate
+        ? repository.getParseJob(sourceReview.candidate.parse_job_id)
+        : null;
+    },
+    'REQUIREMENT_CANDIDATE_NOT_FOUND', 'Requirement Candidate 不存在。'
+  ));
+  app.use('/api/requirements/:requirementId/enterprise-retrieval', authorizeResolvedMutation(
+    req => repository.getCanonicalRequirementForRetrieval(req.params.requirementId),
+    'REQUIREMENT_NOT_FOUND', 'Requirement 不存在。'
+  ));
 
   app.get('/api/health', async (_req, res, next) => {
     try {
@@ -188,6 +348,55 @@ export function createApp({ repository, storage, generationService, requirementP
     catch (error) { next(error); }
   });
 
+  app.get('/api/projects/:projectId/requirement-scope-authority', async (req, res, next) => {
+    try {
+      if (!requirementScopeAuthorityService) throw new AppError('REQUIREMENT_SCOPE_AUTHORITY_UNAVAILABLE', '需求范围授权服务尚未配置。', 503);
+      sendData(res, { decisions: await requirementScopeAuthorityService.listDecisions(req.params.projectId) });
+    } catch (error) { next(error); }
+  });
+
+  app.post('/api/projects/:projectId/requirement-scope-authority', async (req, res, next) => {
+    try {
+      if (!requirementScopeAuthorityService) throw new AppError('REQUIREMENT_SCOPE_AUTHORITY_UNAVAILABLE', '需求范围授权服务尚未配置。', 503);
+      const body = req.body || {};
+      const actor = trustedActor(req);
+      sendData(res, { decision: await requirementScopeAuthorityService.recordDecision({
+        projectId: req.params.projectId,
+        candidateIdentity: body.candidate_identity,
+        sourceChunkId: body.source_chunk_id,
+        sourceHash: body.source_hash,
+        sourcePageStart: body.source_page_start,
+        sourcePageEnd: body.source_page_end,
+        decision: body.decision,
+        reasonCodes: body.reason_codes,
+        actor
+      }) }, 201);
+    } catch (error) { next(error); }
+  });
+
+  app.get('/api/projects/:projectId/material-bindings', async (req, res, next) => {
+    try {
+      if (!projectMaterialBindingService) throw new AppError('PROJECT_MATERIAL_BINDING_UNAVAILABLE', '项目材料绑定服务尚未配置。', 503);
+      sendData(res, { bindings: await projectMaterialBindingService.list(req.params.projectId) });
+    } catch (error) { next(error); }
+  });
+
+  app.post('/api/projects/:projectId/material-bindings', async (req, res, next) => {
+    try {
+      if (!projectMaterialBindingService) throw new AppError('PROJECT_MATERIAL_BINDING_UNAVAILABLE', '项目材料绑定服务尚未配置。', 503);
+      const actor = trustedActor(req);
+      sendData(res, { binding: await projectMaterialBindingService.create({ projectId: req.params.projectId, materialId: req.body?.material_id, bindingSource: req.body?.binding_source, actor }) }, 201);
+    } catch (error) { next(error); }
+  });
+
+  app.delete('/api/projects/:projectId/material-bindings/:materialId', async (req, res, next) => {
+    try {
+      if (!projectMaterialBindingService) throw new AppError('PROJECT_MATERIAL_BINDING_UNAVAILABLE', '项目材料绑定服务尚未配置。', 503);
+      trustedActor(req);
+      sendData(res, { binding: await projectMaterialBindingService.remove({ projectId: req.params.projectId, materialId: req.params.materialId }) });
+    } catch (error) { next(error); }
+  });
+
   app.get('/api/projects/:projectId/company-materials', async (req, res, next) => {
     try { sendData(res, await companyMaterialService.list(req.params.projectId)); }
     catch (error) { next(error); }
@@ -262,13 +471,6 @@ export function createApp({ repository, storage, generationService, requirementP
   });
   app.post('/api/projects/:projectId/requirements/:requirementId/evidence-reviews',async(req,res,next)=>{
     try {
-      if (projectAuthorizationService) {
-        await projectAuthorizationService.assertProjectAccess({
-          actor: trustedActor(req),
-          projectId: req.params.projectId,
-          action: 'WRITE'
-        });
-      }
       const review = await evidenceReviewService.propose({
         projectId:req.params.projectId,
         requirementId:req.params.requirementId,
@@ -315,6 +517,42 @@ export function createApp({ repository, storage, generationService, requirementP
     catch (error) { next(error); }
   });
   app.get('/api/projects/:projectId/review-center',async(req,res,next)=>{try{sendData(res,await reviewCenterService.get(req.params.projectId));}catch(error){next(error);}});
+  app.get('/api/projects/:projectId/requirements/:requirementId/response-decision', async (req, res, next) => {
+    try {
+      if (!responseRouterService) throw new AppError('RESPONSE_ROUTER_UNAVAILABLE', 'Response Router 服务尚未配置。', 503);
+      sendData(res, await responseRouterService.get(req.params.projectId, req.params.requirementId));
+    } catch (error) { next(error); }
+  });
+  app.get('/api/projects/:projectId/requirements/:requirementId/safe-response-packet', async (req, res, next) => {
+    try {
+      if (!safeResponsePacketService) throw new AppError('SAFE_RESPONSE_PACKET_UNAVAILABLE', 'Safe Response Packet 服务尚未配置。', 503);
+      sendData(res, await safeResponsePacketService.get(req.params.projectId, req.params.requirementId));
+    } catch (error) { next(error); }
+  });
+  app.get('/api/projects/:projectId/final-reconciliation', async (req, res, next) => {
+    try {
+      if (!finalRequirementReconciliationService) throw new AppError('RECONCILIATION_UNAVAILABLE', 'Final Requirement Reconciliation 服务尚未配置。', 503);
+      sendData(res, await finalRequirementReconciliationService.get(req.params.projectId, req.query.version_id || null));
+    } catch (error) { next(error); }
+  });
+  app.get('/api/projects/:projectId/gate-a/tasks', async (req, res, next) => {
+    try {
+      if (!flowProjectionService) throw new AppError('FLOW_PROJECTION_UNAVAILABLE', '流程投影服务尚未配置。', 503);
+      sendData(res, await flowProjectionService.getTasks(req.params.projectId));
+    } catch (error) { next(error); }
+  });
+  app.get('/api/projects/:projectId/compliance-matrix', async (req, res, next) => {
+    try {
+      if (!flowProjectionService) throw new AppError('FLOW_PROJECTION_UNAVAILABLE', '流程投影服务尚未配置。', 503);
+      sendData(res, await flowProjectionService.getCompliance(req.params.projectId));
+    } catch (error) { next(error); }
+  });
+  app.get('/api/projects/:projectId/bid-response-matrix', async (req, res, next) => {
+    try {
+      if (!flowProjectionService) throw new AppError('FLOW_PROJECTION_UNAVAILABLE', '流程投影服务尚未配置。', 503);
+      sendData(res, await flowProjectionService.getBidResponseMatrix(req.params.projectId));
+    } catch (error) { next(error); }
+  });
   app.get('/api/projects/:projectId/evidence-readiness',async(req,res,next)=>{try{sendData(res,await evidenceReadinessService.get(req.params.projectId));}catch(error){next(error);}});
   app.get('/api/projects/:projectId/material-processing',async(req,res,next)=>{try{sendData(res,await materialProcessingCenterService.get(req.params.projectId));}catch(error){next(error);}});
   app.post('/api/evidence-reviews/:reviewId/:decision(approve|reject)',async(req,res,next)=>{try{const actor=trustedActor(req);sendData(res,{review:await evidenceReviewService.decide(req.params.reviewId,req.params.decision,{reviewer:actor.actor_id,note:req.body?.note})});}catch(error){next(error);}});
@@ -322,12 +560,17 @@ export function createApp({ repository, storage, generationService, requirementP
   app.post('/api/evidence-reviews/:reviewId/facts',async(req,res,next)=>{try{const actor=trustedActor(req);const review=await repository.getEvidenceReviewProject(req.params.reviewId);if(!review)throw new AppError('EVIDENCE_REVIEW_NOT_FOUND','Evidence Review 不存在。',404);sendData(res,await evidenceSourceFactService.extract({projectId:review.project_id,reviewId:req.params.reviewId,actor}),201);}catch(error){next(error);}});
   app.post('/api/evidence-source-facts/:factId/:decision(approve|reject)',async(req,res,next)=>{try{const actor=trustedActor(req);sendData(res,{fact:await evidenceSourceFactService.decide(req.params.factId,req.params.decision,{reviewer:actor.actor_id,note:req.body?.note})});}catch(error){next(error);}});
   app.post('/api/projects/:projectId/requirement-evidence-fact-mappings',async(req,res,next)=>{try{sendData(res,{mapping:await requirementEvidenceFactMappingService.propose({projectId:req.params.projectId,requirementId:req.body?.requirement_id,factId:req.body?.fact_id,sourceType:req.body?.source_type||'manual'})},201);}catch(error){next(error);}});
+  app.post('/api/projects/:projectId/requirements/:requirementId/requirement-evidence-fact-mappings/produce',async(req,res,next)=>{try{sendData(res,await requirementEvidenceFactMappingService.produceForRequirement({projectId:req.params.projectId,requirementId:req.params.requirementId}),201);}catch(error){next(error);}});
   app.post('/api/requirement-evidence-fact-mappings/:mappingId/:decision(approve|reject)',async(req,res,next)=>{try{const actor=trustedActor(req);sendData(res,{mapping:await requirementEvidenceFactMappingService.decide(req.params.mappingId,req.params.decision,{reviewer:actor.actor_id,note:req.body?.note})});}catch(error){next(error);}});
   app.get('/api/projects/:projectId/project-facts/:factId/impact',async(req,res,next)=>{try{const impact=await reviewCenterService.factImpact(req.params.projectId,req.params.factId);if(!impact)throw new AppError('PROJECT_FACT_NOT_FOUND','Project Fact 不存在。',404);sendData(res,impact);}catch(error){next(error);}});
   app.post('/api/project-facts/:factId/:decision(approve|reject)',async(req,res,next)=>{try{const actor=trustedActor(req);sendData(res,{fact:await projectFactControlService.decide(req.params.factId,req.params.decision,{reviewer:actor.actor_id,note:req.body?.note})});}catch(error){next(error);}});
   app.post('/api/project-facts/:factId/edit',async(req,res,next)=>{try{const actor=trustedActor(req);const current=await repository.getProjectFactCurrent(req.params.factId);if(!current)throw new AppError('PROJECT_FACT_NOT_FOUND','Project Fact 不存在。',404);const impact=await reviewCenterService.factImpact(current.project_id,current.project_fact_id);const fact=await projectFactControlService.edit(req.params.factId,req.body?.fact||{}, {editor:actor.actor_id,note:req.body?.note});sendData(res,{fact,propagation:{...impact,status:'invalidation_completed'}});}catch(error){next(error);}});
 
-  app.post('/api/projects/:projectId/production-beta', async (req, res, next) => {
+  // The legacy production-beta mutation is retained only as an explicitly
+  // opt-in compatibility surface. Canonical Claim authority is
+  // /claims/generate below; the default production app must not expose this
+  // second mutation path.
+  if (legacyGenerationCompat) app.post('/api/projects/:projectId/production-beta', async (req, res, next) => {
     try { sendData(res, await productionBetaService.process(req.params.projectId, req.body), 201); }
     catch (error) { next(error); }
   });
@@ -477,9 +720,10 @@ export function createApp({ repository, storage, generationService, requirementP
       return res.status(400).json({ ok: false, error: uploadError });
     }
     const appError = error instanceof AppError ? error : error?.code && Number.isInteger(error?.status)
-      ? new AppError(error.code, error.message, error.status)
+      ? new AppError(error.code, error.message, error.status, error.details)
       : new AppError('INTERNAL_ERROR', '服务暂时不可用，请稍后重试。', 500);
-    const safeError = { code: appError.code, message: appError.message };
+    const diagnostic = safeFactDiagnostic(appError);
+    const safeError = { code: appError.code, message: appError.message, ...(diagnostic ? { diagnostic } : {}) };
     return res.status(appError.status).json({ ok: false, error: safeError });
   });
 

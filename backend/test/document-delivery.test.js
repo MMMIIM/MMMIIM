@@ -214,7 +214,7 @@ test('Word export 文件名移除已知内部项目标记', async () => {
 });
 
 test('Stage 4 export route returns downloadable DOCX with audit header', async () => {
-  const app = createApp({ documentDeliveryService: { async exportWord() { return { buffer: Buffer.from('docx'), mimeType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', fileName: '示例-技术标-V1.docx', audit: { id: 'export-route-1' } }; } } });
+  const app = createApp({ documentDeliveryService: { async exportWord() { return { buffer: Buffer.from('docx'), mimeType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', fileName: '示例-技术标-V1.docx', audit: { id: 'export-route-1' } }; } }, projectAuthorizationService: { assertProjectAccess: async () => {} }, actorResolver: () => ({ actor_id: 'delivery-test', actor_type: 'test', source: 'test' }) });
   const server = app.listen(0);
   try {
     const address = server.address();

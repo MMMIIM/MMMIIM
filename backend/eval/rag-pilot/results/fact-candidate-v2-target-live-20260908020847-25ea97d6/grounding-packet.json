@@ -1,0 +1,98 @@
+{
+  "run_id": "fact-candidate-v2-target-live-20260908020847-25ea97d6",
+  "cases": [
+    {
+      "case_id": "COM-01",
+      "source_snapshot": {
+        "material_id": "COM-01",
+        "material_version": "eval-snapshot-v1",
+        "source_hash": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+        "chunk_id": "COM-01-FULL-CHUNK-001",
+        "chunk_hash": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+        "source_span_id": "COM-01-FULL-SPAN-001",
+        "source_span_hash": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+        "approved_review_identity": null
+      },
+      "grounding": []
+    },
+    {
+      "case_id": "COM-06-A",
+      "source_snapshot": {
+        "material_id": "COM-06",
+        "material_version": "eval-snapshot-v1",
+        "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+        "chunk_id": "COM-06-A-FULL-CHUNK-001",
+        "chunk_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+        "source_span_id": "COM-06-A-FULL-SPAN-001",
+        "source_span_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+        "approved_review_identity": null
+      },
+      "grounding": []
+    },
+    {
+      "case_id": "COM-06-B",
+      "source_snapshot": {
+        "material_id": "COM-06",
+        "material_version": "eval-snapshot-v1",
+        "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+        "chunk_id": "COM-06-A-FULL-CHUNK-001",
+        "chunk_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+        "source_span_id": "COM-06-A-FULL-SPAN-001",
+        "source_span_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+        "approved_review_identity": null
+      },
+      "grounding": []
+    },
+    {
+      "case_id": "CCV2-U13-01",
+      "source_snapshot": {
+        "material_id": "CCV2-U13-01",
+        "material_version": "eval-snapshot-v1",
+        "source_hash": "9408fc5a50ffcad28def68d844c2d701405b99655f2d5904aeb89874f55ae575",
+        "chunk_id": "CCV2-U13-01-FULL-CHUNK-001",
+        "chunk_hash": "9408fc5a50ffcad28def68d844c2d701405b99655f2d5904aeb89874f55ae575",
+        "source_span_id": "CCV2-U13-01-FULL-SPAN-001",
+        "source_span_hash": "9408fc5a50ffcad28def68d844c2d701405b99655f2d5904aeb89874f55ae575",
+        "approved_review_identity": null
+      },
+      "grounding": [
+        {
+          "fact_index": 0,
+          "decision": "REVIEW_REQUIRED",
+          "reasons": [
+            "QUANTITY_CONDITION_UNRESOLVED",
+            "QUANTITY_CONDITION_UNRESOLVED",
+            "QUANTITY_CONDITION_UNRESOLVED"
+          ]
+        },
+        {
+          "fact_index": 1,
+          "decision": "REVIEW_REQUIRED",
+          "reasons": [
+            "STATUS_ENUM_UNRESOLVED",
+            "QUANTITY_CONDITION_UNRESOLVED",
+            "QUANTITY_VALUE_OR_UNIT_UNRESOLVED",
+            "QUANTITY_CONDITION_UNRESOLVED"
+          ]
+        },
+        {
+          "fact_index": 2,
+          "decision": "REVIEW_REQUIRED",
+          "reasons": [
+            "STATUS_ENUM_UNRESOLVED",
+            "QUANTITY_CONDITION_UNRESOLVED",
+            "QUANTITY_VALUE_OR_UNIT_UNRESOLVED",
+            "QUANTITY_CONDITION_UNRESOLVED"
+          ]
+        },
+        {
+          "fact_index": 3,
+          "decision": "REJECT",
+          "reasons": [
+            "quantity.unit is not grounded"
+          ]
+        }
+      ]
+    }
+  ]
+}

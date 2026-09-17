@@ -1,0 +1,49 @@
+{
+  "artifact_type": "V43_R1_HYGIENE_MICRO_PATCH_REPORT",
+  "patch_scope": "existing retrieval-chunk-role/substantive owner only",
+  "changed_files": [
+    {
+      "path": "backend/src/pipeline/retrieval-substantive-candidate.js",
+      "sha256": "8f7dd1f6a9a67494b81ab4c200204091ce2a8206a2442aa66375db1c8ee84c76",
+      "changes": [
+        "generic summary/disclaimer shape classified as BOILERPLATE / NON_SUBSTANTIVE"
+      ]
+    },
+    {
+      "path": "backend/src/pipeline/retrieval-chunk-role.js",
+      "sha256": "c8114a420f9ad3357e9c574e094ed82119a8a6e482c26185a8dc6674ffb06579",
+      "changes": [
+        "URL query parameters excluded from sentence-punctuation test",
+        "OFF/REF/SRC/DOC citation-index shape classified fail-closed"
+      ]
+    },
+    {
+      "path": "backend/test/retrieval-chunk-role.test.js",
+      "sha256": "6f27dc34e548c97364b2269280ca1d7ba7d444d59ccea9d79fa6d73716c48e86",
+      "changes": [
+        "red tests for boilerplate and URL-query citation rows, then green"
+      ]
+    }
+  ],
+  "deterministic_rules": [
+    "summary marker + defer-to-primary-source marker + authoritative-source marker => BOILERPLATE",
+    "citation/index marker + index separator/metadata shape, with URLs removed before punctuation check => NON_SUBSTANTIVE/CITATION_INDEX"
+  ],
+  "pre_patch_red_tests": {
+    "count": 2,
+    "cases": [
+      "boilerplate summary disclaimers are fail-closed and do not consume reference slots",
+      "citation index rows with URL query parameters are recognized as non-substantive"
+    ]
+  },
+  "post_patch_focused_tests": {
+    "count": 10,
+    "passed": 10,
+    "failed": 0
+  },
+  "production_semantic_contract_changed": false,
+  "new_filter_framework": false,
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0
+}

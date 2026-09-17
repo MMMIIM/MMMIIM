@@ -1,0 +1,250 @@
+{
+  "artifact_type": "V43_REQUIREMENT_HIGH_DENSITY_OUTPUT_MICRO_LIVE_GPT_PACKET",
+  "run_id": "requirement-high-density-output-micro-2026-09-09T02-34-50-454Z-d3fd5565",
+  "dataset": "HOLDOUT-REQ-V2-01",
+  "execution_mode": "TARGETED",
+  "decision": "V43_REQUIREMENT_HIGH_DENSITY_OUTPUT_BUDGET_MICRO_LIVE_PROOF",
+  "input_parity": {
+    "tender_id": "HOLDOUT-REQ-V2-01",
+    "source_file": "backend/eval/requirement-unseen-holdout-v2/work/HOLDOUT-REQ-V2-01/extracted/2026年网络路由交换和网络安全设备项目招标文件（260601001）.pdf",
+    "source_file_sha256": "f63221be9a38b64bfa6a90a59a428cf15b8211427965adee35967f7f8cd75aa5",
+    "prepared_chunk_count": 45,
+    "target_chunk_hashes": [
+      {
+        "chunk_number": 45,
+        "source_chunk_hash": "4e7b360135fc5e8f998e539c06cf022a7695346a961ba717fb073e8531892697"
+      },
+      {
+        "chunk_number": 6,
+        "source_chunk_hash": "4ca3bf0a278242a152e8318f5ae437f430a5cfd0bcce3514b8aa629978570b77"
+      },
+      {
+        "chunk_number": 14,
+        "source_chunk_hash": "01308fd8a1f60bfa5a679994cea9dae313aa45d79d9b609fcad32ae55e4f99d1"
+      }
+    ],
+    "source_hashes_verified": true
+  },
+  "execution_identity": {
+    "provider": "openai_compatible",
+    "model": "deepseek-ai/DeepSeek-V4-Flash",
+    "endpoint": "/chat/completions",
+    "prompt_contract": "4.3-requirement-extraction-v3.1.1",
+    "prompt_instruction_hash": "9b8fe6582e774a64f36b2be307274e297fafb309cf17270a4d8fc463da817305",
+    "candidate_contract": "4.3-requirement-candidate-v3",
+    "candidate_schema_hash": "1f5bd20f624a34a5f0bfd76e226f24d3595cc8a1e06bdc176c3d40e9694edbba",
+    "response_format": "json_schema",
+    "strict": true,
+    "enable_thinking": false,
+    "production_default_max_output_tokens": 4800,
+    "eval_max_output_tokens": 9600,
+    "override_scope": "isolated_eval_standalone_gateway_only"
+  },
+  "precheck": {
+    "production_default_max_output_tokens": 4800,
+    "configured_max_output_tokens": 4800,
+    "adapter_accepts_positive_integer_max_tokens": true,
+    "task_specific_override_in_production_gateway": false,
+    "isolated_eval_override": true,
+    "micro_test_max_output_tokens": 9600,
+    "configured_provider": "openai_compatible",
+    "configured_model": "deepseek-ai/DeepSeek-V4-Flash",
+    "provider_base_host": "api.siliconflow.cn",
+    "endpoint_category": "chat_completions",
+    "production_gateway_untouched": true
+  },
+  "calls": [
+    {
+      "case_id": "HOLDOUT-REQ-V2-01",
+      "chunk_number": 45,
+      "execution_id": "requirement-high-density-output-micro-2026-09-09T02-34-50-454Z-d3fd5565-45-008e938d",
+      "input": {
+        "tender_id": "HOLDOUT-REQ-V2-01",
+        "source_file_sha256": "f63221be9a38b64bfa6a90a59a428cf15b8211427965adee35967f7f8cd75aa5",
+        "source_chunk_hash": "4e7b360135fc5e8f998e539c06cf022a7695346a961ba717fb073e8531892697",
+        "source_ref_hash": "6bf1c94cc0bb13df52bd41f6b115c6c9d105bda94b666de2c6375d714fea1e27",
+        "chunk_count": 45,
+        "source_ref_count": 79
+      },
+      "execution_identity": {
+        "configured_provider": "openai_compatible",
+        "configured_model": "deepseek-ai/DeepSeek-V4-Flash",
+        "requested_provider": "openai_compatible",
+        "requested_model": "deepseek-ai/DeepSeek-V4-Flash",
+        "endpoint": "/chat/completions",
+        "response_format": "json_schema",
+        "strict": true,
+        "enable_thinking": false,
+        "temperature": 0.1,
+        "top_p": 1,
+        "top_k": 50,
+        "max_output_tokens": 9600,
+        "only_changed_generation_field": "max_output_tokens"
+      },
+      "started_at": "2026-09-09T02:34:51.696Z",
+      "status": "FAILED",
+      "provider_calls_before": 0,
+      "provider_calls_after": 1,
+      "provider_http_reached": false,
+      "provider_http_status": null,
+      "gateway_http_status": 502,
+      "response_model": null,
+      "finish_reason": null,
+      "latency_ms": 32,
+      "json_parse_success": false,
+      "schema_pass": false,
+      "source_resolution": null,
+      "candidate_count": 0,
+      "raw_output_chars": null,
+      "usage": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null
+      },
+      "provider_audit": {
+        "provider": "openai_compatible",
+        "protocol": "chat_completions",
+        "model": "deepseek-ai/DeepSeek-V4-Flash",
+        "requested_provider": "openai_compatible",
+        "requested_model": "deepseek-ai/DeepSeek-V4-Flash",
+        "response_provider": null,
+        "response_model": null,
+        "endpoint": "/chat/completions",
+        "http_status": null,
+        "latency_ms": 32,
+        "provider_http_reached": false,
+        "provider_adapter_invoked": true,
+        "fetch_invoked": true,
+        "finish_reason": null,
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "total_tokens": null,
+        "model_content_length_chars": null,
+        "output_truncated": false,
+        "response_format_type": "json_schema",
+        "generation_config": {
+          "response_format": {
+            "type": "json_schema",
+            "json_schema": {
+              "name": "requirement_extraction_data",
+              "strict": true,
+              "schema": {
+                "type": "object",
+                "required": [
+                  "requirements"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "requirements": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "text",
+                        "category",
+                        "source_range",
+                        "mandatory_observed",
+                        "requires_confirmation"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "text": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "category": {
+                          "type": "string",
+                          "enum": [
+                            "functional",
+                            "technical",
+                            "performance",
+                            "security",
+                            "data",
+                            "implementation",
+                            "delivery",
+                            "acceptance",
+                            "service",
+                            "constraint",
+                            "other"
+                          ]
+                        },
+                        "source_range": {
+                          "type": "object",
+                          "required": [
+                            "start_ref",
+                            "end_ref"
+                          ],
+                          "additionalProperties": false,
+                          "properties": {
+                            "start_ref": {
+                              "type": "string",
+                              "pattern": "^C\\d{3}-S\\d{3}$"
+                            },
+                            "end_ref": {
+                              "type": "string",
+                              "pattern": "^C\\d{3}-S\\d{3}$"
+                            }
+                          }
+                        },
+                        "mandatory_observed": {
+                          "type": "boolean"
+                        },
+                        "requires_confirmation": {
+                          "type": "boolean"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "enable_thinking": false,
+          "max_tokens": 9600,
+          "temperature": 0.1,
+          "top_p": 1,
+          "top_k": 50,
+          "frequency_penalty": 0,
+          "stream": false,
+          "n": 1
+        },
+        "outbound_prompt_diagnostics": {
+          "instruction_sha256": "9b8fe6582e774a64f36b2be307274e297fafb309cf17270a4d8fc463da817305",
+          "instruction_char_count": 3608,
+          "payload_sha256": "ca2cd5e8b13924dade3322cfb8217451d46f25bc3ed420cf3f6a420c25bfa78a",
+          "payload_char_count": 2620,
+          "legacy_schema_tokens_observed": [],
+          "legacy_schema_tokens_in_instruction": [],
+          "legacy_schema_positive_schema_context": false,
+          "contamination": false
+        },
+        "json_parse_success": null,
+        "json_parse_error_offset": null,
+        "model_content": null,
+        "parsed_json": null,
+        "safe_error_code": "FETCH_FAILED",
+        "safe_error_message": "Provider request failed before an HTTP response.",
+        "failure_stage": "FETCH_INVOKED",
+        "current_stage": "FETCH_INVOKED"
+      },
+      "raw_provider_response": null,
+      "parsed_candidates": [],
+      "error": {
+        "name": "SemanticGatewayError",
+        "code": "PROVIDER_UNAVAILABLE",
+        "message": "Semantic Gateway request failed: PROVIDER_UNAVAILABLE."
+      },
+      "finished_at": "2026-09-09T02:34:51.750Z"
+    }
+  ],
+  "provider_calls": 1,
+  "retries": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "production_routing_change": 0,
+  "complete_raw_provider_responses_retained": true,
+  "final_status": "BLOCKED_PROVIDER_CONNECTIVITY"
+}

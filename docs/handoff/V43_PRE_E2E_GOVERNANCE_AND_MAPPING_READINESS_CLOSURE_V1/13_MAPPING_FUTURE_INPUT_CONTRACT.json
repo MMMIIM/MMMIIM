@@ -1,0 +1,70 @@
+{
+  "artifact_type": "V43_MAPPING_FUTURE_INPUT_CONTRACT_V1",
+  "execution_mode": "OFFLINE_ONLY",
+  "provider_calls": 0,
+  "embedding_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "gold_mutations": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "commit": 0,
+  "push": 0,
+  "merge": 0,
+  "deploy": 0,
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "contract_version": "requirement-evidence-mapping-v1.1",
+  "input_requirement_source": "docs/V43_REQUIREMENT_GOLD_V2_SIX_TENDER_CANONICAL_INPUT.json",
+  "input_requirement_count": 1009,
+  "successor_suite": "mapping-eval-suite-v2",
+  "partitions": [
+    {
+      "partition": "REAL_SEMANTIC",
+      "dataset": "backend/eval/requirement-evidence-mapping-v2/real-derived-gold-v1.json",
+      "cases": 12,
+      "scored": 12,
+      "allowed_denominator": true,
+      "aggregation": "SEPARATE"
+    },
+    {
+      "partition": "SYNTHETIC_SEMANTIC",
+      "dataset": "backend/eval/requirement-evidence-mapping-v2/synthetic-boundary-gold-v2.json",
+      "cases": 29,
+      "scored": 29,
+      "allowed_denominator": true,
+      "aggregation": "SEPARATE"
+    },
+    {
+      "partition": "ENGINEERING",
+      "dataset": "backend/eval/requirement-evidence-mapping-v2/engineering-fixtures-v2.json",
+      "cases": 6,
+      "scored": 0,
+      "allowed_denominator": false,
+      "aggregation": "REGRESSION_ONLY"
+    },
+    {
+      "partition": "DISPUTED",
+      "dataset": "backend/eval/requirement-evidence-mapping-v2/disputed-cases-v2.json",
+      "cases": 1,
+      "scored": 0,
+      "allowed_denominator": false,
+      "aggregation": "AUDITABLE_UNSCORED"
+    },
+    {
+      "partition": "LEGACY_V1",
+      "dataset": "backend/eval/requirement-evidence-mapping-v1/gold-cases.json",
+      "cases": 36,
+      "scored": "UNDECLARED_IN_V1",
+      "allowed_denominator": false,
+      "aggregation": "IMMUTABLE_CONTRACT_FIXTURE_SEPARATE"
+    }
+  ],
+  "policy": [
+    "Keep REAL_SEMANTIC and SYNTHETIC_SEMANTIC separate.",
+    "Exclude ENGINEERING and DISPUTED from semantic denominator.",
+    "No execution in this task."
+  ]
+}

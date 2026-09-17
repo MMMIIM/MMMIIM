@@ -33,6 +33,19 @@ test('External Writer PostgreSQL 审计状态按请求生命周期持久化',asy
 const directory = dirname(fileURLToPath(import.meta.url));
 dotenv.config({ path: resolve(directory, '../.env') });
 process.env.BACKEND_DEV_ACTOR_ID = process.env.BACKEND_DEV_ACTOR_ID || 'validity-reviewer';
+const INTEGRATION_ACTOR_ID = process.env.BACKEND_DEV_ACTOR_ID;
+
+async function authorizeIntegrationActor(repository, ...projectIds) {
+  for (const projectId of projectIds) {
+    await repository.createProjectMembership({
+      projectId,
+      actorId:INTEGRATION_ACTOR_ID,
+      role:'OWNER',
+      status:'ACTIVE',
+      createdBy:INTEGRATION_ACTOR_ID
+    });
+  }
+}
 
 test('Evidence Source Span PostgreSQL lineage 验证连续范围、hash 与 Anchor',async()=>{
   assert.ok(process.env.DATABASE_URL,'DATABASE_URL is required for PostgreSQL integration tests');const pool=createPool();const repository=new PgRepository(pool);const project=await repository.createProject({name:`Evidence span ${Date.now()}`});
@@ -97,6 +110,7 @@ test('023 Evidence Fact Contract migration 可重复执行',async()=>{
 test('Evidence Fact PostgreSQL 生命周期、来源、版本和 HTTP API 闭环',async()=>{
   const pool=createPool();const repository=new PgRepository(pool);const project=await repository.createProject({name:`Evidence Fact ${Date.now()}`});const other=await repository.createProject({name:`Evidence Fact other ${Date.now()}`});let server;
   try{
+    await authorizeIntegrationActor(repository,project.id);
     const source='供应商东软集团股份有限公司中标数据共享交换平台软件项目，合同金额为100万元。';const material=await repository.createCompanyMaterial({projectId:project.id,originalName:'award.txt',storageKey:`fact-${project.id}`,materialType:'project_case',mimeType:'text/plain',sizeBytes:source.length,fileHash:createHash('sha256').update(source).digest('hex')});await repository.completeCompanyMaterialExtraction(material.id,source);const chunks=chunkEnterpriseMaterial(material.id,source);await repository.replaceMaterialChunks(material.id,chunks);const evidenceService=new EvidenceService({repository});const evidence=await evidenceService.create(project.id,{material_id:material.id,source_chunk_id:chunks[0].chunk_id,evidence_type:'project_case',title:'公开中标公告',content:source,evidence_scope:['award_fact','contract_amount']});await evidenceService.setValidity(evidence.id,{validity_status:'active',reviewed_by:'integration'});await evidenceService.decide(evidence.id,'approved',{decided_by:'integration'});
     const service=new EvidenceFactService({repository});const body={fact_type:'project_award',subject:{type:'organization',name:'东软集团股份有限公司'},entities:[{type:'procurement_item',name:'数据共享交换平台软件',relation:'awarded_item'}],fact_status:'award',fact_scopes:['award_fact','contract_amount'],quantities:[{metric:'contract_amount',operator:'eq',value:'100',unit:'万元',source_text:'合同金额为100万元'}],validity:{status:'not_applicable'},created_by:'integration'};
     await assert.rejects(()=>service.create(other.id,evidence.id,body),(error)=>error.code==='EVIDENCE_NOT_FOUND');const created=await service.create(project.id,evidence.id,body);assert.equal(created.review_status,'draft');assert.equal(created.source_text,source);assert.equal(created.source_hash,chunks[0].chunk_hash);assert.deepEqual(created.source_location.char_start,0);
@@ -127,6 +141,7 @@ test('完整 migration chain 支持 fresh、ambiguous existing 与连续重放',
 test('Enterprise Retrieval pgvector Top-K、隔离、失效与审计闭环',async()=>{
   const pool=createPool();const repository=new PgRepository(pool);const project=await repository.createProject({name:`Retrieval ${Date.now()}`});const other=await repository.createProject({name:`Retrieval other ${Date.now()}`});let server;
   try{
+    await authorizeIntegrationActor(repository,project.id);
     const file=(await pool.query(`INSERT INTO tender_files(project_id,original_name,storage_key,mime_type,size_bytes) VALUES($1,'r.txt',$2,'text/plain',1) RETURNING *`,[project.id,`retrieval-${project.id}`])).rows[0];const job=(await pool.query(`INSERT INTO tender_parse_jobs(project_id,tender_file_id,status,phase) VALUES($1,$2,'succeeded','succeeded') RETURNING *`,[project.id,file.id])).rows[0];const baseline=(await pool.query(`INSERT INTO requirement_baselines(project_id,parse_job_id,status) VALUES($1,$2,'building') RETURNING *`,[project.id,job.id])).rows[0];const requirement=(await pool.query(`INSERT INTO requirements(baseline_id,project_id,req_id,content,source_excerpt,source_text,is_mandatory,target_sections,ordinal,source_status,confirmation_type,requirement_category,writer_eligible) VALUES($1,$2,'REQ-001','国产化环境部署','国产化环境部署','国产化环境部署',false,'[]',1,'verified','verified','technical',true) RETURNING *`,[baseline.id,project.id])).rows[0];await pool.query(`UPDATE requirement_baselines SET status='confirmed',confirmed_at=now(),confirmed_by='test',confirmation_type='verified' WHERE id=$1`,[baseline.id]);
     const addMaterial=async(target,type,text,label)=>{const material=await repository.createCompanyMaterial({projectId:target.id,originalName:`${label}.txt`,storageKey:`${target.id}/${label}`,materialType:type,mimeType:'text/plain',sizeBytes:text.length,fileHash:createHash('sha256').update(`${target.id}|${label}`).digest('hex')});await repository.completeCompanyMaterialExtraction(material.id,text);const chunks=chunkEnterpriseMaterial(material.id,text);await repository.replaceMaterialChunks(material.id,chunks);return{material,chunk:chunks[0]};};
      const relevant=await addMaterial(project,'project_case','项目已完成麒麟鲲鹏国产化适配部署。','relevant');const history=await addMaterial(project,'historical_bid','历史标书记录了国产化环境部署响应。','history');const unrelated=await addMaterial(project,'company_profile','公司地址和联系方式','unrelated');const cross=await addMaterial(other,'project_case','完全匹配的国产化环境部署','cross');
@@ -776,6 +791,7 @@ test('A阶段候选确认 HTTP API 保持固定 JSON 契约与完整门禁', asy
   const job = await repository.createParseJob({ projectId: project.id, tenderFileId: file.id });
   let server;
   try {
+    await authorizeIntegrationActor(repository,project.id);
     await pool.query(`UPDATE tender_parse_jobs SET status='succeeded',phase='succeeded' WHERE id=$1`, [job.id]);
     const { rows } = await pool.query(`INSERT INTO requirement_candidates(parse_job_id,req_id,content,source_excerpt,source_text,ordinal,is_mandatory,mandatory_marker,candidate_decision,source_status,source_verified,source_page,source_paragraph,source_hash,confirmation_type) VALUES
       ($1,'REQ-001','已核验技术需求','已核验技术需求','已核验技术需求',1,false,NULL,'include','verified',true,1,1,'verified-hash','verified'),
@@ -828,6 +844,7 @@ test('B阶段企业材料与 Evidence Catalog PostgreSQL/HTTP 约束', async () 
   const pool=createPool(); const repository=new PgRepository(pool);
   const project=await repository.createProject({name:`Evidence MVP 集成 ${Date.now()}`}); let server;
   try {
+    await authorizeIntegrationActor(repository,project.id);
     const tender=(await pool.query(`INSERT INTO tender_files(project_id,original_name,storage_key,mime_type,size_bytes) VALUES($1,'baseline.txt','baseline','text/plain',1) RETURNING *`,[project.id])).rows[0];
     const job=(await pool.query(`INSERT INTO tender_parse_jobs(project_id,tender_file_id,status,phase) VALUES($1,$2,'succeeded','succeeded') RETURNING *`,[project.id,tender.id])).rows[0];
     const baseline=(await pool.query(`INSERT INTO requirement_baselines(project_id,parse_job_id,status) VALUES($1,$2,'building') RETURNING *`,[project.id,job.id])).rows[0];
@@ -869,6 +886,7 @@ test('B阶段企业材料与 Evidence Catalog PostgreSQL/HTTP 约束', async () 
 test('V4.3 ResponsePlan、Claim Gate 与 Coverage HTTP 闭环',async()=>{
   const pool=createPool();const repository=new PgRepository(pool);const project=await repository.createProject({name:`Planning loop ${Date.now()}`});const emptyProject=await repository.createProject({name:`Empty baseline ${Date.now()}`});let server;
   try{
+    await authorizeIntegrationActor(repository,project.id,emptyProject.id);
     const productionBetaService=new ProductionBetaService({repository,provider:new ProductionTaskProvider({provider:'mock'})});
     const app=createApp({repository,storage:{},generationService:{},requirementParseService:{},requirementSourceService:{},productionBetaService,companyMaterialService:{},evidenceService:{}});
     server=await new Promise((resolve)=>{const listener=app.listen(0,'127.0.0.1',()=>resolve(listener));});const base=`http://127.0.0.1:${server.address().port}`;

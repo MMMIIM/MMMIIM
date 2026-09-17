@@ -1,0 +1,26 @@
+{
+  "artifact_type": "V43_RAG_PRODUCT_KPI_DEFINITION",
+  "lanes": {
+    "reference": {
+      "recall_at_k": "L1 expected source hit",
+      "useful_at_k": "L2 GPT/Human useful label",
+      "off_topic_rate": "L2",
+      "redundancy_rate": "L2",
+      "empty_reference_rate": "no final reference candidate / reference queries"
+    },
+    "evidence": {
+      "candidate_recall_at_k": "L1 expected evidence candidate hit",
+      "exact_identifier_recall": "L2 exact signal",
+      "wrong_enterprise_escape": "L2 authority safety",
+      "wrong_role_escape": "L2 source-role safety",
+      "quarantined_escape": "L2 lifecycle safety"
+    },
+    "e2e": {
+      "writer_reference_usefulness": "downstream product metric",
+      "claim_authority_escape": "downstream safety metric",
+      "final_section_quality": "downstream semantic/product metric"
+    }
+  },
+  "denominator_policy": "Never combine Reference and Evidence denominators; do not collapse L1 and L2 into one Recall KPI",
+  "release_boundary": "No KPI is release-valid before source identity and GPT/Human semantic review are complete"
+}

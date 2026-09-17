@@ -1,0 +1,49 @@
+{
+  "gaps": [
+    {
+      "rank": "P0_E2E_BLOCKER",
+      "stage": "Embedding",
+      "impact": "Enterprise index cannot be built",
+      "root_cause": "Sandbox/OS network EACCES on configured SOCKS5 path",
+      "class": "environment",
+      "action": "restore approved host network path",
+      "size": "XS"
+    },
+    {
+      "rank": "P0_SAFETY",
+      "stage": "Requirement authority",
+      "impact": "four non-applicable rows require human persistence",
+      "root_cause": "Human authority not persisted automatically",
+      "class": "semantic/authority",
+      "action": "Human review",
+      "size": "S"
+    },
+    {
+      "rank": "P1_QUALITY",
+      "stage": "Scope recertification",
+      "impact": "historical/source alignment remains review evidence",
+      "root_cause": "V2/V3 lineage drift",
+      "class": "semantic",
+      "action": "review packet",
+      "size": "S"
+    },
+    {
+      "rank": "P1_UX",
+      "stage": "Review",
+      "impact": "compact workload still needs human selection",
+      "root_cause": "multi-layer provenance differences",
+      "class": "engineering",
+      "action": "human adjudication",
+      "size": "S"
+    },
+    {
+      "rank": "P2_POLISH",
+      "stage": "E2E resume",
+      "impact": "index idempotency/retrieval smoke unavailable",
+      "root_cause": "upstream embedding blocker",
+      "class": "engineering",
+      "action": "rerun after preflight",
+      "size": "XS"
+    }
+  ]
+}

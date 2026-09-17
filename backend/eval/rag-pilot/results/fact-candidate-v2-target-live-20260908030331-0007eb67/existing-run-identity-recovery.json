@@ -1,0 +1,22 @@
+{
+  "artifact_type": "FACT_CANDIDATE_V2_EXISTING_RUN_IDENTITY_RECOVERY",
+  "source_run_id": "fact-candidate-v2-target-live-20260908030331-0007eb67",
+  "matched_count": "4/4",
+  "unique_execution_match": "PASS",
+  "target_provider_route_confirmed": "YES",
+  "target_provider_model_confirmed": "NO",
+  "target_provider_endpoint_confirmed": "YES",
+  "com06_config_identity_recovered": "NO",
+  "com06_config_identity_blocker": "thinking not observable in historical Gateway logs",
+  "target_provider_identity_gate": "BLOCKED",
+  "rows": [
+    { "case_id": "COM-01", "resolved_provider": "deepseek_official", "resolved_model": "NOT_OBSERVABLE_IN_FAILURE_LOG", "resolved_endpoint": "/responses", "gateway_error_code": "OUTPUT_SCHEMA_INVALID", "unique_match": "YES" },
+    { "case_id": "COM-06-A", "resolved_provider": "deepseek_official", "resolved_model": "NOT_OBSERVABLE_IN_FAILURE_LOG", "resolved_endpoint": "/responses", "gateway_error_code": "OUTPUT_SCHEMA_INVALID", "unique_match": "YES" },
+    { "case_id": "COM-06-B", "resolved_provider": "deepseek_official", "resolved_model": "NOT_OBSERVABLE_IN_FAILURE_LOG", "resolved_endpoint": "/responses", "gateway_error_code": "OUTPUT_SCHEMA_INVALID", "unique_match": "YES" },
+    { "case_id": "CCV2-U13-01", "resolved_provider": "deepseek_official", "resolved_model": "deepseek-v4-flash", "resolved_endpoint": "/responses", "gateway_error_code": null, "unique_match": "YES", "model_conflict_with_preflight": true }
+  ],
+  "provider_calls_added": 0,
+  "production_db_writes": 0,
+  "fact_persistence": 0,
+  "gold_mutations": 0
+}

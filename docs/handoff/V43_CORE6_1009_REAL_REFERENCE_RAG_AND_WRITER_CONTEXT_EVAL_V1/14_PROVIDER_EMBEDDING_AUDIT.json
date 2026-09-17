@@ -1,0 +1,46 @@
+{
+  "artifact_type": "V43_PROVIDER_EMBEDDING_AUDIT",
+  "run_id": "V43-CORE6-REAL-REFERENCE-RAG-WRITER-20260915071233",
+  "database_identity": {
+    "database": "bid_platform",
+    "schema": "public"
+  },
+  "database_schema": {
+    "required_tables": [
+      "company_materials",
+      "material_chunks",
+      "material_chunk_embeddings",
+      "project_material_bindings"
+    ],
+    "missing_tables": [
+      "project_material_bindings"
+    ]
+  },
+  "provider": "siliconflow",
+  "api_base_configured": true,
+  "api_key_present": true,
+  "model": "Qwen/Qwen3-Embedding-0.6B",
+  "version": "1",
+  "dimension": 1024,
+  "max_calls": 80,
+  "concurrency": 1,
+  "retry_max": 1,
+  "generative_llm_calls": 0,
+  "writer_provider_calls": 0,
+  "call_count": 0,
+  "failures": [],
+  "retries": 0,
+  "latency_ms": [],
+  "stop_on_first_provider_failure": true,
+  "no_secrets_persisted": true,
+  "provider_calls": 0,
+  "retry_count": 0,
+  "total_latency_ms": 0,
+  "status": "BLOCKED",
+  "current_run_query_embedding_calls": 0,
+  "task_cumulative_query_embedding_calls": 2,
+  "prior_bounded_attempts": [
+    { "run_id": "V43-CORE6-REAL-REFERENCE-RAG-WRITER-20260915070848", "query_embedding_calls": 1, "outcome": "EMBEDDING_NETWORK_ERROR" },
+    { "run_id": "V43-CORE6-REAL-REFERENCE-RAG-WRITER-20260915070919", "query_embedding_calls": 1, "outcome": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE_42P01" }
+  ]
+}

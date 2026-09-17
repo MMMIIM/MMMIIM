@@ -4,7 +4,7 @@ This file is the project's stable instruction entry point. It keeps product
 boundaries and source-of-truth routing only. Detailed checkpoint governance is
 provided by the `engineering-governance` Skill; execution mechanics such as
 TDD, debugging, planning, and general review remain with the applicable
-development tools or Superpowers workflow.
+development tools.
 
 ## Product identity
 

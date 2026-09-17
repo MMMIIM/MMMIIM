@@ -1,0 +1,1522 @@
+{
+  "artifact_type": "V43_GPT_CORE6_REAL_REFERENCE_RAG_SEMANTIC_REVIEW_PACKET",
+  "blind_to_semantic_labels": true,
+  "source_identity": {
+    "artifact": "docs\\V43_REQUIREMENT_GOLD_V2_SIX_TENDER_CANONICAL_INPUT.json",
+    "sha256": "ff07402688a3013af9a9b8be01f613f76848b7ea905208c1955a604432422fe1",
+    "expected_sha256_from_prior_identity_reconciliation": "ff07402688a3013af9a9b8be01f613f76848b7ea905208c1955a604432422fe1",
+    "row_count": 1009,
+    "unique_requirement_ids": 1009,
+    "tender_ids": [
+      "JY-001",
+      "TB-003",
+      "TB-006",
+      "FAST-01",
+      "FAST-04",
+      "FAST-WATER-01"
+    ],
+    "eval_only": true,
+    "human_gold_authority": false,
+    "semantic_labels_created": 0
+  },
+  "run_id": "V43-CORE6-REAL-REFERENCE-RAG-WRITER-20260915071233",
+  "case_count": 36,
+  "review_labels": [
+    "USEFUL",
+    "PARTIAL",
+    "NOT_USEFUL"
+  ],
+  "failure_families": [
+    "GOOD_REFERENCE",
+    "SEMANTIC_NEAR_MISS",
+    "RANKING_FAILURE",
+    "REDUNDANCY",
+    "WEAK_CORPUS",
+    "OFF_TOPIC",
+    "TOO_GENERIC",
+    "WRONG_DOMAIN",
+    "REFERENCE_NOT_NEEDED",
+    "OTHER"
+  ],
+  "cases": [
+    {
+      "case_id": "RAG-JY-001-JY-001-REQ-001",
+      "tender_id": "JY-001",
+      "requirement_id": "JY-001:REQ-001",
+      "requirement_text": "制定统一的技术标准、数据标准和业务标准,通过“一网统管”核心平台和数字底座,实现城市治理一图展现、城市态势一脑分析、处置力量一键点调、城市事件一键流转、社会要素一格汇聚、移动应用一端接入、市民热线一呼即通、基层实战统一赋能、开发平台统一底座。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "制定统一的技术标准、数据标准和业务标准,通过“一网统管”核心平台和数字底座,实现城市治理一图展现、城市态势一脑分析、处置力量一键点调、城市事件一键流转、社会要素一格汇聚、移动应用一端接入、市民热线一呼即通、基层实战统一赋能、开发平台统一底座。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-JY-001-JY-001-REQ-006",
+      "tender_id": "JY-001",
+      "requirement_id": "JY-001:REQ-006",
+      "requirement_text": "提升江阴市12345政务服务便民热线智能化服务能力、城市精细化管理能力、事件监控智能预警能力,构建“上下贯通、左右互联、融合共享”的联勤联动指挥平台,感知城市运行综合态势,提高城市治理水平和服务质量。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "提升江阴市12345政务服务便民热线智能化服务能力、城市精细化管理能力、事件监控智能预警能力,构建“上下贯通、左右互联、融合共享”的联勤联动指挥平台,感知城市运行综合态势,提高城市治理水平和服务质量。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-JY-001-JY-001-REQ-071",
+      "tender_id": "JY-001",
+      "requirement_id": "JY-001:REQ-071",
+      "requirement_text": "警网融合应构建与公安“一标三实”数据的实时交互机制,结合网格自主发现实现数据的动态回流,按日归集全量动态数据,构建“民警+网格员”全民反诈长效治理模式,实现流动人口完整采集闭环管理,实现流动人口采集信息质量(完整性)自动稽核。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "警网融合应构建与公安“一标三实”数据的实时交互机制,结合网格自主发现实现数据的动态回流,按日归集全量动态数据,构建“民警+网格员”全民反诈长效治理模式,实现流动人口完整采集闭环管理,实现流动人口采集信息质量(完整性)自动稽核。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-JY-001-JY-001-REQ-004",
+      "tender_id": "JY-001",
+      "requirement_id": "JY-001:REQ-004",
+      "requirement_text": "实现社会治理事件跨部门、跨层级、跨平台多级联动处置。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "实现社会治理事件跨部门、跨层级、跨平台多级联动处置。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-JY-001-JY-001-REQ-039",
+      "tender_id": "JY-001",
+      "requirement_id": "JY-001:REQ-039",
+      "requirement_text": "移动端严禁刊登商业广告或链接商业广告页面。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "移动端严禁刊登商业广告或链接商业广告页面。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-JY-001-JY-001-REQ-003",
+      "tender_id": "JY-001",
+      "requirement_id": "JY-001:REQ-003",
+      "requirement_text": "将视频资源充分联网整合,搭建城市统一的视频“发现”能力服务平台,提升城运中心视频融合应用水平。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "将视频资源充分联网整合,搭建城市统一的视频“发现”能力服务平台,提升城运中心视频融合应用水平。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-JY-001-JY-001-REQ-177",
+      "tender_id": "JY-001",
+      "requirement_id": "JY-001:REQ-177",
+      "requirement_text": "质量目标:系统运行稳定、达到设计要求,并圆满通过采购人组织的验收。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "质量目标:系统运行稳定、达到设计要求,并圆满通过采购人组织的验收。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-JY-001-JY-001-REQ-064",
+      "tender_id": "JY-001",
+      "requirement_id": "JY-001:REQ-064",
+      "requirement_text": "任务引擎应构建任务类别、标签体系、任务对象等,对周期性及非周期任务定义,自动实现任务定义的发布。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "任务引擎应构建任务类别、标签体系、任务对象等,对周期性及非周期任务定义,自动实现任务定义的发布。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-JY-001-JY-001-REQ-007",
+      "tender_id": "JY-001",
+      "requirement_id": "JY-001:REQ-007",
+      "requirement_text": "系统功能设计严格遵循社会治管理要求,以信息化带动管理规范化,建设方案编制遵循相关法律法规及政策文件。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "系统功能设计严格遵循社会治管理要求,以信息化带动管理规范化,建设方案编制遵循相关法律法规及政策文件。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-JY-001-JY-001-REQ-179",
+      "tender_id": "JY-001",
+      "requirement_id": "JY-001:REQ-179",
+      "requirement_text": "投标人应提供详尽的项目管理办法,成立专门的项目管理组,由专人负责,确保项目按时按质进行。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "投标人应提供详尽的项目管理办法,成立专门的项目管理组,由专人负责,确保项目按时按质进行。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-TB-003-TB-003-REQ-053",
+      "tender_id": "TB-003",
+      "requirement_id": "TB-003:REQ-053",
+      "requirement_text": "投标人须提供总体设计方案，包括总体架构、部署架构、技术路线等，需切合实际，充分结合焦作市现有政务服务相关情况，确保本期项目的前瞻性、扩展性、先进性。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "投标人须提供总体设计方案，包括总体架构、部署架构、技术路线等，需切合实际，充分结合焦作市现有政务服务相关情况，确保本期项目的前瞻性、扩展性、先进性。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-TB-003-TB-003-REQ-054",
+      "tender_id": "TB-003",
+      "requirement_id": "TB-003:REQ-054",
+      "requirement_text": "投标人须提供“四电”应用服务专区建设方案，方案内容包括：电子证照系统升级、电子印章系统升级（政务侧）、电子材料应用系统、电子印章和电子签名系统（互联网侧）、多CA互信互认系统（互联网侧）、码上办管理系统等支撑平台。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "投标人须提供“四电”应用服务专区建设方案，方案内容包括：电子证照系统升级、电子印章系统升级（政务侧）、电子材料应用系统、电子印章和电子签名系统（互联网侧）、多CA互信互认系统（互联网侧）、码上办管理系统等支撑平台。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-TB-003-TB-003-REQ-058",
+      "tender_id": "TB-003",
+      "requirement_id": "TB-003:REQ-058",
+      "requirement_text": "投标人须提供系统对接设计方案，方案内容包括：对接内容、系统对接方式等。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "投标人须提供系统对接设计方案，方案内容包括：对接内容、系统对接方式等。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-TB-003-TB-003-REQ-115",
+      "tender_id": "TB-003",
+      "requirement_id": "TB-003:REQ-115",
+      "requirement_text": "安全性：投标人需提供有效的安全保密措施，应确保平台内部数据的完整性和可靠性，从而确保整个系统的安全运行。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "安全性：投标人需提供有效的安全保密措施，应确保平台内部数据的完整性和可靠性，从而确保整个系统的安全运行。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-TB-003-TB-003-REQ-057",
+      "tender_id": "TB-003",
+      "requirement_id": "TB-003:REQ-057",
+      "requirement_text": "投标人须提供国产化适配方案，方案内容包括：原系统国产化改造、数据迁移等。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "投标人须提供国产化适配方案，方案内容包括：原系统国产化改造、数据迁移等。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-TB-003-TB-003-REQ-059",
+      "tender_id": "TB-003",
+      "requirement_id": "TB-003:REQ-059",
+      "requirement_text": "投标人须针对本项目提供合理可行的项目实施方案，方案应包括：实施进度计划、项目实施组织、实施原则、进度保障措施、质量保证措施、项目验收方案等内容。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "投标人须针对本项目提供合理可行的项目实施方案，方案应包括：实施进度计划、项目实施组织、实施原则、进度保障措施、质量保证措施、项目验收方案等内容。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-TB-003-TB-003-REQ-061",
+      "tender_id": "TB-003",
+      "requirement_id": "TB-003:REQ-061",
+      "requirement_text": "投标人须提供培训服务方案，方案包括：培训目标、培训对象、培训形式、培训计划等内容。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "投标人须提供培训服务方案，方案包括：培训目标、培训对象、培训形式、培训计划等内容。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-TB-003-TB-003-REQ-060",
+      "tender_id": "TB-003",
+      "requirement_id": "TB-003:REQ-060",
+      "requirement_text": "投标人须提供售后服务方案，方案包括：服务体系、服务计划、服务形式、响应时间等内容。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "投标人须提供售后服务方案，方案包括：服务体系、服务计划、服务形式、响应时间等内容。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-TB-003-TB-003-REQ-020",
+      "tender_id": "TB-003",
+      "requirement_id": "TB-003:REQ-020",
+      "requirement_text": "无论招标结果如何，投标人应自行承担与参加投标有关的全部费用。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "无论招标结果如何，投标人应自行承担与参加投标有关的全部费用。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-TB-003-TB-003-REQ-114",
+      "tender_id": "TB-003",
+      "requirement_id": "TB-003:REQ-114",
+      "requirement_text": "系统架构设计：投标人需充分考虑到系统今后纵向和横向的平滑扩展能力，应采用多层架构的体系结构，系统按照构件化、面向对象的设计思路，灵活性好、可维护性高。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "系统架构设计：投标人需充分考虑到系统今后纵向和横向的平滑扩展能力，应采用多层架构的体系结构，系统按照构件化、面向对象的设计思路，灵活性好、可维护性高。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-TB-006-TB-006-REQ-033",
+      "tender_id": "TB-006",
+      "requirement_id": "TB-006:REQ-033",
+      "requirement_text": "迁移已运行在政务云平台的应用系统时，应确保数据不丢失和业务正常运行，并主动与原政务云平台服务商对接。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "迁移已运行在政务云平台的应用系统时，应确保数据不丢失和业务正常运行，并主动与原政务云平台服务商对接。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-TB-006-TB-006-REQ-046",
+      "tender_id": "TB-006",
+      "requirement_id": "TB-006:REQ-046",
+      "requirement_text": "供应商应提供在本项目中落实ESG理念的工作措施。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "供应商应提供在本项目中落实ESG理念的工作措施。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-FAST-01-FAST-01-REQ-011",
+      "tender_id": "FAST-01",
+      "requirement_id": "FAST-01:REQ-011",
+      "requirement_text": "驻点服务人员须遵守医院规章制度，并对工作期间接触的医院资料、信息或秘密保密。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "驻点服务人员须遵守医院规章制度，并对工作期间接触的医院资料、信息或秘密保密。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-FAST-01-FAST-01-REQ-007",
+      "tender_id": "FAST-01",
+      "requirement_id": "FAST-01:REQ-007",
+      "requirement_text": "应协助院方按照需求进行相关数据处理。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "应协助院方按照需求进行相关数据处理。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-FAST-04-FAST-04-REQ-224",
+      "tender_id": "FAST-04",
+      "requirement_id": "FAST-04:REQ-224",
+      "requirement_text": "内存配置功能：a)提供数据库内存规划和配置建议；b)依据物理内存规划数据库可用内存；c)依据可用内存或负载情况，自动设置或向用户建议不同数据缓存区大小。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "内存配置功能：a)提供数据库内存规划和配置建议；b)依据物理内存规划数据库可用内存；c)依据可用内存或负载情况，自动设置或向用户建议不同数据缓存区大小。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-FAST-04-FAST-04-REQ-329",
+      "tender_id": "FAST-04",
+      "requirement_id": "FAST-04:REQ-329",
+      "requirement_text": "建立漏洞管理机制，及时通过邮件、网站等方式将安全漏洞告知用户，并提供安全补丁对漏洞进行修复。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "建立漏洞管理机制，及时通过邮件、网站等方式将安全漏洞告知用户，并提供安全补丁对漏洞进行修复。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-FAST-04-FAST-04-REQ-352",
+      "tender_id": "FAST-04",
+      "requirement_id": "FAST-04:REQ-352",
+      "requirement_text": "投标人针对本项目编制项目实施方案，包括但不限于供货方案(包括供应商管理、到货验收)，操作系统与数据库安装、适配、调优方案，进度控制、偏差处理措施等。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "投标人针对本项目编制项目实施方案，包括但不限于供货方案(包括供应商管理、到货验收)，操作系统与数据库安装、适配、调优方案，进度控制、偏差处理措施等。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-FAST-04-FAST-04-REQ-353",
+      "tender_id": "FAST-04",
+      "requirement_id": "FAST-04:REQ-353",
+      "requirement_text": "投标人针对本项目编制技术支持和售后服务方案，包括但不限于目标及流程、内容及范围等。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "投标人针对本项目编制技术支持和售后服务方案，包括但不限于目标及流程、内容及范围等。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-FAST-04-FAST-04-REQ-270",
+      "tender_id": "FAST-04",
+      "requirement_id": "FAST-04:REQ-270",
+      "requirement_text": "集群构建与管理扩展要求：在读写操作负载差距较大时，提供读写分离能力。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "集群构建与管理扩展要求：在读写操作负载差距较大时，提供读写分离能力。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-FAST-WATER-01-FAST-WATER-01-REQ-025",
+      "tender_id": "FAST-WATER-01",
+      "requirement_id": "FAST-WATER-01:REQ-025",
+      "requirement_text": "应对项目管理系统开展功能完善及流程调整。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "应对项目管理系统开展功能完善及流程调整。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-FAST-WATER-01-FAST-WATER-01-REQ-024",
+      "tender_id": "FAST-WATER-01",
+      "requirement_id": "FAST-WATER-01:REQ-024",
+      "requirement_text": "应对项目管理系统开展安全加固。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "应对项目管理系统开展安全加固。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-FAST-WATER-01-FAST-WATER-01-REQ-023",
+      "tender_id": "FAST-WATER-01",
+      "requirement_id": "FAST-WATER-01:REQ-023",
+      "requirement_text": "应对项目管理系统提供每日数据备份服务。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "应对项目管理系统提供每日数据备份服务。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-FAST-WATER-01-FAST-WATER-01-REQ-026",
+      "tender_id": "FAST-WATER-01",
+      "requirement_id": "FAST-WATER-01:REQ-026",
+      "requirement_text": "应对项目管理系统开展安全检查。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "应对项目管理系统开展安全检查。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-FAST-WATER-01-FAST-WATER-01-REQ-027",
+      "tender_id": "FAST-WATER-01",
+      "requirement_id": "FAST-WATER-01:REQ-027",
+      "requirement_text": "应对项目管理系统开展应急故障处理。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "应对项目管理系统开展应急故障处理。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-FAST-WATER-01-FAST-WATER-01-REQ-109",
+      "tender_id": "FAST-WATER-01",
+      "requirement_id": "FAST-WATER-01:REQ-109",
+      "requirement_text": "应按照《北京市水务信息化项目建设与运行管理办法》对涉及国家秘密技术或水务敏感数据的内容保密。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "应按照《北京市水务信息化项目建设与运行管理办法》对涉及国家秘密技术或水务敏感数据的内容保密。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    },
+    {
+      "case_id": "RAG-FAST-WATER-01-FAST-WATER-01-REQ-028",
+      "tender_id": "FAST-WATER-01",
+      "requirement_id": "FAST-WATER-01:REQ-028",
+      "requirement_text": "应对项目管理系统提供使用技术咨询。",
+      "section": null,
+      "response_mode": "SOLUTION",
+      "reference_need": true,
+      "actual_retrieval_query": "应对项目管理系统提供使用技术咨询。",
+      "execution_status": "BLOCKED",
+      "blocked_reason": {
+        "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+        "message": "Current production retrieval query requires missing table(s): project_material_bindings"
+      },
+      "strategies": {
+        "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        },
+        "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+          "final_reference_count": 0,
+          "references": [],
+          "mechanical_suspicion_flags": [],
+          "semantic_label": null,
+          "failure_family": null,
+          "semantic_notes": null
+        }
+      }
+    }
+  ],
+  "semantic_labels_created": 0,
+  "provider_calls": 0,
+  "llm_calls": 0
+}

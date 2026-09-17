@@ -1,0 +1,45 @@
+{
+  "scope_recertification": {
+    "rejected_rows": 22,
+    "deterministic_in_scope": 17,
+    "deterministic_out_of_scope": 0,
+    "ambiguous_gpt_review": 5,
+    "primary_root_cause": "ROLE_BLACKLIST_OVERREACH"
+  },
+  "v3": {
+    "run_id": "REAL_E2E_CASE_01_REQUIREMENT_RUN_V3",
+    "chunks": 33,
+    "raw_candidates": 405,
+    "scope_accepted": 405,
+    "scope_rejected": 0,
+    "final_candidates": 341,
+    "source_verified": 341,
+    "provider_calls": 33,
+    "duration_ms": null
+  },
+  "v2": {
+    "run_id": "REAL_E2E_CASE_01_REQUIREMENT_RUN_V2",
+    "chunks": 33,
+    "raw_candidates": 436,
+    "scope_accepted": 414,
+    "scope_rejected": 22,
+    "final_candidates": 341,
+    "source_verified": 341,
+    "provider_calls": 33,
+    "duration_ms": null
+  },
+  "alignment_counts": {
+    "LEVEL_1": 88,
+    "LEVEL_2": 0,
+    "LEVEL_3": 0,
+    "LEVEL_4": 81,
+    "LEVEL_5": 7,
+    "LEVEL_6": 165
+  },
+  "previous_438_review_rows_compacted_to": 176,
+  "enterprise_indexing": "BLOCKED_ENTERPRISE_INDEXING_EMBEDDING_NETWORK_ERROR",
+  "retrieval_smoke": "NOT_RUN_INDEX_BLOCKED",
+  "new_regressions": 0,
+  "semantic_root_cause": "PENDING_GPT",
+  "recommended_human_action": "Review the compact scope ambiguity/source alignment packet; resolve embedding environment separately."
+}

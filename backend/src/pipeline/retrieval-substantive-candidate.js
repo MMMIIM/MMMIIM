@@ -36,6 +36,17 @@ const STATUS_LABEL = /^(?:P[0-3](?:\s*[—-]\s*[A-Z_]+)?|SUPPORTED\s*\/|NO_EVIDE
 const FACTUAL_PREDICATE = /(?:\b(?:is|are|was|were|has|have|had|supports?|provides?|delivers?|completed?|deployed?|uses?|meets?|includes?|contains?|runs?|passed?|certified?|approved?|registered?|active|available|verified|recorded|accepted|responsible|requires?|ensures?|achieves?|achieved)\b|(?:具有|具备|拥有|支持|提供|完成|通过|采用|满足|包含|包括|达到|部署|负责|承担|实现|可以|能够|使用|配置|运行|记录|验收|签订|获得|认证|注册))/iu;
 const FACT_ROW = /(?:^|[|\t])\s*[^|\t:：=]{1,48}\s*[:：=]\s*\S/;
 const SENTENCE_PUNCTUATION = /[。！？!?；;，,。]/u;
+const SUMMARY_MARKER = /(?:结构化摘要|资料摘要|文档摘要|摘要|summary)/iu;
+const DEFER_TO_SOURCE = /(?:需|须|应|请|必须|应当).{0,32}(?:回到|依据|参照|以.{0,12}为准|核验|核查|验证|确认)/iu;
+const AUTHORITATIVE_SOURCE_MARKER = /(?:原始|正式).{0,32}(?:法律|标准|政策|项目文件|原文)|(?:法律|标准|政策|项目文件|原文).{0,24}(?:核验|核查|验证|确认)/iu;
+
+function isGenericSummaryDisclaimer(value) {
+  const source = normalize(value);
+  if (!source || source.length > 600) return false;
+  return SUMMARY_MARKER.test(source)
+    && DEFER_TO_SOURCE.test(source)
+    && AUTHORITATIVE_SOURCE_MARKER.test(source);
+}
 
 /**
  * A short label is not an auditable proposition unless it carries a
@@ -75,6 +86,7 @@ export function classifySubstantiveCandidate(candidate = {}) {
   const source = normalize(candidate.source_text ?? candidate.raw_original_text);
   const valueLines = lines(source);
   if (!source) return { substantive_candidate: false, substantive_class: 'NON_SUBSTANTIVE', substantive_reason: 'EMPTY_SOURCE', substantive_version: RETRIEVAL_SUBSTANTIVE_VERSION };
+  if (isGenericSummaryDisclaimer(source)) return { substantive_candidate: false, substantive_class: 'BOILERPLATE', substantive_reason: 'GENERIC_SUMMARY_DISCLAIMER', substantive_version: RETRIEVAL_SUBSTANTIVE_VERSION };
   if (isMetadataBlock(valueLines)) return { substantive_candidate: false, substantive_class: 'LABEL_ONLY', substantive_reason: 'METADATA_LABEL_BLOCK', substantive_version: RETRIEVAL_SUBSTANTIVE_VERSION };
   if (valueLines.length === 1 && NON_SUBSTANTIVE_LABELS.has(valueLines[0])) return { substantive_candidate: false, substantive_class: 'LABEL_ONLY', substantive_reason: 'KNOWN_LABEL_ONLY', substantive_version: RETRIEVAL_SUBSTANTIVE_VERSION };
   if (valueLines.length === 1 && NAVIGATION.test(valueLines[0])) return { substantive_candidate: false, substantive_class: 'NAVIGATION', substantive_reason: 'NAVIGATION_LABEL', substantive_version: RETRIEVAL_SUBSTANTIVE_VERSION };

@@ -1,0 +1,61 @@
+{
+  "checkpoint": "V43_TRACK_B_SIX_TENDER_AUTHORITATIVE_ARTIFACT_RECOVERY_MASTER_CHECKPOINT",
+  "terminal_status": "V43_TRACK_B_PARTIAL_RECOVERY",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "track_a_checkpoint_read": true,
+  "baseline_drift": false,
+  "provider_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "production_code_changes": 0,
+  "gold_mutations": 0,
+  "authoritative_packet_contract": "CONFIRMED",
+  "known_good_tenders": ["FAST-01", "TB-006", "FAST-WATER-01"],
+  "missing_tenders": {
+    "JY-001": {
+      "raw_source": "backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf",
+      "raw_source_sha256": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "authority_candidates": [
+        "backend/eval/reports/jiangyin-extraction-defect-packet-v2.json",
+        "backend/eval/reports/jiangyin-ambiguity-prevalence-v1.json",
+        "backend/eval/reports/jiangyin-full-requirement-rag-fitness-v1.json",
+        "backend/eval/reports/jiangyin-source-traceability-gate-v1.json"
+      ],
+      "source_hash_status": "SOURCE_HASH_PARITY_PASS_RAW_ONLY",
+      "human_authority_status": "NOT_FOUND",
+      "primary_classification": "E_ONLY_NON_AUTHORITATIVE_ARTIFACT_EXISTS",
+      "recoverable_without_reextraction": false
+    },
+    "TB-003": {
+      "raw_source": "backend/eval/tender-benchmark-v1/sources/TB-003-jiaozuo-sidian.pdf",
+      "raw_source_sha256": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "authority_candidates": [],
+      "source_hash_status": "SOURCE_HASH_PARITY_PASS_RAW_ONLY",
+      "human_authority_status": "NOT_FOUND",
+      "primary_classification": "E_ONLY_NON_AUTHORITATIVE_ARTIFACT_EXISTS",
+      "recoverable_without_reextraction": false
+    },
+    "FAST-04": {
+      "raw_source": "backend/eval/tender-benchmark-v1/sources/FAST-04-beijing-software.pdf",
+      "raw_source_sha256": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "authority_candidates": [],
+      "source_hash_status": "SOURCE_HASH_PARITY_PASS_RAW_ONLY",
+      "human_authority_status": "NOT_FOUND",
+      "primary_classification": "E_ONLY_NON_AUTHORITATIVE_ARTIFACT_EXISTS",
+      "recoverable_without_reextraction": false
+    }
+  },
+  "six_tender_source_foundation_state": "3_OF_6_CONFIRMED",
+  "six_tender_source_parity": "FAIL_MISSING_AUTHORITATIVE_PACKETS",
+  "requirement_source_verification_gate": "BLOCKED",
+  "real_mapping_gold": "BLOCKED",
+  "reextraction_required": "NOT_YET_AUTHORIZED",
+  "recovery_implementation_required": true,
+  "human_review_required": true,
+  "safe_to_run_eval_only_recovery_implementation": false,
+  "safe_to_declare_six_tender_source_parity_pass": false,
+  "safe_to_reopen_real_mapping_gold": false,
+  "production_files_changed": 0,
+  "git_history_mutations": 0
+}

@@ -1,0 +1,366 @@
+{
+  "run_id": "SEMANTIC_INVARIANT_ROOT_FIX_CANARY_01",
+  "runtime": {
+    "gateway": "http://127.0.0.1:18082",
+    "health": 200,
+    "ready": 200,
+    "info": {
+      "build_revision": "f509514",
+      "working_tree_dirty": true,
+      "provider": "openai_compatible",
+      "model": "deepseek-ai/DeepSeek-V4-Flash",
+      "requirement_extraction_prompt_version": "4.3-requirement-extraction-v3.1.1",
+      "requirement_extraction_prompt_hash": "9b8fe6582e774a64f36b2be307274e297fafb309cf17270a4d8fc463da817305",
+      "evidence_support_schema_hash": "15276121aed6a8337384618a3939d66a7802815163f676e193ff8775a8486578"
+    }
+  },
+  "semantic": {
+    "cases": [
+      {
+        "case_id": "S01",
+        "expected": "EXPECTED_POSITIVE",
+        "assessment": {
+          "assessment_id": "ESA-BDB40C79BE554AA99F67CD2F8ED716C8",
+          "assessment_version": "evidence-support-assessment-v1",
+          "evaluator_version": "4.3-evidence-support-assessment-v1",
+          "assessment_status": "available",
+          "input_kind": "retrieval_candidate",
+          "requirement": {
+            "requirement_id": "SEM-S01",
+            "text": "企业需要具备 REST API、Webhook 和批量文件交换能力。",
+            "text_hash": "a6aa8efce0c54a0704ebb2da5f2eb015aa9ad9971a6a8f345b1a5f015da7b65a"
+          },
+          "source": {
+            "source_id": "SEM-SOURCE-S01",
+            "source_kind": "retrieval_candidate",
+            "source_span_id": "ESPAN-709632A1A25EF2E14625CFCFB00A3D4A",
+            "source_text_hash": "1e19f9fe3abbfaaea6c430c467144ebd3b898e4490179cc8c6e2012e67355e45",
+            "lineage": {
+              "project_id": "d22e95d8-3a2e-450d-a5ef-27f83a283aff",
+              "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+              "document_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+              "anchor_chunk_id": "MCH-0663AA700C01FD958515713C21CF5F5E"
+            },
+            "material": {
+              "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+              "material_type": "technical_solution",
+              "corpus_scope": "ENTERPRISE_PRIVATE",
+              "source_type": "synthetic_company_evidence",
+              "source_authority": "enterprise_private"
+            }
+          },
+          "semantic_relevance": "relevant",
+          "evidence_capability": "capable",
+          "support_level": "partial_support",
+          "semantic_relationship": "partial",
+          "review_dimensions": {
+            "subject_match": "match",
+            "scope_match": "mismatch",
+            "status_match": "mismatch",
+            "quantitative_match": "mismatch",
+            "entity_match": "match",
+            "validity_match": "unknown",
+            "source_authority": "unknown",
+            "support_sufficiency": "unknown"
+          },
+          "reason_codes": [
+            "RELATIONSHIP_UNKNOWN",
+            "SCOPE_MISMATCH",
+            "STATUS_MISMATCH",
+            "QUANTITATIVE_MISMATCH",
+            "VALIDITY_UNKNOWN",
+            "SOURCE_AUTHORITY_INSUFFICIENT",
+            "SUPPORT_INSUFFICIENT"
+          ],
+          "support_observations": [
+            {
+              "source_id": "SEM-SOURCE-S01",
+              "source_span_id": "ESPAN-709632A1A25EF2E14625CFCFB00A3D4A",
+              "support_excerpt": "支持REST API、Webhook和批量文件交换；2026-07-12完成12个模拟接口联调。",
+              "support_excerpt_hash": "4cfeecd92d540c0bb407ae32151d79e6eb9c95c17ff5c8f7fc47ec44a194659a",
+              "observation_type": "direct_support",
+              "reason_codes": [
+                "ENTITY_MISMATCH",
+                "SCOPE_MISMATCH",
+                "STATUS_MISMATCH",
+                "QUANTITATIVE_MISMATCH",
+                "VALIDITY_UNKNOWN",
+                "SOURCE_AUTHORITY_INSUFFICIENT",
+                "SUPPORT_INSUFFICIENT"
+              ]
+            }
+          ],
+          "conflict_observations": []
+        },
+        "error": null,
+        "provider_call": {
+          "run_id": "SEMANTIC_INVARIANT_ROOT_FIX_CANARY_01",
+          "phase": "SEMANTIC",
+          "case_id": "S01",
+          "attempt": 1,
+          "gateway_http_status": 200,
+          "provider_http_reached": true,
+          "provider_http_status": 200,
+          "finish_reason": "stop",
+          "prompt_tokens": 795,
+          "completion_tokens": 432,
+          "output_truncated": false,
+          "latency_ms": 13186,
+          "error_code": null,
+          "response_format_type": "json_schema"
+        }
+      },
+      {
+        "case_id": "S02",
+        "expected": "EXPECTED_LIMITED",
+        "assessment": {
+          "assessment_id": "ESA-4B3E132F9578F6AC052242CE9D2E028B",
+          "assessment_version": "evidence-support-assessment-v1",
+          "evaluator_version": "4.3-evidence-support-assessment-v1",
+          "assessment_status": "available",
+          "input_kind": "retrieval_candidate",
+          "requirement": {
+            "requirement_id": "SEM-S02",
+            "text": "企业应明确支持指定版本的操作系统和数据库。",
+            "text_hash": "bd26e77fe63ebcf44040cc192480ebc543b2c73b915888613d6a1d74924ad3c9"
+          },
+          "source": {
+            "source_id": "SEM-SOURCE-S02",
+            "source_kind": "retrieval_candidate",
+            "source_span_id": "ESPAN-FB231E6D00D7BA0D84531011C5CD9802",
+            "source_text_hash": "06a9bca77bce93b62d389be935c216233496d042f2ba0df04ceba84734a5b2ff",
+            "lineage": {
+              "project_id": "d22e95d8-3a2e-450d-a5ef-27f83a283aff",
+              "material_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd",
+              "document_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd",
+              "anchor_chunk_id": "MCH-AA94BB7D153A30F95E869D78DC45A0E5"
+            },
+            "material": {
+              "material_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd",
+              "material_type": "technical_solution",
+              "corpus_scope": "ENTERPRISE_PRIVATE",
+              "source_type": "synthetic_company_evidence",
+              "source_authority": "enterprise_private"
+            }
+          },
+          "semantic_relevance": "relevant",
+          "evidence_capability": "not_capable",
+          "support_level": "insufficient",
+          "semantic_relationship": "related",
+          "review_dimensions": {
+            "subject_match": "match",
+            "scope_match": "mismatch",
+            "status_match": "match",
+            "quantitative_match": "unknown",
+            "entity_match": "match",
+            "validity_match": "unknown",
+            "source_authority": "unknown",
+            "support_sufficiency": "unknown"
+          },
+          "reason_codes": [
+            "VALIDITY_UNKNOWN",
+            "SCOPE_MISMATCH",
+            "QUANTITATIVE_UNKNOWN"
+          ],
+          "support_observations": [
+            {
+              "source_id": "SEM-SOURCE-S02",
+              "source_span_id": "ESPAN-FB231E6D00D7BA0D84531011C5CD9802",
+              "support_excerpt": "Synthetic记录：Linux x86_64、某国产Linux测试环境、PostgreSQL兼容数据库完成安装与核心功能验证；未列版本不得推断。",
+              "support_excerpt_hash": "43940169890ecd25f53c7292ad30195c8e1c2b62fa681a23830db7a1c5242802",
+              "observation_type": "partial_support",
+              "reason_codes": [
+                "SCOPE_MISMATCH",
+                "QUANTITATIVE_UNKNOWN"
+              ]
+            }
+          ],
+          "conflict_observations": []
+        },
+        "error": null,
+        "provider_call": {
+          "run_id": "SEMANTIC_INVARIANT_ROOT_FIX_CANARY_01",
+          "phase": "SEMANTIC",
+          "case_id": "S02",
+          "attempt": 2,
+          "gateway_http_status": 200,
+          "provider_http_reached": true,
+          "provider_http_status": 200,
+          "finish_reason": "stop",
+          "prompt_tokens": 797,
+          "completion_tokens": 352,
+          "output_truncated": false,
+          "latency_ms": 4520,
+          "error_code": null,
+          "response_format_type": "json_schema"
+        }
+      },
+      {
+        "case_id": "S03",
+        "expected": "EXPECTED_NEGATIVE",
+        "assessment": null,
+        "error": {
+          "code": "SCHEMA_INVALID",
+          "status": 422,
+          "audit": {
+            "technical_error_code": null,
+            "error_code": "SCHEMA_INVALID",
+            "response_classification": null,
+            "probe_diagnostics": null
+          }
+        },
+        "provider_call": {
+          "run_id": "SEMANTIC_INVARIANT_ROOT_FIX_CANARY_01",
+          "phase": "SEMANTIC",
+          "case_id": "S03",
+          "attempt": 3,
+          "gateway_http_status": 200,
+          "provider_http_reached": true,
+          "provider_http_status": 200,
+          "finish_reason": "stop",
+          "prompt_tokens": 777,
+          "completion_tokens": 333,
+          "output_truncated": false,
+          "latency_ms": 13026,
+          "error_code": null,
+          "response_format_type": "json_schema"
+        }
+      },
+      {
+        "case_id": "S04",
+        "expected": "EXPECTED_REFERENCE_ONLY",
+        "assessment": {
+          "assessment_id": "ESA-5D4A425E4F25A3366B978470C8D2A6BE",
+          "assessment_version": "evidence-support-assessment-v1",
+          "evaluator_version": "4.3-evidence-support-assessment-v1",
+          "assessment_status": "available",
+          "input_kind": "retrieval_candidate",
+          "requirement": {
+            "requirement_id": "SEM-S04",
+            "text": "企业已具备政务项目实施能力。",
+            "text_hash": "821f089614317056046792289faf230df1ef0cea3f9a55b08c19a6957b092670"
+          },
+          "source": {
+            "source_id": "SEM-SOURCE-S04",
+            "source_kind": "retrieval_candidate",
+            "source_span_id": "ESPAN-EDFBDBDF9102248BB2E62E7EA262F77F",
+            "source_text_hash": "b28664cf17ae0c76a2013301375c968d7a6ad0a7173cc5793519206d5bbf5389",
+            "lineage": {
+              "project_id": "00000000-0000-4000-8000-000000000001",
+              "material_id": "434265bb-f3e6-4341-9a5d-57546997ae68",
+              "document_id": "434265bb-f3e6-4341-9a5d-57546997ae68",
+              "anchor_chunk_id": "MCH-0A4BFFC7419309FA3FD1735D26D1B1F6"
+            },
+            "material": {
+              "material_id": "434265bb-f3e6-4341-9a5d-57546997ae68",
+              "material_type": "technical_whitepaper",
+              "corpus_scope": "GOVERNMENT_ENTERPRISE",
+              "source_type": "government_guidance",
+              "source_authority": "official"
+            }
+          },
+          "semantic_relevance": "relevant",
+          "evidence_capability": "reference_only",
+          "support_level": "reference_only",
+          "semantic_relationship": "related",
+          "review_dimensions": {
+            "subject_match": "unknown",
+            "scope_match": "unknown",
+            "status_match": "unknown",
+            "quantitative_match": "unknown",
+            "entity_match": "unknown",
+            "validity_match": "unknown",
+            "source_authority": "unknown",
+            "support_sufficiency": "unknown"
+          },
+          "reason_codes": [
+            "REFERENCE_ONLY_SOURCE"
+          ],
+          "support_observations": [],
+          "conflict_observations": []
+        },
+        "error": null,
+        "provider_call": null
+      }
+    ],
+    "metrics": {
+      "cases": 4,
+      "provider_reached": 3,
+      "contract_validity_failures": 1,
+      "illegal_direct_combinations": null,
+      "direct_invariant_violations": null,
+      "schema_invalid_caused_by_invariant": null,
+      "assessment_unavailable_caused_by_invariant": 0,
+      "quality_mismatches": 1
+    }
+  },
+  "provider": {
+    "attempts": 3,
+    "cap": 6,
+    "calls": [
+      {
+        "run_id": "SEMANTIC_INVARIANT_ROOT_FIX_CANARY_01",
+        "phase": "SEMANTIC",
+        "case_id": "S01",
+        "attempt": 1,
+        "gateway_http_status": 200,
+        "provider_http_reached": true,
+        "provider_http_status": 200,
+        "finish_reason": "stop",
+        "prompt_tokens": 795,
+        "completion_tokens": 432,
+        "output_truncated": false,
+        "latency_ms": 13186,
+        "error_code": null,
+        "response_format_type": "json_schema"
+      },
+      {
+        "run_id": "SEMANTIC_INVARIANT_ROOT_FIX_CANARY_01",
+        "phase": "SEMANTIC",
+        "case_id": "S02",
+        "attempt": 2,
+        "gateway_http_status": 200,
+        "provider_http_reached": true,
+        "provider_http_status": 200,
+        "finish_reason": "stop",
+        "prompt_tokens": 797,
+        "completion_tokens": 352,
+        "output_truncated": false,
+        "latency_ms": 4520,
+        "error_code": null,
+        "response_format_type": "json_schema"
+      },
+      {
+        "run_id": "SEMANTIC_INVARIANT_ROOT_FIX_CANARY_01",
+        "phase": "SEMANTIC",
+        "case_id": "S03",
+        "attempt": 3,
+        "gateway_http_status": 200,
+        "provider_http_reached": true,
+        "provider_http_status": 200,
+        "finish_reason": "stop",
+        "prompt_tokens": 777,
+        "completion_tokens": 333,
+        "output_truncated": false,
+        "latency_ms": 13026,
+        "error_code": null,
+        "response_format_type": "json_schema"
+      }
+    ],
+    "retry_count": 0,
+    "fallback_count": 0,
+    "dify": 0,
+    "benchmark": 0
+  },
+  "ledger": {
+    "about_to_send": 3,
+    "terminal_events": 3,
+    "unmatched": 0
+  },
+  "fact": {
+    "executed": false,
+    "provider_calls": 0
+  },
+  "db_writes": 0,
+  "production_writes": 0
+}

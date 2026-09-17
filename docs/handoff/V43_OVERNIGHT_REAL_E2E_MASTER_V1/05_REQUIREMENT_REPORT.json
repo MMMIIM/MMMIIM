@@ -1,0 +1,35 @@
+{
+  "report": "TB-006 requirement production-shaped execution",
+  "run_id": "V43-OVERNIGHT-REAL-E2E-CASE-01-20260914",
+  "fresh_execution": {
+    "source_sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+    "parser_status": "PASS",
+    "chunk_count": 33,
+    "chunk_coverage": "100%",
+    "gateway_path": "createRequirementExtractionGateway → Semantic Gateway",
+    "completed_chunks": 5,
+    "failed_chunk": 6,
+    "provider_calls": 6,
+    "status": "BLOCKED_FAIL_CLOSED",
+    "error_code": "REQUIREMENT_SCOPE_EXCLUDED",
+    "first_failure_stage": "SOURCE_SCOPE_VALIDATION",
+    "failure_reason": "候选来源范围仅包含非需求范围内容。",
+    "semantic_contract_change": 0,
+    "prompt_change": 0,
+    "schema_change": 0
+  },
+  "frozen_auxiliary_reference": {
+    "path": "docs/eval/requirement-production-core6-20260911/TB-006.production-requirements.json",
+    "run_id": "V43-CORE6-20260911",
+    "status": "succeeded",
+    "candidate_count": 341,
+    "canonical_count": 341,
+    "source_verified_count": 341,
+    "provider_calls_observed": 32,
+    "used_as_fresh_output": false,
+    "note": "Read-only auxiliary identity only; not substituted for this run."
+  },
+  "authority_status": "NO_NEW_CONFIRMED_REQUIREMENT_BASELINE_CREATED",
+  "production_db_writes": 0,
+  "gold_mutations": 0
+}

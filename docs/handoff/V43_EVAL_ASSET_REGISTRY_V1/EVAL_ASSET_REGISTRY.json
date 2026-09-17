@@ -1,0 +1,517 @@
+{
+  "artifact_type": "V43_EVAL_ASSET_REGISTRY_V1",
+  "generated_at": "2026-09-16",
+  "registry_version": "1",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "status_taxonomy": [
+    "CURRENT_REUSABLE",
+    "CURRENT_PARTIAL_REUSABLE",
+    "BLOCKED_BUT_DIAGNOSTICALLY_VALID",
+    "SUPERSEDED_DO_NOT_USE",
+    "HISTORICAL_ARCHIVE_ONLY",
+    "QUARANTINED_AUTHORITY_ZERO",
+    "EXPLORATORY_ONLY",
+    "INVALID_IDENTITY",
+    "UNKNOWN_REVIEW_REQUIRED"
+  ],
+  "frozen_snapshots": [
+    {
+      "snapshot_id": "V43_CHENGCHUAN_BASE16_CONTENT_ROLE_FREEZE_V1",
+      "path": "docs/handoff/V43_PRE_E2E_GOVERNANCE_AND_MAPPING_READINESS_CLOSURE_V1/21_CHENGCHUAN_SOURCE_ROLE_MODEL_CORRECTED.json",
+      "bytes": 10812,
+      "sha256": "adfbaff3e0018db5f35006ab20325c75c350a5339da7e4354b8648f130bf86a8",
+      "status": "FROZEN_FOR_ENGINEERING_E2E",
+      "scope": "Chengchuan Base16 COM-01..COM-16",
+      "material_count": 16,
+      "reference_only_count": 7,
+      "evidence_candidate_count": 9,
+      "review_required_count": 1,
+      "policy_version": "material-source-role-v1",
+      "authority_policy_version": "material-source-authority-v1",
+      "synthetic": true,
+      "authority": "SYNTHETIC_EVAL_ONLY",
+      "production_authority": "NONE",
+      "read_policy": "All Chengchuan Base16 Eval/E2E consumers must load this snapshot; legacy material_type/evidence_category role inference is forbidden; snapshot mismatch fails closed."
+    }
+  ],
+  "evaluation_read_policy": {
+    "chengchuan_base16": "LOAD_FROZEN_ROLE_SNAPSHOT",
+    "legacy_material_type_inference": "FORBIDDEN",
+    "snapshot_mismatch": "FAIL_CLOSED"
+  },
+  "artifacts": [
+    {
+      "path": "docs/handoff/V43_PRE_E2E_GOVERNANCE_AND_MAPPING_READINESS_CLOSURE_V1/21_CHENGCHUAN_SOURCE_ROLE_MODEL_CORRECTED.json",
+      "bytes": 10812,
+      "sha256": "adfbaff3e0018db5f35006ab20325c75c350a5339da7e4354b8648f130bf86a8",
+      "status": "FROZEN_FOR_ENGINEERING_E2E",
+      "roles": ["ENGINEERING_EVAL_AUTHORITY", "SOURCE_ROLE_SNAPSHOT"],
+      "notes": ["Base16 content-level role/type audit freeze; synthetic authority remains Eval-only; COM-06 requires semantic review."]
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/00_EXECUTION_MANIFEST.json",
+      "bytes": 2739,
+      "sha256": "971ab7a16ece06619d6ab6e2d537cb29341cb261a895de83703fe7bbe355f5d8"
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/01_SOURCE_MATERIAL_REGISTRY.json",
+      "bytes": 161275,
+      "sha256": "d53ad497bf71757ae73d876bc7dd182fafeb48a07d6ff661bc3721e8b9c1bd65"
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/02_MATERIAL_SET_REGISTRY.json",
+      "bytes": 2656,
+      "sha256": "ff2ddf4564f750ef170d191206cac492e2f5001baf805d2bd5af59c31d4ed7a0"
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/03_DUPLICATE_ALIAS_MAP.json",
+      "bytes": 1117,
+      "sha256": "c7cb6ca3ec7f564f64939bd22df8fa1183bae12910eea394729b178119947d30"
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/04_AUTHORITY_MATRIX.json",
+      "bytes": 4647,
+      "sha256": "40a9bb6a19d660eb772d52fabe2071973b58cf6f5d80ac6e8d104b76161fc202"
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/05_SYNTHETIC_ENTERPRISE_IDENTITY.json",
+      "bytes": 5087,
+      "sha256": "60f28f327440ad8c1ad7a9d8fbea5609dc4046d08250c9e323cedb711574e6e3"
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/06_HUAWEI_ASSET_AUDIT.json",
+      "bytes": 2509,
+      "sha256": "2110a1e473498538a4b770d346f72123095f0de0785cb7c55d31a0dc6c05a9c6"
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/07_QUARANTINE_AUDIT.json",
+      "bytes": 3577,
+      "sha256": "11a10cd3744500161361ee6f8634b3a2e7cf38fe283ac837cf0f495101f8b524"
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/08_EXPLORATORY_WEB_AUDIT.json",
+      "bytes": 3355,
+      "sha256": "f094f8c945cf9635892850afecf055351ccb5b56f87425a7b12d5ce2fd7a729e"
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/09_DERIVED_ARTIFACT_REGISTRY.json",
+      "bytes": 9611,
+      "sha256": "49135e28a81b318ce74529af06c06f9462da4e6e9bd5f1b42c7174af6f0905d4"
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/10_RESULT_STATUS_REGISTRY.json",
+      "bytes": 3432,
+      "sha256": "f6173408484ced65049a7f4f5752a65e5f3919a07db2fc167ac6f64abc0edbde"
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/11_SUPERSESSION_GRAPH.json",
+      "bytes": 1413,
+      "sha256": "bbff5d68a227d89563a65d99d4e0374f34be60b88483dad125d151322c89ee3a"
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/12_EMBEDDING_REUSE_INDEX.json",
+      "bytes": 1883,
+      "sha256": "ee70f79944f8f18cf82556cee95ba29ef40899e5bb184f5bb0c665c4f9b2b22b"
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/13_FACT_REUSE_INDEX.json",
+      "bytes": 1507,
+      "sha256": "4767354c1541905cdd7e811e3202cf1ae0f54d1651df27ab2acbae9522dfbde3"
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/14_MAPPING_CLAIM_REUSE_INDEX.json",
+      "bytes": 3070,
+      "sha256": "371f138d3e856a0ca1f3c10c07c3e7efff2622bd6014178a1fd5b037024f1dc4"
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/15_RAG_RESULT_REGISTRY.json",
+      "bytes": 2155,
+      "sha256": "aec78f7fbf032adccd0223c9a16c08b89a5e4281641d02e545eea9f276337d59"
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/16_CORE6_REQUIREMENT_FREEZE.json",
+      "bytes": 2102,
+      "sha256": "f63c7ea8e16b273ddbcba149ad80150b3468aac498423a2571f39a58a4b14a09"
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/17_CORE6_DEEP_CHAIN_PRESELECTION.json",
+      "bytes": 12562,
+      "sha256": "b3154f3487a706e22accf8512d9cf13f01d2737ea39d2533ae931bb2c82dae3a"
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/18_MAPPING_FUTURE_EXECUTION_PLAN.json",
+      "bytes": 2255,
+      "sha256": "89bab0934a2055baa8c65c790650a7c3ac73ab16f551e2ff68cbdf607acee901"
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/19_PROVIDER_RUNTIME_DEPENDENCY_MAP.json",
+      "bytes": 18280,
+      "sha256": "bddb5994ccca13e288c8cc47e3601ba712e25572e133b08a5c7aacb3639a0f9c"
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/20_HOST_GATE_PLAN.json",
+      "bytes": 2768,
+      "sha256": "b3672767b8cf25f47b11cc8dece63f492c36c1ca4622de482ec605f763781fdc"
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/21_DB_SAFETY_AUDIT.json",
+      "bytes": 4478,
+      "sha256": "0779f3727a75d325fb92f639970cab47e053663db7af7ad0dd683dfc7107fe86"
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/22_IDEMPOTENCY_AUDIT.json",
+      "bytes": 996,
+      "sha256": "38bfe036c840b7845a2287135d5505f7fd22fbc76e1431f0679b6030be2a18f8"
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/23_AUTHORITY_REGRESSION_REPORT.json",
+      "bytes": 2354,
+      "sha256": "9a1d23a76c14428d28f43be06274fd9f320b1ccb751e81d70522018dbf60c982"
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/24_SAFE_PACKET_READINESS.json",
+      "bytes": 932,
+      "sha256": "cf99ab5a02d75f39ada2268fcb4d362e651636d48af1e819a838c0d65d5994f0"
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/25_MODULE_READINESS_MATRIX.json",
+      "bytes": 1623,
+      "sha256": "26312169d1b87b720ff36c59bfec15af614d938f44264b9060c57904ec820a34"
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/26_CURRENT_E2E_REUSE_PLAN.json",
+      "bytes": 5998,
+      "sha256": "bb8e0dc5e60e052bef9700b25157bb9ba685fd7232d752ba3a30dd385433e58c",
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "roles": ["SOURCE_OF_FACTUAL_STATUS"],
+      "notes": ["V43_CURRENT_E2E_REUSE_PLAN_REFRESH_V2; Chengchuan Base16 is the default synthetic E2E corpus, existing 160 vectors are reusable on identity parity, and the first Host gate is retrieval query embedding."]
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/27_ENGINEERING_DEBT_REGISTER.json",
+      "bytes": 3907,
+      "sha256": "866e864c6bc8e783b7f9233c21e54418f0766d909521c2cd109127a8ce96d330"
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/28_TEST_REPORT.json",
+      "bytes": 1985,
+      "sha256": "4db24b542087fd938877057755afeda3bdbaec0a833aa0fe0a26c6222b3a6519"
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/29_CHECKPOINT.json",
+      "bytes": 1283,
+      "sha256": "004e9d437b522e75f674825560ac427e124af1fa077c7ad38e2f395b70976893"
+    },
+    {
+      "path": "docs/handoff/V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_V1/29_CHECKPOINT.md",
+      "bytes": 804,
+      "sha256": "f0abf988f07920759995731590b48cebc11a58be7536bb1979612497b7462ac3"
+    }
+  ],
+  "source_artifacts": [
+    {
+      "path": "docs/V43_REQUIREMENT_GOLD_V2_SIX_TENDER_CANONICAL_INPUT.json",
+      "exists": true,
+      "bytes": 1670324,
+      "sha256": "ff07402688a3013af9a9b8be01f613f76848b7ea905208c1955a604432422fe1",
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "roles": [
+        "SOURCE_OF_FACTUAL_STATUS"
+      ],
+      "notes": []
+    },
+    {
+      "path": "docs/handoff/V43_RESPONSE_ROUTER_V2_2_3_FINAL_AUTHORITY_CLOSURE/07_FULL_REPLAY.json",
+      "exists": true,
+      "bytes": 6622066,
+      "sha256": "6a89ee174a981c60b21364b2a43f05ba8fac652ca2862aac2b0196e1742e0b6a",
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "roles": [
+        "SOURCE_OF_FACTUAL_STATUS"
+      ],
+      "notes": []
+    },
+    {
+      "path": "docs/handoff/V43_OVERNIGHT_REAL_E2E_MASTER_V1/00A_PROVIDER_RUNTIME_PREFLIGHT.json",
+      "exists": true,
+      "bytes": 12100,
+      "sha256": "0dc5b743993d1d4fc1a820d24ec095c2bdd1fa123d74446287554f6ff8e0adcc",
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "roles": [
+        "SOURCE_OF_FACTUAL_STATUS"
+      ],
+      "notes": []
+    },
+    {
+      "path": "docs/handoff/V43_OVERNIGHT_REAL_E2E_MASTER_V1/00B_EMBEDDING_REUSE_AUDIT.json",
+      "exists": true,
+      "bytes": 3306,
+      "sha256": "ecaf366b432d0259e24735943d6b1c9e432156589d6a5df46de68bac9f32c17a",
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "roles": [
+        "SOURCE_OF_FACTUAL_STATUS"
+      ],
+      "notes": []
+    },
+    {
+      "path": "docs/handoff/V43_OVERNIGHT_REAL_E2E_MASTER_V1/00C_E2E_PROVIDER_DEPENDENCY_MAP.json",
+      "exists": true,
+      "bytes": 4560,
+      "sha256": "faf94e9c5d885ab97e0cdd8733ebb38fdaaf31949417eb29c619064a448e8925",
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "roles": [
+        "SOURCE_OF_FACTUAL_STATUS"
+      ],
+      "notes": []
+    },
+    {
+      "path": "docs/handoff/V43_OVERNIGHT_REAL_E2E_MASTER_V1/00D_HOST_EXECUTION_GATE.json",
+      "exists": true,
+      "bytes": 1925,
+      "sha256": "444959f2e3844317cb0711e6dc23381c1530c1a45c77ad813c1a495d552b7a40",
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "roles": [
+        "SOURCE_OF_FACTUAL_STATUS"
+      ],
+      "notes": []
+    },
+    {
+      "path": "backend/eval/rag-pilot/V43_RAG_CODEX_HANDOFF_1/rag_bundle_manifest.json",
+      "exists": true,
+      "bytes": 53316,
+      "sha256": "bf1ab744e7cc340a36df7045ded13a55b225d60e80ae871319d7ebf4bee0d87d",
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "roles": [
+        "SOURCE_OF_FACTUAL_STATUS"
+      ],
+      "notes": []
+    },
+    {
+      "path": "backend/eval/rag-governance/11_current_rag_corpus_inventory.json",
+      "exists": true,
+      "bytes": 192532,
+      "sha256": "7ac972492ca6d689209ade0bfd7cd270ef4c98d70aa41a01e69f041f7e9153dd",
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "roles": [
+        "SOURCE_OF_FACTUAL_STATUS"
+      ],
+      "notes": []
+    },
+    {
+      "path": "backend/eval/rag-governance/15_material_source_authority_quarantine_checkpoint.json",
+      "exists": true,
+      "bytes": 2129,
+      "sha256": "a24355d97ef0716fc04c77d313390c0a9fabf83bb2509636cbdc84db95704261",
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "roles": [
+        "SOURCE_OF_FACTUAL_STATUS"
+      ],
+      "notes": []
+    },
+    {
+      "path": "docs/V43_CHENGCHUAN_V2_IMPORT_CHECKPOINT.json",
+      "exists": true,
+      "bytes": 1472,
+      "sha256": "e2f341d6c355274c281d1bf0ddec64a4592b5319456563fb6a7967604c861fe6",
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "roles": [
+        "SOURCE_OF_FACTUAL_STATUS"
+      ],
+      "notes": []
+    },
+    {
+      "path": "docs/V43_CHENGCHUAN_CONTROLLED_REAL_FACT_INVENTORY.json",
+      "exists": true,
+      "bytes": 100561,
+      "sha256": "65ca3e3a8e529d3c3404a7bc2b95ef0187f95fc8ad9cfa7016393c35e9a35811",
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "roles": [
+        "SOURCE_OF_FACTUAL_STATUS"
+      ],
+      "notes": []
+    },
+    {
+      "path": "docs/V43_CHENGCHUAN_CONTROLLED_REAL_FACT_QUALITY_AUDIT.json",
+      "exists": true,
+      "bytes": 65643,
+      "sha256": "a42722e2d9dce725aecb3d43eb59638073a6bb582ab0f6f441a33688cde160c4",
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "roles": [
+        "SOURCE_OF_FACTUAL_STATUS"
+      ],
+      "notes": []
+    },
+    {
+      "path": "backend/eval/requirement-evidence-mapping-v2/successor-manifest.json",
+      "exists": true,
+      "bytes": 5273,
+      "sha256": "13a7b7887987e5bfe1b46a466eaeb6ca43cfc28473e8566739010669eee395fd",
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "roles": [
+        "SOURCE_OF_FACTUAL_STATUS"
+      ],
+      "notes": []
+    },
+    {
+      "path": "docs/V43_MAPPING_V2_ACTIVATION_READINESS_CHECKPOINT.json",
+      "exists": true,
+      "bytes": 5014,
+      "sha256": "ab202890039a58bcda44dd1af024419fda399ad42b4e56db8c16fee27a223ce3",
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "roles": [
+        "SOURCE_OF_FACTUAL_STATUS"
+      ],
+      "notes": []
+    },
+    {
+      "path": "docs/handoff/V43_REAL_E2E_AUTHORITY_AND_PROJECT_MATERIAL_BINDING_IMPLEMENTATION_V1/04_TB006_HUAWEI_BINDINGS.json",
+      "exists": true,
+      "bytes": 1084,
+      "sha256": "f17277b4a7cf71f4ae2080351bbafad349e4a7fdfccc31581bfaea69b8f10cd8",
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "roles": [
+        "SOURCE_OF_FACTUAL_STATUS"
+      ],
+      "notes": []
+    },
+    {
+      "path": "docs/handoff/V43_REAL_E2E_AUTHORITY_AND_PROJECT_MATERIAL_BINDING_IMPLEMENTATION_V1/host-retrieval-utf8.json",
+      "exists": true,
+      "bytes": 52845,
+      "sha256": "6971bded786a21e0f320a3ef6366aa76f812ce4551fdf4a46837250dbdec9209",
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "roles": [
+        "SOURCE_OF_FACTUAL_STATUS"
+      ],
+      "notes": []
+    },
+    {
+      "path": "docs/handoff/V43_CORE6_1009_COMBINED_ARTIFACT_IDENTITY_RECONCILIATION_V1/08_CHECKPOINT.json",
+      "exists": true,
+      "bytes": 47480,
+      "sha256": "0598241ddf83ff1c4db9a2954d08f8b3899f448811c0b0751da7ed99811d9128",
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "roles": [
+        "SOURCE_OF_FACTUAL_STATUS"
+      ],
+      "notes": []
+    },
+    {
+      "path": "docs/handoff/V43_CORE6_1009_REAL_REFERENCE_RAG_AND_WRITER_CONTEXT_EVAL_V1/04_REAL_6TENDER_EVAL_SET.json",
+      "exists": true,
+      "bytes": 84131,
+      "sha256": "0f619c253f530b00b7814ab4afaea65d63da6cbebf3c709ad2fbb16616bf65f1",
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "roles": [
+        "SOURCE_OF_FACTUAL_STATUS"
+      ],
+      "notes": []
+    },
+    {
+      "path": "docs/handoff/V43_CORE6_1009_REAL_REFERENCE_RAG_AND_WRITER_CONTEXT_EVAL_V1/17_CHECKPOINT.json",
+      "exists": true,
+      "bytes": 5300,
+      "sha256": "fcbf0ac664bb8aa0631ef91d9ba0a90fa2d10d5a9088270dce94e88f4c85ee15",
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "roles": [
+        "SOURCE_OF_FACTUAL_STATUS"
+      ],
+      "notes": []
+    },
+    {
+      "path": "docs/handoff/V43_RESPONSE_ROUTER_V2_2_3_FINAL_AUTHORITY_CLOSURE/10_CHECKPOINT.json",
+      "exists": true,
+      "bytes": 2841,
+      "sha256": "87b1dad6bb66d2f7e7e48e2df3fbcb3cd2bf5071e9dcc5cf55ecc1c77dd4c9b7",
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "roles": [
+        "SOURCE_OF_FACTUAL_STATUS"
+      ],
+      "notes": []
+    },
+    {
+      "path": "docs/V43_RESPONSE_ROUTER_V2_2_3_FREEZE_CHECKPOINT.json",
+      "exists": true,
+      "bytes": 1120,
+      "sha256": "064d46c91fabb65a44df75d8c0eae83411d831bbbaa2e433240f7b069bf3579d",
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "roles": [
+        "SOURCE_OF_FACTUAL_STATUS"
+      ],
+      "notes": []
+    },
+    {
+      "path": "backend/eval/evidence-support/calibration-v2",
+      "exists": true,
+      "kind": "directory",
+      "entries": 84,
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "roles": [
+        "SOURCE_OF_FACTUAL_STATUS"
+      ],
+      "notes": []
+    },
+    {
+      "path": "backend/eval/requirement-evidence-mapping-v2",
+      "exists": true,
+      "kind": "directory",
+      "entries": 7,
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "roles": [
+        "SOURCE_OF_FACTUAL_STATUS"
+      ],
+      "notes": []
+    },
+    {
+      "path": "backend/eval/gold-human-review/v2",
+      "exists": true,
+      "kind": "directory",
+      "entries": 24,
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "roles": [
+        "SOURCE_OF_FACTUAL_STATUS"
+      ],
+      "notes": []
+    },
+    {
+      "path": "backend/eval/requirement-unseen-holdout-v3",
+      "exists": true,
+      "kind": "directory",
+      "entries": 3,
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "roles": [
+        "SOURCE_OF_FACTUAL_STATUS"
+      ],
+      "notes": []
+    },
+    {
+      "path": "backend/eval/gold",
+      "exists": true,
+      "kind": "directory",
+      "entries": 6,
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "roles": [
+        "SOURCE_OF_FACTUAL_STATUS"
+      ],
+      "notes": []
+    },
+    {
+      "path": "docs/handoff/V43_OVERNIGHT_REAL_E2E_MASTER_V1",
+      "exists": true,
+      "kind": "directory",
+      "entries": 31,
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "roles": [
+        "SOURCE_OF_FACTUAL_STATUS"
+      ],
+      "notes": []
+    }
+  ],
+  "safety": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "production_changes": 0
+  }
+}

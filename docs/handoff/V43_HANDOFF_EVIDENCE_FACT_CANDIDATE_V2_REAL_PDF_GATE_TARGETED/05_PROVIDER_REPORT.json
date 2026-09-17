@@ -1,0 +1,61 @@
+{
+  "run_id": "V43-REAL-PDF-PILOT-CANDIDATE-V2-20260913101303-22c0550e",
+  "provider_runtime": {
+    "provider": "openai_compatible",
+    "gateway_base_url": "http://127.0.0.1:18082",
+    "provider_base_url": "https://api.siliconflow.cn/v1",
+    "provider_host": "api.siliconflow.cn",
+    "provider_port": "443",
+    "model": "deepseek-ai/DeepSeek-V4-Flash",
+    "service_key_present": true,
+    "provider_key_present": true,
+    "deepseek_official_api_base": "https://api.deepseek.com",
+    "deepseek_official_fact_model": "deepseek-v4-pro",
+    "deepseek_official_key_present": true,
+    "timeout_ms": 120000
+  },
+  "preflight": {
+    "/ready": {
+      "http_status": 200,
+      "healthy": true,
+      "safe_shape": {
+        "status": "ready",
+        "service": null,
+        "build_revision": null,
+        "provider": "openai_compatible",
+        "provider_configured": true,
+        "fact_provider": null,
+        "fact_provider_configured": null,
+        "fact_provider_endpoint": null,
+        "fact_model": null,
+        "task_registry_loaded": true
+      }
+    },
+    "/info": {
+      "http_status": 200,
+      "healthy": true,
+      "safe_shape": {
+        "status": null,
+        "service": "semantic-gateway",
+        "build_revision": "dev-working-tree",
+        "provider": null,
+        "provider_configured": null,
+        "fact_provider": "deepseek_official",
+        "fact_provider_configured": true,
+        "fact_provider_endpoint": "/responses",
+        "fact_model": "deepseek-v4-pro",
+        "task_registry_loaded": true
+      }
+    }
+  },
+  "task_type": "evidence_fact_candidate_v2",
+  "contract_version": "4.3-evidence-fact-candidate-v2",
+  "prompt_hash": "480ea2763abef430d31cacf0a86c1e067afbd075d6c32ac49528ed655cbadb19",
+  "schema_hash": "3dcece82464fcbd0351fe4444cc66994d36e40ca6ca97a3f2d0ba01e5e44f0b3",
+  "provider_call_cap": 120,
+  "provider_calls": 0,
+  "provider_failures": 0,
+  "retries": 0,
+  "calls": [],
+  "requirement_blind_extraction": "PASS"
+}

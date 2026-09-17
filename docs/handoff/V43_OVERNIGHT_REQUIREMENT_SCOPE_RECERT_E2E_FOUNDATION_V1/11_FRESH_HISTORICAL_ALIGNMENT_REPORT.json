@@ -1,0 +1,5125 @@
+{
+  "method": "deterministic_staged_alignment",
+  "levels": {
+    "level_1": "same source hash + exact excerpt + exact requirement text",
+    "level_2": "same source hash + page/paragraph span + exact requirement text",
+    "level_3": "same source hash + excerpt + exact requirement text",
+    "level_4": "same source span hash + text differs",
+    "level_5": "source span differs + text same",
+    "level_6": "unmatched"
+  },
+  "counts": {
+    "LEVEL_1": 88,
+    "LEVEL_2": 0,
+    "LEVEL_3": 0,
+    "LEVEL_4": 81,
+    "LEVEL_5": 7,
+    "LEVEL_6": 165
+  },
+  "rows": [
+    {
+      "fresh_requirement_id": "REQ-001",
+      "fresh_source_hash": "714052e04728cc86332da2412f960ed0718621e85245882a137de622ab9cc6ce",
+      "fresh_source_refs": [
+        "C001-S043"
+      ],
+      "fresh_requirement_text": "合同履行期限为自合同签订之日起10个月。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-002",
+      "historical_source_hash": "714052e04728cc86332da2412f960ed0718621e85245882a137de622ab9cc6ce",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-002",
+      "fresh_source_hash": "da85ac4b1f89be157868c754ffdf3adce8aaef33bd3bcd3598e52388e394c9d2",
+      "fresh_source_refs": [
+        "C001-S044"
+      ],
+      "fresh_requirement_text": "本项目不接受联合体投标。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-003",
+      "historical_source_hash": "da85ac4b1f89be157868c754ffdf3adce8aaef33bd3bcd3598e52388e394c9d2",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-003",
+      "fresh_source_hash": "a923bc6839207959852b42ff0805430b847f9f5f6a76f2d962cf80ed1ae921b4",
+      "fresh_source_refs": [
+        "C001-S046"
+      ],
+      "fresh_requirement_text": "投标人须满足《中华人民共和国政府采购法》第二十二条规定。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-004",
+      "historical_source_hash": "a923bc6839207959852b42ff0805430b847f9f5f6a76f2d962cf80ed1ae921b4",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-004",
+      "fresh_source_hash": "76e8e18080916b400f510b06f580220f2a42b0e585e6557880dd21a6c02aac8d",
+      "fresh_source_refs": [
+        "C001-S049"
+      ],
+      "fresh_requirement_text": "本项目不专门面向中小企业预留采购份额。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-005",
+      "historical_source_hash": "76e8e18080916b400f510b06f580220f2a42b0e585e6557880dd21a6c02aac8d",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-005",
+      "fresh_source_hash": "7eca50548f4d169cd302cbc5bbf6cf15d74190c42a49c168b4463d8f47100e22",
+      "fresh_source_refs": [
+        "C002-S003",
+        "C002-S004",
+        "C002-S005",
+        "C002-S006",
+        "C002-S007",
+        "C002-S008",
+        "C002-S009",
+        "C002-S010",
+        "C002-S011"
+      ],
+      "fresh_requirement_text": "投标人应取得互联网资源协作服务业务许可，须提供《中华人民共和国增值电信业务经营许可证》复印件，且该许可证中的“业务种类（服务项目）及覆盖范围”须包含第一类增值电信业务中的“互联网数据中心业务”或“互联网数据中心业务（不含互联网资源协作服务）”或“互联网数据中心业务（仅限互联网资源协作服务）”，机房所在地均须包含“北京”。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-006",
+      "fresh_source_hash": "ad24c8bc93d5d431466d5663ac7fa32eb253997a01846b6e29935913ef70ef30",
+      "fresh_source_refs": [
+        "C002-S024",
+        "C002-S025",
+        "C002-S026"
+      ],
+      "fresh_requirement_text": "投标人务必远程参加开标解密，保持联系人电话畅通，并确保使用制作上传本项目电子投标文件的计算机设备及自身CA数字证书或电子营业执照登录北京市政府采购电子交易平台自行进行解密操作。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-007",
+      "fresh_source_hash": "40a4ab29f0d4edd004f298e7bb9a7fef55a7902e558dfbb47dec3bf32d8e64ce",
+      "fresh_source_refs": [
+        "C002-S031",
+        "C002-S032",
+        "C002-S033",
+        "C002-S034"
+      ],
+      "fresh_requirement_text": "供应商应认真学习北京市政府采购电子交易平台发布的相关操作手册，办理CA数字证书或电子营业执照、进行平台注册绑定，并认真核实CA数字证书或电子营业执照情况确认是否符合本项目电子化采购流程要求。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-008",
+      "fresh_source_hash": "d78e48308416d262c0f4b14a4318c94f7625a3ff33bdad702961c8e48c2f9a13",
+      "fresh_source_refs": [
+        "C002-S038",
+        "C002-S039",
+        "C002-S040"
+      ],
+      "fresh_requirement_text": "供应商应按照程序要求办理CA数字证书或电子营业执照，登录北京市政府采购电子交易平台查阅“用户指南”—“操作指南”—“市场主体CA办理操作流程指引”/“电子营业执照使用指南”进行办理。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-009",
+      "fresh_source_hash": "37d5b6ad5653c3daf642d8b79e400ce0b0f8144872c74551745ccc49393db2ed",
+      "fresh_source_refs": [
+        "C002-S041",
+        "C002-S042",
+        "C002-S043"
+      ],
+      "fresh_requirement_text": "供应商应登录北京市政府采购电子交易平台“用户指南”—“操作指南”—“市场主体注册入库操作流程指引”进行自助注册绑定。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-010",
+      "fresh_source_hash": "c44e10af9c794a6587fcbad0901c02b129f8eeec54ad9cc8bd46daaaa501f3a8",
+      "fresh_source_refs": [
+        "C002-S044",
+        "C002-S045",
+        "C002-S046",
+        "C002-S047",
+        "C002-S048"
+      ],
+      "fresh_requirement_text": "供应商应登录北京市政府采购电子交易平台“用户指南”—“工具下载”—“招标采购系统文件驱动安装包”下载相关驱动，并登录“用户指南”—“工具下载”—“投标文件编制工具”下载相关客户端。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-011",
+      "fresh_source_hash": "593637afec51005a7ee7e50bbfd6d97b2d017899338fe5c5040596d2cd7c6633",
+      "fresh_source_refs": [
+        "C002-S049",
+        "C002-S050",
+        "C002-S051",
+        "C002-S052",
+        "C002-S053",
+        "C002-S054",
+        "C002-S055",
+        "C002-S056"
+      ],
+      "fresh_requirement_text": "供应商应使用CA数字证书或电子营业执照登录北京市政府采购电子交易平台获取电子招标文件；如计划参与多个采购包的投标，应在【我的项目】栏目依次选择对应采购包，分别按采购包下载招标文件电子版；未在规定期限内按上述操作获取文件的采购包，供应商无法提交相应包的电子投标文件。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-012",
+      "fresh_source_hash": "08b4a3fd07d4e497e89151afcd2cd413ce89bea88a091e9104dca59bdf63f8bf",
+      "fresh_source_refs": [
+        "C002-S057",
+        "C002-S058",
+        "C002-S059",
+        "C002-S060"
+      ],
+      "fresh_requirement_text": "供应商应使用电子投标客户端编制电子投标文件并进行线上投标，电子投标文件需要加密并加盖电子签章；如无法按照要求在电子投标文件中加盖电子签章和加密，应及时通过技术支持服务热线联系技术人员。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-013",
+      "fresh_source_hash": "f039d95018cabc839759360f9a7798f7eef6347ede72f4ce9bb264a93b8a9f80",
+      "fresh_source_refs": [
+        "C002-S061",
+        "C002-S062",
+        "C002-S063"
+      ],
+      "fresh_requirement_text": "供应商应于投标截止时间前在北京市政府采购电子交易平台提交电子投标文件，上传电子投标文件过程中应保持与互联网的连接畅通。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-014",
+      "fresh_source_hash": "635b7b982f5651e7bb5b1402dc2cece1d19117f7f38f8dc146e2fa33e8fb2762",
+      "fresh_source_refs": [
+        "C003-S002",
+        "C003-S003"
+      ],
+      "fresh_requirement_text": "供应商在开标地点使用CA数字证书或电子营业执照登录北京市政府采购电子交易平台进行电子开标。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-015",
+      "historical_source_hash": "635b7b982f5651e7bb5b1402dc2cece1d19117f7f38f8dc146e2fa33e8fb2762",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-015",
+      "fresh_source_hash": "2fd74deee4026eecc625fba3bf5d7b8442b2bfbad14ea46929a84b143c719794",
+      "fresh_source_refs": [
+        "C003-S081",
+        "C003-S082"
+      ],
+      "fresh_requirement_text": "投标保证金金额：无须提交。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-016",
+      "fresh_source_hash": "2fd74deee4026eecc625fba3bf5d7b8442b2bfbad14ea46929a84b143c719794",
+      "fresh_source_refs": [
+        "C003-S081",
+        "C003-S082"
+      ],
+      "fresh_requirement_text": "投标有效期：自提交投标文件的截止之日起算180日历天。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-017",
+      "fresh_source_hash": "b0c411854eaad398858e322f17f637ce28ada25e7c8fba6c7e73c343666b447a",
+      "fresh_source_refs": [
+        "C004-S001"
+      ],
+      "fresh_requirement_text": "解密时间为120分钟。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-017",
+      "historical_source_hash": "b0c411854eaad398858e322f17f637ce28ada25e7c8fba6c7e73c343666b447a",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-018",
+      "fresh_source_hash": "d4c484b0f45748b13616fa1ad7b36472fca72cad720e3dff7fadd57a48af809a",
+      "fresh_source_refs": [
+        "C004-S006",
+        "C004-S007",
+        "C004-S008",
+        "C004-S009"
+      ],
+      "fresh_requirement_text": "中标候选人并列的，按照以下方式确定中标人：得分且投标报价均相同的，以技术部分得分高者为中标人；已披露2023年度或2024年度ESG报告的投标人须提供相应网页截图及网址。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-019",
+      "fresh_source_hash": "9284587ae4f8edbcaa23767e31aaab6001b6a405427ef7110f4024c06f2ae740",
+      "fresh_source_refs": [
+        "C004-S012",
+        "C004-S013"
+      ],
+      "fresh_requirement_text": "本项目的非主体、非关键性工作不允许分包。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-020",
+      "fresh_source_hash": "96833a8aed0704596879313ad085d32c435184f69b73dd353844ac76ef583e2a",
+      "fresh_source_refs": [
+        "C004-S061"
+      ],
+      "fresh_requirement_text": "若《投标人须知资料表》中规定了组织现场考察、召开开标前答疑会，则投标人应按要求在规定的时间和地点参加。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-021",
+      "fresh_source_hash": "523dfadabbce71a887e70992d1e01fea1164f233dd6bf13638c13ee1ed8f6558",
+      "fresh_source_refs": [
+        "C005-S073",
+        "C005-S074",
+        "C005-S075"
+      ],
+      "fresh_requirement_text": "如本项目采购产品属于实施政府强制采购品目清单范围的节能产品，则投标人所报产品必须获得国家确定的认证机构出具的、处于有效期之内的节能产品认证证书，否则投标无效。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-022",
+      "fresh_source_hash": "175df139b5b53d8ef3b33815199ebb39cfa1f80886171f526c2e7a6469dc9c4f",
+      "fresh_source_refs": [
+        "C006-S004",
+        "C006-S005",
+        "C006-S006",
+        "C006-S007",
+        "C006-S008",
+        "C006-S009",
+        "C006-S010"
+      ],
+      "fresh_requirement_text": "各级政府部门在购置计算机办公设备时，必须采购预装正版操作系统软件的计算机产品，相关规定依据国权联〔2006〕1号、国办发〔2010〕47号、财预〔2010〕536号文件。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-023",
+      "fresh_source_hash": "6ee27e198fb316d85c35eae143ceb8ed25f750ff0780c61a7f11eb1bf4f89032",
+      "fresh_source_refs": [
+        "C006-S012",
+        "C006-S013",
+        "C006-S014",
+        "C006-S015",
+        "C006-S016"
+      ],
+      "fresh_requirement_text": "所提供产品属于列入《网络关键设备和网络安全专用产品目录》的网络安全专用产品时，应当按照《信息安全技术网络安全专用产品安全技术要求》等相关国家标准的强制性要求，由具备资格的机构安全认证合格或者安全检测符合要求。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-024",
+      "fresh_source_hash": "dd91726d3470afc7c424dd44195a824977259a06945c58bfa56f8e5034715950",
+      "fresh_source_refs": [
+        "C006-S021",
+        "C006-S022",
+        "C006-S023",
+        "C006-S024"
+      ],
+      "fresh_requirement_text": "本项目中涉及涂料、胶黏剂、油墨、清洗剂等挥发性有机物产品的，属于强制性标准的，供应商应执行符合本市和国家的VOCs含量限制标准（具体标准见第五章《采购需求》），否则投标无效；属于推荐性标准的，优先采用。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-025",
+      "fresh_source_hash": "e5b84f443c9de5ba70970f1f5dc4269af4675fa0b7acc1fdac1a0c300d5bff5f",
+      "fresh_source_refs": [
+        "C006-S026",
+        "C006-S027",
+        "C006-S028"
+      ],
+      "fresh_requirement_text": "如本项目采购产品属于《强制性产品认证目录》的产品，则投标人所报产品必须获得经国家市场监督管理总局指定的认证机构出具的、处于有效期之内的强制性产品认证证书，否则投标无效。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-026",
+      "fresh_source_hash": "1a46f87496a5a27d8e8d3950d5de87d42c07cb8bd7de571bbd884a5d32933e72",
+      "fresh_source_refs": [
+        "C006-S030",
+        "C006-S031"
+      ],
+      "fresh_requirement_text": "投标人应自行承担所有与准备和参加投标有关的费用，无论投标的结果如何，采购人或采购代理机构在任何情况下均无承担这些费用的义务和责任。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-027",
+      "fresh_source_hash": "7cb68666749fc7acecc65d056e47981cd8882c53316aebacdab457ed61f34f0e",
+      "fresh_source_refs": [
+        "C006-S038",
+        "C006-S039",
+        "C006-S040"
+      ],
+      "fresh_requirement_text": "投标人应认真阅读招标文件的全部内容，按照招标文件要求提交投标文件并保证所提供的全部资料的真实性，并对招标文件做出实质性响应，否则投标无效。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-047",
+      "historical_source_hash": "7cb68666749fc7acecc65d056e47981cd8882c53316aebacdab457ed61f34f0e",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-028",
+      "fresh_source_hash": "c997684a8ee618d8b28b218882f8e9f0a2d711b95d00888d2cd5c52b69b9ab88",
+      "fresh_source_refs": [
+        "C006-S048",
+        "C006-S049",
+        "C006-S050",
+        "C006-S051"
+      ],
+      "fresh_requirement_text": "澄清或者修改的内容为招标文件的组成部分，并对所有获取招标文件的潜在投标人具有约束力。澄清或者修改的内容可能影响投标文件编制的，将在投标截止时间至少15日前，以书面形式通知所有获取招标文件的潜在投标人；不足15日的，将顺延提交投标文件的截止时间和开标时间。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-029",
+      "fresh_source_hash": "8573f684c990ca07b1d05aacde48d187fedd0208aefa8ee7b47143a689db15f5",
+      "fresh_source_refs": [
+        "C006-S054",
+        "C006-S055",
+        "C006-S056",
+        "C006-S057"
+      ],
+      "fresh_requirement_text": "本项目如划分采购包，投标人可以对本项目的其中一个采购包进行投标，也可同时对多个采购包进行投标。投标人应当对所投采购包对应第五章《采购需求》所列的全部内容进行投标，不得将一个采购包中的内容拆分投标，否则其对该采购包的投标将被认定为无效投标。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-048",
+      "historical_source_hash": "8573f684c990ca07b1d05aacde48d187fedd0208aefa8ee7b47143a689db15f5",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-030",
+      "fresh_source_hash": "39a9f2bb1f28b7fffff2777560884240db768865b5c8d0b1daeeb92fae2c3b9b",
+      "fresh_source_refs": [
+        "C006-S058",
+        "C006-S059"
+      ],
+      "fresh_requirement_text": "除招标文件有特殊要求外，本项目投标所使用的计量单位，应采用中华人民共和国法定计量单位。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-049",
+      "historical_source_hash": "39a9f2bb1f28b7fffff2777560884240db768865b5c8d0b1daeeb92fae2c3b9b",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-031",
+      "fresh_source_hash": "f4a6378c42bb0004428ee3a3f92716920442ddf7eafa21bdbb0d72a8e021669a",
+      "fresh_source_refs": [
+        "C006-S060",
+        "C006-S061",
+        "C006-S062",
+        "C006-S063",
+        "C006-S064"
+      ],
+      "fresh_requirement_text": "除专用术语外，投标文件及来往函电均应使用中文书写。必要时专用术语应附有中文解释。投标人提交的支持资料和已印制的文献可以用外文，但相应内容应附有中文翻译本，在解释投标文件时以中文翻译本为准。未附中文翻译本或翻译本中文内容明显与外文内容不一致的，其不利后果由投标人自行承担。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-050",
+      "historical_source_hash": "f4a6378c42bb0004428ee3a3f92716920442ddf7eafa21bdbb0d72a8e021669a",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-032",
+      "fresh_source_hash": "67c66aa463946e2a4ad0cad7cccae0ea9847dd585d3ba8c79bc992faec178cec",
+      "fresh_source_refs": [
+        "C006-S066",
+        "C006-S067",
+        "C006-S068"
+      ],
+      "fresh_requirement_text": "投标人应当按照招标文件的要求编制投标文件。投标文件应由《资格证明文件》、《商务技术文件》两部分构成。投标文件的部分格式要求，见第七章《投标文件格式》。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-051",
+      "historical_source_hash": "67c66aa463946e2a4ad0cad7cccae0ea9847dd585d3ba8c79bc992faec178cec",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-033",
+      "fresh_source_hash": "ca9a0259317340d5882022aaf5b0ee207bc3f004537150f20fa3149dd4b8b3d4",
+      "fresh_source_refs": [
+        "C006-S069",
+        "C006-S070",
+        "C006-S071",
+        "C006-S072",
+        "C006-S073"
+      ],
+      "fresh_requirement_text": "对于招标文件中标记了“实质性格式”文件的，投标人不得改变格式中给定的文字所表达的含义，不得删减格式中的实质性内容，不得自行添加与格式中给定的文字内容相矛盾的内容，不得对应当填写的空格不填写或不实质性响应，否则投标无效。未标记“实质性格式”的文件和招标文件未提供格式的内容，可由投标人自行编写。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-052",
+      "historical_source_hash": "ca9a0259317340d5882022aaf5b0ee207bc3f004537150f20fa3149dd4b8b3d4",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-034",
+      "fresh_source_hash": "631716a6cb9ed84f46fcf5cb1680f8b77d30af4e8ae5569274e4f7812af042a9",
+      "fresh_source_refs": [
+        "C007-S001",
+        "C007-S002",
+        "C007-S003",
+        "C007-S004"
+      ],
+      "fresh_requirement_text": "投标人应对照第五章《采购需求》，说明所提供货物和服务已对第五章《采购需求》做出了响应，或申明与第五章《采购需求》的偏差和例外；如第五章《采购需求》中要求提供证明文件的，投标人应当按具体要求提供证明文件。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-053",
+      "historical_source_hash": "631716a6cb9ed84f46fcf5cb1680f8b77d30af4e8ae5569274e4f7812af042a9",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-035",
+      "fresh_source_hash": "89896cfc4926e124065116f8693dcc6646fb8ec0cf464903e0d95a2fc505e4e4",
+      "fresh_source_refs": [
+        "C007-S005"
+      ],
+      "fresh_requirement_text": "投标人认为应附的其他材料，应作为投标文件的一部分。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-036",
+      "fresh_source_hash": "4248432e8dfc25e6e228d8c13dc6123c0cd1744ebbe6dc51cc1c94a85e3931e9",
+      "fresh_source_refs": [
+        "C007-S007"
+      ],
+      "fresh_requirement_text": "所有投标均以人民币为计价货币。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-037",
+      "fresh_source_hash": "29df3fa648f8689ced6e4728ccbad34846c7fe44529f4e6694b5d79b66020355",
+      "fresh_source_refs": [
+        "C007-S008",
+        "C007-S009",
+        "C007-S010",
+        "C007-S011",
+        "C007-S012",
+        "C007-S013",
+        "C007-S014",
+        "C007-S015"
+      ],
+      "fresh_requirement_text": "投标人的报价应包括为完成本项目所发生的一切费用和税费，采购人将不再支付报价以外的任何费用；报价应包括但不限于：投标货物及标准附件、备品备件、专用工具等的出厂价（包括已在中国国内的进口货物完税后的仓库交货价、展室交货价或货架交货价）和运至最终目的地的运输费和保险费，安装调试、检验、技术服务、培训、质量保证、售后服务、税费等，以及按照招标文件要求完成本项目的全部相关费用；《投标人须知资料表》中有特殊规定的，从其规定。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-038",
+      "fresh_source_hash": "0d6e335883f127b6e65bf205a6e45fd5dc1d3fa32f2b8b2947d52457f3b76ec1",
+      "fresh_source_refs": [
+        "C007-S018",
+        "C007-S019"
+      ],
+      "fresh_requirement_text": "投标人不能提供任何有选择性或可调整的报价（招标文件另有规定的除外），否则其投标无效。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-039",
+      "fresh_source_hash": "2494d14c94e2bff38697147ca4555ab907c717bb9c6c72e8a0c2bb68eae42466",
+      "fresh_source_refs": [
+        "C007-S021",
+        "C007-S022"
+      ],
+      "fresh_requirement_text": "投标人应按《投标人须知资料表》中规定的金额及要求交纳投标保证金；投标人自愿超额缴纳投标保证金的，投标文件不做无效处理。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-040",
+      "fresh_source_hash": "a1e08b02891863903e5fe6c5aae80dab339dc81d30388c5314740977b800c600",
+      "fresh_source_refs": [
+        "C007-S023",
+        "C007-S024"
+      ],
+      "fresh_requirement_text": "交纳投标保证金可采用的形式：政府采购法律法规接受的支票、汇票、本票、网上银行支付或者金融机构、担保机构出具的保函等非现金形式。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-041",
+      "fresh_source_hash": "f3dea995f0a7ff06996d85226b443aefb87212764f6a470d98d95b7d5ff966b8",
+      "fresh_source_refs": [
+        "C007-S025",
+        "C007-S026",
+        "C007-S027",
+        "C007-S028",
+        "C007-S029",
+        "C007-S030"
+      ],
+      "fresh_requirement_text": "投标保证金到账（保函提交）截止时间同投标截止时间。以支票、汇票、本票、网上银行支付等形式提交投标保证金的，应在投标截止时间前到账；以金融机构、担保机构出具的纸质保函等形式提交投标保证金的，应在投标截止时间前将原件提交至采购代理机构；以电子保函形式提交投标保证金的，应在投标截止时间前通过北京市政府采购电子交易平台完成电子保函在线办理。未按上述要求缴纳投标保证金的，其投标无效。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-042",
+      "fresh_source_hash": "e6d2b0f79e4695b235f0d371ce5c584c16635e7c07e36b4356b0b8f2d47aaa1e",
+      "fresh_source_refs": [
+        "C007-S031",
+        "C007-S032",
+        "C007-S033"
+      ],
+      "fresh_requirement_text": "投标人除需在投标文件中提供“投标保证金凭证/交款单据电子件”，还需在投标截止时间前，通过电子交易平台上传“投标保证金凭证/交款单据电子件”。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-043",
+      "fresh_source_hash": "ace6e47b5cab2aecdfa4097c42adfc6acf1b73e9ae298afb55fa2136acbcb7aa",
+      "fresh_source_refs": [
+        "C007-S035"
+      ],
+      "fresh_requirement_text": "投标保证金有效期同投标有效期。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-044",
+      "fresh_source_hash": "ddd2572b06ecef33fae581b243daf75cbe6e25a5079b110ecfcb52efb52e7258",
+      "fresh_source_refs": [
+        "C007-S036",
+        "C007-S037"
+      ],
+      "fresh_requirement_text": "投标人为联合体的，可以由联合体中的一方或者多方共同交纳投标保证金，其交纳的投标保证金对联合体各方均具有约束力。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-045",
+      "fresh_source_hash": "6e4eb74af5930d0c2ded5d8589ca5ee734217b1872a2a8f9a7e6715ccfb9cc81",
+      "fresh_source_refs": [
+        "C007-S038",
+        "C007-S039",
+        "C007-S040"
+      ],
+      "fresh_requirement_text": "采购人、采购代理机构将及时退还投标人的投标保证金，采用银行保函、担保机构担保函等形式递交的投标保证金，经投标人同意后采购人、采购代理机构可以不再退还，但因投标人自身原因导致无法及时退还的除外。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-046",
+      "fresh_source_hash": "e1440c7901c0a195dafc07952c89ecbea9291533597db0c1d2e8127ddba8c523",
+      "fresh_source_refs": [
+        "C007-S041",
+        "C007-S042"
+      ],
+      "fresh_requirement_text": "投标人在投标截止时间前撤回已提交的投标文件的，自收到投标人书面撤回通知之日起5个工作日内退还已收取的投标保证金。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-047",
+      "fresh_source_hash": "fb42b975f64a93143cdb95a27e81424ef53886e9d677a41a008b3f52b8281db7",
+      "fresh_source_refs": [
+        "C007-S043",
+        "C007-S044"
+      ],
+      "fresh_requirement_text": "中标人的投标保证金，自采购合同签订之日起5个工作日内退还中标人。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-048",
+      "fresh_source_hash": "fd8795c9b3c993b321b9dec00b4d2f634feb8b5bb22eea0fe0209db9ead8023a",
+      "fresh_source_refs": [
+        "C007-S045",
+        "C007-S046"
+      ],
+      "fresh_requirement_text": "未中标投标人的投标保证金，自中标通知书发出之日起5个工作日内退还未中标人。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-049",
+      "fresh_source_hash": "1243d2b2a3cf5c74fd91aba9bebe457a0f805524a406cab0e3976e2c7b9d6ddc",
+      "fresh_source_refs": [
+        "C007-S047",
+        "C007-S048"
+      ],
+      "fresh_requirement_text": "终止招标项目已经收取投标保证金的，自终止采购活动后5个工作日内退还已收取的投标保证金及其在银行产生的孳息。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-050",
+      "fresh_source_hash": "bf0b5cb81bd37eb46fab08814c3f279a5f8e18045a4a3cab06edbcb42a52162c",
+      "fresh_source_refs": [
+        "C007-S049",
+        "C007-S050",
+        "C007-S051"
+      ],
+      "fresh_requirement_text": "有下列情形之一的，采购人或采购代理机构可以不予退还投标保证金：投标有效期内投标人撤销投标文件的；《投标人须知资料表》中规定的其他情形。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-051",
+      "fresh_source_hash": "d14a4aa27306708be32381d4c55c74bd9126494eccc63aa0d02322f608e45f06",
+      "fresh_source_refs": [
+        "C007-S053",
+        "C007-S054"
+      ],
+      "fresh_requirement_text": "投标文件应在本招标文件《投标人须知资料表》中规定的投标有效期内保持有效，投标有效期少于招标文件规定期限的，其投标无效。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-052",
+      "fresh_source_hash": "0bb58954e5abb06e3e33144442453fde390c925a3f639e201211e5ef87b76a1b",
+      "fresh_source_refs": [
+        "C007-S056",
+        "C007-S057",
+        "C007-S058",
+        "C007-S059"
+      ],
+      "fresh_requirement_text": "招标文件要求签字的内容（如授权委托书等），可以使用电子签章或使用原件的电子件（电子件指扫描件、照片等形式电子文件）；要求第三方出具的盖章件原件（如联合协议、分包意向协议、制造商授权书等），投标文件中应使用原件的电子件。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-057",
+      "historical_source_hash": "0bb58954e5abb06e3e33144442453fde390c925a3f639e201211e5ef87b76a1b",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-053",
+      "fresh_source_hash": "bb4021fa53eca50e6258737dfd767ed823a0308e4aa18c74854b6c62952cecc0",
+      "fresh_source_refs": [
+        "C007-S060"
+      ],
+      "fresh_requirement_text": "招标文件要求盖章的内容，一般通过投标文件编制工具加盖电子签章。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-058",
+      "historical_source_hash": "bb4021fa53eca50e6258737dfd767ed823a0308e4aa18c74854b6c62952cecc0",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-054",
+      "fresh_source_hash": "e865a37974a0cf29edcc2a2e6de61934b88d2a551e9e370dedc89785ed254053",
+      "fresh_source_refs": [
+        "C007-S063",
+        "C007-S064",
+        "C007-S065"
+      ],
+      "fresh_requirement_text": "本项目使用北京市政府采购电子交易平台。投标人根据招标文件及电子交易平台供应商操作手册要求编制、生成并提交电子投标文件。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-059",
+      "historical_source_hash": "e865a37974a0cf29edcc2a2e6de61934b88d2a551e9e370dedc89785ed254053",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-055",
+      "fresh_source_hash": "6e2d65e9834f8ab11011b7809022f078ba540d20e7b678946551a424c2a33db8",
+      "fresh_source_refs": [
+        "C007-S066",
+        "C007-S067"
+      ],
+      "fresh_requirement_text": "采购人及采购代理机构拒绝接受通过电子交易平台以外任何形式提交的投标文件，投标保证金除外。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-056",
+      "fresh_source_hash": "39a06184fcaa009f318a0307cc2bcbbec9efbd5e185192a3c847811ee437c39b",
+      "fresh_source_refs": [
+        "C007-S068",
+        "C007-S069"
+      ],
+      "fresh_requirement_text": "投标人应在招标文件要求提交投标文件截止时间前，将电子投标文件提交至电子交易平台。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-060",
+      "historical_source_hash": "39a06184fcaa009f318a0307cc2bcbbec9efbd5e185192a3c847811ee437c39b",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-057",
+      "fresh_source_hash": "9dff539f2aa40d9bcf197bed5af707f40a8b98e086f8b2f268dff9b6ba6002fe",
+      "fresh_source_refs": [
+        "C007-S071",
+        "C007-S072",
+        "C007-S073"
+      ],
+      "fresh_requirement_text": "投标截止时间前，投标人可以通过电子交易平台对所提交的投标文件进行补充、修改或者撤回。投标保证金的补充、修改或者撤回无需通过电子交易平台，但应就其补充、修改或者撤回通知采购人或采购代理机构。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-058",
+      "fresh_source_hash": "f82f50619b3400b44f0aea6a340897bfef39818cad25c98c97976cbc173ee864",
+      "fresh_source_refs": [
+        "C008-S001",
+        "C008-S002"
+      ],
+      "fresh_requirement_text": "投标人对投标文件的补充、修改的内容应当按照招标文件要求签署、盖章，作为投标文件的组成部分。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-061",
+      "historical_source_hash": "f82f50619b3400b44f0aea6a340897bfef39818cad25c98c97976cbc173ee864",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-059",
+      "fresh_source_hash": "edb39ac35e38b712da968cec466c8df102cef92774079c7dca012f27b1012608",
+      "fresh_source_refs": [
+        "C008-S006",
+        "C008-S007",
+        "C008-S008"
+      ],
+      "fresh_requirement_text": "本项目开标使用北京市政府采购电子交易平台。投标人应在《投标人须知资料表》规定的时间内对投标文件进行解密，因非系统原因导致的解密失败，视为投标无效。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-060",
+      "fresh_source_hash": "1b7677ccc8402d322f809f0785f0eab99dd8374cc0f816746427147932352614",
+      "fresh_source_refs": [
+        "C008-S009",
+        "C008-S010",
+        "C008-S011"
+      ],
+      "fresh_requirement_text": "开标过程将使用电子交易平台宣布投标人名称、投标价格和招标文件规定的需要宣布的其他内容并进行记录，并由参加开标的各投标人确认。投标人未在规定时间内提出疑义或确认一览表的，视同认可开标结果。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-061",
+      "fresh_source_hash": "df865fda5854b03aa391876982514604c77fa02ff2daceb7daf0fda64923f13b",
+      "fresh_source_refs": [
+        "C008-S012",
+        "C008-S013",
+        "C008-S014"
+      ],
+      "fresh_requirement_text": "投标人对开标过程和开标记录有疑义，以及认为采购人、采购代理机构相关工作人员有需要回避的情形的，应当场提出询问或者回避申请。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-062",
+      "fresh_source_hash": "a4b53a373eac4c9146ca9647b0815ed1fbcd2f525b42fc046f13b9d7a0e8b5f2",
+      "fresh_source_refs": [
+        "C008-S045",
+        "C008-S046",
+        "C008-S047"
+      ],
+      "fresh_requirement_text": "中标人、采购人应当自中标通知书发出之日起30日内，按照招标文件和中标人投标文件的规定签订书面合同。所签订的合同不得对招标文件确定的事项和中标人投标文件作实质性修改。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-063",
+      "fresh_source_hash": "2ccdd38e95177edebdacdceb6c3116e52e9eb63ebf8ca07ae5d19caed8b13183",
+      "fresh_source_refs": [
+        "C008-S050",
+        "C008-S051"
+      ],
+      "fresh_requirement_text": "联合体中标的，联合体各方应当共同与采购人签订合同，就采购合同约定的事项向采购人承担连带责任。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-064",
+      "fresh_source_hash": "e4705cbf988628170e6a555a33351cd4bba06e4b3b0a4a6330b5e4de134ee0d3",
+      "fresh_source_refs": [
+        "C008-S053",
+        "C008-S054",
+        "C008-S055",
+        "C008-S056",
+        "C008-S057",
+        "C008-S058"
+      ],
+      "fresh_requirement_text": "采购人允许采用分包方式履行合同的，中标人可以依法在中标后将中标项目的非主体、非关键性工作采取分包方式履行合同。本项目的非主体、非关键性工作是否允许分包，见《投标人须知资料表》。政府采购合同分包履行的，应当在投标文件中载明分包承担主体，分包承担主体应当具备相应资质条件且不得再次分包，否则投标无效。中标人就采购项目和分包项目向采购人负责，分包供应商就分包项目承担责任。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-065",
+      "fresh_source_hash": "eeb7a306cba677a9f006f4a28aa23b86a0e89817fe839ca9b49a8b727dac1324",
+      "fresh_source_refs": [
+        "C008-S062",
+        "C008-S063",
+        "C008-S064",
+        "C008-S065"
+      ],
+      "fresh_requirement_text": "投标人对政府采购活动事项有疑问的，可依法向采购人或采购代理机构提出询问，提出形式见《投标人须知资料表》。采购人或采购代理机构对供应商依法提出的询问，在3个工作日内作出答复，但答复的内容不得涉及商业秘密。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-066",
+      "fresh_source_hash": "2b416c0ddf78d48a2ff4b4918aaae92aa14cdda8acb9626d7c262892c819bff8",
+      "fresh_source_refs": [
+        "C008-S067",
+        "C008-S068",
+        "C008-S069",
+        "C008-S070"
+      ],
+      "fresh_requirement_text": "投标人认为采购文件、采购过程、中标结果使自己的权益受到损害的，可以在知道或者应知其权益受到损害之日起7个工作日内，以书面形式向采购人、采购代理机构提出质疑。采购人、采购代理机构在收到质疑函后7个工作日内作出答复。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-067",
+      "fresh_source_hash": "27dbd22f1ff2869be60f7d12f9298159ef8f5c230d73cd6db392fb73e5078b80",
+      "fresh_source_refs": [
+        "C009-S001",
+        "C009-S002",
+        "C009-S003"
+      ],
+      "fresh_requirement_text": "质疑函须使用财政部制定的范本文件。投标人为自然人的，质疑函应当由本人签字；投标人为法人或者其他组织的，质疑函应当由法定代表人、主要负责人，或者其授权代表签字或者盖章，并加盖公章。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-068",
+      "fresh_source_hash": "b503a3f8320b5c14ab46dbbf1838c996b7a981ca09218d5370f9c44d96037494",
+      "fresh_source_refs": [
+        "C009-S004",
+        "C009-S005",
+        "C009-S006",
+        "C009-S007",
+        "C009-S008"
+      ],
+      "fresh_requirement_text": "投标人委托代理人进行质疑的，应当随质疑函同时提交投标人签署的授权委托书。授权委托书应当载明代理人的姓名或者名称、代理事项、具体权限、期限和相关事项。投标人为自然人的，应当由本人签字；投标人为法人或者其他组织的，应当由法定代表人、主要负责人签字或者盖章，并加盖公章。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-069",
+      "fresh_source_hash": "448644fc19a2f2b7c97d9e70995e6097e90f031eddc4d7b380de15203a09b6be",
+      "fresh_source_refs": [
+        "C009-S009",
+        "C009-S010",
+        "C009-S011"
+      ],
+      "fresh_requirement_text": "投标人应在法定质疑期内一次性提出针对同一采购程序环节的质疑，法定质疑期内针对同一采购程序环节再次提出的质疑，采购人、采购代理机构有权不予答复。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-070",
+      "fresh_source_hash": "94d9e8e7afe317e4b7b760f7b782392663071bd3a693d777cb2ed288f6abc35e",
+      "fresh_source_refs": [
+        "C009-S014",
+        "C009-S015"
+      ],
+      "fresh_requirement_text": "收费对象、收费标准及缴纳时间见《投标人须知资料表》。由中标人支付的，中标人须一次性向采购代理机构缴纳代理费，投标报价应包含代理费用。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-071",
+      "fresh_source_hash": "ee50292c386550f0c1dd2f411b69827685fea427215057a1e368e409dfec6301",
+      "fresh_source_refs": [
+        "C009-S023",
+        "C009-S024"
+      ],
+      "fresh_requirement_text": "投标人《资格证明文件》有任何一项不符合《资格审查要求》的，资格审查不合格，其投标无效。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-072",
+      "fresh_source_hash": "e0b656013d53db0786879119109de71b6e79f6cd2200f7cbe896343bc100b226",
+      "fresh_source_refs": [
+        "C009-S034",
+        "C009-S035",
+        "C009-S036",
+        "C009-S037",
+        "C009-S038",
+        "C009-S039",
+        "C009-S040",
+        "C009-S041",
+        "C009-S042",
+        "C009-S043",
+        "C009-S044",
+        "C009-S045",
+        "C009-S046",
+        "C009-S047",
+        "C009-S048",
+        "C009-S049",
+        "C009-S050",
+        "C009-S051",
+        "C009-S052",
+        "C009-S053",
+        "C009-S054"
+      ],
+      "fresh_requirement_text": "投标人为企业（包括合伙企业）的，应提供有效的“营业执照”；投标人为事业单位的，应提供有效的“事业单位法人证书”；投标人是非企业机构的，应提供有效的“执业许可证”、“登记证书”等证明文件；投标人是个体工商户的，应提供有效的“个体工商户营业执照”；投标人是自然人的，应提供有效的自然人身份证明。分支机构参加投标的，应提供该分支机构或其所属法人/其他组织的相应证明文件；同时还应提供其所属法人/其他组织出具的授权其参与本项目的授权书（格式自拟，须加盖其所属法人/其他组织的公章）；对于银行、保险、石油石化、电力、电信等行业的分支机构，可以提供上述授权，也可以提供其所属法人/其他组织的有关文件或制度等能够证明授权其独立开展业务的证明材料。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-073",
+      "fresh_source_hash": "5b308574f8a35fc81249dd31e42d9981d57f6580adfc1d904ac09e5298f4d5b9",
+      "fresh_source_refs": [
+        "C009-S058",
+        "C009-S059",
+        "C009-S060",
+        "C009-S061"
+      ],
+      "fresh_requirement_text": "投标人应提供符合招标文件要求的《投标人资格声明书》。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-074",
+      "fresh_source_hash": "aa0e74e6bd3e519285a42cb33727a7355195561758e766517f7b4332da5d5fc8",
+      "fresh_source_refs": [
+        "C009-S066",
+        "C009-S067",
+        "C009-S068",
+        "C009-S069",
+        "C009-S070",
+        "C009-S071",
+        "C009-S072",
+        "C009-S073",
+        "C009-S074",
+        "C009-S075",
+        "C009-S076",
+        "C009-S077",
+        "C009-S078",
+        "C009-S079"
+      ],
+      "fresh_requirement_text": "投标人信用记录查询渠道为信用中国网站和中国政府采购网（www.creditchina.gov.cn、www.ccgp.gov.cn）；截止时点为投标截止时间以后、资格审查阶段采购人的实际查询时间；信用信息查询记录和证据留存具体方式为查询结果网页打印页作为查询记录和证据，与其他采购文件一并保存；信用信息的使用原则为经认定的被列入失信被执行人、重大税收违法案件当事人名单、政府采购严重违法失信行为记录名单的投标人，其投标无效。联合体形式投标的，联合体成员存在不良信用记录，视同联合体存在不良信用记录。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-075",
+      "fresh_source_hash": "6008f2b57658b033bb155cc3b9a644bb85a7d3f9dc7e8a822f8922a08589c135",
+      "fresh_source_refs": [
+        "C009-S092",
+        "C009-S093",
+        "C009-S094",
+        "C009-S095",
+        "C009-S096"
+      ],
+      "fresh_requirement_text": "当本项目（包）涉及预留份额专门面向中小企业采购，此时建议在《资格证明文件》中提供中小企业证明文件。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-076",
+      "fresh_source_hash": "cdcec1dcb73ac2feccf55fb4524c9e2e37df8294a8dd5145083024e73d11c772",
+      "fresh_source_refs": [
+        "C010-S001",
+        "C010-S002",
+        "C010-S003",
+        "C010-S004",
+        "C010-S005"
+      ],
+      "fresh_requirement_text": "投标人单独投标的，应提供《中小企业声明函》或《残疾人福利性单位声明函》或由省级以上监狱管理局、戒毒管理局（含新疆生产建设兵团）出具的属于监狱企业的证明文件。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-077",
+      "fresh_source_hash": "611cf27de11bb8e16a159c164435da7560c77cfa5e325a60f28d227e660f7f81",
+      "fresh_source_refs": [
+        "C010-S006",
+        "C010-S007",
+        "C010-S008",
+        "C010-S009",
+        "C010-S010",
+        "C010-S011",
+        "C010-S012",
+        "C010-S013",
+        "C010-S014"
+      ],
+      "fresh_requirement_text": "如招标文件要求以联合体形式参加或者要求合同分包的，且投标人为联合体或拟进行合同分包的，则联合体中的中小企业、签订分包意向协议的中小企业具体情况须在《中小企业声明函》或《残疾人福利性单位声明函》或由省级以上监狱管理局、戒毒管理局（含新疆生产建设兵团）出具的属于监狱企业的证明文件中如实填报，且满足招标文件关于预留份额的要求。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-078",
+      "fresh_source_hash": "4fe1c2dfdc1f8d47d6620df9c5ef18df60b9c57b7b685c4bec0d8124fe54a024",
+      "fresh_source_refs": [
+        "C010-S021",
+        "C010-S022",
+        "C010-S023",
+        "C010-S024",
+        "C010-S025",
+        "C010-S026",
+        "C010-S027",
+        "C010-S028"
+      ],
+      "fresh_requirement_text": "如本项目（包）要求通过分包措施预留部分采购份额面向中小企业采购、且投标人因落实政府采购政策拟进行分包的，必须提供拟分包情况说明及分包意向协议；否则无须提供。对于预留份额专门面向中小企业采购的项目（包），组成联合体或者接受分包合同的中小企业与联合体内其他企业、分包企业之间不得存在直接控股、管理关系。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-079",
+      "fresh_source_hash": "52f51b1ad2ec7b4b62b2dabda88c5f97b761242fa922934ddc391fd860933120",
+      "fresh_source_refs": [
+        "C010-S031",
+        "C010-S032",
+        "C010-S033",
+        "C010-S034",
+        "C010-S035",
+        "C010-S036",
+        "C010-S037",
+        "C010-S038"
+      ],
+      "fresh_requirement_text": "其它落实政府采购政策的资格要求：如有，见第一章《投标邀请》，提供证明文件的电子件或电子证照。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-080",
+      "fresh_source_hash": "8a530ea1e27c696ff3d152f78e4ccd4dd72e6712f62dc7366a036df9c5fac50b",
+      "fresh_source_refs": [
+        "C010-S039",
+        "C010-S040"
+      ],
+      "fresh_requirement_text": "本项目的特定资格要求：如有，见第一章《投标邀请》。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-069",
+      "historical_source_hash": "8a530ea1e27c696ff3d152f78e4ccd4dd72e6712f62dc7366a036df9c5fac50b",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-081",
+      "fresh_source_hash": "2bad122d4110e1b724446865c4af425b56577928d42a72e878955aa4b7a33cc1",
+      "fresh_source_refs": [
+        "C010-S043",
+        "C010-S044",
+        "C010-S045",
+        "C010-S046",
+        "C010-S047",
+        "C010-S048",
+        "C010-S049"
+      ],
+      "fresh_requirement_text": "如本项目接受联合体投标，且投标人为联合体时必须提供《联合协议》，明确各方拟承担的工作和责任，并指定联合体牵头人，授权其代表所有联合体成员负责本项目投标和合同实施阶段的牵头、协调工作。该联合协议应当作为投标文件的组成部分，与投标文件其他内容同时递交。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-070",
+      "historical_source_hash": "2bad122d4110e1b724446865c4af425b56577928d42a72e878955aa4b7a33cc1",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-082",
+      "fresh_source_hash": "dd0b64c1804568cf9e8a64b08ac420a5fd54d311eaf462eb35364a19884373a0",
+      "fresh_source_refs": [
+        "C010-S050",
+        "C010-S051",
+        "C010-S052"
+      ],
+      "fresh_requirement_text": "联合体各成员单位均须提供本表中序号1-1、1-2的证明文件。联合体各成员单位均应满足本表3-2项规定。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-071",
+      "historical_source_hash": "dd0b64c1804568cf9e8a64b08ac420a5fd54d311eaf462eb35364a19884373a0",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-083",
+      "fresh_source_hash": "2071d71711bbb5fe3a31e358d881a59c571ed559cb55dc6a7f40170293131245",
+      "fresh_source_refs": [
+        "C010-S053",
+        "C010-S054",
+        "C010-S055",
+        "C010-S056"
+      ],
+      "fresh_requirement_text": "本表序号3-3项规定的其他特定资格要求中的每一小项要求，联合体各方中至少应当有一方符合本表中其他资格要求并提供证明文件。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-084",
+      "fresh_source_hash": "1beeb2ad4189e3310c71aae5ce33f2b00d2744d2847505a2236d8fd90244a262",
+      "fresh_source_refs": [
+        "C010-S057",
+        "C010-S058",
+        "C010-S059"
+      ],
+      "fresh_requirement_text": "联合体中有同类资质的供应商按照联合体分工承担相同工作的，应当按照资质等级较低的供应商确定资质等级。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-072",
+      "historical_source_hash": "1beeb2ad4189e3310c71aae5ce33f2b00d2744d2847505a2236d8fd90244a262",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-085",
+      "fresh_source_hash": "49e7fd93ff026f46aec252422181f19af90a3098713c4198b90540efb280c3b6",
+      "fresh_source_refs": [
+        "C010-S060",
+        "C010-S061",
+        "C010-S062",
+        "C010-S063"
+      ],
+      "fresh_requirement_text": "以联合体形式参加政府采购活动的，联合体各方不得再单独参加或者与其他供应商另外组成联合体参加同一合同项下的政府采购活动。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-073",
+      "historical_source_hash": "49e7fd93ff026f46aec252422181f19af90a3098713c4198b90540efb280c3b6",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-086",
+      "fresh_source_hash": "7c5ee8781cf49322857ea40ed1320a02e55025d71b89c88e1e7ce832406820e7",
+      "fresh_source_refs": [
+        "C010-S064",
+        "C010-S065"
+      ],
+      "fresh_requirement_text": "若联合体中任一成员单位中途退出，则该联合体的投标无效。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-074",
+      "historical_source_hash": "7c5ee8781cf49322857ea40ed1320a02e55025d71b89c88e1e7ce832406820e7",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-087",
+      "fresh_source_hash": "ef162ee33d738ab0c88cf5c8aa94b24ad8a144bce1b62be0734a8b24a8d4d249",
+      "fresh_source_refs": [
+        "C010-S066",
+        "C010-S067"
+      ],
+      "fresh_requirement_text": "本项目不接受联合体投标时，投标人不得为联合体。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-075",
+      "historical_source_hash": "ef162ee33d738ab0c88cf5c8aa94b24ad8a144bce1b62be0734a8b24a8d4d249",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-088",
+      "fresh_source_hash": "90a739452da56a02ef82052a243f62305c658d4869cbfbedcf44a198d212868f",
+      "fresh_source_refs": [
+        "C010-S075",
+        "C010-S076",
+        "C010-S077"
+      ],
+      "fresh_requirement_text": "如本项目属于政府购买服务，投标人不属于公益一类事业单位、使用事业编制且由财政拨款保障的群团组织。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-076",
+      "historical_source_hash": "90a739452da56a02ef82052a243f62305c658d4869cbfbedcf44a198d212868f",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-089",
+      "fresh_source_hash": "e77b5a4cf807d798309886157caa7d62cf5c6b712b572a7f98719abbccc01e8f",
+      "fresh_source_refs": [
+        "C010-S086",
+        "C010-S087",
+        "C010-S088",
+        "C010-S089"
+      ],
+      "fresh_requirement_text": "其他特定资格要求：如有，见第一章《投标邀请》。注：如联合体中有同类资质的供应商按照联合体分工承担相同工作的，均应当提供资质证书电子件或电子证照。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-090",
+      "fresh_source_hash": "6f58ec3c3b6e1e0a4d2ff0cc74dc64905ed217d9eef866ea11f6942b03bfdb7e",
+      "fresh_source_refs": [
+        "C010-S093",
+        "C010-S094"
+      ],
+      "fresh_requirement_text": "投标保证金（本项目不涉及）：按照招标文件的规定提交投标保证金。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-091",
+      "fresh_source_hash": "42d380334bba3749b0754a027c4362f82481286fec910293ba862a826159e72b",
+      "fresh_source_refs": [
+        "C010-S095",
+        "C010-S096",
+        "C010-S097",
+        "C010-S098",
+        "C010-S099",
+        "C010-S100"
+      ],
+      "fresh_requirement_text": "获取招标文件：在规定期限内通过北京市政府采购电子交易平台获取所参与包的招标文件。注：如本项目接受联合体，且供应商为联合体时，联合体中任一成员获取文件即视为满足要求。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-092",
+      "fresh_source_hash": "4ed8bd88e079d6b7504d2823fb074d888f18acc95c0ffb9545ae7148f9464d61",
+      "fresh_source_refs": [
+        "C011-S018"
+      ],
+      "fresh_requirement_text": "投标文件必须满足招标文件第五章《采购需求》中★号条款要求。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-093",
+      "fresh_source_hash": "8e59d90909779069aab594927c071d1398ac6a9ea89659764e8fb6a3aa073952",
+      "fresh_source_refs": [
+        "C011-S005",
+        "C011-S006",
+        "C011-S007",
+        "C011-S008"
+      ],
+      "fresh_requirement_text": "投标人的《商务技术文件》必须符合《符合性审查要求》中规定的审查因素和审查内容，任何一项不符合即投标无效。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-094",
+      "fresh_source_hash": "a60e385f061c65d5236deb8123390dc1e219284b98f443e10ad103ce4906a8ef",
+      "fresh_source_refs": [
+        "C011-S009"
+      ],
+      "fresh_requirement_text": "投标人不得将一个采购包中的内容拆分投标。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-083",
+      "historical_source_hash": "a60e385f061c65d5236deb8123390dc1e219284b98f443e10ad103ce4906a8ef",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-095",
+      "fresh_source_hash": "1ba4dd9d5bfdd36357ea32b2133e01b54ec7ca5834717fc7857560dfba792eee",
+      "fresh_source_refs": [
+        "C011-S010",
+        "C011-S011"
+      ],
+      "fresh_requirement_text": "投标报价不得超过招标文件中规定的项目/采购包预算金额或者项目/采购包最高限价。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-096",
+      "fresh_source_hash": "dee173ebf69e3c79e04147e571aac15609db47f7955de7f62518585393886cac",
+      "fresh_source_refs": [
+        "C011-S012",
+        "C011-S013"
+      ],
+      "fresh_requirement_text": "投标文件不得出现可选择性或可调整的报价（招标文件另有规定的除外）。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-097",
+      "fresh_source_hash": "decdd32da3c0655ed8a6b8f12afef66aaea47e5b6c6760f9cbd983b46a8d011f",
+      "fresh_source_refs": [
+        "C011-S014",
+        "C011-S015"
+      ],
+      "fresh_requirement_text": "投标文件中承诺的投标有效期必须满足招标文件中载明的投标有效期。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-084",
+      "historical_source_hash": "decdd32da3c0655ed8a6b8f12afef66aaea47e5b6c6760f9cbd983b46a8d011f",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-098",
+      "fresh_source_hash": "ccc25b948b5060de71f958328d166e1dcd3002e459f1343b8c259c03dad7999f",
+      "fresh_source_refs": [
+        "C011-S016",
+        "C011-S017"
+      ],
+      "fresh_requirement_text": "标记为“实质性格式”的文件必须按招标文件要求提供且签署、盖章。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-085",
+      "historical_source_hash": "ccc25b948b5060de71f958328d166e1dcd3002e459f1343b8c259c03dad7999f",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-099",
+      "fresh_source_hash": "4a259545540a0a3fda902e35f32a2278d4aed826b0ffcabd3a1e454b1ae81ac2",
+      "fresh_source_refs": [
+        "C011-S019",
+        "C011-S020",
+        "C011-S021",
+        "C011-S022"
+      ],
+      "fresh_requirement_text": "分包履行的内容、金额或者比例不得超出《投标人须知资料表》中的规定；分包承担主体必须具备《投标人须知资料表》载明的资质条件，并提供资质证书电子件（如有）。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-100",
+      "fresh_source_hash": "8dd1cbe7bce7343edc471b67683af51e72c19199fb3695e3c7a015cd39859d7b",
+      "fresh_source_refs": [
+        "C011-S023",
+        "C011-S024",
+        "C011-S025",
+        "C011-S026"
+      ],
+      "fresh_requirement_text": "投标文件报价出现前后不一致时，投标人必须对修正后的报价予以确认（如有）。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-101",
+      "fresh_source_hash": "f8b1efac3270357458ad9089208631a2f59b143d578fff7b5604540288930c97",
+      "fresh_source_refs": [
+        "C011-S027",
+        "C011-S028",
+        "C011-S029",
+        "C011-S030"
+      ],
+      "fresh_requirement_text": "投标报价必须合理；若投标人的报价明显低于其他通过符合性审查投标人的报价，有可能影响产品质量或者不能诚信履约的，投标人必须能够应评标委员会要求在规定时间内证明其报价合理性。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-102",
+      "fresh_source_hash": "cc9748a5959390776f6e1411896cb95791231005585b84161cb432980531f712",
+      "fresh_source_refs": [
+        "C011-S032",
+        "C011-S033",
+        "C011-S034",
+        "C011-S035"
+      ],
+      "fresh_requirement_text": "当招标文件不接受进口产品投标时，投标人所投产品不得含有进口产品。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-103",
+      "fresh_source_hash": "fb21dccee43580928ac672a159f5c3553ae23b13064dd95959d895ff2459a2bc",
+      "fresh_source_refs": [
+        "C011-S036",
+        "C011-S037",
+        "C011-S038",
+        "C011-S039",
+        "C011-S040",
+        "C011-S041",
+        "C011-S042",
+        "C011-S043",
+        "C011-S044"
+      ],
+      "fresh_requirement_text": "国家有关部门对投标人的投标产品有强制性规定或要求的（如相应技术、安全、节能和环保等），投标人的投标产品必须符合相应规定或要求，并提供证明文件电子件。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-104",
+      "fresh_source_hash": "3ab2d89193a5c84f0ffbc69a8abf048c886902976c2d9363929eb0515f8d578d",
+      "fresh_source_refs": [
+        "C011-S045",
+        "C011-S046"
+      ],
+      "fresh_requirement_text": "若投标产品属于政府强制采购产品，则投标人所报产品必须获得国家确定的认证机构出具的、处于有效期之内的节能产品认证证书。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-105",
+      "fresh_source_hash": "00a0e7a424b47ef9523c1c26ed1bdb480dd725b9b6d522cc4e053b144033dc53",
+      "fresh_source_refs": [
+        "C011-S047",
+        "C011-S048",
+        "C011-S049"
+      ],
+      "fresh_requirement_text": "投标产品必须经国家有关部门认可的机构安全认证合格或者安全检测符合要求；若该产品已经获得公安部颁发的计算机信息系统安全专用产品销售许可证且在有效期内，亦视为符合要求。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-106",
+      "fresh_source_hash": "fb34d7d832f2bbac135d00f020928c451502fcd81bbf195304a17e20a6042351",
+      "fresh_source_refs": [
+        "C011-S050",
+        "C011-S051",
+        "C011-S052"
+      ],
+      "fresh_requirement_text": "项目中涉及涂料、胶黏剂、油墨、清洗剂等挥发性有机物产品且属于强制性标准的，供应商必须执行符合本市和国家的VOCs含量限制标准。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-092",
+      "historical_source_hash": "fb34d7d832f2bbac135d00f020928c451502fcd81bbf195304a17e20a6042351",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-107",
+      "fresh_source_hash": "736ae272d58e62f46114dd7d3f1113df38f8a4dd113d2861225fc0cccfd4d7cd",
+      "fresh_source_refs": [
+        "C011-S053",
+        "C011-S054",
+        "C011-S055"
+      ],
+      "fresh_requirement_text": "采购的产品若属于《强制性产品认证目录》的产品，则投标人所报产品必须获得经国家市场监督管理总局指定的认证机构出具的、处于有效期之内的强制性产品认证证书。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-093",
+      "historical_source_hash": "736ae272d58e62f46114dd7d3f1113df38f8a4dd113d2861225fc0cccfd4d7cd",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-108",
+      "fresh_source_hash": "008e9d20b19a502191d806a4fc0856f0c858a682a5141bdccf767f092a044ed0",
+      "fresh_source_refs": [
+        "C011-S056",
+        "C011-S057",
+        "C011-S058"
+      ],
+      "fresh_requirement_text": "投标人必须遵循公平竞争的原则，不得存在恶意串通、妨碍其他投标人的竞争行为，不得存在损害采购人或者其他投标人合法权益的情形。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-109",
+      "fresh_source_hash": "9f17c3ac2e037200a94cbb38718a5544df962b2e7c7a3324131ef0550c8f04f9",
+      "fresh_source_refs": [
+        "C011-S059",
+        "C011-S060",
+        "C011-S061",
+        "C011-S062",
+        "C011-S063",
+        "C011-S064",
+        "C011-S065",
+        "C011-S066",
+        "C011-S067"
+      ],
+      "fresh_requirement_text": "投标人不得存在《政府采购货物和服务招标投标管理办法》视为投标人串通投标的情形：（一）不同投标人的投标文件由同一单位或者个人编制；（二）不同投标人委托同一单位或者个人办理投标事宜；（三）不同投标人的投标文件载明的项目管理成员或者联系人员为同一人；（四）不同投标人的投标文件异常一致或者投标报价呈规律性差异；（五）不同投标人的投标文件相互混装；（六）不同投标人的投标保证金从同一单位或者个人的账户转出。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-110",
+      "fresh_source_hash": "4e3643be5d03f8c017ce27367c06f3006ea2c09e078d62a98db0b3d613a79e64",
+      "fresh_source_refs": [
+        "C011-S068"
+      ],
+      "fresh_requirement_text": "投标文件不得含有采购人不能接受的附加条件。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-096",
+      "historical_source_hash": "4e3643be5d03f8c017ce27367c06f3006ea2c09e078d62a98db0b3d613a79e64",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-111",
+      "fresh_source_hash": "8e37fb6d8d1d4c77d310ef1dcb20a8ae4acf285734257687bbd8dda67a541930",
+      "fresh_source_refs": [
+        "C011-S069",
+        "C011-S070"
+      ],
+      "fresh_requirement_text": "投标人、投标文件不得存在不符合法律、法规和招标文件规定的其他无效情形。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-097",
+      "historical_source_hash": "8e37fb6d8d1d4c77d310ef1dcb20a8ae4acf285734257687bbd8dda67a541930",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-112",
+      "fresh_source_hash": "e69c3d4a9007562829f8dbd3b40abf511ebe1f9c9eff610a22f5365e51db25a0",
+      "fresh_source_refs": [
+        "C011-S072",
+        "C011-S073",
+        "C011-S074",
+        "C011-S075",
+        "C011-S076",
+        "C011-S077",
+        "C011-S078",
+        "C011-S079"
+      ],
+      "fresh_requirement_text": "投标人的澄清、说明或者补正必须采用书面形式，并加盖公章，或者由法定代表人（若投标人为事业单位或其他组织或分支机构，可为单位负责人）或其授权的代表签字；不得超出投标文件的范围或者改变投标文件的实质性内容；澄清文件将作为投标文件内容的一部分。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-113",
+      "fresh_source_hash": "4bdf7a33a5d76a7d33ccdcabc152ebdca223d07895460ec922a8e60dd840ab0e",
+      "fresh_source_refs": [
+        "C011-S080",
+        "C011-S081",
+        "C011-S082"
+      ],
+      "fresh_requirement_text": "若评标委员会认为投标人的报价明显低于其他通过符合性审查投标人的报价，有可能影响产品质量或者不能诚信履约的，投标人必须证明其报价合理性；若不能证明，评标委员会将作为无效投标处理。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-114",
+      "fresh_source_hash": "2359ff2f73d6761187a7336533aa44d894518ad67e34058bb9fd8b2d24ebc52f",
+      "fresh_source_refs": [
+        "C011-S083",
+        "C011-S084",
+        "C011-S085",
+        "C011-S086"
+      ],
+      "fresh_requirement_text": "投标报价必须包含招标文件全部内容；如分项报价表有缺漏视为已含在其他各项报价中，将不对投标总价进行调整；评标委员会有权要求投标人在评标现场合理的时间内对此进行书面确认，投标人不确认的，视为将一个采购包中的内容拆分投标，其投标无效。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-115",
+      "fresh_source_hash": "677803c4450bf9ce8149383b04ed854cf72246736db11ee12120cbaf13ddce14",
+      "fresh_source_refs": [
+        "C012-S001",
+        "C012-S002",
+        "C012-S003",
+        "C012-S004",
+        "C012-S005",
+        "C012-S006",
+        "C012-S007",
+        "C012-S008",
+        "C012-S009",
+        "C012-S010"
+      ],
+      "fresh_requirement_text": "投标文件报价出现前后不一致的，按照下列规定修正：开标时，在北京市政府采购电子交易平台上显示的投标报价内容与投标文件中相应内容不一致的，以开标时显示的投标报价内容为准；单价金额小数点或者百分比有明显错位的，以开标一览表的总价为准，并修改单价；修正后的报价经投标人书面确认后产生约束力，投标人不确认的，其投标无效。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-116",
+      "fresh_source_hash": "cc2771205df9a7bdab004aaee21f8aadabe4c9ff043957f68f7f9499646f071a",
+      "fresh_source_refs": [
+        "C012-S011",
+        "C012-S012",
+        "C012-S013",
+        "C012-S014",
+        "C012-S015",
+        "C012-S016",
+        "C012-S017",
+        "C012-S018",
+        "C012-S019"
+      ],
+      "fresh_requirement_text": "落实政府采购政策的价格调整：只有符合第二章《投标人须知》5.2条预留份额项目中的非预留部分采购包，对小微企业报价给予扣除；对于联合协议或者分包意向协议约定小微企业的合同份额占到合同总金额30%以上的联合体或者大中型企业的报价给予4%的扣除，用扣除后的价格参与评审；组成联合体或者接受分包的小微企业与联合体内其他企业、分包企业之间存在直接控股、管理关系的，不享受价格扣除优惠政策。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-117",
+      "fresh_source_hash": "10ce97377ae89ff02fd3f25bfab44f08f13dd99cf7cfc43e912ea250f9ef5c32",
+      "fresh_source_refs": [
+        "C012-S020",
+        "C012-S021",
+        "C012-S022"
+      ],
+      "fresh_requirement_text": "若投标人同时属于小型或微型企业、监狱企业、残疾人福利性单位中的两种及以上，将不重复享受小微企业价格扣减的优惠政策。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-102",
+      "historical_source_hash": "10ce97377ae89ff02fd3f25bfab44f08f13dd99cf7cfc43e912ea250f9ef5c32",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-118",
+      "fresh_source_hash": "4fe3bb6f4033490809e5c339c384d7ba4fc597a1e2ba0d44e1243da5584eb97c",
+      "fresh_source_refs": [
+        "C012-S025",
+        "C012-S026"
+      ],
+      "fresh_requirement_text": "未通过符合性审查的投标文件不得进入比较与评价。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-119",
+      "fresh_source_hash": "e08f4ffc36101439c7b090cae018628dbc0dd508492f1c7aaa35b4be4aef7287",
+      "fresh_source_refs": [
+        "C012-S031",
+        "C012-S032",
+        "C012-S033"
+      ],
+      "fresh_requirement_text": "产品品牌相同的不同投标人参加同一合同项下投标的，以其中通过资格审查、符合性审查且报价最低的参加评标；报价相同的，按招标文件规定确定一个参加评标的投标人，其他投标无效。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-120",
+      "fresh_source_hash": "2a08d36db53b98d5baf3f9ec5161742d62e68675cbb548d32ac830f8d99550b6",
+      "fresh_source_refs": [
+        "C012-S034",
+        "C012-S035",
+        "C012-S036",
+        "C012-S037",
+        "C012-S038"
+      ],
+      "fresh_requirement_text": "和认证证书实施政府优先采购。优先采购的具体规定（如涉及）且通过资格审查、符合性审查的不同投标人参加同一合同项下投标的，按一家投标人计算，评审后得分最高的同品牌投标人获得中标人推荐资格；评审得分相同的，评标委员会按照下述规定确定一个投标人获得中标人推荐资格，其他同品牌投标人不作为中标候选人。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-121",
+      "fresh_source_hash": "5bac84ecbfdd953b5d5cf56c8f1262a1f841f9bda53bff114046b265af1dfb59",
+      "fresh_source_refs": [
+        "C012-S039",
+        "C012-S040"
+      ],
+      "fresh_requirement_text": "其他方式，具体要求：投标人评审得分相同的，按投标报价由低向高顺序排列。得分且投标报价相同的，以技术部分得分顺序排列。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-122",
+      "fresh_source_hash": "68ce6df4079093ec030239a6a33feb90a5bdc75e2dc5a351f118425ae26519a9",
+      "fresh_source_refs": [
+        "C012-S042",
+        "C012-S043",
+        "C012-S044",
+        "C012-S045"
+      ],
+      "fresh_requirement_text": "投标文件满足招标文件全部实质性要求，且按照评审因素的量化指标评审得分最高的投标人为排名第一的中标候选人。评分分值计算保留小数点后两位，第三位四舍五入。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-123",
+      "fresh_source_hash": "c08366deb47b81abf01b048c57ef1611fedf292ea99989e9f38adcc0c3dfceb5",
+      "fresh_source_refs": [
+        "C012-S046",
+        "C012-S047",
+        "C012-S048"
+      ],
+      "fresh_requirement_text": "采用最低评标价法时，评标结果按本章2.4、2.5调整后的投标报价由低到高顺序排列。投标报价相同的并列。投标文件满足招标文件全部实质性要求且投标报价最低的投标人为排名第一的中标候选人。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-124",
+      "fresh_source_hash": "7b01c740cf93345a97930b00e2a1f3b19176f717e089074926b58dfb57de9da3",
+      "fresh_source_refs": [
+        "C012-S049",
+        "C012-S050"
+      ],
+      "fresh_requirement_text": "评标委员会要对评分汇总情况进行复核，特别是对排名第一的、报价最低的、投标或响应文件被认定为无效的情形进行重点复核。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-125",
+      "fresh_source_hash": "809f61518eb53e17aa49e26c99c35594dc2e7020ce284e3c6fc9becc7743f166",
+      "fresh_source_refs": [
+        "C012-S051",
+        "C012-S052",
+        "C012-S053",
+        "C012-S054",
+        "C012-S055",
+        "C012-S056",
+        "C012-S057"
+      ],
+      "fresh_requirement_text": "评标委员会将根据各投标人的评标排序，依次推荐本项目（各采购包）的中标候选人，起草并签署评标报告。本项目（各采购包）评标委员会推荐所有进入评标排序且符合核心产品（如有）要求的投标人为中标候选人。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-126",
+      "fresh_source_hash": "d2e3da1681ac116df2d4c5ef7bc85830078212f17623a988875556a202beab3c",
+      "fresh_source_refs": [
+        "C013-S001",
+        "C013-S002"
+      ],
+      "fresh_requirement_text": "评标委员会在评标过程中发现投标人有行贿、提供虚假材料或者串通等违法行为时，应当及时向财政部门报告。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-127",
+      "fresh_source_hash": "bb298e523d515d01fe16babb4edca8dcd9e8cf03df36fd1df4c6d917a11b28be",
+      "fresh_source_refs": [
+        "C013-S029",
+        "C013-S030"
+      ],
+      "fresh_requirement_text": "投标人所提供的云平台通过中央网信办云计算服务安全评估，提供相关证明，得3分。",
+      "alignment_level": "LEVEL_5",
+      "historical_requirement_id": "REQ-103",
+      "historical_source_hash": "a51fd8715e65d42f7e38a9816878256bffd7ae48b34581954226b16cadd5c86c",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-128",
+      "fresh_source_hash": "1f81d2bf40b672067f67f236c240aa1096bab95c5f46d30b65cca51e61a5e348",
+      "fresh_source_refs": [
+        "C013-S032",
+        "C013-S033"
+      ],
+      "fresh_requirement_text": "投标人所提供的云平台通过商用密码应用安全性评估，提供相关证明，得3分。",
+      "alignment_level": "LEVEL_5",
+      "historical_requirement_id": "REQ-104",
+      "historical_source_hash": "c33483a9077aba799e18fd35a3e07fb9209b80771c25cd669b71cfccd67a0bac",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-129",
+      "fresh_source_hash": "ab8c1a9883e34023edb842aebf202c78c11cb646acd4b6d82fcba5c8827e90a7",
+      "fresh_source_refs": [
+        "C013-S043",
+        "C013-S044",
+        "C013-S045",
+        "C013-S046",
+        "C013-S047",
+        "C013-S048",
+        "C013-S049"
+      ],
+      "fresh_requirement_text": "投标人所提供的云平台应通过网络安全等级保护（GB/T 22239-2019）第三级测评，提供2023年至投标文件递交截止时间内通过网络安全等级保护第三级的测评报告（至少包括报告首页、网络安全等级测评基本信息表页、等级测评结论页）并提供证明复印件。",
+      "alignment_level": "LEVEL_5",
+      "historical_requirement_id": "REQ-105",
+      "historical_source_hash": "a58228cd6721dfdd0e2350541f815c0f66a6eb2b8a894e8052109ad3c45eda69",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-130",
+      "fresh_source_hash": "509e4ee1af02e91814773fae41d4bdee71f5364b074a8dcc86a091c2dee7e509",
+      "fresh_source_refs": [
+        "C013-S052",
+        "C013-S053",
+        "C013-S054",
+        "C013-S055"
+      ],
+      "fresh_requirement_text": "投标人须提供自2022年12月1日至投标文件递交截止时间的类似项目案例，须提供合同首页、合同服务内容页、合同金额页、盖章页的复印件。",
+      "alignment_level": "LEVEL_5",
+      "historical_requirement_id": "REQ-106",
+      "historical_source_hash": "631155946145aac663a48e9c73e0c3c6b3bb3d005fdc18c5b0e576fa48aff576",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-131",
+      "fresh_source_hash": "05acaa941d46ea2670132fd6a9914ec1d521d60fd0474ff9930d37092579ab58",
+      "fresh_source_refs": [
+        "C013-S056",
+        "C013-S057",
+        "C013-S058",
+        "C013-S059",
+        "C013-S060"
+      ],
+      "fresh_requirement_text": "投标人应结合业务系统特点阐述对采购人提供的总体服务方案，包含但不限于以下内容：（2）提供计算服务方案，要求包含计算服务配置方案，为文字大模型和视觉智能平台分配符合用户需求的计算资源；（3）提供存储服务方案。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-132",
+      "fresh_source_hash": "0b79b48d34776daf9fc37b8a8cf4129c60bb4a1613fe8ff6264d3cafa844a57c",
+      "fresh_source_refs": [
+        "C014-S014",
+        "C014-S015",
+        "C014-S016"
+      ],
+      "fresh_requirement_text": "投标人应对采购需求有充分、准确、全面的理解，对本项目实施过程中难点有明确的认识和合理的应对方案，包括但不限于项目理解和重难点分析。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-133",
+      "fresh_source_hash": "0792740d83fa3a13d50658ec710062b9545e91fc2710ed792269841d0f13f14e",
+      "fresh_source_refs": [
+        "C014-S023",
+        "C014-S024"
+      ],
+      "fresh_requirement_text": "投标人应阐述对采购人提供的安全服务方案，包含但不限于安全服务相关内容。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-134",
+      "fresh_source_hash": "e2457492172ab7faa8c44a49103c68b87ba5a4ecd17979d07271a6e3381c42c9",
+      "fresh_source_refs": [
+        "C014-S033"
+      ],
+      "fresh_requirement_text": "投标人应针对本次采购项目提供保密方案。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-135",
+      "fresh_source_hash": "b4dbdc5e3aaf93e129dc0f9e29343801120d7eb641b3dd3d1928d65af248da69",
+      "fresh_source_refs": [
+        "C014-S038"
+      ],
+      "fresh_requirement_text": "投标人应提供迁移服务方案。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-136",
+      "fresh_source_hash": "49c6bb1da546e952bb3aa0bcdd452a7e1c24e9012a1462facd6bb62ba1355602",
+      "fresh_source_refs": [
+        "C014-S044",
+        "C014-S045"
+      ],
+      "fresh_requirement_text": "投标人应明确系统迁移所需时间，并针对迁移所需时间提供迁移服务承诺函（加盖投标人公章）。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-137",
+      "fresh_source_hash": "a06a15600a887f910740c5e70e7b74c96cdfba5981c647e3fa81e5be5758b46b",
+      "fresh_source_refs": [
+        "C014-S047",
+        "C014-S048",
+        "C014-S049"
+      ],
+      "fresh_requirement_text": "投标人在系统迁移过程中迁移部署上线时间应在6-7个工作日以内（含），超过7个工作日不得分。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-138",
+      "fresh_source_hash": "2d5b8bf46f42e0a5a1257c91042babc4141a997df7d5c91bcb772fbb758c1120",
+      "fresh_source_refs": [
+        "C014-S051",
+        "C014-S052"
+      ],
+      "fresh_requirement_text": "投标人应提供承诺书，包括工作事项、人员数量、投入时间等内容。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-139",
+      "fresh_source_hash": "9ff9a10681286cd975e0c1aa2d493b0a27194afa02a123743edee27455fb8d18",
+      "fresh_source_refs": [
+        "C014-S054",
+        "C014-S055"
+      ],
+      "fresh_requirement_text": "投标人应具有完善的服务保障体系，内容包含但不限于工作事项承诺。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-140",
+      "fresh_source_hash": "49ad6fbf32183992fcf214f8160e90c0dfab6ff39080c00c0581f41d549af2a6",
+      "fresh_source_refs": [
+        "C014-S063",
+        "C014-S064"
+      ],
+      "fresh_requirement_text": "项目经理应具有信息系统项目管理师（高级）证书，并提供证书复印件。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-141",
+      "fresh_source_hash": "726f0daf34e79fa210cfcdd1ba26e951a123a2b4c37a9a5e8d4c0693f2bbd2a9",
+      "fresh_source_refs": [
+        "C014-S068",
+        "C014-S069"
+      ],
+      "fresh_requirement_text": "投标人应提供服务团队人员名单，包括服务团队总体情况（5分）及负责人配备情况。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-142",
+      "fresh_source_hash": "b87fbb1c100529e85ffddbabb67ee05346bb20b0d4c0362da58f80f2b5906f6c",
+      "fresh_source_refs": [
+        "C014-S080",
+        "C014-S081"
+      ],
+      "fresh_requirement_text": "投标人应根据项目特点提供本项目落实ESG理念的工作措施。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-143",
+      "fresh_source_hash": "6ab428bd1ef32aefddd95b1da50d3d0a3cc5837419508ede4bb7a0cc71058e88",
+      "fresh_source_refs": [
+        "C015-S046",
+        "C015-S047",
+        "C015-S048",
+        "C015-S049",
+        "C015-S050",
+        "C015-S051",
+        "C015-S052",
+        "C015-S053",
+        "C015-S054",
+        "C015-S055",
+        "C015-S056"
+      ],
+      "fresh_requirement_text": "平台云主机服务（包含X86、ARM、C86）：vCPU（vCPU ARM架构主频不低于2.4GHz，C86和x86主频不低于2.2GHz，平均虚拟化率，即物理CPU/虚拟CPU≥1/4，虚拟CPU利用率不低于物理CPU的25%），计价单位1 CPU，数量504，期限10个月。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-124",
+      "historical_source_hash": "6ab428bd1ef32aefddd95b1da50d3d0a3cc5837419508ede4bb7a0cc71058e88",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-144",
+      "fresh_source_hash": "51b50cf9ae87728c984fa2ed7e07af0381d6cbe61053927728587d06a85719ed",
+      "fresh_source_refs": [
+        "C015-S057",
+        "C015-S058"
+      ],
+      "fresh_requirement_text": "计算服务-内存：内存，计价单位1 GB，数量1728，期限10个月。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-125",
+      "historical_source_hash": "51b50cf9ae87728c984fa2ed7e07af0381d6cbe61053927728587d06a85719ed",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-145",
+      "fresh_source_hash": "ad72e7333e3dc160da2749c41434577e94ff301b26a47b9d53ab3de03b58a142",
+      "fresh_source_refs": [
+        "C015-S059",
+        "C015-S060",
+        "C015-S061",
+        "C015-S062",
+        "C015-S063"
+      ],
+      "fresh_requirement_text": "GPU卡算力服务：GPU显存（需同时租用算力资源、云主机或物理服务器资源，联合使用），计价单位1 GB，数量1024，期限10个月。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-126",
+      "historical_source_hash": "ad72e7333e3dc160da2749c41434577e94ff301b26a47b9d53ab3de03b58a142",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-146",
+      "fresh_source_hash": "45cd121daca2de39e6d5bcb795fd869d2b162556ba7d3551e56ac97bc95bae03",
+      "fresh_source_refs": [
+        "C015-S066",
+        "C015-S067",
+        "C015-S068",
+        "C015-S069",
+        "C015-S070",
+        "C015-S071",
+        "C015-S072",
+        "C015-S073",
+        "C015-S074",
+        "C015-S075"
+      ],
+      "fresh_requirement_text": "GPU卡算力服务（适配X86、ARM、C86）：半精度浮点运算能力（需同时租用GPU显存、云主机或物理服务器资源，联合使用），计价单位1TFLOPS，数量3712，期限10个月。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-127",
+      "historical_source_hash": "45cd121daca2de39e6d5bcb795fd869d2b162556ba7d3551e56ac97bc95bae03",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-147",
+      "fresh_source_hash": "02d86e8e33699b9578059bdb9708b4f68b8b3840ee2c4c5e6b031ada9c6474f9",
+      "fresh_source_refs": [
+        "C015-S076",
+        "C015-S077",
+        "C015-S078"
+      ],
+      "fresh_requirement_text": "普通性能存储：普通存储（单盘技术指标：单盘IOPS 2000-5000），计价单位100 GB，数量68，期限10个月。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-128",
+      "historical_source_hash": "02d86e8e33699b9578059bdb9708b4f68b8b3840ee2c4c5e6b031ada9c6474f9",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-148",
+      "fresh_source_hash": "6a4589645458a8dd82405a66c6e51d4df0571599c05f16f52d4e9fafdb2de0d3",
+      "fresh_source_refs": [
+        "C015-S079",
+        "C015-S080",
+        "C015-S081",
+        "C015-S082",
+        "C015-S083",
+        "C015-S084",
+        "C015-S085",
+        "C015-S086",
+        "C015-S087",
+        "C015-S088",
+        "C015-S089"
+      ],
+      "fresh_requirement_text": "存储服务（兼容X86、ARM、C86）-高性能存储：高性能存储（单盘技术指标：单盘IOPS 10000-25000），计价单位100 GB，数量259.72，期限10个月。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-149",
+      "fresh_source_hash": "5accbd12bd41162379f87b79b1ba2666498fccf778ead030bdd7f10f79c29995",
+      "fresh_source_refs": [
+        "C015-S090",
+        "C015-S091"
+      ],
+      "fresh_requirement_text": "本地备份服务：本地备份服务，计价单位100 GB，数量68，期限10个月。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-130",
+      "historical_source_hash": "5accbd12bd41162379f87b79b1ba2666498fccf778ead030bdd7f10f79c29995",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-150",
+      "fresh_source_hash": "856b0de446256ffebc5173ffd370a958bd4b11c1e430f85666eb1984480fde81",
+      "fresh_source_refs": [
+        "C015-S092",
+        "C015-S093",
+        "C015-S094",
+        "C015-S095",
+        "C015-S096"
+      ],
+      "fresh_requirement_text": "网络服务（兼容X86、ARM、C86）-远程接入服务：远程接入服务，计价单位1账号，数量4，期限10个月。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-131",
+      "historical_source_hash": "856b0de446256ffebc5173ffd370a958bd4b11c1e430f85666eb1984480fde81",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-151",
+      "fresh_source_hash": "734c38f80a58ee15db4e12dccda9367d70f424bdd70df47bae20ff2be90609cc",
+      "fresh_source_refs": [
+        "C016-S006",
+        "C016-S007"
+      ],
+      "fresh_requirement_text": "提供政务云基础服务，包括计算服务、存储服务和网络服务等基础环境的日常维护、应急响应等工作。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-132",
+      "historical_source_hash": "734c38f80a58ee15db4e12dccda9367d70f424bdd70df47bae20ff2be90609cc",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-152",
+      "fresh_source_hash": "a24653b5a87ebae2ffe6475238d0e882713f0579375b9b61aba0863abd9e5037",
+      "fresh_source_refs": [
+        "C016-S008",
+        "C016-S009"
+      ],
+      "fresh_requirement_text": "提供7*24运维保障，做好重大活动和节假日应急值守保障服务，确保各系统在政务云环境中可靠稳定运行。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-133",
+      "historical_source_hash": "a24653b5a87ebae2ffe6475238d0e882713f0579375b9b61aba0863abd9e5037",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-153",
+      "fresh_source_hash": "49c56ce406d6e38dee4bcb23d6b57e4f0a2a5c0026401c2f5e06fd3cf1c800e8",
+      "fresh_source_refs": [
+        "C016-S010",
+        "C016-S011",
+        "C016-S012"
+      ],
+      "fresh_requirement_text": "服务期内，投标人须完成信息系统的日常运维和安全运维服务工作（包括但不限于：云平台服务、日常技术支持、系统日常维护、服务规范、安全及保密要求、响应的及时性），确保入云系统安全、稳定的运行。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-134",
+      "historical_source_hash": "49c56ce406d6e38dee4bcb23d6b57e4f0a2a5c0026401c2f5e06fd3cf1c800e8",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-154",
+      "fresh_source_hash": "83e9c0bb887821ddaf7d4517f55456a4e44503a3f1259ce5b8e40e5799367653",
+      "fresh_source_refs": [
+        "C016-S015",
+        "C016-S016",
+        "C016-S017",
+        "C016-S018"
+      ],
+      "fresh_requirement_text": "投标人需根据采购需求，提供计算服务，包括：平台云主机服务（包含X86、ARM、C86）和GPU卡算力服务（适配X86、ARM、C86），实现合理的计算资源配置。按照采购人要求对vCPU及内存进行动态调整，自接到工单至完成调整时间不超过4小时。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-135",
+      "historical_source_hash": "83e9c0bb887821ddaf7d4517f55456a4e44503a3f1259ce5b8e40e5799367653",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-155",
+      "fresh_source_hash": "364eaccea7e7f7b432328f5c8b493eea963203062ed837128761bd1e8248bbbe",
+      "fresh_source_refs": [
+        "C016-S020",
+        "C016-S021"
+      ],
+      "fresh_requirement_text": "投标人需根据采购需求，提供存储服务，包括：普通性能存储、高性能存储和本地备份服务。",
+      "alignment_level": "LEVEL_5",
+      "historical_requirement_id": "REQ-136",
+      "historical_source_hash": "23ab4efc706e949194bde86f3f98fceeea19c1c7e53ff527a51f3e72835b766b",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-156",
+      "fresh_source_hash": "b988d2f195c8ce7d930242e6c84e47ce3c2567a77490f52bbef5b788b9331583",
+      "fresh_source_refs": [
+        "C016-S022",
+        "C016-S023"
+      ],
+      "fresh_requirement_text": "投标人需根据采购需求，提供单盘IOPS1000-3000的普通性能存储服务，按照采购人要求对存储空间和配置进行动态调整。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-137",
+      "historical_source_hash": "b988d2f195c8ce7d930242e6c84e47ce3c2567a77490f52bbef5b788b9331583",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-157",
+      "fresh_source_hash": "94980f75f819726b07fc4ce41ebe1417a58f934c8f38e636ddb07a27fc95a19e",
+      "fresh_source_refs": [
+        "C016-S024",
+        "C016-S025"
+      ],
+      "fresh_requirement_text": "投标人需根据采购需求，提供单盘IOPS 3000-20000的高性能存储服务，按照采购人要求对存储空间和配置进行动态调整。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-138",
+      "historical_source_hash": "94980f75f819726b07fc4ce41ebe1417a58f934c8f38e636ddb07a27fc95a19e",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-158",
+      "fresh_source_hash": "367a29cdc025a242814653ce4b53f8be050b186d6d3789a0b8d2b44f6d5067e2",
+      "fresh_source_refs": [
+        "C016-S026",
+        "C016-S027"
+      ],
+      "fresh_requirement_text": "投标人需根据采购需求，提供本地备份服务，通过备份策略实现文件、操作系统、数据库的本地备份。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-139",
+      "historical_source_hash": "367a29cdc025a242814653ce4b53f8be050b186d6d3789a0b8d2b44f6d5067e2",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-159",
+      "fresh_source_hash": "080b07169e3726aa5252dcf00090761cd725ba8a46356594fb8b846c64caa0d6",
+      "fresh_source_refs": [
+        "C016-S029",
+        "C016-S030"
+      ],
+      "fresh_requirement_text": "投标人需根据采购需求，提供远程接入服务，每个账号结合身份验证通过VPN远程接入堡垒机维护应用系统。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-140",
+      "historical_source_hash": "080b07169e3726aa5252dcf00090761cd725ba8a46356594fb8b846c64caa0d6",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-160",
+      "fresh_source_hash": "565287a6c977edf9b53d3cd1c0763d4b2757b0feef419a82e8e4b0aae7db958e",
+      "fresh_source_refs": [
+        "C016-S032",
+        "C016-S033"
+      ],
+      "fresh_requirement_text": "投标人提供的政务云环境应在安全等保三级基础上，按各业务系统具体安全需求，开展相应等保评估、检查、整改等工作。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-141",
+      "historical_source_hash": "565287a6c977edf9b53d3cd1c0763d4b2757b0feef419a82e8e4b0aae7db958e",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-161",
+      "fresh_source_hash": "054b3635612dc0866c4f514640cf8cef44da8319509b43f6e84765519fb7ef3c",
+      "fresh_source_refs": [
+        "C016-S035",
+        "C016-S036",
+        "C016-S037"
+      ],
+      "fresh_requirement_text": "投标人须严格按照《北京市市级政务云管理办法》以及采购人制定的管理办法及流程等相关制度，开展标准化运维工作。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-142",
+      "historical_source_hash": "054b3635612dc0866c4f514640cf8cef44da8319509b43f6e84765519fb7ef3c",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-162",
+      "fresh_source_hash": "7e74bcb25af6656c021249dfcc6271a8f732c12429f424baeb8ee4b4cf671dda",
+      "fresh_source_refs": [
+        "C016-S039",
+        "C016-S040",
+        "C016-S041"
+      ],
+      "fresh_requirement_text": "投标人需利用监控系统或人工对机房环境、硬件设备及应用系统的运行情况进行7×24小时的不间断巡检监控，及时发现安全隐患，通知相关人员及时处理，并形成监控报告。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-143",
+      "historical_source_hash": "7e74bcb25af6656c021249dfcc6271a8f732c12429f424baeb8ee4b4cf671dda",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-163",
+      "fresh_source_hash": "6e5dcc102800a7c8889d4ee63eddca07ea8983eb90c7f32992cfec73b26013db",
+      "fresh_source_refs": [
+        "C016-S042",
+        "C016-S043",
+        "C016-S044"
+      ],
+      "fresh_requirement_text": "投标人负责设立技术支持热线，并安排专人值守，为运维工作提供7×24小时热线支持服务。投标人针对采购人要求的云平台运维服务相关内容，需指定专业技术能力较强的工程师，根据采购人要求配合开展相关维护服务。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-144",
+      "historical_source_hash": "6e5dcc102800a7c8889d4ee63eddca07ea8983eb90c7f32992cfec73b26013db",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-164",
+      "fresh_source_hash": "3c09ec8ed9a6717ec6e43d851108cddf6b77ca8453b45ac5fce333d15ea2cc12",
+      "fresh_source_refs": [
+        "C016-S046",
+        "C016-S047"
+      ],
+      "fresh_requirement_text": "投标人须严格遵守采购人的相关信息安全规定，不得利用系统维护服务时的便利对采购人数据及其他信息擅自修改或透漏给第三方。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-145",
+      "historical_source_hash": "3c09ec8ed9a6717ec6e43d851108cddf6b77ca8453b45ac5fce333d15ea2cc12",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-165",
+      "fresh_source_hash": "8669a71cd09372ac8aa5c44c4302d873a625d862b89f4e59092f86417f68943e",
+      "fresh_source_refs": [
+        "C016-S049",
+        "C016-S050",
+        "C016-S051",
+        "C016-S052",
+        "C016-S053"
+      ],
+      "fresh_requirement_text": "投标人应当提供高效的系统维护服务，有效防范系统风险，系统对应负责人7×24小时电话畅通，能够在系统发生除宕机外的其他故障问题时，能够协调人力资源在1小时内到达运维现场提供服务。系统发生宕机问题时，投标人应在5分钟内响应，在1个小时之内使系统恢复正常。故障处理完毕后提供相关系统宕机报告。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-146",
+      "historical_source_hash": "8669a71cd09372ac8aa5c44c4302d873a625d862b89f4e59092f86417f68943e",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-166",
+      "fresh_source_hash": "78eddb27396b4468d2a53f8686aef5f6665229c0a6800111e77391c8381616b9",
+      "fresh_source_refs": [
+        "C016-S055",
+        "C016-S056",
+        "C016-S057"
+      ],
+      "fresh_requirement_text": "为保障业务高峰期内系统平稳运行，缓解系统高峰期内因业务发生量增大而带来系统压力风险，要求投标人根据业务周期性特点，加大运维保障力度，保证在业务高峰期内系统平稳运行。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-147",
+      "historical_source_hash": "78eddb27396b4468d2a53f8686aef5f6665229c0a6800111e77391c8381616b9",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-167",
+      "fresh_source_hash": "4dd473592f859e4106215f09b4126287e1a6e7a3b2eebc3cfe31705751d11f8a",
+      "fresh_source_refs": [
+        "C016-S059",
+        "C016-S060",
+        "C016-S061",
+        "C016-S062",
+        "C016-S063",
+        "C016-S064"
+      ],
+      "fresh_requirement_text": "如涉及跨云平台迁移，在系统业务正常运行的前提下，自合同生效之日起7个工作日内完成全部系统迁移，投标人需提供迁移服务承诺函，投标人需在迁移服务方案中明确是否需要采购人投入专人、时间及工作，并提供承诺书，投标人需具备类似项目经验，可根据业务特点制定应用系统迁移部署方案，配合用户完成系统迁移部署、运行和安全保障，最终保证现有业务系统可平滑迁移至中标单位云平台。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-148",
+      "historical_source_hash": "4dd473592f859e4106215f09b4126287e1a6e7a3b2eebc3cfe31705751d11f8a",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-168",
+      "fresh_source_hash": "589b9d5874b19f043941a6c69efaac97cc1709d11c2785e2136ba0d6dbe3493b",
+      "fresh_source_refs": [
+        "C016-S066",
+        "C016-S067",
+        "C016-S068"
+      ],
+      "fresh_requirement_text": "根据采购人需求，完成应用系统的迁移部署，迁移过程中保证应用系统正常运行。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-149",
+      "historical_source_hash": "589b9d5874b19f043941a6c69efaac97cc1709d11c2785e2136ba0d6dbe3493b",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-169",
+      "fresh_source_hash": "f7fea92f9ab56facd1875bc5628d9930f38bc83fe10615c790a3df6514820943",
+      "fresh_source_refs": [
+        "C016-S069",
+        "C016-S070",
+        "C016-S071"
+      ],
+      "fresh_requirement_text": "自合同生效之日起7日内，根据用户需求完成系统迁移工作，并且不能改变和影响原有系统的功能、技术状态以及用户的使用习惯。未按时完成系统迁移工作的，采购人有权解除合同并有权要求供应商按合同首付款双倍支付违约金。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-150",
+      "historical_source_hash": "f7fea92f9ab56facd1875bc5628d9930f38bc83fe10615c790a3df6514820943",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-170",
+      "fresh_source_hash": "1919960fda7567f5338e61cd62c10a9fd01d98f6e0b552638f5b01f57cd16dd4",
+      "fresh_source_refs": [
+        "C016-S072",
+        "C016-S073",
+        "C016-S074",
+        "C016-S075",
+        "C016-S076"
+      ],
+      "fresh_requirement_text": "针对已经运行在政务云平台上的应用系统，为确保迁移过程中数据不丢失、系统业务正常运行，本次中标人负责与原政务云平台的服务商进行主动对接，系统迁移涉及的所有费用（包括但不限于中标人迁移测试阶段的云资源费用，系统开发商对业务系统的部署、调试费用，原服务商配合迁出系统的服务费用等）由本次中标人负责解决。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-151",
+      "historical_source_hash": "1919960fda7567f5338e61cd62c10a9fd01d98f6e0b552638f5b01f57cd16dd4",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-171",
+      "fresh_source_hash": "35231f4e7e359fe4a3c1ae8823f352e40a977c4b153f35c168a273bdf195f90b",
+      "fresh_source_refs": [
+        "C017-S002",
+        "C017-S003",
+        "C017-S004"
+      ],
+      "fresh_requirement_text": "服务期内，投标人须设有 7×24 小时电话响应服务、具备运维团队，提供售后服务保障。团队成员应明确职责，架构清晰，岗位设置合理，且具备与本项目相关的项目经验。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-152",
+      "historical_source_hash": "35231f4e7e359fe4a3c1ae8823f352e40a977c4b153f35c168a273bdf195f90b",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-172",
+      "fresh_source_hash": "84de43f1113f3a299f69e23aca0fb0131132324eb1031c660c27154e18dbdffb",
+      "fresh_source_refs": [
+        "C017-S005"
+      ],
+      "fresh_requirement_text": "投标人须提供 1 名项目经理及若干名项目团队专职人员，为本项目提供服务。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-173",
+      "fresh_source_hash": "fc99b8f541b9c2603af987503e85082c9d3281750d8c9e68d16f9c736b654cda",
+      "fresh_source_refs": [
+        "C017-S006",
+        "C017-S007"
+      ],
+      "fresh_requirement_text": "项目经理需按照采购人要求，承担云资源服务保障具体工作，技术支持人员要求如下。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-174",
+      "fresh_source_hash": "af2e2b2935a139dd80382776f9b8ace07fd3dc286350880392fc4b4bb71d5aa5",
+      "fresh_source_refs": [
+        "C017-S008"
+      ],
+      "fresh_requirement_text": "项目经理具有信息系统项目管理师（高级）证书。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-154",
+      "historical_source_hash": "af2e2b2935a139dd80382776f9b8ace07fd3dc286350880392fc4b4bb71d5aa5",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-175",
+      "fresh_source_hash": "d13abeed342de4157d207d84984be9043801a1e5dbe9e9ab35577d8243eaafbb",
+      "fresh_source_refs": [
+        "C017-S009"
+      ],
+      "fresh_requirement_text": "技术负责人具有 CISP 证书。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-155",
+      "historical_source_hash": "d13abeed342de4157d207d84984be9043801a1e5dbe9e9ab35577d8243eaafbb",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-176",
+      "fresh_source_hash": "3c6e01c072664d03a477aa0dca8f050ca40c2f83f3e497c752b074b4fffc035b",
+      "fresh_source_refs": [
+        "C017-S010"
+      ],
+      "fresh_requirement_text": "团队成员（除项目经理和技术负责人之外）具有 CISP 等证书。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-156",
+      "historical_source_hash": "3c6e01c072664d03a477aa0dca8f050ca40c2f83f3e497c752b074b4fffc035b",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-177",
+      "fresh_source_hash": "f19671be429f63faf9ab548aec4cdd57634177f25e421024fd6ef18e6b6e336a",
+      "fresh_source_refs": [
+        "C017-S012",
+        "C017-S013",
+        "C017-S014",
+        "C017-S015",
+        "C017-S016"
+      ],
+      "fresh_requirement_text": "中标人因承接本合同约定项目所知悉的该项目信息或采购人信息，以及在项目实施过程中所产生的与该项目有关的全部信息均为采购人的保密信息，中标人应按照采购人关于保密工作的相关要求，对上述保密信息承担保密义务。中标人须严格遵守信息安全规定，不得利用系统维护服务时的便利对采购人数据及其他信息擅自修改或透漏给第三方。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-157",
+      "historical_source_hash": "f19671be429f63faf9ab548aec4cdd57634177f25e421024fd6ef18e6b6e336a",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-178",
+      "fresh_source_hash": "97384e4dbf0edf120407eae71f45f2deaee0b085b245d9133f9f751ac61f143f",
+      "fresh_source_refs": [
+        "C017-S017",
+        "C017-S018",
+        "C017-S019",
+        "C017-S020"
+      ],
+      "fresh_requirement_text": "中标人应对上述保密信息予以妥善保存，并保证仅将其用于与完成本合同项下约定项目实施有关的用途或目的。在缺少相关保密条款约定时，对上述保密信息，中标人应至少采取适用于对自己商业秘密进行保护的同等保护措施和审慎程度进行保密。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-158",
+      "historical_source_hash": "97384e4dbf0edf120407eae71f45f2deaee0b085b245d9133f9f751ac61f143f",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-179",
+      "fresh_source_hash": "88d25ffb1b05f6071569a0fec9b15dd83cbd43d0733c30f7a68ea7dd83249360",
+      "fresh_source_refs": [
+        "C017-S021",
+        "C017-S022",
+        "C017-S023",
+        "C017-S024"
+      ],
+      "fresh_requirement_text": "中标人保证将保密信息的披露范围严格控制在直接从事该项目工作且因工作需要有必要知悉保密信息的工作人员范围内，对中标人非从事该项目的人员一律严格保密。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-159",
+      "historical_source_hash": "88d25ffb1b05f6071569a0fec9b15dd83cbd43d0733c30f7a68ea7dd83249360",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-180",
+      "fresh_source_hash": "ee303091e56ef8623a383dbf6cf1a0601f7899f826aa2b309e7efb76c25ffda6",
+      "fresh_source_refs": [
+        "C017-S025",
+        "C017-S026",
+        "C017-S027",
+        "C017-S028"
+      ],
+      "fresh_requirement_text": "中标人应保证在向其工作人员披露采购人的保密信息前，认真做好员工的保密教育工作，明确告知其将知悉的为采购人的保密信息，并明确告知其需承担的保密义务及泄密所应承担的法律责任，并要求全体参与该项目的人员签署书面《保密协议》。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-160",
+      "historical_source_hash": "ee303091e56ef8623a383dbf6cf1a0601f7899f826aa2b309e7efb76c25ffda6",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-181",
+      "fresh_source_hash": "2af60c7b6d52778dbd46457bb6a27f8d1d787266d10e05900af9b5dd9beba3a2",
+      "fresh_source_refs": [
+        "C017-S029",
+        "C017-S030",
+        "C017-S031"
+      ],
+      "fresh_requirement_text": "任何时间内，一经采购人提出要求，中标人应按照采购人指示在收到采购人书面通知后 5 日内将含有保密信息的所有文件或其他资料归还采购人，且不得擅自复制留存。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-161",
+      "historical_source_hash": "2af60c7b6d52778dbd46457bb6a27f8d1d787266d10e05900af9b5dd9beba3a2",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-182",
+      "fresh_source_hash": "95b41f4fd6f6505aaffc0441f202d1fda4c366d0741f61055a3eda50760230cb",
+      "fresh_source_refs": [
+        "C017-S032",
+        "C017-S033",
+        "C017-S034"
+      ],
+      "fresh_requirement_text": "非经采购人特别授权，采购人向中标人提供的任何保密信息并不包括授予中标人该保密信息包含的任何专利权、商标权、著作权、商业秘密或其它类型的知识产权。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-162",
+      "historical_source_hash": "95b41f4fd6f6505aaffc0441f202d1fda4c366d0741f61055a3eda50760230cb",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-183",
+      "fresh_source_hash": "0f2be4da52660c58a01a4822ee143b958b62ce36289b96f825e612aa646e6234",
+      "fresh_source_refs": [
+        "C017-S036",
+        "C017-S037",
+        "C017-S038"
+      ],
+      "fresh_requirement_text": "为在项目中充分落实《政府采购法》规定的“政府采购应当有助于实现国家的经济和社会发展政策目标”等相关要求，以项目为载体推动北京市环境社会治理(ESG)体系高质量发展，请供应商提供在本项目中落实 ESG 理念的工作措施。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-163",
+      "historical_source_hash": "0f2be4da52660c58a01a4822ee143b958b62ce36289b96f825e612aa646e6234",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-184",
+      "fresh_source_hash": "877217d7db2bef0efe76eb1ce3eb16a255d814c21dbfb8834227ea17ee0cbc6a",
+      "fresh_source_refs": [
+        "C018-S032",
+        "C018-S033"
+      ],
+      "fresh_requirement_text": "甲方应按照《北京市市级政务云管理办法》的有关规定，将相关信息系部署或迁移至北京市政务云服务平台。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-164",
+      "historical_source_hash": "877217d7db2bef0efe76eb1ce3eb16a255d814c21dbfb8834227ea17ee0cbc6a",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-185",
+      "fresh_source_hash": "82d4a277ae443534030dd26c631834ccaa776fa52ba5e8c913138894af47615f",
+      "fresh_source_refs": [
+        "C018-S036",
+        "C018-S037",
+        "C018-S038"
+      ],
+      "fresh_requirement_text": "乙方向甲方提供基础服务和基础安全保障服务。基础安全保障服务是云服务商应具备的云平台层安全保障能力，使用单位无需购买即可享受服务。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-186",
+      "fresh_source_hash": "38988ffea637c565bf7444d8b34bf08d73d6511dbb39fcbf25aa6cf26b2a3c70",
+      "fresh_source_refs": [
+        "C018-S042"
+      ],
+      "fresh_requirement_text": "提供7x24小时运维人员管理、安全登记。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-166",
+      "historical_source_hash": "38988ffea637c565bf7444d8b34bf08d73d6511dbb39fcbf25aa6cf26b2a3c70",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-187",
+      "fresh_source_hash": "57902e3320592ab2185ce284f3d51a6dc7e919c53a89f225e3ba4b496f1126f0",
+      "fresh_source_refs": [
+        "C018-S043"
+      ],
+      "fresh_requirement_text": "提供机房设备管理、安全控制。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-167",
+      "historical_source_hash": "57902e3320592ab2185ce284f3d51a6dc7e919c53a89f225e3ba4b496f1126f0",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-188",
+      "fresh_source_hash": "5e73a8468d1a9ea6d5134ed0843d1b51a36e0adfbd9bec241e8e2992807e8231",
+      "fresh_source_refs": [
+        "C018-S046"
+      ],
+      "fresh_requirement_text": "协助云使用单位进行安全应急演练。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-168",
+      "historical_source_hash": "5e73a8468d1a9ea6d5134ed0843d1b51a36e0adfbd9bec241e8e2992807e8231",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-189",
+      "fresh_source_hash": "38c130ac57b50db2f859c56612616d924df925ea2ec12f2b6ddc320e14c4c0e0",
+      "fresh_source_refs": [
+        "C018-S047"
+      ],
+      "fresh_requirement_text": "提供机房进出控制、监控等物理访问控制。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-169",
+      "historical_source_hash": "38c130ac57b50db2f859c56612616d924df925ea2ec12f2b6ddc320e14c4c0e0",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-190",
+      "fresh_source_hash": "cd4510efb5a57fc5ccbd1aab542ccadeefeb01e41f3eeb9c8de3643b137d6f4f",
+      "fresh_source_refs": [
+        "C018-S048"
+      ],
+      "fresh_requirement_text": "提供机房防火、防盗、防雷电的机房三防服务。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-170",
+      "historical_source_hash": "cd4510efb5a57fc5ccbd1aab542ccadeefeb01e41f3eeb9c8de3643b137d6f4f",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-191",
+      "fresh_source_hash": "a1df2aed8b1cc51637560d1108b43f1e696505d29e405ce460a7065f251090aa",
+      "fresh_source_refs": [
+        "C018-S049"
+      ],
+      "fresh_requirement_text": "提供设备访问记录、日志统计、安全事件的设备访问审计。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-171",
+      "historical_source_hash": "a1df2aed8b1cc51637560d1108b43f1e696505d29e405ce460a7065f251090aa",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-192",
+      "fresh_source_hash": "b8626566cb720b3152428265babb5b0702eed286f7d2de842087a54f6eb0074b",
+      "fresh_source_refs": [
+        "C018-S050",
+        "C018-S051"
+      ],
+      "fresh_requirement_text": "提供出口流量控制、检测，并且可观测数据，互联网网络行为审计。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-172",
+      "historical_source_hash": "b8626566cb720b3152428265babb5b0702eed286f7d2de842087a54f6eb0074b",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-193",
+      "fresh_source_hash": "caf4e767c28eca27269035cb06d44fdc2709064935017a1598c9d8b8b4fa1634",
+      "fresh_source_refs": [
+        "C018-S052"
+      ],
+      "fresh_requirement_text": "云平台整体提供总带宽为10Gb的抗DDoS防护。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-173",
+      "historical_source_hash": "caf4e767c28eca27269035cb06d44fdc2709064935017a1598c9d8b8b4fa1634",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-194",
+      "fresh_source_hash": "38cb0bf8e276a4f485db513566079373e92bc9d218c78902f644dc4334e9332e",
+      "fresh_source_refs": [
+        "C018-S053"
+      ],
+      "fresh_requirement_text": "提供出口安全的防火墙安全防护。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-174",
+      "historical_source_hash": "38cb0bf8e276a4f485db513566079373e92bc9d218c78902f644dc4334e9332e",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-195",
+      "fresh_source_hash": "8f9a2b1aee9d8d24c6e6770e65fdeb31e069a2ebef55f95525d0dfe87514ee5e",
+      "fresh_source_refs": [
+        "C018-S054"
+      ],
+      "fresh_requirement_text": "提供防入侵监测的防入侵监测IPS。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-175",
+      "historical_source_hash": "8f9a2b1aee9d8d24c6e6770e65fdeb31e069a2ebef55f95525d0dfe87514ee5e",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-196",
+      "fresh_source_hash": "52a54fc885073bfd2b1f2e565734d573299cd3c2fd282ee61ef8989dbe30bd1b",
+      "fresh_source_refs": [
+        "C018-S055"
+      ],
+      "fresh_requirement_text": "免费提供1个远程登录堡垒机的运维账号。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-176",
+      "historical_source_hash": "52a54fc885073bfd2b1f2e565734d573299cd3c2fd282ee61ef8989dbe30bd1b",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-197",
+      "fresh_source_hash": "896183ea3ac8d3f7cf83e272886a028858195f482e6779a5ef049922db6a1b26",
+      "fresh_source_refs": [
+        "C018-S056"
+      ],
+      "fresh_requirement_text": "提供租户虚拟化层隔离。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-177",
+      "historical_source_hash": "896183ea3ac8d3f7cf83e272886a028858195f482e6779a5ef049922db6a1b26",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-198",
+      "fresh_source_hash": "4bb76e427dc974c23b0cd7533b016e6f4761b4b3872b1860a46bca653b5caf5b",
+      "fresh_source_refs": [
+        "C018-S057",
+        "C018-S058"
+      ],
+      "fresh_requirement_text": "提供租户内部访问权限控制，用户可以自由分配。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-178",
+      "historical_source_hash": "4bb76e427dc974c23b0cd7533b016e6f4761b4b3872b1860a46bca653b5caf5b",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-199",
+      "fresh_source_hash": "c3ea404e98d8246465b800861257515062bfa1ccbbde0548b36171d91cddd6c9",
+      "fresh_source_refs": [
+        "C018-S059",
+        "C018-S060",
+        "C018-S061"
+      ],
+      "fresh_requirement_text": "提供云上资源的基本监控，包括CPU、内存使用率等。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-179",
+      "historical_source_hash": "c3ea404e98d8246465b800861257515062bfa1ccbbde0548b36171d91cddd6c9",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-200",
+      "fresh_source_hash": "204b36ca925382d243fd9aba46253c205fdfb11206ec2af183fc8f160d121236",
+      "fresh_source_refs": [
+        "C018-S064"
+      ],
+      "fresh_requirement_text": "提供通过代入角色实现获取操作权限的角色权限管理。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-180",
+      "historical_source_hash": "204b36ca925382d243fd9aba46253c205fdfb11206ec2af183fc8f160d121236",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-201",
+      "fresh_source_hash": "4ef3e58a267a72f5e8b260c958e4f94d842e950feb2ef6c044bc62e5210df2f9",
+      "fresh_source_refs": [
+        "C018-S067",
+        "C018-S068"
+      ],
+      "fresh_requirement_text": "乙方应为甲方提供本合同约定的全部服务，做好云主机等云资源或云服务的运维工作。",
+      "alignment_level": "LEVEL_5",
+      "historical_requirement_id": "REQ-181",
+      "historical_source_hash": "cbb85acf5e562ee6e2944b7924d3a752daa469d3efd91f8be46550dc17e94e1b",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-202",
+      "fresh_source_hash": "d5ff4495d91b1a77622ec6c718c15ba1988bf2c4059952a8283556137eacf711",
+      "fresh_source_refs": [
+        "C018-S069",
+        "C018-S070"
+      ],
+      "fresh_requirement_text": "乙方应配合甲方搭建信息系统上云的测试环境，免费测试期由甲乙双方协商确定。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-182",
+      "historical_source_hash": "d5ff4495d91b1a77622ec6c718c15ba1988bf2c4059952a8283556137eacf711",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-203",
+      "fresh_source_hash": "16f01ab60f352756ebdd227375ba12e2a3f24acbfaf1289918de503a223e0cd7",
+      "fresh_source_refs": [
+        "C018-S071",
+        "C018-S072",
+        "C018-S073",
+        "C018-S074"
+      ],
+      "fresh_requirement_text": "乙方为甲方提供的服务质量应满足《信息安全技术网络安全等级保护基本要求》（GB/T22239-2019）、《信息安全技术网络安全等级保护测评要求》（GB/T28448-2019）、《关于加强党政部门云计算服务网络安全管理的意见》（中网办发文[2014]14号）及国家主管部门发布的其他标准规范要求。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-183",
+      "historical_source_hash": "16f01ab60f352756ebdd227375ba12e2a3f24acbfaf1289918de503a223e0cd7",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-204",
+      "fresh_source_hash": "b7997a10e94fa3637c30d316370b9d602c2407c566019d86f574d5341033e945",
+      "fresh_source_refs": [
+        "C018-S075",
+        "C018-S076",
+        "C018-S077"
+      ],
+      "fresh_requirement_text": "乙方提供的云平台整体可用性应不低于99.99%，数据可靠性应不低于99.9999%，云平台应按照等保三级标准建设并通过测评，云平台可按需7个自然日快速扩容。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-184",
+      "historical_source_hash": "b7997a10e94fa3637c30d316370b9d602c2407c566019d86f574d5341033e945",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-205",
+      "fresh_source_hash": "71dbcb50093a2e2e0ca37ece1bf7398f3f5bbf33a4b2fbc426de209b72d2b88d",
+      "fresh_source_refs": [
+        "C018-S078",
+        "C018-S079",
+        "C018-S080",
+        "C018-S081"
+      ],
+      "fresh_requirement_text": "乙方提供的云平台应具备资源动态调整机制，根据甲方信息系统运行情况进行资源的动态调整，如遇信息系统使用高峰期，经双方协商可短期内提供免费的云资源扩容服务，如需要长期使用扩容服务，以北京市级政务云基础服务目录价格为准双方协商费用，并签订补充协议。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-185",
+      "historical_source_hash": "71dbcb50093a2e2e0ca37ece1bf7398f3f5bbf33a4b2fbc426de209b72d2b88d",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-206",
+      "fresh_source_hash": "e21a9927281f49b642e2bea38229de31880080aed0d9a863c81b49e1c8767e5c",
+      "fresh_source_refs": [
+        "C018-S082",
+        "C018-S083"
+      ],
+      "fresh_requirement_text": "乙方应提供技术服务热线(7*24小时)，负责解答用户在云平台使用中遇到的问题，并及时提出解决问题的建议和操作方法，方式应包括邮件、电话、即时通讯工具等。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-207",
+      "fresh_source_hash": "7b98d9f0a40c68ed4918840ef9eb3911966571f279df41860d4d04c1ae751927",
+      "fresh_source_refs": [
+        "C018-S085",
+        "C018-S086"
+      ],
+      "fresh_requirement_text": "在服务期内，提供7*24小时的现场和技术支持服务，对故障15分钟内响应，并协调人力资源在1小时内到达运维现场提供服务。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-187",
+      "historical_source_hash": "7b98d9f0a40c68ed4918840ef9eb3911966571f279df41860d4d04c1ae751927",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-208",
+      "fresh_source_hash": "efe3624a97531b07bed7083a4b63f9e159b245e184fb0c8d04c9b126d707da40",
+      "fresh_source_refs": [
+        "C018-S087",
+        "C018-S088"
+      ],
+      "fresh_requirement_text": "乙方须具备故障快速定位和恢复能力，故障定位排除时限不超过30分钟，重要信息系统故障定位排除时限不超过10分钟。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-188",
+      "historical_source_hash": "efe3624a97531b07bed7083a4b63f9e159b245e184fb0c8d04c9b126d707da40",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-209",
+      "fresh_source_hash": "8fa715f5f70b24f898ca8fa26752ea0fc20768ecac00366a86adbf191ab0a93e",
+      "fresh_source_refs": [
+        "C018-S090"
+      ],
+      "fresh_requirement_text": "甲乙双方应各指派一名代表作为本项目负责人。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-210",
+      "fresh_source_hash": "2a4c0ecbe49e8eca2d940e000d113ba7f7b0481ce6db0027fbfb7c5f96533a56",
+      "fresh_source_refs": [
+        "C018-S091",
+        "C018-S092"
+      ],
+      "fresh_requirement_text": "项目负责人应跟踪项目执行，包括云服务使用培训，云服务各阶段验收，服务成果确认等管理工作。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-211",
+      "fresh_source_hash": "f27c1542ea4b942f8be933dfc8311798476a284cbfacd5d9ac463703f69ac1b9",
+      "fresh_source_refs": [
+        "C018-S093",
+        "C018-S094",
+        "C018-S095"
+      ],
+      "fresh_requirement_text": "项目负责人应进行项目检查和控制，检查云服务使用过程中各阶段工作质量和进度，协调各种资源，确保项目按计划进度实施。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-190",
+      "historical_source_hash": "f27c1542ea4b942f8be933dfc8311798476a284cbfacd5d9ac463703f69ac1b9",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-212",
+      "fresh_source_hash": "05d8ef991dd75ae534228011e4b69b974ab4866c33a6a89847a56c3e3859f11d",
+      "fresh_source_refs": [
+        "C018-S096",
+        "C018-S097"
+      ],
+      "fresh_requirement_text": "项目负责人应负责项目沟通协调，负责协调解决组织接口及技术接口问题，沟通项目售前、售后情况，解决云服务使用过程中出现的相关问题。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-191",
+      "historical_source_hash": "05d8ef991dd75ae534228011e4b69b974ab4866c33a6a89847a56c3e3859f11d",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-213",
+      "fresh_source_hash": "f22cc2f0df4f78b09462ced79d55dd0e94f9924f43d0ced2e49cf04523228305",
+      "fresh_source_refs": [
+        "C021-S020",
+        "C021-S021",
+        "C021-S022",
+        "C021-S023",
+        "C021-S024",
+        "C021-S025",
+        "C021-S026"
+      ],
+      "fresh_requirement_text": "服务期内，如出现政务云管理单位责令乙方退出，相关补偿费用甲乙双方另行协商（不超过合同服务费总金额的5%）；无论甲乙双方是否就补偿费用达成一致，乙方在接到责令退出通知后，均应与甲方办理信息系统迁移和交接工作，在甲方提出系统迁出需求后10天内配合甲方完成信息系统迁移的相关工作，包含梳理迁出系统的云资源、安全策略配置等；确保系统在新环境运行稳定后，关停原服务，并对原有系统数据进行安全擦除；否则，乙方应向甲方支付合同总金额【5】%的违约金，如违约金不足以弥补甲方损失的，还应就差额部分向甲方赔偿。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-214",
+      "fresh_source_hash": "059eb9f465de2a5bcd255e9b8994ca0a633c7ce872d3621114208a0f3f579e27",
+      "fresh_source_refs": [
+        "C021-S027",
+        "C021-S028",
+        "C021-S029",
+        "C021-S030",
+        "C021-S031",
+        "C021-S032",
+        "C021-S033"
+      ],
+      "fresh_requirement_text": "服务期满后双方不再续签或者合同提前解除的，乙方应无条件免费配合甲方完成迁移和切换工作，切换期为2个月；乙方应在甲方监督下与新的服务单位就本项目相关工作内容和系统软硬件进行交接，完成迁移和切换工作，以确保政务信息化服务保障的数据完整性及业务延续性；切换期未到期前，乙方不得单方面终止服务或撤回人员，否则乙方应向甲方支付服务费总金额【5】%的违约金，如违约金不足以弥补甲方损失的，还应就差额部分向甲方赔偿。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-215",
+      "fresh_source_hash": "0be61b866ad126a86200bd0155dd0a10b0ed96b7864d3a15983b0333aa06c9cc",
+      "fresh_source_refs": [
+        "C021-S035",
+        "C021-S036",
+        "C021-S037",
+        "C021-S038"
+      ],
+      "fresh_requirement_text": "乙方因承接本合同约定项目所知悉的该项目信息或甲方信息，以及在项目实施过程中所产生的与该项目有关的全部信息均为甲方的保密信息，乙方应按照法律法规及甲方关于保密工作的相关要求，对上述保密信息承担保密义务；未经甲方书面同意，乙方不得将甲方保密信息透露给任何第三方。",
+      "alignment_level": "LEVEL_5",
+      "historical_requirement_id": "REQ-229",
+      "historical_source_hash": "78b80bb6f8238bd7f2eb6a038835f4e6c094ce311f970bf4da980d50cc0585b8",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-216",
+      "fresh_source_hash": "49fa44e527e47ffae023608311b255ab0979c6090a7fe83262896a5f43410aae",
+      "fresh_source_refs": [
+        "C021-S039",
+        "C021-S040",
+        "C021-S041"
+      ],
+      "fresh_requirement_text": "乙方应对上述保密信息予以妥善保存，并保证仅将其用于与完成本合同项下约定项目实施有关的用途或目的；在缺少相关保密条款约定时，对上述保密信息，乙方应至少采取适用于对自己核心机密进行保护的同等保护措施和审慎程度进行保密。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-230",
+      "historical_source_hash": "49fa44e527e47ffae023608311b255ab0979c6090a7fe83262896a5f43410aae",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-217",
+      "fresh_source_hash": "f5079d2edd450b06836878097ddfe3f706ed3f6e0a0b4e34f0a8bede82573031",
+      "fresh_source_refs": [
+        "C021-S042",
+        "C021-S043"
+      ],
+      "fresh_requirement_text": "乙方保证将保密信息的披露范围严格控制在直接从事该项目工作且因工作需要有必要知悉保密信息的工作人员范围内，对乙方非从事该项目的人员一律严格保密。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-231",
+      "historical_source_hash": "f5079d2edd450b06836878097ddfe3f706ed3f6e0a0b4e34f0a8bede82573031",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-218",
+      "fresh_source_hash": "ae2e582a810bf8bb2478ab31b6dc9e2e544251bb8d9729cf5856e4b1008e39d9",
+      "fresh_source_refs": [
+        "C021-S044",
+        "C021-S045",
+        "C021-S046",
+        "C021-S047"
+      ],
+      "fresh_requirement_text": "乙方应保证在向其工作人员披露甲方的保密信息前，认真做好员工的保密教育工作，明确告知其将知悉的为甲方的保密信息，并明确告知其需承担的保密义务及泄密所应承担的法律责任，并要求全体参与该项目的人员签署书面《服务人员安全保密责任书》（见附件6）。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-232",
+      "historical_source_hash": "ae2e582a810bf8bb2478ab31b6dc9e2e544251bb8d9729cf5856e4b1008e39d9",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-219",
+      "fresh_source_hash": "eb7c38905b2a4f1c7211fd4d5da6263094d62bcb920d6108ebd6839976e16f72",
+      "fresh_source_refs": [
+        "C021-S048",
+        "C021-S049"
+      ],
+      "fresh_requirement_text": "任何时间内，一经甲方提出要求，乙方应按照甲方指示在收到甲方书面通知后5日内将含有保密信息的所有文件或其他资料归还甲方，且不得擅自复制留存。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-233",
+      "historical_source_hash": "eb7c38905b2a4f1c7211fd4d5da6263094d62bcb920d6108ebd6839976e16f72",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-220",
+      "fresh_source_hash": "8413a2657c9d58c96e02f1059e9ffc5fce11df65d0601d8acd31157d94e304a4",
+      "fresh_source_refs": [
+        "C021-S050",
+        "C021-S051",
+        "C021-S052"
+      ],
+      "fresh_requirement_text": "非经甲方特别授权，甲方向乙方提供的任何保密信息仅包含使用权，并不包括授予乙方该保密信息包含的任何专利权、商标权、著作权、商业秘密或其它类型的知识产权。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-234",
+      "historical_source_hash": "8413a2657c9d58c96e02f1059e9ffc5fce11df65d0601d8acd31157d94e304a4",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-221",
+      "fresh_source_hash": "101b4a174203121bb21dcad149778d96c1c540af1b198e28e6d6532089a4aefd",
+      "fresh_source_refs": [
+        "C021-S053",
+        "C021-S054",
+        "C021-S055",
+        "C021-S056"
+      ],
+      "fresh_requirement_text": "乙方需要定期向政务云管理单位和云综合监管服务商提交云平台及入云系统相关信息，内容包括但不限于：云资源租用情况、系统迁移进展、已租用资源的使用绩效情况、安全监控分析、IP管理、重大活动值守、工作建议等，此时如涉及甲方信息，不属于违反保密义务。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-222",
+      "fresh_source_hash": "6abff0ab3b162513e86b22ac5c2cd36c5ea8691f156d1d0f2ecd855cefc16968",
+      "fresh_source_refs": [
+        "C021-S057"
+      ],
+      "fresh_requirement_text": "乙方承担上述保密义务的期限为合同履行期间及合同终止后5年。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-223",
+      "fresh_source_hash": "ed20027985f79c733b074b2e8666f1cd9148cadeb6fd81caee7519df1ac828c2",
+      "fresh_source_refs": [
+        "C021-S059",
+        "C021-S060",
+        "C021-S061"
+      ],
+      "fresh_requirement_text": "承担上述保密义务的责任主体为乙方（含乙方工作人员），乙方须与甲方签订《安全保密协议》（见附件4）；如乙方或乙方工作人员违反约定的保密义务，应遵照《安全保密协议》的约定承担违约责任。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-236",
+      "historical_source_hash": "ed20027985f79c733b074b2e8666f1cd9148cadeb6fd81caee7519df1ac828c2",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-224",
+      "fresh_source_hash": "ba466d862eb66b6ada5928291da1fb342114fb098de74be1ab167710a27421d4",
+      "fresh_source_refs": [
+        "C022-S001",
+        "C022-S002",
+        "C022-S003",
+        "C022-S004",
+        "C022-S005"
+      ],
+      "fresh_requirement_text": "本合同按中华人民共和国相关法律、法规进行解释；因履行合同所发生的一切争议，双方应友好协商解决，协商不成的，按第（2）种方式解决：依法向甲方住所地有管辖权的人民法院起诉。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-225",
+      "fresh_source_hash": "09ee1784337e9bbdccb5b6cf8c03d2ebe9202e8931da6e24a84d8114eef18641",
+      "fresh_source_refs": [
+        "C022-S007",
+        "C022-S008"
+      ],
+      "fresh_requirement_text": "在本合同履行过程中，甲方提出服务需求变更，应与乙方协商一致并签署补充协议；在变更达成一致前，双方应继续履行其原约定义务。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-237",
+      "historical_source_hash": "09ee1784337e9bbdccb5b6cf8c03d2ebe9202e8931da6e24a84d8114eef18641",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-226",
+      "fresh_source_hash": "73e72e05fd28226df05f39c1de3aee7d70dd6578d3535d9e40d4906daeca8fe6",
+      "fresh_source_refs": [
+        "C022-S010",
+        "C022-S011",
+        "C022-S012",
+        "C022-S013"
+      ],
+      "fresh_requirement_text": "合同双方承诺共同加强廉洁自律、反对商业贿赂；甲方及其工作人员不得索要礼金、有价证券和贵重物品；不得在乙方报销应由本单位或个人支付的费用；不得以参与项目实施为名，接受乙方从该项目中支取的劳务报酬；不得参加乙方安排的超标准宴请和娱乐活动。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-227",
+      "fresh_source_hash": "ee50a00a94ceeaf32a4cb9ad581df806be2f321514366fbcab25b9a20f9562b4",
+      "fresh_source_refs": [
+        "C022-S014",
+        "C022-S015",
+        "C022-S016"
+      ],
+      "fresh_requirement_text": "乙方不得向甲方及其工作人员行贿或馈赠礼金、有价证券、贵重礼品；不得为其报销应由甲方单位或个人支付的费用；不得向甲方工作人员支付劳务报酬；不得安排甲方工作人员参加超标准宴请及娱乐活动。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-238",
+      "historical_source_hash": "ee50a00a94ceeaf32a4cb9ad581df806be2f321514366fbcab25b9a20f9562b4",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-228",
+      "fresh_source_hash": "bc20fd038349dcf2b0574ae8c8abeda7cf2d1f7037f80cbbc4f9424955ae0326",
+      "fresh_source_refs": [
+        "C022-S018",
+        "C022-S019",
+        "C022-S020",
+        "C022-S021"
+      ],
+      "fresh_requirement_text": "双方因履行本合同或与本合同有关的一切通知包括不限于口头、电话、邮件、书面等形式；涉及本合同权利义务变化的或其他必要通知，应以书面形式传递，收到方应签收；如无法向他方直接送达或收到方不予签收，可邮寄送达，邮件寄至本合同记载之地址时，即视为送达。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-229",
+      "fresh_source_hash": "f4c75e7c63788deb472687d0ab7ee1d7889fed9a5382e5f853f1d36598fc7d21",
+      "fresh_source_refs": [
+        "C022-S022",
+        "C022-S023",
+        "C022-S024"
+      ],
+      "fresh_requirement_text": "本合同载明的地址、电话、银行账号等发生变更的，变更一方应自变更之日起20日内以书面形式通知对方；否则变更一方应自行承担因通知不及时所造成的一切后果。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-239",
+      "historical_source_hash": "f4c75e7c63788deb472687d0ab7ee1d7889fed9a5382e5f853f1d36598fc7d21",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-230",
+      "fresh_source_hash": "13eca50d3a7a5744fb79751c241650f86b115e516728769758387a1b06c752bc",
+      "fresh_source_refs": [
+        "C022-S026",
+        "C022-S027"
+      ],
+      "fresh_requirement_text": "本合同自双方法定代表人或其委托代理人签名并加盖本单位合同专用章或单位公章后生效，至双方履行完毕本合同规定的全部义务时终止。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-231",
+      "fresh_source_hash": "3f21b3aea849994c39dacf5c23ca2c6413daef57aeae64400eac80307c641dcd",
+      "fresh_source_refs": [
+        "C022-S028",
+        "C022-S029",
+        "C022-S030",
+        "C022-S031"
+      ],
+      "fresh_requirement_text": "未尽事宜，经双方协商一致，签订书面补充协议，补充协议与本合同不一致的，以补充协议为准；甲方需追加与本合同标的相同的工作的，在不改变本合同其他条款的前提下，可以与乙方协商签订补充协议，但所有补充协议的总金额不得超过本合同总金额的百分之十。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-240",
+      "historical_source_hash": "3f21b3aea849994c39dacf5c23ca2c6413daef57aeae64400eac80307c641dcd",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-232",
+      "fresh_source_hash": "da913d1483a9702b297e1fdb56ebfe6bbc75cde6a66ed401c5cd3404361d0b8c",
+      "fresh_source_refs": [
+        "C022-S032"
+      ],
+      "fresh_requirement_text": "本合同一式玖份，甲方执陆份，乙方执叁份，具有同等法律效力。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-233",
+      "fresh_source_hash": "2e597932bb871702121df8995dcc8cead9d46203ba837529885486bd173a2533",
+      "fresh_source_refs": [
+        "C022-S033",
+        "C022-S034"
+      ],
+      "fresh_requirement_text": "附件1、附件2、附件3、附件4为本合同不可分割的组成部分，与合同具有同等法律效力。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-234",
+      "fresh_source_hash": "3e4078ef82881a8e32941ad2e0c606d974e5c1d2e38c81004306e978b569f5d9",
+      "fresh_source_refs": [
+        "C022-S085",
+        "C022-S086",
+        "C022-S087",
+        "C022-S088",
+        "C022-S089",
+        "C022-S090",
+        "C022-S091",
+        "C022-S092",
+        "C022-S093",
+        "C022-S094",
+        "C022-S095",
+        "C022-S096",
+        "C022-S097",
+        "C022-S098",
+        "C022-S099",
+        "C022-S100"
+      ],
+      "fresh_requirement_text": "重大违约行为表规定：服务中断类别，范围云平台整体，因非不可抗力造成超过30%以上信息系统中断、影响人数50万以上、导致500万元以上经济损失，影响时间2小时以上；重大篡改事件类别，范围信息系统，在重大或特别重大保障期间，因云服务商的安全隐患原因造成的系统被恶意篡改事件，事件发生后云服务商未按照应急预案进行处置，造成信息安全事件处置延误，且该事件被国家级机构或媒体通报、市级领导批示或关注的，影响时间30分钟以上。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-235",
+      "fresh_source_hash": "78cb0b1cbd54e5f9538007f4af9739ed23245bc5b3603c0ec7b1b6d9f11172b4",
+      "fresh_source_refs": [
+        "C023-S001"
+      ],
+      "fresh_requirement_text": "在重大或特别重大保障期间，因云服务商的安全隐患原因造成的系统被恶意篡改事件，事件发生后云服务商未按照应急预案进行处置，造成信息安全事件处置延误，且该事件被国家级机构或媒体通报、市级领导批示或关注的，属于重大安全事故（云服务商主责），处置时限为30分钟以上。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-236",
+      "fresh_source_hash": "ee652475f4dd2c8f4194070d0601494538daaaf29881eb39e21692830dac66c9",
+      "fresh_source_refs": [
+        "C023-S003",
+        "C023-S004",
+        "C023-S005",
+        "C023-S006",
+        "C023-S007",
+        "C023-S008",
+        "C023-S009",
+        "C023-S010",
+        "C023-S011",
+        "C023-S012"
+      ],
+      "fresh_requirement_text": "因非不可抗力造成的云平台超过3个信息系统丢失超过1个月以上的数据，且确认无法恢复的，属于数据丢失全事故（云服务商主责），等级为A级，次数为1次。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-237",
+      "fresh_source_hash": "cc4ed2373130b514b9a1c6c8c7ebde70aa36329608abe619aa99dd997686cdc5",
+      "fresh_source_refs": [
+        "C023-S014",
+        "C023-S015",
+        "C023-S016",
+        "C023-S017",
+        "C023-S018",
+        "C023-S019",
+        "C023-S020",
+        "C023-S021",
+        "C023-S022",
+        "C023-S023",
+        "C023-S024"
+      ],
+      "fresh_requirement_text": "被第三方安全机构通报云平台存在安全隐患，云服务商未在24小时内做有效处置或应急防护措施，造成信息系统在重大或特别重大保障期间被恶意篡改或敏感信息泄露事件的，属于恶意入侵攻击，等级为A级，次数为1次。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-238",
+      "fresh_source_hash": "b6c70f6eec158af1e42f1938da53fe5677aa585fd09c4e4c067d7177fa26279c",
+      "fresh_source_refs": [
+        "C023-S032",
+        "C023-S033",
+        "C023-S034",
+        "C023-S035",
+        "C023-S036",
+        "C023-S037",
+        "C023-S038",
+        "C023-S039"
+      ],
+      "fresh_requirement_text": "因非不可抗力造成超过10%至30%信息系统中断、影响人数10万以上、导致100万元以上经济损失的，属于服务中断（云服务商主责），处置时限为2小时以上，等级为B级，一年内3次。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-239",
+      "fresh_source_hash": "155095dd07e69d1d42fa0a759c01041eebbe52a6122162ce55af10dfb1d3c0db",
+      "fresh_source_refs": [
+        "C023-S042",
+        "C023-S043",
+        "C023-S044",
+        "C023-S045",
+        "C023-S046",
+        "C023-S047",
+        "C023-S048",
+        "C023-S049",
+        "C023-S050",
+        "C023-S051"
+      ],
+      "fresh_requirement_text": "因云服务商的安全隐患原因造成的系统被恶意篡改事件，事件发生后云服务商未按照应急预案进行处置，造成信息安全事件处置延误，且该事件被市级机构或媒体通报、市级领导批示或关注的，属于重大篡改事件，处置时限为30分钟以上。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-247",
+      "historical_source_hash": "155095dd07e69d1d42fa0a759c01041eebbe52a6122162ce55af10dfb1d3c0db",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-240",
+      "fresh_source_hash": "7b48d782086b6c0e9f1f41a47e3c2b6ada75a6a22b0f762b46f77ea2919f0201",
+      "fresh_source_refs": [
+        "C023-S052",
+        "C023-S053",
+        "C023-S054",
+        "C023-S055",
+        "C023-S056",
+        "C023-S057",
+        "C023-S058",
+        "C023-S059"
+      ],
+      "fresh_requirement_text": "因非不可抗力造成1个信息系统丢失超过1个月以上的数据，且确认无法恢复的，属于数据丢失事件。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-241",
+      "fresh_source_hash": "16601d4c28d54c5cce8138ad458124d6fcd3f74d1b89f95e467120288ea09e1f",
+      "fresh_source_refs": [
+        "C023-S061",
+        "C023-S062",
+        "C023-S063",
+        "C023-S064",
+        "C023-S065",
+        "C023-S066",
+        "C023-S067"
+      ],
+      "fresh_requirement_text": "被第三方安全机构通报云平台存在安全隐患，云服务商未在24小时内做有效处置或应急防护措施，造成信息系统被恶意篡改或敏感信息泄露事件的，属于恶意入侵攻击。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-242",
+      "fresh_source_hash": "8c673c192238adc2c234dc6614529cd319c907a02c30143e0fddb603d149e857",
+      "fresh_source_refs": [
+        "C023-S073"
+      ],
+      "fresh_requirement_text": "所提供的云服务可用性低于99.99%，或数据可用性低于99.9999%，出现问题并造成重大损失的，违约金惩罚系数为200%。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-243",
+      "fresh_source_hash": "2ba9f16fe8289e2d254ace1eb665bcc923c0ec4f4ea122c6ea42cd1813a0b0d5",
+      "fresh_source_refs": [
+        "C023-S075",
+        "C023-S076",
+        "C023-S077",
+        "C023-S078",
+        "C023-S079"
+      ],
+      "fresh_requirement_text": "因未做好系统和数据互备，由于另一家云服务商服务中断，而导致系统和数据无法正常应用的，但影响未达到B级及以上事故影响的，违约金惩罚系数为200%。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-251",
+      "historical_source_hash": "2ba9f16fe8289e2d254ace1eb665bcc923c0ec4f4ea122c6ea42cd1813a0b0d5",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-244",
+      "fresh_source_hash": "8c1b2e02c8403a153b23a257dbeae4245c4fa4de817a878e6ea40154628c78e0",
+      "fresh_source_refs": [
+        "C023-S080",
+        "C023-S081"
+      ],
+      "fresh_requirement_text": "因所提供的安全服务出现故障，导致某系统网页被篡改，造成重大影响的，违约金惩罚系数为600%。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-252",
+      "historical_source_hash": "8c1b2e02c8403a153b23a257dbeae4245c4fa4de817a878e6ea40154628c78e0",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-245",
+      "fresh_source_hash": "43b6294207f4923a0d303ceddb845d43f8dae86c2d6700866ef714afdd951ac0",
+      "fresh_source_refs": [
+        "C023-S082",
+        "C023-S083"
+      ],
+      "fresh_requirement_text": "因所提供的安全服务出现故障，导致某系统数据丢失，造成重大影响的，违约金惩罚系数为600%。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-253",
+      "historical_source_hash": "43b6294207f4923a0d303ceddb845d43f8dae86c2d6700866ef714afdd951ac0",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-246",
+      "fresh_source_hash": "8d2e6bbf875e6bd277f8dfb59b629aa2296bcbb8fa7917dc5a53bef1663bb74a",
+      "fresh_source_refs": [
+        "C023-S084",
+        "C023-S085"
+      ],
+      "fresh_requirement_text": "因所提供的安全服务出现故障，导致某系统被入侵，造成重大影响的，违约金惩罚系数为600%。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-254",
+      "historical_source_hash": "8d2e6bbf875e6bd277f8dfb59b629aa2296bcbb8fa7917dc5a53bef1663bb74a",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-247",
+      "fresh_source_hash": "766a36e682f1665625e0cc7977d9fa1181afaeafef3ec6743586a1cec1463ac3",
+      "fresh_source_refs": [
+        "C023-S086",
+        "C023-S087"
+      ],
+      "fresh_requirement_text": "在云安全监管服务商已发出整改通知后未正确处置，出现问题并造成重大事故的，违约金惩罚系数为200%。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-255",
+      "historical_source_hash": "766a36e682f1665625e0cc7977d9fa1181afaeafef3ec6743586a1cec1463ac3",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-248",
+      "fresh_source_hash": "aab0a253e535a6f97cca895a7e9d4a56b10d910976427e7cf72174b1f5676abb",
+      "fresh_source_refs": [
+        "C023-S088"
+      ],
+      "fresh_requirement_text": "平均响应时间大于15分钟且小于30分钟，造成重大事故的，违约金惩罚系数为200%。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-256",
+      "historical_source_hash": "aab0a253e535a6f97cca895a7e9d4a56b10d910976427e7cf72174b1f5676abb",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-249",
+      "fresh_source_hash": "26e8f1f9a2709582368d6dd9169ebad513167b3eb090913a6b767380496d5787",
+      "fresh_source_refs": [
+        "C023-S089",
+        "C023-S090"
+      ],
+      "fresh_requirement_text": "运维需求平均响应时间大于30分钟且小于60分钟，造成重大事故的，违约金惩罚系数为200%。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-257",
+      "historical_source_hash": "26e8f1f9a2709582368d6dd9169ebad513167b3eb090913a6b767380496d5787",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-250",
+      "fresh_source_hash": "50937bcfa7f8bb4674833181fa2a86ef89a2262d46c05edee485c450868a2a9a",
+      "fresh_source_refs": [
+        "C023-S091",
+        "C023-S092"
+      ],
+      "fresh_requirement_text": "运维需求平均故障恢复时间大于30分钟且小于60分钟，造成重大影响的，违约金惩罚系数为100%。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-258",
+      "historical_source_hash": "50937bcfa7f8bb4674833181fa2a86ef89a2262d46c05edee485c450868a2a9a",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-251",
+      "fresh_source_hash": "f3803b79aea79aac9f4526ddc192c51e285466c480d633c66c71b1565d477119",
+      "fresh_source_refs": [
+        "C023-S093",
+        "C023-S094"
+      ],
+      "fresh_requirement_text": "运维需求平均故障恢复时间大于60分钟且小于120分钟，造成重大影响的，违约金惩罚系数为200%。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-259",
+      "historical_source_hash": "f3803b79aea79aac9f4526ddc192c51e285466c480d633c66c71b1565d477119",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-252",
+      "fresh_source_hash": "43b35a9d403a23a9587f2c972c33f3e5ae0de7a1b00ff9f4ca53a6ebfaa9b8dc",
+      "fresh_source_refs": [
+        "C023-S095"
+      ],
+      "fresh_requirement_text": "现场无人值守大于1小时且小于2小时，造成重大事故的，违约金惩罚系数为100%。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-260",
+      "historical_source_hash": "43b35a9d403a23a9587f2c972c33f3e5ae0de7a1b00ff9f4ca53a6ebfaa9b8dc",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-253",
+      "fresh_source_hash": "eefd65bd9c6b2a2c197cf3aa3c0b5a88d186cb7e48ec1d272ae92b7107bb0d82",
+      "fresh_source_refs": [
+        "C023-S096"
+      ],
+      "fresh_requirement_text": "现场无人值守大于2小时且小于4小时，造成重大事故的，违约金惩罚系数为200%。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-261",
+      "historical_source_hash": "eefd65bd9c6b2a2c197cf3aa3c0b5a88d186cb7e48ec1d272ae92b7107bb0d82",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-254",
+      "fresh_source_hash": "2f2ce9d4cc2ef8f1aa522bbd9d67a58e94c99230160b0f9cfb3b1192cb362317",
+      "fresh_source_refs": [
+        "C024-S001",
+        "C024-S002"
+      ],
+      "fresh_requirement_text": "所提供的云服务可用性必须达到99.99%，数据可用性必须达到99.9999%。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-255",
+      "fresh_source_hash": "5054cff81f9dabc26010c3ba98d0eb6a6b92d153aa1ac76e06630afe70b56c41",
+      "fresh_source_refs": [
+        "C024-S007",
+        "C024-S008",
+        "C024-S009"
+      ],
+      "fresh_requirement_text": "在运营期间，甲方对乙方实施月度考核，如乙方连续3次未能通过考核，经限期整改后仍不能达到甲方要求的，将受到惩罚。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-264",
+      "historical_source_hash": "5054cff81f9dabc26010c3ba98d0eb6a6b92d153aa1ac76e06630afe70b56c41",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-256",
+      "fresh_source_hash": "9c1f54192da52af32b6d10072837b232e994be28c10f8148e3df454e932360c7",
+      "fresh_source_refs": [
+        "C024-S010",
+        "C024-S011",
+        "C024-S012",
+        "C024-S013",
+        "C024-S014"
+      ],
+      "fresh_requirement_text": "在运营期内，乙方必须按照用户方的扩容需求，在7个自然日内完成云平台的资源扩容；如未能完成且经管理单位书面通知仍未能限期满足用户需求的，将受到惩罚。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-265",
+      "historical_source_hash": "9c1f54192da52af32b6d10072837b232e994be28c10f8148e3df454e932360c7",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-257",
+      "fresh_source_hash": "a3253e9829b4a803a57182a9a1d0e81f090bc367d44c1cfee4e7cba0f5e3925c",
+      "fresh_source_refs": [
+        "C024-S015",
+        "C024-S016"
+      ],
+      "fresh_requirement_text": "因所提供的云服务或安全服务出现故障，造成某系统宕机2小时以上的，将受到惩罚。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-266",
+      "historical_source_hash": "a3253e9829b4a803a57182a9a1d0e81f090bc367d44c1cfee4e7cba0f5e3925c",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-258",
+      "fresh_source_hash": "a9a8525af1adb9ce4d9c75e7135b89553505793be25d89e3d8efd707e207b853",
+      "fresh_source_refs": [
+        "C024-S017",
+        "C024-S018"
+      ],
+      "fresh_requirement_text": "因所提供的云服务或安全服务出现故障，造成某系统连续宕机3次以上或累计8小时以上的，将受到惩罚。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-267",
+      "historical_source_hash": "a9a8525af1adb9ce4d9c75e7135b89553505793be25d89e3d8efd707e207b853",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-259",
+      "fresh_source_hash": "3b42c460bc6d246eb2955b690d8e29231dc58a78826615500981407e4913facd",
+      "fresh_source_refs": [
+        "C024-S020",
+        "C024-S021",
+        "C024-S022"
+      ],
+      "fresh_requirement_text": "在云安全监管服务商已发出整改通知后未正确处置，出现问题的，未造成重大影响的，将受到惩罚。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-268",
+      "historical_source_hash": "3b42c460bc6d246eb2955b690d8e29231dc58a78826615500981407e4913facd",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-260",
+      "fresh_source_hash": "b257cd73d44b4dc8a0e63266970e7745276e8e597e0df4f341ff3d4d9f5758fb",
+      "fresh_source_refs": [
+        "C024-S023",
+        "C024-S024",
+        "C024-S025"
+      ],
+      "fresh_requirement_text": "运维需求平均响应时间大于15分钟且小于30分钟，出现问题但未造成重大影响的，将受到惩罚。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-269",
+      "historical_source_hash": "b257cd73d44b4dc8a0e63266970e7745276e8e597e0df4f341ff3d4d9f5758fb",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-261",
+      "fresh_source_hash": "2a70eac77924178d995d17806719198d9fcc422f08a6d0f9b0b779ebcf14338d",
+      "fresh_source_refs": [
+        "C024-S026",
+        "C024-S027",
+        "C024-S028"
+      ],
+      "fresh_requirement_text": "运维需求平均响应时间大于30分钟且小于60分钟，出现问题但未造成重大影响的，将受到惩罚。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-270",
+      "historical_source_hash": "2a70eac77924178d995d17806719198d9fcc422f08a6d0f9b0b779ebcf14338d",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-262",
+      "fresh_source_hash": "0a0a9a76ef7792de4b7d6e6a985381ee24563ac46897b654009af166886542eb",
+      "fresh_source_refs": [
+        "C024-S029",
+        "C024-S030",
+        "C024-S031"
+      ],
+      "fresh_requirement_text": "运维需求平均故障恢复时间大于30分钟且小于60分钟，出现问题但未造成重大影响的，将受到惩罚。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-271",
+      "historical_source_hash": "0a0a9a76ef7792de4b7d6e6a985381ee24563ac46897b654009af166886542eb",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-263",
+      "fresh_source_hash": "a8425dde13a4670a61a9c9da6f34df92aa9b9d093d9c60ca438e50efac97705b",
+      "fresh_source_refs": [
+        "C024-S032",
+        "C024-S033",
+        "C024-S034"
+      ],
+      "fresh_requirement_text": "运维需求平均故障恢复时间大于60分钟且小于120分钟，出现问题但未造成重大影响的，将受到惩罚。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-272",
+      "historical_source_hash": "a8425dde13a4670a61a9c9da6f34df92aa9b9d093d9c60ca438e50efac97705b",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-264",
+      "fresh_source_hash": "a9302ea03596a681e660a0649a7cf8e261ec2240923b5b6a3f26f7b89b761d66",
+      "fresh_source_refs": [
+        "C024-S036",
+        "C024-S037",
+        "C024-S038"
+      ],
+      "fresh_requirement_text": "现场无人值守大于1小时且小于2小时，出现问题但未造成重大影响的，将受到惩罚。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-273",
+      "historical_source_hash": "a9302ea03596a681e660a0649a7cf8e261ec2240923b5b6a3f26f7b89b761d66",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-265",
+      "fresh_source_hash": "970ab9a5dfc051b15445f4a7e4e2260846448397aae87cf6afe2e5ff2c8a5d21",
+      "fresh_source_refs": [
+        "C024-S039",
+        "C024-S040",
+        "C024-S041"
+      ],
+      "fresh_requirement_text": "现场无人值守大于2小时且小于4小时，出现问题但未造成重大影响的，将受到惩罚。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-274",
+      "historical_source_hash": "970ab9a5dfc051b15445f4a7e4e2260846448397aae87cf6afe2e5ff2c8a5d21",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-266",
+      "fresh_source_hash": "b64636683990cfcb77a544d33fde3e59170408531324a2eafc8c1bbf1ed0f82b",
+      "fresh_source_refs": [
+        "C024-S051",
+        "C024-S052"
+      ],
+      "fresh_requirement_text": "乙方必须遵守甲方的各项规章制度，严格按照工作规范组织进行市级政务云基础服务实施工作，制定切实可行的措施保障人员安全、设备安全、生产安全。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-275",
+      "historical_source_hash": "b64636683990cfcb77a544d33fde3e59170408531324a2eafc8c1bbf1ed0f82b",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-267",
+      "fresh_source_hash": "d85abc9eaef28a492333c995cd7e2a18e33b7ec3ac02ed610709bf180e18a2c1",
+      "fresh_source_refs": [
+        "C024-S053",
+        "C024-S054"
+      ],
+      "fresh_requirement_text": "乙方必须制定合理的措施对运维/服务人员进行管理和思想教育，加强保密意识、安全生产意识。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-276",
+      "historical_source_hash": "d85abc9eaef28a492333c995cd7e2a18e33b7ec3ac02ed610709bf180e18a2c1",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-268",
+      "fresh_source_hash": "ea3cadad048914f086e51db721fc2f4b830dd3ebda4da903d7369665c1ebe0f9",
+      "fresh_source_refs": [
+        "C024-S075",
+        "C024-S076",
+        "C024-S077"
+      ],
+      "fresh_requirement_text": "乙方保证对所获悉的甲方保密信息按照下列规定进行保密，并在缺少相关保密条款约定时，应至少采取适用于对自己的保密信息同样的保护措施和审慎程度进行保密：一、仅将本协议项下保密信息使用于与市级政务云基础服务有关的用途；二、除直接参与市级政务云基础服务的人员之外，不得将保密信息透露给其他无关人员和任何第三方；三、不能将甲方保密信息的全部或部分进行发布、传播、复制或仿造；四、甲方应告知并以适当的方式要求其直接参与市级政务云基础服务的人员，按照本协议规定保守保密信息。如乙方工作人员违反本协议规定，泄露甲方保密信息的，乙方应承担违约责任；五、乙方不能利用获悉信息为自己或其他方开发信息、技术和产品、或与甲方的产品进行竞争；六、未经甲方书面许可并采取加密措施，不得擅自将载有保密信息的任何文档、图纸、资料、磁盘、胶片等介质，带离甲方工作场所；七、对于用户数据和服务结果数据的保管、访问，乙方无关人员不能访问；必须访问的人员，乙方要进行严格的访问控制；管理用户数据的人员应由乙方严格筛选；八、对于甲方提供给乙方使用的任何资源，如网络、NOTES等，乙方都只能将其用于市级政务云基础服务工作，而不能用于其他目的，特别是从事侵害甲方利益的活动。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-278",
+      "historical_source_hash": "ea3cadad048914f086e51db721fc2f4b830dd3ebda4da903d7369665c1ebe0f9",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-269",
+      "fresh_source_hash": "055e39010c4fae6419cfc0e60b1eb317d7e686bb9d329edd606ee2f8eb4d3344",
+      "fresh_source_refs": [
+        "C024-S093",
+        "C024-S094"
+      ],
+      "fresh_requirement_text": "市级政务云基础服务终止后，乙方应按照甲方的要求对相关保密信息做相应处理，比如销毁或其他处理方式。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-286",
+      "historical_source_hash": "055e39010c4fae6419cfc0e60b1eb317d7e686bb9d329edd606ee2f8eb4d3344",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-270",
+      "fresh_source_hash": "7615094cb21e6171ced042e0422ca01c2e9a66f6af70f257e678df4da925ee3d",
+      "fresh_source_refs": [
+        "C026-S003",
+        "C026-S004",
+        "C026-S005"
+      ],
+      "fresh_requirement_text": "投标人应按照第七章规定的顺序编制投标文件（资格证明文件）和投标文件（商务技术文件），编制中涉及格式资料的，应按照本部分提供的内容和格式（所有表格的格式可扩展）填写提交。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-288",
+      "historical_source_hash": "7615094cb21e6171ced042e0422ca01c2e9a66f6af70f257e678df4da925ee3d",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-271",
+      "fresh_source_hash": "b19b1f4a8faee2b6699d8395596197d76c057759c53a032c2273da4a5bad2f1b",
+      "fresh_source_refs": [
+        "C026-S006",
+        "C026-S007",
+        "C026-S008",
+        "C026-S009"
+      ],
+      "fresh_requirement_text": "对于招标文件中标记了“实质性格式”的文件，投标人不得改变格式中给定的文字所表达的含义，不得删减格式中的实质性内容，不得自行添加与格式中给定的文字内容相矛盾的内容，不得对应当填写的空格不填写或不实质性响应，否则投标无效。未标记“实质性格式”的文件和招标文件未提供格式的内容，可由投标人自行编写。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-289",
+      "historical_source_hash": "b19b1f4a8faee2b6699d8395596197d76c057759c53a032c2273da4a5bad2f1b",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-272",
+      "fresh_source_hash": "a4e3de1cd5523ea75e81d4304c88dd18758c0e088a2aee91c8fd29b6906a7cc6",
+      "fresh_source_refs": [
+        "C026-S010"
+      ],
+      "fresh_requirement_text": "投标人全部声明和问题的回答及所附材料必须是真实的、准确的和完整的。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-290",
+      "historical_source_hash": "a4e3de1cd5523ea75e81d4304c88dd18758c0e088a2aee91c8fd29b6906a7cc6",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-273",
+      "fresh_source_hash": "04f0f1c842b90f5d2d369505ddd886d65afccba70a4375f2d5108b1cc5703fec",
+      "fresh_source_refs": [
+        "C026-S020",
+        "C026-S021",
+        "C026-S022",
+        "C026-S023"
+      ],
+      "fresh_requirement_text": "投标人应满足《中华人民共和国政府采购法》第二十二条规定，并提供营业执照等证明文件及投标人资格声明书。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-274",
+      "fresh_source_hash": "77b18f329f79591605585d3b3535460b48c6e72846e6cba2878ecc4ad86bf672",
+      "fresh_source_refs": [
+        "C026-S024",
+        "C026-S025",
+        "C026-S026",
+        "C026-S027",
+        "C026-S028",
+        "C026-S029",
+        "C026-S030",
+        "C026-S031",
+        "C026-S032",
+        "C026-S033",
+        "C026-S034",
+        "C026-S035",
+        "C026-S036",
+        "C026-S037",
+        "C026-S038",
+        "C026-S039",
+        "C026-S040",
+        "C026-S041",
+        "C026-S042",
+        "C026-S043",
+        "C026-S044",
+        "C026-S045",
+        "C026-S046"
+      ],
+      "fresh_requirement_text": "投标人应提交投标人资格声明书，承诺具有良好的商业信誉和健全的财务会计制度；具有履行合同所必需的设备和专业技术能力；有依法缴纳税收和社会保障资金的良好记录；参加政府采购活动前三年内，在经营活动中没有重大违法记录；不属于政府采购法律、行政法规规定的公益一类事业单位或使用事业编制且由财政拨款保障的群团组织（仅适用于政府购买服务项目）；不存在为采购项目提供整体设计、规范编制或者项目管理、监理、检测等服务后，再参加该采购项目的其他采购活动的情形（单一来源采购项目除外）；并填写与其他存在“单位负责人为同一人或者存在直接控股、管理关系”的其他法人单位信息（如有）。上述声明真实有效，否则我方负全部责任。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-275",
+      "fresh_source_hash": "cf617b9cf5d8370a8dd86ec8fa8a88bf24508e423bcc85a38780db9b80ab92cd",
+      "fresh_source_refs": [
+        "C026-S047",
+        "C026-S048"
+      ],
+      "fresh_requirement_text": "投标人应在投标人资格声明书上加盖公章并填写日期。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-276",
+      "fresh_source_hash": "a4cfe48f393946a98f48120df2eaa971626a59586c223ea45afdc1dadfca44e2",
+      "fresh_source_refs": [
+        "C026-S059",
+        "C026-S060",
+        "C026-S061"
+      ],
+      "fresh_requirement_text": "如本项目（包）专门面向中小企业采购，投标文件中须提供《中小企业声明函》或《残疾人福利性单位声明函》或由省级以上监狱管理局、戒毒管理局（含新疆生产建设兵团）出具的属于监狱企业的证明文件，且建议在资格证明文件部分提供。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-293",
+      "historical_source_hash": "a4cfe48f393946a98f48120df2eaa971626a59586c223ea45afdc1dadfca44e2",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-277",
+      "fresh_source_hash": "12839265ac46b4809cd969744398b078819eb6e55f0a1612f5e001453eb3bb69",
+      "fresh_source_refs": [
+        "C026-S062",
+        "C026-S063",
+        "C026-S064",
+        "C026-S065",
+        "C026-S066",
+        "C026-S067"
+      ],
+      "fresh_requirement_text": "如本项目（包）预留部分采购项目预算专门面向中小企业采购，且要求获得采购合同的供应商将采购项目中的一定比例分包给一家或者多家中小企业的，如供应商因落实政府采购政策拟进行分包的，投标文件中除须提供《中小企业声明函》或《残疾人福利性单位声明函》或由省级以上监狱管理局、戒毒管理局（含新疆生产建设兵团）出具的属于监狱企业的证明文件，还须同时提供《拟分包情况说明》及《分包意向协议》，且建议在资格证明文件部分提供。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-294",
+      "historical_source_hash": "12839265ac46b4809cd969744398b078819eb6e55f0a1612f5e001453eb3bb69",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-278",
+      "fresh_source_hash": "208bd890fae22f19e4246116a6658ea95ae9a8fe7c668c64bc236169800fb98c",
+      "fresh_source_refs": [
+        "C026-S068",
+        "C026-S069",
+        "C026-S070",
+        "C026-S071",
+        "C026-S072"
+      ],
+      "fresh_requirement_text": "如本项目（包）预留部分采购项目预算专门面向中小企业采购，且要求供应商以联合体形式参加采购活动，如供应商为联合体的，投标文件中除须提供《中小企业声明函》或《残疾人福利性单位声明函》或由省级以上监狱管理局、戒毒管理局（含新疆生产建设兵团）出具的属于监狱企业的证明文件，还须同时提供《联合协议》；上述文件建议在资格证明文件部分提供。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-295",
+      "historical_source_hash": "208bd890fae22f19e4246116a6658ea95ae9a8fe7c668c64bc236169800fb98c",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-279",
+      "fresh_source_hash": "0e24aec284c2f313616110c46fa0ec20d35f3d2343c974ca6685e3c1926deaa4",
+      "fresh_source_refs": [
+        "C026-S074",
+        "C026-S075",
+        "C026-S076",
+        "C026-S077",
+        "C026-S078"
+      ],
+      "fresh_requirement_text": "《中小企业声明函》由参加政府采购活动的投标人出具；联合体投标的，《中小企业声明函》可由牵头人出具。对于联合体中由中小企业承担的部分，或者分包给中小企业的部分，必须全部由中小企业制造、承建或者承接。供应商应当在声明函“标的名称”部分标明联合体中中小企业承担的具体内容或者中小企业的具体分包内容。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-296",
+      "historical_source_hash": "0e24aec284c2f313616110c46fa0ec20d35f3d2343c974ca6685e3c1926deaa4",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-280",
+      "fresh_source_hash": "d51ca88f96fb69723996fbcbe5491734f401531d9253221547b073a35e8e746d",
+      "fresh_source_refs": [
+        "C026-S079",
+        "C026-S080"
+      ],
+      "fresh_requirement_text": "对于多标的采购项目，投标人应充分、准确地了解所提供货物的制造企业、提供服务的企业信息。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-297",
+      "historical_source_hash": "d51ca88f96fb69723996fbcbe5491734f401531d9253221547b073a35e8e746d",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-281",
+      "fresh_source_hash": "3914045e63d6dc08db572354b4c80a500e3e417064c815f42bbb98c54c666813",
+      "fresh_source_refs": [
+        "C027-S001",
+        "C027-S002",
+        "C027-S003",
+        "C027-S004",
+        "C027-S005",
+        "C027-S006",
+        "C027-S007",
+        "C027-S008"
+      ],
+      "fresh_requirement_text": "投标人应通过工业和信息化部组织开发的中小企业规模类型自测小程序（在国务院客户端和工业和信息化部网站上均有链接）填写所属行业和指标数据，自动生成企业规模类型测试结果；本项目中小企业划分标准所属行业详见第二章《投标人须知资料表》，如在该程序中未找到本项目文件规定的中小企业划分标准所属行业，则按照《关于印发中小企业划型标准规定的通知（工信部联企业﹝2011﹞300 号）》及《金融业企业划型标准规定》（〔2015〕309 号）等国务院批准的中小企业划分标准执行。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-298",
+      "historical_source_hash": "3914045e63d6dc08db572354b4c80a500e3e417064c815f42bbb98c54c666813",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-282",
+      "fresh_source_hash": "d68522a719da72fafcffb3a98fd445dbe4627f777d9620eed42a0c5975429a84",
+      "fresh_source_refs": [
+        "C027-S010",
+        "C027-S011",
+        "C027-S012",
+        "C027-S013",
+        "C027-S014",
+        "C027-S015",
+        "C027-S016",
+        "C027-S017",
+        "C027-S018",
+        "C027-S019",
+        "C027-S020",
+        "C027-S021",
+        "C027-S022",
+        "C027-S023",
+        "C027-S024",
+        "C027-S025",
+        "C027-S026",
+        "C027-S027",
+        "C027-S028"
+      ],
+      "fresh_requirement_text": "投标人（或联合体）应按照《政府采购促进中小企业发展管理办法》（财库﹝2020﹞46 号）的规定，提供《中小企业声明函（货物）》格式，声明参加采购活动提供的货物全部由符合政策要求的中小企业制造，并列出相关企业（含联合体中的中小企业、签订分包意向协议的中小企业）的具体情况，包括标的名称、所属行业、制造商名称、从业人员、营业收入、资产总额（填报上一年度数据，无上一年度数据的新成立企业可不填报），并声明以上企业不属于大企业的分支机构，不存在控股股东为大企业的情形，也不存在与大企业的负责人为同一人的情形；声明函需加盖企业名称章并注明日期，且对声明内容的真实性负责，如有虚假将依法承担相应责任。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-299",
+      "historical_source_hash": "d68522a719da72fafcffb3a98fd445dbe4627f777d9620eed42a0c5975429a84",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-283",
+      "fresh_source_hash": "30f5cec9f528ae061322622d0ec32f9560974632704d1516b9b19d96174f2a4c",
+      "fresh_source_refs": [
+        "C027-S030",
+        "C027-S031",
+        "C027-S032",
+        "C027-S033",
+        "C027-S034",
+        "C027-S035",
+        "C027-S036",
+        "C027-S037",
+        "C027-S038"
+      ],
+      "fresh_requirement_text": "投标人（或联合体）应按照《政府采购促进中小企业发展管理办法》（财库﹝2020﹞46 号）的规定，提供《中小企业声明函（工程、服务）》格式，声明工程的施工单位全部为符合政策要求的中小企业（或者服务全部由符合政策要求的中小企业承接），并列出相关企业（含联合体中的中小企业、签订分包意向协议的中小企业）的具体情况，包括标的名称、所属行业、承建（承接）企业名称、从业人员、营业收入、资产总额（填报上一年度数据，无上一年度数据的新成立企业可不填报），并声明以上企业不属于大企业的分支机构，不存在控股股东为大企业的情形，也不存在与大企业的负责人为同一人的情形；声明函需加盖企业名称章并注明日期，且对声明内容的真实性负责，如有虚假将依法承担相应责任。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-300",
+      "historical_source_hash": "30f5cec9f528ae061322622d0ec32f9560974632704d1516b9b19d96174f2a4c",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-284",
+      "fresh_source_hash": "86e79a6ec4575dc458ffed8a7d3f4419632f361fd4f6b09fe2ea892ebf313665",
+      "fresh_source_refs": [
+        "C028-S001",
+        "C028-S002",
+        "C028-S003",
+        "C028-S004",
+        "C028-S005",
+        "C028-S006",
+        "C028-S007"
+      ],
+      "fresh_requirement_text": "投标人须填写《中小企业声明函》，声明其属于采购文件中明确的所属行业，并填写从业人员、营业收入、资产总额等上一年度数据（无上一年度数据的新成立企业可不填报），声明不属于大企业的分支机构、不存在控股股东为大企业的情形、不存在与大企业的负责人为同一人的情形，并对声明内容的真实性负责，如有虚假将依法承担相应责任。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-301",
+      "historical_source_hash": "86e79a6ec4575dc458ffed8a7d3f4419632f361fd4f6b09fe2ea892ebf313665",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-285",
+      "fresh_source_hash": "6a5bd5b966e042c13b07b136112b1ca6b0ca361593a4150e278fc9ddb46060b0",
+      "fresh_source_refs": [
+        "C028-S012",
+        "C028-S013",
+        "C028-S014",
+        "C028-S015",
+        "C028-S016",
+        "C028-S017",
+        "C028-S018",
+        "C028-S019",
+        "C028-S020",
+        "C028-S021"
+      ],
+      "fresh_requirement_text": "投标人须填写《残疾人福利性单位声明函》，根据财库〔2017〕141号规定，声明本单位是否属于符合条件的残疾人福利性单位，若属于则须声明参加采购活动提供本单位制造的货物或服务，并对声明真实性负责，如有虚假将依法承担相应责任。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-286",
+      "fresh_source_hash": "726079ec9522ae6ddd0d1e9c53b8e80e42f2aa9292b07c8682149ac6b7d0c2ec",
+      "fresh_source_refs": [
+        "C028-S023",
+        "C028-S024",
+        "C028-S025",
+        "C028-S026",
+        "C028-S027",
+        "C028-S028",
+        "C028-S029",
+        "C028-S030",
+        "C028-S031",
+        "C028-S032",
+        "C028-S033",
+        "C028-S034",
+        "C028-S035",
+        "C028-S036",
+        "C028-S037",
+        "C028-S038",
+        "C028-S039",
+        "C028-S040",
+        "C028-S041",
+        "C028-S042",
+        "C028-S043",
+        "C028-S044",
+        "C028-S045",
+        "C028-S046",
+        "C028-S047",
+        "C028-S048",
+        "C028-S049",
+        "C028-S050",
+        "C028-S051",
+        "C028-S052",
+        "C028-S053",
+        "C028-S054",
+        "C028-S055",
+        "C028-S056",
+        "C028-S057",
+        "C028-S058",
+        "C028-S059",
+        "C028-S060"
+      ],
+      "fresh_requirement_text": "投标人须填写《拟分包情况说明》，列明拟分包承担主体的名称、类型、资质等级、拟分包合同内容、金额及占采购包合同金额的比例，并承诺一旦中标将按所列情况分包且分包承担主体不再次分包；若招标文件载明分包承担主体应具备相应资质条件，则须列明资质等级并后附资质证书电子件，否则投标无效。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-287",
+      "fresh_source_hash": "1cdabc9a1f0791b897bfe972b24c281216c99f2c8d23da14a5eda5840972812b",
+      "fresh_source_refs": [
+        "C028-S062",
+        "C028-S063",
+        "C028-S064",
+        "C028-S065",
+        "C028-S066",
+        "C028-S067",
+        "C028-S068",
+        "C028-S069",
+        "C028-S070",
+        "C028-S071",
+        "C028-S072",
+        "C028-S073",
+        "C028-S074",
+        "C028-S075",
+        "C028-S076",
+        "C028-S077"
+      ],
+      "fresh_requirement_text": "投标人须与所有拟分包单位分别签订《分包意向协议》，每单位一份，并在投标文件中提交全部协议原件的电子件；该协议仅在投标人为落实政府采购政策而向中小企业分包时必须提供，否则投标无效。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-304",
+      "historical_source_hash": "1cdabc9a1f0791b897bfe972b24c281216c99f2c8d23da14a5eda5840972812b",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-288",
+      "fresh_source_hash": "4c05d6e52836cdf1592e45d1dca1cd29f0cd6473d553456bcb2e9029f40c33f5",
+      "fresh_source_refs": [
+        "C028-S082",
+        "C028-S083",
+        "C028-S084",
+        "C028-S085",
+        "C028-S086",
+        "C028-S087",
+        "C028-S088",
+        "C028-S089",
+        "C028-S090",
+        "C028-S091",
+        "C028-S092",
+        "C028-S093",
+        "C028-S094",
+        "C028-S095",
+        "C028-S096",
+        "C028-S097",
+        "C028-S098",
+        "C028-S099"
+      ],
+      "fresh_requirement_text": "投标人如组成联合体投标，须提交《联合协议》，明确联合体牵头人及各成员单位，约定联合体中标后共同与采购人签订合同并对采购合同约定事项承担连带责任，同意由牵头人代表其他成员出具《授权委托书》，明确各成员负责的工作范围、内容（以投标文件及合同为准），并填写联合协议合同总额及各成员分摊比例，同时声明各成员的企业类型（大型、中型、小微企业等）及合同金额。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-289",
+      "fresh_source_hash": "155441a188d29296ef32b478ccc0899dafeb9f3cff7b5125b8ad34f1fb7b7f8c",
+      "fresh_source_refs": [
+        "C029-S005",
+        "C029-S006"
+      ],
+      "fresh_requirement_text": "以联合体形式参加政府采购活动的，联合体各方不得再单独参加或者与其他供应商另外组成联合体参加同一合同项下的政府采购活动。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-306",
+      "historical_source_hash": "155441a188d29296ef32b478ccc0899dafeb9f3cff7b5125b8ad34f1fb7b7f8c",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-290",
+      "fresh_source_hash": "f391863dce97e6d3e74d31934cb6a56a1188647882a6138368f9463e4adc70e5",
+      "fresh_source_refs": [
+        "C029-S017",
+        "C029-S018"
+      ],
+      "fresh_requirement_text": "如本项目（包）接受供应商以联合体形式参加采购活动，且供应商以联合体形式参与时，须提供《联合协议》，否则投标无效。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-307",
+      "historical_source_hash": "f391863dce97e6d3e74d31934cb6a56a1188647882a6138368f9463e4adc70e5",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-291",
+      "fresh_source_hash": "0cf8fbb2b95d0639ddf9e400d7dbf061f6750f5d5d0ee03dd68aff0879eea4c8",
+      "fresh_source_refs": [
+        "C029-S019"
+      ],
+      "fresh_requirement_text": "联合体各方成员须在本协议上共同盖章。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-308",
+      "historical_source_hash": "0cf8fbb2b95d0639ddf9e400d7dbf061f6750f5d5d0ee03dd68aff0879eea4c8",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-292",
+      "fresh_source_hash": "0f7964f9488ef6cd78c3c32310dc1b2bdb9b2418dac55b60b1748671f6cf7d5b",
+      "fresh_source_refs": [
+        "C029-S037"
+      ],
+      "fresh_requirement_text": "本投标有效期为自提交投标文件的截止之日起180个日历日。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-309",
+      "historical_source_hash": "0f7964f9488ef6cd78c3c32310dc1b2bdb9b2418dac55b60b1748671f6cf7d5b",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-293",
+      "fresh_source_hash": "ef6c25a3409c68a334ce8fbee44224dd86a0b0c268648f8cdedd2202ffab1fbb",
+      "fresh_source_refs": [
+        "C029-S038"
+      ],
+      "fresh_requirement_text": "除合同条款及采购需求偏离表列出的偏离外，我方响应招标文件的全部要求。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-310",
+      "historical_source_hash": "ef6c25a3409c68a334ce8fbee44224dd86a0b0c268648f8cdedd2202ffab1fbb",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-294",
+      "fresh_source_hash": "d30b3ff3253030bb7db07a9541a9b7748f096ff3829b9e3299b6becf865f1791",
+      "fresh_source_refs": [
+        "C029-S039"
+      ],
+      "fresh_requirement_text": "我方已提供的全部文件资料是真实、准确的，并对此承担一切法律后果。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-311",
+      "historical_source_hash": "d30b3ff3253030bb7db07a9541a9b7748f096ff3829b9e3299b6becf865f1791",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-295",
+      "fresh_source_hash": "460f4e88088043bc57a5f353110a09500457112aff7a18a8ca74b134b021cf64",
+      "fresh_source_refs": [
+        "C029-S040",
+        "C029-S041"
+      ],
+      "fresh_requirement_text": "如我方中标，我方将在法律规定的期限内与你方签订合同，按照招标文件要求提交履约保证金，并在合同约定的期限内完成合同规定的全部义务。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-312",
+      "historical_source_hash": "460f4e88088043bc57a5f353110a09500457112aff7a18a8ca74b134b021cf64",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-296",
+      "fresh_source_hash": "e3ea4f8971ec908bc4a66dc7b5829429b72a20c7f0e0219f8f37f65a4fca06c3",
+      "fresh_source_refs": [
+        "C029-S046"
+      ],
+      "fresh_requirement_text": "投标人名称（加盖公章）___________",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-297",
+      "fresh_source_hash": "c7c134364f993eabda6fbc30affb66b165ac3bff142bfc2a106954d6d2807efc",
+      "fresh_source_refs": [
+        "C029-S055"
+      ],
+      "fresh_requirement_text": "委托期限：自本授权委托书签署之日起至投标有效期届满之日止。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-298",
+      "fresh_source_hash": "b1c4e38438ca2a413f423a5cf03a702ccbc0b65e91332a01fb99a2dc36f52aaa",
+      "fresh_source_refs": [
+        "C029-S056"
+      ],
+      "fresh_requirement_text": "代理人无转委托权。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-299",
+      "fresh_source_hash": "ce59d704a3da1b0cfe19e44cde7b7ca0c123020c5e1eddc6dad372926ee33a4e",
+      "fresh_source_refs": [
+        "C029-S057"
+      ],
+      "fresh_requirement_text": "投标人名称（加盖公章）：________________",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-300",
+      "fresh_source_hash": "6b500c8597c526508e29372fa18d6a8d6443b704c88eff244f388a1468684e6a",
+      "fresh_source_refs": [
+        "C029-S058"
+      ],
+      "fresh_requirement_text": "法定代表人（单位负责人）（签字或签章）：________________",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-301",
+      "fresh_source_hash": "1df2c8f9954900f68c609a7d35e6181e8cac2d7311e9ca571210d179e660cfa0",
+      "fresh_source_refs": [
+        "C029-S059"
+      ],
+      "fresh_requirement_text": "委托代理人（签字或签章）：________________",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-302",
+      "fresh_source_hash": "86e587299dc4ff2c4eb115760e0d1ec90d212030c50736e36bcdc478db4b4cb9",
+      "fresh_source_refs": [
+        "C029-S061"
+      ],
+      "fresh_requirement_text": "附：法定代表人（单位负责人）及委托代理人身份证明文件电子件",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-314",
+      "historical_source_hash": "86e587299dc4ff2c4eb115760e0d1ec90d212030c50736e36bcdc478db4b4cb9",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-303",
+      "fresh_source_hash": "dafb7325f7fb1fdb314acde6c43e13afb512c6262af137d9ce4f6dd3331f9739",
+      "fresh_source_refs": [
+        "C029-S063",
+        "C029-S064"
+      ],
+      "fresh_requirement_text": "若供应商为事业单位或其他组织或分支机构，则法定代表人（单位负责人）处的签署人可为单位负责人。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-304",
+      "fresh_source_hash": "17c721c75ebad87ceef3bdc5392ba0e978672b0d4a1c73afaed43329d3e4b1d9",
+      "fresh_source_refs": [
+        "C029-S065",
+        "C029-S066",
+        "C029-S067"
+      ],
+      "fresh_requirement_text": "若投标文件中签字之处均为法定代表人（单位负责人）本人签署，则可不提供本《授权委托书》，但须提供《法定代表人（单位负责人）身份证明》；否则，不需要提供《法定代表人（单位负责人）身份证明》。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-305",
+      "fresh_source_hash": "22583cc003de66e77a5e4ac4d42ac88b297faed02e178cb900777d6cf9540019",
+      "fresh_source_refs": [
+        "C029-S068"
+      ],
+      "fresh_requirement_text": "供应商为自然人的情形，可不提供本《授权委托书》。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-306",
+      "fresh_source_hash": "0b6bc92d35b75b120c2ad3d8505c131f83f49ed4e8e47014c8de22da4e6c8270",
+      "fresh_source_refs": [
+        "C030-S001",
+        "C030-S002",
+        "C030-S003"
+      ],
+      "fresh_requirement_text": "供应商应随本《授权委托书》同时提供法定代表人（单位负责人）及委托代理人的有效的身份证或护照等身份证明文件电子件；提供身份证的，应同时提供身份证双面电子件。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-316",
+      "historical_source_hash": "0b6bc92d35b75b120c2ad3d8505c131f83f49ed4e8e47014c8de22da4e6c8270",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-307",
+      "fresh_source_hash": "cdbb5d4139f17f7efbbaeb87bbe0ff8b1a7ae6f875a3b8e8d0b8de7edc5dff7d",
+      "fresh_source_refs": [
+        "C030-S005",
+        "C030-S006",
+        "C030-S007",
+        "C030-S008",
+        "C030-S009",
+        "C030-S010",
+        "C030-S011",
+        "C030-S012",
+        "C030-S013"
+      ],
+      "fresh_requirement_text": "投标人应提供《法定代表人（单位负责人）身份证明》，内容包括姓名、性别、年龄、职务，并附法定代表人（单位负责人）身份证或护照等身份证明文件电子件，且投标人名称处加盖公章、法定代表人（单位负责人）签字或签章，并填写日期。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-317",
+      "historical_source_hash": "cdbb5d4139f17f7efbbaeb87bbe0ff8b1a7ae6f875a3b8e8d0b8de7edc5dff7d",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-308",
+      "fresh_source_hash": "ab86ec14de3c83dd6c3a0bff1ad8e6d9c5b738104a8cc405b366812846026161",
+      "fresh_source_refs": [
+        "C030-S015",
+        "C030-S016",
+        "C030-S017",
+        "C030-S018",
+        "C030-S019",
+        "C030-S020",
+        "C030-S021",
+        "C030-S022",
+        "C030-S023",
+        "C030-S024",
+        "C030-S025",
+        "C030-S026",
+        "C030-S027",
+        "C030-S028",
+        "C030-S029",
+        "C030-S030",
+        "C030-S031",
+        "C030-S032",
+        "C030-S033",
+        "C030-S034",
+        "C030-S035",
+        "C030-S036",
+        "C030-S037",
+        "C030-S038",
+        "C030-S039",
+        "C030-S040",
+        "C030-S041",
+        "C030-S042",
+        "C030-S043",
+        "C030-S044",
+        "C030-S045",
+        "C030-S046",
+        "C030-S047",
+        "C030-S048",
+        "C030-S049",
+        "C030-S050",
+        "C030-S051",
+        "C030-S052",
+        "C030-S053",
+        "C030-S054",
+        "C030-S055",
+        "C030-S056",
+        "C030-S057",
+        "C030-S058",
+        "C030-S059",
+        "C030-S060"
+      ],
+      "fresh_requirement_text": "投标人应按招标文件要求填写投标分项报价表（实质性格式），按包分别填写，报价单位为人民币元，并包括分项名称、制造商、产地/国别、制造商统一社会信用代码、制造商规模、制造商绝对所有权拥有者所属性别、外商投资类型、品牌、规格型号、单价、数量、合价及总价；如果不提供分项报价将视为没有实质性响应招标文件。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-309",
+      "fresh_source_hash": "80f6b3ad4f090a986caf191fcbb600a857f0864a93b3bb2f73be7bf2b1e8d6be",
+      "fresh_source_refs": [
+        "C030-S045",
+        "C030-S046",
+        "C030-S047",
+        "C030-S048",
+        "C030-S049",
+        "C030-S050",
+        "C030-S051",
+        "C030-S052",
+        "C030-S053",
+        "C030-S054",
+        "C030-S055",
+        "C030-S056",
+        "C030-S057",
+        "C030-S058",
+        "C030-S059",
+        "C030-S060",
+        "C030-S061",
+        "C030-S062",
+        "C030-S063",
+        "C030-S064",
+        "C030-S065",
+        "C030-S066"
+      ],
+      "fresh_requirement_text": "投标人在投标分项报价表中填写制造商规模时应填写“大型”、“中型”、“小型”、“微型”或“其他”，且不应与《中小企业声明函》或《拟分包情况说明》中内容矛盾；制造商绝对所有权拥有者所属性别应填写“男”或“女”，指拥有制造商51%以上绝对所有权的性别，绝对所有权拥有者可以是一个人，也可以是多人合计计算；外商投资类型应填写“外商单独投资”、“外商部分投资”或“内资”。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-310",
+      "fresh_source_hash": "9a67f0d47bb1eefddb7d74a8bd3818fc90999dfe671feafbef60bc456322f844",
+      "fresh_source_refs": [
+        "C030-S070",
+        "C030-S071",
+        "C030-S072",
+        "C030-S073",
+        "C030-S074",
+        "C030-S075",
+        "C030-S076",
+        "C030-S077",
+        "C030-S078",
+        "C030-S079",
+        "C030-S080",
+        "C030-S081",
+        "C030-S082"
+      ],
+      "fresh_requirement_text": "投标人应填写合同条款偏离表（实质性格式），对本项目合同条款的偏离情况进行选择；未选择投标无效；如有偏离，应在本表中对负偏离项逐一列明，否则投标无效；偏离情况应据实填写“正偏离”或“负偏离”；投标人名称处加盖公章并填写日期。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-320",
+      "historical_source_hash": "9a67f0d47bb1eefddb7d74a8bd3818fc90999dfe671feafbef60bc456322f844",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-311",
+      "fresh_source_hash": "f0d611f7ab2a5701848f7d18b1d95e20c5fb6fee550cc693979677357d6fe384",
+      "fresh_source_refs": [
+        "C030-S084",
+        "C030-S085",
+        "C030-S086",
+        "C030-S087",
+        "C030-S088",
+        "C030-S089",
+        "C030-S090",
+        "C030-S091"
+      ],
+      "fresh_requirement_text": "投标人应填写采购需求偏离表（实质性格式），对招标文件中的所有商务、技术要求，除本表所列明的所有偏离外，均视作供应商已对之理解和响应；此表中若无任何文字说明，内容为空白的，投标无效。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-321",
+      "historical_source_hash": "f0d611f7ab2a5701848f7d18b1d95e20c5fb6fee550cc693979677357d6fe384",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-312",
+      "fresh_source_hash": "2381c458e980581aa068329074d9a276ccf3111a5949e9af10f2f0522ed91ffa",
+      "fresh_source_refs": [
+        "C031-S001"
+      ],
+      "fresh_requirement_text": "“偏离情况”列应据实填写“无偏离”、“正偏离”或“负偏离”。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-322",
+      "historical_source_hash": "2381c458e980581aa068329074d9a276ccf3111a5949e9af10f2f0522ed91ffa",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-313",
+      "fresh_source_hash": "cf617b9cf5d8370a8dd86ec8fa8a88bf24508e423bcc85a38780db9b80ab92cd",
+      "fresh_source_refs": [
+        "C031-S002",
+        "C031-S003"
+      ],
+      "fresh_requirement_text": "投标文件需加盖投标人公章并填写日期。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-314",
+      "fresh_source_hash": "a708dab09236b108b8643296da16ab51cb4fb129a826a976c15a1eaad3119aa3",
+      "fresh_source_refs": [
+        "C031-S007",
+        "C031-S008",
+        "C031-S009",
+        "C031-S010"
+      ],
+      "fresh_requirement_text": "中小企业参加政府采购活动，应当出具《中小企业声明函》或《残疾人福利性单位声明函》或由省级以上监狱管理局、戒毒管理局（含新疆生产建设兵团）出具的属于监狱企业的证明文件，以证明中小企业身份；《中小企业声明函》由参加政府采购活动的投标人出具，联合体投标的，《中小企业声明函》可由牵头人出具。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-315",
+      "fresh_source_hash": "9c82a630029502dd47ade0670c1dd66ef12a4814c870289254042f5caae787cd",
+      "fresh_source_refs": [
+        "C031-S011",
+        "C031-S012",
+        "C031-S013"
+      ],
+      "fresh_requirement_text": "对于联合体中由中小企业承担的部分，或者分包给中小企业的部分，必须全部由中小企业制造、承建或者承接；供应商应当在声明函“标的名称”部分标明联合体中中小企业承担的具体内容或者中小企业的具体分包内容。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-316",
+      "fresh_source_hash": "d51ca88f96fb69723996fbcbe5491734f401531d9253221547b073a35e8e746d",
+      "fresh_source_refs": [
+        "C031-S014",
+        "C031-S015"
+      ],
+      "fresh_requirement_text": "对于多标的采购项目，投标人应充分、准确地了解所提供货物的制造企业、提供服务的承接企业信息。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-317",
+      "fresh_source_hash": "6dbd0373626bf7d86c23ed8dfb1e569ab72b5364523b00feeddce8983eef5ba8",
+      "fresh_source_refs": [
+        "C031-S024",
+        "C031-S025",
+        "C031-S026",
+        "C031-S027",
+        "C031-S028",
+        "C031-S029",
+        "C031-S030",
+        "C031-S031",
+        "C031-S032",
+        "C031-S033",
+        "C031-S034",
+        "C031-S035",
+        "C031-S036",
+        "C031-S037",
+        "C031-S038",
+        "C031-S039",
+        "C031-S040",
+        "C031-S041"
+      ],
+      "fresh_requirement_text": "中小企业声明函（货物）格式要求：本公司（联合体）郑重声明，根据《政府采购促进中小企业发展管理办法》（财库﹝2020﹞46号）的规定，参加（单位名称）的（项目名称）采购活动，提供的货物全部由符合政策要求的中小企业制造；相关企业（含联合体中的中小企业、签订分包意向协议的中小企业）的具体情况需列明标的名称、所属行业、制造商名称、从业人员、营业收入、资产总额及企业类型；并声明以上企业不属于大企业的分支机构，不存在控股股东为大企业的情形，也不存在与大企业的负责人为同一人的情形；本企业对上述声明内容的真实性负责，如有虚假将依法承担相应责任；企业名称（盖章）并填写日期。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-325",
+      "historical_source_hash": "6dbd0373626bf7d86c23ed8dfb1e569ab72b5364523b00feeddce8983eef5ba8",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-318",
+      "fresh_source_hash": "887357dbd4d29d3968895806443d3f1daac170f4f33e2b1270d0b8be9967fd6a",
+      "fresh_source_refs": [
+        "C031-S044"
+      ],
+      "fresh_requirement_text": "从业人员、营业收入、资产总额填报上一年度数据，无上一年度数据的新成立企业可不填报。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-319",
+      "fresh_source_hash": "f3e4464a6c2694b05408a982b6e90352daa4334f940bdf3cabbd8c25b0e6d49a",
+      "fresh_source_refs": [
+        "C031-S047",
+        "C031-S048",
+        "C031-S049",
+        "C031-S050",
+        "C031-S051",
+        "C031-S052",
+        "C031-S053",
+        "C031-S054",
+        "C031-S055",
+        "C031-S056",
+        "C031-S057"
+      ],
+      "fresh_requirement_text": "中小企业声明函（工程、服务）格式要求：本公司（联合体）郑重声明，根据《政府采购促进中小企业发展管理办法》（财库﹝2020﹞46号）的规定，参加（单位名称）的（项目名称）采购活动，工程的施工单位全部为符合政策要求的中小企业（或者：服务全部由符合政策要求的中小企业承接）；相关企业（含联合体中的中小企业、签订分包意向协议的中小企业）的具体情况需列明标的名称、所属行业、承建（承接）企业名称、从业人员、营业收入、资产总额及企业类型。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-326",
+      "historical_source_hash": "f3e4464a6c2694b05408a982b6e90352daa4334f940bdf3cabbd8c25b0e6d49a",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-320",
+      "fresh_source_hash": "57f2077d748cc38eddf18b6313482712d88949cbeb5fdeb406f4a760cf90244e",
+      "fresh_source_refs": [
+        "C032-S002",
+        "C032-S003",
+        "C032-S004",
+        "C032-S005",
+        "C032-S006",
+        "C032-S007",
+        "C032-S008",
+        "C032-S009",
+        "C032-S010"
+      ],
+      "fresh_requirement_text": "承建（承接）企业须声明其标的名称、所属行业、企业名称、从业人员、营业收入、资产总额及企业类型（中型、小型或微型），并声明不属于大企业的分支机构、不存在控股股东为大企业的情形、也不存在与大企业的负责人为同一人的情形，且对声明内容的真实性负责，如有虚假将依法承担相应责任。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-327",
+      "historical_source_hash": "57f2077d748cc38eddf18b6313482712d88949cbeb5fdeb406f4a760cf90244e",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-321",
+      "fresh_source_hash": "c68433a81fefb477e473b4b6019c5340ce7b650ac4489ea187bc8b2eed4169d3",
+      "fresh_source_refs": [
+        "C032-S011",
+        "C032-S012",
+        "C032-S013"
+      ],
+      "fresh_requirement_text": "中小企业声明函须由企业名称盖章并填写日期；从业人员、营业收入、资产总额填报上一年度数据，无上一年度数据的新成立企业可不填报。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-322",
+      "fresh_source_hash": "bf0fac3b15bb54ca340564e3c59d02b012606831462801d421dca215b0dcced3",
+      "fresh_source_refs": [
+        "C032-S016",
+        "C032-S017",
+        "C032-S018",
+        "C032-S019",
+        "C032-S020",
+        "C032-S021",
+        "C032-S022"
+      ],
+      "fresh_requirement_text": "残疾人福利性单位声明函须声明本单位是否属于符合条件的残疾人福利性单位；若属于，须声明参加采购活动提供本单位制造的货物（由本单位承担工程/提供服务）或提供其他残疾人福利性单位制造的货物（不包括使用非残疾人福利性单位注册商标的货物），并对声明真实性负责，如有虚假依法承担相应责任。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-328",
+      "historical_source_hash": "bf0fac3b15bb54ca340564e3c59d02b012606831462801d421dca215b0dcced3",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-323",
+      "fresh_source_hash": "9c7bce630ef6276c5f8bbdbfc9ee7be4cae56b99c6d1433e06cee5589406f598",
+      "fresh_source_refs": [
+        "C032-S023",
+        "C032-S024"
+      ],
+      "fresh_requirement_text": "残疾人福利性单位声明函须由单位名称盖章并填写日期。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-324",
+      "fresh_source_hash": "99cf92fea1b54e247dac97f058b96a432d191ac43992941f3d665d94adb7f1aa",
+      "fresh_source_refs": [
+        "C032-S028",
+        "C032-S029",
+        "C032-S030",
+        "C032-S031",
+        "C032-S032"
+      ],
+      "fresh_requirement_text": "拟分包情况说明须致采购人名称，填写采购编号、采购项目名称和包号，并承诺一旦获得采购合同将按下表所列情况进行分包，且承诺分包承担主体不再次分包。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-329",
+      "historical_source_hash": "99cf92fea1b54e247dac97f058b96a432d191ac43992941f3d665d94adb7f1aa",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-325",
+      "fresh_source_hash": "7685b8421a3419ad62ed9cb1e48efc56ac823258d2844228dcd85a3d18d45933",
+      "fresh_source_refs": [
+        "C032-S033",
+        "C032-S034",
+        "C032-S035",
+        "C032-S036",
+        "C032-S037",
+        "C032-S038",
+        "C032-S039",
+        "C032-S040",
+        "C032-S041",
+        "C032-S042",
+        "C032-S043",
+        "C032-S044",
+        "C032-S045",
+        "C032-S046"
+      ],
+      "fresh_requirement_text": "拟分包情况说明表格须填写分包承担主体名称、分包承担主体类型（中型企业、小微企业或其他）、资质等级、拟分包合同内容、拟分包合同金额（人民币元）及占合同金额的比例（%）。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-326",
+      "fresh_source_hash": "b0e738a24b496e7e7952f70f8c7c9f34b4d6edd9b0794a5c8875dcc072cb9326",
+      "fresh_source_refs": [
+        "C032-S058",
+        "C032-S059"
+      ],
+      "fresh_requirement_text": "如本项目（包）允许分包且投标人拟进行分包时，必须提供拟分包情况说明；如未提供，或提供了但未填写分包承担主体名称、拟分包合同内容、拟分包合同金额，投标无效。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-330",
+      "historical_source_hash": "b0e738a24b496e7e7952f70f8c7c9f34b4d6edd9b0794a5c8875dcc072cb9326",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-327",
+      "fresh_source_hash": "4442524e36449fc8d8dda1b00d8800a95bf6c3e37b329f38ad32ecd9fcfac5f7",
+      "fresh_source_refs": [
+        "C032-S060",
+        "C032-S061",
+        "C032-S062"
+      ],
+      "fresh_requirement_text": "如招标文件《投标人须知资料表》载明本项目分包承担主体应具备的相应资质条件，投标人须在拟分包情况说明表中列明分包承担主体的资质等级，并后附资质证书电子件，否则投标无效。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-331",
+      "historical_source_hash": "4442524e36449fc8d8dda1b00d8800a95bf6c3e37b329f38ad32ecd9fcfac5f7",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-328",
+      "fresh_source_hash": "af8bec8ceb5e204fccd563170faddc8dd70e2e68ed96e30b40fe21687a16d1a0",
+      "fresh_source_refs": [
+        "C032-S063",
+        "C032-S064",
+        "C032-S065"
+      ],
+      "fresh_requirement_text": "投标人“为落实政府采购政策”而向中小企业分包时，须仔细阅读资格证明文件格式2-1中说明，并按要求在资格证明文件中提供相关全部文件；投标人非“为落实政府采购政策”而向中小企业分包时，建议在本册提供。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-329",
+      "fresh_source_hash": "32c81b9db14cd875964c26ec4d4c8f2f3a1e4afc853ed0a46b2f87caea825910",
+      "fresh_source_refs": [
+        "C032-S066",
+        "C032-S067"
+      ],
+      "fresh_requirement_text": "拟分包情况说明须由投标人名称盖章并填写日期。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-330",
+      "fresh_source_hash": "f9a34a884e40e4ada36675f2c20180252f49a4c2d6c899e4f9c80c4ae20c6d37",
+      "fresh_source_refs": [
+        "C032-S070",
+        "C032-S071",
+        "C032-S072",
+        "C032-S073",
+        "C032-S074",
+        "C032-S075",
+        "C032-S076",
+        "C032-S077",
+        "C032-S078"
+      ],
+      "fresh_requirement_text": "分包意向协议须由甲方（投标人）和乙方（拟分包单位）签署，甲方承诺一旦获得采购合同将按约定将合同项下部分内容分包给乙方，并明确分包内容和分包金额及占合同金额比例；乙方承诺在上述情况下与甲方签订分包合同；协议自各方盖章之日起生效，如甲方未中标则自动终止。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-331",
+      "fresh_source_hash": "ac70050c62beee8c3361bc1df9628fcc8f7a1bacdfc423a25d3ecd8ecba07fa1",
+      "fresh_source_refs": [
+        "C032-S079",
+        "C032-S080"
+      ],
+      "fresh_requirement_text": "分包意向协议须由甲方（投标人）和乙方（拟分包单位）盖章并填写日期。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-332",
+      "fresh_source_hash": "17d75047f152dfa69e3b2a4efd935722b0aefe6b074f97de99c592317044c147",
+      "fresh_source_refs": [
+        "C032-S082",
+        "C032-S083"
+      ],
+      "fresh_requirement_text": "投标人“为落实政府采购政策”而向中小企业分包时必须提供分包意向协议，否则投标无效；且建议按照采购文件要求在资格证明文件部分提供。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-333",
+      "historical_source_hash": "17d75047f152dfa69e3b2a4efd935722b0aefe6b074f97de99c592317044c147",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-333",
+      "fresh_source_hash": "d9ba25b40c4b55b8a51a5a31bfcb177fb4e7a15b328675d3b6ea22711e5a0486",
+      "fresh_source_refs": [
+        "C032-S084",
+        "C032-S085"
+      ],
+      "fresh_requirement_text": "投标人满足《政府采购促进中小企业发展管理办法》（财库〔2020〕46号）第九条有关规定，拟享受中小企业政策优惠措施的，仍需提供分包意向协议，否则不予认可。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-334",
+      "historical_source_hash": "d9ba25b40c4b55b8a51a5a31bfcb177fb4e7a15b328675d3b6ea22711e5a0486",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-334",
+      "fresh_source_hash": "b01159716058d65dda451c5230bc3953eaea536c641c12a992894885b15673a1",
+      "fresh_source_refs": [
+        "C033-S001",
+        "C033-S002"
+      ],
+      "fresh_requirement_text": "投标人须与所有拟分包单位分别签订《分包意向协议》，每单位签订一份，并在投标文件中提交全部协议原件的电子件，否则不予认可。",
+      "alignment_level": "LEVEL_1",
+      "historical_requirement_id": "REQ-335",
+      "historical_source_hash": "b01159716058d65dda451c5230bc3953eaea536c641c12a992894885b15673a1",
+      "text_equal": true
+    },
+    {
+      "fresh_requirement_id": "REQ-335",
+      "fresh_source_hash": "8fa15977c95f949db0581868e280b8f3935ea33dee1e74543e09571886496edd",
+      "fresh_source_refs": [
+        "C033-S020"
+      ],
+      "fresh_requirement_text": "投标人如为联合体，则应填写联合体各成员信息。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-336",
+      "fresh_source_hash": "b649fabdf48bdd8845640ad8f94e10f9e36092464466c3a17b5bca35798871a7",
+      "fresh_source_refs": [
+        "C033-S021",
+        "C033-S022",
+        "C033-S023",
+        "C033-S024",
+        "C033-S025"
+      ],
+      "fresh_requirement_text": "投标人性质请填写：“企业”、“社会组织”、“公益二类事业单位”、“从事生产经营活动事业单位”、“农村集体经济组织”、“基层群众性自治组织”或“个人”。投标人规模请填写：“大型”、“中型”、“小型”、“微型”或“其他”，且不应与《中小企业声明函》或《拟分包情况说明》中内容矛盾。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-337",
+      "fresh_source_hash": "c06d94eba8556aea13e9a9d659f19b6e9349e90ac1db878111ba079eafacd939",
+      "fresh_source_refs": [
+        "C033-S026",
+        "C033-S027"
+      ],
+      "fresh_requirement_text": "投标人绝对所有权拥有者所属性别请填写：“男”或“女”，指拥有投标人51%以上绝对所有权的性别；绝对所有权拥有者可以是一个人，也可以是多人合计计算。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-338",
+      "fresh_source_hash": "4e52998afbfe0440469378aa11ee93a9358cc1c2fa0110d56eb7ecb4af8bfd59",
+      "fresh_source_refs": [
+        "C033-S028",
+        "C033-S029",
+        "C033-S030",
+        "C033-S031"
+      ],
+      "fresh_requirement_text": "外商投资类型请填写：“外商单独投资”、“外商部分投资”或“内资”。属于“内资”的，无需填写“外商投资国别”。属于“外商单独投资”、“外商部分投资”的，外商投资国别请填写：“欧资企业”、“美资企业”、“日资企业”、“其他”。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-339",
+      "fresh_source_hash": "7bdf9762be52849f27e93e06f7a99e8a8f5ca7cbd0b4ca14e3dfdc373159b1db",
+      "fresh_source_refs": [
+        "C033-S032"
+      ],
+      "fresh_requirement_text": "请投标人按要求填写，该信息采集表不作为实质性格式和内容进行评审使用。",
+      "alignment_level": "LEVEL_4",
+      "historical_requirement_id": "REQ-339",
+      "historical_source_hash": "7bdf9762be52849f27e93e06f7a99e8a8f5ca7cbd0b4ca14e3dfdc373159b1db",
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-340",
+      "fresh_source_hash": "e2fd42415524fdc84d072c4adf429dfbfa5807a9e2f00e6e53a8d8ed572e4e4f",
+      "fresh_source_refs": [
+        "C033-S042",
+        "C033-S043",
+        "C033-S044",
+        "C033-S045",
+        "C033-S046"
+      ],
+      "fresh_requirement_text": "制造商信息采集表（货物类采购项目需填写）：外商投资类型请填写：“外商单独投资”、“外商部分投资”或“内资”。属于“内资”的，无需填写“外商投资国别”。属于“外商单独投资”、“外商部分投资”的，外商投资国别请填写：“欧资企业”、“美资企业”、“日资企业”、“其他”。请申请人按要求填写，该信息采集表不作为实质性格式和内容进行评审使用。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    },
+    {
+      "fresh_requirement_id": "REQ-341",
+      "fresh_source_hash": "8865489997aae1616dd46142382eb499791bfb4b315682a9cdf6793e2e7e6c82",
+      "fresh_source_refs": [
+        "C033-S048",
+        "C033-S049",
+        "C033-S050",
+        "C033-S051",
+        "C033-S052",
+        "C033-S053"
+      ],
+      "fresh_requirement_text": "操作系统、CPU信息采集表（计算机、服务器采购项目需填写）：请投标人按要求填写，该信息采集表不作为实质性格式和内容进行评审使用。",
+      "alignment_level": "LEVEL_6",
+      "historical_requirement_id": null,
+      "historical_source_hash": null,
+      "text_equal": false
+    }
+  ],
+  "semantic_alignment": "NOT_PERFORMED"
+}

@@ -1,0 +1,20 @@
+{
+  "run_id": "V43-DAYTIME-EMBEDDING-PREFLIGHT-20260914",
+  "service": "existing production embedding client",
+  "provider": "siliconflow",
+  "model": "Qwen/Qwen3-Embedding-0.6B",
+  "dimensions": 1024,
+  "proxy": "socks5://127.0.0.1:18081",
+  "provider_calls": 1,
+  "retries": 0,
+  "latency_ms": 12,
+  "provider_reached": false,
+  "status": "BLOCKED_ENVIRONMENT_SANDBOX_NETWORK_EACCES",
+  "error_code": "EMBEDDING_NETWORK_ERROR",
+  "root_class": "BLOCKED_ENVIRONMENT_SANDBOX_NETWORK_EACCES",
+  "side_effects": {
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "embeddings_written": 0
+  }
+}

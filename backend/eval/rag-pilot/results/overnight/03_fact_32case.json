@@ -1,0 +1,843 @@
+{
+  "run_id": "v43-overnight-fact-v1",
+  "contract": {
+    "task_type": "evidence_fact_extraction",
+    "contract_version": "4.3-evidence-fact-extraction-v1",
+    "instruction_hash": "86cb8d243b0e0f8ed83ecba67dd6aff8532958a14a7723c1a2f1192c663c301b",
+    "schema_hash": "2cc97797765c5f1892ac91b2109e15549aedeb23736a786e5189735a1c23713d",
+    "data_required": [
+      "facts"
+    ],
+    "data_allowed": [
+      "facts"
+    ],
+    "parser": "semantic-gateway-envelope-v1",
+    "provider": "mock",
+    "model": "mock-semantic-v1",
+    "provider_host": null,
+    "structured_output": {
+      "response_format": "json_schema",
+      "strict": true
+    },
+    "retry_policy": {
+      "max_attempts": 2,
+      "eligible": [
+        "OUTPUT_SCHEMA_INVALID",
+        "FACT_SEMANTIC_EMPTY"
+      ]
+    },
+    "canonical_fact_contract": {
+      "contract_version": "evidence-fact-v1",
+      "owner": "createEvidenceFactContract",
+      "schema_owner": "backend/src/pipeline/evidence-fact-contract-v1.js"
+    },
+    "task_schema_hash": "2cc97797765c5f1892ac91b2109e15549aedeb23736a786e5189735a1c23713d"
+  },
+  "metrics": {
+    "provider_cases": 24,
+    "final_valid_grounded": 0,
+    "first_pass": 0,
+    "retry_recovered": 0,
+    "human_escalation": 24,
+    "hallucination": 0,
+    "authority_contamination": 0,
+    "provenance_failure": 0,
+    "boundary_blocked": 8
+  },
+  "eligible": [
+    {
+      "case_id": "C01",
+      "category": "ELIGIBLE",
+      "material": {
+        "doc_id": "COM-04",
+        "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+        "chunk_id": "MCH-0663AA700C01FD958515713C21CF5F5E",
+        "source_span_id": "ESPAN-709632A1A25EF2E14625CFCFB00A3D4A",
+        "source_text": "## 接口\n\n支持REST API、Webhook和批量文件交换；2026-07-12完成12个模拟接口联调。\n\n"
+      },
+      "provider_called": false,
+      "attempt_count": null,
+      "first_pass": false,
+      "retry_eligible": null,
+      "retry_attempted": null,
+      "auto_recovered": false,
+      "final_success": false,
+      "semantic_candidates": [],
+      "canonical_facts": [],
+      "provider_audit": {},
+      "error": {
+        "code": "FACT_SEMANTIC_SOURCE_INVALID",
+        "message": "Source Span hash does not match its text.",
+        "details": {
+          "stage": "FACT"
+        }
+      }
+    },
+    {
+      "case_id": "C02",
+      "category": "ELIGIBLE",
+      "material": {
+        "doc_id": "COM-04",
+        "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+        "chunk_id": "MCH-0663AA700C01FD958515713C21CF5F5E",
+        "source_span_id": "ESPAN-709632A1A25EF2E14625CFCFB00A3D4A",
+        "source_text": "## 接口\n\n支持REST API、Webhook和批量文件交换；2026-07-12完成12个模拟接口联调。\n\n"
+      },
+      "provider_called": false,
+      "attempt_count": null,
+      "first_pass": false,
+      "retry_eligible": null,
+      "retry_attempted": null,
+      "auto_recovered": false,
+      "final_success": false,
+      "semantic_candidates": [],
+      "canonical_facts": [],
+      "provider_audit": {},
+      "error": {
+        "code": "FACT_SEMANTIC_SOURCE_INVALID",
+        "message": "Source Span hash does not match its text.",
+        "details": {
+          "stage": "FACT"
+        }
+      }
+    },
+    {
+      "case_id": "C03",
+      "category": "ELIGIBLE",
+      "material": {
+        "doc_id": "COM-02",
+        "material_id": "7dc70fee-13e0-4b7d-b95f-202665c241d0",
+        "chunk_id": "MCH-369C7BBCDB79203D29F37E8A524E41D5",
+        "source_span_id": "ESPAN-6A91C241354ED5CE7C86251CFF75CD64",
+        "source_text": "## 产品\n\nSynthetic产品含组织权限、流程、表单、接口、日志、报表、知识库、RAG和Agent工具管理。\n\n"
+      },
+      "provider_called": false,
+      "attempt_count": null,
+      "first_pass": false,
+      "retry_eligible": null,
+      "retry_attempted": null,
+      "auto_recovered": false,
+      "final_success": false,
+      "semantic_candidates": [],
+      "canonical_facts": [],
+      "provider_audit": {},
+      "error": {
+        "code": "FACT_SEMANTIC_SOURCE_INVALID",
+        "message": "Source Span hash does not match its text.",
+        "details": {
+          "stage": "FACT"
+        }
+      }
+    },
+    {
+      "case_id": "C04",
+      "category": "ELIGIBLE",
+      "material": {
+        "doc_id": "COM-02",
+        "material_id": "7dc70fee-13e0-4b7d-b95f-202665c241d0",
+        "chunk_id": "MCH-DB2E8A791703B57F03ADB7C6477BD59D",
+        "source_span_id": "ESPAN-CBCEDEC140861164732B9EDEB087B4E6",
+        "source_text": "## 版本\n\n测试版本v3.2，发布日期2026-06-15；版本变化后需重新核验能力。\n\n"
+      },
+      "provider_called": false,
+      "attempt_count": null,
+      "first_pass": false,
+      "retry_eligible": null,
+      "retry_attempted": null,
+      "auto_recovered": false,
+      "final_success": false,
+      "semantic_candidates": [],
+      "canonical_facts": [],
+      "provider_audit": {},
+      "error": {
+        "code": "FACT_SEMANTIC_SOURCE_INVALID",
+        "message": "Source Span hash does not match its text.",
+        "details": {
+          "stage": "FACT"
+        }
+      }
+    },
+    {
+      "case_id": "C05",
+      "category": "ELIGIBLE",
+      "material": {
+        "doc_id": "COM-03",
+        "material_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd",
+        "chunk_id": "MCH-AA94BB7D153A30F95E869D78DC45A0E5",
+        "source_span_id": "ESPAN-FB231E6D00D7BA0D84531011C5CD9802",
+        "source_text": "## 适配\n\nSynthetic记录：Linux x86_64、某国产Linux测试环境、PostgreSQL兼容数据库完成安装与核心功能验证；未列版本不得推断。\n\n"
+      },
+      "provider_called": false,
+      "attempt_count": null,
+      "first_pass": false,
+      "retry_eligible": null,
+      "retry_attempted": null,
+      "auto_recovered": false,
+      "final_success": false,
+      "semantic_candidates": [],
+      "canonical_facts": [],
+      "provider_audit": {},
+      "error": {
+        "code": "FACT_SEMANTIC_SOURCE_INVALID",
+        "message": "Source Span hash does not match its text.",
+        "details": {
+          "stage": "FACT"
+        }
+      }
+    },
+    {
+      "case_id": "C06",
+      "category": "ELIGIBLE",
+      "material": {
+        "doc_id": "COM-03",
+        "material_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd",
+        "chunk_id": "MCH-653922163892C4D2607119A7FD0151C0",
+        "source_span_id": "ESPAN-DC5CE3C836C0BA41A483DA0A71657D45",
+        "source_text": "## 架构\n\nWeb前端、API服务、关系数据库、对象存储、缓存和消息队列。\n\n"
+      },
+      "provider_called": false,
+      "attempt_count": null,
+      "first_pass": false,
+      "retry_eligible": null,
+      "retry_attempted": null,
+      "auto_recovered": false,
+      "final_success": false,
+      "semantic_candidates": [],
+      "canonical_facts": [],
+      "provider_audit": {},
+      "error": {
+        "code": "FACT_SEMANTIC_SOURCE_INVALID",
+        "message": "Source Span hash does not match its text.",
+        "details": {
+          "stage": "FACT"
+        }
+      }
+    },
+    {
+      "case_id": "C07",
+      "category": "ELIGIBLE",
+      "material": {
+        "doc_id": "COM-05",
+        "material_id": "81990289-5472-4c41-a68e-b16035013a9a",
+        "chunk_id": "MCH-19D4CA86EF48631FD4A3D61C157A2069",
+        "source_span_id": "ESPAN-8D55AB16DE71C7C49357FD5FC02096B9",
+        "source_text": "## 迁移\n\n采用盘点、映射、清洗、预迁移、核验、正式迁移和回滚准备。\n\n"
+      },
+      "provider_called": false,
+      "attempt_count": null,
+      "first_pass": false,
+      "retry_eligible": null,
+      "retry_attempted": null,
+      "auto_recovered": false,
+      "final_success": false,
+      "semantic_candidates": [],
+      "canonical_facts": [],
+      "provider_audit": {},
+      "error": {
+        "code": "FACT_SEMANTIC_SOURCE_INVALID",
+        "message": "Source Span hash does not match its text.",
+        "details": {
+          "stage": "FACT"
+        }
+      }
+    },
+    {
+      "case_id": "C08",
+      "category": "ELIGIBLE",
+      "material": {
+        "doc_id": "COM-05",
+        "material_id": "81990289-5472-4c41-a68e-b16035013a9a",
+        "chunk_id": "MCH-FD130C9B339EAB07A2E766A827EBB9AC",
+        "source_span_id": "ESPAN-BDCC65D3468343B38124FB03C70DB341",
+        "source_text": "## 治理\n\n包含字典、标准、目录、质量规则和血缘测试模块。\n\n"
+      },
+      "provider_called": false,
+      "attempt_count": null,
+      "first_pass": false,
+      "retry_eligible": null,
+      "retry_attempted": null,
+      "auto_recovered": false,
+      "final_success": false,
+      "semantic_candidates": [],
+      "canonical_facts": [],
+      "provider_audit": {},
+      "error": {
+        "code": "FACT_SEMANTIC_SOURCE_INVALID",
+        "message": "Source Span hash does not match its text.",
+        "details": {
+          "stage": "FACT"
+        }
+      }
+    },
+    {
+      "case_id": "C09",
+      "category": "ELIGIBLE",
+      "material": {
+        "doc_id": "COM-06",
+        "material_id": "3ec066d3-679a-4232-ba6d-364038658c81",
+        "chunk_id": "MCH-FE0AD69A95643C6E508A4F7E5147D0D3",
+        "source_span_id": "ESPAN-CBD4647006B2E1B994A71FE5C0989714",
+        "source_text": "## 测试\n\n2026-08-01对v3.2测试环境执行账号、角色、最小权限、登录审计、关键操作和数据导出审计。\n\n"
+      },
+      "provider_called": false,
+      "attempt_count": null,
+      "first_pass": false,
+      "retry_eligible": null,
+      "retry_attempted": null,
+      "auto_recovered": false,
+      "final_success": false,
+      "semantic_candidates": [],
+      "canonical_facts": [],
+      "provider_audit": {},
+      "error": {
+        "code": "FACT_SEMANTIC_SOURCE_INVALID",
+        "message": "Source Span hash does not match its text.",
+        "details": {
+          "stage": "FACT"
+        }
+      }
+    },
+    {
+      "case_id": "C10",
+      "category": "ELIGIBLE",
+      "material": {
+        "doc_id": "COM-06",
+        "material_id": "3ec066d3-679a-4232-ba6d-364038658c81",
+        "chunk_id": "MCH-FE0AD69A95643C6E508A4F7E5147D0D3",
+        "source_span_id": "ESPAN-CBD4647006B2E1B994A71FE5C0989714",
+        "source_text": "## 测试\n\n2026-08-01对v3.2测试环境执行账号、角色、最小权限、登录审计、关键操作和数据导出审计。\n\n"
+      },
+      "provider_called": false,
+      "attempt_count": null,
+      "first_pass": false,
+      "retry_eligible": null,
+      "retry_attempted": null,
+      "auto_recovered": false,
+      "final_success": false,
+      "semantic_candidates": [],
+      "canonical_facts": [],
+      "provider_audit": {},
+      "error": {
+        "code": "FACT_SEMANTIC_SOURCE_INVALID",
+        "message": "Source Span hash does not match its text.",
+        "details": {
+          "stage": "FACT"
+        }
+      }
+    },
+    {
+      "case_id": "C11",
+      "category": "ELIGIBLE",
+      "material": {
+        "doc_id": "COM-07",
+        "material_id": "42debef7-084f-471c-8fa5-1f9dcbf4c2f7",
+        "chunk_id": "MCH-D09A2FC0D82F6D27ED11B48CBDA4B06C",
+        "source_span_id": "ESPAN-D0BC89F0DCA4285297BA8B43ABC5E41E",
+        "source_text": "## 结果\n\n100个虚拟用户标准查询场景P95=1.8秒；导入10000条合成记录耗时42秒。\n\n"
+      },
+      "provider_called": false,
+      "attempt_count": null,
+      "first_pass": false,
+      "retry_eligible": null,
+      "retry_attempted": null,
+      "auto_recovered": false,
+      "final_success": false,
+      "semantic_candidates": [],
+      "canonical_facts": [],
+      "provider_audit": {},
+      "error": {
+        "code": "FACT_SEMANTIC_SOURCE_INVALID",
+        "message": "Source Span hash does not match its text.",
+        "details": {
+          "stage": "FACT"
+        }
+      }
+    },
+    {
+      "case_id": "C12",
+      "category": "ELIGIBLE",
+      "material": {
+        "doc_id": "COM-07",
+        "material_id": "42debef7-084f-471c-8fa5-1f9dcbf4c2f7",
+        "chunk_id": "MCH-D09A2FC0D82F6D27ED11B48CBDA4B06C",
+        "source_span_id": "ESPAN-D0BC89F0DCA4285297BA8B43ABC5E41E",
+        "source_text": "## 结果\n\n100个虚拟用户标准查询场景P95=1.8秒；导入10000条合成记录耗时42秒。\n\n"
+      },
+      "provider_called": false,
+      "attempt_count": null,
+      "first_pass": false,
+      "retry_eligible": null,
+      "retry_attempted": null,
+      "auto_recovered": false,
+      "final_success": false,
+      "semantic_candidates": [],
+      "canonical_facts": [],
+      "provider_audit": {},
+      "error": {
+        "code": "FACT_SEMANTIC_SOURCE_INVALID",
+        "message": "Source Span hash does not match its text.",
+        "details": {
+          "stage": "FACT"
+        }
+      }
+    },
+    {
+      "case_id": "C13",
+      "category": "ELIGIBLE",
+      "material": {
+        "doc_id": "COM-08",
+        "material_id": "4ba1c701-7c4f-415b-9186-28b25c4472ce",
+        "chunk_id": "MCH-2EEFA4F9B214B94D417935EEB260A88E",
+        "source_span_id": "ESPAN-7036C96C3615C3D1E3CF37D52F5B18DB",
+        "source_text": "## 演练\n\n2026-07-25完成Synthetic数据库备份恢复和应用节点故障切换。\n\n"
+      },
+      "provider_called": false,
+      "attempt_count": null,
+      "first_pass": false,
+      "retry_eligible": null,
+      "retry_attempted": null,
+      "auto_recovered": false,
+      "final_success": false,
+      "semantic_candidates": [],
+      "canonical_facts": [],
+      "provider_audit": {},
+      "error": {
+        "code": "FACT_SEMANTIC_SOURCE_INVALID",
+        "message": "Source Span hash does not match its text.",
+        "details": {
+          "stage": "FACT"
+        }
+      }
+    },
+    {
+      "case_id": "C14",
+      "category": "ELIGIBLE",
+      "material": {
+        "doc_id": "COM-08",
+        "material_id": "4ba1c701-7c4f-415b-9186-28b25c4472ce",
+        "chunk_id": "MCH-2EEFA4F9B214B94D417935EEB260A88E",
+        "source_span_id": "ESPAN-7036C96C3615C3D1E3CF37D52F5B18DB",
+        "source_text": "## 演练\n\n2026-07-25完成Synthetic数据库备份恢复和应用节点故障切换。\n\n"
+      },
+      "provider_called": false,
+      "attempt_count": null,
+      "first_pass": false,
+      "retry_eligible": null,
+      "retry_attempted": null,
+      "auto_recovered": false,
+      "final_success": false,
+      "semantic_candidates": [],
+      "canonical_facts": [],
+      "provider_audit": {},
+      "error": {
+        "code": "FACT_SEMANTIC_SOURCE_INVALID",
+        "message": "Source Span hash does not match its text.",
+        "details": {
+          "stage": "FACT"
+        }
+      }
+    },
+    {
+      "case_id": "C15",
+      "category": "ELIGIBLE",
+      "material": {
+        "doc_id": "COM-09",
+        "material_id": "f32d71e5-37db-496f-9050-dd7b52fd3804",
+        "chunk_id": "MCH-F95A1B49C78845275EDBC1F7CF3A465E",
+        "source_span_id": "ESPAN-4C2B002781035903DE193D1204BE0996",
+        "source_text": "## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n"
+      },
+      "provider_called": false,
+      "attempt_count": null,
+      "first_pass": false,
+      "retry_eligible": null,
+      "retry_attempted": null,
+      "auto_recovered": false,
+      "final_success": false,
+      "semantic_candidates": [],
+      "canonical_facts": [],
+      "provider_audit": {},
+      "error": {
+        "code": "FACT_SEMANTIC_SOURCE_INVALID",
+        "message": "Source Span hash does not match its text.",
+        "details": {
+          "stage": "FACT"
+        }
+      }
+    },
+    {
+      "case_id": "C16",
+      "category": "ELIGIBLE",
+      "material": {
+        "doc_id": "COM-09",
+        "material_id": "f32d71e5-37db-496f-9050-dd7b52fd3804",
+        "chunk_id": "MCH-EBD45515D01F89536083DB49120CB8AC",
+        "source_span_id": "ESPAN-AD38F19FE3E1C26578A464C9B0AC1177",
+        "source_text": "## 治理\n\n周计划、风险清单、问题单、变更单和里程碑评审。\n\n"
+      },
+      "provider_called": false,
+      "attempt_count": null,
+      "first_pass": false,
+      "retry_eligible": null,
+      "retry_attempted": null,
+      "auto_recovered": false,
+      "final_success": false,
+      "semantic_candidates": [],
+      "canonical_facts": [],
+      "provider_audit": {},
+      "error": {
+        "code": "FACT_SEMANTIC_SOURCE_INVALID",
+        "message": "Source Span hash does not match its text.",
+        "details": {
+          "stage": "FACT"
+        }
+      }
+    },
+    {
+      "case_id": "C17",
+      "category": "ELIGIBLE",
+      "material": {
+        "doc_id": "COM-10",
+        "material_id": "bee37331-9769-4856-a907-6ad8a49a80c0",
+        "chunk_id": "MCH-D2130C45687D034E14CF1C99C3E9CBB9",
+        "source_span_id": "ESPAN-43032B623B36D826ECCA5D8635B8F519",
+        "source_text": "## 时效\n\n真实人员Evidence必须有证书有效期、劳动/社保关系和可投入时间。\n\n"
+      },
+      "provider_called": false,
+      "attempt_count": null,
+      "first_pass": false,
+      "retry_eligible": null,
+      "retry_attempted": null,
+      "auto_recovered": false,
+      "final_success": false,
+      "semantic_candidates": [],
+      "canonical_facts": [],
+      "provider_audit": {},
+      "error": {
+        "code": "FACT_SEMANTIC_SOURCE_INVALID",
+        "message": "Source Span hash does not match its text.",
+        "details": {
+          "stage": "FACT"
+        }
+      }
+    },
+    {
+      "case_id": "C18",
+      "category": "ELIGIBLE",
+      "material": {
+        "doc_id": "COM-11",
+        "material_id": "b94aca0b-a314-4f71-a54b-e6d31e4ef702",
+        "chunk_id": "MCH-D06343ED00C2802BEB0CC954418DB047",
+        "source_span_id": "ESPAN-15046CC9A4D2A850F01B81314EB96474",
+        "source_text": "## 测试与交付\n\n支持功能、接口、迁移、性能、安全、UAT、培训、交付和验收记录。\n\n"
+      },
+      "provider_called": false,
+      "attempt_count": null,
+      "first_pass": false,
+      "retry_eligible": null,
+      "retry_attempted": null,
+      "auto_recovered": false,
+      "final_success": false,
+      "semantic_candidates": [],
+      "canonical_facts": [],
+      "provider_audit": {},
+      "error": {
+        "code": "FACT_SEMANTIC_SOURCE_INVALID",
+        "message": "Source Span hash does not match its text.",
+        "details": {
+          "stage": "FACT"
+        }
+      }
+    },
+    {
+      "case_id": "C19",
+      "category": "ELIGIBLE",
+      "material": {
+        "doc_id": "COM-11",
+        "material_id": "b94aca0b-a314-4f71-a54b-e6d31e4ef702",
+        "chunk_id": "MCH-D06343ED00C2802BEB0CC954418DB047",
+        "source_span_id": "ESPAN-15046CC9A4D2A850F01B81314EB96474",
+        "source_text": "## 测试与交付\n\n支持功能、接口、迁移、性能、安全、UAT、培训、交付和验收记录。\n\n"
+      },
+      "provider_called": false,
+      "attempt_count": null,
+      "first_pass": false,
+      "retry_eligible": null,
+      "retry_attempted": null,
+      "auto_recovered": false,
+      "final_success": false,
+      "semantic_candidates": [],
+      "canonical_facts": [],
+      "provider_audit": {},
+      "error": {
+        "code": "FACT_SEMANTIC_SOURCE_INVALID",
+        "message": "Source Span hash does not match its text.",
+        "details": {
+          "stage": "FACT"
+        }
+      }
+    },
+    {
+      "case_id": "C20",
+      "category": "ELIGIBLE",
+      "material": {
+        "doc_id": "COM-12",
+        "material_id": "45d3a548-516a-4349-a50b-e67ccef7930a",
+        "chunk_id": "MCH-3B1C4B8C1C451305A024A8C424460BBA",
+        "source_span_id": "ESPAN-CD10AB29F6950541DF736A37A079BF30",
+        "source_text": "## 运维\n\n巡检、告警、故障、升级、备份和复盘。\n\n"
+      },
+      "provider_called": false,
+      "attempt_count": null,
+      "first_pass": false,
+      "retry_eligible": null,
+      "retry_attempted": null,
+      "auto_recovered": false,
+      "final_success": false,
+      "semantic_candidates": [],
+      "canonical_facts": [],
+      "provider_audit": {},
+      "error": {
+        "code": "FACT_SEMANTIC_SOURCE_INVALID",
+        "message": "Source Span hash does not match its text.",
+        "details": {
+          "stage": "FACT"
+        }
+      }
+    },
+    {
+      "case_id": "C21",
+      "category": "ELIGIBLE",
+      "material": {
+        "doc_id": "COM-12",
+        "material_id": "45d3a548-516a-4349-a50b-e67ccef7930a",
+        "chunk_id": "MCH-3B1C4B8C1C451305A024A8C424460BBA",
+        "source_span_id": "ESPAN-CD10AB29F6950541DF736A37A079BF30",
+        "source_text": "## 运维\n\n巡检、告警、故障、升级、备份和复盘。\n\n"
+      },
+      "provider_called": false,
+      "attempt_count": null,
+      "first_pass": false,
+      "retry_eligible": null,
+      "retry_attempted": null,
+      "auto_recovered": false,
+      "final_success": false,
+      "semantic_candidates": [],
+      "canonical_facts": [],
+      "provider_audit": {},
+      "error": {
+        "code": "FACT_SEMANTIC_SOURCE_INVALID",
+        "message": "Source Span hash does not match its text.",
+        "details": {
+          "stage": "FACT"
+        }
+      }
+    },
+    {
+      "case_id": "C22",
+      "category": "ELIGIBLE",
+      "material": {
+        "doc_id": "COM-13",
+        "material_id": "a5510db7-bb22-46e3-aa7f-13b77f1206a6",
+        "chunk_id": "MCH-78E4EA708EBC05B9E2731B7736CF9B2E",
+        "source_span_id": "ESPAN-2330043E91EF2AC532ACB663F253F8F7",
+        "source_text": "## 案例\n\n某虚构市级事件协同平台，包含受理、派单、处置、督办、统计、地图和部门接口。\n\n"
+      },
+      "provider_called": false,
+      "attempt_count": null,
+      "first_pass": false,
+      "retry_eligible": null,
+      "retry_attempted": null,
+      "auto_recovered": false,
+      "final_success": false,
+      "semantic_candidates": [],
+      "canonical_facts": [],
+      "provider_audit": {},
+      "error": {
+        "code": "FACT_SEMANTIC_SOURCE_INVALID",
+        "message": "Source Span hash does not match its text.",
+        "details": {
+          "stage": "FACT"
+        }
+      }
+    },
+    {
+      "case_id": "C23",
+      "category": "ELIGIBLE",
+      "material": {
+        "doc_id": "COM-14",
+        "material_id": "04738608-0aa8-4e12-b37b-fc5084e0428b",
+        "chunk_id": "MCH-9BD85ED0A87D7C6B058D4EE89A4A1303",
+        "source_span_id": "ESPAN-0C64749885777668FD1823D64CAE1159",
+        "source_text": "## 案例\n\n某虚构三级医院接口与数据平台，包含接口治理、患者主索引、历史迁移、联调和试运行。\n\n"
+      },
+      "provider_called": false,
+      "attempt_count": null,
+      "first_pass": false,
+      "retry_eligible": null,
+      "retry_attempted": null,
+      "auto_recovered": false,
+      "final_success": false,
+      "semantic_candidates": [],
+      "canonical_facts": [],
+      "provider_audit": {},
+      "error": {
+        "code": "FACT_SEMANTIC_SOURCE_INVALID",
+        "message": "Source Span hash does not match its text.",
+        "details": {
+          "stage": "FACT"
+        }
+      }
+    },
+    {
+      "case_id": "C24",
+      "category": "ELIGIBLE",
+      "material": {
+        "doc_id": "COM-15",
+        "material_id": "e39ce20c-b73c-4cd2-a965-d8fbad6775e2",
+        "chunk_id": "MCH-1950F3F8D1880A4714E2AE13548431B2",
+        "source_span_id": "ESPAN-6B5CE3BE997EC171D764E8E323185435",
+        "source_text": "## 有效测试证书\n\nTEST-CERT-2026-A：虚构证书，有效期2026-03-01至2027-02-28。\n\n"
+      },
+      "provider_called": false,
+      "attempt_count": null,
+      "first_pass": false,
+      "retry_eligible": null,
+      "retry_attempted": null,
+      "auto_recovered": false,
+      "final_success": false,
+      "semantic_candidates": [],
+      "canonical_facts": [],
+      "provider_audit": {},
+      "error": {
+        "code": "FACT_SEMANTIC_SOURCE_INVALID",
+        "message": "Source Span hash does not match its text.",
+        "details": {
+          "stage": "FACT"
+        }
+      }
+    }
+  ],
+  "boundary": [
+    {
+      "case_id": "BND01",
+      "category": "BOUNDARY",
+      "reason": "PUBLIC_GUIDANCE_REFERENCE_ONLY",
+      "material": {
+        "doc_id": "UNI-08",
+        "material_id": "31d40c70-2f1a-4155-b829-a1e8ccca3cc6",
+        "chunk_id": "MCH-AFAC3EB94B7916A172224BF6C304041E",
+        "source_span_id": "ESPAN-CE414E591459E35E4F739BF4EE8AAABD",
+        "source_text": "# 接口集成与互操作\n\n> 官方资料结构化摘要。正式投标与合规判断需回到原始法律、标准、政策或项目文件核验。\n\n## 接口\n\n明确对象、方式、字段、鉴权、错误处理和责任边界。\n\n## 证据\n\n接口规范、联调记录、问题单、测试报告比“支持接口”更强。\n\n## 官方来源 / 依据\n\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n- **OFF-U03｜政务数据共享条例**｜国务院｜状态 `CURRENT_CONFIRMED`｜实施 `2025-08-01`｜最后核验 `2026-08-31`｜https://www.stats.gov.cn/gk/tjfg/xgfxfg/202506/t20250609_1960124.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。"
+      },
+      "provider_called": false,
+      "blocked_before_provider": true,
+      "error": null
+    },
+    {
+      "case_id": "BND02",
+      "category": "BOUNDARY",
+      "reason": "PUBLIC_GUIDANCE_REFERENCE_ONLY",
+      "material": {
+        "doc_id": "GOV-02",
+        "material_id": "08d5580a-d81b-491f-8c9b-d37ca4251840",
+        "chunk_id": "MCH-F10ED69DC3BF77C66D6A0EA805EC99AA",
+        "source_span_id": "ESPAN-E0B83692CE440D0FCDBF4A35E49B10CB",
+        "source_text": "# 政务数据目录、共享与跨部门协同\n\n> 官方资料结构化摘要。正式投标与合规判断需回到原始法律、标准、政策或项目文件核验。\n\n## 目录与共享\n\n需明确数据目录、共享属性、使用条件、授权、安全和记录。\n\n## 官方来源 / 依据\n\n- **OFF-U03｜政务数据共享条例**｜国务院｜状态 `CURRENT_CONFIRMED`｜实施 `2025-08-01`｜最后核验 `2026-08-31`｜https://www.stats.gov.cn/gk/tjfg/xgfxfg/202506/t20250609_1960124.html\n- **OFF-U06｜中华人民共和国数据安全法**｜全国人大常委会｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-09-01`｜最后核验 `2026-08-31`｜https://www.npc.gov.cn/npc/c2/c30834/202106/t20210610_311888.html\n- **OFF-U07｜中华人民共和国个人信息保护法**｜全国人大常委会｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-11-01`｜最后核验 `2026-08-31`｜https://www.miit.gov.cn/zwgk/zcwj/flfg/art/2022/art_04a0f1fb5df244e39688fd5372623a8d.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。"
+      },
+      "provider_called": false,
+      "blocked_before_provider": true,
+      "error": null
+    },
+    {
+      "case_id": "BND03",
+      "category": "BOUNDARY",
+      "reason": "PUBLIC_GUIDANCE_REFERENCE_ONLY",
+      "material": {
+        "doc_id": "MED-04",
+        "material_id": "9669c4f6-e215-4b08-a5e3-488bf239ce75",
+        "chunk_id": "MCH-DCE4045A9B42C2B1E75BCD3C214B48FF",
+        "source_span_id": "ESPAN-503BAD428E6BEBDD701EA778D7A36D86",
+        "source_text": "# 医疗数据安全、隐私与病历访问\n\n> 官方资料结构化摘要。正式投标与合规判断需回到原始法律、标准、政策或项目文件核验。\n\n## 安全\n\n医疗机构需开展分类分级、风险评估和安全责任管理。\n\n## 病历\n\n电子病历访问遵循分级分类、最小可用和行为审计。\n\n## 官方来源 / 依据\n\n- **OFF-M06｜医疗卫生机构网络安全管理办法**｜国家卫生健康委员会等｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2022-08-08`｜最后核验 `2026-08-31`｜https://www.nhc.gov.cn/guihuaxxs/c100133/202208/8a23d01133214a779879094dd20cd383.shtml\n- **OFF-M12｜关于进一步加强医疗机构电子病历信息使用管理的通知**｜国家卫生健康委员会｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2025-06-01`｜最后核验 `2026-08-31`｜https://www.nhc.gov.cn/yzygj/c100068/202506/c68abee7c54b4651a774cd533761780b.shtml\n- **OFF-U04｜网络数据安全管理条例**｜国务院｜状态 `CURRENT_CONFIRMED`｜实施 `2025-01-01`｜最后核验 `2026-08-31`｜https://app.www.gov.cn/govdata/gov/202409/30/520076/article.html\n- **OFF-U07｜中华人民共和国个人信息保护法**｜全国人大常委会｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-11-01`｜最后核验 `2026-08-31`｜https://www.miit.gov.cn/zwgk/zcwj/flfg/art/2022/art_04a0f1fb5df244e39688fd5372623a8d.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。"
+      },
+      "provider_called": false,
+      "blocked_before_provider": true,
+      "error": null
+    },
+    {
+      "case_id": "BND04",
+      "category": "BOUNDARY",
+      "reason": "NEGATIVE_ENTERPRISE_PROOF",
+      "material": {
+        "doc_id": "COM-04",
+        "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+        "chunk_id": "MCH-99497AE6286B2BAC390E35611FEE3A8A",
+        "source_span_id": "ESPAN-D1A99A1CD1ACC1F465B25CFC2D6AD390",
+        "source_text": "## 边界\n\n不代表已对接任何真实政务或医院系统。\n\n"
+      },
+      "provider_called": false,
+      "blocked_before_provider": true,
+      "error": null
+    },
+    {
+      "case_id": "BND05",
+      "category": "BOUNDARY",
+      "reason": "NON_SUPPORTING_ENTERPRISE_SOURCE",
+      "material": {
+        "doc_id": "COM-06",
+        "material_id": "3ec066d3-679a-4232-ba6d-364038658c81",
+        "chunk_id": "MCH-48BA8BF36C74047C6F344C134357DA37",
+        "source_span_id": "ESPAN-FBEA7F8E85AD5EC2519C5500AA8E454D",
+        "source_text": "## 边界\n\n不代表通过等保、密评或第三方认证。\n\n"
+      },
+      "provider_called": false,
+      "blocked_before_provider": true,
+      "error": null
+    },
+    {
+      "case_id": "BND06",
+      "category": "BOUNDARY",
+      "reason": "NEGATIVE_ENTERPRISE_PROOF",
+      "material": {
+        "doc_id": "COM-12",
+        "material_id": "45d3a548-516a-4349-a50b-e67ccef7930a",
+        "chunk_id": "MCH-170F20D1FD733BEE32B62D0D019A0FBB",
+        "source_span_id": "ESPAN-66BBB540B64BB443F7C0AD8F651DD226",
+        "source_text": "## 边界\n\n无真实客户合同，因此不提供可对外使用的7×24、分钟级响应或赔付承诺。\n\n"
+      },
+      "provider_called": false,
+      "blocked_before_provider": true,
+      "error": null
+    },
+    {
+      "case_id": "BND07",
+      "category": "BOUNDARY",
+      "reason": "COMMERCIAL_BOUNDARY",
+      "material": {
+        "doc_id": "COM-16",
+        "material_id": "fa4d4d1b-7add-4b2e-bab5-646df34ad084",
+        "chunk_id": "MCH-22582AC4412275DAB0E4442D9D909225",
+        "source_span_id": "ESPAN-4DC6350537F824DAFB6CE4B4E112611F",
+        "source_text": "## 边界\n\n报价、付款、质保、履约期和法律责任必须由正式商务与法务流程确认。\n\n"
+      },
+      "provider_called": false,
+      "blocked_before_provider": true,
+      "error": null
+    },
+    {
+      "case_id": "BND08",
+      "category": "BOUNDARY",
+      "reason": "PUBLIC_GUIDANCE_REFERENCE_ONLY",
+      "material": {
+        "doc_id": "GOV-08",
+        "material_id": "60da053c-c356-49ca-93ac-c8418bf9d798",
+        "chunk_id": "MCH-1BAE11EA77E384A948AA1EB3F2838DBA",
+        "source_span_id": "ESPAN-28C977632A268104D933F72828211B7A",
+        "source_text": "# 政务采购证明材料组织\n\n> 官方资料结构化摘要。正式投标与合规判断需回到原始法律、标准、政策或项目文件核验。\n\n## 证明\n\n方案、服务、业绩、人员、资质与证明材料应建立对应关系，避免只存宣传册。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U14｜中华人民共和国政府采购法实施条例**｜国务院｜状态 `CURRENT_CONFIRMED`｜实施 `2015-03-01`｜最后核验 `2026-08-31`｜https://xzfg.moj.gov.cn/law/detail?LawID=417\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。"
+      },
+      "provider_called": false,
+      "blocked_before_provider": true,
+      "error": null
+    }
+  ]
+}

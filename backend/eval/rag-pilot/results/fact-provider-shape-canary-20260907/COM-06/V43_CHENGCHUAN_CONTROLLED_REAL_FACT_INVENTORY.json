@@ -1,0 +1,57 @@
+{
+  "run_id": "chengchuan-controlled-real-fact-1788762461995",
+  "generated_at": "2026-09-07T06:27:41.995Z",
+  "database": "bid_platform_eval_chengchuan_v2",
+  "project_id": "19979c0e-45c0-443d-b504-09f28543fdfc",
+  "enterprise_id": "SYNTH-CHENGCHUAN-001",
+  "data_classification": "CONTROLLED_REAL_TEST",
+  "source_authority": "SYNTHETIC_DEVELOPMENT_ONLY",
+  "requirement_blind_extraction": true,
+  "material_count": 1,
+  "processed_material_count": 0,
+  "failed_material_count": 1,
+  "extraction_windows_total": 1,
+  "processed_windows": 0,
+  "failed_windows": 1,
+  "provider_calls": 1,
+  "provider_failures": 0,
+  "gateway_failures": 0,
+  "facts": [],
+  "material_summaries": [
+    {
+      "doc_id": "COM-06",
+      "material_id": "647066c9-efdc-4344-9d35-e16fd13fb052",
+      "original_name": "COM-06_权限_安全与审计测试报告.md",
+      "material_type": "technical_solution",
+      "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+      "chunk_count": 10,
+      "extraction_status": "succeeded",
+      "source_class": "base_existing_com",
+      "synthetic": true,
+      "enterprise_id": "SYNTH-CHENGCHUAN-001",
+      "failure": {
+        "code": "FACT_SEMANTIC_EMPTY",
+        "message": "Fact extraction failed.",
+        "status": 422,
+        "details": {
+          "stage": "FACT",
+          "cause_code": "VALID_EMPTY_RESULT",
+          "gateway_http_status": null,
+          "provider_http_status": 200,
+          "gateway_error_code": null,
+          "semantic_error_code": null,
+          "provider_error_code": null,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "json_parse_success": true,
+          "output_truncated": false,
+          "retry_attempted": false,
+          "attempt_count": null,
+          "constraint": null,
+          "table": null,
+          "detail": null
+        }
+      }
+    }
+  ]
+}

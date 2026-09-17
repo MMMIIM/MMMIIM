@@ -1,0 +1,46 @@
+{
+  "artifact_type": "V43_REFERENCE_CORPUS_SPECIFICITY_UPGRADE_AND_PAIRED_RETEST_EXECUTION_MANIFEST",
+  "run_id": "V43-REFERENCE-CORPUS-SPECIFICITY-20260915125956",
+  "status": "BLOCKED_REFERENCE_SOURCE_CONTENT_UNAVAILABLE",
+  "scope": "REQUIREMENT_LEVEL_REFERENCE_RETRIEVAL_EVAL",
+  "baseline_run_id": "V43-CORE6-REAL-REFERENCE-RAG-WRITER-20260915105535",
+  "immutable_baseline": true,
+  "physical_corpus_gap": "PHYSICAL_CORPUS_GAP_NOT_OBSERVED",
+  "semantic_corpus_gap_or_low_density": [
+    "call_center_speech_ai",
+    "database_internals",
+    "document_material_platform",
+    "electronic_signature_ca",
+    "ux_interaction"
+  ],
+  "outputs": [
+    "00_EXECUTION_MANIFEST.json",
+    "01_BASELINE_IDENTITY.json",
+    "02_TOPIC_SOURCE_PLAN.json",
+    "03_NEW_REFERENCE_SOURCE_MANIFEST.json",
+    "04_CORPUS_VARIANT_IDENTITY.json",
+    "05_NEW_CHUNK_EMBEDDING_AUDIT.json",
+    "06_B1_ENRICHED_RESULTS.json",
+    "07_B2_THRESHOLD_054_SHADOW_RESULTS.json",
+    "08_PAIRED_MECHANICAL_COMPARISON.json",
+    "09_GENERIC_CHUNK_DISPLACEMENT.json",
+    "10_GPT_DELTA_REVIEW_PACKET.json",
+    "11_UNCLASSIFIED_TOPIC_REVIEW_PACKET.json",
+    "12_AUTHORITY_REGRESSION.json",
+    "13_PROVIDER_AUDIT.json",
+    "14_TEST_REPORT.json",
+    "15_CHECKPOINT.json",
+    "15_CHECKPOINT.md"
+  ],
+  "side_effects": {
+    "provider_calls": 1,
+    "embedding_calls": 1,
+    "llm_calls": 0,
+    "eval_db_writes": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "router_mutations": 0,
+    "requirement_mutations": 0,
+    "fact_mapping_claim_writer_mutations": 0
+  }
+}

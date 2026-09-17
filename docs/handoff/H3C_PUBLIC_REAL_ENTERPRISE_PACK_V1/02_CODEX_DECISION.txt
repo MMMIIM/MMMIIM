@@ -1,0 +1,21 @@
+DECISION
+V43_REAL_FACT_V2_H3C_PUBLIC_SOURCE_DOWNLOAD_AND_FREEZE
+
+1. Read 00_README.md and 01_SOURCE_MANIFEST.json.
+2. Do not alter the 20-source list based on tender requirements.
+3. Run download_h3c_public_sources.py against the official H3C URLs.
+4. Keep DEMO-ENTERPRISE-A completely separate.
+5. Record canonical URL, resolved URL, HTTP metadata, SHA256, byte size, local path.
+6. Discover/download only same-domain official PDF attachments.
+7. Deduplicate identical bytes by SHA256.
+8. Assign source role REAL_PUBLIC_FIRST_PARTY or the existing canonical equivalent.
+9. If that role requires a schema change: STOP with BLOCKED_REAL_FACT_SOURCE_ROLE_SCHEMA_CHANGE_REQUIRED.
+10. No Provider/LLM calls. No Fact extraction yet. No DB writes.
+11. Produce:
+   - download_report.json
+   - source_authority_snapshot.json
+   - duplicate_report.json
+   - source_eligibility.json
+   - checkpoint.json
+12. Report REAL_FACT_V2_ELIGIBLE_SOURCE_COUNT.
+13. STOP with READY_FOR_GPT_REAL_FACT_V2_SOURCE_FOUNDATION_ADJUDICATION.

@@ -1,0 +1,126 @@
+{
+  "checkpoint": "V43_FACT_OUTPUT_CONTRACT_RECOVERY_CHECKPOINT",
+  "generated_at": "2026-09-07T00:00:00.000Z",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "task_type": "evidence_fact_extraction",
+  "phase": "OFFLINE_CONTRACT_RECOVERY",
+  "provider_calls_this_phase": 0,
+  "production_db_writes_this_phase": 0,
+  "gold_mutations_this_phase": 0,
+  "historical_run": {
+    "artifact": "docs/V43_RAG_FACT_TARGETED_LIVE_CHECKPOINT.json",
+    "provider_calls": 22,
+    "provider_failures": 0,
+    "gateway_http_status": {"200": 3, "422": 19},
+    "provider_http_status": {"200": 22},
+    "output_schema_invalid": 19,
+    "wrong_shape_rate": 0.8636363636,
+    "output_contract_valid_rate": 0.1363636364,
+    "semantic_empty_valid_responses": 2,
+    "safe_telemetry_gap": "No per-call schema_validation_errors or provider structural key summary was retained."
+  },
+  "requested_contract": {
+    "contract_version": "4.3-evidence-fact-extraction-v1",
+    "instruction_sha256_current_runtime": "f4303deae5b4382d26561d3cdadd29af4ef507496aa4200fe89e43307810925d",
+    "data_schema_sha256_current_runtime": "9b1c3dbe95e5817470032ce7594686bdc90e3d794babc7a207ced3ae443f42d9",
+    "response_format": {
+      "type": "json_schema",
+      "name": "evidence_fact_extraction_data",
+      "strict": true
+    },
+    "data_top_level": {"type": "object", "allowed_keys": ["facts"], "required_keys": ["facts"]},
+    "fact_required_keys": ["subject_type", "subject_name", "entities", "status", "scopes", "quantities", "validity", "domain_metadata"],
+    "fact_optional_keys": ["status_source_text"]
+  },
+  "provider_adapter": {
+    "provider_category": "openai_compatible",
+    "model": "deepseek-ai/DeepSeek-V4-Flash",
+    "request_path": "/chat/completions",
+    "request_response_format": "explicit json_schema projected from canonical data_schema",
+    "strict": true,
+    "tool_function_schema": "not used",
+    "enable_thinking": false,
+    "max_tokens": 4800,
+    "temperature": 0.1,
+    "top_p": 0.9,
+    "top_k": 20,
+    "stream": false,
+    "n": 1,
+    "config_source": "task-router explicit response_format"
+  },
+  "shape_comparison": {
+    "provider_return_top_level_shape": {
+      "exact_22_run": "NOT_RETAINED",
+      "safe_evidence": "Provider HTTP 200 and adapter JSON parse succeeded for all 22 rows; raw Provider top-level keys were not persisted.",
+      "historical_same_runtime_canary": "JSON object parsed by adapter; representative nested schema violations were retained as safe paths/types only."
+    },
+    "valid_response_top_level_shape": {
+      "outer_gateway": "object with data.outputs.response_payload_json string",
+      "inner_envelope": "object with schema_version, task_type, status, data, warnings",
+      "task_data": "object with facts array",
+      "observed_fact_counts": {"call_2": 0, "call_8": 0, "call_22": 1}
+    },
+    "invalid_response_top_level_shape": {
+      "exact_22_run": "NOT_RETAINED; only wrong_shape label was persisted",
+      "historical_same_runtime_examples": [
+        {"path": "data.facts[0].entities", "expected": "object", "actual_type": "string"},
+        {"path": "data.facts[0].scope_source_texts", "expected": "object", "actual_type": "array"},
+        {"path": "data.facts[0].validity", "expected": "no additional properties", "additional_property": "valid_to"},
+        {"path": "data.facts[0].entities[0]", "expected": "no additional properties", "additional_property": "entity_type"},
+        {"path": "data.facts[0].status_source_text", "expected": "non-empty string", "actual_type": "string"}
+      ]
+    },
+    "gateway_expected_shape": {
+      "outer": {"data": {"outputs": {"response_payload_json": "JSON string"}}},
+      "inner": {"schema_version": "contract version", "task_type": "evidence_fact_extraction", "status": "success|failed", "data": {"facts": "array"}, "warnings": "array"}
+    },
+    "normalizer_output_shape": "strict JSON Gateway envelope; Fact transport does not use legacy think/fence normalization",
+    "fact_parser_expected_shape": "envelope.data.facts[] -> projectEvidenceFactTransportCandidate -> Canonical Evidence Fact; no result/text/answer fallback"
+  },
+  "sampled_invalid_rows": [
+    {"call_index": 1, "gateway_http_status": 422, "provider_http_status": 200, "response_shape": "wrong_shape", "content_length": 2142, "content_hash": "c5555687a09dc5b3ff0252a74fdcc37ad88ed92566b65b781a83357ba86a3cc4", "provider_top_level_keys": "NOT_RETAINED"},
+    {"call_index": 3, "gateway_http_status": 422, "provider_http_status": 200, "response_shape": "wrong_shape", "content_length": 2142, "content_hash": "6976b73c0fd3e96ab7f8d653d29f1b0ed0e2cbaa928cafdbae62b20ddb50ff56", "provider_top_level_keys": "NOT_RETAINED"},
+    {"call_index": 4, "gateway_http_status": 422, "provider_http_status": 200, "response_shape": "wrong_shape", "content_length": 2201, "content_hash": "25f19bd1987b8569a9c640bdbb7b21e90010f75f5e40aafb672a738959fceebd", "provider_top_level_keys": "NOT_RETAINED"}
+  ],
+  "ownership": {
+    "output_schema_invalid_19": {
+      "classification": "A_PROVIDER_DID_NOT_FOLLOW_REQUESTED_SCHEMA",
+      "confidence": "PROVISIONAL_PENDING_EXACT_SHAPE_TELEMETRY",
+      "evidence": ["Provider HTTP 200", "Gateway strict validation returned OUTPUT_SCHEMA_INVALID", "same-runtime canary recorded schema field violations", "local contract-parity tests pass"],
+      "not_proven": ["The exact invalid path for each of the 19 rows", "Whether any row also involved Provider response-format incompatibility"]
+    },
+    "configuration_incompatibility": {"classification": "B_NOT_SUPPORTED_BY_CURRENT_EVIDENCE", "reason": "Official Provider API documents json_schema for the model; local adapter forwards explicit strict json_schema and three rows passed the same Gateway contract."},
+    "gateway_normalization_defect": {"classification": "C_NOT_OBSERVED", "reason": "Gateway transport and envelope tests pass; no repair or fallback exists."},
+    "internal_schema_expectation_mismatch": {"classification": "D_NOT_OBSERVED", "reason": "Shared semantic-contract, task-router, Gateway and Fact parser parity tests pass."},
+    "fact_parser_expectation_mismatch": {"classification": "E_NOT_OBSERVED", "reason": "Parser consumes the canonical envelope.data.facts projection and rejects invalid transport shapes deterministically."},
+    "prompt_output_contract_conflict": {"classification": "F_NOT_PROVEN", "reason": "Prompt and schema both require a single facts object; exact Provider output is not retained for the 22-row run."},
+    "mixed_root_cause": {"classification": "G_NOT_SELECTED", "reason": "The current evidence supports a provisional Provider schema violation classification; a mixed classification is unnecessary until exact telemetry is collected."}
+  },
+  "retry_policy": {
+    "historical_schema_contract_retries": 10,
+    "current_schema_contract_retries": 0,
+    "semantic_empty_expected_fact_retry": "retains existing bounded one-retry behavior",
+    "focused_regression": "PASS"
+  },
+  "offline_regression": {
+    "fact_contract_gateway_and_eval_tests": {"tests": 58, "passed": 58, "external_provider_calls": 0},
+    "semantic_gateway_contract_tests": {"tests": 63, "passed": 63, "external_provider_calls": 0},
+    "assertions": [
+      "invalid schema fails closed",
+      "valid empty facts array remains semantic-empty",
+      "no JSON repair or legacy fallback",
+      "schema diagnostics are safe and content-free",
+      "source lineage, quantity, entity, status and validity projection remain unchanged"
+    ]
+  },
+  "telemetry_patch": {
+    "scope": "Eval runner only",
+    "fields": ["schema_validation_errors", "fact_semantic_diagnostic", "response_format_type", "generation_config", "contract/instruction hashes", "safe structural summary"],
+    "raw_provider_content_persisted": false,
+    "ready_for_bounded_rerun": true
+  },
+  "targeted_gate": "STOP_BEFORE_RERUN_PENDING_EXACT_SHAPE_EVIDENCE",
+  "next_allowed_step": "Run the same 12-material set with provider_call_cap=18 only after this diagnostic patch is deployed to the runtime and the focused regression remains green.",
+  "readiness": "RAG_FACT_PRODUCTION_READINESS=NOT_READY"
+}

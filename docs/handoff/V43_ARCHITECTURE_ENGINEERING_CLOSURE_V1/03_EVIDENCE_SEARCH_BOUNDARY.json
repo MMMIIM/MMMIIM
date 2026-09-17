@@ -1,0 +1,46 @@
+{
+  "generated_at": "2026-09-16T17:31:38.432Z",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "dirty_worktree": true,
+  "authority": "SYNTHETIC_EVAL_ONLY",
+  "production_authority": "NONE",
+  "schema_version": "v43-evidence-search-boundary-v1",
+  "production_owner": "EnterpriseRetrievalService",
+  "eval_owner": "EvidenceSearchOrchestrator",
+  "eval_isolation": "ISOLATED_EVAL",
+  "filter": {
+    "source_role": "EVIDENCE_CANDIDATE",
+    "enterprise_id": "SYNTH-CHENGCHUAN-001",
+    "corpus_scope": "ENTERPRISE_PRIVATE",
+    "quarantined": false,
+    "active_approved_extracted": true
+  },
+  "top_k": {
+    "max": 5,
+    "force_fill": false,
+    "k0_valid": true,
+    "threshold_added": false
+  },
+  "candidate_fields": [
+    "requirement_id",
+    "search_run_id",
+    "enterprise_id",
+    "project_id",
+    "material_id",
+    "chunk_id",
+    "source_span_id",
+    "source_hash",
+    "source_role",
+    "authority",
+    "production_authority",
+    "rank",
+    "profile_hash"
+  ],
+  "bounded_fix": {
+    "status": "CLOSED",
+    "rule": "one search_run_id per run shared by top-level result and every candidate",
+    "ranking_changed": false,
+    "authority_changed": false
+  }
+}

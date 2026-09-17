@@ -1,0 +1,62 @@
+{
+  "checkpoint": "V43_FACT_V21_STAGE1_RECONCILIATION_CHECKPOINT",
+  "generated_at": "2026-09-08T09:12:19.081Z",
+  "original_run_id": "fact-candidate-v2-1-fresh-20260908064040-06620586",
+  "original_execution_id": "fact-candidate-v2-1-fresh-20260908064040-06620586-COM-01",
+  "old_checkpoint_status": "BLOCKED_WITH_EVIDENCE",
+  "runtime_resolved_provider": "deepseek_official",
+  "response_provider_raw_value": null,
+  "response_provider_observability": "NOT_EMITTED_BY_RESPONSE",
+  "actual_response_model": "deepseek-v4-pro",
+  "stage1_frozen_hard_stop_results": {
+    "response_model_expected": {
+      "result": true,
+      "actual": "deepseek-v4-pro"
+    },
+    "schema": {
+      "result": true
+    },
+    "facts_nonempty": {
+      "result": true,
+      "actual": 4
+    },
+    "source_ref_resolution": {
+      "result": true,
+      "actual": 1
+    },
+    "source_text_output_bytes": {
+      "result": true,
+      "actual": 0
+    },
+    "response_provider": {
+      "result": "NOT_A_HARD_STOP",
+      "actual": null
+    }
+  },
+  "com01_stage1_mechanical_gate": "PASS",
+  "physical_provider_call_accounting": {
+    "historical_interrupted_provider_calls": "UNKNOWN_0_OR_1",
+    "diagnostic_invalid_run": 1,
+    "clean_com01_run": 1,
+    "total_new_physical_calls_so_far": 2,
+    "valid_canary_executions": 1,
+    "max_new_provider_calls_original": 4,
+    "remaining_physical_call_budget": 2,
+    "stage2_executions_required": 3,
+    "stage2_budget_authorized": "NO"
+  },
+  "valid_semantic_execution_count": 1,
+  "remaining_old_call_budget": 2,
+  "gpt_semantic_packet_path": "backend\\eval\\rag-pilot\\results\\fact-candidate-v2-1-fresh-20260908064040-06620586\\V43_FACT_V21_COM01_GPT_SEMANTIC_REVIEW_PACKET.json",
+  "raw_candidate_packet_path": "backend\\eval\\rag-pilot\\results\\fact-candidate-v2-1-fresh-20260908064040-06620586\\raw-candidate-packet.json",
+  "canonicalization_packet_path": "backend\\eval\\rag-pilot\\results\\fact-candidate-v2-1-fresh-20260908064040-06620586\\canonicalization-packet.json",
+  "grounding_packet_path": "backend\\eval\\rag-pilot\\results\\fact-candidate-v2-1-fresh-20260908064040-06620586\\V43_FACT_V21_COM01_GPT_SEMANTIC_REVIEW_PACKET.json",
+  "resolved_source_packet_path": "backend\\eval\\rag-pilot\\results\\fact-candidate-v2-1-fresh-20260908064040-06620586\\V43_FACT_V21_COM01_GPT_SEMANTIC_REVIEW_PACKET.json",
+  "original_checkpoint_sha256": "7ee6bdfcf9fcdbf639097da23c9301f555fef0e9a2dfdae231525159a1b8ca49",
+  "provider_calls_this_task": 0,
+  "production_db_writes": 0,
+  "fact_persistence": 0,
+  "gold_mutations": 0,
+  "raw_execution_mutation": 0,
+  "final_status": "READY_FOR_GPT_COM01_SEMANTIC_ADJUDICATION"
+}

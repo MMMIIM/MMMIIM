@@ -1,0 +1,130 @@
+{
+  "stage": "NORMALIZED_CANDIDATE_SNAPSHOT",
+  "eval_run_id": "V43-FLYWHEEL-P0-43-CORRECTED-V6.3-20260912104145",
+  "captured_at": "2026-09-12T10:47:22.726Z",
+  "evidence": {
+    "candidate_count": 12,
+    "candidates": [
+      {
+        "text": "系统故障重启后能正常运行且支持数据一致性；支持完全媒体故障恢复的能力；提供基于时间点故障恢复功能。",
+        "category": "functional",
+        "source_range": {
+          "start_ref": "C036-S003",
+          "end_ref": "C036-S008"
+        },
+        "mandatory_observed": true,
+        "requires_confirmation": false
+      },
+      {
+        "text": "支持数据库事务故障、系统故障、存储媒体故障不同级别的可恢复能力。",
+        "category": "functional",
+        "source_range": {
+          "start_ref": "C036-S014",
+          "end_ref": "C036-S018"
+        },
+        "mandatory_observed": true,
+        "requires_confirmation": false
+      },
+      {
+        "text": "持虚拟化部署或容器化部署等云化部署方式。",
+        "category": "technical",
+        "source_range": {
+          "start_ref": "C036-S022",
+          "end_ref": "C036-S023"
+        },
+        "mandatory_observed": true,
+        "requires_confirmation": false
+      },
+      {
+        "text": "同源支持以下至少三种 CPU 平台架构：ARM、LoongArch、MIPS、SW64、x86；支持 SMP 和 NUMA 的运行环境。",
+        "category": "technical",
+        "source_range": {
+          "start_ref": "C036-S027",
+          "end_ref": "C036-S036"
+        },
+        "mandatory_observed": true,
+        "requires_confirmation": false
+      },
+      {
+        "text": "支持 ODBC。",
+        "category": "technical",
+        "source_range": {
+          "start_ref": "C036-S038",
+          "end_ref": "C036-S038"
+        },
+        "mandatory_observed": true,
+        "requires_confirmation": false
+      },
+      {
+        "text": "支持 JDBC。",
+        "category": "technical",
+        "source_range": {
+          "start_ref": "C036-S042",
+          "end_ref": "C036-S042"
+        },
+        "mandatory_observed": true,
+        "requires_confirmation": false
+      },
+      {
+        "text": "以光盘、便携式移动设备、镜像文件、在线下载等交付方式提供产品交付物。",
+        "category": "delivery",
+        "source_range": {
+          "start_ref": "C036-S046",
+          "end_ref": "C036-S049"
+        },
+        "mandatory_observed": true,
+        "requires_confirmation": false
+      },
+      {
+        "text": "产品自发布之日起至产品停止功能升级（包含不限于新特性、新硬件支持、问题修复、安全补丁等）之日止≥5 年。",
+        "category": "service",
+        "source_range": {
+          "start_ref": "C036-S051",
+          "end_ref": "C036-S055"
+        },
+        "mandatory_observed": true,
+        "requires_confirmation": false
+      },
+      {
+        "text": "产品停止功能升级之日起至产品停止功能维护（包括问题修复、安全补丁等）之日止≥4 年。",
+        "category": "service",
+        "source_range": {
+          "start_ref": "C036-S058",
+          "end_ref": "C036-S062"
+        },
+        "mandatory_observed": true,
+        "requires_confirmation": false
+      },
+      {
+        "text": "产品功能维护停止之日起至产品停止安全维护（包括中高风险漏洞修复）之日止≥2 年。",
+        "category": "service",
+        "source_range": {
+          "start_ref": "C036-S065",
+          "end_ref": "C036-S069"
+        },
+        "mandatory_observed": true,
+        "requires_confirmation": false
+      },
+      {
+        "text": "自销售之日起，产品售后服务周期≥6 年。",
+        "category": "service",
+        "source_range": {
+          "start_ref": "C036-S074",
+          "end_ref": "C036-S077"
+        },
+        "mandatory_observed": true,
+        "requires_confirmation": false
+      },
+      {
+        "text": "提供多种形式支持服务，包含电话、电子邮件、远程连接等；提供技术支持服务，支持同城4h、异地12h响应要求，两个工作日解决问题，对于未能解决的问题和故障提供可行的升级方案；提供培训材料、产品手册、培训视频等培训相关内容；建立全国技术服务体系和服务团队，符合专业服务体系标准要求，提供原厂中文服务；服务周期内支持版本免费升级；开源产品对获得的社区源代码进行安全性和知识产权审查与管理；提供数据库参数、慢SQL语句的性能优化指南，包含性能优化。",
+        "category": "service",
+        "source_range": {
+          "start_ref": "C036-S080",
+          "end_ref": "C036-S100"
+        },
+        "mandatory_observed": true,
+        "requires_confirmation": false
+      }
+    ]
+  }
+}

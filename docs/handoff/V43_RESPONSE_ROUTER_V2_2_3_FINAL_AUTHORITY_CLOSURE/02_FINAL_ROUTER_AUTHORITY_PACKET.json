@@ -1,0 +1,114 @@
+{
+  "artifact_type": "V43_RESPONSE_ROUTER_V2_2_3_FINAL_AUTHORITY_PACKET",
+  "eval_only": true,
+  "semantic_root_cause": "PENDING_GPT",
+  "router_identity": {
+    "version": "v43-response-router-v2.2.3",
+    "implementation_id": "v43-response-router-v2.2.3-response-authority-closure",
+    "path": "backend/src/pipeline/requirement-response-router-v2-2-3.js",
+    "sha256": "ff34a72ca1929cac7d99d0c12674216bd9686e97a1e9727e9eee2a9e1554ab1f"
+  },
+  "reference_v3": {
+    "sha256": "3c7f151678c8c99aee25ab995d438496b4a0e5fc661386b70204f3be72e2e744",
+    "rows": 2178,
+    "cohorts": {
+      "CORE6": 1009,
+      "HOLDOUT_V1": 397,
+      "HOLDOUT_V2": 772
+    }
+  },
+  "replay_identity": {
+    "run_id": "V43-RR-V2_2_3-V3-REPLAY-97631e2eb12b0081",
+    "rows": 2178
+  },
+  "deterministic_safety": {
+    "future_commitment_as_existing_fact": 0,
+    "high_p0_evidence_false_negative": 0,
+    "p0_commitment_to_solution_escape": 0,
+    "p0_compliance_escape": 0,
+    "critical_p0_gate_missing": 0,
+    "high_safety_gate_missing": 0,
+    "gpt_response_required_false_negative": 0,
+    "gpt_scoring_related_false_negative": 0,
+    "gpt_critical_primary_mode_residual": 0,
+    "gpt_evidence_dependency_false_negative": 0,
+    "response_required_coverage": 1,
+    "v222_correct_v223_wrong": 0,
+    "unexplained_router_drift": 0
+  },
+  "residual_adjudication": {
+    "response_required_disagreements": [],
+    "scoring_false_negatives": [],
+    "primary_mode_disagreements": [],
+    "evidence_dependency_false_negatives": [],
+    "new_semantic_regressions": []
+  },
+  "evidence": {
+    "source_text_output_bytes": 0,
+    "source_ref_resolution_rate": 1,
+    "execution_layer": {
+      "matrix_row_count": 1009,
+      "canonical_requirement_count": 1009,
+      "response_decision_count": 1009,
+      "response_decision_coverage_rate": 1,
+      "matrix_ids_closed": true,
+      "response_unit_count": 178,
+      "response_required_universe": 1001,
+      "final_reconciliation_denominator": 1001,
+      "final_reconciliation_coverage_rate": 1,
+      "response_unit_ids_unknown": 0,
+      "compliance_to_normal_writer_direct": 0,
+      "enterprise_assertion_without_authority_lineage": 0,
+      "writer_lineage_violation": 0,
+      "no_authority_created": true
+    },
+    "determinism": {
+      "checkpoint": "V43_RESPONSE_ROUTER_V2_2_3_DETERMINISM_RECERT",
+      "replay_artifact": "docs/V43_ROUTER_V2_2_3_FULL_REPLAY_REFERENCE_V3.json",
+      "first_stable_hash": "01678921475fa4cadc8d6699d8581cd59865030647c15361ce4c87fbd9c82929",
+      "second_stable_hash": "01678921475fa4cadc8d6699d8581cd59865030647c15361ce4c87fbd9c82929",
+      "stable": true,
+      "rows": 2178,
+      "provider_calls": 0,
+      "llm_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0,
+      "status": "PASS"
+    },
+    "static_leakage": {
+      "checkpoint": "V43_RESPONSE_ROUTER_V2_2_3_STATIC_LEAKAGE_AUDIT",
+      "files": [
+        {
+          "path": "backend/src/pipeline/requirement-response-router-v2-2-3.js",
+          "sha256": "ff34a72ca1929cac7d99d0c12674216bd9686e97a1e9727e9eee2a9e1554ab1f"
+        },
+        {
+          "path": "backend/src/pipeline/response-decision-v1.js",
+          "sha256": "02c7de9daca9547819b6cfe29ddaa3f2a7366972dcdd920cb15c8e50459aea17"
+        },
+        {
+          "path": "backend/src/pipeline/response-router-service.js",
+          "sha256": "09b70153fdbac1ec4596919ca33df54043bbde68493a0cee10f9abecb33388a9"
+        }
+      ],
+      "forbidden_pattern_count": 0,
+      "findings": [],
+      "provider_calls": 0,
+      "llm_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0,
+      "status": "PASS"
+    }
+  },
+  "side_effects": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "fact_writes": 0,
+    "gold_mutations": 0,
+    "requirement_mutations": 0,
+    "reference_mutations": 0,
+    "router_mutations": 0,
+    "production_semantic_changes": 0
+  }
+}

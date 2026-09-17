@@ -67,3 +67,41 @@ they must not re-enter the source-evidence pipeline.
 New fields must declare owner, source/derived class, persistence expectation,
 allowed values and downstream consumers. A generic `status`, `result`,
 `evidence` or `source` field is not sufficient documentation for a formal state.
+
+## Canonical authority freeze — ADR-017
+
+The following definitions are authoritative for the Evidence → Fact → Mapping
+chain. Legacy persistence and APIs remain only for historical compatibility,
+legacy audit/read and temporary legacy UI/API compatibility; they are never a
+second canonical write authority.
+
+| Concept | Business definition | Canonical owner | Persistence | Lifecycle position | Do-not-confuse-with | Legacy equivalent |
+|---|---|---|---|---|---|---|
+| Enterprise Evidence | Project/company material that can be reviewed as source evidence | Evidence source/review services | `evidences`, source spans | material → review | Retrieval Candidate, Fact | legacy evidence APIs |
+| Evidence Source Span | Exact, hashable source unit with lineage | `EvidenceSourceSpanService` | `evidence_source_spans` | evidence → review | Evidence Fact | span fields on legacy Evidence |
+| Evidence Fact | Bounded atomic enterprise fact bound to an approved review and exact span | `EvidenceSourceFactService` | `evidence_source_facts` | review → Fact | Source Span, Assessment | `evidence_facts` |
+| Requirement–Evidence Fact Mapping | Reviewed support relationship between Canonical Requirement and approved Fact | `RequirementEvidenceFactMappingService` | `requirement_evidence_fact_mappings` | Fact + Requirement → Mapping | Sufficiency, Claim approval | `requirement_evidence_mappings` |
+| Evidence Support Assessment | Source-bound semantic observation, including unavailable/uncertain states | assessment contract/evaluator | transient/read model | span → review | Fact, Mapping | legacy support observations |
+| Sufficiency | Deterministic aggregate of Evidence Support observations and approved support | `aggregateEvidenceSufficiency()` | derived | assessment/mapping → readiness | Mapping, Readiness | none |
+| Readiness | Requirement-level operational readiness derived from canonical support | `EvidenceReadinessService` | derived/read model | support → project readiness | Sufficiency, Claim permission | legacy readiness views |
+| Claim | Proposed bid assertion | Claim services | claim tables | plan + support → gate | Fact, Mapping | legacy claim records |
+| Coverage | Requirement coverage outcome for a response | Coverage validator / coverage lifecycle | `requirement_coverages` | claim/response → coverage | Mapping, Claim Gate | none |
+| Claim Gate | Safety authorization decision for Claim/Writer use | `ClaimGateService` / Enterprise Claim Gate | gate evaluations | Claim → Writer authorization | Claim, Mapping approval | none |
+
+Canonical Fact and Mapping identities use database FKs: `requirements.id` and
+`evidence_source_facts.id`. Display identifiers (`req_id`, Candidate IDs,
+source refs) are not FK identities. Approval events are distinct:
+Evidence approval ≠ Review approval ≠ Fact approval ≠ Mapping approval ≠ Claim
+approval. Mapping approval alone cannot produce `SUPPORTED`, Claim-ready,
+Readiness-ready or Writer-ready authority.
+
+The active Mapping contract remains `requirement-evidence-mapping-v1`.
+`support_level` values are contract-specific and must not be compared across
+legacy and canonical contracts without an explicit conversion.
+
+### DEFINITION_DRIFT_BACKLOG (P1)
+
+The following remain documented follow-up work and are not alternate authority:
+`support_level` naming, `approved`/status naming, legacy/new API wording, and
+frontend wording such as “需求匹配确认”. They must not be resolved by creating
+another Fact or Mapping concept.

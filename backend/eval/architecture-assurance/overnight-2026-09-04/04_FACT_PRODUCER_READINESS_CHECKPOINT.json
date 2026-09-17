@@ -1,0 +1,15 @@
+{
+  "phase": "04",
+  "baseline_fingerprint": "318d53c8a8785952d38a173dc086efd1d044c5871e288e305614e52e14a19641",
+  "confirmed_current": ["Fact lifecycle service/persistence/review/versioning is wired", "default ProviderNeutral extractor is non-producing", "SemanticGatewayEvidenceFactExtractor is registered and injected"],
+  "historical_fixed": ["source/review/hash/currentness gates", "atomic Fact replacement"],
+  "open": ["semantic producer certification", "Real Fact Gold and provider fidelity"],
+  "conflicting": ["handoff producer status versus current runtime wiring"],
+  "unknown": ["semantic accuracy and live-provider behavior"],
+  "risks": ["P1-PRODUCER-001", "P1-FACT-GOLD-001"],
+  "evidence_refs": ["backend/src/evidence-source-fact-service.js", "backend/src/pipeline/semantic-gateway-evidence-fact-extractor.js", "backend/src/server.js", "backend/test/evidence-fact-producer-v1.test.js"],
+  "fact_revisions": ["producer status = AVAILABLE_NOT_CERTIFIED"],
+  "next_dependencies": ["05_MAPPING_PRODUCER_READINESS_CHECKPOINT"],
+  "gate": "FACT_INFRASTRUCTURE=READY_WITH_DEBT; FACT_PRODUCER=AVAILABLE_NOT_CERTIFIED",
+  "safe_to_continue": true
+}

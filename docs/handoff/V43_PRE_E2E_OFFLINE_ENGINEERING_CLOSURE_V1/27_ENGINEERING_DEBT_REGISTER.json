@@ -1,0 +1,117 @@
+{
+  "artifact_type": "V43_ENGINEERING_DEBT_REGISTER_V1",
+  "generated_at": "2026-09-16",
+  "execution_mode": "OFFLINE_ONLY",
+  "provider_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "gold_mutations": 0,
+  "production_semantic_changes": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "commit": 0,
+  "push": 0,
+  "merge": 0,
+  "deploy": 0,
+  "debts": [
+    {
+      "id": "DOC-BASELINE-001",
+      "item": "V43_TARGET_ARCHITECTURE_BID_COPILOT_BASELINE.md missing",
+      "severity": "DOCUMENTATION_GAP",
+      "owner": "engineering documentation",
+      "evidence": "filesystem check at generation time"
+    },
+    {
+      "id": "HOST-EMBED-001",
+      "item": "Host-only embedding egress gate remains before full E2E",
+      "severity": "P0_HOST_GATE",
+      "owner": "runtime operations",
+      "evidence": {
+        "path": "docs/handoff/V43_OVERNIGHT_REAL_E2E_MASTER_V1/00D_HOST_EXECUTION_GATE.json",
+        "exists": true,
+        "bytes": 1925,
+        "sha256": "444959f2e3844317cb0711e6dc23381c1530c1a45c77ad813c1a495d552b7a40",
+        "status": "CURRENT_REUSABLE",
+        "roles": [],
+        "notes": []
+      }
+    },
+    {
+      "id": "FACT-REAL-001",
+      "item": "Real Fact authority is not established; Chengchuan inventory is synthetic Eval-only",
+      "severity": "P0_AUTHORITY",
+      "owner": "Fact/Governance",
+      "evidence": {
+        "path": "docs/V43_CHENGCHUAN_CONTROLLED_REAL_FACT_INVENTORY.json",
+        "exists": true,
+        "bytes": 100561,
+        "sha256": "65ca3e3a8e529d3c3404a7bc2b95ef0187f95fc8ad9cfa7016393c35e9a35811",
+        "status": "BLOCKED_BUT_DIAGNOSTICALLY_VALID",
+        "roles": [],
+        "notes": []
+      }
+    },
+    {
+      "id": "FACT-EXT-001",
+      "item": "Chengchuan extension embedding evidence incomplete",
+      "severity": "P1_EVIDENCE",
+      "owner": "Eval data operations",
+      "evidence": {
+        "path": "docs/V43_CHENGCHUAN_V2_IMPORT_CHECKPOINT.json",
+        "exists": true,
+        "bytes": 1472,
+        "sha256": "e2f341d6c355274c281d1bf0ddec64a4592b5319456563fb6a7967604c861fe6",
+        "status": "BLOCKED_BUT_DIAGNOSTICALLY_VALID",
+        "roles": [],
+        "notes": []
+      }
+    },
+    {
+      "id": "MAPPING-REAL-001",
+      "item": "Mapping successor real partition gaps and no trusted dual eval",
+      "severity": "P0_EVAL_GATE",
+      "owner": "Mapping/Eval",
+      "evidence": {
+        "path": "docs/V43_MAPPING_V2_ACTIVATION_READINESS_CHECKPOINT.json",
+        "exists": true,
+        "bytes": 5014,
+        "sha256": "ab202890039a58bcda44dd1af024419fda399ad42b4e56db8c16fee27a223ce3",
+        "status": "CURRENT_PARTIAL_REUSABLE",
+        "roles": [],
+        "notes": []
+      }
+    },
+    {
+      "id": "REQ-HUMAN-001",
+      "item": "Core6 canonical input is not Human Gold authority",
+      "severity": "P0_AUTHORITY",
+      "owner": "Human review",
+      "evidence": {
+        "path": "docs/V43_REQUIREMENT_GOLD_V2_SIX_TENDER_CANONICAL_INPUT.json",
+        "exists": true,
+        "bytes": 1670324,
+        "sha256": "ff07402688a3013af9a9b8be01f613f76848b7ea905208c1955a604432422fe1",
+        "status": "CURRENT_PARTIAL_REUSABLE",
+        "roles": [],
+        "notes": []
+      }
+    },
+    {
+      "id": "REQ-COUNT-001",
+      "item": "FAST-WATER-01 source manifest records 114 requirements while current Core6 canonical input records 113",
+      "severity": "IDENTITY_RECONCILIATION",
+      "owner": "Requirement authority review",
+      "evidence": {
+        "path": "docs/handoff/V43_CORE6_AUTHORITATIVE_REQUIREMENT_ARTIFACT_RECOVERY_V2/09_CORE6_AUTHORITATIVE_REQUIREMENT_MANIFEST_V1.json",
+        "exists": true,
+        "bytes": 5140,
+        "sha256": "204d7292496959fd306f7708674f88ee2d3654d6ce8752e56ea891f43f3c51b3",
+        "status": "CURRENT_PARTIAL_REUSABLE",
+        "roles": [],
+        "notes": []
+      }
+    }
+  ]
+}

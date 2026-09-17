@@ -1,0 +1,46 @@
+{
+  "task": "RESUME_V43_CHENGCHUAN_CONTROLLED_REAL_FACT_EXTRACTION",
+  "status": "IMPORT_COMPLETE_FACT_EXTRACTION_PARTIAL_WITH_FAILURES",
+  "source": {
+    "base_existing_com_docs": 16,
+    "new_extension_docs": 76,
+    "post_import_synthetic_enterprise_docs": 92,
+    "matrix_theme_coverage": "34/34",
+    "residual_xinglan_references": 0,
+    "tender_requirement_leakage": 0,
+    "doc_id_collisions": 0,
+    "extension_sha256_verified": true,
+    "target_layout_verified": true,
+    "enterprise_id": "SYNTH-CHENGCHUAN-001",
+    "authority_tier": "SYNTHETIC_DEVELOPMENT_ONLY",
+    "eval_authority_mode": "CONTROLLED_REAL_TEST"
+  },
+  "import": {
+    "target_database": "bid_platform_eval_chengchuan_v2",
+    "base_imported": 16,
+    "extension_imported": 76,
+    "duplicate_import": 0,
+    "source_hash_mismatch": 0
+  },
+  "fact_extraction": {
+    "total_extraction_windows": 92,
+    "processed_windows": 1,
+    "failed_windows": 91,
+    "provider_calls": 140,
+    "provider_failures": 120,
+    "fact_candidate_total": 5,
+    "fact_usable_total": 5,
+    "controlled_approved_fact_total": 5,
+    "fact_review_required_total": 91,
+    "fact_rejected_total": 0,
+    "downstream_requirement_baseline": "SIX_TENDER_CANONICAL_1009",
+    "mapping_input_requirement_ready": true
+  },
+  "safety": {
+    "requirement_blind_extraction": "PASS",
+    "eval_db_writes": 92,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "synthetic_to_production_real_escalation": 0
+  }
+}

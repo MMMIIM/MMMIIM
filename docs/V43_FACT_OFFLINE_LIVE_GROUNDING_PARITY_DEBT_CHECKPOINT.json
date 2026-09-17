@@ -1,0 +1,986 @@
+{
+  "checkpoint": "V43_FACT_OFFLINE_LIVE_GROUNDING_PARITY_DEBT_CHECKPOINT",
+  "generated_at": "2026-09-09T02:52:54.993Z",
+  "task": "V43_FACT_OFFLINE_LIVE_GROUNDING_PARITY_DEBT_CLOSURE",
+  "runtime_identity": {
+    "live_run_id": "fact-final-micro-live-20260909015137-88911903",
+    "live_head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+    "current_head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+    "current_head_matches_live": true,
+    "canonicalizer_version": "4.3-evidence-fact-canonicalizer-v2.1",
+    "grounding_version": "4.3-evidence-fact-grounding-v2.1",
+    "contract": {
+      "schema_version": "4.3-evidence-fact-candidate-v2.1",
+      "prompt_version": "4.3-evidence-fact-candidate-v2-prompt-v2",
+      "schema_sha256": "3dcece82464fcbd0351fe4444cc66994d36e40ca6ca97a3f2d0ba01e5e44f0b3",
+      "live_packet_contract_match": true
+    }
+  },
+  "input_parity": {
+    "source_packet": "docs\\V43_FACT_FINAL_MICRO_LIVE_GPT_PACKET.json",
+    "prior_offline_packet": "docs\\V43_FACT_FINAL_OBSERVABILITY_AND_GROUNDING_DELTA_GPT_PACKET.json",
+    "live_execution_count": 4,
+    "exact_saved_live_candidate_count": 5,
+    "current_source_ref_resolution_rate": 1,
+    "source_hashes_match_saved_live": true,
+    "prior_offline_candidate_difference_windows": [
+      "COM-07-WINDOW-002",
+      "COM-07-WINDOW-004",
+      "COM-08-WINDOW-004"
+    ]
+  },
+  "path_trace": {
+    "live": "saved live raw Candidate → source role resolution → source-ref resolution → canonicalization → grounding",
+    "offline": "same saved live raw Candidate → same source role resolution → same source-ref resolution → same canonicalization → same grounding",
+    "resolved_source_unit": "Backend-owned producer_source_text + heading_path",
+    "production_entry_point_replayed": "fact-final-micro-live deterministic post-processing functions",
+    "replay_parity_pass_count": 5,
+    "replay_parity_total": 5,
+    "replay_parity_status": "PASS"
+  },
+  "offline_replay_result": {
+    "mode": "DETERMINISTIC_OFFLINE_REPLAY_OF_SAVED_LIVE_CANDIDATES",
+    "provider_calls": 0,
+    "candidate_count": 5,
+    "grounding_distribution": {
+      "ACCEPT": 1,
+      "REJECT": 2,
+      "REVIEW_REQUIRED": 2
+    },
+    "canonicalization_distribution": {
+      "CANONICALIZED": 2,
+      "CANONICALIZATION_REVIEW_REQUIRED": 3
+    },
+    "source_ref_resolution_rate": 1,
+    "target_replay": {
+      "COM_07_WINDOW_002": [
+        "ACCEPT",
+        "REJECT"
+      ],
+      "COM_08_WINDOW_004": [
+        "REJECT"
+      ]
+    }
+  },
+  "candidate_rows": [
+    {
+      "case_id": "COM-07",
+      "window_id": "COM-07-WINDOW-002",
+      "candidate_index": 0,
+      "statement": "Synthetic TEST 环境为 4 vCPU、16GB RAM、版本 v3.2。",
+      "statement_hash": "b0b269e6c34a7c7b93280532868354808a2eee8e1c06d1a2c89550f65a47da33",
+      "raw_candidate_hash": "cd3417d8bd347dba8e06ad2bed0266fd8c7cdf4ae6e4df545520d1e0a0cf9c32",
+      "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-07_性能与容量测试报告.md#full-document#window=COM-07-WINDOW-002",
+      "source_ref_hash": "6853e314aa61403a5eb8c028c1f6d958f8affcecf0940c408d5d1f471ec565e8",
+      "source_ref_resolution": "PASS",
+      "source_ref_count": 1,
+      "window_source_hash": "ac61395f76765144e56b91510f1b5dd60c2c55ec1002aad91ed73cdc80445f34",
+      "resolved_source_unit": {
+        "heading_path": [
+          "性能与容量测试报告",
+          "环境"
+        ],
+        "text_sha256": "ac61395f76765144e56b91510f1b5dd60c2c55ec1002aad91ed73cdc80445f34",
+        "text_bytes": 87,
+        "propagated_to_grounding": true
+      },
+      "candidate_input_fingerprint": {
+        "subject_name": "Synthetic TEST",
+        "subject_source_refs_sha256": "35fa2d1db43b47f3d0c80562547fe4bfdaf5a2266d5dba5caf82b16a526a602f",
+        "entity_mentions_sha256": "1de9714b8114fef4d1f94e6938b74fc3cf6d0cbcb374b2c0cba097c390de1a34",
+        "status_text_sha256": null,
+        "status_source_refs_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "scope_items_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "quantity_items_sha256": "22d0e5fac5fb26593d141c613a50ec1a0725fd69e52429f97433dcac1bc02722",
+        "temporal_items_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "canonicalization_input_sha256": "cd3417d8bd347dba8e06ad2bed0266fd8c7cdf4ae6e4df545520d1e0a0cf9c32"
+      },
+      "heading_path": [
+        "性能与容量测试报告",
+        "环境"
+      ],
+      "source_role": {
+        "role": "SOURCE_ROLE_UNKNOWN",
+        "eligibility": "SOURCE_ROLE_UNKNOWN",
+        "claim_permission": false,
+        "synthetic": true
+      },
+      "function_entry_points": {
+        "source_role": "resolveEnterpriseFactSourceRole",
+        "source_ref_resolution": "resolveEvidenceFactCandidateV21SourceRefs",
+        "canonicalization_grounding": "canonicalizeAndGroundEvidenceFactCandidateV21"
+      },
+      "grounding_options": {
+        "resolvedSourceUnit": {
+          "heading_path": [
+            "性能与容量测试报告",
+            "环境"
+          ],
+          "text_sha256": "ac61395f76765144e56b91510f1b5dd60c2c55ec1002aad91ed73cdc80445f34"
+        }
+      },
+      "replay": {
+        "canonicalization": {
+          "status": "CANONICALIZED",
+          "reasons": [],
+          "canonical": {
+            "subject": {
+              "type": "测试环境",
+              "name": "Synthetic TEST"
+            },
+            "entity_names": [
+              "Synthetic TEST"
+            ],
+            "status": "unknown",
+            "scopes": [],
+            "quantities": [
+              {
+                "metric": "vCPU",
+                "value": "4",
+                "unit": "vCPU",
+                "source_text": "性能与容量测试报告 / 环境\nSynthetic TEST：4 vCPU、16GB RAM、版本v3.2。"
+              },
+              {
+                "metric": "RAM",
+                "value": "16",
+                "unit": "GB",
+                "source_text": "性能与容量测试报告 / 环境\nSynthetic TEST：4 vCPU、16GB RAM、版本v3.2。"
+              }
+            ],
+            "validity": {
+              "status": "unknown",
+              "valid_from": null,
+              "valid_until": null
+            },
+            "status_source_text_hash": null
+          }
+        },
+        "grounding": {
+          "decision": "ACCEPT",
+          "reasons": [],
+          "mode": "BOUNDED_COMPOSITIONAL"
+        }
+      },
+      "replay_error": null,
+      "parity_with_recorded_live": {
+        "canonicalization_status_equal": true,
+        "canonicalization_reasons_equal": true,
+        "grounding_decision_equal": true,
+        "grounding_reasons_equal": true,
+        "recorded": {
+          "canonicalization": {
+            "status": "CANONICALIZED",
+            "reasons": []
+          },
+          "grounding": {
+            "decision": "ACCEPT",
+            "reasons": []
+          }
+        },
+        "replayed": {
+          "canonicalization": {
+            "status": "CANONICALIZED",
+            "reasons": [],
+            "canonical": {
+              "subject": {
+                "type": "测试环境",
+                "name": "Synthetic TEST"
+              },
+              "entity_names": [
+                "Synthetic TEST"
+              ],
+              "status": "unknown",
+              "scopes": [],
+              "quantities": [
+                {
+                  "metric": "vCPU",
+                  "value": "4",
+                  "unit": "vCPU",
+                  "source_text": "性能与容量测试报告 / 环境\nSynthetic TEST：4 vCPU、16GB RAM、版本v3.2。"
+                },
+                {
+                  "metric": "RAM",
+                  "value": "16",
+                  "unit": "GB",
+                  "source_text": "性能与容量测试报告 / 环境\nSynthetic TEST：4 vCPU、16GB RAM、版本v3.2。"
+                }
+              ],
+              "validity": {
+                "status": "unknown",
+                "valid_from": null,
+                "valid_until": null
+              },
+              "status_source_text_hash": null
+            }
+          },
+          "grounding": {
+            "decision": "ACCEPT",
+            "reasons": [],
+            "mode": "BOUNDED_COMPOSITIONAL"
+          }
+        }
+      },
+      "previous_offline_fixture": {
+        "candidate_count": 1,
+        "statement_hashes": [
+          "9ec25469d92e190a4a82c1083aef11f0584e12ad55ffef8e13a1689475835a6c"
+        ],
+        "source_hashes": [
+          "ac61395f76765144e56b91510f1b5dd60c2c55ec1002aad91ed73cdc80445f34"
+        ],
+        "grounding_decisions": [
+          "REJECT"
+        ]
+      }
+    },
+    {
+      "case_id": "COM-07",
+      "window_id": "COM-07-WINDOW-002",
+      "candidate_index": 1,
+      "statement": "版本为 v3.2。",
+      "statement_hash": "0ede620a60883380f1a6bd0bd82774f2246991034ce3643a0d71a718f6666b73",
+      "raw_candidate_hash": "23bc89f02c2e20f95ca2ad834875e341d8675ccc52ce227da6e31d44272ac7e9",
+      "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-07_性能与容量测试报告.md#full-document#window=COM-07-WINDOW-002",
+      "source_ref_hash": "6853e314aa61403a5eb8c028c1f6d958f8affcecf0940c408d5d1f471ec565e8",
+      "source_ref_resolution": "PASS",
+      "source_ref_count": 1,
+      "window_source_hash": "ac61395f76765144e56b91510f1b5dd60c2c55ec1002aad91ed73cdc80445f34",
+      "resolved_source_unit": {
+        "heading_path": [
+          "性能与容量测试报告",
+          "环境"
+        ],
+        "text_sha256": "ac61395f76765144e56b91510f1b5dd60c2c55ec1002aad91ed73cdc80445f34",
+        "text_bytes": 87,
+        "propagated_to_grounding": true
+      },
+      "candidate_input_fingerprint": {
+        "subject_name": "Synthetic TEST",
+        "subject_source_refs_sha256": "35fa2d1db43b47f3d0c80562547fe4bfdaf5a2266d5dba5caf82b16a526a602f",
+        "entity_mentions_sha256": "1de9714b8114fef4d1f94e6938b74fc3cf6d0cbcb374b2c0cba097c390de1a34",
+        "status_text_sha256": null,
+        "status_source_refs_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "scope_items_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "quantity_items_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "temporal_items_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "canonicalization_input_sha256": "23bc89f02c2e20f95ca2ad834875e341d8675ccc52ce227da6e31d44272ac7e9"
+      },
+      "heading_path": [
+        "性能与容量测试报告",
+        "环境"
+      ],
+      "source_role": {
+        "role": "SOURCE_ROLE_UNKNOWN",
+        "eligibility": "SOURCE_ROLE_UNKNOWN",
+        "claim_permission": false,
+        "synthetic": true
+      },
+      "function_entry_points": {
+        "source_role": "resolveEnterpriseFactSourceRole",
+        "source_ref_resolution": "resolveEvidenceFactCandidateV21SourceRefs",
+        "canonicalization_grounding": "canonicalizeAndGroundEvidenceFactCandidateV21"
+      },
+      "grounding_options": {
+        "resolvedSourceUnit": {
+          "heading_path": [
+            "性能与容量测试报告",
+            "环境"
+          ],
+          "text_sha256": "ac61395f76765144e56b91510f1b5dd60c2c55ec1002aad91ed73cdc80445f34"
+        }
+      },
+      "replay": {
+        "canonicalization": {
+          "status": "CANONICALIZED",
+          "reasons": [],
+          "canonical": {
+            "subject": {
+              "type": "测试环境",
+              "name": "Synthetic TEST"
+            },
+            "entity_names": [
+              "Synthetic TEST"
+            ],
+            "status": "unknown",
+            "scopes": [],
+            "quantities": [],
+            "validity": {
+              "status": "unknown",
+              "valid_from": null,
+              "valid_until": null
+            },
+            "status_source_text_hash": null
+          }
+        },
+        "grounding": {
+          "decision": "REJECT",
+          "reasons": [
+            "statement is not grounded"
+          ],
+          "mode": "UNKNOWN"
+        }
+      },
+      "replay_error": null,
+      "parity_with_recorded_live": {
+        "canonicalization_status_equal": true,
+        "canonicalization_reasons_equal": true,
+        "grounding_decision_equal": true,
+        "grounding_reasons_equal": true,
+        "recorded": {
+          "canonicalization": {
+            "status": "CANONICALIZED",
+            "reasons": []
+          },
+          "grounding": {
+            "decision": "REJECT",
+            "reasons": [
+              "statement is not grounded"
+            ]
+          }
+        },
+        "replayed": {
+          "canonicalization": {
+            "status": "CANONICALIZED",
+            "reasons": [],
+            "canonical": {
+              "subject": {
+                "type": "测试环境",
+                "name": "Synthetic TEST"
+              },
+              "entity_names": [
+                "Synthetic TEST"
+              ],
+              "status": "unknown",
+              "scopes": [],
+              "quantities": [],
+              "validity": {
+                "status": "unknown",
+                "valid_from": null,
+                "valid_until": null
+              },
+              "status_source_text_hash": null
+            }
+          },
+          "grounding": {
+            "decision": "REJECT",
+            "reasons": [
+              "statement is not grounded"
+            ],
+            "mode": "UNKNOWN"
+          }
+        }
+      },
+      "previous_offline_fixture": {
+        "candidate_count": 1,
+        "statement_hashes": [
+          "9ec25469d92e190a4a82c1083aef11f0584e12ad55ffef8e13a1689475835a6c"
+        ],
+        "source_hashes": [
+          "ac61395f76765144e56b91510f1b5dd60c2c55ec1002aad91ed73cdc80445f34"
+        ],
+        "grounding_decisions": [
+          "REJECT"
+        ]
+      }
+    },
+    {
+      "case_id": "COM-07",
+      "window_id": "COM-07-WINDOW-004",
+      "candidate_index": 0,
+      "statement": "性能与容量测试报告在2026-11-30后标记为STALE_PENDING_RETEST。",
+      "statement_hash": "c7ffa7cbe4cf5b891d89294aa5480ab66cd41d27bdee714e8ecf6c343891f027",
+      "raw_candidate_hash": "78e7c7b04b14bab306a406f37cc3f58f945da59469e7bec2a7bbf8fac89a6424",
+      "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-07_性能与容量测试报告.md#full-document#window=COM-07-WINDOW-004",
+      "source_ref_hash": "1a5fb053e8768abdd0d760b3731cb46c7a930317ded8ed5d4129f8d7937e9e78",
+      "source_ref_resolution": "PASS",
+      "source_ref_count": 1,
+      "window_source_hash": "859c6b070be8a0c30d68161dc9df8ecfde4505bf4db2c097d8010c2ef22639b5",
+      "resolved_source_unit": {
+        "heading_path": [
+          "性能与容量测试报告",
+          "时效"
+        ],
+        "text_sha256": "859c6b070be8a0c30d68161dc9df8ecfde4505bf4db2c097d8010c2ef22639b5",
+        "text_bytes": 79,
+        "propagated_to_grounding": true
+      },
+      "candidate_input_fingerprint": {
+        "subject_name": "性能与容量测试报告",
+        "subject_source_refs_sha256": "e98fed13e87e53b1e638ef17922107652faf9192c9d3d06d3d3029e3e61a9038",
+        "entity_mentions_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "status_text_sha256": "5a9f70b98ff0d6b1df0e4769c4f4eca50aab41e6c82661455c0eae56057e6170",
+        "status_source_refs_sha256": "e98fed13e87e53b1e638ef17922107652faf9192c9d3d06d3d3029e3e61a9038",
+        "scope_items_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "quantity_items_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "temporal_items_sha256": "02b1d6b7984dde4f11e569d69dc4092900dac85a4aea867f7008675709c8ba96",
+        "canonicalization_input_sha256": "78e7c7b04b14bab306a406f37cc3f58f945da59469e7bec2a7bbf8fac89a6424"
+      },
+      "heading_path": [
+        "性能与容量测试报告",
+        "时效"
+      ],
+      "source_role": {
+        "role": "GOVERNANCE_CONTEXT_ONLY",
+        "eligibility": "GOVERNANCE_CONTEXT_ONLY",
+        "claim_permission": false,
+        "synthetic": true
+      },
+      "function_entry_points": {
+        "source_role": "resolveEnterpriseFactSourceRole",
+        "source_ref_resolution": "resolveEvidenceFactCandidateV21SourceRefs",
+        "canonicalization_grounding": "canonicalizeAndGroundEvidenceFactCandidateV21"
+      },
+      "grounding_options": {
+        "resolvedSourceUnit": {
+          "heading_path": [
+            "性能与容量测试报告",
+            "时效"
+          ],
+          "text_sha256": "859c6b070be8a0c30d68161dc9df8ecfde4505bf4db2c097d8010c2ef22639b5"
+        }
+      },
+      "replay": {
+        "canonicalization": {
+          "status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "reasons": [
+            "STATUS_ENUM_UNRESOLVED",
+            "TEMPORAL_ROLE_OR_DATE_UNRESOLVED"
+          ],
+          "canonical": {
+            "subject": {
+              "type": "文档",
+              "name": "性能与容量测试报告"
+            },
+            "entity_names": [],
+            "status": "unknown",
+            "scopes": [],
+            "quantities": [],
+            "validity": {
+              "status": "unknown",
+              "valid_from": null,
+              "valid_until": null
+            },
+            "status_source_text_hash": "5a9f70b98ff0d6b1df0e4769c4f4eca50aab41e6c82661455c0eae56057e6170"
+          }
+        },
+        "grounding": {
+          "decision": "REVIEW_REQUIRED",
+          "reasons": [
+            "STATUS_ENUM_UNRESOLVED",
+            "TEMPORAL_ROLE_OR_DATE_UNRESOLVED"
+          ],
+          "mode": "BOUNDED_COMPOSITIONAL"
+        }
+      },
+      "replay_error": null,
+      "parity_with_recorded_live": {
+        "canonicalization_status_equal": true,
+        "canonicalization_reasons_equal": true,
+        "grounding_decision_equal": true,
+        "grounding_reasons_equal": true,
+        "recorded": {
+          "canonicalization": {
+            "status": "CANONICALIZATION_REVIEW_REQUIRED",
+            "reasons": [
+              "STATUS_ENUM_UNRESOLVED",
+              "TEMPORAL_ROLE_OR_DATE_UNRESOLVED"
+            ]
+          },
+          "grounding": {
+            "decision": "REVIEW_REQUIRED",
+            "reasons": [
+              "STATUS_ENUM_UNRESOLVED",
+              "TEMPORAL_ROLE_OR_DATE_UNRESOLVED"
+            ]
+          }
+        },
+        "replayed": {
+          "canonicalization": {
+            "status": "CANONICALIZATION_REVIEW_REQUIRED",
+            "reasons": [
+              "STATUS_ENUM_UNRESOLVED",
+              "TEMPORAL_ROLE_OR_DATE_UNRESOLVED"
+            ],
+            "canonical": {
+              "subject": {
+                "type": "文档",
+                "name": "性能与容量测试报告"
+              },
+              "entity_names": [],
+              "status": "unknown",
+              "scopes": [],
+              "quantities": [],
+              "validity": {
+                "status": "unknown",
+                "valid_from": null,
+                "valid_until": null
+              },
+              "status_source_text_hash": "5a9f70b98ff0d6b1df0e4769c4f4eca50aab41e6c82661455c0eae56057e6170"
+            }
+          },
+          "grounding": {
+            "decision": "REVIEW_REQUIRED",
+            "reasons": [
+              "STATUS_ENUM_UNRESOLVED",
+              "TEMPORAL_ROLE_OR_DATE_UNRESOLVED"
+            ],
+            "mode": "BOUNDED_COMPOSITIONAL"
+          }
+        }
+      },
+      "previous_offline_fixture": {
+        "candidate_count": 1,
+        "statement_hashes": [
+          "fd1034fefdae0c9f3eb93604b7d59f23bf08e419dfb3ae6cd41d2c9e3204432d"
+        ],
+        "source_hashes": [
+          "859c6b070be8a0c30d68161dc9df8ecfde4505bf4db2c097d8010c2ef22639b5"
+        ],
+        "grounding_decisions": [
+          "REJECT"
+        ]
+      }
+    },
+    {
+      "case_id": "COM-08",
+      "window_id": "COM-08-WINDOW-003",
+      "candidate_index": 0,
+      "statement": "备份恢复与容灾演练记录中未形成真实客户RTO/RPO或可用率承诺。",
+      "statement_hash": "a3ed869838003ef43b20b98c6763d751a45f545542b491198e9400e17f1e1c2b",
+      "raw_candidate_hash": "3e69589a0baf5dd4af030b72d6995c3a8d8aa195c52abcc95e8299efb62a5cbd",
+      "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-08_备份恢复与容灾演练记录.md#full-document#window=COM-08-WINDOW-003",
+      "source_ref_hash": "d9b57b62e4f20b37d96569039f8c13e42fe2af52619d30e066f0e87abd545d96",
+      "source_ref_resolution": "PASS",
+      "source_ref_count": 1,
+      "window_source_hash": "d5edb4f61d57df0fbe95a6368e617eb898732a517a0031722d6b8cffecdcfe21",
+      "resolved_source_unit": {
+        "heading_path": [
+          "备份恢复与容灾演练记录",
+          "边界"
+        ],
+        "text_sha256": "d5edb4f61d57df0fbe95a6368e617eb898732a517a0031722d6b8cffecdcfe21",
+        "text_bytes": 92,
+        "propagated_to_grounding": true
+      },
+      "candidate_input_fingerprint": {
+        "subject_name": "备份恢复与容灾演练记录",
+        "subject_source_refs_sha256": "74e5202aeb60af788aa4130438e7118f0391cef96d22c0f9e024cd0494cf05d7",
+        "entity_mentions_sha256": "fe4b09634e994f69f3013f3547d242d263e56ac6734a5ef32b768a24454b2dd1",
+        "status_text_sha256": "9db883742ff39475a4075047968c40ccd730a450c9d4ad0019035e2e8bfdf4da",
+        "status_source_refs_sha256": "74e5202aeb60af788aa4130438e7118f0391cef96d22c0f9e024cd0494cf05d7",
+        "scope_items_sha256": "078f3f183acb8e23ab844ad8f1c8cf89bd56b0349d6e369aea18483eb4fc0fb3",
+        "quantity_items_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "temporal_items_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "canonicalization_input_sha256": "3e69589a0baf5dd4af030b72d6995c3a8d8aa195c52abcc95e8299efb62a5cbd"
+      },
+      "heading_path": [
+        "备份恢复与容灾演练记录",
+        "边界"
+      ],
+      "source_role": {
+        "role": "ENTERPRISE_CAPABILITY_ELIGIBLE",
+        "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+        "claim_permission": false,
+        "synthetic": true
+      },
+      "function_entry_points": {
+        "source_role": "resolveEnterpriseFactSourceRole",
+        "source_ref_resolution": "resolveEvidenceFactCandidateV21SourceRefs",
+        "canonicalization_grounding": "canonicalizeAndGroundEvidenceFactCandidateV21"
+      },
+      "grounding_options": {
+        "resolvedSourceUnit": {
+          "heading_path": [
+            "备份恢复与容灾演练记录",
+            "边界"
+          ],
+          "text_sha256": "d5edb4f61d57df0fbe95a6368e617eb898732a517a0031722d6b8cffecdcfe21"
+        }
+      },
+      "replay": {
+        "canonicalization": {
+          "status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "reasons": [
+            "STATUS_ENUM_UNRESOLVED",
+            "NEGATED_OR_LIMITED_SCOPE"
+          ],
+          "canonical": {
+            "subject": {
+              "type": "文档/记录",
+              "name": "备份恢复与容灾演练记录"
+            },
+            "entity_names": [
+              "RTO",
+              "RPO",
+              "可用率"
+            ],
+            "status": "unknown",
+            "scopes": [
+              "真实客户RTO/RPO或可用率承诺"
+            ],
+            "quantities": [],
+            "validity": {
+              "status": "unknown",
+              "valid_from": null,
+              "valid_until": null
+            },
+            "status_source_text_hash": "9db883742ff39475a4075047968c40ccd730a450c9d4ad0019035e2e8bfdf4da"
+          }
+        },
+        "grounding": {
+          "decision": "REVIEW_REQUIRED",
+          "reasons": [
+            "STATUS_ENUM_UNRESOLVED",
+            "NEGATED_OR_LIMITED_SCOPE"
+          ],
+          "mode": "BOUNDED_COMPOSITIONAL"
+        }
+      },
+      "replay_error": null,
+      "parity_with_recorded_live": {
+        "canonicalization_status_equal": true,
+        "canonicalization_reasons_equal": true,
+        "grounding_decision_equal": true,
+        "grounding_reasons_equal": true,
+        "recorded": {
+          "canonicalization": {
+            "status": "CANONICALIZATION_REVIEW_REQUIRED",
+            "reasons": [
+              "STATUS_ENUM_UNRESOLVED",
+              "NEGATED_OR_LIMITED_SCOPE"
+            ]
+          },
+          "grounding": {
+            "decision": "REVIEW_REQUIRED",
+            "reasons": [
+              "STATUS_ENUM_UNRESOLVED",
+              "NEGATED_OR_LIMITED_SCOPE"
+            ]
+          }
+        },
+        "replayed": {
+          "canonicalization": {
+            "status": "CANONICALIZATION_REVIEW_REQUIRED",
+            "reasons": [
+              "STATUS_ENUM_UNRESOLVED",
+              "NEGATED_OR_LIMITED_SCOPE"
+            ],
+            "canonical": {
+              "subject": {
+                "type": "文档/记录",
+                "name": "备份恢复与容灾演练记录"
+              },
+              "entity_names": [
+                "RTO",
+                "RPO",
+                "可用率"
+              ],
+              "status": "unknown",
+              "scopes": [
+                "真实客户RTO/RPO或可用率承诺"
+              ],
+              "quantities": [],
+              "validity": {
+                "status": "unknown",
+                "valid_from": null,
+                "valid_until": null
+              },
+              "status_source_text_hash": "9db883742ff39475a4075047968c40ccd730a450c9d4ad0019035e2e8bfdf4da"
+            }
+          },
+          "grounding": {
+            "decision": "REVIEW_REQUIRED",
+            "reasons": [
+              "STATUS_ENUM_UNRESOLVED",
+              "NEGATED_OR_LIMITED_SCOPE"
+            ],
+            "mode": "BOUNDED_COMPOSITIONAL"
+          }
+        }
+      },
+      "previous_offline_fixture": {
+        "candidate_count": 1,
+        "statement_hashes": [
+          "a3ed869838003ef43b20b98c6763d751a45f545542b491198e9400e17f1e1c2b"
+        ],
+        "source_hashes": [
+          "d5edb4f61d57df0fbe95a6368e617eb898732a517a0031722d6b8cffecdcfe21"
+        ],
+        "grounding_decisions": [
+          "REJECT"
+        ]
+      }
+    },
+    {
+      "case_id": "COM-08",
+      "window_id": "COM-08-WINDOW-004",
+      "candidate_index": 0,
+      "statement": "备份恢复与容灾演练记录引用了 OFF-U08 和 OFF-U09 两个官方来源。",
+      "statement_hash": "8af02d0e97a1c130ae58244d1573ffa11ab045b0b6baad32466c690816cd7799",
+      "raw_candidate_hash": "41c8cab8ec9bdd642a30fe2f6726f52da5ee51037fe73f0d105021efa2a0e77c",
+      "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-08_备份恢复与容灾演练记录.md#full-document#window=COM-08-WINDOW-004",
+      "source_ref_hash": "4f30fbe02f583936d7f0cf6c07ba9146497eae5b364277496e4d88283141b6d7",
+      "source_ref_resolution": "PASS",
+      "source_ref_count": 1,
+      "window_source_hash": "5d4a89188c78de8f9f9202c6b442f26095b01770d8044b95a2a70da4f3c9fa49",
+      "resolved_source_unit": {
+        "heading_path": [
+          "备份恢复与容灾演练记录",
+          "官方来源 / 依据"
+        ],
+        "text_sha256": "5d4a89188c78de8f9f9202c6b442f26095b01770d8044b95a2a70da4f3c9fa49",
+        "text_bytes": 671,
+        "propagated_to_grounding": true
+      },
+      "candidate_input_fingerprint": {
+        "subject_name": "备份恢复与容灾演练记录",
+        "subject_source_refs_sha256": "7e750c6b5fe953ce4bcf84d15a83a6e98b808078ab28f6c1a891943c7f0ded6f",
+        "entity_mentions_sha256": "e7adb60fd11d8a9efb5a19ff60e1baebb19e9ae6b1da931b649110963f260a0d",
+        "status_text_sha256": "7b7c2557bd50c3569d64f43f7af767b88384861df58a81a8e79e8465dcd806c1",
+        "status_source_refs_sha256": "7e750c6b5fe953ce4bcf84d15a83a6e98b808078ab28f6c1a891943c7f0ded6f",
+        "scope_items_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "quantity_items_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "temporal_items_sha256": "b450657092b900216f7a0e0fc57aa55ee9e9d65a473031f3443d253547e8af60",
+        "canonicalization_input_sha256": "41c8cab8ec9bdd642a30fe2f6726f52da5ee51037fe73f0d105021efa2a0e77c"
+      },
+      "heading_path": [
+        "备份恢复与容灾演练记录",
+        "官方来源 / 依据"
+      ],
+      "source_role": {
+        "role": "REFERENCE_CONTEXT_ONLY",
+        "eligibility": "REFERENCE_CONTEXT_ONLY",
+        "claim_permission": false,
+        "synthetic": true
+      },
+      "function_entry_points": {
+        "source_role": "resolveEnterpriseFactSourceRole",
+        "source_ref_resolution": "resolveEvidenceFactCandidateV21SourceRefs",
+        "canonicalization_grounding": "canonicalizeAndGroundEvidenceFactCandidateV21"
+      },
+      "grounding_options": {
+        "resolvedSourceUnit": {
+          "heading_path": [
+            "备份恢复与容灾演练记录",
+            "官方来源 / 依据"
+          ],
+          "text_sha256": "5d4a89188c78de8f9f9202c6b442f26095b01770d8044b95a2a70da4f3c9fa49"
+        }
+      },
+      "replay": {
+        "canonicalization": {
+          "status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "canonical": {
+            "subject": {
+              "type": "记录文档",
+              "name": "备份恢复与容灾演练记录"
+            },
+            "entity_names": [
+              "OFF-U08",
+              "OFF-U09",
+              "GB/T 22239-2019 网络安全等级保护基本要求",
+              "GB/T 25070-2019 网络安全等级保护安全设计技术要求",
+              "国家市场监督管理总局",
+              "国家标准化管理委员会"
+            ],
+            "status": "unknown",
+            "scopes": [],
+            "quantities": [],
+            "validity": {
+              "status": "unknown",
+              "valid_from": null,
+              "valid_until": null
+            },
+            "status_source_text_hash": "7b7c2557bd50c3569d64f43f7af767b88384861df58a81a8e79e8465dcd806c1"
+          }
+        },
+        "grounding": {
+          "decision": "REJECT",
+          "reasons": [
+            "statement is not grounded"
+          ],
+          "mode": "UNKNOWN"
+        }
+      },
+      "replay_error": null,
+      "parity_with_recorded_live": {
+        "canonicalization_status_equal": true,
+        "canonicalization_reasons_equal": true,
+        "grounding_decision_equal": true,
+        "grounding_reasons_equal": true,
+        "recorded": {
+          "canonicalization": {
+            "status": "CANONICALIZATION_REVIEW_REQUIRED",
+            "reasons": [
+              "STATUS_ENUM_UNRESOLVED"
+            ]
+          },
+          "grounding": {
+            "decision": "REJECT",
+            "reasons": [
+              "statement is not grounded"
+            ]
+          }
+        },
+        "replayed": {
+          "canonicalization": {
+            "status": "CANONICALIZATION_REVIEW_REQUIRED",
+            "reasons": [
+              "STATUS_ENUM_UNRESOLVED"
+            ],
+            "canonical": {
+              "subject": {
+                "type": "记录文档",
+                "name": "备份恢复与容灾演练记录"
+              },
+              "entity_names": [
+                "OFF-U08",
+                "OFF-U09",
+                "GB/T 22239-2019 网络安全等级保护基本要求",
+                "GB/T 25070-2019 网络安全等级保护安全设计技术要求",
+                "国家市场监督管理总局",
+                "国家标准化管理委员会"
+              ],
+              "status": "unknown",
+              "scopes": [],
+              "quantities": [],
+              "validity": {
+                "status": "unknown",
+                "valid_from": null,
+                "valid_until": null
+              },
+              "status_source_text_hash": "7b7c2557bd50c3569d64f43f7af767b88384861df58a81a8e79e8465dcd806c1"
+            }
+          },
+          "grounding": {
+            "decision": "REJECT",
+            "reasons": [
+              "statement is not grounded"
+            ],
+            "mode": "UNKNOWN"
+          }
+        }
+      },
+      "previous_offline_fixture": {
+        "candidate_count": 1,
+        "statement_hashes": [
+          "cf3525c4f5db838fb388254cd2d07eb1bf448c7a6f3f6d2831aec4709905bfb0"
+        ],
+        "source_hashes": [
+          "5d4a89188c78de8f9f9202c6b442f26095b01770d8044b95a2a70da4f3c9fa49"
+        ],
+        "grounding_decisions": [
+          "REJECT"
+        ]
+      }
+    }
+  ],
+  "root_cause": {
+    "global_primary": "A_OFFLINE_FIXTURE_CANDIDATE_DIFFERENCE",
+    "COM_07_WINDOW_002": {
+      "primary": "A_OFFLINE_FIXTURE_CANDIDATE_DIFFERENCE",
+      "secondary": [
+        "F_NEW_LIVE_SEMANTIC_FORM_NOT_COVERED_BY_OFFLINE_FIXTURE",
+        "E_STATEMENT_ONLY_GROUNDING_LIMITATION"
+      ],
+      "evidence": "Live contains two candidates (combined environment statement plus granular version statement); prior offline packet contains one paraphrased combined statement only. Exact saved live replay preserves the recorded ACCEPT/REJECT decisions. The granular version candidate is semantically redundant with the accepted combined candidate."
+    },
+    "COM_08_WINDOW_004": {
+      "primary": "A_OFFLINE_FIXTURE_CANDIDATE_DIFFERENCE",
+      "secondary": [
+        "E_STATEMENT_ONLY_GROUNDING_LIMITATION"
+      ],
+      "evidence": "Prior offline packet used a different statement surface. Exact saved live replay reproduces REJECT with the same bounded heading/source unit. The heading and child source list support the relation semantically, but current statement grounding is conservative and statement-only for this connective form."
+    },
+    "engineering_parity_bug": false,
+    "production_semantic_fix_applied": false
+  },
+  "gpt_semantic_adjudication": {
+    "COM_07_WINDOW_002": {
+      "source_supported": true,
+      "semantic_classification": "REDUNDANT_SEMANTIC_NOISE",
+      "product_impact": "FALSE_REJECT + REDUNDANT_FACT_ONLY + NO_UNIQUE_HIGH_RISK_FACT_LOSS",
+      "authority_impact": "NONE",
+      "action": "KNOWN_BOUNDED_GROUNDING_RECALL_DEBT; no phrase-specific rule"
+    },
+    "COM_08_WINDOW_004": {
+      "source_supported": true,
+      "semantic_classification": "GENUINE_BOUNDED_HEADING_RELATION_FALSE_REJECT",
+      "source_role": "REFERENCE_CONTEXT_ONLY",
+      "enterprise_authority": "NO",
+      "safety_impact": "NONE",
+      "action": "KNOWN_BOUNDED_GROUNDING_RECALL_DEBT; no new semantic rule in this task"
+    }
+  },
+  "deterministic_regression": {
+    "critical_false_accept_count": 0,
+    "reference_authority_escape_count": 0,
+    "governance_authority_escape_count": 0,
+    "cross_heading_composition_count": 0,
+    "full_document_fallback_count": 0,
+    "negative_to_positive_escalation_count": 0,
+    "source_ref_resolution": {
+      "total": 5,
+      "resolved": 5,
+      "rate": 1
+    },
+    "status": "PASS"
+  },
+  "known_debt": {
+    "id": "FACT_BOUNDED_GROUNDING_GENERALIZATION",
+    "status": "PARTIAL_PASS_WITH_2_FALSE_REJECTS",
+    "affected_cases": [
+      "COM-07-WINDOW-002",
+      "COM-08-WINDOW-004"
+    ],
+    "fail_closed": true,
+    "recall_only": true,
+    "blocks_high_risk_evidence_safety": false,
+    "no_production_patch": true
+  },
+  "side_effects": {
+    "provider_calls": 0,
+    "production_db_writes": 0,
+    "fact_persistence": 0,
+    "gold_mutations": 0,
+    "mapping_actions": 0,
+    "claim_actions": 0,
+    "writer_actions": 0,
+    "commit": 0,
+    "push": 0,
+    "merge": 0,
+    "deploy": 0
+  },
+  "code_changed": false,
+  "production_semantic_changes": 0,
+  "code_identity": [
+    {
+      "relative": "backend/src/pipeline/evidence-fact-candidate-v2-1.js",
+      "sha256": "18b9920ca39cd7e0bb963b230e253a166249f22a2b4d96e9f0a414dadae406be"
+    },
+    {
+      "relative": "backend/src/pipeline/evidence-fact-candidate-v2.js",
+      "sha256": "d693ecb14003921ab4d72f77d39b32e20aaedf459d3c0697ec32a4e893b0cea1"
+    },
+    {
+      "relative": "backend/src/pipeline/enterprise-evidence-source-router.js",
+      "sha256": "e1c19a8277614821a1488d3716956f69f97c1fe916c47b8812fa480a5435d2d6"
+    },
+    {
+      "relative": "backend/src/pipeline/evidence-fact-producer-input-window.js",
+      "sha256": "51770e604405b702f8f78a3c40c6757c07d862ed73373066decdcead9bee4999"
+    },
+    {
+      "relative": "backend/eval/rag-pilot/fact-final-micro-live-runner.mjs",
+      "sha256": "6b5d125e3efea9e4ae03e981e34822b9ed91aefc634b3783b0d52ee12bc230c3"
+    },
+    {
+      "relative": "backend/eval/rag-pilot/fact-final-observability-grounding-delta.mjs",
+      "sha256": "58ebb6ca1626554474f88f68f170d57edc5dcd47af3ba6de1f7d08a1031fc8c6"
+    }
+  ],
+  "final_status": "FACT_MAINLINE_FROZEN_WITH_KNOWN_RECALL_DEBT"
+}

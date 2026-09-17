@@ -1,0 +1,273 @@
+{
+  "audit": "V43_WRITER_PROVIDER_FIDELITY_AUTHORITY_GAP_RESOLUTION_AUDIT",
+  "version": "writer-provider-fidelity-authority-gap-v1",
+  "writer_source_authority_gate": "WRITER_SOURCE_AUTHORITY_COMPLETENESS_GATE",
+  "total_writer_candidates": 12,
+  "baseline_source_complete": 3,
+  "baseline_source_complete_ids": [
+    "project_response_only",
+    "requirement_laundering_negative",
+    "W-AUTH-RETENTION-001"
+  ],
+  "authority_gap_count": 9,
+  "source_recoverable_count": 0,
+  "source_not_authorized_count": 9,
+  "source_ambiguous_count": 0,
+  "recovered_source_complete_count": 0,
+  "final_source_complete_count": 3,
+  "claim_gold_v2_dependent_count": 3,
+  "root_cause_distribution": {
+    "REQUIREMENT_IDENTITY_MISMATCH": 6,
+    "HISTORICAL_FIXTURE_WITHOUT_FORMAL_AUTHORITY": 3
+  },
+  "candidates": [
+    {
+      "writer_case_id": "authorized_strong_claim",
+      "requirement_identity_status": "MISSING_CANONICAL_REQUIREMENT_IDENTITY",
+      "approved_claim_identity_status": "PRESENT_FIXTURE_ONLY",
+      "claim_gate_evaluation_status": "PRESENT_FIXTURE_GATE_METADATA_NOT_CANONICAL",
+      "claim_limitation_status": "PRESENT",
+      "writer_authorization_status": "PRESENT_SYNTHETIC_FIXTURE_AUTHORITY",
+      "authorization_snapshot_status": "PRESENT_CURRENT_FIXTURE",
+      "safe_context_projection_status": "PRESENT_FIXTURE",
+      "project_scope_status": "SAME_PROJECT_IN_SOURCE_PACKET",
+      "currentness_status": "TRUE_IN_FIXTURE_ONLY",
+      "source_provenance_status": "INCOMPLETE_REQUIREMENT_IDENTITY",
+      "root_cause": "REQUIREMENT_IDENTITY_MISMATCH",
+      "root_cause_class": "SOURCE_NOT_AUTHORIZED",
+      "recoverability": "SOURCE_NOT_AUTHORIZED",
+      "claim_gold_v2_dependency": "NO",
+      "writer_gold_admission": "NOT_ADMITTED_NO_FORMAL_AUTHORITY",
+      "authority_gate_code": "WRITER_SOURCE_AUTHORITY_INCOMPLETE",
+      "authority_gate_missing": [
+        "requirements.non_empty"
+      ],
+      "authorization_parity_code": "WRITER_AUTHORIZATION_PARITY_PASS",
+      "authorization_parity_failures": []
+    },
+    {
+      "writer_case_id": "scope_restriction_negative",
+      "requirement_identity_status": "MISSING_CANONICAL_REQUIREMENT_IDENTITY",
+      "approved_claim_identity_status": "PRESENT_FIXTURE_ONLY",
+      "claim_gate_evaluation_status": "PRESENT_FIXTURE_GATE_METADATA_NOT_CANONICAL",
+      "claim_limitation_status": "PRESENT",
+      "writer_authorization_status": "PRESENT_SYNTHETIC_FIXTURE_AUTHORITY",
+      "authorization_snapshot_status": "PRESENT_CURRENT_FIXTURE",
+      "safe_context_projection_status": "PRESENT_FIXTURE",
+      "project_scope_status": "SAME_PROJECT_IN_SOURCE_PACKET",
+      "currentness_status": "TRUE_IN_FIXTURE_ONLY",
+      "source_provenance_status": "INCOMPLETE_REQUIREMENT_IDENTITY",
+      "root_cause": "REQUIREMENT_IDENTITY_MISMATCH",
+      "root_cause_class": "SOURCE_NOT_AUTHORIZED",
+      "recoverability": "SOURCE_NOT_AUTHORIZED",
+      "claim_gold_v2_dependency": "NO",
+      "writer_gold_admission": "NOT_ADMITTED_NO_FORMAL_AUTHORITY",
+      "authority_gate_code": "WRITER_SOURCE_AUTHORITY_INCOMPLETE",
+      "authority_gate_missing": [
+        "requirements.non_empty"
+      ],
+      "authorization_parity_code": "WRITER_AUTHORIZATION_PARITY_PASS",
+      "authorization_parity_failures": []
+    },
+    {
+      "writer_case_id": "quantity_restriction_negative",
+      "requirement_identity_status": "MISSING_CANONICAL_REQUIREMENT_IDENTITY",
+      "approved_claim_identity_status": "PRESENT_FIXTURE_ONLY",
+      "claim_gate_evaluation_status": "PRESENT_FIXTURE_GATE_METADATA_NOT_CANONICAL",
+      "claim_limitation_status": "PRESENT",
+      "writer_authorization_status": "PRESENT_SYNTHETIC_FIXTURE_AUTHORITY",
+      "authorization_snapshot_status": "PRESENT_CURRENT_FIXTURE",
+      "safe_context_projection_status": "PRESENT_FIXTURE",
+      "project_scope_status": "SAME_PROJECT_IN_SOURCE_PACKET",
+      "currentness_status": "TRUE_IN_FIXTURE_ONLY",
+      "source_provenance_status": "INCOMPLETE_REQUIREMENT_IDENTITY",
+      "root_cause": "REQUIREMENT_IDENTITY_MISMATCH",
+      "root_cause_class": "SOURCE_NOT_AUTHORIZED",
+      "recoverability": "SOURCE_NOT_AUTHORIZED",
+      "claim_gold_v2_dependency": "NO",
+      "writer_gold_admission": "NOT_ADMITTED_NO_FORMAL_AUTHORITY",
+      "authority_gate_code": "WRITER_SOURCE_AUTHORITY_INCOMPLETE",
+      "authority_gate_missing": [
+        "requirements.non_empty"
+      ],
+      "authorization_parity_code": "WRITER_AUTHORIZATION_PARITY_PASS",
+      "authorization_parity_failures": []
+    },
+    {
+      "writer_case_id": "status_restriction_negative",
+      "requirement_identity_status": "MISSING_CANONICAL_REQUIREMENT_IDENTITY",
+      "approved_claim_identity_status": "PRESENT_FIXTURE_ONLY",
+      "claim_gate_evaluation_status": "PRESENT_FIXTURE_GATE_METADATA_NOT_CANONICAL",
+      "claim_limitation_status": "PRESENT",
+      "writer_authorization_status": "PRESENT_SYNTHETIC_FIXTURE_AUTHORITY",
+      "authorization_snapshot_status": "PRESENT_CURRENT_FIXTURE",
+      "safe_context_projection_status": "PRESENT_FIXTURE",
+      "project_scope_status": "SAME_PROJECT_IN_SOURCE_PACKET",
+      "currentness_status": "TRUE_IN_FIXTURE_ONLY",
+      "source_provenance_status": "INCOMPLETE_REQUIREMENT_IDENTITY",
+      "root_cause": "REQUIREMENT_IDENTITY_MISMATCH",
+      "root_cause_class": "SOURCE_NOT_AUTHORIZED",
+      "recoverability": "SOURCE_NOT_AUTHORIZED",
+      "claim_gold_v2_dependency": "NO",
+      "writer_gold_admission": "NOT_ADMITTED_NO_FORMAL_AUTHORITY",
+      "authority_gate_code": "WRITER_SOURCE_AUTHORITY_INCOMPLETE",
+      "authority_gate_missing": [
+        "requirements.non_empty"
+      ],
+      "authorization_parity_code": "WRITER_AUTHORIZATION_PARITY_PASS",
+      "authorization_parity_failures": []
+    },
+    {
+      "writer_case_id": "validity_restriction_negative",
+      "requirement_identity_status": "MISSING_CANONICAL_REQUIREMENT_IDENTITY",
+      "approved_claim_identity_status": "PRESENT_FIXTURE_ONLY",
+      "claim_gate_evaluation_status": "PRESENT_FIXTURE_GATE_METADATA_NOT_CANONICAL",
+      "claim_limitation_status": "PRESENT",
+      "writer_authorization_status": "PRESENT_SYNTHETIC_FIXTURE_AUTHORITY",
+      "authorization_snapshot_status": "PRESENT_CURRENT_FIXTURE",
+      "safe_context_projection_status": "PRESENT_FIXTURE",
+      "project_scope_status": "SAME_PROJECT_IN_SOURCE_PACKET",
+      "currentness_status": "TRUE_IN_FIXTURE_ONLY",
+      "source_provenance_status": "INCOMPLETE_REQUIREMENT_IDENTITY",
+      "root_cause": "REQUIREMENT_IDENTITY_MISMATCH",
+      "root_cause_class": "SOURCE_NOT_AUTHORIZED",
+      "recoverability": "SOURCE_NOT_AUTHORIZED",
+      "claim_gold_v2_dependency": "NO",
+      "writer_gold_admission": "NOT_ADMITTED_NO_FORMAL_AUTHORITY",
+      "authority_gate_code": "WRITER_SOURCE_AUTHORITY_INCOMPLETE",
+      "authority_gate_missing": [
+        "requirements.non_empty"
+      ],
+      "authorization_parity_code": "WRITER_AUTHORIZATION_PARITY_PASS",
+      "authorization_parity_failures": []
+    },
+    {
+      "writer_case_id": "composite_authorized_claim",
+      "requirement_identity_status": "MISSING_CANONICAL_REQUIREMENT_IDENTITY",
+      "approved_claim_identity_status": "PRESENT_FIXTURE_ONLY",
+      "claim_gate_evaluation_status": "PRESENT_FIXTURE_GATE_METADATA_NOT_CANONICAL",
+      "claim_limitation_status": "PRESENT",
+      "writer_authorization_status": "PRESENT_SYNTHETIC_FIXTURE_AUTHORITY",
+      "authorization_snapshot_status": "PRESENT_CURRENT_FIXTURE",
+      "safe_context_projection_status": "PRESENT_FIXTURE",
+      "project_scope_status": "SAME_PROJECT_IN_SOURCE_PACKET",
+      "currentness_status": "TRUE_IN_FIXTURE_ONLY",
+      "source_provenance_status": "INCOMPLETE_REQUIREMENT_IDENTITY",
+      "root_cause": "REQUIREMENT_IDENTITY_MISMATCH",
+      "root_cause_class": "SOURCE_NOT_AUTHORIZED",
+      "recoverability": "SOURCE_NOT_AUTHORIZED",
+      "claim_gold_v2_dependency": "NO",
+      "writer_gold_admission": "NOT_ADMITTED_NO_FORMAL_AUTHORITY",
+      "authority_gate_code": "WRITER_SOURCE_AUTHORITY_INCOMPLETE",
+      "authority_gate_missing": [
+        "requirements.non_empty"
+      ],
+      "authorization_parity_code": "WRITER_AUTHORIZATION_PARITY_PASS",
+      "authorization_parity_failures": []
+    },
+    {
+      "writer_case_id": "CLM-030-1",
+      "requirement_identity_status": "IDENTITY_PRESENT_SOURCE_HASH_UNRESOLVED",
+      "approved_claim_identity_status": "PRESENT_BUT_UNRESOLVED_LEGACY",
+      "claim_gate_evaluation_status": "ABSENT_IN_SOURCE",
+      "claim_limitation_status": "NONE_DECLARED",
+      "writer_authorization_status": "PRESENT_BUT_NOT_FORMAL_AUTHORITY",
+      "authorization_snapshot_status": "PRESENT_UNVERIFIED_LEGACY",
+      "safe_context_projection_status": "PRESENT_DERIVED_LEGACY",
+      "project_scope_status": "SAME_PROJECT_IN_SOURCE_PACKET",
+      "currentness_status": "ASSERTED_TRUE_UNVERIFIED",
+      "source_provenance_status": "UNRESOLVABLE_LEGACY",
+      "root_cause": "HISTORICAL_FIXTURE_WITHOUT_FORMAL_AUTHORITY",
+      "root_cause_class": "SOURCE_NOT_AUTHORIZED",
+      "recoverability": "SOURCE_NOT_AUTHORIZED",
+      "claim_gold_v2_dependency": "YES_BLOCKED_BY_CLAIM_GOLD_V2",
+      "writer_gold_admission": "BLOCKED_BY_CLAIM_GOLD_V2",
+      "authority_gate_code": "WRITER_SOURCE_AUTHORITY_INCOMPLETE",
+      "authority_gate_missing": [
+        "requirements[0].source_hash"
+      ],
+      "authorization_parity_code": "WRITER_AUTHORIZATION_PARITY_FAILED",
+      "authorization_parity_failures": [
+        "UNAPPROVED_OR_UNRESOLVED_CLAIM_VISIBLE"
+      ]
+    },
+    {
+      "writer_case_id": "CLM-016-1",
+      "requirement_identity_status": "IDENTITY_PRESENT_SOURCE_HASH_UNRESOLVED",
+      "approved_claim_identity_status": "PRESENT_BUT_UNRESOLVED_LEGACY",
+      "claim_gate_evaluation_status": "ABSENT_IN_SOURCE",
+      "claim_limitation_status": "NONE_DECLARED",
+      "writer_authorization_status": "PRESENT_BUT_NOT_FORMAL_AUTHORITY",
+      "authorization_snapshot_status": "PRESENT_UNVERIFIED_LEGACY",
+      "safe_context_projection_status": "PRESENT_DERIVED_LEGACY",
+      "project_scope_status": "SAME_PROJECT_IN_SOURCE_PACKET",
+      "currentness_status": "ASSERTED_TRUE_UNVERIFIED",
+      "source_provenance_status": "UNRESOLVABLE_LEGACY",
+      "root_cause": "HISTORICAL_FIXTURE_WITHOUT_FORMAL_AUTHORITY",
+      "root_cause_class": "SOURCE_NOT_AUTHORIZED",
+      "recoverability": "SOURCE_NOT_AUTHORIZED",
+      "claim_gold_v2_dependency": "YES_BLOCKED_BY_CLAIM_GOLD_V2",
+      "writer_gold_admission": "BLOCKED_BY_CLAIM_GOLD_V2",
+      "authority_gate_code": "WRITER_SOURCE_AUTHORITY_INCOMPLETE",
+      "authority_gate_missing": [
+        "requirements[0].source_hash"
+      ],
+      "authorization_parity_code": "WRITER_AUTHORIZATION_PARITY_FAILED",
+      "authorization_parity_failures": [
+        "UNAPPROVED_OR_UNRESOLVED_CLAIM_VISIBLE"
+      ]
+    },
+    {
+      "writer_case_id": "CLM-187-1",
+      "requirement_identity_status": "IDENTITY_PRESENT_SOURCE_HASH_UNRESOLVED",
+      "approved_claim_identity_status": "PRESENT_BUT_UNRESOLVED_LEGACY",
+      "claim_gate_evaluation_status": "ABSENT_IN_SOURCE",
+      "claim_limitation_status": "NONE_DECLARED",
+      "writer_authorization_status": "PRESENT_BUT_NOT_FORMAL_AUTHORITY",
+      "authorization_snapshot_status": "PRESENT_UNVERIFIED_LEGACY",
+      "safe_context_projection_status": "PRESENT_DERIVED_LEGACY",
+      "project_scope_status": "SAME_PROJECT_IN_SOURCE_PACKET",
+      "currentness_status": "ASSERTED_TRUE_UNVERIFIED",
+      "source_provenance_status": "UNRESOLVABLE_LEGACY",
+      "root_cause": "HISTORICAL_FIXTURE_WITHOUT_FORMAL_AUTHORITY",
+      "root_cause_class": "SOURCE_NOT_AUTHORIZED",
+      "recoverability": "SOURCE_NOT_AUTHORIZED",
+      "claim_gold_v2_dependency": "YES_BLOCKED_BY_CLAIM_GOLD_V2",
+      "writer_gold_admission": "BLOCKED_BY_CLAIM_GOLD_V2",
+      "authority_gate_code": "WRITER_SOURCE_AUTHORITY_INCOMPLETE",
+      "authority_gate_missing": [
+        "requirements[0].source_hash"
+      ],
+      "authorization_parity_code": "WRITER_AUTHORIZATION_PARITY_FAILED",
+      "authorization_parity_failures": [
+        "UNAPPROVED_OR_UNRESOLVED_CLAIM_VISIBLE"
+      ]
+    }
+  ],
+  "baseline_revalidation": {
+    "source_complete_ids": [
+      "project_response_only",
+      "requirement_laundering_negative",
+      "W-AUTH-RETENTION-001"
+    ],
+    "source_authority_complete": true,
+    "authorization_parity_pass": true,
+    "stable_source_identity": true
+  },
+  "gates": {
+    "writer_source_completeness": "BASELINE_3_PASS; 9_FAIL_CLOSED",
+    "writer_authorization_parity": "GAP_FIXTURES_6_PASS; LEGACY_3_FAIL_CLOSED",
+    "source_packet_render_parity": "PASS",
+    "writer_authority_laundering": "PASS"
+  },
+  "production_files_changed": 0,
+  "claim_authority_changed": 0,
+  "writer_authorization_changed": 0,
+  "provider_calls": 0,
+  "dify_calls": 0,
+  "embedding_calls": 0,
+  "db_writes": 0,
+  "source_packet_sha256": "4c43f8d829350078657204bccf266771e441a887a244b9b17aaacae7d66e4972",
+  "source_packet_markdown_sha256": "0fa0dbe94609509a1705d0a3d3a0e1a52ee0acfa6e95dc016044d7961fc91655",
+  "final_verdict": "WRITER_SOURCE_POOL_PARTIALLY_READY"
+}

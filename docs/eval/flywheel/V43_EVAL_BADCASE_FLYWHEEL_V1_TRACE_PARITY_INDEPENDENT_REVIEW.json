@@ -1,0 +1,64 @@
+{
+  "artifact_type": "V43_EVAL_BADCASE_FLYWHEEL_V1_TRACE_PARITY_INDEPENDENT_REVIEW",
+  "artifact_version": "v1",
+  "decision": "V43_EVAL_FLYWHEEL_V1_TRACE_PARITY_REPAIR",
+  "review_result": "PASS_WITH_NON_BLOCKING_FINDINGS",
+  "review_scope": [
+    "trace parity against frozen historical mechanical reference",
+    "CORE6 partition identity",
+    "many-to-many lineage preservation",
+    "failure-code distinction",
+    "deterministic evaluator behavior",
+    "production boundary and side effects"
+  ],
+  "evidence": {
+    "parity_test": "backend/test/eval-flywheel/legacy-trace-parity.test.js",
+    "parity_test_result": "PASS",
+    "parity_counts": {
+      "atoms": 487,
+      "source_linked": 472,
+      "chunk_observable": 472,
+      "source_resolution_observable": 472,
+      "canonical_lineage_atoms": 472,
+      "no_mechanical_link": 15,
+      "canonical_links": 5286
+    },
+    "r3_partition": "CORE6",
+    "r2_immutable": true,
+    "r2_trace_sha256": "c9119bd896ad3730938c1697a44550146319742cdd3fe3d03f69d7e60d2d9b19",
+    "deterministic_regression": "487/487 PASS",
+    "focused_flywheel_suite": "17/17 PASS",
+    "requirement_deterministic_suite": "68/68 PASS"
+  },
+  "review_findings": [
+    {
+      "severity": "NON_BLOCKING",
+      "finding": "Historical R2 intentionally retains TARGETED_BADCASE and is not rewritten; R3 is the CORE6 successor."
+    },
+    {
+      "severity": "NON_BLOCKING",
+      "finding": "Backend full suite retains 23 pre-existing unrelated failures; no current-task failure was identified."
+    },
+    {
+      "severity": "NON_BLOCKING",
+      "finding": "PostgreSQL integration is a production-writing suite and was not run under the safe guard."
+    },
+    {
+      "severity": "INFO",
+      "finding": "The 15 no-link atoms remain mechanical evidence gaps and are not semantic labels."
+    }
+  ],
+  "side_effects": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "production_semantic_changes": 0,
+    "new_migrations": 0,
+    "commits": 0,
+    "pushes": 0,
+    "merges": 0,
+    "deploys": 0
+  },
+  "verdict": "TRACE_PARITY_REPAIR_ACCEPTED_FOR_GPT_FINAL_REVIEW"
+}

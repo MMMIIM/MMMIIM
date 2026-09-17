@@ -1,0 +1,35 @@
+{
+  "artifact_type": "V43_R1_LABEL_SCORE_DISTRIBUTION_AFTER_HYGIENE_REPLAY",
+  "source_artifact": "docs/handoff/V43_REFERENCE_RAG_SEMANTIC_ADJUDICATION_AND_FAILURE_DECOMPOSITION_V1/05_R1_OFFLINE_REPLAY.json",
+  "source_sha256": "ab393c8b5f2d3aa31b8645992deb94fd662894e1a8d714d8549d0b49bd162852",
+  "score_source": "replay_r1_references.similarity_score",
+  "distributions": {
+    "USEFUL": {
+      "reference_count": 48,
+      "case_count": 12,
+      "min": 0.365923,
+      "p25": 0.509297,
+      "median": 0.560977,
+      "p75": 0.585344,
+      "max": 0.706659
+    },
+    "PARTIAL": {
+      "reference_count": 148,
+      "case_count": 37,
+      "min": 0.392376,
+      "p25": 0.477507,
+      "median": 0.510084,
+      "p75": 0.553474,
+      "max": 0.685602
+    },
+    "NOT_USEFUL": {
+      "reference_count": 105,
+      "case_count": 31,
+      "min": 0.349007,
+      "p25": 0.450949,
+      "median": 0.491509,
+      "p75": 0.528468,
+      "max": 0.64345
+    }
+  }
+}

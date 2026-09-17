@@ -1,0 +1,33 @@
+{
+  "task_type": "evidence_fact_extraction",
+  "contract_version": "4.3-evidence-fact-extraction-v1",
+  "instruction_hash": "86cb8d243b0e0f8ed83ecba67dd6aff8532958a14a7723c1a2f1192c663c301b",
+  "schema_hash": "2cc97797765c5f1892ac91b2109e15549aedeb23736a786e5189735a1c23713d",
+  "data_required": [
+    "facts"
+  ],
+  "data_allowed": [
+    "facts"
+  ],
+  "parser": "semantic-gateway-envelope-v1",
+  "provider": "openai_compatible",
+  "model": "deepseek-ai/DeepSeek-V4-Flash",
+  "provider_host": "api.siliconflow.cn",
+  "structured_output": {
+    "response_format": "json_schema",
+    "strict": true
+  },
+  "retry_policy": {
+    "max_attempts": 2,
+    "eligible": [
+      "OUTPUT_SCHEMA_INVALID",
+      "FACT_SEMANTIC_EMPTY"
+    ]
+  },
+  "canonical_fact_contract": {
+    "contract_version": "evidence-fact-v1",
+    "owner": "createEvidenceFactContract",
+    "schema_owner": "backend/src/pipeline/evidence-fact-contract-v1.js"
+  },
+  "task_schema_hash": "2cc97797765c5f1892ac91b2109e15549aedeb23736a786e5189735a1c23713d"
+}

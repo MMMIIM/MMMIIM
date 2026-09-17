@@ -1,0 +1,56 @@
+{
+  "artifact_type": "V43_E2E_INPUT_FREEZE_V1",
+  "execution_mode": "OFFLINE_ONLY",
+  "provider_calls": 0,
+  "embedding_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "gold_mutations": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "commit": 0,
+  "push": 0,
+  "merge": 0,
+  "deploy": 0,
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "requirement": {
+    "path": "docs/V43_REQUIREMENT_GOLD_V2_SIX_TENDER_CANONICAL_INPUT.json",
+    "sha256": "ff07402688a3013af9a9b8be01f613f76848b7ea905208c1955a604432422fe1",
+    "row_count": 1009,
+    "tenders": {
+      "JY-001": 193,
+      "TB-003": 265,
+      "TB-006": 46,
+      "FAST-01": 39,
+      "FAST-04": 353,
+      "FAST-WATER-01": 113
+    },
+    "authority": "SOURCE_DERIVED_EVAL_AUTHORITY_NOT_HUMAN_GOLD"
+  },
+  "router": {
+    "path": "docs/handoff/V43_RESPONSE_ROUTER_V2_2_3_FINAL_AUTHORITY_CLOSURE/07_FULL_REPLAY.json",
+    "sha256": "6a89ee174a981c60b21364b2a43f05ba8fac652ca2862aac2b0196e1742e0b6a",
+    "router_identity": "v43-response-router-v2.2.3-response-authority-closure",
+    "rows": 1009
+  },
+  "corpus": {
+    "default": "CHENGCHUAN_BASE16",
+    "materials": 16,
+    "chunks": 160,
+    "embeddings": 160,
+    "model": "Qwen/Qwen3-Embedding-0.6B",
+    "version": "1",
+    "dimension": 1024,
+    "vector_reuse": "REQUIRED_IF_IDENTITY_MATCH"
+  },
+  "excluded": [
+    "CHENGCHUAN_V2_EXTENSION_92",
+    "H3C",
+    "HUAWEI_FROM_CHENGCHUAN_DEEP_CHAIN",
+    "NEUSOFT",
+    "UNKNOWN"
+  ]
+}

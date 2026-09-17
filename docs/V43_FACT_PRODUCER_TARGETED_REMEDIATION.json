@@ -1,0 +1,41 @@
+{
+  "artifact": "V43_FACT_PRODUCER_TARGETED_REMEDIATION",
+  "status": "BLOCKED_EXTERNAL_AUTHORIZATION",
+  "scope": ["COM-01","COM-06","COM-07","COM-08","COM-12","CCV2-U09-02","CCV2-U13-01","CCV2-U17-01","CCV2-U20-02","CCV2-U29-02","CCV2-U30-02","CCV2-U34-02"],
+  "provider_concurrency": 2,
+  "provider_call_cap": 30,
+  "max_remediation_cycles": 2,
+  "preconditions": [
+    "Offline root-cause classification complete",
+    "Use existing SemanticGatewayEvidenceFactExtractor and EvidenceSourceFactService",
+    "Eval DB only; preserve existing five facts and audit rows",
+    "Requirement-blind assertion remains enabled",
+    "No Prompt/Schema/Production contract changes"
+  ],
+  "fixed_order": [
+    "deterministic contract/envelope",
+    "gateway normalization",
+    "parser projection",
+    "input construction",
+    "validator false reject",
+    "prompt micro patch"
+  ],
+  "proposed_eval_only_instrumentation": [
+    "Persist safe Gateway probe metadata and upstream-status distinction",
+    "Select fixed material IDs without reimport or full rerun",
+    "Use a complete source span/window rather than heading-only chunk[0]"
+  ],
+  "forbidden": ["permissive JSON repair","second extractor","Provider/model switch","retry expansion","schema rewrite","production writes","Gold mutation"],
+  "targeted_gate": {
+    "unexplained_422": 0,
+    "wrong_shape_rate": 0,
+    "output_contract_valid": "100%",
+    "gateway_normalization_valid": "100%",
+    "unexplained_empty": 0,
+    "unsupported_fact_accepted": 0,
+    "lineage_or_grounding_mismatch": 0,
+    "semantic_duplicate_active": 0,
+    "unexplained_material_failure": 0
+  },
+  "execution": {"provider_calls": 0,"production_db_writes": 0,"gold_mutations": 0,"status":"BLOCKED_EXTERNAL_AUTHORIZATION","reason":"Execution environment rejected the task-scoped external egress despite synthetic Eval classification; no workaround attempted."}
+}

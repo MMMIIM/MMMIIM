@@ -1,0 +1,39 @@
+{
+  "artifact_type": "V43_SIX_TENDER_SOURCE_PARITY",
+  "rows": [
+    {
+      "tender_id": "JY-001",
+      "source_identity_parity": true,
+      "authority_packet_current": false
+    },
+    {
+      "tender_id": "TB-003",
+      "source_identity_parity": true,
+      "authority_packet_current": false
+    },
+    {
+      "tender_id": "TB-006",
+      "source_identity_parity": true,
+      "authority_packet_current": true
+    },
+    {
+      "tender_id": "FAST-01",
+      "source_identity_parity": true,
+      "authority_packet_current": true
+    },
+    {
+      "tender_id": "FAST-04",
+      "source_identity_parity": true,
+      "authority_packet_current": false
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "source_identity_parity": true,
+      "authority_packet_current": true
+    }
+  ],
+  "source_identity_parity": "PASS_6_OF_6",
+  "authority_packet_parity": "FAIL_3_OF_6",
+  "failure_reason": "JY-001/TB-003/FAST-04 lack frozen Human adjudication identity",
+  "resolver_coverage": "3/6"
+}

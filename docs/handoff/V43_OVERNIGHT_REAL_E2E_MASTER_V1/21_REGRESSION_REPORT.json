@@ -1,0 +1,48 @@
+{
+  "run_id": "V43-OVERNIGHT-REAL-E2E-CASE-01-20260914",
+  "status": "COMPLETE",
+  "suites": [
+    {
+      "name": "focused requirement/fact/router regression",
+      "command": "node --test test/requirement-scope-table.test.js test/requirement-production-quality-gate.test.js test/requirement-extraction-contract-owner.test.js test/requirement-resilience.test.js test/response-router-v2-2-3.test.js test/evidence-fact-candidate-v2-2.test.js test/real-pdf-fact-pilot-v1-1-contract.test.js",
+      "passed": 75,
+      "failed": 1,
+      "status": "PASS_WITH_PRE_EXISTING_UNRELATED_BASELINE",
+      "failure": {
+        "test": "frozen 199 Gold requirements retain an eligible or unknown source span after routing",
+        "family": "PATH_FIXTURE_AVAILABILITY",
+        "signature": "ENOENT backend/backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json",
+        "classification": "PRE_EXISTING_UNRELATED_BASELINE"
+      }
+    },
+    {
+      "name": "isolated PostgreSQL integration",
+      "command": "DATABASE_URL=<isolated-eval-db-redacted> node --test --test-concurrency=1 integration/postgres.integration.js",
+      "passed": 27,
+      "failed": 0,
+      "status": "PASS",
+      "database": "bid_platform_flow_audit_test",
+      "writes_scoped_to_isolated_eval_db": true
+    },
+    {
+      "name": "frontend build",
+      "command": "npm run build",
+      "status": "PASS"
+    },
+    {
+      "name": "lint",
+      "command": "npm run lint",
+      "status": "PASS"
+    },
+    {
+      "name": "git diff check",
+      "command": "git diff --check",
+      "status": "PASS_WITH_LINE_ENDING_WARNINGS_ONLY"
+    }
+  ],
+  "baseline_policy": "Known unrelated failures are recorded only; no unrelated repair is authorized.",
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "new_task_regressions": 0
+}

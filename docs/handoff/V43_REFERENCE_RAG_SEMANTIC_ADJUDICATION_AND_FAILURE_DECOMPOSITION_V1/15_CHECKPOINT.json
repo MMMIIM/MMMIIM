@@ -1,0 +1,54 @@
+{
+  "artifact_type": "V43_REFERENCE_RAG_SEMANTIC_ADJUDICATION_AND_FAILURE_DECOMPOSITION_CHECKPOINT",
+  "status": "READY_FOR_GPT_REFERENCE_RAG_FAIL_QUIET_STRATEGY_DECISION",
+  "run_id": "V43-CORE6-REAL-REFERENCE-RAG-WRITER-20260915105535",
+  "scope": "REQUIREMENT_LEVEL_REFERENCE_RETRIEVAL_EVAL",
+  "source_artifact": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/14_GPT_SEMANTIC_REVIEW_PACKET.json",
+  "source_sha256": "357d4102eccac3faeaa3ae06bf896c4ceb9b275b377b12c18acc4865ed80a19e",
+  "R1_engineering_hygiene": "ACCEPTED",
+  "R1_semantic_labels": {
+    "useful": 12,
+    "partial": 37,
+    "not_useful": 31,
+    "total": 80,
+    "useful_rate": 0.15,
+    "failure_families": {
+      "TOO_GENERIC": 19,
+      "WEAK_CORPUS": 25,
+      "REFERENCE_NOT_NEEDED": 6,
+      "GOOD_REFERENCE": 12,
+      "RANKING_FAILURE": 7,
+      "SEMANTIC_NEAR_MISS": 9,
+      "OTHER": 2
+    }
+  },
+  "R2_authority": {
+    "canonical_status": "NOT_EXECUTED_VECTOR_UNAVAILABLE_OR_RETRIEVAL_BLOCKED",
+    "integrity_report": "02_R2_ARTIFACT_INTEGRITY_REPORT.json",
+    "no_rerun": true
+  },
+  "hygiene_patch": {
+    "owner": "backend/src/pipeline/retrieval-chunk-role.js + retrieval-substantive-candidate.js",
+    "offline_replay": "05_R1_OFFLINE_REPLAY.json",
+    "heading_escape": 0,
+    "front_matter_escape": 0,
+    "citation_source_index_escape": 0,
+    "boilerplate_escape": 0,
+    "duplicate_escape": 0,
+    "final_k_max": 4
+  },
+  "routing_debt": {
+    "raw_80": "12_RAW80_VS_ADJUSTED74_METRICS.json",
+    "adjusted_74": "12_RAW80_VS_ADJUSTED74_METRICS.json"
+  },
+  "provider_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "requirement_mutations": 0,
+  "fact_mapping_claim_writer_mutations": 0,
+  "production_semantic_changes": 0,
+  "no_mmr_rerun": true,
+  "no_lexical_proxy_rerun": true,
+  "next_gate": "GPT_FAIL_QUIET_STRATEGY_DECISION"
+}

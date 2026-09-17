@@ -98,6 +98,29 @@ export function buildRequirementExtractionPayload({
   };
 }
 
+/**
+ * Resolve the single provider-facing Requirement Extraction input owned by the
+ * production path.  Evaluation and verification callers must compare against
+ * this value instead of reconstructing model_text selection independently.
+ */
+export function resolveRequirementExtractionProviderInput({ chunk, fallbackText } = {}) {
+  return chunk?.model_text || String(fallbackText || '');
+}
+
+export function assertRequirementExtractionProviderInputParity({
+  chunk,
+  fallbackText,
+  actualInput
+} = {}) {
+  const canonicalInput = resolveRequirementExtractionProviderInput({ chunk, fallbackText });
+  if (actualInput !== canonicalInput) {
+    throw Object.assign(new Error('Production-like evaluation input differs from the canonical Requirement Extraction input.'), {
+      code: 'PRODUCTION_PARITY_VIOLATION'
+    });
+  }
+  return canonicalInput;
+}
+
 export function createRequirementExtractionGateway(client) {
   return {
     async extract({
@@ -110,6 +133,10 @@ export function createRequirementExtractionGateway(client) {
       chunkCount,
       diagnosticMode = null
     }) {
+      const providerInput = resolveRequirementExtractionProviderInput({
+        chunk,
+        fallbackText: text
+      });
       const gatewayResponse = await client.run({
         task_type: REQUIREMENT_EXTRACTION_TASK_TYPE,
         // The transport field is required by the legacy HTTP envelope, but its
@@ -120,7 +147,7 @@ export function createRequirementExtractionGateway(client) {
           sectionName: sectionName || chunk?.segments?.[0]?.source_section,
           chunkIndex: chunk?.chunk_number,
           chunkCount,
-          chunkText: chunk?.model_text || text
+          chunkText: providerInput
         }))
       }, { diagnosticMode });
       return validateRequirementExtractionEnvelope(gatewayResponse);

@@ -1,0 +1,41 @@
+{
+  "artifact_type": "V43_DOMAIN_AFFINITY_SUMMARY",
+  "method": "deterministic normalized query-term substring overlap; diagnostic only",
+  "source_artifact": "docs/handoff/V43_REFERENCE_RAG_SEMANTIC_ADJUDICATION_AND_FAILURE_DECOMPOSITION_V1/11_DOMAIN_AFFINITY_OFFLINE_ANALYSIS.json",
+  "source_sha256": "0f380de910c3aae86d445b32994dbcec4137608496ae6adbef35a8be315e4885",
+  "tested_rule_count": 0,
+  "tested_rules": [],
+  "baseline": {
+    "case_count": 80,
+    "reference_count": 301,
+    "zero_reference_case_count": 0,
+    "label_counts": {
+      "PARTIAL": 37,
+      "NOT_USEFUL": 31,
+      "USEFUL": 12
+    }
+  },
+  "observed_affinity_aggregate": {
+    "PARTIAL": {
+      "cases": 37,
+      "references": 148,
+      "mean_affinity_ratio": 0.006478537360890303
+    },
+    "NOT_USEFUL": {
+      "cases": 31,
+      "references": 105,
+      "mean_affinity_ratio": 0.0005952380952380953
+    },
+    "USEFUL": {
+      "cases": 12,
+      "references": 48,
+      "mean_affinity_ratio": 0
+    }
+  },
+  "USEFUL_retained_or_improved": "NOT_TESTED_IN_EXISTING_ARTIFACT",
+  "PARTIAL_changed": "NOT_TESTED_IN_EXISTING_ARTIFACT",
+  "NOT_USEFUL_suppressed": "NOT_TESTED_IN_EXISTING_ARTIFACT",
+  "new_wrong_domain_risk": "NOT_TESTED_IN_EXISTING_ARTIFACT",
+  "zero_reference_delta": "NOT_TESTED_IN_EXISTING_ARTIFACT",
+  "promotion_evidence": "NO_DOMAIN_AFFINITY_PROMOTION_EVIDENCE"
+}

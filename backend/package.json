@@ -19,6 +19,8 @@
     "probe:evidence-support-provider": "node scripts/evidence-support-provider-probe.js",
     "probe:semantic-adjudication-capability": "node scripts/semantic-adjudication-capability-probe.js",
     "eval:semantic-adjudication-value-v1": "node eval/semantic-adjudication-value-v1/runner.js",
+    "eval:mapping": "node eval/mapping-benchmark-v1/mapping-eval-runner.js --mode fast",
+    "eval:gold-v2-foundation": "node eval/gold-governance/gold-v2-foundation-orchestrator.js",
     "eval:jiangyin-ambiguity-prevalence-v1": "node eval/jiangyin-ambiguity-prevalence-v1/runner.js",
     "eval:jiangyin-full-rag-fitness-v1": "node eval/jiangyin-full-requirement-rag-fitness-v1/runner.js",
     "reconcile:sources": "node scripts/reconcile-requirement-sources.js",
@@ -60,6 +62,9 @@
     "ingest:corpus-l3": "node scripts/ingest-corpus-l3.js",
     "prepare:l3-enterprise": "node scripts/prepare-l3-enterprise-path.js",
     "eval:evidence-gold": "node eval/evidence-gold/run.js",
+    "eval:claim": "node eval/claim-eval-v1/runner.js",
+    "eval:flywheel": "node eval/flywheel/runner.js",
+    "eval:writer-fast-gate": "node eval/rag-pilot/writer-fast-gate-v1.js",
     "audit:semantic-boundary": "node eval/semantic-boundary/audit-runner.js",
     "snapshot:semantic-boundary": "node eval/semantic-boundary/snapshot.js",
     "validate:corpus-manifest": "node eval/semantic-boundary/corpus-manifest-contract.js",
@@ -99,7 +104,7 @@
     "smoke:writer-gateway": "node scripts/live-gateway-smoke.js section_drafting",
     "smoke:revision-gateway": "node scripts/live-gateway-smoke.js targeted_revision",
     "test": "node --test",
-    "test:postgres": "node --test --test-concurrency=1 integration/postgres.integration.js integration/deterministic.integration.js integration/document-delivery.integration.js integration/agent-actions.integration.js integration/corpus-l3.integration.js integration/sem-p1-004-entry-matrix.integration.js integration/project-authorization.integration.js integration/mapping-claim-authority.integration.js"
+    "test:postgres": "node --test --test-concurrency=1 integration/postgres.integration.js integration/deterministic.integration.js integration/document-delivery.integration.js integration/agent-actions.integration.js integration/corpus-l3.integration.js integration/sem-p1-004-entry-matrix.integration.js integration/project-authorization.integration.js integration/mapping-claim-authority.integration.js integration/claim-eval-v1.integration.js integration/track-a-authority-remediation.integration.js"
   },
   "dependencies": {
     "@bid/semantic-contracts": "*",

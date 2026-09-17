@@ -1,0 +1,107 @@
+[
+  {
+    "contract_name": "evidence_fact_extraction",
+    "version": "4.3-evidence-fact-extraction-v1",
+    "schema_hash": "322efee1bb0e909e407a668bfef6fdbb0f2c8a4833bac8f511302178acf8b91c",
+    "prompt_version": "evidence_fact_extraction",
+    "prompt_hash": "f3e047082cfe0481683e4f766985b6412e4b88e3d0cde9be4a9f0367b8246c0c",
+    "production_default": true,
+    "eval_only": false,
+    "downstream_consumable": true,
+    "historical_only": false
+  },
+  {
+    "contract_name": "evidence_fact_candidate_v2",
+    "version": "4.3-evidence-fact-candidate-v2",
+    "schema_hash": "3dcece82464fcbd0351fe4444cc66994d36e40ca6ca97a3f2d0ba01e5e44f0b3",
+    "prompt_version": "4.3-evidence-fact-candidate-v2-prompt-v2",
+    "prompt_hash": "480ea2763abef430d31cacf0a86c1e067afbd075d6c32ac49528ed655cbadb19",
+    "production_default": false,
+    "eval_only": true,
+    "downstream_consumable": false,
+    "historical_only": false
+  },
+  {
+    "contract_name": "evidence_fact_candidate_v2.1",
+    "version": "4.3-evidence-fact-candidate-v2.1",
+    "schema_hash": "3dcece82464fcbd0351fe4444cc66994d36e40ca6ca97a3f2d0ba01e5e44f0b3",
+    "prompt_version": "4.3-evidence-fact-candidate-v2.1-prompt-v1",
+    "prompt_hash": "56e83bf44b2bb720e32824e305860bfa16a0157262394d53be348ea483622218",
+    "production_default": false,
+    "eval_only": true,
+    "downstream_consumable": false,
+    "historical_only": false
+  },
+  {
+    "contract_name": "Canonical Evidence Fact",
+    "version": null,
+    "schema_hash": "11a98dad7da81321505e3eaaa99c3d9927a1a9da3afd0c647c2af50611826d7d",
+    "prompt_version": null,
+    "prompt_hash": null,
+    "production_default": true,
+    "eval_only": false,
+    "downstream_consumable": true,
+    "historical_only": false,
+    "source_path": "backend/src/pipeline/evidence-fact-contract-v1.js"
+  },
+  {
+    "contract_name": "Grounding result",
+    "version": null,
+    "schema_hash": "2bbcbef378efa025a9b5d510e4373860c69cc467f408312d04d192760ae9ff25",
+    "prompt_version": null,
+    "prompt_hash": null,
+    "production_default": true,
+    "eval_only": false,
+    "downstream_consumable": true,
+    "historical_only": false,
+    "source_path": "backend/src/pipeline/evidence-fact-candidate-v2.js"
+  },
+  {
+    "contract_name": "Fact persistence DTO/schema",
+    "version": null,
+    "schema_hash": "45b4c90857844fb8a6d933a845f953a8bd1e5fc9d3466c890f29d7229d48be00",
+    "prompt_version": null,
+    "prompt_hash": null,
+    "production_default": true,
+    "eval_only": false,
+    "downstream_consumable": true,
+    "historical_only": false,
+    "source_path": "backend/src/evidence-source-fact-service.js"
+  },
+  {
+    "contract_name": "Mapping input contract",
+    "version": null,
+    "schema_hash": "f22362f22a668997fac365e97e12f530957827b97ee4b5cc7ad3c14ad0e4a2c8",
+    "prompt_version": null,
+    "prompt_hash": null,
+    "production_default": true,
+    "eval_only": false,
+    "downstream_consumable": true,
+    "historical_only": false,
+    "source_path": "backend/src/pipeline/requirement-evidence-mapping-contract-v1.js"
+  },
+  {
+    "contract_name": "Claim input contract",
+    "version": null,
+    "schema_hash": "6aaf7d4224cf462449e8a1d312b4353a773cff9b0f6866d86d63cbbec27e7749",
+    "prompt_version": null,
+    "prompt_hash": null,
+    "production_default": true,
+    "eval_only": false,
+    "downstream_consumable": true,
+    "historical_only": false,
+    "source_path": "backend/src/pipeline/claim-gate-input-adapter-v1.js"
+  },
+  {
+    "contract_name": "Writer authorization snapshot",
+    "version": null,
+    "schema_hash": "36f9989c465fc75a12caad6cda73b5a3e37df0fad79ec31568ae1e956ea5dccd",
+    "prompt_version": null,
+    "prompt_hash": null,
+    "production_default": true,
+    "eval_only": false,
+    "downstream_consumable": true,
+    "historical_only": false,
+    "source_path": "backend/src/pipeline/writer-authorization-snapshot.js"
+  }
+]

@@ -1,0 +1,86 @@
+{
+  "run_id": "unseen-holdout-v1-2026-09-08T06-21-08-203Z-5faac1ab",
+  "stage": "A_PROVIDER_ZERO_PRODUCTION_PATH_PLANNING",
+  "created_at": "2026-09-08T06:21:09.988Z",
+  "code_freeze_parity": "PASS",
+  "source_freeze_parity": "PASS",
+  "holdout_tender_count": 2,
+  "max_provider_calls": 120,
+  "planned_provider_calls_total": 43,
+  "tenders": [
+    {
+      "tender_id": "HOLDOUT-REQ-01",
+      "source_file": "backend/eval/requirement-unseen-holdout-v1/source-candidates/三大平台-全国公共资源交易平台通用软件购置和实施项目招标文件.pdf",
+      "source_file_sha256": "d7000d6aea6a86991425b8968ccd12432ff3492c1f081ec894e06178539cd949",
+      "page_count": 66,
+      "parsed_block_count": 1631,
+      "production_chunk_count": 19,
+      "routed_chunk_count": 19,
+      "excluded_chunk_count": 0,
+      "section_role_distribution": {
+        "REQUIREMENT_ELIGIBLE": 167,
+        "SCORING": 85,
+        "QUALIFICATION": 40,
+        "COMMERCIAL": 51,
+        "PROCUREMENT": 61,
+        "LEGAL": 23,
+        "UNKNOWN": 1196
+      },
+      "planned_provider_calls": 19,
+      "source_resolution_failure_count": 0,
+      "table_annotation": {
+        "status": "APPLIED",
+        "rows": 54,
+        "ambiguous_rows": 0
+      },
+      "span_conservation_pass": false
+    },
+    {
+      "tender_id": "HOLDOUT-REQ-02",
+      "source_file": "backend/eval/requirement-unseen-holdout-v1/work/HOLDOUT-REQ-02/2026-2027年信息化运维项目招标文件（2026021102）.pdf",
+      "source_file_sha256": "15e7517e78a4cd6d6663587e2e93b1abd426818c78afb5871f7fa24900e6a196",
+      "page_count": 61,
+      "parsed_block_count": 1610,
+      "production_chunk_count": 24,
+      "routed_chunk_count": 24,
+      "excluded_chunk_count": 0,
+      "section_role_distribution": {
+        "REQUIREMENT_ELIGIBLE": 47,
+        "SCORING": 78,
+        "QUALIFICATION": 29,
+        "COMMERCIAL": 72,
+        "PROCUREMENT": 41,
+        "LEGAL": 19,
+        "UNKNOWN": 1316
+      },
+      "planned_provider_calls": 24,
+      "source_resolution_failure_count": 0,
+      "table_annotation": {
+        "status": "APPLIED",
+        "rows": 0,
+        "ambiguous_rows": 0
+      },
+      "span_conservation_pass": false
+    }
+  ],
+  "stage_a_exclusion_explanations": [
+    {
+      "tender_id": "HOLDOUT-REQ-01",
+      "unrouted_block_count": 8,
+      "classification": "FRONT_MATTER_OR_TOC_NOT_IN_SECTION_CLASSIFIER",
+      "source_pages": [
+        1,
+        2
+      ]
+    },
+    {
+      "tender_id": "HOLDOUT-REQ-02",
+      "unrouted_block_count": 8,
+      "classification": "FRONT_MATTER_OR_TOC_NOT_IN_SECTION_CLASSIFIER",
+      "source_pages": [
+        1
+      ]
+    }
+  ],
+  "stage_a_exclusion_explanations_status": "PASS"
+}

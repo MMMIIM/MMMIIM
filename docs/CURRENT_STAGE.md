@@ -1,5 +1,140 @@
 # Current Stage
 
+## V43 Evidence RAG Retrieval Quality P1D — Existing Rerank Reachability Diagnostic
+
+Priority: **P1 / Eval and engineering diagnostic only**
+Status: **P1D DIAGNOSTIC COMPLETE / GPT REVIEW PENDING**
+
+The production reranker implementation is present as
+`4.3-role-need-rerank-v1` and is called by
+`EnterpriseRetrievalService.retrieve`, but the actual route does not build or
+attach a Backend-owned Production EvidenceNeedProfile. The caller-supplied
+`semantic_metadata` is not an approved Eval source, and the frozen P1C
+adapter omitted the candidate role fields required by the reranker. Gold
+`profile_class` was not used to fill this gap.
+
+R-FALLBACK was replayed from the frozen P1C results for the 20 / 32 / 48 / 64
+candidate-depth ladder. R-EXISTING was intentionally blocked before reranker
+invocation; no synthetic metadata was introduced. The resulting gate is
+`EXISTING_RERANK_NOT_EVALUABLE`.
+
+Checkpoint:
+`docs/handoff/V43_RAG_RETRIEVAL_P1D_EXISTING_RERANK_REACHABILITY_DIAGNOSTIC_V1/V43_RAG_RETRIEVAL_P1D_EXISTING_RERANK_REACHABILITY_DIAGNOSTIC_CHECKPOINT_V1.md/.json`.
+
+No Production Retrieval change is authorized. P2 Parent/Child, P3
+Profile/Lexical, P4 K0, bounded overfetch promotion, MMR, Hybrid, and
+Cross-encoder Reranker remain **HOLD**. Stop for GPT review.
+
+## V43 Evidence RAG Retrieval Quality P1C — Bounded Overfetch Challenger
+
+Priority: **P1 / Eval and engineering challenger only**
+Status: **P1C ENGINEERING VALIDATION COMPLETE / GPT REVIEW PENDING**
+
+P1C froze the bounded candidate ladder `20 / 32 / 48 / 64` before replay and
+reused the frozen 94-chunk snapshot, query vectors, GPT semantic Gold,
+development-validation overlay, matcher, and existing Production Hygiene.
+R0 is raw dense Top20 → existing Hygiene → existing fallback → final Top8;
+R32/R48/R64 use the same path with only the bounded raw candidate depth
+changed. No new Hygiene rule, re-chunking, re-embedding, Provider, Embedding,
+LLM, or Production Retrieval change was made.
+
+Across the 10 frozen development-eval cases, Recall@8 and MRR_FINAL@8 did not
+improve at any challenger depth. R32/R48/R64 reduced final-pool underfill, and
+Top20-external grade≥2 candidates entered the existing Hygiene survivor pool,
+but none entered final review Top8. All regression and safety gates passed;
+the required missing-atom-to-final-review gate failed.
+
+`DEVELOPMENT_SELECTED_CANDIDATE_K = NONE`;
+`R64_DIAGNOSTIC_ONLY = TRUE`;
+`OVERFETCH_GAIN_SATURATION_POINT = NONE`;
+next recommendation candidate: **`NO_CHANGE_YET`**.
+
+Checkpoint:
+`docs/handoff/V43_RAG_RETRIEVAL_P1C_BOUNDED_OVERFETCH_CHALLENGER_V1/V43_RAG_RETRIEVAL_P1C_BOUNDED_OVERFETCH_CHALLENGER_CHECKPOINT_V1.md/.json`.
+
+Stop for GPT review. Do not implement bounded overfetch. P2 Parent/Child, P3
+Profile/Lexical, P4 K0, MMR, Hybrid, and Cross-encoder Reranker remain **HOLD**.
+
+## V43 Evidence RAG Retrieval Quality P1B — Production-Shape Hygiene Canary (historical)
+
+Priority: **P1 / Engineering validation only**
+Status: **P1B ENGINEERING VALIDATION COMPLETE / GPT PASS; P1C OVERRIDES THE P1A PRODUCTION GATE**
+
+The production Retrieval shape is frozen as raw vector `candidateK=20`,
+post-truncation hygiene, no slot replenishment, and final review `K=8`.
+P1B replayed R0 (current shape) against R1 (same shape plus the exact frozen
+P1A hygiene rule) using the unchanged vectors and the frozen matcher. R1 made
+no additional raw-top-20 exclusions because the existing production hygiene
+already removed those structural candidates. On the 7-case
+`DEVELOPMENT_VALIDATION_SET`, R0/R1 at K=5 were Recall `0.700000`, Candidate
+Precision `0.114286`, and nDCG `0.471039`; this reproduces or exceeds the
+P1A full-rank projection for the decision gate. The recommended gate is
+`P1A_PRODUCTION_SAFE_AS_IS`; this was the Codex mechanical gate only. GPT
+review overrode it with `P1A_NEEDS_BOUNDED_OVERFETCH` and authorized P1C as an
+Eval challenger; neither result is Production promotion authorization.
+
+The former seven-case holdout is represented only by a governance overlay as
+`DEVELOPMENT_VALIDATION_SET`; semantic Gold labels and the Gold file remain
+unchanged. The P1A rule remains
+`P1A_HYGIENE_RULE_V1_GENERIC_DETERMINISTIC`, hash
+`8320c40c28fa5052f6ea9abe3843a2544b6c929a955a252b97ee56b5180a79c2`.
+Matcher: `EVIDENCE_MATCHER_V1_EXACT_ACCEPTED_SPAN_GRADE`, hash
+`ce675a8756ea325fe208a32a8143d5889586fb26a343c7dd430dce378fe5c4f2`.
+Replay parity passed; Provider, embedding, LLM, production DB, Gold, corpus,
+authority, lineage, Fact, Mapping, Claim, and Writer mutations were all zero.
+
+Checkpoint:
+`docs/handoff/V43_RAG_RETRIEVAL_P1B_PRODUCTION_SHAPE_HYGIENE_CANARY_V1/V43_RAG_RETRIEVAL_P1B_PRODUCTION_SHAPE_HYGIENE_CANARY_CHECKPOINT_V1.md/.json`.
+
+No production Retrieval change is authorized. P2 Parent/Child, P3
+Profile/Lexical, P4 K0, MMR, Hybrid, and Cross-encoder Reranker remain **HOLD**.
+Stop here for GPT review.
+
+## V43 Evidence RAG Retrieval Quality P1A — Structure Hygiene Challenger (historical)
+
+Priority: **P1 / Eval-only challenger**
+Status: **P1A SEMANTIC REVIEW PASS / PRODUCTION PROMOTION NOT AUTHORIZED**
+
+The challenger applied frozen dense ranking followed by generic,
+deterministic, Gold-independent hygiene filtering and final candidate
+projection. It did not re-chunk, merge or split source chunks, change
+parent/child structure, re-embed corpus/query vectors, or change source-span
+identity. It excluded 47 heading-only structural chunks and retained 47
+original source chunks. The P1A replay result remains the separate full-rank
+projection baseline for P1B comparison.
+
+Checkpoint:
+`docs/handoff/V43_RAG_RETRIEVAL_P1A_STRUCTURE_HYGIENE_CHALLENGER_V1/V43_RAG_RETRIEVAL_P1A_STRUCTURE_HYGIENE_CHALLENGER_CHECKPOINT_V1.md/.json`.
+
+## V43 Evidence RAG Retrieval Quality P0 — Gold / Metrics Freeze (completed baseline)
+
+Priority: **P0**
+Status: **P0 HOLDOUT REPLAY COMPLETE / PASS**
+
+GPT decision `V43_RAG_RETRIEVAL_P0_GOLD_METRICS_FREEZE_V1` authorizes an
+Eval-only Evidence Retrieval Gold and metrics baseline. The frozen
+`GPT_SEMANTIC_GOLD_V1` remains unchanged at SHA256
+`7576C1D9A9FECD19F032AD49085E61E48BB008EFF4788E225A2CCEE3087492E7`.
+The immutable baseline snapshot
+`EVSNAP-D98FA52C-952F-416F-B57F-92C41EF9731D` remains unchanged. The 7 frozen
+holdout queries were validated against the existing
+`HOLDOUT_QUERY_VECTOR_SUPPLEMENT_V1` (7 provider calls, Qwen3-Embedding-0.6B,
+1024 dimensions) and replayed against the unchanged 94-vector snapshot at
+K=1/3/5/8/20. No additional Provider call was made during the V2 replay.
+The holdout is now `DEVELOPMENT_VALIDATION_SET` and is not a fresh final-release
+blind holdout.
+
+Checkpoint:
+`docs/handoff/V43_RAG_RETRIEVAL_P0_HOLDOUT_REPLAY_AND_K0_V2/V43_RAG_RETRIEVAL_P0_HOLDOUT_REPLAY_CHECKPOINT_V2.md/.json`.
+
+This decision does not modify Production Retrieval, ranking, chunking, topK,
+MMR, Source Eligibility, Provider/model configuration, or any
+Evidence/Fact/Mapping/Claim/Writer state. P1 Structure, P2 Parent/Child, P3
+The mechanical next-intervention recommendation is `P3_PROFILE_LEXICAL`;
+P1 Structure, P2 Parent/Child, P3 Profile/Lexical, and P4 K0 remain **NOT
+AUTHORIZED** until GPT reviews this checkpoint and authorizes one next
+intervention.
+
 ## Stage 20-S — Evidence Sufficiency Offline Validation Baseline
 
 Priority: **P0**

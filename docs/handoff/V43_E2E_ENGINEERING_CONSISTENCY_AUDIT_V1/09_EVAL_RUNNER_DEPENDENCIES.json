@@ -1,0 +1,47 @@
+{
+  "artifact_type": "V43_E2E_ENGINEERING_CONSISTENCY_AUDIT_V1_EVAL_RUNNER_DEPENDENCIES",
+  "runner": "backend/eval/real-e2e/run-requirement-retrieval-fact-canary.mjs",
+  "entry_chain": [
+    "runCanary()",
+    "create backend/runtime and repository",
+    "schema preflight",
+    "runRetrieval()",
+    "PgRepository.listChunksForRetrieval()",
+    "read-only ranking SELECT",
+    "EmbeddingClient (not reached in this audit)",
+    "Fact replay (not reached in this audit)"
+  ],
+  "required_inputs": [
+    "DATABASE_URL",
+    "expected canary database bid_platform_flow_audit_test",
+    "expected project 7a038c5d-38e4-46ae-b24d-39437bb3b545",
+    "six HW material bindings and chunk/embedding identity",
+    "Eval-only requirement selection packet"
+  ],
+  "current_resolution": {
+    "backend_env_database": "bid_platform",
+    "runner_expected_database": "bid_platform_flow_audit_test",
+    "database_target_match": false,
+    "canonical_requirements_for_expected_project": 0,
+    "provider_reached": false,
+    "fact_persistence": 0,
+    "status": "BLOCKED_PRE_PROVIDER"
+  },
+  "authority_dependencies": {
+    "material_lifecycle": "company_materials source_version + lifecycle/review/usage/extraction/index predicates",
+    "project_scope": "project_material_bindings when present",
+    "requirement": "requirements joined to requirement_baselines status=confirmed",
+    "scope_decision": "requirement_scope_authority_decisions via formal service",
+    "fact": "EvidenceSourceFactService and evidence_source_facts",
+    "mapping": "RequirementEvidenceFactMappingService; not invoked",
+    "claim": "Claim Gate; not invoked",
+    "writer": "Writer Safe Context/authorization; not invoked"
+  },
+  "external_side_effects": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "eval_db_writes": 0,
+    "gold_mutations": 0
+  }
+}

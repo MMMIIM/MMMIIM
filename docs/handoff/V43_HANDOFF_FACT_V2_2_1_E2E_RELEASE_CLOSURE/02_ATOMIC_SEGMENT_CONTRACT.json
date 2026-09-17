@@ -1,0 +1,27 @@
+{
+  "contract": "FactExtractionAtomicSegment",
+  "status": "EVAL_ONLY_EXECUTION_DERIVED",
+  "storage_chunk_unchanged": true,
+  "material_db_rechunk": false,
+  "parent_lineage_required": [
+    "parent_chunk_id",
+    "material_id",
+    "document_id",
+    "page/span offsets",
+    "source hash lineage"
+  ],
+  "boundary_order": [
+    "paragraph",
+    "list_item_or_bullet",
+    "table_row",
+    "heading_associated_block",
+    "sentence_fallback"
+  ],
+  "heading_context_assertability": "NON_ASSERTABLE_CONTEXT_ONLY",
+  "max_split_depth": 2,
+  "arbitrary_character_split": false,
+  "terminal_rule": "BLOCKED_ATOMIC_SOURCE_SEGMENT_OUTPUT_DENSITY",
+  "deduplication": "EXACT_NORMALIZED_CANDIDATE_IDENTITY_PLUS_AUTHORITATIVE_LINEAGE_ONLY",
+  "schema_version": "4.3-evidence-fact-candidate-v2.2",
+  "schema_unchanged": true
+}

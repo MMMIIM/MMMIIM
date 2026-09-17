@@ -1,0 +1,115 @@
+{
+  "artifact_type": "V43_EVAL_BADCASE_FLYWHEEL_V1_TRACE_PARITY_CHECKPOINT",
+  "artifact_version": "v1",
+  "decision": "V43_EVAL_FLYWHEEL_V1_TRACE_PARITY_REPAIR",
+  "status": "READY_FOR_GPT_EVAL_FLYWHEEL_V1_FINAL_REVIEW",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "git_head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "git_dirty": true,
+  "source_truth": {
+    "artifact": "docs/eval/p0-recall/GPT_SOURCE_TRUTH_P0_CORE6_V1.json",
+    "sha256": "9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+    "atom_count": 487,
+    "semantic_labels_created": 0
+  },
+  "root_cause": {
+    "classification": "MECHANICAL_TRACE_PARITY_GAP",
+    "description": "Current adapter had first-prefix matching and omitted persisted page-lineage many-to-many links; the frozen historical trace used deterministic page lineage plus link method identity.",
+    "repair_scope": "eval_only_requirement_trace_adapter_and_runner"
+  },
+  "historical_r2": {
+    "run_id": "V43-FLYWHEEL-P0-487-R2",
+    "partition": "TARGETED_BADCASE",
+    "trace_sha256": "c9119bd896ad3730938c1697a44550146319742cdd3fe3d03f69d7e60d2d9b19",
+    "immutable": true
+  },
+  "successor_r3": {
+    "run_id": "V43-FLYWHEEL-P0-487-R3",
+    "partition": "CORE6",
+    "trace": {
+      "path": "docs/eval/flywheel/V43-FLYWHEEL-P0-487-R3/V43_P0_487_PROVENANCE_TRACE_INDEX.json",
+      "sha256": "7f180356c2ee5753ae3cfddb28c8085abc546e66c5897e89b523b9cb3787d327"
+    },
+    "deterministic_evaluations": {
+      "path": "docs/eval/flywheel/V43-FLYWHEEL-P0-487-R3/deterministic-evaluations.json",
+      "sha256": "c423b649f41c8dfd8447fbc34265cdf891c903324b4b7723e1b09d498bc7ba03"
+    },
+    "regression_results": {
+      "path": "docs/eval/flywheel/V43-FLYWHEEL-P0-487-R3/regression-results.json",
+      "sha256": "704770b4d63ec01f03e446e6105238bdd3c99d501466cd5134fd8463767695cc"
+    }
+  },
+  "mechanical_parity": {
+    "atom_count": 487,
+    "unique_atom_count": 487,
+    "source_linked": 472,
+    "chunk_observable": 472,
+    "source_resolution_observable": 472,
+    "canonical_lineage_atoms": 472,
+    "no_mechanical_link": 15,
+    "canonical_links_total": 5286,
+    "link_method_precedence_atoms": {
+      "normalized_exact_substring": 32,
+      "shared_8gram": 335,
+      "same_page_span_only": 105
+    },
+    "provider_input_historical_gaps": 487,
+    "raw_candidate_historical_gaps": 487,
+    "normalization_historical_gaps": 487,
+    "no_mechanical_link_failure_code": "NO_MECHANICAL_LINK_FOUND"
+  },
+  "tender_counts": {
+    "JY-001": {"atoms": 89, "source_linked": 89, "no_mechanical_link": 0, "canonical_links": 952},
+    "TB-003": {"atoms": 25, "source_linked": 21, "no_mechanical_link": 4, "canonical_links": 88},
+    "TB-006": {"atoms": 19, "source_linked": 19, "no_mechanical_link": 0, "canonical_links": 120},
+    "FAST-01": {"atoms": 24, "source_linked": 13, "no_mechanical_link": 11, "canonical_links": 79},
+    "FAST-04": {"atoms": 229, "source_linked": 229, "no_mechanical_link": 0, "canonical_links": 3287},
+    "FAST-WATER-01": {"atoms": 101, "source_linked": 101, "no_mechanical_link": 0, "canonical_links": 760}
+  },
+  "deterministic_risk_signals": {
+    "NEGATION_TOKEN_CHANGED": {"case_count": 399, "by_tender": {"FAST-04": 195, "FAST-WATER-01": 77, "FAST-01": 13, "TB-006": 16, "TB-003": 21, "JY-001": 77}},
+    "NUMERIC_TOKEN_CHANGED": {"case_count": 378, "by_tender": {"FAST-04": 214, "FAST-WATER-01": 66, "FAST-01": 13, "TB-006": 2, "TB-003": 8, "JY-001": 75}},
+    "TABLE_INDEX_TOKEN_RISK": {"case_count": 335, "by_tender": {"FAST-04": 186, "FAST-WATER-01": 66, "FAST-01": 13, "TB-006": 2, "TB-003": 9, "JY-001": 59}},
+    "SOURCE_CANONICAL_LOW_LEXICAL_ALIGNMENT": {"case_count": 447, "by_tender": {"FAST-04": 227, "FAST-WATER-01": 92, "FAST-01": 11, "TB-006": 15, "TB-003": 19, "JY-001": 83}}
+  },
+  "side_effects": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "production_semantic_changes": 0,
+    "migrations_added": 0
+  },
+  "tests": {
+    "legacy_trace_parity": "PASS (included in 17/17 focused tests)",
+    "focused_flywheel_suite": "PASS (17/17)",
+    "existing_requirement_deterministic_regression": "PASS (68/68)",
+    "frontend": "PASS (51/51)",
+    "backend_full": "PRE_EXISTING_UNRELATED_BASELINE (23 failures; exit 1)",
+    "build": "PASS",
+    "lint": "PASS",
+    "diff_check": "PASS",
+    "postgresql": "NOT_RUN_SAFE_GUARD"
+  },
+  "baseline_drift": "NO_CURRENT_TASK_REGRESSION",
+  "independent_review": {
+    "result": "PASS_WITH_NON_BLOCKING_FINDINGS",
+    "artifact": "docs/eval/flywheel/V43_EVAL_BADCASE_FLYWHEEL_V1_TRACE_PARITY_INDEPENDENT_REVIEW.json"
+  },
+  "changed_files": [
+    "backend/src/eval/flywheel/adapters/requirement.js",
+    "backend/src/eval/flywheel/trace.js",
+    "backend/src/eval/flywheel/deterministic-evaluator.js",
+    "backend/eval/flywheel/runner.js",
+    "backend/test/eval-flywheel/legacy-trace-parity.test.js",
+    "docs/eval/flywheel/V43_EVAL_BADCASE_FLYWHEEL_V1_TRACE_PARITY_CHECKPOINT.json",
+    "docs/eval/flywheel/V43_EVAL_BADCASE_FLYWHEEL_V1_TRACE_PARITY_CHECKPOINT.md",
+    "docs/eval/flywheel/V43_EVAL_BADCASE_FLYWHEEL_V1_TRACE_PARITY_INDEPENDENT_REVIEW.json"
+  ],
+  "remaining_blockers": [
+    "Historical R2 remains immutable and retains TARGETED_BADCASE partition.",
+    "Seeded 44-row BadCase ledger remains pending GPT/Human semantic authority.",
+    "Existing backend baseline failures remain out of scope.",
+    "PostgreSQL regression is not run because the suite writes the production database."
+  ]
+}

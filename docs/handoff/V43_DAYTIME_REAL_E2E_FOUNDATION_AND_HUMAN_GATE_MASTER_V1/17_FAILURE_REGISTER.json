@@ -1,0 +1,27 @@
+{
+  "failures": [
+    {
+      "stage": "ENTERPRISE_INDEXING",
+      "scope": "ENVIRONMENT",
+      "code": "EMBEDDING_NETWORK_ERROR",
+      "low_level_reason": "SOCKS5 proxy 127.0.0.1:18081 unreachable; Node transport reported EACCES in the sandbox",
+      "classification": "BLOCKED_ENVIRONMENT_SANDBOX_NETWORK_EACCES",
+      "provider_reached": false
+    },
+    {
+      "stage": "REQUIREMENT_SCOPE",
+      "scope": "GPT_ADJUDICATION",
+      "code": "NONE",
+      "classification": "CLOSED_5_OF_5_PARITY"
+    },
+    {
+      "stage": "FULL_BACKEND_BASELINE",
+      "scope": "BASELINE",
+      "count": 29,
+      "classification": "KNOWN_BASELINE_FAILURE",
+      "identity": "PRE_EXISTING"
+    }
+  ],
+  "current_task_regressions": 0,
+  "semantic_conclusions_from_embedding_failure": false
+}

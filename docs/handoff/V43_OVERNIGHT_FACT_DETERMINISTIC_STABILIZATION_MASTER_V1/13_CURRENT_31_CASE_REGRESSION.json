@@ -1,0 +1,32 @@
+{
+  "artifact_type": "V43_CURRENT_31_CASE_DETERMINISTIC_REGRESSION",
+  "source_artifact": "docs/handoff/V43_FACT_REVIEW_BURDEN_DETERMINISTIC_REDUCTION_V1/06_OFFLINE_BEFORE_AFTER.json",
+  "source_artifact_sha256": "ee112767f886c308cf92e1c5b805dd7e38a39becb245833e39299ec5e123ea75",
+  "candidate_count": 31,
+  "decision_distribution": {
+    "ACCEPT": 19,
+    "REVIEW_REQUIRED": 12
+  },
+  "review_required_rate": 0.3870967741935484,
+  "gpt_supported_hard_reject_count": 0,
+  "candidate_17": {
+    "decision": "REVIEW_REQUIRED",
+    "reason": "SOURCE_BOUNDARY_COMPLETION_UNRESOLVED",
+    "semantic_label": "PENDING_GPT"
+  },
+  "quantity_normalized_count": 14,
+  "quantity_unresolved_count": 0,
+  "quantity_qualifier_contract_gap_count": 9,
+  "source_boundary_guard": true,
+  "unsupported_auto_accept_count": 0,
+  "hard_contradiction_escape_count": 0,
+  "unrepresented_relation_auto_accept_count": 0,
+  "provider_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "canary_db_manual_writes": 0,
+  "eval_db_writes": 0,
+  "fact_persistence": 0,
+  "gold_mutations": 0,
+  "status": "PASS_WITH_NON_BLOCKING_CONTRACT_DEBT"
+}

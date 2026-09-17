@@ -1,0 +1,919 @@
+{
+  "checkpoint": "V43_REQUIREMENT_CORE6_FRESH_REPRODUCTION_CHECKPOINT",
+  "artifact_version": "v1",
+  "run_id": "req-core6-fresh-20260907133003259-49044f2a",
+  "generated_at": "2026-09-07T13:31:33.727Z",
+  "CORE6_CASE_COUNT": 6,
+  "provider_calls": 6,
+  "PROVIDER_CALLS": 6,
+  "RETRIES": 0,
+  "S0_CURRENT": 0,
+  "S1_CURRENT": 0,
+  "S2_CURRENT": 3,
+  "S3_CURRENT": 0,
+  "S4_CURRENT": 0,
+  "S5_CURRENT": 0,
+  "PASS_RECOVERED": 3,
+  "CURRENT_RUNTIME_FAILURE": 0,
+  "DOMINANT_CURRENT_ROOT_CAUSE": null,
+  "dominant_current_root_cause": null,
+  "SOURCE_TRACEABILITY": 1,
+  "CURRENT_CORE6_RECALL": 0.5,
+  "P0_ESCAPE": "REVIEW_REQUIRED",
+  "production_db_writes": 0,
+  "PRODUCTION_DB_WRITES": 0,
+  "gold_mutations": 0,
+  "GOLD_MUTATIONS": 0,
+  "fact_calls": 0,
+  "mapping_calls": 0,
+  "claim_calls": 0,
+  "writer_calls": 0,
+  "attempts": 6,
+  "retries": 0,
+  "max_call_cap": 8,
+  "concurrency": 2,
+  "runtime_identity": {
+    "task_type": "requirement_extraction",
+    "contract_version": "4.3-requirement-extraction-v3.1.1",
+    "prompt_instruction_hash": "9b8fe6582e774a64f36b2be307274e297fafb309cf17270a4d8fc463da817305",
+    "task_data_schema_hash": "9ee6ebb2a34e5ff3131d3b0bdbbcee45b1c8c33ac38d8325bd8925836abb7acc",
+    "candidate_schema_hash": "1f5bd20f624a34a5f0bfd76e226f24d3595cc8a1e06bdc176c3d40e9694edbba",
+    "local_candidate_schema_hash": "1f5bd20f624a34a5f0bfd76e226f24d3595cc8a1e06bdc176c3d40e9694edbba",
+    "canonical_rule_version": "4.3-canonical-requirement-1",
+    "provider_family": "mock",
+    "model": null,
+    "gateway_api_host": "127.0.0.1",
+    "files": {
+      "requirement_prompt_contract": "packages/semantic-contracts/index.js",
+      "requirement_extraction": "backend/src/pipeline/requirement-extraction.js",
+      "semantic_window_chunker": "backend/src/pipeline/requirement-chunker.js",
+      "section_router": "backend/src/pipeline/requirement-scope-router.js",
+      "source_resolver": "backend/src/pipeline/source-location-resolver.js",
+      "candidate_quality_gate": "backend/src/pipeline/requirement-quality-gate.js",
+      "canonicalizer": "backend/src/pipeline/canonical-requirements.js"
+    },
+    "file_hashes": {
+      "requirement_prompt_contract": "fa851c319851b55e29ffe555ba135628c7f85d6cdf22b65dce6572133f9409b7",
+      "requirement_extraction": "54a3be043763114ba8517bf30f29e123236dd7057178605962283170cb6017fa",
+      "semantic_window_chunker": "9256a9914ebdf09200025019c29ee93754f04fe97b917c0d2fad568b5283fe2f",
+      "section_router": "3711073fc612445fa7c47c16244d0a77b201f4bce2d2051a19a32816c7c17ad0",
+      "source_resolver": "6acac0ad8d027a9dae5b4868714230556c0da02dffa5e1cd7f69cc2f349a065c",
+      "candidate_quality_gate": "464b7d52145d891982d717400f9497a97bb9a1500fed8dfd86eeeb05da11af88",
+      "canonicalizer": "9d21df8a18163f960d565df4a088232b60c669f101d5a776e60b5647103e1c99"
+    },
+    "generation": {
+      "response_format": {
+        "type": "json_schema",
+        "strict": true
+      },
+      "enable_thinking": false,
+      "temperature": 0.1,
+      "max_tokens": 4800
+    },
+    "sensitive_values_logged": false,
+    "production_db_writes": 0,
+    "gold_mutations": 0
+  },
+  "preflight": {
+    "artifact_type": "V43_REQUIREMENT_CORE6_FRESH_REPRODUCTION_PREFLIGHT",
+    "run_id": "req-core6-fresh-20260907133003259-49044f2a",
+    "parity": {
+      "prompt_hash_match": true,
+      "schema_hash_match": true,
+      "contract_version_match": true,
+      "gateway_ready": true,
+      "source_side_artifact_present": true,
+      "manifest_present": true
+    },
+    "provider_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "preflight": {
+      "gateway_base_host": "127.0.0.1",
+      "ready_http_status": 200,
+      "ready_ok": true,
+      "info_http_status": 200,
+      "info_ok": true,
+      "build_revision": "dev-working-tree",
+      "provider": null,
+      "model": null,
+      "provider_configured": true,
+      "task_registry_loaded": true,
+      "requirement_extraction_contract_version": "4.3-requirement-extraction-v3.1.1",
+      "requirement_extraction_prompt_hash": "9b8fe6582e774a64f36b2be307274e297fafb309cf17270a4d8fc463da817305",
+      "candidate_schema_contract_version": "4.3-requirement-candidate-v3",
+      "candidate_schema_sha256": "1f5bd20f624a34a5f0bfd76e226f24d3595cc8a1e06bdc176c3d40e9694edbba",
+      "sensitive_values_logged": false
+    }
+  },
+  "historical_attribution_unchanged": true,
+  "historical_recovery": "EXHAUSTED_NOT_REPLAYED",
+  "phase_b_authorized": false,
+  "next_gate": "RETURN_FOR_REVIEW",
+  "started_at": "2026-09-07T13:30:04.117Z",
+  "finished_at": "2026-09-07T13:31:33.727Z",
+  "side_effects": {
+    "provider_calls": 6,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "fact_calls": 0,
+    "mapping_calls": 0,
+    "claim_calls": 0,
+    "writer_calls": 0
+  },
+  "case_results": [
+    {
+      "run_id": "req-core6-fresh-20260907133003259-49044f2a",
+      "expected_id": "JY-001-BLIND-10-E01",
+      "tender_id": "JY-001",
+      "window_id": "JY-001-BLIND-10",
+      "historical_classification": "UNRESOLVED_ARTIFACT_LIMITATION",
+      "source_excerpt": "处理操作；③自下而上的事件（包括：街镇二\n级节点、社区/职能部门三级节点）处理操作；\n④指令功能演示：市级或街道可关联事件并下",
+      "parsed_source_found": true,
+      "source_sha256": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "source_ref_count": 3,
+      "source_refs": [
+        "C023-S007",
+        "C023-S008",
+        "C023-S009"
+      ],
+      "source_sha_match": true,
+      "section_identity": [
+        "评标方法和评标标准"
+      ],
+      "router_selected": true,
+      "router_reason": "CURRENT_REQUIREMENT_EXTRACTION_SCOPE_COMBINED",
+      "semantic_window_text": "处理操作；③自下而上的事件（包括：街镇二\n级节点、社区/职能部门三级节点）处理操作；\n④指令功能演示：市级或街道可关联事件并下",
+      "heading_visible": false,
+      "table_header_visible": false,
+      "neighbor_context_visible": true,
+      "provider_input": "[C023-S007] 处理操作；③自下而上的事件（包括：街镇二\n[C023-S008] 级节点、社区/职能部门三级节点）处理操作；\n[C023-S009] ④指令功能演示：市级或街道可关联事件并下",
+      "provider_input_hash": "b7aa2741049afd0e2f2faea3c8e28fe13f7796fa1496053e8c696a375b0db024",
+      "provider_called": true,
+      "provider_http": {
+        "gateway_http_status": 200,
+        "provider_http_status": 200,
+        "provider_reached": true,
+        "finish_reason": "stop"
+      },
+      "schema_valid": true,
+      "candidate_outputs": [
+        {
+          "eval_candidate_id": "CAND-01",
+          "text": "系统需支持自下而上的事件处理操作，包括街镇二级节点、社区/职能部门三级节点的事件处理操作。",
+          "category": "functional",
+          "source_range": {
+            "start_ref": "C023-S007",
+            "end_ref": "C023-S008"
+          },
+          "mandatory_observed": false,
+          "requires_confirmation": false,
+          "source_text": null,
+          "source_context_text": null,
+          "source_verified": false
+        },
+        {
+          "eval_candidate_id": "CAND-02",
+          "text": "系统需支持指令功能演示：市级或街道可关联事件并下发指令。",
+          "category": "functional",
+          "source_range": {
+            "start_ref": "C023-S009",
+            "end_ref": "C023-S009"
+          },
+          "mandatory_observed": false,
+          "requires_confirmation": false,
+          "source_text": null,
+          "source_context_text": null,
+          "source_verified": false
+        }
+      ],
+      "candidate_ids": [
+        "CAND-01",
+        "CAND-02"
+      ],
+      "source_resolution_result": "PASS",
+      "canonical_outputs": [
+        {
+          "eval_canonical_id": "CANON-01",
+          "text": "系统需支持自下而上的事件处理操作，包括街镇二级节点、社区/职能部门三级节点的事件处理操作。",
+          "category": "functional",
+          "requirement_category": "technical",
+          "source_excerpt": "处理操作；③自下而上的事件（包括：街镇二\n级节点、社区/职能部门三级节点）处理操作；",
+          "source_hash": "c44ed7aaf53afa880b059da61d603ca1a1844aa6a161f123ebcb79d5b21bdd0f",
+          "source_verified": true,
+          "source_resolution_status": "verified",
+          "source_match_type": "exact_multi_paragraph_span",
+          "mandatory_observed": false,
+          "requires_confirmation": false,
+          "quality_gate_decision": "REVIEW_REQUIRED",
+          "quality_gate_reason_codes": [
+            "NUMBER_OMISSION_REVIEW"
+          ]
+        },
+        {
+          "eval_canonical_id": "CANON-02",
+          "text": "系统需支持指令功能演示：市级或街道可关联事件并下发指令。",
+          "category": "functional",
+          "requirement_category": "technical",
+          "source_excerpt": "④指令功能演示：市级或街道可关联事件并下",
+          "source_hash": "94635f1f6c8f2b13acefa975583b39571384a16c447711f125d8c3b70e30b358",
+          "source_verified": true,
+          "source_resolution_status": "verified",
+          "source_match_type": "exact_single_paragraph",
+          "mandatory_observed": false,
+          "requires_confirmation": false,
+          "quality_gate_decision": "REVIEW_REQUIRED",
+          "quality_gate_reason_codes": [
+            "NUMBER_OMISSION_REVIEW"
+          ]
+        }
+      ],
+      "canonical_ids": [
+        "CANON-01",
+        "CANON-02"
+      ],
+      "dedup_events": [
+        {
+          "duplicate_count": 0
+        }
+      ],
+      "filter_events": [
+        {
+          "quality_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+          "reason_codes": [
+            "NUMBER_OMISSION_REVIEW"
+          ],
+          "failure_stage": "QUALITY_GATE"
+        }
+      ],
+      "final_alignment": "PASS_RECOVERED",
+      "source_traceable": true,
+      "failure_code": null,
+      "failure_stage": "QUALITY_GATE",
+      "retries": 0,
+      "duration_ms": 3056,
+      "current_runtime_classification": "PASS_RECOVERED",
+      "audit": {
+        "json_parse_success": true,
+        "schema_validation_errors": [],
+        "provider_model": null,
+        "response_model": null,
+        "prompt_tokens": 1756,
+        "completion_tokens": 180,
+        "total_tokens": 1936,
+        "output_truncated": false,
+        "finish_reason": "stop",
+        "provider_http_status": 200,
+        "gateway_http_status": 200
+      },
+      "expected_requirement": "功能演示应包含自下而上的事件处理操作，包括街镇二级节点、社区/职能部门三级节点。",
+      "offline_alignment": {
+        "recovered": true,
+        "coverage": 0.8787878787878788,
+        "matched_bigrams": 29,
+        "expected_bigrams": 33,
+        "method": "DETERMINISTIC_CONTENT_BIGRAM_COVERAGE_V1"
+      }
+    },
+    {
+      "run_id": "req-core6-fresh-20260907133003259-49044f2a",
+      "expected_id": "FAST-01-BLIND-03-E01",
+      "tender_id": "FAST-01",
+      "window_id": "FAST-01-BLIND-03",
+      "historical_classification": "UNRESOLVED_ARTIFACT_LIMITATION",
+      "source_excerpt": "（10）项目重点难点分析、应对措施及相关的合理化建议\n（11）质量保障措施\n（12）拟安排的项目负责人情况（仅限一人）",
+      "parsed_source_found": true,
+      "source_sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+      "source_ref_count": 3,
+      "source_refs": [
+        "C005-S010",
+        "C005-S011",
+        "C005-S012"
+      ],
+      "source_sha_match": true,
+      "section_identity": [
+        "投标文件组成要求及格式"
+      ],
+      "router_selected": true,
+      "router_reason": "CURRENT_REQUIREMENT_EXTRACTION_SCOPE_COMBINED",
+      "semantic_window_text": "（10）项目重点难点分析、应对措施及相关的合理化建议\n（11）质量保障措施\n（12）拟安排的项目负责人情况（仅限一人）",
+      "heading_visible": true,
+      "table_header_visible": false,
+      "neighbor_context_visible": true,
+      "provider_input": "[C005-S010] （10）项目重点难点分析、应对措施及相关的合理化建议\n[C005-S011] （11）质量保障措施\n[C005-S012] （12）拟安排的项目负责人情况（仅限一人）",
+      "provider_input_hash": "3ae7d96f94479a8a542dcda818e04799bc28a782ee14f431f1cbd7165a6f9412",
+      "provider_called": true,
+      "provider_http": {
+        "gateway_http_status": 200,
+        "provider_http_status": 200,
+        "provider_reached": true,
+        "finish_reason": "stop"
+      },
+      "schema_valid": true,
+      "candidate_outputs": [],
+      "candidate_ids": [],
+      "source_resolution_result": "NOT_APPLICABLE",
+      "canonical_outputs": [],
+      "canonical_ids": [],
+      "dedup_events": [
+        {
+          "duplicate_count": null
+        }
+      ],
+      "filter_events": [
+        {
+          "quality_gate_decision": "REVIEW_REQUIRED_OR_EMPTY",
+          "reason_codes": [
+            "NO_CANDIDATES_RETURNED_BY_PROVIDER"
+          ],
+          "failure_stage": "QUALITY_GATE"
+        }
+      ],
+      "final_alignment": "S2_CURRENT_MODEL_SEMANTIC_MISS",
+      "source_traceable": true,
+      "failure_code": null,
+      "failure_stage": "QUALITY_GATE",
+      "retries": 0,
+      "duration_ms": 1230,
+      "current_runtime_classification": "S2_CURRENT_MODEL_SEMANTIC_MISS",
+      "audit": {
+        "json_parse_success": true,
+        "schema_validation_errors": [],
+        "provider_model": null,
+        "response_model": null,
+        "prompt_tokens": 1747,
+        "completion_tokens": 5,
+        "total_tokens": 1752,
+        "output_truncated": false,
+        "finish_reason": "stop",
+        "provider_http_status": 200,
+        "gateway_http_status": 200
+      },
+      "expected_requirement": "投标响应应提供项目重点难点分析、应对措施及相关合理化建议。",
+      "offline_alignment": {
+        "recovered": false,
+        "coverage": 0,
+        "matched_bigrams": 0,
+        "expected_bigrams": 26,
+        "method": "DETERMINISTIC_CONTENT_BIGRAM_COVERAGE_V1"
+      }
+    },
+    {
+      "run_id": "req-core6-fresh-20260907133003259-49044f2a",
+      "expected_id": "JY-001-BLIND-10-E02",
+      "tender_id": "JY-001",
+      "window_id": "JY-001-BLIND-10",
+      "historical_classification": "UNRESOLVED_ARTIFACT_LIMITATION",
+      "source_excerpt": "处理操作；③自下而上的事件（包括：街镇二\n级节点、社区/职能部门三级节点）处理操作；\n④指令功能演示：市级或街道可关联事件并下",
+      "parsed_source_found": true,
+      "source_sha256": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "source_ref_count": 3,
+      "source_refs": [
+        "C023-S007",
+        "C023-S008",
+        "C023-S009"
+      ],
+      "source_sha_match": true,
+      "section_identity": [
+        "评标方法和评标标准"
+      ],
+      "router_selected": true,
+      "router_reason": "CURRENT_REQUIREMENT_EXTRACTION_SCOPE_COMBINED",
+      "semantic_window_text": "处理操作；③自下而上的事件（包括：街镇二\n级节点、社区/职能部门三级节点）处理操作；\n④指令功能演示：市级或街道可关联事件并下",
+      "heading_visible": false,
+      "table_header_visible": false,
+      "neighbor_context_visible": true,
+      "provider_input": "[C023-S007] 处理操作；③自下而上的事件（包括：街镇二\n[C023-S008] 级节点、社区/职能部门三级节点）处理操作；\n[C023-S009] ④指令功能演示：市级或街道可关联事件并下",
+      "provider_input_hash": "b7aa2741049afd0e2f2faea3c8e28fe13f7796fa1496053e8c696a375b0db024",
+      "provider_called": true,
+      "provider_http": {
+        "gateway_http_status": 200,
+        "provider_http_status": 200,
+        "provider_reached": true,
+        "finish_reason": "stop"
+      },
+      "schema_valid": true,
+      "candidate_outputs": [
+        {
+          "eval_candidate_id": "CAND-01",
+          "text": "系统需支持自下而上的事件处理操作，包括街镇二级节点、社区/职能部门三级节点的事件处理操作。",
+          "category": "functional",
+          "source_range": {
+            "start_ref": "C023-S007",
+            "end_ref": "C023-S008"
+          },
+          "mandatory_observed": false,
+          "requires_confirmation": false,
+          "source_text": null,
+          "source_context_text": null,
+          "source_verified": false
+        },
+        {
+          "eval_candidate_id": "CAND-02",
+          "text": "系统需支持指令功能演示：市级或街道可关联事件并下发指令。",
+          "category": "functional",
+          "source_range": {
+            "start_ref": "C023-S009",
+            "end_ref": "C023-S009"
+          },
+          "mandatory_observed": false,
+          "requires_confirmation": false,
+          "source_text": null,
+          "source_context_text": null,
+          "source_verified": false
+        }
+      ],
+      "candidate_ids": [
+        "CAND-01",
+        "CAND-02"
+      ],
+      "source_resolution_result": "PASS",
+      "canonical_outputs": [
+        {
+          "eval_canonical_id": "CANON-01",
+          "text": "系统需支持自下而上的事件处理操作，包括街镇二级节点、社区/职能部门三级节点的事件处理操作。",
+          "category": "functional",
+          "requirement_category": "technical",
+          "source_excerpt": "处理操作；③自下而上的事件（包括：街镇二\n级节点、社区/职能部门三级节点）处理操作；",
+          "source_hash": "c44ed7aaf53afa880b059da61d603ca1a1844aa6a161f123ebcb79d5b21bdd0f",
+          "source_verified": true,
+          "source_resolution_status": "verified",
+          "source_match_type": "exact_multi_paragraph_span",
+          "mandatory_observed": false,
+          "requires_confirmation": false,
+          "quality_gate_decision": "REVIEW_REQUIRED",
+          "quality_gate_reason_codes": [
+            "NUMBER_OMISSION_REVIEW"
+          ]
+        },
+        {
+          "eval_canonical_id": "CANON-02",
+          "text": "系统需支持指令功能演示：市级或街道可关联事件并下发指令。",
+          "category": "functional",
+          "requirement_category": "technical",
+          "source_excerpt": "④指令功能演示：市级或街道可关联事件并下",
+          "source_hash": "94635f1f6c8f2b13acefa975583b39571384a16c447711f125d8c3b70e30b358",
+          "source_verified": true,
+          "source_resolution_status": "verified",
+          "source_match_type": "exact_single_paragraph",
+          "mandatory_observed": false,
+          "requires_confirmation": false,
+          "quality_gate_decision": "REVIEW_REQUIRED",
+          "quality_gate_reason_codes": [
+            "NUMBER_OMISSION_REVIEW"
+          ]
+        }
+      ],
+      "canonical_ids": [
+        "CANON-01",
+        "CANON-02"
+      ],
+      "dedup_events": [
+        {
+          "duplicate_count": 0
+        }
+      ],
+      "filter_events": [
+        {
+          "quality_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+          "reason_codes": [
+            "NUMBER_OMISSION_REVIEW"
+          ],
+          "failure_stage": "QUALITY_GATE"
+        }
+      ],
+      "final_alignment": "S2_CURRENT_MODEL_SEMANTIC_MISS",
+      "source_traceable": true,
+      "failure_code": null,
+      "failure_stage": "QUALITY_GATE",
+      "retries": 0,
+      "duration_ms": 4470,
+      "current_runtime_classification": "S2_CURRENT_MODEL_SEMANTIC_MISS",
+      "audit": {
+        "json_parse_success": true,
+        "schema_validation_errors": [],
+        "provider_model": null,
+        "response_model": null,
+        "prompt_tokens": 1756,
+        "completion_tokens": 180,
+        "total_tokens": 1936,
+        "output_truncated": false,
+        "finish_reason": "stop",
+        "provider_http_status": 200,
+        "gateway_http_status": 200
+      },
+      "expected_requirement": "功能演示应包含指令功能：市级或街道可关联事件并执行后续下发类操作；原文在“并下”处截断，完整动作需确认。",
+      "offline_alignment": {
+        "recovered": false,
+        "coverage": 0.4090909090909091,
+        "matched_bigrams": 18,
+        "expected_bigrams": 44,
+        "method": "DETERMINISTIC_CONTENT_BIGRAM_COVERAGE_V1"
+      }
+    },
+    {
+      "run_id": "req-core6-fresh-20260907133003259-49044f2a",
+      "expected_id": "FAST-01-BLIND-03-E02",
+      "tender_id": "FAST-01",
+      "window_id": "FAST-01-BLIND-03",
+      "historical_classification": "UNRESOLVED_ARTIFACT_LIMITATION",
+      "source_excerpt": "（10）项目重点难点分析、应对措施及相关的合理化建议\n（11）质量保障措施\n（12）拟安排的项目负责人情况（仅限一人）",
+      "parsed_source_found": true,
+      "source_sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+      "source_ref_count": 3,
+      "source_refs": [
+        "C005-S010",
+        "C005-S011",
+        "C005-S012"
+      ],
+      "source_sha_match": true,
+      "section_identity": [
+        "投标文件组成要求及格式"
+      ],
+      "router_selected": true,
+      "router_reason": "CURRENT_REQUIREMENT_EXTRACTION_SCOPE_COMBINED",
+      "semantic_window_text": "（10）项目重点难点分析、应对措施及相关的合理化建议\n（11）质量保障措施\n（12）拟安排的项目负责人情况（仅限一人）",
+      "heading_visible": true,
+      "table_header_visible": false,
+      "neighbor_context_visible": true,
+      "provider_input": "[C005-S010] （10）项目重点难点分析、应对措施及相关的合理化建议\n[C005-S011] （11）质量保障措施\n[C005-S012] （12）拟安排的项目负责人情况（仅限一人）",
+      "provider_input_hash": "3ae7d96f94479a8a542dcda818e04799bc28a782ee14f431f1cbd7165a6f9412",
+      "provider_called": true,
+      "provider_http": {
+        "gateway_http_status": 200,
+        "provider_http_status": 200,
+        "provider_reached": true,
+        "finish_reason": "stop"
+      },
+      "schema_valid": true,
+      "candidate_outputs": [],
+      "candidate_ids": [],
+      "source_resolution_result": "NOT_APPLICABLE",
+      "canonical_outputs": [],
+      "canonical_ids": [],
+      "dedup_events": [
+        {
+          "duplicate_count": null
+        }
+      ],
+      "filter_events": [
+        {
+          "quality_gate_decision": "REVIEW_REQUIRED_OR_EMPTY",
+          "reason_codes": [
+            "NO_CANDIDATES_RETURNED_BY_PROVIDER"
+          ],
+          "failure_stage": "QUALITY_GATE"
+        }
+      ],
+      "final_alignment": "S2_CURRENT_MODEL_SEMANTIC_MISS",
+      "source_traceable": true,
+      "failure_code": null,
+      "failure_stage": "QUALITY_GATE",
+      "retries": 0,
+      "duration_ms": 1008,
+      "current_runtime_classification": "S2_CURRENT_MODEL_SEMANTIC_MISS",
+      "audit": {
+        "json_parse_success": true,
+        "schema_validation_errors": [],
+        "provider_model": null,
+        "response_model": null,
+        "prompt_tokens": 1747,
+        "completion_tokens": 5,
+        "total_tokens": 1752,
+        "output_truncated": false,
+        "finish_reason": "stop",
+        "provider_http_status": 200,
+        "gateway_http_status": 200
+      },
+      "expected_requirement": "投标响应应提供质量保障措施。",
+      "offline_alignment": {
+        "recovered": false,
+        "coverage": 0,
+        "matched_bigrams": 0,
+        "expected_bigrams": 12,
+        "method": "DETERMINISTIC_CONTENT_BIGRAM_COVERAGE_V1"
+      }
+    },
+    {
+      "run_id": "req-core6-fresh-20260907133003259-49044f2a",
+      "expected_id": "FAST-01-BLIND-08-E01",
+      "tender_id": "FAST-01",
+      "window_id": "FAST-01-BLIND-08",
+      "historical_classification": "UNRESOLVED_ARTIFACT_LIMITATION",
+      "source_excerpt": "18.2.2 投标产品从采购人开始使用至招标文件中规定的周期内正常、连续地使用所必\n须的备件和专用工具清单，包括备件和专用工具的货源及现行价格。\n18.2.3 对照招标文件技术规格，逐条说明投标技术方案已对采购人的技术规格做出了",
+      "parsed_source_found": true,
+      "source_sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+      "source_ref_count": 3,
+      "source_refs": [
+        "C017-S028",
+        "C017-S029",
+        "C017-S030"
+      ],
+      "source_sha_match": true,
+      "section_identity": [
+        "投标文件的编制"
+      ],
+      "router_selected": true,
+      "router_reason": "CURRENT_REQUIREMENT_EXTRACTION_SCOPE_COMBINED",
+      "semantic_window_text": "18.2.2 投标产品从采购人开始使用至招标文件中规定的周期内正常、连续地使用所必\n须的备件和专用工具清单，包括备件和专用工具的货源及现行价格。\n18.2.3 对照招标文件技术规格，逐条说明投标技术方案已对采购人的技术规格做出了",
+      "heading_visible": true,
+      "table_header_visible": false,
+      "neighbor_context_visible": true,
+      "provider_input": "[C017-S028] 18.2.2 投标产品从采购人开始使用至招标文件中规定的周期内正常、连续地使用所必\n[C017-S029] 须的备件和专用工具清单，包括备件和专用工具的货源及现行价格。\n[C017-S030] 18.2.3 对照招标文件技术规格，逐条说明投标技术方案已对采购人的技术规格做出了",
+      "provider_input_hash": "1ccb7ec354375e68ef74599bb6f2c07b382eedecc51b97458fe42fd4bda59cbd",
+      "provider_called": true,
+      "provider_http": {
+        "gateway_http_status": 200,
+        "provider_http_status": 200,
+        "provider_reached": true,
+        "finish_reason": "stop"
+      },
+      "schema_valid": true,
+      "candidate_outputs": [
+        {
+          "eval_candidate_id": "CAND-01",
+          "text": "投标人须提供投标产品从采购人开始使用至招标文件中规定的周期内正常、连续地使用所必需的备件和专用工具清单，包括备件和专用工具的货源及现行价格。",
+          "category": "delivery",
+          "source_range": {
+            "start_ref": "C017-S028",
+            "end_ref": "C017-S029"
+          },
+          "mandatory_observed": true,
+          "requires_confirmation": false,
+          "source_text": null,
+          "source_context_text": null,
+          "source_verified": false
+        },
+        {
+          "eval_candidate_id": "CAND-02",
+          "text": "投标人须对照招标文件技术规格，逐条说明投标技术方案已对采购人的技术规格做出了响应。",
+          "category": "technical",
+          "source_range": {
+            "start_ref": "C017-S030",
+            "end_ref": "C017-S030"
+          },
+          "mandatory_observed": true,
+          "requires_confirmation": false,
+          "source_text": null,
+          "source_context_text": null,
+          "source_verified": false
+        }
+      ],
+      "candidate_ids": [
+        "CAND-01",
+        "CAND-02"
+      ],
+      "source_resolution_result": "PASS",
+      "canonical_outputs": [
+        {
+          "eval_canonical_id": "CANON-01",
+          "text": "投标人须提供投标产品从采购人开始使用至招标文件中规定的周期内正常、连续地使用所必需的备件和专用工具清单，包括备件和专用工具的货源及现行价格。",
+          "category": "delivery",
+          "requirement_category": "delivery",
+          "source_excerpt": "18.2.2 投标产品从采购人开始使用至招标文件中规定的周期内正常、连续地使用所必\n须的备件和专用工具清单，包括备件和专用工具的货源及现行价格。",
+          "source_hash": "2a5e958b915e1e2c2673c288b44bf437c432d418fb263a608f6973514ab0d559",
+          "source_verified": true,
+          "source_resolution_status": "verified",
+          "source_match_type": "exact_multi_paragraph_span",
+          "mandatory_observed": true,
+          "requires_confirmation": false,
+          "quality_gate_decision": "REVIEW_REQUIRED",
+          "quality_gate_reason_codes": [
+            "NUMBER_OMISSION_REVIEW",
+            "ENTITY_MISMATCH_REVIEW"
+          ]
+        },
+        {
+          "eval_canonical_id": "CANON-02",
+          "text": "投标人须对照招标文件技术规格，逐条说明投标技术方案已对采购人的技术规格做出了响应。",
+          "category": "technical",
+          "requirement_category": "technical",
+          "source_excerpt": "18.2.3 对照招标文件技术规格，逐条说明投标技术方案已对采购人的技术规格做出了",
+          "source_hash": "cc646151d55760e95ba4a3d74921f5db937e43879b1f2c5968b7e6edb527238e",
+          "source_verified": true,
+          "source_resolution_status": "verified",
+          "source_match_type": "exact_single_paragraph",
+          "mandatory_observed": true,
+          "requires_confirmation": false,
+          "quality_gate_decision": "REVIEW_REQUIRED",
+          "quality_gate_reason_codes": [
+            "NUMBER_OMISSION_REVIEW",
+            "MODALITY_ADDITION_REVIEW"
+          ]
+        }
+      ],
+      "canonical_ids": [
+        "CANON-01",
+        "CANON-02"
+      ],
+      "dedup_events": [
+        {
+          "duplicate_count": 0
+        }
+      ],
+      "filter_events": [
+        {
+          "quality_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+          "reason_codes": [
+            "NUMBER_OMISSION_REVIEW",
+            "ENTITY_MISMATCH_REVIEW",
+            "MODALITY_ADDITION_REVIEW"
+          ],
+          "failure_stage": "QUALITY_GATE"
+        }
+      ],
+      "final_alignment": "PASS_RECOVERED",
+      "source_traceable": true,
+      "failure_code": null,
+      "failure_stage": "QUALITY_GATE",
+      "retries": 0,
+      "duration_ms": 2066,
+      "current_runtime_classification": "PASS_RECOVERED",
+      "audit": {
+        "json_parse_success": true,
+        "schema_validation_errors": [],
+        "provider_model": null,
+        "response_model": null,
+        "prompt_tokens": 1789,
+        "completion_tokens": 205,
+        "total_tokens": 1994,
+        "output_truncated": false,
+        "finish_reason": "stop",
+        "provider_http_status": 200,
+        "gateway_http_status": 200
+      },
+      "expected_requirement": "投标人应提供在规定周期内保证投标产品正常、连续使用所需的备件和专用工具清单，并说明货源及现行价格。",
+      "offline_alignment": {
+        "recovered": true,
+        "coverage": 0.6818181818181818,
+        "matched_bigrams": 30,
+        "expected_bigrams": 44,
+        "method": "DETERMINISTIC_CONTENT_BIGRAM_COVERAGE_V1"
+      }
+    },
+    {
+      "run_id": "req-core6-fresh-20260907133003259-49044f2a",
+      "expected_id": "FAST-01-BLIND-08-E02",
+      "tender_id": "FAST-01",
+      "window_id": "FAST-01-BLIND-08",
+      "historical_classification": "UNRESOLVED_ARTIFACT_LIMITATION",
+      "source_excerpt": "18.2.2 投标产品从采购人开始使用至招标文件中规定的周期内正常、连续地使用所必\n须的备件和专用工具清单，包括备件和专用工具的货源及现行价格。\n18.2.3 对照招标文件技术规格，逐条说明投标技术方案已对采购人的技术规格做出了",
+      "parsed_source_found": true,
+      "source_sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+      "source_ref_count": 3,
+      "source_refs": [
+        "C017-S028",
+        "C017-S029",
+        "C017-S030"
+      ],
+      "source_sha_match": true,
+      "section_identity": [
+        "投标文件的编制"
+      ],
+      "router_selected": true,
+      "router_reason": "CURRENT_REQUIREMENT_EXTRACTION_SCOPE_COMBINED",
+      "semantic_window_text": "18.2.2 投标产品从采购人开始使用至招标文件中规定的周期内正常、连续地使用所必\n须的备件和专用工具清单，包括备件和专用工具的货源及现行价格。\n18.2.3 对照招标文件技术规格，逐条说明投标技术方案已对采购人的技术规格做出了",
+      "heading_visible": true,
+      "table_header_visible": false,
+      "neighbor_context_visible": true,
+      "provider_input": "[C017-S028] 18.2.2 投标产品从采购人开始使用至招标文件中规定的周期内正常、连续地使用所必\n[C017-S029] 须的备件和专用工具清单，包括备件和专用工具的货源及现行价格。\n[C017-S030] 18.2.3 对照招标文件技术规格，逐条说明投标技术方案已对采购人的技术规格做出了",
+      "provider_input_hash": "1ccb7ec354375e68ef74599bb6f2c07b382eedecc51b97458fe42fd4bda59cbd",
+      "provider_called": true,
+      "provider_http": {
+        "gateway_http_status": 200,
+        "provider_http_status": 200,
+        "provider_reached": true,
+        "finish_reason": "stop"
+      },
+      "schema_valid": true,
+      "candidate_outputs": [
+        {
+          "eval_candidate_id": "CAND-01",
+          "text": "投标人须提供投标产品从采购人开始使用至招标文件中规定的周期内正常、连续地使用所必需的备件和专用工具清单，包括备件和专用工具的货源及现行价格。",
+          "category": "delivery",
+          "source_range": {
+            "start_ref": "C017-S028",
+            "end_ref": "C017-S029"
+          },
+          "mandatory_observed": true,
+          "requires_confirmation": false,
+          "source_text": null,
+          "source_context_text": null,
+          "source_verified": false
+        },
+        {
+          "eval_candidate_id": "CAND-02",
+          "text": "投标人须对照招标文件技术规格，逐条说明投标技术方案已对采购人的技术规格做出了响应。",
+          "category": "technical",
+          "source_range": {
+            "start_ref": "C017-S030",
+            "end_ref": "C017-S030"
+          },
+          "mandatory_observed": true,
+          "requires_confirmation": false,
+          "source_text": null,
+          "source_context_text": null,
+          "source_verified": false
+        }
+      ],
+      "candidate_ids": [
+        "CAND-01",
+        "CAND-02"
+      ],
+      "source_resolution_result": "PASS",
+      "canonical_outputs": [
+        {
+          "eval_canonical_id": "CANON-01",
+          "text": "投标人须提供投标产品从采购人开始使用至招标文件中规定的周期内正常、连续地使用所必需的备件和专用工具清单，包括备件和专用工具的货源及现行价格。",
+          "category": "delivery",
+          "requirement_category": "delivery",
+          "source_excerpt": "18.2.2 投标产品从采购人开始使用至招标文件中规定的周期内正常、连续地使用所必\n须的备件和专用工具清单，包括备件和专用工具的货源及现行价格。",
+          "source_hash": "2a5e958b915e1e2c2673c288b44bf437c432d418fb263a608f6973514ab0d559",
+          "source_verified": true,
+          "source_resolution_status": "verified",
+          "source_match_type": "exact_multi_paragraph_span",
+          "mandatory_observed": true,
+          "requires_confirmation": false,
+          "quality_gate_decision": "REVIEW_REQUIRED",
+          "quality_gate_reason_codes": [
+            "NUMBER_OMISSION_REVIEW",
+            "ENTITY_MISMATCH_REVIEW"
+          ]
+        },
+        {
+          "eval_canonical_id": "CANON-02",
+          "text": "投标人须对照招标文件技术规格，逐条说明投标技术方案已对采购人的技术规格做出了响应。",
+          "category": "technical",
+          "requirement_category": "technical",
+          "source_excerpt": "18.2.3 对照招标文件技术规格，逐条说明投标技术方案已对采购人的技术规格做出了",
+          "source_hash": "cc646151d55760e95ba4a3d74921f5db937e43879b1f2c5968b7e6edb527238e",
+          "source_verified": true,
+          "source_resolution_status": "verified",
+          "source_match_type": "exact_single_paragraph",
+          "mandatory_observed": true,
+          "requires_confirmation": false,
+          "quality_gate_decision": "REVIEW_REQUIRED",
+          "quality_gate_reason_codes": [
+            "NUMBER_OMISSION_REVIEW",
+            "MODALITY_ADDITION_REVIEW"
+          ]
+        }
+      ],
+      "canonical_ids": [
+        "CANON-01",
+        "CANON-02"
+      ],
+      "dedup_events": [
+        {
+          "duplicate_count": 0
+        }
+      ],
+      "filter_events": [
+        {
+          "quality_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+          "reason_codes": [
+            "NUMBER_OMISSION_REVIEW",
+            "ENTITY_MISMATCH_REVIEW",
+            "MODALITY_ADDITION_REVIEW"
+          ],
+          "failure_stage": "QUALITY_GATE"
+        }
+      ],
+      "final_alignment": "PASS_RECOVERED",
+      "source_traceable": true,
+      "failure_code": null,
+      "failure_stage": "QUALITY_GATE",
+      "retries": 0,
+      "duration_ms": 1669,
+      "current_runtime_classification": "PASS_RECOVERED",
+      "audit": {
+        "json_parse_success": true,
+        "schema_validation_errors": [],
+        "provider_model": null,
+        "response_model": null,
+        "prompt_tokens": 1789,
+        "completion_tokens": 205,
+        "total_tokens": 1994,
+        "output_truncated": false,
+        "finish_reason": "stop",
+        "provider_http_status": 200,
+        "gateway_http_status": 200
+      },
+      "expected_requirement": "投标技术方案应对照招标文件技术规格逐条说明响应情况。",
+      "offline_alignment": {
+        "recovered": true,
+        "coverage": 0.782608695652174,
+        "matched_bigrams": 18,
+        "expected_bigrams": 23,
+        "method": "DETERMINISTIC_CONTENT_BIGRAM_COVERAGE_V1"
+      }
+    }
+  ],
+  "attempts_summary": {
+    "first_attempts": 6,
+    "total_attempts": 6,
+    "retries": 0
+  },
+  "reclassification_mode": "OFFLINE_NO_PROVIDER_CALL",
+  "original_checkpoint": "V43_REQUIREMENT_CORE6_FRESH_REPRODUCTION_CHECKPOINT"
+}

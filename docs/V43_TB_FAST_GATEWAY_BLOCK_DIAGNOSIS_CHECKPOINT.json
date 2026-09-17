@@ -1,0 +1,164 @@
+{
+  "checkpoint": "V43_TB_FAST_GATEWAY_BLOCK_DIAGNOSIS_CHECKPOINT",
+  "generated_at": "2026-09-05T13:24:38.553Z",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "diagnostic_mode": "READ_ONLY_GATEWAY_BLOCK_DIAGNOSIS",
+  "target_tenders": [
+    "TB-003",
+    "FAST-04"
+  ],
+  "results": {
+    "TB-003": {
+      "source": {
+        "file_present": true,
+        "file": "backend/eval/tender-benchmark-v1/sources/TB-003-jiaozuo-sidian.pdf",
+        "sha256": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+        "manifest_status": "OFFICIAL_SOURCE_VERIFIED"
+      },
+      "parser_chunk": {
+        "status": "PASS",
+        "extracted_characters": 57853,
+        "paragraph_count": 2239,
+        "page_count": 91,
+        "technical_section": "受控全文回退",
+        "technical_section_character_count": 52942,
+        "chunk_count": 33,
+        "chunk_count_expected": 33,
+        "warnings": [
+          {
+            "code": "TECHNICAL_SECTION_FALLBACK",
+            "message": "文档没有可识别章节标题，已基于技术需求信号使用受控全文回退。"
+          }
+        ]
+      },
+      "gateway_payload": {
+        "status": "BUILT",
+        "builder": "buildRequirementExtractionPayload",
+        "keys": [
+          "project_name",
+          "section_name",
+          "chunk_index",
+          "chunk_count",
+          "chunk_text"
+        ],
+        "chunk_index": 1,
+        "chunk_count": 33,
+        "payload_sha256": "a04957d8a0377135626afdc6045c53918a002f7c57aab0b2fd72d898c04c7dad",
+        "full_payload_logged": false
+      },
+      "gateway_response": {
+        "health_http_status": null,
+        "ready_http_status": null,
+        "info_http_status": null,
+        "http_reachable": false,
+        "response_body_received": false,
+        "error_code": "GATEWAY_NETWORK_ERROR",
+        "failure_class": "environment",
+        "provider_reached": false
+      },
+      "extraction": {
+        "attempted": true,
+        "candidates": 0,
+        "status": "BLOCKED",
+        "retry_count": 0
+      }
+    },
+    "FAST-04": {
+      "source": {
+        "file_present": true,
+        "file": "backend/eval/tender-benchmark-v1/sources/FAST-04-beijing-software.pdf",
+        "sha256": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+        "manifest_status": "OFFICIAL_SOURCE_VERIFIED"
+      },
+      "parser_chunk": {
+        "status": "PASS",
+        "extracted_characters": 77530,
+        "paragraph_count": 4590,
+        "page_count": 119,
+        "technical_section": "需求提取范围",
+        "technical_section_character_count": 68333,
+        "chunk_count": 50,
+        "chunk_count_expected": 50,
+        "warnings": []
+      },
+      "gateway_payload": {
+        "status": "BUILT",
+        "builder": "buildRequirementExtractionPayload",
+        "keys": [
+          "project_name",
+          "section_name",
+          "chunk_index",
+          "chunk_count",
+          "chunk_text"
+        ],
+        "chunk_index": 1,
+        "chunk_count": 50,
+        "payload_sha256": "17d432b8100c2f019b24cb2a873793f633ae16cdd6fe0a9e947000080669b78f",
+        "full_payload_logged": false
+      },
+      "gateway_response": {
+        "health_http_status": null,
+        "ready_http_status": null,
+        "info_http_status": null,
+        "http_reachable": false,
+        "response_body_received": false,
+        "error_code": "GATEWAY_NETWORK_ERROR",
+        "failure_class": "environment",
+        "provider_reached": false
+      },
+      "extraction": {
+        "attempted": true,
+        "candidates": 0,
+        "status": "BLOCKED",
+        "retry_count": 0
+      }
+    }
+  },
+  "environment_fingerprint": {
+    "backend_target": "http://127.0.0.1:3001",
+    "backend_reachable": false,
+    "gateway_target": "http://127.0.0.1:18082",
+    "gateway_reachable": false,
+    "config_source": "canonical_semantic_gateway",
+    "provider_configured": false,
+    "env_key_presence": {
+      "SEMANTIC_GATEWAY_API_BASE": true,
+      "SEMANTIC_GATEWAY_API_KEY": true,
+      "SEMANTIC_GATEWAY_USER": false,
+      "SEMANTIC_GATEWAY_PROVIDER_API_BASE": false,
+      "SEMANTIC_GATEWAY_PROVIDER_API_KEY": false,
+      "SEMANTIC_GATEWAY_MODEL": false,
+      "SEMANTIC_GATEWAY_REQUIREMENT_EXTRACTION_TIMEOUT_MS": false
+    },
+    "node_version": "v24.19.0",
+    "ports_checked": {
+      "backend_3001": true,
+      "gateway_18082": true
+    },
+    "note": "Presence booleans only; no credential values or fingerprints are recorded.",
+    "http_checks": {
+      "backend_3001": false,
+      "gateway_18082": false
+    }
+  },
+  "provider_calls": 0,
+  "gateway_request_attempts": 2,
+  "retries": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "production_changes": 0,
+  "first_failure_stage": "Semantic Gateway transport",
+  "root_classification": "ENVIRONMENT",
+  "blockers": [
+    "TB-003 fresh extraction blocked before provider reach: GATEWAY_NETWORK_ERROR",
+    "FAST-04 fresh extraction blocked before provider reach: GATEWAY_NETWORK_ERROR",
+    "Gateway doctor also reports backend/gateway unreachable and provider not configured."
+  ],
+  "no_fallback_fields": [
+    "result",
+    "text",
+    "answer"
+  ],
+  "authority_status": "NO_AUTHORITATIVE_UPGRADE"
+}

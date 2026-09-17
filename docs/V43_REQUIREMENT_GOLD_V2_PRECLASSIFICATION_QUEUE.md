@@ -1,0 +1,6695 @@
+# V43 Requirement Gold V2 — Preclassification Queue
+
+Eval-only Human Authority review queue. Suggested decisions are not authority, do not create formal REQ-ID, do not promote Gold, do not create Mapping, and do not write Production DB.
+
+- Queue rows: 392
+- Provider calls: 0
+- Production DB writes: 0
+- Gold promotion: NOT_AUTHORIZED
+- Decision counts: {"NEEDS_REVIEW":194,"KEEP_REQUIREMENT":198}
+
+## Tender input status
+
+- JY-001: CANDIDATE_PENDING_HUMAN_AUTHORITY; persisted candidates=193; queue rows=193; source=backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf; sha256=bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145
+- TB-003: NO_PERSISTED_CANDIDATE_PACKET; persisted candidates=0; queue rows=0; source=backend/eval/tender-benchmark-v1/sources/TB-003-jiaozuo-sidian.pdf; sha256=bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1; blocker=No candidate rows for this tender are persisted in the current repository. Reconstructing them would require another extraction run; no Provider call or re-extraction was performed for this preclassification task.
+- TB-006: EXISTING_FROZEN_CANDIDATES; persisted candidates=46; queue rows=46; source=backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf; sha256=b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480
+- FAST-01: EXISTING_FROZEN_CANDIDATES; persisted candidates=39; queue rows=39; source=backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf; sha256=8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29
+- FAST-04: NO_PERSISTED_CANDIDATE_PACKET; persisted candidates=0; queue rows=0; source=backend/eval/tender-benchmark-v1/sources/FAST-04-beijing-software.pdf; sha256=7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce; blocker=No candidate rows for this tender are persisted in the current repository. Reconstructing them would require another extraction run; no Provider call or re-extraction was performed for this preclassification task.
+- FAST-WATER-01: EXISTING_FROZEN_CANDIDATES; persisted candidates=114; queue rows=114; source=backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf; sha256=15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535
+
+## Queue records
+
+### JY-001:CAND-001
+- tender_id: JY-001
+- requirement_text: 制定统一的技术标准、数据标准和业务标准,通过“一网统管”核心平台和数字底座,实现城市治理一图展现、城市态势一脑分析、处置力量一键点调、城市事件一键流转、社会要素一格汇聚、移动应用一端接入、市民热线一呼即通、基层实战统一赋能、开发平台统一底座。
+- category: context
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":16,"end":16}
+- span: {"clause":null,"paragraph_start":441,"paragraph_end":444,"page_start":16,"page_end":16}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"00fa9e6b2985b372dc0892c0415b82263ffe6b533274e087a9f15f5395e5f1f3","historical_source_span_hash":"f6fa26fe274368549a7f4797c1036cc73af51e78003828cb3449cac7f5a311f3","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":null,"paragraph_start":441,"paragraph_end":444,"page_start":16,"page_end":16},"source_page":{"start":16,"end":16}}
+- source_excerpt: 
+
+    制定统一的技术标准、数据标准和业务标准，通过“一网统管”核心平台和数字底座，
+    实现城市治理一图展现、城市态势一脑分析、处置力量一键点调、城市事件一键流转、
+    社会要素一格汇聚、移动应用一端接入、市民热线一呼即通、基层实战统一赋能、开发
+    平台统一底座。坚持利旧节约原则，充分利用已有的江阴智慧城市综合管理平台、江阴
+- requires_human_review: true
+
+### JY-001:CAND-002
+- tender_id: JY-001
+- requirement_text: 坚持利旧节约原则,充分利用已有的江阴智慧城市综合管理平台、江阴市12345政务服务便民热线平台进行整合对接与提档改造,形成符合我市实际的“一网统管”体系。
+- category: contractual
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":16,"end":16}
+- span: {"clause":null,"paragraph_start":444,"paragraph_end":446,"page_start":16,"page_end":16}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"82f30c602e51c13a724fde42fda45a22835d234902d39d8aba99c57ea957e785","historical_source_span_hash":"6c5e756c545ab69bf47bfe69c67d2971d12ce8965757eea24f3917ff3de4772a","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":null,"paragraph_start":444,"paragraph_end":446,"page_start":16,"page_end":16},"source_page":{"start":16,"end":16}}
+- source_excerpt: 
+
+    平台统一底座。坚持利旧节约原则，充分利用已有的江阴智慧城市综合管理平台、江阴
+    市 	12345 	政务服务便民热线平台进行整合对接与提档改造，形成符合我市实际的“一网
+    统管”体系。
+- requires_human_review: true
+
+### JY-001:CAND-003
+- tender_id: JY-001
+- requirement_text: 将视频资源充分联网整合,搭建城市统一的视频“发现”能力服务平台,提升城运中心视频融合应用水平。
+- category: context
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":16,"end":16}
+- span: {"clause":null,"paragraph_start":449,"paragraph_end":450,"page_start":16,"page_end":16}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"cdbfae982656194c756f1a30166e23190ad269524cc193768d5b92220806e19f","historical_source_span_hash":"ff1c06e7b0a0a2402ce93a45d674b39a3eafd551f5e31472e5b78c1254358d8d","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":null,"paragraph_start":449,"paragraph_end":450,"page_start":16,"page_end":16},"source_page":{"start":16,"end":16}}
+- source_excerpt: 
+
+    革的良好成果进行提档升级，同时将视频资源充分联网整合，搭建城市统一的视频“发
+    现”能力服务平台，提升城运中心视频融合应用水平，着力构建市域治理“一网统管”
+- requires_human_review: true
+
+### JY-001:CAND-004
+- tender_id: JY-001
+- requirement_text: 实现社会治理事件跨部门、跨层级、跨平台多级联动处置。
+- category: context
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":16,"end":16}
+- span: {"clause":null,"paragraph_start":451,"paragraph_end":451,"page_start":16,"page_end":16}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"8e38b042f5713175666939f276c3ff670238de174f0b3e7038d786e1dca068f5","historical_source_span_hash":"ff0ac8d8f6e4bdfb9cde3e3250e051fb66ee33c53ff0c688f850e58453de1799","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":null,"paragraph_start":451,"paragraph_end":451,"page_start":16,"page_end":16},"source_page":{"start":16,"end":16}}
+- source_excerpt: 
+
+    新体系，实现社会治理事件跨部门、跨层级、跨平台多级联动处置，为社会治理工作的
+- requires_human_review: true
+
+### JY-001:CAND-005
+- tender_id: JY-001
+- requirement_text: 围绕江阴市城市治理“一网统管”总体目标,着力构建市域治理“高效处置一件事”新体系。打通并梳理12345热线诉求事件、网格化上报事件、“110”非警情事件、“城市之眼”视频事件等社会治理事件,实现事件的跨部门、跨层级、跨平台多级联动处置,打造高效联动的核心平台。
+- category: context
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":16,"end":16}
+- span: {"clause":null,"paragraph_start":454,"paragraph_end":457,"page_start":16,"page_end":16}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"be6b17bc455550093d44fe747596f77151c6722a2aaf60a82217502539f162e9","historical_source_span_hash":"9d3cfbab3aeaed951ff50bd23f057e80289ba5d91f1615f89abe69bb74301741","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":null,"paragraph_start":454,"paragraph_end":457,"page_start":16,"page_end":16},"source_page":{"start":16,"end":16}}
+- source_excerpt: 
+
+    围绕江阴市城市治理“一网统管”总体目标，着力构建市域治理“高效处置一件事”
+    新体系。打通并梳理 	12345 	热线诉求事件、网格化上报事件、“110”非警情事件、“城
+    市之眼”视频事件等社会治理事件，实现事件的跨部门、跨层级、跨平台多级联动处置，
+    打造高效联动的核心平台。旨在提升江阴市 	12345 	政务服务便民热线智能化服务能力、
+- requires_human_review: true
+
+### JY-001:CAND-006
+- tender_id: JY-001
+- requirement_text: 提升江阴市12345政务服务便民热线智能化服务能力、城市精细化管理能力、事件监控智能预警能力,构建“上下贯通、左右互联、融合共享”的联勤联动指挥平台,感知城市运行综合态势,提高城市治理水平和服务质量。
+- category: context
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":16,"end":16}
+- span: {"clause":null,"paragraph_start":457,"paragraph_end":459,"page_start":16,"page_end":16}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"1d8dbfad1c07dac28990682e49e576c6e00d0e2b45c07493607f4d20ee462f42","historical_source_span_hash":"29042a1a4d4838bf0d78df76ca116214c4d25173e3cf742af6b921878fba62a7","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":null,"paragraph_start":457,"paragraph_end":459,"page_start":16,"page_end":16},"source_page":{"start":16,"end":16}}
+- source_excerpt: 
+
+    打造高效联动的核心平台。旨在提升江阴市 	12345 	政务服务便民热线智能化服务能力、
+    城市精细化管理能力、事件监控智能预警能力，构建“上下贯通、左右互联、融合共享”
+    的联勤联动指挥平台，感知城市运行综合态势，提高城市治理水平和服务质量。
+- requires_human_review: true
+
+### JY-001:CAND-007
+- tender_id: JY-001
+- requirement_text: 系统功能设计严格遵循社会治管理要求,以信息化带动管理规范化,建设方案编制遵循相关法律法规及政策文件。
+- category: contractual
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":16,"end":16}
+- span: {"clause":"3.1","paragraph_start":462,"paragraph_end":463,"page_start":16,"page_end":16}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"d1d18c40d84062d5f70e5fca31b83d58cc8e37b575540d8b60c8d18da9830559","historical_source_span_hash":"4b5add01337945f1259fd188cc1e8b0834a4e34b69e5974f85be035d03b4d16d","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"3.1","paragraph_start":462,"paragraph_end":463,"page_start":16,"page_end":16},"source_page":{"start":16,"end":16}}
+- source_excerpt: 
+
+    系统功能设计严格遵循社会治管理要求，以信息化带动管理规范化，建设方案编制遵
+    循以下法律法规及相关政策文件。
+- requires_human_review: true
+
+### JY-001:CAND-008
+- tender_id: JY-001
+- requirement_text: 建设内容包括:江阴市市域社会治理现代化联勤联动指挥平台、智慧城市综合管理平台升级、12345语音智能化及业务系统升级、江阴市城市之眼系统平台。
+- category: context
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":18,"end":18}
+- span: {"clause":"3.2","paragraph_start":519,"paragraph_end":520,"page_start":18,"page_end":18}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"19542727dd3d7be4eb724bdf85cc12b0a97bb4ce9e03ce0a4190f12874648335","historical_source_span_hash":"f558f0c6c452337cf792269eb6c117882d2f29d2aac0dce56d7b0ed603bdd50c","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"3.2","paragraph_start":519,"paragraph_end":520,"page_start":18,"page_end":18},"source_page":{"start":18,"end":18}}
+- source_excerpt: 
+
+    挥中心。建设内容包括：江阴市市域社会治理现代化联勤联动指挥平台、智慧城市综合
+    管理平台升级、12345 	语音智能化及业务系统升级、江阴市城市之眼系统平台。
+- requires_human_review: true
+
+### JY-001:CAND-009
+- tender_id: JY-001
+- requirement_text: 系统需支持在线用户量>=10000人。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":18,"end":18}
+- span: {"clause":"5.2.1.1","paragraph_start":532,"paragraph_end":532,"page_start":18,"page_end":18}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"420af0da3beed2180b0c10e5f0a3ea49d5241a88d6a41a81e39dde20a4b0d191","historical_source_span_hash":"994a22dbab8e904e09efc3b41be1842b18220bbb2c5800bd4fd462f4a51c0e32","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.1","paragraph_start":532,"paragraph_end":532,"page_start":18,"page_end":18},"source_page":{"start":18,"end":18}}
+- source_excerpt: 
+
+    满足全市各专业条线管理人员、网格员使用，同时支持在线用户量>=10000 	人。满足全市
+- requires_human_review: true
+
+### JY-001:CAND-010
+- tender_id: JY-001
+- requirement_text: 系统需支持并发量100次/秒。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":18,"end":18}
+- span: {"clause":"5.2.1.1","paragraph_start":532,"paragraph_end":533,"page_start":18,"page_end":18}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"305ff4461409364bf31ee56dd85e8e714f386f92d1044dc445c809e1efd8e801","historical_source_span_hash":"db517408c8d6859718af8f8cdf5ad214ed62be2e891226d3aa51733400d8bc27","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.1","paragraph_start":532,"paragraph_end":533,"page_start":18,"page_end":18},"source_page":{"start":18,"end":18}}
+- source_excerpt: 
+
+    满足全市各专业条线管理人员、网格员使用，同时支持在线用户量>=10000 	人。满足全市
+    各专业条线管理人员、网格员使用，同时支持并发量 	100 	次/秒，普通话智能识别率≥98%；智
+- requires_human_review: true
+
+### JY-001:CAND-011
+- tender_id: JY-001
+- requirement_text: 普通话智能识别率≥98%。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":18,"end":18}
+- span: {"clause":"5.2.1.1","paragraph_start":533,"paragraph_end":533,"page_start":18,"page_end":18}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"6f1b762e9678a509544bce7c9e3027121852cf6f4828f8ff94f823b0c57a9d5e","historical_source_span_hash":"3aac38b0c41d6f0efad5d1c056f667f26823746f73be41db6175b8a7858cbd41","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.1","paragraph_start":533,"paragraph_end":533,"page_start":18,"page_end":18},"source_page":{"start":18,"end":18}}
+- source_excerpt: 
+
+    各专业条线管理人员、网格员使用，同时支持并发量 	100 	次/秒，普通话智能识别率≥98%；智
+- requires_human_review: true
+
+### JY-001:CAND-012
+- tender_id: JY-001
+- requirement_text: 系统在常规压力下需保持7*24小时稳定运行,事务成功率需达99.99%。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":19,"end":19}
+- span: {"clause":"5.2.1.1","paragraph_start":537,"paragraph_end":537,"page_start":19,"page_end":19}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"34d31c83c3331f32ce4953a8673b547cdae64d9b5ddf0040b3a4b3586863575c","historical_source_span_hash":"2349c6cd99e9f055bae3f003e11926801e72284c0719b6e7afd319844af403bf","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.1","paragraph_start":537,"paragraph_end":537,"page_start":19,"page_end":19},"source_page":{"start":19,"end":19}}
+- source_excerpt: 
+
+    稳定性要求：系统在常规压力下需保持 	7*24 	小时稳定运行，事务成功率需达 	99.99%。
+- requires_human_review: true
+
+### JY-001:CAND-013
+- tender_id: JY-001
+- requirement_text: 系统架构需支持横向扩展能力,可随业务量的增长进行必要的节点扩展。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":19,"end":19}
+- span: {"clause":"5.2.1.1","paragraph_start":538,"paragraph_end":538,"page_start":19,"page_end":19}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"a687ec8b8b303851eabf689c9852961048d168fb2e18f2e2eca0acb00a416ae8","historical_source_span_hash":"8c7c0f60d3f6c87e0f9f7d9e5fb53498de859ca9a9aae5124573503ebc531008","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.1","paragraph_start":538,"paragraph_end":538,"page_start":19,"page_end":19},"source_page":{"start":19,"end":19}}
+- source_excerpt: 
+
+    扩展能力要求：系统架构需支持横向扩展能力，可随业务量的增长进行必要的节点扩展。
+- requires_human_review: true
+
+### JY-001:CAND-014
+- tender_id: JY-001
+- requirement_text: 兼容X86架构,配合支持国产化的操作系统和数据库改造,满足多元的资源申请,支持业务创新。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":19,"end":19}
+- span: {"clause":"5.2.1.1","paragraph_start":539,"paragraph_end":540,"page_start":19,"page_end":19}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"bff7f7829693fa1f1acf894751703fc104304824e2711b5f884e3f2a57eba7bd","historical_source_span_hash":"7ba4187d2e273a60f689ce1728bbc21c130e8730883afab512eb696e3f3fc1bd","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.1","paragraph_start":539,"paragraph_end":540,"page_start":19,"page_end":19},"source_page":{"start":19,"end":19}}
+- source_excerpt: 
+
+    兼容性要求：兼容 	X86 	架构，配合支持国产化的操作系统和数据库改造，满足多元的资源申请，
+    支持业务创新。
+- requires_human_review: true
+
+### JY-001:CAND-015
+- tender_id: JY-001
+- requirement_text: 数据服务类接口响应时间需<=1秒。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":19,"end":19}
+- span: {"clause":"5.2.1.1","paragraph_start":542,"paragraph_end":542,"page_start":19,"page_end":19}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"2c84e944501c8c003d660b0aa9156a99ab694a67d8b4a122fe7590b3f606f164","historical_source_span_hash":"2c84e944501c8c003d660b0aa9156a99ab694a67d8b4a122fe7590b3f606f164","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.1","paragraph_start":542,"paragraph_end":542,"page_start":19,"page_end":19},"source_page":{"start":19,"end":19}}
+- source_excerpt: 
+
+    数据服务类接口响应时间需<=1 	秒。常规页面展示响应时间需<=3 	秒。
+- requires_human_review: true
+
+### JY-001:CAND-016
+- tender_id: JY-001
+- requirement_text: 常规页面展示响应时间需<=3秒。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":19,"end":19}
+- span: {"clause":"5.2.1.1","paragraph_start":542,"paragraph_end":542,"page_start":19,"page_end":19}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"2c84e944501c8c003d660b0aa9156a99ab694a67d8b4a122fe7590b3f606f164","historical_source_span_hash":"2c84e944501c8c003d660b0aa9156a99ab694a67d8b4a122fe7590b3f606f164","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.1","paragraph_start":542,"paragraph_end":542,"page_start":19,"page_end":19},"source_page":{"start":19,"end":19}}
+- source_excerpt: 
+
+    数据服务类接口响应时间需<=1 	秒。常规页面展示响应时间需<=3 	秒。
+- requires_human_review: true
+
+### JY-001:CAND-017
+- tender_id: JY-001
+- requirement_text: 网格、网格要素、网格力量等数据查询时间<1秒。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":19,"end":19}
+- span: {"clause":"5.2.1.1","paragraph_start":543,"paragraph_end":543,"page_start":19,"page_end":19}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"f04a5cfad004f2e312de295308236781402b6864d5f907683c6a81557a2fff32","historical_source_span_hash":"ff0463aba9d79e86587c2dab5bee34d3ad75079b8d0fc19ae4ab85ccd6b6ade6","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.1","paragraph_start":543,"paragraph_end":543,"page_start":19,"page_end":19},"source_page":{"start":19,"end":19}}
+- source_excerpt: 
+
+    数据查询：网格、网格要素、网格力量等数据查询时间<1 	秒。统计分析类查询响应时间需
+- requires_human_review: true
+
+### JY-001:CAND-018
+- tender_id: JY-001
+- requirement_text: 统计分析类查询响应时间需<=10秒。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":19,"end":19}
+- span: {"clause":"5.2.1.1","paragraph_start":543,"paragraph_end":544,"page_start":19,"page_end":19}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"045cb2d114de56d52deed8e7443b9873de1cd0efdc1e88086b807fbf86f12edc","historical_source_span_hash":"174c06d329a6c5c83a062cb6a7af9d729059d888ca489ab4d177a52b10a23429","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.1","paragraph_start":543,"paragraph_end":544,"page_start":19,"page_end":19},"source_page":{"start":19,"end":19}}
+- source_excerpt: 
+
+    数据查询：网格、网格要素、网格力量等数据查询时间<1 	秒。统计分析类查询响应时间需
+    <=10 	秒。
+- requires_human_review: true
+
+### JY-001:CAND-019
+- tender_id: JY-001
+- requirement_text: 系统日均处理关键事务需>=10万笔。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":19,"end":19}
+- span: {"clause":"5.2.1.1","paragraph_start":546,"paragraph_end":546,"page_start":19,"page_end":19}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"da47c16ae3f77105953bfb4e85f0de6f6ed9dc5616b33fb3064bcf3ad9f763cc","historical_source_span_hash":"da47c16ae3f77105953bfb4e85f0de6f6ed9dc5616b33fb3064bcf3ad9f763cc","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.1","paragraph_start":546,"paragraph_end":546,"page_start":19,"page_end":19},"source_page":{"start":19,"end":19}}
+- source_excerpt: 
+
+    系统日均处理关键事务需>=10 	万笔。
+- requires_human_review: true
+
+### JY-001:CAND-020
+- tender_id: JY-001
+- requirement_text: 数据服务支持正常100个并发用户情况下的系统响应时间需<1秒。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":19,"end":19}
+- span: {"clause":"5.2.1.1","paragraph_start":547,"paragraph_end":547,"page_start":19,"page_end":19}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"f3c277de49f0540c9055ee689b8040af643fb5846475461428b9803b62e6007b","historical_source_span_hash":"f3c277de49f0540c9055ee689b8040af643fb5846475461428b9803b62e6007b","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.1","paragraph_start":547,"paragraph_end":547,"page_start":19,"page_end":19},"source_page":{"start":19,"end":19}}
+- source_excerpt: 
+
+    数据服务支持正常 	100 	个并发用户情况下的系统响应时间需<1 	秒。
+- requires_human_review: true
+
+### JY-001:CAND-021
+- tender_id: JY-001
+- requirement_text: 单表查询(100万条左右),响应<1秒;数据多表关联查询<3秒。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":19,"end":19}
+- span: {"clause":"5.2.1.1","paragraph_start":548,"paragraph_end":548,"page_start":19,"page_end":19}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"254921548c3a1a15f225e90cf3ead4b0930d2e88002b34e995e7e18377569fb3","historical_source_span_hash":"02d77df07d1cd31142b6e7d9ec9a3b19b317a0ff1f402668eede2510622b546f","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.1","paragraph_start":548,"paragraph_end":548,"page_start":19,"page_end":19},"source_page":{"start":19,"end":19}}
+- source_excerpt: 
+
+    数据处理性能：单表查询（100 	万条左右），响应<1 	秒；数据多表关联查询<3 	秒。
+- requires_human_review: true
+
+### JY-001:CAND-022
+- tender_id: JY-001
+- requirement_text: 交互类业务操作平均响应时间1-3秒,峰值响应时间3-5秒。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":19,"end":19}
+- span: {"clause":"5.2.1.1","paragraph_start":551,"paragraph_end":552,"page_start":19,"page_end":19}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"296f157ea11ff16c7e6188f4b8a3ad0d7ef9c27648314e26c22b054c72d833ea","historical_source_span_hash":"df556b966fa6bdf0058f656220de14897bb9e5e52e9c3e9280b4d3f8cdbe77ac","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.1","paragraph_start":551,"paragraph_end":552,"page_start":19,"page_end":19},"source_page":{"start":19,"end":19}}
+- source_excerpt: 
+
+    1) 	平均响应时间：1-3（秒）；
+    2) 	峰值响应时间：3-5（秒）。
+- requires_human_review: true
+
+### JY-001:CAND-023
+- tender_id: JY-001
+- requirement_text: 简单报表(关联3张表数据,查询数据量百万级)响应时间1-5秒;复杂报表(关联3-5张表数据,查询数据量千万级)响应时间1-10秒。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":19,"end":19}
+- span: {"clause":"5.2.1.1","paragraph_start":555,"paragraph_end":556,"page_start":19,"page_end":19}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"1703714cb93f181e9a32843b275b05c9ea5377ee195653497e6b31d41ed31474","historical_source_span_hash":"58d953a669d98b32885de3f76b10479ae35bd556ae5bd3b7aa20b8ffa4cc3fa4","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.1","paragraph_start":555,"paragraph_end":556,"page_start":19,"page_end":19},"source_page":{"start":19,"end":19}}
+- source_excerpt: 
+
+    3) 	简单报表（关联 	3 	张表数据，查询数据量百万级）响应时间：1-5（秒）；
+    4) 	复杂报表（关联 	3-5 	张表数据，查询数据量千万级）响应时间：1-10（秒）；
+- requires_human_review: true
+
+### JY-001:CAND-024
+- tender_id: JY-001
+- requirement_text: 设计开发时应充分考虑软件的可靠性,并合理利用支撑平台的可靠性,应尽可能保证软件在极端情况下的正常运行,避免由于模块故障或系统的升级而影响整个系统的正常运行。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":19,"end":19}
+- span: {"clause":"5.2.1.2","paragraph_start":558,"paragraph_end":559,"page_start":19,"page_end":19}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"db7dd794ec7553bf452c46a9c5fb8728e35b1f66830a031ba2d6a8df491ce3a5","historical_source_span_hash":"ec0ca95f8da7cc4cff76f20a1988b5b43121f759fcd4f7819d27d01889893e75","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.2","paragraph_start":558,"paragraph_end":559,"page_start":19,"page_end":19},"source_page":{"start":19,"end":19}}
+- source_excerpt: 
+
+    设计开发时应充分考虑软件的可靠性，并合理利用支撑平台的可靠性，应尽可能保证软件在
+    极端情况下的正常运行，避免由于模块故障或系统的升级而影响整个系统的正常运行。
+- requires_human_review: true
+
+### JY-001:CAND-025
+- tender_id: JY-001
+- requirement_text: 系统提供7×24小时的连续运行,系统故障平均间隔时间≥300天。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":19,"end":19}
+- span: {"clause":"5.2.1.2","paragraph_start":560,"paragraph_end":560,"page_start":19,"page_end":19}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"0745c73e2a6109162936995730c53ad4f78fe964c94cc2c23a7a923920dfb5f8","historical_source_span_hash":"c7ed7802b84ffc950dc06e070000af4655d27ab04bc0b165f48fa476a9bb8fb1","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.2","paragraph_start":560,"paragraph_end":560,"page_start":19,"page_end":19},"source_page":{"start":19,"end":19}}
+- source_excerpt: 
+
+    系统提供 	7×24 	小时的连续运行，系统故障平均间隔时间≥300 	天。
+- requires_human_review: true
+
+### JY-001:CAND-026
+- tender_id: JY-001
+- requirement_text: 系统安全性好,按各用户的实际需求设定其严格安全等级来保证系统的可靠性。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":19,"end":19}
+- span: {"clause":"5.2.1.2","paragraph_start":561,"paragraph_end":561,"page_start":19,"page_end":19}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"53d01c3568700f0655d5941f061ba0d7e16f5cc7fe477d363904fd3b2dc560ca","historical_source_span_hash":"75bafab24ce3606b801eb1a82fa47b30b59db2cfdf5c0a41c129e2c38a25aaa9","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.2","paragraph_start":561,"paragraph_end":561,"page_start":19,"page_end":19},"source_page":{"start":19,"end":19}}
+- source_excerpt: 
+
+    系统安全性好，按各用户的实际需求设定其严格安全等级来保证系统的可靠性。
+- requires_human_review: true
+
+### JY-001:CAND-027
+- tender_id: JY-001
+- requirement_text: 具有较强的系统安全性和灾难恢复能力。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":19,"end":19}
+- span: {"clause":"5.2.1.2","paragraph_start":562,"paragraph_end":562,"page_start":19,"page_end":19}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"3725bb402a8891ad9a92c0c395aca577aac6aff21e310b688143d1be92af292b","historical_source_span_hash":"3725bb402a8891ad9a92c0c395aca577aac6aff21e310b688143d1be92af292b","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.2","paragraph_start":562,"paragraph_end":562,"page_start":19,"page_end":19},"source_page":{"start":19,"end":19}}
+- source_excerpt: 
+
+    具有较强的系统安全性和灾难恢复能力。
+- requires_human_review: true
+
+### JY-001:CAND-028
+- tender_id: JY-001
+- requirement_text: 软件设计时应充分考虑软件的开放性,应充分考虑对不同业务数据和其他数据异构性的兼容。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":19,"end":19}
+- span: {"clause":"5.2.1.3","paragraph_start":564,"paragraph_end":564,"page_start":19,"page_end":19}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"0d21cb30e357ab46e3d9c15cc6699a945a7cef2c42b3da2f91a440156781714c","historical_source_span_hash":"be0a595dc6ef450446f9a78a0816f4fb24987a74684b737795e19c57682586c6","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.3","paragraph_start":564,"paragraph_end":564,"page_start":19,"page_end":19},"source_page":{"start":19,"end":19}}
+- source_excerpt: 
+
+    软件设计时应充分考虑软件的开放性，应充分考虑对不同业务数据和其他数据异构性的兼容。
+- requires_human_review: true
+
+### JY-001:CAND-029
+- tender_id: JY-001
+- requirement_text: 基于XML的结构化数据设计,通过数据交换共享平台,实现本平台与其它异构系统之间的数据交换和共享。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":19,"end":19}
+- span: {"clause":"5.2.1.3","paragraph_start":565,"paragraph_end":566,"page_start":19,"page_end":19}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"3c29b513810a95c11fee6b9ae3d13b5d3b9b1e0f378343061732c478d1130d77","historical_source_span_hash":"152382cc825d46580ab571f718638e16cdd2143e9492854250525b691636ff01","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.3","paragraph_start":565,"paragraph_end":566,"page_start":19,"page_end":19},"source_page":{"start":19,"end":19}}
+- source_excerpt: 
+
+    基于 	XML 	的结构化数据设计，通过数据交换共享平台，实现本平台与其它异构系统之间的数据
+    交换和共享。
+- requires_human_review: true
+
+### JY-001:CAND-030
+- tender_id: JY-001
+- requirement_text: Web端基于B/S结构,提供友好的展示界面。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":19,"end":19}
+- span: {"clause":"5.2.1.4","paragraph_start":569,"paragraph_end":569,"page_start":19,"page_end":19}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"fefba0156a2ec92e50b419d27bab9e107225c604a051543cd11408060beb88c6","historical_source_span_hash":"46e098aa7e82437e51b704321cf7e026d485d9004ad55b6a6c6259df63dd3a5b","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.4","paragraph_start":569,"paragraph_end":569,"page_start":19,"page_end":19},"source_page":{"start":19,"end":19}}
+- source_excerpt: 
+
+    （1） 	基于 	B/S 	结构，提供友好的展示界面。
+- requires_human_review: true
+
+### JY-001:CAND-031
+- tender_id: JY-001
+- requirement_text: Web端兼容IE9以上,360、chrome等主流浏览器版本。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":19,"end":19}
+- span: {"clause":"5.2.1.4","paragraph_start":570,"paragraph_end":570,"page_start":19,"page_end":19}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"12440efd528cca3138f146d446691cca53c2e6f17271eec2aa70025d86cfcb55","historical_source_span_hash":"bc57ecfb8b6c3bf97f279749e1349b150a4491155c998a0b3cd4143676495d75","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.4","paragraph_start":570,"paragraph_end":570,"page_start":19,"page_end":19},"source_page":{"start":19,"end":19}}
+- source_excerpt: 
+
+    （2） 	兼容 	IE9 	以上，360、chrome 	等主流浏览器版本。
+- requires_human_review: true
+
+### JY-001:CAND-032
+- tender_id: JY-001
+- requirement_text: Web端提供强大的图形界面功能,采用树形结构。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":20,"end":20}
+- span: {"clause":"5.2.1.4","paragraph_start":573,"paragraph_end":573,"page_start":20,"page_end":20}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"c845e8663308cb5c0f639451478120c355b9894c522fa24fed61a2a7fb912da9","historical_source_span_hash":"607e8d24eb7ac7dd07de7a4f685f8390fd22a80ec9171cbaf329a8045f70ad84","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.4","paragraph_start":573,"paragraph_end":573,"page_start":20,"page_end":20},"source_page":{"start":20,"end":20}}
+- source_excerpt: 
+
+    （3） 	提供强大的图形界面功能，采用树形结构。
+- requires_human_review: true
+
+### JY-001:CAND-033
+- tender_id: JY-001
+- requirement_text: 管理系统软件应提供简体中文界面。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":20,"end":20}
+- span: {"clause":"5.2.1.4","paragraph_start":574,"paragraph_end":574,"page_start":20,"page_end":20}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"212ae329e5e1f5ac83c639aa9ad0c96648e202beef26ae90b2a07ed948ee1019","historical_source_span_hash":"facc019c18691a66607923456a23c642e02426094ed6f1d84f07484e52cc2d31","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.4","paragraph_start":574,"paragraph_end":574,"page_start":20,"page_end":20},"source_page":{"start":20,"end":20}}
+- source_excerpt: 
+
+    （4） 	管理系统软件应提供简体中文界面。
+- requires_human_review: true
+
+### JY-001:CAND-034
+- tender_id: JY-001
+- requirement_text: 管理系统软件操作应简单、方便,尽可能适应系统用户的使用习惯。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":20,"end":20}
+- span: {"clause":"5.2.1.4","paragraph_start":575,"paragraph_end":575,"page_start":20,"page_end":20}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"92c7d74923d6b91e92dd29897c962b614d8b76fa9bc98a6d5fe04ad1bce7240d","historical_source_span_hash":"6eee9bc687d665be6df3dc10734bbe2a2ae46e84bc3546339f879be1a07651a1","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.4","paragraph_start":575,"paragraph_end":575,"page_start":20,"page_end":20},"source_page":{"start":20,"end":20}}
+- source_excerpt: 
+
+    （5） 	管理系统软件操作应简单、方便，尽可能适应系统用户的使用习惯。
+- requires_human_review: true
+
+### JY-001:CAND-035
+- tender_id: JY-001
+- requirement_text: 移动端符合移动设备的交互方式,应兼容当前主流移动设备的屏幕尺寸与分辨率。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":20,"end":20}
+- span: {"clause":"5.2.1.4","paragraph_start":577,"paragraph_end":577,"page_start":20,"page_end":20}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"96dace999cc5e54d7fcb99bad11c667a97c297dc467484baabc68a54d5dc8626","historical_source_span_hash":"405925c2fde423fe834483de3c23e95c4ca62f82848e63e014de1c03e1e8e3a2","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.4","paragraph_start":577,"paragraph_end":577,"page_start":20,"page_end":20},"source_page":{"start":20,"end":20}}
+- source_excerpt: 
+
+    （1） 	符合移动设备的交互方式，应兼容当前主流移动设备的屏幕尺寸与分辨率。
+- requires_human_review: true
+
+### JY-001:CAND-036
+- tender_id: JY-001
+- requirement_text: 移动端功能上应最大限度减少用户额外安装组件、控件或插件。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":20,"end":20}
+- span: {"clause":"5.2.1.4","paragraph_start":578,"paragraph_end":578,"page_start":20,"page_end":20}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"a0969ef2debdf758be26b32bb0b1e1d865dd0cfad544bc384ae4fb24a030f251","historical_source_span_hash":"afe5fde6fe56a50a56b036660b699ed8a22a7898b0bf128d52218c806b52a18d","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.4","paragraph_start":578,"paragraph_end":578,"page_start":20,"page_end":20},"source_page":{"start":20,"end":20}}
+- source_excerpt: 
+
+    （2） 	功能上应最大限度减少用户额外安装组件、控件或插件。
+- requires_human_review: true
+
+### JY-001:CAND-037
+- tender_id: JY-001
+- requirement_text: 移动端显示内容中图片、附件、视频等应有效可用,名称要直观准确,图片、附件、视频采用JPG、PNG、PDF、MP4等主流常用格式,便于跨平台的兼容性和浏览的流畅度。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":20,"end":20}
+- span: {"clause":"5.2.1.4","paragraph_start":579,"paragraph_end":580,"page_start":20,"page_end":20}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"e585d3bf56b6d49ee2f7aee2737b2586767cb0ff5dfad8be3a7d30c95e0a3b6e","historical_source_span_hash":"705d6325e89e8172b2b07d9f540f7eef6e0d6b0670c952045e89e304a59ccc89","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.4","paragraph_start":579,"paragraph_end":580,"page_start":20,"page_end":20},"source_page":{"start":20,"end":20}}
+- source_excerpt: 
+
+    （3） 	显示内容中图片、附件、视频等应有效可用，名称要直观准确，图片、附件、视
+    频采用 	JPG、PNG、PDF、MP4 	等主流常用格式，便于跨平台的兼容性和浏览的流畅度。
+- requires_human_review: true
+
+### JY-001:CAND-038
+- tender_id: JY-001
+- requirement_text: 移动端避免使用弹出窗口、漂浮窗口,确因需要使用时,不得使用多个窗口,应提供关闭按钮。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":20,"end":20}
+- span: {"clause":"5.2.1.4","paragraph_start":581,"paragraph_end":582,"page_start":20,"page_end":20}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"1e2575af27326e98b152a4f43c8d0487368d38a5b7994f693093a0cfc4a3479d","historical_source_span_hash":"849dc1297d6b4640555b7fb805c3850ea77f9d84785a7cbada54f44d755d3885","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.4","paragraph_start":581,"paragraph_end":582,"page_start":20,"page_end":20},"source_page":{"start":20,"end":20}}
+- source_excerpt: 
+
+    （4） 	避免使用弹出窗口、漂浮窗口，确因需要使用时，不得使用多个窗口，应提供关
+    闭按钮。
+- requires_human_review: true
+
+### JY-001:CAND-039
+- tender_id: JY-001
+- requirement_text: 移动端严禁刊登商业广告或链接商业广告页面。
+- category: contractual
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":20,"end":20}
+- span: {"clause":"5.2.1.4","paragraph_start":583,"paragraph_end":583,"page_start":20,"page_end":20}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"03dd1c2bbeae47cde6a67bb85028e69168e112a1dbe358df88d22da194541d01","historical_source_span_hash":"f64472c36741ff16e50a6d8df7de0074dc3117a20e8edbfcde38f57f33387ef6","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.4","paragraph_start":583,"paragraph_end":583,"page_start":20,"page_end":20},"source_page":{"start":20,"end":20}}
+- source_excerpt: 
+
+    （5） 	严禁刊登商业广告或链接商业广告页面。
+- requires_human_review: true
+
+### JY-001:CAND-040
+- tender_id: JY-001
+- requirement_text: 移动端集成统一分享功能,分享渠道支持当前主流社交平台软件。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":20,"end":20}
+- span: {"clause":"5.2.1.4","paragraph_start":584,"paragraph_end":584,"page_start":20,"page_end":20}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"a957c49d2e4902b7f3d27f2cc3f901a60d2fd2f7a1f8717842ef242e78b37b53","historical_source_span_hash":"e3c85476f0462d23b4c21b0bacd56070f11bdd51fdbe565853e0d044598eb7bd","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.4","paragraph_start":584,"paragraph_end":584,"page_start":20,"page_end":20},"source_page":{"start":20,"end":20}}
+- source_excerpt: 
+
+    （6） 	集成统一分享功能，分享渠道支持当前主流社交平台软件。
+- requires_human_review: true
+
+### JY-001:CAND-041
+- tender_id: JY-001
+- requirement_text: 移动端支持安卓系统,Android5.0及以上。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":20,"end":20}
+- span: {"clause":"5.2.1.4","paragraph_start":585,"paragraph_end":585,"page_start":20,"page_end":20}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"03212b9e5ee3d858dba3fca0fd9f871beabfda494bf597224a5ac939887345f2","historical_source_span_hash":"9086e3de8a2d85755f7b764ee67598d85106f50a894b78566c45a48e72600a0d","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.4","paragraph_start":585,"paragraph_end":585,"page_start":20,"page_end":20},"source_page":{"start":20,"end":20}}
+- source_excerpt: 
+
+    （7） 	支持安卓系统，Android5.0 	及以上。
+- requires_human_review: true
+
+### JY-001:CAND-042
+- tender_id: JY-001
+- requirement_text: 移动端支持华为、小米、VIVO、OPPO、三星等主流品牌型号。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":20,"end":20}
+- span: {"clause":"5.2.1.4","paragraph_start":586,"paragraph_end":586,"page_start":20,"page_end":20}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"471203eb8c913ce12cadab10819dbdc596e5dbf43b52a597ad240f378fe9b432","historical_source_span_hash":"6230aa0abc55d10dcd6362ca8652f6763b028cf510113152361b2071bfbd3f46","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.4","paragraph_start":586,"paragraph_end":586,"page_start":20,"page_end":20},"source_page":{"start":20,"end":20}}
+- source_excerpt: 
+
+    （8） 	手机型号和厂商：华为、小米、VIVO、OPPO、三星等主流品牌型号。
+- requires_human_review: true
+
+### JY-001:CAND-043
+- tender_id: JY-001
+- requirement_text: 软件设计研发使用的技术不对使用的浏览器有特殊要求,软件操作界面简洁,方便各类操作人员操作使用。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":20,"end":20}
+- span: {"clause":"5.2.1.5","paragraph_start":588,"paragraph_end":589,"page_start":20,"page_end":20}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"11ad1303d627fb8936d45f1ac2430a259826b8167360f3d7f2319cbb51795b81","historical_source_span_hash":"b5c0589b829d989f48b464ccf8b93f705571f1928b946d532a58789016ecf190","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.5","paragraph_start":588,"paragraph_end":589,"page_start":20,"page_end":20},"source_page":{"start":20,"end":20}}
+- source_excerpt: 
+
+    软件设计研发使用的技术不对使用的浏览器有特殊要求，软件操作界面简洁，方便
+    各类操作人员操作使用。
+- requires_human_review: true
+
+### JY-001:CAND-044
+- tender_id: JY-001
+- requirement_text: 软件页面的设计大气、美观、简洁,尽可能地提高浏览速度,突出主要信息,软件导航层次清晰,方便浏览者对相关信息的访问。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":20,"end":20}
+- span: {"clause":"5.2.1.6","paragraph_start":591,"paragraph_end":592,"page_start":20,"page_end":20}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"a6440c14fb7ac0879268b4e62a38406445595a2a01aeb8b637af95b4acf52143","historical_source_span_hash":"277617c82fc947440766fa41d86beed476eda05b895b46ef480ed172d4ff2eb3","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.6","paragraph_start":591,"paragraph_end":592,"page_start":20,"page_end":20},"source_page":{"start":20,"end":20}}
+- source_excerpt: 
+
+    软件页面的设计大气、美观、简洁，尽可能地提高浏览速度，突出主要信息，软件
+    导航层次清晰，方便浏览者对相关信息的访问。
+- requires_human_review: true
+
+### JY-001:CAND-045
+- tender_id: JY-001
+- requirement_text: 栏目设置合理,符合人们的浏览习惯,软件层次设计合理,让操作者可以通过尽可能少的点击次数即可找到需要的信息。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":20,"end":20}
+- span: {"clause":"5.2.1.7","paragraph_start":594,"paragraph_end":595,"page_start":20,"page_end":20}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"bf4fa1abb223f7db445c08f1899365c6e5a6de8a77710dcbe6aa4eb7690843b8","historical_source_span_hash":"396adad611cbbd89752cb762ef3ed1a821bf0135051100edbb0c73b9e534d01a","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.7","paragraph_start":594,"paragraph_end":595,"page_start":20,"page_end":20},"source_page":{"start":20,"end":20}}
+- source_excerpt: 
+
+    栏目设置合理，符合人们的浏览习惯，软件层次设计合理，让操作者可以通过尽可
+    能少的点击次数即可找到需要的信息。
+- requires_human_review: true
+
+### JY-001:CAND-046
+- tender_id: JY-001
+- requirement_text: 本项目部署在政务云平台,要求供应商具备云服务能力。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":20,"end":20}
+- span: {"clause":"5.2.1.8","paragraph_start":597,"paragraph_end":597,"page_start":20,"page_end":20}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"62bbebfafd18121e88f186e2c2b3c026be8ed04b4ebc88e5e7caff30ab8a7239","historical_source_span_hash":"d5326ecc3547057ad9bc0fd480329c55c681151cc2ea419323cc687dd13bb4a9","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.8","paragraph_start":597,"paragraph_end":597,"page_start":20,"page_end":20},"source_page":{"start":20,"end":20}}
+- source_excerpt: 
+
+    本项目部署在政务云平台，要求供应商具备云服务能力。
+- requires_human_review: true
+
+### JY-001:CAND-047
+- tender_id: JY-001
+- requirement_text: 本项目智慧城市综合管理平台必须能够与无锡市社会稳定风险防范处置工作平台、市(县)区网格化联动处置平台无缝对接。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":20,"end":20}
+- span: {"clause":"5.2.1.9","paragraph_start":599,"paragraph_end":600,"page_start":20,"page_end":20}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"ea02ba07e14ba8f3200d6fee79cbf223c089fe74fc011a105c5ff371e21c4ad1","historical_source_span_hash":"ffde5685b8ee4a536e1bd426737e63b84757d035d9b54a324be02c410b8b7ec4","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.9","paragraph_start":599,"paragraph_end":600,"page_start":20,"page_end":20},"source_page":{"start":20,"end":20}}
+- source_excerpt: 
+
+    本项目智慧城市综合管理平台必须能够与无锡市社会稳定风险防范处置工作平台、
+    市(县)区网格化联动处置平台无缝对接；本项目江阴市城市之眼系统平台必须能够和江
+- requires_human_review: true
+
+### JY-001:CAND-048
+- tender_id: JY-001
+- requirement_text: 本项目江阴市城市之眼系统平台必须能够和江阴市视频联网共享平台无缝对接。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":20,"end":20}
+- span: {"clause":"5.2.1.9","paragraph_start":600,"paragraph_end":601,"page_start":20,"page_end":20}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"174bca3d38c2704f8b6a60199850cdaba36e78e69913395bbeafb9aad1c2cdde","historical_source_span_hash":"5f747a625c120f9de51ff5d7167ef25c90cad94daa179cc52f060fe6fde58172","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.9","paragraph_start":600,"paragraph_end":601,"page_start":20,"page_end":20},"source_page":{"start":20,"end":20}}
+- source_excerpt: 
+
+    市(县)区网格化联动处置平台无缝对接；本项目江阴市城市之眼系统平台必须能够和江
+    阴市视频联网共享平台无缝对接。投标人须承诺中标后签订合同时提供无锡市社会稳定
+- requires_human_review: true
+
+### JY-001:CAND-049
+- tender_id: JY-001
+- requirement_text: 投标人须承诺中标后签订合同时提供无锡市社会稳定风险防范处置工作平台项目原厂商、市(县)区网格化联动处置平台2020年提升完善建设项目原厂商、江阴市视频联网共享平台原厂商出具的无缝对接证明函(加盖投标人及厂商公章)。
+- category: contractual
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":20,"end":20}
+- span: {"clause":"5.2.1.9","paragraph_start":601,"paragraph_end":604,"page_start":20,"page_end":20}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"5f9dca6cb405812de06dd33f2af201b630276b9ac65f27b8c29945b34d55cf3e","historical_source_span_hash":"f6572d529db62dfd3216dd4244b100c734f398a8996e502df6f3ee14a696e5e5","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.9","paragraph_start":601,"paragraph_end":604,"page_start":20,"page_end":20},"source_page":{"start":20,"end":20}}
+- source_excerpt: 
+
+    阴市视频联网共享平台无缝对接。投标人须承诺中标后签订合同时提供无锡市社会稳定
+    风险防范处置工作平台项目原厂商、市(县)区网格化联动处置平台 	2020 	年提升完善建设
+    项目原厂商、江阴市视频联网共享平台原厂商出具的无缝对接证明函(加盖投标人及厂商
+    公章)。（承诺书格式自拟，未提供将作为无效投标）
+- requires_human_review: true
+
+### JY-001:CAND-050
+- tender_id: JY-001
+- requirement_text: 投标单位可对现场进行勘查(不统一组织,投标单位可与采购单位直接联系安排,因投标单位不进行现场勘查造成费用计算不准等的后果均由投标人自己负责)。
+- category: contractual
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":20,"end":20}
+- span: {"clause":"5.2.1.9","paragraph_start":605,"paragraph_end":606,"page_start":20,"page_end":20}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"0b1fbf9ee07c8bfd079944a054109503da820e8d53e237c06d96100684f515b2","historical_source_span_hash":"0c3ee6cc5ca85c280c1ca12a18885d9456c9de80ad4b88ed47adf218bca8fb73","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.1.9","paragraph_start":605,"paragraph_end":606,"page_start":20,"page_end":20},"source_page":{"start":20,"end":20}}
+- source_excerpt: 
+
+    投标单位可对现场进行勘查（不统一组织，投标单位可与采购单位直接联系安排，
+    因投标单位不进行现场勘查造成费用计算不准等的后果均由投标人自己负责）。
+- requires_human_review: true
+
+### JY-001:CAND-051
+- tender_id: JY-001
+- requirement_text: 建设江阴市市域社会治理现代化联勤联动指挥平台,包含事件联勤联动中心、运行指挥监管中心、事件标准库管理、事件汇聚收发网关、联勤联动移动端、通用辅助功能。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":21,"end":21}
+- span: {"clause":"5.2.2","paragraph_start":612,"paragraph_end":618,"page_start":21,"page_end":21}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"f1ea4f686e6b07e23aed07c9b896c7d2ab18775d529d037a062c4b4269817381","historical_source_span_hash":"f1ea4f686e6b07e23aed07c9b896c7d2ab18775d529d037a062c4b4269817381","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.2","paragraph_start":612,"paragraph_end":618,"page_start":21,"page_end":21},"source_page":{"start":21,"end":21}}
+- source_excerpt: 
+
+    一 	江阴市市域社会治理现代化联勤联动指挥平台
+    1 	事件联勤联动中心 	1 	套
+    2 	运行指挥监管中心 	1 	套
+    3 	事件标准库管理 	1 	套
+    4 	事件汇聚收发网关 	1 	套
+    5 	联勤联动移动端 	1 	套
+    6 	通用辅助功能 	1 	套
+- requires_human_review: true
+
+### JY-001:CAND-052
+- tender_id: JY-001
+- requirement_text: 建设智慧城市综合管理平台升级,包含网格平台升级、网格业务中台升级、多元共治应用、精网微格管理、警网融合应用、考核监测应用、网格学院应用。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":21,"end":21}
+- span: {"clause":"5.2.2","paragraph_start":619,"paragraph_end":626,"page_start":21,"page_end":21}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"7c52c10ff55395509c1f32324e1f2212f87996c2f71a333eed60c90d65d046d6","historical_source_span_hash":"7c52c10ff55395509c1f32324e1f2212f87996c2f71a333eed60c90d65d046d6","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.2","paragraph_start":619,"paragraph_end":626,"page_start":21,"page_end":21},"source_page":{"start":21,"end":21}}
+- source_excerpt: 
+
+    二 	智慧城市综合管理平台升级
+    1 	网格平台升级 	1 	项
+    2 	网格业务中台升级 	1 	项
+    3 	多元共治应用 	1 	项
+    4 	精网微格管理 	1 	项
+    5 	警网融合应用 	1 	项
+    6 	考核监测应用 	1 	项
+    7 	网格学院应用 	1 	项
+- requires_human_review: true
+
+### JY-001:CAND-053
+- tender_id: JY-001
+- requirement_text: 建设12345语音智能化及业务系统升级,包含呼叫中心软交换平台升级、12345智能应用、12345业务运营管理系统、12345工单闭环归档系统、12345省市及其它渠道对接、12345智能知识库、12345数据库升级。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":21,"end":21}
+- span: {"clause":"5.2.2","paragraph_start":627,"paragraph_end":634,"page_start":21,"page_end":21}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"ffc0834e77deafd5156f0c58942109db74b5a936fd7c642b3b01476e02db9782","historical_source_span_hash":"ffc0834e77deafd5156f0c58942109db74b5a936fd7c642b3b01476e02db9782","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.2","paragraph_start":627,"paragraph_end":634,"page_start":21,"page_end":21},"source_page":{"start":21,"end":21}}
+- source_excerpt: 
+
+    三 	12345 	语音智能化及业务系统升级
+    1 	呼叫中心软交换平台升级 	1 	项
+    2 	12345 	智能应用 	1 	套
+    3 	12345 	业务运营管理系统 	1 	套
+    4 	12345 	工单闭环归档系统 	1 	套
+    5 	12345 	省市及其它渠道对接 	1 	项
+    6 	12345 	智能知识库 	1 	套
+    7 	12345 	数据库升级 	1 	项
+- requires_human_review: true
+
+### JY-001:CAND-054
+- tender_id: JY-001
+- requirement_text: 建设江阴市城市之眼系统平台,包含AR实景系统、城市之眼系统、视频事件联动。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":21,"end":21}
+- span: {"clause":"5.2.2","paragraph_start":635,"paragraph_end":638,"page_start":21,"page_end":21}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"e7c991b22675585bd92d9065fc711745d1b97821ac41ff65a251bff47a4a1f91","historical_source_span_hash":"e7c991b22675585bd92d9065fc711745d1b97821ac41ff65a251bff47a4a1f91","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.2","paragraph_start":635,"paragraph_end":638,"page_start":21,"page_end":21},"source_page":{"start":21,"end":21}}
+- source_excerpt: 
+
+    四 	江阴市城市之眼系统平台
+    1 	AR 	实景系统 	1 	套
+    2 	城市之眼系统 	1 	套
+    3 	视频事件联动 	1 	项
+- requires_human_review: true
+
+### JY-001:CAND-055
+- tender_id: JY-001
+- requirement_text: 通过江阴市市域社会治理现代化联勤联动指挥平台归口处置、综合管控、统一调度各类事件,线上对平台内各类事件进行分级响应、快速分发,线下协调指挥联动处置,并通过高位监督实现全面闭环管理,推动条块协同共治,凝聚社会治理合力。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":21,"end":21}
+- span: {"clause":"5.2.3.1","paragraph_start":641,"paragraph_end":643,"page_start":21,"page_end":21}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"2de00c200a494fa6ecf69235df12f4d4a229af3731134388c64c61de87600ad8","historical_source_span_hash":"ee1074f518afe29cf680946481a5e4d1e1f8817f910078263460da8b67b5a55d","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.3.1","paragraph_start":641,"paragraph_end":643,"page_start":21,"page_end":21},"source_page":{"start":21,"end":21}}
+- source_excerpt: 
+
+    通过江阴市市域社会治理现代化联勤联动指挥平台归口处置、综合管控、统一调度
+    各类事件，线上对平台内各类事件进行分级响应、快速分发，线下协调指挥联动处置，
+    并通过高位监督实现全面闭环管理，推动条块协同共治，凝聚社会治理合力。
+- requires_human_review: true
+
+### JY-001:CAND-056
+- tender_id: JY-001
+- requirement_text: 运行指挥监管中心应借助大屏端和PC端的GIS地图,掌握具体事件空间位置信息,并结合视频通讯技术和一键建组方法,实现和事件人员的资源远程调度及群组之间的实时通信。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":21,"end":21}
+- span: {"clause":"5.2.3.2","paragraph_start":645,"paragraph_end":647,"page_start":21,"page_end":21}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"958d9b269ca41e07d2f0ac528f00ba4c31e6dd00e0458b67a130199a27838f38","historical_source_span_hash":"01ff5a411349fbadd6a1cf2462e640b3fdc7469062fde0b8e8b0c95f40848218","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.3.2","paragraph_start":645,"paragraph_end":647,"page_start":21,"page_end":21},"source_page":{"start":21,"end":21}}
+- source_excerpt: 
+
+    江阴市市域社会治理现代化联勤联动指挥平台主要借助大屏端和 	PC 	端的 	GIS 	地图，
+    掌握具体事件空间位置信息，并结合视频通讯技术和一键建组方法，实现和事件人员的
+    资源远程调度及群组之间的实时通信。
+- requires_human_review: true
+
+### JY-001:CAND-057
+- tender_id: JY-001
+- requirement_text: 事件标准库管理应通过提取多渠道事件字段信息,按对应规则匹配实现事件标准化和标准化库,并制定标准的事件联动接口规范,方便各类专业条线业务系统与智慧城市综合管理平台形成事件联动。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":22,"end":22}
+- span: {"clause":"5.2.3.3","paragraph_start":651,"paragraph_end":653,"page_start":22,"page_end":22}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"7a484add036d90ca25228e4436e9b1276a6179c1567726dc6ee73faa98eecc5c","historical_source_span_hash":"5688744dc3668c49334710053322def29b6823e473599e653dac219c3575d801","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.3.3","paragraph_start":651,"paragraph_end":653,"page_start":22,"page_end":22},"source_page":{"start":22,"end":22}}
+- source_excerpt: 
+
+    通过提取多渠道事件字段信息，按对应规则匹配实现事件标准化和标准化库。制定
+    标准的事件联动接口规范，方便各类专业条线业务系统与智慧城市综合管理平台形成事
+    件联动。
+- requires_human_review: true
+
+### JY-001:CAND-058
+- tender_id: JY-001
+- requirement_text: 事件汇聚收发网关应汇聚各信息渠道的实时事件,实现多渠道事件归一,对归集库内的事件数据按照统一要求进行治理后,沉淀到事件库。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":22,"end":22}
+- span: {"clause":"5.2.3.4","paragraph_start":655,"paragraph_end":656,"page_start":22,"page_end":22}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"84b8bcbb162d1f53c627b8c530d75b4fd5a867a8dc9dbc9429d2de3c28d05ce5","historical_source_span_hash":"dcb45e4a90be3898b22918f89e5859ab1bea8b8c9fb07dd05db887e09b42899a","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.3.4","paragraph_start":655,"paragraph_end":656,"page_start":22,"page_end":22},"source_page":{"start":22,"end":22}}
+- source_excerpt: 
+
+    汇聚各信息渠道的实时事件，多渠道事件归一，对归集库内的事件数据按照统一要
+    求进行治理后，沉淀到事件库。
+- requires_human_review: true
+
+### JY-001:CAND-059
+- tender_id: JY-001
+- requirement_text: 建设通用辅助功能,为第三方系统对接、外部能力调用提供能力支撑,提供基础通信能力、底座能力对接等功能。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":22,"end":22}
+- span: {"clause":"5.2.3.6","paragraph_start":662,"paragraph_end":663,"page_start":22,"page_end":22}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"beec7aef1b99ed5d0dee1caf1925fcc13b8558455b0445a69ec19720e6fe1659","historical_source_span_hash":"605e368ee53c72ca8de545522419efe15e21b7dc8b25424985329e205f8fe748","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.3.6","paragraph_start":662,"paragraph_end":663,"page_start":22,"page_end":22},"source_page":{"start":22,"end":22}}
+- source_excerpt: 
+
+    建设通用辅助功能，为第三方系统对接、外部能力调用提供能力支撑，提供基础通
+    信能力、底座能力对接等功能。
+- requires_human_review: true
+
+### JY-001:CAND-060
+- tender_id: JY-001
+- requirement_text: 入格采集功能升级应基于省市两级标准,实现实有房屋、人口、单位数据归集及管理,原有智慧城市综合管理平台业务系统数据抽取,保持无锡市级数据变更与江阴智慧城市综合管理平台数据同步更新,实现网格数据、采集字段归集。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":22,"end":22}
+- span: {"clause":"5.2.4.1","paragraph_start":667,"paragraph_end":669,"page_start":22,"page_end":22}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"c30f12d685b002b0ad1cd979dc7e632c13162e06bbdbe7b61c12c85c05d97e4b","historical_source_span_hash":"e0e507c6c7f74213fc6bc64384f7a9752c457b20b6e4a75afb7dd3a72582afbd","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.4.1","paragraph_start":667,"paragraph_end":669,"page_start":22,"page_end":22},"source_page":{"start":22,"end":22}}
+- source_excerpt: 
+
+    基于省市两级标准，实现实有房屋、人口、单位数据归集及管理，原有智慧城市综
+    合管理平台业务系统数据抽取，保持无锡市级数据变更与江阴智慧城市综合管理平台数
+    据同步更新，实现网格数据、采集字段归集。
+- requires_human_review: true
+
+### JY-001:CAND-061
+- tender_id: JY-001
+- requirement_text: APP简化优化升级应升级为互联网、政务网双网登陆模式,根据不同模块选择相应登陆方式,借此保护个人隐私等问题,并实现APP应用H5形式开发,应用微服务化。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":22,"end":22}
+- span: {"clause":"5.2.4.1","paragraph_start":671,"paragraph_end":673,"page_start":22,"page_end":22}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"87b2cf4023e7104edb98a0dc3eed499f6d895b86afac67f8966707fe40d766b3","historical_source_span_hash":"26e56f33ecafef72d7f01ddc35abbf33c0ace71dfe911e58177a10f6ccee224a","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.4.1","paragraph_start":671,"paragraph_end":673,"page_start":22,"page_end":22},"source_page":{"start":22,"end":22}}
+- source_excerpt: 
+
+    根据使用人员及场景情况，APP 	升级为互联网、政务网双网登陆模式，根据不同模
+    块选择相应登陆方式，借此保护个人隐私等问题，并实现 	APP 	应用 	H5 	形式开发，应用微
+    服务化。
+- requires_human_review: true
+
+### JY-001:CAND-062
+- tender_id: JY-001
+- requirement_text: 网格工作监测屏升级应建立全景网格管理功能和指标监测视图,实现分级下钻功能,对一标多实视图升级,实现全场景业务及资源调度。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":22,"end":22}
+- span: {"clause":"5.2.4.1","paragraph_start":675,"paragraph_end":676,"page_start":22,"page_end":22}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"0ff7d790910e88e9005bbfac688ce9e7eea9eea502f5ab20d22d76433f9945d1","historical_source_span_hash":"a978ab087c8c8508ab828a9232c4040a2d9157d4406e7f99b0cde52228b49ed0","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.4.1","paragraph_start":675,"paragraph_end":676,"page_start":22,"page_end":22},"source_page":{"start":22,"end":22}}
+- source_excerpt: 
+
+    建立全景网格管理功能和指标监测视图，实现分级下钻功能。对一标多实视图升级，
+    实现全场景业务及资源调度。
+- requires_human_review: true
+
+### JY-001:CAND-063
+- tender_id: JY-001
+- requirement_text: 网格业务中台升级应对智慧城市综合管理平台事件模块进行底层数据升级,规范原有事件底层数据格式,统一规范事件运行主流程,实现事件中心数字化改造。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":22,"end":22}
+- span: {"clause":"5.2.4.2","paragraph_start":678,"paragraph_end":679,"page_start":22,"page_end":22}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"a5fd550d7651941b5be5d3c137bb1b8342d36f1e3e1f325e72ac199fa9966c9c","historical_source_span_hash":"aeffe25941e6fa85a9a91a6a089b3498084fcb7b78a531e5baa5a4fdf7ccacbf","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.4.2","paragraph_start":678,"paragraph_end":679,"page_start":22,"page_end":22},"source_page":{"start":22,"end":22}}
+- source_excerpt: 
+
+    智慧城市综合管理平台事件模块进行底层数据升级，规范原有事件底层数据格式，
+    统一规范事件运行主流程，实现事件中心数字化改造。
+- requires_human_review: true
+
+### JY-001:CAND-064
+- tender_id: JY-001
+- requirement_text: 任务引擎应构建任务类别、标签体系、任务对象等,对周期性及非周期任务定义,自动实现任务定义的发布。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":22,"end":22}
+- span: {"clause":"5.2.4.2","paragraph_start":681,"paragraph_end":682,"page_start":22,"page_end":22}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"6bfc3066cb33cfcf1cef05b5542f3668ae078903d87e24b7a33401def2f4c227","historical_source_span_hash":"9bbaa9c424c6615b6244cd8563bb5eab6808987b09b1e9a8137721413268be14","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.4.2","paragraph_start":681,"paragraph_end":682,"page_start":22,"page_end":22},"source_page":{"start":22,"end":22}}
+- source_excerpt: 
+
+    构建任务类别、标签体系、任务对象等。对周期性及非周期任务定义，自动实现任
+    务定义的发布。
+- requires_human_review: true
+
+### JY-001:CAND-065
+- tender_id: JY-001
+- requirement_text: 网格事件管理应根据筛选条件,对事件进行查询、统计,同时完善网格事件市、镇两级审核推送机制。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":22,"end":22}
+- span: {"clause":"5.2.4.2","paragraph_start":684,"paragraph_end":685,"page_start":22,"page_end":22}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"03b873c23b94fa41da50c0e53b7e128f568a3477ec223437471f994a8aa43665","historical_source_span_hash":"d11df9fc523707f2ddcc8f40c8f1a4b07af27e3ed672bb2d390ca67dc193fbe9","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.4.2","paragraph_start":684,"paragraph_end":685,"page_start":22,"page_end":22},"source_page":{"start":22,"end":22}}
+- source_excerpt: 
+
+    根据筛选条件，对事件进行查询、统计，同时完善网格事件市、镇两级审核推送机
+    制。
+- requires_human_review: true
+
+### JY-001:CAND-066
+- tender_id: JY-001
+- requirement_text: 网格事件管理要素全生命周期管理应精准掌握网格内基础要素的变化动态,对智慧城市综合管理平台的数据能力进行升级,实现网格工作数据的高效计算与监测。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":23,"end":23}
+- span: {"clause":"5.2.4.2","paragraph_start":689,"paragraph_end":690,"page_start":23,"page_end":23}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"15628821ad380bdbbbe41e6f8d78396900f4e1974d91b47d6510a142444e0d01","historical_source_span_hash":"8bbf8e20c155fe751df4884d149aa2ef381b7595b6d813c031e0587a05942dac","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.4.2","paragraph_start":689,"paragraph_end":690,"page_start":23,"page_end":23},"source_page":{"start":23,"end":23}}
+- source_excerpt: 
+
+    精准掌握网格内基础要素的变化动态，对智慧城市综合管理平台的数据能力进行升
+    级，实现网格工作数据的高效计算与监测。
+- requires_human_review: true
+
+### JY-001:CAND-067
+- tender_id: JY-001
+- requirement_text: 多级网格中心功能完善应完善中心管理机制,对网格员进行量化质化分析,对网格内考核要素调整的审核权限体系升级。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":23,"end":23}
+- span: {"clause":"5.2.4.2","paragraph_start":692,"paragraph_end":693,"page_start":23,"page_end":23}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"c89d6c577fcd24451ac0c6a6467811fd5d34335ae955f8b190a519e1910a3700","historical_source_span_hash":"172e5f2317acfbbdff1ef59fbd9e5e3af7e200009f7df2590b96bfcb539a83a8","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.4.2","paragraph_start":692,"paragraph_end":693,"page_start":23,"page_end":23},"source_page":{"start":23,"end":23}}
+- source_excerpt: 
+
+    完善中心管理机制，对网格员进行量化质化分析，对网格内考核要素调整的审核权
+    限体系升级。
+- requires_human_review: true
+
+### JY-001:CAND-068
+- tender_id: JY-001
+- requirement_text: 构建样板应用应构建平台精网微格体系,推动本地警网融合应用实现数据按需闭环,定制网格考核机制,开发网格学院应用打造网格学习培训基地。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":23,"end":23}
+- span: {"clause":"5.2.4.3","paragraph_start":695,"paragraph_end":696,"page_start":23,"page_end":23}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"48ddda94391a74b7aa7c01072cf3c3ccb9376eac3824036ff6dfad9009426b3f","historical_source_span_hash":"116adc133e53f5f01c68aaa4d5884ef1a55c29283a7414a6c01c309037bb88ce","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.4.3","paragraph_start":695,"paragraph_end":696,"page_start":23,"page_end":23},"source_page":{"start":23,"end":23}}
+- source_excerpt: 
+
+    构建平台精网微格体系，推动本地警网融合应用实现数据按需闭环，定制网格考核
+    机制，开发网格学院应用打造网格学习培训基地。
+- requires_human_review: true
+
+### JY-001:CAND-069
+- tender_id: JY-001
+- requirement_text: 多元共治应建设多元共治力量体系,定义实体组织和虚拟组织进行任务处理,围绕精网微格体系,将网格化业务向下拓展,真正深入基层。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":23,"end":23}
+- span: {"clause":"5.2.4.3","paragraph_start":698,"paragraph_end":699,"page_start":23,"page_end":23}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"d1904a9e64b15c4fe7b4704a272637214682f2d1426ff5ed27a9805623dc145a","historical_source_span_hash":"fee61b9ae2e1d8c4e32dae7d847932c257c293ad2cdbc9489bfdcf456b1349a5","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.4.3","paragraph_start":698,"paragraph_end":699,"page_start":23,"page_end":23},"source_page":{"start":23,"end":23}}
+- source_excerpt: 
+
+    建设多元共治力量体系，定义实体组织和虚拟组织进行任务处理，围绕精网微格体
+    系，将网格化业务向下拓展，真正深入基层。
+- requires_human_review: true
+
+### JY-001:CAND-070
+- tender_id: JY-001
+- requirement_text: 精微网格管理需进一步对网格划分并对微网格要素管理,线上监测各专职网格员和“微网格”联络员、志愿者配备情况。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":23,"end":23}
+- span: {"clause":"5.2.4.3","paragraph_start":701,"paragraph_end":702,"page_start":23,"page_end":23}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"b20cfa6db039a38fb0f2486afd902ce2c433cf058983c1a0260a93336f77e0e1","historical_source_span_hash":"7ba3ed7ea7cab8e37c345a680f4be946890fb28325941352aaa5811f171ccf16","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.4.3","paragraph_start":701,"paragraph_end":702,"page_start":23,"page_end":23},"source_page":{"start":23,"end":23}}
+- source_excerpt: 
+
+    需进一步对网格划分并对微网格要素管理，线上监测各专职网格员和“微网格”联
+    络员、志愿者配备情况。
+- requires_human_review: true
+
+### JY-001:CAND-071
+- tender_id: JY-001
+- requirement_text: 警网融合应构建与公安“一标三实”数据的实时交互机制,结合网格自主发现实现数据的动态回流,按日归集全量动态数据,构建“民警+网格员”全民反诈长效治理模式,实现流动人口完整采集闭环管理,实现流动人口采集信息质量(完整性)自动稽核。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":23,"end":23}
+- span: {"clause":"5.2.4.3","paragraph_start":704,"paragraph_end":706,"page_start":23,"page_end":23}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"346dc87a6af42ece5856a2aa5c9fd4499965e2e4c62843186815200a6d045e47","historical_source_span_hash":"13421f9f837dfb285c4ef626dd427bdf589d1dcd3a162b91000bbd5b1b990df5","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.4.3","paragraph_start":704,"paragraph_end":706,"page_start":23,"page_end":23},"source_page":{"start":23,"end":23}}
+- source_excerpt: 
+
+    构建与公安“一标三实”数据的实时交互机制，结合网格自主发现实现数据的动态
+    回流，按日归集全量动态数据。构建“民警+网格员”全民反诈长效治理模式。流动人口
+    完整采集闭环管理，实现流动人口采集信息质量（完整性）自动稽核。
+- requires_human_review: true
+
+### JY-001:CAND-072
+- tender_id: JY-001
+- requirement_text: 考核监测应建设月度考核指标监测模型和时序考核指标监测模型,实现对上报考核数据的模拟打分和实时监测,优化数据报表规则,优化不合格指标项的判别规则,整合现有平台与监测平台报表,开发监测视图,提供质检平台,网格中心管理人员可以对质量进行评价,并对下级网格中心及网格进行扣分。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":23,"end":23}
+- span: {"clause":"5.2.4.3","paragraph_start":708,"paragraph_end":711,"page_start":23,"page_end":23}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"d01494e9bcdd5c7910d2e8ade9d5f3a6431019ee5d92e70ca25966b64caf8bab","historical_source_span_hash":"7b9d3a3d2919e12bec82e506eec2123987b2509aa5428761ce162fd0f7caa1d0","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.4.3","paragraph_start":708,"paragraph_end":711,"page_start":23,"page_end":23},"source_page":{"start":23,"end":23}}
+- source_excerpt: 
+
+    建设月度考核指标监测模型和时序考核指标监测模型，实现对上报考核数据的模拟
+    打分和实时监测。优化数据报表规则，优化不合格指标项的判别规则。整合现有平台与
+    监测平台报表，开发监测视图。提供质检平台，网格中心管理人员可以对质量进行评价，
+    并对下级网格中心及网格进行扣分。
+- requires_human_review: true
+
+### JY-001:CAND-073
+- tender_id: JY-001
+- requirement_text: 网格学院移动端应通过微信公众号的形式,以微信小程序为载体,打通江苏省网格化平台账号体系,方便对学习人员进行有效的管理;管理员可以在网格学院后台对移动端学习课程进行管理,包含课程分类和课程管理,为后续课程归类做划分,包括不限于考试增、删、改、查,试题分类、题库管理、试卷分类、考试管理、成绩统计和纠错管理等。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":23,"end":23}
+- span: {"clause":"5.2.4.3","paragraph_start":713,"paragraph_end":717,"page_start":23,"page_end":23}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"adf3a9242d3842ec6cf9a90a76b4a3bd4d8863dd20d533fb176a60269c9ff8fc","historical_source_span_hash":"b216668fee8b632d475d94d628f32d99207a97103f5dc5dd64a5b425e3111da0","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.4.3","paragraph_start":713,"paragraph_end":717,"page_start":23,"page_end":23},"source_page":{"start":23,"end":23}}
+- source_excerpt: 
+
+    网格学院移动端通过微信公众号的形式，以微信小程序为载体，打通江苏省网格化
+    平台账号体系，方便对学习人员进行有效的管理。管理员可以在网格学院后台对移动端
+    学习课程进行管理，包含课程分类和课程管理，为后续课程归类做划分。包括不限于考
+    试增、删、改、查，试题分类、题库管理、试卷分类、考试管理、成绩统计和纠错管理
+    等。
+- requires_human_review: true
+
+### JY-001:CAND-074
+- tender_id: JY-001
+- requirement_text: 呼叫中心软交换平台升级主要包括基础话务平台语音软交换改造、语音软交换核心、智能化引擎模块。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":23,"end":23}
+- span: {"clause":"5.2.5.1","paragraph_start":720,"paragraph_end":720,"page_start":23,"page_end":23}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"4d29012642ad5cb3edef45bdac20b55c28c0e6a9e0d06751e2ffe7ddfa1179db","historical_source_span_hash":"6a79d9cb7faecf175baad65623cb5ed210fa480fc0f26581236757cadb7e3c17","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.5.1","paragraph_start":720,"paragraph_end":720,"page_start":23,"page_end":23},"source_page":{"start":23,"end":23}}
+- source_excerpt: 
+
+    主要包括：基础话务平台语音软交换改造、语音软交换核心、智能化引擎模块。
+- requires_human_review: true
+
+### JY-001:CAND-075
+- tender_id: JY-001
+- requirement_text: 12345智能应用应引入智能化引擎能力,主要包括语音合成引擎能力,语音识别引擎能力、语义理解引擎能力。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":24,"end":24}
+- span: {"clause":"5.2.5.2","paragraph_start":724,"paragraph_end":725,"page_start":24,"page_end":24}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"4e9dde21423f7bb1175f559f5f2081bb8f2b195d6dbb91dec95166d70cb0d845","historical_source_span_hash":"b59b5a2422b1a7723521046470a463987e6ba7721a0f2e800f97264d99e2bb76","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.5.2","paragraph_start":724,"paragraph_end":725,"page_start":24,"page_end":24},"source_page":{"start":24,"end":24}}
+- source_excerpt: 
+
+    引入智能化引擎能力，主要包括语音合成引擎能力，语音识别引擎能力、语义理解
+    引擎能力。
+- requires_human_review: true
+
+### JY-001:CAND-076
+- tender_id: JY-001
+- requirement_text: 12345业务运营管理系统应提供全媒体坐席首页门户,能够便于话务人员一览快速直观查看当前个人业务待办及数据展示,主要包括话务坐席门户服务、语音渠道软电话服务、来电市民画像服务、业务配置管理、运营统计报表等。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":24,"end":24}
+- span: {"clause":"5.2.5.3","paragraph_start":727,"paragraph_end":729,"page_start":24,"page_end":24}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"cf23404e3291c1b188c2be28da0b053c8dfacf52b9482eed0e2c84476022b57f","historical_source_span_hash":"04df4a95991a9d370766106cf16431b6f56d9c9ba642af8a1d3c8f60e4d9630e","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.5.3","paragraph_start":727,"paragraph_end":729,"page_start":24,"page_end":24},"source_page":{"start":24,"end":24}}
+- source_excerpt: 
+
+    提供全媒体坐席首页门户，能够便于话务人员一览快速直观查看当前个人业务待办及
+    数据展示。主要包括：话务坐席门户服务、语音渠道软电话服务、来电市民画像服务、
+    业务配置管理、运营统计报表等。
+- requires_human_review: true
+
+### JY-001:CAND-077
+- tender_id: JY-001
+- requirement_text: 12345工单闭环归档系统应进一步对12345工单闭环归档的管理升级,提供诉求受理模块,工单业务流程模块、督办管理模块、工单办理能效分析,提供后台分析统计等功能。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":24,"end":24}
+- span: {"clause":"5.2.5.4","paragraph_start":731,"paragraph_end":732,"page_start":24,"page_end":24}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"66fea58b20c7cd1db2dd7ae19bd6fb97820b09649b5a1ce16bbdd409e60e6f7d","historical_source_span_hash":"e0083edc31017d2b5ea49e890bda0e93153c7f24fdf6bdf134ee4c6770d30179","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.5.4","paragraph_start":731,"paragraph_end":732,"page_start":24,"page_end":24},"source_page":{"start":24,"end":24}}
+- source_excerpt: 
+
+    进一步对 	12345 	工单闭环归档的管理升级，提供诉求受理模块，工单业务流程模块、
+    督办管理模块、工单办理能效分析，提供后台分析统计等功能。
+- requires_human_review: true
+
+### JY-001:CAND-078
+- tender_id: JY-001
+- requirement_text: 12345省市及其它渠道对接主要包括移动端通过H5页面集成至最江阴APP,市民最江阴APP提诉、市民微信公众号提诉、省市12345及其它渠道对接,对接渠道包括市网格化、公安110、数字城管、省12345、无锡市12345等多个第三方系统。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":24,"end":24}
+- span: {"clause":"5.2.5.5","paragraph_start":734,"paragraph_end":736,"page_start":24,"page_end":24}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"341c5acca1bc0e88cb21c51492f4634de82a9665211209e77336e8c6ae3bdf53","historical_source_span_hash":"5cbe043f305ea86cbc2b5d0009a88645896e6e68ac9356c71f55d95498cc064b","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.5.5","paragraph_start":734,"paragraph_end":736,"page_start":24,"page_end":24},"source_page":{"start":24,"end":24}}
+- source_excerpt: 
+
+    主要包括：移动端通过 	H5 	页面集成至最江阴 	APP，市民最江阴 	APP 	提诉、市民微信
+    公众号提诉、省市 	12345 	及其它渠道对接。对接渠道包括：市网格化、公安 	110、数字
+    城管、省 	12345、无锡市 	12345 	等多个第三方系统。
+- requires_human_review: true
+
+### JY-001:CAND-079
+- tender_id: JY-001
+- requirement_text: 12345智能知识库应优化升级12345知识库系统,构建完善、标准的知识辅助服务体系,支持多种格式附件上传,提供知识库采编、知识检索、知识收藏等。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":24,"end":24}
+- span: {"clause":"5.2.5.6","paragraph_start":738,"paragraph_end":739,"page_start":24,"page_end":24}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"23453a0d5b91f6d179d84a3ec738fd238a1930ddb914d5b8cc051f700b3b16c7","historical_source_span_hash":"500791fb6ac159f8dbb540b7632e90c68bd21978dd3ee45314a50185824deb59","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.5.6","paragraph_start":738,"paragraph_end":739,"page_start":24,"page_end":24},"source_page":{"start":24,"end":24}}
+- source_excerpt: 
+
+    优化升级 	12345 	知识库系统，构建完善、标准的知识辅助服务体系。支持多种格式附
+    件上传，提供知识库采编、知识检索、知识收藏等。
+- requires_human_review: true
+
+### JY-001:CAND-080
+- tender_id: JY-001
+- requirement_text: 12345数据库升级应通过架构升级、数据结构优化、查询性能优化、历史数据迁移,保证业务连续的基础上,提升数据库整体性能,升级后整体性能应满足以下指标要求:数据服务类接口响应时间需<=1秒,常规页面展示响应时间需<=3秒,事件类数据查询时间<1秒,统计分析类查询响应时间需<=10秒。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":24,"end":24}
+- span: {"clause":"5.2.5.7","paragraph_start":741,"paragraph_end":744,"page_start":24,"page_end":24}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"a6e22b6e17c6da690c1c76e7e6a9e1a2283ee5da5bda71dac67fc7d92328275b","historical_source_span_hash":"3d9034d47e6dcf8b30b6d63016dfde61b43515f9d2e7877a578327b8fd8ac94e","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.5.7","paragraph_start":741,"paragraph_end":744,"page_start":24,"page_end":24},"source_page":{"start":24,"end":24}}
+- source_excerpt: 
+
+    升级数据库，通过架构升级、数据结构优化、查询性能优化、历史数据迁移，保证业
+    务连续的基础上，提升数据库整体性能。升级后整体性能应满足一下指标要求：
+    数据服务类接口响应时间需<=1 	秒。常规页面展示响应时间需<=3 	秒。
+    数据查询：事件类数据查询时间<1 	秒。统计分析类查询响应时间需<=10 	秒。
+- requires_human_review: true
+
+### JY-001:CAND-081
+- tender_id: JY-001
+- requirement_text: AR实景系统标签管理应支持根据标签形态设置定点标签、矢量标签、区域标签三大类,支持在高点视频画面中添加、修改、删除、关注标签,支持对标签的图标形状修改,支持对标签的图标颜色修改。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":24,"end":24}
+- span: {"clause":"5.2.6.1","paragraph_start":752,"paragraph_end":756,"page_start":24,"page_end":24}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"b616530326bc6639aca9a8c8c1447518fb61ff782bb9dbdac6f573f4a7cc7ccf","historical_source_span_hash":"4ceb6f80d46582c1e06d0d53db6a0bf76bfe125ac93c31bdbce2064ee56f3d6b","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":752,"paragraph_end":756,"page_start":24,"page_end":24},"source_page":{"start":24,"end":24}}
+- source_excerpt: 
+
+    根据标签形态可设置定点标签、矢量
+    标签、区域标签三大类，支持在高点
+    视频画面中添加、修改、删除、关注
+    标签。支持对标签的图标形状修改。
+    支持对标签的图标颜色修改。
+- requires_human_review: true
+
+### JY-001:CAND-082
+- tender_id: JY-001
+- requirement_text: 标签展示应对视频画面中重点位置、区域、设备进行标签标注,进而直观展示视频画面区域内有效信息、属性和特征。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":24,"end":24}
+- span: {"clause":"5.2.6.1","paragraph_start":759,"paragraph_end":761,"page_start":24,"page_end":24}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"8976ab8ae43f7dd47145a23a054c7ca867b9ec704d01066af573f1d1cb5895eb","historical_source_span_hash":"169e7e6d14c61a221080fcc395cf3e898af6e2beb09d571b20826872f50981ce","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":759,"paragraph_end":761,"page_start":24,"page_end":24},"source_page":{"start":24,"end":24}}
+- source_excerpt: 
+
+    对视频画面中重点位置、区域、设备
+    进行标签标注，进而直观展示视频画
+    面区域内有效信息、属性和特征。
+- requires_human_review: true
+
+### JY-001:CAND-083
+- tender_id: JY-001
+- requirement_text: 标签同步应支持全景视频画面中添加的所有标签自动同步至特写球机画面中,同时也支持特写球机画面中添加的标签自动同步到全景视频画面中,并且双向同步的标签依旧保持精准的坐标位置,可实现远距离精准打标签。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":25,"end":25}
+- span: {"clause":"5.2.6.1","paragraph_start":772,"paragraph_end":777,"page_start":25,"page_end":25}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"5c6c558dfff342c33b77f3719666a575dd43cde2fed98b7f036b0c7cee5b3ed6","historical_source_span_hash":"f69dbabafc544c8704d115b12a51c2e624b9d8e9216aa8b724e4ca1fab6a45fe","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":772,"paragraph_end":777,"page_start":25,"page_end":25},"source_page":{"start":25,"end":25}}
+- source_excerpt: 
+
+    支持全景视频画面中添加的所有标
+    签自动同步至特写球机画面中，同时
+    也支持特写球机画面中添加的标签
+    自动同步到全景视频画面中，并且双
+    向同步的标签依旧保持精准的坐标
+    位置，可实现远距离精准打标签。
+- requires_human_review: true
+
+### JY-001:CAND-084
+- tender_id: JY-001
+- requirement_text: AR算法引擎应支持通过中心平台实现高点实景视频打标签功能,前端产品SDK协议接入平台,实现标签随动功能。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":25,"end":25}
+- span: {"clause":"5.2.6.1","paragraph_start":781,"paragraph_end":783,"page_start":25,"page_end":25}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"193503e1b6fe0b879982cb42cf84be97d030796703df70454169b63a510d75f8","historical_source_span_hash":"7fc7518c873e3f83881807996a6eee09c5c75c1e8f85260feddc5fcdd4e2a4b0","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":781,"paragraph_end":783,"page_start":25,"page_end":25},"source_page":{"start":25,"end":25}}
+- source_excerpt: 
+
+    支持通过中心平台实现高点实景视
+    频打标签功能，前端产品 	SDK 	协议接
+    入平台，实现标签随动功能；
+- requires_human_review: true
+
+### JY-001:CAND-085
+- tender_id: JY-001
+- requirement_text: 视频标签应支持以画中画方式随时调阅、查看任一标签名称和视频。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":25,"end":25}
+- span: {"clause":"5.2.6.1","paragraph_start":787,"paragraph_end":788,"page_start":25,"page_end":25}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"bc4ffd21e8d3a49a4f206895868838125df87038997c775f06f4fd0334f6a8ba","historical_source_span_hash":"bc4ffd21e8d3a49a4f206895868838125df87038997c775f06f4fd0334f6a8ba","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":787,"paragraph_end":788,"page_start":25,"page_end":25},"source_page":{"start":25,"end":25}}
+- source_excerpt: 
+
+    视频标签 支持以画中画方式随时调阅、查看任
+    一标签名称和视频。 1 	项
+- requires_human_review: true
+
+### JY-001:CAND-086
+- tender_id: JY-001
+- requirement_text: 卡口标签应在全景视频中标注卡口标签,选择要添加的监控点名称,标注完成后可以对标注好的标签查看标签名称、实时监控视频、车流量统计分析、基本信息,过车信息可以查看历史抓拍、历史违章,以画中画方式在全景视频中显示。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":25,"end":25}
+- span: {"clause":"5.2.6.1","paragraph_start":790,"paragraph_end":796,"page_start":25,"page_end":25}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"8e7f21d1fff86042dae08f2dc92457c2c410cd1fbd7e82ab3dc6a4d865598275","historical_source_span_hash":"ed4f785e414fc51e0eb303af2661bff8c8d35fccef7ffd33d6a266b13845887c","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":790,"paragraph_end":796,"page_start":25,"page_end":25},"source_page":{"start":25,"end":25}}
+- source_excerpt: 
+
+    在全景视频中标注卡口标签，选择要
+    添加的监控点名称，标注完成后可以
+    对标注好的标签查看标签名称、实时
+    监控视频、车流量统计分析、基本信
+    息，过车信息可以查看历史抓拍、历
+    史违章，以画中画方式在全景视频中
+    显示。
+- requires_human_review: true
+
+### JY-001:CAND-087
+- tender_id: JY-001
+- requirement_text: 人脸标签应在全景视频中标注人脸标签,选择要添加的监控点名称,标注完成后可以对标注好的标签查看标签名称、实时监控视频、人脸抓拍统计分析、基本信息,人员信息可以查看人脸历史抓拍、人脸历史黑名单报警,以画中画方式在全景视频中显示。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":25,"end":25}
+- span: {"clause":"5.2.6.1","paragraph_start":799,"paragraph_end":805,"page_start":25,"page_end":25}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"763121af0d3879ed1416690ff24796cde7af4dadf2e8bca80aa697f7d517ca62","historical_source_span_hash":"bd1ccd7f6cee0ad42517013bdfc9757cc82ba8ce4d1f75a1f17ea034adb262ac","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":799,"paragraph_end":805,"page_start":25,"page_end":25},"source_page":{"start":25,"end":25}}
+- source_excerpt: 
+
+    在全景视频中标注人脸标签，选择要
+    添加的监控点名称，标注完成后可以
+    对标注好的标签查看标签名称、实时
+    监控视频、人脸抓拍统计分析、基本
+    信息，人员信息可以查看人脸历史抓
+    拍、人脸历史黑名单报警，以画中画
+    方式在全景视频中显示。
+- requires_human_review: true
+
+### JY-001:CAND-088
+- tender_id: JY-001
+- requirement_text: 客流量标签应支持人流量数据统计标签,在标签上展示保有量、进客量、出客量、人流密度数据、人流量数据或人流密度预警信息等。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":25,"end":25}
+- span: {"clause":"5.2.6.1","paragraph_start":808,"paragraph_end":811,"page_start":25,"page_end":25}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"67960bc4f570210c6fb759f876e17a10b3e07f835dcc6bf38f0865dfd9623e35","historical_source_span_hash":"e479c575858dc70cd99221287398dede8f7a913adfafc6582d07483fc769b0b5","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":808,"paragraph_end":811,"page_start":25,"page_end":25},"source_page":{"start":25,"end":25}}
+- source_excerpt: 
+
+    支持人流量数据统计标签，在标签上
+    展示保有量、进客量、出客量、人流
+    密度数据、人流量数据或人流密度预
+    警信息等。
+- requires_human_review: true
+
+### JY-001:CAND-089
+- tender_id: JY-001
+- requirement_text: 区域标签应在视频画面中可以任意画线做图形框定和信息标注,并可以添加监控视频,主要用来标识封闭区间,办公区域,重点关注区域等。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":26,"end":26}
+- span: {"clause":"5.2.6.1","paragraph_start":825,"paragraph_end":828,"page_start":26,"page_end":26}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"a2a373a36a472b474514eb8f45085b617a2c983e48f53cf2c2f7a0848ff79c37","historical_source_span_hash":"e3fab1e87bffc9f3f376d1354470c0f11c1dbe43887f714d5e232c5992d52624","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":825,"paragraph_end":828,"page_start":26,"page_end":26},"source_page":{"start":26,"end":26}}
+- source_excerpt: 
+
+    在视频画面中可以任意画线做图形
+    框定和信息标注，并可以添加监控视
+    频，主要用来标识封闭区间，办公区
+    域，重点关注区域等
+- requires_human_review: true
+
+### JY-001:CAND-090
+- tender_id: JY-001
+- requirement_text: 其他标签应支持在全景视频中标注商场标签、酒店标签、厕所标签、景区标签、公交站标签、设备配电箱标签、路灯标签、井盖标签、垃圾桶标签等各类标签。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":26,"end":26}
+- span: {"clause":"5.2.6.1","paragraph_start":831,"paragraph_end":834,"page_start":26,"page_end":26}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"05d3f68c38647128918332e981a5842bb9b4340086866f63ed6703902f22a06a","historical_source_span_hash":"05d3f68c38647128918332e981a5842bb9b4340086866f63ed6703902f22a06a","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":831,"paragraph_end":834,"page_start":26,"page_end":26},"source_page":{"start":26,"end":26}}
+- source_excerpt: 
+
+    支持在全景视频中标注商场标签、酒
+    店标签、厕所标签、景区标签、公交
+    站标签、设备配电箱标签、路灯标签、
+    井盖标签、垃圾桶标签等各类标签。
+- requires_human_review: true
+
+### JY-001:CAND-091
+- tender_id: JY-001
+- requirement_text: 实时预览应支持对相对位置较高的视频以及视野范围内的低点视频同步预览,在高点视频中以画中画形式展示低点视频画面,支持同时预览多个标签的关联视频,重点低点视频可进行放大查看。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":26,"end":26}
+- span: {"clause":"5.2.6.1","paragraph_start":839,"paragraph_end":844,"page_start":26,"page_end":26}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"ffda057819a2d60be284b4ebd51d04b58f22e1c27a65cad928a36bcbede42bba","historical_source_span_hash":"ee3060ea079e66c2ad0e0dd2d9bed9d6d72287bae0553c399d81aa5c5664b684","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":839,"paragraph_end":844,"page_start":26,"page_end":26},"source_page":{"start":26,"end":26}}
+- source_excerpt: 
+
+    支持对相对位置较高的视频以及视
+    野范围内的低点视频同步预览，在高
+    点视频中以画中画形式展示低点视
+    频画面，支持同时预览多个标签的关
+    联视频，重点低点视频可进行放大查
+    看。
+- requires_human_review: true
+
+### JY-001:CAND-092
+- tender_id: JY-001
+- requirement_text: 录像回放应支持对实景地图的高低点视频进行录像存储和联动回放,回放AR高点录像的同时,录像画面也会携带标签信息,点击对应的标签信息,系统会同步回放对应时间内低点资源的录像,以画中画的方式进行呈现。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":26,"end":26}
+- span: {"clause":"5.2.6.1","paragraph_start":847,"paragraph_end":852,"page_start":26,"page_end":26}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"996e044e88ebbeb2f723c3a892b57031d1253f7170e8faa4162fce2fadf6e4ba","historical_source_span_hash":"a8aa5db7d65dc93f38e7cc708e93cac90b32c830c5d53040b5ab492704d93680","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":847,"paragraph_end":852,"page_start":26,"page_end":26},"source_page":{"start":26,"end":26}}
+- source_excerpt: 
+
+    支持对实景地图的高低点视频进行
+    录像存储和联动回放，回放 	AR 	高点
+    录像的同时，录像画面也会携带标签
+    信息，点击对应的标签信息，系统会
+    同步回放对应时间内低点资源的录
+    像，以画中画的方式进行呈现。
+- requires_human_review: true
+
+### JY-001:CAND-093
+- tender_id: JY-001
+- requirement_text: 视频轮巡应支持用户根据实际场景需要,配置对应的视频轮巡预案,对重点关注的视频点位进行轮播,减少操作人员频繁的视频操作,提高视频巡逻效率。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":26,"end":26}
+- span: {"clause":"5.2.6.1","paragraph_start":855,"paragraph_end":858,"page_start":26,"page_end":26}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"0311659a0940325bd1c956e209f693086eb2a424e713779d43266aaa3d950204","historical_source_span_hash":"2c3ae87f22a8c6646e8c2f891d1e9f2fc5c435fb1e45a45aab8304231ea8f55f","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":855,"paragraph_end":858,"page_start":26,"page_end":26},"source_page":{"start":26,"end":26}}
+- source_excerpt: 
+
+    支持用户根据实际场景需要，配置对
+    应的视频轮巡预案，对重点关注的视
+    频点位进行轮播，减少操作人员频繁
+    的视频操作，提高视频巡逻效率。
+- requires_human_review: true
+
+### JY-001:CAND-094
+- tender_id: JY-001
+- requirement_text: 高高联动应支持多个AR高点进行联动切换,主要满足室外大范围视场切换或者室内室外相互切换的场景。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":26,"end":26}
+- span: {"clause":"5.2.6.1","paragraph_start":864,"paragraph_end":866,"page_start":26,"page_end":26}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"29ea1a0a7110c7548ae8194c0ccda3c2bd5afef26436d645d9e49ae67856c803","historical_source_span_hash":"454bf8735403b7b5a95a247e48013d85de04d12282aa74c954ae316c64ce6881","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":864,"paragraph_end":866,"page_start":26,"page_end":26},"source_page":{"start":26,"end":26}}
+- source_excerpt: 
+
+    支持多个 	AR 	高点进行联动切换，主
+    要满足室外大范围视场切换或者室
+    内室外相互切换的场景
+- requires_human_review: true
+
+### JY-001:CAND-095
+- tender_id: JY-001
+- requirement_text: 高低联动应支持通过AR高点视频全局俯瞰、低点视频标签化展示的高低联动模式进行联动监控,可以通过标记的物联感知设备、地理要素信息、安保警力资源等各类标签详细了解细节信息。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":26,"end":26}
+- span: {"clause":"5.2.6.1","paragraph_start":869,"paragraph_end":873,"page_start":26,"page_end":26}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"388b292b684917254a9fb801ac72142f5332bd47aef663be5dce67843366913a","historical_source_span_hash":"1f2f98b78ddceb5c8629dc6d1505567ee04abfec7bf333c9bb3540bd3e9243b9","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":869,"paragraph_end":873,"page_start":26,"page_end":26},"source_page":{"start":26,"end":26}}
+- source_excerpt: 
+
+    支持通过 	AR 	高点视频全局俯瞰、低
+    点视频标签化展示的高低联动模式
+    进行联动监控，可以通过标记的物联
+    感知设备、地理要素信息、安保警力
+    资源等各类标签详细了解细节信息
+- requires_human_review: true
+
+### JY-001:CAND-096
+- tender_id: JY-001
+- requirement_text: 低高联动应支持在报警列表中选择低点标签的报警信息切换图标,切换到报警所属的高点视频画面,球机可自动转向当前报警画面并放大显示,需提供第三方权威机构出具的检测报告扫描件。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":27,"end":27}
+- span: {"clause":"5.2.6.1","paragraph_start":879,"paragraph_end":884,"page_start":27,"page_end":27}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"34052739cef59cba75a61d7d38b28f98cc89d63fe48aa3b12329d1b44ba90446","historical_source_span_hash":"b95f79ed8df55e3d46b6bde3170c7a020ff881651d8c3b5c09cf38a417694879","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":879,"paragraph_end":884,"page_start":27,"page_end":27},"source_page":{"start":27,"end":27}}
+- source_excerpt: 
+
+    支持在报警列表中选择低点标签的
+    报警信息切换图标，切换到报警所属
+    的高点视频画面，球机可自动转向当
+    前报警画面并放大显示。（需提供第
+    三方权威机构出具的检测报告扫描
+    件）
+- requires_human_review: true
+
+### JY-001:CAND-097
+- tender_id: JY-001
+- requirement_text: 鹰眼全景细节联动应在鹰眼全景视频画面中支持联动调用细节球机,包括3D定位、移动目标跟踪,在全景画面保持不变动的情况下,使用球机快速放大相关细节并跟踪目标。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":27,"end":27}
+- span: {"clause":"5.2.6.1","paragraph_start":888,"paragraph_end":892,"page_start":27,"page_end":27}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"63ec787146c4959619d89a50274e52133624dcbf7edf9cf76531594cdb57209d","historical_source_span_hash":"b1cfb073905cf618bc4816642556b8bc584c8d4590a66b1a268e071c04be0e7c","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":888,"paragraph_end":892,"page_start":27,"page_end":27},"source_page":{"start":27,"end":27}}
+- source_excerpt: 
+
+    在鹰眼全景视频画面中支持联动调
+    用细节球机，包括 	3D 	定位、移动目
+    标跟踪。在全景画面保持不变动的情
+    况下，使用球机快速放大相关细节并
+    跟踪目标
+- requires_human_review: true
+
+### JY-001:CAND-098
+- tender_id: JY-001
+- requirement_text: 车辆布控报警联动应支持在AR实景地图中展示实时车辆抓拍信息以及车辆黑名单报警结果,报警信息包括车辆图片、车牌、车牌颜色、布控地点、布控时间、布控原因等。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":27,"end":27}
+- span: {"clause":"5.2.6.1","paragraph_start":898,"paragraph_end":902,"page_start":27,"page_end":27}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"53c4b522996a79471f86c4f89c87c24e838cb98100703b545af6f9794f1804da","historical_source_span_hash":"9799ce4196ee43499bacd6f7fba45f736651d78e55e3f4104a1c0eb30fef6008","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":898,"paragraph_end":902,"page_start":27,"page_end":27},"source_page":{"start":27,"end":27}}
+- source_excerpt: 
+
+    支持在 	AR 	实景地图中展示实时车辆
+    抓拍信息以及车辆黑名单报警结果，
+    报警信息包括车辆图片、车牌、车牌
+    颜色、布控地点、布控时间、布控原
+    因等
+- requires_human_review: true
+
+### JY-001:CAND-099
+- tender_id: JY-001
+- requirement_text: 人脸布控报警联动应支持在AR实景地图中展示实时人脸抓拍信息以及人脸黑名单报警结果,报警信息包括人脸图片、相似度百分比、姓名、抓拍时间、抓拍地点、布控信息,布控信息包括人物名称、证件号码、布控人、布控原因等。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":27,"end":27}
+- span: {"clause":"5.2.6.1","paragraph_start":906,"paragraph_end":911,"page_start":27,"page_end":27}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"1e1e03f4d7e48a190d017b74bf6e86821db7d00e399bd0c06345370ff855247a","historical_source_span_hash":"a03f870fbb90bfa99b6e33e0166e65d9af916bd2873150d5d4e661c4152a6946","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":906,"paragraph_end":911,"page_start":27,"page_end":27},"source_page":{"start":27,"end":27}}
+- source_excerpt: 
+
+    支持在 	AR 	实景地图中展示实时人脸
+    抓拍信息以及人脸黑名单报警结果，
+    报警信息包括人脸图片、相似度百分
+    比、姓名、抓拍时间、抓拍地点、布
+    控信息，布控信息包括人物名称、证
+    件号码、布控人、布控原因等
+- requires_human_review: true
+
+### JY-001:CAND-100
+- tender_id: JY-001
+- requirement_text: 目标跟踪应支持手动跟踪移动目标功能,用户可以在全景画面中手动框选一个移动目标(人、车等),鹰眼的细节球机会实时对该目标进行跟踪。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":27,"end":27}
+- span: {"clause":"5.2.6.1","paragraph_start":914,"paragraph_end":917,"page_start":27,"page_end":27}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"4c4d0beff7c6bebfee6acc746eb8a84ff90ed9b60ff1371a620b58b8df491c02","historical_source_span_hash":"5250fc509fa33022dff38c9daf836ae1ed2650d0145a4288c85e135c6f095773","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":914,"paragraph_end":917,"page_start":27,"page_end":27},"source_page":{"start":27,"end":27}}
+- source_excerpt: 
+
+    支持手动跟踪移动目标功能，用户可
+    以在全景画面中手动框选一个移动
+    目标（人、车等），鹰眼的细节球机
+    会实时对该目标进行跟踪
+- requires_human_review: true
+
+### JY-001:CAND-101
+- tender_id: JY-001
+- requirement_text: AR场景授权应接入AR高空摄像机,按照接入路数收费8路。
+- category: contractual
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":27,"end":27}
+- span: {"clause":"5.2.6.1","paragraph_start":923,"paragraph_end":924,"page_start":27,"page_end":27}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"57ce1a773bceb0a177ee1452baffb3e66c7a259ec3abde2663ae7af7f153aac5","historical_source_span_hash":"11e2705469d180106096e7032efdadb2a7921671dafb975bf44a73dc4dd26136","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":923,"paragraph_end":924,"page_start":27,"page_end":27},"source_page":{"start":27,"end":27}}
+- source_excerpt: 
+
+    接入 	AR 	高空摄像机，按照接入路数
+    收费 8 	路
+- requires_human_review: true
+
+### JY-001:CAND-102
+- tender_id: JY-001
+- requirement_text: 运管中心应提供平台运行环境管理、运行状态管理的统一入口,提供运行环境管理、运行状态管理等功能,使安装部署、数据备份、授权管理、告警信息查看、问题追溯等。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":28,"end":28}
+- span: {"clause":"5.2.6.1","paragraph_start":938,"paragraph_end":942,"page_start":28,"page_end":28}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"5388b58b4c32cb4ea3736cecdf045217a4cd1fdfbdee9a517caacda338f63a4b","historical_source_span_hash":"1bb495d7af8dc3235b7a53b46f802688d8cb232a505c79eb5a812144030f8a53","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":938,"paragraph_end":942,"page_start":28,"page_end":28},"source_page":{"start":28,"end":28}}
+- source_excerpt: 
+
+    平台运行环境管理、运行状态管理的
+    统一入口，提供运行环境管理、运行
+    状态管理等功能，使安装部署、数据
+    备份、授权管理、告警信息查看、问
+    题追溯等
+- requires_human_review: true
+
+### JY-001:CAND-103
+- tender_id: JY-001
+- requirement_text: 视频门户首页应包括经典首页主题、视频应用主题、智能应用主题,包含常用应用、设备统计、公告、收藏点位等模块,同时提供快捷导航、下载、系统设置、首页切换、登录管理等功能。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":28,"end":28}
+- span: {"clause":"5.2.6.1","paragraph_start":950,"paragraph_end":954,"page_start":28,"page_end":28}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"fc4912f6bd179224d59ca11e6ce650077cd2d9a30bd142018ab9270fc899ae29","historical_source_span_hash":"2f155d1a08e43df92f369d26c29606b218efc2c111ffda4f6ed1031cbd6267d9","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":950,"paragraph_end":954,"page_start":28,"page_end":28},"source_page":{"start":28,"end":28}}
+- source_excerpt: 
+
+    门户首页包括经典首页主题、视频应
+    用主题、智能应用主题，包含常用应
+    用、设备统计、公告、收藏点位等模
+    块，同时提供快捷导航、下载、系统
+    设置、首页切换、登录管理等功能。
+- requires_human_review: true
+
+### JY-001:CAND-104
+- tender_id: JY-001
+- requirement_text: 实时预览主要用于视频的实时查看,其中可以通过配置视图、轮巡、广播分组等实现不同的视频预览方式。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":28,"end":28}
+- span: {"clause":"5.2.6.1","paragraph_start":957,"paragraph_end":959,"page_start":28,"page_end":28}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"4ce89278d285c918e38faa7d5edfa6a9f6e9febe8c97a31565d536863fc6ef1d","historical_source_span_hash":"6d58be27cdb8e46cf2d3d1163b9acf4fdcb99ee49301eb993c13bd53610a371f","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":957,"paragraph_end":959,"page_start":28,"page_end":28},"source_page":{"start":28,"end":28}}
+- source_excerpt: 
+
+    主要用于视频的实时查看，其中可以
+    通过配置视图、轮巡、广播分组等实
+    现不同的视频预览方式。
+- requires_human_review: true
+
+### JY-001:CAND-105
+- tender_id: JY-001
+- requirement_text: 录像回放主要应用于查看历史视频信息,可以通过不同的方式查看录像,且可以实现录像的下载、剪切等操作。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":28,"end":28}
+- span: {"clause":"5.2.6.1","paragraph_start":962,"paragraph_end":965,"page_start":28,"page_end":28}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"24052aa7e1d79d088e43a83880a089713ca5403b1407531a1daf5d3e78cc13e7","historical_source_span_hash":"b1f4ce576a117f2aafee286a3c9d919707ee0a524baa0ab0e382c1943c502cc9","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":962,"paragraph_end":965,"page_start":28,"page_end":28},"source_page":{"start":28,"end":28}}
+- source_excerpt: 
+
+    录像回放主要应用于查看历史视频
+    信息，可以通过不同的方式查看录
+    像，且可以实现录像的下载、剪切等
+    操作。
+- requires_human_review: true
+
+### JY-001:CAND-106
+- tender_id: JY-001
+- requirement_text: 电视墙应支持画面按照1画面、4画面、6画面、8画面、9画面分割,同时支持画面拼接取消,画面支持开窗与漫游,并可放大至整个电视墙。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":28,"end":28}
+- span: {"clause":"5.2.6.1","paragraph_start":968,"paragraph_end":971,"page_start":28,"page_end":28}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"c7b8a9e8e8a9dc13e6757d42f876310fd8e1cc7ccc3631f558286368aab6b554","historical_source_span_hash":"cac75e3fa476377802a3147d202e797aadb92e89e937af3908285ff0f6916702","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":968,"paragraph_end":971,"page_start":28,"page_end":28},"source_page":{"start":28,"end":28}}
+- source_excerpt: 
+
+    支持画面按照 	1 	画面、4 	画面、6 	画
+    面、8 	画面、9 	画面分割，同时支持
+    画面拼接取消。画面支持开窗与漫
+    游，并可放大至整个电视墙。
+- requires_human_review: true
+
+### JY-001:CAND-107
+- tender_id: JY-001
+- requirement_text: 视频运维应可视化展示系统设备运行情况,支持展示所选区域下监控点总数、监控点在线率、图像正常率、录像完整率等数据概况。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":28,"end":28}
+- span: {"clause":"5.2.6.1","paragraph_start":974,"paragraph_end":977,"page_start":28,"page_end":28}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"293b34129b6c70ade061932b35cee5896aa48c97a3093067e2a61a74d5647156","historical_source_span_hash":"1fb08f8e4117efb48b8fe434fdde6d64166bc331e390193b7cf4ac9f9afeb738","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":974,"paragraph_end":977,"page_start":28,"page_end":28},"source_page":{"start":28,"end":28}}
+- source_excerpt: 
+
+    可视化展示系统设备运行情况，支持
+    展示所选区域下监控点总数、监控点
+    在线率、图像正常率、录像完整率等
+    数据概况
+- requires_human_review: true
+
+### JY-001:CAND-108
+- tender_id: JY-001
+- requirement_text: 视频应用客户端应提供视频预览客户端。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":28,"end":28}
+- span: {"clause":"5.2.6.1","paragraph_start":980,"paragraph_end":980,"page_start":28,"page_end":28}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"43c1f6c110ddfb844b7bdc0eed6981db65e3fe8018b8644e0be7850ef0425e05","historical_source_span_hash":"43c1f6c110ddfb844b7bdc0eed6981db65e3fe8018b8644e0be7850ef0425e05","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":980,"paragraph_end":980,"page_start":28,"page_end":28},"source_page":{"start":28,"end":28}}
+- source_excerpt: 
+
+    户端 提供视频预览客户端 	1 	项
+- requires_human_review: true
+
+### JY-001:CAND-109
+- tender_id: JY-001
+- requirement_text: 视频接入管理应通过视频接入管理服务接入、汇聚各类视频资源,构建上层的基础应用、智能分析等视频能力,包含10万路视频接入授权。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":28,"end":28}
+- span: {"clause":"5.2.6.1","paragraph_start":985,"paragraph_end":988,"page_start":28,"page_end":28}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"cf8656a189101752df24b9fc81f6580f5c1ed15e45f8968f9e6c24bdc70e6f45","historical_source_span_hash":"032331290d62134ccfc733a09b2792902b8ca1c90d8320ddf29a8b663a4e3749","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":985,"paragraph_end":988,"page_start":28,"page_end":28},"source_page":{"start":28,"end":28}}
+- source_excerpt: 
+
+    通过视频接入管理服务接入、汇聚各
+    类视频资源，构建上层的基础应用、
+    智能分析等视频能力，包含 	10 	万路
+    视频接入授权
+- requires_human_review: true
+
+### JY-001:CAND-110
+- tender_id: JY-001
+- requirement_text: 提供视频广场功能,展现视频资源的点位情况、基本能力及场所位置等,通过视频广场可以了解平台的城市视频资源基本情况及分布情况,从而实现快速定位所需要视频资源。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":29,"end":29}
+- span: {"clause":"5.2.6.1","paragraph_start":1000,"paragraph_end":1004,"page_start":29,"page_end":29}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"30a3e0080de458fd56bd8ef250839e1a071c8d7d1e5f22bf18f72d0012ca18e1","historical_source_span_hash":"a174d0f02ed046fb17ac97ffffbb1f5f1405a6fb5420dff6e9d318fb240199b9","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":1000,"paragraph_end":1004,"page_start":29,"page_end":29},"source_page":{"start":29,"end":29}}
+- source_excerpt: 
+
+    展现视频资源的点位情况、基本能力
+    及场所位置等，通过视频广场可以了
+    解平台的城市视频资源基本情况及
+    分布情况，从而实现快速定位所需要
+    视频资源。
+- requires_human_review: true
+
+### JY-001:CAND-111
+- tender_id: JY-001
+- requirement_text: 视频广场支持重点区域列表展示、重点区域地图展示、区域关联场所下点位展示,支持点击区域卡片进入区域详情页面,支持点位查看更多进入区域详情页面,能够高亮显示已收藏的点位。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":29,"end":29}
+- span: {"clause":"5.2.6.1","paragraph_start":1005,"paragraph_end":1009,"page_start":29,"page_end":29}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"6493c5642feffe6c0b41d48da03462409c4d1a3067c6df7d082427f5de1f80ad","historical_source_span_hash":"c1f78479d463498a0753625422c7051f236824ee3f02b43e9ebd243178af63b5","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":1005,"paragraph_end":1009,"page_start":29,"page_end":29},"source_page":{"start":29,"end":29}}
+- source_excerpt: 
+
+    支持重点区域列表展示、重点区域地
+    图展示、区域关联场所下点位展示，
+    支持点击区域卡片进去区域详情页
+    面，支持点位查看更多进入区域详情
+    页面，能够高亮显示已收藏的点位。
+- requires_human_review: true
+
+### JY-001:CAND-112
+- tender_id: JY-001
+- requirement_text: 提供算法超市功能,为外部用户提供平台智能算法的展示和查看能力,了解平台的算法内容,并能结合自身业务需求,选择智能算法支撑业务开展。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":29,"end":29}
+- span: {"clause":"5.2.6.1","paragraph_start":1012,"paragraph_end":1015,"page_start":29,"page_end":29}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"fc650f29992648ca79d8723b9d93e80534b79915ee9bd720dc471e2bb2dcf9dd","historical_source_span_hash":"b99a7b5b4274d03e771c4dd7324c0dd575a18b453378c4415d2c05292cc35b70","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":1012,"paragraph_end":1015,"page_start":29,"page_end":29},"source_page":{"start":29,"end":29}}
+- source_excerpt: 
+
+    为外部用户提供平台智能算法的展
+    示和查看能力，了解平台的算法内
+    容，并能结合自身业务需求，选择智
+    能算法支撑业务开展。
+- requires_human_review: true
+
+### JY-001:CAND-113
+- tender_id: JY-001
+- requirement_text: 提供点位搜索功能,通过点位搜索,实现视频资源在多种筛选条件下的快速搜索,并在电子地图上展示搜索结果。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":29,"end":29}
+- span: {"clause":"5.2.6.1","paragraph_start":1018,"paragraph_end":1020,"page_start":29,"page_end":29}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"0e1f73b99b9cc09f6cea79fdcbc36effa9b71e7a56c885bb219150158c903be3","historical_source_span_hash":"08e5b4511403eac6cf7265ef8950bdb6b709d860633b42562b1875ed7ca06e28","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":1018,"paragraph_end":1020,"page_start":29,"page_end":29},"source_page":{"start":29,"end":29}}
+- source_excerpt: 
+
+    通过点位搜索，实现视频资源在多种
+    筛选条件下的快速搜索，并在电子地
+    图上展示搜索结果。
+- requires_human_review: true
+
+### JY-001:CAND-114
+- tender_id: JY-001
+- requirement_text: 点位搜索支持直接通过主页面搜索按钮全量查询系统中点位、支持输入关键字匹配命中点位名称、别名、编号、用户名称、更新条件等信息查询。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":29,"end":29}
+- span: {"clause":"5.2.6.1","paragraph_start":1021,"paragraph_end":1024,"page_start":29,"page_end":29}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"2733acf4fb8e8b668d404e13e3269d72e413824ce0c168dbaec334ee06dee68c","historical_source_span_hash":"2733acf4fb8e8b668d404e13e3269d72e413824ce0c168dbaec334ee06dee68c","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":1021,"paragraph_end":1024,"page_start":29,"page_end":29},"source_page":{"start":29,"end":29}}
+- source_excerpt: 
+
+    支持直接通过主页面搜索按钮全量
+    查询系统中点位、支持输入关键字匹
+    配命中点位名称、别名、编号、用户
+    名称、更新条件等信息查询。
+- requires_human_review: true
+
+### JY-001:CAND-115
+- tender_id: JY-001
+- requirement_text: 提供标签中心功能,为用户提供丰富的视频点位标签能力,帮助用户更加高效的管理、使用视频点位资源,可以通过人工或者智能的方式,快速实现视频点位的通用属性、业务场景等标签的标注,能在电子地图、视频门户中快速筛选指定标签的视频源,能批量筛选指定标签的视频分配给指定用户,并提供完善的标签审批流程,以便规范、高效的开展点位标注工作。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":29,"end":29}
+- span: {"clause":"5.2.6.1","paragraph_start":1027,"paragraph_end":1036,"page_start":29,"page_end":29}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"396652f3e722719761cbf50695a11b93a96ae2a61dd1ea9907d3cecc7b9a2e6b","historical_source_span_hash":"6bfb15469377e906a58ca770332e7904e1f6c7fbe2ec9f73e34136d5abf7d565","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":1027,"paragraph_end":1036,"page_start":29,"page_end":29},"source_page":{"start":29,"end":29}}
+- source_excerpt: 
+
+    用户提供丰富的视频点位标签能力，
+    帮助用户更加高效的管理、使用视频
+    点位资源，可以通过人工或者智能的
+    方式，快速实现视频点位的通用属
+    性、业务场景等标签的标注，能在电
+    子地图、视频门户中快速筛选指定标
+    签的视频源，能批量筛选指定标签的
+    视频分配给指定用户，并提供完善的
+    标签审批流程，以便规范、高效的开
+    展点位标注工作。
+- requires_human_review: true
+
+### JY-001:CAND-116
+- tender_id: JY-001
+- requirement_text: 提供事件研判功能,提供预警研判处理的工作台,按最新上报事件处理,核验操作包括正报、误报,逐一进行事件的研判,对接江阴市市域社会治理现代化联勤联动指挥平台。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":30,"end":30}
+- span: {"clause":"5.2.6.1","paragraph_start":1047,"paragraph_end":1051,"page_start":30,"page_end":30}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"208466c8da9a6070113bec9ec660c395407097b7b6fad2a55be30176324ef1ad","historical_source_span_hash":"9fd5d73be0d2c39aaa88612e835bce9689d556f9269b1cab24c5a74ad041311a","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":1047,"paragraph_end":1051,"page_start":30,"page_end":30},"source_page":{"start":30,"end":30}}
+- source_excerpt: 
+
+    提供预警研判处理的工作台，按最新
+    上报事件处理，核验操作包括正报、
+    误报，逐一进行事件的研判，对接江
+    阴市市域社会治理现代化联勤联动
+    指挥平台
+- requires_human_review: true
+
+### JY-001:CAND-117
+- tender_id: JY-001
+- requirement_text: 提供运行管理功能,提供运行概览能力,帮助运维人员及管理人员了解平台整体运行情况,包括点位资源情况、任务执行情况、算力运行情况、算法使用情况、智能分析情况、事件输出情况、分析异常情况等。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":30,"end":30}
+- span: {"clause":"5.2.6.1","paragraph_start":1054,"paragraph_end":1059,"page_start":30,"page_end":30}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"6a651f392d0c2b6d54e56ff0035ceb0f807991565dfc05e76196fdc4b496433b","historical_source_span_hash":"edea07da64b08653c9ec6497171e8cb9b1980d71c315d16f3bff8f9942b85360","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":1054,"paragraph_end":1059,"page_start":30,"page_end":30},"source_page":{"start":30,"end":30}}
+- source_excerpt: 
+
+    提供运行概览能力，帮助运维人员及
+    管理人员了解平台整体运行情况，包
+    括点位资源情况、任务执行情况、算
+    力运行情况、算法使用情况、智能分
+    析情况、事件输出情况、分析异常情
+    况等
+- requires_human_review: true
+
+### JY-001:CAND-118
+- tender_id: JY-001
+- requirement_text: 提供平台管理功能,面向管理运维人员提供管理中心能力,对系统的运行进行管理维护,保障系统平稳、可靠、稳定的运转。平台管理包括系统管理和软件管理两个功能模块。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":30,"end":30}
+- span: {"clause":"5.2.6.1","paragraph_start":1062,"paragraph_end":1066,"page_start":30,"page_end":30}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"27803e9d07dc151218703f58c29b6f6c07f481c3b874bb78a9e8eb1a8230a3ff","historical_source_span_hash":"5c48fbf732c0d5996f26f724f86969c9f3ace6918efca17adc8e4199a234734b","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":1062,"paragraph_end":1066,"page_start":30,"page_end":30},"source_page":{"start":30,"end":30}}
+- source_excerpt: 
+
+    面向管理运维人员提供管理中心能
+    力，对系统的运行进行管理维护，保
+    障系统平稳、可靠、稳定的运转。平
+    台管理包括系统管理和软件管理两
+    个功能模块。
+- requires_human_review: true
+
+### JY-001:CAND-119
+- tender_id: JY-001
+- requirement_text: 构建视频数据资源池,主要包括视频点位数据、资源目录组织、场所分类、设备状态、场景、任务、事件等数据,基于视频资源的治理结果,构建统一的视频数据资源库,通过标准的视频数据资源描述规范,实现城市各类视频感知资源差异的屏蔽,以标准的、规范的视频资源描述对上层进行统一的应用支撑。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":30,"end":30}
+- span: {"clause":"5.2.6.1","paragraph_start":1073,"paragraph_end":1080,"page_start":30,"page_end":30}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"5cb9c382ac945093b568c29f58a008c5b06f3576323d3c14ab0bc086b0026f72","historical_source_span_hash":"84fb78f7ae4ce2eb57100e3899d1f49f5b8e85930c6fa2b3885f143c5ae07739","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":1073,"paragraph_end":1080,"page_start":30,"page_end":30},"source_page":{"start":30,"end":30}}
+- source_excerpt: 
+
+    主要包括视频点位数据、资源目录组
+    织、场所分类、设备状态、场景、任
+    务、事件等数据，基于视频资源的治
+    理结果，构建统一的视频数据资源
+    库，通过标准的视频数据资源描述规
+    范，实现城市各类视频感知资源差异
+    的屏蔽，以标准的、规范的视频资源
+    描述对上层进行统一的应用支撑
+- requires_human_review: true
+
+### JY-001:CAND-120
+- tender_id: JY-001
+- requirement_text: 构建业务数据资源池,主要基于政务数据、视频数据构建起统一的基础库,并结合上层应用需要,构建各类主题库、专题库、检索库、关系库、标签库等内容。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":30,"end":30}
+- span: {"clause":"5.2.6.1","paragraph_start":1084,"paragraph_end":1087,"page_start":30,"page_end":30}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"3646136e9ad6edfe2b85de8f8821bc4fe17de80582f2a4d6d592059bacd1d67f","historical_source_span_hash":"8db0749e704bef676f27ac841c696791e0cbf3c8c3d046c20433418494b24785","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":1084,"paragraph_end":1087,"page_start":30,"page_end":30},"source_page":{"start":30,"end":30}}
+- source_excerpt: 
+
+    主要基于政务数据、视频数据构建起
+    统一的基础库，并结合上层应用需
+    要，构建各类主题库、专题库、检索
+    库、关系库、标签库等内容。
+- requires_human_review: true
+
+### JY-001:CAND-121
+- tender_id: JY-001
+- requirement_text: 提供点位治理服务。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":30,"end":30}
+- span: {"clause":"5.2.6.1","paragraph_start":1089,"paragraph_end":1089,"page_start":30,"page_end":30}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"90f793fb1d1d52186f408308654b79feefb86a3822a4f0be8914f9a8306f20e4","historical_source_span_hash":"90f793fb1d1d52186f408308654b79feefb86a3822a4f0be8914f9a8306f20e4","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.1","paragraph_start":1089,"paragraph_end":1089,"page_start":30,"page_end":30},"source_page":{"start":30,"end":30}}
+- source_excerpt: 
+
+    44 	点位治理 	治理服务 	1 	项
+- requires_human_review: true
+
+### JY-001:CAND-122
+- tender_id: JY-001
+- requirement_text: 采购视频数据保护一体机1台,性能指标详见主要设备技术参数与性能指标。
+- category: contractual
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":31,"end":31}
+- span: {"clause":"5.2.6.2","paragraph_start":1100,"paragraph_end":1100,"page_start":31,"page_end":31}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"c265067f30aa4c2abc6e98c13f819698ff11d502b4b978ee16dae3b1517d4ae3","historical_source_span_hash":"c265067f30aa4c2abc6e98c13f819698ff11d502b4b978ee16dae3b1517d4ae3","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.2","paragraph_start":1100,"paragraph_end":1100,"page_start":31,"page_end":31},"source_page":{"start":31,"end":31}}
+- source_excerpt: 
+
+    1 	视频数据保护一体机 	详见主要设备技术参数与性能指标 	1 	台
+- requires_human_review: true
+
+### JY-001:CAND-123
+- tender_id: JY-001
+- requirement_text: 采购球型鹰眼A共3个,从4个候选点位中选择3个点位安装,性能指标详见主要设备技术参数与性能指标。
+- category: contractual
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":31,"end":31}
+- span: {"clause":"5.2.6.2","paragraph_start":1102,"paragraph_end":1107,"page_start":31,"page_end":31}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"75b4ee2a5542b71028d7061f89c24e10a08347053552bca5daaf5936252951b0","historical_source_span_hash":"48b65cf128e8735450161cbbad2ce85f8bc8603586f53ce61c54866fde7c5931","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.2","paragraph_start":1102,"paragraph_end":1107,"page_start":31,"page_end":31},"source_page":{"start":31,"end":31}}
+- source_excerpt: 
+
+    1 	球型鹰眼 	A 	详见主要设备技术参数与性能指标 	3 	个
+    详 见 球 型 鹰
+    眼 	A 	清单（4
+    个 点 位 选 	择
+    3 	个 点 位 安
+    装）
+- requires_human_review: true
+
+### JY-001:CAND-124
+- tender_id: JY-001
+- requirement_text: 采购球型鹰眼B共5个,从11个候选点位中选择5个点位安装,性能指标详见主要设备技术参数与性能指标。
+- category: contractual
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":31,"end":31}
+- span: {"clause":"5.2.6.2","paragraph_start":1108,"paragraph_end":1113,"page_start":31,"page_end":31}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"32ffdca979bdbdd55329a11d38d6441f0295bdf1bb7d90694704561af1f39ab7","historical_source_span_hash":"59520b3043eb1464d1c48bb3690c1cc501746a4bd5584facd1acb0bf610d629c","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.2","paragraph_start":1108,"paragraph_end":1113,"page_start":31,"page_end":31},"source_page":{"start":31,"end":31}}
+- source_excerpt: 
+
+    2 	球型鹰眼 	B 	详见主要设备技术参数与性能指标 	5 	个
+    详 见 球 型 鹰
+    眼 	B 	清单（11
+    个 点 位 选 	择
+    5 	个 点 位 安
+    装）
+- requires_human_review: true
+
+### JY-001:CAND-125
+- tender_id: JY-001
+- requirement_text: 租赁专线链路1项,租期5年,带宽VPN 50M。
+- category: contractual
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":31,"end":31}
+- span: {"clause":"5.2.6.2","paragraph_start":1114,"paragraph_end":1114,"page_start":31,"page_end":31}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"82568d694cf5c1677652f03d9229fb596b7a7f986a1d76c7b42714e8144a4d28","historical_source_span_hash":"82568d694cf5c1677652f03d9229fb596b7a7f986a1d76c7b42714e8144a4d28","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.2","paragraph_start":1114,"paragraph_end":1114,"page_start":31,"page_end":31},"source_page":{"start":31,"end":31}}
+- source_excerpt: 
+
+    3 	专线链路租赁 	5 	年 	VPN 	50M 	1 	项
+- requires_human_review: true
+
+### JY-001:CAND-126
+- tender_id: JY-001
+- requirement_text: 采购万兆多模光模块4个。
+- category: contractual
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":31,"end":31}
+- span: {"clause":"5.2.6.2","paragraph_start":1115,"paragraph_end":1115,"page_start":31,"page_end":31}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"158bd63c61e004de307cdec68feb1b9ad6b03baaa3a1532274416a3afc6081d9","historical_source_span_hash":"158bd63c61e004de307cdec68feb1b9ad6b03baaa3a1532274416a3afc6081d9","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.2","paragraph_start":1115,"paragraph_end":1115,"page_start":31,"page_end":31},"source_page":{"start":31,"end":31}}
+- source_excerpt: 
+
+    4 	光模块 	万兆多模 	4 	个
+- requires_human_review: true
+
+### JY-001:CAND-127
+- tender_id: JY-001
+- requirement_text: 租赁主干租纤2套,租期5年。
+- category: contractual
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":31,"end":31}
+- span: {"clause":"5.2.6.2","paragraph_start":1116,"paragraph_end":1116,"page_start":31,"page_end":31}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"d9d204807dda93a2b1b880c4ede2c176135303bde1d173a29880e8fa4e15dfbd","historical_source_span_hash":"d9d204807dda93a2b1b880c4ede2c176135303bde1d173a29880e8fa4e15dfbd","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.2","paragraph_start":1116,"paragraph_end":1116,"page_start":31,"page_end":31},"source_page":{"start":31,"end":31}}
+- source_excerpt: 
+
+    5 	主干租纤 	5 	年租纤 	2 	套
+- requires_human_review: true
+
+### JY-001:CAND-128
+- tender_id: JY-001
+- requirement_text: 提供点位施工服务8个,包括点位施工及5年运维。
+- category: implementation
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":31,"end":31}
+- span: {"clause":"5.2.6.2","paragraph_start":1117,"paragraph_end":1117,"page_start":31,"page_end":31}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"4aaf57a0115980355479c0f71274ec412977cc44fe182913961c05cb579bde13","historical_source_span_hash":"4aaf57a0115980355479c0f71274ec412977cc44fe182913961c05cb579bde13","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.2","paragraph_start":1117,"paragraph_end":1117,"page_start":31,"page_end":31},"source_page":{"start":31,"end":31}}
+- source_excerpt: 
+
+    6 	点位施工服务 	点位施工及 	5 	年运维 	8 	个
+- requires_human_review: true
+
+### JY-001:CAND-129
+- tender_id: JY-001
+- requirement_text: 采购辅材8套,包括配管、网线、电源线及配电箱。
+- category: contractual
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":31,"end":31}
+- span: {"clause":"5.2.6.2","paragraph_start":1118,"paragraph_end":1118,"page_start":31,"page_end":31}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"47e297ac88fb5153d349c1d8f6e073cb3aa18450165db90cf737cc94af81c367","historical_source_span_hash":"47e297ac88fb5153d349c1d8f6e073cb3aa18450165db90cf737cc94af81c367","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.2","paragraph_start":1118,"paragraph_end":1118,"page_start":31,"page_end":31},"source_page":{"start":31,"end":31}}
+- source_excerpt: 
+
+    7 	辅材 	配管、网线、电源线及配电箱 	8 	套
+- requires_human_review: true
+
+### JY-001:CAND-130
+- tender_id: JY-001
+- requirement_text: 支付高点安装租用费8个,包括铁塔或者高楼顶部租用费及电费,租期五年。
+- category: contractual
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":31,"end":31}
+- span: {"clause":"5.2.6.2","paragraph_start":1119,"paragraph_end":1119,"page_start":31,"page_end":31}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"7262e4a708df02559069570eaf0a5d3914f898095d13e774afbe94c5cecc30ec","historical_source_span_hash":"777d92fcf2858df606d486bf96aaf8a29c59939c142bff82520aac51209224cd","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.2","paragraph_start":1119,"paragraph_end":1119,"page_start":31,"page_end":31},"source_page":{"start":31,"end":31}}
+- source_excerpt: 
+
+    8 	高点安装租用费 	铁塔或者高楼顶部，租用费+电费 	8 	个 	五年费用
+- requires_human_review: true
+
+### JY-001:CAND-131
+- tender_id: JY-001
+- requirement_text: 采购防火墙1台,性能指标详见主要设备技术参数与性能指标。
+- category: contractual
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":31,"end":31}
+- span: {"clause":"5.2.6.2","paragraph_start":1120,"paragraph_end":1120,"page_start":31,"page_end":31}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"b9a7c3b1f5ae90ffb664554fd66e5cc98f986cffde8d045fc17bac71b006b053","historical_source_span_hash":"b9a7c3b1f5ae90ffb664554fd66e5cc98f986cffde8d045fc17bac71b006b053","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.2","paragraph_start":1120,"paragraph_end":1120,"page_start":31,"page_end":31},"source_page":{"start":31,"end":31}}
+- source_excerpt: 
+
+    9 	防火墙 	详见主要设备技术参数与性能指标 	1 	台
+- requires_human_review: true
+
+### JY-001:CAND-132
+- tender_id: JY-001
+- requirement_text: 球型鹰眼A摄像机需内置除湿器,可对样机内部进行除湿,除去玻璃罩上的水状附着物,需提供第三方权威机构出具的检测报告扫描件。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":33,"end":33}
+- span: {"clause":"5.2.6.3","paragraph_start":1179,"paragraph_end":1180,"page_start":33,"page_end":33}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"bdf55abef596c02ef70d4f38e0116968e3eef21cfb24d15e05cbb0b469daa524","historical_source_span_hash":"909d6b6fca2c5b801556af6ed994103fe12cba6dfa9e0e6d178f2483aad603eb","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1179,"paragraph_end":1180,"page_start":33,"page_end":33},"source_page":{"start":33,"end":33}}
+- source_excerpt: 
+
+    1、摄像机内置除湿器，可对样机内部进行除湿，除去玻璃罩上的水状附着物。（需
+    提供第三方权威机构出具的检测报告扫描件）
+- requires_human_review: true
+
+### JY-001:CAND-133
+- tender_id: JY-001
+- requirement_text: 球型鹰眼A需自带镜头,另配6个图像采集模块,可输出1路主视频图像和6路辅视频图像,可将辅视频图像进行无缝拼接,拼接后的辅视频图像水平视场角为270°,垂直视场角为80°。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":33,"end":33}
+- span: {"clause":"5.2.6.3","paragraph_start":1181,"paragraph_end":1183,"page_start":33,"page_end":33}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"2bba08366b7d23d07ea94dd01edf1844cb98cc6977eff2b7cc387ee98a0b46a4","historical_source_span_hash":"983d79d1691b0db2cd81b4f60eb976f11aa72b54283322ed2986f2e8450cbb20","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1181,"paragraph_end":1183,"page_start":33,"page_end":33},"source_page":{"start":33,"end":33}}
+- source_excerpt: 
+
+    2、自带镜头，另配 	6 	个图像采集模块，可输出 	1 	路主视频图像和 	6 	路辅视频图像。
+    可将辅视频图像进行无缝拼接，拼接后的辅视频图像：水平视场角为 	270°，垂直视场
+    角为 	80°。
+- requires_human_review: true
+
+### JY-001:CAND-134
+- tender_id: JY-001
+- requirement_text: 球型鹰眼A传感器类型需为【全景】1/1.8"progressive scan CMOS,【细节】1/1.8"progressive scan CMOS。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":33,"end":33}
+- span: {"clause":"5.2.6.3","paragraph_start":1184,"paragraph_end":1185,"page_start":33,"page_end":33}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"76388562320110aa66d789a952399593ef8c08e28e2be90b53af00a1d97ad6b8","historical_source_span_hash":"a0ce2c3d13ce8df1c4541f9a3949ccd9d5589f7c95a03fb8aa4cafeff45b476d","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1184,"paragraph_end":1185,"page_start":33,"page_end":33},"source_page":{"start":33,"end":33}}
+- source_excerpt: 
+
+    3、传感器类型:【全景】1/1.8＂progressive 	scan 	CMOS，	【细节】1/1.8＂progressive
+    scan 	CMOS。
+- requires_human_review: true
+
+### JY-001:CAND-135
+- tender_id: JY-001
+- requirement_text: 球型鹰眼A最低照度需满足:【全景】0.0005 Lux/F1.0(彩色),0.0001 Lux/F1.0(黑白);【细节】0.0005 Lux/F1.5(彩色),0.0001 Lux/F1.5(黑白),0 Lux with IR。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":33,"end":33}
+- span: {"clause":"5.2.6.3","paragraph_start":1186,"paragraph_end":1188,"page_start":33,"page_end":33}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"0082b2d761732084ae800c48035a38090ab5cbf07adbea9c14a5473bbff71eb6","historical_source_span_hash":"565e9995fa7f24ba81e00144537426c0a6f0daf9442b11823693d3a7be4bffbc","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1186,"paragraph_end":1188,"page_start":33,"page_end":33},"source_page":{"start":33,"end":33}}
+- source_excerpt: 
+
+    4、最低照度:
+    【全景】0.0005 	Lux/F1.0（彩色），0.0001 	Lux/F1.0（黑白）
+    【细节】0.0005 	Lux/F1.5（彩色），0.0001 	Lux/F1.5（黑白），0 	Lux 	with 	IR
+- requires_human_review: true
+
+### JY-001:CAND-136
+- tender_id: JY-001
+- requirement_text: 球型鹰眼A宽动态需满足:【全景】不支持,【细节】支持120 dB超宽动态。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":33,"end":33}
+- span: {"clause":"5.2.6.3","paragraph_start":1189,"paragraph_end":1189,"page_start":33,"page_end":33}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"0099f18473bb41d03d2fd08f6499be5914c3c8f477229a2d15a4b6c31279c54b","historical_source_span_hash":"af4440b25a6282119e81b71f334859c27deb752db6256e120691c13c50dc25a3","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1189,"paragraph_end":1189,"page_start":33,"page_end":33},"source_page":{"start":33,"end":33}}
+- source_excerpt: 
+
+    5、宽动态: 	【全景】不支持，【细节】支持 	120 	dB 	超宽动态
+- requires_human_review: true
+
+### JY-001:CAND-137
+- tender_id: JY-001
+- requirement_text: 球型鹰眼A视场角需满足:水平视场角60°~1.96°,垂直视场角35.8°~1.11°,对角线视场角67°~2.23°。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":33,"end":33}
+- span: {"clause":"5.2.6.3","paragraph_start":1192,"paragraph_end":1193,"page_start":33,"page_end":33}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"7de60d7e246ed54a53ac59a0b4e13e66cd2c399cce4aef72aa3ea36d62603d53","historical_source_span_hash":"ce9fae4ee48fa552cd118725a6b819d1ed737a9fcd9c79afa0a4760f1ad9e2e0","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1192,"paragraph_end":1193,"page_start":33,"page_end":33},"source_page":{"start":33,"end":33}}
+- source_excerpt: 
+
+    8、视场角:水平视场角：60°~1.96°，垂直视场角：35.8°~1.11°，对角线视场
+    角：67°~2.23°
+- requires_human_review: true
+
+### JY-001:CAND-138
+- tender_id: JY-001
+- requirement_text: 球型鹰眼A水平速度需满足:水平键控速度0.1°~210°/s,速度可设;水平预置点速度240°/s。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":34,"end":34}
+- span: {"clause":"5.2.6.3","paragraph_start":1230,"paragraph_end":1231,"page_start":34,"page_end":34}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"88d900211f2acb4fc0deb3e1ce765cb90286a3e810097fe7c66642951f87a2ae","historical_source_span_hash":"ccc1d8468d615ab6b180b9d29be3c6fcbab73b489d87c524960f717249bf8a50","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1230,"paragraph_end":1231,"page_start":34,"page_end":34},"source_page":{"start":34,"end":34}}
+- source_excerpt: 
+
+    13、水平速度: 	水平键控速度：0.1°~210°/s，速度可设；水平预置点速度：240°
+    /s
+- requires_human_review: true
+
+### JY-001:CAND-139
+- tender_id: JY-001
+- requirement_text: 球型鹰眼A需具备AR视频标签添加、修改、删除和标准等系列管理功能,支持视频画面中添加最多500个标签;标签类型包括警务站视频标签、建筑物视频标签、卡口视频标签、普通视频标签等。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":34,"end":34}
+- span: {"clause":"5.2.6.3","paragraph_start":1204,"paragraph_end":1206,"page_start":34,"page_end":34}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"94fcbfc540597f5cb66799ac8bd2591470e2ba543fc58747b5ec13616673e38c","historical_source_span_hash":"aa14d74f653012c2480b40bc76d0eb4f70ec220443f38d76ee1e54f0bcd9a115","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1204,"paragraph_end":1206,"page_start":34,"page_end":34},"source_page":{"start":34,"end":34}}
+- source_excerpt: 
+
+    15、具备 	AR 	视频标签添加，修改，删除和标准等系列管理功能，支持视频画面中添
+    加最多 	500 	个标签；标签类型包括：警务站视频标签，建筑物视频标签，卡口视频标签，
+    普通视频标签等。
+- requires_human_review: true
+
+### JY-001:CAND-140
+- tender_id: JY-001
+- requirement_text: 球型鹰眼B全景镜头光圈均不小于F1.0,需提供第三方权威机构出具的检测报告扫描件。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":34,"end":34}
+- span: {"clause":"5.2.6.3","paragraph_start":1212,"paragraph_end":1212,"page_start":34,"page_end":34}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"d09905ec824b4a1bae88704f90dca098fc9cb9164f12c75c5ec75375e81e5ef5","historical_source_span_hash":"012abbfd77f5e081c0afa472b4af0bfef7f7b4c149ebf6794ef6deec020f8bc5","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1212,"paragraph_end":1212,"page_start":34,"page_end":34},"source_page":{"start":34,"end":34}}
+- source_excerpt: 
+
+    1、全景镜头光圈均不小于 	F1.0。（需提供第三方权威机构出具的检测报告扫描件）
+- requires_human_review: true
+
+### JY-001:CAND-141
+- tender_id: JY-001
+- requirement_text: 球型鹰眼B需自带镜头,另配4个图像采集模块,可输出1路主视频图像和4路辅视频图像,可将辅视频图像进行无缝拼接,拼接后的辅视频图像水平视场角为180°,垂直视场角为85°。传感器类型需为【全景】1/1.8"progressive scan CMOS,【细节】1/1.8"progressive scan CMOS。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":34,"end":34}
+- span: {"clause":"5.2.6.3","paragraph_start":1213,"paragraph_end":1216,"page_start":34,"page_end":34}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"37213af4d1c13578e84efdd4d120ebb0f480d27291925c74d81aaf1877582c7c","historical_source_span_hash":"3e4dce518b6f8ac308509e4abceaf4df85ad8f33d7e0153c4fe0fc4f8330fea3","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1213,"paragraph_end":1216,"page_start":34,"page_end":34},"source_page":{"start":34,"end":34}}
+- source_excerpt: 
+
+    2、自带镜头，另配 	4 	个图像采集模块，可输出 	1 	路主视频图像和 	4 	路辅视频图像。
+    可将辅视频图像进行无缝拼接，拼接后的辅视频图像：水平视场角为 	180°，垂直视场
+    角为 	85°。传感器类型: 	【全景】1/1.8＂progressive 	scan 	CMOS，【细节】1/1.8＂
+    progressive 	scan 	CMOS
+- requires_human_review: true
+
+### JY-001:CAND-142
+- tender_id: JY-001
+- requirement_text: 球型鹰眼B最低照度需满足:【全景】0.0005 Lux/F1.0(彩色),0.0001 Lux/F1.0(黑白);【细节】0.0005 Lux/F1.5(彩色),0.0001 Lux/F1.5(黑白),0 Lux with IR。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":34,"end":34}
+- span: {"clause":"5.2.6.3","paragraph_start":1217,"paragraph_end":1219,"page_start":34,"page_end":34}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"3fa6bd82442f72adeac0fbadfc0bb1703b79edc2c6039ff37f8a25c04ef13683","historical_source_span_hash":"812d9886c54d0ffd94df8ca6520f70d9d1ffe21786aa72dbe6eabf12c6cb307e","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1217,"paragraph_end":1219,"page_start":34,"page_end":34},"source_page":{"start":34,"end":34}}
+- source_excerpt: 
+
+    3、最低照度:
+    【全景】0.0005 	Lux/F1.0（彩色），0.0001 	Lux/F1.0（黑白）
+    【细节】0.0005 	Lux/F1.5（彩色），0.0001 	Lux/F1.5（黑白），0 	Lux 	with 	IR
+- requires_human_review: true
+
+### JY-001:CAND-143
+- tender_id: JY-001
+- requirement_text: 球型鹰眼B宽动态需满足:【全景】不支持,【细节】支持120 dB超宽动态。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":34,"end":34}
+- span: {"clause":"5.2.6.3","paragraph_start":1220,"paragraph_end":1220,"page_start":34,"page_end":34}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"ad8815faaa5a438b326dc339e4ffc32707cbaa049821779e4dd961c6302849ed","historical_source_span_hash":"da11ca9f72967ab41d714d5f28bfb00d27171917f1d19d6cc1fb4edf6af518af","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1220,"paragraph_end":1220,"page_start":34,"page_end":34},"source_page":{"start":34,"end":34}}
+- source_excerpt: 
+
+    4、宽动态: 	【全景】不支持，【细节】支持 	120 	dB 	超宽动态
+- requires_human_review: true
+
+### JY-001:CAND-144
+- tender_id: JY-001
+- requirement_text: 球型鹰眼B需支持光学防抖。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":34,"end":34}
+- span: {"clause":"5.2.6.3","paragraph_start":1221,"paragraph_end":1221,"page_start":34,"page_end":34}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"56d253df9b196ab75d97fe91d358763ee1e30c2c4c3c35a73f590c00397fd478","historical_source_span_hash":"56d253df9b196ab75d97fe91d358763ee1e30c2c4c3c35a73f590c00397fd478","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1221,"paragraph_end":1221,"page_start":34,"page_end":34},"source_page":{"start":34,"end":34}}
+- source_excerpt: 
+
+    5、光学防抖: 	支持
+- requires_human_review: true
+
+### JY-001:CAND-145
+- tender_id: JY-001
+- requirement_text: 球型鹰眼B视场角需满足:水平视场角60°~1.96°,垂直视场角35.8°~1.11°,对角线视场角67°~2.23°。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":34,"end":34}
+- span: {"clause":"5.2.6.3","paragraph_start":1224,"paragraph_end":1225,"page_start":34,"page_end":34}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"3e63aa63c3dbbb572f90801c57a55fbe58c8ac6da567efde7d3fa09260e42892","historical_source_span_hash":"6f1680504287c4599de1db1ce641ac3466acbc341e1bb60880e9c53bce38a3fe","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1224,"paragraph_end":1225,"page_start":34,"page_end":34},"source_page":{"start":34,"end":34}}
+- source_excerpt: 
+
+    8、视场角: 	水平视场角：60°~1.96° 	; 	垂直视场角：35.8°~1.11° 	; 	对角线视
+    场角：67°~2.23°
+- requires_human_review: true
+
+### JY-001:CAND-146
+- tender_id: JY-001
+- requirement_text: 球型鹰眼B水平速度需满足:水平键控速度0.1°~210°/s,速度可设;水平预置点速度240°/s。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":34,"end":34}
+- span: {"clause":"5.2.6.3","paragraph_start":1230,"paragraph_end":1231,"page_start":34,"page_end":34}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"88d900211f2acb4fc0deb3e1ce765cb90286a3e810097fe7c66642951f87a2ae","historical_source_span_hash":"ccc1d8468d615ab6b180b9d29be3c6fcbab73b489d87c524960f717249bf8a50","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1230,"paragraph_end":1231,"page_start":34,"page_end":34},"source_page":{"start":34,"end":34}}
+- source_excerpt: 
+
+    13、水平速度: 	水平键控速度：0.1°~210°/s，速度可设；水平预置点速度：240°
+    /s
+- requires_human_review: true
+
+### JY-001:CAND-147
+- tender_id: JY-001
+- requirement_text: 球型鹰眼B需具备AR视频标签添加、修改、删除和标准等系列管理功能,支持视频画面中添加最多500个标签;标签类型包括警务站视频标签、建筑物视频标签、卡口视频标签、普通视频标签等。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":34,"end":34}
+- span: {"clause":"5.2.6.3","paragraph_start":1204,"paragraph_end":1206,"page_start":34,"page_end":34}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"94fcbfc540597f5cb66799ac8bd2591470e2ba543fc58747b5ec13616673e38c","historical_source_span_hash":"aa14d74f653012c2480b40bc76d0eb4f70ec220443f38d76ee1e54f0bcd9a115","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1204,"paragraph_end":1206,"page_start":34,"page_end":34},"source_page":{"start":34,"end":34}}
+- source_excerpt: 
+
+    15、具备 	AR 	视频标签添加，修改，删除和标准等系列管理功能，支持视频画面中添
+    加最多 	500 	个标签；标签类型包括：警务站视频标签，建筑物视频标签，卡口视频标签，
+    普通视频标签等。
+- requires_human_review: true
+
+### JY-001:CAND-148
+- tender_id: JY-001
+- requirement_text: 防火墙需为2U标准机架设备,设备具有冗余电源,设备配置8个千兆自适应电口、4个千兆光口、4个万兆光口、2个扩展槽位、2个USB接口、1个RJ45 Console口。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":35,"end":35}
+- span: {"clause":"5.2.6.3","paragraph_start":1246,"paragraph_end":1248,"page_start":35,"page_end":35}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"e88d8b898de8de15c68481a20a93fcc67021b334ca3000d8f2fa944fe4ebc4a4","historical_source_span_hash":"267a5975fe4c139b7c8393a4917bf23b8f9e50950f46e8bedc27fc0343056a05","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1246,"paragraph_end":1248,"page_start":35,"page_end":35},"source_page":{"start":35,"end":35}}
+- source_excerpt: 
+
+    2U 	标准机架设备，设备具有冗余电源，设备配置 	8 	个千兆自适应电口,4 	个
+    千兆光口，4 	个万兆光口，2 	个扩展槽位，2 	个 	USB 	接口，1 	个 	RJ45 	Console
+    口
+- requires_human_review: true
+
+### JY-001:CAND-149
+- tender_id: JY-001
+- requirement_text: 防火墙网络吞吐量需≥40Gbps,每秒新建连接数需≥18万,最大并发连接数需≥1000万,VPN IPSEC隧道数需≥20000。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":35,"end":35}
+- span: {"clause":"5.2.6.3","paragraph_start":1250,"paragraph_end":1251,"page_start":35,"page_end":35}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"90b5b90dcf94608d1351c9ce8c538c82ac75d51414a7adb7d46cf4946ea76e92","historical_source_span_hash":"80d673270ac3e7cc22b573181d4d46e7100d6a7ff6f32fbde739b8333f984c93","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1250,"paragraph_end":1251,"page_start":35,"page_end":35},"source_page":{"start":35,"end":35}}
+- source_excerpt: 
+
+    网络吞吐量≥40Gbps，每秒新建连接数≥18 	万，最大并发连接数≥1000 	万，
+    VPN 	IPSEC 	隧道数≥20000；
+- requires_human_review: true
+
+### JY-001:CAND-150
+- tender_id: JY-001
+- requirement_text: 防火墙此次配置需包含5年硬件质保和技术支持服务以及5年IPS、AV特征库升级授权。
+- category: delivery
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":35,"end":35}
+- span: {"clause":"5.2.6.3","paragraph_start":1252,"paragraph_end":1252,"page_start":35,"page_end":35}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"85de13138ec254b5ac807115b8b420e115f2bda44a8f928db3a95637f5f6e3b0","historical_source_span_hash":"85de13138ec254b5ac807115b8b420e115f2bda44a8f928db3a95637f5f6e3b0","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1252,"paragraph_end":1252,"page_start":35,"page_end":35},"source_page":{"start":35,"end":35}}
+- source_excerpt: 
+
+    此次配置 	5 	年硬件质保和技术支持服务以及 	5 	年 	IPS、AV 	特征库升级授权。
+- requires_human_review: true
+
+### JY-001:CAND-151
+- tender_id: JY-001
+- requirement_text: 防火墙设备需支持多操作系统(≥3个),多系统设置可在Web界面上完成全部操作。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":35,"end":35}
+- span: {"clause":"5.2.6.3","paragraph_start":1254,"paragraph_end":1254,"page_start":35,"page_end":35}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"2fc39859744c967fda68c44bcd1922e0cf3149f2b7425a37e6d1ddb2c4369821","historical_source_span_hash":"f8e727c02e09a92046ec911ad50c32c333742a1a22600bad02ac4def98addd5a","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1254,"paragraph_end":1254,"page_start":35,"page_end":35},"source_page":{"start":35,"end":35}}
+- source_excerpt: 
+
+    设备支持多操作系统（≥3 	个），多系统设置可在 	Web 	界面上完成全部操作
+- requires_human_review: true
+
+### JY-001:CAND-152
+- tender_id: JY-001
+- requirement_text: 防火墙需采用具有自主知识产权的VSP或LOS或UNIMAS通用安全平台,具备高效、智能、安全、健壮、易扩展等特点。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":35,"end":35}
+- span: {"clause":"5.2.6.3","paragraph_start":1255,"paragraph_end":1256,"page_start":35,"page_end":35}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"b65ab0408387a7d488e67eebbfa6205c33f7458e70f39b530d2f35df027a8f4a","historical_source_span_hash":"b90a0eb14136fcc0a55e8fa68bfcf4d256bbab277d775ee751b8a1624c498758","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1255,"paragraph_end":1256,"page_start":35,"page_end":35},"source_page":{"start":35,"end":35}}
+- source_excerpt: 
+
+    采用具有自主知识产权的 	VSP 	或 	LOS 	或 	UNIMAS 	通用安全平台，具备高效、
+    智能、安全、健壮、易扩展等特点。
+- requires_human_review: true
+
+### JY-001:CAND-153
+- tender_id: JY-001
+- requirement_text: 防火墙需支持基于应用的策略路由,可实现为不同的应用类型智能选择相应的链路。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":35,"end":35}
+- span: {"clause":"5.2.6.3","paragraph_start":1258,"paragraph_end":1258,"page_start":35,"page_end":35}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"8dc593d937347d390279018f0bb6b3f74439cf00a48ba143bcfe5bcf280f57fc","historical_source_span_hash":"028c57fbbf099b6d217eb47e792d49f362a5019d43b60e73c44fb1b57590b954","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1258,"paragraph_end":1258,"page_start":35,"page_end":35},"source_page":{"start":35,"end":35}}
+- source_excerpt: 
+
+    支持基于应用的策略路由，可实现为不同的应用类型智能选择相应的链路。
+- requires_human_review: true
+
+### JY-001:CAND-154
+- tender_id: JY-001
+- requirement_text: 防火墙需支持基于WEB地址URL的策略路由,可实现将不同类型的网站流量智能分配到不同的链路。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":35,"end":35}
+- span: {"clause":"5.2.6.3","paragraph_start":1259,"paragraph_end":1260,"page_start":35,"page_end":35}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"5112b710a70ae6e516092423dbee66c64fcdac57a952b2ef6f00b989843097bb","historical_source_span_hash":"bb5c38fbd2d7dae2c30ec1933b21bd685a12fc2489d6fdac3d1ffa04e8b2c90b","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1259,"paragraph_end":1260,"page_start":35,"page_end":35},"source_page":{"start":35,"end":35}}
+- source_excerpt: 
+
+    基于 	WEB 	地址 	URL 	的策略路由，可实现将不同类型的网站流量智能分配到
+    不同的链路。
+- requires_human_review: true
+
+### JY-001:CAND-155
+- tender_id: JY-001
+- requirement_text: 防火墙需支持基于文件类型的策略路由,可实现将预定义或者自定义的文件按照不同的分类进行智能选路。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":35,"end":35}
+- span: {"clause":"5.2.6.3","paragraph_start":1261,"paragraph_end":1262,"page_start":35,"page_end":35}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"825c6cca99c60e4bcff25e1a822ba2baed9b73437348f0e3fb9503eec3b81621","historical_source_span_hash":"861f849259e5e9df53af6f74bfd4452c92220a42826e7afe239bc65f66d44367","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1261,"paragraph_end":1262,"page_start":35,"page_end":35},"source_page":{"start":35,"end":35}}
+- source_excerpt: 
+
+    支持基于文件类型的策略路由，可实现将预定义或者自定义的文件按照不同
+    的分类进行智能选路。
+- requires_human_review: true
+
+### JY-001:CAND-156
+- tender_id: JY-001
+- requirement_text: 防火墙需支持ISP路由,支持联通、电信、教育网、移动等ISP服务商地址列表,列表可导出及导入,可通过Web界面选择不同的ISP服务商实现快速切换,需提供第三方权威机构出具的检测报告扫描件。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":35,"end":35}
+- span: {"clause":"5.2.6.3","paragraph_start":1263,"paragraph_end":1265,"page_start":35,"page_end":35}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"4ad9688bb3885312d24116fc2443999980f3e97a006efd6bbf2e8bd77b17e280","historical_source_span_hash":"0aa04a5a38f25b212e240da0468d407224445b2175f7e53a9c168193d70f67e6","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1263,"paragraph_end":1265,"page_start":35,"page_end":35},"source_page":{"start":35,"end":35}}
+- source_excerpt: 
+
+    支持 	ISP 	路由，支持联通、电信、教育网、移动等 	ISP 	服务商地址列表，列
+    表可导出及导入，可通过 	Web 	界面选择不同的 	ISP 	服务商实现快速切换（需
+    提供第三方权威机构出具的检测报告扫描件）
+- requires_human_review: true
+
+### JY-001:CAND-157
+- tender_id: JY-001
+- requirement_text: 防火墙需支持对虚拟环境的数据流进行全策略控制。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":35,"end":35}
+- span: {"clause":"5.2.6.3","paragraph_start":1267,"paragraph_end":1267,"page_start":35,"page_end":35}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"2d49814b44d1c354285df79a7076793bf3a62fddf73f3a5498405e6cdb792798","historical_source_span_hash":"2d49814b44d1c354285df79a7076793bf3a62fddf73f3a5498405e6cdb792798","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1267,"paragraph_end":1267,"page_start":35,"page_end":35},"source_page":{"start":35,"end":35}}
+- source_excerpt: 
+
+    支持对虚拟环境的数据流进行全策略控制。
+- requires_human_review: true
+
+### JY-001:CAND-158
+- tender_id: JY-001
+- requirement_text: 防火墙需支持链路聚合功能,支持802.3ad和静态轮询、热备等多种模式,MAC、MAC&IP、IP&Port多种聚合负载算法。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":35,"end":35}
+- span: {"clause":"5.2.6.3","paragraph_start":1268,"paragraph_end":1269,"page_start":35,"page_end":35}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"15068c546a28cb8a98da23c9525c99c8ad1fb0c2639ea2e6ad2c6397caa1282c","historical_source_span_hash":"ce21ddd683892c2a5b476c10d6b10d8dc84d59b99aa22aa4fe4abb659176b8a3","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1268,"paragraph_end":1269,"page_start":35,"page_end":35},"source_page":{"start":35,"end":35}}
+- source_excerpt: 
+
+    支持链路聚合功能，支持 	802.3ad 	和静态轮询、热备等多种模式，MAC、
+    MAC&IP、IP&Port 	多种聚合负载算法。
+- requires_human_review: true
+
+### JY-001:CAND-159
+- tender_id: JY-001
+- requirement_text: 防火墙需支持PPPoE接入,并具备自动断线重连技术,一个物理接口至少支持4路ADSL拨号,能够针对每条ADSL链路单独设置保证带宽,并能够设置按需拨号。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":35,"end":35}
+- span: {"clause":"5.2.6.3","paragraph_start":1270,"paragraph_end":1272,"page_start":35,"page_end":35}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"8c0f5bed74505f6ab22153189fb55713a413cc3de56d0dfcf78535808f40cb6c","historical_source_span_hash":"11fc114b05d2299017bf71e32ec517c0717b07e59eeaad1f1230c44729ff546d","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1270,"paragraph_end":1272,"page_start":35,"page_end":35},"source_page":{"start":35,"end":35}}
+- source_excerpt: 
+
+    支持 	PPPoE 	接入，并具备自动断线重连技术，一个物理接口至少支持 	4 	路
+    ADSL 	拨号，能够针对每条 	ADSL 	链路单独设置保证带宽，并能够设置按需拨
+    号。
+- requires_human_review: true
+
+### JY-001:CAND-160
+- tender_id: JY-001
+- requirement_text: 防火墙病毒库特征总数量需达三千万条以上,需提供第三方权威机构出具的检测报告扫描件。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":35,"end":35}
+- span: {"clause":"5.2.6.3","paragraph_start":1273,"paragraph_end":1274,"page_start":35,"page_end":35}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"c02b708065f8ad18b18bd03cabe85e20fd8b956ff3fa14234bde9dcd98113be2","historical_source_span_hash":"74b01e20a93beda2854315283afbc25dcb33b84378a18a66e09d5bf0c3c76713","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1273,"paragraph_end":1274,"page_start":35,"page_end":35},"source_page":{"start":35,"end":35}}
+- source_excerpt: 
+
+    防病毒 病毒库数量：病毒库特征总数量达三千万条以上（需提供第三方权威机构出
+    具的检测报告扫描件）
+- requires_human_review: true
+
+### JY-001:CAND-161
+- tender_id: JY-001
+- requirement_text: 防火墙需支持针对策略中的源、目的地址进行新建限制,可以针对单IP(或地址范围)进行新建控制。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":36,"end":36}
+- span: {"clause":"5.2.6.3","paragraph_start":1280,"paragraph_end":1281,"page_start":36,"page_end":36}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"09a5df4aa012382251efba5e53318f9237329613140cbe97a64b3c43f687167e","historical_source_span_hash":"0f6d853469100c81cdbf6e4a9e8dddd79ddefda9e70b0e241cceb6eb4f87a527","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1280,"paragraph_end":1281,"page_start":36,"page_end":36},"source_page":{"start":36,"end":36}}
+- source_excerpt: 
+
+    支持针对策略中的源、目的地址进行新建限制，可以针对单 	IP(或地址范围)
+    进行新建控制。
+- requires_human_review: true
+
+### JY-001:CAND-162
+- tender_id: JY-001
+- requirement_text: 防火墙需支持专业的DNSflood攻击防护,具有高级的基于聚类限速、聚类分析、重传检测等多种高级防护算法。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":36,"end":36}
+- span: {"clause":"5.2.6.3","paragraph_start":1284,"paragraph_end":1285,"page_start":36,"page_end":36}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"a331a388965a1155cabc5a65da6f830cd549ddbf667b3ecf0113eb01b9051855","historical_source_span_hash":"7b2ae36b019c1b5f6e36f77c3bf8dee5d816b79e661573c2ec835d2bb4c93fb0","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1284,"paragraph_end":1285,"page_start":36,"page_end":36},"source_page":{"start":36,"end":36}}
+- source_excerpt: 
+
+    支持专业的 	DNSflood 	攻击防护，具有高级的基于聚类限速、聚类分析、重
+    传检测等多种高级防护算法。
+- requires_human_review: true
+
+### JY-001:CAND-163
+- tender_id: JY-001
+- requirement_text: 防火墙需支持web界面下对攻击流量进行抓包分析,支持自定义抓包参数,至少包括数据报文长度、报文数量、抓包时间及采样频率等基本参数;支持根据协议、源目的IP、端口等参数进行数据报文过滤。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":36,"end":36}
+- span: {"clause":"5.2.6.3","paragraph_start":1286,"paragraph_end":1288,"page_start":36,"page_end":36}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"7d440f81a0ac3f7ddf9995ad839eea3a7fac3a8190cb0637aaa4f23b2a0cd615","historical_source_span_hash":"9c985f6c57df50ba7b7fd55e35fbc08cb8d412c381546f53f3995755be7f812c","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1286,"paragraph_end":1288,"page_start":36,"page_end":36},"source_page":{"start":36,"end":36}}
+- source_excerpt: 
+
+    支持 	web 	界面下对攻击流量进行抓包分析，支持自定义抓包参数，至少包括
+    数据报文长度、报文数量、抓包时间及采样频率等基本参数；支持根据协议、
+    源目的 	IP、端口等参数进行数据报文过滤。
+- requires_human_review: true
+
+### JY-001:CAND-164
+- tender_id: JY-001
+- requirement_text: 防火墙需支持标准IPSec、GRE、PPTP、L2TP、DMVPN等形态VPN。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":36,"end":36}
+- span: {"clause":"5.2.6.3","paragraph_start":1290,"paragraph_end":1290,"page_start":36,"page_end":36}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"6f1312c9fa919f89eebe8ba8809692d08a5fdfa0411407580ebb24ae2368a914","historical_source_span_hash":"6f1312c9fa919f89eebe8ba8809692d08a5fdfa0411407580ebb24ae2368a914","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1290,"paragraph_end":1290,"page_start":36,"page_end":36},"source_page":{"start":36,"end":36}}
+- source_excerpt: 
+
+    支持标准 	IPSec、GRE、PPTP、L2TP、DMVPN 	等形态 	VPN。
+- requires_human_review: true
+
+### JY-001:CAND-165
+- tender_id: JY-001
+- requirement_text: 防火墙需支持3DES、DES、AES128、AES256等加密算法,支持DH1、DH2、DH5、DH14等DH组,RSA1024、RSA2048等非对称加密算法,以及MD5、SHA1、SHA2等通用摘要算法。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":36,"end":36}
+- span: {"clause":"5.2.6.3","paragraph_start":1291,"paragraph_end":1293,"page_start":36,"page_end":36}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"eb34db253e43f64865da34c04a0a8820271b4bd9df621d4b1e5b4ac2f37eead3","historical_source_span_hash":"3438ab3829dfb50403fbc0679a43d34fa4626d68c84de6e55cc04465a0921578","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1291,"paragraph_end":1293,"page_start":36,"page_end":36},"source_page":{"start":36,"end":36}}
+- source_excerpt: 
+
+    支持 	3DES、DES、AES128、AES256 	等加密算法，支持 	DH1、DH2、DH5、DH14
+    等 	DH 	组，RSA1024、RSA2048 	等非对称加密算法，以及 	MD5、SHA1、SHA2 	等
+    通用摘要算法。
+- requires_human_review: true
+
+### JY-001:CAND-166
+- tender_id: JY-001
+- requirement_text: 防火墙需支持预共享密钥、证书等认证方式且支持X-Auth扩展认证。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":36,"end":36}
+- span: {"clause":"5.2.6.3","paragraph_start":1294,"paragraph_end":1294,"page_start":36,"page_end":36}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"67483a5eb431b846919602b5d35e7ab25908a4aca63240bb842a63c6e70c429b","historical_source_span_hash":"67483a5eb431b846919602b5d35e7ab25908a4aca63240bb842a63c6e70c429b","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1294,"paragraph_end":1294,"page_start":36,"page_end":36},"source_page":{"start":36,"end":36}}
+- source_excerpt: 
+
+    支持预共享密钥、证书等认证方式且支持 	X-Auth 	扩展认证
+- requires_human_review: true
+
+### JY-001:CAND-167
+- tender_id: JY-001
+- requirement_text: 防火墙需支持多出口VPN,且支持双向NAT(ATT协议)穿越。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":36,"end":36}
+- span: {"clause":"5.2.6.3","paragraph_start":1295,"paragraph_end":1295,"page_start":36,"page_end":36}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"aa8914c9f70eb26a90a918c522717bafaae562b5afee8eb180646adf058df01f","historical_source_span_hash":"7fe5d3b0597a82aa3e633de88dafca372cbfef559922de909f43e877ea0918db","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1295,"paragraph_end":1295,"page_start":36,"page_end":36},"source_page":{"start":36,"end":36}}
+- source_excerpt: 
+
+    支持多出口 	VPN，且支持双向 	NAT（ATT 	协议）穿越
+- requires_human_review: true
+
+### JY-001:CAND-168
+- tender_id: JY-001
+- requirement_text: 防火墙需支持DMVPN,在增加一个新的分支节点网关后,不需要在中心网关更改任何配置,且支持路由推送,实现spoke to spoke互通,不必建立额外隧道。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":36,"end":36}
+- span: {"clause":"5.2.6.3","paragraph_start":1296,"paragraph_end":1297,"page_start":36,"page_end":36}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"4b6dbe2b34c80ada5286bad55b7fcda57818c071f9a715d2eeb20d87ada46df6","historical_source_span_hash":"e302ef4404af9b5dd54eef83522c81968849593462cc0a53b9a6fad2f0cfbb34","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1296,"paragraph_end":1297,"page_start":36,"page_end":36},"source_page":{"start":36,"end":36}}
+- source_excerpt: 
+
+    支持 	DMVPN，在增加一个新的分支节点网关后，不需要在中心网关更改任何
+    配置，且支持路由推送，实现 	spoke 	to 	spoke 	互通，不必建立额外隧道
+- requires_human_review: true
+
+### JY-001:CAND-169
+- tender_id: JY-001
+- requirement_text: 防火墙需支持设置中断连接、记录日志,在邮件中标示垃圾邮件等动作。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":36,"end":36}
+- span: {"clause":"5.2.6.3","paragraph_start":1299,"paragraph_end":1299,"page_start":36,"page_end":36}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"72bd71d49645fe0453adebae60a01b7e749698b33e6e64b6d462a138f18984ec","historical_source_span_hash":"9941a4f73384f39f34765f5ad31038d4e6e857ea053d3978beac85234893f456","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1299,"paragraph_end":1299,"page_start":36,"page_end":36},"source_page":{"start":36,"end":36}}
+- source_excerpt: 
+
+    支持设置中断连接、记录日志，在邮件中标示垃圾邮件等动作。
+- requires_human_review: true
+
+### JY-001:CAND-170
+- tender_id: JY-001
+- requirement_text: 防火墙需支持邮件服务器地址黑名单、邮件地址、主题、正文、附件名、附件内容等进行关键字匹配过滤。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":36,"end":36}
+- span: {"clause":"5.2.6.3","paragraph_start":1300,"paragraph_end":1301,"page_start":36,"page_end":36}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"3b18917a2666a969aa1ef29d1eb573bbdd22af39ff97f051fc1fbadd5072d44e","historical_source_span_hash":"3b18917a2666a969aa1ef29d1eb573bbdd22af39ff97f051fc1fbadd5072d44e","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1300,"paragraph_end":1301,"page_start":36,"page_end":36},"source_page":{"start":36,"end":36}}
+- source_excerpt: 
+
+    支持邮件服务器地址黑名单、邮件地址、主题、正文、附件名、附件内容等
+    进行关键字匹配过滤。
+- requires_human_review: true
+
+### JY-001:CAND-171
+- tender_id: JY-001
+- requirement_text: 防火墙需支持防邮件炸弹功能,即设置POP3、SMTP的连接频率。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":36,"end":36}
+- span: {"clause":"5.2.6.3","paragraph_start":1302,"paragraph_end":1302,"page_start":36,"page_end":36}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"7805d309a8480a40e27a923e1711d4918bf03848f23d00868b3b1d25bd392c73","historical_source_span_hash":"d4e43996a6e483183a14eb311b9c772bb05c08b81998f2485053c53dc9519c17","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1302,"paragraph_end":1302,"page_start":36,"page_end":36},"source_page":{"start":36,"end":36}}
+- source_excerpt: 
+
+    支持防邮件炸弹功能，即设置 	POP3、SMTP 	的连接频率。
+- requires_human_review: true
+
+### JY-001:CAND-172
+- tender_id: JY-001
+- requirement_text: 防火墙需支持端口联动,支持上下行端口组的联动,可以实现单端口决定同组中的任意接口失效启动链路切换。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":36,"end":36}
+- span: {"clause":"5.2.6.3","paragraph_start":1304,"paragraph_end":1305,"page_start":36,"page_end":36}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"a3e329b6a9c220a72a4aec3c5354b092f12096b4013a6311c418a3c5eff152f5","historical_source_span_hash":"25b808312af3bd1f78127592b5f444952569dfbdb03493f9f5d94ec5b0e07e8c","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1304,"paragraph_end":1305,"page_start":36,"page_end":36},"source_page":{"start":36,"end":36}}
+- source_excerpt: 
+
+    支持端口联动，支持上下行端口组的联动，可以实现单端口决定同组中的任
+    意接口失效启动链路切换。
+- requires_human_review: true
+
+### JY-001:CAND-173
+- tender_id: JY-001
+- requirement_text: 防火墙需可在热备和集群工作模式下支持多台防火墙的会话、配置的实时同步、手动同步。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":36,"end":36}
+- span: {"clause":"5.2.6.3","paragraph_start":1306,"paragraph_end":1307,"page_start":36,"page_end":36}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"964e261afe74b6901a3a958f1e5b95215aa3cd0aefa6a3d10fd2fcd1b060e19c","historical_source_span_hash":"964e261afe74b6901a3a958f1e5b95215aa3cd0aefa6a3d10fd2fcd1b060e19c","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1306,"paragraph_end":1307,"page_start":36,"page_end":36},"source_page":{"start":36,"end":36}}
+- source_excerpt: 
+
+    可在热备和集群工作模式下支持多台防火墙的会话、配置的实时同步、手动
+    同步。
+- requires_human_review: true
+
+### JY-001:CAND-174
+- tender_id: JY-001
+- requirement_text: 防火墙需支持自动同步、心跳接口多级(≥2级)物理备份。
+- category: technical
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":36,"end":36}
+- span: {"clause":"5.2.6.3","paragraph_start":1308,"paragraph_end":1308,"page_start":36,"page_end":36}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"8cde88d9d0fe3b9e3b2c765fb43f7df5082e778324c078148c2e8690ac153a59","historical_source_span_hash":"c04bb049897e06bb5280f97861bc089636d9710465dd22952c95b6eda4b8324c","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1308,"paragraph_end":1308,"page_start":36,"page_end":36},"source_page":{"start":36,"end":36}}
+- source_excerpt: 
+
+    自动同步、心跳接口多级（≥2 	级）物理备份
+- requires_human_review: true
+
+### JY-001:CAND-175
+- tender_id: JY-001
+- requirement_text: 采购方书面通知开工之后6个月内完成并上线运行。
+- category: delivery
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":36,"end":36}
+- span: {"clause":"5.2.6.3","paragraph_start":1310,"paragraph_end":1310,"page_start":36,"page_end":36}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"93aa535e18061f51065a647543b8d3a44e7477a64b95034d141992f2b1f9105b","historical_source_span_hash":"93aa535e18061f51065a647543b8d3a44e7477a64b95034d141992f2b1f9105b","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1310,"paragraph_end":1310,"page_start":36,"page_end":36},"source_page":{"start":36,"end":36}}
+- source_excerpt: 
+
+    采购方书面通知开工之后 	6 	个月内完成并上线运行。
+- requires_human_review: true
+
+### JY-001:CAND-176
+- tender_id: JY-001
+- requirement_text: 交货(服务)地点为江阴市城市运行管理中心(江阴市澄江中路9号)。
+- category: delivery
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":36,"end":36}
+- span: {"clause":"5.2.6.3","paragraph_start":1312,"paragraph_end":1312,"page_start":36,"page_end":36}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"9b577c1142a0e0b0675e42a9116076f67a395a681938edf7c9c27a2a17ff3318","historical_source_span_hash":"78300d51b6828ce7cfb14e69a00eb7a41fa211a8cf9fa5ffce1b225e43f9639e","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"5.2.6.3","paragraph_start":1312,"paragraph_end":1312,"page_start":36,"page_end":36},"source_page":{"start":36,"end":36}}
+- source_excerpt: 
+
+    江阴市城市运行管理中心（江阴市澄江中路 	9 	号）。
+- requires_human_review: true
+
+### JY-001:CAND-177
+- tender_id: JY-001
+- requirement_text: 质量目标:系统运行稳定、达到设计要求,并圆满通过采购人组织的验收。
+- category: delivery
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":37,"end":37}
+- span: {"clause":"8.1","paragraph_start":1318,"paragraph_end":1318,"page_start":37,"page_end":37}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"fbfb269bed7ba57c68466aaab7caf2431e3a3cb6bef6abcb60d541014471438b","historical_source_span_hash":"ed2694384ea4f0bf7d7cfc5a48544841dda71f3e49b31b51a2e8440ab1f49ff7","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"8.1","paragraph_start":1318,"paragraph_end":1318,"page_start":37,"page_end":37},"source_page":{"start":37,"end":37}}
+- source_excerpt: 
+
+    质量目标：系统运行稳定、达到设计要求，并圆满通过采购人组织的验收。
+- requires_human_review: true
+
+### JY-001:CAND-178
+- tender_id: JY-001
+- requirement_text: 进度目标:确保项目建设工作在预定的时间内完成。
+- category: delivery
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":37,"end":37}
+- span: {"clause":"8.1","paragraph_start":1319,"paragraph_end":1319,"page_start":37,"page_end":37}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"a44d6e8d3bce75988a1cca9b8340191160500647fd5bf8f21a24b83fd0a11428","historical_source_span_hash":"f624480490ebab85043374fb8c213f0952965f21197b75cbed485b878718763f","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"8.1","paragraph_start":1319,"paragraph_end":1319,"page_start":37,"page_end":37},"source_page":{"start":37,"end":37}}
+- source_excerpt: 
+
+    进度目标：确保项目建设工作在预定的时间内完成。
+- requires_human_review: true
+
+### JY-001:CAND-179
+- tender_id: JY-001
+- requirement_text: 投标人应提供详尽的项目管理办法,成立专门的项目管理组,由专人负责,确保项目按时按质进行。
+- category: implementation
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":37,"end":37}
+- span: {"clause":"8.1","paragraph_start":1321,"paragraph_end":1322,"page_start":37,"page_end":37}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"eaf63df15be80d7ed481388faafc4a7e3fc55a9fd0d856cc0d7502857875aada","historical_source_span_hash":"f44624f203afacd0ae6a01745dd75730d60f8d2b4102f0116d6ef0bc57e7bfd5","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"8.1","paragraph_start":1321,"paragraph_end":1322,"page_start":37,"page_end":37},"source_page":{"start":37,"end":37}}
+- source_excerpt: 
+
+    投标人应提供详尽的项目管理办法，成立专门的项目管理组，由专人负责，确保项目按时
+    按质进行。
+- requires_human_review: true
+
+### JY-001:CAND-180
+- tender_id: JY-001
+- requirement_text: 本项目总工期6个月,中标人应在采购合同签订后,于3个月内将项目建设达到初验标准,初验合格试运行3个月后申请终验。
+- category: implementation
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":37,"end":37}
+- span: {"clause":"8.1","paragraph_start":1324,"paragraph_end":1325,"page_start":37,"page_end":37}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"37b4a76c5f37a9244a4752ecb41300778fc8da48791dbbb9502bc82fb36ed845","historical_source_span_hash":"3db4b16ed1ad4f7602f1e9eb650e84902b008b57ac7f74f42238083a40d672d2","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"8.1","paragraph_start":1324,"paragraph_end":1325,"page_start":37,"page_end":37},"source_page":{"start":37,"end":37}}
+- source_excerpt: 
+
+    本项目总工期 	6 	个月，中标人应在采购合同签订后，于 	3 	个月内将项目建设达到初验标准，
+    初验合格试运行 	3 	个月后申请终验。
+- requires_human_review: true
+
+### JY-001:CAND-181
+- tender_id: JY-001
+- requirement_text: 投标人应在投标文件中详细提出项目进度计划表,时间进度不能超过上述的项目工期要求。
+- category: implementation
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":37,"end":37}
+- span: {"clause":"8.1","paragraph_start":1326,"paragraph_end":1326,"page_start":37,"page_end":37}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"dff7537cf343accaaf4841a2d4d8fa93a809ef131b4a953d02a498b1a3054b50","historical_source_span_hash":"28e572c5a9f441a452c6fc36fce9e1298c0793529fc1c7646ec029210ed092e6","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"8.1","paragraph_start":1326,"paragraph_end":1326,"page_start":37,"page_end":37},"source_page":{"start":37,"end":37}}
+- source_excerpt: 
+
+    投标人应在投标文件中详细提出项目进度计划表，时间进度不能超过上述的项目工期要求。
+- requires_human_review: true
+
+### JY-001:CAND-182
+- tender_id: JY-001
+- requirement_text: 人员配置应科学、合理、有效、应充分保证人员的数量和质量。项目实施过程中,投标人应配备符合以下条件的人员:项目组主要人员不少于6人(即项目负责人1人,专业技术人员不少于5人,专业技术人员包括技术负责人、需求分析师等技术人员),另需配置至少10名的项目辅助人员。
+- category: implementation
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":37,"end":37}
+- span: {"clause":"8.2","paragraph_start":1328,"paragraph_end":1331,"page_start":37,"page_end":37}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"7cf95565fff919b9e5e984e5b788d0b09ac4449af297a4b6defe9e3eb15a8fb1","historical_source_span_hash":"b7fcb47707547655866ab8cb13a6d4235857a0b29781f73b6c5ddb2fe4f38f9f","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"8.2","paragraph_start":1328,"paragraph_end":1331,"page_start":37,"page_end":37},"source_page":{"start":37,"end":37}}
+- source_excerpt: 
+
+    人员配置应科学、合理、有效、应充分保证人员的数量和质量。项目实施过程中，投标人
+    应配备符合以下条件的人员：
+    （1）项目组主要人员不少于 	6 	人（即项目负责人 	1 	人，专业技术人员不少于 	5 	人，专业
+    技术人员包括技术负责人、需求分析师等技术人员），另需配置至少 	10 	名的项目辅助人员。
+- requires_human_review: true
+
+### JY-001:CAND-183
+- tender_id: JY-001
+- requirement_text: 在项目服务期限内,项目组人员应相对稳定,更换项目组主要人员须提出书面申请,经采购方书面同意后方可更换。
+- category: contractual
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":37,"end":37}
+- span: {"clause":"8.2","paragraph_start":1332,"paragraph_end":1333,"page_start":37,"page_end":37}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"6beebc2ec56a416d30b43ad9321cb8724e832d3e2ca6354bc6b648d1c022e453","historical_source_span_hash":"635b62204b517d228ef01385623a6907fd0a6d0d72e8e39c0dafdeb1e3ac9b6d","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"8.2","paragraph_start":1332,"paragraph_end":1333,"page_start":37,"page_end":37},"source_page":{"start":37,"end":37}}
+- source_excerpt: 
+
+    在项目服务期限内，项目组人员应相对稳定，更换项目组主要人员须提出书面申请，经采购方
+    书面同意后方可更换。
+- requires_human_review: true
+
+### JY-001:CAND-184
+- tender_id: JY-001
+- requirement_text: 中标人在项目实施过程中出现资源、进度、质量协调控制不力的情况,采购人有权要求更换相关负责人,中标人必须予以配合,并确保不影响项目建设的进度和质量。
+- category: contractual
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":37,"end":37}
+- span: {"clause":"8.2","paragraph_start":1334,"paragraph_end":1335,"page_start":37,"page_end":37}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"bbbf6bde551ba0ca232ca34f3e8fdefeebf555abfd86f4c26a7c8a5a3b85e0c3","historical_source_span_hash":"57e32164f7ce32474c6dfe876b0b3eede737cf7494313d7c5f991e8ed78beb01","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"8.2","paragraph_start":1334,"paragraph_end":1335,"page_start":37,"page_end":37},"source_page":{"start":37,"end":37}}
+- source_excerpt: 
+
+    （2）中标人在项目实施过程中出现资源、进度、质量协调控制不力的情况，采购人有权
+    要求更换相关负责人，中标人必须予以配合，并确保不影响项目建设的进度和质量。
+- requires_human_review: true
+
+### JY-001:CAND-185
+- tender_id: JY-001
+- requirement_text: 未经采购方书面同意更换项目负责人的,一次扣10万元;未经采购方书面同意更换专业技术人员的,一人一次扣3万元;未按照要求配置相应人员的,扣5万元。
+- category: contractual
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":37,"end":37}
+- span: {"clause":"8.2","paragraph_start":1336,"paragraph_end":1337,"page_start":37,"page_end":37}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"82aef4d960331ac21dff3bf6c5e38e1456ccc5dfeaad39e9a295e9e1debc2ee8","historical_source_span_hash":"9469e470fbc9a68065c5731c249a6b3666b0e062a5be501258836f9887e0ee6e","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"8.2","paragraph_start":1336,"paragraph_end":1337,"page_start":37,"page_end":37},"source_page":{"start":37,"end":37}}
+- source_excerpt: 
+
+    罚则：未经采购方书面同意更换项目负责人的，一次扣 	10 	万元；未经采购方书面同意更
+    换专业技术人员的，一人一次扣 	3 	万元；未按照要求配置相应人员的，扣 	5 	万元。
+- requires_human_review: true
+
+### JY-001:CAND-186
+- tender_id: JY-001
+- requirement_text: 须提交的成果包括:(1)项目实施过程文档全套;(2)项目定制开发软件系统源代码电子文件(不加密,可编辑不限使用时间)1份源代码;(3)刻录上述文档和系统软件(包括江阴市市域社会治理现代化联勤联动指挥平台、智慧城市综合管理平台升级、12345语音智能化及业务系统升级、江阴市城市之眼系统平台软件平台)的光盘3份。
+- category: delivery
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":37,"end":37}
+- span: {"clause":"8.3","paragraph_start":1339,"paragraph_end":1344,"page_start":37,"page_end":37}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"e555365d472fad340fc1e6e67ff8333136ff5f4bd3bfbd95dac834efc79ff925","historical_source_span_hash":"62a89b40b6aad159fb043fd1760b4c0c53255a7ba2d714cc171c1b97c63f0439","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"8.3","paragraph_start":1339,"paragraph_end":1344,"page_start":37,"page_end":37},"source_page":{"start":37,"end":37}}
+- source_excerpt: 
+
+    须提交的成果包括：
+    （1）项目实施过程文档全套；
+    （2）项目定制开发软件系统源代码电子文件（不加密，可编辑不限使用时间）1 	份源代码；
+    （3）刻录上述文档和系统软件（包括江阴市市域社会治理现代化联勤联动指挥平台、智
+    慧城市综合管理平台升级、12345 	语音智能化及业务系统升级、江阴市城市之眼系统平台软件
+    平台）的光盘 	3 	份。
+- requires_human_review: true
+
+### JY-001:CAND-187
+- tender_id: JY-001
+- requirement_text: 项目建设过程中及建设完成后,必须按照相关标准及规范进行验收,遵循初验(预验收)、试运行、终验(竣工验收)环节。项目建成后可进行系统初验,初验通过后,进入试运行期,试运行期为3个月。期间未出现严重影响系统和业务应用的故障,需经具有软件测评资质的第三方机构检测通过即可终验。
+- category: delivery
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":37,"end":37}
+- span: {"clause":"8.4","paragraph_start":1346,"paragraph_end":1349,"page_start":37,"page_end":37}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"1dbba4fb7f940c93c8392ef5668033ea97d027fab38f69cc4b21417656f563d6","historical_source_span_hash":"5380274fb8a314565610929c4a867ff6dab3a06f36187ef34503ebe3020fb5c4","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"8.4","paragraph_start":1346,"paragraph_end":1349,"page_start":37,"page_end":37},"source_page":{"start":37,"end":37}}
+- source_excerpt: 
+
+    项目建设过程中及建设完成后，必须按照相关标准及规范进行验收，遵循初验（预验收）、
+    试运行、终验（竣工验收）环节。项目建成后可进行系统初验，初验通过后，进入试运行期，
+    试运行期为 	3 	个月。期间未出现严重影响系统和业务应用的故障，需经具有软件测评资质的第
+    三方机构检测通过即可终验。本项目第三方测评机构由采购方另行招标采购，费用不包含在本
+- requires_human_review: true
+
+### JY-001:CAND-188
+- tender_id: JY-001
+- requirement_text: 本项目第三方测评机构由采购方另行招标采购,费用不包含在本次招标中。
+- category: contractual
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":37,"end":37}
+- span: {"clause":"8.4","paragraph_start":1349,"paragraph_end":1350,"page_start":37,"page_end":37}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"470cd54df2b8d80c12b564fb55193e4771410cac77f96d678f63f566fa7473f2","historical_source_span_hash":"44de91832836aec0938895ddb1cc5bb130f0a28c3e8e8bc1249a52e4f62313be","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"8.4","paragraph_start":1349,"paragraph_end":1350,"page_start":37,"page_end":37},"source_page":{"start":37,"end":37}}
+- source_excerpt: 
+
+    三方机构检测通过即可终验。本项目第三方测评机构由采购方另行招标采购，费用不包含在本
+    次招标中。试运行期间若发生与技术要求不符或与初验记录不一致的情况时，中标人应负责解
+- requires_human_review: true
+
+### JY-001:CAND-189
+- tender_id: JY-001
+- requirement_text: 项目初、终验需同时验收项目文档,提交验收的主要文件及内容符合相关文档规范。文档不合格的,不得通过项目初、终验。
+- category: delivery
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":38,"end":38}
+- span: {"clause":"8.4","paragraph_start":1354,"paragraph_end":1355,"page_start":38,"page_end":38}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"030fb3acec77ed8c69b8a51a0eb6a787f32d19fb56e29a4b990496f3ab300437","historical_source_span_hash":"4f685bb2f7975df523c3ff9d6955919ad25192dd90d8fea2048fb713b4a22344","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"8.4","paragraph_start":1354,"paragraph_end":1355,"page_start":38,"page_end":38},"source_page":{"start":38,"end":38}}
+- source_excerpt: 
+
+    失。项目初、终验需同时验收项目文档，提交验收的主要文件及内容符合相关文档规范。文档
+    不合格的，不得通过项目初、终验。
+- requires_human_review: true
+
+### JY-001:CAND-190
+- tender_id: JY-001
+- requirement_text: 要求针对本项目应用软件及采用的相关技术等提出全面培训计划和培训方案并征得业务主管部门领导的同意后实施。
+- category: implementation
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":38,"end":38}
+- span: {"clause":"9.1","paragraph_start":1358,"paragraph_end":1359,"page_start":38,"page_end":38}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"1669b7ebe8f3d26f81195b3577b6a23e84b967c142551629ebf40b01315e5a31","historical_source_span_hash":"1669b7ebe8f3d26f81195b3577b6a23e84b967c142551629ebf40b01315e5a31","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"9.1","paragraph_start":1358,"paragraph_end":1359,"page_start":38,"page_end":38},"source_page":{"start":38,"end":38}}
+- source_excerpt: 
+
+    1、要求针对本项目应用软件及采用的相关技术等提出全面培训计划和培训方案并征
+    得业务主管部门领导的同意后实施。
+- requires_human_review: true
+
+### JY-001:CAND-191
+- tender_id: JY-001
+- requirement_text: 培训对象主要分为涉及该项目的各类人员,必须针对不同的对象制定不同的培训计划,并分别培训。
+- category: implementation
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":38,"end":38}
+- span: {"clause":"9.1","paragraph_start":1360,"paragraph_end":1361,"page_start":38,"page_end":38}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"5f02d23b29c26cc260cb106d256f8c437b4a4fa775fff335c404f55ca845ae34","historical_source_span_hash":"abcdabaa6d655739aa7d0a140c4f4699118a6bbc8d8cc5a3c61516d32fdd8bd7","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"9.1","paragraph_start":1360,"paragraph_end":1361,"page_start":38,"page_end":38},"source_page":{"start":38,"end":38}}
+- source_excerpt: 
+
+    2、培训对象主要分为涉及该项目的各类人员，必须针对不同的对象制定不同的培训
+    计划，并分别培训。
+- requires_human_review: true
+
+### JY-001:CAND-192
+- tender_id: JY-001
+- requirement_text: 要求对所有被培训人员进行现场培训,提供文字资料、讲义等相关用品。所有的资料必须是中文书写。
+- category: implementation
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":38,"end":38}
+- span: {"clause":"9.1","paragraph_start":1362,"paragraph_end":1363,"page_start":38,"page_end":38}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"25e0c1810eb33b17a86976fa118c8209f85f0e73f97da719c26b5226ba62fb6a","historical_source_span_hash":"db211e8f9fbde5f94bcf85e261dd2a119e22ed3cfc0d168a67d4cde7c8f9b063","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"9.1","paragraph_start":1362,"paragraph_end":1363,"page_start":38,"page_end":38},"source_page":{"start":38,"end":38}}
+- source_excerpt: 
+
+    3、要求对所有被培训人员进行现场培训，提供文字资料、讲义等相关用品。所有的
+    资料必须是中文书写。
+- requires_human_review: true
+
+### JY-001:CAND-193
+- tender_id: JY-001
+- requirement_text: 业务系统操作培训工作应在系统上线试运行过程中进行。
+- category: implementation
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Human authority review required; this candidate is not automatically promoted, downgraded, deduplicated, or removed.
+- page: {"start":38,"end":38}
+- span: {"clause":"9.1","paragraph_start":1364,"paragraph_end":1364,"page_start":38,"page_end":38}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf","source_file_sha256":"bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145","source_excerpt_sha256":"2e2a3beb483458cab299878c4548307eb21b7ad8259d3e61d4c59f3fe7672cf8","historical_source_span_hash":"2e2a3beb483458cab299878c4548307eb21b7ad8259d3e61d4c59f3fe7672cf8","source_excerpt_origin":"official PDF parser output; no semantic rewriting","source_excerpt_capture_status":"CAPTURED_FROM_CURRENT_OFFICIAL_PDF","source_span":{"clause":"9.1","paragraph_start":1364,"paragraph_end":1364,"page_start":38,"page_end":38},"source_page":{"start":38,"end":38}}
+- source_excerpt: 
+
+    4、业务系统操作培训工作应在系统上线试运行过程中进行。
+- requires_human_review: true
+
+### FAST-01:FAST-01-G001
+- tender_id: FAST-01
+- requirement_text: 本项目服务期限为1年，服务时间为2025年12月1日至2026年11月30日；续签不超过两次且长期服务合同履行期限最长不超过36个月。
+- category: constraint
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C001-S035","start_ref":"C001-S032"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"800616be17c944f236f845584231662ab390170b5bce55ce0b79a57880f9f402","source_range":{"end_ref":"C001-S035","start_ref":"C001-S032"},"source_refs":["C001-S032","C001-S033","C001-S034","C001-S035"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    ★服务期限：本项目服务期限为 1 年，服务时间为 2025 年 12 月 1 日至 2026 年 11
+    月 30 日。服务期满后，根据中标供应商履约及考核情况确定是否续签，续签不超过
+    两次（一年一签），长期服务政府采购合同履行期限最长不得超过三十六个月，如
+    采购方对履约情况不满意，采购方不再续约。
+- requires_human_review: true
+
+### FAST-01:FAST-01-G002
+- tender_id: FAST-01
+- requirement_text: 项目负责人须为投标人自有员工，并与供应商基本情况表填报一致；须按要求提供近一个月社保证明，注册不足1个月时可提供承诺函。
+- category: implementation
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C001-S040","start_ref":"C001-S037"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"1886beffcd278c3fbfdf33a7f25b31cc4ef9c2f6bdf33dd56b1c4b55d2646d40","source_range":{"end_ref":"C001-S040","start_ref":"C001-S037"},"source_refs":["C001-S037","C001-S038","C001-S039","C001-S040"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    ★项目负责人为投标人自有员工且与招标文件中五、供应商基本情况表的项目负责
+    人填报一致。要求提供社保部门出具的投标人为其缴纳的近一个月（含开标当月）
+    的社保证明作为本单位员工的证明依据；如投标人注册成立时间不足 1 个月的，可
+    提供承诺函(格式自拟)，无需提供相关人员社保证明。
+- requires_human_review: true
+
+### FAST-01:FAST-01-G003
+- tender_id: FAST-01
+- requirement_text: 维护服务范围应覆盖HIS、电子病历、PACS-RIS、LIS、体检、手术麻醉、心电、输血、院感、药事等10个业务软件系统及相关接口。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C002-S012","start_ref":"C002-S009"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"b9c71dcb319e6af20efdea026f6dbc1de277692a035f8bb39163bea55e9769a5","source_range":{"end_ref":"C002-S012","start_ref":"C002-S009"},"source_refs":["C002-S009","C002-S010","C002-S011","C002-S012"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    本次项目维护服务内容包括对 HIS 系统、电子病历系统、
+    PACS-RIS 系统、LIS 系统、体检信息系统、手术麻醉信息系统、
+    心电管理系统、输血管理系统、院感管理系统、药事管理系统
+    10 个业务软件系统及相关接口维护，主要服务内容要求如下：
+- requires_human_review: true
+
+### FAST-01:FAST-01-G004
+- tender_id: FAST-01
+- requirement_text: 应及时处理信息系统使用过程中出现的问题。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C002-S013","start_ref":"C002-S013"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"ed7d801526522d482c61969e8ef5f54bdc3a8091f56d2c6af35dd566783ea62f","source_range":{"end_ref":"C002-S013","start_ref":"C002-S013"},"source_refs":["C002-S013"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （1）问题处理，及时解决信息系统在使用过程中出现的问题。
+- requires_human_review: true
+
+### FAST-01:FAST-01-G005
+- tender_id: FAST-01
+- requirement_text: 应及时优化处理信息系统操作变慢、性能降低等性能问题。
+- category: performance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C002-S015","start_ref":"C002-S014"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"4de77aaa4e1182fa3f280a42aee487472b5bb9fe80296b05c45f2c88dca0a8e9","source_range":{"end_ref":"C002-S015","start_ref":"C002-S014"},"source_refs":["C002-S014","C002-S015"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （2）性能优化，及时优化处理信息系统操作变慢、性能降低
+    等问题。
+- requires_human_review: true
+
+### FAST-01:FAST-01-G006
+- tender_id: FAST-01
+- requirement_text: 应按院方要求指导培训使用人员熟练使用信息系统。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C002-S017","start_ref":"C002-S016"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"753f7b1c8a53140c1bfaf1e876e5f2d28c08a86a21c284dfe19abb8ea7de503d","source_range":{"end_ref":"C002-S017","start_ref":"C002-S016"},"source_refs":["C002-S016","C002-S017"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （3）操作培训，按院方要求指导培训使用人员熟练使用信息
+    系统。
+- requires_human_review: true
+
+### FAST-01:FAST-01-G007
+- tender_id: FAST-01
+- requirement_text: 应协助院方按照需求进行相关数据处理。
+- category: data
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C002-S018","start_ref":"C002-S018"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"7dab9b9b7eff8818f79d74f974cfe6aa78a177def96423053ec6feb2752040b2","source_range":{"end_ref":"C002-S018","start_ref":"C002-S018"},"source_refs":["C002-S018"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （4）数据处理，协助院方按照需求进行相关数据处理。
+- requires_human_review: true
+
+### FAST-01:FAST-01-G008
+- tender_id: FAST-01
+- requirement_text: 应每天检查服务器、应用系统使用情况和运行日志，并每季度进行一次深度检查。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C002-S020","start_ref":"C002-S019"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"842dcd53fa8038f6db14163c298ede2250a757ff8758b3dd8bde3f5b007474c6","source_range":{"end_ref":"C002-S020","start_ref":"C002-S019"},"source_refs":["C002-S019","C002-S020"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （5）定期巡检，每天检查服务器、应用系统的使用情况和运
+    行日志，每季度进行一次深度检查。
+- requires_human_review: true
+
+### FAST-01:FAST-01-G009
+- tender_id: FAST-01
+- requirement_text: 应配合院方完成系统安全相关工作，包括补丁升级、漏洞修复和安全检查协助等。
+- category: security
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C002-S023","start_ref":"C002-S021"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"b9a7ce4e4c20587411f00a1ae61aaa2a09d7ee41f4d2d845e193898958c9f15e","source_range":{"end_ref":"C002-S023","start_ref":"C002-S021"},"source_refs":["C002-S021","C002-S022","C002-S023"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （6）系统安全问题处理，配合院方完成系统安全相关工作，
+    包括但不限于运维相关系统及主机的补丁升级、漏洞修复以及
+    安全检查的协助等。
+- requires_human_review: true
+
+### FAST-01:FAST-01-G010
+- tender_id: FAST-01
+- requirement_text: 应派驻3名软件维护工程师分别驻点用户指定地点，提供系统轮巡、现场及远程故障处理等服务。
+- category: implementation
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C003-S005","start_ref":"C003-S003"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"10f7a0b2d012e68cc82cc0de096b1e54cba03a660a63cabbf8f05173238dc724","source_range":{"end_ref":"C003-S005","start_ref":"C003-S003"},"source_refs":["C003-S003","C003-S004","C003-S005"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （1）要求派驻 3 名软件维护工程师分别驻点在用户指定地点，
+    提供巡检服务，主要包括各医院信息系统轮巡、现场系统故障
+    处理、远程故障处理等服务，以便出现故障及时响应。
+- requires_human_review: true
+
+### FAST-01:FAST-01-G011
+- tender_id: FAST-01
+- requirement_text: 驻点服务人员须遵守医院规章制度，并对工作期间接触的医院资料、信息或秘密保密。
+- category: security
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C003-S008","start_ref":"C003-S006"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"edd1685906289411a26993aaa2bd72758564e61d6b4d6754abc5401b30c594d1","source_range":{"end_ref":"C003-S008","start_ref":"C003-S006"},"source_refs":["C003-S006","C003-S007","C003-S008"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （2）要求驻点服务人员应严格遵守医院各项规章制度，对工
+    作期间接触到的医院的各项资料信息或秘密等进行保密。投标
+    人应在工作日提供驻场维护服务，要求按照医院工作日时间为
+- requires_human_review: true
+
+### FAST-01:FAST-01-G012
+- tender_id: FAST-01
+- requirement_text: 工作日驻场维护时间为8:00-17:00，其他时间可远程协助，必要时现场处理，紧急或临时任务需配合加班。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C003-S011","start_ref":"C003-S008"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"9cf547c71e0fbbaf83011f23accd95318db7c4c3c38de3a53df24df7fac4cfd5","source_range":{"end_ref":"C003-S011","start_ref":"C003-S008"},"source_refs":["C003-S008","C003-S009","C003-S010","C003-S011"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    人应在工作日提供驻场维护服务，要求按照医院工作日时间为
+    上午 8：00-下午 17：00，其它时间可远程协助处理，必要时
+    现场处理，如遇紧急情况或临时工作任务等需要加班时，驻点
+    人员需积极配合院方。
+- requires_human_review: true
+
+### FAST-01:FAST-01-G013
+- tender_id: FAST-01
+- requirement_text: 合同期间应保持驻点人员稳定；特殊情况调整须提前一个月书面通知，经院方同意并完成交接后方可离开。
+- category: implementation
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C003-S015","start_ref":"C003-S012"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"e908685698fdb70b927660e658e8361a7412677dd30847767d551071a68fbd6a","source_range":{"end_ref":"C003-S015","start_ref":"C003-S012"},"source_refs":["C003-S012","C003-S013","C003-S014","C003-S015"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （3）在合同期间，投标人需保证驻点服务人员的稳定，不得
+    随意进行人员调整，如果因人员离职等特殊情况需要调整时，
+    要提前一个月书面通知院方，经院方同意并工作交接完成后才
+    能离开，如院方对驻点人员不满意要求调整时，投标人应一个
+- requires_human_review: true
+
+### FAST-01:FAST-01-G014
+- tender_id: FAST-01
+- requirement_text: 院方要求调整驻点人员时，投标人应在一个月内更换并确保新人员满足院方要求。
+- category: implementation
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C003-S016","start_ref":"C003-S015"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"122bd485f0b8e08a7e1113895edc0be781a1ee1adaf67e24eac1ea59a8509400","source_range":{"end_ref":"C003-S016","start_ref":"C003-S015"},"source_refs":["C003-S015","C003-S016"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    能离开，如院方对驻点人员不满意要求调整时，投标人应一个
+    月内进行更换，并确保调整后的人员满足院方要求。
+- requires_human_review: true
+
+### FAST-01:FAST-01-G015
+- tender_id: FAST-01
+- requirement_text: 驻点人员休假或请假期间，应安排临时人员顶替以保证系统故障及时处理。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C003-S018","start_ref":"C003-S017"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"7248c46109628b0c64527835194b88dfc3b64a8a53a502a6c8a31cfbd6931307","source_range":{"end_ref":"C003-S018","start_ref":"C003-S017"},"source_refs":["C003-S017","C003-S018"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （4）驻点服务人员休假和请假期间，投标人需安排临时人员
+    顶替，保证系统故障及时处理。信息系统发生宕机等意外事件
+- requires_human_review: true
+
+### FAST-01:FAST-01-G016
+- tender_id: FAST-01
+- requirement_text: 信息系统宕机等严重影响业务且现场人员预计30分钟内无法排除时，应安排技术人员2小时内到场处理。
+- category: performance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C003-S020","start_ref":"C003-S018"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"1480ea9f75972c76f9f01c5f56398c2848102cafde01759da877da32dda76d20","source_range":{"end_ref":"C003-S020","start_ref":"C003-S018"},"source_refs":["C003-S018","C003-S019","C003-S020"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    顶替，保证系统故障及时处理。信息系统发生宕机等意外事件
+    严重影响医院业务，现场驻点维护人员预计 30 分钟内不能排
+    除故障时，投标人应安排技术人员 2 小时内赶到现场处理。
+- requires_human_review: true
+
+### FAST-01:FAST-01-G017
+- tender_id: FAST-01
+- requirement_text: 应为驻点人员配备值班手机，保证24小时通讯通畅，并提供应急电话和投诉电话，对问题及时跟踪处理。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C003-S023","start_ref":"C003-S021"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"0b7251ad08951db00bee52a5d3516ca8f45001ec4ab0cf6b7e46381b689d14ec","source_range":{"end_ref":"C003-S023","start_ref":"C003-S021"},"source_refs":["C003-S021","C003-S022","C003-S023"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （5）要求投标人为驻点服务人员配备值班手机，保证 24 小时
+    通讯通畅，需提供应急电话和投诉电话，对反馈的问题及时跟
+    踪处理。
+- requires_human_review: true
+
+### FAST-01:FAST-01-G018
+- tender_id: FAST-01
+- requirement_text: 驻点人员应详细记录问题处理过程，包括问题描述、提出人、提出时间、解决时间和解决办法等。
+- category: delivery
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C003-S026","start_ref":"C003-S024"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"db44255423e191f0b9e98d902e6ccaf8f1266925e50f39d4281f2003afb32244","source_range":{"end_ref":"C003-S026","start_ref":"C003-S024"},"source_refs":["C003-S024","C003-S025","C003-S026"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （6）驻点服务人员应详细记录问题处理过程，包括问题描述、
+    提出人、提出时间、解决时间、解决办法等内容，按时递交工
+    作报告，要求每周四下 17：00 前递交上周的服务工作周报，
+- requires_human_review: true
+
+### FAST-01:FAST-01-G019
+- tender_id: FAST-01
+- requirement_text: 应按规定提交服务报告：周报每周四17:00前、月报每月5日17:00前、季度巡检报告巡检后15个工作日内、服务到期后提交年度整体报告。
+- category: delivery
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C003-S029","start_ref":"C003-S026"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"e9a30bd2285bb1d4554ebd9c8c4793a62ff020134180b30c899baeac79662d2d","source_range":{"end_ref":"C003-S029","start_ref":"C003-S026"},"source_refs":["C003-S026","C003-S027","C003-S028","C003-S029"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    作报告，要求每周四下 17：00 前递交上周的服务工作周报，
+    每月 5 号下午 17：00 前递交服务工作月报，季度巡检报告要
+    求巡检后 15 个工作日内提供，服务到期后递交年度服务整体
+    报告。
+- requires_human_review: true
+
+### FAST-01:FAST-01-G020
+- tender_id: FAST-01
+- requirement_text: 问题处理应遵循故障分级响应机制；一级故障或其他级别超时未解决时应及时报告指定人员，一级故障解决后一天内提交重大信息事件报告。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C003-S032","start_ref":"C003-S030"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"d948d649e59d557a14e8447722c1ddf55094b34d72112596bf51c092b6cd3827","source_range":{"end_ref":"C003-S032","start_ref":"C003-S030"},"source_refs":["C003-S030","C003-S031","C003-S032"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （7）问题处理按照《表 1：故障分级及响应机制》，一级故
+    障或未能在规定时间内解决其它级别故障，应及时报告院方指
+    定人员，一级故障解决后应一天内递交重大信息事件报告。
+- requires_human_review: true
+
+### FAST-01:FAST-01-G021
+- tender_id: FAST-01
+- requirement_text: 一级故障应立即响应、立即处理，并在30分钟内解决。
+- category: performance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C003-S048","start_ref":"C003-S042"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"cc0037016d1ac24c671870c7d949d46177e3fc97635e1e306181cef36c9d213e","source_range":{"end_ref":"C003-S048","start_ref":"C003-S042"},"source_refs":["C003-S042","C003-S043","C003-S044","C003-S045","C003-S046","C003-S047","C003-S048"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    一级 数据库、应用信 立即 立即 ≦30
+    15 / 56
+    - 16 -
+    息系统等故障，
+    造成全院业务整
+    体受影响
+    分钟
+- requires_human_review: true
+
+### FAST-01:FAST-01-G022
+- tender_id: FAST-01
+- requirement_text: 二级故障应立即响应，处理时间不超过10分钟，解决时间不超过50分钟。
+- category: performance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C004-S007","start_ref":"C003-S049"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"a177dae64e00a16cb9aa53e47f2a0a5d134c88a18583747fe3fb1677886a355a","source_range":{"end_ref":"C004-S007","start_ref":"C003-S049"},"source_refs":["C003-S049","C003-S050","C004-S001","C004-S002","C004-S003","C004-S004","C004-S005","C004-S006","C004-S007"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    二级 信息系统故障，
+    导致单项业务整
+    体受影响或不能
+    中断的临床业务
+    受影响
+    立即 ≦10
+    分钟
+    ≦50
+    分钟
+- requires_human_review: true
+
+### FAST-01:FAST-01-G023
+- tender_id: FAST-01
+- requirement_text: 三级故障响应时间不超过10分钟、处理时间不超过30分钟、解决时间不超过2小时。
+- category: performance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C004-S017","start_ref":"C004-S008"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"afc1905d6a99118a36876bf8eb1d1ec295b27d5685fad15957334283273c4ffc","source_range":{"end_ref":"C004-S017","start_ref":"C004-S008"},"source_refs":["C004-S008","C004-S009","C004-S010","C004-S011","C004-S012","C004-S013","C004-S014","C004-S015","C004-S016","C004-S017"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    三级 信息系统故障，
+    导致个体工作站
+    非紧急业务受影
+    响
+    ≦10 分
+    钟
+    ≦30
+    分钟
+    ≦2 小
+    时
+- requires_human_review: true
+
+### FAST-01:FAST-01-G024
+- tender_id: FAST-01
+- requirement_text: 四级故障响应时间不超过20分钟、处理时间不超过1小时、解决时间不超过24小时。
+- category: performance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C004-S028","start_ref":"C004-S018"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"85d791d1c1f8da006be2e131c2e26a7c217caaaa8941b06c7d08562a22ea5c0c","source_range":{"end_ref":"C004-S028","start_ref":"C004-S018"},"source_refs":["C004-S018","C004-S019","C004-S020","C004-S021","C004-S022","C004-S023","C004-S024","C004-S025","C004-S026","C004-S027","C004-S028"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    四级 信息系统故障，
+    导致个体工作站
+    单个业务不能开
+    展，日程工作不
+    受影响
+    ≦20 分
+    钟
+    ≦1 小
+    时
+    ≦24
+    小时
+- requires_human_review: true
+
+### FAST-01:FAST-01-G025
+- tender_id: FAST-01
+- requirement_text: 适应性调整维护应充分调研和分析需求，提出解决方案并明确解决时间，经需求提出者确认后方可实施。
+- category: implementation
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C004-S031","start_ref":"C004-S029"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"fa497a4586b7e15905290688f5d717debcdecfa1eced3ab517a2690d827c02f5","source_range":{"end_ref":"C004-S031","start_ref":"C004-S029"},"source_refs":["C004-S029","C004-S030","C004-S031"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （1）适应性调整维护应详细了解需求目的，进行充分调研和
+    需求分析后，提出解决方案，明确解决时间，经需求提出者确
+    认后方可进行调整维护。维护内容只限于现有功能模块及政策
+- requires_human_review: true
+
+### FAST-01:FAST-01-G026
+- tender_id: FAST-01
+- requirement_text: 适应性调整维护仅限现有功能模块、政策类需求、接口优化及数据报表统计处理，不包括新增功能模块。
+- category: constraint
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C004-S033","start_ref":"C004-S031"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"c9fd61397d3428a7fad0c1d0e0ba86491f487465ca2b7fc495a84878d45e84f0","source_range":{"end_ref":"C004-S033","start_ref":"C004-S031"},"source_refs":["C004-S031","C004-S032","C004-S033"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    认后方可进行调整维护。维护内容只限于现有功能模块及政策
+    类的需求、各类接口优化及数据报表统计处理，不包括新增功
+    能模块需求。一般需求要求一周内完成，重大需求最长不超过
+- requires_human_review: true
+
+### FAST-01:FAST-01-G027
+- tender_id: FAST-01
+- requirement_text: 一般需求应一周内完成，重大需求最长不超过一个月；特殊情况不能按时完成时应提前告知并协商完成时间。
+- category: performance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C004-S035","start_ref":"C004-S033"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"d6437e55e91fd77abe1b80c682cbd056eaaf47baebb7277870076543cf752b85","source_range":{"end_ref":"C004-S035","start_ref":"C004-S033"},"source_refs":["C004-S033","C004-S034","C004-S035"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    能模块需求。一般需求要求一周内完成，重大需求最长不超过
+    一个月。因特殊情况不能按时完成时，应提前告知需求提出者，
+    并协商完成时间，否则按未按时完成处理。
+- requires_human_review: true
+
+### FAST-01:FAST-01-G028
+- tender_id: FAST-01
+- requirement_text: 应定期开展软件和数据库巡检并按时提交巡检报告，检查内容包括性能、功能正确性、可用性、安全性、参数合理性和性能优化等。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C004-S039","start_ref":"C004-S036"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"8e72a757d9150089455d6cde6e87f3f901f3451f8dc0374b7b11ec1df644fea2","source_range":{"end_ref":"C004-S039","start_ref":"C004-S036"},"source_refs":["C004-S036","C004-S037","C004-S038","C004-S039"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （2）定期巡检，按时提交巡检报告，巡检服务主要指软件检
+    查和数据库检查，内容包括：系统性能指标检查、功能正确性
+    检查、软件可用性与安全性检查、参数的合理性、性能优化等；
+    巡检过程中发现的问题，依据服务方与院方确认的故障分类标
+- requires_human_review: true
+
+### FAST-01:FAST-01-G029
+- tender_id: FAST-01
+- requirement_text: 巡检发现的问题应依据双方确认的故障分类标准，由现场技术服务工程师进行相应故障排除。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C004-S040","start_ref":"C004-S039"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"a96eab00ad668d863f89ed66a6b1d6757561824ba2545518f7f91dd57a9260dd","source_range":{"end_ref":"C004-S040","start_ref":"C004-S039"},"source_refs":["C004-S039","C004-S040"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    巡检过程中发现的问题，依据服务方与院方确认的故障分类标
+    准，由现场技术服务工程师进行相应的故障排除。
+- requires_human_review: true
+
+### FAST-01:FAST-01-G030
+- tender_id: FAST-01
+- requirement_text: 非工作时间一级故障须立即到场处理；其他问题可远程处理，30分钟仍不能远程解决时二级故障应立即到场，三级和四级故障可协商工作时间处理。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C004-S044","start_ref":"C004-S041"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"9508c2eb58ebbd1fc20a48ad47af19a8d208f69dde912d5d36e94b34a856e0d7","source_range":{"end_ref":"C004-S044","start_ref":"C004-S041"},"source_refs":["C004-S041","C004-S042","C004-S043","C004-S044"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （3）非工作时间出现一级故障需立即赶往现场处理，其它问
+    题可以通过电话远程指导处理，如果 30 分钟内仍不能远程解
+    决时，二级故障应立即赶到现场处理，三级和四故障可协商工
+    作时间处理。
+- requires_human_review: true
+
+### FAST-01:FAST-01-G031
+- tender_id: FAST-01
+- requirement_text: 现场人员应遵守用户各项规章制度并按相应制度办事。
+- category: constraint
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C004-S047","start_ref":"C004-S045"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"c5eac73903e3d76786c251cd8d0901158c91f299c19cddbda8a4111410921327","source_range":{"end_ref":"C004-S047","start_ref":"C004-S045"},"source_refs":["C004-S045","C004-S046","C004-S047"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （二）行为规范要求
+    （1）遵守用户的各项规章制度，严格按照用户相应的规章制
+    度办事。
+- requires_human_review: true
+
+### FAST-01:FAST-01-G032
+- tender_id: FAST-01
+- requirement_text: 应与用户运行维护体系其他部门和环节协同配合开展技术支持。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C004-S049","start_ref":"C004-S048"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"5b78d3600b065acef76689194d5bbe34995ef6fa12776da7752927bd1c03cf20","source_range":{"end_ref":"C004-S049","start_ref":"C004-S048"},"source_refs":["C004-S048","C004-S049"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （2）与用户运行维护体系其他部门和环节协同工作，密切配
+    合，共同开展技术支持工作。
+- requires_human_review: true
+
+### FAST-01:FAST-01-G033
+- tender_id: FAST-01
+- requirement_text: 出现疑难技术、业务问题和重大紧急情况时应及时向负责人报告。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S001","start_ref":"C004-S050"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"a628abbb207553aa048cc6d75568dd49b74d1ab5c663d708ac9081ce15992cba","source_range":{"end_ref":"C005-S001","start_ref":"C004-S050"},"source_refs":["C004-S050","C005-S001"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （3）出现疑难技术、业务问题和重大紧急情况时，及时向负
+    责人报告。
+- requires_human_review: true
+
+### FAST-01:FAST-01-G034
+- tender_id: FAST-01
+- requirement_text: 现场技术支持及电话服务应保持规范、文明的职业行为和沟通。
+- category: constraint
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S003","start_ref":"C005-S002"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"87acfccf41b7f8c5799bb5aa5fcc7a5c1845e7af2c8103cd0da5167a0a0949c5","source_range":{"end_ref":"C005-S003","start_ref":"C005-S002"},"source_refs":["C005-S002","C005-S003"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （4）现场技术支持时要精神饱满，穿着得体，谈吐文明，举
+    止庄重。接听电话时要文明礼貌，语言清晰明了，语气和善。
+- requires_human_review: true
+
+### FAST-01:FAST-01-G035
+- tender_id: FAST-01
+- requirement_text: 应遵守信息安全和保密原则，对网络、主机、系统软件、应用软件的密码、核心参数及业务数据等承担保密责任，不得随意复制和传播。
+- category: security
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S007","start_ref":"C005-S004"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"4a3c4ac1945dec282085a77e19ff004f9c2e7eb608c418cb0801dcbd02979e12","source_range":{"end_ref":"C005-S007","start_ref":"C005-S004"},"source_refs":["C005-S004","C005-S005","C005-S006","C005-S007"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （5）遵守信息安全和保密原则。对工作期间接触到的医院的
+    各项资料信息或秘密等进行保密，包括对被支持单位的网络、
+    主机、系统软件、应用软件等的密码、核心参数、业务数据等
+    负有保密责任，不得随意复制和传播。
+- requires_human_review: true
+
+### FAST-01:FAST-01-G036
+- tender_id: FAST-01
+- requirement_text: 项目工作团队不少于3人（含项目负责人），团队成员均应为投标人自有员工。
+- category: implementation
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S010","start_ref":"C005-S008"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"d31640738c4753898a87e88806944ba78a1bc7102aa633b60ce00a1f99adb4da","source_range":{"end_ref":"C005-S010","start_ref":"C005-S008"},"source_refs":["C005-S008","C005-S009","C005-S010"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    2 人员要求
+    投标人为本项目安排不少于 3 人（含项目负责人）的工作团队，
+    团队成员均为投标人自有员工。其中 1 人为项目负责人，至少
+- requires_human_review: true
+
+### FAST-01:FAST-01-G037
+- tender_id: FAST-01
+- requirement_text: 项目负责人至少具有本科（或以上）学历，负责信息系统运维、驻场服务及管理等工作。
+- category: implementation
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S012","start_ref":"C005-S010"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"d04bf07febe65898afa3c88efa9c51d41267e0de6c5e6aecd277fc933d1004e4","source_range":{"end_ref":"C005-S012","start_ref":"C005-S010"},"source_refs":["C005-S010","C005-S011","C005-S012"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    团队成员均为投标人自有员工。其中 1 人为项目负责人，至少
+    具有本科（或以上）学历，负责信息系统运维、人员驻场服务
+    及管理等工作；项目组员的职责是负责信息系统运维服务及驻
+- requires_human_review: true
+
+### FAST-01:FAST-01-G038
+- tender_id: FAST-01
+- requirement_text: 项目组员负责信息系统运维服务及驻场服务等工作。
+- category: implementation
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S015","start_ref":"C005-S012"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"50ad1595ee86abca20901f44c09e4fd5817fa6119a483e6156ac02cece3dc2e6","source_range":{"end_ref":"C005-S015","start_ref":"C005-S012"},"source_refs":["C005-S012","C005-S013","C005-S014","C005-S015"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    及管理等工作；项目组员的职责是负责信息系统运维服务及驻
+    16 / 56
+    - 17 -
+    场服务等工作。
+- requires_human_review: true
+
+### FAST-01:FAST-01-G039
+- tender_id: FAST-01
+- requirement_text: 服务地点为深圳市大鹏新区医疗健康集团。
+- category: constraint
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C006-S009","start_ref":"C006-S009"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf","source_file_sha256":"8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json","packet_sha256":"d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af","source_excerpt_sha256":"5a9c09cade1cbe2b3ea35e0b4b9b3a97cbd85df70277afc5963d2d6e8d9f25bf","source_range":{"end_ref":"C006-S009","start_ref":"C006-S009"},"source_refs":["C006-S009"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    2 服务地点 深圳市大鹏新区医疗健康集团
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G001
+- tender_id: FAST-WATER-01
+- requirement_text: 项目采购内容包括信息系统运行维护和安全运行维护服务。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C004-S013","start_ref":"C004-S010"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"70ca9131eac9b8cbb3b95a6c947387c9fb7c56b9751fe364e39dc2223eafea37","source_range":{"end_ref":"C004-S013","start_ref":"C004-S010"},"source_refs":["C004-S010","C004-S011","C004-S012","C004-S013"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    ★2.采购内容
+    本项目包括以下工作内容：
+    （1）信息系统运行维护；
+    （2）安全运行维护服务。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G002-01
+- tender_id: FAST-WATER-01
+- requirement_text: 应对综合信息平台提供每日巡检服务。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S006","start_ref":"C005-S006"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"1b065ff0bc00b413e9659aedd0aff03114345ba0bdb0115640d47f7d5f871d47","source_range":{"end_ref":"C005-S006","start_ref":"C005-S006"},"source_refs":["C005-S006"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    综合信息平台巡检 每天
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G002-02
+- tender_id: FAST-WATER-01
+- requirement_text: 应对综合信息平台提供每日数据备份服务。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S007","start_ref":"C005-S007"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"ae8a4ce2fff0a5ebdb79a15023ffb2fc4a0dd306a5f42d23736d045a517d56ef","source_range":{"end_ref":"C005-S007","start_ref":"C005-S007"},"source_refs":["C005-S007"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    综合信息平台数据备份 每天
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G002-03
+- tender_id: FAST-WATER-01
+- requirement_text: 应对综合信息平台提供每日数据维护服务。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S008","start_ref":"C005-S008"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"b2e6fb9a1da8c6357a5803d9ed9b191283b2752cf3f353068ed3dc7f73e4ec44","source_range":{"end_ref":"C005-S008","start_ref":"C005-S008"},"source_refs":["C005-S008"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    综合信息平台数据维护 每天
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G002-04
+- tender_id: FAST-WATER-01
+- requirement_text: 应对综合信息平台提供每日现场服务。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S009","start_ref":"C005-S009"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"933c68debe197e00a1185269caf94ece222c76b5fd5aa2269c7e4938cf6e94e6","source_range":{"end_ref":"C005-S009","start_ref":"C005-S009"},"source_refs":["C005-S009"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    综合信息平台现场服务 每天
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G002-05
+- tender_id: FAST-WATER-01
+- requirement_text: 应对综合信息平台开展安全加固。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S010","start_ref":"C005-S010"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"777894d754cf43a28d20f48fc657eb45cf8882a85ec9c90fde6bc7b829933be2","source_range":{"end_ref":"C005-S010","start_ref":"C005-S010"},"source_refs":["C005-S010"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    综合信息平台安全加固
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G002-06
+- tender_id: FAST-WATER-01
+- requirement_text: 应对综合信息平台开展功能完善及流程调整。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S011","start_ref":"C005-S011"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"f8ea0efc63a41b3b698ef0f3cb3650b57408ea729b4424cea684a9d31d656e90","source_range":{"end_ref":"C005-S011","start_ref":"C005-S011"},"source_refs":["C005-S011"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    综合信息平台功能完善及流程调整
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G002-07
+- tender_id: FAST-WATER-01
+- requirement_text: 应对综合信息平台开展组织机构信息调整。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S012","start_ref":"C005-S012"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"14ef68befca815a16c7d70203bb36f0b63793c5fce6575f0bec92eba0ae30c8b","source_range":{"end_ref":"C005-S012","start_ref":"C005-S012"},"source_refs":["C005-S012"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    综合信息平台组织机构信息调整
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G002-08
+- tender_id: FAST-WATER-01
+- requirement_text: 应对综合信息平台开展安全检查。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S013","start_ref":"C005-S013"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"983b006832d9b1826035fe8b71df1c2ee03d77eb6b0d383989b0bb8c56c8a255","source_range":{"end_ref":"C005-S013","start_ref":"C005-S013"},"source_refs":["C005-S013"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    综合信息平台安全检查
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G002-09
+- tender_id: FAST-WATER-01
+- requirement_text: 应对综合信息平台开展应急故障处理。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S015","start_ref":"C005-S015"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"5c6a4800f15d15b588f69143e19c7d8dbdafbfd2d83d44628d9d1d012f9e3e4d","source_range":{"end_ref":"C005-S015","start_ref":"C005-S015"},"source_refs":["C005-S015"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    综合信息平台应急故障处理
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G003-01
+- tender_id: FAST-WATER-01
+- requirement_text: 应对共享信息系统提供每日巡检服务。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S016","start_ref":"C005-S016"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"6ddec7307cabfe8600879a93ad4b3575b36f8d57cb85fb8f2d8a7a5be5d5539d","source_range":{"end_ref":"C005-S016","start_ref":"C005-S016"},"source_refs":["C005-S016"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    共享信息系统巡检 每天
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G003-02
+- tender_id: FAST-WATER-01
+- requirement_text: 应对共享信息系统提供每日数据备份服务。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S017","start_ref":"C005-S017"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"3fa04c161d6e4e5aa70a07613595303d8ac6b2b771964bc9f1a80f6f787e01d1","source_range":{"end_ref":"C005-S017","start_ref":"C005-S017"},"source_refs":["C005-S017"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    共享信息系统数据备份 每天
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G003-03
+- tender_id: FAST-WATER-01
+- requirement_text: 应对共享信息系统提供每日数据维护服务。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S018","start_ref":"C005-S018"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"23fd99bb86d3216c98b5f722dc6a4576bc8a9f706be03435dcbff97ee1b64e88","source_range":{"end_ref":"C005-S018","start_ref":"C005-S018"},"source_refs":["C005-S018"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    共享信息系统数据维护 每天
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G003-04
+- tender_id: FAST-WATER-01
+- requirement_text: 应对共享信息系统提供每日现场服务。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S019","start_ref":"C005-S019"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"d5210814703a4d1e29df99d452a514b3b83cc70ac0ccd9de1e7b1995db09c9a8","source_range":{"end_ref":"C005-S019","start_ref":"C005-S019"},"source_refs":["C005-S019"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    共享信息系统现场服务 每天
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G003-05
+- tender_id: FAST-WATER-01
+- requirement_text: 应对共享信息系统开展安全加固。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S020","start_ref":"C005-S020"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"c40216c1cb2c889c582a218598af035592739fbb7be0740aa413eb4fef13bee5","source_range":{"end_ref":"C005-S020","start_ref":"C005-S020"},"source_refs":["C005-S020"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    共享信息系统安全加固
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G003-06
+- tender_id: FAST-WATER-01
+- requirement_text: 应对共享信息系统开展安全检查。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S021","start_ref":"C005-S021"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"d729b44cfacbc1032b66897e8b57b3af6d498b2d5491c96351a77a54991cf5ed","source_range":{"end_ref":"C005-S021","start_ref":"C005-S021"},"source_refs":["C005-S021"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    共享信息系统安全检查
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G003-07
+- tender_id: FAST-WATER-01
+- requirement_text: 应对共享信息系统开展应急故障处理。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S023","start_ref":"C005-S023"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"aa46267784164364934b7dfeccf66adcfc605625b0148a22c59cf97cbc88f1e0","source_range":{"end_ref":"C005-S023","start_ref":"C005-S023"},"source_refs":["C005-S023"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    共享信息系统应急故障处理
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G004-01
+- tender_id: FAST-WATER-01
+- requirement_text: 应对外网门户提供每日信息维护服务。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S024","start_ref":"C005-S024"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"84cd1ea048d1e6e52cba6b5dccccbd7f57efb117eeb5eb38d3fd5b4cb51ca7dd","source_range":{"end_ref":"C005-S024","start_ref":"C005-S024"},"source_refs":["C005-S024"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    外网网站信息维护 每天
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G004-02
+- tender_id: FAST-WATER-01
+- requirement_text: 应对外网门户提供每周数据备份服务。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S025","start_ref":"C005-S025"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"b04155498a6b46e03e6085237004427f936f7c2b821503524ee44cd1725a236f","source_range":{"end_ref":"C005-S025","start_ref":"C005-S025"},"source_refs":["C005-S025"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    外网网站数据备份 每周
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G004-03
+- tender_id: FAST-WATER-01
+- requirement_text: 应对外网门户提供每日监控预警服务。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S026","start_ref":"C005-S026"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"54407440cbe0c1e4508e5519d7e1d1a62d65b655d4d8ac431cdc58b5d3791694","source_range":{"end_ref":"C005-S026","start_ref":"C005-S026"},"source_refs":["C005-S026"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    外网监控预警 每天
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G004-04
+- tender_id: FAST-WATER-01
+- requirement_text: 应对外网门户提供季度磁盘空间整理服务。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S027","start_ref":"C005-S027"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"14e38d862cd54cec6500b393bb3e9582386ac452b67e9f7e808d1d8968e3240d","source_range":{"end_ref":"C005-S027","start_ref":"C005-S027"},"source_refs":["C005-S027"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    外网磁盘空间整理 季度
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G004-05
+- tender_id: FAST-WATER-01
+- requirement_text: 应对外网门户提供网站模块维护服务。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S029","start_ref":"C005-S029"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"b4e4ef3bf7532a1dbcc817fc07c7a30b0dd19a35dad63c8dba8a415785493acb","source_range":{"end_ref":"C005-S029","start_ref":"C005-S029"},"source_refs":["C005-S029"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    外网网站模块维护
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G005-01
+- tender_id: FAST-WATER-01
+- requirement_text: 应对项目管理系统提供每日数据备份服务。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S030","start_ref":"C005-S030"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"800186f2a3da791088d14040c97c142f1ce8133f2b9dbaeb24bcef3187202e57","source_range":{"end_ref":"C005-S030","start_ref":"C005-S030"},"source_refs":["C005-S030"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    项目管理系统数据备份 每天
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G005-02
+- tender_id: FAST-WATER-01
+- requirement_text: 应对项目管理系统开展安全加固。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S031","start_ref":"C005-S031"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"2662840ddcdbb9688e5a29d84427ee2d1bf77c13bef75086203d8ca1a531ddcc","source_range":{"end_ref":"C005-S031","start_ref":"C005-S031"},"source_refs":["C005-S031"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    项目管理系统安全加固
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G005-03
+- tender_id: FAST-WATER-01
+- requirement_text: 应对项目管理系统开展功能完善及流程调整。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S032","start_ref":"C005-S032"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"6e8e99290f6ac0a66c683f895d46856f0d703728fb60eb6442afe930cc5410a3","source_range":{"end_ref":"C005-S032","start_ref":"C005-S032"},"source_refs":["C005-S032"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    项目管理系统功能完善及流程调整
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G005-04
+- tender_id: FAST-WATER-01
+- requirement_text: 应对项目管理系统开展安全检查。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S033","start_ref":"C005-S033"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"77f76f1477085d01fb2036571b9124fa595954b716901a916bbc4c2e2678bba7","source_range":{"end_ref":"C005-S033","start_ref":"C005-S033"},"source_refs":["C005-S033"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    项目管理系统安全检查
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G005-05
+- tender_id: FAST-WATER-01
+- requirement_text: 应对项目管理系统开展应急故障处理。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S034","start_ref":"C005-S034"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"6ff1e842ea372754ea0add17730d5ec396746c650f0b54e082b753ecb87012a1","source_range":{"end_ref":"C005-S034","start_ref":"C005-S034"},"source_refs":["C005-S034"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    项目管理系统应急故障处理
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G005-06
+- tender_id: FAST-WATER-01
+- requirement_text: 应对项目管理系统提供使用技术咨询。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S036","start_ref":"C005-S036"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"c5cfbf381106397df908bb353a3cbb559714a98429f66a7dc686ffb3490fef22","source_range":{"end_ref":"C005-S036","start_ref":"C005-S036"},"source_refs":["C005-S036"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    使用技术咨询
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G006-01
+- tender_id: FAST-WATER-01
+- requirement_text: 应对即时通讯系统提供系统巡检服务。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S037","start_ref":"C005-S037"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"1068a50b67a5c75d7e0fa570a6db2554a999f96c1bec9fe46f8e6764c7238d43","source_range":{"end_ref":"C005-S037","start_ref":"C005-S037"},"source_refs":["C005-S037"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    系统巡检
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G006-02
+- tender_id: FAST-WATER-01
+- requirement_text: 应对即时通讯系统提供数据备份服务。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S038","start_ref":"C005-S038"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"cd4f23cd03c785d38bc7e28c64e24c1ab4136c7b8d1fd10bd2a7e02a5887d3d0","source_range":{"end_ref":"C005-S038","start_ref":"C005-S038"},"source_refs":["C005-S038"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    数据备份
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G006-03
+- tender_id: FAST-WATER-01
+- requirement_text: 应对即时通讯系统提供组织机构信息调整服务。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S039","start_ref":"C005-S039"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"73c03766d7c9db126aa3904842e1fcdeeaeddf5889ef5d9d7dfb2f643e49a6b3","source_range":{"end_ref":"C005-S039","start_ref":"C005-S039"},"source_refs":["C005-S039"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    组织机构信息调整
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G006-04
+- tender_id: FAST-WATER-01
+- requirement_text: 应对即时通讯系统处理使用中的问题。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S040","start_ref":"C005-S040"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"32ad0de19721b6a7424fe1b668b130b4f77c4d3cebd144f6836525715bcd37c9","source_range":{"end_ref":"C005-S040","start_ref":"C005-S040"},"source_refs":["C005-S040"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    处理使用中的问题
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G006-05
+- tender_id: FAST-WATER-01
+- requirement_text: 应对即时通讯系统提供系统版本升级服务。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S042","start_ref":"C005-S042"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"75ec3a9bef6f8538bab1c5b5f237c0251149a6c2d876950d655d51f9df1ab79b","source_range":{"end_ref":"C005-S042","start_ref":"C005-S042"},"source_refs":["C005-S042"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    系统版本升级
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G007-01
+- tender_id: FAST-WATER-01
+- requirement_text: 应对档案管理系统提供每日数据备份服务。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S043","start_ref":"C005-S043"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"18f4b5a3c8aecf1046cbcd895934a18e2f20aee79da6a7a93fda0d9a211d3910","source_range":{"end_ref":"C005-S043","start_ref":"C005-S043"},"source_refs":["C005-S043"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    档案管理系统数据备份 每天
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G007-02
+- tender_id: FAST-WATER-01
+- requirement_text: 应对档案管理系统开展安全加固。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S044","start_ref":"C005-S044"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"3a9ec18f8a38f0037b79389c38384bbc0070b6e4e86dfd2e690787e353da283c","source_range":{"end_ref":"C005-S044","start_ref":"C005-S044"},"source_refs":["C005-S044"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    档案管理统安全加固	6 档案管理系统
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G007-03
+- tender_id: FAST-WATER-01
+- requirement_text: 应对档案管理系统开展现有功能完善。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S045","start_ref":"C005-S045"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"45c98f109a08647f71fce6f9a0aa48258e32376d51ec89778a2862aac85158b7","source_range":{"end_ref":"C005-S045","start_ref":"C005-S045"},"source_refs":["C005-S045"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    档案管理系统现有功能完善
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G007-04
+- tender_id: FAST-WATER-01
+- requirement_text: 应对档案管理系统开展应急故障处理。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S047","start_ref":"C005-S047"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"a9f43e317af11cef8ee29d1902d3c32c01217e16229892847bea82de2fbf8534","source_range":{"end_ref":"C005-S047","start_ref":"C005-S047"},"source_refs":["C005-S047"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    档案管理系统应急故障处理
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G008
+- tender_id: FAST-WATER-01
+- requirement_text: 应为财务系统、CAD系统及专业软件等提供使用技术咨询和故障诊断处理。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C006-S001","start_ref":"C005-S048"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"fae418a0d5d8b379dddc38774e000eef8af8d31040c2449320b50e1f097651b1","source_range":{"end_ref":"C006-S001","start_ref":"C005-S048"},"source_refs":["C005-S048","C005-S049","C005-S050","C006-S001"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    使用技术咨询
+    故障诊断与处理
+    7 财务系统、CAD 系
+    统、专业软件等 系统使用咨询
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G009
+- tender_id: FAST-WATER-01
+- requirement_text: 应对网络线路和通讯终端进行维护，保障网络平稳运行。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C006-S003","start_ref":"C006-S002"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"8d7515dfb795358371b3893d02db4bce6c5ab6b965b362f64ad8e1ba4ae5c46a","source_range":{"end_ref":"C006-S003","start_ref":"C006-S002"},"source_refs":["C006-S002","C006-S003"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    1.1.2 通讯终端及线路维护
+    对网络线路和通讯终端进行维护，保障网络平稳运行。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G010
+- tender_id: FAST-WATER-01
+- requirement_text: 应每天维护机房运行环境，包括服务器、UPS、空调/新风、环控消防和综合布线等。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C006-S006","start_ref":"C006-S004"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"5b28fb7210d7676f4661c276396ba557a15216c3ddf92328a3bbc9be9cccfc23","source_range":{"end_ref":"C006-S006","start_ref":"C006-S004"},"source_refs":["C006-S004","C006-S005","C006-S006"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    1.1.3 机房运行环境维护
+    每天维护机房运行环境，包括服务期维护、UPS、空调/新风系统、环控消防系统、
+    综合布线等方面。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G011
+- tender_id: FAST-WATER-01
+- requirement_text: 应定期现场检查无线网络系统，及时发现隐患并通过系统调整降低故障概率，保证系统稳定高效运行。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C006-S010","start_ref":"C006-S007"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"7da40901f83a63f4f846886a7cc80c2e2db085de3764aff5cbb0eb953eb540a5","source_range":{"end_ref":"C006-S010","start_ref":"C006-S007"},"source_refs":["C006-S007","C006-S008","C006-S009","C006-S010"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    1.1.4 无线网络系统运维服务
+    运维服务人员为北京市水科学技术研究院的无线网络系统进行定期的现场检查，及
+    时发现网络系统运行中出现的隐患，通过系统调整等手段，减少系统发生故障的概率，
+    保证系统稳定、高效运行。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G012
+- tender_id: FAST-WATER-01
+- requirement_text: 应每日巡检监控无线网络系统及设备，包括系统连通性、设备运行状态和系统展示内容等。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C006-S012","start_ref":"C006-S011"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"186223301d3635281b1d9c5f703b4bbd1699a518a73d473b99ed3ca8804a7662","source_range":{"end_ref":"C006-S012","start_ref":"C006-S011"},"source_refs":["C006-S011","C006-S012"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    运维服务人员每日对无线网络系统及设备进行巡检监控，巡检监控内容包括但不限
+    于：系统连通性、设备运行状态、系统展示内容等；
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G013
+- tender_id: FAST-WATER-01
+- requirement_text: 应每周对无线网络系统开展主动巡检，检查硬件环境、设备状态、系统配置和系统日志等。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C006-S015","start_ref":"C006-S013"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"282dc752056f11fecc878bcb756d581fb4c6770c53dacfc9effbb8547e92ebc8","source_range":{"end_ref":"C006-S015","start_ref":"C006-S013"},"source_refs":["C006-S013","C006-S014","C006-S015"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    每周对无线网络系统提供主动巡检服务，对北京市水科学技术研究院无线网络系统
+    进行细致全面监视和检查，检查的内容包括但不限于：硬件环境、设备状态、系统配置、
+    系统日志检查分析等方面的检查。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G014
+- tender_id: FAST-WATER-01
+- requirement_text: 无线网络现场巡检后应填写巡检记录，并在巡检完成后三个工作日内提交巡检报告；采购人可要求增加或修改巡检内容。
+- category: delivery
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C006-S020","start_ref":"C006-S016"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"166ec7df3ea8e105b38fc72a17f8e5a538dde3fddafc7832251aef751327b0bf","source_range":{"end_ref":"C006-S020","start_ref":"C006-S016"},"source_refs":["C006-S016","C006-S017","C006-S018","C006-S019","C006-S020"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    运维服务人员完成现场巡检后需做好维护记录检查与分析工作，填写无线系统巡检
+    记录表（模板由运维服务人员提供）。
+    运维服务人员在系统巡检完成后三个工作日内提交巡检报告（报告模版由运维服务
+    人员提供），北京市水科学技术研究院可以根据需要要求运维服务人员增加或修改巡检
+    内容。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G015
+- tender_id: FAST-WATER-01
+- requirement_text: 应建立无线网络系统维修档案，并根据运行情况提供系统升级和优化建议及方案。
+- category: delivery
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C006-S022","start_ref":"C006-S021"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"76673d523c7f34566feaec04d9c3cf3b483c3ce285b8d0cff45b75fe30d340d8","source_range":{"end_ref":"C006-S022","start_ref":"C006-S021"},"source_refs":["C006-S021","C006-S022"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    运维服务人员需为北京市水科学技术研究院建立无线网络系统维修档案，并根据系
+    统运行情况向北京市水科学技术研究院提供系统升级、优化的建议和方案。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G016
+- tender_id: FAST-WATER-01
+- requirement_text: 信息网络运维应覆盖网络设备管理、网络安全管理、网络性能优化、网络故障处理及数据备份与恢复等，确保网络稳定、安全、可靠运行。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C006-S026","start_ref":"C006-S023"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"88ac52820d3cc6c8446471d8e6e07772a61ce611cba1dce6c16002bd937aa29c","source_range":{"end_ref":"C006-S026","start_ref":"C006-S023"},"source_refs":["C006-S023","C006-S024","C006-S025","C006-S026"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    1.1.5 信息网络运维服务
+    信息网络运维服务是指对网络系统进行日常管理、运行和维护的工作，其目标是确
+    保网络系统的稳定性、安全性和可靠性，保证网络服务的正常运行。包括网络设备管理、
+    网络安全管理、网络性能优化、网络故障处理、数据备份与回复等。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G017
+- tender_id: FAST-WATER-01
+- requirement_text: 应维护会议室投影仪、数字电视等多媒体设备，保障会议正常使用。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C006-S030","start_ref":"C006-S027"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"a6eb6d8e70d201b44cfd9368beb4af5dc6033897ba1ecd93610662dd8711174a","source_range":{"end_ref":"C006-S030","start_ref":"C006-S027"},"source_refs":["C006-S027","C006-S028","C006-S029","C006-S030"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    1.1.6 投影及多媒体设备维护
+    39
+    对会议室中的投影仪、数字电视等等多媒体设备进行维护，保障在会议过程中的正
+    常使用。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G018
+- tender_id: FAST-WATER-01
+- requirement_text: 应对计算机终端硬件故障进行检修和维修更换，并处理运行缓慢、不稳定等问题及提供合理使用建议。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C007-S009","start_ref":"C007-S006"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"0317990560c0002657bd052786b5dc3083a79346efdf1dded92e708c2c223cb7","source_range":{"end_ref":"C007-S009","start_ref":"C007-S006"},"source_refs":["C007-S006","C007-S007","C007-S008","C007-S009"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    运行维护服务范围：
+    （1）计算机终端的硬件维护：包括计算机终端各类故障的检修，如无法启动电脑，
+    硬件配件（CPU、内存、硬盘、主板、光驱、电源、键盘鼠标、显示器等）的维修更换，
+    对运行速度慢，运行不稳定等进行解决维修，同时对用户提出合理化使用建议。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G019
+- tender_id: FAST-WATER-01
+- requirement_text: 应维护计算机终端操作系统、办公软件、防病毒、数字证书、邮件和OA等软件，清理不常用/恶意软件和系统垃圾，修复漏洞和缺失功能并提供简单数据恢复备份。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C007-S012","start_ref":"C007-S010"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"693fe800e003cd0ae43094b3c81041756f602edfea5ef6e9df0869d187a60563","source_range":{"end_ref":"C007-S012","start_ref":"C007-S010"},"source_refs":["C007-S010","C007-S011","C007-S012"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （2）计算机终端的软件维护：包括操作系统，办公软件，防病毒软件，数字证书
+    软件，邮件系统、OA 办公自动化系统等。卸载不常用软件，恶意软件，清理系统垃圾。
+    修复系统漏洞，修复系统缺失功能，数据简单恢复备份等。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G020
+- tender_id: FAST-WATER-01
+- requirement_text: 应维护计算机终端外围设备，包括打印机、传真机、刻录机、扫描仪及音视频设备等。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C007-S014","start_ref":"C007-S013"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"3692cc73643c632edbd2e5a38d9532e3f30b66cbeac5924decb94cf9ee5a4fc4","source_range":{"end_ref":"C007-S014","start_ref":"C007-S013"},"source_refs":["C007-S013","C007-S014"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （3）计算机终端的外围设备维护：包括各类相关外设，如打印机，传真机，刻录
+    机，扫描仪，音视频设备等。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G021
+- tender_id: FAST-WATER-01
+- requirement_text: 应开展桌面和外设清点及资产管理，并检查记录配置与变更情况。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C007-S017","start_ref":"C007-S015"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"120db54ea96685c8842e3e1d69daf2f3b469803e2c3a3f3c34f2e0e39ec0d36f","source_range":{"end_ref":"C007-S017","start_ref":"C007-S015"},"source_refs":["C007-S015","C007-S016","C007-S017"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    运维服务人员针对台式机、笔记本电脑、无线设备和桌面应用设计的服务，下列服
+    务共同构成终端用户工作环境服务集：
+    ●桌面和外设的清点和资产管理；检查记录配置及变更情况；
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G022
+- tender_id: FAST-WATER-01
+- requirement_text: 应每月进行终端杀毒软件升级、病毒查杀和性能优化，并开展安全使用风险评估、病毒统计分析和防护策略制定，必要时进行额外病毒查杀和安全加固。
+- category: security
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C007-S021","start_ref":"C007-S018"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"8700ca84c1b1f0a6db2f1716f42005895724b943123109bc367d406915700740","source_range":{"end_ref":"C007-S021","start_ref":"C007-S018"},"source_refs":["C007-S018","C007-S019","C007-S020","C007-S021"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    ●每月定期对计算机终端进行杀毒软件升级、计算机病毒查杀与系统性能优化处理。
+    每月进行计算机安全使用风险评估，对查杀病毒的类型、数量等进行统计分析，并制定
+    终端安全使用防护策略，同时，根据用户需求及实际情况，不定期对终端进行病毒查杀
+    与安全加固等工作；
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G023
+- tender_id: FAST-WATER-01
+- requirement_text: 应受理台式机和笔记本故障，确认问题后提供电话、远程或现场诊断支持，并联系售后/备件服务方跟踪监督解决。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C007-S024","start_ref":"C007-S022"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"9a06225f499531fc4ed81d8f00cbecd288bdfe7ee558e9aed7b8a712b199053b","source_range":{"end_ref":"C007-S024","start_ref":"C007-S022"},"source_refs":["C007-S022","C007-S023","C007-S024"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    ●针对台式、笔记本电脑进行故障问题接收，联系终端用户，确认具体问题故障；电
+    话指导用户进行简单恢复操作并尝试远程帮助；现场服务及故障诊断；针对台式、笔记
+    本电脑的故障，联系硬件的售后服务或备件服务公司，并跟踪问题并监督解决；
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G024
+- tender_id: FAST-WATER-01
+- requirement_text: 应为打印机、复印机、扫描仪等提供驱动安装和配置支持，每月常规巡检及清洁，并负责日常维护和常见耗材/部件处理。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C007-S028","start_ref":"C007-S025"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"602e810a9d6f7dbd875b7a210b9455eb29c9137dd94318493cc306bc50696e9d","source_range":{"end_ref":"C007-S028","start_ref":"C007-S025"},"source_refs":["C007-S025","C007-S026","C007-S027","C007-S028"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    ●对于打印机、复印机、扫描仪等驱动的安装进行指导、辅助或现场服务，对设备进
+    行配置；每月对打印机、复印机、扫描仪、多功能一体机等进行常规巡检，并负责清理
+    设备保持清洁；针对打印机、复印机、扫描仪和多功能一体机等及时进行日常维护，如
+    常见配置的设置、更换卡纸槽、更换硒鼓等；
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G025
+- tender_id: FAST-WATER-01
+- requirement_text: 应对LED系统定期现场巡检并在重大节日或特殊时期前后巡检，及时发现并协调解决问题，保证LED大屏稳定运行。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C007-S032","start_ref":"C007-S030"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"36fd91e3051560daec70c551d6cb42a3dfe4b2e5843678999b53e0129974ea9b","source_range":{"end_ref":"C007-S032","start_ref":"C007-S030"},"source_refs":["C007-S030","C007-S031","C007-S032"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    ●针对 LED 系统运维服务人员提供定期的现场巡检，及时发现问题并协调解决，保证
+    LED 大屏稳定、高效运行；以及重大法定节日（五一、汛前、十一等）或特殊时期前后
+    进行巡检，以保证 LED 显示屏的正常使用。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G026
+- tender_id: FAST-WATER-01
+- requirement_text: 应对视频会议系统定期现场巡检并在重大节日或特殊时期前后巡检，及时发现并协调解决问题，保证系统稳定运行。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C007-S035","start_ref":"C007-S033"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"366f7dbb2a66425dbd64523669a156a6f5a4b0fd505c7a6b9801595f45bea7d8","source_range":{"end_ref":"C007-S035","start_ref":"C007-S033"},"source_refs":["C007-S033","C007-S034","C007-S035"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    ●针对视频会议系统运维服务人员提供定期的现场巡检，及时发现问题并协调解决，
+    保证视频会议系统稳定、高效运行；以及重大法定节日（五一、汛前、十一等）或特殊
+    时期前后进行巡检，以保证视频会议系统的正常使用。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G027
+- tender_id: FAST-WATER-01
+- requirement_text: 应维护视频会议设备，保障会议正常开展。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C007-S037","start_ref":"C007-S036"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"d068ee1903a16da003a12b29720d62b1db11688be785906d68ad540ed332814e","source_range":{"end_ref":"C007-S037","start_ref":"C007-S036"},"source_refs":["C007-S036","C007-S037"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    1.1.8 视频会议设备维护
+    对视频会议设备进行维护，保障会议正常开展。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G028
+- tender_id: FAST-WATER-01
+- requirement_text: 应维护LED显示屏，包括故障维修、显示内容更新和维护。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C007-S039","start_ref":"C007-S038"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"e3b4f01e7396b53c29b21800856cbc1a73a6c43ab4c69b9b6db9f8cca2ee5543","source_range":{"end_ref":"C007-S039","start_ref":"C007-S038"},"source_refs":["C007-S038","C007-S039"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    1.1.9LED 显示屏维护
+    对 LED 显示屏进行维护，包括故障维修、显示内容的更新和维护等内容。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G029
+- tender_id: FAST-WATER-01
+- requirement_text: 应对两个基地网络及计算机设备进行日常状态监测、策略制定调整、特征库及版本升级，并利用分析系统辅助故障定位；同时维护机房基础设施。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C007-S046","start_ref":"C007-S040"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"9b2adafe19783554a0a197b746e204cb57e766ccc251e6cc874d5ef71bbbd680","source_range":{"end_ref":"C007-S046","start_ref":"C007-S040"},"source_refs":["C007-S040","C007-S041","C007-S042","C007-S043","C007-S044","C007-S045","C007-S046"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    1.1.10 两个基地网络及计算机设备维护
+    北京市水科学技术研究院与互联网连接采用防火墙进行边界隔离控制，采用上网行
+    为设备进行行为审计。两个基地(永乐店及门头沟实验基地)分别通过天融信 VPN 设备远
+    程接入北京市水科学技术研究院内部网络共有防火墙、上网行为、交换机等 30 余台。
+    运维服务人员负责所有设备的日常状态监测、策略制定、调整和修改，负责特征库
+    升级和版本升级等工作，并且可以通过专业的分析系统设备对问题及故障进行辅助定位。
+    负责机房基础设施的日常状态监测及运行维护。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G030
+- tender_id: FAST-WATER-01
+- requirement_text: 应为20台网络设备/服务器资产提供为期1年的硬件保修服务。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C007-S048","start_ref":"C007-S047"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"6625ecd60b064ed55f2338c8b09864ae938b3df1c0b46e4c69939d2f91eb96c3","source_range":{"end_ref":"C007-S048","start_ref":"C007-S047"},"source_refs":["C007-S047","C007-S048"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    1.1.11 网络设备及服务器资产一年硬件保修服务
+    为 20 台网络设备/服务器资产提供为期 1 年的硬件保修服务。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G031
+- tender_id: FAST-WATER-01
+- requirement_text: 应为7台会议室设备资产提供为期1年的硬件保修服务。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C007-S050","start_ref":"C007-S049"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"219aa3ada9bcdd5e3fbdabebcdfbc2954db506b034ac081c972d2552ab20bb38","source_range":{"end_ref":"C007-S050","start_ref":"C007-S049"},"source_refs":["C007-S049","C007-S050"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    1.1.12 会议室资产一年硬件保修服务
+    为 7 台会议室设备资产，提供为期 1 年的硬件保修服务。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G032
+- tender_id: FAST-WATER-01
+- requirement_text: 特殊时期应加大技术支撑力度，必要时现场值守，并在故障定位后提出解决方案，经采购人同意后实施。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C008-S005","start_ref":"C008-S001"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"940eed37cf34333df74a579e92076c1fba2546e66494bb0bc05ce0ec234abbd1","source_range":{"end_ref":"C008-S005","start_ref":"C008-S001"},"source_refs":["C008-S001","C008-S002","C008-S003","C008-S004","C008-S005"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    1.2 安全运行维护服务
+    1.2.1 重点时期保障服务
+    由北京市水科学技术研究院指定的特殊时期，运维服务人员需进一步加大技术支撑
+    力度，在技术人员配备、响应、调集等方面有更高的实效，必要时可进行现场值守，在
+    故障发生时，定位故障原因提出解决方案，经北京市水科学技术研究院同意后方可实施。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G033
+- tender_id: FAST-WATER-01
+- requirement_text: 特殊时期应提供更及时的7×24服务，至少安排1人7×24小时现场值守。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C008-S007","start_ref":"C008-S006"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"a43201d71f7059be9456e5b248a69c54a9a20c760db811e0757cc09827c802c1","source_range":{"end_ref":"C008-S007","start_ref":"C008-S006"},"source_refs":["C008-S006","C008-S007"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    在特殊时期提供更为及时的 7*24 的服务，至少一人 7*24 小时现场值守。具体要求
+    如下：
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G034-01
+- tender_id: FAST-WATER-01
+- requirement_text: 特殊时期故障申告后应在30秒内响应。
+- category: performance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C008-S012","start_ref":"C008-S009"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"2cd5f31ff5ebf29ef49b5750ed979f97dcbed42fbf6013c6381e3d340986fcad","source_range":{"end_ref":"C008-S012","start_ref":"C008-S009"},"source_refs":["C008-S009","C008-S010","C008-S011","C008-S012"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    故障响应时间 由北京市水科学技术研究院开始申告故障到运维服务 30 秒
+    41
+    人员通过电话、邮件、传真等方式响应北京市水科学
+    技术研究院的时间。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G034-02
+- tender_id: FAST-WATER-01
+- requirement_text: 硬件损坏定位后备件应在30分钟内到场。
+- category: performance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C008-S014","start_ref":"C008-S013"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"8ccbe71eab18df0a3e083ea37d4a80de99e2c779abe4e1fffa997ec08768ec88","source_range":{"end_ref":"C008-S014","start_ref":"C008-S013"},"source_refs":["C008-S013","C008-S014"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    备件到场时间 若北京市水科学技术研究院设备硬件损坏需更换硬件
+    时，从故障定位起到硬件到达现场的时间。 30 分钟
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G034-03
+- tender_id: FAST-WATER-01
+- requirement_text: 故障应在1小时内解决并恢复系统运行。
+- category: performance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C008-S016","start_ref":"C008-S015"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"7c79e09af3c7bd57e68c45f9457e76b550f7449edd4dd2e2a1c5e3a48004edde","source_range":{"end_ref":"C008-S016","start_ref":"C008-S015"},"source_refs":["C008-S015","C008-S016"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    故障解决时间 运维服务人员接到北京市水科学技术研究院故障申报
+    至故障解决系统恢复运行的时间。 1 小时
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G035-01
+- tender_id: FAST-WATER-01
+- requirement_text: 应为4台防火墙、3台上网行为设备提供软硬件维保和特征库升级等服务。
+- category: security
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C008-S018","start_ref":"C008-S018"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"5cceb007398b1671fe36d584938235ef67ba3a68b4f5276a2e53348f0b42c55e","source_range":{"end_ref":"C008-S018","start_ref":"C008-S018"},"source_refs":["C008-S018"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    为 4 台防火墙，3 台上网行为设备提供软硬件维保和特征库升级等服务。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G035-02
+- tender_id: FAST-WATER-01
+- requirement_text: 应为EDR软件、200台PC和30台Windows Server提供升级服务。
+- category: security
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C008-S019","start_ref":"C008-S019"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"0f8dcf975165a50a88fd921d52cdc27525ac6c27cf18364efb2dd88ac64499b9","source_range":{"end_ref":"C008-S019","start_ref":"C008-S019"},"source_refs":["C008-S019"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    为 EDR 软件、200PC、30Windows server 提供升级服务。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G036
+- tender_id: FAST-WATER-01
+- requirement_text: 安全设备硬件应提供一年原厂保修，发现硬件故障时免费提供备机和备件以保证正常运行。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C008-S023","start_ref":"C008-S021"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"4ff2a7924da5cb17eb6a8dd8b9c9b5505c590940406c36b194c5b0b60d3feee8","source_range":{"end_ref":"C008-S023","start_ref":"C008-S021"},"source_refs":["C008-S021","C008-S022","C008-S023"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    硬件维保是指针对所有硬件进行一年的原厂保修服务，现场定期测试，发现隐患后
+    及时向北京市水科学技术研究院汇报。备件更换指当硬件出现故障时，运维服务人员有
+    义务在服务期内免费提供相应备机和备件，以确保该设备正常运行。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G037
+- tender_id: FAST-WATER-01
+- requirement_text: 每季度至少进行一次设备清理保养，发现隐患应及时报告。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C008-S025","start_ref":"C008-S024"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"c6b3322b4621f4fdebe3a09c2087e551b3893a7ea2c48db6dca9cad4fe163626","source_range":{"end_ref":"C008-S025","start_ref":"C008-S024"},"source_refs":["C008-S024","C008-S025"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    运维服务人员每个季度至少为北京市水科学技术研究院做一次设备清理和保养工
+    作，以保证硬件运行正常，发现隐患后及时向北京市水科学技术研究院工作人员汇报。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G038
+- tender_id: FAST-WATER-01
+- requirement_text: 硬件故障更换前应制定更换方案并经采购人同意，备件更换时间应小于2小时。
+- category: performance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C008-S028","start_ref":"C008-S026"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"bbe66df7aded316bd0af68fc4fa89c7ceda2a772bfb9191c60f31c4a792c9d38","source_range":{"end_ref":"C008-S028","start_ref":"C008-S026"},"source_refs":["C008-S026","C008-S027","C008-S028"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    在北京市水科学技术研究院硬件设备发生故障时，运维服务人员应迅速对其进行更
+    换，并在更换前制定更换方案，经北京市水科学技术研究院同意后进行更换，备件更换
+    的时间要求小于 2 小时。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G039
+- tender_id: FAST-WATER-01
+- requirement_text: 应为WAF、防火墙、上网行为管理、僵木蠕、EDR等安全设备和软件提供为期1年的特征库升级服务。
+- category: security
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C009-S003","start_ref":"C009-S001"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"90f5dcafb458a24b3d7f48feb11e439e06ca754220d5dda4016e88e23dff7950","source_range":{"end_ref":"C009-S003","start_ref":"C009-S001"},"source_refs":["C009-S001","C009-S002","C009-S003"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    1.2.3 特征库升级
+    为 1 台 WAF、5 台防火墙、4 台上网行为管理、僵木蠕、EDR 等安全设备和软件提供
+    为期 1 年的特征库升级服务。包含以下内容：
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G040
+- tender_id: FAST-WATER-01
+- requirement_text: 特征库升级应包括现状分析、制定升级计划并备份、执行升级、系统验证和验证无误后上线运行。
+- category: implementation
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C009-S010","start_ref":"C009-S004"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"b92860d505559d4c434698bd68de684fd8fa4b12cb7bf3068d6ac27ea196e965","source_range":{"end_ref":"C009-S010","start_ref":"C009-S004"},"source_refs":["C009-S004","C009-S005","C009-S006","C009-S007","C009-S008","C009-S009","C009-S010"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    分析当前特征库：仔细审查当前特征库的内容和性能，了解每个特征的作用和可能
+    存在的问题。
+    准备升级：根据升级内容制定详细的升级计划，包括升级时间、升级方式等，并进
+    行系统备份以防数据丢失。
+    执行升级：按照升级计划对特征库进行升级，包括数据库优化、系统架构升级等。
+    系统验证：升级完成后进行系统验证，检查系统是否正常运行，数据是否准确同步。
+    上线运行：经过验证无误后，将升级后的特征库系统上线运行。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G041
+- tender_id: FAST-WATER-01
+- requirement_text: 应提供不少于10人的稳定运维团队，其中驻场技术人员不少于3名，提供5×8小时驻场服务，并在特殊时期或工作繁忙时按需增加驻场人员。
+- category: implementation
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C009-S019","start_ref":"C009-S014"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"e6408f2c8489033ddb35f872e366a4af8ae8842febcbd1282054d30776f9f079","source_range":{"end_ref":"C009-S019","start_ref":"C009-S014"},"source_refs":["C009-S014","C009-S015","C009-S016","C009-S017","C009-S018","C009-S019"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    2.1 驻场服务
+    42
+    运维服务商提供不少于 10 人的高水平、稳定的运维团队，其中驻场技术人员不少
+    于 3 名，提供 5*8 小时驻场运维服务,若遇特殊时期和维护工作繁忙，为了高效完成运
+    维任务，按需求增加驻场人员 ，保证可以快速处理和解决绝大多数问题。考勤和日常工
+    作等服从北京市水科学技术研究院安排。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G042
+- tender_id: FAST-WATER-01
+- requirement_text: 应建立团队管理、业务衔接和人员更替办法，保障人员流动不影响运维；明确项目负责人且未经采购人许可不得更换。
+- category: implementation
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C009-S023","start_ref":"C009-S020"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"328a892447caadb4b1d49c8c87720fd25761d6d2948d045e512a5b5f6b970c31","source_range":{"end_ref":"C009-S023","start_ref":"C009-S020"},"source_refs":["C009-S020","C009-S021","C009-S022","C009-S023"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    运维服务人员要确保提供高水平，稳定的运维团队，要有科学的团队管理办法、业
+    务衔接办法以及人员更替办法，确保在人员流动的情况下不会对正常的运维工作造成影
+    响。同时，也要确保在应急事件和特殊值守时期等工作中切实发挥驻场工程师作用。运
+    维服务商要明确项目负责人，未经北京市水科学技术研究院许可不得更换。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G043
+- tender_id: FAST-WATER-01
+- requirement_text: 远程技术支持须征得采购人同意后通过远程终端登录；运维方负责提供远程支持所需软件。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C009-S030","start_ref":"C009-S024"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"02582069fd50e4034925587f461c8471b7f9343e40af126c3fcf88e25eb892b5","source_range":{"end_ref":"C009-S030","start_ref":"C009-S024"},"source_refs":["C009-S024","C009-S025","C009-S026","C009-S027","C009-S028","C009-S029","C009-S030"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    2.2 远程网络支持（远程接入终端）
+    运维服务人员在征得北京市水科学技术研究院同意后，通过远程终端登录进行技术
+    支持。
+    北京市水科学技术研究院负责提供必要的远程技术支持所需局端拨号设备（如电话
+    线、调制解调器等），负责向运维服务人员提供服务器的登录用户名及密码、远程维护
+    拨号电话号码、服务器的 IP 地址，并安排维护人员在现场协助。运维服务人员负责提
+    供远程技术支持所需软件。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G044
+- tender_id: FAST-WATER-01
+- requirement_text: 远程支持重大和严重故障响应时间应小于15分钟，一般故障小于30分钟。
+- category: performance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C009-S036","start_ref":"C009-S031"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"6aa029cafefd93c067dc20f14b2cefd941b2cde2e2da53972e1d16606c21feea","source_range":{"end_ref":"C009-S036","start_ref":"C009-S031"},"source_refs":["C009-S031","C009-S032","C009-S033","C009-S034","C009-S035","C009-S036"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    响应时间：是指从双方确认电话支持不能排除设备故障到技术支持工程师远程登录
+    到服务器或相关设备的时间。具体要求见下表。
+    故障/问题级别 响应时间
+    重大 小于 15 分钟
+    严重 小于 15 分钟
+    一般 小于 30 分钟
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G045
+- tender_id: FAST-WATER-01
+- requirement_text: 远程支持重大故障解决时间应小于2小时、严重故障小于4小时、一般故障小于12小时。
+- category: performance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C009-S042","start_ref":"C009-S037"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"d3ecda49aea49b4167128e88bcc13db439fc88df7ccb7412d49344a664c8a7fc","source_range":{"end_ref":"C009-S042","start_ref":"C009-S037"},"source_refs":["C009-S037","C009-S038","C009-S039","C009-S040","C009-S041","C009-S042"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    解决时间：接到北京市水科学技术研究院服务请求到业务故障基本排除的时间。具
+    体要求下表。
+    故障/问题级别 解决时间
+    重大 小于 2 小时
+    严重 小于 4 小时
+    一般 小于 12 小时
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G046
+- tender_id: FAST-WATER-01
+- requirement_text: 远程支持不能解决时，应按规定时限安排技术人员赴现场提供支持。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C010-S003","start_ref":"C010-S001"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"713c4178df63549e19e8de33774802c15efe217ade6c31e9f89b3cce79063a6b","source_range":{"end_ref":"C010-S003","start_ref":"C010-S001"},"source_refs":["C010-S001","C010-S002","C010-S003"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    2.3 现场支持
+    对于远程支持不能解决的设备故障问题，运维服务人员按规定时限安排相关技术人
+    员赴现场提供支持服务。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G047
+- tender_id: FAST-WATER-01
+- requirement_text: 现场故障处理前应充分准备；故障解决方案及影响较大的操作须经采购人批准，处理过程不得影响设备正常运行，并由采购人维护人员协同。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C010-S013","start_ref":"C010-S004"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"ea7e31c96d320fea8db0dc189f6f33a4ba31c68af6fdfc6e8827a1cd28070f13","source_range":{"end_ref":"C010-S013","start_ref":"C010-S004"},"source_refs":["C010-S004","C010-S005","C010-S006","C010-S007","C010-S008","C010-S009","C010-S010","C010-S011","C010-S012","C010-S013"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    运维服务商技术支持工程师在进行现场故障排除服务前，应作好必要的准备（包括
+    查阅客户和设备档案，了解设备运行情况及设备以往所发生过的问题的处理办法等）。
+    43
+    运维服务商技术支持工程师抵达北京市水科学技术研究院故障现场，制定出故障解
+    决技术方案后，需经北京市水科学技术研究院批准，并由北京市水科学技术研究院的技
+    术人员具体实施方案；或经北京市水科学技术研究院允许，由运维服务人员的技术支持
+    工程师进行具体实施；要避免因盲目动手给北京市水科学技术研究院造成损失，在必须
+    进行系统重装或系统启动等影响较大的操作时，须经北京市水科学技术研究院现场维护
+    主管批准方可实施。运维服务人员技术支持工程师在处理故障时不能影响设备的正常运
+    行，并应有北京市水科学技术研究院维护人员在场协同处理。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G048
+- tender_id: FAST-WATER-01
+- requirement_text: 现场故障处理完成后应提交现场技术服务报告并双方存档，同时就服务内容进行解释和现场培训。
+- category: delivery
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C010-S016","start_ref":"C010-S014"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"e9904260b3ce5a6e75dcf5d271ccc7c3e271eba3da5cb5bd3ab5068ae1de3067","source_range":{"end_ref":"C010-S016","start_ref":"C010-S014"},"source_refs":["C010-S014","C010-S015","C010-S016"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    现场故障处理服务完成后，技术支持人员要向北京市水科学技术研究院提交现场技
+    术服务报告，北京市水科学技术研究院对现场技术服务报告签字确认，双方各自存档；
+    针对本次服务的相关内容，技术人员要对北京市水科学技术研究院进行解释和现场培训。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G049
+- tender_id: FAST-WATER-01
+- requirement_text: 现场支持重大故障响应时间小于2小时、严重故障小于4小时、一般故障小于8小时。
+- category: performance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C010-S022","start_ref":"C010-S017"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"25257a318a25271dd1b106a32bbdd852ed4289593f23a896bfb14ce03ea95599","source_range":{"end_ref":"C010-S022","start_ref":"C010-S017"},"source_refs":["C010-S017","C010-S018","C010-S019","C010-S020","C010-S021","C010-S022"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    响应时间：在双方确认需要进行现场技术支持，至运维服务人员到达北京市水科学
+    技术研究院设备现场之间的时间，相应的现场技术支持服务的响应时间要求见下表。
+    故障/问题级别 响应时间
+    重大 小于 2 小时
+    严重 小于 4 小时
+    一般 小于 8 小时
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G050
+- tender_id: FAST-WATER-01
+- requirement_text: 现场支持重大故障解决时间小于2小时、严重故障小于4小时、一般故障小于12小时。
+- category: performance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C010-S028","start_ref":"C010-S023"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"48349773b55f7c77b90de579f47b07439091d9dbe81a9ee80edfa13e179d38b4","source_range":{"end_ref":"C010-S028","start_ref":"C010-S023"},"source_refs":["C010-S023","C010-S024","C010-S025","C010-S026","C010-S027","C010-S028"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    解决时间：接到北京市水科学技术研究院服务请求到故障基本排除的时间。具体要
+    求下表。
+    故障/问题级别 解决时间
+    重大 小于 2 小时
+    严重 小于 4 小时
+    一般 小于 12 小时
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G051
+- tender_id: FAST-WATER-01
+- requirement_text: 发生严重故障时应提供紧急电话、远程、现场和备件支持；重大故障请求后立即安排电话及远程支持、技术工程师赶赴现场并成立后方专家组。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C011-S008","start_ref":"C011-S001"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"a3af32b4c9e9c6d3777d72f9cb3589088abd22d50b474d6b91b9dabb41bfcf8c","source_range":{"end_ref":"C011-S008","start_ref":"C011-S001"},"source_refs":["C011-S001","C011-S002","C011-S003","C011-S004","C011-S005","C011-S006","C011-S007","C011-S008"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    2.4 紧急故障恢复支持
+    按相关故障定义，北京市水科学技术研究院设备发生严重故障时，运维服务人员以
+    最短的时间进行故障处理。
+    紧急故障恢复服务包括紧急电话支持服务、紧急远程支持服务、紧急现场支持服务
+    和备品备件服务。运维服务人员接到北京市水科学技术研究院重大故障的服务请求后，
+    应立即安排经验丰富的技术工程师进行电话支持和远程技术支持，同时安排技术工程师
+    立即赶往现场，并成立后方专家小组配合进行故障处理，如有必要应该在后方实验室模
+    拟故障发生原因和解决方法。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G052
+- tender_id: FAST-WATER-01
+- requirement_text: 紧急故障处理过程中应记录事件时间和措施；处理完成后按协商决定是否现场观察1-2天，经采购人同意后方可离场。
+- category: delivery
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C011-S014","start_ref":"C011-S011"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"f56baa39b7f74d4f917d864a54fcd604861e156a2c8188fcbdb2f4d78ce8d622","source_range":{"end_ref":"C011-S014","start_ref":"C011-S011"},"source_refs":["C011-S011","C011-S012","C011-S013","C011-S014"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    在紧急故障恢复服务过程中，运维服务人员负责记录所有事件的发生时间及所采取
+    44
+    的措施；设备故障处理完毕以后，视情况双方协商决定是否安排运维服务人员在现场观
+    察 1－2 天。在北京市水科学技术研究院同意后，运维服务人员方可离开现场。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G053
+- tender_id: FAST-WATER-01
+- requirement_text: 紧急故障处理完毕后应查找重大故障原因并提交《重大故障技术服务报告》，报告故障原因、处理过程、结果和预防方法。
+- category: delivery
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C011-S018","start_ref":"C011-S015"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"6e4d12b319c44d5f78a1e89b2ce5f8924e03630479dd4bb2454b824ad189d74a","source_range":{"end_ref":"C011-S018","start_ref":"C011-S015"},"source_refs":["C011-S015","C011-S016","C011-S017","C011-S018"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    紧急故障处理完毕以后，运维服务人员应组织查找重大故障原因，向北京市水科学
+    技术研究院提交《重大故障技术服务报告》，由双方共同备案，并向北京市水科学技术
+    研究院故障局点的运维管理部门进行当面报告，提供故障的发生原因、解决过程、解决
+    结果和今后的预防方法。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G054
+- tender_id: FAST-WATER-01
+- requirement_text: 重大故障电话支持应立即响应，远程登录时间小于15分钟，现场到达时间为2小时。
+- category: performance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C011-S025","start_ref":"C011-S019"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"6df9cea7051068efb740d6490e831fb939e2b4351e3ea49b4c9128a8d97d557c","source_range":{"end_ref":"C011-S025","start_ref":"C011-S019"},"source_refs":["C011-S019","C011-S020","C011-S021","C011-S022","C011-S023","C011-S024","C011-S025"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    响应时间：从北京市水科学技术研究院向运维服务人员提出重大故障服务请求到运
+    维服务人员开始提供电话支持的时间应立即响应。从北京市水科学技术研究院向运维服
+    务人员提出重大故障服务请求到运维服务人员远程登录到相关服务器的时间应小于 15
+    分钟；从北京市水科学技术研究院向运维服务人员提出重大故障服务请求到运维服务人
+    员到达故障现场的时间，见下表：
+    故障现场城市范围 响应时间
+    设备所在地 2 小时
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G055
+- tender_id: FAST-WATER-01
+- requirement_text: 紧急故障业务恢复时间：重大故障小于2小时、严重故障小于4小时、一般故障小于8小时。
+- category: performance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C011-S031","start_ref":"C011-S026"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"36c047767099f92cdc1af5308e5259b76d7e035512d00a1bf3a04a36c3fd1ec9","source_range":{"end_ref":"C011-S031","start_ref":"C011-S026"},"source_refs":["C011-S026","C011-S027","C011-S028","C011-S029","C011-S030","C011-S031"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    业务恢复时间：排除紧急故障、恢复业务的修复时间，紧急故障恢复业务的时间要
+    求见下表：
+    故障/问题级别 解决时间
+    重大 小于 2 小时内
+    严重 小于 4 小时内
+    一般 小于 8 小时
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G056
+- tender_id: FAST-WATER-01
+- requirement_text: 项目执行应遵循《2006-2020年国家信息化发展战略》《网络安全等级保护制度2.0标准》《电子政务运维服务支撑系统规范》等标准规范。
+- category: constraint
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C011-S041","start_ref":"C011-S038"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"4a876ec36d9fd49cd2d964b93f00519320f9d78a21b7b16478008596dda10162","source_range":{"end_ref":"C011-S041","start_ref":"C011-S038"},"source_refs":["C011-S038","C011-S039","C011-S040","C011-S041"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    ★3.项目执行的标准和规范
+    《2006-2020 年国家信息化发展战略》；
+    《网络安全等级保护制度 2.0 标准》；
+    《电子政务运维服务支撑系统规范》（DB 11/T 714-2010）
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G057-01
+- tender_id: FAST-WATER-01
+- requirement_text: 供应商应具有多年信息系统运行维护、网络安全运维服务经验及成功案例。
+- category: implementation
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C011-S043","start_ref":"C011-S043"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"21ada366947211562f24803a92694d2cbb38e0ae8e577ad577bdb468999a9e55","source_range":{"end_ref":"C011-S043","start_ref":"C011-S043"},"source_refs":["C011-S043"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （1）供应商应具有多年信息系统运行维护、网络安全运维服务经验及成功案例；
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G057-02
+- tender_id: FAST-WATER-01
+- requirement_text: 供应商应配备经验丰富的技术人员。
+- category: implementation
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C011-S045","start_ref":"C011-S045"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"2e378f911d4a096023bbcf5e45846b94fdef7b70df6b9e6de0c7b54e9aee59a7","source_range":{"end_ref":"C011-S045","start_ref":"C011-S045"},"source_refs":["C011-S045"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （2）供应商经验丰富的技术人员；
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G058
+- tender_id: FAST-WATER-01
+- requirement_text: 供应商应建立完善的运维服务制度和良好的用户服务记录，并备有保障网络连续运行的相应备品备件。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C011-S047","start_ref":"C011-S046"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"38782279d9466d95be62620929261e6ad57b67e19023d26f00abeff3b7a4cfbb","source_range":{"end_ref":"C011-S047","start_ref":"C011-S046"},"source_refs":["C011-S046","C011-S047"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （3）供应商应建立有完善的运维服务制度和良好的用户服务记录。
+    （4）为保证网络系统的连续运行，运维服务人员应备有相应的备品备件；
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G059
+- tender_id: FAST-WATER-01
+- requirement_text: 运维方应自行配备网络系统和应用系统维护、监测分析、性能分析所需的软件工具和检测仪器。
+- category: implementation
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C011-S049","start_ref":"C011-S048"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"94ba9873b26f2432542493ffa91cd50932583515fb8f060c5219f161da5db88a","source_range":{"end_ref":"C011-S049","start_ref":"C011-S048"},"source_refs":["C011-S048","C011-S049"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （5）运维服务人员应自行配备网络系统和应用系统维护、监测分析、性能分析等
+    服务所需的软件工具系统和检测仪器；
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G060
+- tender_id: FAST-WATER-01
+- requirement_text: 应确保运维团队稳定，建立团队管理、业务衔接及人员更替办法，保障人员流动和应急值守不影响运维，并明确项目负责人且未经采购人许可不得更换。
+- category: implementation
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C012-S003","start_ref":"C011-S050"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"c534b98717d9fe862d589cc753bf562eed913cd460295ec294efcd3ebdfe6d80","source_range":{"end_ref":"C012-S003","start_ref":"C011-S050"},"source_refs":["C011-S050","C012-S001","C012-S002","C012-S003"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （6）确保服务团队稳定。运维服务人员要确保提供高水平，稳定的运维团队，要
+    有科学的团队管理办法、业务衔接办法以及人员更替办法，确保在人员流动的情况下不
+    会对正常的运维工作造成影响。同时，也要确保在应急事件和特殊值守时期等工作中切
+    实发挥工程师作用。运维服务人员要明确运维项目负责人，未经采购人许可不得更换。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G061
+- tender_id: FAST-WATER-01
+- requirement_text: 应设置维护专用联系电话并配备传真、电脑等基础办公设备。
+- category: implementation
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C012-S005","start_ref":"C012-S004"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"d1ae36862b7ed4cfce886126c73000585c42467080ffd590d3aa0c9610db26b2","source_range":{"end_ref":"C012-S005","start_ref":"C012-S004"},"source_refs":["C012-S004","C012-S005"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （7）运维服务人员应设定维护专用的联系电话，并应配备传真、电脑等基础办公
+    设备，方便文件的编写和发送。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G062
+- tender_id: FAST-WATER-01
+- requirement_text: 应指定维护人员专门负责项目，维护人员应具备相关网络设备现场维护经验和处理问题能力；人员调整应书面通知采购人。
+- category: implementation
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C012-S008","start_ref":"C012-S006"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"c2a5a4e4e36b726c382ea79c081c42a75a9c22ab85e2835e07710e3dec00344f","source_range":{"end_ref":"C012-S008","start_ref":"C012-S006"},"source_refs":["C012-S006","C012-S007","C012-S008"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （8）供应商应指定维护人员专门负责本项目维护工作，维护人员应具备网络系统
+    相关设备维护的现场维护经验，熟悉系统和设备的操作，有能力处理出现的各类问题，
+    若出现人员调整应书面通知采购人；
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G063
+- tender_id: FAST-WATER-01
+- requirement_text: 应根据实际工作内容详细列出项目主要人员、备件设备等并说明人员分工。
+- category: delivery
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C012-S010","start_ref":"C012-S009"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"c92c68dbea92d409eda2827b745cb5f1ef6a88de20d191b99b74208d139158ca","source_range":{"end_ref":"C012-S010","start_ref":"C012-S009"},"source_refs":["C012-S009","C012-S010"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （9）运维服务人员应根据实际的工作内容要求，详细列出本项目的主要人员、备
+    件设备等说明，并对人员分工作出说明。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G064
+- tender_id: FAST-WATER-01
+- requirement_text: 应每月提交《网络系统运行月计划》和《网络系统运行情况月报告》，陈述系统运行状况和事件处理情况。
+- category: delivery
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C013-S005","start_ref":"C013-S001"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"06561aa091b16ac6f77371301506528561fd9fbaa82c62a685a73794296de471","source_range":{"end_ref":"C013-S005","start_ref":"C013-S001"},"source_refs":["C013-S001","C013-S002","C013-S003","C013-S004","C013-S005"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    5.1 成果要求
+    工作成果交付物应包括但不局限于以下报告：
+    （1）运维服务人员每月定期向北京市水科学技术研究院提交《网络系统运行月计
+    划》、《网络系统运行情况月报告》，向北京市水科学技术研究院陈述系统运行状况和
+    事件处理情况。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G065
+- tender_id: FAST-WATER-01
+- requirement_text: 网络运行状态检查目标为每月2次，1次可接受，少于1次不可接受。
+- category: acceptance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C013-S032","start_ref":"C013-S024"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"b456833337ef690b8228ecb7a74d158d79756ed3720a1586d4524a6344b7798c","source_range":{"end_ref":"C013-S032","start_ref":"C013-S024"},"source_refs":["C013-S024","C013-S025","C013-S026","C013-S027","C013-S028","C013-S029","C013-S030","C013-S031","C013-S032"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    网
+    络
+    运行状态
+    检查 次数/月 2 1 <1 定时检查网络
+    系统运行状态
+    一
+    般
+    系统
+    报告 月
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G066
+- tender_id: FAST-WATER-01
+- requirement_text: 硬件状态检查目标为每月2次，1次可接受，少于1次不可接受。
+- category: acceptance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C013-S043","start_ref":"C013-S034"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"6707ecf8d462b44a62814ec131fa5845270c93fa909ba20f4b9034aa7e97c7a9","source_range":{"end_ref":"C013-S043","start_ref":"C013-S034"},"source_refs":["C013-S034","C013-S035","C013-S036","C013-S037","C013-S038","C013-S039","C013-S040","C013-S041","C013-S042","C013-S043"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    硬件状态
+    检查 次数/月 2 1 <1
+    定时检查网络
+    系统相关设备
+    指示灯、硬件
+    状态等
+    一
+    般
+    系统
+    报告 月
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G067
+- tender_id: FAST-WATER-01
+- requirement_text: 系统日志检查目标为每月2次，1次可接受，少于1次不可接受。
+- category: acceptance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C013-S049","start_ref":"C013-S044"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"f09eba8c5b6e4e50bf86ef4c2e64d66aac7561ddf604c279590e8fa813afaf04","source_range":{"end_ref":"C013-S049","start_ref":"C013-S044"},"source_refs":["C013-S044","C013-S045","C013-S046","C013-S047","C013-S048","C013-S049"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    日志检查 次数/月 2 1 <1 定时检查网络
+    系统日志
+    一
+    般
+    系统
+    报告 月
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G068
+- tender_id: FAST-WATER-01
+- requirement_text: 系统可用性目标为100%，99.9%可接受，低于99%不可接受。
+- category: acceptance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C014-S014","start_ref":"C013-S050"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"1f5de8e2a82ceb493df82549188dec2f12e3ed0c516a5703accffd9d9f51433d","source_range":{"end_ref":"C014-S014","start_ref":"C013-S050"},"source_refs":["C013-S050","C014-S001","C014-S002","C014-S003","C014-S004","C014-S005","C014-S006","C014-S007","C014-S008","C014-S009","C014-S010","C014-S011","C014-S012","C014-S013","C014-S014"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    系统可用
+    性
+    每月系统正
+    常运行时间
+    /24 小时*30
+    天
+    100
+    % 99.9% <99%
+    每月系统正常
+    运行时间/24
+    小时*30 天
+    重
+    要
+    系统
+    报告 月
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G069
+- tender_id: FAST-WATER-01
+- requirement_text: 一般故障次数目标为每月0次，1次可接受，超过2次不可接受。
+- category: acceptance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C014-S024","start_ref":"C014-S015"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"6e31da82ab1dd8b2c9cd2f0f5718976092ad04e1a0d663782efc4bd66476268a","source_range":{"end_ref":"C014-S024","start_ref":"C014-S015"},"source_refs":["C014-S015","C014-S016","C014-S017","C014-S018","C014-S019","C014-S020","C014-S021","C014-S022","C014-S023","C014-S024"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    一般故障
+    （造成功
+    能故障等）
+    次数
+    次数/月 0 1 >2 平均每月发生
+    一般故障次数
+    重
+    要
+    系统
+    报告 月
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G070
+- tender_id: FAST-WATER-01
+- requirement_text: 一般故障解决时间目标2小时，4小时可接受，超过6小时不可接受。
+- category: acceptance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C014-S033","start_ref":"C014-S025"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"65e37a39605b9fac0abdbbbc913d73af235c724b117eb9acd7ff3393fe6374ea","source_range":{"end_ref":"C014-S033","start_ref":"C014-S025"},"source_refs":["C014-S025","C014-S026","C014-S027","C014-S028","C014-S029","C014-S030","C014-S031","C014-S032","C014-S033"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    一般故障
+    解决时间 小时 2 4 >6
+    每次故障发生
+    到功能恢复的
+    时间
+    重
+    要
+    系统
+    报告 月
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G071
+- tender_id: FAST-WATER-01
+- requirement_text: 严重故障次数目标为每年0次，1次可接受，超过2次不可接受。
+- category: acceptance
+- suggested_decision: NEEDS_REVIEW
+- confidence: null
+- reason: Existing packet candidate is retained for review because the governing source-ambiguity decision excludes it from the evaluable frozen source set; source excerpt is not available in the source-foundation artifact.
+- page: null
+- span: {"start_ref":"C014-S034","end_ref":"C014-S046"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":null,"source_range":{"start_ref":"C014-S034","end_ref":"C014-S046"},"source_refs":null,"source_verification_classification":"SOURCE_AMBIGUOUS","source_verified":false,"ambiguity":"SOURCE_AMBIGUOUS"}
+- source_excerpt: null
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G072
+- tender_id: FAST-WATER-01
+- requirement_text: 严重故障解决时间目标2小时，6小时可接受，超过6小时不可接受。
+- category: acceptance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C015-S007","start_ref":"C014-S047"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"c5308b6c09734e475aec687371bd5b63f8918987a686c359842b127e7518ef99","source_range":{"end_ref":"C015-S007","start_ref":"C014-S047"},"source_refs":["C014-S047","C014-S048","C014-S049","C014-S050","C015-S001","C015-S002","C015-S003","C015-S004","C015-S005","C015-S006","C015-S007"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    运
+    维
+    严重故障
+    解决时间 小时 2 6 >6
+    每次故障发生
+    到系统恢复的
+    时间
+    重
+    要
+    系统
+    报告 月
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G073
+- tender_id: FAST-WATER-01
+- requirement_text: 成果形式包括纸质报告和电子文件，电子文件以U盘为载体；纸质报告和电子文件各1套。
+- category: delivery
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C016-S006","start_ref":"C016-S001"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"775942c86693f0fc4a8fb74a555b6ccec7baed520f5018951c37126b1f069301","source_range":{"end_ref":"C016-S006","start_ref":"C016-S001"},"source_refs":["C016-S001","C016-S002","C016-S003","C016-S004","C016-S005","C016-S006"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    5.2 成果形式及数量
+    （1）成果形式
+    成果形式包括纸质报告和电子文件。电子文件载体为 U 盘。
+    （2）成果数量
+    纸质报告：1 套。
+    电子文件：1 套。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G074
+- tender_id: FAST-WATER-01
+- requirement_text: 采购标的服务时间为合同签订之日起至2025年12月31日。
+- category: constraint
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C019-S008","start_ref":"C019-S007"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"d4dfb211d74ae948e7c7183ae1a27cd843789f7c7586a58c67e79c0d397619a1","source_range":{"end_ref":"C019-S008","start_ref":"C019-S007"},"source_refs":["C019-S007","C019-S008"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    ★1.采购标的服务时间
+    合同签订之日起至 2025 年 12 月 31 日
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G075
+- tender_id: FAST-WATER-01
+- requirement_text: 采购标的服务地点为北京市。
+- category: constraint
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C019-S010","start_ref":"C019-S009"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"efb8d0247148affcc99b4d04b5188934e6d6c06b358ab6d77d2d05d29aa4e218","source_range":{"end_ref":"C019-S010","start_ref":"C019-S009"},"source_refs":["C019-S009","C019-S010"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    ★2.采购标的服务地点
+    服务地点：北京市。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G076
+- tender_id: FAST-WATER-01
+- requirement_text: 应按照《北京市水务信息化项目建设与运行管理办法》对涉及国家秘密技术或水务敏感数据的内容保密。
+- category: security
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C019-S034","start_ref":"C019-S032"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"c11481b2027d3dec2ea8b877634cb332478d24d3a5fecc63f9bce09f6f52def4","source_range":{"end_ref":"C019-S034","start_ref":"C019-S032"},"source_refs":["C019-S032","C019-S033","C019-S034"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    ★4.保密要求
+    按照《北京市水务信息化项目建设与运行管理办法》要求，对涉及国家秘密技术或
+    水务敏感数据的内容保密。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G077
+- tender_id: FAST-WATER-01
+- requirement_text: 供应商提供的货物和工作成果不得侵犯第三方合法权益，并应保证采购人在境内使用时免受第三方知识产权侵权起诉。
+- category: constraint
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C019-S040","start_ref":"C019-S035"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"2b194824a9e9f6e18aa7714bd9ca6e0f4523d1c2ec50be4cd3d9466f415f3aba","source_range":{"end_ref":"C019-S040","start_ref":"C019-S035"},"source_refs":["C019-S035","C019-S036","C019-S037","C019-S038","C019-S039","C019-S040"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    ★5.知识产权
+    供应商提供的货物及任何其他工作成果不得侵犯任何第三方的合法权益（包括但不
+    限于知识产权在内的一切权益）。供应商应保证，采购人在中华人民共和国境内使用该
+    供应商提供的设备或其任何一部分时，免受第三方提出的侵犯其知识产权、版权、专利
+    权、商标权或工业设计权的起诉。采购人如受到第三方的侵权起诉，一切责任由供应商
+    承担。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G078
+- tender_id: FAST-WATER-01
+- requirement_text: 供应商应提交各项服务报告及阶段性总结报告，采购人通过月检和不定期抽检对服务运行情况进行监督检查。
+- category: acceptance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C019-S044","start_ref":"C019-S041"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"1564033cb2cbb427f2051e00c118a06338009fe214ddc9a5a9c7b4d292cfa9f1","source_range":{"end_ref":"C019-S044","start_ref":"C019-S041"},"source_refs":["C019-S041","C019-S042","C019-S043","C019-S044"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    五、验收要求
+    供应商向采购人提交各项服务报告及阶段性总结报告，向采购人陈述系统运行状况
+    和事件处理情况。采购人通过定期或不定期的方式对服务内容运行情况进行抽查，或查
+    看服务报告。采购人的监督检查以月检与不定期抽检的方式进行。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G079
+- tender_id: FAST-WATER-01
+- requirement_text: 合同服务期结束后30个工作日内，供应商应提交项目验收材料并组织双方会议汇报年度服务和合同执行情况。
+- category: acceptance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C019-S046","start_ref":"C019-S045"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"2a9156b4fa9ae739bb88dee1770408a3ea4a0c6fc349878b426aeb4fee9c0e10","source_range":{"end_ref":"C019-S046","start_ref":"C019-S045"},"source_refs":["C019-S045","C019-S046"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    供应商于合同服务期结束后的 30 个工作日内应向采购人提交项目验收材料并组织
+    召开双方参与的会议，汇报年度服务情况和合同执行情况。
+- requires_human_review: true
+
+### FAST-WATER-01:FAST-WATER-01-G080
+- tender_id: FAST-WATER-01
+- requirement_text: 项目验收材料应包括周期报告、日常维护记录、项目服务管理报告及工作总结、验收申请报告等。
+- category: acceptance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C019-S049","start_ref":"C019-S047"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf","source_file_sha256":"15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-WATER-01.json","packet_sha256":"0d7561178ae7a16670608a2ac16d04c0f68687be7e3d1e26cfb460b6f4102310","source_excerpt_sha256":"dad0b10e47ffe2ae9edc5bbeb589752aacdacba8c0528848dbd124779f2e2854","source_range":{"end_ref":"C019-S049","start_ref":"C019-S047"},"source_refs":["C019-S047","C019-S048","C019-S049"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    项目验收材料包括但不限于以下内容：周期报告、日常维护记录、项目服务管理报
+    告及工作总结报告、验收申请报告等。
+    采购人检查验收材料，对运维情况进行评价，并出具正式的验收意见。
+- requires_human_review: true
+
+### TB-006:TB-006-G001
+- tender_id: TB-006
+- requirement_text: 大模型软件需部署至市级政务云平台。
+- category: implementation
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C002-S004","start_ref":"C002-S002"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"0c88beacd609cc25e16a4b8fca9e35a7c302139a41026c79228f282aab5362d5","source_range":{"end_ref":"C002-S004","start_ref":"C002-S002"},"source_refs":["C002-S002","C002-S003","C002-S004"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （二）项目背景或概况
+    根据北京市相关文件要求，北京市应急指挥调度能力提升工程项目购置的大
+    模型软件需部署至市级政务云平台。
+- requires_human_review: true
+
+### TB-006:TB-006-G002
+- tender_id: TB-006
+- requirement_text: 服务地点为北京市通州区。
+- category: constraint
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C002-S007","start_ref":"C002-S005"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"6b53215eb78ab54a2accae77b9d13a3d792f92798e5001e3da1e7251b5f0ffc8","source_range":{"end_ref":"C002-S007","start_ref":"C002-S005"},"source_refs":["C002-S005","C002-S006","C002-S007"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    二、商务要求
+    （一）服务地点
+    服务地点：北京市通州区。
+- requires_human_review: true
+
+### TB-006:TB-006-G003
+- tender_id: TB-006
+- requirement_text: 服务期限自合同签订之日起10个月。
+- category: constraint
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C002-S009","start_ref":"C002-S008"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"2303178f34678f9534e674490727988027be0adc0f1ec23406b2bab19ddf1b86","source_range":{"end_ref":"C002-S009","start_ref":"C002-S008"},"source_refs":["C002-S008","C002-S009"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （二）服务期限
+    服务期限：自合同签订之日起 10 个月。
+- requires_human_review: true
+
+### TB-006:TB-006-G004
+- tender_id: TB-006
+- requirement_text: 合同期内系统应安全稳定运行，不得因硬件故障导致服务中断12小时。
+- category: performance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C002-S012","start_ref":"C002-S010"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"7185b3f401e5857e5b14d29b4fab6ba346dcc28964e33b372805b746aec2e5f0","source_range":{"end_ref":"C002-S012","start_ref":"C002-S010"},"source_refs":["C002-S010","C002-S011","C002-S012"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （三）验收服务标准
+    中标人所提供资源应满足招标文件及相关合同规定的要求。保证合同期内系
+    统安全稳定运行，不因硬件故障导致服务中断 12 小时。服务期满后 30 个工作日
+- requires_human_review: true
+
+### TB-006:TB-006-G005
+- tender_id: TB-006
+- requirement_text: 服务期满后30个工作日开始验收；中标人应在采购人指定验收日前提交验收报告，内容至少包括合同服务清单和各系统设备运行情况。
+- category: acceptance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C002-S015","start_ref":"C002-S012"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"43d990bc2ca763daf2a824dc9b60f701720185bc0852e315c4a39f86fbde86ee","source_range":{"end_ref":"C002-S015","start_ref":"C002-S012"},"source_refs":["C002-S012","C002-S013","C002-S014","C002-S015"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    统安全稳定运行，不因硬件故障导致服务中断 12 小时。服务期满后 30 个工作日
+    开始对合同项目进行验收。中标人应当在采购人指定的验收日前向采购人提交验
+    收报告。验收报告的内容包括但不限于，合同规定的各项服务清单，各系统设备
+    运行情况。
+- requires_human_review: true
+
+### TB-006:TB-006-G006
+- tender_id: TB-006
+- requirement_text: 政务云平台云主机vCPU应满足ARM架构主频不低于2.4GHz、C86和x86主频不低于2.2GHz，物理CPU/虚拟CPU平均虚拟化率不低于1/4，虚拟CPU利用率不低于物理CPU的25%。
+- category: technical
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C003-S006","start_ref":"C002-S038"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"da669dea31987b8429174f381ceb4786546ff7d43973023ffdfbd9eb1b687379","source_range":{"end_ref":"C003-S006","start_ref":"C002-S038"},"source_refs":["C002-S038","C002-S039","C002-S040","C003-S001","C003-S002","C003-S003","C003-S004","C003-S005","C003-S006"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    vCPU（vCPU ARM 架构主频
+    不低于 2.4GHz，
+    C86 和 x86 主频不低于
+    2.2GHz，平均虚拟化率，
+    即物理 CPU/虚拟 CPU≥
+    1/4，虚拟 CPU 利用率不低
+    于物理 CPU 的 25% ）
+    1 CPU 元/
+    月 504 10	平台云主机服
+- requires_human_review: true
+
+### TB-006:TB-006-G007
+- tender_id: TB-006
+- requirement_text: 应按采购需求提供平台云主机内存资源，按表列数量和10个月期限提供服务。
+- category: technical
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C003-S010","start_ref":"C003-S007"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"48542ae98533e1c16b6796eade0e7043bf13da2e4f9d9337569c146fdb37f9cf","source_range":{"end_ref":"C003-S010","start_ref":"C003-S007"},"source_refs":["C003-S007","C003-S008","C003-S009","C003-S010"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    务（包含 X86、
+    ARM、C86）
+    内存 1 GB 元/
+    月 1728 10
+- requires_human_review: true
+
+### TB-006:TB-006-G008
+- tender_id: TB-006
+- requirement_text: 应提供GPU显存资源，并与算力资源、云主机或物理服务器资源联合使用，按表列数量和10个月期限提供服务。
+- category: technical
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C003-S015","start_ref":"C003-S011"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"ad72e7333e3dc160da2749c41434577e94ff301b26a47b9d53ab3de03b58a142","source_range":{"end_ref":"C003-S015","start_ref":"C003-S011"},"source_refs":["C003-S011","C003-S012","C003-S013","C003-S014","C003-S015"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    GPU 显存（需同时租用算
+    力资源、云主机或物理
+    服务器资源，联合使用）
+    1 GB 元/
+    月 1024 10
+- requires_human_review: true
+
+### TB-006:TB-006-G009
+- tender_id: TB-006
+- requirement_text: 应提供适配X86、ARM、C86的GPU卡半精度浮点算力服务，并与GPU显存、云主机或物理服务器资源联合使用。
+- category: technical
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C003-S027","start_ref":"C003-S016"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"60bccc818b91b5a0a032e19acb37e95b9b7eb7e3ed7f91418524747a05502e44","source_range":{"end_ref":"C003-S027","start_ref":"C003-S016"},"source_refs":["C003-S016","C003-S017","C003-S018","C003-S019","C003-S020","C003-S021","C003-S022","C003-S023","C003-S024","C003-S025","C003-S026","C003-S027"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    计算服务
+    GPU 卡算力服务
+    （适配 X86、ARM、
+    C86）
+    半精度浮点运算能力（需
+    同时租用 GPU 显存、云主
+    机或物理服务器资源，联
+    合使用）
+    1
+    TFLOPS
+    元/
+    月 3712 10
+- requires_human_review: true
+
+### TB-006:TB-006-G010
+- tender_id: TB-006
+- requirement_text: 应提供普通性能存储服务，单盘IOPS指标为2000-5000，按表列数量和10个月期限提供。
+- category: performance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C003-S030","start_ref":"C003-S028"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"02d86e8e33699b9578059bdb9708b4f68b8b3840ee2c4c5e6b031ada9c6474f9","source_range":{"end_ref":"C003-S030","start_ref":"C003-S028"},"source_refs":["C003-S028","C003-S029","C003-S030"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    普通性能存储 普通存储（单盘技术指标:
+    单盘 IOPS 2000-5000） 100 GB 元/
+    月 68 10
+- requires_human_review: true
+
+### TB-006:TB-006-G011
+- tender_id: TB-006
+- requirement_text: 应提供高性能存储服务，单盘IOPS指标为10000-25000，按表列数量和10个月期限提供。
+- category: performance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C003-S038","start_ref":"C003-S031"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"cb0bd7fe6d45376a3f50b32c97f21e812dd6c700a2859ca5d47073f6b1322ee3","source_range":{"end_ref":"C003-S038","start_ref":"C003-S031"},"source_refs":["C003-S031","C003-S032","C003-S033","C003-S034","C003-S035","C003-S036","C003-S037","C003-S038"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    高性能存储
+    高性能存储（单盘技术指
+    标：单盘 IOPS
+    10000-25000）
+    100 GB 元/
+    月
+    259.
+    72 10
+- requires_human_review: true
+
+### TB-006:TB-006-G012
+- tender_id: TB-006
+- requirement_text: 应提供本地备份服务，按表列容量和10个月期限提供。
+- category: data
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C003-S043","start_ref":"C003-S039"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"44ab9c96b0d9d78a10df79db0209c10c4b23337b64966a64296c6770d45dcedf","source_range":{"end_ref":"C003-S043","start_ref":"C003-S039"},"source_refs":["C003-S039","C003-S040","C003-S041","C003-S042","C003-S043"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    存储服务（兼
+    容 X86、ARM、
+    C86）
+    本地备份服务 本地备份服务 100 GB 元/
+    月 68 10
+- requires_human_review: true
+
+### TB-006:TB-006-G013
+- tender_id: TB-006
+- requirement_text: 应提供远程接入服务账号，按表列数量和10个月期限提供。
+- category: technical
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C003-S048","start_ref":"C003-S044"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"856b0de446256ffebc5173ffd370a958bd4b11c1e430f85666eb1984480fde81","source_range":{"end_ref":"C003-S048","start_ref":"C003-S044"},"source_refs":["C003-S044","C003-S045","C003-S046","C003-S047","C003-S048"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    网络服务（兼
+    容 X86、ARM、
+    C86）
+    远程接入服务 远程接入服务 1 账号 元/
+    月 4 10
+- requires_human_review: true
+
+### TB-006:TB-006-G014
+- tender_id: TB-006
+- requirement_text: 应提供计算、存储、网络等政务云基础环境的日常维护和应急响应服务。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C004-S005","start_ref":"C003-S049"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"372fa87fffd67a7c655365a58469645debc5f336aa289a179e051931c3fd8630","source_range":{"end_ref":"C004-S005","start_ref":"C003-S049"},"source_refs":["C003-S049","C003-S050","C004-S001","C004-S002","C004-S003","C004-S004","C004-S005"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （二）采购目标
+    本项目的总体目标是通过租用政务云平台基础服务，对北京市应急管理局应
+    急指挥调度能力提升工程项目的文字大模型和视觉智能平台运行环境进行持续
+    优化，提供可靠、稳定、安全的政务云基础服务，具体包括：
+    41
+    1、提供政务云基础服务，包括计算服务、存储服务和网络服务等基础环境
+    日常维护、应急响应等工作。
+- requires_human_review: true
+
+### TB-006:TB-006-G015
+- tender_id: TB-006
+- requirement_text: 应提供7×24运维保障，并做好重大活动和节假日应急值守，确保系统在政务云环境中可靠稳定运行。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C004-S007","start_ref":"C004-S006"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"a24653b5a87ebae2ffe6475238d0e882713f0579375b9b61aba0863abd9e5037","source_range":{"end_ref":"C004-S007","start_ref":"C004-S006"},"source_refs":["C004-S006","C004-S007"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    2、提供 7*24 运维保障，做好重大活动和节假日应急值守保障服务，确保各
+    系统在政务云环境中可靠稳定运行。
+- requires_human_review: true
+
+### TB-006:TB-006-G016
+- tender_id: TB-006
+- requirement_text: 服务期内应完成信息系统日常运维和安全运维，包括云平台服务、技术支持、系统维护、服务规范、安全保密和及时响应。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C004-S010","start_ref":"C004-S008"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"49c56ce406d6e38dee4bcb23d6b57e4f0a2a5c0026401c2f5e06fd3cf1c800e8","source_range":{"end_ref":"C004-S010","start_ref":"C004-S008"},"source_refs":["C004-S008","C004-S009","C004-S010"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    3、服务期内，投标人须完成信息系统的日常运维和安全运维服务工作（包
+    括但不限于：云平台服务、日常技术支持、系统日常维护、服务规范、安全及保
+    密要求、响应的及时性），确保入云系统安全、稳定的运行。
+- requires_human_review: true
+
+### TB-006:TB-006-G017
+- tender_id: TB-006
+- requirement_text: 应提供平台云主机服务（X86、ARM、C86）和GPU卡算力服务（适配X86、ARM、C86），并按采购人要求动态调整vCPU和内存，工单下达到完成调整不超过4小时。
+- category: technical
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C004-S016","start_ref":"C004-S011"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"74469257c32ec9a2b3130296dc65e0ded4c1b387e83e6b1217979c2807877d91","source_range":{"end_ref":"C004-S016","start_ref":"C004-S011"},"source_refs":["C004-S011","C004-S012","C004-S013","C004-S014","C004-S015","C004-S016"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （三）服务内容
+    1.计算服务
+    投标人需根据采购需求，提供计算服务，包括：平台云主机服务（包含
+    X86、ARM、C86）和 GPU 卡算力服务（适配 X86、ARM、C86），实现合理的计算
+    资源配置。按照采购人要求对 vCPU 及内存进行动态调整，自接到工单至完成调
+    整时间不超过 4 小时。
+- requires_human_review: true
+
+### TB-006:TB-006-G018
+- tender_id: TB-006
+- requirement_text: 应提供普通性能存储、高性能存储和本地备份服务。
+- category: technical
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C004-S019","start_ref":"C004-S017"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"23ab4efc706e949194bde86f3f98fceeea19c1c7e53ff527a51f3e72835b766b","source_range":{"end_ref":"C004-S019","start_ref":"C004-S017"},"source_refs":["C004-S017","C004-S018","C004-S019"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    2.存储服务
+    投标人需根据采购需求，提供存储服务，包括：普通性能存储、高性能存储
+    和本地备份服务。
+- requires_human_review: true
+
+### TB-006:TB-006-G019
+- tender_id: TB-006
+- requirement_text: 普通性能存储单盘IOPS应为1000-3000，并能按采购人要求动态调整存储空间和配置。
+- category: performance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C004-S021","start_ref":"C004-S020"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"b988d2f195c8ce7d930242e6c84e47ce3c2567a77490f52bbef5b788b9331583","source_range":{"end_ref":"C004-S021","start_ref":"C004-S020"},"source_refs":["C004-S020","C004-S021"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    投标人需根据采购需求，提供单盘 IOPS1000-3000 的普通性能存储服务，按
+    照采购人要求对存储空间和配置进行动态调整。
+- requires_human_review: true
+
+### TB-006:TB-006-G020
+- tender_id: TB-006
+- requirement_text: 高性能存储单盘IOPS应为3000-20000，并能按采购人要求动态调整存储空间和配置。
+- category: performance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C004-S023","start_ref":"C004-S022"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"94980f75f819726b07fc4ce41ebe1417a58f934c8f38e636ddb07a27fc95a19e","source_range":{"end_ref":"C004-S023","start_ref":"C004-S022"},"source_refs":["C004-S022","C004-S023"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    投标人需根据采购需求，提供单盘 IOPS 3000-20000 的高性能存储服务，按
+    照采购人要求对存储空间和配置进行动态调整。
+- requires_human_review: true
+
+### TB-006:TB-006-G021
+- tender_id: TB-006
+- requirement_text: 本地备份服务应通过备份策略实现文件、操作系统和数据库的本地备份。
+- category: data
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C004-S025","start_ref":"C004-S024"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"367a29cdc025a242814653ce4b53f8be050b186d6d3789a0b8d2b44f6d5067e2","source_range":{"end_ref":"C004-S025","start_ref":"C004-S024"},"source_refs":["C004-S024","C004-S025"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    投标人需根据采购需求，提供本地备份服务，通过备份策略实现文件、操作
+    系统、数据库的本地备份。
+- requires_human_review: true
+
+### TB-006:TB-006-G022
+- tender_id: TB-006
+- requirement_text: 远程接入服务应通过身份验证后经VPN远程接入堡垒机维护应用系统。
+- category: security
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C004-S028","start_ref":"C004-S026"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"59ea778ea6d3fd444834f21d993c720bdf4fefb3b0b96d78db5ea5fa40cce05d","source_range":{"end_ref":"C004-S028","start_ref":"C004-S026"},"source_refs":["C004-S026","C004-S027","C004-S028"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    3.网络服务
+    投标人需根据采购需求，提供远程接入服务，每个账号结合身份验证通过 VPN
+    远程接入堡垒机维护应用系统。
+- requires_human_review: true
+
+### TB-006:TB-006-G023
+- tender_id: TB-006
+- requirement_text: 政务云环境应在等保三级基础上，根据各业务系统安全需求开展等保评估、检查和整改。
+- category: security
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C004-S031","start_ref":"C004-S029"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"e6eb3cd18bafb5aac91e7e9aa72b3fa55704b35dbfe0e1de460898337b040192","source_range":{"end_ref":"C004-S031","start_ref":"C004-S029"},"source_refs":["C004-S029","C004-S030","C004-S031"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    4.运维服务
+    投标人提供的政务云环境应在安全等保三级基础上，按各业务系统具体安全
+    需求，开展相应等保评估、检查、整改等工作。
+- requires_human_review: true
+
+### TB-006:TB-006-G024
+- tender_id: TB-006
+- requirement_text: 应严格按照《北京市市级政务云管理办法》及采购人管理制度和流程开展标准化运维。
+- category: constraint
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C004-S035","start_ref":"C004-S032"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"59a28a3fe85e9d8d0f1087d855c8a9acc83ae7b46917ce45ca28833fad6c4bb8","source_range":{"end_ref":"C004-S035","start_ref":"C004-S032"},"source_refs":["C004-S032","C004-S033","C004-S034","C004-S035"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （1）服务规范
+    投标人须严格按照《北京市市级政务云管理办法》以及采购人制定的管理办
+    42
+    法及流程等相关制度，开展标准化运维工作。
+- requires_human_review: true
+
+### TB-006:TB-006-G025
+- tender_id: TB-006
+- requirement_text: 应利用监控系统或人工对机房环境、硬件设备和应用系统进行7×24不间断巡检监控，及时发现并处理安全隐患并形成监控报告。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C004-S039","start_ref":"C004-S036"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"65c5fe81d3e10a0b0f6664d0a843122db97138b0b80f783a32401b418dd052fc","source_range":{"end_ref":"C004-S039","start_ref":"C004-S036"},"source_refs":["C004-S036","C004-S037","C004-S038","C004-S039"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （2）服务方式
+    投标人需利用监控系统或人工对机房环境、硬件设备及应用系统的运行情况
+    进行 7×24 小时的不间断巡检监控，及时发现安全隐患，通知相关人员及时处理，
+    并形成监控报告。
+- requires_human_review: true
+
+### TB-006:TB-006-G026
+- tender_id: TB-006
+- requirement_text: 应设立技术支持热线并安排专人7×24值守，指定专业技术能力较强的工程师按采购人要求配合开展维护服务。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C004-S042","start_ref":"C004-S040"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"6e5dcc102800a7c8889d4ee63eddca07ea8983eb90c7f32992cfec73b26013db","source_range":{"end_ref":"C004-S042","start_ref":"C004-S040"},"source_refs":["C004-S040","C004-S041","C004-S042"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    投标人负责设立技术支持热线，并安排专人值守，为运维工作提供 7×24 小
+    时热线支持服务。投标人针对采购人要求的云平台运维服务相关内容，需指定专
+    业技术能力较强的工程师，根据采购人要求配合开展相关维护服务。
+- requires_human_review: true
+
+### TB-006:TB-006-G027
+- tender_id: TB-006
+- requirement_text: 应遵守采购人信息安全规定，不得利用维护便利擅自修改采购人数据或向第三方泄露采购人数据及其他信息。
+- category: security
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C004-S045","start_ref":"C004-S043"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"694a331022dd129c2d156c3217e9bb43223826758f5b5a6cd1381710d95bd683","source_range":{"end_ref":"C004-S045","start_ref":"C004-S043"},"source_refs":["C004-S043","C004-S044","C004-S045"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （3）安全及保密要求
+    投标人须严格遵守采购人的相关信息安全规定，不得利用系统维护服务时的
+    便利对采购人数据及其他信息擅自修改或透漏给第三方。
+- requires_human_review: true
+
+### TB-006:TB-006-G028
+- tender_id: TB-006
+- requirement_text: 非宕机故障发生时应协调人力在1小时内到达运维现场；系统宕机时5分钟内响应并在1小时内恢复正常，处理完成后提交宕机报告。
+- category: performance
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S001","start_ref":"C004-S046"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"32437616300fe302984eb7e6c2f9817b54f394ef98de8525709d07c1ad6e7249","source_range":{"end_ref":"C005-S001","start_ref":"C004-S046"},"source_refs":["C004-S046","C004-S047","C004-S048","C004-S049","C004-S050","C005-S001"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （4）响应的及时性
+    投标人应当提供高效的系统维护服务，有效防范系统风险，系统对应负责人
+    7×24 小时电话畅通，能够在系统发生除宕机外的其他故障问题时，能够协调人
+    力资源在 1 小时内到达运维现场提供服务。系统发生宕机问题时，投标人应在 5
+    分钟内响应，在 1 个小时之内使系统恢复正常。故障处理完毕后提供相关系统宕
+    机报告。
+- requires_human_review: true
+
+### TB-006:TB-006-G029
+- tender_id: TB-006
+- requirement_text: 业务高峰期应根据业务周期特点加大运维保障力度，保证系统平稳运行。
+- category: service
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S005","start_ref":"C005-S002"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"e6aab593a1d0148b5679f1e4cf5fb758cd5688740783d6dc3b4d5caa31871cd1","source_range":{"end_ref":"C005-S005","start_ref":"C005-S002"},"source_refs":["C005-S002","C005-S003","C005-S004","C005-S005"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （5）重点保障要求
+    为保障业务高峰期内系统平稳运行，缓解系统高峰期内因业务发生量增大而
+    带来系统压力风险，要求投标人根据业务周期性特点，加大运维保障力度，保证
+    在业务高峰期内系统平稳运行。
+- requires_human_review: true
+
+### TB-006:TB-006-G030
+- tender_id: TB-006
+- requirement_text: 如涉及跨云平台迁移，应在保障业务系统正常运行前提下，自合同生效之日起7个工作日内完成全部系统迁移并提供迁移服务承诺函。
+- category: implementation
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S009","start_ref":"C005-S006"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"884f76f98b684e88105e961f1cf2e5b73d3329e863f390e0f901289f766ced8b","source_range":{"end_ref":"C005-S009","start_ref":"C005-S006"},"source_refs":["C005-S006","C005-S007","C005-S008","C005-S009"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    5.迁移服务
+    由于目前业务系统属于生产系统，保障业务系统正常运行是关键。如涉及跨
+    云平台迁移，在系统业务正常运行的前提下，自合同生效之日起 7 个工作日内完
+    成全部系统迁移，投标人需提供迁移服务承诺函，投标人需在迁移服务方案中明
+- requires_human_review: true
+
+### TB-006:TB-006-G031
+- tender_id: TB-006
+- requirement_text: 迁移方案应明确是否需要采购人投入人员、时间和工作，并提供承诺；投标人应具备类似项目经验并制定迁移部署方案，配合完成迁移部署、运行和安全保障。
+- category: implementation
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S013","start_ref":"C005-S009"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"3bd6ec25ca43c73bc9adb0f62b0d8d27f2fec441ca8e759fbf3a2a29f6245876","source_range":{"end_ref":"C005-S013","start_ref":"C005-S009"},"source_refs":["C005-S009","C005-S010","C005-S011","C005-S012","C005-S013"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    成全部系统迁移，投标人需提供迁移服务承诺函，投标人需在迁移服务方案中明
+    确是否需要采购人投入专人、时间及工作，并提供承诺书，投标人需具备类似项
+    目经验，可根据业务特点制定应用系统迁移部署方案，配合用户完成系统迁移部
+    署、运行和安全保障，最终保证现有业务系统可平滑迁移至中标单位云平台。具
+    体要求如下：
+- requires_human_review: true
+
+### TB-006:TB-006-G032
+- tender_id: TB-006
+- requirement_text: 迁移过程中应保证应用系统正常运行，并在合同生效之日起7日内完成迁移，不得改变或影响原系统功能、技术状态和用户使用习惯。
+- category: implementation
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S019","start_ref":"C005-S014"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"037cce7817a23e42ac82a5f96d86d2ecc358f84ecea32c75f9b88d47e3b8c1ee","source_range":{"end_ref":"C005-S019","start_ref":"C005-S014"},"source_refs":["C005-S014","C005-S015","C005-S016","C005-S017","C005-S018","C005-S019"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    根据采购人需求，完成应用系统的迁移部署，迁移过程中保证应用系统正常
+    43
+    运行。
+    自合同生效之日起 7 日内，根据用户需求完成系统迁移工作，并且不能改变
+    和影响原有系统的功能、技术状态以及用户的使用习惯。未按时完成系统迁移工
+    作的，采购人有权解除合同并有权要求供应商按合同首付款双倍支付违约金。
+- requires_human_review: true
+
+### TB-006:TB-006-G033
+- tender_id: TB-006
+- requirement_text: 迁移已运行在政务云平台的应用系统时，应确保数据不丢失和业务正常运行，并主动与原政务云平台服务商对接。
+- category: data
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S024","start_ref":"C005-S020"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"1919960fda7567f5338e61cd62c10a9fd01d98f6e0b552638f5b01f57cd16dd4","source_range":{"end_ref":"C005-S024","start_ref":"C005-S020"},"source_refs":["C005-S020","C005-S021","C005-S022","C005-S023","C005-S024"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    针对已经运行在政务云平台上的应用系统，为确保迁移过程中数据不丢失、
+    系统业务正常运行，本次中标人负责与原政务云平台的服务商进行主动对接，系
+    统迁移涉及的所有费用（包括但不限于中标人迁移测试阶段的云资源费用，系统
+    开发商对业务系统的部署、调试费用，原服务商配合迁出系统的服务费用等）由
+    本次中标人负责解决。
+- requires_human_review: true
+
+### TB-006:TB-006-G034
+- tender_id: TB-006
+- requirement_text: 服务期内应提供7×24电话响应和运维团队售后保障，团队职责明确、架构清晰、岗位合理并具备相关项目经验。
+- category: implementation
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S028","start_ref":"C005-S025"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"500cabe35745a3c2d92e99ceb4ce1c2b0cebcb361b6fcfb7ef6728f2f9affe59","source_range":{"end_ref":"C005-S028","start_ref":"C005-S025"},"source_refs":["C005-S025","C005-S026","C005-S027","C005-S028"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    (四）运维团队要求
+    服务期内，投标人须设有 7×24 小时电话响应服务、具备运维团队，提供售
+    后服务保障。团队成员应明确职责，架构清晰，岗位设置合理，且具备与本项相
+    关的项目经验。
+- requires_human_review: true
+
+### TB-006:TB-006-G035-01
+- tender_id: TB-006
+- requirement_text: 投标人须提供1名项目经理及若干名项目团队专职人员，为本项目提供服务。
+- category: implementation
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S029","start_ref":"C005-S029"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"84de43f1113f3a299f69e23aca0fb0131132324eb1031c660c27154e18dbdffb","source_range":{"end_ref":"C005-S029","start_ref":"C005-S029"},"source_refs":["C005-S029"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    投标人须提供 1 名项目经理及若干名项目团队专职人员，为本项目提供服务。
+- requires_human_review: true
+
+### TB-006:TB-006-G035-02
+- tender_id: TB-006
+- requirement_text: 项目经理需按照采购人要求承担云资源服务保障具体工作。
+- category: implementation
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S030","start_ref":"C005-S030"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"d57bc90ce4df63e9e6748ce58d720207b8f4101a2cdfdbd9652632e26be8bf80","source_range":{"end_ref":"C005-S030","start_ref":"C005-S030"},"source_refs":["C005-S030"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    项目经理需按照采购人要求，承担云资源服务保障具体工作，技术支持人员要求
+- requires_human_review: true
+
+### TB-006:TB-006-G036-01
+- tender_id: TB-006
+- requirement_text: 项目经理具有信息系统项目管理师（高级）证书。
+- category: implementation
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S032","start_ref":"C005-S032"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"af2e2b2935a139dd80382776f9b8ace07fd3dc286350880392fc4b4bb71d5aa5","source_range":{"end_ref":"C005-S032","start_ref":"C005-S032"},"source_refs":["C005-S032"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    项目经理具有信息系统项目管理师（高级）证书；
+- requires_human_review: true
+
+### TB-006:TB-006-G036-02
+- tender_id: TB-006
+- requirement_text: 技术负责人具有CISP证书。
+- category: implementation
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S033","start_ref":"C005-S033"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"d13abeed342de4157d207d84984be9043801a1e5dbe9e9ab35577d8243eaafbb","source_range":{"end_ref":"C005-S033","start_ref":"C005-S033"},"source_refs":["C005-S033"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    技术负责人具有 CISP 证书；
+- requires_human_review: true
+
+### TB-006:TB-006-G036-03
+- tender_id: TB-006
+- requirement_text: 团队成员（除项目经理和技术负责人之外）具有CISP等证书。
+- category: implementation
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S034","start_ref":"C005-S034"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"3c6e01c072664d03a477aa0dca8f050ca40c2f83f3e497c752b074b4fffc035b","source_range":{"end_ref":"C005-S034","start_ref":"C005-S034"},"source_refs":["C005-S034"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    团队成员（除项目经理和技术负责人之外）具有 CISP 等证书。
+- requires_human_review: true
+
+### TB-006:TB-006-G037
+- tender_id: TB-006
+- requirement_text: 中标人应对项目及采购人相关保密信息承担保密义务，不得擅自修改或向第三方泄露采购人数据和其他信息。
+- category: security
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S040","start_ref":"C005-S035"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"c6cda1b0e5177e3befc05fd6a87fd160387797070822eff9318915af458d3261","source_range":{"end_ref":"C005-S040","start_ref":"C005-S035"},"source_refs":["C005-S035","C005-S036","C005-S037","C005-S038","C005-S039","C005-S040"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    （五）保密要求
+    1、中标人因承接本合同约定项目所知悉的该项目信息或采购人信息，以及
+    在项目实施过程中所产生的与该项目有关的全部信息均为采购人的保密信息，中
+    标人应按照采购人关于保密工作的相关要求，对上述保密信息承担保密义务。中
+    标人须严格遵守信息安全规定，不得利用系统维护服务时的便利对采购人数据及
+    其他信息擅自修改或透漏给第三方。
+- requires_human_review: true
+
+### TB-006:TB-006-G038
+- tender_id: TB-006
+- requirement_text: 保密信息仅可用于履行本项目，应至少采取与保护自身商业秘密同等的保护措施和谨慎程度。
+- category: security
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S044","start_ref":"C005-S041"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"97384e4dbf0edf120407eae71f45f2deaee0b085b245d9133f9f751ac61f143f","source_range":{"end_ref":"C005-S044","start_ref":"C005-S041"},"source_refs":["C005-S041","C005-S042","C005-S043","C005-S044"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    2、中标人应对上述保密信息予以妥善保存，并保证仅将其用于与完成本合
+    同项下约定项目实施有关的用途或目的。在缺少相关保密条款约定时，对上述保
+    密信息,中标人应至少采取适用于对自己商业秘密进行保护的同等保护措施和审
+    慎程度进行保密。
+- requires_human_review: true
+
+### TB-006:TB-006-G039
+- tender_id: TB-006
+- requirement_text: 保密信息披露范围应严格限制在直接从事项目且确有知悉必要的工作人员范围内。
+- category: security
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C005-S048","start_ref":"C005-S045"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"88d25ffb1b05f6071569a0fec9b15dd83cbd43d0733c30f7a68ea7dd83249360","source_range":{"end_ref":"C005-S048","start_ref":"C005-S045"},"source_refs":["C005-S045","C005-S046","C005-S047","C005-S048"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    3、中标人保证将保密信息的披露范围严格控制在直接从事该项目工作且因
+    44
+    工作需要有必要知悉保密信息的工作人员范围内,对中标人非从事该项目的人员
+    一律严格保密。
+- requires_human_review: true
+
+### TB-006:TB-006-G040
+- tender_id: TB-006
+- requirement_text: 向工作人员披露保密信息前应开展保密教育，明确保密义务和法律责任，并要求全部项目参与人员签署书面《保密协议》。
+- category: security
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C006-S002","start_ref":"C005-S049"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"ee303091e56ef8623a383dbf6cf1a0601f7899f826aa2b309e7efb76c25ffda6","source_range":{"end_ref":"C006-S002","start_ref":"C005-S049"},"source_refs":["C005-S049","C005-S050","C006-S001","C006-S002"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    4、中标人应保证在向其工作人员披露采购人的保密信息前，认真做好员工
+    的保密教育工作，明确告知其将知悉的为采购人的保密信息，并明确告知其需承
+    担的保密义务及泄密所应承担的法律责任，并要求全体参与该项目的人员签署书
+    面《保密协议》。
+- requires_human_review: true
+
+### TB-006:TB-006-G041
+- tender_id: TB-006
+- requirement_text: 采购人要求时，中标人应在收到书面通知后5日内归还含保密信息的全部文件或资料，且不得擅自复制留存。
+- category: security
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C006-S005","start_ref":"C006-S003"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"2af60c7b6d52778dbd46457bb6a27f8d1d787266d10e05900af9b5dd9beba3a2","source_range":{"end_ref":"C006-S005","start_ref":"C006-S003"},"source_refs":["C006-S003","C006-S004","C006-S005"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    5、任何时间内，一经采购人提出要求，中标人应按照采购人指示在收到采
+    购人书面通知后 5 日内将含有保密信息的所有文件或其他资料归还采购人，且不
+    得擅自复制留存。
+- requires_human_review: true
+
+### TB-006:TB-006-G042
+- tender_id: TB-006
+- requirement_text: 采购人提供保密信息不构成对其中专利权、商标权、著作权、商业秘密或其他知识产权的授权。
+- category: constraint
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C006-S008","start_ref":"C006-S006"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"95b41f4fd6f6505aaffc0441f202d1fda4c366d0741f61055a3eda50760230cb","source_range":{"end_ref":"C006-S008","start_ref":"C006-S006"},"source_refs":["C006-S006","C006-S007","C006-S008"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    6、非经采购人特别授权，采购人向中标人提供的任何保密信息并不包括授
+    予中标人该保密信息包含的任何专利权、商标权、著作权、商业秘密或其它类型
+    的知识产权。
+- requires_human_review: true
+
+### TB-006:TB-006-G043
+- tender_id: TB-006
+- requirement_text: 供应商应提供在本项目中落实ESG理念的工作措施。
+- category: constraint
+- suggested_decision: KEEP_REQUIREMENT
+- confidence: null
+- reason: Existing frozen, source-verified candidate; KEEP is a Human Authority queue suggestion only. No formal REQ-ID assignment, Gold promotion, or Production write is performed.
+- page: null
+- span: {"end_ref":"C006-S012","start_ref":"C006-S009"}
+- source_lineage: {"source_file":"backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf","source_file_sha256":"b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480","packet_file":"backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/TB-006.json","packet_sha256":"0675bff49eefa129c0c4c07f17b4bc3040a155c4247d647eb26361215003f3ab","source_excerpt_sha256":"0dc93bedb6c11c4908f3ac4ee0bc9654d6c4481d6a7b3e26dfc27ff8bd0f5de4","source_range":{"end_ref":"C006-S012","start_ref":"C006-S009"},"source_refs":["C006-S009","C006-S010","C006-S011","C006-S012"],"source_verification_classification":"SOURCE_CLEAR","source_verified":true,"ambiguity":null}
+- source_excerpt: 
+
+    四、政策性采购需求
+    为在项目中充分落实《政府采购法》规定的“政府采购应当有助于实现国家
+    的经济和社会发展政策目标”等相关要求，以项目为载体推动北京市环境社会治
+    理(ESG)体系高质量发展，请供应商提供在本项目中落实 ESG 理念的工作措施。
+- requires_human_review: true
+
+## Stop conditions
+
+TB-003 and FAST-04 have no persisted candidate rows in the current repository. No re-extraction was performed for this queue; they remain blocked pending a persisted candidate packet. Existing frozen candidates and JY-001 candidates remain non-authoritative inputs for Human review.

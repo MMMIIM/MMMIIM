@@ -34,11 +34,12 @@ const ACTION_LABELS = Object.freeze({
 });
 
 export class BidCopilotOrchestrator {
-  constructor({ contextResolver, tools, actionExecutor, auditRepository, clock = () => Date.now() } = {}) {
+  constructor({ contextResolver, tools, actionExecutor, auditRepository, reconciliationService = null, clock = () => Date.now() } = {}) {
     this.contextResolver = contextResolver;
     this.tools = tools;
     this.actionExecutor = actionExecutor;
     this.auditRepository = auditRepository;
+    this.reconciliationService = reconciliationService;
     this.clock = clock;
   }
 
@@ -58,6 +59,18 @@ export class BidCopilotOrchestrator {
     const intent = classifyCopilotIntent(message);
     const audit = { agent_run_id: agentRunId, user_id: context.user_id, project_id: context.project_id, current_route: context.current_route, user_request: message, intent, selected_tools: [], tool_results: [], actions_proposed: [], actions_executed: [], human_required_actions: [], status: 'running', created_at: new Date().toISOString() };
     const response = baseResponse(context, { agent_run_id: agentRunId, intent });
+    if (this.reconciliationService && context.project_id) {
+      try {
+        const reconciliation = await this.reconciliationService.get(context.project_id, context.document_version_id || null);
+        response.context.final_requirement_reconciliation = {
+          status: reconciliation.status,
+          summary: reconciliation.summary,
+          read_only: true
+        };
+      } catch (error) {
+        response.context.final_requirement_reconciliation = { status: 'UNAVAILABLE', read_only: true, reason_code: error.code || 'RECONCILIATION_UNAVAILABLE' };
+      }
+    }
     const call = async (tool, args = {}) => { audit.selected_tools.push(tool); const result = await this.tools.execute(tool, context, args); audit.tool_results.push({ tool, status: result.status, reason_code: result.reason_code }); return result; };
 
     const callActions = async (actions) => {

@@ -1,0 +1,5623 @@
+{
+  "schema_version": "v43-rag-corpus-inventory-v1",
+  "generated_at": "2026-09-03T09:03:56.485Z",
+  "read_only": true,
+  "provider_calls": 0,
+  "db_writes": 0,
+  "totals": {
+    "evidence_facts": 6,
+    "evidence_source_facts": 0,
+    "legacy_mappings": 6,
+    "fact_mappings": 0,
+    "retrieval_runs": 17,
+    "retrieval_results": 129,
+    "materials": 56,
+    "chunks": 561,
+    "embeddings": 625,
+    "active_materials": 56,
+    "active_chunks": 561,
+    "active_embeddings": 625,
+    "retrieval_eligible_materials": 56
+  },
+  "scope_distribution": {
+    "ENTERPRISE_PRIVATE": {
+      "materials": 22,
+      "chunks": 243,
+      "embeddings": 243
+    },
+    "GENERAL": {
+      "materials": 16,
+      "chunks": 162,
+      "embeddings": 162
+    },
+    "GOVERNMENT_ENTERPRISE": {
+      "materials": 8,
+      "chunks": 64,
+      "embeddings": 128
+    },
+    "HEALTHCARE": {
+      "materials": 10,
+      "chunks": 92,
+      "embeddings": 92
+    }
+  },
+  "material_type_distribution": {
+    "project_case": 5,
+    "company_profile": 2,
+    "product_documentation": 2,
+    "technical_solution": 5,
+    "delivery_capability": 4,
+    "personnel": 1,
+    "qualification": 2,
+    "other": 1,
+    "technical_whitepaper": 34
+  },
+  "projects": [
+    {
+      "id": "00000000-0000-4000-8000-000000000001",
+      "name": "平台公共知识库（官方公开资料）",
+      "status": "corpus"
+    },
+    {
+      "id": "0315d056-4669-4491-97e4-1f50fac5bf6e",
+      "name": "Day 1 真实契约验收 2026-08-18",
+      "status": "failed"
+    },
+    {
+      "id": "0ce84927-138d-4a79-8e21-ac2db07f240d",
+      "name": "corpus-retrieval-9ad56316-5f71-4c88-b372-b38b8ef07514",
+      "status": "draft"
+    },
+    {
+      "id": "112b3805-df67-4483-b1aa-c8941a111465",
+      "name": "Production-shaped E2E 4.3 Canonical 2026-08-20",
+      "status": "requirements_confirmed"
+    },
+    {
+      "id": "1dfa0ad3-bd0e-4fde-9c16-6703c112af43",
+      "name": "P0-1 真实验收 2026-08-17T15:11:11.910Z",
+      "status": "failed"
+    },
+    {
+      "id": "2406057a-80be-4751-aa25-70050a52fd59",
+      "name": "智慧城市综合事件管理平台建设项目极限",
+      "status": "draft"
+    },
+    {
+      "id": "2598dda6-eabc-47d7-8170-c03b665f71f3",
+      "name": "Plan edit 1787217845413",
+      "status": "draft"
+    },
+    {
+      "id": "5c3cd7dc-054c-4b43-8167-2bda2d794899",
+      "name": "FACT-PROVIDER-ACCEPTANCE-V3-SYNTHETIC",
+      "status": "draft"
+    },
+    {
+      "id": "ac6c9346-d8d8-485a-89d0-aea2c607c3c3",
+      "name": "E2E-V43-LIVE 2026-08-19T08:32:24.371Z",
+      "status": "draft"
+    },
+    {
+      "id": "bfeecc64-1ea6-4d12-b1a5-64ac6f6314d6",
+      "name": "Plan edit 1787220533723",
+      "status": "draft"
+    },
+    {
+      "id": "c75a8dc9-1674-445c-adf6-de14b0fe0a0d",
+      "name": "江阴市城市运营“一网统管”项目一期之联勤联动统一事件",
+      "status": "requirements_review"
+    },
+    {
+      "id": "d22e95d8-3a2e-450d-a5ef-27f83a283aff",
+      "name": "Synthetic Demo Company RAG Benchmark",
+      "status": "requirements_confirmed"
+    },
+    {
+      "id": "d89a8994-c152-4d9f-8925-e642b6ce8337",
+      "name": "智慧城市综合事件管理平台建设项目",
+      "status": "requirements_confirmed"
+    },
+    {
+      "id": "dcc6c0fa-3b13-4ee1-addb-0e1fb34de030",
+      "name": "FACT-PROVIDER-ACCEPTANCE-SYNTHETIC-1788156212977",
+      "status": "requirements_confirmed"
+    }
+  ],
+  "materials": [
+    {
+      "material_id": "2e553e66-a909-4ed1-b99e-a57c25b51824",
+      "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+      "project_name": "Production-shaped E2E 4.3 Canonical 2026-08-20",
+      "original_name": "ccgp-neusoft-project.md",
+      "material_type": "project_case",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "industry": "NOT_AVAILABLE",
+      "source_type": "NOT_AVAILABLE",
+      "source_org": "NOT_AVAILABLE",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "enterprise_private",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "NOT_INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "2b2faa4b1f0530063a5448cd8ff9685ed1ccb139c55287e42d7c108868bfbd41",
+      "synthetic_test_material": false,
+      "chunk_count": 27,
+      "embedding_count": 27,
+      "embedded_chunk_count": 27,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 27
+        }
+      ],
+      "indexed": false,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": true,
+      "evidence_source_eligible_count": 2,
+      "derived_fact_count": 2,
+      "current_fact_count": 2,
+      "derived_fact_ids": [
+        "EFACT-5CF3484B-96D5-41AC-96A5-E10C70582C78",
+        "EFACT-FD8C911C-8C57-4D89-9A5C-C5CE5DC43235"
+      ],
+      "derived_mapping_count": 2,
+      "derived_mapping_ids": [
+        "3830bc69-bf16-4673-b424-5c574a181c52",
+        "e73f7f74-4b55-4194-a608-2560d0e89383"
+      ],
+      "current_mapping_count": 2,
+      "claim_reference_count": 2,
+      "claim_ids": [
+        "CLM-2BDAF381674C25FB",
+        "CLM-6E3C6031B3CA4B32"
+      ],
+      "retrieval_run_count": 4,
+      "retrieval_result_count": 8,
+      "source_quality_flags": [
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "STRUCTURED_FACT_CANDIDATE": 9,
+        "HEADING_ONLY": 9,
+        "VERY_LOW_INFORMATION": 26
+      },
+      "low_information_chunk_count": 26
+    },
+    {
+      "material_id": "adde4515-c4bd-4fba-9269-efa94cf6ac2a",
+      "project_id": "d22e95d8-3a2e-450d-a5ef-27f83a283aff",
+      "project_name": "Synthetic Demo Company RAG Benchmark",
+      "original_name": "COM-01_公司概况与业务范围.md",
+      "material_type": "company_profile",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "industry": "government+medical",
+      "source_type": "synthetic_company_evidence",
+      "source_org": "OFF-U01,OFF-U02",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "enterprise_private",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "2025-12-31T16:00:00.000Z",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+      "synthetic_test_material": true,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 3,
+      "retrieval_result_count": 3,
+      "source_quality_flags": [
+        "HEADING_ONLY",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "7dc70fee-13e0-4b7d-b95f-202665c241d0",
+      "project_id": "d22e95d8-3a2e-450d-a5ef-27f83a283aff",
+      "project_name": "Synthetic Demo Company RAG Benchmark",
+      "original_name": "COM-02_产品平台能力说明.md",
+      "material_type": "product_documentation",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "industry": "government+medical",
+      "source_type": "synthetic_company_evidence",
+      "source_org": "OFF-U01,OFF-U04",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "enterprise_private",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "2026-06-14T16:00:00.000Z",
+        "effective_to": "2027-06-13T16:00:00.000Z"
+      },
+      "file_hash": "c9a0c64ef292dc57f753071c362147dd2e50b17be104815405a8507eeab3a120",
+      "synthetic_test_material": true,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 0,
+      "retrieval_result_count": 0,
+      "source_quality_flags": [
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8,
+        "STRUCTURED_FACT_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd",
+      "project_id": "d22e95d8-3a2e-450d-a5ef-27f83a283aff",
+      "project_name": "Synthetic Demo Company RAG Benchmark",
+      "original_name": "COM-03_技术架构与部署适配报告.md",
+      "material_type": "technical_solution",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "industry": "government+medical",
+      "source_type": "synthetic_company_evidence",
+      "source_org": "OFF-U02,OFF-U12,OFF-U13",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "enterprise_private",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "2026-05-19T16:00:00.000Z",
+        "effective_to": "2027-05-18T16:00:00.000Z"
+      },
+      "file_hash": "70197f58823f5c278d54437bba1f449f6fd926bc236fe94e61f852cf8a5ac5db",
+      "synthetic_test_material": true,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 1,
+      "source_quality_flags": [
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8,
+        "STRUCTURED_FACT_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+      "project_id": "d22e95d8-3a2e-450d-a5ef-27f83a283aff",
+      "project_name": "Synthetic Demo Company RAG Benchmark",
+      "original_name": "COM-04_API与系统集成能力报告.md",
+      "material_type": "technical_solution",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "industry": "government+medical",
+      "source_type": "synthetic_company_evidence",
+      "source_org": "OFF-U03",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "enterprise_private",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "2026-07-11T16:00:00.000Z",
+        "effective_to": "2027-07-10T16:00:00.000Z"
+      },
+      "file_hash": "8410478e68efb788edd72802271d8f38ff6983deb95f153fe03a9506f4da3b87",
+      "synthetic_test_material": true,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 2,
+      "retrieval_result_count": 4,
+      "source_quality_flags": [
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8,
+        "STRUCTURED_FACT_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "81990289-5472-4c41-a68e-b16035013a9a",
+      "project_id": "d22e95d8-3a2e-450d-a5ef-27f83a283aff",
+      "project_name": "Synthetic Demo Company RAG Benchmark",
+      "original_name": "COM-05_数据治理与迁移能力材料.md",
+      "material_type": "technical_solution",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "industry": "government+medical",
+      "source_type": "synthetic_company_evidence",
+      "source_org": "OFF-U03,OFF-U06,OFF-U11",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "enterprise_private",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "2026-03-31T16:00:00.000Z",
+        "effective_to": "2027-03-30T16:00:00.000Z"
+      },
+      "file_hash": "25a2a9c986a87aaba8a3b3545eb62a1e41965ecc708ebfa65c7da484e95c3f52",
+      "synthetic_test_material": true,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 2,
+      "retrieval_result_count": 2,
+      "source_quality_flags": [
+        "HEADING_ONLY",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "3ec066d3-679a-4232-ba6d-364038658c81",
+      "project_id": "d22e95d8-3a2e-450d-a5ef-27f83a283aff",
+      "project_name": "Synthetic Demo Company RAG Benchmark",
+      "original_name": "COM-06_权限、安全与审计测试报告.md",
+      "material_type": "technical_solution",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "industry": "government+medical",
+      "source_type": "synthetic_company_evidence",
+      "source_org": "OFF-U05,OFF-U08,OFF-U10",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "enterprise_private",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "2026-07-31T16:00:00.000Z",
+        "effective_to": "2027-01-30T16:00:00.000Z"
+      },
+      "file_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+      "synthetic_test_material": true,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 0,
+      "retrieval_result_count": 0,
+      "source_quality_flags": [
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8,
+        "STRUCTURED_FACT_CANDIDATE": 2
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "42debef7-084f-471c-8fa5-1f9dcbf4c2f7",
+      "project_id": "d22e95d8-3a2e-450d-a5ef-27f83a283aff",
+      "project_name": "Synthetic Demo Company RAG Benchmark",
+      "original_name": "COM-07_性能与容量测试报告.md",
+      "material_type": "technical_solution",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "industry": "government+medical",
+      "source_type": "synthetic_company_evidence",
+      "source_org": "OFF-U01",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "enterprise_private",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "2026-08-09T16:00:00.000Z",
+        "effective_to": "2026-11-29T16:00:00.000Z"
+      },
+      "file_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f",
+      "synthetic_test_material": true,
+      "chunk_count": 12,
+      "embedding_count": 12,
+      "embedded_chunk_count": 12,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 12
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 1,
+      "source_quality_flags": [
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 6,
+        "VERY_LOW_INFORMATION": 10,
+        "STRUCTURED_FACT_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 10
+    },
+    {
+      "material_id": "4ba1c701-7c4f-415b-9186-28b25c4472ce",
+      "project_id": "d22e95d8-3a2e-450d-a5ef-27f83a283aff",
+      "project_name": "Synthetic Demo Company RAG Benchmark",
+      "original_name": "COM-08_备份恢复与容灾演练记录.md",
+      "material_type": "delivery_capability",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "industry": "government+medical",
+      "source_type": "synthetic_company_evidence",
+      "source_org": "OFF-U08,OFF-U09",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "enterprise_private",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "2026-07-24T16:00:00.000Z",
+        "effective_to": "2027-01-23T16:00:00.000Z"
+      },
+      "file_hash": "afd00a30e6a46e9e09d42ac1f7eeae36be26420a40da12a42ecd0cb0d8ba9041",
+      "synthetic_test_material": true,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 1,
+      "source_quality_flags": [
+        "HEADING_ONLY",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "f32d71e5-37db-496f-9050-dd7b52fd3804",
+      "project_id": "d22e95d8-3a2e-450d-a5ef-27f83a283aff",
+      "project_name": "Synthetic Demo Company RAG Benchmark",
+      "original_name": "COM-09_项目实施与质量管理方法.md",
+      "material_type": "delivery_capability",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "industry": "government+medical",
+      "source_type": "synthetic_company_evidence",
+      "source_org": "OFF-U01,OFF-U02",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "enterprise_private",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "2025-12-31T16:00:00.000Z",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "573873e3bdd580b38e5ad75b387b86c8f6ed6f2f72fddcea2f75b9a18f53f73a",
+      "synthetic_test_material": true,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 1,
+      "source_quality_flags": [
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8,
+        "STRUCTURED_FACT_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "bee37331-9769-4856-a907-6ad8a49a80c0",
+      "project_id": "d22e95d8-3a2e-450d-a5ef-27f83a283aff",
+      "project_name": "Synthetic Demo Company RAG Benchmark",
+      "original_name": "COM-10_项目团队与人员能力模板.md",
+      "material_type": "personnel",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "industry": "government+medical",
+      "source_type": "synthetic_company_evidence",
+      "source_org": "OFF-U01",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "enterprise_private",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "2025-12-31T16:00:00.000Z",
+        "effective_to": "2026-12-30T16:00:00.000Z"
+      },
+      "file_hash": "28c9c343c143769f3c72dfa0c1edb820ba1ade09417ae3373d358fc1a5ec3985",
+      "synthetic_test_material": true,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 1,
+      "source_quality_flags": [
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8,
+        "STRUCTURED_FACT_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "b94aca0b-a314-4f71-a54b-e6d31e4ef702",
+      "project_id": "d22e95d8-3a2e-450d-a5ef-27f83a283aff",
+      "project_name": "Synthetic Demo Company RAG Benchmark",
+      "original_name": "COM-11_测试、培训、验收与交付能力.md",
+      "material_type": "delivery_capability",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "industry": "government+medical",
+      "source_type": "synthetic_company_evidence",
+      "source_org": "OFF-U01",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "enterprise_private",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "2025-12-31T16:00:00.000Z",
+        "effective_to": "2027-12-30T16:00:00.000Z"
+      },
+      "file_hash": "3cced71cd8781414b9de68cd3ddcd4cca57dc80de960bef8412c5a88a24ba79a",
+      "synthetic_test_material": true,
+      "chunk_count": 8,
+      "embedding_count": 8,
+      "embedded_chunk_count": 8,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 8
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 2,
+      "retrieval_result_count": 3,
+      "source_quality_flags": [
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 4,
+        "VERY_LOW_INFORMATION": 6,
+        "STRUCTURED_FACT_CANDIDATE": 2
+      },
+      "low_information_chunk_count": 6
+    },
+    {
+      "material_id": "45d3a548-516a-4349-a50b-e67ccef7930a",
+      "project_id": "d22e95d8-3a2e-450d-a5ef-27f83a283aff",
+      "project_name": "Synthetic Demo Company RAG Benchmark",
+      "original_name": "COM-12_运维、SLA与应急服务说明.md",
+      "material_type": "delivery_capability",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "industry": "government+medical",
+      "source_type": "synthetic_company_evidence",
+      "source_org": "OFF-U05",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "enterprise_private",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "2025-12-31T16:00:00.000Z",
+        "effective_to": "2026-12-30T16:00:00.000Z"
+      },
+      "file_hash": "2689d0870f813b00849e6da5daca12cdf56064b4655b2d46bdc110b5ca3d9814",
+      "synthetic_test_material": true,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 0,
+      "retrieval_result_count": 0,
+      "source_quality_flags": [
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8,
+        "STRUCTURED_FACT_CANDIDATE": 2
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "a5510db7-bb22-46e3-aa7f-13b77f1206a6",
+      "project_id": "d22e95d8-3a2e-450d-a5ef-27f83a283aff",
+      "project_name": "Synthetic Demo Company RAG Benchmark",
+      "original_name": "COM-13_Synthetic政企案例：城市事件协同平台.md",
+      "material_type": "project_case",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "industry": "government+medical",
+      "source_type": "synthetic_company_evidence",
+      "source_org": "OFF-U02,OFF-U03",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "enterprise_private",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "2025-10-30T16:00:00.000Z",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "61c4631f7e6eb283abcb4a4a67a0c2ada761eea796496f39d3c815569c822d75",
+      "synthetic_test_material": true,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 2,
+      "retrieval_result_count": 2,
+      "source_quality_flags": [
+        "HEADING_ONLY",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "04738608-0aa8-4e12-b37b-fc5084e0428b",
+      "project_id": "d22e95d8-3a2e-450d-a5ef-27f83a283aff",
+      "project_name": "Synthetic Demo Company RAG Benchmark",
+      "original_name": "COM-14_Synthetic医疗案例：医院接口与数据平台.md",
+      "material_type": "project_case",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "industry": "government+medical",
+      "source_type": "synthetic_company_evidence",
+      "source_org": "OFF-M03,OFF-M05,OFF-M06",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "enterprise_private",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "2026-01-30T16:00:00.000Z",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "f4c20067c469eb6092518b450c7caa9fe86bda91832b7f17c1f6e7d3393c91d2",
+      "synthetic_test_material": true,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 3,
+      "retrieval_result_count": 6,
+      "source_quality_flags": [
+        "HEADING_ONLY",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "e39ce20c-b73c-4cd2-a965-d8fbad6775e2",
+      "project_id": "d22e95d8-3a2e-450d-a5ef-27f83a283aff",
+      "project_name": "Synthetic Demo Company RAG Benchmark",
+      "original_name": "COM-15_Synthetic资质、知识产权与授权索引.md",
+      "material_type": "qualification",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "industry": "government+medical",
+      "source_type": "synthetic_company_evidence",
+      "source_org": "OFF-U01",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "enterprise_private",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "2026-02-28T16:00:00.000Z",
+        "effective_to": "2027-02-27T16:00:00.000Z"
+      },
+      "file_hash": "988786fbbd8adac54e42c86d8df9c40daf2d00c39370c31d2c6043e5519962cf",
+      "synthetic_test_material": true,
+      "chunk_count": 12,
+      "embedding_count": 12,
+      "embedded_chunk_count": 12,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 12
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 1,
+      "source_quality_flags": [
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 6,
+        "VERY_LOW_INFORMATION": 10,
+        "STRUCTURED_FACT_CANDIDATE": 4
+      },
+      "low_information_chunk_count": 10
+    },
+    {
+      "material_id": "fa4d4d1b-7add-4b2e-bab5-646df34ad084",
+      "project_id": "d22e95d8-3a2e-450d-a5ef-27f83a283aff",
+      "project_name": "Synthetic Demo Company RAG Benchmark",
+      "original_name": "COM-16_商务与合同响应边界.md",
+      "material_type": "other",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "industry": "government+medical",
+      "source_type": "synthetic_company_evidence",
+      "source_org": "OFF-U01,OFF-U14",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "enterprise_private",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "2025-12-31T16:00:00.000Z",
+        "effective_to": "2026-12-30T16:00:00.000Z"
+      },
+      "file_hash": "66adff7f7ff2a0d57828ac3004bbab49463fa53f5d0af2a3ef94eaae7623c270",
+      "synthetic_test_material": true,
+      "chunk_count": 8,
+      "embedding_count": 8,
+      "embedded_chunk_count": 8,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 8
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 2,
+      "retrieval_result_count": 2,
+      "source_quality_flags": [
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 4,
+        "VERY_LOW_INFORMATION": 6,
+        "STRUCTURED_FACT_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 6
+    },
+    {
+      "material_id": "d888b245-b0af-4a2d-a26e-7134c885247e",
+      "project_id": "5c3cd7dc-054c-4b43-8167-2bda2d794899",
+      "project_name": "FACT-PROVIDER-ACCEPTANCE-V3-SYNTHETIC",
+      "original_name": "fact-acceptance-v3.txt",
+      "material_type": "project_case",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "industry": "NOT_AVAILABLE",
+      "source_type": "NOT_AVAILABLE",
+      "source_org": "NOT_AVAILABLE",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "enterprise_private",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "NOT_INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "da350cb95dac9d5d23a904afbbf4604c5bdf33abfe42135b8da0c032a00508c0",
+      "synthetic_test_material": false,
+      "chunk_count": 1,
+      "embedding_count": 1,
+      "embedded_chunk_count": 1,
+      "embedding_identities": [
+        {
+          "model": "acceptance-fixture",
+          "version": "v1",
+          "dimension": 1,
+          "count": 1
+        }
+      ],
+      "indexed": false,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 1,
+      "source_quality_flags": [],
+      "source_quality_flag_counts": {},
+      "low_information_chunk_count": 0
+    },
+    {
+      "material_id": "427e5615-72e0-4d3d-b38a-f44891b993e2",
+      "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+      "project_name": "Production-shaped E2E 4.3 Canonical 2026-08-20",
+      "original_name": "neusoft-qualifications.md",
+      "material_type": "qualification",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "industry": "NOT_AVAILABLE",
+      "source_type": "NOT_AVAILABLE",
+      "source_org": "NOT_AVAILABLE",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "enterprise_private",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "NOT_INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "27f1cd9e832820f35abf057c8c4f36a24aecc7092e39849077ff8ce213acb170",
+      "synthetic_test_material": false,
+      "chunk_count": 3,
+      "embedding_count": 3,
+      "embedded_chunk_count": 3,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 3
+        }
+      ],
+      "indexed": false,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": true,
+      "evidence_source_eligible_count": 2,
+      "derived_fact_count": 2,
+      "current_fact_count": 2,
+      "derived_fact_ids": [
+        "EFACT-51BBB3D4-8397-4E1E-B030-26DA8E4A9465",
+        "EFACT-CD2403D4-C896-4762-9DBC-8ECA23B7B1D4"
+      ],
+      "derived_mapping_count": 2,
+      "derived_mapping_ids": [
+        "9c419732-900e-4969-b030-2264b6e6c365",
+        "f5867a6d-ab89-44ac-afe4-fd82215100c3"
+      ],
+      "current_mapping_count": 2,
+      "claim_reference_count": 2,
+      "claim_ids": [
+        "CLM-3CC158B816F5D18A",
+        "CLM-4FDF892B160ED147"
+      ],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 1,
+      "source_quality_flags": [
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 1,
+        "VERY_LOW_INFORMATION": 1,
+        "STRUCTURED_FACT_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 1
+    },
+    {
+      "material_id": "5a4674b0-aaab-475a-964b-977ae4b1ff65",
+      "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+      "project_name": "Production-shaped E2E 4.3 Canonical 2026-08-20",
+      "original_name": "neusoft-smart-city.md",
+      "material_type": "company_profile",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "industry": "NOT_AVAILABLE",
+      "source_type": "NOT_AVAILABLE",
+      "source_org": "NOT_AVAILABLE",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "enterprise_private",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "NOT_INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "67761742b6a3375e512291a0ae6aed8b728b510afd3ccc7df4b67d4f4c18ed78",
+      "synthetic_test_material": false,
+      "chunk_count": 34,
+      "embedding_count": 34,
+      "embedded_chunk_count": 34,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 34
+        }
+      ],
+      "indexed": false,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 9,
+      "retrieval_result_count": 26,
+      "source_quality_flags": [
+        "HEADING_ONLY",
+        "MARKETING_STYLE_CANDIDATE",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 8,
+        "VERY_LOW_INFORMATION": 33,
+        "MARKETING_STYLE_CANDIDATE": 5,
+        "STRUCTURED_FACT_CANDIDATE": 5
+      },
+      "low_information_chunk_count": 33
+    },
+    {
+      "material_id": "c7542760-5ed9-479e-a642-1ebf7999f446",
+      "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+      "project_name": "Production-shaped E2E 4.3 Canonical 2026-08-20",
+      "original_name": "neusoft-system-integration.md",
+      "material_type": "product_documentation",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "industry": "NOT_AVAILABLE",
+      "source_type": "NOT_AVAILABLE",
+      "source_org": "NOT_AVAILABLE",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "enterprise_private",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "NOT_INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "76da6a6e91f71de397f9fcb71ed97188c2642be98040723e438d9cc960c94de0",
+      "synthetic_test_material": false,
+      "chunk_count": 17,
+      "embedding_count": 17,
+      "embedded_chunk_count": 17,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 17
+        }
+      ],
+      "indexed": false,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": true,
+      "evidence_source_eligible_count": 2,
+      "derived_fact_count": 2,
+      "current_fact_count": 2,
+      "derived_fact_ids": [
+        "EFACT-4B0F9D53-903A-443B-9F97-54A8D3F35951",
+        "EFACT-AAF9F31E-E70C-45A1-88F5-3D0C8A27B51D"
+      ],
+      "derived_mapping_count": 2,
+      "derived_mapping_ids": [
+        "118358fb-29b1-43c0-afaf-93450163b071",
+        "1d7815c9-5389-44f0-b9e8-a81d1a70eb4b"
+      ],
+      "current_mapping_count": 2,
+      "claim_reference_count": 2,
+      "claim_ids": [
+        "CLM-7E8A09184585A4B0",
+        "CLM-960C12709CA78F16"
+      ],
+      "retrieval_run_count": 7,
+      "retrieval_result_count": 20,
+      "source_quality_flags": [
+        "HEADING_ONLY",
+        "MARKETING_STYLE_CANDIDATE",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "STRUCTURED_FACT_CANDIDATE": 3,
+        "HEADING_ONLY": 6,
+        "VERY_LOW_INFORMATION": 13,
+        "MARKETING_STYLE_CANDIDATE": 2
+      },
+      "low_information_chunk_count": 13
+    },
+    {
+      "material_id": "487a83f9-9ca4-4525-a064-a4df03869b13",
+      "project_id": "dcc6c0fa-3b13-4ee1-addb-0e1fb34de030",
+      "project_name": "FACT-PROVIDER-ACCEPTANCE-SYNTHETIC-1788156212977",
+      "original_name": "synthetic-fact-source.txt",
+      "material_type": "project_case",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "industry": "NOT_AVAILABLE",
+      "source_type": "NOT_AVAILABLE",
+      "source_org": "NOT_AVAILABLE",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "enterprise_private",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "NOT_INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "1a32a4c51bc938cf36086c91fb1dd8f94cbb2cf62f0b775f1c83d6ac45e7d2eb",
+      "synthetic_test_material": false,
+      "chunk_count": 1,
+      "embedding_count": 1,
+      "embedded_chunk_count": 1,
+      "embedding_identities": [
+        {
+          "model": "synthetic-acceptance",
+          "version": "1",
+          "dimension": 3,
+          "count": 1
+        }
+      ],
+      "indexed": false,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 1,
+      "source_quality_flags": [],
+      "source_quality_flag_counts": {},
+      "low_information_chunk_count": 0
+    },
+    {
+      "material_id": "da0524ff-46a1-4266-a1f7-29ffcd3545ae",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "UNI-01_采购需求、评分与验收边界.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "GENERAL",
+      "industry": "NOT_AVAILABLE",
+      "source_type": "official_standard",
+      "source_org": "OFF-U01,OFF-U14",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "e979db994b7a5f9b15c9add453f3692d0b848fa1021d4645e6ede34b275a7f9b",
+      "synthetic_test_material": false,
+      "chunk_count": 12,
+      "embedding_count": 12,
+      "embedded_chunk_count": 12,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 12
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 4,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 6,
+        "VERY_LOW_INFORMATION": 10,
+        "STRUCTURED_FACT_CANDIDATE": 3,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 10
+    },
+    {
+      "material_id": "ff5abe48-c358-4bcb-b2c7-e54b8eeffe10",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "UNI-02_政务信息化项目建设与治理.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "GENERAL",
+      "industry": "NOT_AVAILABLE",
+      "source_type": "official_standard",
+      "source_org": "OFF-U02",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "b3b07e4a7e29453604b898cee66393db47ef1a016c6ea3a074c561f2da40e3a8",
+      "synthetic_test_material": false,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 3,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8,
+        "STRUCTURED_FACT_CANDIDATE": 1,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "02001ebe-6272-45ca-b641-d33e3bfcec24",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "UNI-03_数据共享、目录与治理.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "GENERAL",
+      "industry": "NOT_AVAILABLE",
+      "source_type": "official_standard",
+      "source_org": "OFF-U03,OFF-U06",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "4ca90cb4165a99de16ff2db8bcf8e60ed8077f4e28eb62f5c2ebba4cdaf5b6f4",
+      "synthetic_test_material": false,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 2,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "2c26c5a4-b816-4611-b89d-2c1db4db297e",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "UNI-04_网络数据安全与个人信息保护.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "GENERAL",
+      "industry": "NOT_AVAILABLE",
+      "source_type": "official_standard",
+      "source_org": "OFF-U04,OFF-U05,OFF-U06,OFF-U07,OFF-U10",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "0a2db3651f3b596a597f44ee13765d1492288ad22df981f9a13b9d317af75049",
+      "synthetic_test_material": false,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 0,
+      "retrieval_result_count": 0,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8,
+        "STRUCTURED_FACT_CANDIDATE": 2,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "5057a650-b809-4bf5-9b9b-c6fea2c1925c",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "UNI-05_等级保护与安全设计.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "GENERAL",
+      "industry": "NOT_AVAILABLE",
+      "source_type": "official_standard",
+      "source_org": "OFF-U08,OFF-U09",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "64b633abb9c4bb4c3a314045f46b24e9be45e2597ba403d49461ab8e9a6e5481",
+      "synthetic_test_material": false,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 0,
+      "retrieval_result_count": 0,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "b2c89530-fc68-4149-9db2-3e8aa4a0ad44",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "UNI-06_数据安全能力与生命周期.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "GENERAL",
+      "industry": "NOT_AVAILABLE",
+      "source_type": "official_standard",
+      "source_org": "OFF-U06,OFF-U11",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "4f6831ace8833bcd23b28ddc24d11b2eb4eb5f860f860a6d6382e752aa5fd99f",
+      "synthetic_test_material": false,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 0,
+      "retrieval_result_count": 0,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "8492c3e4-01b7-4a8f-a0a4-6ef24a223825",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "UNI-07_架构、部署与信创适配.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "GENERAL",
+      "industry": "NOT_AVAILABLE",
+      "source_type": "official_standard",
+      "source_org": "OFF-U02,OFF-U12,OFF-U13",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "fee930ac7c812d2be59c0da2414a5ff88b4cdccc124f07a02a23b3a7545d27e5",
+      "synthetic_test_material": false,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 1,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8,
+        "STRUCTURED_FACT_CANDIDATE": 1,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "31d40c70-2f1a-4155-b829-a1e8ccca3cc6",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "UNI-08_接口集成与互操作.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "GENERAL",
+      "industry": "NOT_AVAILABLE",
+      "source_type": "official_standard",
+      "source_org": "OFF-U02,OFF-U03",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "98e3cda16a024b7c2fb9b6e59b16fc4f8002fa30fed5bd38bcaf611005e0688b",
+      "synthetic_test_material": false,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 2,
+      "retrieval_result_count": 3,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "edb39391-dc20-4d53-97ed-e053af081b7b",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "UNI-09_身份权限、日志审计与可追溯.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "GENERAL",
+      "industry": "NOT_AVAILABLE",
+      "source_type": "official_standard",
+      "source_org": "OFF-U05,OFF-U08,OFF-U10",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "3cd2e7a5a64f7d89bb5d3ed6f078211eb7358c4bfc578f09f4e9d0b329e6d802",
+      "synthetic_test_material": false,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 1,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8,
+        "STRUCTURED_FACT_CANDIDATE": 1,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "4f7ac6cd-1cba-451d-9fc9-286fceda898b",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "UNI-10_监控、运维、SLA与应急.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "GENERAL",
+      "industry": "NOT_AVAILABLE",
+      "source_type": "official_standard",
+      "source_org": "OFF-U02,OFF-U05",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "0e5074dcbef1385558fe33f9cf91064f6eb182049a5b91d09cb06044d235b698",
+      "synthetic_test_material": false,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 0,
+      "retrieval_result_count": 0,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8,
+        "STRUCTURED_FACT_CANDIDATE": 2,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "4f395744-f341-4c1e-8437-cea45ad44a42",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "UNI-11_备份、高可用与容灾.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "GENERAL",
+      "industry": "NOT_AVAILABLE",
+      "source_type": "official_standard",
+      "source_org": "OFF-U05,OFF-U08",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "0c55a2bef55c7cfa49b66e52834b2f5b5b96f782936e9afb551a1de0dea1376b",
+      "synthetic_test_material": false,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 0,
+      "retrieval_result_count": 0,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8,
+        "STRUCTURED_FACT_CANDIDATE": 2,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "6d2349a3-6d6e-406d-98b6-ea2bbde81770",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "UNI-12_性能、容量与扩展性.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "GENERAL",
+      "industry": "NOT_AVAILABLE",
+      "source_type": "official_standard",
+      "source_org": "OFF-U01",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "c1cb48fb57f50ab4a28434485eb8696a7a2dcda799ae9815bed15325e3ac264f",
+      "synthetic_test_material": false,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 1,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8,
+        "STRUCTURED_FACT_CANDIDATE": 1,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "61eeaf03-dcab-4d32-a3e1-39c561201c5a",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "UNI-13_实施、团队、质量、风险与变更.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "GENERAL",
+      "industry": "NOT_AVAILABLE",
+      "source_type": "official_standard",
+      "source_org": "OFF-U01,OFF-U02",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "d13e1b9aff7abfbaa16a65a5e6bf4557afcb0ebc7825c9fc63499fd112969425",
+      "synthetic_test_material": false,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 1,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8,
+        "STRUCTURED_FACT_CANDIDATE": 1,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "17f48354-f2be-4b74-a930-0ab7d95face8",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "UNI-14_测试、试运行、培训与验收.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "GENERAL",
+      "industry": "NOT_AVAILABLE",
+      "source_type": "official_standard",
+      "source_org": "OFF-U01",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "b05345afde2ed01151210647ff638018e6737a49979a8b2cdbd7e41aaebdfaf2",
+      "synthetic_test_material": false,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 1,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8,
+        "STRUCTURED_FACT_CANDIDATE": 1,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "f2ee34ca-8fd8-4c40-b532-9af049d73139",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "UNI-15_业绩、资质与可核验证明.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "GENERAL",
+      "industry": "NOT_AVAILABLE",
+      "source_type": "official_standard",
+      "source_org": "OFF-U01,OFF-U14",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "49e1587bd83796ef002582060a0b1fab632478c45b84681c77fc2bb108a665df",
+      "synthetic_test_material": false,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 1,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8,
+        "STRUCTURED_FACT_CANDIDATE": 2,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "d8b8c2f7-9a51-4eb3-a91c-61b141a97748",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "UNI-16_AI、知识库与智能体通用边界.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "GENERAL",
+      "industry": "NOT_AVAILABLE",
+      "source_type": "official_standard",
+      "source_org": "OFF-U01,OFF-U04,OFF-U05,OFF-U07",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "93ad7f1588adde6c4852f6fe1994d0e5f09830a8d9f216db81f786e148e4a684",
+      "synthetic_test_material": false,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 0,
+      "retrieval_result_count": 0,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8,
+        "STRUCTURED_FACT_CANDIDATE": 1,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "434265bb-f3e6-4341-9a5d-57546997ae68",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "GOV-01_政务信息化项目全生命周期管理.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "GOVERNMENT_ENTERPRISE",
+      "industry": "government",
+      "source_type": "government_guidance",
+      "source_org": "OFF-U02,OFF-U01",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "ff5606dab820c05bd794e8c108b176583ff6cab9345901f33626c1a002a041d4",
+      "synthetic_test_material": false,
+      "chunk_count": 8,
+      "embedding_count": 16,
+      "embedded_chunk_count": 8,
+      "embedding_identities": [
+        {
+          "model": "local-deterministic-corpus",
+          "version": "1",
+          "dimension": 64,
+          "count": 8
+        },
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 8
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 1,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 4,
+        "VERY_LOW_INFORMATION": 6,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 6
+    },
+    {
+      "material_id": "08d5580a-d81b-491f-8c9b-d37ca4251840",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "GOV-02_政务数据目录、共享与跨部门协同.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "GOVERNMENT_ENTERPRISE",
+      "industry": "government",
+      "source_type": "government_guidance",
+      "source_org": "OFF-U03,OFF-U06,OFF-U07",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "dc504bce9528803bfad802fad4821a765ebd4601334a6159fb37d6c5791e986b",
+      "synthetic_test_material": false,
+      "chunk_count": 8,
+      "embedding_count": 16,
+      "embedded_chunk_count": 8,
+      "embedding_identities": [
+        {
+          "model": "local-deterministic-corpus",
+          "version": "1",
+          "dimension": 64,
+          "count": 8
+        },
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 8
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 2,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 4,
+        "VERY_LOW_INFORMATION": 6,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 6
+    },
+    {
+      "material_id": "40bb49d9-58f1-4828-b00a-37acbc9ffb96",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "GOV-03_政务平台安全、等保与数据保护.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "GOVERNMENT_ENTERPRISE",
+      "industry": "government",
+      "source_type": "government_guidance",
+      "source_org": "OFF-U04,OFF-U05,OFF-U08,OFF-U09",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "da0e6696f00e92435c8558c008e4f55a9419d44f299b5d6b7809d106b280661d",
+      "synthetic_test_material": false,
+      "chunk_count": 8,
+      "embedding_count": 16,
+      "embedded_chunk_count": 8,
+      "embedding_identities": [
+        {
+          "model": "local-deterministic-corpus",
+          "version": "1",
+          "dimension": 64,
+          "count": 8
+        },
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 8
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 1,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 4,
+        "VERY_LOW_INFORMATION": 6,
+        "STRUCTURED_FACT_CANDIDATE": 2,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 6
+    },
+    {
+      "material_id": "7821ed9b-ec17-4a63-bd7d-fea5ff670bf7",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "GOV-04_政务云、信创与基础环境适配.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "GOVERNMENT_ENTERPRISE",
+      "industry": "government",
+      "source_type": "government_guidance",
+      "source_org": "OFF-U02,OFF-U12,OFF-U13",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "050ea5d1bbeebda403c63255c7066c59c3349093ad67c38f91408cec6d1ab1fe",
+      "synthetic_test_material": false,
+      "chunk_count": 8,
+      "embedding_count": 16,
+      "embedded_chunk_count": 8,
+      "embedding_identities": [
+        {
+          "model": "local-deterministic-corpus",
+          "version": "1",
+          "dimension": 64,
+          "count": 8
+        },
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 8
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 1,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 4,
+        "VERY_LOW_INFORMATION": 6,
+        "STRUCTURED_FACT_CANDIDATE": 1,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 6
+    },
+    {
+      "material_id": "2b056228-38f8-4868-bbed-06ba8b0bad15",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "GOV-05_政务服务、门户与多端应用.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "GOVERNMENT_ENTERPRISE",
+      "industry": "government",
+      "source_type": "government_guidance",
+      "source_org": "OFF-U02",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "300b014906168785a0dfb40b1d8d6c3ab94fd50a450fef22eef167e022750e6f",
+      "synthetic_test_material": false,
+      "chunk_count": 8,
+      "embedding_count": 16,
+      "embedded_chunk_count": 8,
+      "embedding_identities": [
+        {
+          "model": "local-deterministic-corpus",
+          "version": "1",
+          "dimension": 64,
+          "count": 8
+        },
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 8
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 2,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 4,
+        "VERY_LOW_INFORMATION": 6,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 6
+    },
+    {
+      "material_id": "4c324fa0-1d08-447f-bc3d-1f239fe5a064",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "GOV-06_政务系统接口迁移、联调与上线.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "GOVERNMENT_ENTERPRISE",
+      "industry": "government",
+      "source_type": "government_guidance",
+      "source_org": "OFF-U02,OFF-U03",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "d956bc7c227a5df7ae10ec0b5d81d0887d61fbd81be0d613c74390f91685d2ab",
+      "synthetic_test_material": false,
+      "chunk_count": 8,
+      "embedding_count": 16,
+      "embedded_chunk_count": 8,
+      "embedding_identities": [
+        {
+          "model": "local-deterministic-corpus",
+          "version": "1",
+          "dimension": 64,
+          "count": 8
+        },
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 8
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 2,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 4,
+        "VERY_LOW_INFORMATION": 6,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 6
+    },
+    {
+      "material_id": "549213aa-0c25-4116-983c-9779de476452",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "GOV-07_政务运维、重保与应急.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "GOVERNMENT_ENTERPRISE",
+      "industry": "government",
+      "source_type": "government_guidance",
+      "source_org": "OFF-U02,OFF-U05",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "0dbf2e99ad8e385b6b499dc823d30bc6753bb383160a47deab3bb4bcdbbdaaef",
+      "synthetic_test_material": false,
+      "chunk_count": 8,
+      "embedding_count": 16,
+      "embedded_chunk_count": 8,
+      "embedding_identities": [
+        {
+          "model": "local-deterministic-corpus",
+          "version": "1",
+          "dimension": 64,
+          "count": 8
+        },
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 8
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 0,
+      "retrieval_result_count": 0,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 4,
+        "VERY_LOW_INFORMATION": 6,
+        "STRUCTURED_FACT_CANDIDATE": 1,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 6
+    },
+    {
+      "material_id": "60da053c-c356-49ca-93ac-c8418bf9d798",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "GOV-08_政务采购证明材料组织.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "GOVERNMENT_ENTERPRISE",
+      "industry": "government",
+      "source_type": "government_guidance",
+      "source_org": "OFF-U01,OFF-U14",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "8b0eb7bbe4417a21c43bad6e9345d9f6b2d7cc04e09584c6999ddb48b00a683f",
+      "synthetic_test_material": false,
+      "chunk_count": 8,
+      "embedding_count": 16,
+      "embedded_chunk_count": 8,
+      "embedding_identities": [
+        {
+          "model": "local-deterministic-corpus",
+          "version": "1",
+          "dimension": 64,
+          "count": 8
+        },
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 8
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 0,
+      "retrieval_result_count": 0,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 4,
+        "VERY_LOW_INFORMATION": 6,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 6
+    },
+    {
+      "material_id": "6b0456ff-0a60-4214-9811-c225fc78e942",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "MED-01_医院信息化总体建设框架.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "HEALTHCARE",
+      "industry": "medical",
+      "source_type": "industry_guidance",
+      "source_org": "OFF-M01,OFF-M10",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "71a533f7911ac3a8fa12e8df0902486478f434974d3619110f4b9e8ac2310c6a",
+      "synthetic_test_material": false,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 3,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8,
+        "STRUCTURED_FACT_CANDIDATE": 1,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "014434eb-0d82-423f-aa8b-676d30af0182",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "MED-02_电子病历功能与应用水平.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "HEALTHCARE",
+      "industry": "medical",
+      "source_type": "industry_guidance",
+      "source_org": "OFF-M02,OFF-M07",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "6af428f987849ba9d82f38f8b31d1a7930a07de0f23fae14dc9ebfc72813f54e",
+      "synthetic_test_material": false,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 3,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "c8a97e64-c235-4522-beee-87a8be697328",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "MED-03_医院信息平台与互联互通.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "HEALTHCARE",
+      "industry": "medical",
+      "source_type": "industry_guidance",
+      "source_org": "OFF-M03,OFF-M04,OFF-M05",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "fd7cf94cf96acf76acccfbbef099ad2a699084fec6ef2cf406ca3a8d1d44871d",
+      "synthetic_test_material": false,
+      "chunk_count": 8,
+      "embedding_count": 8,
+      "embedded_chunk_count": 8,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 8
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 2,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 4,
+        "VERY_LOW_INFORMATION": 6,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 6
+    },
+    {
+      "material_id": "9669c4f6-e215-4b08-a5e3-488bf239ce75",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "MED-04_医疗数据安全、隐私与病历访问.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "HEALTHCARE",
+      "industry": "medical",
+      "source_type": "industry_guidance",
+      "source_org": "OFF-M06,OFF-M12,OFF-U04,OFF-U07",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "e056a151fe36337919c534744f7e2ea7569cbfe6bddf070979bb843e5e4615b0",
+      "synthetic_test_material": false,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 4,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "f367e088-988d-4db8-85ff-54f2f0685463",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "MED-05_医院智慧服务.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "HEALTHCARE",
+      "industry": "medical",
+      "source_type": "industry_guidance",
+      "source_org": "OFF-M08",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "874817d47327419c6742a2f1a2e167d5c8bec9d45a835a6492bffd973aa56e19",
+      "synthetic_test_material": false,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 0,
+      "retrieval_result_count": 0,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "3f2e8318-e8fc-4491-9320-5620bb90d381",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "MED-06_医院智慧管理.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "HEALTHCARE",
+      "industry": "medical",
+      "source_type": "industry_guidance",
+      "source_org": "OFF-M09",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "9bcb575556c1fe24f050423512328bfc23c226ac9641e047a782ee9f839ed34e",
+      "synthetic_test_material": false,
+      "chunk_count": 8,
+      "embedding_count": 8,
+      "embedded_chunk_count": 8,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 8
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 0,
+      "retrieval_result_count": 0,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 4,
+        "VERY_LOW_INFORMATION": 6,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 6
+    },
+    {
+      "material_id": "3cd85f3c-89b7-4b95-8b8d-38ead65cee23",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "MED-07_医疗接口、迁移与上线切换.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "HEALTHCARE",
+      "industry": "medical",
+      "source_type": "industry_guidance",
+      "source_org": "OFF-M03,OFF-M05",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "af7b8d7adab9d894835f786d14872234d61bc804b55d43e921807c611ba23f93",
+      "synthetic_test_material": false,
+      "chunk_count": 8,
+      "embedding_count": 8,
+      "embedded_chunk_count": 8,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 8
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 3,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 4,
+        "VERY_LOW_INFORMATION": 6,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 6
+    },
+    {
+      "material_id": "27a41b4e-a6d6-4f64-9374-8b3f5d10f2fa",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "MED-08_医疗业务连续性、备份与应急.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "HEALTHCARE",
+      "industry": "medical",
+      "source_type": "industry_guidance",
+      "source_org": "OFF-M06,OFF-U08",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "439727e526720db7fefc692dae22e19b47f9e3369fde3f63a603ae23a2ebadd9",
+      "synthetic_test_material": false,
+      "chunk_count": 8,
+      "embedding_count": 8,
+      "embedded_chunk_count": 8,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 8
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 0,
+      "retrieval_result_count": 0,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 4,
+        "VERY_LOW_INFORMATION": 6,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 6
+    },
+    {
+      "material_id": "867d6da7-09bd-490b-b349-63acf35f9fed",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "MED-09_医疗测试、符合性与成熟度.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "HEALTHCARE",
+      "industry": "medical",
+      "source_type": "industry_guidance",
+      "source_org": "OFF-M04,OFF-M11,OFF-M05",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "b3a3cd15517094ab431f03e2f14b5515298c183084a288ea3dceac3ed5831885",
+      "synthetic_test_material": false,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 1,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "STRUCTURED_FACT_CANDIDATE",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8,
+        "STRUCTURED_FACT_CANDIDATE": 2,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 8
+    },
+    {
+      "material_id": "5855cce7-1c58-4315-a00e-58ae871af01b",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "project_name": "平台公共知识库（官方公开资料）",
+      "original_name": "MED-10_医院项目实施、培训与运维.md",
+      "material_type": "technical_whitepaper",
+      "corpus_scope": "HEALTHCARE",
+      "industry": "medical",
+      "source_type": "industry_guidance",
+      "source_org": "OFF-M01,OFF-M06",
+      "source_name": "NOT_AVAILABLE",
+      "source_url": "NOT_AVAILABLE",
+      "document_number": "NOT_AVAILABLE",
+      "source_authority": "official",
+      "status": {
+        "extraction_status": "succeeded",
+        "review_status": "approved",
+        "lifecycle_status": "ACTIVE",
+        "usage_status": "ACTIVE_FULLTEXT",
+        "index_status": "INDEXED"
+      },
+      "currentness": {
+        "effective_status": "current_status_required",
+        "effective_from": "NOT_AVAILABLE",
+        "effective_to": "NOT_AVAILABLE"
+      },
+      "file_hash": "3ebef259e63e9ab8b29dad4c0da3c151fc181a9fc710905c566db5ef07c2b4ea",
+      "synthetic_test_material": false,
+      "chunk_count": 10,
+      "embedding_count": 10,
+      "embedded_chunk_count": 10,
+      "embedding_identities": [
+        {
+          "model": "Qwen/Qwen3-Embedding-0.6B",
+          "version": "1",
+          "dimension": 1024,
+          "count": 10
+        }
+      ],
+      "indexed": true,
+      "retrieval_eligible": true,
+      "evidence_source_eligible": false,
+      "evidence_source_eligible_count": 0,
+      "derived_fact_count": 0,
+      "current_fact_count": 0,
+      "derived_fact_ids": [],
+      "derived_mapping_count": 0,
+      "derived_mapping_ids": [],
+      "current_mapping_count": 0,
+      "claim_reference_count": 0,
+      "claim_ids": [],
+      "retrieval_run_count": 1,
+      "retrieval_result_count": 1,
+      "source_quality_flags": [
+        "AUTHORITATIVE_RECORD_CANDIDATE",
+        "HEADING_ONLY",
+        "VERY_LOW_INFORMATION"
+      ],
+      "source_quality_flag_counts": {
+        "HEADING_ONLY": 5,
+        "VERY_LOW_INFORMATION": 8,
+        "AUTHORITATIVE_RECORD_CANDIDATE": 1
+      },
+      "low_information_chunk_count": 8
+    }
+  ],
+  "matrix_driven": {
+    "manifest_path": "backend/eval/rag-pilot/V43_RAG_CODEX_HANDOFF_1/rag_bundle_manifest.json",
+    "manifest_version": "V43_OFFICIAL_SOURCE_RAG_BUNDLE_1",
+    "document_count": 50,
+    "documents_by_library": {
+      "universal": 16,
+      "industry": 18,
+      "company_case": 16
+    },
+    "documents_by_evidence_status": {
+      "official_guidance_summary": 34,
+      "synthetic_pilot_evidence": 16
+    },
+    "source_registry_count": 26,
+    "coverage_requirement_count": 34,
+    "themes": {
+      "U01": 5,
+      "U19": 6,
+      "U20": 6,
+      "U21": 5,
+      "U23": 8,
+      "U24": 8,
+      "U32": 5,
+      "U33": 3,
+      "U03": 5,
+      "U05": 8,
+      "U06": 6,
+      "U07": 6,
+      "U31": 5,
+      "U09": 7,
+      "U10": 6,
+      "U11": 6,
+      "U12": 4,
+      "U14": 5,
+      "U08": 5,
+      "U04": 4,
+      "U16": 3,
+      "U17": 3,
+      "U26": 5,
+      "U27": 4,
+      "U28": 4,
+      "U15": 3,
+      "U13": 2,
+      "U22": 3,
+      "U25": 4,
+      "U29": 5,
+      "U30": 3,
+      "U18": 2,
+      "U34": 19,
+      "U02": 6
+    },
+    "documents": [
+      {
+        "doc_id": "UNI-01",
+        "title": "采购需求、评分与验收边界",
+        "library_scope": "universal",
+        "domain": "cross_industry",
+        "requirement_themes": [
+          "U01",
+          "U19",
+          "U20",
+          "U21",
+          "U23",
+          "U24",
+          "U32",
+          "U33"
+        ],
+        "evidence_category": "GENERAL",
+        "source_ids": [
+          "OFF-U01",
+          "OFF-U14"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "01_universal_rag/UNI-01_采购需求_评分与验收边界.md",
+        "sha256": "e979db994b7a5f9b15c9add453f3692d0b848fa1021d4645e6ede34b275a7f9b"
+      },
+      {
+        "doc_id": "UNI-02",
+        "title": "政务信息化项目建设与治理",
+        "library_scope": "universal",
+        "domain": "cross_industry",
+        "requirement_themes": [
+          "U01",
+          "U03",
+          "U19",
+          "U20",
+          "U21",
+          "U24"
+        ],
+        "evidence_category": "GENERAL",
+        "source_ids": [
+          "OFF-U02"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "01_universal_rag/UNI-02_政务信息化项目建设与治理.md",
+        "sha256": "b3b07e4a7e29453604b898cee66393db47ef1a016c6ea3a074c561f2da40e3a8"
+      },
+      {
+        "doc_id": "UNI-03",
+        "title": "数据共享、目录与治理",
+        "library_scope": "universal",
+        "domain": "cross_industry",
+        "requirement_themes": [
+          "U05",
+          "U06",
+          "U07",
+          "U31"
+        ],
+        "evidence_category": "G04",
+        "source_ids": [
+          "OFF-U03",
+          "OFF-U06"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "01_universal_rag/UNI-03_数据共享_目录与治理.md",
+        "sha256": "4ca90cb4165a99de16ff2db8bcf8e60ed8077f4e28eb62f5c2ebba4cdaf5b6f4"
+      },
+      {
+        "doc_id": "UNI-04",
+        "title": "网络数据安全与个人信息保护",
+        "library_scope": "universal",
+        "domain": "cross_industry",
+        "requirement_themes": [
+          "U09",
+          "U10",
+          "U31"
+        ],
+        "evidence_category": "G06",
+        "source_ids": [
+          "OFF-U04",
+          "OFF-U05",
+          "OFF-U06",
+          "OFF-U07",
+          "OFF-U10"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "01_universal_rag/UNI-04_网络数据安全与个人信息保护.md",
+        "sha256": "0a2db3651f3b596a597f44ee13765d1492288ad22df981f9a13b9d317af75049"
+      },
+      {
+        "doc_id": "UNI-05",
+        "title": "等级保护与安全设计",
+        "library_scope": "universal",
+        "domain": "cross_industry",
+        "requirement_themes": [
+          "U09",
+          "U10",
+          "U11",
+          "U12",
+          "U14"
+        ],
+        "evidence_category": "G06",
+        "source_ids": [
+          "OFF-U08",
+          "OFF-U09"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "01_universal_rag/UNI-05_等级保护与安全设计.md",
+        "sha256": "64b633abb9c4bb4c3a314045f46b24e9be45e2597ba403d49461ab8e9a6e5481"
+      },
+      {
+        "doc_id": "UNI-06",
+        "title": "数据安全能力与生命周期",
+        "library_scope": "universal",
+        "domain": "cross_industry",
+        "requirement_themes": [
+          "U06",
+          "U07",
+          "U08",
+          "U10",
+          "U31"
+        ],
+        "evidence_category": "G04/G06",
+        "source_ids": [
+          "OFF-U06",
+          "OFF-U11"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "01_universal_rag/UNI-06_数据安全能力与生命周期.md",
+        "sha256": "4f6831ace8833bcd23b28ddc24d11b2eb4eb5f860f860a6d6382e752aa5fd99f"
+      },
+      {
+        "doc_id": "UNI-07",
+        "title": "架构、部署与信创适配",
+        "library_scope": "universal",
+        "domain": "cross_industry",
+        "requirement_themes": [
+          "U03",
+          "U04",
+          "U16",
+          "U17"
+        ],
+        "evidence_category": "G02",
+        "source_ids": [
+          "OFF-U02",
+          "OFF-U12",
+          "OFF-U13"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "01_universal_rag/UNI-07_架构_部署与信创适配.md",
+        "sha256": "fee930ac7c812d2be59c0da2414a5ff88b4cdccc124f07a02a23b3a7545d27e5"
+      },
+      {
+        "doc_id": "UNI-08",
+        "title": "接口集成与互操作",
+        "library_scope": "universal",
+        "domain": "cross_industry",
+        "requirement_themes": [
+          "U05",
+          "U23"
+        ],
+        "evidence_category": "G03",
+        "source_ids": [
+          "OFF-U02",
+          "OFF-U03"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "01_universal_rag/UNI-08_接口集成与互操作.md",
+        "sha256": "98e3cda16a024b7c2fb9b6e59b16fc4f8002fa30fed5bd38bcaf611005e0688b"
+      },
+      {
+        "doc_id": "UNI-09",
+        "title": "身份权限、日志审计与可追溯",
+        "library_scope": "universal",
+        "domain": "cross_industry",
+        "requirement_themes": [
+          "U09",
+          "U11"
+        ],
+        "evidence_category": "G05/G07",
+        "source_ids": [
+          "OFF-U05",
+          "OFF-U08",
+          "OFF-U10"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "01_universal_rag/UNI-09_身份权限_日志审计与可追溯.md",
+        "sha256": "3cd2e7a5a64f7d89bb5d3ed6f078211eb7358c4bfc578f09f4e9d0b329e6d802"
+      },
+      {
+        "doc_id": "UNI-10",
+        "title": "监控、运维、SLA与应急",
+        "library_scope": "universal",
+        "domain": "cross_industry",
+        "requirement_themes": [
+          "U12",
+          "U26",
+          "U27",
+          "U28"
+        ],
+        "evidence_category": "G08/G11/G16",
+        "source_ids": [
+          "OFF-U02",
+          "OFF-U05"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "01_universal_rag/UNI-10_监控_运维_SLA与应急.md",
+        "sha256": "0e5074dcbef1385558fe33f9cf91064f6eb182049a5b91d09cb06044d235b698"
+      },
+      {
+        "doc_id": "UNI-11",
+        "title": "备份、高可用与容灾",
+        "library_scope": "universal",
+        "domain": "cross_industry",
+        "requirement_themes": [
+          "U08",
+          "U14",
+          "U15"
+        ],
+        "evidence_category": "G09/G10",
+        "source_ids": [
+          "OFF-U05",
+          "OFF-U08"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "01_universal_rag/UNI-11_备份_高可用与容灾.md",
+        "sha256": "0c55a2bef55c7cfa49b66e52834b2f5b5b96f782936e9afb551a1de0dea1376b"
+      },
+      {
+        "doc_id": "UNI-12",
+        "title": "性能、容量与扩展性",
+        "library_scope": "universal",
+        "domain": "cross_industry",
+        "requirement_themes": [
+          "U13",
+          "U15"
+        ],
+        "evidence_category": "G10",
+        "source_ids": [
+          "OFF-U01"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "01_universal_rag/UNI-12_性能_容量与扩展性.md",
+        "sha256": "c1cb48fb57f50ab4a28434485eb8696a7a2dcda799ae9815bed15325e3ac264f"
+      },
+      {
+        "doc_id": "UNI-13",
+        "title": "实施、团队、质量、风险与变更",
+        "library_scope": "universal",
+        "domain": "cross_industry",
+        "requirement_themes": [
+          "U19",
+          "U20",
+          "U21",
+          "U22"
+        ],
+        "evidence_category": "G12/G13",
+        "source_ids": [
+          "OFF-U01",
+          "OFF-U02"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "01_universal_rag/UNI-13_实施_团队_质量_风险与变更.md",
+        "sha256": "d13e1b9aff7abfbaa16a65a5e6bf4557afcb0ebc7825c9fc63499fd112969425"
+      },
+      {
+        "doc_id": "UNI-14",
+        "title": "测试、试运行、培训与验收",
+        "library_scope": "universal",
+        "domain": "cross_industry",
+        "requirement_themes": [
+          "U23",
+          "U24",
+          "U25"
+        ],
+        "evidence_category": "G14/G15",
+        "source_ids": [
+          "OFF-U01"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "01_universal_rag/UNI-14_测试_试运行_培训与验收.md",
+        "sha256": "b05345afde2ed01151210647ff638018e6737a49979a8b2cdbd7e41aaebdfaf2"
+      },
+      {
+        "doc_id": "UNI-15",
+        "title": "业绩、资质与可核验证明",
+        "library_scope": "universal",
+        "domain": "cross_industry",
+        "requirement_themes": [
+          "U29",
+          "U30",
+          "U32"
+        ],
+        "evidence_category": "G17/H01/H02",
+        "source_ids": [
+          "OFF-U01",
+          "OFF-U14"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "01_universal_rag/UNI-15_业绩_资质与可核验证明.md",
+        "sha256": "49e1587bd83796ef002582060a0b1fab632478c45b84681c77fc2bb108a665df"
+      },
+      {
+        "doc_id": "UNI-16",
+        "title": "AI、知识库与智能体通用边界",
+        "library_scope": "universal",
+        "domain": "cross_industry",
+        "requirement_themes": [
+          "U18"
+        ],
+        "evidence_category": "G18",
+        "source_ids": [
+          "OFF-U01",
+          "OFF-U04",
+          "OFF-U05",
+          "OFF-U07"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "01_universal_rag/UNI-16_AI_知识库与智能体通用边界.md",
+        "sha256": "93ad7f1588adde6c4852f6fe1994d0e5f09830a8d9f216db81f786e148e4a684"
+      },
+      {
+        "doc_id": "GOV-01",
+        "title": "政务信息化项目全生命周期管理",
+        "library_scope": "industry",
+        "domain": "government",
+        "requirement_themes": [
+          "U01",
+          "U03",
+          "U19",
+          "U20",
+          "U21",
+          "U24"
+        ],
+        "evidence_category": "G12",
+        "source_ids": [
+          "OFF-U02",
+          "OFF-U01"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "02_industry_rag/government/GOV-01_政务信息化项目全生命周期管理.md",
+        "sha256": "ff5606dab820c05bd794e8c108b176583ff6cab9345901f33626c1a002a041d4"
+      },
+      {
+        "doc_id": "GOV-02",
+        "title": "政务数据目录、共享与跨部门协同",
+        "library_scope": "industry",
+        "domain": "government",
+        "requirement_themes": [
+          "U05",
+          "U07",
+          "U31",
+          "U34"
+        ],
+        "evidence_category": "G18",
+        "source_ids": [
+          "OFF-U03",
+          "OFF-U06",
+          "OFF-U07"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "02_industry_rag/government/GOV-02_政务数据目录_共享与跨部门协同.md",
+        "sha256": "dc504bce9528803bfad802fad4821a765ebd4601334a6159fb37d6c5791e986b"
+      },
+      {
+        "doc_id": "GOV-03",
+        "title": "政务平台安全、等保与数据保护",
+        "library_scope": "industry",
+        "domain": "government",
+        "requirement_themes": [
+          "U09",
+          "U10",
+          "U11",
+          "U14",
+          "U34"
+        ],
+        "evidence_category": "G18",
+        "source_ids": [
+          "OFF-U04",
+          "OFF-U05",
+          "OFF-U08",
+          "OFF-U09"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "02_industry_rag/government/GOV-03_政务平台安全_等保与数据保护.md",
+        "sha256": "da0e6696f00e92435c8558c008e4f55a9419d44f299b5d6b7809d106b280661d"
+      },
+      {
+        "doc_id": "GOV-04",
+        "title": "政务云、信创与基础环境适配",
+        "library_scope": "industry",
+        "domain": "government",
+        "requirement_themes": [
+          "U04",
+          "U16",
+          "U17",
+          "U34"
+        ],
+        "evidence_category": "G18",
+        "source_ids": [
+          "OFF-U02",
+          "OFF-U12",
+          "OFF-U13"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "02_industry_rag/government/GOV-04_政务云_信创与基础环境适配.md",
+        "sha256": "050ea5d1bbeebda403c63255c7066c59c3349093ad67c38f91408cec6d1ab1fe"
+      },
+      {
+        "doc_id": "GOV-05",
+        "title": "政务服务、门户与多端应用",
+        "library_scope": "industry",
+        "domain": "government",
+        "requirement_themes": [
+          "U02",
+          "U26",
+          "U34"
+        ],
+        "evidence_category": "G18",
+        "source_ids": [
+          "OFF-U02"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "02_industry_rag/government/GOV-05_政务服务_门户与多端应用.md",
+        "sha256": "300b014906168785a0dfb40b1d8d6c3ab94fd50a450fef22eef167e022750e6f"
+      },
+      {
+        "doc_id": "GOV-06",
+        "title": "政务系统接口迁移、联调与上线",
+        "library_scope": "industry",
+        "domain": "government",
+        "requirement_themes": [
+          "U05",
+          "U06",
+          "U23",
+          "U24",
+          "U34"
+        ],
+        "evidence_category": "G18",
+        "source_ids": [
+          "OFF-U02",
+          "OFF-U03"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "02_industry_rag/government/GOV-06_政务系统接口迁移_联调与上线.md",
+        "sha256": "d956bc7c227a5df7ae10ec0b5d81d0887d61fbd81be0d613c74390f91685d2ab"
+      },
+      {
+        "doc_id": "GOV-07",
+        "title": "政务运维、重保与应急",
+        "library_scope": "industry",
+        "domain": "government",
+        "requirement_themes": [
+          "U12",
+          "U26",
+          "U27",
+          "U28",
+          "U34"
+        ],
+        "evidence_category": "G18",
+        "source_ids": [
+          "OFF-U02",
+          "OFF-U05"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "02_industry_rag/government/GOV-07_政务运维_重保与应急.md",
+        "sha256": "0dbf2e99ad8e385b6b499dc823d30bc6753bb383160a47deab3bb4bcdbbdaaef"
+      },
+      {
+        "doc_id": "GOV-08",
+        "title": "政务采购证明材料组织",
+        "library_scope": "industry",
+        "domain": "government",
+        "requirement_themes": [
+          "U29",
+          "U30",
+          "U32",
+          "U33",
+          "U34"
+        ],
+        "evidence_category": "G18",
+        "source_ids": [
+          "OFF-U01",
+          "OFF-U14"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "02_industry_rag/government/GOV-08_政务采购证明材料组织.md",
+        "sha256": "8b0eb7bbe4417a21c43bad6e9345d9f6b2d7cc04e09584c6999ddb48b00a683f"
+      },
+      {
+        "doc_id": "MED-01",
+        "title": "医院信息化总体建设框架",
+        "library_scope": "industry",
+        "domain": "medical",
+        "requirement_themes": [
+          "U01",
+          "U02",
+          "U03",
+          "U04",
+          "U34"
+        ],
+        "evidence_category": "G18",
+        "source_ids": [
+          "OFF-M01",
+          "OFF-M10"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "02_industry_rag/medical/MED-01_医院信息化总体建设框架.md",
+        "sha256": "71a533f7911ac3a8fa12e8df0902486478f434974d3619110f4b9e8ac2310c6a"
+      },
+      {
+        "doc_id": "MED-02",
+        "title": "电子病历功能与应用水平",
+        "library_scope": "industry",
+        "domain": "medical",
+        "requirement_themes": [
+          "U02",
+          "U09",
+          "U11",
+          "U34"
+        ],
+        "evidence_category": "G18",
+        "source_ids": [
+          "OFF-M02",
+          "OFF-M07"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "02_industry_rag/medical/MED-02_电子病历功能与应用水平.md",
+        "sha256": "6af428f987849ba9d82f38f8b31d1a7930a07de0f23fae14dc9ebfc72813f54e"
+      },
+      {
+        "doc_id": "MED-03",
+        "title": "医院信息平台与互联互通",
+        "library_scope": "industry",
+        "domain": "medical",
+        "requirement_themes": [
+          "U05",
+          "U07",
+          "U23",
+          "U34"
+        ],
+        "evidence_category": "G18",
+        "source_ids": [
+          "OFF-M03",
+          "OFF-M04",
+          "OFF-M05"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "02_industry_rag/medical/MED-03_医院信息平台与互联互通.md",
+        "sha256": "fd7cf94cf96acf76acccfbbef099ad2a699084fec6ef2cf406ca3a8d1d44871d"
+      },
+      {
+        "doc_id": "MED-04",
+        "title": "医疗数据安全、隐私与病历访问",
+        "library_scope": "industry",
+        "domain": "medical",
+        "requirement_themes": [
+          "U09",
+          "U10",
+          "U11",
+          "U31",
+          "U34"
+        ],
+        "evidence_category": "G18",
+        "source_ids": [
+          "OFF-M06",
+          "OFF-M12",
+          "OFF-U04",
+          "OFF-U07"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "02_industry_rag/medical/MED-04_医疗数据安全_隐私与病历访问.md",
+        "sha256": "e056a151fe36337919c534744f7e2ea7569cbfe6bddf070979bb843e5e4615b0"
+      },
+      {
+        "doc_id": "MED-05",
+        "title": "医院智慧服务",
+        "library_scope": "industry",
+        "domain": "medical",
+        "requirement_themes": [
+          "U02",
+          "U25",
+          "U34"
+        ],
+        "evidence_category": "G18",
+        "source_ids": [
+          "OFF-M08"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "02_industry_rag/medical/MED-05_医院智慧服务.md",
+        "sha256": "874817d47327419c6742a2f1a2e167d5c8bec9d45a835a6492bffd973aa56e19"
+      },
+      {
+        "doc_id": "MED-06",
+        "title": "医院智慧管理",
+        "library_scope": "industry",
+        "domain": "medical",
+        "requirement_themes": [
+          "U02",
+          "U07",
+          "U34"
+        ],
+        "evidence_category": "G18",
+        "source_ids": [
+          "OFF-M09"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "02_industry_rag/medical/MED-06_医院智慧管理.md",
+        "sha256": "9bcb575556c1fe24f050423512328bfc23c226ac9641e047a782ee9f839ed34e"
+      },
+      {
+        "doc_id": "MED-07",
+        "title": "医疗接口、迁移与上线切换",
+        "library_scope": "industry",
+        "domain": "medical",
+        "requirement_themes": [
+          "U05",
+          "U06",
+          "U23",
+          "U24",
+          "U34"
+        ],
+        "evidence_category": "G18",
+        "source_ids": [
+          "OFF-M03",
+          "OFF-M05"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "02_industry_rag/medical/MED-07_医疗接口_迁移与上线切换.md",
+        "sha256": "af7b8d7adab9d894835f786d14872234d61bc804b55d43e921807c611ba23f93"
+      },
+      {
+        "doc_id": "MED-08",
+        "title": "医疗业务连续性、备份与应急",
+        "library_scope": "industry",
+        "domain": "medical",
+        "requirement_themes": [
+          "U08",
+          "U14",
+          "U27",
+          "U34"
+        ],
+        "evidence_category": "G18",
+        "source_ids": [
+          "OFF-M06",
+          "OFF-U08"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "02_industry_rag/medical/MED-08_医疗业务连续性_备份与应急.md",
+        "sha256": "439727e526720db7fefc692dae22e19b47f9e3369fde3f63a603ae23a2ebadd9"
+      },
+      {
+        "doc_id": "MED-09",
+        "title": "医疗测试、符合性与成熟度",
+        "library_scope": "industry",
+        "domain": "medical",
+        "requirement_themes": [
+          "U23",
+          "U24",
+          "U32",
+          "U34"
+        ],
+        "evidence_category": "G18",
+        "source_ids": [
+          "OFF-M04",
+          "OFF-M11",
+          "OFF-M05"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "02_industry_rag/medical/MED-09_医疗测试_符合性与成熟度.md",
+        "sha256": "b3a3cd15517094ab431f03e2f14b5515298c183084a288ea3dceac3ed5831885"
+      },
+      {
+        "doc_id": "MED-10",
+        "title": "医院项目实施、培训与运维",
+        "library_scope": "industry",
+        "domain": "medical",
+        "requirement_themes": [
+          "U19",
+          "U20",
+          "U22",
+          "U25",
+          "U26",
+          "U28",
+          "U34"
+        ],
+        "evidence_category": "G18",
+        "source_ids": [
+          "OFF-M01",
+          "OFF-M06"
+        ],
+        "source_kind": "official_guidance_summary",
+        "evidence_status": "official_guidance_summary",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": false,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "02_industry_rag/medical/MED-10_医院项目实施_培训与运维.md",
+        "sha256": "3ebef259e63e9ab8b29dad4c0da3c151fc181a9fc710905c566db5ef07c2b4ea"
+      },
+      {
+        "doc_id": "COM-01",
+        "title": "公司概况与业务范围",
+        "library_scope": "company_case",
+        "domain": "government+medical",
+        "requirement_themes": [
+          "U01",
+          "U29"
+        ],
+        "evidence_category": "COMPANY_PROFILE",
+        "source_ids": [
+          "OFF-U01",
+          "OFF-U02"
+        ],
+        "source_kind": "synthetic_company_evidence",
+        "evidence_status": "synthetic_pilot_evidence",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": true,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "LOW",
+        "path": "03_company_case_rag/COM-01_公司概况与业务范围.md",
+        "sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c"
+      },
+      {
+        "doc_id": "COM-02",
+        "title": "产品平台能力说明",
+        "library_scope": "company_case",
+        "domain": "government+medical",
+        "requirement_themes": [
+          "U02",
+          "U18"
+        ],
+        "evidence_category": "PRODUCT",
+        "source_ids": [
+          "OFF-U01",
+          "OFF-U04"
+        ],
+        "source_kind": "synthetic_company_evidence",
+        "evidence_status": "synthetic_pilot_evidence",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": true,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "MEDIUM",
+        "path": "03_company_case_rag/COM-02_产品平台能力说明.md",
+        "sha256": "c9a0c64ef292dc57f753071c362147dd2e50b17be104815405a8507eeab3a120"
+      },
+      {
+        "doc_id": "COM-03",
+        "title": "技术架构与部署适配报告",
+        "library_scope": "company_case",
+        "domain": "government+medical",
+        "requirement_themes": [
+          "U03",
+          "U04",
+          "U16",
+          "U17"
+        ],
+        "evidence_category": "ARCHITECTURE",
+        "source_ids": [
+          "OFF-U02",
+          "OFF-U12",
+          "OFF-U13"
+        ],
+        "source_kind": "synthetic_company_evidence",
+        "evidence_status": "synthetic_pilot_evidence",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": true,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "03_company_case_rag/COM-03_技术架构与部署适配报告.md",
+        "sha256": "70197f58823f5c278d54437bba1f449f6fd926bc236fe94e61f852cf8a5ac5db"
+      },
+      {
+        "doc_id": "COM-04",
+        "title": "API与系统集成能力报告",
+        "library_scope": "company_case",
+        "domain": "government+medical",
+        "requirement_themes": [
+          "U05"
+        ],
+        "evidence_category": "INTEGRATION",
+        "source_ids": [
+          "OFF-U03"
+        ],
+        "source_kind": "synthetic_company_evidence",
+        "evidence_status": "synthetic_pilot_evidence",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": true,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "MEDIUM",
+        "path": "03_company_case_rag/COM-04_API与系统集成能力报告.md",
+        "sha256": "8410478e68efb788edd72802271d8f38ff6983deb95f153fe03a9506f4da3b87"
+      },
+      {
+        "doc_id": "COM-05",
+        "title": "数据治理与迁移能力材料",
+        "library_scope": "company_case",
+        "domain": "government+medical",
+        "requirement_themes": [
+          "U06",
+          "U07",
+          "U08"
+        ],
+        "evidence_category": "DATA",
+        "source_ids": [
+          "OFF-U03",
+          "OFF-U06",
+          "OFF-U11"
+        ],
+        "source_kind": "synthetic_company_evidence",
+        "evidence_status": "synthetic_pilot_evidence",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": true,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "MEDIUM",
+        "path": "03_company_case_rag/COM-05_数据治理与迁移能力材料.md",
+        "sha256": "25a2a9c986a87aaba8a3b3545eb62a1e41965ecc708ebfa65c7da484e95c3f52"
+      },
+      {
+        "doc_id": "COM-06",
+        "title": "权限、安全与审计测试报告",
+        "library_scope": "company_case",
+        "domain": "government+medical",
+        "requirement_themes": [
+          "U09",
+          "U10",
+          "U11"
+        ],
+        "evidence_category": "SECURITY",
+        "source_ids": [
+          "OFF-U05",
+          "OFF-U08",
+          "OFF-U10"
+        ],
+        "source_kind": "synthetic_company_evidence",
+        "evidence_status": "synthetic_pilot_evidence",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": true,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "03_company_case_rag/COM-06_权限_安全与审计测试报告.md",
+        "sha256": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080"
+      },
+      {
+        "doc_id": "COM-07",
+        "title": "性能与容量测试报告",
+        "library_scope": "company_case",
+        "domain": "government+medical",
+        "requirement_themes": [
+          "U13",
+          "U15"
+        ],
+        "evidence_category": "PERFORMANCE",
+        "source_ids": [
+          "OFF-U01"
+        ],
+        "source_kind": "synthetic_company_evidence",
+        "evidence_status": "synthetic_pilot_evidence",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": true,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "VERY_HIGH",
+        "path": "03_company_case_rag/COM-07_性能与容量测试报告.md",
+        "sha256": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f"
+      },
+      {
+        "doc_id": "COM-08",
+        "title": "备份恢复与容灾演练记录",
+        "library_scope": "company_case",
+        "domain": "government+medical",
+        "requirement_themes": [
+          "U08",
+          "U14"
+        ],
+        "evidence_category": "DR",
+        "source_ids": [
+          "OFF-U08",
+          "OFF-U09"
+        ],
+        "source_kind": "synthetic_company_evidence",
+        "evidence_status": "synthetic_pilot_evidence",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": true,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "03_company_case_rag/COM-08_备份恢复与容灾演练记录.md",
+        "sha256": "afd00a30e6a46e9e09d42ac1f7eeae36be26420a40da12a42ecd0cb0d8ba9041"
+      },
+      {
+        "doc_id": "COM-09",
+        "title": "项目实施与质量管理方法",
+        "library_scope": "company_case",
+        "domain": "government+medical",
+        "requirement_themes": [
+          "U19",
+          "U20",
+          "U21"
+        ],
+        "evidence_category": "DELIVERY",
+        "source_ids": [
+          "OFF-U01",
+          "OFF-U02"
+        ],
+        "source_kind": "synthetic_company_evidence",
+        "evidence_status": "synthetic_pilot_evidence",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": true,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "LOW",
+        "path": "03_company_case_rag/COM-09_项目实施与质量管理方法.md",
+        "sha256": "573873e3bdd580b38e5ad75b387b86c8f6ed6f2f72fddcea2f75b9a18f53f73a"
+      },
+      {
+        "doc_id": "COM-10",
+        "title": "项目团队与人员能力模板",
+        "library_scope": "company_case",
+        "domain": "government+medical",
+        "requirement_themes": [
+          "U22"
+        ],
+        "evidence_category": "TEAM",
+        "source_ids": [
+          "OFF-U01"
+        ],
+        "source_kind": "synthetic_company_evidence",
+        "evidence_status": "synthetic_pilot_evidence",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": true,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "03_company_case_rag/COM-10_项目团队与人员能力模板.md",
+        "sha256": "28c9c343c143769f3c72dfa0c1edb820ba1ade09417ae3373d358fc1a5ec3985"
+      },
+      {
+        "doc_id": "COM-11",
+        "title": "测试、培训、验收与交付能力",
+        "library_scope": "company_case",
+        "domain": "government+medical",
+        "requirement_themes": [
+          "U23",
+          "U24",
+          "U25"
+        ],
+        "evidence_category": "QA_DELIVERY",
+        "source_ids": [
+          "OFF-U01"
+        ],
+        "source_kind": "synthetic_company_evidence",
+        "evidence_status": "synthetic_pilot_evidence",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": true,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "MEDIUM",
+        "path": "03_company_case_rag/COM-11_测试_培训_验收与交付能力.md",
+        "sha256": "3cced71cd8781414b9de68cd3ddcd4cca57dc80de960bef8412c5a88a24ba79a"
+      },
+      {
+        "doc_id": "COM-12",
+        "title": "运维、SLA与应急服务说明",
+        "library_scope": "company_case",
+        "domain": "government+medical",
+        "requirement_themes": [
+          "U12",
+          "U26",
+          "U27",
+          "U28"
+        ],
+        "evidence_category": "SERVICE",
+        "source_ids": [
+          "OFF-U05"
+        ],
+        "source_kind": "synthetic_company_evidence",
+        "evidence_status": "synthetic_pilot_evidence",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": true,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "03_company_case_rag/COM-12_运维_SLA与应急服务说明.md",
+        "sha256": "2689d0870f813b00849e6da5daca12cdf56064b4655b2d46bdc110b5ca3d9814"
+      },
+      {
+        "doc_id": "COM-13",
+        "title": "Synthetic政企案例：城市事件协同平台",
+        "library_scope": "company_case",
+        "domain": "government+medical",
+        "requirement_themes": [
+          "U29",
+          "U34"
+        ],
+        "evidence_category": "CASE_GOV",
+        "source_ids": [
+          "OFF-U02",
+          "OFF-U03"
+        ],
+        "source_kind": "synthetic_company_evidence",
+        "evidence_status": "synthetic_pilot_evidence",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": true,
+        "effective_status": "HISTORICAL_PROJECT_EVIDENCE",
+        "freshness_sensitivity": "LOW",
+        "path": "03_company_case_rag/COM-13_Synthetic政企案例_城市事件协同平台.md",
+        "sha256": "61c4631f7e6eb283abcb4a4a67a0c2ada761eea796496f39d3c815569c822d75"
+      },
+      {
+        "doc_id": "COM-14",
+        "title": "Synthetic医疗案例：医院接口与数据平台",
+        "library_scope": "company_case",
+        "domain": "government+medical",
+        "requirement_themes": [
+          "U05",
+          "U06",
+          "U29",
+          "U34"
+        ],
+        "evidence_category": "CASE_MEDICAL",
+        "source_ids": [
+          "OFF-M03",
+          "OFF-M05",
+          "OFF-M06"
+        ],
+        "source_kind": "synthetic_company_evidence",
+        "evidence_status": "synthetic_pilot_evidence",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": true,
+        "effective_status": "HISTORICAL_PROJECT_EVIDENCE",
+        "freshness_sensitivity": "LOW",
+        "path": "03_company_case_rag/COM-14_Synthetic医疗案例_医院接口与数据平台.md",
+        "sha256": "f4c20067c469eb6092518b450c7caa9fe86bda91832b7f17c1f6e7d3393c91d2"
+      },
+      {
+        "doc_id": "COM-15",
+        "title": "Synthetic资质、知识产权与授权索引",
+        "library_scope": "company_case",
+        "domain": "government+medical",
+        "requirement_themes": [
+          "U30",
+          "U32"
+        ],
+        "evidence_category": "QUALIFICATION",
+        "source_ids": [
+          "OFF-U01"
+        ],
+        "source_kind": "synthetic_company_evidence",
+        "evidence_status": "synthetic_pilot_evidence",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": true,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "VERY_HIGH",
+        "path": "03_company_case_rag/COM-15_Synthetic资质_知识产权与授权索引.md",
+        "sha256": "988786fbbd8adac54e42c86d8df9c40daf2d00c39370c31d2c6043e5519962cf"
+      },
+      {
+        "doc_id": "COM-16",
+        "title": "商务与合同响应边界",
+        "library_scope": "company_case",
+        "domain": "government+medical",
+        "requirement_themes": [
+          "U33"
+        ],
+        "evidence_category": "COMMERCIAL",
+        "source_ids": [
+          "OFF-U01",
+          "OFF-U14"
+        ],
+        "source_kind": "synthetic_company_evidence",
+        "evidence_status": "synthetic_pilot_evidence",
+        "claim_permission": false,
+        "human_review_required": true,
+        "synthetic_company_evidence": true,
+        "effective_status": "CURRENT",
+        "freshness_sensitivity": "HIGH",
+        "path": "03_company_case_rag/COM-16_商务与合同响应边界.md",
+        "sha256": "66adff7f7ff2a0d57828ac3004bbab49463fa53f5d0af2a3ef94eaae7623c270"
+      }
+    ]
+  },
+  "quality_flags": {
+    "STRUCTURED_FACT_CANDIDATE": 60,
+    "HEADING_ONLY": 263,
+    "VERY_LOW_INFORMATION": 451,
+    "MARKETING_STYLE_CANDIDATE": 7,
+    "AUTHORITATIVE_RECORD_CANDIDATE": 34
+  },
+  "low_information_chunk_count": 451,
+  "neusoft": {
+    "material_count": 4,
+    "chunk_count": 81,
+    "embedding_count": 81,
+    "derived_fact_count": 6,
+    "current_fact_count": 6,
+    "derived_mapping_count": 6,
+    "current_mapping_count": 6,
+    "claim_reference_count": 6,
+    "retrieval_result_count": 55,
+    "repository_reference_count": 37,
+    "repository_reference_paths": [
+      "backend/eval/corpus/acquisition-status-report-v1.json",
+      "backend/eval/corpus/l3-corpus-manifest-v1.json",
+      "backend/eval/corpus/real-public/ccgp-neusoft-project.md",
+      "backend/eval/corpus/real-public/neusoft-qualifications.md",
+      "backend/eval/corpus/real-public/neusoft-smart-city.md",
+      "backend/eval/corpus/real-public/neusoft-system-integration.md",
+      "backend/eval/evidence-gold/contract.js",
+      "backend/eval/evidence-gold/gold-candidates.json",
+      "backend/eval/evidence-gold/review/claim-review.md",
+      "backend/eval/evidence-gold/review/evidence-batch-1.md",
+      "backend/eval/evidence-gold/review/evidence-batch-2.md",
+      "backend/eval/evidence-gold/review/evidence-batch-3.md",
+      "backend/eval/evidence-gold/review/retrieval-review.md",
+      "backend/eval/evidence-support/calibration-v2/review-packet.md",
+      "backend/eval/gold-human-review/02_claim_gold_full_review.json",
+      "backend/eval/gold-human-review/02_claim_gold_full_review.md",
+      "backend/eval/gold-human-review/v2/00_gold_v2_source_manifest.md",
+      "backend/eval/gold-human-review/v2/01_mapping_real_source_packet.json",
+      "backend/eval/gold-human-review/v2/01_mapping_real_source_packet.md",
+      "backend/eval/gold-human-review/v2/02_mapping_batch01_human_adjudication.json",
+      "backend/eval/gold-human-review/v2/02_mapping_batch01_human_adjudication.md",
+      "backend/eval/gold-human-review/v2/03_mapping_real_supplemental_source_packet.json",
+      "backend/eval/gold-human-review/v2/05_mapping_real_supplemental_human_review_packet.json",
+      "backend/eval/gold-human-review/v2/05_mapping_real_supplemental_human_review_packet.md",
+      "backend/eval/gold-human-review/v2/11_mapping_real_full_human_review_blind.json",
+      "backend/eval/gold-human-review/v2/11_mapping_real_full_human_review_blind.md",
+      "backend/eval/gold-human-review/v2/11b_mapping_real_current_authority_overlay.md",
+      "backend/eval/gold-human-review/v2/claim/02_claim_real_source_packet.json",
+      "backend/eval/gold-human-review/v2/claim/02_claim_real_source_packet.md",
+      "backend/eval/gold-human-review/v2/writer/02_writer_provider_fidelity_source_packet.json",
+      "backend/eval/gold-human-review/v2/writer/02_writer_provider_fidelity_source_packet.md",
+      "backend/eval/reports/jiangyin-full-requirement-rag-fitness-v1.json",
+      "backend/eval/requirement-evidence-mapping-v2/real-derived-gold-v1.json",
+      "backend/eval/retrieval-baseline/retrieval-baseline-report-v1.md",
+      "backend/eval/semantic-boundary/corpus-manifest-v1.json",
+      "backend/eval/semantic-boundary/snapshot-v1.partial.json",
+      "backend/eval/semantic-boundary/snapshot.js"
+    ],
+    "materials": [
+      {
+        "material_id": "2e553e66-a909-4ed1-b99e-a57c25b51824",
+        "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+        "project_name": "Production-shaped E2E 4.3 Canonical 2026-08-20",
+        "original_name": "ccgp-neusoft-project.md",
+        "material_type": "project_case",
+        "corpus_scope": "ENTERPRISE_PRIVATE",
+        "industry": "NOT_AVAILABLE",
+        "source_type": "NOT_AVAILABLE",
+        "source_org": "NOT_AVAILABLE",
+        "source_name": "NOT_AVAILABLE",
+        "source_url": "NOT_AVAILABLE",
+        "document_number": "NOT_AVAILABLE",
+        "source_authority": "enterprise_private",
+        "status": {
+          "extraction_status": "succeeded",
+          "review_status": "approved",
+          "lifecycle_status": "ACTIVE",
+          "usage_status": "ACTIVE_FULLTEXT",
+          "index_status": "NOT_INDEXED"
+        },
+        "currentness": {
+          "effective_status": "current_status_required",
+          "effective_from": "NOT_AVAILABLE",
+          "effective_to": "NOT_AVAILABLE"
+        },
+        "file_hash": "2b2faa4b1f0530063a5448cd8ff9685ed1ccb139c55287e42d7c108868bfbd41",
+        "synthetic_test_material": false,
+        "chunk_count": 27,
+        "embedding_count": 27,
+        "embedded_chunk_count": 27,
+        "embedding_identities": [
+          {
+            "model": "Qwen/Qwen3-Embedding-0.6B",
+            "version": "1",
+            "dimension": 1024,
+            "count": 27
+          }
+        ],
+        "indexed": false,
+        "retrieval_eligible": true,
+        "evidence_source_eligible": true,
+        "evidence_source_eligible_count": 2,
+        "derived_fact_count": 2,
+        "current_fact_count": 2,
+        "derived_fact_ids": [
+          "EFACT-5CF3484B-96D5-41AC-96A5-E10C70582C78",
+          "EFACT-FD8C911C-8C57-4D89-9A5C-C5CE5DC43235"
+        ],
+        "derived_mapping_count": 2,
+        "derived_mapping_ids": [
+          "3830bc69-bf16-4673-b424-5c574a181c52",
+          "e73f7f74-4b55-4194-a608-2560d0e89383"
+        ],
+        "current_mapping_count": 2,
+        "claim_reference_count": 2,
+        "claim_ids": [
+          "CLM-2BDAF381674C25FB",
+          "CLM-6E3C6031B3CA4B32"
+        ],
+        "retrieval_run_count": 4,
+        "retrieval_result_count": 8,
+        "source_quality_flags": [
+          "HEADING_ONLY",
+          "STRUCTURED_FACT_CANDIDATE",
+          "VERY_LOW_INFORMATION"
+        ],
+        "source_quality_flag_counts": {
+          "STRUCTURED_FACT_CANDIDATE": 9,
+          "HEADING_ONLY": 9,
+          "VERY_LOW_INFORMATION": 26
+        },
+        "low_information_chunk_count": 26,
+        "usage": {
+          "used_by_mapping_real_candidate": true,
+          "used_by_claim_legacy": true,
+          "used_by_writer_fixture": true,
+          "used_by_other_eval": true
+        },
+        "quarantine_status": "NOT_APPLIED_BLOCKED_MISSING_LIFECYCLE"
+      },
+      {
+        "material_id": "427e5615-72e0-4d3d-b38a-f44891b993e2",
+        "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+        "project_name": "Production-shaped E2E 4.3 Canonical 2026-08-20",
+        "original_name": "neusoft-qualifications.md",
+        "material_type": "qualification",
+        "corpus_scope": "ENTERPRISE_PRIVATE",
+        "industry": "NOT_AVAILABLE",
+        "source_type": "NOT_AVAILABLE",
+        "source_org": "NOT_AVAILABLE",
+        "source_name": "NOT_AVAILABLE",
+        "source_url": "NOT_AVAILABLE",
+        "document_number": "NOT_AVAILABLE",
+        "source_authority": "enterprise_private",
+        "status": {
+          "extraction_status": "succeeded",
+          "review_status": "approved",
+          "lifecycle_status": "ACTIVE",
+          "usage_status": "ACTIVE_FULLTEXT",
+          "index_status": "NOT_INDEXED"
+        },
+        "currentness": {
+          "effective_status": "current_status_required",
+          "effective_from": "NOT_AVAILABLE",
+          "effective_to": "NOT_AVAILABLE"
+        },
+        "file_hash": "27f1cd9e832820f35abf057c8c4f36a24aecc7092e39849077ff8ce213acb170",
+        "synthetic_test_material": false,
+        "chunk_count": 3,
+        "embedding_count": 3,
+        "embedded_chunk_count": 3,
+        "embedding_identities": [
+          {
+            "model": "Qwen/Qwen3-Embedding-0.6B",
+            "version": "1",
+            "dimension": 1024,
+            "count": 3
+          }
+        ],
+        "indexed": false,
+        "retrieval_eligible": true,
+        "evidence_source_eligible": true,
+        "evidence_source_eligible_count": 2,
+        "derived_fact_count": 2,
+        "current_fact_count": 2,
+        "derived_fact_ids": [
+          "EFACT-51BBB3D4-8397-4E1E-B030-26DA8E4A9465",
+          "EFACT-CD2403D4-C896-4762-9DBC-8ECA23B7B1D4"
+        ],
+        "derived_mapping_count": 2,
+        "derived_mapping_ids": [
+          "9c419732-900e-4969-b030-2264b6e6c365",
+          "f5867a6d-ab89-44ac-afe4-fd82215100c3"
+        ],
+        "current_mapping_count": 2,
+        "claim_reference_count": 2,
+        "claim_ids": [
+          "CLM-3CC158B816F5D18A",
+          "CLM-4FDF892B160ED147"
+        ],
+        "retrieval_run_count": 1,
+        "retrieval_result_count": 1,
+        "source_quality_flags": [
+          "HEADING_ONLY",
+          "STRUCTURED_FACT_CANDIDATE",
+          "VERY_LOW_INFORMATION"
+        ],
+        "source_quality_flag_counts": {
+          "HEADING_ONLY": 1,
+          "VERY_LOW_INFORMATION": 1,
+          "STRUCTURED_FACT_CANDIDATE": 1
+        },
+        "low_information_chunk_count": 1,
+        "usage": {
+          "used_by_mapping_real_candidate": true,
+          "used_by_claim_legacy": true,
+          "used_by_writer_fixture": true,
+          "used_by_other_eval": true
+        },
+        "quarantine_status": "NOT_APPLIED_BLOCKED_MISSING_LIFECYCLE"
+      },
+      {
+        "material_id": "5a4674b0-aaab-475a-964b-977ae4b1ff65",
+        "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+        "project_name": "Production-shaped E2E 4.3 Canonical 2026-08-20",
+        "original_name": "neusoft-smart-city.md",
+        "material_type": "company_profile",
+        "corpus_scope": "ENTERPRISE_PRIVATE",
+        "industry": "NOT_AVAILABLE",
+        "source_type": "NOT_AVAILABLE",
+        "source_org": "NOT_AVAILABLE",
+        "source_name": "NOT_AVAILABLE",
+        "source_url": "NOT_AVAILABLE",
+        "document_number": "NOT_AVAILABLE",
+        "source_authority": "enterprise_private",
+        "status": {
+          "extraction_status": "succeeded",
+          "review_status": "approved",
+          "lifecycle_status": "ACTIVE",
+          "usage_status": "ACTIVE_FULLTEXT",
+          "index_status": "NOT_INDEXED"
+        },
+        "currentness": {
+          "effective_status": "current_status_required",
+          "effective_from": "NOT_AVAILABLE",
+          "effective_to": "NOT_AVAILABLE"
+        },
+        "file_hash": "67761742b6a3375e512291a0ae6aed8b728b510afd3ccc7df4b67d4f4c18ed78",
+        "synthetic_test_material": false,
+        "chunk_count": 34,
+        "embedding_count": 34,
+        "embedded_chunk_count": 34,
+        "embedding_identities": [
+          {
+            "model": "Qwen/Qwen3-Embedding-0.6B",
+            "version": "1",
+            "dimension": 1024,
+            "count": 34
+          }
+        ],
+        "indexed": false,
+        "retrieval_eligible": true,
+        "evidence_source_eligible": false,
+        "evidence_source_eligible_count": 0,
+        "derived_fact_count": 0,
+        "current_fact_count": 0,
+        "derived_fact_ids": [],
+        "derived_mapping_count": 0,
+        "derived_mapping_ids": [],
+        "current_mapping_count": 0,
+        "claim_reference_count": 0,
+        "claim_ids": [],
+        "retrieval_run_count": 9,
+        "retrieval_result_count": 26,
+        "source_quality_flags": [
+          "HEADING_ONLY",
+          "MARKETING_STYLE_CANDIDATE",
+          "STRUCTURED_FACT_CANDIDATE",
+          "VERY_LOW_INFORMATION"
+        ],
+        "source_quality_flag_counts": {
+          "HEADING_ONLY": 8,
+          "VERY_LOW_INFORMATION": 33,
+          "MARKETING_STYLE_CANDIDATE": 5,
+          "STRUCTURED_FACT_CANDIDATE": 5
+        },
+        "low_information_chunk_count": 33,
+        "usage": {
+          "used_by_mapping_real_candidate": true,
+          "used_by_claim_legacy": true,
+          "used_by_writer_fixture": false,
+          "used_by_other_eval": true
+        },
+        "quarantine_status": "NOT_APPLIED_BLOCKED_MISSING_LIFECYCLE"
+      },
+      {
+        "material_id": "c7542760-5ed9-479e-a642-1ebf7999f446",
+        "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+        "project_name": "Production-shaped E2E 4.3 Canonical 2026-08-20",
+        "original_name": "neusoft-system-integration.md",
+        "material_type": "product_documentation",
+        "corpus_scope": "ENTERPRISE_PRIVATE",
+        "industry": "NOT_AVAILABLE",
+        "source_type": "NOT_AVAILABLE",
+        "source_org": "NOT_AVAILABLE",
+        "source_name": "NOT_AVAILABLE",
+        "source_url": "NOT_AVAILABLE",
+        "document_number": "NOT_AVAILABLE",
+        "source_authority": "enterprise_private",
+        "status": {
+          "extraction_status": "succeeded",
+          "review_status": "approved",
+          "lifecycle_status": "ACTIVE",
+          "usage_status": "ACTIVE_FULLTEXT",
+          "index_status": "NOT_INDEXED"
+        },
+        "currentness": {
+          "effective_status": "current_status_required",
+          "effective_from": "NOT_AVAILABLE",
+          "effective_to": "NOT_AVAILABLE"
+        },
+        "file_hash": "76da6a6e91f71de397f9fcb71ed97188c2642be98040723e438d9cc960c94de0",
+        "synthetic_test_material": false,
+        "chunk_count": 17,
+        "embedding_count": 17,
+        "embedded_chunk_count": 17,
+        "embedding_identities": [
+          {
+            "model": "Qwen/Qwen3-Embedding-0.6B",
+            "version": "1",
+            "dimension": 1024,
+            "count": 17
+          }
+        ],
+        "indexed": false,
+        "retrieval_eligible": true,
+        "evidence_source_eligible": true,
+        "evidence_source_eligible_count": 2,
+        "derived_fact_count": 2,
+        "current_fact_count": 2,
+        "derived_fact_ids": [
+          "EFACT-4B0F9D53-903A-443B-9F97-54A8D3F35951",
+          "EFACT-AAF9F31E-E70C-45A1-88F5-3D0C8A27B51D"
+        ],
+        "derived_mapping_count": 2,
+        "derived_mapping_ids": [
+          "118358fb-29b1-43c0-afaf-93450163b071",
+          "1d7815c9-5389-44f0-b9e8-a81d1a70eb4b"
+        ],
+        "current_mapping_count": 2,
+        "claim_reference_count": 2,
+        "claim_ids": [
+          "CLM-7E8A09184585A4B0",
+          "CLM-960C12709CA78F16"
+        ],
+        "retrieval_run_count": 7,
+        "retrieval_result_count": 20,
+        "source_quality_flags": [
+          "HEADING_ONLY",
+          "MARKETING_STYLE_CANDIDATE",
+          "STRUCTURED_FACT_CANDIDATE",
+          "VERY_LOW_INFORMATION"
+        ],
+        "source_quality_flag_counts": {
+          "STRUCTURED_FACT_CANDIDATE": 3,
+          "HEADING_ONLY": 6,
+          "VERY_LOW_INFORMATION": 13,
+          "MARKETING_STYLE_CANDIDATE": 2
+        },
+        "low_information_chunk_count": 13,
+        "usage": {
+          "used_by_mapping_real_candidate": true,
+          "used_by_claim_legacy": true,
+          "used_by_writer_fixture": true,
+          "used_by_other_eval": true
+        },
+        "quarantine_status": "NOT_APPLIED_BLOCKED_MISSING_LIFECYCLE"
+      }
+    ],
+    "quarantine_status": "NEUSOFT_QUARANTINE_REQUIRES_AUTHORITY_LIFECYCLE_DECISION",
+    "blocker": "Existing lifecycle enum has no quarantine state honored by private Retrieval and derived authority queries; applying usage/review/lifecycle updates alone would not fail closed.",
+    "derived_authority_leakage": "YES",
+    "future_retrieval_excluded": "NOT_ENFORCED",
+    "future_evidence_fact_excluded": "NOT_ENFORCED",
+    "future_mapping_candidate_excluded": "NOT_ENFORCED",
+    "gold_discovery_excluded": "POLICY_ONLY_NOT_ENFORCED"
+  },
+  "baseline_comparison": {
+    "materials": 50,
+    "chunks": 478,
+    "source": "backend/eval/rag-pilot/results/overnight/00_master_checkpoint.md",
+    "current_materials": 56,
+    "current_chunks": 561,
+    "material_delta": 6,
+    "chunk_delta": 83
+  },
+  "gold_immutability": {
+    "before": {
+      "backend/eval/requirement-evidence-mapping-v1/gold-cases.json": "5a6d9eb7c4e7b23f347da111b5276060375b3de2e07716b9cee88d15d5431707",
+      "backend/eval/requirement-evidence-mapping-v2/real-derived-gold-v1.json": "6e74e3892748107b9c41c17393a4e0d8f51ef166deb914879543856c9e829e4f",
+      "backend/eval/gold-human-review/00_gold_review_manifest.json": "b3d1e4f39729af50944dd8b6b873ed6e943ec8311739616e5cd3800e87bb6ce6",
+      "backend/eval/gold-human-review/v2/01_mapping_real_source_packet.json": "5ca994228f7d4bfedb61aed0c0aac5ef5cf0b284aa573c7732ce4383ecde4acb",
+      "backend/eval/gold-human-review/v2/03_mapping_real_supplemental_source_packet.json": "a3a0c1abb4f98eef4d77fd120f4d4e47639fa1680a1a17139c65077756032bd0"
+    },
+    "after": {
+      "backend/eval/requirement-evidence-mapping-v1/gold-cases.json": "5a6d9eb7c4e7b23f347da111b5276060375b3de2e07716b9cee88d15d5431707",
+      "backend/eval/requirement-evidence-mapping-v2/real-derived-gold-v1.json": "6e74e3892748107b9c41c17393a4e0d8f51ef166deb914879543856c9e829e4f",
+      "backend/eval/gold-human-review/00_gold_review_manifest.json": "b3d1e4f39729af50944dd8b6b873ed6e943ec8311739616e5cd3800e87bb6ce6",
+      "backend/eval/gold-human-review/v2/01_mapping_real_source_packet.json": "5ca994228f7d4bfedb61aed0c0aac5ef5cf0b284aa573c7732ce4383ecde4acb",
+      "backend/eval/gold-human-review/v2/03_mapping_real_supplemental_source_packet.json": "a3a0c1abb4f98eef4d77fd120f4d4e47639fa1680a1a17139c65077756032bd0"
+    },
+    "parity": "PASS"
+  },
+  "production_code_changed_by_task": 0,
+  "local_deterministic_negative_control": {
+    "provider_calls": 0,
+    "excluded_neusoft_candidates": "NOT_ENFORCED",
+    "result": "BLOCKED_BY_MISSING_AUTHORITY_LIFECYCLE"
+  },
+  "final_verdict": {
+    "current_inventory": "CURRENT_RAG_CORPUS_INVENTORY_COMPLETE",
+    "matrix_corpus": "MATRIX_DRIVEN_CORPUS_IDENTIFIED",
+    "neusoft": "NEUSOFT_QUARANTINE_REQUIRES_AUTHORITY_LIFECYCLE_DECISION",
+    "rag_production_ready": "NOT_CLAIMED",
+    "mapping_gold_ready": "NOT_CLAIMED",
+    "claim_gold_ready": "NOT_CLAIMED"
+  }
+}

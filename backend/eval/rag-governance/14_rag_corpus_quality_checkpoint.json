@@ -1,0 +1,112 @@
+{
+  "checkpoint": "V43_RAG_CORPUS_INVENTORY_NEUSOFT_QUARANTINE_CHECKPOINT",
+  "generated_at": "2026-09-03T09:03:56.485Z",
+  "total_materials": 56,
+  "total_chunks": 561,
+  "total_embeddings": 625,
+  "active_material_count": 56,
+  "active_chunk_count": 561,
+  "active_embedding_count": 625,
+  "retrieval_eligible_material_count": 56,
+  "scope_distribution": {
+    "ENTERPRISE_PRIVATE": {
+      "materials": 22,
+      "chunks": 243,
+      "embeddings": 243
+    },
+    "GENERAL": {
+      "materials": 16,
+      "chunks": 162,
+      "embeddings": 162
+    },
+    "GOVERNMENT_ENTERPRISE": {
+      "materials": 8,
+      "chunks": 64,
+      "embeddings": 128
+    },
+    "HEALTHCARE": {
+      "materials": 10,
+      "chunks": 92,
+      "embeddings": 92
+    }
+  },
+  "authority_distribution": {
+    "enterprise_private": 22,
+    "official": 34
+  },
+  "currentness_distribution": {
+    "current_status_required": 56
+  },
+  "matrix_material_count": 50,
+  "matrix_theme_count": 34,
+  "matrix_themes": {
+    "U01": 5,
+    "U19": 6,
+    "U20": 6,
+    "U21": 5,
+    "U23": 8,
+    "U24": 8,
+    "U32": 5,
+    "U33": 3,
+    "U03": 5,
+    "U05": 8,
+    "U06": 6,
+    "U07": 6,
+    "U31": 5,
+    "U09": 7,
+    "U10": 6,
+    "U11": 6,
+    "U12": 4,
+    "U14": 5,
+    "U08": 5,
+    "U04": 4,
+    "U16": 3,
+    "U17": 3,
+    "U26": 5,
+    "U27": 4,
+    "U28": 4,
+    "U15": 3,
+    "U13": 2,
+    "U22": 3,
+    "U25": 4,
+    "U29": 5,
+    "U30": 3,
+    "U18": 2,
+    "U34": 19,
+    "U02": 6
+  },
+  "neusoft_material_count": 4,
+  "neusoft_chunk_count": 81,
+  "neusoft_embedding_count": 81,
+  "neusoft_fact_count": 6,
+  "neusoft_current_fact_count": 6,
+  "neusoft_mapping_count": 6,
+  "neusoft_current_mapping_count": 6,
+  "neusoft_quarantine_status": "NEUSOFT_QUARANTINE_REQUIRES_AUTHORITY_LIFECYCLE_DECISION",
+  "neusoft_retrieval_quarantine": "NOT_ENFORCED_BLOCKED_MISSING_LIFECYCLE",
+  "neusoft_fact_authority_quarantine": "NOT_ENFORCED_BLOCKED_MISSING_LIFECYCLE",
+  "neusoft_mapping_authority_quarantine": "NOT_ENFORCED_BLOCKED_MISSING_LIFECYCLE",
+  "neusoft_future_retrieval_status": "NOT_ENFORCED",
+  "neusoft_derived_authority_leakage": "YES",
+  "active_retrieval_results_after_quarantine": "NOT_RUN_NO_QUARANTINE_APPLIED",
+  "low_information_count": 451,
+  "low_information_source_candidate_count": 451,
+  "old_gold_sha_changed": "NO",
+  "production_code_changed": 0,
+  "db_writes": 0,
+  "provider_calls": 0,
+  "focused_tests": "PENDING",
+  "backend_tests": "FAIL_1158_OF_1171_13_PRE_EXISTING_GOVERNANCE_FIXTURE_DOC_ASSERTIONS",
+  "frontend_tests": "51/51 PASS (standalone)",
+  "lint": "PASS",
+  "build": "PASS",
+  "diff_check": "PASS",
+  "final_verdict": {
+    "inventory": "CURRENT_RAG_CORPUS_INVENTORY_COMPLETE",
+    "matrix_corpus": "MATRIX_DRIVEN_CORPUS_IDENTIFIED",
+    "neusoft": "NEUSOFT_QUARANTINE_REQUIRES_AUTHORITY_LIFECYCLE_DECISION",
+    "rag_production_ready": "NOT_CLAIMED",
+    "mapping_gold_ready": "NOT_CLAIMED",
+    "claim_gold_ready": "NOT_CLAIMED"
+  }
+}

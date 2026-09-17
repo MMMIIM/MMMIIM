@@ -1,0 +1,3813 @@
+{
+  "artifact_type": "V43_RAG_RETRIEVAL_P0_HOLDOUT_REPLAY_CHECKPOINT_V1",
+  "artifact_version": "v1",
+  "status": "P0_HOLDOUT_REPLAY_COMPLETE_GPT_SEMANTIC_REVIEW_PENDING",
+  "execution_mode": "EVAL_ONLY_CONTRACT_CORRECTION",
+  "authority": "SYNTHETIC_EVAL_ONLY",
+  "production_authority": "NONE",
+  "contract_amendment": {
+    "artifact_type": "V43_RAG_RETRIEVAL_P0_K0_CONTRACT_AMENDMENT_V1",
+    "path": "backend/eval/retrieval-quality-p0/V43_RAG_RETRIEVAL_P0_K0_CONTRACT_AMENDMENT_V1.json",
+    "file_sha256": "774761C1A871E8977229A0EBB0419DA74372A3D2FAEC004D8AC0932131666452",
+    "deterministic_content_hash": "9f0399cfa682806209ec7ffb3050d6ca3380f2297e8abe41dc99880f2c672da5",
+    "original_gold_unchanged": true
+  },
+  "original_gold_unchanged_proof": {
+    "path": "backend/eval/retrieval-quality-p0/GPT_SEMANTIC_GOLD_V1.json",
+    "file_sha256_before": "7576C1D9A9FECD19F032AD49085E61E48BB008EFF4788E225A2CCEE3087492E7",
+    "file_sha256_after": "7576C1D9A9FECD19F032AD49085E61E48BB008EFF4788E225A2CCEE3087492E7",
+    "frozen_sha256": "7576C1D9A9FECD19F032AD49085E61E48BB008EFF4788E225A2CCEE3087492E7",
+    "file_sha256_parity": true,
+    "deterministic_content_hash_before": "0e1545330089a41df56e9b3d6456508a25aefab74153fff26738002f7c1f8d39",
+    "deterministic_content_hash_after": "0e1545330089a41df56e9b3d6456508a25aefab74153fff26738002f7c1f8d39",
+    "spans_and_atoms_mutated": false
+  },
+  "holdout_query_vector_artifact": {
+    "artifact_type": "HOLDOUT_QUERY_VECTOR_SUPPLEMENT_V1",
+    "path": "backend/eval/retrieval-quality-p0/results/V43_RAG_RETRIEVAL_P0_HOLDOUT_QUERY_VECTOR_SUPPLEMENT_V1.json",
+    "file_sha256": "1ADA092294196E91B7F2FED7533ABDCE2A61DC86315546FDFCD7EF0011586F27",
+    "deterministic_content_hash": "d4fd8b13e480c587f796053c956e70ac0bd80f952dca78a92c625e110d98bc8f",
+    "query_count": 7,
+    "provider": "api.siliconflow.cn",
+    "model": "Qwen/Qwen3-Embedding-0.6B",
+    "version": "1",
+    "vector_dimension": 1024,
+    "provider_call_count": 7,
+    "retry_count": 0
+  },
+  "provider_call_count": 7,
+  "corpus_snapshot_unchanged_proof": {
+    "path": "docs/handoff/V43_EVIDENCE_SEARCH_SUPPORT_ARCHITECTURE_ENGINEERING_V1/evidence-vector-snapshot/EVSNAP-D98FA52C-952F-416F-B57F-92C41EF9731D.json",
+    "snapshot_id": "EVSNAP-D98FA52C-952F-416F-B57F-92C41EF9731D",
+    "identity_hash": "ec659099e70e6c00e5cebd664732be815b8447de3e4a86dca3ed16c6f28772e8",
+    "file_sha256_before": "5D0A7F451D4090DEDBD8E9EE4F3B5851565F01F7A4170D5A40C673031BCC4578",
+    "file_sha256_after": "5D0A7F451D4090DEDBD8E9EE4F3B5851565F01F7A4170D5A40C673031BCC4578",
+    "frozen_file_sha256": "5D0A7F451D4090DEDBD8E9EE4F3B5851565F01F7A4170D5A40C673031BCC4578",
+    "file_sha256_parity": true,
+    "deterministic_content_hash_before": "25708f009b853d434207272c511a21474e5ea5805b41d1d2239d605ef8fab421",
+    "deterministic_content_hash_after": "25708f009b853d434207272c511a21474e5ea5805b41d1d2239d605ef8fab421",
+    "material_count": 9,
+    "chunk_count": 94,
+    "reference_only_escape_count": 0,
+    "cross_enterprise_escape_count": 0,
+    "quarantine_escape_count": 0
+  },
+  "governance": {
+    "before_replay_split": "UNTOUCHED_HOLDOUT_SET",
+    "after_results_inspected_split": "DEVELOPMENT_VALIDATION_SET",
+    "fresh_final_release_holdout_eligible": false,
+    "gold_semantic_labels_created_by_codex": false
+  },
+  "metric_definitions": {
+    "evidence_atom_recall_at_k": "Matchable Gold evidence atoms covered by a Top-K candidate, divided by matchable atoms; atoms without acceptable spans are excluded and remain visible as corpus gaps.",
+    "candidate_precision_at_k": "Top-K candidates with Gold evidence grade >= 2 divided by K.",
+    "ndcg_at_k": "Graded nDCG over Gold evidence items with grades 3/2/1/0.",
+    "mrr_full": "Mean reciprocal rank over cases whose full frozen ranking contains a grade >= 2 evidence candidate; cases without one are excluded from the denominator.",
+    "expected_retrieval_k0": "True only when no frozen Gold evidence item has grade >= 2.",
+    "expected_no_sufficient_evidence": "Independent true/false projection of full Requirement sufficiency; partial cases may have false retrieval K0 and true no-sufficient-evidence.",
+    "false_positive_retrieval_candidate_rate": "Among expected_retrieval_k0 cases, the rate with a grade >= 2 candidate in the evaluated Top-K.",
+    "false_negative_retrieval_k0_rate": "Among expected_retrieval_k0=false cases, the rate for which the replay returns zero candidates."
+  },
+  "holdout_replay": {
+    "case_count": 7,
+    "cases": [
+      {
+        "case_id": "RAG-P0-HOLD-JY-001-REQ-027",
+        "requirement_id": "JY-001:REQ-027",
+        "canonical_requirement_text": "具有较强的系统安全性和灾难恢复能力。",
+        "case_class": "POSITIVE",
+        "frozen_gold_profile_class": "SERVICE",
+        "evidence_need_profile": {
+          "class": "PRODUCT_CAPABILITY",
+          "required_dimensions": [
+            "subject",
+            "scope"
+          ],
+          "conditional_dimensions": [],
+          "search_signals": [
+            "PRODUCT_CAPABILITY"
+          ],
+          "critical_literals": [],
+          "profile_hash": "2d406d4be1370a68d09a4def33999ef7cfe4f8d2cf9fe409b606042bf0a602cb"
+        },
+        "query_text": "具有较强的系统安全性和灾难恢复能力。",
+        "query_hash": "3725bb402a8891ad9a92c0c395aca577aac6aff21e310b688143d1be92af292b",
+        "expected_retrieval_k0": false,
+        "expected_no_sufficient_evidence": false,
+        "query_vector_present": true,
+        "raw_candidate_count": 94,
+        "metrics": {
+          "1": {
+            "evidence_atom_recall": 0,
+            "candidate_precision": 0,
+            "ndcg": 0,
+            "mrr_full": 0.166666666667,
+            "expected_retrieval_k0": false,
+            "expected_no_sufficient_evidence": false,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": true
+          },
+          "3": {
+            "evidence_atom_recall": 0,
+            "candidate_precision": 0,
+            "ndcg": 0,
+            "mrr_full": 0.166666666667,
+            "expected_retrieval_k0": false,
+            "expected_no_sufficient_evidence": false,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": true
+          },
+          "5": {
+            "evidence_atom_recall": 0,
+            "candidate_precision": 0,
+            "ndcg": 0,
+            "mrr_full": 0.166666666667,
+            "expected_retrieval_k0": false,
+            "expected_no_sufficient_evidence": false,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": true
+          },
+          "8": {
+            "evidence_atom_recall": 0.5,
+            "candidate_precision": 0.125,
+            "ndcg": 0.218407436818,
+            "mrr_full": 0.166666666667,
+            "expected_retrieval_k0": false,
+            "expected_no_sufficient_evidence": false,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": false
+          },
+          "20": {
+            "evidence_atom_recall": 1,
+            "candidate_precision": 0.1,
+            "ndcg": 0.360276338684,
+            "mrr_full": 0.166666666667,
+            "expected_retrieval_k0": false,
+            "expected_no_sufficient_evidence": false,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": false
+          }
+        },
+        "first_failure_family": "LOW_RANK_GRADE_GE_2_EVIDENCE",
+        "top20": [
+          {
+            "material_id": "4ba1c701-7c4f-415b-9186-28b25c4472ce",
+            "material_logical_identity": {
+              "com_id": "COM-08",
+              "original_name": "COM-08_备份恢复与容灾演练记录.md",
+              "source_file": "COM-08_备份恢复与容灾演练记录.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-2C504155D5C0E36380C02CD11962B632",
+            "chunk_hash": "1036a0c983265a4f9a8bc8c1db7488cd04994f98c1cc792563ebc139899f969e",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-2C504155D5C0E36380C02CD11962B632:FULL",
+            "exact_candidate_source_text": "# 备份恢复与容灾演练记录",
+            "similarity": 0.515342393902,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 1
+          },
+          {
+            "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+            "material_logical_identity": {
+              "com_id": "COM-04",
+              "original_name": "COM-04_API与系统集成能力报告.md",
+              "source_file": "COM-04_API与系统集成能力报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-EE13BCB24F6A977A2B054A4FB85DE7B4",
+            "chunk_hash": "22ef906b89005ebb7006adc02fbd456e742f20ef21ca023be0e57ce0fdb4b4ba",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-EE13BCB24F6A977A2B054A4FB85DE7B4:FULL",
+            "exact_candidate_source_text": "# API与系统集成能力报告",
+            "similarity": 0.494581639891,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 2
+          },
+          {
+            "material_id": "3ec066d3-679a-4232-ba6d-364038658c81",
+            "material_logical_identity": {
+              "com_id": "COM-06",
+              "original_name": "COM-06_权限、安全与审计测试报告.md",
+              "source_file": "COM-06_权限_安全与审计测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-830217C1CE1806D87047FB5ABBBBFC9E",
+            "chunk_hash": "a7a61cb8330a641592f2df7aba95e2e1553ad0b298d8f40634b20ccac4008ae3",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-830217C1CE1806D87047FB5ABBBBFC9E:FULL",
+            "exact_candidate_source_text": "# 权限、安全与审计测试报告",
+            "similarity": 0.433125433538,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 3
+          },
+          {
+            "material_id": "42debef7-084f-471c-8fa5-1f9dcbf4c2f7",
+            "material_logical_identity": {
+              "com_id": "COM-07",
+              "original_name": "COM-07_性能与容量测试报告.md",
+              "source_file": "COM-07_性能与容量测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-027908729B88CC25ECD8D921A18682E9",
+            "chunk_hash": "d4b5cdfb5102e49f82ba62b89d657e721e4069d45198057f27e9a74c374bd48e",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-027908729B88CC25ECD8D921A18682E9:FULL",
+            "exact_candidate_source_text": "# 性能与容量测试报告",
+            "similarity": 0.428794603861,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 4
+          },
+          {
+            "material_id": "3ec066d3-679a-4232-ba6d-364038658c81",
+            "material_logical_identity": {
+              "com_id": "COM-06",
+              "original_name": "COM-06_权限、安全与审计测试报告.md",
+              "source_file": "COM-06_权限_安全与审计测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-48BA8BF36C74047C6F344C134357DA37",
+            "chunk_hash": "fe84a35f3f8176e51790c0a26933b7e8bca5bf77499841b07d645485b1779066",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-48BA8BF36C74047C6F344C134357DA37:FULL",
+            "exact_candidate_source_text": "不代表通过等保、密评或第三方认证。",
+            "similarity": 0.423680764615,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 5
+          },
+          {
+            "material_id": "4ba1c701-7c4f-415b-9186-28b25c4472ce",
+            "material_logical_identity": {
+              "com_id": "COM-08",
+              "original_name": "COM-08_备份恢复与容灾演练记录.md",
+              "source_file": "COM-08_备份恢复与容灾演练记录.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-2EEFA4F9B214B94D417935EEB260A88E",
+            "chunk_hash": "d3b24de48283ba5305695df23e8c1182d3120a2f45ab4076e9f86214992d8a30",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-2EEFA4F9B214B94D417935EEB260A88E:FULL",
+            "exact_candidate_source_text": "2026-07-25完成Synthetic数据库备份恢复和应用节点故障切换。",
+            "similarity": 0.420741550613,
+            "gold_grade": 3,
+            "gold_item_ids": [
+              "HOLD-JY027-ITEM-02"
+            ],
+            "rank": 6
+          },
+          {
+            "material_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd",
+            "material_logical_identity": {
+              "com_id": "COM-03",
+              "original_name": "COM-03_技术架构与部署适配报告.md",
+              "source_file": "COM-03_技术架构与部署适配报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-90273C2E8DD579484D1CA7EEE503EECC",
+            "chunk_hash": "6150d900a0920ce9aa6ad399b25ffe34711fb87880ecb8eeb8b6b4d0ee649aff",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-90273C2E8DD579484D1CA7EEE503EECC:FULL",
+            "exact_candidate_source_text": "## 架构",
+            "similarity": 0.415175445075,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 7
+          },
+          {
+            "material_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd",
+            "material_logical_identity": {
+              "com_id": "COM-03",
+              "original_name": "COM-03_技术架构与部署适配报告.md",
+              "source_file": "COM-03_技术架构与部署适配报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-B39BE48830FFE2F9798289F8E74276EA",
+            "chunk_hash": "5efd8a1f7995e16e2220a9486911647f1885fa7887b0fb1f010108d58fd175e7",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-B39BE48830FFE2F9798289F8E74276EA:FULL",
+            "exact_candidate_source_text": "# 技术架构与部署适配报告",
+            "similarity": 0.397565190586,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 8
+          },
+          {
+            "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+            "material_logical_identity": {
+              "com_id": "COM-04",
+              "original_name": "COM-04_API与系统集成能力报告.md",
+              "source_file": "COM-04_API与系统集成能力报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-99497AE6286B2BAC390E35611FEE3A8A",
+            "chunk_hash": "368d8deb15ff8ff690f09b33dfbd503c66410c5dc4be8e8916e3c7e09f189a9e",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-99497AE6286B2BAC390E35611FEE3A8A:FULL",
+            "exact_candidate_source_text": "不代表已对接任何真实政务或医院系统。",
+            "similarity": 0.387261649577,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 9
+          },
+          {
+            "material_id": "4ba1c701-7c4f-415b-9186-28b25c4472ce",
+            "material_logical_identity": {
+              "com_id": "COM-08",
+              "original_name": "COM-08_备份恢复与容灾演练记录.md",
+              "source_file": "COM-08_备份恢复与容灾演练记录.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-06BA7B4AA35AE9E3B89097C7EA4CD3EF",
+            "chunk_hash": "63fa0d744ce6f12fbfdb53724c0e36ab3cc3c338da6dacb84e9d8d44258e7569",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-06BA7B4AA35AE9E3B89097C7EA4CD3EF:FULL",
+            "exact_candidate_source_text": "未形成真实客户RTO/RPO或可用率承诺。",
+            "similarity": 0.382127076605,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 10
+          },
+          {
+            "material_id": "04738608-0aa8-4e12-b37b-fc5084e0428b",
+            "material_logical_identity": {
+              "com_id": "COM-14",
+              "original_name": "COM-14_Synthetic医疗案例_医院接口与数据平台.md",
+              "source_file": "COM-14_Synthetic医疗案例_医院接口与数据平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-C7CC7F84C1222606976E23BAAAC8852A",
+            "chunk_hash": "cb75c45ef18ca635a54c57864218822f5886af271e88591d8f2f9c21992de476",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-C7CC7F84C1222606976E23BAAAC8852A:FULL",
+            "exact_candidate_source_text": "## 时效",
+            "similarity": 0.379037135059,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 11
+          },
+          {
+            "material_id": "42debef7-084f-471c-8fa5-1f9dcbf4c2f7",
+            "material_logical_identity": {
+              "com_id": "COM-07",
+              "original_name": "COM-07_性能与容量测试报告.md",
+              "source_file": "COM-07_性能与容量测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-825C1EFE5FF1E3AE15ABAC31FE558D47",
+            "chunk_hash": "cb75c45ef18ca635a54c57864218822f5886af271e88591d8f2f9c21992de476",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-825C1EFE5FF1E3AE15ABAC31FE558D47:FULL",
+            "exact_candidate_source_text": "## 时效",
+            "similarity": 0.379037135059,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 12
+          },
+          {
+            "material_id": "a5510db7-bb22-46e3-aa7f-13b77f1206a6",
+            "material_logical_identity": {
+              "com_id": "COM-13",
+              "original_name": "COM-13_Synthetic政企案例_城市事件协同平台.md",
+              "source_file": "COM-13_Synthetic政企案例_城市事件协同平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-754B541D292110C60F5BC8CE4F976678",
+            "chunk_hash": "cb75c45ef18ca635a54c57864218822f5886af271e88591d8f2f9c21992de476",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-754B541D292110C60F5BC8CE4F976678:FULL",
+            "exact_candidate_source_text": "## 时效",
+            "similarity": 0.379037135059,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 13
+          },
+          {
+            "material_id": "7dc70fee-13e0-4b7d-b95f-202665c241d0",
+            "material_logical_identity": {
+              "com_id": "COM-02",
+              "original_name": "COM-02_产品平台能力说明.md",
+              "source_file": "COM-02_产品平台能力说明.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-AF65DB60327B026A2B66255423ECA6D2",
+            "chunk_hash": "8cc3c2d95fe26cbeaa7cdedde503dacd796f670ae22cd8d7b5ab6fa79eb5af22",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-AF65DB60327B026A2B66255423ECA6D2:FULL",
+            "exact_candidate_source_text": "# 产品平台能力说明",
+            "similarity": 0.378377616122,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 14
+          },
+          {
+            "material_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd",
+            "material_logical_identity": {
+              "com_id": "COM-03",
+              "original_name": "COM-03_技术架构与部署适配报告.md",
+              "source_file": "COM-03_技术架构与部署适配报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-AA94BB7D153A30F95E869D78DC45A0E5",
+            "chunk_hash": "43940169890ecd25f53c7292ad30195c8e1c2b62fa681a23830db7a1c5242802",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-AA94BB7D153A30F95E869D78DC45A0E5:FULL",
+            "exact_candidate_source_text": "Synthetic记录：Linux x86_64、某国产Linux测试环境、PostgreSQL兼容数据库完成安装与核心功能验证；未列版本不得推断。",
+            "similarity": 0.377892293073,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 15
+          },
+          {
+            "material_id": "a5510db7-bb22-46e3-aa7f-13b77f1206a6",
+            "material_logical_identity": {
+              "com_id": "COM-13",
+              "original_name": "COM-13_Synthetic政企案例_城市事件协同平台.md",
+              "source_file": "COM-13_Synthetic政企案例_城市事件协同平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-78E4EA708EBC05B9E2731B7736CF9B2E",
+            "chunk_hash": "599301a3312c6cda42f0d6ffc1a20c759915ad29da4a9843a6f4e131395eaaaa",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-78E4EA708EBC05B9E2731B7736CF9B2E:FULL",
+            "exact_candidate_source_text": "某虚构市级事件协同平台，包含受理、派单、处置、督办、统计、地图和部门接口。",
+            "similarity": 0.377495494014,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 16
+          },
+          {
+            "material_id": "42debef7-084f-471c-8fa5-1f9dcbf4c2f7",
+            "material_logical_identity": {
+              "com_id": "COM-07",
+              "original_name": "COM-07_性能与容量测试报告.md",
+              "source_file": "COM-07_性能与容量测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-DF096836654818BBD4DF11A39ED29B5D",
+            "chunk_hash": "833ba3680a9ef71d10114e5bb3ad36ddd7bf0bd07793a95662ef46d6327e1e82",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-DF096836654818BBD4DF11A39ED29B5D:FULL",
+            "exact_candidate_source_text": "## 环境",
+            "similarity": 0.377287184965,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 17
+          },
+          {
+            "material_id": "04738608-0aa8-4e12-b37b-fc5084e0428b",
+            "material_logical_identity": {
+              "com_id": "COM-14",
+              "original_name": "COM-14_Synthetic医疗案例_医院接口与数据平台.md",
+              "source_file": "COM-14_Synthetic医疗案例_医院接口与数据平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-9BD85ED0A87D7C6B058D4EE89A4A1303",
+            "chunk_hash": "4e8149a2c87768925e70c0a6307836b6c82f707d0062dcb19d642dfc3b51f81b",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-9BD85ED0A87D7C6B058D4EE89A4A1303:FULL",
+            "exact_candidate_source_text": "某虚构三级医院接口与数据平台，包含接口治理、患者主索引、历史迁移、联调和试运行。",
+            "similarity": 0.375356628506,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 18
+          },
+          {
+            "material_id": "3ec066d3-679a-4232-ba6d-364038658c81",
+            "material_logical_identity": {
+              "com_id": "COM-06",
+              "original_name": "COM-06_权限、安全与审计测试报告.md",
+              "source_file": "COM-06_权限_安全与审计测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-FE0AD69A95643C6E508A4F7E5147D0D3",
+            "chunk_hash": "8172afa05be1a2a8801c023b948d6673b68de1cb1414ac008e42d1afa7db4e5e",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-FE0AD69A95643C6E508A4F7E5147D0D3:FULL",
+            "exact_candidate_source_text": "2026-08-01对v3.2测试环境执行账号、角色、最小权限、登录审计、关键操作和数据导出审计。",
+            "similarity": 0.373876635806,
+            "gold_grade": 3,
+            "gold_item_ids": [
+              "HOLD-JY027-ITEM-01"
+            ],
+            "rank": 19
+          },
+          {
+            "material_id": "04738608-0aa8-4e12-b37b-fc5084e0428b",
+            "material_logical_identity": {
+              "com_id": "COM-14",
+              "original_name": "COM-14_Synthetic医疗案例_医院接口与数据平台.md",
+              "source_file": "COM-14_Synthetic医疗案例_医院接口与数据平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-5206328872C2D6702A96C1DED4A76BB1",
+            "chunk_hash": "8aced249764480f00a86c6bc03cf90677f37d9034a19b7c7f7815d477507efd5",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-5206328872C2D6702A96C1DED4A76BB1:FULL",
+            "exact_candidate_source_text": "## 案例",
+            "similarity": 0.373560840505,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 20
+          }
+        ]
+      },
+      {
+        "case_id": "RAG-P0-HOLD-JY-001-REQ-077",
+        "requirement_id": "JY-001:REQ-077",
+        "canonical_requirement_text": "12345工单闭环归档系统应进一步对12345工单闭环归档的管理升级,提供诉求受理模块,工单业务流程模块、督办管理模块、工单办理能效分析,提供后台分析统计等功能。",
+        "case_class": "PARTIAL",
+        "frozen_gold_profile_class": "PRODUCT_CAPABILITY",
+        "evidence_need_profile": {
+          "class": "PRODUCT_CAPABILITY",
+          "required_dimensions": [
+            "subject",
+            "scope"
+          ],
+          "conditional_dimensions": [],
+          "search_signals": [
+            "12345",
+            "PRODUCT_CAPABILITY"
+          ],
+          "critical_literals": [
+            "12345"
+          ],
+          "profile_hash": "a640c424c9a07cbb2150f299028669ca4fa97156b2e476495274a8253e0b9fa3"
+        },
+        "query_text": "12345工单闭环归档系统应进一步对12345工单闭环归档的管理升级,提供诉求受理模块,工单业务流程模块、督办管理模块、工单办理能效分析,提供后台分析统计等功能。",
+        "query_hash": "e5bd8b61b921ec1b7e0c8704f3552e4aae4af69fdf89a833f15dc58f23267e1d",
+        "expected_retrieval_k0": false,
+        "expected_no_sufficient_evidence": true,
+        "query_vector_present": true,
+        "raw_candidate_count": 94,
+        "metrics": {
+          "1": {
+            "evidence_atom_recall": 1,
+            "candidate_precision": 1,
+            "ndcg": 1,
+            "mrr_full": 1,
+            "expected_retrieval_k0": false,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": false
+          },
+          "3": {
+            "evidence_atom_recall": 1,
+            "candidate_precision": 0.333333333333,
+            "ndcg": 1,
+            "mrr_full": 1,
+            "expected_retrieval_k0": false,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": false
+          },
+          "5": {
+            "evidence_atom_recall": 1,
+            "candidate_precision": 0.2,
+            "ndcg": 1,
+            "mrr_full": 1,
+            "expected_retrieval_k0": false,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": false
+          },
+          "8": {
+            "evidence_atom_recall": 1,
+            "candidate_precision": 0.125,
+            "ndcg": 1,
+            "mrr_full": 1,
+            "expected_retrieval_k0": false,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": false
+          },
+          "20": {
+            "evidence_atom_recall": 1,
+            "candidate_precision": 0.05,
+            "ndcg": 1,
+            "mrr_full": 1,
+            "expected_retrieval_k0": false,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": false
+          }
+        },
+        "first_failure_family": "GRADE_GE_2_EVIDENCE_AT_RANK_1",
+        "top20": [
+          {
+            "material_id": "a5510db7-bb22-46e3-aa7f-13b77f1206a6",
+            "material_logical_identity": {
+              "com_id": "COM-13",
+              "original_name": "COM-13_Synthetic政企案例_城市事件协同平台.md",
+              "source_file": "COM-13_Synthetic政企案例_城市事件协同平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-78E4EA708EBC05B9E2731B7736CF9B2E",
+            "chunk_hash": "599301a3312c6cda42f0d6ffc1a20c759915ad29da4a9843a6f4e131395eaaaa",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-78E4EA708EBC05B9E2731B7736CF9B2E:FULL",
+            "exact_candidate_source_text": "某虚构市级事件协同平台，包含受理、派单、处置、督办、统计、地图和部门接口。",
+            "similarity": 0.529948125817,
+            "gold_grade": 2,
+            "gold_item_ids": [
+              "HOLD-JY077-ITEM-01"
+            ],
+            "rank": 1
+          },
+          {
+            "material_id": "04738608-0aa8-4e12-b37b-fc5084e0428b",
+            "material_logical_identity": {
+              "com_id": "COM-14",
+              "original_name": "COM-14_Synthetic医疗案例_医院接口与数据平台.md",
+              "source_file": "COM-14_Synthetic医疗案例_医院接口与数据平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-5206328872C2D6702A96C1DED4A76BB1",
+            "chunk_hash": "8aced249764480f00a86c6bc03cf90677f37d9034a19b7c7f7815d477507efd5",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-5206328872C2D6702A96C1DED4A76BB1:FULL",
+            "exact_candidate_source_text": "## 案例",
+            "similarity": 0.480623656251,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 2
+          },
+          {
+            "material_id": "a5510db7-bb22-46e3-aa7f-13b77f1206a6",
+            "material_logical_identity": {
+              "com_id": "COM-13",
+              "original_name": "COM-13_Synthetic政企案例_城市事件协同平台.md",
+              "source_file": "COM-13_Synthetic政企案例_城市事件协同平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-B6C5012AB485B7FF9E67AE65347FA518",
+            "chunk_hash": "8aced249764480f00a86c6bc03cf90677f37d9034a19b7c7f7815d477507efd5",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-B6C5012AB485B7FF9E67AE65347FA518:FULL",
+            "exact_candidate_source_text": "## 案例",
+            "similarity": 0.480623656251,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 3
+          },
+          {
+            "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+            "material_logical_identity": {
+              "com_id": "COM-04",
+              "original_name": "COM-04_API与系统集成能力报告.md",
+              "source_file": "COM-04_API与系统集成能力报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-EE13BCB24F6A977A2B054A4FB85DE7B4",
+            "chunk_hash": "22ef906b89005ebb7006adc02fbd456e742f20ef21ca023be0e57ce0fdb4b4ba",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-EE13BCB24F6A977A2B054A4FB85DE7B4:FULL",
+            "exact_candidate_source_text": "# API与系统集成能力报告",
+            "similarity": 0.470354397818,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 4
+          },
+          {
+            "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+            "material_logical_identity": {
+              "com_id": "COM-04",
+              "original_name": "COM-04_API与系统集成能力报告.md",
+              "source_file": "COM-04_API与系统集成能力报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-0663AA700C01FD958515713C21CF5F5E",
+            "chunk_hash": "4cfeecd92d540c0bb407ae32151d79e6eb9c95c17ff5c8f7fc47ec44a194659a",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-0663AA700C01FD958515713C21CF5F5E:FULL",
+            "exact_candidate_source_text": "支持REST API、Webhook和批量文件交换；2026-07-12完成12个模拟接口联调。",
+            "similarity": 0.448336742489,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 5
+          },
+          {
+            "material_id": "04738608-0aa8-4e12-b37b-fc5084e0428b",
+            "material_logical_identity": {
+              "com_id": "COM-14",
+              "original_name": "COM-14_Synthetic医疗案例_医院接口与数据平台.md",
+              "source_file": "COM-14_Synthetic医疗案例_医院接口与数据平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-9BD85ED0A87D7C6B058D4EE89A4A1303",
+            "chunk_hash": "4e8149a2c87768925e70c0a6307836b6c82f707d0062dcb19d642dfc3b51f81b",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-9BD85ED0A87D7C6B058D4EE89A4A1303:FULL",
+            "exact_candidate_source_text": "某虚构三级医院接口与数据平台，包含接口治理、患者主索引、历史迁移、联调和试运行。",
+            "similarity": 0.445253114201,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 6
+          },
+          {
+            "material_id": "42debef7-084f-471c-8fa5-1f9dcbf4c2f7",
+            "material_logical_identity": {
+              "com_id": "COM-07",
+              "original_name": "COM-07_性能与容量测试报告.md",
+              "source_file": "COM-07_性能与容量测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-7292707ADFE23D2A5D2AEC00FE7794F5",
+            "chunk_hash": "6aeebef0d26443c1f5faee74c66e35f6f1b33c92a0d18bcf9f47830c04a68ec7",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-7292707ADFE23D2A5D2AEC00FE7794F5:FULL",
+            "exact_candidate_source_text": "## 结果",
+            "similarity": 0.440907074059,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 7
+          },
+          {
+            "material_id": "42debef7-084f-471c-8fa5-1f9dcbf4c2f7",
+            "material_logical_identity": {
+              "com_id": "COM-07",
+              "original_name": "COM-07_性能与容量测试报告.md",
+              "source_file": "COM-07_性能与容量测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-DF096836654818BBD4DF11A39ED29B5D",
+            "chunk_hash": "833ba3680a9ef71d10114e5bb3ad36ddd7bf0bd07793a95662ef46d6327e1e82",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-DF096836654818BBD4DF11A39ED29B5D:FULL",
+            "exact_candidate_source_text": "## 环境",
+            "similarity": 0.437088376415,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 8
+          },
+          {
+            "material_id": "a5510db7-bb22-46e3-aa7f-13b77f1206a6",
+            "material_logical_identity": {
+              "com_id": "COM-13",
+              "original_name": "COM-13_Synthetic政企案例_城市事件协同平台.md",
+              "source_file": "COM-13_Synthetic政企案例_城市事件协同平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-890687AB8C9ED31230E628F9D2C2E196",
+            "chunk_hash": "00f80f3fc7b51f9a86ace01a09814814f5ce94892afcd31986d6bcfdae3280f5",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-890687AB8C9ED31230E628F9D2C2E196:FULL",
+            "exact_candidate_source_text": "# Synthetic政企案例：城市事件协同平台",
+            "similarity": 0.432834974969,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 9
+          },
+          {
+            "material_id": "a5510db7-bb22-46e3-aa7f-13b77f1206a6",
+            "material_logical_identity": {
+              "com_id": "COM-13",
+              "original_name": "COM-13_Synthetic政企案例_城市事件协同平台.md",
+              "source_file": "COM-13_Synthetic政企案例_城市事件协同平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-105B217D6CC7E8DA8B4F3C79ED727593",
+            "chunk_hash": "e1bb1e9d993d1fa56367d79fd5370ea1da33d7b5e027d9c77de78965a75bbb4e",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-105B217D6CC7E8DA8B4F3C79ED727593:FULL",
+            "exact_candidate_source_text": "实施期2025-03至2025-10；历史案例可用于业绩测试，但产品版本能力需重新核验。",
+            "similarity": 0.430028846418,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 10
+          },
+          {
+            "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+            "material_logical_identity": {
+              "com_id": "COM-04",
+              "original_name": "COM-04_API与系统集成能力报告.md",
+              "source_file": "COM-04_API与系统集成能力报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-99497AE6286B2BAC390E35611FEE3A8A",
+            "chunk_hash": "368d8deb15ff8ff690f09b33dfbd503c66410c5dc4be8e8916e3c7e09f189a9e",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-99497AE6286B2BAC390E35611FEE3A8A:FULL",
+            "exact_candidate_source_text": "不代表已对接任何真实政务或医院系统。",
+            "similarity": 0.423540269623,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 11
+          },
+          {
+            "material_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd",
+            "material_logical_identity": {
+              "com_id": "COM-03",
+              "original_name": "COM-03_技术架构与部署适配报告.md",
+              "source_file": "COM-03_技术架构与部署适配报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-B39BE48830FFE2F9798289F8E74276EA",
+            "chunk_hash": "5efd8a1f7995e16e2220a9486911647f1885fa7887b0fb1f010108d58fd175e7",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-B39BE48830FFE2F9798289F8E74276EA:FULL",
+            "exact_candidate_source_text": "# 技术架构与部署适配报告",
+            "similarity": 0.419428097113,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 12
+          },
+          {
+            "material_id": "4ba1c701-7c4f-415b-9186-28b25c4472ce",
+            "material_logical_identity": {
+              "com_id": "COM-08",
+              "original_name": "COM-08_备份恢复与容灾演练记录.md",
+              "source_file": "COM-08_备份恢复与容灾演练记录.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-2C504155D5C0E36380C02CD11962B632",
+            "chunk_hash": "1036a0c983265a4f9a8bc8c1db7488cd04994f98c1cc792563ebc139899f969e",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-2C504155D5C0E36380C02CD11962B632:FULL",
+            "exact_candidate_source_text": "# 备份恢复与容灾演练记录",
+            "similarity": 0.415834169211,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 13
+          },
+          {
+            "material_id": "04738608-0aa8-4e12-b37b-fc5084e0428b",
+            "material_logical_identity": {
+              "com_id": "COM-14",
+              "original_name": "COM-14_Synthetic医疗案例_医院接口与数据平台.md",
+              "source_file": "COM-14_Synthetic医疗案例_医院接口与数据平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-38B77798F64FB62682CAF795D502D53D",
+            "chunk_hash": "4027b4bb423477908597e8286a68c13ed6bc7baf21e74cdbb7a28ea71edce2d1",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-38B77798F64FB62682CAF795D502D53D:FULL",
+            "exact_candidate_source_text": "# Synthetic医疗案例：医院接口与数据平台",
+            "similarity": 0.413254466814,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 14
+          },
+          {
+            "material_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd",
+            "material_logical_identity": {
+              "com_id": "COM-03",
+              "original_name": "COM-03_技术架构与部署适配报告.md",
+              "source_file": "COM-03_技术架构与部署适配报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-90273C2E8DD579484D1CA7EEE503EECC",
+            "chunk_hash": "6150d900a0920ce9aa6ad399b25ffe34711fb87880ecb8eeb8b6b4d0ee649aff",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-90273C2E8DD579484D1CA7EEE503EECC:FULL",
+            "exact_candidate_source_text": "## 架构",
+            "similarity": 0.412648777398,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 15
+          },
+          {
+            "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+            "material_logical_identity": {
+              "com_id": "COM-04",
+              "original_name": "COM-04_API与系统集成能力报告.md",
+              "source_file": "COM-04_API与系统集成能力报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-9CF8507336652AD1E8F7FAC7BDF421F2",
+            "chunk_hash": "0622f542813fdeb1f248488e6163c23dc5ccd6c76ee1fdcf8d47404feab2759f",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-9CF8507336652AD1E8F7FAC7BDF421F2:FULL",
+            "exact_candidate_source_text": "- **OFF-U03｜政务数据共享条例**｜国务院｜状态 `CURRENT_CONFIRMED`｜实施 `2025-08-01`｜最后核验 `2026-08-31`｜https://www.stats.gov.cn/gk/tjfg/xgfxfg/202506/t20250609_1960124.html",
+            "similarity": 0.412315683681,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 16
+          },
+          {
+            "material_id": "04738608-0aa8-4e12-b37b-fc5084e0428b",
+            "material_logical_identity": {
+              "com_id": "COM-14",
+              "original_name": "COM-14_Synthetic医疗案例_医院接口与数据平台.md",
+              "source_file": "COM-14_Synthetic医疗案例_医院接口与数据平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-C7CC7F84C1222606976E23BAAAC8852A",
+            "chunk_hash": "cb75c45ef18ca635a54c57864218822f5886af271e88591d8f2f9c21992de476",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-C7CC7F84C1222606976E23BAAAC8852A:FULL",
+            "exact_candidate_source_text": "## 时效",
+            "similarity": 0.411171028173,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 17
+          },
+          {
+            "material_id": "42debef7-084f-471c-8fa5-1f9dcbf4c2f7",
+            "material_logical_identity": {
+              "com_id": "COM-07",
+              "original_name": "COM-07_性能与容量测试报告.md",
+              "source_file": "COM-07_性能与容量测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-825C1EFE5FF1E3AE15ABAC31FE558D47",
+            "chunk_hash": "cb75c45ef18ca635a54c57864218822f5886af271e88591d8f2f9c21992de476",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-825C1EFE5FF1E3AE15ABAC31FE558D47:FULL",
+            "exact_candidate_source_text": "## 时效",
+            "similarity": 0.411171028173,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 18
+          },
+          {
+            "material_id": "a5510db7-bb22-46e3-aa7f-13b77f1206a6",
+            "material_logical_identity": {
+              "com_id": "COM-13",
+              "original_name": "COM-13_Synthetic政企案例_城市事件协同平台.md",
+              "source_file": "COM-13_Synthetic政企案例_城市事件协同平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-754B541D292110C60F5BC8CE4F976678",
+            "chunk_hash": "cb75c45ef18ca635a54c57864218822f5886af271e88591d8f2f9c21992de476",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-754B541D292110C60F5BC8CE4F976678:FULL",
+            "exact_candidate_source_text": "## 时效",
+            "similarity": 0.411171028173,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 19
+          },
+          {
+            "material_id": "7dc70fee-13e0-4b7d-b95f-202665c241d0",
+            "material_logical_identity": {
+              "com_id": "COM-02",
+              "original_name": "COM-02_产品平台能力说明.md",
+              "source_file": "COM-02_产品平台能力说明.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-7BC3D75382C9BBF605E8033A7D57547D",
+            "chunk_hash": "9abf6f4e35a6a4846cdb5bece328d03e72cc139ff34ba9dedb915696a08bbf71",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-7BC3D75382C9BBF605E8033A7D57547D:FULL",
+            "exact_candidate_source_text": "## 产品",
+            "similarity": 0.410271531595,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 20
+          }
+        ]
+      },
+      {
+        "case_id": "RAG-P0-HOLD-JY-001-REQ-051",
+        "requirement_id": "JY-001:REQ-051",
+        "canonical_requirement_text": "建设江阴市市域社会治理现代化联勤联动指挥平台,包含事件联勤联动中心、运行指挥监管中心、事件标准库管理、事件汇聚收发网关、联勤联动移动端、通用辅助功能。",
+        "case_class": "PARTIAL",
+        "frozen_gold_profile_class": "PRODUCT_CAPABILITY",
+        "evidence_need_profile": {
+          "class": "PRODUCT_CAPABILITY",
+          "required_dimensions": [
+            "subject",
+            "scope",
+            "entity"
+          ],
+          "conditional_dimensions": [],
+          "search_signals": [
+            "PRODUCT_CAPABILITY"
+          ],
+          "critical_literals": [],
+          "profile_hash": "331856ff1c1d3a863baee52652dfb264feaea37016fa9f9a74244454a5ddbc5c"
+        },
+        "query_text": "建设江阴市市域社会治理现代化联勤联动指挥平台,包含事件联勤联动中心、运行指挥监管中心、事件标准库管理、事件汇聚收发网关、联勤联动移动端、通用辅助功能。",
+        "query_hash": "d6b00913d2e8eee0f357e4d129d856e4ab785bd122a940f1d77346a22e3abfb2",
+        "expected_retrieval_k0": false,
+        "expected_no_sufficient_evidence": true,
+        "query_vector_present": true,
+        "raw_candidate_count": 94,
+        "metrics": {
+          "1": {
+            "evidence_atom_recall": 1,
+            "candidate_precision": 1,
+            "ndcg": 1,
+            "mrr_full": 1,
+            "expected_retrieval_k0": false,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": false
+          },
+          "3": {
+            "evidence_atom_recall": 1,
+            "candidate_precision": 0.333333333333,
+            "ndcg": 0.826234657129,
+            "mrr_full": 1,
+            "expected_retrieval_k0": false,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": false
+          },
+          "5": {
+            "evidence_atom_recall": 1,
+            "candidate_precision": 0.2,
+            "ndcg": 0.826234657129,
+            "mrr_full": 1,
+            "expected_retrieval_k0": false,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": false
+          },
+          "8": {
+            "evidence_atom_recall": 1,
+            "candidate_precision": 0.125,
+            "ndcg": 0.826234657129,
+            "mrr_full": 1,
+            "expected_retrieval_k0": false,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": false
+          },
+          "20": {
+            "evidence_atom_recall": 1,
+            "candidate_precision": 0.05,
+            "ndcg": 0.826234657129,
+            "mrr_full": 1,
+            "expected_retrieval_k0": false,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": false
+          }
+        },
+        "first_failure_family": "GRADE_GE_2_EVIDENCE_AT_RANK_1",
+        "top20": [
+          {
+            "material_id": "a5510db7-bb22-46e3-aa7f-13b77f1206a6",
+            "material_logical_identity": {
+              "com_id": "COM-13",
+              "original_name": "COM-13_Synthetic政企案例_城市事件协同平台.md",
+              "source_file": "COM-13_Synthetic政企案例_城市事件协同平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-78E4EA708EBC05B9E2731B7736CF9B2E",
+            "chunk_hash": "599301a3312c6cda42f0d6ffc1a20c759915ad29da4a9843a6f4e131395eaaaa",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-78E4EA708EBC05B9E2731B7736CF9B2E:FULL",
+            "exact_candidate_source_text": "某虚构市级事件协同平台，包含受理、派单、处置、督办、统计、地图和部门接口。",
+            "similarity": 0.61731906631,
+            "gold_grade": 2,
+            "gold_item_ids": [
+              "HOLD-JY051-ITEM-01"
+            ],
+            "rank": 1
+          },
+          {
+            "material_id": "a5510db7-bb22-46e3-aa7f-13b77f1206a6",
+            "material_logical_identity": {
+              "com_id": "COM-13",
+              "original_name": "COM-13_Synthetic政企案例_城市事件协同平台.md",
+              "source_file": "COM-13_Synthetic政企案例_城市事件协同平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-890687AB8C9ED31230E628F9D2C2E196",
+            "chunk_hash": "00f80f3fc7b51f9a86ace01a09814814f5ce94892afcd31986d6bcfdae3280f5",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-890687AB8C9ED31230E628F9D2C2E196:FULL",
+            "exact_candidate_source_text": "# Synthetic政企案例：城市事件协同平台",
+            "similarity": 0.564313674349,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 2
+          },
+          {
+            "material_id": "4ba1c701-7c4f-415b-9186-28b25c4472ce",
+            "material_logical_identity": {
+              "com_id": "COM-08",
+              "original_name": "COM-08_备份恢复与容灾演练记录.md",
+              "source_file": "COM-08_备份恢复与容灾演练记录.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-564EF1FEECD2103E30534797B2861D50",
+            "chunk_hash": "924cb6e8052e539f6dfb8718d2665d89bcedf6e90c015fbf087f36408eb65d41",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-564EF1FEECD2103E30534797B2861D50:FULL",
+            "exact_candidate_source_text": "## 演练",
+            "similarity": 0.425393252492,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 3
+          },
+          {
+            "material_id": "7dc70fee-13e0-4b7d-b95f-202665c241d0",
+            "material_logical_identity": {
+              "com_id": "COM-02",
+              "original_name": "COM-02_产品平台能力说明.md",
+              "source_file": "COM-02_产品平台能力说明.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-AF65DB60327B026A2B66255423ECA6D2",
+            "chunk_hash": "8cc3c2d95fe26cbeaa7cdedde503dacd796f670ae22cd8d7b5ab6fa79eb5af22",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-AF65DB60327B026A2B66255423ECA6D2:FULL",
+            "exact_candidate_source_text": "# 产品平台能力说明",
+            "similarity": 0.420619083123,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 4
+          },
+          {
+            "material_id": "04738608-0aa8-4e12-b37b-fc5084e0428b",
+            "material_logical_identity": {
+              "com_id": "COM-14",
+              "original_name": "COM-14_Synthetic医疗案例_医院接口与数据平台.md",
+              "source_file": "COM-14_Synthetic医疗案例_医院接口与数据平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-38B77798F64FB62682CAF795D502D53D",
+            "chunk_hash": "4027b4bb423477908597e8286a68c13ed6bc7baf21e74cdbb7a28ea71edce2d1",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-38B77798F64FB62682CAF795D502D53D:FULL",
+            "exact_candidate_source_text": "# Synthetic医疗案例：医院接口与数据平台",
+            "similarity": 0.419712490352,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 5
+          },
+          {
+            "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+            "material_logical_identity": {
+              "com_id": "COM-04",
+              "original_name": "COM-04_API与系统集成能力报告.md",
+              "source_file": "COM-04_API与系统集成能力报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-99497AE6286B2BAC390E35611FEE3A8A",
+            "chunk_hash": "368d8deb15ff8ff690f09b33dfbd503c66410c5dc4be8e8916e3c7e09f189a9e",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-99497AE6286B2BAC390E35611FEE3A8A:FULL",
+            "exact_candidate_source_text": "不代表已对接任何真实政务或医院系统。",
+            "similarity": 0.41680837747,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 6
+          },
+          {
+            "material_id": "04738608-0aa8-4e12-b37b-fc5084e0428b",
+            "material_logical_identity": {
+              "com_id": "COM-14",
+              "original_name": "COM-14_Synthetic医疗案例_医院接口与数据平台.md",
+              "source_file": "COM-14_Synthetic医疗案例_医院接口与数据平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-9BD85ED0A87D7C6B058D4EE89A4A1303",
+            "chunk_hash": "4e8149a2c87768925e70c0a6307836b6c82f707d0062dcb19d642dfc3b51f81b",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-9BD85ED0A87D7C6B058D4EE89A4A1303:FULL",
+            "exact_candidate_source_text": "某虚构三级医院接口与数据平台，包含接口治理、患者主索引、历史迁移、联调和试运行。",
+            "similarity": 0.405226003777,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 7
+          },
+          {
+            "material_id": "04738608-0aa8-4e12-b37b-fc5084e0428b",
+            "material_logical_identity": {
+              "com_id": "COM-14",
+              "original_name": "COM-14_Synthetic医疗案例_医院接口与数据平台.md",
+              "source_file": "COM-14_Synthetic医疗案例_医院接口与数据平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-5206328872C2D6702A96C1DED4A76BB1",
+            "chunk_hash": "8aced249764480f00a86c6bc03cf90677f37d9034a19b7c7f7815d477507efd5",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-5206328872C2D6702A96C1DED4A76BB1:FULL",
+            "exact_candidate_source_text": "## 案例",
+            "similarity": 0.391240007024,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 8
+          },
+          {
+            "material_id": "a5510db7-bb22-46e3-aa7f-13b77f1206a6",
+            "material_logical_identity": {
+              "com_id": "COM-13",
+              "original_name": "COM-13_Synthetic政企案例_城市事件协同平台.md",
+              "source_file": "COM-13_Synthetic政企案例_城市事件协同平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-B6C5012AB485B7FF9E67AE65347FA518",
+            "chunk_hash": "8aced249764480f00a86c6bc03cf90677f37d9034a19b7c7f7815d477507efd5",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-B6C5012AB485B7FF9E67AE65347FA518:FULL",
+            "exact_candidate_source_text": "## 案例",
+            "similarity": 0.391240007024,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 9
+          },
+          {
+            "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+            "material_logical_identity": {
+              "com_id": "COM-04",
+              "original_name": "COM-04_API与系统集成能力报告.md",
+              "source_file": "COM-04_API与系统集成能力报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-FB52222056B272025DB89E56558E3B76",
+            "chunk_hash": "22a93631846f434ad9cd38133e52917cb375d0a335bd81d3ff10e409e2a49907",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-FB52222056B272025DB89E56558E3B76:FULL",
+            "exact_candidate_source_text": "## 接口",
+            "similarity": 0.385539404303,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 10
+          },
+          {
+            "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+            "material_logical_identity": {
+              "com_id": "COM-04",
+              "original_name": "COM-04_API与系统集成能力报告.md",
+              "source_file": "COM-04_API与系统集成能力报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-9CF8507336652AD1E8F7FAC7BDF421F2",
+            "chunk_hash": "0622f542813fdeb1f248488e6163c23dc5ccd6c76ee1fdcf8d47404feab2759f",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-9CF8507336652AD1E8F7FAC7BDF421F2:FULL",
+            "exact_candidate_source_text": "- **OFF-U03｜政务数据共享条例**｜国务院｜状态 `CURRENT_CONFIRMED`｜实施 `2025-08-01`｜最后核验 `2026-08-31`｜https://www.stats.gov.cn/gk/tjfg/xgfxfg/202506/t20250609_1960124.html",
+            "similarity": 0.380369413867,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 11
+          },
+          {
+            "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+            "material_logical_identity": {
+              "com_id": "COM-04",
+              "original_name": "COM-04_API与系统集成能力报告.md",
+              "source_file": "COM-04_API与系统集成能力报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-EE13BCB24F6A977A2B054A4FB85DE7B4",
+            "chunk_hash": "22ef906b89005ebb7006adc02fbd456e742f20ef21ca023be0e57ce0fdb4b4ba",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-EE13BCB24F6A977A2B054A4FB85DE7B4:FULL",
+            "exact_candidate_source_text": "# API与系统集成能力报告",
+            "similarity": 0.378435294859,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 12
+          },
+          {
+            "material_id": "42debef7-084f-471c-8fa5-1f9dcbf4c2f7",
+            "material_logical_identity": {
+              "com_id": "COM-07",
+              "original_name": "COM-07_性能与容量测试报告.md",
+              "source_file": "COM-07_性能与容量测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-DF096836654818BBD4DF11A39ED29B5D",
+            "chunk_hash": "833ba3680a9ef71d10114e5bb3ad36ddd7bf0bd07793a95662ef46d6327e1e82",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-DF096836654818BBD4DF11A39ED29B5D:FULL",
+            "exact_candidate_source_text": "## 环境",
+            "similarity": 0.375863443079,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 13
+          },
+          {
+            "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+            "material_logical_identity": {
+              "com_id": "COM-04",
+              "original_name": "COM-04_API与系统集成能力报告.md",
+              "source_file": "COM-04_API与系统集成能力报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-12DA2A7EF1D137EFB87E1170768F9B31",
+            "chunk_hash": "1418aef8779aa9ccbf2439ec35979c64cdaa005bbc4458933e8ac9cba516edb3",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-12DA2A7EF1D137EFB87E1170768F9B31:FULL",
+            "exact_candidate_source_text": "## 边界",
+            "similarity": 0.37248939611,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 14
+          },
+          {
+            "material_id": "3ec066d3-679a-4232-ba6d-364038658c81",
+            "material_logical_identity": {
+              "com_id": "COM-06",
+              "original_name": "COM-06_权限、安全与审计测试报告.md",
+              "source_file": "COM-06_权限_安全与审计测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-DC5EFA1A85827ED4FD45615F8BAFAA31",
+            "chunk_hash": "1418aef8779aa9ccbf2439ec35979c64cdaa005bbc4458933e8ac9cba516edb3",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-DC5EFA1A85827ED4FD45615F8BAFAA31:FULL",
+            "exact_candidate_source_text": "## 边界",
+            "similarity": 0.37248939611,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 15
+          },
+          {
+            "material_id": "4ba1c701-7c4f-415b-9186-28b25c4472ce",
+            "material_logical_identity": {
+              "com_id": "COM-08",
+              "original_name": "COM-08_备份恢复与容灾演练记录.md",
+              "source_file": "COM-08_备份恢复与容灾演练记录.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-86B6338331A1A56937F90A6D3237E2F6",
+            "chunk_hash": "1418aef8779aa9ccbf2439ec35979c64cdaa005bbc4458933e8ac9cba516edb3",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-86B6338331A1A56937F90A6D3237E2F6:FULL",
+            "exact_candidate_source_text": "## 边界",
+            "similarity": 0.37248939611,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 16
+          },
+          {
+            "material_id": "e39ce20c-b73c-4cd2-a965-d8fbad6775e2",
+            "material_logical_identity": {
+              "com_id": "COM-15",
+              "original_name": "COM-15_Synthetic资质_知识产权与授权索引.md",
+              "source_file": "COM-15_Synthetic资质_知识产权与授权索引.md"
+            },
+            "material_type": "qualification",
+            "chunk_id": "MCH-171940189D3FF4D8F723AA3AC8963A5E",
+            "chunk_hash": "1418aef8779aa9ccbf2439ec35979c64cdaa005bbc4458933e8ac9cba516edb3",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-171940189D3FF4D8F723AA3AC8963A5E:FULL",
+            "exact_candidate_source_text": "## 边界",
+            "similarity": 0.37248939611,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 17
+          },
+          {
+            "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+            "material_logical_identity": {
+              "com_id": "COM-04",
+              "original_name": "COM-04_API与系统集成能力报告.md",
+              "source_file": "COM-04_API与系统集成能力报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-0663AA700C01FD958515713C21CF5F5E",
+            "chunk_hash": "4cfeecd92d540c0bb407ae32151d79e6eb9c95c17ff5c8f7fc47ec44a194659a",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-0663AA700C01FD958515713C21CF5F5E:FULL",
+            "exact_candidate_source_text": "支持REST API、Webhook和批量文件交换；2026-07-12完成12个模拟接口联调。",
+            "similarity": 0.363168843504,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 18
+          },
+          {
+            "material_id": "3ec066d3-679a-4232-ba6d-364038658c81",
+            "material_logical_identity": {
+              "com_id": "COM-06",
+              "original_name": "COM-06_权限、安全与审计测试报告.md",
+              "source_file": "COM-06_权限_安全与审计测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-3EAF2AF1DE8911F888699505E1BEE833",
+            "chunk_hash": "7b9fc215b23c8d3769e63835c244bd6dfe12fc8b388119cc280591ed4e66a054",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-3EAF2AF1DE8911F888699505E1BEE833:FULL",
+            "exact_candidate_source_text": "## 测试",
+            "similarity": 0.359731095381,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 19
+          },
+          {
+            "material_id": "a5510db7-bb22-46e3-aa7f-13b77f1206a6",
+            "material_logical_identity": {
+              "com_id": "COM-13",
+              "original_name": "COM-13_Synthetic政企案例_城市事件协同平台.md",
+              "source_file": "COM-13_Synthetic政企案例_城市事件协同平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-71BD40EFE44793D40F2C01BF6AEF5438",
+            "chunk_hash": "48abdcb690261165e94aee22c5d00ea79cd402a8d17ed094cba44ed19bba73e2",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-71BD40EFE44793D40F2C01BF6AEF5438:FULL",
+            "exact_candidate_source_text": "- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n- **OFF-U03｜政务数据共享条例**｜国务院｜状态 `CURRENT_CONFIRMED`｜实施 `2025-08-01`｜最后核验 `2026-08-31`｜https://www.stats.gov.cn/gk/tjfg/xgfxfg/202506/t20250609_1960124.html",
+            "similarity": 0.354374373601,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 20
+          }
+        ]
+      },
+      {
+        "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+        "requirement_id": "TB-003:REQ-119",
+        "canonical_requirement_text": "可靠性要求：平台应提供适当的容错和备份恢复功能，确保系统的可靠运行。保证在高并发的情况下有高效的性能，保证用户使用。平台具有广泛的兼容性，保证用户的使用体验。",
+        "case_class": "PARTIAL",
+        "frozen_gold_profile_class": "PERFORMANCE",
+        "evidence_need_profile": {
+          "class": "PERFORMANCE",
+          "required_dimensions": [
+            "subject",
+            "scope"
+          ],
+          "conditional_dimensions": [],
+          "search_signals": [
+            "PERFORMANCE"
+          ],
+          "critical_literals": [],
+          "profile_hash": "8e3971837f61f0d9062b986a54129c0a22769a8a35a9153bac90c9a00daf9fc0"
+        },
+        "query_text": "可靠性要求：平台应提供适当的容错和备份恢复功能，确保系统的可靠运行。保证在高并发的情况下有高效的性能，保证用户使用。平台具有广泛的兼容性，保证用户的使用体验。",
+        "query_hash": "c84c1275817dab37b80eb9304fc7a2cf5e21d8bef9045169abd9b874126892b7",
+        "expected_retrieval_k0": false,
+        "expected_no_sufficient_evidence": true,
+        "query_vector_present": true,
+        "raw_candidate_count": 94,
+        "metrics": {
+          "1": {
+            "evidence_atom_recall": 0,
+            "candidate_precision": 0,
+            "ndcg": 0,
+            "mrr_full": 0.037037037037,
+            "expected_retrieval_k0": false,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": true
+          },
+          "3": {
+            "evidence_atom_recall": 0,
+            "candidate_precision": 0,
+            "ndcg": 0,
+            "mrr_full": 0.037037037037,
+            "expected_retrieval_k0": false,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": true
+          },
+          "5": {
+            "evidence_atom_recall": 0,
+            "candidate_precision": 0,
+            "ndcg": 0,
+            "mrr_full": 0.037037037037,
+            "expected_retrieval_k0": false,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": true
+          },
+          "8": {
+            "evidence_atom_recall": 0,
+            "candidate_precision": 0,
+            "ndcg": 0,
+            "mrr_full": 0.037037037037,
+            "expected_retrieval_k0": false,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": true
+          },
+          "20": {
+            "evidence_atom_recall": 0,
+            "candidate_precision": 0,
+            "ndcg": 0,
+            "mrr_full": 0.037037037037,
+            "expected_retrieval_k0": false,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": true
+          }
+        },
+        "first_failure_family": "RETRIEVAL_MISS_OR_RELEVANT_ONLY",
+        "top20": [
+          {
+            "material_id": "7dc70fee-13e0-4b7d-b95f-202665c241d0",
+            "material_logical_identity": {
+              "com_id": "COM-02",
+              "original_name": "COM-02_产品平台能力说明.md",
+              "source_file": "COM-02_产品平台能力说明.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-AF65DB60327B026A2B66255423ECA6D2",
+            "chunk_hash": "8cc3c2d95fe26cbeaa7cdedde503dacd796f670ae22cd8d7b5ab6fa79eb5af22",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-AF65DB60327B026A2B66255423ECA6D2:FULL",
+            "exact_candidate_source_text": "# 产品平台能力说明",
+            "similarity": 0.564081111148,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 1
+          },
+          {
+            "material_id": "04738608-0aa8-4e12-b37b-fc5084e0428b",
+            "material_logical_identity": {
+              "com_id": "COM-14",
+              "original_name": "COM-14_Synthetic医疗案例_医院接口与数据平台.md",
+              "source_file": "COM-14_Synthetic医疗案例_医院接口与数据平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-9BD85ED0A87D7C6B058D4EE89A4A1303",
+            "chunk_hash": "4e8149a2c87768925e70c0a6307836b6c82f707d0062dcb19d642dfc3b51f81b",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-9BD85ED0A87D7C6B058D4EE89A4A1303:FULL",
+            "exact_candidate_source_text": "某虚构三级医院接口与数据平台，包含接口治理、患者主索引、历史迁移、联调和试运行。",
+            "similarity": 0.517085961636,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 2
+          },
+          {
+            "material_id": "a5510db7-bb22-46e3-aa7f-13b77f1206a6",
+            "material_logical_identity": {
+              "com_id": "COM-13",
+              "original_name": "COM-13_Synthetic政企案例_城市事件协同平台.md",
+              "source_file": "COM-13_Synthetic政企案例_城市事件协同平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-78E4EA708EBC05B9E2731B7736CF9B2E",
+            "chunk_hash": "599301a3312c6cda42f0d6ffc1a20c759915ad29da4a9843a6f4e131395eaaaa",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-78E4EA708EBC05B9E2731B7736CF9B2E:FULL",
+            "exact_candidate_source_text": "某虚构市级事件协同平台，包含受理、派单、处置、督办、统计、地图和部门接口。",
+            "similarity": 0.505875710533,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 3
+          },
+          {
+            "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+            "material_logical_identity": {
+              "com_id": "COM-04",
+              "original_name": "COM-04_API与系统集成能力报告.md",
+              "source_file": "COM-04_API与系统集成能力报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-EE13BCB24F6A977A2B054A4FB85DE7B4",
+            "chunk_hash": "22ef906b89005ebb7006adc02fbd456e742f20ef21ca023be0e57ce0fdb4b4ba",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-EE13BCB24F6A977A2B054A4FB85DE7B4:FULL",
+            "exact_candidate_source_text": "# API与系统集成能力报告",
+            "similarity": 0.468170911817,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 4
+          },
+          {
+            "material_id": "4ba1c701-7c4f-415b-9186-28b25c4472ce",
+            "material_logical_identity": {
+              "com_id": "COM-08",
+              "original_name": "COM-08_备份恢复与容灾演练记录.md",
+              "source_file": "COM-08_备份恢复与容灾演练记录.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-06BA7B4AA35AE9E3B89097C7EA4CD3EF",
+            "chunk_hash": "63fa0d744ce6f12fbfdb53724c0e36ab3cc3c338da6dacb84e9d8d44258e7569",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-06BA7B4AA35AE9E3B89097C7EA4CD3EF:FULL",
+            "exact_candidate_source_text": "未形成真实客户RTO/RPO或可用率承诺。",
+            "similarity": 0.467515903796,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 5
+          },
+          {
+            "material_id": "3ec066d3-679a-4232-ba6d-364038658c81",
+            "material_logical_identity": {
+              "com_id": "COM-06",
+              "original_name": "COM-06_权限、安全与审计测试报告.md",
+              "source_file": "COM-06_权限_安全与审计测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-48BA8BF36C74047C6F344C134357DA37",
+            "chunk_hash": "fe84a35f3f8176e51790c0a26933b7e8bca5bf77499841b07d645485b1779066",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-48BA8BF36C74047C6F344C134357DA37:FULL",
+            "exact_candidate_source_text": "不代表通过等保、密评或第三方认证。",
+            "similarity": 0.463972165265,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 6
+          },
+          {
+            "material_id": "4ba1c701-7c4f-415b-9186-28b25c4472ce",
+            "material_logical_identity": {
+              "com_id": "COM-08",
+              "original_name": "COM-08_备份恢复与容灾演练记录.md",
+              "source_file": "COM-08_备份恢复与容灾演练记录.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-2C504155D5C0E36380C02CD11962B632",
+            "chunk_hash": "1036a0c983265a4f9a8bc8c1db7488cd04994f98c1cc792563ebc139899f969e",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-2C504155D5C0E36380C02CD11962B632:FULL",
+            "exact_candidate_source_text": "# 备份恢复与容灾演练记录",
+            "similarity": 0.462860317369,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 7
+          },
+          {
+            "material_id": "04738608-0aa8-4e12-b37b-fc5084e0428b",
+            "material_logical_identity": {
+              "com_id": "COM-14",
+              "original_name": "COM-14_Synthetic医疗案例_医院接口与数据平台.md",
+              "source_file": "COM-14_Synthetic医疗案例_医院接口与数据平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-38B77798F64FB62682CAF795D502D53D",
+            "chunk_hash": "4027b4bb423477908597e8286a68c13ed6bc7baf21e74cdbb7a28ea71edce2d1",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-38B77798F64FB62682CAF795D502D53D:FULL",
+            "exact_candidate_source_text": "# Synthetic医疗案例：医院接口与数据平台",
+            "similarity": 0.461711573861,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 8
+          },
+          {
+            "material_id": "42debef7-084f-471c-8fa5-1f9dcbf4c2f7",
+            "material_logical_identity": {
+              "com_id": "COM-07",
+              "original_name": "COM-07_性能与容量测试报告.md",
+              "source_file": "COM-07_性能与容量测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-027908729B88CC25ECD8D921A18682E9",
+            "chunk_hash": "d4b5cdfb5102e49f82ba62b89d657e721e4069d45198057f27e9a74c374bd48e",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-027908729B88CC25ECD8D921A18682E9:FULL",
+            "exact_candidate_source_text": "# 性能与容量测试报告",
+            "similarity": 0.439829109044,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 9
+          },
+          {
+            "material_id": "3ec066d3-679a-4232-ba6d-364038658c81",
+            "material_logical_identity": {
+              "com_id": "COM-06",
+              "original_name": "COM-06_权限、安全与审计测试报告.md",
+              "source_file": "COM-06_权限_安全与审计测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-830217C1CE1806D87047FB5ABBBBFC9E",
+            "chunk_hash": "a7a61cb8330a641592f2df7aba95e2e1553ad0b298d8f40634b20ccac4008ae3",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-830217C1CE1806D87047FB5ABBBBFC9E:FULL",
+            "exact_candidate_source_text": "# 权限、安全与审计测试报告",
+            "similarity": 0.439657419511,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 10
+          },
+          {
+            "material_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd",
+            "material_logical_identity": {
+              "com_id": "COM-03",
+              "original_name": "COM-03_技术架构与部署适配报告.md",
+              "source_file": "COM-03_技术架构与部署适配报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-B39BE48830FFE2F9798289F8E74276EA",
+            "chunk_hash": "5efd8a1f7995e16e2220a9486911647f1885fa7887b0fb1f010108d58fd175e7",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-B39BE48830FFE2F9798289F8E74276EA:FULL",
+            "exact_candidate_source_text": "# 技术架构与部署适配报告",
+            "similarity": 0.433560799505,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 11
+          },
+          {
+            "material_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd",
+            "material_logical_identity": {
+              "com_id": "COM-03",
+              "original_name": "COM-03_技术架构与部署适配报告.md",
+              "source_file": "COM-03_技术架构与部署适配报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-653922163892C4D2607119A7FD0151C0",
+            "chunk_hash": "2b1b4b913531b032cbc58a0b97bae3eb467c05c3379cd20bba542ba58615a88a",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-653922163892C4D2607119A7FD0151C0:FULL",
+            "exact_candidate_source_text": "Web前端、API服务、关系数据库、对象存储、缓存和消息队列。",
+            "similarity": 0.432390891827,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 12
+          },
+          {
+            "material_id": "7dc70fee-13e0-4b7d-b95f-202665c241d0",
+            "material_logical_identity": {
+              "com_id": "COM-02",
+              "original_name": "COM-02_产品平台能力说明.md",
+              "source_file": "COM-02_产品平台能力说明.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-DB2E8A791703B57F03ADB7C6477BD59D",
+            "chunk_hash": "8b5cb8500e4f6d50e1dd6f548d18c607f1ce5aa8aad1cfb1ac759cfe0ed2a8a1",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-DB2E8A791703B57F03ADB7C6477BD59D:FULL",
+            "exact_candidate_source_text": "测试版本v3.2，发布日期2026-06-15；版本变化后需重新核验能力。",
+            "similarity": 0.429743994277,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 13
+          },
+          {
+            "material_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd",
+            "material_logical_identity": {
+              "com_id": "COM-03",
+              "original_name": "COM-03_技术架构与部署适配报告.md",
+              "source_file": "COM-03_技术架构与部署适配报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-90273C2E8DD579484D1CA7EEE503EECC",
+            "chunk_hash": "6150d900a0920ce9aa6ad399b25ffe34711fb87880ecb8eeb8b6b4d0ee649aff",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-90273C2E8DD579484D1CA7EEE503EECC:FULL",
+            "exact_candidate_source_text": "## 架构",
+            "similarity": 0.42409814772,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 14
+          },
+          {
+            "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+            "material_logical_identity": {
+              "com_id": "COM-04",
+              "original_name": "COM-04_API与系统集成能力报告.md",
+              "source_file": "COM-04_API与系统集成能力报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-99497AE6286B2BAC390E35611FEE3A8A",
+            "chunk_hash": "368d8deb15ff8ff690f09b33dfbd503c66410c5dc4be8e8916e3c7e09f189a9e",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-99497AE6286B2BAC390E35611FEE3A8A:FULL",
+            "exact_candidate_source_text": "不代表已对接任何真实政务或医院系统。",
+            "similarity": 0.420350555575,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 15
+          },
+          {
+            "material_id": "a5510db7-bb22-46e3-aa7f-13b77f1206a6",
+            "material_logical_identity": {
+              "com_id": "COM-13",
+              "original_name": "COM-13_Synthetic政企案例_城市事件协同平台.md",
+              "source_file": "COM-13_Synthetic政企案例_城市事件协同平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-890687AB8C9ED31230E628F9D2C2E196",
+            "chunk_hash": "00f80f3fc7b51f9a86ace01a09814814f5ce94892afcd31986d6bcfdae3280f5",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-890687AB8C9ED31230E628F9D2C2E196:FULL",
+            "exact_candidate_source_text": "# Synthetic政企案例：城市事件协同平台",
+            "similarity": 0.4179307493,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 16
+          },
+          {
+            "material_id": "04738608-0aa8-4e12-b37b-fc5084e0428b",
+            "material_logical_identity": {
+              "com_id": "COM-14",
+              "original_name": "COM-14_Synthetic医疗案例_医院接口与数据平台.md",
+              "source_file": "COM-14_Synthetic医疗案例_医院接口与数据平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-8586CCE96C74420D56F2FFD591E3084F",
+            "chunk_hash": "7bec5c2dcf9767d9252ed01a77d1a24b8c322d78bcda1facc903627acea01225",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-8586CCE96C74420D56F2FFD591E3084F:FULL",
+            "exact_candidate_source_text": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "similarity": 0.416482402933,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 17
+          },
+          {
+            "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+            "material_logical_identity": {
+              "com_id": "COM-04",
+              "original_name": "COM-04_API与系统集成能力报告.md",
+              "source_file": "COM-04_API与系统集成能力报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-963DB5E23E18716684C5726572029882",
+            "chunk_hash": "7bec5c2dcf9767d9252ed01a77d1a24b8c322d78bcda1facc903627acea01225",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-963DB5E23E18716684C5726572029882:FULL",
+            "exact_candidate_source_text": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "similarity": 0.416482402933,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 18
+          },
+          {
+            "material_id": "3ec066d3-679a-4232-ba6d-364038658c81",
+            "material_logical_identity": {
+              "com_id": "COM-06",
+              "original_name": "COM-06_权限、安全与审计测试报告.md",
+              "source_file": "COM-06_权限_安全与审计测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-54AFCEC0497565624990733061741986",
+            "chunk_hash": "7bec5c2dcf9767d9252ed01a77d1a24b8c322d78bcda1facc903627acea01225",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-54AFCEC0497565624990733061741986:FULL",
+            "exact_candidate_source_text": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "similarity": 0.416482402933,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 19
+          },
+          {
+            "material_id": "42debef7-084f-471c-8fa5-1f9dcbf4c2f7",
+            "material_logical_identity": {
+              "com_id": "COM-07",
+              "original_name": "COM-07_性能与容量测试报告.md",
+              "source_file": "COM-07_性能与容量测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-47C67ADB60E04D88D052C17AB0857D91",
+            "chunk_hash": "7bec5c2dcf9767d9252ed01a77d1a24b8c322d78bcda1facc903627acea01225",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-47C67ADB60E04D88D052C17AB0857D91:FULL",
+            "exact_candidate_source_text": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "similarity": 0.416482402933,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 20
+          }
+        ]
+      },
+      {
+        "case_id": "RAG-P0-HOLD-TB-003-REQ-170",
+        "requirement_id": "TB-003:REQ-170",
+        "canonical_requirement_text": "国产数据库需满足以下需求：(1)具备数据存储、访问控制、身份鉴别、安全审计和数据备份恢复等功能；(2)支持国产化操作系统；(3)满足所有应用系统国产化改造需求；(4)支持同时创建并运行≥20个独立数据库，每个库可独立配置资源配额；(5)提供3年维护期内符合系统需求的免费升级服务。",
+        "case_class": "PARTIAL",
+        "frozen_gold_profile_class": "QUALIFICATION",
+        "evidence_need_profile": {
+          "class": "SERVICE_CAPABILITY",
+          "required_dimensions": [
+            "subject",
+            "scope",
+            "quantity"
+          ],
+          "conditional_dimensions": [],
+          "search_signals": [
+            "1",
+            "2",
+            "20个",
+            "3",
+            "3年",
+            "4",
+            "5",
+            "SERVICE_CAPABILITY"
+          ],
+          "critical_literals": [
+            "1",
+            "2",
+            "20个",
+            "3",
+            "3年",
+            "4",
+            "5"
+          ],
+          "profile_hash": "a1a84003a0e2026205054f59f6b3f7d20356e5edf4d45bc5cb9e1b63c3031835"
+        },
+        "query_text": "国产数据库需满足以下需求：(1)具备数据存储、访问控制、身份鉴别、安全审计和数据备份恢复等功能；(2)支持国产化操作系统；(3)满足所有应用系统国产化改造需求；(4)支持同时创建并运行≥20个独立数据库，每个库可独立配置资源配额；(5)提供3年维护期内符合系统需求的免费升级服务。",
+        "query_hash": "c9201ba8c20da08b71197f89755b2cfaa2a36b070f2279937d969f62e5de7812",
+        "expected_retrieval_k0": false,
+        "expected_no_sufficient_evidence": true,
+        "query_vector_present": true,
+        "raw_candidate_count": 94,
+        "metrics": {
+          "1": {
+            "evidence_atom_recall": 0,
+            "candidate_precision": 0,
+            "ndcg": 0,
+            "mrr_full": 0.5,
+            "expected_retrieval_k0": false,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": true
+          },
+          "3": {
+            "evidence_atom_recall": 1,
+            "candidate_precision": 0.333333333333,
+            "ndcg": 0.386852807235,
+            "mrr_full": 0.5,
+            "expected_retrieval_k0": false,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": false
+          },
+          "5": {
+            "evidence_atom_recall": 1,
+            "candidate_precision": 0.2,
+            "ndcg": 0.386852807235,
+            "mrr_full": 0.5,
+            "expected_retrieval_k0": false,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": false
+          },
+          "8": {
+            "evidence_atom_recall": 1,
+            "candidate_precision": 0.125,
+            "ndcg": 0.386852807235,
+            "mrr_full": 0.5,
+            "expected_retrieval_k0": false,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": false
+          },
+          "20": {
+            "evidence_atom_recall": 1,
+            "candidate_precision": 0.05,
+            "ndcg": 0.386852807235,
+            "mrr_full": 0.5,
+            "expected_retrieval_k0": false,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": false
+          }
+        },
+        "first_failure_family": "LOW_RANK_GRADE_GE_2_EVIDENCE",
+        "top20": [
+          {
+            "material_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd",
+            "material_logical_identity": {
+              "com_id": "COM-03",
+              "original_name": "COM-03_技术架构与部署适配报告.md",
+              "source_file": "COM-03_技术架构与部署适配报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-BEB81A1EE2C55E0DEC03943613B233BF",
+            "chunk_hash": "20cade208f0832c46d69462f24059a547aa14d6c07269723faeed0b8257592cc",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-BEB81A1EE2C55E0DEC03943613B233BF:FULL",
+            "exact_candidate_source_text": "- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n- **OFF-U12｜数据库政府采购需求标准（2023年版）**｜财政部、工业和信息化部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2023-12-16`｜最后核验 `2026-08-31`｜https://m.mof.gov.cn/zcfb/202312/t20231226_3924124.htm\n- **OFF-U13｜操作系统政府采购需求标准（2023年版）**｜财政部、工业和信息化部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2023-12-16`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/jrttts/202312/t20231226_3924138.htm",
+            "similarity": 0.592825662043,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 1
+          },
+          {
+            "material_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd",
+            "material_logical_identity": {
+              "com_id": "COM-03",
+              "original_name": "COM-03_技术架构与部署适配报告.md",
+              "source_file": "COM-03_技术架构与部署适配报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-AA94BB7D153A30F95E869D78DC45A0E5",
+            "chunk_hash": "43940169890ecd25f53c7292ad30195c8e1c2b62fa681a23830db7a1c5242802",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-AA94BB7D153A30F95E869D78DC45A0E5:FULL",
+            "exact_candidate_source_text": "Synthetic记录：Linux x86_64、某国产Linux测试环境、PostgreSQL兼容数据库完成安装与核心功能验证；未列版本不得推断。",
+            "similarity": 0.571409869993,
+            "gold_grade": 2,
+            "gold_item_ids": [
+              "HOLD-TB170-ITEM-01"
+            ],
+            "rank": 2
+          },
+          {
+            "material_id": "3ec066d3-679a-4232-ba6d-364038658c81",
+            "material_logical_identity": {
+              "com_id": "COM-06",
+              "original_name": "COM-06_权限、安全与审计测试报告.md",
+              "source_file": "COM-06_权限_安全与审计测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-FE0AD69A95643C6E508A4F7E5147D0D3",
+            "chunk_hash": "8172afa05be1a2a8801c023b948d6673b68de1cb1414ac008e42d1afa7db4e5e",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-FE0AD69A95643C6E508A4F7E5147D0D3:FULL",
+            "exact_candidate_source_text": "2026-08-01对v3.2测试环境执行账号、角色、最小权限、登录审计、关键操作和数据导出审计。",
+            "similarity": 0.470314993787,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 3
+          },
+          {
+            "material_id": "04738608-0aa8-4e12-b37b-fc5084e0428b",
+            "material_logical_identity": {
+              "com_id": "COM-14",
+              "original_name": "COM-14_Synthetic医疗案例_医院接口与数据平台.md",
+              "source_file": "COM-14_Synthetic医疗案例_医院接口与数据平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-9BD85ED0A87D7C6B058D4EE89A4A1303",
+            "chunk_hash": "4e8149a2c87768925e70c0a6307836b6c82f707d0062dcb19d642dfc3b51f81b",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-9BD85ED0A87D7C6B058D4EE89A4A1303:FULL",
+            "exact_candidate_source_text": "某虚构三级医院接口与数据平台，包含接口治理、患者主索引、历史迁移、联调和试运行。",
+            "similarity": 0.467817578617,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 4
+          },
+          {
+            "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+            "material_logical_identity": {
+              "com_id": "COM-04",
+              "original_name": "COM-04_API与系统集成能力报告.md",
+              "source_file": "COM-04_API与系统集成能力报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-9CF8507336652AD1E8F7FAC7BDF421F2",
+            "chunk_hash": "0622f542813fdeb1f248488e6163c23dc5ccd6c76ee1fdcf8d47404feab2759f",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-9CF8507336652AD1E8F7FAC7BDF421F2:FULL",
+            "exact_candidate_source_text": "- **OFF-U03｜政务数据共享条例**｜国务院｜状态 `CURRENT_CONFIRMED`｜实施 `2025-08-01`｜最后核验 `2026-08-31`｜https://www.stats.gov.cn/gk/tjfg/xgfxfg/202506/t20250609_1960124.html",
+            "similarity": 0.454787504661,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 5
+          },
+          {
+            "material_id": "7dc70fee-13e0-4b7d-b95f-202665c241d0",
+            "material_logical_identity": {
+              "com_id": "COM-02",
+              "original_name": "COM-02_产品平台能力说明.md",
+              "source_file": "COM-02_产品平台能力说明.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-7C9BBDDBC1AEA2EFDCFC785EC62079DC",
+            "chunk_hash": "1b6e6b0a9c4f4cc7e6dd406dc46bbeb91edb6302f9155410c98ee58f80e1d4fc",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-7C9BBDDBC1AEA2EFDCFC785EC62079DC:FULL",
+            "exact_candidate_source_text": "- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U04｜网络数据安全管理条例**｜国务院｜状态 `CURRENT_CONFIRMED`｜实施 `2025-01-01`｜最后核验 `2026-08-31`｜https://app.www.gov.cn/govdata/gov/202409/30/520076/article.html",
+            "similarity": 0.452454739619,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 6
+          },
+          {
+            "material_id": "e39ce20c-b73c-4cd2-a965-d8fbad6775e2",
+            "material_logical_identity": {
+              "com_id": "COM-15",
+              "original_name": "COM-15_Synthetic资质_知识产权与授权索引.md",
+              "source_file": "COM-15_Synthetic资质_知识产权与授权索引.md"
+            },
+            "material_type": "qualification",
+            "chunk_id": "MCH-D8CB31B13256257CFB2B45937D64FA93",
+            "chunk_hash": "7d6704bdce8a8b181c375feb18a112d930151fa04fb46e7d9a0b4abdc6a279ef",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-D8CB31B13256257CFB2B45937D64FA93:FULL",
+            "exact_candidate_source_text": "所有编号仅测试时效和字段结构。",
+            "similarity": 0.448538452146,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 7
+          },
+          {
+            "material_id": "a5510db7-bb22-46e3-aa7f-13b77f1206a6",
+            "material_logical_identity": {
+              "com_id": "COM-13",
+              "original_name": "COM-13_Synthetic政企案例_城市事件协同平台.md",
+              "source_file": "COM-13_Synthetic政企案例_城市事件协同平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-71BD40EFE44793D40F2C01BF6AEF5438",
+            "chunk_hash": "48abdcb690261165e94aee22c5d00ea79cd402a8d17ed094cba44ed19bba73e2",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-71BD40EFE44793D40F2C01BF6AEF5438:FULL",
+            "exact_candidate_source_text": "- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n- **OFF-U03｜政务数据共享条例**｜国务院｜状态 `CURRENT_CONFIRMED`｜实施 `2025-08-01`｜最后核验 `2026-08-31`｜https://www.stats.gov.cn/gk/tjfg/xgfxfg/202506/t20250609_1960124.html",
+            "similarity": 0.445917954916,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 8
+          },
+          {
+            "material_id": "3ec066d3-679a-4232-ba6d-364038658c81",
+            "material_logical_identity": {
+              "com_id": "COM-06",
+              "original_name": "COM-06_权限、安全与审计测试报告.md",
+              "source_file": "COM-06_权限_安全与审计测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-48BA8BF36C74047C6F344C134357DA37",
+            "chunk_hash": "fe84a35f3f8176e51790c0a26933b7e8bca5bf77499841b07d645485b1779066",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-48BA8BF36C74047C6F344C134357DA37:FULL",
+            "exact_candidate_source_text": "不代表通过等保、密评或第三方认证。",
+            "similarity": 0.44353815469,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 9
+          },
+          {
+            "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+            "material_logical_identity": {
+              "com_id": "COM-04",
+              "original_name": "COM-04_API与系统集成能力报告.md",
+              "source_file": "COM-04_API与系统集成能力报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-99497AE6286B2BAC390E35611FEE3A8A",
+            "chunk_hash": "368d8deb15ff8ff690f09b33dfbd503c66410c5dc4be8e8916e3c7e09f189a9e",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-99497AE6286B2BAC390E35611FEE3A8A:FULL",
+            "exact_candidate_source_text": "不代表已对接任何真实政务或医院系统。",
+            "similarity": 0.441044479442,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 10
+          },
+          {
+            "material_id": "04738608-0aa8-4e12-b37b-fc5084e0428b",
+            "material_logical_identity": {
+              "com_id": "COM-14",
+              "original_name": "COM-14_Synthetic医疗案例_医院接口与数据平台.md",
+              "source_file": "COM-14_Synthetic医疗案例_医院接口与数据平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-63EA0AB0B6642FBB7331046C199AF04A",
+            "chunk_hash": "fb700e9f8a9826b634951fa64e34b4bea7997bb4fa31a0f574a035c5798255ba",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-63EA0AB0B6642FBB7331046C199AF04A:FULL",
+            "exact_candidate_source_text": "- **OFF-M03｜WS/T 447-2014 基于电子病历的医院信息平台技术规范**｜国家卫生健康委员会｜状态 `CURRENTNESS_UNCONFIRMED`｜实施 `2014-06-20`｜最后核验 `2026-08-31`｜https://www.nhc.gov.cn/wjw/s9497/201406/a2014514701f4e76b14f3446f6318937.shtml\n- **OFF-M05｜医院信息平台交互标准 第1-11部分 + 医学电子文档数字签名技术标准**｜国家卫生健康委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2025-04-01`｜最后核验 `2026-08-31`｜https://www.nhc.gov.cn/wjw/zcwjtg/202411/308603c60d554dd49052b5bfb3a9d391.shtml\n- **OFF-M06｜医疗卫生机构网络安全管理办法**｜国家卫生健康委员会等｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2022-08-08`｜最后核验 `2026-08-31`｜https://www.nhc.gov.cn/guihuaxxs/c100133/202208/8a23d01133214a779879094dd20cd383.shtml",
+            "similarity": 0.440818853086,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 11
+          },
+          {
+            "material_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd",
+            "material_logical_identity": {
+              "com_id": "COM-03",
+              "original_name": "COM-03_技术架构与部署适配报告.md",
+              "source_file": "COM-03_技术架构与部署适配报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-653922163892C4D2607119A7FD0151C0",
+            "chunk_hash": "2b1b4b913531b032cbc58a0b97bae3eb467c05c3379cd20bba542ba58615a88a",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-653922163892C4D2607119A7FD0151C0:FULL",
+            "exact_candidate_source_text": "Web前端、API服务、关系数据库、对象存储、缓存和消息队列。",
+            "similarity": 0.440360271002,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 12
+          },
+          {
+            "material_id": "3ec066d3-679a-4232-ba6d-364038658c81",
+            "material_logical_identity": {
+              "com_id": "COM-06",
+              "original_name": "COM-06_权限、安全与审计测试报告.md",
+              "source_file": "COM-06_权限_安全与审计测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-446232132A686E27FF81449A8D93AE05",
+            "chunk_hash": "4b162882f971d64e7ffeca175415dd7a12a69e482804eb03d06188ea3611b0c0",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-446232132A686E27FF81449A8D93AE05:FULL",
+            "exact_candidate_source_text": "- **OFF-U05｜中华人民共和国网络安全法（2025年修正）**｜全国人大常委会｜状态 `CURRENT_CONFIRMED`｜实施 `2026-01-01`｜最后核验 `2026-08-31`｜https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm\n- **OFF-U08｜GB/T 22239-2019 网络安全等级保护基本要求**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2019-12-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=BAFB47E8874764186BDB7865E8344DAF\n- **OFF-U10｜GB/T 35273-2020 个人信息安全规范**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2020-10-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=4568F276E0F8346EB0FBA097AA0CE05E",
+            "similarity": 0.439069959265,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 13
+          },
+          {
+            "material_id": "4ba1c701-7c4f-415b-9186-28b25c4472ce",
+            "material_logical_identity": {
+              "com_id": "COM-08",
+              "original_name": "COM-08_备份恢复与容灾演练记录.md",
+              "source_file": "COM-08_备份恢复与容灾演练记录.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-06BA7B4AA35AE9E3B89097C7EA4CD3EF",
+            "chunk_hash": "63fa0d744ce6f12fbfdb53724c0e36ab3cc3c338da6dacb84e9d8d44258e7569",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-06BA7B4AA35AE9E3B89097C7EA4CD3EF:FULL",
+            "exact_candidate_source_text": "未形成真实客户RTO/RPO或可用率承诺。",
+            "similarity": 0.43671698799,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 14
+          },
+          {
+            "material_id": "4ba1c701-7c4f-415b-9186-28b25c4472ce",
+            "material_logical_identity": {
+              "com_id": "COM-08",
+              "original_name": "COM-08_备份恢复与容灾演练记录.md",
+              "source_file": "COM-08_备份恢复与容灾演练记录.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-7EE99DCEA81CE59BDA98319EC6D8E396",
+            "chunk_hash": "465d029abbdc54b0b09d5c93e5231e70f09c42e0ec56106cd1043165271bed5c",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-7EE99DCEA81CE59BDA98319EC6D8E396:FULL",
+            "exact_candidate_source_text": "- **OFF-U08｜GB/T 22239-2019 网络安全等级保护基本要求**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2019-12-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=BAFB47E8874764186BDB7865E8344DAF\n- **OFF-U09｜GB/T 25070-2019 网络安全等级保护安全设计技术要求**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2019-12-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=9FB6EE8597B21436D0E99BF44FD42C4D",
+            "similarity": 0.430081467192,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 15
+          },
+          {
+            "material_id": "a5510db7-bb22-46e3-aa7f-13b77f1206a6",
+            "material_logical_identity": {
+              "com_id": "COM-13",
+              "original_name": "COM-13_Synthetic政企案例_城市事件协同平台.md",
+              "source_file": "COM-13_Synthetic政企案例_城市事件协同平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-105B217D6CC7E8DA8B4F3C79ED727593",
+            "chunk_hash": "e1bb1e9d993d1fa56367d79fd5370ea1da33d7b5e027d9c77de78965a75bbb4e",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-105B217D6CC7E8DA8B4F3C79ED727593:FULL",
+            "exact_candidate_source_text": "实施期2025-03至2025-10；历史案例可用于业绩测试，但产品版本能力需重新核验。",
+            "similarity": 0.426349459632,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 16
+          },
+          {
+            "material_id": "3ec066d3-679a-4232-ba6d-364038658c81",
+            "material_logical_identity": {
+              "com_id": "COM-06",
+              "original_name": "COM-06_权限、安全与审计测试报告.md",
+              "source_file": "COM-06_权限_安全与审计测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-830217C1CE1806D87047FB5ABBBBFC9E",
+            "chunk_hash": "a7a61cb8330a641592f2df7aba95e2e1553ad0b298d8f40634b20ccac4008ae3",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-830217C1CE1806D87047FB5ABBBBFC9E:FULL",
+            "exact_candidate_source_text": "# 权限、安全与审计测试报告",
+            "similarity": 0.425682387041,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 17
+          },
+          {
+            "material_id": "42debef7-084f-471c-8fa5-1f9dcbf4c2f7",
+            "material_logical_identity": {
+              "com_id": "COM-07",
+              "original_name": "COM-07_性能与容量测试报告.md",
+              "source_file": "COM-07_性能与容量测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-47E6AE32EA013E5699685AEDF9A33D99",
+            "chunk_hash": "134f1d0f0e1adfbed61f5ef11bf3a855b81e91444d587edd255f9be845167459",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-47E6AE32EA013E5699685AEDF9A33D99:FULL",
+            "exact_candidate_source_text": "- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm",
+            "similarity": 0.421043681215,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 18
+          },
+          {
+            "material_id": "e39ce20c-b73c-4cd2-a965-d8fbad6775e2",
+            "material_logical_identity": {
+              "com_id": "COM-15",
+              "original_name": "COM-15_Synthetic资质_知识产权与授权索引.md",
+              "source_file": "COM-15_Synthetic资质_知识产权与授权索引.md"
+            },
+            "material_type": "qualification",
+            "chunk_id": "MCH-9DB7950B25CD623A0642023CEE408B0C",
+            "chunk_hash": "134f1d0f0e1adfbed61f5ef11bf3a855b81e91444d587edd255f9be845167459",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-9DB7950B25CD623A0642023CEE408B0C:FULL",
+            "exact_candidate_source_text": "- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm",
+            "similarity": 0.421043681215,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 19
+          },
+          {
+            "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+            "material_logical_identity": {
+              "com_id": "COM-04",
+              "original_name": "COM-04_API与系统集成能力报告.md",
+              "source_file": "COM-04_API与系统集成能力报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-EE13BCB24F6A977A2B054A4FB85DE7B4",
+            "chunk_hash": "22ef906b89005ebb7006adc02fbd456e742f20ef21ca023be0e57ce0fdb4b4ba",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-EE13BCB24F6A977A2B054A4FB85DE7B4:FULL",
+            "exact_candidate_source_text": "# API与系统集成能力报告",
+            "similarity": 0.417358360968,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 20
+          }
+        ]
+      },
+      {
+        "case_id": "RAG-P0-HOLD-TB-006-REQ-037",
+        "requirement_id": "TB-006:REQ-037",
+        "canonical_requirement_text": "项目经理具有信息系统项目管理师（高级）证书。",
+        "case_class": "CORPUS_GAP",
+        "frozen_gold_profile_class": "QUALIFICATION",
+        "evidence_need_profile": {
+          "class": "QUALIFICATION",
+          "required_dimensions": [
+            "subject",
+            "scope",
+            "status"
+          ],
+          "conditional_dimensions": [],
+          "search_signals": [
+            "QUALIFICATION",
+            "证书"
+          ],
+          "critical_literals": [
+            "证书"
+          ],
+          "profile_hash": "208fa1b1b369e260799e5ea175cb64c6b07cfb16f803bca314206069b2c3f2e3"
+        },
+        "query_text": "项目经理具有信息系统项目管理师（高级）证书。",
+        "query_hash": "c7e0097cd71887f92eb71f2dafdc57b3058d267ac6900b9be363b82f561d268f",
+        "expected_retrieval_k0": true,
+        "expected_no_sufficient_evidence": true,
+        "query_vector_present": true,
+        "raw_candidate_count": 94,
+        "metrics": {
+          "1": {
+            "evidence_atom_recall": null,
+            "candidate_precision": 0,
+            "ndcg": 0,
+            "mrr_full": null,
+            "expected_retrieval_k0": true,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": true
+          },
+          "3": {
+            "evidence_atom_recall": null,
+            "candidate_precision": 0,
+            "ndcg": 0,
+            "mrr_full": null,
+            "expected_retrieval_k0": true,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": true
+          },
+          "5": {
+            "evidence_atom_recall": null,
+            "candidate_precision": 0,
+            "ndcg": 0,
+            "mrr_full": null,
+            "expected_retrieval_k0": true,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": true
+          },
+          "8": {
+            "evidence_atom_recall": null,
+            "candidate_precision": 0,
+            "ndcg": 0,
+            "mrr_full": null,
+            "expected_retrieval_k0": true,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": true
+          },
+          "20": {
+            "evidence_atom_recall": null,
+            "candidate_precision": 0,
+            "ndcg": 0,
+            "mrr_full": null,
+            "expected_retrieval_k0": true,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": true
+          }
+        },
+        "first_failure_family": "EXPECTED_K0_NO_GRADE_GE_2_EVIDENCE",
+        "top20": [
+          {
+            "material_id": "3ec066d3-679a-4232-ba6d-364038658c81",
+            "material_logical_identity": {
+              "com_id": "COM-06",
+              "original_name": "COM-06_权限、安全与审计测试报告.md",
+              "source_file": "COM-06_权限_安全与审计测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-48BA8BF36C74047C6F344C134357DA37",
+            "chunk_hash": "fe84a35f3f8176e51790c0a26933b7e8bca5bf77499841b07d645485b1779066",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-48BA8BF36C74047C6F344C134357DA37:FULL",
+            "exact_candidate_source_text": "不代表通过等保、密评或第三方认证。",
+            "similarity": 0.368819691852,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 1
+          },
+          {
+            "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+            "material_logical_identity": {
+              "com_id": "COM-04",
+              "original_name": "COM-04_API与系统集成能力报告.md",
+              "source_file": "COM-04_API与系统集成能力报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-EE13BCB24F6A977A2B054A4FB85DE7B4",
+            "chunk_hash": "22ef906b89005ebb7006adc02fbd456e742f20ef21ca023be0e57ce0fdb4b4ba",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-EE13BCB24F6A977A2B054A4FB85DE7B4:FULL",
+            "exact_candidate_source_text": "# API与系统集成能力报告",
+            "similarity": 0.368470862892,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 2
+          },
+          {
+            "material_id": "a5510db7-bb22-46e3-aa7f-13b77f1206a6",
+            "material_logical_identity": {
+              "com_id": "COM-13",
+              "original_name": "COM-13_Synthetic政企案例_城市事件协同平台.md",
+              "source_file": "COM-13_Synthetic政企案例_城市事件协同平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-78E4EA708EBC05B9E2731B7736CF9B2E",
+            "chunk_hash": "599301a3312c6cda42f0d6ffc1a20c759915ad29da4a9843a6f4e131395eaaaa",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-78E4EA708EBC05B9E2731B7736CF9B2E:FULL",
+            "exact_candidate_source_text": "某虚构市级事件协同平台，包含受理、派单、处置、督办、统计、地图和部门接口。",
+            "similarity": 0.368342422423,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 3
+          },
+          {
+            "material_id": "a5510db7-bb22-46e3-aa7f-13b77f1206a6",
+            "material_logical_identity": {
+              "com_id": "COM-13",
+              "original_name": "COM-13_Synthetic政企案例_城市事件协同平台.md",
+              "source_file": "COM-13_Synthetic政企案例_城市事件协同平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-105B217D6CC7E8DA8B4F3C79ED727593",
+            "chunk_hash": "e1bb1e9d993d1fa56367d79fd5370ea1da33d7b5e027d9c77de78965a75bbb4e",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-105B217D6CC7E8DA8B4F3C79ED727593:FULL",
+            "exact_candidate_source_text": "实施期2025-03至2025-10；历史案例可用于业绩测试，但产品版本能力需重新核验。",
+            "similarity": 0.344380213522,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 4
+          },
+          {
+            "material_id": "e39ce20c-b73c-4cd2-a965-d8fbad6775e2",
+            "material_logical_identity": {
+              "com_id": "COM-15",
+              "original_name": "COM-15_Synthetic资质_知识产权与授权索引.md",
+              "source_file": "COM-15_Synthetic资质_知识产权与授权索引.md"
+            },
+            "material_type": "qualification",
+            "chunk_id": "MCH-C6CA2369913CB9822014BDF9A10397F9",
+            "chunk_hash": "ec0b7560b724a599a80c493831acc894ff1913d7dded1986560991c51d8ad187",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-C6CA2369913CB9822014BDF9A10397F9:FULL",
+            "exact_candidate_source_text": "## 过期测试证书",
+            "similarity": 0.339485382051,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 5
+          },
+          {
+            "material_id": "7dc70fee-13e0-4b7d-b95f-202665c241d0",
+            "material_logical_identity": {
+              "com_id": "COM-02",
+              "original_name": "COM-02_产品平台能力说明.md",
+              "source_file": "COM-02_产品平台能力说明.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-7BC3D75382C9BBF605E8033A7D57547D",
+            "chunk_hash": "9abf6f4e35a6a4846cdb5bece328d03e72cc139ff34ba9dedb915696a08bbf71",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-7BC3D75382C9BBF605E8033A7D57547D:FULL",
+            "exact_candidate_source_text": "## 产品",
+            "similarity": 0.337326402506,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 6
+          },
+          {
+            "material_id": "7dc70fee-13e0-4b7d-b95f-202665c241d0",
+            "material_logical_identity": {
+              "com_id": "COM-02",
+              "original_name": "COM-02_产品平台能力说明.md",
+              "source_file": "COM-02_产品平台能力说明.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-AF65DB60327B026A2B66255423ECA6D2",
+            "chunk_hash": "8cc3c2d95fe26cbeaa7cdedde503dacd796f670ae22cd8d7b5ab6fa79eb5af22",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-AF65DB60327B026A2B66255423ECA6D2:FULL",
+            "exact_candidate_source_text": "# 产品平台能力说明",
+            "similarity": 0.33008059591,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 7
+          },
+          {
+            "material_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd",
+            "material_logical_identity": {
+              "com_id": "COM-03",
+              "original_name": "COM-03_技术架构与部署适配报告.md",
+              "source_file": "COM-03_技术架构与部署适配报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-90273C2E8DD579484D1CA7EEE503EECC",
+            "chunk_hash": "6150d900a0920ce9aa6ad399b25ffe34711fb87880ecb8eeb8b6b4d0ee649aff",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-90273C2E8DD579484D1CA7EEE503EECC:FULL",
+            "exact_candidate_source_text": "## 架构",
+            "similarity": 0.326640821281,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 8
+          },
+          {
+            "material_id": "7dc70fee-13e0-4b7d-b95f-202665c241d0",
+            "material_logical_identity": {
+              "com_id": "COM-02",
+              "original_name": "COM-02_产品平台能力说明.md",
+              "source_file": "COM-02_产品平台能力说明.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-369C7BBCDB79203D29F37E8A524E41D5",
+            "chunk_hash": "644ec25fde2d5afb4a7d6b59720c4e643f933e9bfa267417a52a565cf998b084",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-369C7BBCDB79203D29F37E8A524E41D5:FULL",
+            "exact_candidate_source_text": "Synthetic产品含组织权限、流程、表单、接口、日志、报表、知识库、RAG和Agent工具管理。",
+            "similarity": 0.322829880703,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 9
+          },
+          {
+            "material_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd",
+            "material_logical_identity": {
+              "com_id": "COM-03",
+              "original_name": "COM-03_技术架构与部署适配报告.md",
+              "source_file": "COM-03_技术架构与部署适配报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-BEB81A1EE2C55E0DEC03943613B233BF",
+            "chunk_hash": "20cade208f0832c46d69462f24059a547aa14d6c07269723faeed0b8257592cc",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-BEB81A1EE2C55E0DEC03943613B233BF:FULL",
+            "exact_candidate_source_text": "- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n- **OFF-U12｜数据库政府采购需求标准（2023年版）**｜财政部、工业和信息化部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2023-12-16`｜最后核验 `2026-08-31`｜https://m.mof.gov.cn/zcfb/202312/t20231226_3924124.htm\n- **OFF-U13｜操作系统政府采购需求标准（2023年版）**｜财政部、工业和信息化部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2023-12-16`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/jrttts/202312/t20231226_3924138.htm",
+            "similarity": 0.319563338919,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 10
+          },
+          {
+            "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+            "material_logical_identity": {
+              "com_id": "COM-04",
+              "original_name": "COM-04_API与系统集成能力报告.md",
+              "source_file": "COM-04_API与系统集成能力报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-FB52222056B272025DB89E56558E3B76",
+            "chunk_hash": "22a93631846f434ad9cd38133e52917cb375d0a335bd81d3ff10e409e2a49907",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-FB52222056B272025DB89E56558E3B76:FULL",
+            "exact_candidate_source_text": "## 接口",
+            "similarity": 0.316560919132,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 11
+          },
+          {
+            "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+            "material_logical_identity": {
+              "com_id": "COM-04",
+              "original_name": "COM-04_API与系统集成能力报告.md",
+              "source_file": "COM-04_API与系统集成能力报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-99497AE6286B2BAC390E35611FEE3A8A",
+            "chunk_hash": "368d8deb15ff8ff690f09b33dfbd503c66410c5dc4be8e8916e3c7e09f189a9e",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-99497AE6286B2BAC390E35611FEE3A8A:FULL",
+            "exact_candidate_source_text": "不代表已对接任何真实政务或医院系统。",
+            "similarity": 0.313481521002,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 12
+          },
+          {
+            "material_id": "e39ce20c-b73c-4cd2-a965-d8fbad6775e2",
+            "material_logical_identity": {
+              "com_id": "COM-15",
+              "original_name": "COM-15_Synthetic资质_知识产权与授权索引.md",
+              "source_file": "COM-15_Synthetic资质_知识产权与授权索引.md"
+            },
+            "material_type": "qualification",
+            "chunk_id": "MCH-705A0239339519EBBC063F163A40FCBD",
+            "chunk_hash": "40da102851ab7158e03f9080b0db910a4361fc7d15a913a74c5b0b96b8839577",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-705A0239339519EBBC063F163A40FCBD:FULL",
+            "exact_candidate_source_text": "## 有效测试证书",
+            "similarity": 0.312548323191,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 13
+          },
+          {
+            "material_id": "04738608-0aa8-4e12-b37b-fc5084e0428b",
+            "material_logical_identity": {
+              "com_id": "COM-14",
+              "original_name": "COM-14_Synthetic医疗案例_医院接口与数据平台.md",
+              "source_file": "COM-14_Synthetic医疗案例_医院接口与数据平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-9BD85ED0A87D7C6B058D4EE89A4A1303",
+            "chunk_hash": "4e8149a2c87768925e70c0a6307836b6c82f707d0062dcb19d642dfc3b51f81b",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-9BD85ED0A87D7C6B058D4EE89A4A1303:FULL",
+            "exact_candidate_source_text": "某虚构三级医院接口与数据平台，包含接口治理、患者主索引、历史迁移、联调和试运行。",
+            "similarity": 0.310207915608,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 14
+          },
+          {
+            "material_id": "04738608-0aa8-4e12-b37b-fc5084e0428b",
+            "material_logical_identity": {
+              "com_id": "COM-14",
+              "original_name": "COM-14_Synthetic医疗案例_医院接口与数据平台.md",
+              "source_file": "COM-14_Synthetic医疗案例_医院接口与数据平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-5A34B18E49BD9E5FD9319944B4295679",
+            "chunk_hash": "7ce82602b2facd871ef8c9d89d40e930c8e14ac76caf56764bd576b3b7e7b229",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-5A34B18E49BD9E5FD9319944B4295679:FULL",
+            "exact_candidate_source_text": "实施期2025-06至2026-01；标准映射以2026-08-31核验结果为准。",
+            "similarity": 0.308919165474,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 15
+          },
+          {
+            "material_id": "3ec066d3-679a-4232-ba6d-364038658c81",
+            "material_logical_identity": {
+              "com_id": "COM-06",
+              "original_name": "COM-06_权限、安全与审计测试报告.md",
+              "source_file": "COM-06_权限_安全与审计测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-830217C1CE1806D87047FB5ABBBBFC9E",
+            "chunk_hash": "a7a61cb8330a641592f2df7aba95e2e1553ad0b298d8f40634b20ccac4008ae3",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-830217C1CE1806D87047FB5ABBBBFC9E:FULL",
+            "exact_candidate_source_text": "# 权限、安全与审计测试报告",
+            "similarity": 0.307327533049,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 16
+          },
+          {
+            "material_id": "a5510db7-bb22-46e3-aa7f-13b77f1206a6",
+            "material_logical_identity": {
+              "com_id": "COM-13",
+              "original_name": "COM-13_Synthetic政企案例_城市事件协同平台.md",
+              "source_file": "COM-13_Synthetic政企案例_城市事件协同平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-71BD40EFE44793D40F2C01BF6AEF5438",
+            "chunk_hash": "48abdcb690261165e94aee22c5d00ea79cd402a8d17ed094cba44ed19bba73e2",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-71BD40EFE44793D40F2C01BF6AEF5438:FULL",
+            "exact_candidate_source_text": "- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n- **OFF-U03｜政务数据共享条例**｜国务院｜状态 `CURRENT_CONFIRMED`｜实施 `2025-08-01`｜最后核验 `2026-08-31`｜https://www.stats.gov.cn/gk/tjfg/xgfxfg/202506/t20250609_1960124.html",
+            "similarity": 0.307180670614,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 17
+          },
+          {
+            "material_id": "e39ce20c-b73c-4cd2-a965-d8fbad6775e2",
+            "material_logical_identity": {
+              "com_id": "COM-15",
+              "original_name": "COM-15_Synthetic资质_知识产权与授权索引.md",
+              "source_file": "COM-15_Synthetic资质_知识产权与授权索引.md"
+            },
+            "material_type": "qualification",
+            "chunk_id": "MCH-DB93106BE9B5C221E85E901343C6DE2E",
+            "chunk_hash": "5b4b307751d48a83ce25afc2f0d36b7e2ebbf668efc6569caf1211451fb4f455",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-DB93106BE9B5C221E85E901343C6DE2E:FULL",
+            "exact_candidate_source_text": "TEST-CERT-2024-X：虚构证书，2025-12-31到期，应标记EXPIRED。",
+            "similarity": 0.306130212255,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 18
+          },
+          {
+            "material_id": "04738608-0aa8-4e12-b37b-fc5084e0428b",
+            "material_logical_identity": {
+              "com_id": "COM-14",
+              "original_name": "COM-14_Synthetic医疗案例_医院接口与数据平台.md",
+              "source_file": "COM-14_Synthetic医疗案例_医院接口与数据平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-5206328872C2D6702A96C1DED4A76BB1",
+            "chunk_hash": "8aced249764480f00a86c6bc03cf90677f37d9034a19b7c7f7815d477507efd5",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-5206328872C2D6702A96C1DED4A76BB1:FULL",
+            "exact_candidate_source_text": "## 案例",
+            "similarity": 0.302872712192,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 19
+          },
+          {
+            "material_id": "a5510db7-bb22-46e3-aa7f-13b77f1206a6",
+            "material_logical_identity": {
+              "com_id": "COM-13",
+              "original_name": "COM-13_Synthetic政企案例_城市事件协同平台.md",
+              "source_file": "COM-13_Synthetic政企案例_城市事件协同平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-B6C5012AB485B7FF9E67AE65347FA518",
+            "chunk_hash": "8aced249764480f00a86c6bc03cf90677f37d9034a19b7c7f7815d477507efd5",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-B6C5012AB485B7FF9E67AE65347FA518:FULL",
+            "exact_candidate_source_text": "## 案例",
+            "similarity": 0.302872712192,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 20
+          }
+        ]
+      },
+      {
+        "case_id": "RAG-P0-HOLD-JY-001-REQ-148",
+        "requirement_id": "JY-001:REQ-148",
+        "canonical_requirement_text": "防火墙需为2U标准机架设备,设备具有冗余电源,设备配置8个千兆自适应电口、4个千兆光口、4个万兆光口、2个扩展槽位、2个USB接口、1个RJ45 Console口。",
+        "case_class": "NEGATIVE",
+        "frozen_gold_profile_class": "PRODUCT_CAPABILITY",
+        "evidence_need_profile": {
+          "class": "PRODUCT_CAPABILITY",
+          "required_dimensions": [
+            "subject",
+            "scope",
+            "quantity",
+            "entity"
+          ],
+          "conditional_dimensions": [],
+          "search_signals": [
+            "1个",
+            "2",
+            "2个",
+            "45 ",
+            "4个",
+            "8个",
+            "PRODUCT_CAPABILITY"
+          ],
+          "critical_literals": [
+            "1个",
+            "2",
+            "2个",
+            "45 ",
+            "4个",
+            "8个"
+          ],
+          "profile_hash": "aee566ca9eb6aff6827de411f61f181c2fd48a661059a2d2c7109a9dcb5dc752"
+        },
+        "query_text": "防火墙需为2U标准机架设备,设备具有冗余电源,设备配置8个千兆自适应电口、4个千兆光口、4个万兆光口、2个扩展槽位、2个USB接口、1个RJ45 Console口。",
+        "query_hash": "08621828acd4d077bd2307309edefdbf057f0b64df07da92343827c6f1a8e3f4",
+        "expected_retrieval_k0": true,
+        "expected_no_sufficient_evidence": true,
+        "query_vector_present": true,
+        "raw_candidate_count": 94,
+        "metrics": {
+          "1": {
+            "evidence_atom_recall": null,
+            "candidate_precision": 0,
+            "ndcg": null,
+            "mrr_full": null,
+            "expected_retrieval_k0": true,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": true
+          },
+          "3": {
+            "evidence_atom_recall": null,
+            "candidate_precision": 0,
+            "ndcg": null,
+            "mrr_full": null,
+            "expected_retrieval_k0": true,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": true
+          },
+          "5": {
+            "evidence_atom_recall": null,
+            "candidate_precision": 0,
+            "ndcg": null,
+            "mrr_full": null,
+            "expected_retrieval_k0": true,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": true
+          },
+          "8": {
+            "evidence_atom_recall": null,
+            "candidate_precision": 0,
+            "ndcg": null,
+            "mrr_full": null,
+            "expected_retrieval_k0": true,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": true
+          },
+          "20": {
+            "evidence_atom_recall": null,
+            "candidate_precision": 0,
+            "ndcg": null,
+            "mrr_full": null,
+            "expected_retrieval_k0": true,
+            "expected_no_sufficient_evidence": true,
+            "returned_k0": false,
+            "false_positive_retrieval_candidate": false,
+            "false_negative_retrieval_k0": false,
+            "no_grade_gte_2_in_top_k": true
+          }
+        },
+        "first_failure_family": "EXPECTED_K0_NO_GRADE_GE_2_EVIDENCE",
+        "top20": [
+          {
+            "material_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd",
+            "material_logical_identity": {
+              "com_id": "COM-03",
+              "original_name": "COM-03_技术架构与部署适配报告.md",
+              "source_file": "COM-03_技术架构与部署适配报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-90273C2E8DD579484D1CA7EEE503EECC",
+            "chunk_hash": "6150d900a0920ce9aa6ad399b25ffe34711fb87880ecb8eeb8b6b4d0ee649aff",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-90273C2E8DD579484D1CA7EEE503EECC:FULL",
+            "exact_candidate_source_text": "## 架构",
+            "similarity": 0.458969057675,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 1
+          },
+          {
+            "material_id": "3ec066d3-679a-4232-ba6d-364038658c81",
+            "material_logical_identity": {
+              "com_id": "COM-06",
+              "original_name": "COM-06_权限、安全与审计测试报告.md",
+              "source_file": "COM-06_权限_安全与审计测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-48BA8BF36C74047C6F344C134357DA37",
+            "chunk_hash": "fe84a35f3f8176e51790c0a26933b7e8bca5bf77499841b07d645485b1779066",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-48BA8BF36C74047C6F344C134357DA37:FULL",
+            "exact_candidate_source_text": "不代表通过等保、密评或第三方认证。",
+            "similarity": 0.446235921617,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 2
+          },
+          {
+            "material_id": "4ba1c701-7c4f-415b-9186-28b25c4472ce",
+            "material_logical_identity": {
+              "com_id": "COM-08",
+              "original_name": "COM-08_备份恢复与容灾演练记录.md",
+              "source_file": "COM-08_备份恢复与容灾演练记录.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-7EE99DCEA81CE59BDA98319EC6D8E396",
+            "chunk_hash": "465d029abbdc54b0b09d5c93e5231e70f09c42e0ec56106cd1043165271bed5c",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-7EE99DCEA81CE59BDA98319EC6D8E396:FULL",
+            "exact_candidate_source_text": "- **OFF-U08｜GB/T 22239-2019 网络安全等级保护基本要求**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2019-12-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=BAFB47E8874764186BDB7865E8344DAF\n- **OFF-U09｜GB/T 25070-2019 网络安全等级保护安全设计技术要求**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2019-12-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=9FB6EE8597B21436D0E99BF44FD42C4D",
+            "similarity": 0.443877791011,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 3
+          },
+          {
+            "material_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd",
+            "material_logical_identity": {
+              "com_id": "COM-03",
+              "original_name": "COM-03_技术架构与部署适配报告.md",
+              "source_file": "COM-03_技术架构与部署适配报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-B39BE48830FFE2F9798289F8E74276EA",
+            "chunk_hash": "5efd8a1f7995e16e2220a9486911647f1885fa7887b0fb1f010108d58fd175e7",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-B39BE48830FFE2F9798289F8E74276EA:FULL",
+            "exact_candidate_source_text": "# 技术架构与部署适配报告",
+            "similarity": 0.427168599368,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 4
+          },
+          {
+            "material_id": "42debef7-084f-471c-8fa5-1f9dcbf4c2f7",
+            "material_logical_identity": {
+              "com_id": "COM-07",
+              "original_name": "COM-07_性能与容量测试报告.md",
+              "source_file": "COM-07_性能与容量测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-0AF76BF34D2122C835F1EC9DB6B0E22F",
+            "chunk_hash": "09dead6c944d3085b40ece8ceb18e18aec9661f1341fb15d80ad84eff66d8c03",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-0AF76BF34D2122C835F1EC9DB6B0E22F:FULL",
+            "exact_candidate_source_text": "Synthetic TEST：4 vCPU、16GB RAM、版本v3.2。",
+            "similarity": 0.414422661231,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 5
+          },
+          {
+            "material_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd",
+            "material_logical_identity": {
+              "com_id": "COM-03",
+              "original_name": "COM-03_技术架构与部署适配报告.md",
+              "source_file": "COM-03_技术架构与部署适配报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-81DCFAE5EB396F201DD37F0DA83F825D",
+            "chunk_hash": "f65e4851b9fe7f437be9ff784ac5308fe18a92cb2b629a86d8803025a785e97f",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-81DCFAE5EB396F201DD37F0DA83F825D:FULL",
+            "exact_candidate_source_text": "## 适配",
+            "similarity": 0.403067796331,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 6
+          },
+          {
+            "material_id": "7dc70fee-13e0-4b7d-b95f-202665c241d0",
+            "material_logical_identity": {
+              "com_id": "COM-02",
+              "original_name": "COM-02_产品平台能力说明.md",
+              "source_file": "COM-02_产品平台能力说明.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-7BC3D75382C9BBF605E8033A7D57547D",
+            "chunk_hash": "9abf6f4e35a6a4846cdb5bece328d03e72cc139ff34ba9dedb915696a08bbf71",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-7BC3D75382C9BBF605E8033A7D57547D:FULL",
+            "exact_candidate_source_text": "## 产品",
+            "similarity": 0.402349655341,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 7
+          },
+          {
+            "material_id": "4ba1c701-7c4f-415b-9186-28b25c4472ce",
+            "material_logical_identity": {
+              "com_id": "COM-08",
+              "original_name": "COM-08_备份恢复与容灾演练记录.md",
+              "source_file": "COM-08_备份恢复与容灾演练记录.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-2C504155D5C0E36380C02CD11962B632",
+            "chunk_hash": "1036a0c983265a4f9a8bc8c1db7488cd04994f98c1cc792563ebc139899f969e",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-2C504155D5C0E36380C02CD11962B632:FULL",
+            "exact_candidate_source_text": "# 备份恢复与容灾演练记录",
+            "similarity": 0.388514915077,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 8
+          },
+          {
+            "material_id": "3ec066d3-679a-4232-ba6d-364038658c81",
+            "material_logical_identity": {
+              "com_id": "COM-06",
+              "original_name": "COM-06_权限、安全与审计测试报告.md",
+              "source_file": "COM-06_权限_安全与审计测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-446232132A686E27FF81449A8D93AE05",
+            "chunk_hash": "4b162882f971d64e7ffeca175415dd7a12a69e482804eb03d06188ea3611b0c0",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-446232132A686E27FF81449A8D93AE05:FULL",
+            "exact_candidate_source_text": "- **OFF-U05｜中华人民共和国网络安全法（2025年修正）**｜全国人大常委会｜状态 `CURRENT_CONFIRMED`｜实施 `2026-01-01`｜最后核验 `2026-08-31`｜https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm\n- **OFF-U08｜GB/T 22239-2019 网络安全等级保护基本要求**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2019-12-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=BAFB47E8874764186BDB7865E8344DAF\n- **OFF-U10｜GB/T 35273-2020 个人信息安全规范**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2020-10-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=4568F276E0F8346EB0FBA097AA0CE05E",
+            "similarity": 0.387603707577,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 9
+          },
+          {
+            "material_id": "42debef7-084f-471c-8fa5-1f9dcbf4c2f7",
+            "material_logical_identity": {
+              "com_id": "COM-07",
+              "original_name": "COM-07_性能与容量测试报告.md",
+              "source_file": "COM-07_性能与容量测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-DF096836654818BBD4DF11A39ED29B5D",
+            "chunk_hash": "833ba3680a9ef71d10114e5bb3ad36ddd7bf0bd07793a95662ef46d6327e1e82",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-DF096836654818BBD4DF11A39ED29B5D:FULL",
+            "exact_candidate_source_text": "## 环境",
+            "similarity": 0.373293747405,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 10
+          },
+          {
+            "material_id": "04738608-0aa8-4e12-b37b-fc5084e0428b",
+            "material_logical_identity": {
+              "com_id": "COM-14",
+              "original_name": "COM-14_Synthetic医疗案例_医院接口与数据平台.md",
+              "source_file": "COM-14_Synthetic医疗案例_医院接口与数据平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-C7CC7F84C1222606976E23BAAAC8852A",
+            "chunk_hash": "cb75c45ef18ca635a54c57864218822f5886af271e88591d8f2f9c21992de476",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-C7CC7F84C1222606976E23BAAAC8852A:FULL",
+            "exact_candidate_source_text": "## 时效",
+            "similarity": 0.372535901774,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 11
+          },
+          {
+            "material_id": "42debef7-084f-471c-8fa5-1f9dcbf4c2f7",
+            "material_logical_identity": {
+              "com_id": "COM-07",
+              "original_name": "COM-07_性能与容量测试报告.md",
+              "source_file": "COM-07_性能与容量测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-825C1EFE5FF1E3AE15ABAC31FE558D47",
+            "chunk_hash": "cb75c45ef18ca635a54c57864218822f5886af271e88591d8f2f9c21992de476",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-825C1EFE5FF1E3AE15ABAC31FE558D47:FULL",
+            "exact_candidate_source_text": "## 时效",
+            "similarity": 0.372535901774,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 12
+          },
+          {
+            "material_id": "a5510db7-bb22-46e3-aa7f-13b77f1206a6",
+            "material_logical_identity": {
+              "com_id": "COM-13",
+              "original_name": "COM-13_Synthetic政企案例_城市事件协同平台.md",
+              "source_file": "COM-13_Synthetic政企案例_城市事件协同平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-754B541D292110C60F5BC8CE4F976678",
+            "chunk_hash": "cb75c45ef18ca635a54c57864218822f5886af271e88591d8f2f9c21992de476",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-754B541D292110C60F5BC8CE4F976678:FULL",
+            "exact_candidate_source_text": "## 时效",
+            "similarity": 0.372535901774,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 13
+          },
+          {
+            "material_id": "04738608-0aa8-4e12-b37b-fc5084e0428b",
+            "material_logical_identity": {
+              "com_id": "COM-14",
+              "original_name": "COM-14_Synthetic医疗案例_医院接口与数据平台.md",
+              "source_file": "COM-14_Synthetic医疗案例_医院接口与数据平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-5A34B18E49BD9E5FD9319944B4295679",
+            "chunk_hash": "7ce82602b2facd871ef8c9d89d40e930c8e14ac76caf56764bd576b3b7e7b229",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-5A34B18E49BD9E5FD9319944B4295679:FULL",
+            "exact_candidate_source_text": "实施期2025-06至2026-01；标准映射以2026-08-31核验结果为准。",
+            "similarity": 0.371639641698,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 14
+          },
+          {
+            "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+            "material_logical_identity": {
+              "com_id": "COM-04",
+              "original_name": "COM-04_API与系统集成能力报告.md",
+              "source_file": "COM-04_API与系统集成能力报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-12DA2A7EF1D137EFB87E1170768F9B31",
+            "chunk_hash": "1418aef8779aa9ccbf2439ec35979c64cdaa005bbc4458933e8ac9cba516edb3",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-12DA2A7EF1D137EFB87E1170768F9B31:FULL",
+            "exact_candidate_source_text": "## 边界",
+            "similarity": 0.370851816824,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 15
+          },
+          {
+            "material_id": "3ec066d3-679a-4232-ba6d-364038658c81",
+            "material_logical_identity": {
+              "com_id": "COM-06",
+              "original_name": "COM-06_权限、安全与审计测试报告.md",
+              "source_file": "COM-06_权限_安全与审计测试报告.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-DC5EFA1A85827ED4FD45615F8BAFAA31",
+            "chunk_hash": "1418aef8779aa9ccbf2439ec35979c64cdaa005bbc4458933e8ac9cba516edb3",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-DC5EFA1A85827ED4FD45615F8BAFAA31:FULL",
+            "exact_candidate_source_text": "## 边界",
+            "similarity": 0.370851816824,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 16
+          },
+          {
+            "material_id": "4ba1c701-7c4f-415b-9186-28b25c4472ce",
+            "material_logical_identity": {
+              "com_id": "COM-08",
+              "original_name": "COM-08_备份恢复与容灾演练记录.md",
+              "source_file": "COM-08_备份恢复与容灾演练记录.md"
+            },
+            "material_type": "delivery_capability",
+            "chunk_id": "MCH-86B6338331A1A56937F90A6D3237E2F6",
+            "chunk_hash": "1418aef8779aa9ccbf2439ec35979c64cdaa005bbc4458933e8ac9cba516edb3",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-86B6338331A1A56937F90A6D3237E2F6:FULL",
+            "exact_candidate_source_text": "## 边界",
+            "similarity": 0.370851816824,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 17
+          },
+          {
+            "material_id": "e39ce20c-b73c-4cd2-a965-d8fbad6775e2",
+            "material_logical_identity": {
+              "com_id": "COM-15",
+              "original_name": "COM-15_Synthetic资质_知识产权与授权索引.md",
+              "source_file": "COM-15_Synthetic资质_知识产权与授权索引.md"
+            },
+            "material_type": "qualification",
+            "chunk_id": "MCH-171940189D3FF4D8F723AA3AC8963A5E",
+            "chunk_hash": "1418aef8779aa9ccbf2439ec35979c64cdaa005bbc4458933e8ac9cba516edb3",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-171940189D3FF4D8F723AA3AC8963A5E:FULL",
+            "exact_candidate_source_text": "## 边界",
+            "similarity": 0.370851816824,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 18
+          },
+          {
+            "material_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd",
+            "material_logical_identity": {
+              "com_id": "COM-03",
+              "original_name": "COM-03_技术架构与部署适配报告.md",
+              "source_file": "COM-03_技术架构与部署适配报告.md"
+            },
+            "material_type": "product_documentation",
+            "chunk_id": "MCH-BEB81A1EE2C55E0DEC03943613B233BF",
+            "chunk_hash": "20cade208f0832c46d69462f24059a547aa14d6c07269723faeed0b8257592cc",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-BEB81A1EE2C55E0DEC03943613B233BF:FULL",
+            "exact_candidate_source_text": "- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n- **OFF-U12｜数据库政府采购需求标准（2023年版）**｜财政部、工业和信息化部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2023-12-16`｜最后核验 `2026-08-31`｜https://m.mof.gov.cn/zcfb/202312/t20231226_3924124.htm\n- **OFF-U13｜操作系统政府采购需求标准（2023年版）**｜财政部、工业和信息化部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2023-12-16`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/jrttts/202312/t20231226_3924138.htm",
+            "similarity": 0.369742232825,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 19
+          },
+          {
+            "material_id": "04738608-0aa8-4e12-b37b-fc5084e0428b",
+            "material_logical_identity": {
+              "com_id": "COM-14",
+              "original_name": "COM-14_Synthetic医疗案例_医院接口与数据平台.md",
+              "source_file": "COM-14_Synthetic医疗案例_医院接口与数据平台.md"
+            },
+            "material_type": "project_case",
+            "chunk_id": "MCH-95C6A33C0669C3D4D76CBCE3D1E3625E",
+            "chunk_hash": "b0ed9a3646789233d046d409b5eba6fb329a4d661cae3dc52bdb82f2da868f72",
+            "source_role": "EVIDENCE_CANDIDATE",
+            "enterprise_id": "SYNTH-CHENGCHUAN-001",
+            "source_span": "MCH-95C6A33C0669C3D4D76CBCE3D1E3625E:FULL",
+            "exact_candidate_source_text": "## 时效使用规则",
+            "similarity": 0.368234943599,
+            "gold_grade": 0,
+            "gold_item_ids": [],
+            "rank": 20
+          }
+        ]
+      }
+    ],
+    "aggregate_metrics_at_k": {
+      "1": {
+        "case_count": 7,
+        "evidence_atom_recall": 0.4,
+        "evidence_atom_recall_denominator_cases": 5,
+        "candidate_precision": 0.285714285714,
+        "ndcg": 0.333333333333,
+        "ndcg_denominator_cases": 6,
+        "mrr_full": 0.540740740741,
+        "mrr_full_denominator_cases": 5,
+        "expected_retrieval_k0_count": 2,
+        "expected_no_sufficient_evidence_count": 6,
+        "false_positive_retrieval_candidate_rate": 0,
+        "false_negative_retrieval_k0_rate": 0,
+        "returned_k0_count": 0,
+        "no_grade_gte_2_in_top_k_count": 5
+      },
+      "3": {
+        "case_count": 7,
+        "evidence_atom_recall": 0.6,
+        "evidence_atom_recall_denominator_cases": 5,
+        "candidate_precision": 0.142857142857,
+        "ndcg": 0.368847910727,
+        "ndcg_denominator_cases": 6,
+        "mrr_full": 0.540740740741,
+        "mrr_full_denominator_cases": 5,
+        "expected_retrieval_k0_count": 2,
+        "expected_no_sufficient_evidence_count": 6,
+        "false_positive_retrieval_candidate_rate": 0,
+        "false_negative_retrieval_k0_rate": 0,
+        "returned_k0_count": 0,
+        "no_grade_gte_2_in_top_k_count": 4
+      },
+      "5": {
+        "case_count": 7,
+        "evidence_atom_recall": 0.6,
+        "evidence_atom_recall_denominator_cases": 5,
+        "candidate_precision": 0.085714285714,
+        "ndcg": 0.368847910727,
+        "ndcg_denominator_cases": 6,
+        "mrr_full": 0.540740740741,
+        "mrr_full_denominator_cases": 5,
+        "expected_retrieval_k0_count": 2,
+        "expected_no_sufficient_evidence_count": 6,
+        "false_positive_retrieval_candidate_rate": 0,
+        "false_negative_retrieval_k0_rate": 0,
+        "returned_k0_count": 0,
+        "no_grade_gte_2_in_top_k_count": 4
+      },
+      "8": {
+        "case_count": 7,
+        "evidence_atom_recall": 0.7,
+        "evidence_atom_recall_denominator_cases": 5,
+        "candidate_precision": 0.071428571429,
+        "ndcg": 0.405249150197,
+        "ndcg_denominator_cases": 6,
+        "mrr_full": 0.540740740741,
+        "mrr_full_denominator_cases": 5,
+        "expected_retrieval_k0_count": 2,
+        "expected_no_sufficient_evidence_count": 6,
+        "false_positive_retrieval_candidate_rate": 0,
+        "false_negative_retrieval_k0_rate": 0,
+        "returned_k0_count": 0,
+        "no_grade_gte_2_in_top_k_count": 3
+      },
+      "20": {
+        "case_count": 7,
+        "evidence_atom_recall": 0.8,
+        "evidence_atom_recall_denominator_cases": 5,
+        "candidate_precision": 0.035714285714,
+        "ndcg": 0.428893967175,
+        "ndcg_denominator_cases": 6,
+        "mrr_full": 0.540740740741,
+        "mrr_full_denominator_cases": 5,
+        "expected_retrieval_k0_count": 2,
+        "expected_no_sufficient_evidence_count": 6,
+        "false_positive_retrieval_candidate_rate": 0,
+        "false_negative_retrieval_k0_rate": 0,
+        "returned_k0_count": 0,
+        "no_grade_gte_2_in_top_k_count": 3
+      }
+    },
+    "metrics_by_profile_class": {
+      "PERFORMANCE": {
+        "case_count": 1,
+        "metrics_at_k": {
+          "1": {
+            "evidence_atom_recall": 0,
+            "candidate_precision": 0,
+            "ndcg": 0,
+            "mrr_full": 0.037037037037,
+            "case_count": 1
+          },
+          "3": {
+            "evidence_atom_recall": 0,
+            "candidate_precision": 0,
+            "ndcg": 0,
+            "mrr_full": 0.037037037037,
+            "case_count": 1
+          },
+          "5": {
+            "evidence_atom_recall": 0,
+            "candidate_precision": 0,
+            "ndcg": 0,
+            "mrr_full": 0.037037037037,
+            "case_count": 1
+          },
+          "8": {
+            "evidence_atom_recall": 0,
+            "candidate_precision": 0,
+            "ndcg": 0,
+            "mrr_full": 0.037037037037,
+            "case_count": 1
+          },
+          "20": {
+            "evidence_atom_recall": 0,
+            "candidate_precision": 0,
+            "ndcg": 0,
+            "mrr_full": 0.037037037037,
+            "case_count": 1
+          }
+        }
+      },
+      "PRODUCT_CAPABILITY": {
+        "case_count": 3,
+        "metrics_at_k": {
+          "1": {
+            "evidence_atom_recall": 1,
+            "candidate_precision": 0.666666666667,
+            "ndcg": 1,
+            "mrr_full": 1,
+            "case_count": 3
+          },
+          "3": {
+            "evidence_atom_recall": 1,
+            "candidate_precision": 0.222222222222,
+            "ndcg": 0.913117328565,
+            "mrr_full": 1,
+            "case_count": 3
+          },
+          "5": {
+            "evidence_atom_recall": 1,
+            "candidate_precision": 0.133333333333,
+            "ndcg": 0.913117328565,
+            "mrr_full": 1,
+            "case_count": 3
+          },
+          "8": {
+            "evidence_atom_recall": 1,
+            "candidate_precision": 0.083333333333,
+            "ndcg": 0.913117328565,
+            "mrr_full": 1,
+            "case_count": 3
+          },
+          "20": {
+            "evidence_atom_recall": 1,
+            "candidate_precision": 0.033333333333,
+            "ndcg": 0.913117328565,
+            "mrr_full": 1,
+            "case_count": 3
+          }
+        }
+      },
+      "QUALIFICATION": {
+        "case_count": 2,
+        "metrics_at_k": {
+          "1": {
+            "evidence_atom_recall": 0,
+            "candidate_precision": 0,
+            "ndcg": 0,
+            "mrr_full": 0.5,
+            "case_count": 2
+          },
+          "3": {
+            "evidence_atom_recall": 1,
+            "candidate_precision": 0.166666666667,
+            "ndcg": 0.193426403617,
+            "mrr_full": 0.5,
+            "case_count": 2
+          },
+          "5": {
+            "evidence_atom_recall": 1,
+            "candidate_precision": 0.1,
+            "ndcg": 0.193426403617,
+            "mrr_full": 0.5,
+            "case_count": 2
+          },
+          "8": {
+            "evidence_atom_recall": 1,
+            "candidate_precision": 0.0625,
+            "ndcg": 0.193426403617,
+            "mrr_full": 0.5,
+            "case_count": 2
+          },
+          "20": {
+            "evidence_atom_recall": 1,
+            "candidate_precision": 0.025,
+            "ndcg": 0.193426403617,
+            "mrr_full": 0.5,
+            "case_count": 2
+          }
+        }
+      },
+      "SERVICE": {
+        "case_count": 1,
+        "metrics_at_k": {
+          "1": {
+            "evidence_atom_recall": 0,
+            "candidate_precision": 0,
+            "ndcg": 0,
+            "mrr_full": 0.166666666667,
+            "case_count": 1
+          },
+          "3": {
+            "evidence_atom_recall": 0,
+            "candidate_precision": 0,
+            "ndcg": 0,
+            "mrr_full": 0.166666666667,
+            "case_count": 1
+          },
+          "5": {
+            "evidence_atom_recall": 0,
+            "candidate_precision": 0,
+            "ndcg": 0,
+            "mrr_full": 0.166666666667,
+            "case_count": 1
+          },
+          "8": {
+            "evidence_atom_recall": 0.5,
+            "candidate_precision": 0.125,
+            "ndcg": 0.218407436818,
+            "mrr_full": 0.166666666667,
+            "case_count": 1
+          },
+          "20": {
+            "evidence_atom_recall": 1,
+            "candidate_precision": 0.1,
+            "ndcg": 0.360276338684,
+            "mrr_full": 0.166666666667,
+            "case_count": 1
+          }
+        }
+      }
+    },
+    "failure_family_distribution": {
+      "LOW_RANK_GRADE_GE_2_EVIDENCE": 2,
+      "GRADE_GE_2_EVIDENCE_AT_RANK_1": 2,
+      "RETRIEVAL_MISS_OR_RELEVANT_ONLY": 1,
+      "EXPECTED_K0_NO_GRADE_GE_2_EVIDENCE": 2
+    },
+    "k0_diagnostics": {
+      "definition": "K0 diagnostics use expected_retrieval_k0 from the additive amendment; expected_no_sufficient_evidence is reported independently.",
+      "expected_retrieval_k0_count": 2,
+      "expected_retrieval_k0_case_ids": [
+        "RAG-P0-HOLD-TB-006-REQ-037",
+        "RAG-P0-HOLD-JY-001-REQ-148"
+      ],
+      "expected_no_sufficient_evidence_count": 6,
+      "expected_no_sufficient_evidence_case_ids": [
+        "RAG-P0-HOLD-JY-001-REQ-077",
+        "RAG-P0-HOLD-JY-001-REQ-051",
+        "RAG-P0-HOLD-TB-003-REQ-119",
+        "RAG-P0-HOLD-TB-003-REQ-170",
+        "RAG-P0-HOLD-TB-006-REQ-037",
+        "RAG-P0-HOLD-JY-001-REQ-148"
+      ],
+      "partial_cases_are_not_false_positive_retrieval": true,
+      "at_k": {
+        "1": {
+          "case_count": 7,
+          "evidence_atom_recall": 0.4,
+          "evidence_atom_recall_denominator_cases": 5,
+          "candidate_precision": 0.285714285714,
+          "ndcg": 0.333333333333,
+          "ndcg_denominator_cases": 6,
+          "mrr_full": 0.540740740741,
+          "mrr_full_denominator_cases": 5,
+          "expected_retrieval_k0_count": 2,
+          "expected_no_sufficient_evidence_count": 6,
+          "false_positive_retrieval_candidate_rate": 0,
+          "false_negative_retrieval_k0_rate": 0,
+          "returned_k0_count": 0,
+          "no_grade_gte_2_in_top_k_count": 5
+        },
+        "3": {
+          "case_count": 7,
+          "evidence_atom_recall": 0.6,
+          "evidence_atom_recall_denominator_cases": 5,
+          "candidate_precision": 0.142857142857,
+          "ndcg": 0.368847910727,
+          "ndcg_denominator_cases": 6,
+          "mrr_full": 0.540740740741,
+          "mrr_full_denominator_cases": 5,
+          "expected_retrieval_k0_count": 2,
+          "expected_no_sufficient_evidence_count": 6,
+          "false_positive_retrieval_candidate_rate": 0,
+          "false_negative_retrieval_k0_rate": 0,
+          "returned_k0_count": 0,
+          "no_grade_gte_2_in_top_k_count": 4
+        },
+        "5": {
+          "case_count": 7,
+          "evidence_atom_recall": 0.6,
+          "evidence_atom_recall_denominator_cases": 5,
+          "candidate_precision": 0.085714285714,
+          "ndcg": 0.368847910727,
+          "ndcg_denominator_cases": 6,
+          "mrr_full": 0.540740740741,
+          "mrr_full_denominator_cases": 5,
+          "expected_retrieval_k0_count": 2,
+          "expected_no_sufficient_evidence_count": 6,
+          "false_positive_retrieval_candidate_rate": 0,
+          "false_negative_retrieval_k0_rate": 0,
+          "returned_k0_count": 0,
+          "no_grade_gte_2_in_top_k_count": 4
+        },
+        "8": {
+          "case_count": 7,
+          "evidence_atom_recall": 0.7,
+          "evidence_atom_recall_denominator_cases": 5,
+          "candidate_precision": 0.071428571429,
+          "ndcg": 0.405249150197,
+          "ndcg_denominator_cases": 6,
+          "mrr_full": 0.540740740741,
+          "mrr_full_denominator_cases": 5,
+          "expected_retrieval_k0_count": 2,
+          "expected_no_sufficient_evidence_count": 6,
+          "false_positive_retrieval_candidate_rate": 0,
+          "false_negative_retrieval_k0_rate": 0,
+          "returned_k0_count": 0,
+          "no_grade_gte_2_in_top_k_count": 3
+        },
+        "20": {
+          "case_count": 7,
+          "evidence_atom_recall": 0.8,
+          "evidence_atom_recall_denominator_cases": 5,
+          "candidate_precision": 0.035714285714,
+          "ndcg": 0.428893967175,
+          "ndcg_denominator_cases": 6,
+          "mrr_full": 0.540740740741,
+          "mrr_full_denominator_cases": 5,
+          "expected_retrieval_k0_count": 2,
+          "expected_no_sufficient_evidence_count": 6,
+          "false_positive_retrieval_candidate_rate": 0,
+          "false_negative_retrieval_k0_rate": 0,
+          "returned_k0_count": 0,
+          "no_grade_gte_2_in_top_k_count": 3
+        }
+      }
+    }
+  },
+  "deterministic_replay_parity": {
+    "replay_input_content_hashes": {
+      "gold": "0e1545330089a41df56e9b3d6456508a25aefab74153fff26738002f7c1f8d39",
+      "snapshot": "25708f009b853d434207272c511a21474e5ea5805b41d1d2239d605ef8fab421",
+      "chunk_artifact": "dca1aa45cd8ab9f05e97335e3044d6df739a919841a7a8348b5eb8cd8ccd7a3d",
+      "requirement_pool": "1ed3de0aa24d46a3a143f06f72ea86958cf2aa1b57d06423011545393db03d8c",
+      "query_supplement": "d4fd8b13e480c587f796053c956e70ac0bd80f952dca78a92c625e110d98bc8f"
+    },
+    "replay_run_count": 2,
+    "first_replay_deterministic_content_hash": "7426ae4100f781002d6761e6e8d2bffed8074666d8f6772a5bd4bffe755d5e0f",
+    "second_replay_deterministic_content_hash": "7426ae4100f781002d6761e6e8d2bffed8074666d8f6772a5bd4bffe755d5e0f",
+    "same_input_same_output": true,
+    "old_baseline_artifact_file_sha256_before": "3A7B9670432C7EC0FCF5E4CA9B40EE79B8855AD73572552E27C96FAB7CACD218",
+    "old_baseline_artifact_file_sha256_after": "3A7B9670432C7EC0FCF5E4CA9B40EE79B8855AD73572552E27C96FAB7CACD218",
+    "old_baseline_artifact_unchanged": true,
+    "old_baseline_pending_marker_not_authoritative_for_this_checkpoint": true
+  },
+  "safety_metrics": {
+    "provider_calls": 7,
+    "embedding_calls": 7,
+    "llm_calls": 0,
+    "fact_calls": 0,
+    "mapping_calls": 0,
+    "claim_calls": 0,
+    "writer_calls": 0,
+    "production_db_writes": 0,
+    "eval_db_writes": 0,
+    "gold_mutations": 0,
+    "corpus_mutations": 0,
+    "production_retrieval_changes": 0,
+    "production_authority_promotions": 0,
+    "commits": 0,
+    "pushes": 0,
+    "merges": 0,
+    "deploys": 0
+  },
+  "next_intervention_recommendation": {
+    "recommendation": "P3_PROFILE_LEXICAL",
+    "basis": "At Top-5, the frozen replay shows a profile-sliced retrieval gap outside PRODUCT_CAPABILITY; the recommendation is to review profile/lexical handling only, without implementing query or ranking changes in this checkpoint."
+  },
+  "deterministic_content_hash": "f0be1adea13de7d9ad218b9172cc9c40520a7e92825cc0af37eb1689da0fd5f4"
+}

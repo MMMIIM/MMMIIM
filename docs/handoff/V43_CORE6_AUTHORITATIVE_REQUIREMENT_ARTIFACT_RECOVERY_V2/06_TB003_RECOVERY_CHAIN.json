@@ -1,0 +1,38 @@
+{
+  "tender_id": "TB-003",
+  "chain": [
+    {
+      "stage": "RAW_TENDER_SOURCE",
+      "path": "backend/eval/tender-benchmark-v1/sources/TB-003-jiaozuo-sidian.pdf",
+      "exists": true,
+      "sha256": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "status": "SOURCE_IDENTITY_VERIFIED"
+    },
+    {
+      "stage": "RECOVERED_SOURCE_AUTHORITY_PACKET",
+      "path": "backend/eval/requirement-extraction-real-tender-pilot-v1/recovered-source-authority-v1/packets/TB-003.json",
+      "exists": true,
+      "packet_sha256": "3ccd439c54893cb70f4d943c6708763e35df7cc14dd4293cc0db16f1812cbcd0",
+      "requirement_count": 265,
+      "authority_status": "SOURCE_CANONICAL_AUTHORITY_READY_PENDING_HUMAN_REVIEW",
+      "gold_authority": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "stage": "CURRENT_RUNTIME_EVIDENCE",
+      "manifest": "docs/eval/requirement-production-core6-20260911/CORE6_RUNTIME_MANIFEST.json",
+      "provider_calls": 33,
+      "candidate_count": 257,
+      "canonical_count": 257,
+      "semantic_adjudication": "not performed",
+      "status": "NON_AUTHORITATIVE_RUNTIME_EVIDENCE"
+    },
+    {
+      "stage": "HISTORICAL_HUMAN_ADJUDICATION",
+      "status": "NOT_FOUND_IN_REPOSITORY_ARCHAEOLOGY",
+      "blocker": "ADJUDICATION_IDENTITY_MISSING"
+    }
+  ],
+  "recovery_status": "BLOCKED_ADJUDICATION_IDENTITY_MISSING",
+  "semantic_reconstruction_performed": false,
+  "production_canonical_substitution": false
+}

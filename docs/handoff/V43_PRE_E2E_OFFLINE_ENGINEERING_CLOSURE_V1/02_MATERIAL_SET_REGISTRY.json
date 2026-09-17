@@ -1,0 +1,99 @@
+{
+  "artifact_type": "V43_MATERIAL_SET_REGISTRY_V1",
+  "generated_at": "2026-09-16",
+  "execution_mode": "OFFLINE_ONLY",
+  "provider_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "gold_mutations": 0,
+  "production_semantic_changes": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "commit": 0,
+  "push": 0,
+  "merge": 0,
+  "deploy": 0,
+  "sets": [
+    {
+      "set_id": "MATRIX50",
+      "count": 50,
+      "source": "rag_bundle_manifest",
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "authority": "source manifest plus governance metadata"
+    },
+    {
+      "set_id": "CURRENT_RAG_SNAPSHOT",
+      "count": 56,
+      "chunks": 561,
+      "embeddings": 625,
+      "status": "CURRENT_PARTIAL_REUSABLE"
+    },
+    {
+      "set_id": "HUAWEI_PUBLIC_REAL_PDF_PILOT_V1",
+      "count": 6,
+      "chunks": 590,
+      "embeddings": 590,
+      "status": "CURRENT_REUSABLE",
+      "source_authority": "official public PDF snapshot"
+    },
+    {
+      "set_id": "CHENGCHUAN_SYNTHETIC_BASE",
+      "count": 16,
+      "chunks": 160,
+      "embeddings": 160,
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "authority": "SYNTHETIC_DEVELOPMENT_ONLY"
+    },
+    {
+      "set_id": "CHENGCHUAN_SYNTHETIC_V2_EXTENSION",
+      "count": 76,
+      "chunks": 676,
+      "status": "BLOCKED_BUT_DIAGNOSTICALLY_VALID",
+      "authority": "CONTROLLED_REAL_TEST only; no re-embed in this task"
+    },
+    {
+      "set_id": "H3C_EXPLORATORY_WEB",
+      "count": 6,
+      "status": "EXPLORATORY_ONLY",
+      "authority": "REFERENCE_ONLY / no product promotion"
+    }
+  ],
+  "historical_56_reconciliation": {
+    "expected_partition": {
+      "reference": 34,
+      "synthetic_enterprise": 16,
+      "neusoft_quarantined": 4,
+      "unknown_review_required": 2
+    },
+    "observed_partition": {
+      "reference": 34,
+      "synthetic_enterprise": 16,
+      "neusoft_quarantined": 4,
+      "unknown_review_required": 2
+    },
+    "observed_total": 56,
+    "parity_status": "PASS"
+  },
+  "source_counts_evidence": [
+    {
+      "path": "backend/eval/rag-pilot/V43_RAG_CODEX_HANDOFF_1/rag_bundle_manifest.json",
+      "exists": true,
+      "bytes": 53316,
+      "sha256": "bf1ab744e7cc340a36df7045ded13a55b225d60e80ae871319d7ebf4bee0d87d",
+      "status": "CURRENT_REUSABLE",
+      "roles": [],
+      "notes": []
+    },
+    {
+      "path": "docs/V43_CHENGCHUAN_V2_IMPORT_CHECKPOINT.json",
+      "exists": true,
+      "bytes": 1472,
+      "sha256": "e2f341d6c355274c281d1bf0ddec64a4592b5319456563fb6a7967604c861fe6",
+      "status": "BLOCKED_BUT_DIAGNOSTICALLY_VALID",
+      "roles": [],
+      "notes": []
+    }
+  ]
+}

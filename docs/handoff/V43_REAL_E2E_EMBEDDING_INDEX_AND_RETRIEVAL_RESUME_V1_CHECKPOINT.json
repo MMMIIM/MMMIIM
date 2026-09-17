@@ -1,0 +1,59 @@
+{
+  "task": "V43_REAL_E2E_EMBEDDING_INDEX_AND_RETRIEVAL_RESUME_V1",
+  "run_id": "V43-REAL-E2E-EMBEDDING-INDEX-RESUME-20260914",
+  "requirement": {
+    "source_run": "REAL_E2E_CASE_01_REQUIREMENT_RUN_V3",
+    "post_scope_recert_count": 337,
+    "scope_final": "PASS",
+    "provider_calls_added": 0
+  },
+  "embedding_preflight": {
+    "provider": "siliconflow",
+    "model": "Qwen/Qwen3-Embedding-0.6B",
+    "dimension_expected": 1024,
+    "transport": "DIRECT_HTTPS",
+    "proxy_used": false,
+    "provider_reached": false,
+    "http_status": null,
+    "vector_returned": false,
+    "vector_dimension": null,
+    "finite_vector": false,
+    "latency_ms": 32,
+    "retry_count": 0,
+    "error_code": "EMBEDDING_NETWORK_ERROR",
+    "low_level_error": "EACCES",
+    "diagnostic": {
+      "dns": "PASS",
+      "tcp_443": "EACCES",
+      "tls": "NOT_REACHED",
+      "http": "NOT_REACHED"
+    }
+  },
+  "enterprise_corpus": {
+    "materials": 6,
+    "chunks": 590,
+    "embedded_chunks": 0,
+    "indexing": "NOT_STARTED_AFTER_PREFLIGHT_FAILURE",
+    "retrieval": "NOT_RUN_INDEX_BLOCKED"
+  },
+  "gates": {
+    "requirement_scope_final": "PASS",
+    "human_review_packet": "READY",
+    "enterprise_indexing": "BLOCKED_ENVIRONMENT",
+    "retrieval": "NOT_RUN_INDEX_BLOCKED",
+    "downstream_e2e": "BLOCKED",
+    "requirement_foundation": "COMPLETE"
+  },
+  "provider_calls_current_run": 1,
+  "provider_reached_current_run": 0,
+  "cumulative_provider_attempts_before": 35,
+  "cumulative_provider_attempts_after": 36,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "fact_persistence": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "final_status": "BLOCKED_EMBEDDING_SANDBOX_NETWORK_EACCES",
+  "stop_reason": "Provider was not reached; direct TCP connection returned EACCES in the Codex sandbox. No retry or indexing was attempted."
+}

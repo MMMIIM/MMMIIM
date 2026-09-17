@@ -1,0 +1,350 @@
+{
+  "checkpoint": "V43_GOLD_V2_FOUNDATION_AND_WRITER_EVAL_PREP_CHECKPOINT",
+  "eval_only": true,
+  "foundation_statuses": {
+    "ARCHITECTURE_MATERIALIZATION": "PASS",
+    "BID_PILOT_READ_ONLY_FOUNDATION": "PASS",
+    "FACT_CONTROL_RECONCILIATION": "PASS",
+    "REAL_ENTERPRISE_FACT_V2_FOUNDATION": "CANDIDATE_ONLY/NO_ELIGIBLE_SOURCES",
+    "REAL_FACT_V2_ELIGIBLE_CANDIDATES": 0,
+    "REQUIREMENT_REAL_SOURCE_FOUNDATION": "PARTIAL",
+    "WRITER_EVAL_PROVIDER_OFF_FOUNDATION": "READY/PASS"
+  },
+  "gate_evidence": {
+    "SAFE_TO_BUILD_MAPPING_GOLD_V2": "Requirement foundation complete=false; Human Fact review eligible=false; Fact freeze authorized=false; corpus gaps absent=false.",
+    "SAFE_TO_FREEZE_REAL_FACT_V2": "This task creates no human Fact authority and performs no Fact adjudication.",
+    "SAFE_TO_RUN_WRITER_LIVE_EVAL": "Writer provider-off status=READY/PASS; provider authorization=false.",
+    "SAFE_TO_START_BID_PILOT_HITL": "Bid Pilot mode=READ_ONLY; approval actions exposed=0.",
+    "SAFE_TO_START_HUMAN_FACT_V2_REVIEW": "Eligible immutable sources=0; a non-empty fixed-snapshot blind packet is required."
+  },
+  "generated_at": "2026-09-13T17:31:01.281Z",
+  "output_files": [
+    "V43_GOLD_V2_FOUNDATION_AND_WRITER_EVAL_PREP_CHECKPOINT.json",
+    "V43_GOLD_V2_FOUNDATION_AND_WRITER_EVAL_PREP_CHECKPOINT.md"
+  ],
+  "read_only_reports": {
+    "architecture": {
+      "current_closure_checkpoint": "backend/eval/architecture-assurance/overnight-2026-09-04/V43_TRACK_A_REMEDIATION_CLOSURE_CHECKPOINT.json",
+      "db_writes": 0,
+      "gold_mutations": 0,
+      "mode": "READ_ONLY_MATERIALIZATION",
+      "prior_path_manifest": {
+        "bypass_findings": 5,
+        "path": "backend/eval/architecture-assurance/overnight-2026-09-04/V43_CHAIN_CLOSURE_00_LOCAL_PATH_MANIFEST.json",
+        "phase": "PRE_REMEDIATION_AS_IS"
+      },
+      "production_files_changed": 0,
+      "provider_calls": 0,
+      "rows": [
+        {
+          "as_is": "Material, Retrieval, Evidence, Fact, Mapping, Claim and Writer remain distinct lifecycle objects.",
+          "evidence": [
+            "backend/eval/architecture-assurance/overnight-2026-09-04/V43_CHAIN_CLOSURE_00_LOCAL_PATH_MANIFEST.json",
+            "backend/eval/architecture-assurance/overnight-2026-09-04/03_AUTHORITY_OBJECT_CHECKPOINT.md"
+          ],
+          "status": "ENFORCED",
+          "surface": "DOMAIN",
+          "target": "Retain the existing domain separation; this Eval creates no business object."
+        },
+        {
+          "as_is": "The later Track A closure proves the previously inventoried authority re-entry gaps fail closed.",
+          "evidence": [
+            "backend/eval/architecture-assurance/overnight-2026-09-04/V43_CHAIN_CLOSURE_00_LOCAL_PATH_MANIFEST.json",
+            "backend/eval/architecture-assurance/overnight-2026-09-04/V43_TRACK_A_REMEDIATION_CLOSURE_CHECKPOINT.json",
+            "backend/integration/track-a-authority-remediation.integration.js"
+          ],
+          "status": "ENFORCED",
+          "surface": "AUTHORITY",
+          "target": "Keep owning services and the single Material Authority Gate authoritative."
+        },
+        {
+          "as_is": "Review, canonical Fact, Mapping and Project Fact decisions remain human-controlled service operations.",
+          "evidence": [
+            "backend/eval/architecture-assurance/overnight-2026-09-04/V43_TRACK_A_REMEDIATION_CLOSURE_CHECKPOINT.json",
+            "backend/test/formal-mutation-authorization.test.js",
+            "backend/test/project-fact-control-v1.test.js"
+          ],
+          "status": "ENFORCED",
+          "surface": "HUMAN_GATE",
+          "target": "No Eval, Agent or Provider may approve or confirm formal state."
+        },
+        {
+          "as_is": "Agent read tools project formal state; authority-bearing actions route through policy and owning services.",
+          "evidence": [
+            "backend/src/pipeline/agent-tools.js",
+            "backend/src/pipeline/agent-action-policy.js",
+            "backend/test/agent-foundation.test.js",
+            "backend/test/agent-actions.test.js"
+          ],
+          "status": "ENFORCED",
+          "surface": "AGENT_BOUNDARY",
+          "target": "Bid Pilot remains read-only in this task."
+        },
+        {
+          "as_is": "Canonical Mapping, Claim and Writer authorization retain source, hash, contract and currentness lineage.",
+          "evidence": [
+            "backend/eval/architecture-assurance/overnight-2026-09-04/V43_TRACK_A_REMEDIATION_CLOSURE_CHECKPOINT.json",
+            "backend/test/mapping-to-claim-entrypoint.test.js",
+            "backend/test/writer-input-authorization-v1.test.js"
+          ],
+          "status": "ENFORCED",
+          "surface": "PROVENANCE",
+          "target": "Derived Eval projections must not redefine canonical identity or provenance."
+        },
+        {
+          "as_is": "NC02-NC05 and canonical downstream regressions are recorded as passing at real entry points and persistence boundaries.",
+          "evidence": [
+            "backend/eval/architecture-assurance/overnight-2026-09-04/V43_TRACK_A_REMEDIATION_CLOSURE_CHECKPOINT.json",
+            "backend/integration/track-a-authority-remediation.integration.js"
+          ],
+          "status": "ENFORCED",
+          "surface": "RUNTIME_ENFORCEMENT",
+          "target": "Retain fail-closed enforcement; no live runtime claim is created by this offline materialization."
+        }
+      ],
+      "status": "PASS",
+      "track_a_remediation": "CLOSED"
+    },
+    "bid_pilot": {
+      "approval_actions_exposed": 0,
+      "authority_writes_exposed": 0,
+      "db_writes": 0,
+      "explanations": [
+        "Relevant material remains distinct from Evidence, Fact, Mapping, Claim and Writer permission.",
+        "Zero eligible enterprise source candidates means no Human Fact V2 review can be exposed.",
+        "Provider-off Writer evaluation does not authorize live Writer execution.",
+        "This projection exposes no HITL approval, reject, override, confirmation or mutation action."
+      ],
+      "exposed_actions": [
+        "VIEW_FOUNDATION_STATUS",
+        "VIEW_SOURCE_GAPS",
+        "VIEW_WRITER_PROVIDER_OFF_RESULTS"
+      ],
+      "fixture_evidence": [
+        "backend/test/agent-foundation.test.js",
+        "backend/test/agent-actions.test.js",
+        "backend/src/pipeline/agent-tools.js",
+        "backend/src/pipeline/bid-copilot-orchestrator.js"
+      ],
+      "gold_mutations": 0,
+      "mode": "READ_ONLY",
+      "production_files_changed": 0,
+      "projections": {
+        "authority_boundary": {
+          "evidence": "backend/eval/architecture-assurance/overnight-2026-09-04/V43_TRACK_A_REMEDIATION_CLOSURE_CHECKPOINT.json",
+          "track_a_remediation": "CLOSED"
+        },
+        "fact_candidates": {
+          "authority": "CANDIDATE_ONLY",
+          "eligible_source_count": 0,
+          "evidence": "backend/eval/gold-governance/v43-gold-v2-foundation/REAL_FACT_V2_BLIND_HUMAN_REVIEW_PACKET.json"
+        },
+        "requirement_sources": {
+          "authoritative_packet_count": 3,
+          "evidence": "backend/eval/gold-governance/v43-gold-v2-foundation/requirement-source-foundation-checkpoint.json",
+          "reconstruction_candidate_count": 3
+        },
+        "writer": {
+          "evidence": "backend/eval/gold-governance/v43-gold-v2-foundation/V43_WRITER_EVAL_PROVIDER_OFF_FOUNDATION_CHECKPOINT.json",
+          "provider_execution": "OFF",
+          "provider_off_status": "READY/PASS"
+        }
+      },
+      "provider_calls": 0,
+      "status": "PASS"
+    },
+    "fact_control_reconciliation": {
+      "capabilities_created": 0,
+      "db_writes": 0,
+      "eligible_source_count_observed": 0,
+      "facts_created": 0,
+      "facts_mutated": 0,
+      "gold_mutations": 0,
+      "mode": "READ_ONLY_INVENTORY",
+      "production_files_changed": 0,
+      "provider_calls": 0,
+      "rows": [
+        {
+          "capability": "FACT_HUMAN_EDIT",
+          "evidence": [
+            "backend/src/project-fact-control-service.js",
+            "backend/src/evidence-source-fact-service.js",
+            "backend/test/project-fact-control-v1.test.js"
+          ],
+          "existing_owner": "ProjectFactControlService and EvidenceSourceFactService",
+          "finding": "Existing edit operations create a new version and preserve prior identity; no new editor is introduced.",
+          "status": "REUSE"
+        },
+        {
+          "capability": "REVIEW_WORKBENCH",
+          "evidence": [
+            "backend/src/review-center-service.js",
+            "backend/test/review-center.test.js"
+          ],
+          "existing_owner": "ReviewCenterService",
+          "finding": "Existing pending-review and impact projections are reusable.",
+          "status": "REUSE"
+        },
+        {
+          "capability": "EVIDENCE_READINESS",
+          "evidence": [
+            "backend/src/evidence-readiness-service.js",
+            "backend/test/evidence-readiness.test.js"
+          ],
+          "existing_owner": "EvidenceReadinessService",
+          "finding": "Readiness remains derived and advisory; it creates no Fact authority.",
+          "status": "REUSE"
+        },
+        {
+          "capability": "PROJECT_FACT_CONTROL_SERVICE",
+          "evidence": [
+            "backend/src/project-fact-control-service.js",
+            "backend/test/project-fact-control-v1.test.js"
+          ],
+          "existing_owner": "ProjectFactControlService",
+          "finding": "Existing service owns review, edit, conflict and version transitions.",
+          "status": "REUSE"
+        },
+        {
+          "capability": "PROJECT_LOCKED_FACT",
+          "evidence": [
+            "backend/eval/rag-pilot/results/overnight/07_p0_remediation_writer_v2_preimplementation_checkpoint.md"
+          ],
+          "existing_owner": "ProjectFactControlService",
+          "finding": "A second LockedFact authority would duplicate Project Fact; reuse approved/current Project Fact projections.",
+          "status": "NOT_NEEDED"
+        },
+        {
+          "capability": "ENTERPRISE_GLOBAL_FACT",
+          "evidence": [
+            "backend/eval/gold-governance/v43-gold-v2-foundation/REAL_FACT_V2_CANDIDATE_MANIFEST.json"
+          ],
+          "existing_owner": "No canonical global enterprise Fact authority established by this task",
+          "finding": "Current canonical candidate manifest has zero eligible immutable enterprise sources.",
+          "status": "MISSING"
+        },
+        {
+          "capability": "CONFLICT_VERSION_EFFECTIVE_TIME_LIFECYCLE",
+          "evidence": [
+            "backend/src/project-fact-control-service.js",
+            "backend/src/evidence-fact-service.js",
+            "backend/test/project-fact-control-v1.test.js"
+          ],
+          "existing_owner": "ProjectFactControlService and Evidence Fact contracts",
+          "finding": "Conflict/version and Fact validity exist, but no unified enterprise-global effective-time lifecycle is proven.",
+          "status": "NEEDS_HARDENING"
+        },
+        {
+          "capability": "HUMAN_CONFIRMATION_API",
+          "evidence": [
+            "backend/src/app.js",
+            "backend/test/formal-mutation-authorization.test.js"
+          ],
+          "existing_owner": "Backend project-fact and canonical Fact decision routes",
+          "finding": "Trusted actor routes already mediate approve/reject/edit operations.",
+          "status": "REUSE"
+        },
+        {
+          "capability": "AGENT_PROJECTION",
+          "evidence": [
+            "backend/src/pipeline/agent-tools.js",
+            "backend/src/pipeline/agent-action-policy.js",
+            "backend/test/agent-foundation.test.js"
+          ],
+          "existing_owner": "AgentTools and AgentActionPolicy",
+          "finding": "Reuse read-only projections; formal Fact decisions remain human-required.",
+          "status": "REUSE"
+        }
+      ],
+      "status": "PASS"
+    }
+  },
+  "readiness_gates": {
+    "SAFE_TO_BUILD_MAPPING_GOLD_V2": "NO",
+    "SAFE_TO_FREEZE_REAL_FACT_V2": "NO",
+    "SAFE_TO_RUN_WRITER_LIVE_EVAL": "NO",
+    "SAFE_TO_START_BID_PILOT_HITL": "NO",
+    "SAFE_TO_START_HUMAN_FACT_V2_REVIEW": "NO"
+  },
+  "side_effects": {
+    "db_writes": 0,
+    "gold_mutations": 0,
+    "production_files_changed": 0,
+    "provider_calls": 0
+  },
+  "task_evidence": {
+    "real_fact_v2": {
+      "blind_packet": "REAL_FACT_V2_BLIND_HUMAN_REVIEW_PACKET.json",
+      "blind_packet_pass": false,
+      "corpus_gaps": [
+        {
+          "code": "CORPUS_GAP",
+          "message": "No complete authority-eligible immutable source snapshot is available",
+          "source_class": "product_documentation"
+        },
+        {
+          "code": "CORPUS_GAP",
+          "message": "No complete authority-eligible immutable source snapshot is available",
+          "source_class": "qualification"
+        },
+        {
+          "code": "CORPUS_GAP",
+          "message": "No complete authority-eligible immutable source snapshot is available",
+          "source_class": "project_case"
+        }
+      ],
+      "eligible_count": 0,
+      "manifest": "REAL_FACT_V2_CANDIDATE_MANIFEST.json",
+      "rejected_count": 7
+    },
+    "requirement_source": {
+      "artifact": "requirement-source-foundation-checkpoint.json",
+      "classifications": {
+        "FAST-01": "A_AUTHORITATIVE_PACKET_RECOVERED",
+        "FAST-04": "B_HUMAN_RECONSTRUCTION_POSSIBLE",
+        "FAST-WATER-01": "A_AUTHORITATIVE_PACKET_RECOVERED",
+        "JY-001": "B_HUMAN_RECONSTRUCTION_POSSIBLE",
+        "TB-003": "B_HUMAN_RECONSTRUCTION_POSSIBLE",
+        "TB-006": "A_AUTHORITATIVE_PACKET_RECOVERED"
+      },
+      "gates": {
+        "authoritative_packet_recovered": 3,
+        "packet_parity": "FAIL_MISSING_AUTHORITATIVE_PACKETS",
+        "requirement_source": "BLOCKED_FOR_MISSING_AUTHORITATIVE_PACKETS",
+        "source_identity": "PASS"
+      }
+    },
+    "writer_provider_off": {
+      "artifact": "V43_WRITER_EVAL_PROVIDER_OFF_FOUNDATION_CHECKPOINT.json",
+      "metrics": {
+        "FOREIGN_ENTERPRISE_CONTAMINATION_BLOCK_RATE": 1,
+        "MUTATION_FAIL_CLOSED_RATE": 1,
+        "REFERENCE_SOLUTION_USAGE_PASS": "PASS",
+        "REFERENCE_SOLUTION_USAGE_RATE": 1,
+        "REFERENCE_TO_ENTERPRISE_ASSERTION_BLOCK_RATE": 1,
+        "SOURCE_ROLE_BOUNDARY_EVAL": "PASS",
+        "WRITER_FAST_GATE": "PASS",
+        "engineering_cases_in_semantic_denominator": 0,
+        "engineering_denominator": 2,
+        "mutation_denominator": 9,
+        "semantic_denominator": 15,
+        "semantic_pass_count": 15,
+        "source_role_denominator": 6
+      },
+      "source_role_boundary": {
+        "ENTERPRISE_EVIDENCE_ASSERTABLE_PASS": "PASS",
+        "FOREIGN_ENTERPRISE_IDENTITY_CONTAMINATION_FAIL": "FAIL_CLOSED",
+        "MIXED_ASSERTABLE_REFERENCE_BOUNDARY": "FAIL_CLOSED",
+        "REFERENCE_SOLUTION_DESIGN_PASS": "PASS",
+        "REFERENCE_STRONG_FACT_PROMOTION_FAIL": "FAIL_CLOSED",
+        "REFERENCE_TO_ENTERPRISE_ASSERTION_FAIL": "FAIL_CLOSED"
+      },
+      "status": "READY/PASS"
+    }
+  },
+  "track_a": {
+    "TRACK_A_REMEDIATION": "CLOSED",
+    "rewritten": false,
+    "source_checkpoint": "backend/eval/architecture-assurance/overnight-2026-09-04/V43_TRACK_A_REMEDIATION_CLOSURE_CHECKPOINT.json"
+  }
+}

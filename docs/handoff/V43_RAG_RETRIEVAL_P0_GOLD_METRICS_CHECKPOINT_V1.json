@@ -1,0 +1,154 @@
+{
+  "artifact_type": "V43_RAG_RETRIEVAL_P0_GOLD_METRICS_CHECKPOINT_V1",
+  "artifact_version": "v1",
+  "checkpoint_id": "V43_RAG_RETRIEVAL_P0_GOLD_METRICS_CHECKPOINT_V1",
+  "status": "PROVISIONAL_BLOCKED_HOLDOUT_REPLAY_PENDING",
+  "decision": "GPT_DECISION_APPROVE_P0_WITH_CORRECTIONS",
+  "scope": "Evidence Retrieval quality only; no P1/P2/P3/P4 implementation",
+  "authority": {
+    "codex": "ENGINEERING_EXECUTOR_ONLY",
+    "gpt": "EVAL_SEMANTIC_AUTHORITY",
+    "gold_authority": "DEVELOPMENT_EVAL_ONLY",
+    "human_confirmation": "OPTIONAL_HIGHER_AUTHORITY_OVERLAY_NOT_BLOCKING_P0_DEVELOPMENT_EVAL"
+  },
+  "baseline_identity": {
+    "snapshot_id": "EVSNAP-D98FA52C-952F-416F-B57F-92C41EF9731D",
+    "snapshot_path": "docs/handoff/V43_EVIDENCE_SEARCH_SUPPORT_ARCHITECTURE_ENGINEERING_V1/evidence-vector-snapshot/EVSNAP-D98FA52C-952F-416F-B57F-92C41EF9731D.json",
+    "snapshot_file_sha256": "5D0A7F451D4090DEDBD8E9EE4F3B5851565F01F7A4170D5A40C673031BCC4578",
+    "manifest_identity_hash": "ec659099e70e6c00e5cebd664732be815b8447de3e4a86dca3ed16c6f28772e8",
+    "vector_artifact_hash": "527f23f25e158f54b4d4ee18b5a17f55f0fb7ffd326d95916836f9f0d4456101",
+    "query_artifact_hash": "d3366c8abba21700f4b5286d437711d59f1d2c019ef3380f3829234010e7d719",
+    "enterprise_id": "SYNTH-CHENGCHUAN-001",
+    "authority": "SYNTHETIC_EVAL_ONLY",
+    "production_authority": "NONE",
+    "material_count": 9,
+    "chunk_count": 94,
+    "query_vector_count": 3,
+    "embedding_provider": "api.siliconflow.cn",
+    "embedding_model": "Qwen/Qwen3-Embedding-0.6B",
+    "embedding_version": "1",
+    "vector_dimension": 1024,
+    "baseline_mutation": false
+  },
+  "corpus_identity": {
+    "chunk_artifact_path": "backend/eval/rag-pilot/results/all_package_chunks.jsonl",
+    "chunk_artifact_sha256": "2382B5206414B697D623DBEC9BABF588E7651D7F73367D5D4270ADDB571C93D4",
+    "source_role_snapshot_path": "docs/handoff/V43_PRE_E2E_GOVERNANCE_AND_MAPPING_READINESS_CLOSURE_V1/21_CHENGCHUAN_SOURCE_ROLE_MODEL_CORRECTED.json",
+    "source_role_snapshot_sha256": "ADFBAFF3E0018DB5F35006AB20325C75C350A5339DA7E4354B8648F130BF86A8",
+    "scope": "ENTERPRISE_PRIVATE",
+    "source_role": "EVIDENCE_CANDIDATE",
+    "source_material_count": 9,
+    "vectorized_chunk_count": 94
+  },
+  "gold_identity": {
+    "path": "backend/eval/retrieval-quality-p0/GPT_SEMANTIC_GOLD_V1.json",
+    "sha256": "7576C1D9A9FECD19F032AD49085E61E48BB008EFF4788E225A2CCEE3087492E7",
+    "schema": {
+      "version": "GPT_SEMANTIC_GOLD_V1",
+      "case_unit": "frozen requirement/query",
+      "evidence_item_unit": "material_id + doc_id + chunk_id + chunk_hash + exact source span offsets",
+      "required_case_fields": ["query_id/requirement_id", "query_hash", "has_sufficient_evidence", "case_class", "expected_k0", "evidence_items", "evidence_atoms", "lineage"],
+      "evidence_item_grades": {"EVIDENCE_BEARING_FULL": 3, "EVIDENCE_BEARING_PARTIAL": 2, "RELEVANT_ONLY": 1, "IRRELEVANT": 0},
+      "atom_match_rule": "Only explicitly acceptable span refs match; same material, topic similarity, or nearest chunk does not match.",
+      "blind_rule": "Gold has no Top-K, vector similarity, rerank score, historical pass/fail, or prior expected hit input.",
+      "semantic_f1": "DISABLED_IN_V1 because atom Recall and candidate Precision use different units."
+    },
+    "authority": "DEVELOPMENT_EVAL_ONLY",
+    "case_count": 10,
+    "calibration_count": 3,
+    "holdout_count": 7,
+    "case_class_distribution": {"POSITIVE": 1, "PARTIAL": 6, "NEGATIVE": 1, "CORPUS_GAP": 2},
+    "semantic_labels_created_by_codex": false,
+    "gold_mutation_after_freeze": false
+  },
+  "query_pool_identity": {
+    "path": "docs/V43_REQUIREMENT_GOLD_V2_SIX_TENDER_CANONICAL_INPUT.json",
+    "sha256": "FF07402688A3013AF9A9B8BE01F613F76848B7EA905208C1955A604432422FE1",
+    "row_count": 1009,
+    "human_evidence_gold": false,
+    "calibration_is_known_badcase_only": true,
+    "holdout_selection_used_retrieval_output": false
+  },
+  "baseline_replay": {
+    "artifact_path": "backend/eval/retrieval-quality-p0/results/V43_RAG_RETRIEVAL_P0_BASELINE_REPLAY_V1.json",
+    "artifact_sha256": "f87358c52aa00e55d970ddcd7161458e3dd6d14cf44f58cae6674e59a08198ce",
+    "execution_mode": "TARGETED",
+    "calibration_replayed": 3,
+    "holdout_replayed": 0,
+    "holdout_status": "NOT_EXECUTED",
+    "holdout_blocker": "Frozen baseline snapshot contains query vectors for the three calibration cases only; no Provider call was authorized for holdout vector generation.",
+    "k_values": [1, 3, 5, 8, 20]
+  },
+  "metric_definitions": {
+    "evidence_atom_recall_at_k": "Retrievable Gold atoms covered by a Top-K candidate divided by retrievable Gold atoms; missing/unresolvable atoms are reported as corpus gaps, not retrieval misses.",
+    "candidate_precision_at_k": "Top-K candidates with common evidence-item grade >= 2 divided by K.",
+    "mrr": "Reciprocal rank of the first grade >= 2 candidate; cases without one are excluded from the MRR denominator.",
+    "ndcg_at_k": "Graded nDCG over the common evidence-item unit with grades 3/2/1/0.",
+    "k0_precision_recall": "NOT_EVALUATED for this baseline because it has no candidate-sufficiency output and returns K candidates for this non-empty pool.",
+    "false_positive_candidate_rate": "Expected-K0 cases with a grade >= 2 candidate in Top-K divided by expected-K0 cases.",
+    "false_negative_k0_rate": "Expected non-K0 cases for which baseline returned zero candidates divided by expected non-K0 cases.",
+    "f1": "NOT_EMITTED; no atom-level Recall is combined with candidate-level Precision."
+  },
+  "baseline_metrics_calibration_only": {
+    "1": {"evidence_atom_recall": 0, "candidate_precision": 0, "mrr": 0.2625, "ndcg": 0, "k0_precision": null, "k0_recall": null, "false_positive_candidate_rate": 0, "false_negative_k0_rate": null, "expected_k0_count": 3, "baseline_returned_k0_count": 0},
+    "3": {"evidence_atom_recall": 0.5, "candidate_precision": 0.111111111111, "mrr": 0.2625, "ndcg": 0.128950935745, "k0_precision": null, "k0_recall": null, "false_positive_candidate_rate": 0.333333333333, "false_negative_k0_rate": null, "expected_k0_count": 3, "baseline_returned_k0_count": 0},
+    "5": {"evidence_atom_recall": 0.5, "candidate_precision": 0.066666666667, "mrr": 0.2625, "ndcg": 0.128950935745, "k0_precision": null, "k0_recall": null, "false_positive_candidate_rate": 0.333333333333, "false_negative_k0_rate": null, "expected_k0_count": 3, "baseline_returned_k0_count": 0},
+    "8": {"evidence_atom_recall": 0.5, "candidate_precision": 0.041666666667, "mrr": 0.2625, "ndcg": 0.128950935745, "k0_precision": null, "k0_recall": null, "false_positive_candidate_rate": 0.333333333333, "false_negative_k0_rate": null, "expected_k0_count": 3, "baseline_returned_k0_count": 0},
+    "20": {"evidence_atom_recall": 0.5, "candidate_precision": 0.033333333333, "mrr": 0.2625, "ndcg": 0.291446743656, "k0_precision": null, "k0_recall": null, "false_positive_candidate_rate": 0.333333333333, "false_negative_k0_rate": null, "expected_k0_count": 3, "baseline_returned_k0_count": 0}
+  },
+  "slice_metrics_calibration_k5": {
+    "PRODUCT_CAPABILITY": {"case_count": 1, "evidence_atom_recall": 1, "candidate_precision": 0.2, "mrr": 0.5, "ndcg": 0.386852807235, "expected_k0_count": 1, "false_positive_candidate_rate": 1},
+    "PERFORMANCE": {"case_count": 1, "evidence_atom_recall": 0, "candidate_precision": 0, "mrr": 0.025, "ndcg": 0, "expected_k0_count": 1, "false_positive_candidate_rate": 0},
+    "QUALIFICATION": {"case_count": 1, "evidence_atom_recall": null, "candidate_precision": 0, "mrr": null, "ndcg": 0, "expected_k0_count": 1, "false_positive_candidate_rate": 0}
+  },
+  "failure_family_distribution": {
+    "replay_scope": "3 calibration cases only",
+    "METADATA_HEADER_FALSE_EVIDENCE_AT_RANK_1": 1,
+    "CORPUS_GAP_OR_NEGATIVE_NO_ACCEPTABLE_EVIDENCE": 1,
+    "WRONG_MATERIAL_OR_RETRIEVAL_MISS": 1
+  },
+  "safety_metrics": {
+    "snapshot_vectors_checked": 94,
+    "lineage_complete": true,
+    "missing_or_mismatched_lineage_count": 0,
+    "source_role_escape_count": 0,
+    "reference_only_escape_count": 0,
+    "quarantine_escape_count": 0,
+    "cross_enterprise_escape_count": 0,
+    "cross_scope_escape_count": 0,
+    "production_db_writes": 0,
+    "eval_db_writes": 0,
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_retrieval_code_changes": 0,
+    "migrations_executed": 0,
+    "gold_mutations": 0,
+    "fact_mapping_claim_writer_mutations": 0
+  },
+  "reproducibility": {
+    "deterministic_sort": "score descending, then material_id|chunk_id ascending",
+    "first_replay_artifact_sha256": "f87358c52aa00e55d970ddcd7161458e3dd6d14cf44f58cae6674e59a08198ce",
+    "second_replay_artifact_sha256": "f87358c52aa00e55d970ddcd7161458e3dd6d14cf44f58cae6674e59a08198ce",
+    "same_input_same_output": true,
+    "replay_hash_match": true,
+    "input_mutation_detected": false
+  },
+  "next_intervention_recommendation": {
+    "recommendation": "NO_CHANGE_YET",
+    "evidence": [
+      "GPT semantic Gold is frozen, but the immutable baseline has vectors for only the three calibration cases.",
+      "Seven untouched holdout cases are frozen but have no baseline query vectors; generating them would require a separately authorized Provider operation.",
+      "The available calibration result is not release validation and cannot authorize P1, P2, P3, or P4.",
+      "The three calibration cases expose metadata/header pollution, low-ranked or missing acceptable spans, and Qualification mismatch, but do not establish the winning production intervention."
+    ],
+    "p1_p2_p3_p4_authorized": false
+  },
+  "stop_conditions": [
+    "Do not modify Production Retrieval code.",
+    "Do not generate holdout query vectors without explicit Provider authorization.",
+    "Do not tune against the holdout Gold.",
+    "Do not calculate or publish a cross-unit F1.",
+    "Do not infer semantic labels from current Top-K.",
+    "Do not select P1/P2/P3/P4 from calibration-only metrics."
+  ]
+}

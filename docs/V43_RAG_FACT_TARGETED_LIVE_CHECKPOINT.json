@@ -1,0 +1,115 @@
+{
+  "checkpoint": "V43_RAG_FACT_TARGETED_LIVE_CHECKPOINT",
+  "generated_at": "2026-09-07T02:58:09.255Z",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "task_type": "evidence_fact_extraction",
+  "database": "bid_platform_eval_chengchuan_v2",
+  "scope": [
+    "COM-01",
+    "COM-06",
+    "COM-07",
+    "COM-08",
+    "COM-12",
+    "CCV2-U09-02",
+    "CCV2-U13-01",
+    "CCV2-U17-01",
+    "CCV2-U20-02",
+    "CCV2-U29-02",
+    "CCV2-U30-02",
+    "CCV2-U34-02"
+  ],
+  "provider_identity": {
+    "provider": "openai_compatible",
+    "model": "deepseek-ai/DeepSeek-V4-Flash",
+    "version": "NOT_EXPOSED",
+    "gateway_http_status_distribution": { "200": 3, "422": 19 },
+    "provider_http_status_distribution": { "200": 22 },
+    "identity_source": "Semantic Gateway container runtime metadata"
+  },
+  "execution": {
+    "provider_call_cap": 30,
+    "concurrency": 2,
+    "provider_calls": 22,
+    "retry_count": 10,
+    "retry_rate": 0.4545454545,
+    "latency_ms": { "p50": 3008, "p95": 5482, "min": 974, "max": 6177 },
+    "schema_contract_retry_count": 10,
+    "unrecovered_schema_failure_count": 9,
+    "source_grounding_failure_count": 1,
+    "provider_failures": 0,
+    "gateway_failures": 19,
+    "requirement_blind_extraction": "PASS",
+    "production_db_writes": 0,
+    "eval_db_writes": true,
+    "gold_mutations": 0,
+    "mapping_actions": 0,
+    "claim_actions": 0,
+    "writer_actions": 0
+  },
+  "targeted_gate": {
+    "unexplained_422": 0,
+    "gateway_envelope_mismatch": 0,
+    "wrong_shape_count": 19,
+    "wrong_shape_rate": 0.8636363636,
+    "output_contract_valid_count": 3,
+    "output_contract_valid_rate": 0.1363636364,
+    "unexplained_empty_result": 0,
+    "unsupported_fact_accepted": 0,
+    "fact_without_lineage": 0,
+    "source_span_mismatch": 0,
+    "critical_numeric_mismatch": 0,
+    "critical_entity_mismatch": 0,
+    "critical_status_validity_mismatch": 0,
+    "semantic_duplicate_active": 0,
+    "unexplained_material_failure": 0,
+    "targeted_gate": "FAIL"
+  },
+  "result_classification": {
+    "FACTS_PRODUCED": 0,
+    "TRUE_NO_FACT": 0,
+    "REVIEW_REQUIRED": 2,
+    "TECHNICAL_FAILURE": 10,
+    "fact_candidate_total": 0,
+    "fact_usable_total": 0,
+    "controlled_approved_fact_total": 0
+  },
+  "per_material": [
+    { "material_id": "COM-01", "classification": "TECHNICAL_FAILURE", "error_code": "AUTO_RECOVERY_FAILED" },
+    { "material_id": "COM-06", "classification": "REVIEW_REQUIRED", "error_code": "FACT_SEMANTIC_EMPTY" },
+    { "material_id": "COM-07", "classification": "TECHNICAL_FAILURE", "error_code": "AUTO_RECOVERY_FAILED" },
+    { "material_id": "COM-08", "classification": "TECHNICAL_FAILURE", "error_code": "AUTO_RECOVERY_FAILED" },
+    { "material_id": "COM-12", "classification": "REVIEW_REQUIRED", "error_code": "FACT_SEMANTIC_EMPTY" },
+    { "material_id": "CCV2-U09-02", "classification": "TECHNICAL_FAILURE", "error_code": "AUTO_RECOVERY_FAILED" },
+    { "material_id": "CCV2-U13-01", "classification": "TECHNICAL_FAILURE", "error_code": "EVIDENCE_FACT_SOURCE_UNGROUNDED" },
+    { "material_id": "CCV2-U17-01", "classification": "TECHNICAL_FAILURE", "error_code": "AUTO_RECOVERY_FAILED" },
+    { "material_id": "CCV2-U20-02", "classification": "TECHNICAL_FAILURE", "error_code": "AUTO_RECOVERY_FAILED" },
+    { "material_id": "CCV2-U29-02", "classification": "TECHNICAL_FAILURE", "error_code": "AUTO_RECOVERY_FAILED" },
+    { "material_id": "CCV2-U30-02", "classification": "TECHNICAL_FAILURE", "error_code": "AUTO_RECOVERY_FAILED" },
+    { "material_id": "CCV2-U34-02", "classification": "TECHNICAL_FAILURE", "error_code": "AUTO_RECOVERY_FAILED" }
+  ],
+  "root_causes": [
+    {
+      "class": "SCHEMA_CONTRACT",
+      "cause": "Provider HTTP 200 responses were rejected by the Gateway as OUTPUT_SCHEMA_INVALID (19/22 calls)."
+    },
+    {
+      "class": "SEMANTIC_QUALITY",
+      "cause": "Two successful envelopes contained zero Fact candidates; they remain review-required, not silently accepted."
+    },
+    {
+      "class": "PROVENANCE",
+      "cause": "One candidate response failed source grounding (EVIDENCE_FACT_SOURCE_UNGROUNDED)."
+    }
+  ],
+  "phase_b_retrieval_currentness": "NOT_EXECUTED_TARGETED_FACT_GATE_FAIL",
+  "phase_c_remaining_corpus": "NOT_EXECUTED",
+  "artifacts": {
+    "run_directory": "docs/V43_RAG_FACT_TARGETED_LIVE_RUN_20260907",
+    "raw_response_audit": "docs/V43_RAG_FACT_TARGETED_LIVE_RUN_20260907/V43_CHENGCHUAN_CONTROLLED_REAL_FACT_RAW_RESPONSES.jsonl",
+    "quality_audit": "docs/V43_RAG_FACT_TARGETED_LIVE_RUN_20260907/V43_CHENGCHUAN_CONTROLLED_REAL_FACT_QUALITY_AUDIT.json",
+    "inventory": "docs/V43_RAG_FACT_TARGETED_LIVE_RUN_20260907/V43_CHENGCHUAN_CONTROLLED_REAL_FACT_INVENTORY.json"
+  },
+  "final_verdict": "TARGETED_FACT_GATE_FAIL_STOP",
+  "readiness": "RAG_FACT_PRODUCTION_READINESS=FAIL"
+}

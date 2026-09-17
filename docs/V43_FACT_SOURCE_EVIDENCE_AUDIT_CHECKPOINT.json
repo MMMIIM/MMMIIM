@@ -1,0 +1,385 @@
+{
+  "checkpoint": "V43_FACT_SOURCE_EVIDENCE_AUDIT_CHECKPOINT",
+  "audit_mode": "READ_ONLY",
+  "generated_at": "2026-09-05",
+  "environment_status": {
+    "docker": {
+      "status": "PASS",
+      "containers": [
+        "bid-platform-semantic-gateway — healthy — port 18082",
+        "bid-platform-backend — healthy — port 3001",
+        "bid-platform-postgres — healthy — port 5432"
+      ]
+    },
+    "postgres": {
+      "status": "PASS",
+      "server": "PostgreSQL 16.15",
+      "database_schema": "public",
+      "in_recovery": false
+    },
+    "backend_connectivity": {
+      "status": "PASS",
+      "endpoint": "GET /api/health",
+      "http_status": 200,
+      "body_ok": true
+    },
+    "migration": {
+      "status": "SCHEMA_PRESENT",
+      "runner": "backend/src/migrate.js replays every .sql file in lexical order; no schema_migrations ledger",
+      "migration_file_count": 51,
+      "latest_observed_features": [
+        "company_materials.lifecycle_status",
+        "company_materials.quarantine_reason",
+        "company_materials.quarantined_at",
+        "company_materials.synthetic_test_material"
+      ],
+      "full_migration_not_run_in_this_read_only_audit": true
+    }
+  },
+  "corpus_source": {
+    "archive_path": "backend/eval/rag-pilot/V43_RAG_CODEX_HANDOFF_1.zip",
+    "archive_exists": true,
+    "archive_contains_com_entries": 16,
+    "extracted_directory": "backend/eval/rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag",
+    "extracted_com_entries": 16,
+    "bundle_manifest": "backend/eval/rag-pilot/V43_RAG_CODEX_HANDOFF_1/rag_bundle_manifest.json",
+    "bundle_facts": {
+      "documents": 50,
+      "company_case_documents": 16,
+      "source_registry_records": 26,
+      "coverage_requirement_rows": 34
+    },
+    "source_kind": "synthetic_company_evidence",
+    "claim_permission": false,
+    "human_review_required": true
+  },
+  "material_alignment": [
+    {
+      "material_id": "adde4515-c4bd-4fba-9269-efa94cf6ac2a",
+      "file_name": "COM-01_公司概况与业务范围.md",
+      "db_exists": true,
+      "material_type": "company_profile",
+      "chunks": 10,
+      "lifecycle": "ACTIVE",
+      "source_type": "synthetic_company_evidence",
+      "synthetic_flag": true,
+      "authority": "Material Authority policy eligible (ACTIVE + approved + ACTIVE_FULLTEXT + extraction succeeded + INDEXED); authority_level=enterprise_private; synthetic source is not Real Fact authority",
+      "source_metadata": "source_org present; source_url NULL; file_hash present"
+    },
+    {
+      "material_id": "7dc70fee-13e0-4b7d-b95f-202665c241d0",
+      "file_name": "COM-02_产品平台能力说明.md",
+      "db_exists": true,
+      "material_type": "product_documentation",
+      "chunks": 10,
+      "lifecycle": "ACTIVE",
+      "source_type": "synthetic_company_evidence",
+      "synthetic_flag": true,
+      "authority": "Material Authority policy eligible (ACTIVE + approved + ACTIVE_FULLTEXT + extraction succeeded + INDEXED); authority_level=enterprise_private; synthetic source is not Real Fact authority",
+      "source_metadata": "source_org present; source_url NULL; file_hash present"
+    },
+    {
+      "material_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd",
+      "file_name": "COM-03_技术架构与部署适配报告.md",
+      "db_exists": true,
+      "material_type": "technical_solution",
+      "chunks": 10,
+      "lifecycle": "ACTIVE",
+      "source_type": "synthetic_company_evidence",
+      "synthetic_flag": true,
+      "authority": "Material Authority policy eligible (ACTIVE + approved + ACTIVE_FULLTEXT + extraction succeeded + INDEXED); authority_level=enterprise_private; synthetic source is not Real Fact authority",
+      "source_metadata": "source_org present; source_url NULL; file_hash present"
+    },
+    {
+      "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+      "file_name": "COM-04_API与系统集成能力报告.md",
+      "db_exists": true,
+      "material_type": "technical_solution",
+      "chunks": 10,
+      "lifecycle": "ACTIVE",
+      "source_type": "synthetic_company_evidence",
+      "synthetic_flag": true,
+      "authority": "Material Authority policy eligible (ACTIVE + approved + ACTIVE_FULLTEXT + extraction succeeded + INDEXED); authority_level=enterprise_private; synthetic source is not Real Fact authority",
+      "source_metadata": "source_org present; source_url NULL; file_hash present"
+    },
+    {
+      "material_id": "81990289-5472-4c41-a68e-b16035013a9a",
+      "file_name": "COM-05_数据治理与迁移能力材料.md",
+      "db_exists": true,
+      "material_type": "technical_solution",
+      "chunks": 10,
+      "lifecycle": "ACTIVE",
+      "source_type": "synthetic_company_evidence",
+      "synthetic_flag": true,
+      "authority": "Material Authority policy eligible (ACTIVE + approved + ACTIVE_FULLTEXT + extraction succeeded + INDEXED); authority_level=enterprise_private; synthetic source is not Real Fact authority",
+      "source_metadata": "source_org present; source_url NULL; file_hash present"
+    },
+    {
+      "material_id": "3ec066d3-679a-4232-ba6d-364038658c81",
+      "file_name": "COM-06_权限、安全与审计测试报告.md",
+      "db_exists": true,
+      "material_type": "technical_solution",
+      "chunks": 10,
+      "lifecycle": "ACTIVE",
+      "source_type": "synthetic_company_evidence",
+      "synthetic_flag": true,
+      "authority": "Material Authority policy eligible (ACTIVE + approved + ACTIVE_FULLTEXT + extraction succeeded + INDEXED); authority_level=enterprise_private; synthetic source is not Real Fact authority",
+      "source_metadata": "source_org present; source_url NULL; file_hash present"
+    },
+    {
+      "material_id": "42debef7-084f-471c-8fa5-1f9dcbf4c2f7",
+      "file_name": "COM-07_性能与容量测试报告.md",
+      "db_exists": true,
+      "material_type": "technical_solution",
+      "chunks": 12,
+      "lifecycle": "ACTIVE",
+      "source_type": "synthetic_company_evidence",
+      "synthetic_flag": true,
+      "authority": "Material Authority policy eligible (ACTIVE + approved + ACTIVE_FULLTEXT + extraction succeeded + INDEXED); authority_level=enterprise_private; synthetic source is not Real Fact authority",
+      "source_metadata": "source_org present; source_url NULL; file_hash present"
+    },
+    {
+      "material_id": "4ba1c701-7c4f-415b-9186-28b25c4472ce",
+      "file_name": "COM-08_备份恢复与容灾演练记录.md",
+      "db_exists": true,
+      "material_type": "delivery_capability",
+      "chunks": 10,
+      "lifecycle": "ACTIVE",
+      "source_type": "synthetic_company_evidence",
+      "synthetic_flag": true,
+      "authority": "Material Authority policy eligible (ACTIVE + approved + ACTIVE_FULLTEXT + extraction succeeded + INDEXED); authority_level=enterprise_private; synthetic source is not Real Fact authority",
+      "source_metadata": "source_org present; source_url NULL; file_hash present"
+    },
+    {
+      "material_id": "f32d71e5-37db-496f-9050-dd7b52fd3804",
+      "file_name": "COM-09_项目实施与质量管理方法.md",
+      "db_exists": true,
+      "material_type": "delivery_capability",
+      "chunks": 10,
+      "lifecycle": "ACTIVE",
+      "source_type": "synthetic_company_evidence",
+      "synthetic_flag": true,
+      "authority": "Material Authority policy eligible (ACTIVE + approved + ACTIVE_FULLTEXT + extraction succeeded + INDEXED); authority_level=enterprise_private; synthetic source is not Real Fact authority",
+      "source_metadata": "source_org present; source_url NULL; file_hash present"
+    },
+    {
+      "material_id": "bee37331-9769-4856-a907-6ad8a49a80c0",
+      "file_name": "COM-10_项目团队与人员能力模板.md",
+      "db_exists": true,
+      "material_type": "personnel",
+      "chunks": 10,
+      "lifecycle": "ACTIVE",
+      "source_type": "synthetic_company_evidence",
+      "synthetic_flag": true,
+      "authority": "Material Authority policy eligible (ACTIVE + approved + ACTIVE_FULLTEXT + extraction succeeded + INDEXED); authority_level=enterprise_private; synthetic source is not Real Fact authority",
+      "source_metadata": "source_org present; source_url NULL; file_hash present"
+    },
+    {
+      "material_id": "b94aca0b-a314-4f71-a54b-e6d31e4ef702",
+      "file_name": "COM-11_测试、培训、验收与交付能力.md",
+      "db_exists": true,
+      "material_type": "delivery_capability",
+      "chunks": 8,
+      "lifecycle": "ACTIVE",
+      "source_type": "synthetic_company_evidence",
+      "synthetic_flag": true,
+      "authority": "Material Authority policy eligible (ACTIVE + approved + ACTIVE_FULLTEXT + extraction succeeded + INDEXED); authority_level=enterprise_private; synthetic source is not Real Fact authority",
+      "source_metadata": "source_org present; source_url NULL; file_hash present"
+    },
+    {
+      "material_id": "45d3a548-516a-4349-a50b-e67ccef7930a",
+      "file_name": "COM-12_运维、SLA与应急服务说明.md",
+      "db_exists": true,
+      "material_type": "delivery_capability",
+      "chunks": 10,
+      "lifecycle": "ACTIVE",
+      "source_type": "synthetic_company_evidence",
+      "synthetic_flag": true,
+      "authority": "Material Authority policy eligible (ACTIVE + approved + ACTIVE_FULLTEXT + extraction succeeded + INDEXED); authority_level=enterprise_private; synthetic source is not Real Fact authority",
+      "source_metadata": "source_org present; source_url NULL; file_hash present"
+    },
+    {
+      "material_id": "a5510db7-bb22-46e3-aa7f-13b77f1206a6",
+      "file_name": "COM-13_Synthetic政企案例：城市事件协同平台.md",
+      "db_exists": true,
+      "material_type": "project_case",
+      "chunks": 10,
+      "lifecycle": "ACTIVE",
+      "source_type": "synthetic_company_evidence",
+      "synthetic_flag": true,
+      "authority": "Material Authority policy eligible (ACTIVE + approved + ACTIVE_FULLTEXT + extraction succeeded + INDEXED); authority_level=enterprise_private; synthetic source is not Real Fact authority",
+      "source_metadata": "source_org present; source_url NULL; file_hash present"
+    },
+    {
+      "material_id": "04738608-0aa8-4e12-b37b-fc5084e0428b",
+      "file_name": "COM-14_Synthetic医疗案例：医院接口与数据平台.md",
+      "db_exists": true,
+      "material_type": "project_case",
+      "chunks": 10,
+      "lifecycle": "ACTIVE",
+      "source_type": "synthetic_company_evidence",
+      "synthetic_flag": true,
+      "authority": "Material Authority policy eligible (ACTIVE + approved + ACTIVE_FULLTEXT + extraction succeeded + INDEXED); authority_level=enterprise_private; synthetic source is not Real Fact authority",
+      "source_metadata": "source_org present; source_url NULL; file_hash present"
+    },
+    {
+      "material_id": "e39ce20c-b73c-4cd2-a965-d8fbad6775e2",
+      "file_name": "COM-15_Synthetic资质、知识产权与授权索引.md",
+      "db_exists": true,
+      "material_type": "qualification",
+      "chunks": 12,
+      "lifecycle": "ACTIVE",
+      "source_type": "synthetic_company_evidence",
+      "synthetic_flag": true,
+      "authority": "Material Authority policy eligible (ACTIVE + approved + ACTIVE_FULLTEXT + extraction succeeded + INDEXED); authority_level=enterprise_private; synthetic source is not Real Fact authority",
+      "source_metadata": "source_org present; source_url NULL; file_hash present"
+    },
+    {
+      "material_id": "fa4d4d1b-7add-4b2e-bab5-646df34ad084",
+      "file_name": "COM-16_商务与合同响应边界.md",
+      "db_exists": true,
+      "material_type": "other",
+      "chunks": 8,
+      "lifecycle": "ACTIVE",
+      "source_type": "synthetic_company_evidence",
+      "synthetic_flag": true,
+      "authority": "Material Authority policy eligible (ACTIVE + approved + ACTIVE_FULLTEXT + extraction succeeded + INDEXED); authority_level=enterprise_private; synthetic source is not Real Fact authority",
+      "source_metadata": "source_org present; source_url NULL; file_hash present"
+    }
+  ],
+  "fact_evidence_audit": [
+    {
+      "id": "COM-01",
+      "title": "公司概况与业务范围",
+      "document_type": "company_profile",
+      "context_summary": "文件标记为 Synthetic Company Evidence；描述虚构企业定位为政企与医疗信息化软件服务商，列出业务平台、数据治理、接口集成、RAG/Agent、实施与运维等范围，并附官方来源编号。",
+      "suitable_as_fact_source": false,
+      "evidence_strength": "LOW",
+      "reason": "概况性范围，且 synthetic、claim_permission=false、需人工复核。"
+    },
+    {
+      "id": "COM-02",
+      "title": "产品平台能力说明",
+      "document_type": "product_documentation",
+      "context_summary": "文件标记为 Synthetic Company Evidence；描述测试产品 v3.2 的组织权限、流程、表单、接口、日志、报表、知识库、RAG 与 Agent 工具管理，并记录发布日期及版本变化后需重新核验。",
+      "suitable_as_fact_source": false,
+      "evidence_strength": "MEDIUM",
+      "reason": "能力字段较具体，但为 synthetic 测试产品，不能直接形成真实企业 Fact。"
+    },
+    {
+      "id": "COM-03",
+      "title": "技术架构与部署适配报告",
+      "document_type": "technical_solution",
+      "context_summary": "文件标记为 Synthetic Company Evidence；列出 Web 前端、API、关系数据库、对象存储、缓存和消息队列，记录 Linux x86_64、某国产 Linux 测试环境及 PostgreSQL 兼容数据库安装和核心验证，未列版本不得推断。",
+      "suitable_as_fact_source": false,
+      "evidence_strength": "MEDIUM",
+      "reason": "有环境与验证边界，但来源为 synthetic，且版本与适用范围不完整。"
+    },
+    {
+      "id": "COM-04",
+      "title": "API与系统集成能力报告",
+      "document_type": "technical_solution",
+      "context_summary": "文件标记为 Synthetic Company Evidence；记录 REST API、Webhook、批量文件交换及 12 个模拟接口联调，并明确不代表已对接真实政务或医院系统。",
+      "suitable_as_fact_source": false,
+      "evidence_strength": "MEDIUM",
+      "reason": "有模拟测试事实和明确限制，但不是真实客户集成证明。"
+    },
+    {
+      "id": "COM-05",
+      "title": "数据治理与迁移能力材料",
+      "document_type": "technical_solution",
+      "context_summary": "文件标记为 Synthetic Company Evidence；描述字典、标准、目录、质量规则、血缘测试模块，以及盘点、映射、清洗、预迁移、核验、正式迁移和回滚准备流程。",
+      "suitable_as_fact_source": false,
+      "evidence_strength": "MEDIUM",
+      "reason": "流程描述完整，但没有独立真实项目或验收来源。"
+    },
+    {
+      "id": "COM-06",
+      "title": "权限、安全与审计测试报告",
+      "document_type": "technical_solution",
+      "context_summary": "文件标记为 Synthetic Company Evidence；记录 2026-08-01 在 v3.2 测试环境执行账号、角色、最小权限、登录审计、关键操作和数据导出审计，并明确不代表等保、密评或第三方认证。",
+      "suitable_as_fact_source": false,
+      "evidence_strength": "MEDIUM",
+      "reason": "测试范围和日期明确，但无第三方认证，且 synthetic。"
+    },
+    {
+      "id": "COM-07",
+      "title": "性能与容量测试报告",
+      "document_type": "technical_solution",
+      "context_summary": "文件标记为 Synthetic Company Evidence；记录 4 vCPU、16GB RAM、v3.2 环境，100 个虚拟用户标准查询 P95=1.8 秒、10000 条合成记录导入耗时 42 秒，并标记 2026-11-30 后需复测。",
+      "suitable_as_fact_source": false,
+      "evidence_strength": "HIGH",
+      "reason": "量化测试字段完整且有时效边界，但测试数据和材料均为 synthetic。"
+    },
+    {
+      "id": "COM-08",
+      "title": "备份恢复与容灾演练记录",
+      "document_type": "delivery_capability",
+      "context_summary": "文件标记为 Synthetic Company Evidence；记录 2026-07-25 完成 Synthetic 数据库备份恢复和应用节点故障切换，并明确未形成真实客户 RTO/RPO 或可用率承诺。",
+      "suitable_as_fact_source": false,
+      "evidence_strength": "MEDIUM",
+      "reason": "事件和边界明确，但没有真实客户范围或可承诺指标。"
+    },
+    {
+      "id": "COM-09",
+      "title": "项目实施与质量管理方法",
+      "document_type": "delivery_capability",
+      "context_summary": "文件标记为 Synthetic Company Evidence；列出启动、调研、设计、开发/配置、集成、测试、培训、试运行、验收，以及周计划、风险清单、问题单、变更单和里程碑评审。",
+      "suitable_as_fact_source": false,
+      "evidence_strength": "MEDIUM",
+      "reason": "是方法模板，不是独立项目履历或验收证明。"
+    },
+    {
+      "id": "COM-10",
+      "title": "项目团队与人员能力模板",
+      "document_type": "personnel",
+      "context_summary": "文件标记为 Synthetic Company Evidence；列出项目经理、产品、架构、开发、测试、实施、数据、安全和运维角色，并要求真实人员证据包含证书有效期、劳动/社保关系和可投入时间。",
+      "suitable_as_fact_source": false,
+      "evidence_strength": "LOW",
+      "reason": "模板没有真实人员身份、证书或可投入证明。"
+    },
+    {
+      "id": "COM-11",
+      "title": "测试、培训、验收与交付能力",
+      "document_type": "delivery_capability",
+      "context_summary": "文件标记为 Synthetic Company Evidence；概述功能、接口、迁移、性能、安全、UAT、培训、交付和验收记录能力，并保留时效使用规则。",
+      "suitable_as_fact_source": false,
+      "evidence_strength": "MEDIUM",
+      "reason": "覆盖面广但内容概括，且没有具体项目记录。"
+    },
+    {
+      "id": "COM-12",
+      "title": "运维、SLA与应急服务说明",
+      "document_type": "delivery_capability",
+      "context_summary": "文件标记为 Synthetic Company Evidence；列出巡检、告警、故障、升级、备份和复盘，并明确无真实客户合同，不提供可对外使用的 7×24、分钟级响应或赔付承诺。",
+      "suitable_as_fact_source": false,
+      "evidence_strength": "LOW",
+      "reason": "明确否定真实 SLA/合同承诺，不能作为现行企业服务事实。"
+    }
+  ],
+  "counts": {
+    "FACT_SOURCE_READY_COUNT": 0,
+    "HIGH_CONFIDENCE_SOURCE_COUNT": 1,
+    "HUMAN_REVIEW_REQUIRED_COUNT": 12,
+    "high_confidence_source_ids": [
+      "COM-07"
+    ],
+    "note": "HIGH confidence is a content-strength classification only; no COM document is production Fact-ready because all are synthetic and claim_permission=false."
+  },
+  "source_gaps": [
+    "No non-synthetic independent enterprise source is present in COM-01..COM-16; current Real Fact V2 eligible candidate count remains 0 in the existing governance checkpoint.",
+    "All COM-01..COM-12 records require human review; none has claim permission.",
+    "DB source_url is NULL for all COM-01..COM-16; source_org contains bundle OFF-* references, not an independent enterprise source URL.",
+    "COM-06 explicitly lacks third-party security certification; COM-07 is synthetic and time-bounded; COM-08 explicitly lacks real-customer RTO/RPO or availability commitment.",
+    "Synthetic company materials must remain separated from Real Customer / Real Gold data."
+  ],
+  "side_effects": {
+    "provider_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "code_changes": 0,
+    "production_changes": 0,
+    "migration_changes": 0,
+    "prompt_changes": 0
+  }
+}

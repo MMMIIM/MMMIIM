@@ -1,0 +1,114 @@
+{
+  "artifact_type": "V43_CORE6_1009_REAL_REFERENCE_RAG_AND_WRITER_CONTEXT_EVAL_V1_EXECUTION_MANIFEST",
+  "run_id": "V43-CORE6-REAL-REFERENCE-RAG-WRITER-20260915071233",
+  "source_identity": {
+    "artifact": "docs\\V43_REQUIREMENT_GOLD_V2_SIX_TENDER_CANONICAL_INPUT.json",
+    "sha256": "ff07402688a3013af9a9b8be01f613f76848b7ea905208c1955a604432422fe1",
+    "expected_sha256_from_prior_identity_reconciliation": "ff07402688a3013af9a9b8be01f613f76848b7ea905208c1955a604432422fe1",
+    "row_count": 1009,
+    "unique_requirement_ids": 1009,
+    "tender_ids": [
+      "JY-001",
+      "TB-003",
+      "TB-006",
+      "FAST-01",
+      "FAST-04",
+      "FAST-WATER-01"
+    ],
+    "eval_only": true,
+    "human_gold_authority": false,
+    "semantic_labels_created": 0
+  },
+  "execution_scope": {
+    "purpose": "Read-only production-shaped reference retrieval and Writer Safe Context dry-run; no semantic adjudication.",
+    "tenders": [
+      "JY-001",
+      "TB-003",
+      "TB-006",
+      "FAST-01",
+      "FAST-04",
+      "FAST-WATER-01"
+    ],
+    "target_cases_per_tender": 10,
+    "minimum_total_cases": 45,
+    "reference_material_types": [
+      "technical_solution",
+      "technical_whitepaper"
+    ],
+    "public_corpus_project_id": "00000000-0000-4000-8000-000000000001",
+    "strategies": [
+      "R0_CURRENT_PRODUCTION_REFERENCE_PATH",
+      "R1_CURRENT_PLUS_ACCEPTED_HYGIENE",
+      "R2_TRUE_VECTOR_MMR_LAMBDA_0_9"
+    ],
+    "mmr_lambda": 0.9,
+    "embedding_budget": {
+      "max_query_calls": 80,
+      "concurrency": 1,
+      "retry_max": 1,
+      "corpus_reembedding": false
+    },
+    "generative_llm_calls": 0,
+    "writer_provider_calls": 0
+  },
+  "authority_boundary": {
+    "requirement_source": "SOURCE-DERIVED_EVAL_AUTHORITY_ONLY",
+    "human_gold_authority": false,
+    "production_requirement_authority": false,
+    "reference_materials_authority": "REFERENCE_ONLY_CONTEXT_ONLY"
+  },
+  "preflight_observations": {
+    "database_identity": { "database": "bid_platform", "schema": "public" },
+    "required_retrieval_tables": ["company_materials", "material_chunks", "material_chunk_embeddings", "project_material_bindings"],
+    "missing_retrieval_tables": ["project_material_bindings"],
+    "reference_denominator_eligible_count": 59,
+    "selected_case_count": 36,
+    "selected_tender_count": 6,
+    "selection_minimum_total": 45,
+    "selection_minimum_met": false
+  },
+  "attempt_history": {
+    "current_run_query_embedding_calls": 0,
+    "prior_bounded_attempts_query_embedding_calls": 2,
+    "task_cumulative_query_embedding_calls": 2,
+    "prior_attempts": [
+      { "run_id": "V43-CORE6-REAL-REFERENCE-RAG-WRITER-20260915070848", "query_embedding_calls": 1, "outcome": "EMBEDDING_NETWORK_ERROR" },
+      { "run_id": "V43-CORE6-REAL-REFERENCE-RAG-WRITER-20260915070919", "query_embedding_calls": 1, "outcome": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE_42P01" }
+    ]
+  },
+  "side_effects": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "eval_db_writes": 0,
+    "requirement_mutations": 0,
+    "gold_mutations": 0,
+    "fact_mapping_claim_writer_mutations": 0,
+    "migration": 0,
+    "commit": 0,
+    "push": 0,
+    "merge": 0,
+    "deploy": 0
+  },
+  "expected_outputs": [
+    "00_EXECUTION_MANIFEST.json",
+    "01_CORE6_EVAL_IDENTITY.json",
+    "02_PRODUCTION_QUERY_PATH_AUDIT.json",
+    "03_REFERENCE_DENOMINATOR.json",
+    "04_REAL_6TENDER_EVAL_SET.json",
+    "05_R0_CURRENT_RESULTS.json",
+    "06_R1_HYGIENE_RESULTS.json",
+    "07_R2_TRUE_MMR_RESULTS.json or 07_R2_NOT_EXECUTED.json",
+    "08_MECHANICAL_COMPARISON.json",
+    "09_GPT_SEMANTIC_REVIEW_PACKET.json",
+    "10_FAILURE_FAMILY_TEMPLATE.json",
+    "11_WRITER_SAFE_CONTEXT_DRY_RUN.json",
+    "12_RAW_INPUT_EXPOSURE_AUDIT.json",
+    "13_REFERENCE_AUTHORITY_NEGATIVE_REGRESSION.json",
+    "14_PROVIDER_EMBEDDING_AUDIT.json",
+    "15_TEST_REPORT.json",
+    "16_DEBT_REGISTER.json",
+    "17_CHECKPOINT.json",
+    "17_CHECKPOINT.md"
+  ]
+}

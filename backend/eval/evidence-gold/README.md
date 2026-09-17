@@ -17,3 +17,10 @@ npm run eval:evidence-gold -w backend
 ```
 
 Material coverage is intentionally incomplete. Current live data covers `company_profile`, `product_documentation`, `project_case`, and `qualification`; it does not manufacture delivery/service, personnel, technical whitepaper, historical bid, or other material types.
+
+Claim quality cases are maintained beside this Gold source in
+`claim-quality-cases.js`; they are a separate evaluation slice, not a second
+production authority. `backend/eval/claim-eval-v1/runner.js` imports the frozen
+production Claim Gate directly and reports Safety, Bid Quality, and offline
+Authorization Integrity. Fast Claim Eval is provider-free and database-free;
+the DB Gate remains an explicit PostgreSQL step.

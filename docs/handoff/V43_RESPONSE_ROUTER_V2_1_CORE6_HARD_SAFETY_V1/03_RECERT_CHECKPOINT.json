@@ -1,0 +1,59 @@
+{
+  "checkpoint": "V43_RESPONSE_ROUTER_V2_1_CORE6_HARD_SAFETY_ADJUDICATION_PACKET_V1",
+  "generated_at": "2026-09-12T11:52:14.770Z",
+  "replay_artifact": {
+    "path": "docs/V43_RESPONSE_ROUTER_V2_1_VS_REFERENCE_V3_FULL_CORPUS_EVAL.json",
+    "sha256": "8068e0d6d7df207d030cf8b6481d4e9c8c9c354f51dcf280124c09ddc587618d",
+    "reference_v3_sha256": "3c7f151678c8c99aee25ab995d438496b4a0e5fc661386b70204f3be72e2e744",
+    "reference_v3_rows": 2178,
+    "core6_rows": 1009,
+    "run_id": "V43-RR-V2_1-V3-REPLAY-c7184cd488d85c64"
+  },
+  "metrics": {
+    "high_risk_evidence_false_negative": {
+      "count": 31,
+      "target": 0,
+      "primary_mode_evidence_miss": 16,
+      "evidence_dependency_miss_with_primary_not_evidence": 15,
+      "other_exact_mechanical_form": 0
+    },
+    "future_commitment_as_existing_fact": {
+      "count": 45,
+      "target": 0
+    },
+    "unsafe_union_unique_rows": 76,
+    "unsafe_intersection_rows": 0
+  },
+  "baseline": {
+    "historical_prior_aggregate_count": 25,
+    "registry_entry_count": 23,
+    "current_failure_count": 29,
+    "confirmed_pre_existing": 23,
+    "new_task_regression": 0,
+    "unknown_baseline_identity": 6,
+    "set_equivalence_status": "NOT_VERIFIABLE_AND_COUNT_DRIFT"
+  },
+  "side_effects": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "requirement_mutations": 0,
+    "reference_mutations": 0,
+    "router_mutations": 0,
+    "prompt_changes": 0,
+    "schema_changes": 0,
+    "commit": 0,
+    "push": 0,
+    "merge": 0,
+    "deploy": 0
+  },
+  "packet": {
+    "path": "02_GPT_DECISION_PACKET.json",
+    "case_count": 76,
+    "semantic_root_cause_values": [
+      "PENDING_GPT"
+    ]
+  },
+  "final_status": "READY_FOR_GPT_RESPONSE_ROUTER_V2_1_CORE6_HARD_SAFETY_ADJUDICATION"
+}

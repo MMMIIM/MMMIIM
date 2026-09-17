@@ -1,0 +1,15 @@
+{
+  "phase": "11",
+  "baseline_fingerprint": "318d53c8a8785952d38a173dc086efd1d044c5871e288e305614e52e14a19641",
+  "confirmed_current": ["service-owned authority writes", "FK/hash/status constraints", "direct SQL occurrences are test fixtures or legacy compatibility", "migration runner replays all files"],
+  "historical_fixed": ["replay compatibility fixes in historical migrations", "atomic finalization and replacement"],
+  "open": ["migration ledger absent", "legacy writable surfaces", "deployment-specific external SQL"],
+  "conflicting": ["replay-safe intent without ledger-backed execution history"],
+  "unknown": ["external SQL clients/permissions"],
+  "risks": ["P1-MIG-001", "P1-LEGACY-001", "P1-LINEAGE-001"],
+  "evidence_refs": ["backend/src/migrate.js", "backend/src/db.js", "backend/migrations/025_*.sql..051_*.sql", "backend/integration/*.integration.js"],
+  "fact_revisions": ["MIGRATION_LEDGER=NO remains current"],
+  "next_dependencies": ["12_TENDER_ARTIFACT_DRIFT_CHECKPOINT"],
+  "gate": "DB_AUTHORITY=STRONG_WITH_DEBT; MIGRATION_HEALTH=PARTIAL",
+  "safe_to_continue": true
+}

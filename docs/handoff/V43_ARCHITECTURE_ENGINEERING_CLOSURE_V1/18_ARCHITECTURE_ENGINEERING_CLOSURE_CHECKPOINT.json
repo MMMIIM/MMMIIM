@@ -1,0 +1,44 @@
+{
+  "generated_at": "2026-09-16T17:31:38.432Z",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "dirty_worktree": true,
+  "authority": "SYNTHETIC_EVAL_ONLY",
+  "production_authority": "NONE",
+  "schema_version": "v43-architecture-engineering-closure-checkpoint-v1",
+  "checkpoint_id": "V43_ARCHITECTURE_ENGINEERING_CLOSURE_CHECKPOINT",
+  "status": "ARCHITECTURE_ENGINEERING_COMPLETE_PENDING_RAG_QUALITY_ACCEPTANCE",
+  "previous_e2e_checkpoint": {
+    "path": "docs/handoff/V43_OVERNIGHT_FACT_AUTHORITY_REPRO_TO_BOUNDED_E2E_V2/19_CHECKPOINT.json",
+    "status": "GATE0_FACT_BOUNDARY_PASS_E2E_CONTINUED"
+  },
+  "latest_rag_checkpoint": {
+    "path": "docs/handoff/V43_RAG_RETRIEVAL_P0_GOLD_METRICS_CHECKPOINT_V1.json",
+    "status": "PROVISIONAL_BLOCKED_HOLDOUT_REPLAY_PENDING"
+  },
+  "stale_but_recent_document_found": true,
+  "stale_but_recent_documents": [
+    "docs/handoff/V43_EVIDENCE_LANE_DECOUPLE_AND_LIVE_FACT_V1/12_E2E_CHECKPOINT.json"
+  ],
+  "formal_owner_map": "01_CURRENT_RUNTIME_OWNERSHIP_MAP.json",
+  "contract_map": "02_ARCHITECTURE_CONTRACT_MAP.json",
+  "identity_audit": "08_IDENTITY_LINEAGE_AUDIT.json",
+  "authority_audit": "13_AUTHORITY_ESCAPE_AUDIT.json",
+  "fixture_count": 10,
+  "duplicate_formal_owner_count": 0,
+  "test_report": "12_INTEGRATION_TEST_REPORT.json",
+  "build_report": "16_BUILD_LINT_DIFF_REPORT.json",
+  "verification": {
+    "focused_tests": "176/176 PASS",
+    "broader_guard_tests": "213/218 PASS with 5 pre-existing unrelated failures",
+    "build": "PASS",
+    "lint": "PASS",
+    "diff_check": "PASS",
+    "new_failures_introduced": 0
+  },
+  "side_effect_audit": "17_SIDE_EFFECT_AUDIT.json",
+  "production_migrations": 0,
+  "frozen_contracts_changed": false,
+  "next_action": "separately execute the authorized RAG holdout-quality gate; no live semantic E2E expansion",
+  "stop_reason": "closure scope complete; RAG quality acceptance remains pending"
+}

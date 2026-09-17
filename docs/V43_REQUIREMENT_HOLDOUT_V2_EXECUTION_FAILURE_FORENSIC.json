@@ -1,0 +1,107 @@
+{
+  "checkpoint": "V43_REQUIREMENT_HOLDOUT_V2_EXECUTION_FAILURE_FORENSIC_AND_OBSERVABILITY_CHECKPOINT",
+  "holdout_v2_status": "FAILED_DEVELOPMENT_EVIDENCE",
+  "source_run_id": "unseen-holdout-v2-2026-09-08T11-28-47-937Z-49fd034e",
+  "source_checkpoint": "backend/eval/requirement-unseen-holdout-v2/results/unseen-holdout-v2-2026-09-08T11-28-47-937Z-49fd034e/V43_REQUIREMENT_UNSEEN_HOLDOUT_V2_EXECUTION_CHECKPOINT.json",
+  "forensic_mode": "OFFLINE_EXISTING_EVIDENCE_ONLY",
+  "historical_planned_execution_count": 78,
+  "historical_attempted_execution_count": null,
+  "historical_successful_execution_count": null,
+  "historical_failed_execution_count": null,
+  "historical_actual_provider_calls": 78,
+  "historical_retries": 0,
+  "unique_failed_execution_count": null,
+  "failure_root_cause": "UNRECOVERABLE_FROM_EXISTING_EVIDENCE",
+  "recovered_failed_executions": [],
+  "unrecoverable_failed_executions": [
+    {
+      "tender_id": "HOLDOUT-REQ-V2-01",
+      "schema_failure_count": 2,
+      "provider_failure_count": 2,
+      "chunk_number": null,
+      "execution_identity": null,
+      "evidence_status": "TENDER_AGGREGATE_ONLY",
+      "failure_family": "H_UNRECOVERABLE_MISSING_EVIDENCE",
+      "primary_first_failure": null,
+      "available_evidence": [
+        "tender-level schema_failure_count",
+        "tender-level provider_failure_count",
+        "planned_provider_calls_total",
+        "actual_provider_calls_total"
+      ],
+      "unavailable_evidence": [
+        "execution_id",
+        "chunk_number",
+        "source_chunk_id",
+        "request_hash",
+        "dispatch_timestamp",
+        "provider_http_status",
+        "response_model",
+        "finish_reason",
+        "json_parse_result",
+        "schema_error_paths",
+        "first_failure_stage",
+        "first_failure_code"
+      ],
+      "recoverability": "UNRECOVERABLE_FROM_EXISTING_EVIDENCE"
+    }
+  ],
+  "failure_family_distribution": {
+    "A_TRANSPORT_FAILURE": 0,
+    "B_PROVIDER_HTTP_FAILURE": 0,
+    "C_PROVIDER_RESPONSE_EMPTY_OR_MALFORMED": 0,
+    "D_JSON_PARSE_FAILURE": 0,
+    "E_SCHEMA_VALIDATION_FAILURE": 0,
+    "F_GATEWAY_ADAPTER_FAILURE": 0,
+    "G_RUNNER_ACCOUNTING_ONLY": 0,
+    "H_UNRECOVERABLE_MISSING_EVIDENCE": 1
+  },
+  "aggregate_observations": {
+    "schema_failure_count": 2,
+    "provider_failure_count": 2,
+    "schema_provider_double_counting": "NOT_DETERMINED_FROM_EXISTING_AGGREGATES",
+    "note": "The historical checkpoint does not identify whether the two counters describe two executions or the same executions."
+  },
+  "first_failure_evidence_complete": false,
+  "schema_provider_double_counting": "NOT_DETERMINED_FROM_EXISTING_AGGREGATES",
+  "execution_completeness": {
+    "status": "NOT_VERIFIABLE_FROM_EXISTING_EVIDENCE",
+    "planned_execution_count": 78,
+    "attempted_execution_count": null,
+    "successful_execution_count": null,
+    "failed_execution_count": null,
+    "zero_candidate_success_count": null,
+    "candidate_producing_success_count": null,
+    "identity_equation_verified": false,
+    "reason": "Existing artifacts persist provider call totals and candidate aggregates but no per-execution journal."
+  },
+  "source_parser_chunker_failure_evidence": {
+    "status": "NO_FAILURE_EVIDENCE_IN_RETAINED_ARTIFACTS",
+    "source_resolution_failure_count": 0,
+    "parser_or_chunker_failure_count": null
+  },
+  "source_resolution_denominator": "GENERATED_CANDIDATE_SOURCE_RESOLUTION",
+  "observability_patch": {
+    "status": "APPLIED_OFFLINE_NOT_CERTIFIED_BY_RERUN",
+    "scope": "Eval-only execution identity, bounded failure metadata, first-failure classification, and counter separation",
+    "provider_calls": 0
+  },
+  "runner_observability_patch": "APPLIED_OFFLINE_NOT_CERTIFIED_BY_RERUN",
+  "retained_execution_journal_present": false,
+  "regression_results": {
+    "requirement_focused": "PASS (105 tests)",
+    "frontend": "PASS (51 tests)",
+    "build": "PASS",
+    "lint": "PASS",
+    "diff_check": "PASS",
+    "root_npm_test": "PRE_EXISTING_UNRELATED_BASELINE"
+  },
+  "production_semantic_code_change": 0,
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "final_verdict": "READY_FOR_GPT_REQUIREMENT_RUNTIME_FORENSIC_ADJUDICATION"
+}

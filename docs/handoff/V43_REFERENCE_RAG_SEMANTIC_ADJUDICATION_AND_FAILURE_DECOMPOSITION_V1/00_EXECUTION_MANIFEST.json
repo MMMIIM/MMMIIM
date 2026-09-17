@@ -1,0 +1,89 @@
+{
+  "artifact_type": "V43_REFERENCE_RAG_SEMANTIC_ADJUDICATION_EXECUTION_MANIFEST",
+  "run_id": "V43-CORE6-REAL-REFERENCE-RAG-WRITER-20260915105535",
+  "scope": "REQUIREMENT_LEVEL_REFERENCE_RETRIEVAL_EVAL",
+  "inputs": [
+    {
+      "path": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/09_R0_RESULTS.json",
+      "sha256": "e4514e226a9d72d6ee66a9d08184826582d02b73275261324bbf95c33089cbe6",
+      "role": "persisted R0 production-path results"
+    },
+    {
+      "path": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/10_R1_RESULTS.json",
+      "sha256": "0aaa30b27a93e521209de0227ae8462a23d1f5667a7d9d7fd74d95a9ae401a15",
+      "role": "persisted R1 results and raw candidate snapshots"
+    },
+    {
+      "path": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/14_GPT_SEMANTIC_REVIEW_PACKET.json",
+      "sha256": "357d4102eccac3faeaa3ae06bf896c4ceb9b275b377b12c18acc4865ed80a19e",
+      "role": "GPT semantic review packet / label authority"
+    },
+    {
+      "path": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/11_R2_NOT_EXECUTED.json",
+      "sha256": "92c4cd9d30f1a3f36d1e715c7923e9a997bec75017764a8ed88d8d308ddebc1f",
+      "role": "canonical R2 status authority"
+    },
+    {
+      "path": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/21_CHECKPOINT.json",
+      "sha256": "b9451902389d6fdd53de6b536cfe8d6fdf5ba24d7ecb5695a3b97a8ed37aa74c",
+      "role": "prior retrieval checkpoint"
+    }
+  ],
+  "input_identity": {
+    "r1_case_count": 80,
+    "six_tenders": [
+      "JY-001",
+      "TB-003",
+      "TB-006",
+      "FAST-01",
+      "FAST-04",
+      "FAST-WATER-01"
+    ],
+    "prior_checkpoint_status": "READY_FOR_GPT_REQUIREMENT_LEVEL_REFERENCE_RETRIEVAL_ADJUDICATION_MMR_NOT_EXECUTED",
+    "canonical_r2_status": "NOT_EXECUTED_VECTOR_UNAVAILABLE_OR_RETRIEVAL_BLOCKED"
+  },
+  "authority": {
+    "gpt_labels": true,
+    "codex_semantic_relabeling": false,
+    "r2_case_rows_non_authoritative": true,
+    "semantic_root_cause": "PENDING_GPT"
+  },
+  "execution": {
+    "offline_only": true,
+    "new_provider_calls": 0,
+    "new_llm_calls": 0,
+    "new_embedding_calls": 0,
+    "production_db_writes": 0,
+    "eval_db_writes": 0,
+    "gold_mutations": 0,
+    "r2_rerun": false,
+    "lexical_proxy_rerun": false,
+    "corpus_ingestion": false,
+    "router_mutation": false,
+    "writer_provider": false
+  },
+  "hygiene_patch_owner": [
+    "backend/src/pipeline/retrieval-substantive-candidate.js",
+    "backend/src/pipeline/retrieval-chunk-role.js"
+  ],
+  "outputs": [
+    "00_EXECUTION_MANIFEST.json",
+    "01_GPT_R1_SEMANTIC_ADJUDICATION.json",
+    "02_R2_ARTIFACT_INTEGRITY_REPORT.json",
+    "03_R1_HYGIENE_ESCAPE_AUDIT.json",
+    "04_R1_HYGIENE_MICRO_PATCH_REPORT.json",
+    "05_R1_OFFLINE_REPLAY.json",
+    "06_RANKING_FAILURE_FORENSICS.json",
+    "07_REFERENCE_NEED_ROUTING_DEBT.json",
+    "08_CORPUS_COVERAGE_DEBT.json",
+    "09_GENERIC_CHUNK_CONCENTRATION.json",
+    "10_SIMILARITY_FAIL_QUIET_SWEEP.json",
+    "11_DOMAIN_AFFINITY_OFFLINE_ANALYSIS.json",
+    "12_RAW80_VS_ADJUSTED74_METRICS.json",
+    "13_TEST_REPORT.json",
+    "14_DEBT_REGISTER.json",
+    "15_CHECKPOINT.json",
+    "15_CHECKPOINT.md"
+  ],
+  "git_head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e"
+}

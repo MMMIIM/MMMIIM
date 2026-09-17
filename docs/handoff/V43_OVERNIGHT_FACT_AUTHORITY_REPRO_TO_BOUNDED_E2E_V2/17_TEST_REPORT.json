@@ -1,0 +1,24 @@
+{
+  "artifact_type": "V43_TEST_REPORT_V2",
+  "status": "PASS_WITH_PREEXISTING_WORKTREE_TEST_FAILURE",
+  "runner_syntax": "PASS",
+  "runner_execution": "PASS",
+  "focused_tests": {
+    "command": "node --test backend/test/evidence-fact-candidate-v2-1.test.js backend/test/evidence-fact-candidate-v2-2.test.js backend/test/evidence-fact-contract-v1.test.js backend/test/evidence-fact-execution-observability.test.js backend/test/canonical-fact-resolution-service.test.js backend/test/enterprise-evidence-source-router.test.js backend/test/evidence-fact-source-role.test.js backend/test/evidence-support-responsibility.test.js backend/test/evidence-support-assessment.test.js backend/test/requirement-evidence-mapping-contract-v1.test.js backend/test/safe-response-packet-v1.test.js backend/test/writer-input-authorization-v1.test.js backend/test/writer-authority-p0.test.js",
+    "passed": 151,
+    "failed": 1,
+    "failure": {
+      "file": "backend/test/evidence-fact-execution-observability.test.js",
+      "test": "valid empty semantic output remains distinguishable from execution failure",
+      "assertion": "expected observed.ok=false and FACT_SEMANTIC_EMPTY; current implementation returns a successful empty completion",
+      "test_file_changed_by_this_task": false,
+      "production_file_changed_by_this_task": false
+    }
+  },
+  "relevant_backend_regression": "PASS_EXCEPT_PREEXISTING_EMPTY_SEMANTIC_EXPECTATION",
+  "build": "PASS",
+  "lint": "PASS",
+  "diff_check": "PASS",
+  "new_failures_introduced": 0,
+  "note": "The bounded runner is a new Eval artifact only. The sole failure is present against the current dirty worktree because the unchanged test expects the superseded empty-result error behavior."
+}

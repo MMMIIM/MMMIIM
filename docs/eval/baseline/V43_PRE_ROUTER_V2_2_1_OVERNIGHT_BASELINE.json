@@ -1,0 +1,363 @@
+{
+  "artifact_type": "V43_PRE_ROUTER_V2_2_1_OVERNIGHT_BASELINE",
+  "generated_at": "2026-09-12T18:02:30.568Z",
+  "git": {
+    "branch": "feat/v4.3-semantic-boundary-routing",
+    "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+    "dirty_file_count": 613,
+    "status_sha256": "2a597582efae4926c07b3e4c96bab1f56be929fe8c20bcc9894a133097c873eb"
+  },
+  "frozen_requirement": {
+    "version": "V6.4",
+    "runtime_contract": "4.3-requirement-extraction-v3.1.1",
+    "instruction_sha256": "cae64eb027365f1e9d39a9ef8b6375af20dc7b274d62ddc54c07ece3f39fc00d",
+    "source_truth_sha256": "9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+    "status": "ACCEPT_AND_FREEZE"
+  },
+  "router_v21_identity": {
+    "path": "backend\\src\\pipeline\\requirement-response-router-v2-1.js",
+    "sha256": "d8a2cd54a6949d0e0ee6312a2e7592d7ae169a2e40f01807df47488a79449b73",
+    "projection_version": "v43-response-router-v2.1",
+    "implementation_id": "v43-response-router-v2.1-systematic-boundary-repair"
+  },
+  "router_v22_identity": {
+    "path": "backend\\src\\pipeline\\requirement-response-router-v2-2.js",
+    "sha256": "88eb370529d0d9d7ce6bb4028668e59f519c60d2f829ecdd5d2bc409fbc326f6",
+    "projection_version": "v43-response-router-v2.2",
+    "implementation_id": "v43-response-router-v2.2-bounded-semantic-closure",
+    "expected_version": "v43-response-router-v2.2",
+    "expected_implementation_id": "v43-response-router-v2.2-bounded-semantic-closure"
+  },
+  "reference_v3": {
+    "locator": "docs\\V43_RESPONSE_ROUTER_FULL_CORPUS_GPT_SEMANTIC_REFERENCE_V3_PACKAGE.zip#V43_RESPONSE_ROUTER_FULL_CORPUS_GPT_SEMANTIC_REFERENCE_V3_2178.json",
+    "sha256": "3c7f151678c8c99aee25ab995d438496b4a0e5fc661386b70204f3be72e2e744",
+    "row_count": 2178,
+    "cohort_counts": {
+      "CORE6": 1009,
+      "HOLDOUT_V1": 397,
+      "HOLDOUT_V2": 772
+    }
+  },
+  "gpt_overlay": {
+    "artifact": "docs/V43_RESPONSE_ROUTER_REFERENCE_V3_GPT_OVERLAY_V1.json",
+    "sha256": "5aca4fe8a17ae91f8ebc6bd9044cbd2a657bc6cc68840247c2d5dc1165868813",
+    "row_count": 20
+  },
+  "replay_metrics": {
+    "full_replay_count": 2178,
+    "primary_mode_agreement_v21": {
+      "matched": 1689,
+      "total": 2178,
+      "rate": 0.7754820936639119
+    },
+    "primary_mode_agreement_v22": {
+      "matched": 1474,
+      "total": 2178,
+      "rate": 0.6767676767676768
+    },
+    "mode_distribution_v22": {
+      "COMMITMENT": 821,
+      "COMPLIANCE": 285,
+      "EVIDENCE": 954,
+      "NEED_REVIEW": 51,
+      "SOLUTION": 67
+    },
+    "risk_distribution_v22": {
+      "HIGH": 1473,
+      "MEDIUM": 598,
+      "P0": 107
+    },
+    "evidence_dependency_distribution_v22": {
+      "false": 1157,
+      "true": 1021
+    },
+    "need_review_count_v22": 51,
+    "safety_metrics_v22": {
+      "gpt_adjudicated": {
+        "adjudicated_case_count": 76,
+        "true_router_defect_count": 56,
+        "reference_v3_semantic_debt_count": 20,
+        "true_high_risk_evidence_false_negative": {
+          "target": 0,
+          "actual": 0,
+          "case_ids": [],
+          "pass": true
+        },
+        "true_future_commitment_as_existing_fact": {
+          "target": 0,
+          "actual": 0,
+          "case_ids": [],
+          "pass": true
+        },
+        "p0_compliance_escape": {
+          "target": 0,
+          "actual": 0,
+          "case_ids": [],
+          "pass": true
+        },
+        "compliance_to_normal_writer_direct": {
+          "target": 0,
+          "actual": 0,
+          "case_ids": [],
+          "pass": true,
+          "basis": "no writer path invoked by deterministic router replay"
+        },
+        "writer_lineage_violation": {
+          "target": 0,
+          "actual": 0,
+          "pass": true,
+          "basis": "deterministic router replay emits no writer output"
+        },
+        "enterprise_authority_lineage_violation": {
+          "target": 0,
+          "actual": 0,
+          "pass": true,
+          "basis": "deterministic router replay emits no enterprise assertions"
+        }
+      },
+      "legacy_reference_v3_mechanical": {
+        "high_risk_evidence_false_negative": 105,
+        "future_commitment_as_existing_fact": 32,
+        "p0_compliance_escape": 0
+      }
+    },
+    "overlay_mismatches": [
+      {
+        "case_id": "CORE6:TB-003:TB-003:REQ-011",
+        "disagreement_dimensions": [
+          "risk_tier"
+        ],
+        "router": {
+          "mode": "COMPLIANCE",
+          "evidence_dependency": false,
+          "risk_tier": "MEDIUM",
+          "human_required": false
+        },
+        "gpt": {
+          "primary_response_mode": "COMPLIANCE",
+          "evidence_dependency": false,
+          "risk_tier": "HIGH",
+          "hard_safety_gate": "HIGH_RISK_EVIDENCE_FALSE_NEGATIVE",
+          "verdict": "REFERENCE_V3_SEMANTIC_DEBT",
+          "reason": "CA/upload procedure is bidder compliance action, not enterprise Fact-chain evidence."
+        }
+      },
+      {
+        "case_id": "CORE6:TB-003:TB-003:REQ-016",
+        "disagreement_dimensions": [
+          "risk_tier"
+        ],
+        "router": {
+          "mode": "COMPLIANCE",
+          "evidence_dependency": false,
+          "risk_tier": "MEDIUM",
+          "human_required": false
+        },
+        "gpt": {
+          "primary_response_mode": "COMPLIANCE",
+          "evidence_dependency": false,
+          "risk_tier": "HIGH",
+          "hard_safety_gate": "HIGH_RISK_EVIDENCE_FALSE_NEGATIVE",
+          "verdict": "REFERENCE_V3_SEMANTIC_DEBT",
+          "reason": "Clause explicitly allows a commitment letter instead of underlying proof materials."
+        }
+      },
+      {
+        "case_id": "CORE6:TB-003:TB-003:REQ-017",
+        "disagreement_dimensions": [
+          "primary_response_mode"
+        ],
+        "router": {
+          "mode": "COMMITMENT",
+          "evidence_dependency": false,
+          "risk_tier": "HIGH",
+          "human_required": true
+        },
+        "gpt": {
+          "primary_response_mode": "COMPLIANCE",
+          "evidence_dependency": false,
+          "risk_tier": "HIGH",
+          "hard_safety_gate": "HIGH_RISK_EVIDENCE_FALSE_NEGATIVE",
+          "verdict": "REFERENCE_V3_SEMANTIC_DEBT",
+          "reason": "Honesty/no-false-commitment rule is compliance; no enterprise evidence dependency is stated."
+        }
+      },
+      {
+        "case_id": "CORE6:TB-003:TB-003:REQ-029",
+        "disagreement_dimensions": [
+          "risk_tier"
+        ],
+        "router": {
+          "mode": "COMPLIANCE",
+          "evidence_dependency": false,
+          "risk_tier": "MEDIUM",
+          "human_required": false
+        },
+        "gpt": {
+          "primary_response_mode": "COMPLIANCE",
+          "evidence_dependency": false,
+          "risk_tier": "HIGH",
+          "hard_safety_gate": "HIGH_RISK_EVIDENCE_FALSE_NEGATIVE",
+          "verdict": "REFERENCE_V3_SEMANTIC_DEBT",
+          "reason": "Translation/seal handling is a compliance-document rule; it does not itself require enterprise Fact-chain evidence."
+        }
+      },
+      {
+        "case_id": "CORE6:TB-003:TB-003:REQ-106",
+        "disagreement_dimensions": [
+          "risk_tier"
+        ],
+        "router": {
+          "mode": "COMMITMENT",
+          "evidence_dependency": false,
+          "risk_tier": "MEDIUM",
+          "human_required": false
+        },
+        "gpt": {
+          "primary_response_mode": "COMMITMENT",
+          "evidence_dependency": false,
+          "risk_tier": "HIGH",
+          "hard_safety_gate": "HIGH_RISK_EVIDENCE_FALSE_NEGATIVE",
+          "verdict": "REFERENCE_V3_SEMANTIC_DEBT",
+          "reason": "Providing one SSL certificate is a future deliverable."
+        }
+      },
+      {
+        "case_id": "CORE6:FAST-04:FAST-04:REQ-175",
+        "disagreement_dimensions": [
+          "primary_response_mode",
+          "evidence_dependency"
+        ],
+        "router": {
+          "mode": "EVIDENCE",
+          "evidence_dependency": true,
+          "risk_tier": "HIGH",
+          "human_required": true
+        },
+        "gpt": {
+          "primary_response_mode": "COMMITMENT",
+          "evidence_dependency": false,
+          "risk_tier": "HIGH",
+          "hard_safety_gate": "HIGH_RISK_EVIDENCE_FALSE_NEGATIVE",
+          "verdict": "REFERENCE_V3_SEMANTIC_DEBT",
+          "reason": "Who will provide future service is a delivery/staffing commitment; no proof requirement is stated."
+        }
+      }
+    ],
+    "overlay_mismatch_count": 6
+  },
+  "backend_failure_identity": {
+    "artifact_type": "V43_RESPONSE_ROUTER_V2_2_BACKEND_FAILURE_SET_COMPARISON",
+    "generated_at": "2026-09-12T17:15:51.584Z",
+    "baseline_source": "docs/V43_BID_RESPONSE_EXECUTION_LAYER_V1_POST_REQUIREMENT_FREEZE_RECERT_CHECKPOINT.json",
+    "baseline_failure_count": 29,
+    "current_failure_count": 29,
+    "current_test_count": "ℹ tests 1487",
+    "current_pass_count": "ℹ pass 1458",
+    "current_exit_code": 1,
+    "comparison": {
+      "confirmed_pre_existing_unchanged": [
+        "Batch01 human authority preserves all supplied cases and aggregate parity",
+        "DS Flash and Candidate V3 runtime decision records the accepted live freeze",
+        "HTTP production generation route retains requirement_response authorization and invalidates changed authorization",
+        "P1-002 generation identity changes when current Writer authorization changes",
+        "engineering governance declares Parity as a focused review dimension",
+        "engineering governance requires cross-run identity and evaluation certification invariants",
+        "engineering governance requires fail-closed canonical input parity before Provider",
+        "eval/requirement-p1-semantic-calibration/gpt-calibration-safety-prep.test.mjs",
+        "eval/requirement-p1-semantic-calibration/metric-and-packet.test.mjs",
+        "extraction audit reports source verification but leaves gold recall/precision unknown",
+        "frozen 199 Gold requirements retain an eligible or unknown source span after routing",
+        "frozen real packets are checked without promoting duplicate supplemental candidates",
+        "frozen source and active Gold hashes remain unchanged while repair artifacts are evaluated",
+        "generated source universes preserve role boundaries and remain blind",
+        "novel supplemental human-review packet is source-complete and blind",
+        "project instructions route Codex to the persistent runtime boundary",
+        "provided 21-case cohort recovers case-level records without blanket attribution",
+        "real-path preflight uses frozen source windows and shared production chunking offline",
+        "source packet render parity gate preserves every canonical Fact identity",
+        "static runtime config guard covers canonical names, roles, secrets and legacy isolation",
+        "successor resolves all six tenders with source and canonical linkage gates",
+        "targeted selector projects historical Gold refs onto current provider chunks",
+        "test/claim-writer-gold-v2-source-authority.test.js",
+        "test/mapping-gold-full-human-review-export.test.js",
+        "test/mapping-gold-v2-successor.test.js",
+        "test/writer-provider-fidelity-authority-gap-audit.test.js",
+        "unknown tender is represented as unresolved and cannot pass the gate",
+        "空分片继续成功处理；仅所有分片为空时整体 NO_REQUIREMENTS_EXTRACTED",
+        "识别六类文档章节且 Requirement 范围只选择第四章"
+      ],
+      "resolved_by_task": [],
+      "new_task_regression": [],
+      "signature_changed_or_unknown": [],
+      "set_equivalent": true,
+      "note": "Failure identity comparison is mechanical by normalized test identity. Existing failures remain outside Router V2.2 scope."
+    },
+    "output_sha256": "a789273e4052b125dcedad1c738d77dde429f910c3c0834c9c451def4dad41ee"
+  },
+  "execution_layer_recert": {
+    "checkpoint": "V43_RESPONSE_ROUTER_V2_2_EXECUTION_LAYER_RECERT",
+    "generated_at": "2026-09-12T17:19:45.773Z",
+    "canonical_input": {
+      "path": "docs\\V43_REQUIREMENT_GOLD_V2_SIX_TENDER_CANONICAL_INPUT.json",
+      "sha256": "ff07402688a3013af9a9b8be01f613f76848b7ea905208c1955a604432422fe1",
+      "count": 1009,
+      "tender_counts": {
+        "JY-001": 193,
+        "TB-003": 265,
+        "TB-006": 46,
+        "FAST-01": 39,
+        "FAST-04": 353,
+        "FAST-WATER-01": 113
+      }
+    },
+    "router_identity": {
+      "projection_version": "v43-response-router-v2.2",
+      "implementation_id": "v43-response-router-v2.2-bounded-semantic-closure"
+    },
+    "execution": {
+      "matrix_row_count": 1009,
+      "canonical_requirement_count": 1009,
+      "response_decision_count": 1009,
+      "response_decision_coverage_rate": 1,
+      "matrix_ids_closed": true,
+      "response_unit_count": 91,
+      "response_required_universe": 987,
+      "final_reconciliation_denominator": 987,
+      "final_reconciliation_coverage_rate": 1,
+      "response_unit_ids_unknown": 0,
+      "compliance_to_normal_writer_direct": 0,
+      "enterprise_assertion_without_authority_lineage": 0,
+      "writer_lineage_violation": 0,
+      "no_authority_created": true
+    },
+    "sample_safe_packets": {
+      "count": 4,
+      "modes": [
+        "SOLUTION",
+        "EVIDENCE",
+        "COMMITMENT",
+        "COMPLIANCE"
+      ],
+      "authority_projection_only": true
+    },
+    "side_effects": {
+      "provider_calls": 0,
+      "llm_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0,
+      "production_semantic_changes": 0
+    },
+    "status": "PASS"
+  },
+  "side_effects": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "source_truth_mutations": 0,
+    "requirement_mutations": 0,
+    "reference_v3_mutations": 0
+  },
+  "baseline_validity": "PRE_MUTATION_SNAPSHOT"
+}

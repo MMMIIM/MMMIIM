@@ -1,0 +1,188 @@
+{
+  "checkpoint": "V43_REQUIREMENT_PRODUCTION_SEMANTIC_AUDIT_CHECKPOINT",
+  "run_id": "req-sem-quality-v1-20260906171356469",
+  "phase": "COMPLETE",
+  "generated_at": "2026-09-06T17:16:20.687Z",
+  "TARGET_TENDERS": [
+    "JY-001",
+    "TB-003",
+    "TB-006",
+    "FAST-01",
+    "FAST-04",
+    "FAST-WATER-01"
+  ],
+  "CANONICAL_REQUIREMENTS": 1009,
+  "OUTPUT_SEMANTIC_SAMPLE_SIZE": 239,
+  "SOURCE_BLIND_WINDOW_COUNT": 72,
+  "SUBSTANTIVE_RECALL": "NOT_EVALUATED_PENDING_BLIND_ADJUDICATION",
+  "MANDATORY_CRITICAL_RECALL": "NOT_EVALUATED_PENDING_INDEPENDENT_ADJUDICATION",
+  "CANONICAL_PRECISION": "NOT_EVALUATED_PENDING_INDEPENDENT_ADJUDICATION",
+  "SEMANTIC_FIDELITY": "NOT_EVALUATED_PENDING_INDEPENDENT_ADJUDICATION",
+  "ATOMIC_OR_INTENTIONALLY_GROUPED_RATE": "NOT_EVALUATED_PENDING_INDEPENDENT_ADJUDICATION",
+  "SEMANTIC_DUPLICATE_RATE": "NOT_EVALUATED_PENDING_INDEPENDENT_ADJUDICATION",
+  "RAW_P0_ERROR_COUNT": 24,
+  "P0_DETECTED_COUNT": 0,
+  "P0_REVIEW_ROUTED_COUNT": 0,
+  "P0_ESCAPE_COUNT": 24,
+  "P0_DETECTION_RECALL": 0,
+  "P0_ESCAPE_RATE": 1,
+  "ACTIONABLE_HUMAN_REVIEW_RATE": "NOT_EVALUATED_PENDING_HUMAN_OR_INDEPENDENT_JUDGE",
+  "SOURCE_TRACEABILITY_RATE": 1,
+  "SOURCE_SEMANTIC_MISMATCH": "NOT_EVALUATED_BY_INDEPENDENT_ADJUDICATION",
+  "LIVE_CASES": 48,
+  "LIVE_PROVIDER_CALLS": 48,
+  "LIVE_PROVIDER_FAILURES": 0,
+  "LIVE_RETRY_RATE": 0,
+  "LIVE_TRUNCATION": 0,
+  "LIVE_LATENCY_P50": 6001,
+  "LIVE_LATENCY_P95": 9567,
+  "PROJECTED_100_PAGE_RUNTIME_C2": 60,
+  "MUTATION_CASES": 30,
+  "P0_MUTATION_DETECTION_RECALL": 0,
+  "P0_MUTATION_ESCAPE": 1,
+  "PATCH_CYCLES_USED": 0,
+  "TOKEN_DELTA": "NOT_APPLICABLE_NO_PATCH",
+  "LATENCY_DELTA": "NOT_APPLICABLE_NO_PATCH",
+  "PRODUCTION_DB_WRITES": 0,
+  "GOLD_MUTATIONS": 0,
+  "MAPPING_ACTIONS": 0,
+  "CLAIM_ACTIONS": 0,
+  "WRITER_ACTIONS": 0,
+  "PROVIDER_CALLS_TOTAL": 48,
+  "PROVIDER_CALL_CAP": 160,
+  "REQUIREMENT_ENGINEERING_QUALITY": "FAIL",
+  "REQUIREMENT_SEMANTIC_QUALITY": "NOT_CERTIFIED_PENDING_INDEPENDENT_ADJUDICATION",
+  "REQUIREMENT_PERFORMANCE": "CONDITIONAL_PROVIDER_BENCHMARK_ONLY",
+  "REQUIREMENT_REVIEW_BURDEN": "NOT_EVALUATED_PENDING_HUMAN_OR_INDEPENDENT_JUDGE",
+  "REQUIREMENT_EXTRACTION_PRODUCTION_READINESS": "FAIL",
+  "REQUIREMENT_MAPPING_INPUT_READY": "NO",
+  "semantic_certification": "BLOCKED_NO_INDEPENDENT_HUMAN_OR_HOLDOUT_JUDGE",
+  "runtime_identity": {
+    "run_id": "req-sem-quality-v1-20260906171356469",
+    "branch": "read-only-current-worktree",
+    "task_type": "requirement_extraction",
+    "prompt_contract_version": "4.3-requirement-extraction-v3.1.1",
+    "prompt_instruction_hash": "9b8fe6582e774a64f36b2be307274e297fafb309cf17270a4d8fc463da817305",
+    "candidate_schema_hash": "9ee6ebb2a34e5ff3131d3b0bdbbcee45b1c8c33ac38d8325bd8925836abb7acc",
+    "chunker_rule_identity": "4781ad3374bf319d0ad92d5b3ec6e41b7d4464c8c4d2b3c12aed1bec357026a4",
+    "router_rule_identity": "3711073fc612445fa7c47c16244d0a77b201f4bce2d2051a19a32816c7c17ad0",
+    "canonical_rule_version": "4.3-canonical-requirement-1",
+    "provider": "mock",
+    "model": "mock-semantic-v1",
+    "gateway_host": "127.0.0.1",
+    "provider_host": null,
+    "provider_configured": false,
+    "timeout_ms": 120000,
+    "generation": {
+      "response_format": {
+        "type": "json_schema",
+        "strict": true,
+        "schema_name": "requirement_extraction_data",
+        "schema_hash": "9ee6ebb2a34e5ff3131d3b0bdbbcee45b1c8c33ac38d8325bd8925836abb7acc"
+      },
+      "enable_thinking": false,
+      "temperature": 0.1,
+      "max_tokens": 4800
+    },
+    "retry_count": 0,
+    "fallback_count": 0,
+    "dify_call_count": 0,
+    "chunk_budget": {
+      "singleCallThreshold": 2000,
+      "characterBudget": 2000,
+      "tokenBudget": 8000,
+      "sourceSpanBudget": 100
+    },
+    "sensitive_values_logged": false
+  },
+  "preflight": {
+    "/health": {
+      "status": 200,
+      "ok": true,
+      "latency_ms": 36
+    },
+    "/ready": {
+      "status": 200,
+      "ok": true,
+      "latency_ms": 3
+    },
+    "/info": {
+      "status": 200,
+      "ok": true,
+      "latency_ms": 13
+    }
+  },
+  "tender_preparation": [
+    {
+      "tender_id": "JY-001",
+      "source_file": "backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf",
+      "source_sha256": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "parser_status": "PASS",
+      "chunker_status": "PASS",
+      "chunk_count": 27,
+      "parser_character_count": 48224,
+      "parser_paragraph_count": 2138
+    },
+    {
+      "tender_id": "TB-003",
+      "source_file": "backend/eval/tender-benchmark-v1/sources/TB-003-jiaozuo-sidian.pdf",
+      "source_sha256": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "parser_status": "PASS",
+      "chunker_status": "PASS",
+      "chunk_count": 33,
+      "parser_character_count": 57853,
+      "parser_paragraph_count": 2239
+    },
+    {
+      "tender_id": "TB-006",
+      "source_file": "backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf",
+      "source_sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+      "parser_status": "PASS",
+      "chunker_status": "PASS",
+      "chunk_count": 32,
+      "parser_character_count": 56927,
+      "parser_paragraph_count": 2750
+    },
+    {
+      "tender_id": "FAST-01",
+      "source_file": "backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf",
+      "source_sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+      "parser_status": "PASS",
+      "chunker_status": "PASS",
+      "chunk_count": 25,
+      "parser_character_count": 53622,
+      "parser_paragraph_count": 2402
+    },
+    {
+      "tender_id": "FAST-04",
+      "source_file": "backend/eval/tender-benchmark-v1/sources/FAST-04-beijing-software.pdf",
+      "source_sha256": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "parser_status": "PASS",
+      "chunker_status": "PASS",
+      "chunk_count": 50,
+      "parser_character_count": 77530,
+      "parser_paragraph_count": 4590
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "source_file": "backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf",
+      "source_sha256": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "parser_status": "PASS",
+      "chunker_status": "PASS",
+      "chunk_count": 26,
+      "parser_character_count": 57996,
+      "parser_paragraph_count": 2690
+    }
+  ],
+  "side_effects": {
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "mapping_actions": 0,
+    "claim_actions": 0,
+    "writer_actions": 0
+  },
+  "blockers": [
+    "Independent semantic adjudication is not available in this run; semantic quality metrics remain NOT_EVALUATED.",
+    "Current canonicalization accepts injected P0 semantic mutations; P0 mutation gate is not fail-closed."
+  ]
+}

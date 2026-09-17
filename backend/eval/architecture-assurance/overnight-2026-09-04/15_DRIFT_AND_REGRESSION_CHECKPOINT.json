@@ -1,0 +1,15 @@
+{
+  "phase": "15",
+  "baseline_fingerprint": "318d53c8a8785952d38a173dc086efd1d044c5871e288e305614e52e14a19641",
+  "confirmed_current": ["eight architecture drifts recorded", "BUG-01/02/03/04/06/07/08/09 fixes have regression evidence", "quarantine invariant currently open/regressed"],
+  "historical_fixed": ["BUG-01", "BUG-02", "BUG-03", "BUG-04", "BUG-06", "BUG-07", "BUG-08", "BUG-09"],
+  "open": ["BUG-05 quarantine enforcement", "producer certification", "source packet recovery", "legacy isolation"],
+  "conflicting": ["handoff/docs vs runtime registry and local governance artifacts"],
+  "unknown": ["remediation on other branches"],
+  "risks": ["P0-BASELINE-001", "P0-RAG-001", "P0-REQ-001", "P1-LEGACY-001", "P1-PRODUCER-001", "P1-PRODUCER-002", "P1-MIG-001", "P1-EVAL-001", "P1-WRITER-001"],
+  "evidence_refs": ["01_CURRENT_SYSTEM_DELTA_CHECKPOINT.md", "13_RAG_AUTHORITY_REGRESSION_CHECKPOINT.md", "backend/eval/gold-human-review/v2/mapping-real-rebuild/06_source_role_projection_checkpoint.json", "backend/eval/gold-human-review/v2/mapping-real-rebuild/12_real_source_ingestion_harness_checkpoint.json"],
+  "fact_revisions": ["BUG-05 status revised to REGRESSED/OPEN based on current explicit NOT_ENFORCED flags"],
+  "next_dependencies": ["16_ENGINEERING_HEALTH_READINESS_CHECKPOINT"],
+  "gate": "ARCHITECTURE_DRIFT_REGISTERED; HISTORICAL_REGRESSION_REGISTERED",
+  "safe_to_continue": true
+}

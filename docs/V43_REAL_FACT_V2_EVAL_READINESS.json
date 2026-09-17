@@ -1,0 +1,51 @@
+{
+  "artifact": "V43_REAL_FACT_V2_EVAL_READINESS",
+  "assets": [
+    {
+      "area": "source-first Fact extraction",
+      "path": "backend/eval/gold-governance/source-first-fact-inventory-v1.js",
+      "reason": "source inventory is ready but no eligible real source-first windows exist",
+      "status": "PARTIAL"
+    },
+    {
+      "area": "Fact quality",
+      "path": "docs/V43_RAG_FACT_PRODUCTION_QUALITY_AUDIT.json",
+      "reason": "prior targeted run stopped on contract/input/network failures",
+      "status": "BLOCKED_BY_PRODUCER"
+    },
+    {
+      "area": "authority",
+      "path": "backend/test/evidence-fact-source-role.test.js",
+      "reason": "deterministic authority controls pass offline",
+      "status": "READY"
+    },
+    {
+      "area": "currentness",
+      "path": "backend/test/evidence-fact-execution-observability.test.js",
+      "reason": "currentness paths exist; live corpus certification absent",
+      "status": "PARTIAL"
+    },
+    {
+      "area": "conflict",
+      "path": "backend/test/evidence-fact-contract-v1.test.js",
+      "reason": "contract and fail-closed tests available",
+      "status": "READY"
+    },
+    {
+      "area": "source-role",
+      "path": "backend/test/material-source-authority-policy.test.js",
+      "reason": "single authority predicate is tested",
+      "status": "READY"
+    },
+    {
+      "area": "RAG evidence",
+      "path": "docs/V43_RAG_FACT_COMPONENT_STATUS_MATRIX.json",
+      "reason": "retrieval engineering proven; Fact semantic quality not certified",
+      "status": "PARTIAL"
+    }
+  ],
+  "eval_only": true,
+  "gold_mutations": 0,
+  "production_db_writes": 0,
+  "provider_calls": 0
+}

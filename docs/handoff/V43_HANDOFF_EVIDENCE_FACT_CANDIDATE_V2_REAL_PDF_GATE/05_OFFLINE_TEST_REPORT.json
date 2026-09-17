@@ -1,0 +1,16 @@
+{
+  "test_commands": [
+    "node --test backend/test/evidence-fact-candidate-v2-contract-closure.test.js",
+    "node --test backend/test/evidence-fact-candidate-v2.test.js backend/test/evidence-fact-candidate-v2-1.test.js backend/test/evidence-fact-transport-v2.test.js",
+    "node --test backend/test/semantic-gateway-client.test.js services/semantic-gateway/test/task-router-candidate-v2.test.js"
+  ],
+  "focused_results": {
+    "contract_closure": "PASS 11/11",
+    "compatibility_and_transport": "PASS 57/57",
+    "client_and_router": "PASS 39/39 then 14/14 after wiring"
+  },
+  "node_syntax_checks": "PASS",
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0
+}

@@ -1,0 +1,137 @@
+{
+  "artifact_type": "V43_RESPONSE_ROUTER_BLIND_GPT_V2_MANIFEST",
+  "artifact_version": "v2",
+  "semantic_contract_version": "V43_RESPONSE_ROUTER_GPT_SEMANTIC_CONTRACT_V2",
+  "blind": true,
+  "generated_at": "2026-09-09T03:49:40.716Z",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "worktree": {
+    "dirty": true,
+    "status_entry_count": 483,
+    "status_sha256": "b1340622e7c6502c65d9d502998a1b41eae00b5df95d071b03646c91111e5760"
+  },
+  "source_artifacts": [
+    {
+      "cohort": "CORE6",
+      "path": "docs/V43_REQUIREMENT_GOLD_V2_SIX_TENDER_CANONICAL_INPUT.json",
+      "sha256": "ff07402688a3013af9a9b8be01f613f76848b7ea905208c1955a604432422fe1",
+      "row_count": 1009,
+      "source_hash_present_count": 1009,
+      "source_hash_missing_count": 0,
+      "source_hash_preservation": "PRESERVED_WHEN_PRESENT"
+    },
+    {
+      "cohort": "HOLDOUT_V1",
+      "path": "backend/eval/requirement-unseen-holdout-v1/results/unseen-holdout-v1-2026-09-08T06-21-08-203Z-5faac1ab/canonical-requirements.json",
+      "sha256": "20bd8af5e9226a70a5ffa2cd3ad0c20b991fe69a452dea9a09a4dc932b326407",
+      "row_count": 397,
+      "source_hash_present_count": 0,
+      "source_hash_missing_count": 397,
+      "source_hash_preservation": "PRESERVED_WHEN_PRESENT"
+    },
+    {
+      "cohort": "HOLDOUT_V2",
+      "path": "backend/eval/requirement-unseen-holdout-v2/results/unseen-holdout-v2-2026-09-08T16-24-57-426Z-69cf5c50/canonical-requirements.json",
+      "sha256": "afe390510a4700c9d099087ad0143aa0436f7933b1638daff89cc0a292b8cb1e",
+      "row_count": 772,
+      "source_hash_present_count": 0,
+      "source_hash_missing_count": 772,
+      "source_hash_preservation": "PRESERVED_WHEN_PRESENT"
+    }
+  ],
+  "cohort_counts": {
+    "CORE6": 1009,
+    "HOLDOUT_V1": 397,
+    "HOLDOUT_V2": 772
+  },
+  "total_count": 2178,
+  "field_inclusion_list": [
+    "case_id",
+    "cohort",
+    "tender_id",
+    "requirement_id",
+    "requirement_text",
+    "category",
+    "requirement_category",
+    "writer_eligible",
+    "mandatory",
+    "mandatory_observed",
+    "requires_confirmation",
+    "confirmation_reasons",
+    "risk_flags",
+    "source_refs",
+    "source_excerpt",
+    "source_span",
+    "source_hash",
+    "source_verified",
+    "source_location",
+    "requirement_hash",
+    "gpt_response_required",
+    "gpt_primary_response_mode",
+    "gpt_secondary_dependencies",
+    "gpt_risk_tier",
+    "gpt_scoring_related",
+    "gpt_scoring_priority",
+    "gpt_evidence_dependency",
+    "gpt_human_required",
+    "gpt_taxonomy_fit",
+    "gpt_routing_reason_family",
+    "gpt_confidence",
+    "gpt_semantic_notes",
+    "gpt_adjudication_status"
+  ],
+  "field_exclusion_list": [
+    "response_role",
+    "response_mode",
+    "risk_tier",
+    "is_scoring_related",
+    "scoring_priority",
+    "routing_reasons",
+    "secondary_dependencies",
+    "evidence_dependency",
+    "deep_chain_required",
+    "human_required",
+    "deterministic_projection",
+    "rule_path_trace",
+    "current_router",
+    "codex_verdict",
+    "recommended_gold",
+    "provider_result",
+    "model_result"
+  ],
+  "duplicate_id_checks": {
+    "within_cohort": {
+      "CORE6": true,
+      "HOLDOUT_V1": true,
+      "HOLDOUT_V2": true
+    }
+  },
+  "cross_cohort_collision_checks": {
+    "combined_cohort_tender_requirement_id_unique": true,
+    "raw_requirement_id_overlap_count": 0
+  },
+  "source_hash_preservation": {
+    "status": "PRESERVED_WHEN_PRESENT",
+    "present_count": 1009,
+    "missing_count": 1169
+  },
+  "semantic_mutation_count": 0,
+  "GPT_LABELS_PRESENT": 0,
+  "side_effects": {
+    "PROVIDER_CALLS": 0,
+    "LLM_CALLS": 0,
+    "PRODUCTION_DB_WRITES": 0,
+    "FACT_PERSISTENCE": 0,
+    "GOLD_MUTATIONS": 0,
+    "MAPPING_ACTIONS": 0,
+    "CLAIM_ACTIONS": 0,
+    "WRITER_ACTIONS": 0,
+    "PRODUCTION_ROUTING_CHANGES": 0,
+    "COMMIT": 0,
+    "PUSH": 0,
+    "MERGE": 0,
+    "DEPLOY": 0
+  },
+  "status": "READY_FOR_GPT_FULL_CORPUS_SEMANTIC_REFERENCE_V2"
+}

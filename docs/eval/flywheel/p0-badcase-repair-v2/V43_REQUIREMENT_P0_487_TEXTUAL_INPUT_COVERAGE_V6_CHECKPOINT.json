@@ -1,0 +1,54 @@
+{
+  "artifact_type": "V43_REQUIREMENT_P0_487_TEXTUAL_INPUT_COVERAGE_V6_CHECKPOINT",
+  "artifact_version": "v6",
+  "production_run_id": "V43-CORE6-20260911",
+  "source_truth_id": "GPT_SOURCE_TRUTH_P0_CORE6_CANDIDATE_V1",
+  "source_truth_sha256": "9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+  "source_evidence_rendering": {
+    "path": "docs\\eval\\flywheel\\p0-semantic-reconstruction\\P0_487_GPT_REVIEW_BUNDLE.jsonl",
+    "sha256": "867965a6f2e0b1568278a62c05316b16bcb1b1dfd09e01705020f4b51d240a2d",
+    "row_count": 487,
+    "authority": "FROZEN_SOURCE_TRUTH_RENDERING_ONLY",
+    "candidate_lineage_used_for_source_selection": false
+  },
+  "production_parse_chunk_unique_count": 197,
+  "denominator_reconciliation": {
+    "production_parse_chunk_unique_count": 197,
+    "hash_comparison_record_count": 197,
+    "duplicate_or_auxiliary_record_count": 0,
+    "reported_204_value": 204,
+    "reason_for_197_vs_204": "204 is the historical FAST-01 candidate/source-verified count, not a Parse Chunk count; current frozen Production run has 197 unique persisted Parse Chunks (28+33+32+26+51+27).",
+    "manifest_chunk_counts": {
+      "JY-001": 28,
+      "TB-003": 33,
+      "TB-006": 32,
+      "FAST-01": 26,
+      "FAST-04": 51,
+      "FAST-WATER-01": 27
+    }
+  },
+  "p0_source_to_provider_input_coverage": {
+    "total_atoms": 487,
+    "source_truth_text_present_in_full_extraction": 23,
+    "source_truth_text_present_in_selected_scope": 23,
+    "source_truth_text_present_in_parse_chunk": 22,
+    "source_truth_text_present_in_provider_payload": 21,
+    "source_ref_present_in_provider_payload": 472,
+    "production_lineage_available": 472,
+    "cross_chunk_semantic_splits": 0,
+    "unresolved_source_evidence": [],
+    "gate": "FAIL"
+  },
+  "historical_15_audit_count": 15,
+  "badcase_44_mechanical_status_counts": {
+    "UNRESOLVED": 43,
+    "PRODUCTION_INPUT_VALID": 1
+  },
+  "provider_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "production_repair_applied": false,
+  "semantic_adjudication_performed": false,
+  "final_status": "READY_FOR_GPT_REQUIREMENT_REAL_COVERAGE_DEFECT_REVIEW"
+}

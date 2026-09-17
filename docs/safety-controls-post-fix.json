@@ -1,0 +1,601 @@
+{
+  "artifact_type": "V43_REQUIREMENT_QUALITY_GATE_SAFETY_CONTROLS_POST_FIX",
+  "artifact_version": "v1",
+  "control_count": 12,
+  "detected_count": 12,
+  "accept_escape_count": 0,
+  "pre_fix_detected_count": 12,
+  "pre_fix_accept_escape_count": 0,
+  "unchanged_safety_floor": true,
+  "source_mutation_suite_sha256": "fc525e5d01f3a34bd18e0de22f155816195367278e1269facb1312404e17d001",
+  "controls": [
+    {
+      "control_id": "SAFETY-PC-001",
+      "mutation_id": "REQ-MUT-001",
+      "dimension": "number",
+      "severity": "P0",
+      "original_requirement_id": "JY-001:REQ-001",
+      "source_text": "制定统一的技术标准、数据标准和业务标准，通过“一网统管”核心平台和数字底座，\n实现城市治理一图展现、城市态势一脑分析、处置力量一键点调、城市事件一键流转、\n社会要素一格汇聚、移动应用一端接入、市民热线一呼即通、基层实战统一赋能、开发\n平台统一底座。坚持利旧节约原则，充分利用已有的江阴智慧城市综合管理平台、江阴",
+      "source_refs": [
+        "C006-S039",
+        "C006-S040",
+        "C006-S041",
+        "C006-S042"
+      ],
+      "replay_source_refs": [
+        "C006-S039",
+        "C006-S040",
+        "C006-S041",
+        "C006-S042"
+      ],
+      "original_canonical_text": "制定统一的技术标准、数据标准和业务标准,通过“一网统管”核心平台和数字底座,实现城市治理一图展现、城市态势一脑分析、处置力量一键点调、城市事件一键流转、社会要素一格汇聚、移动应用一端接入、市民热线一呼即通、基层实战统一赋能、开发平台统一底座。",
+      "mutated_canonical_text": "制定统一的技术标准、数据标准和业务标准,通过“一网统管”核心平台和数字底座,实现城市治理一图展现、城市态势一脑分析、处置力量一键点调、城市事件一键流转、社会要素一格汇聚、移动应用一端接入、市民热线一呼即通、基层实战统一赋能、开发平台统一底座。 数量1000",
+      "exact_mutation_delta": {
+        "dimension": "number",
+        "original_text_hash": "caeea8ca1d2b8e2e294b8cad1b3d18db497bedfea93e833f7ab86ccf9e817f22",
+        "mutated_text_hash": "c70e98524a5a74004c6cd704856cc81cf5f957f0c0bd8f2946265847cdb805c6",
+        "mutation_index": 1,
+        "frozen_fixture_mutated_text_hash": "caeea8ca1d2b8e2e294b8cad1b3d18db497bedfea93e833f7ab86ccf9e817f22",
+        "mutation_payload_hash_match": false
+      },
+      "expected_decision": "FAIL_CLOSED",
+      "quality_gate_function": "evaluateCandidatePayload -> buildCanonicalRequirements -> evaluateRequirementCandidateQuality",
+      "quality_gate_version": "4.3-requirement-quality-gate-1",
+      "actual_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+      "actual_reason_codes": [
+        "NUMBER_DISTORTION"
+      ],
+      "actual_detector_evidence": {
+        "source_resolution_success": true,
+        "canonicalization_success": true,
+        "failure_stage": "QUALITY_GATE",
+        "canonical_count": 1,
+        "duplicate_count": 0,
+        "detected": true
+      },
+      "fixture_sha256": "fc525e5d01f3a34bd18e0de22f155816195367278e1269facb1312404e17d001",
+      "provider_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0
+    },
+    {
+      "control_id": "SAFETY-PC-002",
+      "mutation_id": "REQ-MUT-002",
+      "dimension": "number",
+      "severity": "P0",
+      "original_requirement_id": "JY-001:REQ-002",
+      "source_text": "平台统一底座。坚持利旧节约原则，充分利用已有的江阴智慧城市综合管理平台、江阴\n市 \t12345 \t政务服务便民热线平台进行整合对接与提档改造，形成符合我市实际的“一网\n统管”体系。",
+      "source_refs": [
+        "C006-S042",
+        "C006-S043",
+        "C006-S044"
+      ],
+      "replay_source_refs": [
+        "C006-S042",
+        "C006-S043",
+        "C006-S044"
+      ],
+      "original_canonical_text": "坚持利旧节约原则,充分利用已有的江阴智慧城市综合管理平台、江阴市12345政务服务便民热线平台进行整合对接与提档改造,形成符合我市实际的“一网统管”体系。",
+      "mutated_canonical_text": "坚持利旧节约原则,充分利用已有的江阴智慧城市综合管理平台、江阴市1001政务服务便民热线平台进行整合对接与提档改造,形成符合我市实际的“一网统管”体系。",
+      "exact_mutation_delta": {
+        "dimension": "number",
+        "original_text_hash": "ccf2acffdd801fe80085cf064b50ea2e95b3a31dc6c8e45d04fabaf81c424fe7",
+        "mutated_text_hash": "9b4c44944e373e6ec8d35474ce8f57014f34b1a6a94badd0f628671d795ac17f",
+        "mutation_index": 2,
+        "frozen_fixture_mutated_text_hash": "9b4c44944e373e6ec8d35474ce8f57014f34b1a6a94badd0f628671d795ac17f",
+        "mutation_payload_hash_match": true
+      },
+      "expected_decision": "FAIL_CLOSED",
+      "quality_gate_function": "evaluateCandidatePayload -> buildCanonicalRequirements -> evaluateRequirementCandidateQuality",
+      "quality_gate_version": "4.3-requirement-quality-gate-1",
+      "actual_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+      "actual_reason_codes": [
+        "NUMBER_DISTORTION"
+      ],
+      "actual_detector_evidence": {
+        "source_resolution_success": true,
+        "canonicalization_success": true,
+        "failure_stage": "QUALITY_GATE",
+        "canonical_count": 1,
+        "duplicate_count": 0,
+        "detected": true
+      },
+      "fixture_sha256": "fc525e5d01f3a34bd18e0de22f155816195367278e1269facb1312404e17d001",
+      "provider_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0
+    },
+    {
+      "control_id": "SAFETY-PC-003",
+      "mutation_id": "REQ-MUT-003",
+      "dimension": "number",
+      "severity": "P0",
+      "original_requirement_id": "JY-001:REQ-003",
+      "source_text": "革的良好成果进行提档升级，同时将视频资源充分联网整合，搭建城市统一的视频“发\n现”能力服务平台，提升城运中心视频融合应用水平，着力构建市域治理“一网统管”",
+      "source_refs": [
+        "C006-S047",
+        "C006-S048"
+      ],
+      "replay_source_refs": [
+        "C006-S047",
+        "C006-S048"
+      ],
+      "original_canonical_text": "将视频资源充分联网整合,搭建城市统一的视频“发现”能力服务平台,提升城运中心视频融合应用水平。",
+      "mutated_canonical_text": "将视频资源充分联网整合,搭建城市统一的视频“发现”能力服务平台,提升城运中心视频融合应用水平。 数量1002",
+      "exact_mutation_delta": {
+        "dimension": "number",
+        "original_text_hash": "a36fc0578d62130733d86f4cdf90d2621845e9a4aff2700ff0c04e5fecd95c24",
+        "mutated_text_hash": "8882580bdee6834cbd43661f6303fa5b32dc461c133db12f5ac36ae81e4505a2",
+        "mutation_index": 3,
+        "frozen_fixture_mutated_text_hash": "a36fc0578d62130733d86f4cdf90d2621845e9a4aff2700ff0c04e5fecd95c24",
+        "mutation_payload_hash_match": false
+      },
+      "expected_decision": "FAIL_CLOSED",
+      "quality_gate_function": "evaluateCandidatePayload -> buildCanonicalRequirements -> evaluateRequirementCandidateQuality",
+      "quality_gate_version": "4.3-requirement-quality-gate-1",
+      "actual_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+      "actual_reason_codes": [
+        "NUMBER_DISTORTION"
+      ],
+      "actual_detector_evidence": {
+        "source_resolution_success": true,
+        "canonicalization_success": true,
+        "failure_stage": "QUALITY_GATE",
+        "canonical_count": 1,
+        "duplicate_count": 0,
+        "detected": true
+      },
+      "fixture_sha256": "fc525e5d01f3a34bd18e0de22f155816195367278e1269facb1312404e17d001",
+      "provider_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0
+    },
+    {
+      "control_id": "SAFETY-PC-004",
+      "mutation_id": "REQ-MUT-004",
+      "dimension": "negation",
+      "severity": "P0",
+      "original_requirement_id": "JY-001:REQ-001",
+      "source_text": "制定统一的技术标准、数据标准和业务标准，通过“一网统管”核心平台和数字底座，\n实现城市治理一图展现、城市态势一脑分析、处置力量一键点调、城市事件一键流转、\n社会要素一格汇聚、移动应用一端接入、市民热线一呼即通、基层实战统一赋能、开发\n平台统一底座。坚持利旧节约原则，充分利用已有的江阴智慧城市综合管理平台、江阴",
+      "source_refs": [
+        "C006-S039",
+        "C006-S040",
+        "C006-S041",
+        "C006-S042"
+      ],
+      "replay_source_refs": [
+        "C006-S039",
+        "C006-S040",
+        "C006-S041",
+        "C006-S042"
+      ],
+      "original_canonical_text": "制定统一的技术标准、数据标准和业务标准,通过“一网统管”核心平台和数字底座,实现城市治理一图展现、城市态势一脑分析、处置力量一键点调、城市事件一键流转、社会要素一格汇聚、移动应用一端接入、市民热线一呼即通、基层实战统一赋能、开发平台统一底座。",
+      "mutated_canonical_text": "制定统一的技术标准、数据标准和业务标准,通过“一网统管”核心平台和数字底座,实现城市治理一图展现、城市态势一脑分析、处置力量一键点调、城市事件一键流转、社会要素一格汇聚、移动应用一端接入、市民热线一呼即通、基层实战统一赋能、开发平台统一底座。 不得满足",
+      "exact_mutation_delta": {
+        "dimension": "negation",
+        "original_text_hash": "caeea8ca1d2b8e2e294b8cad1b3d18db497bedfea93e833f7ab86ccf9e817f22",
+        "mutated_text_hash": "58b08e3344afd7ce7032ae2277065d8ea6c6dc32e2411e9f5505d4c9022b2590",
+        "mutation_index": 1,
+        "frozen_fixture_mutated_text_hash": "58b08e3344afd7ce7032ae2277065d8ea6c6dc32e2411e9f5505d4c9022b2590",
+        "mutation_payload_hash_match": true
+      },
+      "expected_decision": "FAIL_CLOSED",
+      "quality_gate_function": "evaluateCandidatePayload -> buildCanonicalRequirements -> evaluateRequirementCandidateQuality",
+      "quality_gate_version": "4.3-requirement-quality-gate-1",
+      "actual_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+      "actual_reason_codes": [
+        "NEGATION_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "actual_detector_evidence": {
+        "source_resolution_success": true,
+        "canonicalization_success": true,
+        "failure_stage": "QUALITY_GATE",
+        "canonical_count": 1,
+        "duplicate_count": 0,
+        "detected": true
+      },
+      "fixture_sha256": "fc525e5d01f3a34bd18e0de22f155816195367278e1269facb1312404e17d001",
+      "provider_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0
+    },
+    {
+      "control_id": "SAFETY-PC-005",
+      "mutation_id": "REQ-MUT-005",
+      "dimension": "negation",
+      "severity": "P0",
+      "original_requirement_id": "JY-001:REQ-002",
+      "source_text": "平台统一底座。坚持利旧节约原则，充分利用已有的江阴智慧城市综合管理平台、江阴\n市 \t12345 \t政务服务便民热线平台进行整合对接与提档改造，形成符合我市实际的“一网\n统管”体系。",
+      "source_refs": [
+        "C006-S042",
+        "C006-S043",
+        "C006-S044"
+      ],
+      "replay_source_refs": [
+        "C006-S042",
+        "C006-S043",
+        "C006-S044"
+      ],
+      "original_canonical_text": "坚持利旧节约原则,充分利用已有的江阴智慧城市综合管理平台、江阴市12345政务服务便民热线平台进行整合对接与提档改造,形成符合我市实际的“一网统管”体系。",
+      "mutated_canonical_text": "坚持利旧节约原则,充分利用已有的江阴智慧城市综合管理平台、江阴市12345政务服务便民热线平台进行整合对接与提档改造,形成符合我市实际的“一网统管”体系。 不得满足",
+      "exact_mutation_delta": {
+        "dimension": "negation",
+        "original_text_hash": "ccf2acffdd801fe80085cf064b50ea2e95b3a31dc6c8e45d04fabaf81c424fe7",
+        "mutated_text_hash": "073816200877d238fda9b4fd9be4e3b4785bd7fc36c89afe8111c55ed8d2c49c",
+        "mutation_index": 2,
+        "frozen_fixture_mutated_text_hash": "073816200877d238fda9b4fd9be4e3b4785bd7fc36c89afe8111c55ed8d2c49c",
+        "mutation_payload_hash_match": true
+      },
+      "expected_decision": "FAIL_CLOSED",
+      "quality_gate_function": "evaluateCandidatePayload -> buildCanonicalRequirements -> evaluateRequirementCandidateQuality",
+      "quality_gate_version": "4.3-requirement-quality-gate-1",
+      "actual_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+      "actual_reason_codes": [
+        "NEGATION_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "actual_detector_evidence": {
+        "source_resolution_success": true,
+        "canonicalization_success": true,
+        "failure_stage": "QUALITY_GATE",
+        "canonical_count": 1,
+        "duplicate_count": 0,
+        "detected": true
+      },
+      "fixture_sha256": "fc525e5d01f3a34bd18e0de22f155816195367278e1269facb1312404e17d001",
+      "provider_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0
+    },
+    {
+      "control_id": "SAFETY-PC-006",
+      "mutation_id": "REQ-MUT-006",
+      "dimension": "negation",
+      "severity": "P0",
+      "original_requirement_id": "JY-001:REQ-003",
+      "source_text": "革的良好成果进行提档升级，同时将视频资源充分联网整合，搭建城市统一的视频“发\n现”能力服务平台，提升城运中心视频融合应用水平，着力构建市域治理“一网统管”",
+      "source_refs": [
+        "C006-S047",
+        "C006-S048"
+      ],
+      "replay_source_refs": [
+        "C006-S047",
+        "C006-S048"
+      ],
+      "original_canonical_text": "将视频资源充分联网整合,搭建城市统一的视频“发现”能力服务平台,提升城运中心视频融合应用水平。",
+      "mutated_canonical_text": "将视频资源充分联网整合,搭建城市统一的视频“发现”能力服务平台,提升城运中心视频融合应用水平。 不得满足",
+      "exact_mutation_delta": {
+        "dimension": "negation",
+        "original_text_hash": "a36fc0578d62130733d86f4cdf90d2621845e9a4aff2700ff0c04e5fecd95c24",
+        "mutated_text_hash": "0625245eaebc2a47372b01a1cd00aac177ba90b335345d7c2061fd96d86524bc",
+        "mutation_index": 3,
+        "frozen_fixture_mutated_text_hash": "0625245eaebc2a47372b01a1cd00aac177ba90b335345d7c2061fd96d86524bc",
+        "mutation_payload_hash_match": true
+      },
+      "expected_decision": "FAIL_CLOSED",
+      "quality_gate_function": "evaluateCandidatePayload -> buildCanonicalRequirements -> evaluateRequirementCandidateQuality",
+      "quality_gate_version": "4.3-requirement-quality-gate-1",
+      "actual_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+      "actual_reason_codes": [
+        "NEGATION_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "actual_detector_evidence": {
+        "source_resolution_success": true,
+        "canonicalization_success": true,
+        "failure_stage": "QUALITY_GATE",
+        "canonical_count": 1,
+        "duplicate_count": 0,
+        "detected": true
+      },
+      "fixture_sha256": "fc525e5d01f3a34bd18e0de22f155816195367278e1269facb1312404e17d001",
+      "provider_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0
+    },
+    {
+      "control_id": "SAFETY-PC-007",
+      "mutation_id": "REQ-MUT-007",
+      "dimension": "entity",
+      "severity": "P0",
+      "original_requirement_id": "JY-001:REQ-001",
+      "source_text": "制定统一的技术标准、数据标准和业务标准，通过“一网统管”核心平台和数字底座，\n实现城市治理一图展现、城市态势一脑分析、处置力量一键点调、城市事件一键流转、\n社会要素一格汇聚、移动应用一端接入、市民热线一呼即通、基层实战统一赋能、开发\n平台统一底座。坚持利旧节约原则，充分利用已有的江阴智慧城市综合管理平台、江阴",
+      "source_refs": [
+        "C006-S039",
+        "C006-S040",
+        "C006-S041",
+        "C006-S042"
+      ],
+      "replay_source_refs": [
+        "C006-S039",
+        "C006-S040",
+        "C006-S041",
+        "C006-S042"
+      ],
+      "original_canonical_text": "制定统一的技术标准、数据标准和业务标准,通过“一网统管”核心平台和数字底座,实现城市治理一图展现、城市态势一脑分析、处置力量一键点调、城市事件一键流转、社会要素一格汇聚、移动应用一端接入、市民热线一呼即通、基层实战统一赋能、开发平台统一底座。",
+      "mutated_canonical_text": "制定统一的技术标准、数据标准和业务标准,通过“一网统管”核心平台和数字底座,实现城市治理一图展现、城市态势一脑分析、处置力量一键点调、城市事件一键流转、社会要素一格汇聚、移动应用一端接入、市民热线一呼即通、基层实战统一赋能、开发平台统一底座。 主体替换为未授权企业1",
+      "exact_mutation_delta": {
+        "dimension": "entity",
+        "original_text_hash": "caeea8ca1d2b8e2e294b8cad1b3d18db497bedfea93e833f7ab86ccf9e817f22",
+        "mutated_text_hash": "d433abd64713e86bc618945c5333b282ae037ac430dc5a20d3ca68416ffd2806",
+        "mutation_index": 1,
+        "frozen_fixture_mutated_text_hash": "d433abd64713e86bc618945c5333b282ae037ac430dc5a20d3ca68416ffd2806",
+        "mutation_payload_hash_match": true
+      },
+      "expected_decision": "FAIL_CLOSED",
+      "quality_gate_function": "evaluateCandidatePayload -> buildCanonicalRequirements -> evaluateRequirementCandidateQuality",
+      "quality_gate_version": "4.3-requirement-quality-gate-1",
+      "actual_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+      "actual_reason_codes": [
+        "NUMBER_DISTORTION",
+        "NEGATION_DISTORTION",
+        "ENTITY_MISMATCH_REVIEW",
+        "OBVIOUS_SEMANTIC_MUTATION"
+      ],
+      "actual_detector_evidence": {
+        "source_resolution_success": true,
+        "canonicalization_success": true,
+        "failure_stage": "QUALITY_GATE",
+        "canonical_count": 1,
+        "duplicate_count": 0,
+        "detected": true
+      },
+      "fixture_sha256": "fc525e5d01f3a34bd18e0de22f155816195367278e1269facb1312404e17d001",
+      "provider_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0
+    },
+    {
+      "control_id": "SAFETY-PC-008",
+      "mutation_id": "REQ-MUT-010",
+      "dimension": "scope",
+      "severity": "P0",
+      "original_requirement_id": "JY-001:REQ-001",
+      "source_text": "制定统一的技术标准、数据标准和业务标准，通过“一网统管”核心平台和数字底座，\n实现城市治理一图展现、城市态势一脑分析、处置力量一键点调、城市事件一键流转、\n社会要素一格汇聚、移动应用一端接入、市民热线一呼即通、基层实战统一赋能、开发\n平台统一底座。坚持利旧节约原则，充分利用已有的江阴智慧城市综合管理平台、江阴",
+      "source_refs": [
+        "C006-S039",
+        "C006-S040",
+        "C006-S041",
+        "C006-S042"
+      ],
+      "replay_source_refs": [
+        "C006-S039",
+        "C006-S040",
+        "C006-S041",
+        "C006-S042"
+      ],
+      "original_canonical_text": "制定统一的技术标准、数据标准和业务标准,通过“一网统管”核心平台和数字底座,实现城市治理一图展现、城市态势一脑分析、处置力量一键点调、城市事件一键流转、社会要素一格汇聚、移动应用一端接入、市民热线一呼即通、基层实战统一赋能、开发平台统一底座。",
+      "mutated_canonical_text": "制定统一的技术标准、数据标准和业务标准,通过“一网统管”核心平台和数字底座,实现城市治理一图展现、城市态势一脑分析、处置力量一键点调、城市事件一键流转、社会要素一格汇聚、移动应用一端接入、市民热线一呼即通、基层实战统一赋能、开发平台统一底座。 范围扩展至全国所有区域",
+      "exact_mutation_delta": {
+        "dimension": "scope",
+        "original_text_hash": "caeea8ca1d2b8e2e294b8cad1b3d18db497bedfea93e833f7ab86ccf9e817f22",
+        "mutated_text_hash": "f9e9d90a17202d1451df600bb90031214902de5dc9f5d0fcbc07f1e511de0308",
+        "mutation_index": 1,
+        "frozen_fixture_mutated_text_hash": "f9e9d90a17202d1451df600bb90031214902de5dc9f5d0fcbc07f1e511de0308",
+        "mutation_payload_hash_match": true
+      },
+      "expected_decision": "FAIL_CLOSED",
+      "quality_gate_function": "evaluateCandidatePayload -> buildCanonicalRequirements -> evaluateRequirementCandidateQuality",
+      "quality_gate_version": "4.3-requirement-quality-gate-1",
+      "actual_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+      "actual_reason_codes": [
+        "SCOPE_EXPANSION_REVIEW",
+        "OBVIOUS_SEMANTIC_MUTATION"
+      ],
+      "actual_detector_evidence": {
+        "source_resolution_success": true,
+        "canonicalization_success": true,
+        "failure_stage": "QUALITY_GATE",
+        "canonical_count": 1,
+        "duplicate_count": 0,
+        "detected": true
+      },
+      "fixture_sha256": "fc525e5d01f3a34bd18e0de22f155816195367278e1269facb1312404e17d001",
+      "provider_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0
+    },
+    {
+      "control_id": "SAFETY-PC-009",
+      "mutation_id": "REQ-MUT-011",
+      "dimension": "scope",
+      "severity": "P0",
+      "original_requirement_id": "JY-001:REQ-002",
+      "source_text": "平台统一底座。坚持利旧节约原则，充分利用已有的江阴智慧城市综合管理平台、江阴\n市 \t12345 \t政务服务便民热线平台进行整合对接与提档改造，形成符合我市实际的“一网\n统管”体系。",
+      "source_refs": [
+        "C006-S042",
+        "C006-S043",
+        "C006-S044"
+      ],
+      "replay_source_refs": [
+        "C006-S042",
+        "C006-S043",
+        "C006-S044"
+      ],
+      "original_canonical_text": "坚持利旧节约原则,充分利用已有的江阴智慧城市综合管理平台、江阴市12345政务服务便民热线平台进行整合对接与提档改造,形成符合我市实际的“一网统管”体系。",
+      "mutated_canonical_text": "坚持利旧节约原则,充分利用已有的江阴智慧城市综合管理平台、江阴市12345政务服务便民热线平台进行整合对接与提档改造,形成符合我市实际的“一网统管”体系。 范围扩展至全国所有区域",
+      "exact_mutation_delta": {
+        "dimension": "scope",
+        "original_text_hash": "ccf2acffdd801fe80085cf064b50ea2e95b3a31dc6c8e45d04fabaf81c424fe7",
+        "mutated_text_hash": "dd92ffbc236ab794f8a5a5721c783068c8d5b2793a6578c3b2d84726ceb67bfe",
+        "mutation_index": 2,
+        "frozen_fixture_mutated_text_hash": "dd92ffbc236ab794f8a5a5721c783068c8d5b2793a6578c3b2d84726ceb67bfe",
+        "mutation_payload_hash_match": true
+      },
+      "expected_decision": "FAIL_CLOSED",
+      "quality_gate_function": "evaluateCandidatePayload -> buildCanonicalRequirements -> evaluateRequirementCandidateQuality",
+      "quality_gate_version": "4.3-requirement-quality-gate-1",
+      "actual_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+      "actual_reason_codes": [
+        "SCOPE_EXPANSION_REVIEW",
+        "OBVIOUS_SEMANTIC_MUTATION"
+      ],
+      "actual_detector_evidence": {
+        "source_resolution_success": true,
+        "canonicalization_success": true,
+        "failure_stage": "QUALITY_GATE",
+        "canonical_count": 1,
+        "duplicate_count": 0,
+        "detected": true
+      },
+      "fixture_sha256": "fc525e5d01f3a34bd18e0de22f155816195367278e1269facb1312404e17d001",
+      "provider_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0
+    },
+    {
+      "control_id": "SAFETY-PC-010",
+      "mutation_id": "REQ-MUT-022",
+      "dimension": "table_header",
+      "severity": "P0",
+      "original_requirement_id": "JY-001:REQ-001",
+      "source_text": "制定统一的技术标准、数据标准和业务标准，通过“一网统管”核心平台和数字底座，\n实现城市治理一图展现、城市态势一脑分析、处置力量一键点调、城市事件一键流转、\n社会要素一格汇聚、移动应用一端接入、市民热线一呼即通、基层实战统一赋能、开发\n平台统一底座。坚持利旧节约原则，充分利用已有的江阴智慧城市综合管理平台、江阴",
+      "source_refs": [
+        "C006-S039",
+        "C006-S040",
+        "C006-S041",
+        "C006-S042"
+      ],
+      "replay_source_refs": [
+        "C006-S039",
+        "C006-S040",
+        "C006-S041",
+        "C006-S042"
+      ],
+      "original_canonical_text": "制定统一的技术标准、数据标准和业务标准,通过“一网统管”核心平台和数字底座,实现城市治理一图展现、城市态势一脑分析、处置力量一键点调、城市事件一键流转、社会要素一格汇聚、移动应用一端接入、市民热线一呼即通、基层实战统一赋能、开发平台统一底座。",
+      "mutated_canonical_text": "制定统一的技术标准、数据标准和业务标准,通过“一网统管”核心平台和数字底座,实现城市治理一图展现、城市态势一脑分析、处置力量一键点调、城市事件一键流转、社会要素一格汇聚、移动应用一端接入、市民热线一呼即通、基层实战统一赋能、开发平台统一底座。（表头缺失）",
+      "exact_mutation_delta": {
+        "dimension": "table_header",
+        "original_text_hash": "caeea8ca1d2b8e2e294b8cad1b3d18db497bedfea93e833f7ab86ccf9e817f22",
+        "mutated_text_hash": "e4ffb4a3a39a68b793ced56a0965717712ca673efa9ea714bf63bbc2ee5fde84",
+        "mutation_index": 1,
+        "frozen_fixture_mutated_text_hash": "caeea8ca1d2b8e2e294b8cad1b3d18db497bedfea93e833f7ab86ccf9e817f22",
+        "mutation_payload_hash_match": false
+      },
+      "expected_decision": "FAIL_CLOSED",
+      "quality_gate_function": "evaluateCandidatePayload -> buildCanonicalRequirements -> evaluateRequirementCandidateQuality",
+      "quality_gate_version": "4.3-requirement-quality-gate-1",
+      "actual_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+      "actual_reason_codes": [
+        "OBVIOUS_SEMANTIC_MUTATION"
+      ],
+      "actual_detector_evidence": {
+        "source_resolution_success": true,
+        "canonicalization_success": true,
+        "failure_stage": "QUALITY_GATE",
+        "canonical_count": 1,
+        "duplicate_count": 0,
+        "detected": true
+      },
+      "fixture_sha256": "fc525e5d01f3a34bd18e0de22f155816195367278e1269facb1312404e17d001",
+      "provider_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0
+    },
+    {
+      "control_id": "SAFETY-PC-011",
+      "mutation_id": "REQ-MUT-013",
+      "dimension": "status",
+      "severity": "P0",
+      "original_requirement_id": "JY-001:REQ-001",
+      "source_text": "制定统一的技术标准、数据标准和业务标准，通过“一网统管”核心平台和数字底座，\n实现城市治理一图展现、城市态势一脑分析、处置力量一键点调、城市事件一键流转、\n社会要素一格汇聚、移动应用一端接入、市民热线一呼即通、基层实战统一赋能、开发\n平台统一底座。坚持利旧节约原则，充分利用已有的江阴智慧城市综合管理平台、江阴",
+      "source_refs": [
+        "C006-S039",
+        "C006-S040",
+        "C006-S041",
+        "C006-S042"
+      ],
+      "replay_source_refs": [
+        "C006-S039",
+        "C006-S040",
+        "C006-S041",
+        "C006-S042"
+      ],
+      "original_canonical_text": "制定统一的技术标准、数据标准和业务标准,通过“一网统管”核心平台和数字底座,实现城市治理一图展现、城市态势一脑分析、处置力量一键点调、城市事件一键流转、社会要素一格汇聚、移动应用一端接入、市民热线一呼即通、基层实战统一赋能、开发平台统一底座。",
+      "mutated_canonical_text": "制定统一的技术标准、数据标准和业务标准,通过“一网统管”核心平台和数字底座,实现城市治理一图展现、城市态势一脑分析、处置力量一键点调、城市事件一键流转、社会要素一格汇聚、移动应用一端接入、市民热线一呼即通、基层实战统一赋能、开发平台统一底座。 状态改为已验收完成",
+      "exact_mutation_delta": {
+        "dimension": "status",
+        "original_text_hash": "caeea8ca1d2b8e2e294b8cad1b3d18db497bedfea93e833f7ab86ccf9e817f22",
+        "mutated_text_hash": "f8946bf4b5e1b1d5099a409b2b6693c74ea3d0f436b0cb06e8fa8c059346d0f5",
+        "mutation_index": 1,
+        "frozen_fixture_mutated_text_hash": "f8946bf4b5e1b1d5099a409b2b6693c74ea3d0f436b0cb06e8fa8c059346d0f5",
+        "mutation_payload_hash_match": true
+      },
+      "expected_decision": "FAIL_CLOSED",
+      "quality_gate_function": "evaluateCandidatePayload -> buildCanonicalRequirements -> evaluateRequirementCandidateQuality",
+      "quality_gate_version": "4.3-requirement-quality-gate-1",
+      "actual_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+      "actual_reason_codes": [
+        "STATUS_DISTORTION",
+        "OBVIOUS_SEMANTIC_MUTATION"
+      ],
+      "actual_detector_evidence": {
+        "source_resolution_success": true,
+        "canonicalization_success": true,
+        "failure_stage": "QUALITY_GATE",
+        "canonical_count": 1,
+        "duplicate_count": 0,
+        "detected": true
+      },
+      "fixture_sha256": "fc525e5d01f3a34bd18e0de22f155816195367278e1269facb1312404e17d001",
+      "provider_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0
+    },
+    {
+      "control_id": "SAFETY-PC-012",
+      "mutation_id": "REQ-MUT-016",
+      "dimension": "temporal",
+      "severity": "P0",
+      "original_requirement_id": "JY-001:REQ-001",
+      "source_text": "制定统一的技术标准、数据标准和业务标准，通过“一网统管”核心平台和数字底座，\n实现城市治理一图展现、城市态势一脑分析、处置力量一键点调、城市事件一键流转、\n社会要素一格汇聚、移动应用一端接入、市民热线一呼即通、基层实战统一赋能、开发\n平台统一底座。坚持利旧节约原则，充分利用已有的江阴智慧城市综合管理平台、江阴",
+      "source_refs": [
+        "C006-S039",
+        "C006-S040",
+        "C006-S041",
+        "C006-S042"
+      ],
+      "replay_source_refs": [
+        "C006-S039",
+        "C006-S040",
+        "C006-S041",
+        "C006-S042"
+      ],
+      "original_canonical_text": "制定统一的技术标准、数据标准和业务标准,通过“一网统管”核心平台和数字底座,实现城市治理一图展现、城市态势一脑分析、处置力量一键点调、城市事件一键流转、社会要素一格汇聚、移动应用一端接入、市民热线一呼即通、基层实战统一赋能、开发平台统一底座。",
+      "mutated_canonical_text": "制定统一的技术标准、数据标准和业务标准,通过“一网统管”核心平台和数字底座,实现城市治理一图展现、城市态势一脑分析、处置力量一键点调、城市事件一键流转、社会要素一格汇聚、移动应用一端接入、市民热线一呼即通、基层实战统一赋能、开发平台统一底座。 有效期改为2040年",
+      "exact_mutation_delta": {
+        "dimension": "temporal",
+        "original_text_hash": "caeea8ca1d2b8e2e294b8cad1b3d18db497bedfea93e833f7ab86ccf9e817f22",
+        "mutated_text_hash": "92a739c3b711d73f421c9584b2edc893981476f51944a3b03cf28976661d68d0",
+        "mutation_index": 1,
+        "frozen_fixture_mutated_text_hash": "92a739c3b711d73f421c9584b2edc893981476f51944a3b03cf28976661d68d0",
+        "mutation_payload_hash_match": true
+      },
+      "expected_decision": "FAIL_CLOSED",
+      "quality_gate_function": "evaluateCandidatePayload -> buildCanonicalRequirements -> evaluateRequirementCandidateQuality",
+      "quality_gate_version": "4.3-requirement-quality-gate-1",
+      "actual_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+      "actual_reason_codes": [
+        "NUMBER_DISTORTION",
+        "STATUS_DISTORTION",
+        "OBVIOUS_SEMANTIC_MUTATION"
+      ],
+      "actual_detector_evidence": {
+        "source_resolution_success": true,
+        "canonicalization_success": true,
+        "failure_stage": "QUALITY_GATE",
+        "canonical_count": 1,
+        "duplicate_count": 0,
+        "detected": true
+      },
+      "fixture_sha256": "fc525e5d01f3a34bd18e0de22f155816195367278e1269facb1312404e17d001",
+      "provider_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0
+    }
+  ],
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0
+}

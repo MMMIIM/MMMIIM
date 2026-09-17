@@ -1,0 +1,4432 @@
+{
+  "packet": "V43_FACT_FINAL_BACKEND_GROUNDING_AND_PRODUCER_WINDOW_GPT_PACKET",
+  "generated_at": "2026-09-08T12:19:26.516Z",
+  "eval_only": true,
+  "replay_mode": "OFFLINE_DETERMINISTIC",
+  "source_packet": "docs\\V43_FACT_V21_FIXED12_GPT_SEMANTIC_PACKET.json",
+  "source_run_id": "fact-v21-fixed12-20260908110957-e4f158f6",
+  "backend_grounding": {
+    "observation_count": 50,
+    "critical_false_accept_after": 0,
+    "confirmed_false_reject_after": 0,
+    "source_role_unknown_after": 1,
+    "reference_authority_escape": 0,
+    "governance_authority_escape": 0,
+    "com12_source_grounded_count": 7,
+    "com12_enterprise_eligible_count": 2,
+    "com12_reference_excluded_count": 1,
+    "com12_governance_excluded_count": 4,
+    "observations": [
+      {
+        "case_id": "COM-01",
+        "candidate_index": 0,
+        "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+        "source_hash": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+        "statement": "澄川数智科技有限公司（Synthetic Demo Company）为虚构测试企业，定位政企与医疗信息化软件服务商。",
+        "candidate": {
+          "statement": "澄川数智科技有限公司（Synthetic Demo Company）为虚构测试企业，定位政企与医疗信息化软件服务商。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "subject_name": "澄川数智科技有限公司",
+          "subject_type_hint": "企业",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "Synthetic Demo Company",
+              "type_hint": "企业别名",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "虚构测试企业",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "scope_items": [
+            {
+              "text": "政企与医疗信息化软件服务商",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REJECT",
+          "final_decision": "REJECTED_GROUNDING"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "final_decision": "REVIEW_REQUIRED",
+          "source_grounding_mode": "BOUNDED_COMPOSITIONAL"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PROFILE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "公司概况与业务范围",
+            "公司"
+          ],
+          "source_unit": "澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": true
+      },
+      {
+        "case_id": "COM-01",
+        "candidate_index": 1,
+        "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+        "source_hash": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+        "statement": "测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。",
+        "candidate": {
+          "statement": "测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "subject_name": "澄川数智科技有限公司",
+          "subject_type_hint": "企业",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "entity_mentions": [],
+          "status_text": "",
+          "status_source_refs": [],
+          "scope_items": [
+            {
+              "text": "业务平台",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "text": "数据治理",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "text": "接口集成",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "text": "RAG/Agent",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "text": "实施与运维",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZED",
+          "grounding_decision": "ACCEPT",
+          "final_decision": "EVAL_CONTROLLED_SYNTHETIC_REVIEW"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZED",
+          "canonicalization_reasons": [],
+          "canonical_status": "unknown",
+          "grounding_decision": "REJECT",
+          "grounding_reasons": [
+            "subject.name is not grounded"
+          ],
+          "final_decision": "REJECTED_GROUNDING",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_CAPABILITY_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "公司概况与业务范围",
+            "范围"
+          ],
+          "source_unit": "测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": true
+      },
+      {
+        "case_id": "COM-01",
+        "candidate_index": 2,
+        "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+        "source_hash": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+        "statement": "OFF-U01｜政府采购需求管理办法｜财政部｜状态 CURRENT_NO_REPEAL_FOUND｜实施 2021-07-01｜最后核验 2026-08-31。",
+        "candidate": {
+          "statement": "OFF-U01｜政府采购需求管理办法｜财政部｜状态 CURRENT_NO_REPEAL_FOUND｜实施 2021-07-01｜最后核验 2026-08-31。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "subject_name": "政府采购需求管理办法",
+          "subject_type_hint": "官方依据",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "财政部",
+              "type_hint": "发布机构",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "CURRENT_NO_REPEAL_FOUND",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": [
+            {
+              "value_text": "2021-07-01",
+              "event_text": "实施",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "value_text": "2026-08-31",
+              "event_text": "最后核验",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ]
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "final_decision": "EXCLUDED_REFERENCE"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "final_decision": "EXCLUDED_REFERENCE",
+          "source_grounding_mode": "BOUNDED_COMPOSITIONAL"
+        },
+        "source_role": {
+          "role": "REFERENCE_CONTEXT_ONLY",
+          "eligibility": "REFERENCE_CONTEXT_ONLY",
+          "heading_path": [
+            "公司概况与业务范围",
+            "官方来源 / 依据"
+          ],
+          "source_unit": "- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "COM-01",
+        "candidate_index": 3,
+        "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+        "source_hash": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+        "statement": "OFF-U02｜国家政务信息化项目建设管理办法｜国务院办公厅｜状态 CURRENT_CONFIRMED｜实施 2020-02-01｜最后核验 2026-08-31。",
+        "candidate": {
+          "statement": "OFF-U02｜国家政务信息化项目建设管理办法｜国务院办公厅｜状态 CURRENT_CONFIRMED｜实施 2020-02-01｜最后核验 2026-08-31。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "subject_name": "国家政务信息化项目建设管理办法",
+          "subject_type_hint": "官方依据",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "国务院办公厅",
+              "type_hint": "发布机构",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "CURRENT_CONFIRMED",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": [
+            {
+              "value_text": "2020-02-01",
+              "event_text": "实施",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "value_text": "2026-08-31",
+              "event_text": "最后核验",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ]
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "final_decision": "EXCLUDED_REFERENCE"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "final_decision": "EXCLUDED_REFERENCE",
+          "source_grounding_mode": "BOUNDED_COMPOSITIONAL"
+        },
+        "source_role": {
+          "role": "REFERENCE_CONTEXT_ONLY",
+          "eligibility": "REFERENCE_CONTEXT_ONLY",
+          "heading_path": [
+            "公司概况与业务范围",
+            "官方来源 / 依据"
+          ],
+          "source_unit": "- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "COM-06",
+        "candidate_index": 0,
+        "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+        "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+        "statement": "2026-08-01对v3.2测试环境执行账号、角色、最小权限、登录审计、关键操作和数据导出审计。",
+        "candidate": {
+          "statement": "2026-08-01对v3.2测试环境执行账号、角色、最小权限、登录审计、关键操作和数据导出审计。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "subject_name": "v3.2测试环境",
+          "subject_type_hint": "测试环境",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "账号",
+              "type_hint": "审计对象",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "角色",
+              "type_hint": "审计对象",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "最小权限",
+              "type_hint": "审计对象",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "登录审计",
+              "type_hint": "审计对象",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "关键操作",
+              "type_hint": "审计对象",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "数据导出审计",
+              "type_hint": "审计对象",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "",
+          "status_source_refs": [],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": [
+            {
+              "value_text": "2026-08-01",
+              "event_text": "执行账号、角色、最小权限、登录审计、关键操作和数据导出审计",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ]
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZED",
+          "grounding_decision": "ACCEPT",
+          "final_decision": "EVAL_CONTROLLED_SYNTHETIC_REVIEW"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZED",
+          "canonicalization_reasons": [],
+          "canonical_status": "unknown",
+          "grounding_decision": "ACCEPT",
+          "grounding_reasons": [],
+          "final_decision": "EVAL_CONTROLLED_SYNTHETIC_REVIEW",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "权限、安全与审计测试报告",
+            "测试"
+          ],
+          "source_unit": "2026-08-01对v3.2测试环境执行账号、角色、最小权限、登录审计、关键操作和数据导出审计。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "COM-06",
+        "candidate_index": 1,
+        "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+        "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+        "statement": "不代表通过等保、密评或第三方认证。",
+        "candidate": {
+          "statement": "不代表通过等保、密评或第三方认证。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "subject_name": "权限、安全与审计测试报告",
+          "subject_type_hint": "测试报告",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "等保",
+              "type_hint": "认证类型",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "密评",
+              "type_hint": "认证类型",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "第三方认证",
+              "type_hint": "认证类型",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "不代表通过等保、密评或第三方认证",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "final_decision": "REVIEW_REQUIRED"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "NEGATED_OR_UNCERTAIN_STATUS",
+            "NEGATED_OR_LIMITED_SCOPE"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "NEGATED_OR_UNCERTAIN_STATUS",
+            "NEGATED_OR_LIMITED_SCOPE"
+          ],
+          "final_decision": "REVIEW_REQUIRED",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_CAPABILITY_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "权限、安全与审计测试报告",
+            "边界"
+          ],
+          "source_unit": "不代表通过等保、密评或第三方认证。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "COM-06",
+        "candidate_index": 2,
+        "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+        "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+        "statement": "OFF-U05｜中华人民共和国网络安全法（2025年修正）｜全国人大常委会｜状态 CURRENT_CONFIRMED｜实施 2026-01-01｜最后核验 2026-08-31",
+        "candidate": {
+          "statement": "OFF-U05｜中华人民共和国网络安全法（2025年修正）｜全国人大常委会｜状态 CURRENT_CONFIRMED｜实施 2026-01-01｜最后核验 2026-08-31",
+          "source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "subject_name": "中华人民共和国网络安全法（2025年修正）",
+          "subject_type_hint": "法律",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "全国人大常委会",
+              "type_hint": "发布机构",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "CURRENT_CONFIRMED",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": [
+            {
+              "value_text": "2026-01-01",
+              "event_text": "实施",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "value_text": "2026-08-31",
+              "event_text": "最后核验",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ]
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "final_decision": "EXCLUDED_REFERENCE"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "final_decision": "EXCLUDED_REFERENCE",
+          "source_grounding_mode": "BOUNDED_COMPOSITIONAL"
+        },
+        "source_role": {
+          "role": "REFERENCE_CONTEXT_ONLY",
+          "eligibility": "REFERENCE_CONTEXT_ONLY",
+          "heading_path": [
+            "权限、安全与审计测试报告",
+            "官方来源 / 依据"
+          ],
+          "source_unit": "- **OFF-U05｜中华人民共和国网络安全法（2025年修正）**｜全国人大常委会｜状态 `CURRENT_CONFIRMED`｜实施 `2026-01-01`｜最后核验 `2026-08-31`｜https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm\n- **OFF-U08｜GB/T 22239-2019 网络安全等级保护基本要求**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2019-12-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=BAFB47E8874764186BDB7865E8344DAF\n- **OFF-U10｜GB/T 35273-2020 个人信息安全规范**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2020-10-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=4568F276E0F8346EB0FBA097AA0CE05E",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "COM-06",
+        "candidate_index": 3,
+        "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+        "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+        "statement": "OFF-U08｜GB/T 22239-2019 网络安全等级保护基本要求｜国家市场监督管理总局、国家标准化管理委员会｜状态 CURRENT_CONFIRMED｜实施 2019-12-01｜最后核验 2026-08-31",
+        "candidate": {
+          "statement": "OFF-U08｜GB/T 22239-2019 网络安全等级保护基本要求｜国家市场监督管理总局、国家标准化管理委员会｜状态 CURRENT_CONFIRMED｜实施 2019-12-01｜最后核验 2026-08-31",
+          "source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "subject_name": "GB/T 22239-2019 网络安全等级保护基本要求",
+          "subject_type_hint": "标准",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "国家市场监督管理总局",
+              "type_hint": "发布机构",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "国家标准化管理委员会",
+              "type_hint": "发布机构",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "CURRENT_CONFIRMED",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": [
+            {
+              "value_text": "2019-12-01",
+              "event_text": "实施",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "value_text": "2026-08-31",
+              "event_text": "最后核验",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ]
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "final_decision": "EXCLUDED_REFERENCE"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "final_decision": "EXCLUDED_REFERENCE",
+          "source_grounding_mode": "BOUNDED_COMPOSITIONAL"
+        },
+        "source_role": {
+          "role": "REFERENCE_CONTEXT_ONLY",
+          "eligibility": "REFERENCE_CONTEXT_ONLY",
+          "heading_path": [
+            "权限、安全与审计测试报告",
+            "官方来源 / 依据"
+          ],
+          "source_unit": "- **OFF-U05｜中华人民共和国网络安全法（2025年修正）**｜全国人大常委会｜状态 `CURRENT_CONFIRMED`｜实施 `2026-01-01`｜最后核验 `2026-08-31`｜https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm\n- **OFF-U08｜GB/T 22239-2019 网络安全等级保护基本要求**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2019-12-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=BAFB47E8874764186BDB7865E8344DAF\n- **OFF-U10｜GB/T 35273-2020 个人信息安全规范**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2020-10-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=4568F276E0F8346EB0FBA097AA0CE05E",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "COM-06",
+        "candidate_index": 4,
+        "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+        "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+        "statement": "OFF-U10｜GB/T 35273-2020 个人信息安全规范｜国家市场监督管理总局、国家标准化管理委员会｜状态 CURRENT_CONFIRMED｜实施 2020-10-01｜最后核验 2026-08-31",
+        "candidate": {
+          "statement": "OFF-U10｜GB/T 35273-2020 个人信息安全规范｜国家市场监督管理总局、国家标准化管理委员会｜状态 CURRENT_CONFIRMED｜实施 2020-10-01｜最后核验 2026-08-31",
+          "source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "subject_name": "GB/T 35273-2020 个人信息安全规范",
+          "subject_type_hint": "标准",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "国家市场监督管理总局",
+              "type_hint": "发布机构",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "国家标准化管理委员会",
+              "type_hint": "发布机构",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "CURRENT_CONFIRMED",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": [
+            {
+              "value_text": "2020-10-01",
+              "event_text": "实施",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "value_text": "2026-08-31",
+              "event_text": "最后核验",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ]
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "final_decision": "EXCLUDED_REFERENCE"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "final_decision": "EXCLUDED_REFERENCE",
+          "source_grounding_mode": "BOUNDED_COMPOSITIONAL"
+        },
+        "source_role": {
+          "role": "REFERENCE_CONTEXT_ONLY",
+          "eligibility": "REFERENCE_CONTEXT_ONLY",
+          "heading_path": [
+            "权限、安全与审计测试报告",
+            "官方来源 / 依据"
+          ],
+          "source_unit": "- **OFF-U05｜中华人民共和国网络安全法（2025年修正）**｜全国人大常委会｜状态 `CURRENT_CONFIRMED`｜实施 `2026-01-01`｜最后核验 `2026-08-31`｜https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm\n- **OFF-U08｜GB/T 22239-2019 网络安全等级保护基本要求**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2019-12-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=BAFB47E8874764186BDB7865E8344DAF\n- **OFF-U10｜GB/T 35273-2020 个人信息安全规范**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2020-10-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=4568F276E0F8346EB0FBA097AA0CE05E",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "COM-06",
+        "candidate_index": 5,
+        "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+        "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+        "statement": "召回后同时检查 evidence_temporal_status 与 Source Registry 的 validity_status。",
+        "candidate": {
+          "statement": "召回后同时检查 evidence_temporal_status 与 Source Registry 的 validity_status。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "subject_name": "evidence_temporal_status",
+          "subject_type_hint": "状态字段",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "Source Registry",
+              "type_hint": "注册表",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "validity_status",
+              "type_hint": "状态字段",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "",
+          "status_source_refs": [],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZED",
+          "grounding_decision": "ACCEPT",
+          "final_decision": "EXCLUDED_GOVERNANCE"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZED",
+          "canonicalization_reasons": [],
+          "canonical_status": "unknown",
+          "grounding_decision": "ACCEPT",
+          "grounding_reasons": [],
+          "final_decision": "EXCLUDED_GOVERNANCE",
+          "source_grounding_mode": "BOUNDED_COMPOSITIONAL"
+        },
+        "source_role": {
+          "role": "GOVERNANCE_CONTEXT_ONLY",
+          "eligibility": "GOVERNANCE_CONTEXT_ONLY",
+          "heading_path": [
+            "权限、安全与审计测试报告",
+            "时效使用规则"
+          ],
+          "source_unit": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "COM-06",
+        "candidate_index": 6,
+        "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+        "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+        "statement": "HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED 不能直接当作当前强制要求。",
+        "candidate": {
+          "statement": "HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED 不能直接当作当前强制要求。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "subject_name": "HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED",
+          "subject_type_hint": "状态",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "entity_mentions": [],
+          "status_text": "不能直接当作当前强制要求",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "final_decision": "EXCLUDED_GOVERNANCE"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "NEGATED_OR_UNCERTAIN_STATUS",
+            "NEGATED_OR_LIMITED_SCOPE"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "NEGATED_OR_UNCERTAIN_STATUS",
+            "NEGATED_OR_LIMITED_SCOPE"
+          ],
+          "final_decision": "EXCLUDED_GOVERNANCE",
+          "source_grounding_mode": "BOUNDED_COMPOSITIONAL"
+        },
+        "source_role": {
+          "role": "GOVERNANCE_CONTEXT_ONLY",
+          "eligibility": "GOVERNANCE_CONTEXT_ONLY",
+          "heading_path": [
+            "权限、安全与审计测试报告",
+            "时效使用规则"
+          ],
+          "source_unit": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "COM-06",
+        "candidate_index": 7,
+        "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+        "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+        "statement": "到达 next_review_at 只代表必须重新核验，不等于自动失效。",
+        "candidate": {
+          "statement": "到达 next_review_at 只代表必须重新核验，不等于自动失效。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "subject_name": "next_review_at",
+          "subject_type_hint": "时间字段",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "entity_mentions": [],
+          "status_text": "必须重新核验，不等于自动失效",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "final_decision": "EXCLUDED_GOVERNANCE"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "NEGATED_OR_UNCERTAIN_STATUS",
+            "NEGATED_OR_LIMITED_SCOPE"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "NEGATED_OR_UNCERTAIN_STATUS",
+            "NEGATED_OR_LIMITED_SCOPE"
+          ],
+          "final_decision": "EXCLUDED_GOVERNANCE",
+          "source_grounding_mode": "BOUNDED_COMPOSITIONAL"
+        },
+        "source_role": {
+          "role": "GOVERNANCE_CONTEXT_ONLY",
+          "eligibility": "GOVERNANCE_CONTEXT_ONLY",
+          "heading_path": [
+            "权限、安全与审计测试报告",
+            "时效使用规则"
+          ],
+          "source_unit": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "COM-06",
+        "candidate_index": 8,
+        "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+        "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+        "statement": "公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+        "candidate": {
+          "statement": "公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "subject_name": "公司 Evidence 的有效期",
+          "subject_type_hint": "有效期",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "官方 Source 的有效期",
+              "type_hint": "有效期",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "是两个不同维度",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "final_decision": "EXCLUDED_GOVERNANCE"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "final_decision": "EXCLUDED_GOVERNANCE",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "GOVERNANCE_CONTEXT_ONLY",
+          "eligibility": "GOVERNANCE_CONTEXT_ONLY",
+          "heading_path": [
+            "权限、安全与审计测试报告",
+            "时效使用规则"
+          ],
+          "source_unit": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "COM-07",
+        "candidate_index": 0,
+        "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-07_性能与容量测试报告.md#full-document",
+        "source_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f",
+        "statement": "性能与容量测试报告记录了在4 vCPU、16GB RAM、版本v3.2的合成测试环境中，100个虚拟用户标准查询场景P95为1.8秒，导入10000条合成记录耗时42秒。",
+        "candidate": {
+          "statement": "性能与容量测试报告记录了在4 vCPU、16GB RAM、版本v3.2的合成测试环境中，100个虚拟用户标准查询场景P95为1.8秒，导入10000条合成记录耗时42秒。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-07_性能与容量测试报告.md#full-document"
+          ],
+          "subject_name": "性能与容量测试报告",
+          "subject_type_hint": "测试报告",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-07_性能与容量测试报告.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "Synthetic TEST",
+              "type_hint": "测试环境",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-07_性能与容量测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "OFF-U01",
+              "type_hint": "官方来源编号",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-07_性能与容量测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "政府采购需求管理办法",
+              "type_hint": "官方文件",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-07_性能与容量测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "财政部",
+              "type_hint": "发布机构",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-07_性能与容量测试报告.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "synthetic_pilot_evidence",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-07_性能与容量测试报告.md#full-document"
+          ],
+          "scope_items": [
+            {
+              "text": "标准查询场景",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-07_性能与容量测试报告.md#full-document"
+              ]
+            },
+            {
+              "text": "合成记录导入",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-07_性能与容量测试报告.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [
+            {
+              "name": "虚拟用户数",
+              "value_text": "100",
+              "unit_text": "个",
+              "condition_text": "标准查询场景",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-07_性能与容量测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "P95响应时间",
+              "value_text": "1.8",
+              "unit_text": "秒",
+              "condition_text": "100个虚拟用户标准查询场景",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-07_性能与容量测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "导入记录数",
+              "value_text": "10000",
+              "unit_text": "条",
+              "condition_text": "合成记录",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-07_性能与容量测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "导入耗时",
+              "value_text": "42",
+              "unit_text": "秒",
+              "condition_text": "导入10000条合成记录",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-07_性能与容量测试报告.md#full-document"
+              ]
+            }
+          ],
+          "temporal_items": [
+            {
+              "value_text": "2026-11-30",
+              "event_text": "标记STALE_PENDING_RETEST",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-07_性能与容量测试报告.md#full-document"
+              ]
+            },
+            {
+              "value_text": "2021-07-01",
+              "event_text": "政府采购需求管理办法实施",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-07_性能与容量测试报告.md#full-document"
+              ]
+            },
+            {
+              "value_text": "2026-08-31",
+              "event_text": "最后核验",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-07_性能与容量测试报告.md#full-document"
+              ]
+            }
+          ]
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REJECT",
+          "final_decision": "REJECTED_GROUNDING"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "STATUS_ENUM_UNRESOLVED",
+            "QUANTITY_CONDITION_UNRESOLVED",
+            "QUANTITY_CONDITION_UNRESOLVED",
+            "QUANTITY_CONDITION_UNRESOLVED",
+            "QUANTITY_CONDITION_UNRESOLVED"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REJECT",
+          "grounding_reasons": [
+            "statement is not grounded"
+          ],
+          "final_decision": "REVIEW_REQUIRED",
+          "source_grounding_mode": "UNKNOWN"
+        },
+        "source_role": {
+          "role": "SOURCE_ROLE_UNKNOWN",
+          "eligibility": "SOURCE_ROLE_UNKNOWN",
+          "heading_path": [],
+          "source_unit": null,
+          "evidence": "NO_BOUNDED_UNIT"
+        },
+        "producer_atomicity": {
+          "status": "OPEN",
+          "classification": "CROSS_SECTION_CANDIDATE_MERGE",
+          "field_heading_coverage": [
+            {
+              "field": "statement",
+              "heading_path": []
+            },
+            {
+              "field": "subject",
+              "heading_path": []
+            },
+            {
+              "field": "status",
+              "heading_path": []
+            },
+            {
+              "field": "scope[0]",
+              "heading_path": [
+                "性能与容量测试报告",
+                "结果"
+              ]
+            },
+            {
+              "field": "scope[1]",
+              "heading_path": []
+            },
+            {
+              "field": "quantity[0].value",
+              "heading_path": [
+                "性能与容量测试报告",
+                "结果"
+              ]
+            },
+            {
+              "field": "quantity[0].condition",
+              "heading_path": [
+                "性能与容量测试报告",
+                "结果"
+              ]
+            },
+            {
+              "field": "quantity[1].value",
+              "heading_path": [
+                "性能与容量测试报告",
+                "结果"
+              ]
+            },
+            {
+              "field": "quantity[1].condition",
+              "heading_path": [
+                "性能与容量测试报告",
+                "结果"
+              ]
+            },
+            {
+              "field": "quantity[2].value",
+              "heading_path": [
+                "性能与容量测试报告",
+                "结果"
+              ]
+            },
+            {
+              "field": "quantity[2].condition",
+              "heading_path": [
+                "性能与容量测试报告",
+                "结果"
+              ]
+            },
+            {
+              "field": "quantity[3].value",
+              "heading_path": [
+                "性能与容量测试报告",
+                "结果"
+              ]
+            },
+            {
+              "field": "quantity[3].condition",
+              "heading_path": [
+                "性能与容量测试报告",
+                "结果"
+              ]
+            },
+            {
+              "field": "temporal[0]",
+              "heading_path": [
+                "性能与容量测试报告",
+                "时效"
+              ]
+            },
+            {
+              "field": "temporal[1]",
+              "heading_path": [
+                "性能与容量测试报告",
+                "官方来源 / 依据"
+              ]
+            },
+            {
+              "field": "temporal[2]",
+              "heading_path": [
+                "性能与容量测试报告",
+                "官方来源 / 依据"
+              ]
+            }
+          ],
+          "root_causes": [
+            "INPUT_WINDOW_BOUNDARY_GAP",
+            "PROMPT_ATOMICITY_GAP"
+          ],
+          "backend_must_not_split": true,
+          "prompt_change_in_this_task": false
+        },
+        "changed": true
+      },
+      {
+        "case_id": "COM-08",
+        "candidate_index": 0,
+        "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-08_备份恢复与容灾演练记录.md#full-document",
+        "source_hash": "afd00a30e6a46e9e09d42ac1f7eeae36be26420a40da12a42ecd0cb0d8ba9041",
+        "statement": "2026-07-25完成Synthetic数据库备份恢复和应用节点故障切换。",
+        "candidate": {
+          "statement": "2026-07-25完成Synthetic数据库备份恢复和应用节点故障切换。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-08_备份恢复与容灾演练记录.md#full-document"
+          ],
+          "subject_name": "Synthetic数据库备份恢复和应用节点故障切换",
+          "subject_type_hint": "演练活动",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-08_备份恢复与容灾演练记录.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "Synthetic数据库",
+              "type_hint": "系统/数据库",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-08_备份恢复与容灾演练记录.md#full-document"
+              ]
+            },
+            {
+              "name": "应用节点",
+              "type_hint": "系统组件",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-08_备份恢复与容灾演练记录.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "",
+          "status_source_refs": [],
+          "scope_items": [
+            {
+              "text": "未形成真实客户RTO/RPO或可用率承诺",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-08_备份恢复与容灾演练记录.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": [
+            {
+              "value_text": "2026-07-25",
+              "event_text": "完成Synthetic数据库备份恢复和应用节点故障切换",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-08_备份恢复与容灾演练记录.md#full-document"
+              ]
+            }
+          ]
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZED",
+          "grounding_decision": "ACCEPT",
+          "final_decision": "REVIEW_REQUIRED"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZED",
+          "canonicalization_reasons": [],
+          "canonical_status": "unknown",
+          "grounding_decision": "REJECT",
+          "grounding_reasons": [
+            "scope is not grounded"
+          ],
+          "final_decision": "REVIEW_REQUIRED",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "备份恢复与容灾演练记录",
+            "演练"
+          ],
+          "source_unit": "2026-07-25完成Synthetic数据库备份恢复和应用节点故障切换。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": {
+          "status": "OPEN",
+          "classification": "CROSS_SECTION_CANDIDATE_MERGE",
+          "field_heading_coverage": [
+            {
+              "field": "statement",
+              "heading_path": [
+                "备份恢复与容灾演练记录",
+                "演练"
+              ]
+            },
+            {
+              "field": "subject",
+              "heading_path": [
+                "备份恢复与容灾演练记录",
+                "演练"
+              ]
+            },
+            {
+              "field": "status",
+              "heading_path": []
+            },
+            {
+              "field": "scope[0]",
+              "heading_path": [
+                "备份恢复与容灾演练记录",
+                "边界"
+              ]
+            },
+            {
+              "field": "temporal[0]",
+              "heading_path": [
+                "备份恢复与容灾演练记录",
+                "演练"
+              ]
+            }
+          ],
+          "root_causes": [
+            "INPUT_WINDOW_BOUNDARY_GAP"
+          ],
+          "backend_must_not_split": true,
+          "prompt_change_in_this_task": false
+        },
+        "changed": true
+      },
+      {
+        "case_id": "COM-12",
+        "candidate_index": 0,
+        "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document",
+        "source_hash": "2689d0870f813b00849e6da5daca12cdf56064b4655b2d46bdc110b5ca3d9814",
+        "statement": "该文档说明运维工作包含巡检、告警、故障、升级、备份和复盘。",
+        "candidate": {
+          "statement": "该文档说明运维工作包含巡检、告警、故障、升级、备份和复盘。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+          ],
+          "subject_name": "运维",
+          "subject_type_hint": "服务活动",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+          ],
+          "entity_mentions": [],
+          "status_text": "",
+          "status_source_refs": [],
+          "scope_items": [
+            {
+              "text": "巡检",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+              ]
+            },
+            {
+              "text": "告警",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+              ]
+            },
+            {
+              "text": "故障",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+              ]
+            },
+            {
+              "text": "升级",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+              ]
+            },
+            {
+              "text": "备份",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+              ]
+            },
+            {
+              "text": "复盘",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZED",
+          "grounding_decision": "REJECT",
+          "final_decision": "REJECTED_GROUNDING"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZED",
+          "canonicalization_reasons": [],
+          "canonical_status": "unknown",
+          "grounding_decision": "ACCEPT",
+          "grounding_reasons": [],
+          "final_decision": "EVAL_CONTROLLED_SYNTHETIC_REVIEW",
+          "source_grounding_mode": "BOUNDED_COMPOSITIONAL"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_CAPABILITY_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "运维、SLA与应急服务说明",
+            "运维"
+          ],
+          "source_unit": "巡检、告警、故障、升级、备份和复盘。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": true
+      },
+      {
+        "case_id": "COM-12",
+        "candidate_index": 1,
+        "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document",
+        "source_hash": "2689d0870f813b00849e6da5daca12cdf56064b4655b2d46bdc110b5ca3d9814",
+        "statement": "该文档说明因无真实客户合同，不提供可对外使用的7×24、分钟级响应或赔付承诺。",
+        "candidate": {
+          "statement": "该文档说明因无真实客户合同，不提供可对外使用的7×24、分钟级响应或赔付承诺。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+          ],
+          "subject_name": "边界",
+          "subject_type_hint": "限制条件",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+          ],
+          "entity_mentions": [],
+          "status_text": "",
+          "status_source_refs": [],
+          "scope_items": [
+            {
+              "text": "无真实客户合同",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+              ]
+            },
+            {
+              "text": "不提供可对外使用的7×24",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+              ]
+            },
+            {
+              "text": "不提供分钟级响应",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+              ]
+            },
+            {
+              "text": "不提供赔付承诺",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZED",
+          "grounding_decision": "REJECT",
+          "final_decision": "REJECTED_GROUNDING"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "NEGATED_OR_LIMITED_SCOPE"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "NEGATED_OR_LIMITED_SCOPE"
+          ],
+          "final_decision": "REVIEW_REQUIRED",
+          "source_grounding_mode": "BOUNDED_COMPOSITIONAL"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_CAPABILITY_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "运维、SLA与应急服务说明",
+            "边界"
+          ],
+          "source_unit": "无真实客户合同，因此不提供可对外使用的7×24、分钟级响应或赔付承诺。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": true
+      },
+      {
+        "case_id": "COM-12",
+        "candidate_index": 2,
+        "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document",
+        "source_hash": "2689d0870f813b00849e6da5daca12cdf56064b4655b2d46bdc110b5ca3d9814",
+        "statement": "该文档将 OFF-U05 中华人民共和国网络安全法（2025年修正）列为官方来源或依据。",
+        "candidate": {
+          "statement": "该文档将 OFF-U05 中华人民共和国网络安全法（2025年修正）列为官方来源或依据。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+          ],
+          "subject_name": "OFF-U05｜中华人民共和国网络安全法（2025年修正）",
+          "subject_type_hint": "官方来源",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "全国人大常委会",
+              "type_hint": "机构",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "CURRENT_CONFIRMED",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": [
+            {
+              "value_text": "2026-01-01",
+              "event_text": "实施",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+              ]
+            },
+            {
+              "value_text": "2026-08-31",
+              "event_text": "最后核验",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+              ]
+            }
+          ]
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REJECT",
+          "final_decision": "REJECTED_GROUNDING"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "final_decision": "EXCLUDED_REFERENCE",
+          "source_grounding_mode": "BOUNDED_COMPOSITIONAL"
+        },
+        "source_role": {
+          "role": "REFERENCE_CONTEXT_ONLY",
+          "eligibility": "REFERENCE_CONTEXT_ONLY",
+          "heading_path": [
+            "运维、SLA与应急服务说明",
+            "官方来源 / 依据"
+          ],
+          "source_unit": "- **OFF-U05｜中华人民共和国网络安全法（2025年修正）**｜全国人大常委会｜状态 `CURRENT_CONFIRMED`｜实施 `2026-01-01`｜最后核验 `2026-08-31`｜https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": true
+      },
+      {
+        "case_id": "COM-12",
+        "candidate_index": 3,
+        "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document",
+        "source_hash": "2689d0870f813b00849e6da5daca12cdf56064b4655b2d46bdc110b5ca3d9814",
+        "statement": "该文档说明召回后需同时检查 evidence_temporal_status 与 Source Registry 的 validity_status。",
+        "candidate": {
+          "statement": "该文档说明召回后需同时检查 evidence_temporal_status 与 Source Registry 的 validity_status。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+          ],
+          "subject_name": "时效使用规则",
+          "subject_type_hint": "规则",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+          ],
+          "entity_mentions": [],
+          "status_text": "",
+          "status_source_refs": [],
+          "scope_items": [
+            {
+              "text": "evidence_temporal_status",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+              ]
+            },
+            {
+              "text": "Source Registry 的 validity_status",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZED",
+          "grounding_decision": "REJECT",
+          "final_decision": "REJECTED_GROUNDING"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZED",
+          "canonicalization_reasons": [],
+          "canonical_status": "unknown",
+          "grounding_decision": "ACCEPT",
+          "grounding_reasons": [],
+          "final_decision": "EXCLUDED_GOVERNANCE",
+          "source_grounding_mode": "BOUNDED_COMPOSITIONAL"
+        },
+        "source_role": {
+          "role": "GOVERNANCE_CONTEXT_ONLY",
+          "eligibility": "GOVERNANCE_CONTEXT_ONLY",
+          "heading_path": [
+            "运维、SLA与应急服务说明",
+            "时效使用规则"
+          ],
+          "source_unit": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": true
+      },
+      {
+        "case_id": "COM-12",
+        "candidate_index": 4,
+        "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document",
+        "source_hash": "2689d0870f813b00849e6da5daca12cdf56064b4655b2d46bdc110b5ca3d9814",
+        "statement": "该文档说明 HISTORICAL_REFERENCE 或 CURRENTNESS_UNCONFIRMED 不能直接当作当前强制要求。",
+        "candidate": {
+          "statement": "该文档说明 HISTORICAL_REFERENCE 或 CURRENTNESS_UNCONFIRMED 不能直接当作当前强制要求。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+          ],
+          "subject_name": "时效使用规则",
+          "subject_type_hint": "规则",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+          ],
+          "entity_mentions": [],
+          "status_text": "",
+          "status_source_refs": [],
+          "scope_items": [
+            {
+              "text": "HISTORICAL_REFERENCE",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+              ]
+            },
+            {
+              "text": "CURRENTNESS_UNCONFIRMED",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZED",
+          "grounding_decision": "REJECT",
+          "final_decision": "REJECTED_GROUNDING"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "NEGATED_OR_LIMITED_SCOPE"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "NEGATED_OR_LIMITED_SCOPE"
+          ],
+          "final_decision": "EXCLUDED_GOVERNANCE",
+          "source_grounding_mode": "BOUNDED_COMPOSITIONAL"
+        },
+        "source_role": {
+          "role": "GOVERNANCE_CONTEXT_ONLY",
+          "eligibility": "GOVERNANCE_CONTEXT_ONLY",
+          "heading_path": [
+            "运维、SLA与应急服务说明",
+            "时效使用规则"
+          ],
+          "source_unit": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": true
+      },
+      {
+        "case_id": "COM-12",
+        "candidate_index": 5,
+        "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document",
+        "source_hash": "2689d0870f813b00849e6da5daca12cdf56064b4655b2d46bdc110b5ca3d9814",
+        "statement": "该文档说明到达 next_review_at 只代表必须重新核验，不等于自动失效。",
+        "candidate": {
+          "statement": "该文档说明到达 next_review_at 只代表必须重新核验，不等于自动失效。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+          ],
+          "subject_name": "时效使用规则",
+          "subject_type_hint": "规则",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+          ],
+          "entity_mentions": [],
+          "status_text": "",
+          "status_source_refs": [],
+          "scope_items": [
+            {
+              "text": "next_review_at",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZED",
+          "grounding_decision": "REJECT",
+          "final_decision": "REJECTED_GROUNDING"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "NEGATED_OR_LIMITED_SCOPE"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "NEGATED_OR_LIMITED_SCOPE"
+          ],
+          "final_decision": "EXCLUDED_GOVERNANCE",
+          "source_grounding_mode": "BOUNDED_COMPOSITIONAL"
+        },
+        "source_role": {
+          "role": "GOVERNANCE_CONTEXT_ONLY",
+          "eligibility": "GOVERNANCE_CONTEXT_ONLY",
+          "heading_path": [
+            "运维、SLA与应急服务说明",
+            "时效使用规则"
+          ],
+          "source_unit": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": true
+      },
+      {
+        "case_id": "COM-12",
+        "candidate_index": 6,
+        "source_ref": "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document",
+        "source_hash": "2689d0870f813b00849e6da5daca12cdf56064b4655b2d46bdc110b5ca3d9814",
+        "statement": "该文档说明公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+        "candidate": {
+          "statement": "该文档说明公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+          ],
+          "subject_name": "时效使用规则",
+          "subject_type_hint": "规则",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+          ],
+          "entity_mentions": [],
+          "status_text": "",
+          "status_source_refs": [],
+          "scope_items": [
+            {
+              "text": "公司 Evidence 的有效期",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+              ]
+            },
+            {
+              "text": "官方 Source 的有效期",
+              "source_refs": [
+                "eval://chengchuan-fixed12/03_company_case_rag/COM-12_运维_SLA与应急服务说明.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZED",
+          "grounding_decision": "REJECT",
+          "final_decision": "REJECTED_GROUNDING"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZED",
+          "canonicalization_reasons": [],
+          "canonical_status": "unknown",
+          "grounding_decision": "ACCEPT",
+          "grounding_reasons": [],
+          "final_decision": "EXCLUDED_GOVERNANCE",
+          "source_grounding_mode": "BOUNDED_COMPOSITIONAL"
+        },
+        "source_role": {
+          "role": "GOVERNANCE_CONTEXT_ONLY",
+          "eligibility": "GOVERNANCE_CONTEXT_ONLY",
+          "heading_path": [
+            "运维、SLA与应急服务说明",
+            "时效使用规则"
+          ],
+          "source_unit": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": true
+      },
+      {
+        "case_id": "CCV2-U09-02",
+        "candidate_index": 0,
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document",
+        "source_hash": "b3a47ddf0ea788c4af955fba4c33314bb9e0f1c32830feb39b68b2ba960a778b",
+        "statement": "2026-06访问控制测试覆盖普通用户、部门管理员、租户管理员和审计员4类角色。",
+        "candidate": {
+          "statement": "2026-06访问控制测试覆盖普通用户、部门管理员、租户管理员和审计员4类角色。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document"
+          ],
+          "subject_name": "访问控制测试",
+          "subject_type_hint": "测试活动",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "普通用户",
+              "type_hint": "角色",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document"
+              ]
+            },
+            {
+              "name": "部门管理员",
+              "type_hint": "角色",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document"
+              ]
+            },
+            {
+              "name": "租户管理员",
+              "type_hint": "角色",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document"
+              ]
+            },
+            {
+              "name": "审计员",
+              "type_hint": "角色",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "",
+          "status_source_refs": [],
+          "scope_items": [],
+          "quantity_items": [
+            {
+              "name": "角色数量",
+              "value_text": "4",
+              "unit_text": "类",
+              "condition_text": "",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document"
+              ]
+            }
+          ],
+          "temporal_items": [
+            {
+              "value_text": "2026-06",
+              "event_text": "访问控制测试",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document"
+              ]
+            }
+          ]
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "final_decision": "REVIEW_REQUIRED"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "TEMPORAL_ROLE_OR_DATE_UNRESOLVED"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "TEMPORAL_ROLE_OR_DATE_UNRESOLVED"
+          ],
+          "final_decision": "REVIEW_REQUIRED",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "身份认证与访问控制-ACCESS_CONTROL_TEST",
+            "可核验记录"
+          ],
+          "source_unit": "1. 2026-06访问控制测试覆盖普通用户、部门管理员、租户管理员和审计员4类角色。\n2. 普通用户无法读取其他部门的受限数据集。\n3. 审计员可以读取审计日志但不能修改业务数据。\n4. 测试发现1项越权缺陷，已在XSA 2.8.3修复并复测通过。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "CCV2-U09-02",
+        "candidate_index": 1,
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document",
+        "source_hash": "b3a47ddf0ea788c4af955fba4c33314bb9e0f1c32830feb39b68b2ba960a778b",
+        "statement": "普通用户无法读取其他部门的受限数据集。",
+        "candidate": {
+          "statement": "普通用户无法读取其他部门的受限数据集。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document"
+          ],
+          "subject_name": "普通用户",
+          "subject_type_hint": "角色",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "受限数据集",
+              "type_hint": "数据对象",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "无法读取",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document"
+          ],
+          "scope_items": [
+            {
+              "text": "其他部门的受限数据集",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "final_decision": "REVIEW_REQUIRED"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "final_decision": "REVIEW_REQUIRED",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "身份认证与访问控制-ACCESS_CONTROL_TEST",
+            "可核验记录"
+          ],
+          "source_unit": "1. 2026-06访问控制测试覆盖普通用户、部门管理员、租户管理员和审计员4类角色。\n2. 普通用户无法读取其他部门的受限数据集。\n3. 审计员可以读取审计日志但不能修改业务数据。\n4. 测试发现1项越权缺陷，已在XSA 2.8.3修复并复测通过。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "CCV2-U09-02",
+        "candidate_index": 2,
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document",
+        "source_hash": "b3a47ddf0ea788c4af955fba4c33314bb9e0f1c32830feb39b68b2ba960a778b",
+        "statement": "审计员可以读取审计日志但不能修改业务数据。",
+        "candidate": {
+          "statement": "审计员可以读取审计日志但不能修改业务数据。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document"
+          ],
+          "subject_name": "审计员",
+          "subject_type_hint": "角色",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "审计日志",
+              "type_hint": "数据对象",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document"
+              ]
+            },
+            {
+              "name": "业务数据",
+              "type_hint": "数据对象",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "可以读取审计日志但不能修改业务数据",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document"
+          ],
+          "scope_items": [
+            {
+              "text": "审计日志",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document"
+              ]
+            },
+            {
+              "text": "业务数据",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "final_decision": "REVIEW_REQUIRED"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "final_decision": "REVIEW_REQUIRED",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "身份认证与访问控制-ACCESS_CONTROL_TEST",
+            "可核验记录"
+          ],
+          "source_unit": "1. 2026-06访问控制测试覆盖普通用户、部门管理员、租户管理员和审计员4类角色。\n2. 普通用户无法读取其他部门的受限数据集。\n3. 审计员可以读取审计日志但不能修改业务数据。\n4. 测试发现1项越权缺陷，已在XSA 2.8.3修复并复测通过。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "CCV2-U09-02",
+        "candidate_index": 3,
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document",
+        "source_hash": "b3a47ddf0ea788c4af955fba4c33314bb9e0f1c32830feb39b68b2ba960a778b",
+        "statement": "测试发现1项越权缺陷，已在XSA 2.8.3修复并复测通过。",
+        "candidate": {
+          "statement": "测试发现1项越权缺陷，已在XSA 2.8.3修复并复测通过。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document"
+          ],
+          "subject_name": "越权缺陷",
+          "subject_type_hint": "缺陷",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "XSA 2.8.3",
+              "type_hint": "版本",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "已修复并复测通过",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [
+            {
+              "name": "越权缺陷数量",
+              "value_text": "1",
+              "unit_text": "项",
+              "condition_text": "",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U09-02_身份认证与访问控制_ACCESS_CONTROL_TEST.md#full-document"
+              ]
+            }
+          ],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REJECT",
+          "final_decision": "REJECTED_GROUNDING"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "final_decision": "REVIEW_REQUIRED",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "身份认证与访问控制-ACCESS_CONTROL_TEST",
+            "可核验记录"
+          ],
+          "source_unit": "1. 2026-06访问控制测试覆盖普通用户、部门管理员、租户管理员和审计员4类角色。\n2. 普通用户无法读取其他部门的受限数据集。\n3. 审计员可以读取审计日志但不能修改业务数据。\n4. 测试发现1项越权缺陷，已在XSA 2.8.3修复并复测通过。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": true
+      },
+      {
+        "case_id": "CCV2-U13-01",
+        "candidate_index": 0,
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document",
+        "source_hash": "9408fc5a50ffcad28def68d844c2d701405b99655f2d5904aeb89874f55ae575",
+        "statement": "澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。",
+        "candidate": {
+          "statement": "澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+          ],
+          "subject_name": "澄川政企数字平台 XDP 5.2 5.2.2",
+          "subject_type_hint": "产品/对象",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "澄川数智科技有限公司（Synthetic Demo Company）",
+              "type_hint": "企业",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "完成性能测试",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+          ],
+          "scope_items": [
+            {
+              "text": "4个应用节点、每节点8核16GB环境",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZED",
+          "grounding_decision": "ACCEPT",
+          "final_decision": "EVAL_CONTROLLED_SYNTHETIC_REVIEW"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZED",
+          "canonicalization_reasons": [],
+          "canonical_status": "completed",
+          "grounding_decision": "REJECT",
+          "grounding_reasons": [
+            "entity.name is not grounded"
+          ],
+          "final_decision": "REJECTED_GROUNDING",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "性能与响应-PERFORMANCE_TEST",
+            "可核验记录"
+          ],
+          "source_unit": "1. 澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。\n2. 标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。\n3. 混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。\n4. 测试持续时间为120分钟。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": true
+      },
+      {
+        "case_id": "CCV2-U13-01",
+        "candidate_index": 1,
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document",
+        "source_hash": "9408fc5a50ffcad28def68d844c2d701405b99655f2d5904aeb89874f55ae575",
+        "statement": "标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。",
+        "candidate": {
+          "statement": "标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+          ],
+          "subject_name": "标准查询场景",
+          "subject_type_hint": "场景",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+          ],
+          "entity_mentions": [],
+          "status_text": "",
+          "status_source_refs": [],
+          "scope_items": [
+            {
+              "text": "8,000并发虚拟用户",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [
+            {
+              "name": "P95响应时间",
+              "value_text": "820",
+              "unit_text": "毫秒",
+              "condition_text": "标准查询场景在8,000并发虚拟用户下",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+              ]
+            }
+          ],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "final_decision": "REVIEW_REQUIRED"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "QUANTITY_CONDITION_UNRESOLVED"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "QUANTITY_CONDITION_UNRESOLVED"
+          ],
+          "final_decision": "REVIEW_REQUIRED",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "性能与响应-PERFORMANCE_TEST",
+            "可核验记录"
+          ],
+          "source_unit": "1. 澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。\n2. 标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。\n3. 混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。\n4. 测试持续时间为120分钟。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "CCV2-U13-01",
+        "candidate_index": 2,
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document",
+        "source_hash": "9408fc5a50ffcad28def68d844c2d701405b99655f2d5904aeb89874f55ae575",
+        "statement": "混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。",
+        "candidate": {
+          "statement": "混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+          ],
+          "subject_name": "混合写入场景",
+          "subject_type_hint": "场景",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+          ],
+          "entity_mentions": [],
+          "status_text": "",
+          "status_source_refs": [],
+          "scope_items": [],
+          "quantity_items": [
+            {
+              "name": "稳定吞吐",
+              "value_text": "1,650",
+              "unit_text": "事务/秒",
+              "condition_text": "混合写入场景",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+              ]
+            },
+            {
+              "name": "错误率",
+              "value_text": "0.18",
+              "unit_text": "%",
+              "condition_text": "混合写入场景",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+              ]
+            }
+          ],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "final_decision": "REVIEW_REQUIRED"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "QUANTITY_CONDITION_UNRESOLVED",
+            "QUANTITY_VALUE_OR_UNIT_UNRESOLVED",
+            "QUANTITY_CONDITION_UNRESOLVED"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "QUANTITY_CONDITION_UNRESOLVED",
+            "QUANTITY_VALUE_OR_UNIT_UNRESOLVED",
+            "QUANTITY_CONDITION_UNRESOLVED"
+          ],
+          "final_decision": "REVIEW_REQUIRED",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "性能与响应-PERFORMANCE_TEST",
+            "可核验记录"
+          ],
+          "source_unit": "1. 澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。\n2. 标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。\n3. 混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。\n4. 测试持续时间为120分钟。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "CCV2-U13-01",
+        "candidate_index": 3,
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document",
+        "source_hash": "9408fc5a50ffcad28def68d844c2d701405b99655f2d5904aeb89874f55ae575",
+        "statement": "测试持续时间为120分钟。",
+        "candidate": {
+          "statement": "测试持续时间为120分钟。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+          ],
+          "subject_name": "测试",
+          "subject_type_hint": "活动",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+          ],
+          "entity_mentions": [],
+          "status_text": "",
+          "status_source_refs": [],
+          "scope_items": [],
+          "quantity_items": [
+            {
+              "name": "持续时间",
+              "value_text": "120",
+              "unit_text": "分钟",
+              "condition_text": "",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+              ]
+            }
+          ],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZED",
+          "grounding_decision": "ACCEPT",
+          "final_decision": "EVAL_CONTROLLED_SYNTHETIC_REVIEW"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZED",
+          "canonicalization_reasons": [],
+          "canonical_status": "unknown",
+          "grounding_decision": "ACCEPT",
+          "grounding_reasons": [],
+          "final_decision": "EVAL_CONTROLLED_SYNTHETIC_REVIEW",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "性能与响应-PERFORMANCE_TEST",
+            "可核验记录"
+          ],
+          "source_unit": "1. 澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。\n2. 标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。\n3. 混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。\n4. 测试持续时间为120分钟。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "CCV2-U17-01",
+        "candidate_index": 0,
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U17-01_操作系统数据库中间件兼容_COMPATIBILITY_MATRIX.md#full-document",
+        "source_hash": "fa9f45848cabbe6801fcfd76fe5879038c79ad1437a8219e1724720c20ee3066",
+        "statement": "兼容矩阵记录XDP 5.2支持PostgreSQL 15/16、MySQL 8.0和达梦DM8指定测试版本。",
+        "candidate": {
+          "statement": "兼容矩阵记录XDP 5.2支持PostgreSQL 15/16、MySQL 8.0和达梦DM8指定测试版本。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U17-01_操作系统数据库中间件兼容_COMPATIBILITY_MATRIX.md#full-document"
+          ],
+          "subject_name": "XDP 5.2",
+          "subject_type_hint": "软件版本",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U17-01_操作系统数据库中间件兼容_COMPATIBILITY_MATRIX.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "PostgreSQL 15/16",
+              "type_hint": "数据库",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U17-01_操作系统数据库中间件兼容_COMPATIBILITY_MATRIX.md#full-document"
+              ]
+            },
+            {
+              "name": "MySQL 8.0",
+              "type_hint": "数据库",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U17-01_操作系统数据库中间件兼容_COMPATIBILITY_MATRIX.md#full-document"
+              ]
+            },
+            {
+              "name": "达梦DM8",
+              "type_hint": "数据库",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U17-01_操作系统数据库中间件兼容_COMPATIBILITY_MATRIX.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "支持",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U17-01_操作系统数据库中间件兼容_COMPATIBILITY_MATRIX.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "final_decision": "REVIEW_REQUIRED"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "final_decision": "REVIEW_REQUIRED",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "操作系统数据库中间件兼容-COMPATIBILITY_MATRIX",
+            "可核验记录"
+          ],
+          "source_unit": "1. 兼容矩阵记录XDP 5.2支持PostgreSQL 15/16、MySQL 8.0和达梦DM8指定测试版本。\n2. 消息队列已验证RabbitMQ 3.12和Kafka 3.6。\n3. 浏览器兼容记录覆盖Chrome 120+、Edge 120+。\n4. 矩阵明确未验证Oracle 11g。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "CCV2-U17-01",
+        "candidate_index": 1,
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U17-01_操作系统数据库中间件兼容_COMPATIBILITY_MATRIX.md#full-document",
+        "source_hash": "fa9f45848cabbe6801fcfd76fe5879038c79ad1437a8219e1724720c20ee3066",
+        "statement": "消息队列已验证RabbitMQ 3.12和Kafka 3.6。",
+        "candidate": {
+          "statement": "消息队列已验证RabbitMQ 3.12和Kafka 3.6。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U17-01_操作系统数据库中间件兼容_COMPATIBILITY_MATRIX.md#full-document"
+          ],
+          "subject_name": "消息队列",
+          "subject_type_hint": "中间件",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U17-01_操作系统数据库中间件兼容_COMPATIBILITY_MATRIX.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "RabbitMQ 3.12",
+              "type_hint": "消息队列",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U17-01_操作系统数据库中间件兼容_COMPATIBILITY_MATRIX.md#full-document"
+              ]
+            },
+            {
+              "name": "Kafka 3.6",
+              "type_hint": "消息队列",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U17-01_操作系统数据库中间件兼容_COMPATIBILITY_MATRIX.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "已验证",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U17-01_操作系统数据库中间件兼容_COMPATIBILITY_MATRIX.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZED",
+          "grounding_decision": "ACCEPT",
+          "final_decision": "EVAL_CONTROLLED_SYNTHETIC_REVIEW"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZED",
+          "canonicalization_reasons": [],
+          "canonical_status": "verified",
+          "grounding_decision": "ACCEPT",
+          "grounding_reasons": [],
+          "final_decision": "EVAL_CONTROLLED_SYNTHETIC_REVIEW",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "操作系统数据库中间件兼容-COMPATIBILITY_MATRIX",
+            "可核验记录"
+          ],
+          "source_unit": "1. 兼容矩阵记录XDP 5.2支持PostgreSQL 15/16、MySQL 8.0和达梦DM8指定测试版本。\n2. 消息队列已验证RabbitMQ 3.12和Kafka 3.6。\n3. 浏览器兼容记录覆盖Chrome 120+、Edge 120+。\n4. 矩阵明确未验证Oracle 11g。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "CCV2-U17-01",
+        "candidate_index": 2,
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U17-01_操作系统数据库中间件兼容_COMPATIBILITY_MATRIX.md#full-document",
+        "source_hash": "fa9f45848cabbe6801fcfd76fe5879038c79ad1437a8219e1724720c20ee3066",
+        "statement": "浏览器兼容记录覆盖Chrome 120+、Edge 120+。",
+        "candidate": {
+          "statement": "浏览器兼容记录覆盖Chrome 120+、Edge 120+。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U17-01_操作系统数据库中间件兼容_COMPATIBILITY_MATRIX.md#full-document"
+          ],
+          "subject_name": "浏览器兼容记录",
+          "subject_type_hint": "兼容性记录",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U17-01_操作系统数据库中间件兼容_COMPATIBILITY_MATRIX.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "Chrome 120+",
+              "type_hint": "浏览器",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U17-01_操作系统数据库中间件兼容_COMPATIBILITY_MATRIX.md#full-document"
+              ]
+            },
+            {
+              "name": "Edge 120+",
+              "type_hint": "浏览器",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U17-01_操作系统数据库中间件兼容_COMPATIBILITY_MATRIX.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "覆盖",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U17-01_操作系统数据库中间件兼容_COMPATIBILITY_MATRIX.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "final_decision": "REVIEW_REQUIRED"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "final_decision": "REVIEW_REQUIRED",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "操作系统数据库中间件兼容-COMPATIBILITY_MATRIX",
+            "可核验记录"
+          ],
+          "source_unit": "1. 兼容矩阵记录XDP 5.2支持PostgreSQL 15/16、MySQL 8.0和达梦DM8指定测试版本。\n2. 消息队列已验证RabbitMQ 3.12和Kafka 3.6。\n3. 浏览器兼容记录覆盖Chrome 120+、Edge 120+。\n4. 矩阵明确未验证Oracle 11g。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "CCV2-U17-01",
+        "candidate_index": 3,
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U17-01_操作系统数据库中间件兼容_COMPATIBILITY_MATRIX.md#full-document",
+        "source_hash": "fa9f45848cabbe6801fcfd76fe5879038c79ad1437a8219e1724720c20ee3066",
+        "statement": "矩阵明确未验证Oracle 11g。",
+        "candidate": {
+          "statement": "矩阵明确未验证Oracle 11g。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U17-01_操作系统数据库中间件兼容_COMPATIBILITY_MATRIX.md#full-document"
+          ],
+          "subject_name": "Oracle 11g",
+          "subject_type_hint": "数据库",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U17-01_操作系统数据库中间件兼容_COMPATIBILITY_MATRIX.md#full-document"
+          ],
+          "entity_mentions": [],
+          "status_text": "未验证",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U17-01_操作系统数据库中间件兼容_COMPATIBILITY_MATRIX.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZED",
+          "grounding_decision": "ACCEPT",
+          "final_decision": "EVAL_CONTROLLED_SYNTHETIC_REVIEW"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "NEGATED_OR_UNCERTAIN_STATUS",
+            "NEGATED_OR_LIMITED_SCOPE"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "NEGATED_OR_UNCERTAIN_STATUS",
+            "NEGATED_OR_LIMITED_SCOPE"
+          ],
+          "final_decision": "REVIEW_REQUIRED",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "操作系统数据库中间件兼容-COMPATIBILITY_MATRIX",
+            "可核验记录"
+          ],
+          "source_unit": "1. 兼容矩阵记录XDP 5.2支持PostgreSQL 15/16、MySQL 8.0和达梦DM8指定测试版本。\n2. 消息队列已验证RabbitMQ 3.12和Kafka 3.6。\n3. 浏览器兼容记录覆盖Chrome 120+、Edge 120+。\n4. 矩阵明确未验证Oracle 11g。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": true
+      },
+      {
+        "case_id": "CCV2-U20-02",
+        "candidate_index": 0,
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U20-02_质量管理_QUALITY_AUDIT_RECORD.md#full-document",
+        "source_hash": "78c12a1f20c5da1af195345c33fd960f5e12293da0f1483afb970440e99f2320",
+        "statement": "2026-Q2内部质量审计抽查8个项目。",
+        "candidate": {
+          "statement": "2026-Q2内部质量审计抽查8个项目。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U20-02_质量管理_QUALITY_AUDIT_RECORD.md#full-document"
+          ],
+          "subject_name": "内部质量审计",
+          "subject_type_hint": "审计活动",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U20-02_质量管理_QUALITY_AUDIT_RECORD.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "澄川数智科技有限公司（Synthetic Demo Company）",
+              "type_hint": "企业",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U20-02_质量管理_QUALITY_AUDIT_RECORD.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "",
+          "status_source_refs": [],
+          "scope_items": [
+            {
+              "text": "8个项目",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U20-02_质量管理_QUALITY_AUDIT_RECORD.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [
+            {
+              "name": "抽查项目数",
+              "value_text": "8",
+              "unit_text": "个",
+              "condition_text": "",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U20-02_质量管理_QUALITY_AUDIT_RECORD.md#full-document"
+              ]
+            }
+          ],
+          "temporal_items": [
+            {
+              "value_text": "2026-Q2",
+              "event_text": "内部质量审计抽查",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U20-02_质量管理_QUALITY_AUDIT_RECORD.md#full-document"
+              ]
+            }
+          ]
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "final_decision": "REVIEW_REQUIRED"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "TEMPORAL_ROLE_OR_DATE_UNRESOLVED"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REJECT",
+          "grounding_reasons": [
+            "entity.name is not grounded"
+          ],
+          "final_decision": "REJECTED_GROUNDING",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "质量管理-QUALITY_AUDIT_RECORD",
+            "可核验记录"
+          ],
+          "source_unit": "1. 2026-Q2内部质量审计抽查8个项目。\n2. 抽查发现文档版本标识问题6项、测试记录不完整2项，均在审计后15个工作日内整改关闭。\n3. 抽查项目未发现绕过上线审批直接发布的记录。\n4. 质量审计记录不等同于第三方认证。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": true
+      },
+      {
+        "case_id": "CCV2-U20-02",
+        "candidate_index": 1,
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U20-02_质量管理_QUALITY_AUDIT_RECORD.md#full-document",
+        "source_hash": "78c12a1f20c5da1af195345c33fd960f5e12293da0f1483afb970440e99f2320",
+        "statement": "抽查发现文档版本标识问题6项、测试记录不完整2项，均在审计后15个工作日内整改关闭。",
+        "candidate": {
+          "statement": "抽查发现文档版本标识问题6项、测试记录不完整2项，均在审计后15个工作日内整改关闭。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U20-02_质量管理_QUALITY_AUDIT_RECORD.md#full-document"
+          ],
+          "subject_name": "文档版本标识问题",
+          "subject_type_hint": "问题项",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U20-02_质量管理_QUALITY_AUDIT_RECORD.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "澄川数智科技有限公司（Synthetic Demo Company）",
+              "type_hint": "企业",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U20-02_质量管理_QUALITY_AUDIT_RECORD.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "整改关闭",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U20-02_质量管理_QUALITY_AUDIT_RECORD.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [
+            {
+              "name": "文档版本标识问题数",
+              "value_text": "6",
+              "unit_text": "项",
+              "condition_text": "",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U20-02_质量管理_QUALITY_AUDIT_RECORD.md#full-document"
+              ]
+            },
+            {
+              "name": "测试记录不完整数",
+              "value_text": "2",
+              "unit_text": "项",
+              "condition_text": "",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U20-02_质量管理_QUALITY_AUDIT_RECORD.md#full-document"
+              ]
+            },
+            {
+              "name": "整改关闭时限",
+              "value_text": "15",
+              "unit_text": "个工作日",
+              "condition_text": "审计后",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U20-02_质量管理_QUALITY_AUDIT_RECORD.md#full-document"
+              ]
+            }
+          ],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "final_decision": "REVIEW_REQUIRED"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "STATUS_ENUM_UNRESOLVED",
+            "QUANTITY_CONDITION_UNRESOLVED"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REJECT",
+          "grounding_reasons": [
+            "entity.name is not grounded"
+          ],
+          "final_decision": "REJECTED_GROUNDING",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "质量管理-QUALITY_AUDIT_RECORD",
+            "可核验记录"
+          ],
+          "source_unit": "1. 2026-Q2内部质量审计抽查8个项目。\n2. 抽查发现文档版本标识问题6项、测试记录不完整2项，均在审计后15个工作日内整改关闭。\n3. 抽查项目未发现绕过上线审批直接发布的记录。\n4. 质量审计记录不等同于第三方认证。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": true
+      },
+      {
+        "case_id": "CCV2-U20-02",
+        "candidate_index": 2,
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U20-02_质量管理_QUALITY_AUDIT_RECORD.md#full-document",
+        "source_hash": "78c12a1f20c5da1af195345c33fd960f5e12293da0f1483afb970440e99f2320",
+        "statement": "抽查项目未发现绕过上线审批直接发布的记录。",
+        "candidate": {
+          "statement": "抽查项目未发现绕过上线审批直接发布的记录。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U20-02_质量管理_QUALITY_AUDIT_RECORD.md#full-document"
+          ],
+          "subject_name": "抽查项目",
+          "subject_type_hint": "项目集合",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U20-02_质量管理_QUALITY_AUDIT_RECORD.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "澄川数智科技有限公司（Synthetic Demo Company）",
+              "type_hint": "企业",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U20-02_质量管理_QUALITY_AUDIT_RECORD.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "未发现绕过上线审批直接发布的记录",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U20-02_质量管理_QUALITY_AUDIT_RECORD.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "final_decision": "REVIEW_REQUIRED"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REJECT",
+          "grounding_reasons": [
+            "entity.name is not grounded"
+          ],
+          "final_decision": "REJECTED_GROUNDING",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "质量管理-QUALITY_AUDIT_RECORD",
+            "可核验记录"
+          ],
+          "source_unit": "1. 2026-Q2内部质量审计抽查8个项目。\n2. 抽查发现文档版本标识问题6项、测试记录不完整2项，均在审计后15个工作日内整改关闭。\n3. 抽查项目未发现绕过上线审批直接发布的记录。\n4. 质量审计记录不等同于第三方认证。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": true
+      },
+      {
+        "case_id": "CCV2-U20-02",
+        "candidate_index": 3,
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U20-02_质量管理_QUALITY_AUDIT_RECORD.md#full-document",
+        "source_hash": "78c12a1f20c5da1af195345c33fd960f5e12293da0f1483afb970440e99f2320",
+        "statement": "质量审计记录不等同于第三方认证。",
+        "candidate": {
+          "statement": "质量审计记录不等同于第三方认证。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U20-02_质量管理_QUALITY_AUDIT_RECORD.md#full-document"
+          ],
+          "subject_name": "质量审计记录",
+          "subject_type_hint": "记录",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U20-02_质量管理_QUALITY_AUDIT_RECORD.md#full-document"
+          ],
+          "entity_mentions": [],
+          "status_text": "不等同于第三方认证",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U20-02_质量管理_QUALITY_AUDIT_RECORD.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZED",
+          "grounding_decision": "ACCEPT",
+          "final_decision": "EVAL_CONTROLLED_SYNTHETIC_REVIEW"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "NEGATED_OR_UNCERTAIN_STATUS",
+            "NEGATED_OR_LIMITED_SCOPE"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "NEGATED_OR_UNCERTAIN_STATUS",
+            "NEGATED_OR_LIMITED_SCOPE"
+          ],
+          "final_decision": "REVIEW_REQUIRED",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "质量管理-QUALITY_AUDIT_RECORD",
+            "可核验记录"
+          ],
+          "source_unit": "1. 2026-Q2内部质量审计抽查8个项目。\n2. 抽查发现文档版本标识问题6项、测试记录不完整2项，均在审计后15个工作日内整改关闭。\n3. 抽查项目未发现绕过上线审批直接发布的记录。\n4. 质量审计记录不等同于第三方认证。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": true
+      },
+      {
+        "case_id": "CCV2-U29-02",
+        "candidate_index": 0,
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md#full-document",
+        "source_hash": "8739b2aae923a268faf4d655330cc4aa9c937ee3d4a6073db0b622135771c171",
+        "statement": "Synthetic医疗案例M-2025-03项目范围包含医院接口平台、患者主索引和数据交换。",
+        "candidate": {
+          "statement": "Synthetic医疗案例M-2025-03项目范围包含医院接口平台、患者主索引和数据交换。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md#full-document"
+          ],
+          "subject_name": "Synthetic医疗案例M-2025-03项目",
+          "subject_type_hint": "项目案例",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "医院接口平台",
+              "type_hint": "项目范围项",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md#full-document"
+              ]
+            },
+            {
+              "name": "患者主索引",
+              "type_hint": "项目范围项",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md#full-document"
+              ]
+            },
+            {
+              "name": "数据交换",
+              "type_hint": "项目范围项",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "",
+          "status_source_refs": [],
+          "scope_items": [
+            {
+              "text": "医院接口平台",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md#full-document"
+              ]
+            },
+            {
+              "text": "患者主索引",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md#full-document"
+              ]
+            },
+            {
+              "text": "数据交换",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZED",
+          "grounding_decision": "ACCEPT",
+          "final_decision": "EVAL_CONTROLLED_SYNTHETIC_REVIEW"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZED",
+          "canonicalization_reasons": [],
+          "canonical_status": "unknown",
+          "grounding_decision": "ACCEPT",
+          "grounding_reasons": [],
+          "final_decision": "EVAL_CONTROLLED_SYNTHETIC_REVIEW",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "项目案例与业绩-ACCEPTANCE_EVIDENCE",
+            "可核验记录"
+          ],
+          "source_unit": "1. Synthetic医疗案例M-2025-03项目范围包含医院接口平台、患者主索引和数据交换。\n2. 项目于2025-03签约，2025-12完成验收。\n3. 验收资料记录上线接口43个。\n4. 该案例不包含HIS核心系统开发，不能据此证明HIS产品研发能力。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "CCV2-U29-02",
+        "candidate_index": 1,
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md#full-document",
+        "source_hash": "8739b2aae923a268faf4d655330cc4aa9c937ee3d4a6073db0b622135771c171",
+        "statement": "项目于2025-03签约，2025-12完成验收。",
+        "candidate": {
+          "statement": "项目于2025-03签约，2025-12完成验收。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md#full-document"
+          ],
+          "subject_name": "Synthetic医疗案例M-2025-03项目",
+          "subject_type_hint": "项目案例",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md#full-document"
+          ],
+          "entity_mentions": [],
+          "status_text": "完成验收",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": [
+            {
+              "value_text": "2025-03",
+              "event_text": "签约",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md#full-document"
+              ]
+            },
+            {
+              "value_text": "2025-12",
+              "event_text": "完成验收",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md#full-document"
+              ]
+            }
+          ]
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "final_decision": "REVIEW_REQUIRED"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "STATUS_ENUM_UNRESOLVED",
+            "TEMPORAL_ROLE_OR_DATE_UNRESOLVED",
+            "TEMPORAL_ROLE_OR_DATE_UNRESOLVED"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "STATUS_ENUM_UNRESOLVED",
+            "TEMPORAL_ROLE_OR_DATE_UNRESOLVED",
+            "TEMPORAL_ROLE_OR_DATE_UNRESOLVED"
+          ],
+          "final_decision": "REVIEW_REQUIRED",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "项目案例与业绩-ACCEPTANCE_EVIDENCE",
+            "可核验记录"
+          ],
+          "source_unit": "1. Synthetic医疗案例M-2025-03项目范围包含医院接口平台、患者主索引和数据交换。\n2. 项目于2025-03签约，2025-12完成验收。\n3. 验收资料记录上线接口43个。\n4. 该案例不包含HIS核心系统开发，不能据此证明HIS产品研发能力。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "CCV2-U29-02",
+        "candidate_index": 2,
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md#full-document",
+        "source_hash": "8739b2aae923a268faf4d655330cc4aa9c937ee3d4a6073db0b622135771c171",
+        "statement": "验收资料记录上线接口43个。",
+        "candidate": {
+          "statement": "验收资料记录上线接口43个。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md#full-document"
+          ],
+          "subject_name": "验收资料",
+          "subject_type_hint": "验收资料",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "上线接口",
+              "type_hint": "数量对象",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "",
+          "status_source_refs": [],
+          "scope_items": [],
+          "quantity_items": [
+            {
+              "name": "上线接口",
+              "value_text": "43",
+              "unit_text": "个",
+              "condition_text": "",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md#full-document"
+              ]
+            }
+          ],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZED",
+          "grounding_decision": "ACCEPT",
+          "final_decision": "EVAL_CONTROLLED_SYNTHETIC_REVIEW"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZED",
+          "canonicalization_reasons": [],
+          "canonical_status": "unknown",
+          "grounding_decision": "ACCEPT",
+          "grounding_reasons": [],
+          "final_decision": "EVAL_CONTROLLED_SYNTHETIC_REVIEW",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "项目案例与业绩-ACCEPTANCE_EVIDENCE",
+            "可核验记录"
+          ],
+          "source_unit": "1. Synthetic医疗案例M-2025-03项目范围包含医院接口平台、患者主索引和数据交换。\n2. 项目于2025-03签约，2025-12完成验收。\n3. 验收资料记录上线接口43个。\n4. 该案例不包含HIS核心系统开发，不能据此证明HIS产品研发能力。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "CCV2-U29-02",
+        "candidate_index": 3,
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md#full-document",
+        "source_hash": "8739b2aae923a268faf4d655330cc4aa9c937ee3d4a6073db0b622135771c171",
+        "statement": "该案例不包含HIS核心系统开发，不能据此证明HIS产品研发能力。",
+        "candidate": {
+          "statement": "该案例不包含HIS核心系统开发，不能据此证明HIS产品研发能力。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md#full-document"
+          ],
+          "subject_name": "Synthetic医疗案例M-2025-03项目",
+          "subject_type_hint": "项目案例",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "HIS核心系统开发",
+              "type_hint": "能力项",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md#full-document"
+              ]
+            },
+            {
+              "name": "HIS产品研发能力",
+              "type_hint": "能力项",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "不包含HIS核心系统开发",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md#full-document"
+          ],
+          "scope_items": [
+            {
+              "text": "HIS核心系统开发",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U29-02_项目案例与业绩_ACCEPTANCE_EVIDENCE.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "final_decision": "REVIEW_REQUIRED"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "final_decision": "REVIEW_REQUIRED",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "项目案例与业绩-ACCEPTANCE_EVIDENCE",
+            "可核验记录"
+          ],
+          "source_unit": "1. Synthetic医疗案例M-2025-03项目范围包含医院接口平台、患者主索引和数据交换。\n2. 项目于2025-03签约，2025-12完成验收。\n3. 验收资料记录上线接口43个。\n4. 该案例不包含HIS核心系统开发，不能据此证明HIS产品研发能力。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "CCV2-U30-02",
+        "candidate_index": 0,
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U30-02_企业资质与认证_CERTIFICATION_STATUS_RECORD.md#full-document",
+        "source_hash": "d0bc96847439b1d2f4baa87c2f92010d9d11882528a906cefb86edc21ac9c808",
+        "statement": "Synthetic旧证书CERT-X-2024已于2025-12-31到期。",
+        "candidate": {
+          "statement": "Synthetic旧证书CERT-X-2024已于2025-12-31到期。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U30-02_企业资质与认证_CERTIFICATION_STATUS_RECORD.md#full-document"
+          ],
+          "subject_name": "Synthetic旧证书CERT-X-2024",
+          "subject_type_hint": "证书",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U30-02_企业资质与认证_CERTIFICATION_STATUS_RECORD.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "澄川数智科技有限公司（Synthetic Demo Company）",
+              "type_hint": "企业",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U30-02_企业资质与认证_CERTIFICATION_STATUS_RECORD.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "已于2025-12-31到期",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U30-02_企业资质与认证_CERTIFICATION_STATUS_RECORD.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": [
+            {
+              "value_text": "2025-12-31",
+              "event_text": "到期",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U30-02_企业资质与认证_CERTIFICATION_STATUS_RECORD.md#full-document"
+              ]
+            }
+          ]
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "final_decision": "REVIEW_REQUIRED"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REJECT",
+          "grounding_reasons": [
+            "entity.name is not grounded"
+          ],
+          "final_decision": "REJECTED_GROUNDING",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "企业资质与认证-CERTIFICATION_STATUS_RECORD",
+            "可核验记录"
+          ],
+          "source_unit": "1. Synthetic旧证书CERT-X-2024已于2025-12-31到期。\n2. 旧证书仅用于历史版本和失效检测测试。\n3. 当前资质索引将CERT-X-2024标记为EXPIRED。\n4. 不得使用过期证书支持当前资质声明。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": true
+      },
+      {
+        "case_id": "CCV2-U30-02",
+        "candidate_index": 1,
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U30-02_企业资质与认证_CERTIFICATION_STATUS_RECORD.md#full-document",
+        "source_hash": "d0bc96847439b1d2f4baa87c2f92010d9d11882528a906cefb86edc21ac9c808",
+        "statement": "旧证书仅用于历史版本和失效检测测试。",
+        "candidate": {
+          "statement": "旧证书仅用于历史版本和失效检测测试。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U30-02_企业资质与认证_CERTIFICATION_STATUS_RECORD.md#full-document"
+          ],
+          "subject_name": "旧证书",
+          "subject_type_hint": "证书",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U30-02_企业资质与认证_CERTIFICATION_STATUS_RECORD.md#full-document"
+          ],
+          "entity_mentions": [],
+          "status_text": "仅用于历史版本和失效检测测试",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U30-02_企业资质与认证_CERTIFICATION_STATUS_RECORD.md#full-document"
+          ],
+          "scope_items": [
+            {
+              "text": "历史版本和失效检测测试",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U30-02_企业资质与认证_CERTIFICATION_STATUS_RECORD.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "final_decision": "REVIEW_REQUIRED"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "NEGATED_OR_UNCERTAIN_STATUS"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "NEGATED_OR_UNCERTAIN_STATUS"
+          ],
+          "final_decision": "REVIEW_REQUIRED",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "企业资质与认证-CERTIFICATION_STATUS_RECORD",
+            "可核验记录"
+          ],
+          "source_unit": "1. Synthetic旧证书CERT-X-2024已于2025-12-31到期。\n2. 旧证书仅用于历史版本和失效检测测试。\n3. 当前资质索引将CERT-X-2024标记为EXPIRED。\n4. 不得使用过期证书支持当前资质声明。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "CCV2-U30-02",
+        "candidate_index": 2,
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U30-02_企业资质与认证_CERTIFICATION_STATUS_RECORD.md#full-document",
+        "source_hash": "d0bc96847439b1d2f4baa87c2f92010d9d11882528a906cefb86edc21ac9c808",
+        "statement": "当前资质索引将CERT-X-2024标记为EXPIRED。",
+        "candidate": {
+          "statement": "当前资质索引将CERT-X-2024标记为EXPIRED。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U30-02_企业资质与认证_CERTIFICATION_STATUS_RECORD.md#full-document"
+          ],
+          "subject_name": "CERT-X-2024",
+          "subject_type_hint": "证书",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U30-02_企业资质与认证_CERTIFICATION_STATUS_RECORD.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "当前资质索引",
+              "type_hint": "索引",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U30-02_企业资质与认证_CERTIFICATION_STATUS_RECORD.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "EXPIRED",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U30-02_企业资质与认证_CERTIFICATION_STATUS_RECORD.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "final_decision": "REVIEW_REQUIRED"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "final_decision": "REVIEW_REQUIRED",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "企业资质与认证-CERTIFICATION_STATUS_RECORD",
+            "可核验记录"
+          ],
+          "source_unit": "1. Synthetic旧证书CERT-X-2024已于2025-12-31到期。\n2. 旧证书仅用于历史版本和失效检测测试。\n3. 当前资质索引将CERT-X-2024标记为EXPIRED。\n4. 不得使用过期证书支持当前资质声明。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "CCV2-U30-02",
+        "candidate_index": 3,
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U30-02_企业资质与认证_CERTIFICATION_STATUS_RECORD.md#full-document",
+        "source_hash": "d0bc96847439b1d2f4baa87c2f92010d9d11882528a906cefb86edc21ac9c808",
+        "statement": "不得使用过期证书支持当前资质声明。",
+        "candidate": {
+          "statement": "不得使用过期证书支持当前资质声明。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U30-02_企业资质与认证_CERTIFICATION_STATUS_RECORD.md#full-document"
+          ],
+          "subject_name": "过期证书",
+          "subject_type_hint": "证书",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U30-02_企业资质与认证_CERTIFICATION_STATUS_RECORD.md#full-document"
+          ],
+          "entity_mentions": [],
+          "status_text": "不得使用",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U30-02_企业资质与认证_CERTIFICATION_STATUS_RECORD.md#full-document"
+          ],
+          "scope_items": [
+            {
+              "text": "支持当前资质声明",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U30-02_企业资质与认证_CERTIFICATION_STATUS_RECORD.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "final_decision": "REVIEW_REQUIRED"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "NEGATED_OR_UNCERTAIN_STATUS",
+            "NEGATED_OR_LIMITED_SCOPE"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "NEGATED_OR_UNCERTAIN_STATUS",
+            "NEGATED_OR_LIMITED_SCOPE"
+          ],
+          "final_decision": "REVIEW_REQUIRED",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "企业资质与认证-CERTIFICATION_STATUS_RECORD",
+            "可核验记录"
+          ],
+          "source_unit": "1. Synthetic旧证书CERT-X-2024已于2025-12-31到期。\n2. 旧证书仅用于历史版本和失效检测测试。\n3. 当前资质索引将CERT-X-2024标记为EXPIRED。\n4. 不得使用过期证书支持当前资质声明。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "CCV2-U34-02",
+        "candidate_index": 0,
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U34-02_行业专项能力_INDUSTRY_MEDICAL_CASE.md#full-document",
+        "source_hash": "723e01a83e793e28b1e92745c0239f2700ccc218a8b6d5ce320904842178a444",
+        "statement": "澄川医疗集成平台 XHI 2.1在Synthetic医疗案例中完成HL7 v2消息接入、患者主索引和接口路由测试。",
+        "candidate": {
+          "statement": "澄川医疗集成平台 XHI 2.1在Synthetic医疗案例中完成HL7 v2消息接入、患者主索引和接口路由测试。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U34-02_行业专项能力_INDUSTRY_MEDICAL_CASE.md#full-document"
+          ],
+          "subject_name": "澄川医疗集成平台 XHI 2.1",
+          "subject_type_hint": "产品/系统",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U34-02_行业专项能力_INDUSTRY_MEDICAL_CASE.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "HL7 v2",
+              "type_hint": "协议/标准",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U34-02_行业专项能力_INDUSTRY_MEDICAL_CASE.md#full-document"
+              ]
+            },
+            {
+              "name": "患者主索引",
+              "type_hint": "功能模块",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U34-02_行业专项能力_INDUSTRY_MEDICAL_CASE.md#full-document"
+              ]
+            },
+            {
+              "name": "接口路由",
+              "type_hint": "功能模块",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U34-02_行业专项能力_INDUSTRY_MEDICAL_CASE.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "",
+          "status_source_refs": [],
+          "scope_items": [
+            {
+              "text": "Synthetic医疗案例",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U34-02_行业专项能力_INDUSTRY_MEDICAL_CASE.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZED",
+          "grounding_decision": "ACCEPT",
+          "final_decision": "EVAL_CONTROLLED_SYNTHETIC_REVIEW"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZED",
+          "canonicalization_reasons": [],
+          "canonical_status": "unknown",
+          "grounding_decision": "ACCEPT",
+          "grounding_reasons": [],
+          "final_decision": "EVAL_CONTROLLED_SYNTHETIC_REVIEW",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "行业专项能力-INDUSTRY_MEDICAL_CASE",
+            "可核验记录"
+          ],
+          "source_unit": "1. 澄川医疗集成平台 XHI 2.1在Synthetic医疗案例中完成HL7 v2消息接入、患者主索引和接口路由测试。\n2. 测试接口包含ADT、医嘱和检验结果三类消息。\n3. 测试数据全部为脱敏Synthetic数据。\n4. 该行业案例只证明医疗接口集成测试能力，不证明政务事件协同能力。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "CCV2-U34-02",
+        "candidate_index": 1,
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U34-02_行业专项能力_INDUSTRY_MEDICAL_CASE.md#full-document",
+        "source_hash": "723e01a83e793e28b1e92745c0239f2700ccc218a8b6d5ce320904842178a444",
+        "statement": "测试接口包含ADT、医嘱和检验结果三类消息。",
+        "candidate": {
+          "statement": "测试接口包含ADT、医嘱和检验结果三类消息。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U34-02_行业专项能力_INDUSTRY_MEDICAL_CASE.md#full-document"
+          ],
+          "subject_name": "测试接口",
+          "subject_type_hint": "接口",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U34-02_行业专项能力_INDUSTRY_MEDICAL_CASE.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "ADT",
+              "type_hint": "消息类型",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U34-02_行业专项能力_INDUSTRY_MEDICAL_CASE.md#full-document"
+              ]
+            },
+            {
+              "name": "医嘱",
+              "type_hint": "消息类型",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U34-02_行业专项能力_INDUSTRY_MEDICAL_CASE.md#full-document"
+              ]
+            },
+            {
+              "name": "检验结果",
+              "type_hint": "消息类型",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U34-02_行业专项能力_INDUSTRY_MEDICAL_CASE.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "",
+          "status_source_refs": [],
+          "scope_items": [],
+          "quantity_items": [
+            {
+              "name": "消息类型数量",
+              "value_text": "三类",
+              "unit_text": "",
+              "condition_text": "",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U34-02_行业专项能力_INDUSTRY_MEDICAL_CASE.md#full-document"
+              ]
+            }
+          ],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "final_decision": "REVIEW_REQUIRED"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "QUANTITY_VALUE_OR_UNIT_UNRESOLVED"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "QUANTITY_VALUE_OR_UNIT_UNRESOLVED"
+          ],
+          "final_decision": "REVIEW_REQUIRED",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "行业专项能力-INDUSTRY_MEDICAL_CASE",
+            "可核验记录"
+          ],
+          "source_unit": "1. 澄川医疗集成平台 XHI 2.1在Synthetic医疗案例中完成HL7 v2消息接入、患者主索引和接口路由测试。\n2. 测试接口包含ADT、医嘱和检验结果三类消息。\n3. 测试数据全部为脱敏Synthetic数据。\n4. 该行业案例只证明医疗接口集成测试能力，不证明政务事件协同能力。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "CCV2-U34-02",
+        "candidate_index": 2,
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U34-02_行业专项能力_INDUSTRY_MEDICAL_CASE.md#full-document",
+        "source_hash": "723e01a83e793e28b1e92745c0239f2700ccc218a8b6d5ce320904842178a444",
+        "statement": "测试数据全部为脱敏Synthetic数据。",
+        "candidate": {
+          "statement": "测试数据全部为脱敏Synthetic数据。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U34-02_行业专项能力_INDUSTRY_MEDICAL_CASE.md#full-document"
+          ],
+          "subject_name": "测试数据",
+          "subject_type_hint": "数据",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U34-02_行业专项能力_INDUSTRY_MEDICAL_CASE.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "Synthetic数据",
+              "type_hint": "数据类型",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U34-02_行业专项能力_INDUSTRY_MEDICAL_CASE.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "脱敏",
+          "status_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U34-02_行业专项能力_INDUSTRY_MEDICAL_CASE.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "final_decision": "REVIEW_REQUIRED"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "final_decision": "REVIEW_REQUIRED",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "行业专项能力-INDUSTRY_MEDICAL_CASE",
+            "可核验记录"
+          ],
+          "source_unit": "1. 澄川医疗集成平台 XHI 2.1在Synthetic医疗案例中完成HL7 v2消息接入、患者主索引和接口路由测试。\n2. 测试接口包含ADT、医嘱和检验结果三类消息。\n3. 测试数据全部为脱敏Synthetic数据。\n4. 该行业案例只证明医疗接口集成测试能力，不证明政务事件协同能力。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": false
+      },
+      {
+        "case_id": "CCV2-U34-02",
+        "candidate_index": 3,
+        "source_ref": "eval://chengchuan-fixed12/materials/CCV2-U34-02_行业专项能力_INDUSTRY_MEDICAL_CASE.md#full-document",
+        "source_hash": "723e01a83e793e28b1e92745c0239f2700ccc218a8b6d5ce320904842178a444",
+        "statement": "该行业案例只证明医疗接口集成测试能力，不证明政务事件协同能力。",
+        "candidate": {
+          "statement": "该行业案例只证明医疗接口集成测试能力，不证明政务事件协同能力。",
+          "source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U34-02_行业专项能力_INDUSTRY_MEDICAL_CASE.md#full-document"
+          ],
+          "subject_name": "该行业案例",
+          "subject_type_hint": "案例",
+          "subject_source_refs": [
+            "eval://chengchuan-fixed12/materials/CCV2-U34-02_行业专项能力_INDUSTRY_MEDICAL_CASE.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "医疗接口集成测试能力",
+              "type_hint": "能力",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U34-02_行业专项能力_INDUSTRY_MEDICAL_CASE.md#full-document"
+              ]
+            },
+            {
+              "name": "政务事件协同能力",
+              "type_hint": "能力",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U34-02_行业专项能力_INDUSTRY_MEDICAL_CASE.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "",
+          "status_source_refs": [],
+          "scope_items": [
+            {
+              "text": "医疗接口集成测试能力",
+              "source_refs": [
+                "eval://chengchuan-fixed12/materials/CCV2-U34-02_行业专项能力_INDUSTRY_MEDICAL_CASE.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        "before": {
+          "canonicalization_status": "CANONICALIZED",
+          "grounding_decision": "ACCEPT",
+          "final_decision": "EVAL_CONTROLLED_SYNTHETIC_REVIEW"
+        },
+        "after": {
+          "canonicalization_status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "canonicalization_reasons": [
+            "NEGATED_OR_LIMITED_SCOPE"
+          ],
+          "canonical_status": "unknown",
+          "grounding_decision": "REVIEW_REQUIRED",
+          "grounding_reasons": [
+            "NEGATED_OR_LIMITED_SCOPE"
+          ],
+          "final_decision": "REVIEW_REQUIRED",
+          "source_grounding_mode": "EXACT"
+        },
+        "source_role": {
+          "role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+          "eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+          "heading_path": [
+            "行业专项能力-INDUSTRY_MEDICAL_CASE",
+            "可核验记录"
+          ],
+          "source_unit": "1. 澄川医疗集成平台 XHI 2.1在Synthetic医疗案例中完成HL7 v2消息接入、患者主索引和接口路由测试。\n2. 测试接口包含ADT、医嘱和检验结果三类消息。\n3. 测试数据全部为脱敏Synthetic数据。\n4. 该行业案例只证明医疗接口集成测试能力，不证明政务事件协同能力。",
+          "evidence": "BOUNDED_HEADING_ALIGNMENT"
+        },
+        "producer_atomicity": null,
+        "changed": true
+      }
+    ]
+  },
+  "producer_input_window": {
+    "manifests": {
+      "COM-07": {
+        "document_id": "COM-07",
+        "source_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f",
+        "source_ref": "eval://chengchuan-fixed12/COM-07#full-document",
+        "windows": [
+          {
+            "window_id": "COM-07-WINDOW-001",
+            "heading_path": [
+              "性能与容量测试报告"
+            ],
+            "heading": "性能与容量测试报告",
+            "heading_level": null,
+            "body": "> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。",
+            "producer_source_text": "性能与容量测试报告\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。",
+            "producer_source_hash": "8cd497a43fb799377252d9dc42393cb7a5ba005f392fd56753a89a6f79f0ec1c",
+            "source_ref": "eval://chengchuan-fixed12/COM-07#full-document",
+            "document_source_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f",
+            "document_metadata": {
+              "source_kind": "synthetic_company_evidence",
+              "evidence_status": "synthetic_pilot_evidence",
+              "synthetic_company_evidence": true,
+              "claim_permission": false,
+              "requirement_blind": false,
+              "doc_id": "COM-07",
+              "source_ref": "eval://chengchuan-fixed12/COM-07#full-document",
+              "source_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f"
+            }
+          },
+          {
+            "window_id": "COM-07-WINDOW-002",
+            "heading_path": [
+              "性能与容量测试报告",
+              "环境"
+            ],
+            "heading": "环境",
+            "heading_level": null,
+            "body": "Synthetic TEST：4 vCPU、16GB RAM、版本v3.2。",
+            "producer_source_text": "性能与容量测试报告 / 环境\nSynthetic TEST：4 vCPU、16GB RAM、版本v3.2。",
+            "producer_source_hash": "ac61395f76765144e56b91510f1b5dd60c2c55ec1002aad91ed73cdc80445f34",
+            "source_ref": "eval://chengchuan-fixed12/COM-07#full-document",
+            "document_source_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f",
+            "document_metadata": {
+              "source_kind": "synthetic_company_evidence",
+              "evidence_status": "synthetic_pilot_evidence",
+              "synthetic_company_evidence": true,
+              "claim_permission": false,
+              "requirement_blind": false,
+              "doc_id": "COM-07",
+              "source_ref": "eval://chengchuan-fixed12/COM-07#full-document",
+              "source_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f"
+            }
+          },
+          {
+            "window_id": "COM-07-WINDOW-003",
+            "heading_path": [
+              "性能与容量测试报告",
+              "结果"
+            ],
+            "heading": "结果",
+            "heading_level": null,
+            "body": "100个虚拟用户标准查询场景P95=1.8秒；导入10000条合成记录耗时42秒。",
+            "producer_source_text": "性能与容量测试报告 / 结果\n100个虚拟用户标准查询场景P95=1.8秒；导入10000条合成记录耗时42秒。",
+            "producer_source_hash": "af6d5d8c9e9f5ae7cbd8ee3e107fd3e4736b69dd7babedc0f5053076533cb291",
+            "source_ref": "eval://chengchuan-fixed12/COM-07#full-document",
+            "document_source_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f",
+            "document_metadata": {
+              "source_kind": "synthetic_company_evidence",
+              "evidence_status": "synthetic_pilot_evidence",
+              "synthetic_company_evidence": true,
+              "claim_permission": false,
+              "requirement_blind": false,
+              "doc_id": "COM-07",
+              "source_ref": "eval://chengchuan-fixed12/COM-07#full-document",
+              "source_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f"
+            }
+          },
+          {
+            "window_id": "COM-07-WINDOW-004",
+            "heading_path": [
+              "性能与容量测试报告",
+              "时效"
+            ],
+            "heading": "时效",
+            "heading_level": null,
+            "body": "2026-11-30后标记STALE_PENDING_RETEST。",
+            "producer_source_text": "性能与容量测试报告 / 时效\n2026-11-30后标记STALE_PENDING_RETEST。",
+            "producer_source_hash": "859c6b070be8a0c30d68161dc9df8ecfde4505bf4db2c097d8010c2ef22639b5",
+            "source_ref": "eval://chengchuan-fixed12/COM-07#full-document",
+            "document_source_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f",
+            "document_metadata": {
+              "source_kind": "synthetic_company_evidence",
+              "evidence_status": "synthetic_pilot_evidence",
+              "synthetic_company_evidence": true,
+              "claim_permission": false,
+              "requirement_blind": false,
+              "doc_id": "COM-07",
+              "source_ref": "eval://chengchuan-fixed12/COM-07#full-document",
+              "source_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f"
+            }
+          },
+          {
+            "window_id": "COM-07-WINDOW-005",
+            "heading_path": [
+              "性能与容量测试报告",
+              "官方来源 / 依据"
+            ],
+            "heading": "官方来源 / 依据",
+            "heading_level": null,
+            "body": "- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm",
+            "producer_source_text": "性能与容量测试报告 / 官方来源 / 依据\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm",
+            "producer_source_hash": "5204be690588383f7c63135198829c1e5700b9c6b04eec2a241108187a70ad07",
+            "source_ref": "eval://chengchuan-fixed12/COM-07#full-document",
+            "document_source_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f",
+            "document_metadata": {
+              "source_kind": "synthetic_company_evidence",
+              "evidence_status": "synthetic_pilot_evidence",
+              "synthetic_company_evidence": true,
+              "claim_permission": false,
+              "requirement_blind": false,
+              "doc_id": "COM-07",
+              "source_ref": "eval://chengchuan-fixed12/COM-07#full-document",
+              "source_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f"
+            }
+          },
+          {
+            "window_id": "COM-07-WINDOW-006",
+            "heading_path": [
+              "性能与容量测试报告",
+              "时效使用规则"
+            ],
+            "heading": "时效使用规则",
+            "heading_level": null,
+            "body": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "producer_source_text": "性能与容量测试报告 / 时效使用规则\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "producer_source_hash": "e5a8d616daadb1e2a308231026a4f1f9e51e6b9bfe05134137339f498f3465c8",
+            "source_ref": "eval://chengchuan-fixed12/COM-07#full-document",
+            "document_source_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f",
+            "document_metadata": {
+              "source_kind": "synthetic_company_evidence",
+              "evidence_status": "synthetic_pilot_evidence",
+              "synthetic_company_evidence": true,
+              "claim_permission": false,
+              "requirement_blind": false,
+              "doc_id": "COM-07",
+              "source_ref": "eval://chengchuan-fixed12/COM-07#full-document",
+              "source_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f"
+            }
+          }
+        ],
+        "window_count": 6,
+        "cross_heading_body_leakage": 0
+      },
+      "COM-08": {
+        "document_id": "COM-08",
+        "source_hash": "afd00a30e6a46e9e09d42ac1f7eeae36be26420a40da12a42ecd0cb0d8ba9041",
+        "source_ref": "eval://chengchuan-fixed12/COM-08#full-document",
+        "windows": [
+          {
+            "window_id": "COM-08-WINDOW-001",
+            "heading_path": [
+              "备份恢复与容灾演练记录"
+            ],
+            "heading": "备份恢复与容灾演练记录",
+            "heading_level": null,
+            "body": "> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。",
+            "producer_source_text": "备份恢复与容灾演练记录\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。",
+            "producer_source_hash": "af96196a9bc862a360944959c7539c65960c5595bbdb488e900ca478d40e79db",
+            "source_ref": "eval://chengchuan-fixed12/COM-08#full-document",
+            "document_source_hash": "afd00a30e6a46e9e09d42ac1f7eeae36be26420a40da12a42ecd0cb0d8ba9041",
+            "document_metadata": {
+              "source_kind": "synthetic_company_evidence",
+              "evidence_status": "synthetic_pilot_evidence",
+              "synthetic_company_evidence": true,
+              "claim_permission": false,
+              "requirement_blind": false,
+              "doc_id": "COM-08",
+              "source_ref": "eval://chengchuan-fixed12/COM-08#full-document",
+              "source_hash": "afd00a30e6a46e9e09d42ac1f7eeae36be26420a40da12a42ecd0cb0d8ba9041"
+            }
+          },
+          {
+            "window_id": "COM-08-WINDOW-002",
+            "heading_path": [
+              "备份恢复与容灾演练记录",
+              "演练"
+            ],
+            "heading": "演练",
+            "heading_level": null,
+            "body": "2026-07-25完成Synthetic数据库备份恢复和应用节点故障切换。",
+            "producer_source_text": "备份恢复与容灾演练记录 / 演练\n2026-07-25完成Synthetic数据库备份恢复和应用节点故障切换。",
+            "producer_source_hash": "c122e8cbdb20dd92ae254cb1751add7f01132ec5534ad4ec60e48b531934723d",
+            "source_ref": "eval://chengchuan-fixed12/COM-08#full-document",
+            "document_source_hash": "afd00a30e6a46e9e09d42ac1f7eeae36be26420a40da12a42ecd0cb0d8ba9041",
+            "document_metadata": {
+              "source_kind": "synthetic_company_evidence",
+              "evidence_status": "synthetic_pilot_evidence",
+              "synthetic_company_evidence": true,
+              "claim_permission": false,
+              "requirement_blind": false,
+              "doc_id": "COM-08",
+              "source_ref": "eval://chengchuan-fixed12/COM-08#full-document",
+              "source_hash": "afd00a30e6a46e9e09d42ac1f7eeae36be26420a40da12a42ecd0cb0d8ba9041"
+            }
+          },
+          {
+            "window_id": "COM-08-WINDOW-003",
+            "heading_path": [
+              "备份恢复与容灾演练记录",
+              "边界"
+            ],
+            "heading": "边界",
+            "heading_level": null,
+            "body": "未形成真实客户RTO/RPO或可用率承诺。",
+            "producer_source_text": "备份恢复与容灾演练记录 / 边界\n未形成真实客户RTO/RPO或可用率承诺。",
+            "producer_source_hash": "d5edb4f61d57df0fbe95a6368e617eb898732a517a0031722d6b8cffecdcfe21",
+            "source_ref": "eval://chengchuan-fixed12/COM-08#full-document",
+            "document_source_hash": "afd00a30e6a46e9e09d42ac1f7eeae36be26420a40da12a42ecd0cb0d8ba9041",
+            "document_metadata": {
+              "source_kind": "synthetic_company_evidence",
+              "evidence_status": "synthetic_pilot_evidence",
+              "synthetic_company_evidence": true,
+              "claim_permission": false,
+              "requirement_blind": false,
+              "doc_id": "COM-08",
+              "source_ref": "eval://chengchuan-fixed12/COM-08#full-document",
+              "source_hash": "afd00a30e6a46e9e09d42ac1f7eeae36be26420a40da12a42ecd0cb0d8ba9041"
+            }
+          },
+          {
+            "window_id": "COM-08-WINDOW-004",
+            "heading_path": [
+              "备份恢复与容灾演练记录",
+              "官方来源 / 依据"
+            ],
+            "heading": "官方来源 / 依据",
+            "heading_level": null,
+            "body": "- **OFF-U08｜GB/T 22239-2019 网络安全等级保护基本要求**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2019-12-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=BAFB47E8874764186BDB7865E8344DAF\n- **OFF-U09｜GB/T 25070-2019 网络安全等级保护安全设计技术要求**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2019-12-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=9FB6EE8597B21436D0E99BF44FD42C4D",
+            "producer_source_text": "备份恢复与容灾演练记录 / 官方来源 / 依据\n- **OFF-U08｜GB/T 22239-2019 网络安全等级保护基本要求**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2019-12-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=BAFB47E8874764186BDB7865E8344DAF\n- **OFF-U09｜GB/T 25070-2019 网络安全等级保护安全设计技术要求**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2019-12-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=9FB6EE8597B21436D0E99BF44FD42C4D",
+            "producer_source_hash": "5d4a89188c78de8f9f9202c6b442f26095b01770d8044b95a2a70da4f3c9fa49",
+            "source_ref": "eval://chengchuan-fixed12/COM-08#full-document",
+            "document_source_hash": "afd00a30e6a46e9e09d42ac1f7eeae36be26420a40da12a42ecd0cb0d8ba9041",
+            "document_metadata": {
+              "source_kind": "synthetic_company_evidence",
+              "evidence_status": "synthetic_pilot_evidence",
+              "synthetic_company_evidence": true,
+              "claim_permission": false,
+              "requirement_blind": false,
+              "doc_id": "COM-08",
+              "source_ref": "eval://chengchuan-fixed12/COM-08#full-document",
+              "source_hash": "afd00a30e6a46e9e09d42ac1f7eeae36be26420a40da12a42ecd0cb0d8ba9041"
+            }
+          },
+          {
+            "window_id": "COM-08-WINDOW-005",
+            "heading_path": [
+              "备份恢复与容灾演练记录",
+              "时效使用规则"
+            ],
+            "heading": "时效使用规则",
+            "heading_level": null,
+            "body": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "producer_source_text": "备份恢复与容灾演练记录 / 时效使用规则\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "producer_source_hash": "c5a5b995dfdf2c242260f24b7758861ec28275dfcc5a80626feec87e038be9cd",
+            "source_ref": "eval://chengchuan-fixed12/COM-08#full-document",
+            "document_source_hash": "afd00a30e6a46e9e09d42ac1f7eeae36be26420a40da12a42ecd0cb0d8ba9041",
+            "document_metadata": {
+              "source_kind": "synthetic_company_evidence",
+              "evidence_status": "synthetic_pilot_evidence",
+              "synthetic_company_evidence": true,
+              "claim_permission": false,
+              "requirement_blind": false,
+              "doc_id": "COM-08",
+              "source_ref": "eval://chengchuan-fixed12/COM-08#full-document",
+              "source_hash": "afd00a30e6a46e9e09d42ac1f7eeae36be26420a40da12a42ecd0cb0d8ba9041"
+            }
+          }
+        ],
+        "window_count": 5,
+        "cross_heading_body_leakage": 0
+      }
+    },
+    "producer_window_count_com07": 6,
+    "producer_window_count_com08": 5,
+    "cross_heading_body_leakage": 0,
+    "historical_raw_candidate_blockers": [
+      {
+        "case_id": "COM-07",
+        "candidate_index": 0,
+        "status": "OPEN",
+        "classification": "CROSS_SECTION_CANDIDATE_MERGE",
+        "field_heading_coverage": [
+          {
+            "field": "statement",
+            "heading_path": []
+          },
+          {
+            "field": "subject",
+            "heading_path": []
+          },
+          {
+            "field": "status",
+            "heading_path": []
+          },
+          {
+            "field": "scope[0]",
+            "heading_path": [
+              "性能与容量测试报告",
+              "结果"
+            ]
+          },
+          {
+            "field": "scope[1]",
+            "heading_path": []
+          },
+          {
+            "field": "quantity[0].value",
+            "heading_path": [
+              "性能与容量测试报告",
+              "结果"
+            ]
+          },
+          {
+            "field": "quantity[0].condition",
+            "heading_path": [
+              "性能与容量测试报告",
+              "结果"
+            ]
+          },
+          {
+            "field": "quantity[1].value",
+            "heading_path": [
+              "性能与容量测试报告",
+              "结果"
+            ]
+          },
+          {
+            "field": "quantity[1].condition",
+            "heading_path": [
+              "性能与容量测试报告",
+              "结果"
+            ]
+          },
+          {
+            "field": "quantity[2].value",
+            "heading_path": [
+              "性能与容量测试报告",
+              "结果"
+            ]
+          },
+          {
+            "field": "quantity[2].condition",
+            "heading_path": [
+              "性能与容量测试报告",
+              "结果"
+            ]
+          },
+          {
+            "field": "quantity[3].value",
+            "heading_path": [
+              "性能与容量测试报告",
+              "结果"
+            ]
+          },
+          {
+            "field": "quantity[3].condition",
+            "heading_path": [
+              "性能与容量测试报告",
+              "结果"
+            ]
+          },
+          {
+            "field": "temporal[0]",
+            "heading_path": [
+              "性能与容量测试报告",
+              "时效"
+            ]
+          },
+          {
+            "field": "temporal[1]",
+            "heading_path": [
+              "性能与容量测试报告",
+              "官方来源 / 依据"
+            ]
+          },
+          {
+            "field": "temporal[2]",
+            "heading_path": [
+              "性能与容量测试报告",
+              "官方来源 / 依据"
+            ]
+          }
+        ],
+        "root_causes": [
+          "INPUT_WINDOW_BOUNDARY_GAP",
+          "PROMPT_ATOMICITY_GAP"
+        ],
+        "backend_must_not_split": true,
+        "prompt_change_in_this_task": false
+      },
+      {
+        "case_id": "COM-08",
+        "candidate_index": 0,
+        "status": "OPEN",
+        "classification": "CROSS_SECTION_CANDIDATE_MERGE",
+        "field_heading_coverage": [
+          {
+            "field": "statement",
+            "heading_path": [
+              "备份恢复与容灾演练记录",
+              "演练"
+            ]
+          },
+          {
+            "field": "subject",
+            "heading_path": [
+              "备份恢复与容灾演练记录",
+              "演练"
+            ]
+          },
+          {
+            "field": "status",
+            "heading_path": []
+          },
+          {
+            "field": "scope[0]",
+            "heading_path": [
+              "备份恢复与容灾演练记录",
+              "边界"
+            ]
+          },
+          {
+            "field": "temporal[0]",
+            "heading_path": [
+              "备份恢复与容灾演练记录",
+              "演练"
+            ]
+          }
+        ],
+        "root_causes": [
+          "INPUT_WINDOW_BOUNDARY_GAP"
+        ],
+        "backend_must_not_split": true,
+        "prompt_change_in_this_task": false
+      }
+    ]
+  },
+  "contract_changes": {
+    "prompt_change": 0,
+    "schema_change": 0,
+    "provider_calls": 0
+  },
+  "side_effects": {
+    "production_db_writes": 0,
+    "fact_persistence": 0,
+    "gold_mutations": 0,
+    "mapping_actions": 0,
+    "claim_actions": 0,
+    "writer_actions": 0
+  },
+  "status": {
+    "fact_backend": "READY_FOR_GPT_FINAL_GROUNDING_ADJUDICATION",
+    "fact_producer_input_window": "READY_FOR_GPT_WINDOW_BOUNDARY_ADJUDICATION"
+  }
+}

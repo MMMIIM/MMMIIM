@@ -1,0 +1,81 @@
+{
+  "artifact": "V43_FACT_PRODUCER_ROOT_CAUSE_AUDIT",
+  "run_id": "chengchuan-controlled-real-fact-1788680490273",
+  "database": "bid_platform_eval_chengchuan_v2",
+  "baseline": {"materials":92,"chunks":676,"extraction_windows":92,"provider_calls":140,"processed_materials":1,"failed_materials":91,"facts":5},
+  "classification_counts": {
+    "GATEWAY_ENVELOPE_MISMATCH": 55,
+    "INPUT_WINDOW_CONSTRUCTION_DEFECT": 14,
+    "TRANSIENT_PROVIDER_NETWORK_ERROR": 17,
+    "SOURCE_GROUNDING_VALIDATOR_FALSE_REJECT": 4,
+    "STATUS_GROUNDING_VALIDATOR_FALSE_REJECT": 1,
+    "FACT_GRANULARITY_DUPLICATION": "SUSPECTED_IN_5_EXISTING_FACTS",
+    "UNKNOWN": 0
+  },
+  "status_422_boundary": {
+    "gateway_http_422_observed": 120,
+    "gateway_http_200_semantic_envelopes": 20,
+    "provider_http_422_proven": false,
+    "backend_contract_422_proven": false,
+    "fact_validator_422_proven": false,
+    "reason": "The Eval wrapper recorded the Semantic Gateway response status in provider_http_status and retained no diagnostic body. Gateway source maps task/schema/envelope errors to 422 and upstream Provider failures to 502; therefore the 120 rows prove Gateway HTTP 422, not Provider HTTP 422."
+  },
+  "failure_differential": {
+    "wrong_shape_contract": {
+      "observed_cases": 55,
+      "gateway_status": 422,
+      "response_shape": "wrong_shape",
+      "raw_content_retained": false,
+      "diagnostic_gap": "No safe top-level keys or gateway probe diagnostics were persisted; exact first invalid path is unavailable for the 92-material run.",
+      "likely_owner": "Gateway envelope/task validation boundary",
+      "classification": "GATEWAY_ENVELOPE_MISMATCH"
+    },
+    "valid_empty": {
+      "observed_cases": 14,
+      "gateway_status": 200,
+      "json_and_contract_shape": "semantic_envelope with facts=[]",
+      "input_observation": "The Eval runner creates one retrieval/source span from chunks[0]; COM-06, COM-08 and COM-12 chunk 0 are title-only headings.",
+      "classification": "INPUT_WINDOW_CONSTRUCTION_DEFECT",
+      "semantic_truth": "Not evaluated as true-no-fact because the material body was not sent in this run."
+    },
+    "grounding": {
+      "source_ungrounded": 4,
+      "status_ungrounded": 1,
+      "classification": "SOURCE_GROUNDING_VALIDATOR_FALSE_REJECT / STATUS_GROUNDING_VALIDATOR_FALSE_REJECT",
+      "owner": "Fact contract grounding boundary",
+      "semantic_acceptance": "No unsupported fact was persisted; these are rejected outputs, not P0 escapes."
+    },
+    "network": {
+      "material_failures": 17,
+      "gateway_status": 502,
+      "classification": "TRANSIENT_PROVIDER_NETWORK_ERROR",
+      "semantic_conclusion": "No model-quality conclusion is drawn."
+    },
+    "successful_u20": {
+      "material": "CCV2-U20-02",
+      "facts": 5,
+      "source_lineage_verified": true,
+      "controlled_approved": 5,
+      "granularity_note": "All five facts share one span; aggregate/child duplication is suspected and must be reviewed before downstream counting."
+    }
+  },
+  "canary_diagnostics": {
+    "artifact": "backend/eval/rag-pilot/results/structured-output-shared-canary-03/canary-report.json",
+    "identity_status": "HISTORICAL_DIAGNOSTIC_ONLY; hashes differ from current runtime",
+    "current_contract_observed_mismatch_examples": [
+      "entities item returned as string instead of object",
+      "scope_source_texts returned as array instead of object",
+      "unexpected entity_type property",
+      "unexpected validity valid_to property",
+      "empty status_source_text"
+    ],
+    "provider_http_status": 200,
+    "gateway_http_status": 422,
+    "interpretation": "Provider reached and returned JSON, but Gateway strict schema validation rejected the task data."
+  },
+  "root_cause": "Systemic contract/input observability problem: the Eval runner uses a title-only anchor for each material and records Gateway status as provider status; current strict contract correctly fails incompatible model output instead of accepting unsupported shapes.",
+  "unknown_count": 0,
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0
+}

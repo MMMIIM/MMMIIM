@@ -14,6 +14,7 @@ function createVersionApp({ actorResolver = () => ({ actor_id: 'user-A', actor_t
   const repository = {
     pool: { query: async () => ({ rows: [{ '?column?': 1 }] }) },
     async getVersion(id) { return versions[id] || null; },
+    async getPipelineDocumentVersion(id) { return versions[id] || null; },
     async confirmVersion(version, confirmationText, actorId) {
       confirmations.push({ version, confirmationText, actorId });
       return { decision: { confirmation_text: confirmationText || null, actor_id: actorId }, version: { ...version, status: 'confirmed' } };
@@ -23,6 +24,7 @@ function createVersionApp({ actorResolver = () => ({ actor_id: 'user-A', actor_t
     repository,
     generationService: new GenerationService({ repository, workflowVersion: '4.2' }),
     actorResolver,
+    projectAuthorizationService: { assertProjectAccess: async () => {} },
     legacyGenerationCompat: false
   });
   return { app, confirmations };
@@ -74,9 +76,10 @@ test('DocumentVersion HTTP confirmation uses one owning service and preserves ri
 test('client reviewer/editor cannot override trusted actor and missing actor fails safely', async () => {
   const calls = [];
   const app = createApp({
-    repository: {},
+    repository: { getEvidenceReviewProject: async () => ({ project_id: 'project' }) },
     evidenceReviewService: { async decide(id, decision, input) { calls.push({ id, decision, input }); return { reviewed_by: input.reviewer }; } },
-    actorResolver: () => ({ actor_id: 'user-A', actor_type: 'test', source: 'test' })
+    actorResolver: () => ({ actor_id: 'user-A', actor_type: 'test', source: 'test' }),
+    projectAuthorizationService: { assertProjectAccess: async () => {} }
   });
   await withServer(app, async (base) => {
     const result = await post(base, '/api/evidence-reviews/ER-1/approve', { reviewer: 'admin' });
@@ -84,7 +87,7 @@ test('client reviewer/editor cannot override trusted actor and missing actor fai
   });
   assert.equal(calls[0].input.reviewer, 'user-A');
 
-  const missingActorApp = createApp({ repository: {}, evidenceReviewService: { async decide() { assert.fail('must not reach service'); } }, actorResolver: null });
+  const missingActorApp = createApp({ repository: { getEvidenceReviewProject: async () => ({ project_id: 'project' }) }, evidenceReviewService: { async decide() { assert.fail('must not reach service'); } }, projectAuthorizationService: { assertProjectAccess: async () => {} }, actorResolver: null });
   await withServer(missingActorApp, async (base) => {
     const result = await post(base, '/api/evidence-reviews/ER-1/approve', { reviewer: 'admin' });
     assert.equal(result.response.status, 401);
@@ -99,7 +102,8 @@ test('ResponsePlan edit discards client edited_by and persists trusted actor onl
     productionBetaService: {
       async editPlan(...args) { calls.push(args); return { audit: { edited_by: args[3].actor_id } }; }
     },
-    actorResolver: () => ({ actor_id: 'user-A', actor_type: 'test', source: 'test' })
+    actorResolver: () => ({ actor_id: 'user-A', actor_type: 'test', source: 'test' }),
+    projectAuthorizationService: { assertProjectAccess: async () => {} }
   });
   await withServer(app, async (base) => {
     const result = await patch(base, '/api/projects/project/response-plans/REQ-001', {
@@ -115,7 +119,8 @@ test('ResponsePlan edit discards client edited_by and persists trusted actor onl
   const missingActorApp = createApp({
     repository: {},
     productionBetaService: { async editPlan() { assert.fail('must not reach service'); } },
-    actorResolver: null
+    actorResolver: null,
+    projectAuthorizationService: { assertProjectAccess: async () => {} }
   });
   await withServer(missingActorApp, async (base) => {
     const result = await patch(base, '/api/projects/project/response-plans/REQ-001', { edited_by: 'admin', edit_reason: 'x' });

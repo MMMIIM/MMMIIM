@@ -1,0 +1,38 @@
+{
+  "tender_id": "JY-001",
+  "chain": [
+    {
+      "stage": "RAW_TENDER_SOURCE",
+      "path": "backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf",
+      "exists": true,
+      "sha256": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "status": "SOURCE_IDENTITY_VERIFIED"
+    },
+    {
+      "stage": "RECOVERED_SOURCE_AUTHORITY_PACKET",
+      "path": "backend/eval/requirement-extraction-real-tender-pilot-v1/recovered-source-authority-v1/packets/JY-001.json",
+      "exists": true,
+      "packet_sha256": "f08c21a255e3c5ada63d87f415013e85a55eca532f3d0593bd77163d1ae4ca7f",
+      "requirement_count": 193,
+      "authority_status": "SOURCE_CANONICAL_AUTHORITY_READY_PENDING_HUMAN_REVIEW",
+      "gold_authority": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "stage": "CURRENT_RUNTIME_EVIDENCE",
+      "manifest": "docs/eval/requirement-production-core6-20260911/CORE6_RUNTIME_MANIFEST.json",
+      "provider_calls": 28,
+      "candidate_count": 320,
+      "canonical_count": 320,
+      "semantic_adjudication": "not performed",
+      "status": "NON_AUTHORITATIVE_RUNTIME_EVIDENCE"
+    },
+    {
+      "stage": "HISTORICAL_HUMAN_ADJUDICATION",
+      "status": "NOT_FOUND_IN_REPOSITORY_ARCHAEOLOGY",
+      "blocker": "ADJUDICATION_IDENTITY_MISSING"
+    }
+  ],
+  "recovery_status": "BLOCKED_ADJUDICATION_IDENTITY_MISSING",
+  "semantic_reconstruction_performed": false,
+  "production_canonical_substitution": false
+}

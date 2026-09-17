@@ -1,0 +1,136 @@
+{
+  "task": "V43_DAYTIME_REAL_E2E_FOUNDATION_AND_HUMAN_GATE_MASTER_V1",
+  "contract": "V43 frozen requirement scope contract",
+  "adjudication_authority": "GPT_FINAL_SCOPE_ADJUDICATION",
+  "prior_root_cause": "ROLE_BLACKLIST_OVERREACH",
+  "parity_rows": [
+    {
+      "candidate_id": "6521272f-b39b-40c5-b9ef-2e23ce983cdf",
+      "req_id": "REQ-040",
+      "requirement_text": "交纳投标保证金可采用的形式：政府采购法律法规接受的支票、汇票、本票、网上银行支付或者金融机构、担保机构出具的保函等非现金形式。",
+      "source_refs": [
+        "C007-S023",
+        "C007-S024"
+      ],
+      "source_hash": "a1e08b02891863903e5fe6c5aae80dab339dc81d30388c5314740977b800c600",
+      "source_verified": true,
+      "gpt_final_decision": "OUT_OF_SCOPE",
+      "gpt_final_reason": "NON_APPLICABLE_TEMPLATE",
+      "expected_decision": "OUT_OF_SCOPE",
+      "mechanical_scope_result": {
+        "status": "OUT_OF_SCOPE",
+        "eligible": false,
+        "roles": [
+          "PROCUREMENT",
+          "COMMERCIAL"
+        ],
+        "scope_reason": "REQUIREMENT_SCOPE_NON_APPLICABLE"
+      },
+      "parity": "PASS"
+    },
+    {
+      "candidate_id": "578709bc-b5aa-4f26-bede-d11905c67173",
+      "req_id": "REQ-043",
+      "requirement_text": "投标保证金有效期同投标有效期。",
+      "source_refs": [
+        "C007-S035"
+      ],
+      "source_hash": "ace6e47b5cab2aecdfa4097c42adfc6acf1b73e9ae298afb55fa2136acbcb7aa",
+      "source_verified": true,
+      "gpt_final_decision": "OUT_OF_SCOPE",
+      "gpt_final_reason": "NON_APPLICABLE_TEMPLATE",
+      "expected_decision": "OUT_OF_SCOPE",
+      "mechanical_scope_result": {
+        "status": "OUT_OF_SCOPE",
+        "eligible": false,
+        "roles": [
+          "PROCUREMENT"
+        ],
+        "scope_reason": "REQUIREMENT_SCOPE_NON_APPLICABLE"
+      },
+      "parity": "PASS"
+    },
+    {
+      "candidate_id": "c3b2540c-ea5f-4e1a-950e-a48170450604",
+      "req_id": "REQ-049",
+      "requirement_text": "终止招标项目已经收取投标保证金的，自终止采购活动后5个工作日内退还已收取的投标保证金及其在银行产生的孳息。",
+      "source_refs": [
+        "C007-S047",
+        "C007-S048"
+      ],
+      "source_hash": "1243d2b2a3cf5c74fd91aba9bebe457a0f805524a406cab0e3976e2c7b9d6ddc",
+      "source_verified": true,
+      "gpt_final_decision": "OUT_OF_SCOPE",
+      "gpt_final_reason": "BUYER_SIDE_OBLIGATION+NON_APPLICABLE_TEMPLATE",
+      "expected_decision": "OUT_OF_SCOPE",
+      "mechanical_scope_result": {
+        "status": "OUT_OF_SCOPE",
+        "eligible": false,
+        "roles": [
+          "PROCUREMENT"
+        ],
+        "scope_reason": "REQUIREMENT_SCOPE_NON_APPLICABLE"
+      },
+      "parity": "PASS"
+    },
+    {
+      "candidate_id": "88cbc248-a16d-4971-8b68-78e395daab55",
+      "req_id": "REQ-055",
+      "requirement_text": "采购人及采购代理机构拒绝接受通过电子交易平台以外任何形式提交的投标文件，投标保证金除外。",
+      "source_refs": [
+        "C007-S066",
+        "C007-S067"
+      ],
+      "source_hash": "6e2d65e9834f8ab11011b7809022f078ba540d20e7b678946551a424c2a33db8",
+      "source_verified": true,
+      "gpt_final_decision": "IN_SCOPE",
+      "gpt_final_reason": "BID_FORMALITY_BIDDER_CONSEQUENCE",
+      "expected_decision": "IN_SCOPE",
+      "mechanical_scope_result": {
+        "status": "PASS",
+        "eligible": true,
+        "roles": [
+          "PROCUREMENT"
+        ],
+        "scope_reason": null
+      },
+      "parity": "PASS"
+    },
+    {
+      "candidate_id": "ded04d78-e8b3-4dec-af56-4a3e91cc891a",
+      "req_id": "REQ-090",
+      "requirement_text": "投标保证金（本项目不涉及）：按照招标文件的规定提交投标保证金。",
+      "source_refs": [
+        "C010-S093",
+        "C010-S094"
+      ],
+      "source_hash": "6f58ec3c3b6e1e0a4d2ff0cc74dc64905ed217d9eef866ea11f6942b03bfdb7e",
+      "source_verified": true,
+      "gpt_final_decision": "OUT_OF_SCOPE",
+      "gpt_final_reason": "EXPLICIT_NON_APPLICABLE",
+      "expected_decision": "OUT_OF_SCOPE",
+      "mechanical_scope_result": {
+        "status": "OUT_OF_SCOPE",
+        "eligible": false,
+        "roles": [
+          "PROCUREMENT"
+        ],
+        "scope_reason": "REQUIREMENT_SCOPE_NON_APPLICABLE"
+      },
+      "parity": "PASS"
+    }
+  ],
+  "parity": "5/5",
+  "final_in_scope": 1,
+  "final_out_of_scope": 4,
+  "ambiguous": 0,
+  "v3_pre_recert_final_count": 341,
+  "post_recert_final_count": 337,
+  "removed_non_applicable": 4,
+  "retained_bid_formality": 1,
+  "source_verified_rate": 1,
+  "source_lineage_complete_rate": 1,
+  "auto_authority_persistence": false,
+  "production_db_writes": 0,
+  "provider_calls": 0
+}

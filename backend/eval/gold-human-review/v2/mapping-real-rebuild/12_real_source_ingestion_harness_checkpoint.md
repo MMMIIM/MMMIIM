@@ -1,0 +1,42 @@
+# V43_MAPPING_REAL_GOLD_MULTI_TENDER_SOURCE_FOUNDATION_CHECKPOINT
+
+- generated_at: 2026-09-04T04:57:25.879Z
+- real_requirement_tender_count: 3
+- real_requirement_source_count: 198
+- target_tender_count: 6
+- authoritative_packet_tender_count: 3
+- tender_ids: ["JY-001","TB-003","TB-006","FAST-01","FAST-04","FAST-WATER-01"]
+- authoritative_packet_tender_ids: ["TB-006","FAST-01","FAST-WATER-01"]
+- missing_authoritative_packet_tenders: ["JY-001","TB-003","FAST-04"]
+- requirement_category_distribution: {"acceptance":11,"constraint":14,"data":4,"delivery":10,"implementation":27,"performance":23,"security":16,"service":86,"technical":7}
+- cross_tender_theme_distribution: {"system/application capability":{"requirement_count":7,"tender_ids":["TB-006"]},"system integration / API":{"requirement_count":0,"tender_ids":[]},"data management / governance":{"requirement_count":4,"tender_ids":["FAST-01","TB-006"]},"deployment / environment":{"requirement_count":0,"tender_ids":[]},"identity / access control":{"requirement_count":0,"tender_ids":[]},"security":{"requirement_count":16,"tender_ids":["FAST-01","FAST-WATER-01","TB-006"]},"logging / audit":{"requirement_count":0,"tender_ids":[]},"monitoring / alerting":{"requirement_count":0,"tender_ids":[]},"backup / recovery":{"requirement_count":0,"tender_ids":[]},"availability / scalability":{"requirement_count":0,"tender_ids":[]},"performance / capacity":{"requirement_count":23,"tender_ids":["FAST-01","FAST-WATER-01","TB-006"]},"operations / maintenance":{"requirement_count":0,"tender_ids":[]},"implementation / delivery":{"requirement_count":51,"tender_ids":["FAST-01","FAST-WATER-01","TB-006"]},"project service resources":{"requirement_count":0,"tender_ids":[]},"training / knowledge transfer":{"requirement_count":0,"tender_ids":[]},"testing / acceptance":{"requirement_count":11,"tender_ids":["FAST-WATER-01","TB-006"]},"service / support / SLA":{"requirement_count":86,"tender_ids":["FAST-01","FAST-WATER-01","TB-006"]},"project experience / cases":{"requirement_count":0,"tender_ids":[]},"industry-specific capability":{"requirement_count":0,"tender_ids":[]}}
+- requirement_source_identity_gate: PASS
+- six_tender_source_parity: FAIL_MISSING_AUTHORITATIVE_PACKETS
+- requirement_source_verification_gate: BLOCKED_FOR_MISSING_AUTHORITATIVE_PACKETS
+- synthetic_requirement_leakage: 0
+- unknown_source_count_before: 2
+- unknown_source_count_after: 2
+- unknown_source_resolution: UNKNOWN_REVIEW_REQUIRED retained; source_type and provenance absent; no unsafe promotion
+- real_enterprise_source_import_harness: PASS (Eval-only, non-persistent plan; production import remains CompanyMaterialService)
+- enterprise_isolation_gate: PASS
+- source_snapshot_hash_gate: PASS
+- source_mutation_versioning_gate: PASS
+- synthetic_source_rejection_gate: PASS
+- quarantined_source_rejection_gate: PASS
+- fact_auto_creation_count: 0
+- mapping_creation_count: 0
+- claim_creation_count: 0
+- active_gold_changed: 0
+- production_files_changed: 0
+- db_writes: 0
+- provider_calls: 0
+- dify_calls: 0
+- focused_tests: PENDING
+- backend_test_delta: PENDING
+- frontend: PENDING
+- build: PENDING
+- lint: PENDING
+- git_diff_check: PENDING
+- output_files: ["07_real_requirement_source_universe_v2.json","07_real_requirement_source_universe_v2.md","08_requirement_cross_tender_coverage.json","08_requirement_cross_tender_coverage.md","09_unknown_source_role_resolution.md","10_real_enterprise_source_import_contract.md","11_real_enterprise_source_candidate_manifest.json","12_real_source_ingestion_harness_checkpoint.md","12_real_source_ingestion_harness_checkpoint.json"]
+- semantic_promotion_status: BLOCKED_BY_AUTHORITATIVE_ARTIFACT_DRIFT
+- final_verdict: REAL_MAPPING_GOLD_SOURCE_FOUNDATION_READY

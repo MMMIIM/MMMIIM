@@ -1,0 +1,19 @@
+{
+  "artifact_type": "V43_TARGETED_FACT_HOST_REPLAY_V2_PROVIDER_FAILURE_DIAGNOSTIC",
+  "run_id": "v43-targeted-fact-host-replay-v2-20260914124306-source-gate",
+  "status": "NO_PROVIDER_CALLS_SOURCE_GATE",
+  "provider_calls": 0,
+  "failures": [
+    {
+      "stage": "SOURCE_IDENTITY_GATE",
+      "chunk_id": "MCH-586AF54E29E13328B1D105D03FF08957",
+      "error_code": "SOURCE_IDENTITY_GATE_FAILED",
+      "failure_codes": [
+        "SOURCE_MATERIAL_ID_MISMATCH"
+      ],
+      "expected_material_id": "2f84fdcc-4f27-4fc6-91a4-746d8a11a6a7",
+      "actual_material_id": "da4b0715-9d47-4853-ab2f-df5eee22c597"
+    }
+  ],
+  "hard_gate": "BLOCKED_SOURCE_IDENTITY"
+}

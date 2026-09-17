@@ -1,0 +1,37 @@
+{
+  "artifact_type": "V43_CASE_01_REGRESSION_REPORT",
+  "new_task_regressions": 0,
+  "focused_tests": {
+    "command": "npm test -- test/requirement-resilience.test.js test/requirement-chunker-v2.test.js test/requirement-extraction-contract-owner.test.js test/requirement-extraction-live-harness.test.js test/requirement-evaluation-integrity.test.js test/requirement-quality-gate.test.js test/requirement-production-quality-gate.test.js test/requirement-production-readiness-recovery.test.js test/requirement-source-provenance.test.js test/tender-parse.test.js",
+    "passed": 128,
+    "failed": 0,
+    "status": "PASS"
+  },
+  "isolated_postgresql": {
+    "status": "PASS",
+    "passed": 27,
+    "failed": 0,
+    "database": "bid_platform_flow_audit_test",
+    "writes_scoped_to_isolated_eval_db": true
+  },
+  "build": "PASS (existing overnight verification)",
+  "lint": "PASS (existing overnight verification)",
+  "diff_check": "PASS_WITH_LINE_ENDING_WARNINGS_ONLY (existing overnight verification)",
+  "known_unrelated_baselines": [
+    {
+      "test": "frozen 199 Gold requirements retain an eligible or unknown source span after routing",
+      "family": "PATH_FIXTURE_AVAILABILITY",
+      "signature": "ENOENT backend/backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json",
+      "classification": "PRE_EXISTING_UNRELATED_BASELINE"
+    },
+    {
+      "test": "requirement source parity",
+      "family": "FIXTURE_COVERAGE",
+      "signature": "existing 5/6 or 5/7 source parity baseline",
+      "classification": "PRE_EXISTING_UNRELATED_BASELINE"
+    }
+  ],
+  "provider_calls_for_regression": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0
+}

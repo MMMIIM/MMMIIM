@@ -1,0 +1,1145 @@
+{
+  "artifact_type": "V43_REFERENCE_FAIL_QUIET_DECISION_PACKET_V1",
+  "status": "READY_FOR_GPT_REFERENCE_FAIL_QUIET_FINAL_DECISION",
+  "scope": "REQUIREMENT_LEVEL_REFERENCE_RETRIEVAL_EVAL",
+  "no_execution": {
+    "provider_calls": 0,
+    "embedding_calls": 0,
+    "llm_calls": 0,
+    "db_writes": 0,
+    "production_changes": 0,
+    "router_changes": 0,
+    "corpus_ingestion": 0,
+    "mmr": 0,
+    "hybrid_bm25_reranker": 0,
+    "commit": 0,
+    "push": 0,
+    "merge": 0,
+    "deploy": 0
+  },
+  "authority": {
+    "gpt_r1_labels": true,
+    "codex_semantic_relabeling": false,
+    "semantic_root_cause": "PENDING_GPT",
+    "writer_reference_product_fidelity": "NOT_ESTABLISHED"
+  },
+  "source_artifacts": [
+    {
+      "path": "docs/handoff/V43_REFERENCE_RAG_SEMANTIC_ADJUDICATION_AND_FAILURE_DECOMPOSITION_V1/06_RANKING_FAILURE_FORENSICS.json",
+      "sha256": "3135c263e9fa6641b952d1e8aa8f23fe0992df905b4fd58923d82b5633d7fe26"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_RAG_SEMANTIC_ADJUDICATION_AND_FAILURE_DECOMPOSITION_V1/08_CORPUS_COVERAGE_DEBT.json",
+      "sha256": "549e66d21460e586bf15709aac45b2e0a4222120cc4969afba3811e9c6c91020"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_RAG_SEMANTIC_ADJUDICATION_AND_FAILURE_DECOMPOSITION_V1/09_GENERIC_CHUNK_CONCENTRATION.json",
+      "sha256": "99c980a3943481106a2a8b8d8e68cf1d69e5417848597609ade5b4f7cc5c077c"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_RAG_SEMANTIC_ADJUDICATION_AND_FAILURE_DECOMPOSITION_V1/10_SIMILARITY_FAIL_QUIET_SWEEP.json",
+      "sha256": "f4b9689c202c76c135c6cffe0e069f3fcf45f17c768d68e246658e6d277c712f"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_RAG_SEMANTIC_ADJUDICATION_AND_FAILURE_DECOMPOSITION_V1/11_DOMAIN_AFFINITY_OFFLINE_ANALYSIS.json",
+      "sha256": "0f380de910c3aae86d445b32994dbcec4137608496ae6adbef35a8be315e4885"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_RAG_SEMANTIC_ADJUDICATION_AND_FAILURE_DECOMPOSITION_V1/12_RAW80_VS_ADJUSTED74_METRICS.json",
+      "sha256": "762e454cf39c948fd67f6fcc873eb1f7ae3ef2145e78755e6eda8190c6a204a6"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_RAG_SEMANTIC_ADJUDICATION_AND_FAILURE_DECOMPOSITION_V1/01_GPT_R1_SEMANTIC_ADJUDICATION.json",
+      "sha256": "c50f7e647438e15a635a91ba01a2977ffb20fc247db863aa1558b70319ea00f9"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_RAG_SEMANTIC_ADJUDICATION_AND_FAILURE_DECOMPOSITION_V1/05_R1_OFFLINE_REPLAY.json",
+      "sha256": "ab393c8b5f2d3aa31b8645992deb94fd662894e1a8d714d8549d0b49bd162852"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_RAG_SEMANTIC_ADJUDICATION_AND_FAILURE_DECOMPOSITION_V1/15_CHECKPOINT.json",
+      "sha256": "4ca5bf57aa05778ad1805d0cb958507639c00fb1fa024401f284fa55bbbf9b7f"
+    }
+  ],
+  "r1_label_summary": {
+    "PARTIAL": 37,
+    "NOT_USEFUL": 31,
+    "USEFUL": 12
+  },
+  "fail_quiet_threshold_table": {
+    "tested_rows": [
+      {
+        "threshold": 0.45,
+        "total_retained_references": 252,
+        "total_retained_cases": 72,
+        "useful_cases_retained": 11,
+        "useful_retention_pct": 91.67,
+        "partial_cases_retained": 36,
+        "partial_retention_pct": 97.3,
+        "not_useful_cases_retained": 25,
+        "not_useful_rejection_pct": 19.35,
+        "zero_reference_case_count": 8,
+        "zero_reference_rate_pct": 10,
+        "derivation": "Existing R1 similarity scores only; no retrieval rerun and no threshold deployed."
+      },
+      {
+        "threshold": 0.48,
+        "total_retained_references": 211,
+        "total_retained_cases": 63,
+        "useful_cases_retained": 10,
+        "useful_retention_pct": 83.33,
+        "partial_cases_retained": 31,
+        "partial_retention_pct": 83.78,
+        "not_useful_cases_retained": 22,
+        "not_useful_rejection_pct": 29.03,
+        "zero_reference_case_count": 17,
+        "zero_reference_rate_pct": 21.25,
+        "derivation": "Existing R1 similarity scores only; no retrieval rerun and no threshold deployed."
+      },
+      {
+        "threshold": 0.5,
+        "total_retained_references": 170,
+        "total_retained_cases": 57,
+        "useful_cases_retained": 10,
+        "useful_retention_pct": 83.33,
+        "partial_cases_retained": 29,
+        "partial_retention_pct": 78.38,
+        "not_useful_cases_retained": 18,
+        "not_useful_rejection_pct": 41.94,
+        "zero_reference_case_count": 23,
+        "zero_reference_rate_pct": 28.75,
+        "derivation": "Existing R1 similarity scores only; no retrieval rerun and no threshold deployed."
+      },
+      {
+        "threshold": 0.52,
+        "total_retained_references": 132,
+        "total_retained_cases": 47,
+        "useful_cases_retained": 10,
+        "useful_retention_pct": 83.33,
+        "partial_cases_retained": 24,
+        "partial_retention_pct": 64.86,
+        "not_useful_cases_retained": 13,
+        "not_useful_rejection_pct": 58.06,
+        "zero_reference_case_count": 33,
+        "zero_reference_rate_pct": 41.25,
+        "derivation": "Existing R1 similarity scores only; no retrieval rerun and no threshold deployed."
+      },
+      {
+        "threshold": 0.54,
+        "total_retained_references": 103,
+        "total_retained_cases": 42,
+        "useful_cases_retained": 10,
+        "useful_retention_pct": 83.33,
+        "partial_cases_retained": 21,
+        "partial_retention_pct": 56.76,
+        "not_useful_cases_retained": 11,
+        "not_useful_rejection_pct": 64.52,
+        "zero_reference_case_count": 38,
+        "zero_reference_rate_pct": 47.5,
+        "derivation": "Existing R1 similarity scores only; no retrieval rerun and no threshold deployed."
+      },
+      {
+        "threshold": 0.56,
+        "total_retained_references": 74,
+        "total_retained_cases": 33,
+        "useful_cases_retained": 9,
+        "useful_retention_pct": 75,
+        "partial_cases_retained": 17,
+        "partial_retention_pct": 45.95,
+        "not_useful_cases_retained": 7,
+        "not_useful_rejection_pct": 77.42,
+        "zero_reference_case_count": 47,
+        "zero_reference_rate_pct": 58.75,
+        "derivation": "Existing R1 similarity scores only; no retrieval rerun and no threshold deployed."
+      },
+      {
+        "threshold": 0.58,
+        "total_retained_references": 40,
+        "total_retained_cases": 26,
+        "useful_cases_retained": 8,
+        "useful_retention_pct": 66.67,
+        "partial_cases_retained": 14,
+        "partial_retention_pct": 37.84,
+        "not_useful_cases_retained": 4,
+        "not_useful_rejection_pct": 87.1,
+        "zero_reference_case_count": 54,
+        "zero_reference_rate_pct": 67.5,
+        "derivation": "Existing R1 similarity scores only; no retrieval rerun and no threshold deployed."
+      },
+      {
+        "threshold": 0.6,
+        "total_retained_references": 24,
+        "total_retained_cases": 15,
+        "useful_cases_retained": 4,
+        "useful_retention_pct": 33.33,
+        "partial_cases_retained": 7,
+        "partial_retention_pct": 18.92,
+        "not_useful_cases_retained": 4,
+        "not_useful_rejection_pct": 87.1,
+        "zero_reference_case_count": 65,
+        "zero_reference_rate_pct": 81.25,
+        "derivation": "Existing R1 similarity scores only; no retrieval rerun and no threshold deployed."
+      },
+      {
+        "threshold": 0.62,
+        "total_retained_references": 16,
+        "total_retained_cases": 11,
+        "useful_cases_retained": 4,
+        "useful_retention_pct": 33.33,
+        "partial_cases_retained": 5,
+        "partial_retention_pct": 13.51,
+        "not_useful_cases_retained": 2,
+        "not_useful_rejection_pct": 93.55,
+        "zero_reference_case_count": 69,
+        "zero_reference_rate_pct": 86.25,
+        "derivation": "Existing R1 similarity scores only; no retrieval rerun and no threshold deployed."
+      },
+      {
+        "threshold": 0.65,
+        "total_retained_references": 7,
+        "total_retained_cases": 6,
+        "useful_cases_retained": 4,
+        "useful_retention_pct": 33.33,
+        "partial_cases_retained": 2,
+        "partial_retention_pct": 5.41,
+        "not_useful_cases_retained": 0,
+        "not_useful_rejection_pct": 100,
+        "zero_reference_case_count": 74,
+        "zero_reference_rate_pct": 92.5,
+        "derivation": "Existing R1 similarity scores only; no retrieval rerun and no threshold deployed."
+      }
+    ],
+    "candidate_thresholds": [
+      {
+        "purpose": "CONSERVATIVE_QUALITY",
+        "candidate_threshold": 0.65,
+        "evidence_row": {
+          "threshold": 0.65,
+          "total_retained_references": 7,
+          "total_retained_cases": 6,
+          "useful_cases_retained": 4,
+          "useful_retention_pct": 33.33,
+          "partial_cases_retained": 2,
+          "partial_retention_pct": 5.41,
+          "not_useful_cases_retained": 0,
+          "not_useful_rejection_pct": 100,
+          "zero_reference_case_count": 74,
+          "zero_reference_rate_pct": 92.5,
+          "derivation": "Existing R1 similarity scores only; no retrieval rerun and no threshold deployed."
+        },
+        "selection_status": "NOT_SELECTED",
+        "basis": "Maximum NOT_USEFUL rejection in the tested table; candidate only.",
+        "production_deployment": false
+      },
+      {
+        "purpose": "BALANCED",
+        "candidate_threshold": 0.58,
+        "evidence_row": {
+          "threshold": 0.58,
+          "total_retained_references": 40,
+          "total_retained_cases": 26,
+          "useful_cases_retained": 8,
+          "useful_retention_pct": 66.67,
+          "partial_cases_retained": 14,
+          "partial_retention_pct": 37.84,
+          "not_useful_cases_retained": 4,
+          "not_useful_rejection_pct": 87.1,
+          "zero_reference_case_count": 54,
+          "zero_reference_rate_pct": 67.5,
+          "derivation": "Existing R1 similarity scores only; no retrieval rerun and no threshold deployed."
+        },
+        "selection_status": "NOT_SELECTED",
+        "basis": "Maximum product of USEFUL retention and NOT_USEFUL rejection among tested rows; candidate only.",
+        "production_deployment": false
+      },
+      {
+        "purpose": "RECALL_PRESERVING",
+        "candidate_threshold": 0.45,
+        "evidence_row": {
+          "threshold": 0.45,
+          "total_retained_references": 252,
+          "total_retained_cases": 72,
+          "useful_cases_retained": 11,
+          "useful_retention_pct": 91.67,
+          "partial_cases_retained": 36,
+          "partial_retention_pct": 97.3,
+          "not_useful_cases_retained": 25,
+          "not_useful_rejection_pct": 19.35,
+          "zero_reference_case_count": 8,
+          "zero_reference_rate_pct": 10,
+          "derivation": "Existing R1 similarity scores only; no retrieval rerun and no threshold deployed."
+        },
+        "selection_status": "NOT_SELECTED",
+        "basis": "Maximum USEFUL retention, then lowest tested threshold; candidate only.",
+        "production_deployment": false
+      }
+    ],
+    "final_strategy_selection": "PENDING_GPT"
+  },
+  "label_score_distribution": {
+    "USEFUL": {
+      "reference_count": 48,
+      "case_count": 12,
+      "min": 0.365923,
+      "p25": 0.509297,
+      "median": 0.560977,
+      "p75": 0.585344,
+      "max": 0.706659
+    },
+    "PARTIAL": {
+      "reference_count": 148,
+      "case_count": 37,
+      "min": 0.392376,
+      "p25": 0.477507,
+      "median": 0.510084,
+      "p75": 0.553474,
+      "max": 0.685602
+    },
+    "NOT_USEFUL": {
+      "reference_count": 105,
+      "case_count": 31,
+      "min": 0.349007,
+      "p25": 0.450949,
+      "median": 0.491509,
+      "p75": 0.528468,
+      "max": 0.64345
+    }
+  },
+  "ranking_failure_summary": {
+    "classification_authority": "MECHANICAL_PROPOSAL_ONLY",
+    "semantic_relabeling": false,
+    "counts": {
+      "SELECTOR_RANKING_FAILURE": 3,
+      "DENSE_RETRIEVAL_CANDIDATE_FAILURE": 3,
+      "CORPUS_GAP": 1
+    },
+    "cases": [
+      {
+        "case_id": "RAG-JY-001-JY-001-REQ-120",
+        "requirement_id": "JY-001:REQ-120",
+        "tender_id": "JY-001",
+        "classification": "SELECTOR_RANKING_FAILURE",
+        "mechanical_classification_proposal": "A_SELECTOR_OR_RANKING_FAILURE",
+        "best_relevant_candidate_rank": null,
+        "best_relevant_similarity": null,
+        "relevance_evidence": "No GPT-confirmed relevant-candidate marker exists in the mechanical artifact; values intentionally remain null.",
+        "selected_final_references": [
+          {
+            "chunk_id": "MCH-B253B26AAA7C6827B20603BF72122990",
+            "material_id": "7821ed9b-ec17-4a63-bd7d-fea5ff670bf7",
+            "original_name": "GOV-04_政务云、信创与基础环境适配.md",
+            "similarity_score": 0.5499401360785889,
+            "source_text": "政务项目常涉及云资源、国产OS/数据库和基础软件；兼容结论需实测。"
+          },
+          {
+            "chunk_id": "MCH-85128F1140026803AD6C33E6571EE7A2",
+            "material_id": "6b0456ff-0a60-4214-9811-c225fc78e942",
+            "original_name": "MED-01_医院信息化总体建设框架.md",
+            "similarity_score": 0.5362625558298086,
+            "source_text": "统筹临床业务、医院管理、数据平台、基础设施、安全与便民服务。"
+          },
+          {
+            "chunk_id": "MCH-174C92129DB9CE352576FE1A58BC82D8",
+            "material_id": "d8b8c2f7-9a51-4eb3-a91c-61b141a97748",
+            "original_name": "UNI-16_AI、知识库与智能体通用边界.md",
+            "similarity_score": 0.5143102679889924,
+            "source_text": "模型输入、知识库和工具调用仍受数据安全、个人信息与最小权限约束。"
+          },
+          {
+            "chunk_id": "MCH-DDBD9CC1FD72A8EB6E028B446E01EA08",
+            "material_id": "2b056228-38f8-4868-bbed-06ba8b0bad15",
+            "original_name": "GOV-05_政务服务、门户与多端应用.md",
+            "similarity_score": 0.5013995766639745,
+            "source_text": "统一门户、事项服务、内容运营、移动端与业务协同是常见场景。"
+          }
+        ],
+        "one_line_reason": "LOW_MECHANICAL_SIGNAL_ONLY; Rows are shown for GPT inspection; no semantic relevance was frozen by Codex.",
+        "semantic_root_cause": "PENDING_GPT"
+      },
+      {
+        "case_id": "RAG-JY-001-JY-001-REQ-047",
+        "requirement_id": "JY-001:REQ-047",
+        "tender_id": "JY-001",
+        "classification": "DENSE_RETRIEVAL_CANDIDATE_FAILURE",
+        "mechanical_classification_proposal": "B_DENSE_RETRIEVAL_CANDIDATE_FAILURE_PROPOSAL",
+        "best_relevant_candidate_rank": null,
+        "best_relevant_similarity": null,
+        "relevance_evidence": "No GPT-confirmed relevant-candidate marker exists in the mechanical artifact; values intentionally remain null.",
+        "selected_final_references": [
+          {
+            "chunk_id": "MCH-B253B26AAA7C6827B20603BF72122990",
+            "material_id": "7821ed9b-ec17-4a63-bd7d-fea5ff670bf7",
+            "original_name": "GOV-04_政务云、信创与基础环境适配.md",
+            "similarity_score": 0.5437443580475076,
+            "source_text": "政务项目常涉及云资源、国产OS/数据库和基础软件；兼容结论需实测。"
+          },
+          {
+            "chunk_id": "MCH-B503203771D75B916D37433B14966870",
+            "material_id": "3f2e8318-e8fc-4491-9320-5620bb90d381",
+            "original_name": "MED-06_医院智慧管理.md",
+            "similarity_score": 0.5144431591033972,
+            "source_text": "关注信息化对精细化、智能化管理的功能和效果。"
+          },
+          {
+            "chunk_id": "MCH-A59653E7AC20F3012EA3A139E51FB645",
+            "material_id": "ff5abe48-c358-4bcb-b2c7-e54b8eeffe10",
+            "original_name": "UNI-02_政务信息化项目建设与治理.md",
+            "similarity_score": 0.49936279658301697,
+            "source_text": "强调统筹规划、共建共享、业务协同、安全可靠和应用绩效。"
+          },
+          {
+            "chunk_id": "MCH-85128F1140026803AD6C33E6571EE7A2",
+            "material_id": "6b0456ff-0a60-4214-9811-c225fc78e942",
+            "original_name": "MED-01_医院信息化总体建设框架.md",
+            "similarity_score": 0.4855025844725299,
+            "source_text": "统筹临床业务、医院管理、数据平台、基础设施、安全与便民服务。"
+          }
+        ],
+        "one_line_reason": "LOW_MECHANICAL_SIGNAL_ONLY; Rows are shown for GPT inspection; no semantic relevance was frozen by Codex.",
+        "semantic_root_cause": "PENDING_GPT"
+      },
+      {
+        "case_id": "RAG-TB-003-TB-003-REQ-114",
+        "requirement_id": "TB-003:REQ-114",
+        "tender_id": "TB-003",
+        "classification": "DENSE_RETRIEVAL_CANDIDATE_FAILURE",
+        "mechanical_classification_proposal": "B_DENSE_RETRIEVAL_CANDIDATE_FAILURE_PROPOSAL",
+        "best_relevant_candidate_rank": null,
+        "best_relevant_similarity": null,
+        "relevance_evidence": "No GPT-confirmed relevant-candidate marker exists in the mechanical artifact; values intentionally remain null.",
+        "selected_final_references": [
+          {
+            "chunk_id": "MCH-931A0AFF234FFA52143DACBFC2E7E0B2",
+            "material_id": "f367e088-988d-4db8-85ff-54f2f0685463",
+            "original_name": "MED-05_医院智慧服务.md",
+            "similarity_score": 0.5087408878273568,
+            "source_text": "> 官方资料结构化摘要。正式投标与合规判断需回到原始法律、标准、政策或项目文件核验。"
+          }
+        ],
+        "one_line_reason": "LOW_MECHANICAL_SIGNAL_ONLY; Rows are shown for GPT inspection; no semantic relevance was frozen by Codex.",
+        "semantic_root_cause": "PENDING_GPT"
+      },
+      {
+        "case_id": "RAG-TB-003-TB-003-REQ-117",
+        "requirement_id": "TB-003:REQ-117",
+        "tender_id": "TB-003",
+        "classification": "CORPUS_GAP",
+        "mechanical_classification_proposal": "C_CORPUS_GAP_PROPOSAL",
+        "best_relevant_candidate_rank": null,
+        "best_relevant_similarity": null,
+        "relevance_evidence": "No GPT-confirmed relevant-candidate marker exists in the mechanical artifact; values intentionally remain null.",
+        "selected_final_references": [
+          {
+            "chunk_id": "MCH-B253B26AAA7C6827B20603BF72122990",
+            "material_id": "7821ed9b-ec17-4a63-bd7d-fea5ff670bf7",
+            "original_name": "GOV-04_政务云、信创与基础环境适配.md",
+            "similarity_score": 0.5679687261581421,
+            "source_text": "政务项目常涉及云资源、国产OS/数据库和基础软件；兼容结论需实测。"
+          },
+          {
+            "chunk_id": "MCH-ED62D1C7221B6E575CA1CB0FBF2AF371",
+            "material_id": "da0524ff-46a1-4266-a1f7-29ffcd3545ae",
+            "original_name": "UNI-01_采购需求、评分与验收边界.md",
+            "similarity_score": 0.5668983459472656,
+            "source_text": "技术服务、履约能力、售后、业绩、人员等评分内容应能关联方案或证明材料，不能只存宣传话术。"
+          },
+          {
+            "chunk_id": "MCH-931A0AFF234FFA52143DACBFC2E7E0B2",
+            "material_id": "f367e088-988d-4db8-85ff-54f2f0685463",
+            "original_name": "MED-05_医院智慧服务.md",
+            "similarity_score": 0.558161232361868,
+            "source_text": "> 官方资料结构化摘要。正式投标与合规判断需回到原始法律、标准、政策或项目文件核验。"
+          }
+        ],
+        "one_line_reason": "LOW_MECHANICAL_SIGNAL_ONLY; Rows are shown for GPT inspection; no semantic relevance was frozen by Codex.",
+        "semantic_root_cause": "PENDING_GPT"
+      },
+      {
+        "case_id": "RAG-TB-003-TB-003-REQ-058",
+        "requirement_id": "TB-003:REQ-058",
+        "tender_id": "TB-003",
+        "classification": "DENSE_RETRIEVAL_CANDIDATE_FAILURE",
+        "mechanical_classification_proposal": "B_DENSE_RETRIEVAL_CANDIDATE_FAILURE_PROPOSAL",
+        "best_relevant_candidate_rank": null,
+        "best_relevant_similarity": null,
+        "relevance_evidence": "No GPT-confirmed relevant-candidate marker exists in the mechanical artifact; values intentionally remain null.",
+        "selected_final_references": [
+          {
+            "chunk_id": "MCH-DD56ED64048D4F4B8D9DE544B89FF57F",
+            "material_id": "da0524ff-46a1-4266-a1f7-29ffcd3545ae",
+            "original_name": "UNI-01_采购需求、评分与验收边界.md",
+            "similarity_score": 0.6371819160689077,
+            "source_text": "需求应围绕项目目标明确技术与商务要求；方案类需求应尽可能转为客观、可核验的功能、场景、质量、交付和服务条件。"
+          },
+          {
+            "chunk_id": "MCH-ED62D1C7221B6E575CA1CB0FBF2AF371",
+            "material_id": "da0524ff-46a1-4266-a1f7-29ffcd3545ae",
+            "original_name": "UNI-01_采购需求、评分与验收边界.md",
+            "similarity_score": 0.5944182631026674,
+            "source_text": "技术服务、履约能力、售后、业绩、人员等评分内容应能关联方案或证明材料，不能只存宣传话术。"
+          },
+          {
+            "chunk_id": "MCH-9E4035F3C22B901F93CF72A3E9CA3E90",
+            "material_id": "f2ee34ca-8fd8-4c40-b532-9af049d73139",
+            "original_name": "UNI-15_业绩、资质与可核验证明.md",
+            "similarity_score": 0.5726932628567981,
+            "source_text": "类似业绩宜关联合同、范围、时间与验收。"
+          },
+          {
+            "chunk_id": "MCH-92AB6373B2C3EF33CC01B4997A6D9B0E",
+            "material_id": "5855cce7-1c58-4315-a00e-58ae871af01b",
+            "original_name": "MED-10_医院项目实施、培训与运维.md",
+            "similarity_score": 0.5457514253706599,
+            "source_text": "关注科室调研、接口、数据准备、培训、试运行、上线与跨厂商运维。"
+          }
+        ],
+        "one_line_reason": "LOW_MECHANICAL_SIGNAL_ONLY; Rows are shown for GPT inspection; no semantic relevance was frozen by Codex.",
+        "semantic_root_cause": "PENDING_GPT"
+      },
+      {
+        "case_id": "RAG-TB-006-TB-006-REQ-023",
+        "requirement_id": "TB-006:REQ-023",
+        "tender_id": "TB-006",
+        "classification": "SELECTOR_RANKING_FAILURE",
+        "mechanical_classification_proposal": "A_SELECTOR_OR_RANKING_FAILURE",
+        "best_relevant_candidate_rank": null,
+        "best_relevant_similarity": null,
+        "relevance_evidence": "No GPT-confirmed relevant-candidate marker exists in the mechanical artifact; values intentionally remain null.",
+        "selected_final_references": [
+          {
+            "chunk_id": "MCH-B253B26AAA7C6827B20603BF72122990",
+            "material_id": "7821ed9b-ec17-4a63-bd7d-fea5ff670bf7",
+            "original_name": "GOV-04_政务云、信创与基础环境适配.md",
+            "similarity_score": 0.6097681885819558,
+            "source_text": "政务项目常涉及云资源、国产OS/数据库和基础软件；兼容结论需实测。"
+          },
+          {
+            "chunk_id": "MCH-E8D4D1A62F977C40749BF807B0DB145A",
+            "material_id": "014434eb-0d82-423f-aa8b-676d30af0182",
+            "original_name": "MED-02_电子病历功能与应用水平.md",
+            "similarity_score": 0.5375811137210745,
+            "source_text": "关注采集、存储、访问、共享、安全以及应用水平。"
+          },
+          {
+            "chunk_id": "MCH-9A9CC259033F3BF46CBD60D32FD171BA",
+            "material_id": "434265bb-f3e6-4341-9a5d-57546997ae68",
+            "original_name": "GOV-01_政务信息化项目全生命周期管理.md",
+            "similarity_score": 0.5355937800165294,
+            "source_text": "政务信息化强调统筹、共享、协同、安全、绩效和全生命周期治理。"
+          },
+          {
+            "chunk_id": "MCH-8E137FA33BE2D473E632D5F90C778200",
+            "material_id": "014434eb-0d82-423f-aa8b-676d30af0182",
+            "original_name": "MED-02_电子病历功能与应用水平.md",
+            "similarity_score": 0.5353901864937117,
+            "source_text": "试行评价体系需持续核验最新规则。"
+          }
+        ],
+        "one_line_reason": "LOW_MECHANICAL_SIGNAL_ONLY; Rows are shown for GPT inspection; no semantic relevance was frozen by Codex.",
+        "semantic_root_cause": "PENDING_GPT"
+      },
+      {
+        "case_id": "RAG-FAST-04-FAST-04-REQ-353",
+        "requirement_id": "FAST-04:REQ-353",
+        "tender_id": "FAST-04",
+        "classification": "SELECTOR_RANKING_FAILURE",
+        "mechanical_classification_proposal": "A_SELECTOR_OR_RANKING_FAILURE",
+        "best_relevant_candidate_rank": null,
+        "best_relevant_similarity": null,
+        "relevance_evidence": "No GPT-confirmed relevant-candidate marker exists in the mechanical artifact; values intentionally remain null.",
+        "selected_final_references": [
+          {
+            "chunk_id": "MCH-DD56ED64048D4F4B8D9DE544B89FF57F",
+            "material_id": "da0524ff-46a1-4266-a1f7-29ffcd3545ae",
+            "original_name": "UNI-01_采购需求、评分与验收边界.md",
+            "similarity_score": 0.6698532104492188,
+            "source_text": "需求应围绕项目目标明确技术与商务要求；方案类需求应尽可能转为客观、可核验的功能、场景、质量、交付和服务条件。"
+          },
+          {
+            "chunk_id": "MCH-ED62D1C7221B6E575CA1CB0FBF2AF371",
+            "material_id": "da0524ff-46a1-4266-a1f7-29ffcd3545ae",
+            "original_name": "UNI-01_采购需求、评分与验收边界.md",
+            "similarity_score": 0.6278613209724426,
+            "source_text": "技术服务、履约能力、售后、业绩、人员等评分内容应能关联方案或证明材料，不能只存宣传话术。"
+          },
+          {
+            "chunk_id": "MCH-D777B9C5D21E6831B82DFE906621CFD9",
+            "material_id": "60da053c-c356-49ca-93ac-c8418bf9d798",
+            "original_name": "GOV-08_政务采购证明材料组织.md",
+            "similarity_score": 0.553606715583402,
+            "source_text": "方案、服务、业绩、人员、资质与证明材料应建立对应关系，避免只存宣传册。"
+          },
+          {
+            "chunk_id": "MCH-3763FB1D7E2A78C402D08EEE11C4CBB2",
+            "material_id": "ff5abe48-c358-4bcb-b2c7-e54b8eeffe10",
+            "original_name": "UNI-02_政务信息化项目建设与治理.md",
+            "similarity_score": 0.5419949566128885,
+            "source_text": "应覆盖总体方案、范围、架构、计划、风险、验收、运行和绩效材料。"
+          }
+        ],
+        "one_line_reason": "LOW_MECHANICAL_SIGNAL_ONLY; Rows are shown for GPT inspection; no semantic relevance was frozen by Codex.",
+        "semantic_root_cause": "PENDING_GPT"
+      }
+    ]
+  },
+  "corpus_gap_priority": [
+    {
+      "topic_family": "video_ar_surveillance",
+      "affected_case_count": 7,
+      "not_useful_count": 7,
+      "partial_count": 0,
+      "tender_count": 1,
+      "tenders": [
+        "JY-001"
+      ],
+      "classification": "CORPUS_EXISTS_BUT_TOO_GENERIC",
+      "classification_evidence": "Persisted R1 candidate rows exist; weakness is represented by GPT WEAK_CORPUS/PARTIAL_WEAK_CORPUS labels in the source cases.",
+      "observed_candidate_material_count": 15,
+      "observed_candidate_chunk_count": 16,
+      "current_relevant_material_chunk_availability": {
+        "candidate_rows_present": true,
+        "candidate_row_count": 28,
+        "semantic_relevance": "NOT_ASSESSED_BY_CODEX"
+      },
+      "source_case_count": 7,
+      "no_new_ingestion": true
+    },
+    {
+      "topic_family": "unclassified_from_available_text",
+      "affected_case_count": 6,
+      "not_useful_count": 6,
+      "partial_count": 0,
+      "tender_count": 4,
+      "tenders": [
+        "FAST-04",
+        "FAST-WATER-01",
+        "JY-001",
+        "TB-003"
+      ],
+      "classification": "CORPUS_EXISTS_BUT_TOO_GENERIC",
+      "classification_evidence": "Persisted R1 candidate rows exist; weakness is represented by GPT WEAK_CORPUS/PARTIAL_WEAK_CORPUS labels in the source cases.",
+      "observed_candidate_material_count": 14,
+      "observed_candidate_chunk_count": 17,
+      "current_relevant_material_chunk_availability": {
+        "candidate_rows_present": true,
+        "candidate_row_count": 24,
+        "semantic_relevance": "NOT_ASSESSED_BY_CODEX"
+      },
+      "source_case_count": 6,
+      "no_new_ingestion": true
+    },
+    {
+      "topic_family": "urban_governance_grid",
+      "affected_case_count": 6,
+      "not_useful_count": 4,
+      "partial_count": 2,
+      "tender_count": 1,
+      "tenders": [
+        "JY-001"
+      ],
+      "classification": "CORPUS_EXISTS_BUT_TOO_GENERIC",
+      "classification_evidence": "Persisted R1 candidate rows exist; weakness is represented by GPT WEAK_CORPUS/PARTIAL_WEAK_CORPUS labels in the source cases.",
+      "observed_candidate_material_count": 11,
+      "observed_candidate_chunk_count": 11,
+      "current_relevant_material_chunk_availability": {
+        "candidate_rows_present": true,
+        "candidate_row_count": 24,
+        "semantic_relevance": "NOT_ASSESSED_BY_CODEX"
+      },
+      "source_case_count": 6,
+      "no_new_ingestion": true
+    },
+    {
+      "topic_family": "call_center_speech_ai",
+      "affected_case_count": 3,
+      "not_useful_count": 1,
+      "partial_count": 2,
+      "tender_count": 1,
+      "tenders": [
+        "JY-001"
+      ],
+      "classification": "CORPUS_EXISTS_BUT_TOO_GENERIC",
+      "classification_evidence": "Persisted R1 candidate rows exist; weakness is represented by GPT WEAK_CORPUS/PARTIAL_WEAK_CORPUS labels in the source cases.",
+      "observed_candidate_material_count": 7,
+      "observed_candidate_chunk_count": 8,
+      "current_relevant_material_chunk_availability": {
+        "candidate_rows_present": true,
+        "candidate_row_count": 12,
+        "semantic_relevance": "NOT_ASSESSED_BY_CODEX"
+      },
+      "source_case_count": 3,
+      "no_new_ingestion": true
+    },
+    {
+      "topic_family": "database_internals",
+      "affected_case_count": 2,
+      "not_useful_count": 1,
+      "partial_count": 1,
+      "tender_count": 2,
+      "tenders": [
+        "FAST-04",
+        "JY-001"
+      ],
+      "classification": "CORPUS_EXISTS_BUT_TOO_GENERIC",
+      "classification_evidence": "Persisted R1 candidate rows exist; weakness is represented by GPT WEAK_CORPUS/PARTIAL_WEAK_CORPUS labels in the source cases.",
+      "observed_candidate_material_count": 8,
+      "observed_candidate_chunk_count": 8,
+      "current_relevant_material_chunk_availability": {
+        "candidate_rows_present": true,
+        "candidate_row_count": 8,
+        "semantic_relevance": "NOT_ASSESSED_BY_CODEX"
+      },
+      "source_case_count": 2,
+      "no_new_ingestion": true
+    },
+    {
+      "topic_family": "document_material_platform",
+      "affected_case_count": 2,
+      "not_useful_count": 2,
+      "partial_count": 0,
+      "tender_count": 2,
+      "tenders": [
+        "JY-001",
+        "TB-003"
+      ],
+      "classification": "CORPUS_EXISTS_BUT_TOO_GENERIC",
+      "classification_evidence": "Persisted R1 candidate rows exist; weakness is represented by GPT WEAK_CORPUS/PARTIAL_WEAK_CORPUS labels in the source cases.",
+      "observed_candidate_material_count": 5,
+      "observed_candidate_chunk_count": 6,
+      "current_relevant_material_chunk_availability": {
+        "candidate_rows_present": true,
+        "candidate_row_count": 8,
+        "semantic_relevance": "NOT_ASSESSED_BY_CODEX"
+      },
+      "source_case_count": 2,
+      "no_new_ingestion": true
+    },
+    {
+      "topic_family": "electronic_signature_ca",
+      "affected_case_count": 2,
+      "not_useful_count": 2,
+      "partial_count": 0,
+      "tender_count": 1,
+      "tenders": [
+        "TB-003"
+      ],
+      "classification": "CORPUS_EXISTS_BUT_TOO_GENERIC",
+      "classification_evidence": "Persisted R1 candidate rows exist; weakness is represented by GPT WEAK_CORPUS/PARTIAL_WEAK_CORPUS labels in the source cases.",
+      "observed_candidate_material_count": 7,
+      "observed_candidate_chunk_count": 8,
+      "current_relevant_material_chunk_availability": {
+        "candidate_rows_present": true,
+        "candidate_row_count": 8,
+        "semantic_relevance": "NOT_ASSESSED_BY_CODEX"
+      },
+      "source_case_count": 2,
+      "no_new_ingestion": true
+    },
+    {
+      "topic_family": "ux_interaction",
+      "affected_case_count": 2,
+      "not_useful_count": 1,
+      "partial_count": 1,
+      "tender_count": 2,
+      "tenders": [
+        "JY-001",
+        "TB-003"
+      ],
+      "classification": "CORPUS_EXISTS_BUT_TOO_GENERIC",
+      "classification_evidence": "Persisted R1 candidate rows exist; weakness is represented by GPT WEAK_CORPUS/PARTIAL_WEAK_CORPUS labels in the source cases.",
+      "observed_candidate_material_count": 6,
+      "observed_candidate_chunk_count": 6,
+      "current_relevant_material_chunk_availability": {
+        "candidate_rows_present": true,
+        "candidate_row_count": 8,
+        "semantic_relevance": "NOT_ASSESSED_BY_CODEX"
+      },
+      "source_case_count": 2,
+      "no_new_ingestion": true
+    },
+    {
+      "topic_family": "esg",
+      "affected_case_count": 1,
+      "not_useful_count": 1,
+      "partial_count": 0,
+      "tender_count": 1,
+      "tenders": [
+        "TB-006"
+      ],
+      "classification": "CORPUS_EXISTS_BUT_TOO_GENERIC",
+      "classification_evidence": "Persisted R1 candidate rows exist; weakness is represented by GPT WEAK_CORPUS/PARTIAL_WEAK_CORPUS labels in the source cases.",
+      "observed_candidate_material_count": 2,
+      "observed_candidate_chunk_count": 4,
+      "current_relevant_material_chunk_availability": {
+        "candidate_rows_present": true,
+        "candidate_row_count": 4,
+        "semantic_relevance": "NOT_ASSESSED_BY_CODEX"
+      },
+      "source_case_count": 1,
+      "no_new_ingestion": true
+    }
+  ],
+  "generic_chunk_concentration_top15": [
+    {
+      "chunk_id": "MCH-92AB6373B2C3EF33CC01B4997A6D9B0E",
+      "material": "MED-10_医院项目实施、培训与运维.md",
+      "short_excerpt": "关注科室调研、接口、数据准备、培训、试运行、上线与跨厂商运维。",
+      "appearance_count": 22,
+      "tender_count": 4,
+      "domain_count": 1,
+      "gpt_labels_of_affected_cases": {
+        "PARTIAL": 9,
+        "USEFUL": 6,
+        "NOT_USEFUL": 7
+      },
+      "repeated_cross_tender_flag": true,
+      "diagnostic_only": true
+    },
+    {
+      "chunk_id": "MCH-DDBD9CC1FD72A8EB6E028B446E01EA08",
+      "material": "GOV-05_政务服务、门户与多端应用.md",
+      "short_excerpt": "统一门户、事项服务、内容运营、移动端与业务协同是常见场景。",
+      "appearance_count": 22,
+      "tender_count": 2,
+      "domain_count": 1,
+      "gpt_labels_of_affected_cases": {
+        "PARTIAL": 15,
+        "NOT_USEFUL": 6,
+        "USEFUL": 1
+      },
+      "repeated_cross_tender_flag": true,
+      "diagnostic_only": true
+    },
+    {
+      "chunk_id": "MCH-DD56ED64048D4F4B8D9DE544B89FF57F",
+      "material": "UNI-01_采购需求、评分与验收边界.md",
+      "short_excerpt": "需求应围绕项目目标明确技术与商务要求；方案类需求应尽可能转为客观、可核验的功能、场景、质量、交付和服务条件。",
+      "appearance_count": 21,
+      "tender_count": 5,
+      "domain_count": 1,
+      "gpt_labels_of_affected_cases": {
+        "PARTIAL": 11,
+        "NOT_USEFUL": 7,
+        "USEFUL": 3
+      },
+      "repeated_cross_tender_flag": true,
+      "diagnostic_only": true
+    },
+    {
+      "chunk_id": "MCH-85128F1140026803AD6C33E6571EE7A2",
+      "material": "MED-01_医院信息化总体建设框架.md",
+      "short_excerpt": "统筹临床业务、医院管理、数据平台、基础设施、安全与便民服务。",
+      "appearance_count": 20,
+      "tender_count": 3,
+      "domain_count": 1,
+      "gpt_labels_of_affected_cases": {
+        "PARTIAL": 11,
+        "USEFUL": 2,
+        "NOT_USEFUL": 7
+      },
+      "repeated_cross_tender_flag": true,
+      "diagnostic_only": true
+    },
+    {
+      "chunk_id": "MCH-B253B26AAA7C6827B20603BF72122990",
+      "material": "GOV-04_政务云、信创与基础环境适配.md",
+      "short_excerpt": "政务项目常涉及云资源、国产OS/数据库和基础软件；兼容结论需实测。",
+      "appearance_count": 18,
+      "tender_count": 5,
+      "domain_count": 1,
+      "gpt_labels_of_affected_cases": {
+        "PARTIAL": 7,
+        "NOT_USEFUL": 8,
+        "USEFUL": 3
+      },
+      "repeated_cross_tender_flag": true,
+      "diagnostic_only": true
+    },
+    {
+      "chunk_id": "MCH-B503203771D75B916D37433B14966870",
+      "material": "MED-06_医院智慧管理.md",
+      "short_excerpt": "关注信息化对精细化、智能化管理的功能和效果。",
+      "appearance_count": 17,
+      "tender_count": 3,
+      "domain_count": 1,
+      "gpt_labels_of_affected_cases": {
+        "NOT_USEFUL": 9,
+        "PARTIAL": 8
+      },
+      "repeated_cross_tender_flag": true,
+      "diagnostic_only": true
+    },
+    {
+      "chunk_id": "MCH-ED62D1C7221B6E575CA1CB0FBF2AF371",
+      "material": "UNI-01_采购需求、评分与验收边界.md",
+      "short_excerpt": "技术服务、履约能力、售后、业绩、人员等评分内容应能关联方案或证明材料，不能只存宣传话术。",
+      "appearance_count": 16,
+      "tender_count": 4,
+      "domain_count": 1,
+      "gpt_labels_of_affected_cases": {
+        "PARTIAL": 7,
+        "NOT_USEFUL": 7,
+        "USEFUL": 2
+      },
+      "repeated_cross_tender_flag": true,
+      "diagnostic_only": true
+    },
+    {
+      "chunk_id": "MCH-896D759076F8C90811C331E5F389F488",
+      "material": "UNI-10_监控、运维、SLA与应急.md",
+      "short_excerpt": "覆盖资源、服务、接口、任务监控、巡检、告警和问题闭环。",
+      "appearance_count": 14,
+      "tender_count": 4,
+      "domain_count": 1,
+      "gpt_labels_of_affected_cases": {
+        "PARTIAL": 6,
+        "NOT_USEFUL": 8
+      },
+      "repeated_cross_tender_flag": true,
+      "diagnostic_only": true
+    },
+    {
+      "chunk_id": "MCH-D777B9C5D21E6831B82DFE906621CFD9",
+      "material": "GOV-08_政务采购证明材料组织.md",
+      "short_excerpt": "方案、服务、业绩、人员、资质与证明材料应建立对应关系，避免只存宣传册。",
+      "appearance_count": 14,
+      "tender_count": 4,
+      "domain_count": 1,
+      "gpt_labels_of_affected_cases": {
+        "PARTIAL": 8,
+        "NOT_USEFUL": 4,
+        "USEFUL": 2
+      },
+      "repeated_cross_tender_flag": true,
+      "diagnostic_only": true
+    },
+    {
+      "chunk_id": "MCH-14A9FA20DA83A8C3A5A4E103C912FBE7",
+      "material": "UNI-09_身份权限、日志审计与可追溯.md",
+      "short_excerpt": "登录、权限变更、数据导出、接口与关键业务操作应可追溯。",
+      "appearance_count": 10,
+      "tender_count": 3,
+      "domain_count": 1,
+      "gpt_labels_of_affected_cases": {
+        "NOT_USEFUL": 3,
+        "PARTIAL": 3,
+        "USEFUL": 4
+      },
+      "repeated_cross_tender_flag": true,
+      "diagnostic_only": true
+    },
+    {
+      "chunk_id": "MCH-9E4035F3C22B901F93CF72A3E9CA3E90",
+      "material": "UNI-15_业绩、资质与可核验证明.md",
+      "short_excerpt": "类似业绩宜关联合同、范围、时间与验收。",
+      "appearance_count": 9,
+      "tender_count": 2,
+      "domain_count": 1,
+      "gpt_labels_of_affected_cases": {
+        "PARTIAL": 4,
+        "NOT_USEFUL": 4,
+        "USEFUL": 1
+      },
+      "repeated_cross_tender_flag": true,
+      "diagnostic_only": true
+    },
+    {
+      "chunk_id": "MCH-931A0AFF234FFA52143DACBFC2E7E0B2",
+      "material": "MED-05_医院智慧服务.md",
+      "short_excerpt": "> 官方资料结构化摘要。正式投标与合规判断需回到原始法律、标准、政策或项目文件核验。",
+      "appearance_count": 8,
+      "tender_count": 2,
+      "domain_count": 1,
+      "gpt_labels_of_affected_cases": {
+        "PARTIAL": 2,
+        "NOT_USEFUL": 6
+      },
+      "repeated_cross_tender_flag": true,
+      "diagnostic_only": true
+    },
+    {
+      "chunk_id": "MCH-E8D4D1A62F977C40749BF807B0DB145A",
+      "material": "MED-02_电子病历功能与应用水平.md",
+      "short_excerpt": "关注采集、存储、访问、共享、安全以及应用水平。",
+      "appearance_count": 8,
+      "tender_count": 4,
+      "domain_count": 1,
+      "gpt_labels_of_affected_cases": {
+        "PARTIAL": 5,
+        "NOT_USEFUL": 1,
+        "USEFUL": 2
+      },
+      "repeated_cross_tender_flag": true,
+      "diagnostic_only": true
+    },
+    {
+      "chunk_id": "MCH-6B909A25FDAA9545020E2201C1AE699A",
+      "material": "UNI-06_数据安全能力与生命周期.md",
+      "short_excerpt": "覆盖采集、传输、存储、使用、共享、归档、销毁。",
+      "appearance_count": 7,
+      "tender_count": 4,
+      "domain_count": 1,
+      "gpt_labels_of_affected_cases": {
+        "PARTIAL": 5,
+        "NOT_USEFUL": 2
+      },
+      "repeated_cross_tender_flag": true,
+      "diagnostic_only": true
+    },
+    {
+      "chunk_id": "MCH-D372CC8B9E57D28E0C5FE5BB86C4546E",
+      "material": "UNI-12_性能、容量与扩展性.md",
+      "short_excerpt": "明确环境、数据规模、并发模型、统计口径和测量日期。",
+      "appearance_count": 7,
+      "tender_count": 3,
+      "domain_count": 1,
+      "gpt_labels_of_affected_cases": {
+        "PARTIAL": 4,
+        "NOT_USEFUL": 2,
+        "USEFUL": 1
+      },
+      "repeated_cross_tender_flag": true,
+      "diagnostic_only": true
+    }
+  ],
+  "domain_affinity_summary": {
+    "method": "deterministic normalized query-term substring overlap; diagnostic only",
+    "source_artifact": "docs/handoff/V43_REFERENCE_RAG_SEMANTIC_ADJUDICATION_AND_FAILURE_DECOMPOSITION_V1/11_DOMAIN_AFFINITY_OFFLINE_ANALYSIS.json",
+    "source_sha256": "0f380de910c3aae86d445b32994dbcec4137608496ae6adbef35a8be315e4885",
+    "tested_rule_count": 0,
+    "tested_rules": [],
+    "baseline": {
+      "case_count": 80,
+      "reference_count": 301,
+      "zero_reference_case_count": 0,
+      "label_counts": {
+        "PARTIAL": 37,
+        "NOT_USEFUL": 31,
+        "USEFUL": 12
+      }
+    },
+    "observed_affinity_aggregate": {
+      "PARTIAL": {
+        "cases": 37,
+        "references": 148,
+        "mean_affinity_ratio": 0.006478537360890303
+      },
+      "NOT_USEFUL": {
+        "cases": 31,
+        "references": 105,
+        "mean_affinity_ratio": 0.0005952380952380953
+      },
+      "USEFUL": {
+        "cases": 12,
+        "references": 48,
+        "mean_affinity_ratio": 0
+      }
+    },
+    "USEFUL_retained_or_improved": "NOT_TESTED_IN_EXISTING_ARTIFACT",
+    "PARTIAL_changed": "NOT_TESTED_IN_EXISTING_ARTIFACT",
+    "NOT_USEFUL_suppressed": "NOT_TESTED_IN_EXISTING_ARTIFACT",
+    "new_wrong_domain_risk": "NOT_TESTED_IN_EXISTING_ARTIFACT",
+    "zero_reference_delta": "NOT_TESTED_IN_EXISTING_ARTIFACT",
+    "promotion_evidence": "NO_DOMAIN_AFFINITY_PROMOTION_EVIDENCE"
+  },
+  "raw80_vs_adjusted74": {
+    "artifact_type": "V43_RAW80_VS_REFERENCE_NEEDED_ADJUSTED74_METRICS",
+    "raw_80": {
+      "case_count": 80,
+      "label_counts": {
+        "PARTIAL": 37,
+        "NOT_USEFUL": 31,
+        "USEFUL": 12
+      },
+      "family_counts": {
+        "TOO_GENERIC": 19,
+        "WEAK_CORPUS": 25,
+        "REFERENCE_NOT_NEEDED": 6,
+        "GOOD_REFERENCE": 12,
+        "RANKING_FAILURE": 7,
+        "SEMANTIC_NEAR_MISS": 9,
+        "OTHER": 2
+      },
+      "useful_rate": 0.15
+    },
+    "reference_needed_adjusted_74": {
+      "case_count": 74,
+      "label_counts": {
+        "PARTIAL": 37,
+        "USEFUL": 12,
+        "NOT_USEFUL": 25
+      },
+      "family_counts": {
+        "TOO_GENERIC": 19,
+        "WEAK_CORPUS": 25,
+        "GOOD_REFERENCE": 12,
+        "RANKING_FAILURE": 7,
+        "SEMANTIC_NEAR_MISS": 9,
+        "OTHER": 2
+      },
+      "useful_rate": 0.16216216216216217
+    },
+    "excluded_case_ids": [
+      "RAG-TB-003-TB-003-REQ-035",
+      "RAG-JY-001-JY-001-REQ-039",
+      "RAG-JY-001-JY-001-REQ-130",
+      "RAG-TB-003-TB-003-REQ-020",
+      "RAG-TB-003-TB-003-REQ-225",
+      "RAG-TB-003-TB-003-REQ-226"
+    ],
+    "denominator_change_only": true,
+    "router_mutated": false
+  },
+  "strategy_decision_matrix": [
+    {
+      "option": "A_R1_HYGIENE_ONLY",
+      "benefit": "Offline replay removes observed heading/front-matter/citation-index/boilerplate/duplicate escapes.",
+      "risk": "GPT R1 semantic useful rate remains 15%; weak corpus, near misses and ranking failures remain.",
+      "engineering_complexity": "LOW; existing chunk-role/substantive owner only.",
+      "current_evidence_strength": "STRONG_ENGINEERING_OFFLINE (10/10 focused; 83/83 relevant regression).",
+      "production_readiness": "NOT_READY_FOR_PRODUCT_FREEZE",
+      "selection_status": "NOT_SELECTED"
+    },
+    {
+      "option": "B_R1_PLUS_GLOBAL_SIMILARITY_FAIL_QUIET_THRESHOLD",
+      "benefit": "Offline sweep shows increased NOT_USEFUL suppression at higher thresholds.",
+      "risk": "Useful/partial retention falls and zero-reference cases rise; no threshold deployment evidence.",
+      "engineering_complexity": "MEDIUM; threshold contract and monitoring would be required.",
+      "current_evidence_strength": "OFFLINE_SCORE_SWEEP_ONLY",
+      "production_readiness": "NOT_READY_NO_THRESHOLD_DEPLOYMENT",
+      "selection_status": "NOT_SELECTED"
+    },
+    {
+      "option": "C_R1_PLUS_DOMAIN_AFFINITY",
+      "benefit": "Existing artifact provides a diagnostic affinity signal by GPT label.",
+      "risk": "No tested rule/weight or wrong-domain safety result supports promotion.",
+      "engineering_complexity": "MEDIUM",
+      "current_evidence_strength": "NO_DOMAIN_AFFINITY_PROMOTION_EVIDENCE",
+      "production_readiness": "NOT_READY",
+      "selection_status": "NOT_SELECTED"
+    },
+    {
+      "option": "D_R1_PLUS_THRESHOLD_PLUS_DOMAIN_AFFINITY",
+      "benefit": "Potential combined fail-quiet filtering is untested.",
+      "risk": "Compounded unmeasured recall, domain, and zero-reference effects.",
+      "engineering_complexity": "HIGH",
+      "current_evidence_strength": "NO_COMBINED_SIMULATION",
+      "production_readiness": "NOT_READY",
+      "selection_status": "NOT_SELECTED"
+    },
+    {
+      "option": "E_R1_NOW_PLUS_CORPUS_ENRICHMENT_THEN_RETEST",
+      "benefit": "Addresses actual WEAK_CORPUS case families before later threshold/ranking testing.",
+      "risk": "Corpus governance and source activation are not part of this task; no ingestion performed.",
+      "engineering_complexity": "HIGH; corpus activation and a new controlled evaluation would be required.",
+      "current_evidence_strength": "ACTUAL_CASE_COVERAGE_DEBT_ONLY",
+      "production_readiness": "NOT_READY_NO_INGESTION_OR_RETEST",
+      "selection_status": "NOT_SELECTED"
+    }
+  ],
+  "canonical_prior_checkpoint": {
+    "status": "READY_FOR_GPT_REFERENCE_RAG_FAIL_QUIET_STRATEGY_DECISION",
+    "scope": "REQUIREMENT_LEVEL_REFERENCE_RETRIEVAL_EVAL",
+    "r2_status": "NOT_EXECUTED_VECTOR_UNAVAILABLE_OR_RETRIEVAL_BLOCKED"
+  }
+}

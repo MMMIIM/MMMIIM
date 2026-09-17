@@ -1,0 +1,115 @@
+{
+  "artifact_type": "V43_P0_SEMANTIC_RECONSTRUCTION_PARITY",
+  "artifact_version": "v2",
+  "created_at": "2026-09-11",
+  "identity": {
+    "source_truth_id": "GPT_SOURCE_TRUTH_P0_CORE6_V1",
+    "source_truth_sha256": "sha256:9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+    "production_run_id": "V43-CORE6-20260911",
+    "r3_eval_run_id": "V43-FLYWHEEL-P0-487-R3",
+    "review_bundle_sha256": "867965a6f2e0b1568278a62c05316b16bcb1b1dfd09e01705020f4b51d240a2d",
+    "review_bundle_manifest_sha256": "5b62e98429b943e6d5f5848e6b711f0eb826106df3b8c07d3c48c688c36edd42"
+  },
+  "historical_reference": {
+    "status": "HISTORICAL_AGGREGATE_ONLY",
+    "per_case_labels_present": false,
+    "importable_as_ledger": false
+  },
+  "historical_aggregate": {
+    "MATCH": 443,
+    "PARTIAL": 7,
+    "DISTORTED": 6,
+    "MISS": 31
+  },
+  "v2_aggregate": {
+    "MATCH": 443,
+    "PARTIAL": 7,
+    "DISTORTED": 6,
+    "MISS": 31
+  },
+  "aggregate_parity": "PASS",
+  "tender_unsafe_count_parity": "PASS",
+  "by_tender": {
+    "JY-001": {
+      "historical": {
+        "PARTIAL": 2,
+        "DISTORTED": 0,
+        "MISS": 8
+      },
+      "v2": {
+        "PARTIAL": 2,
+        "DISTORTED": 0,
+        "MISS": 8
+      },
+      "equal": true
+    },
+    "TB-003": {
+      "historical": {
+        "PARTIAL": 1,
+        "DISTORTED": 0,
+        "MISS": 5
+      },
+      "v2": {
+        "PARTIAL": 1,
+        "DISTORTED": 0,
+        "MISS": 5
+      },
+      "equal": true
+    },
+    "TB-006": {
+      "historical": {
+        "PARTIAL": 1,
+        "DISTORTED": 0,
+        "MISS": 5
+      },
+      "v2": {
+        "PARTIAL": 1,
+        "DISTORTED": 0,
+        "MISS": 5
+      },
+      "equal": true
+    },
+    "FAST-01": {
+      "historical": {
+        "PARTIAL": 1,
+        "DISTORTED": 3,
+        "MISS": 3
+      },
+      "v2": {
+        "PARTIAL": 1,
+        "DISTORTED": 3,
+        "MISS": 3
+      },
+      "equal": true
+    },
+    "FAST-04": {
+      "historical": {
+        "PARTIAL": 0,
+        "DISTORTED": 2,
+        "MISS": 4
+      },
+      "v2": {
+        "PARTIAL": 0,
+        "DISTORTED": 2,
+        "MISS": 4
+      },
+      "equal": true
+    },
+    "FAST-WATER-01": {
+      "historical": {
+        "PARTIAL": 2,
+        "DISTORTED": 1,
+        "MISS": 6
+      },
+      "v2": {
+        "PARTIAL": 2,
+        "DISTORTED": 1,
+        "MISS": 6
+      },
+      "equal": true
+    }
+  },
+  "per_row_parity_to_v1": "UNVERIFIABLE_NO_V1_ROW_LEDGER",
+  "important_note": "历史V1不存在逐row ledger，因此只能证明aggregate和逐Tender unsafe counts的parity，不能宣称逐row V1/V2完全相同。V2逐row ledger是本轮新建的可持久化语义资产。",
+  "semantic_reconstruction_parity": "PASS"
+}

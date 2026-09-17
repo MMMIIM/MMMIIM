@@ -1,0 +1,61 @@
+{
+  "artifact_type": "V43_TARGETED_FACT_HOST_REPLAY_V2_PROVIDER_EXECUTION_REPORT",
+  "run_id": "v43-targeted-fact-host-replay-v2-20260914124306-source-gate",
+  "status": "NOT_RUN_SOURCE_IDENTITY_BLOCKED",
+  "provider": {
+    "configured_provider": "deepseek_official",
+    "configured_model": "deepseek-v4-pro",
+    "endpoint": "/responses",
+    "provider_configured": true
+  },
+  "call_policy": {
+    "max_provider_calls": 3,
+    "provider_attempts": 0,
+    "retries": 0,
+    "concurrency": 1
+  },
+  "cases": [
+    {
+      "case_id": "REQ-099::MCH-93D4FDD592216F58BCD0237DDF4F8F0F",
+      "chunk_id": "MCH-93D4FDD592216F58BCD0237DDF4F8F0F",
+      "requirement_ids": [
+        "REQ-099"
+      ],
+      "status": "NOT_RUN_SOURCE_IDENTITY_BLOCKED",
+      "provider_call": 0,
+      "provider_reached": false,
+      "error_code": "SOURCE_IDENTITY_GATE_FAILED"
+    },
+    {
+      "case_id": "REQ-139::MCH-586AF54E29E13328B1D105D03FF08957",
+      "chunk_id": "MCH-586AF54E29E13328B1D105D03FF08957",
+      "requirement_ids": [
+        "REQ-139"
+      ],
+      "status": "NOT_RUN_SOURCE_IDENTITY_BLOCKED",
+      "provider_call": 0,
+      "provider_reached": false,
+      "error_code": "SOURCE_IDENTITY_GATE_FAILED"
+    },
+    {
+      "case_id": "REQ-014+REQ-023::MCH-CE770B545973FB9CF092951FCDC402B5",
+      "chunk_id": "MCH-CE770B545973FB9CF092951FCDC402B5",
+      "requirement_ids": [
+        "REQ-014",
+        "REQ-023"
+      ],
+      "status": "NOT_RUN_SOURCE_IDENTITY_BLOCKED",
+      "provider_call": 0,
+      "provider_reached": false,
+      "error_code": "SOURCE_IDENTITY_GATE_FAILED"
+    }
+  ],
+  "safety": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "eval_db_writes": 0,
+    "fact_persistence": 0,
+    "gold_mutations": 0
+  }
+}

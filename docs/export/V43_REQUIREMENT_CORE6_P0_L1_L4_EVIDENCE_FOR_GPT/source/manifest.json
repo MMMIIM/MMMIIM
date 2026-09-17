@@ -1,0 +1,84 @@
+{
+  "dataset_version": "reqx-v3-real-tender-gold-pilot-v1",
+  "status": "GPT_GOLD_REVIEWED",
+  "provider_calls": 0,
+  "model_output_used_for_gold": false,
+  "annotation_rules_file": "README.md",
+  "chunk_budget": {
+    "singleCallThreshold": 2000,
+    "characterBudget": 2000,
+    "tokenBudget": 8000,
+    "sourceSpanBudget": 50
+  },
+  "selected_sample_count": 3,
+  "gold_requirement_count": 162,
+  "packets": [
+    {
+      "tender_id": "FAST-01",
+      "packet_file": "packets/FAST-01.json",
+      "gold_file_sha256": "a37b3a41d251dcb04a86a2dbd48d2a37b42adbe78fd0213cc389bb920de55cd4",
+      "source_file": "backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf",
+      "source_file_sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+      "gold_requirement_count": 39,
+      "annotation_status": "GPT_GOLD_REVIEWED",
+      "window_count": 7,
+      "span_count": 255,
+      "selected_window_character_count": 4930,
+      "selection": {
+        "type": "controlled_paragraph_window",
+        "start_paragraph": 469,
+        "end_paragraph": 723
+      },
+      "gold_requirements_sha256": "b8899d73111ade28e2d5765cc5a10822e4ffb95ee2869d701f83ee099343e576",
+      "cross_chunk_gold_count": 2
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "packet_file": "packets/FAST-WATER-01.json",
+      "gold_file_sha256": "1cf4c464b18d00eaa968feba8c787a4c39189b90d0f424ad23f9c6028794219c",
+      "source_file": "backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf",
+      "source_file_sha256": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "gold_requirement_count": 80,
+      "annotation_status": "GPT_GOLD_REVIEWED",
+      "window_count": 19,
+      "span_count": 747,
+      "selected_window_character_count": 16769,
+      "selection": {
+        "type": "classified_technical_section",
+        "section_key": "technical_requirements",
+        "title": "技术与项目要求",
+        "source_start_page": 2,
+        "source_end_page": 55,
+        "source_start_paragraph": 13,
+        "source_end_paragraph": 1869
+      },
+      "gold_requirements_sha256": "aa6654d6687d9cb4f93e3fe26ad956b70298dd3d21826bea2fccecc83a795db7",
+      "cross_chunk_gold_count": 4
+    },
+    {
+      "tender_id": "TB-006",
+      "packet_file": "packets/TB-006.json",
+      "gold_file_sha256": "bdea13db7c474887e41b7535124d6c9f6430ec251285331b4b00ed712560d635",
+      "source_file": "backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf",
+      "source_file_sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+      "gold_requirement_count": 43,
+      "annotation_status": "GPT_GOLD_REVIEWED",
+      "window_count": 6,
+      "span_count": 237,
+      "selected_window_character_count": 4921,
+      "selection": {
+        "type": "classified_technical_section",
+        "section_key": "technical_requirements",
+        "title": "技术与项目要求",
+        "source_start_page": 2,
+        "source_end_page": 46,
+        "source_start_paragraph": 17,
+        "source_end_paragraph": 1516
+      },
+      "gold_requirements_sha256": "275b673cce30b2fe8cb9dbf463664988bdd6b23f182fe50afb4746d7a841562b",
+      "cross_chunk_gold_count": 4
+    }
+  ],
+  "gold_frozen": true,
+  "cross_chunk_gold_count": 10
+}

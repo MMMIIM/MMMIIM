@@ -1,0 +1,69 @@
+{
+  "artifact_type": "V43_EMBEDDING_REUSE_INDEX_V1",
+  "generated_at": "2026-09-16",
+  "execution_mode": "OFFLINE_ONLY",
+  "provider_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "gold_mutations": 0,
+  "production_semantic_changes": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "commit": 0,
+  "push": 0,
+  "merge": 0,
+  "deploy": 0,
+  "policy": "exact snapshot identity only; no re-chunk, re-embed, or regenerated IDs",
+  "reusable": [
+    {
+      "set_id": "CHENGCHUAN-SYNTHETIC-BASE-COM-01-16",
+      "materials": 16,
+      "chunks": 160,
+      "embeddings": 160,
+      "model": "Qwen/Qwen3-Embedding-0.6B",
+      "version": "1",
+      "dimension": 1024,
+      "identity_parity": "PASS",
+      "status": "CURRENT_REUSABLE"
+    },
+    {
+      "set_id": "HUAWEI-PUBLIC-REAL-PDF-PILOT-V1",
+      "materials": 6,
+      "chunks": 590,
+      "embeddings": 590,
+      "model": "Qwen/Qwen3-Embedding-0.6B",
+      "version": "1",
+      "dimension": 1024,
+      "identity_parity": "PASS",
+      "status": "CURRENT_REUSABLE"
+    }
+  ],
+  "blocked_or_partial": [
+    {
+      "set_id": "CHENGCHUAN-SYNTHETIC-V2-EXTENSION",
+      "materials": 76,
+      "chunks": 676,
+      "embeddings": "NOT_RECORDED",
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "reason": "extension embedding evidence incomplete; do not re-embed in this task"
+    },
+    {
+      "set_id": "H3C-REFERENCE-HTML",
+      "status": "EXPLORATORY_ONLY",
+      "reason": "no valid reusable vectors; host gate not entered"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "docs/handoff/V43_OVERNIGHT_REAL_E2E_MASTER_V1/00B_EMBEDDING_REUSE_AUDIT.json",
+      "exists": true,
+      "bytes": 3306,
+      "sha256": "ecaf366b432d0259e24735943d6b1c9e432156589d6a5df46de68bac9f32c17a",
+      "status": "CURRENT_REUSABLE",
+      "roles": [],
+      "notes": []
+    }
+  ]
+}

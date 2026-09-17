@@ -1,0 +1,141 @@
+{
+  "artifact_type": "V43_E2E_PROVIDER_DEPENDENCY_MAP",
+  "version": "v1",
+  "generated_at": "2026-09-15T16:45:25.907Z",
+  "entries": [
+    {
+      "stage": "Requirement",
+      "network_required": true,
+      "can_run_in_codex": true,
+      "can_reuse_artifact": true,
+      "host_required": true,
+      "status": "OFFLINE_REUSE_READY_HOST_FOR_LIVE",
+      "evidence": [
+        "docs/handoff/V43_OVERNIGHT_REAL_E2E_MASTER_V1/05_REQUIREMENT_REPORT.json",
+        "backend/src/pipeline/requirement-extraction.js"
+      ]
+    },
+    {
+      "stage": "Router",
+      "network_required": false,
+      "can_run_in_codex": true,
+      "can_reuse_artifact": true,
+      "host_required": false,
+      "status": "DETERMINISTIC_OFFLINE_READY",
+      "evidence": [
+        "backend/src/pipeline/requirement-response-router-v2-2-3.js",
+        "docs/handoff/V43_RESPONSE_ROUTER_V2_2_3_FINAL_HANDOFF"
+      ]
+    },
+    {
+      "stage": "Evidence retrieval",
+      "network_required": true,
+      "can_run_in_codex": true,
+      "can_reuse_artifact": true,
+      "host_required": true,
+      "status": "REUSE_VECTORS_FOR_EXISTING_CORPUS_HOST_FOR_QUERY_OR_INDEX",
+      "evidence": [
+        "backend/src/pipeline/embedding-client.js",
+        "backend/src/pipeline/enterprise-retrieval-service.js",
+        "docs/handoff/V43_REAL_E2E_AUTHORITY_AND_PROJECT_MATERIAL_BINDING_IMPLEMENTATION_V1/host-retrieval-utf8.json"
+      ]
+    },
+    {
+      "stage": "Fact",
+      "network_required": true,
+      "can_run_in_codex": true,
+      "can_reuse_artifact": true,
+      "host_required": true,
+      "status": "OFFLINE_VALIDATION_READY_HOST_FOR_PROVIDER",
+      "evidence": [
+        "backend/src/pipeline/semantic-gateway-evidence-fact-extractor.js",
+        "services/semantic-gateway/src/gateway.js"
+      ]
+    },
+    {
+      "stage": "Mapping",
+      "network_required": true,
+      "can_run_in_codex": true,
+      "can_reuse_artifact": true,
+      "host_required": true,
+      "status": "DETERMINISTIC_PREP_READY_SEMANTIC_GATEWAY_HOST_FOR_LIVE",
+      "evidence": [
+        "backend/src/pipeline/semantic-gateway-mapping-evaluator.js",
+        "backend/eval/mapping-benchmark-v1"
+      ]
+    },
+    {
+      "stage": "Sufficiency",
+      "network_required": false,
+      "can_run_in_codex": true,
+      "can_reuse_artifact": true,
+      "host_required": false,
+      "status": "DETERMINISTIC_OFFLINE_READY",
+      "evidence": [
+        "backend/src/evidence-readiness-service.js",
+        "backend/test/evidence-support-assessment.test.js"
+      ]
+    },
+    {
+      "stage": "Claim",
+      "network_required": true,
+      "can_run_in_codex": true,
+      "can_reuse_artifact": true,
+      "host_required": true,
+      "status": "GATE_OFFLINE_READY_GENERATION_HOST_IF_SEMANTIC_PROVIDER",
+      "evidence": [
+        "backend/src/pipeline/production-task-provider.js",
+        "backend/src/pipeline/claim-gate-service.js"
+      ]
+    },
+    {
+      "stage": "Reference Retrieval",
+      "network_required": true,
+      "can_run_in_codex": true,
+      "can_reuse_artifact": false,
+      "host_required": true,
+      "status": "NOT_RUN_INDEX_BLOCKED_NO_VALID_H3C_VECTORS",
+      "evidence": [
+        "backend/src/pipeline/embedding-client.js",
+        "docs/handoff/V43_REFERENCE_RETRIEVAL_SCHEMA_PARITY_CORE6_REPLAY_V2/14_PROVIDER_EMBEDDING_AUDIT.json"
+      ]
+    },
+    {
+      "stage": "Safe Packet",
+      "network_required": false,
+      "can_run_in_codex": true,
+      "can_reuse_artifact": true,
+      "host_required": false,
+      "status": "DETERMINISTIC_OFFLINE_READY",
+      "evidence": [
+        "backend/src/pipeline/safe-response-packet-builder.js",
+        "backend/src/pipeline/writer-input-authorization-v1.js"
+      ]
+    },
+    {
+      "stage": "Writer",
+      "network_required": true,
+      "can_run_in_codex": true,
+      "can_reuse_artifact": true,
+      "host_required": true,
+      "status": "DRY_RUN_READY_HOST_FOR_LIVE",
+      "evidence": [
+        "backend/src/pipeline/writer-provider.js",
+        "backend/src/writer-execution-service.js"
+      ]
+    },
+    {
+      "stage": "Validator",
+      "network_required": false,
+      "can_run_in_codex": true,
+      "can_reuse_artifact": true,
+      "host_required": false,
+      "status": "DETERMINISTIC_OFFLINE_READY",
+      "evidence": [
+        "backend/src/pipeline/coverage-validator.js",
+        "backend/src/pipeline/document-validator.js"
+      ]
+    }
+  ],
+  "policy": "Complete offline/replay-capable phases first; stop at the first live provider/embedding boundary unavailable to Codex."
+}

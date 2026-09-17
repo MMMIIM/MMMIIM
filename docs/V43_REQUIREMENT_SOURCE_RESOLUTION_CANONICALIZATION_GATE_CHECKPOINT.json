@@ -1,0 +1,90 @@
+{
+  "checkpoint": "V43_REQUIREMENT_SOURCE_RESOLUTION_CANONICALIZATION_GATE",
+  "generated_at": "2026-09-07T14:18:44.7707192+08:00",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "execution_mode": "OFFLINE_ARTIFACT_REPLAY_ONLY",
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "production_semantic_changes": 0,
+  "historical_payload_observability": {
+    "tb003_attempt1": "NOT_RETAINED",
+    "tb003_attempt2": "NOT_RETAINED",
+    "fast01_attempt1": "NOT_RETAINED",
+    "comparison_status": "NOT_EXECUTED_HISTORICAL_PAYLOADS_NOT_RETAINED",
+    "diagnostic_summary_sha256": "2081156f24ed133a2aafa725776fb2baddebf0d36199b77de17b83e49e6b94d6",
+    "prior_gate_checkpoint_sha256": "5d6a6cb5da9226eb58959e845653edcf947eb3a979fc800ae6326e611f3d7ff6",
+    "safe_conclusion": "Historical candidate-level variance cannot be classified from retained artifacts."
+  },
+  "offline_replay": {
+    "provider_calls": 0,
+    "replay_count_per_packet": 3,
+    "tb003": {
+      "source": "docs/TB003_REQUIREMENT_CANDIDATE_PACKET.json",
+      "source_sha256": "d499ae9e29dd58ad49a5733462e99413411496fd86134a1d64ce0498cef90364",
+      "candidate_count": 265,
+      "prepared_chunk_count": 33,
+      "grouped_chunk_count": 29,
+      "source_resolution_pass_groups": 29,
+      "canonicalization_pass_groups": 29,
+      "quality_gate_pass_groups": 3,
+      "quality_gate_review_or_blocked_groups": 26,
+      "deterministic_replay": "PASS"
+    },
+    "fast01": {
+      "source": "backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json",
+      "source_sha256": "d4e1932bd7702e6d28582931ff24eb6d680c58f108eeda8d8705c44ebae170af",
+      "candidate_count": 39,
+      "packet_window_count": 7,
+      "grouped_window_count": 6,
+      "source_resolution_pass_groups": 4,
+      "source_resolution_failed_groups": 2,
+      "canonicalization_pass_groups": 4,
+      "quality_gate_pass_groups": 0,
+      "quality_gate_review_or_blocked_groups": 4,
+      "deterministic_replay": "PASS",
+      "replay_scope_note": "Uses the retained FAST-01 packet windows; this is not the historical live payload."
+    }
+  },
+  "stage_contract": {
+    "source_resolution": "SEPARATE_RESULT_WITH_CODE_AND_CANDIDATE_INDEX",
+    "canonicalization": "SEPARATE_RESULT_WITH_CODE_AND_CANDIDATE_INDEX",
+    "quality_gate": "SEPARATE_RESULT_WITH_DECISION_AND_REASON_CODES",
+    "generic_source_or_canonicalization_failure": "NOT_USED_BY_NEW_EVAL_BOUNDARY",
+    "empty_valid_payload": "QUALITY_GATE_REVIEW_REQUIRED_OR_EMPTY"
+  },
+  "tb006_wrapper_regression": {
+    "status": "PASS",
+    "scope": "EVAL_ONLY",
+    "behavior": "Consumes smoke_cases and does not read a non-existent result property."
+  },
+  "root_classification": {
+    "historical_payload_gap": "HISTORICAL_PAYLOAD_OBSERVABILITY_GAP",
+    "tb003_attempt_variance": "NOT_DETERMINED_HISTORICAL_PAYLOAD_NOT_RETAINED",
+    "fast01_source_failure": "NOT_DETERMINED_HISTORICAL_PAYLOAD_NOT_RETAINED",
+    "retained_packet_replay": "DETERMINISTIC_REPLAY_PASS"
+  },
+  "focused_regression": {
+    "command": "node --test backend/test/requirement-production-readiness-recovery.test.js backend/test/requirement-production-quality-gate.test.js backend/test/requirement-quality-gate.test.js backend/test/requirement-chunker-v2.test.js backend/test/requirement-resilience.test.js backend/test/requirement-extraction-live-harness.test.js",
+    "tests": 73,
+    "passed": 73,
+    "failed": 0,
+    "provider_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0
+  },
+  "limited_live_revalidation": "NOT_STARTED_PENDING_HISTORICAL_PAYLOAD_GAP",
+  "six_case_smoke": "NOT_EXECUTED",
+  "fixed_benchmark_48": "NOT_EXECUTED",
+  "final_verdict": "BLOCKED_PENDING_HISTORICAL_PAYLOAD_ARTIFACT",
+  "changed_scope": {
+    "production_files_changed": 0,
+    "eval_boundary_changes": [
+      "backend/eval/requirement-production-quality-gate/candidate-pipeline-evaluator.js",
+      "backend/eval/requirement-production-quality-gate/recovery.js",
+      "backend/eval/requirement-semantic-quality-v1/runner.js",
+      "backend/test/requirement-production-readiness-recovery.test.js"
+    ]
+  }
+}

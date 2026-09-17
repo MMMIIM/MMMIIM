@@ -1,0 +1,2387 @@
+{
+  "artifact_type": "V43_P0_BADCASE_44_GPT_POST_REPAIR_PACKET",
+  "artifact_version": "v1",
+  "status": "READY_FOR_GPT_POST_REPAIR_ADJUDICATION",
+  "semantic_labels_are_frozen_inputs": true,
+  "codex_semantic_conclusions": 0,
+  "provider_calls": 39,
+  "rows": [
+    {
+      "atom_id": "JY-001-P0-0002",
+      "tender_id": "JY-001",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production Canonical未保留“信用中国/中国政府采购网”三类失信名单的完整资格排除义务；现有候选仅保留政府采购法第二十二条等其他资格要求。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "JY-001|27d6438c-9789-4aff-b348-0fe5acb0da1d",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 2,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-8ee229c14b972743.json",
+            "sha256": "sha256:5286155d57238c99b21c5674148feddce7e9a180a1b7522f2dab4f22a83533de"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-128fbae14c71481a.json",
+            "sha256": "sha256:7d2e89901de6cfb651a5a7ec7b22a1e57e58072c7f47810af7a4ef391e8e6f85"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-1d63db727df7beb9.json",
+            "sha256": "sha256:65ca4d21cac598e8634ff6837b754559ab1dd9d39dd03ad902e62bec9de4d214"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-c0011cd4c90893d6.json",
+            "sha256": "sha256:92a7b0e816b21e71e500b4a8281613054dec7344e2825d1c6b316401cd13f692"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "JY-001-P0-0007",
+      "tender_id": "JY-001",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production Canonical列举了开标一览表、配置表、响应偏离表等必备文件，但未形成“投标文件须包含*报价明细表”的独立要求。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "JY-001|b646f4eb-8d7c-4066-b907-21cf7f344b7b",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 5,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-76218183c692b82d.json",
+            "sha256": "sha256:14b47383eba5605d6cb09817e35f626ef1143e7f540fb6e678df080ffc41c352"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-adecad202658dd0d.json",
+            "sha256": "sha256:957cad178eb8ca057317283aea839e8f2489205f6437fce2f97e5c54faedf9c7"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-4b9f69da9c8bd3f2.json",
+            "sha256": "sha256:d633e18dfccd6680f9a2ccf60b5838751fee3fe01977121c721ad03bae4b2177"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-445de02e0440ac1f.json",
+            "sha256": "sha256:94cfffb17bb742ccf4d1a262fd057e16f8641853bd37c46b3e257977b724ab98"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "JY-001-P0-0013",
+      "tender_id": "JY-001",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production Canonical未形成“投标文件须按招标文件要求签署、盖章”的独立P0要求。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "JY-001|3ea177bc-b7cb-4bc6-b686-a2bb1d1a8272",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 2,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-c4ddfdf1366b98c0.json",
+            "sha256": "sha256:a9ad1b74cab2c8b71f7aea7119fbb9a89b077f43786d0d7e571e0500190ec68a"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-b8cc343b5480c919.json",
+            "sha256": "sha256:dd2444ab9c369f3b7a1b668fcbb4869d4ff9700d24de567279afee7eeef1acc0"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-22380b85bce7bbd2.json",
+            "sha256": "sha256:f29577fb92609b02143cf26b20d54929e9ddb578660f7482fb980a6abb2ade16"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-a10e27c1e9585550.json",
+            "sha256": "sha256:ef69083fdeb297a584489ba2c03a0f7698c7be21b010ab36bf0233343fb63092"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "JY-001-P0-0015",
+      "tender_id": "JY-001",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production Canonical未形成“报价不得超过预算金额或最高限价”的独立约束。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "JY-001|3ea177bc-b7cb-4bc6-b686-a2bb1d1a8272",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 2,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-c4ddfdf1366b98c0.json",
+            "sha256": "sha256:a9ad1b74cab2c8b71f7aea7119fbb9a89b077f43786d0d7e571e0500190ec68a"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-b8cc343b5480c919.json",
+            "sha256": "sha256:dd2444ab9c369f3b7a1b668fcbb4869d4ff9700d24de567279afee7eeef1acc0"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-22380b85bce7bbd2.json",
+            "sha256": "sha256:f29577fb92609b02143cf26b20d54929e9ddb578660f7482fb980a6abb2ade16"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-a10e27c1e9585550.json",
+            "sha256": "sha256:ef69083fdeb297a584489ba2c03a0f7698c7be21b010ab36bf0233343fb63092"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "JY-001-P0-0016",
+      "tender_id": "JY-001",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production Canonical未形成“投标文件不得含采购人不能接受的附加条件”的独立符合性约束。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "JY-001|3ea177bc-b7cb-4bc6-b686-a2bb1d1a8272",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 2,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-c4ddfdf1366b98c0.json",
+            "sha256": "sha256:a9ad1b74cab2c8b71f7aea7119fbb9a89b077f43786d0d7e571e0500190ec68a"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-b8cc343b5480c919.json",
+            "sha256": "sha256:dd2444ab9c369f3b7a1b668fcbb4869d4ff9700d24de567279afee7eeef1acc0"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-22380b85bce7bbd2.json",
+            "sha256": "sha256:f29577fb92609b02143cf26b20d54929e9ddb578660f7482fb980a6abb2ade16"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-a10e27c1e9585550.json",
+            "sha256": "sha256:ef69083fdeb297a584489ba2c03a0f7698c7be21b010ab36bf0233343fb63092"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "JY-001-P0-0019",
+      "tender_id": "JY-001",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production Canonical未形成“同一方案存在选择性报价时须明确以哪一个为准”的独立报价约束。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "JY-001|3ea177bc-b7cb-4bc6-b686-a2bb1d1a8272",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 2,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-c4ddfdf1366b98c0.json",
+            "sha256": "sha256:a9ad1b74cab2c8b71f7aea7119fbb9a89b077f43786d0d7e571e0500190ec68a"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-b8cc343b5480c919.json",
+            "sha256": "sha256:dd2444ab9c369f3b7a1b668fcbb4869d4ff9700d24de567279afee7eeef1acc0"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-22380b85bce7bbd2.json",
+            "sha256": "sha256:f29577fb92609b02143cf26b20d54929e9ddb578660f7482fb980a6abb2ade16"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-a10e27c1e9585550.json",
+            "sha256": "sha256:ef69083fdeb297a584489ba2c03a0f7698c7be21b010ab36bf0233343fb63092"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "JY-001-P0-0020",
+      "tender_id": "JY-001",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production Canonical未形成可独立判定的“须响应招标文件付款方式”要求；一般性全面响应条款不足以承担该具体义务。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "JY-001|3ea177bc-b7cb-4bc6-b686-a2bb1d1a8272",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 2,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-c4ddfdf1366b98c0.json",
+            "sha256": "sha256:a9ad1b74cab2c8b71f7aea7119fbb9a89b077f43786d0d7e571e0500190ec68a"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-b8cc343b5480c919.json",
+            "sha256": "sha256:dd2444ab9c369f3b7a1b668fcbb4869d4ff9700d24de567279afee7eeef1acc0"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-22380b85bce7bbd2.json",
+            "sha256": "sha256:f29577fb92609b02143cf26b20d54929e9ddb578660f7482fb980a6abb2ade16"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-a10e27c1e9585550.json",
+            "sha256": "sha256:ef69083fdeb297a584489ba2c03a0f7698c7be21b010ab36bf0233343fb63092"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "JY-001-P0-0022",
+      "tender_id": "JY-001",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production Canonical未形成招标文件列举的串通投标情形的独立禁止性要求。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "JY-001|3ea177bc-b7cb-4bc6-b686-a2bb1d1a8272",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 2,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-c4ddfdf1366b98c0.json",
+            "sha256": "sha256:a9ad1b74cab2c8b71f7aea7119fbb9a89b077f43786d0d7e571e0500190ec68a"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-b8cc343b5480c919.json",
+            "sha256": "sha256:dd2444ab9c369f3b7a1b668fcbb4869d4ff9700d24de567279afee7eeef1acc0"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-22380b85bce7bbd2.json",
+            "sha256": "sha256:f29577fb92609b02143cf26b20d54929e9ddb578660f7482fb980a6abb2ade16"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-a10e27c1e9585550.json",
+            "sha256": "sha256:ef69083fdeb297a584489ba2c03a0f7698c7be21b010ab36bf0233343fb63092"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "JY-001-P0-0023",
+      "tender_id": "JY-001",
+      "severity": "P0",
+      "frozen_semantic_label": "PARTIAL",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production保留了总体技术方案及一般技术规格/标准约束，但未完整保留“系统功能设计/建设方案应遵循招标文件列举的政策文件和技术标准”这一治理性要求，属于实质元素不完整。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "JY-001|a893ca94-72e8-4b0b-aec7-3a974b5d1f00",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 1,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-49a6d56ef1f6c6fa.json",
+            "sha256": "sha256:90381737b21803d78457058dd6a3ff1fb4ae95ed2b7523611e3329c2f099f7f5"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-f3856dd81f534bbf.json",
+            "sha256": "sha256:184538ae0976db035ad9e1d99eedfd5b1d97b921e8b62316859960e2148706f9"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-95123ca47c1089b4.json",
+            "sha256": "sha256:cf6a0e4ce8267cb2c0e5e819229e941bec4654528af1e2e585b8e0b57afd7f0c"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-ac076a4af071275e.json",
+            "sha256": "sha256:3aacf8b5886b40e8380c4431f180ff6756c186bccb323733b998429f6230d0cf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "JY-001-P0-0089",
+      "tender_id": "JY-001",
+      "severity": "P0",
+      "frozen_semantic_label": "PARTIAL",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production保留了资格声明函及对表中内容作出承诺的要求，但未保留“资格声明函不得缺失或实质性修改”的完整限制条件。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "JY-001|146d0a57-ee10-41f6-ba37-dbc3889948df",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 2,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-76218183c692b82d.json",
+            "sha256": "sha256:14b47383eba5605d6cb09817e35f626ef1143e7f540fb6e678df080ffc41c352"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-adecad202658dd0d.json",
+            "sha256": "sha256:957cad178eb8ca057317283aea839e8f2489205f6437fce2f97e5c54faedf9c7"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-4b9f69da9c8bd3f2.json",
+            "sha256": "sha256:d633e18dfccd6680f9a2ccf60b5838751fee3fe01977121c721ad03bae4b2177"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-445de02e0440ac1f.json",
+            "sha256": "sha256:94cfffb17bb742ccf4d1a262fd057e16f8641853bd37c46b3e257977b724ab98"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "TB-003-P0-0001",
+      "tender_id": "TB-003",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production仅保留了信用、行贿、关联关系等部分资格条件，未形成对《中华人民共和国政府采购法》第二十二条规定的完整独立资格要求。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "CANONICAL_OUTPUT",
+        "reason": "Candidate reached canonical output but quality gate did not PASS.",
+        "failure_code": null
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "TB-003|0ffec45b-c3ad-45ec-8055-e4e278057ee5",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 1,
+        "source_resolution_pass": true,
+        "canonicalization_pass": true,
+        "quality_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-5413181249413b22.json",
+            "sha256": "sha256:cfbba27bc0825f89e2e4915779ed359ed0d8112cea873566bc90863c2355528f"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-f9426d0f63c592c6.json",
+            "sha256": "sha256:124e46b9c73e60666f2aa3d37765df39c2cb70e90955005cffab7501d6ff9623"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-81c16ade038a4820.json",
+            "sha256": "sha256:1261e56a1cc200574449ac82d59cd27dde82bd27ab371d5f44442e0148afdcf0"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-2710178938ee539a.json",
+            "sha256": "sha256:9349d84a8354b391adf7337f332f8bb39c81399345e0d472f04065213a84279a"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "TB-003-P0-0002",
+      "tender_id": "TB-003",
+      "severity": "P0",
+      "frozen_semantic_label": "PARTIAL",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production仅写为“须满足行贿犯罪档案记录要求”，未保留明确的否定极性“不得存在行贿犯罪档案记录”，因此义务被部分保留但关键极性不足。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "CANONICAL_OUTPUT",
+        "reason": "Candidate reached canonical output but quality gate did not PASS.",
+        "failure_code": null
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "TB-003|0ffec45b-c3ad-45ec-8055-e4e278057ee5",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 1,
+        "source_resolution_pass": true,
+        "canonicalization_pass": true,
+        "quality_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-5413181249413b22.json",
+            "sha256": "sha256:cfbba27bc0825f89e2e4915779ed359ed0d8112cea873566bc90863c2355528f"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-f9426d0f63c592c6.json",
+            "sha256": "sha256:124e46b9c73e60666f2aa3d37765df39c2cb70e90955005cffab7501d6ff9623"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-81c16ade038a4820.json",
+            "sha256": "sha256:1261e56a1cc200574449ac82d59cd27dde82bd27ab371d5f44442e0148afdcf0"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-2710178938ee539a.json",
+            "sha256": "sha256:9349d84a8354b391adf7337f332f8bb39c81399345e0d472f04065213a84279a"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "TB-003-P0-0006",
+      "tender_id": "TB-003",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production未形成“须在规定时间内获取并下载招标文件，否则视为无效标”的独立程序性要求。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "TB-003|4233eee3-42e3-4923-8c66-be514f3d8136",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 3,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-870807ccd52f3918.json",
+            "sha256": "sha256:70a9941601c152525359836bc5d4376ff31433c4d6001a1925655a5ae3ea1066"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-538d56317d57b134.json",
+            "sha256": "sha256:eb9a144657aab6a83a4906441a22252f9487b94b81dfec6b1154ee0fa749ab90"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-9ee4a18c6853b318.json",
+            "sha256": "sha256:28055097e616302f75717512980e98a27e115ceeae309025457333e97f9638ab"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-0fbf78289cc41797.json",
+            "sha256": "sha256:ddad352a537b790f4b46d0f7f19e9af1d015fbafe7e4574b05099ad62d885e02"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-eb8b5db96cfd859b.json",
+            "sha256": "sha256:aa0159da7618073673f98f11eb78dda1d4e1b2204fb1457de6e86280bf71ee90"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-c8387cf88cb64085.json",
+            "sha256": "sha256:e4e0f82da5e2fc21141df8888808d92114f65e909ba946b086db0ad003a54aac"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "TB-003-P0-0023",
+      "tender_id": "TB-003",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production未形成“报价修正后须由投标人确认，否则投标无效”的独立要求。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "TB-003|4233eee3-42e3-4923-8c66-be514f3d8136",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 3,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-870807ccd52f3918.json",
+            "sha256": "sha256:70a9941601c152525359836bc5d4376ff31433c4d6001a1925655a5ae3ea1066"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-538d56317d57b134.json",
+            "sha256": "sha256:eb9a144657aab6a83a4906441a22252f9487b94b81dfec6b1154ee0fa749ab90"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-9ee4a18c6853b318.json",
+            "sha256": "sha256:28055097e616302f75717512980e98a27e115ceeae309025457333e97f9638ab"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-0fbf78289cc41797.json",
+            "sha256": "sha256:ddad352a537b790f4b46d0f7f19e9af1d015fbafe7e4574b05099ad62d885e02"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-eb8b5db96cfd859b.json",
+            "sha256": "sha256:aa0159da7618073673f98f11eb78dda1d4e1b2204fb1457de6e86280bf71ee90"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-c8387cf88cb64085.json",
+            "sha256": "sha256:e4e0f82da5e2fc21141df8888808d92114f65e909ba946b086db0ad003a54aac"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "TB-003-P0-0024",
+      "tender_id": "TB-003",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production未形成“评审委员会要求澄清/说明/补正时不得拒绝，拒不澄清可被拒绝投标”的独立程序性要求。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "TB-003|186e200e-df96-41bd-9756-77fd117e5404",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 1,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-870807ccd52f3918.json",
+            "sha256": "sha256:70a9941601c152525359836bc5d4376ff31433c4d6001a1925655a5ae3ea1066"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-538d56317d57b134.json",
+            "sha256": "sha256:eb9a144657aab6a83a4906441a22252f9487b94b81dfec6b1154ee0fa749ab90"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-9ee4a18c6853b318.json",
+            "sha256": "sha256:28055097e616302f75717512980e98a27e115ceeae309025457333e97f9638ab"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-0fbf78289cc41797.json",
+            "sha256": "sha256:ddad352a537b790f4b46d0f7f19e9af1d015fbafe7e4574b05099ad62d885e02"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-eb8b5db96cfd859b.json",
+            "sha256": "sha256:aa0159da7618073673f98f11eb78dda1d4e1b2204fb1457de6e86280bf71ee90"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-c8387cf88cb64085.json",
+            "sha256": "sha256:e4e0f82da5e2fc21141df8888808d92114f65e909ba946b086db0ad003a54aac"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "TB-003-P0-0025",
+      "tender_id": "TB-003",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production未形成“异常低价时须证明报价合理性，否则按无效投标处理”的独立要求。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "TB-003|4233eee3-42e3-4923-8c66-be514f3d8136",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 3,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-870807ccd52f3918.json",
+            "sha256": "sha256:70a9941601c152525359836bc5d4376ff31433c4d6001a1925655a5ae3ea1066"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-538d56317d57b134.json",
+            "sha256": "sha256:eb9a144657aab6a83a4906441a22252f9487b94b81dfec6b1154ee0fa749ab90"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-9ee4a18c6853b318.json",
+            "sha256": "sha256:28055097e616302f75717512980e98a27e115ceeae309025457333e97f9638ab"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-0fbf78289cc41797.json",
+            "sha256": "sha256:ddad352a537b790f4b46d0f7f19e9af1d015fbafe7e4574b05099ad62d885e02"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-eb8b5db96cfd859b.json",
+            "sha256": "sha256:aa0159da7618073673f98f11eb78dda1d4e1b2204fb1457de6e86280bf71ee90"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-c8387cf88cb64085.json",
+            "sha256": "sha256:e4e0f82da5e2fc21141df8888808d92114f65e909ba946b086db0ad003a54aac"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "TB-006-P0-0005",
+      "tender_id": "TB-006",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production未形成失信被执行人、重大税收违法案件当事人、政府采购严重违法失信主体三类信用排除义务。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "TB-006|23c38f12-260a-41f0-98c7-ffb80159216c",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 2,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-b090894bd042fdab.json",
+            "sha256": "sha256:19215d4227d8a429b4aaac30ba502a31efd0e4db8b1eb02128f9ccca0d0debe4"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-3d8e91ee48d96a8b.json",
+            "sha256": "sha256:189ea4a3dcbc8887e16dc7a9b97a5b1a594b8b408f2eaa2f3d2884dffd909df1"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-406edc64b1cb850d.json",
+            "sha256": "sha256:e6660e4b7e5e3ebfa47ccd9412f08d36b2f31cfea353aeb56bd22da90581f59e"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-e7e6be46818a4526.json",
+            "sha256": "sha256:de48d78b035662dc253b912086716b219c9b552bbab508a3b1a47965bc262509"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "TB-006-P0-0010",
+      "tender_id": "TB-006",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production未形成“投标报价不得超过预算金额或最高限价”的独立约束。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "CANONICAL_OUTPUT",
+        "reason": "Candidate reached canonical output but quality gate did not PASS.",
+        "failure_code": null
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "TB-006|01e0ba3a-1325-4e58-8fe8-04836dcdfcde",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 0,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "REVIEW_REQUIRED_OR_EMPTY",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-e6a8f63cb06999df.json",
+            "sha256": "sha256:76c71452790da5a8deb70b2b57bf053df5d2137a5fbb178414f04c93366e7f0a"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-2177adb1cc879072.json",
+            "sha256": "sha256:444fcbc3fcd3dcd8ae53d6438042b6dc4d1f49bd79069605dccc1d384bd87047"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-7cf1e75002474a3d.json",
+            "sha256": "sha256:312b0f922685a42cd7b802200c933c41139de5066444faf175c623050d499f76"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-d0cc672a3f233227.json",
+            "sha256": "sha256:93dee0fd58326527cd7922934d578426304592f9f2fec7e73098ddb2b9d8f76b"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "TB-006-P0-0011",
+      "tender_id": "TB-006",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production未形成“不得提供可选择性或可调整报价”的独立约束。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "TB-006|ff8cb695-52c6-49bc-b4fc-24e80fa1ed92",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 8,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-e6a8f63cb06999df.json",
+            "sha256": "sha256:76c71452790da5a8deb70b2b57bf053df5d2137a5fbb178414f04c93366e7f0a"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-2177adb1cc879072.json",
+            "sha256": "sha256:444fcbc3fcd3dcd8ae53d6438042b6dc4d1f49bd79069605dccc1d384bd87047"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-7cf1e75002474a3d.json",
+            "sha256": "sha256:312b0f922685a42cd7b802200c933c41139de5066444faf175c623050d499f76"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-d0cc672a3f233227.json",
+            "sha256": "sha256:93dee0fd58326527cd7922934d578426304592f9f2fec7e73098ddb2b9d8f76b"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "TB-006-P0-0014",
+      "tender_id": "TB-006",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production未形成“涉及报价修正时须对修正后的报价予以确认”的独立要求。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "CANONICAL_OUTPUT",
+        "reason": "Candidate reached canonical output but quality gate did not PASS.",
+        "failure_code": null
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "TB-006|01e0ba3a-1325-4e58-8fe8-04836dcdfcde",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 0,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "REVIEW_REQUIRED_OR_EMPTY",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-e6a8f63cb06999df.json",
+            "sha256": "sha256:76c71452790da5a8deb70b2b57bf053df5d2137a5fbb178414f04c93366e7f0a"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-2177adb1cc879072.json",
+            "sha256": "sha256:444fcbc3fcd3dcd8ae53d6438042b6dc4d1f49bd79069605dccc1d384bd87047"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-7cf1e75002474a3d.json",
+            "sha256": "sha256:312b0f922685a42cd7b802200c933c41139de5066444faf175c623050d499f76"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-d0cc672a3f233227.json",
+            "sha256": "sha256:93dee0fd58326527cd7922934d578426304592f9f2fec7e73098ddb2b9d8f76b"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "TB-006-P0-0015",
+      "tender_id": "TB-006",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production未形成“报价异常低时须在规定时间内证明报价合理性”的独立要求。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "CANONICAL_OUTPUT",
+        "reason": "Candidate reached canonical output but quality gate did not PASS.",
+        "failure_code": null
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "TB-006|01e0ba3a-1325-4e58-8fe8-04836dcdfcde",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 0,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "REVIEW_REQUIRED_OR_EMPTY",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-e6a8f63cb06999df.json",
+            "sha256": "sha256:76c71452790da5a8deb70b2b57bf053df5d2137a5fbb178414f04c93366e7f0a"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-2177adb1cc879072.json",
+            "sha256": "sha256:444fcbc3fcd3dcd8ae53d6438042b6dc4d1f49bd79069605dccc1d384bd87047"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-7cf1e75002474a3d.json",
+            "sha256": "sha256:312b0f922685a42cd7b802200c933c41139de5066444faf175c623050d499f76"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-d0cc672a3f233227.json",
+            "sha256": "sha256:93dee0fd58326527cd7922934d578426304592f9f2fec7e73098ddb2b9d8f76b"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "TB-006-P0-0019",
+      "tender_id": "TB-006",
+      "severity": "P0",
+      "frozen_semantic_label": "PARTIAL",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production保留了电子交易平台和截止前提交电子投标文件的要求，但未保留“须在规定时间内完成解密，因非系统原因解密失败则投标无效”的完整程序及后果。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "TB-006|8d158f93-ed65-46e0-b308-cc978570a645",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 3,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-2b1a1664cf62392c.json",
+            "sha256": "sha256:775f56a57d94f2d32840367b86af9f151a2d830403bc334d413eddc91b8ada7c"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-44872de60b2c9c04.json",
+            "sha256": "sha256:4d101b51b7213589cbab80353af2efe0adcc14615e6093a80ee33bc43ef7e73a"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-f09cb056de233da0.json",
+            "sha256": "sha256:fd3076913e6a305d8d36b11399248817d6969025f5490d0eb6b91e99868ce767"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-866f44a593700b64.json",
+            "sha256": "sha256:6c89af717ee658486142ad2a8e215ff5fb770a805845f0bb68127c88ba67731f"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "FAST-01-P0-0001",
+      "tender_id": "FAST-01",
+      "severity": "P0",
+      "frozen_semantic_label": "PARTIAL",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production保留了政府采购法第二十二条第一款条件，但未完整保留“具有独立承担民事责任能力并提供相应主体证明资料”这一具体资格义务，尤其证明材料要求缺失。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "FAST-01|621f8f8f-c7b4-4726-a55c-a69774235484",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 5,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-d475dd8028647c8b.json",
+            "sha256": "sha256:05f0e2341f5088c7a1ccd5390bca57580d2dd4b7c488b474c374f802f3e52e94"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-460c8e944387ed9e.json",
+            "sha256": "sha256:b4dc60f23007ebaa9aa7bf74b911b89fda6615f36215125019483d8f1be417cc"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-02548f87ad533a52.json",
+            "sha256": "sha256:5aa5b9ae1e88a59ea875134b22720b9ff27626c914712c5b5e69bf509f8c2540"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-0781e3c7f474f78a.json",
+            "sha256": "sha256:e9567f090513d12f863e5f7897130514746146e79434f457f2d19b734e441907"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "FAST-01-P0-0005",
+      "tender_id": "FAST-01",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production保留了深圳市本地供应商信用管理禁止记录，但未保留冻结Source Truth要求的失信被执行人、重大税收违法案件当事人、政府采购严重违法失信行为三类全国信用排除义务。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "FAST-01|621f8f8f-c7b4-4726-a55c-a69774235484",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 5,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-d475dd8028647c8b.json",
+            "sha256": "sha256:05f0e2341f5088c7a1ccd5390bca57580d2dd4b7c488b474c374f802f3e52e94"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-460c8e944387ed9e.json",
+            "sha256": "sha256:b4dc60f23007ebaa9aa7bf74b911b89fda6615f36215125019483d8f1be417cc"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-02548f87ad533a52.json",
+            "sha256": "sha256:5aa5b9ae1e88a59ea875134b22720b9ff27626c914712c5b5e69bf509f8c2540"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-0781e3c7f474f78a.json",
+            "sha256": "sha256:e9567f090513d12f863e5f7897130514746146e79434f457f2d19b734e441907"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "FAST-01-P0-0011",
+      "tender_id": "FAST-01",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production未形成“分项报价或投标总价不得高于预算金额或最高限价”的独立约束。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "FAST-01|09205461-08a0-4b7a-8f85-5df9c67680f2",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 1,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-cbf29aa66df0ad8e.json",
+            "sha256": "sha256:ec94556b22289b6c78f3e4c7a6a2b007d79509739d2d76066507215d23e45267"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-f27befd5717e8e99.json",
+            "sha256": "sha256:5e6dbcd163a8dd71fbd097af35ce22cd54c12e708aead500775205daf3af33d3"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-50148d8c46bc66b8.json",
+            "sha256": "sha256:3c6133e8f13f2426f8169d3b60e14cc9be5791845a4505c46b70a514e99d1d61"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-573ead81190ec18e.json",
+            "sha256": "sha256:a66af4b4eaca719333fa874024744a7844832b452f5f98904a1e7503b95ce6a5"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "FAST-01-P0-0017",
+      "tender_id": "FAST-01",
+      "severity": "P0",
+      "frozen_semantic_label": "DISTORTED",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Source Truth要求不同投标供应商的文件制作机器码“不得一致”，Production却生成“文件制作机器码一致”，否定极性被反转。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "FAST-01|09205461-08a0-4b7a-8f85-5df9c67680f2",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 1,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-cbf29aa66df0ad8e.json",
+            "sha256": "sha256:ec94556b22289b6c78f3e4c7a6a2b007d79509739d2d76066507215d23e45267"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-f27befd5717e8e99.json",
+            "sha256": "sha256:5e6dbcd163a8dd71fbd097af35ce22cd54c12e708aead500775205daf3af33d3"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-50148d8c46bc66b8.json",
+            "sha256": "sha256:3c6133e8f13f2426f8169d3b60e14cc9be5791845a4505c46b70a514e99d1d61"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-573ead81190ec18e.json",
+            "sha256": "sha256:a66af4b4eaca719333fa874024744a7844832b452f5f98904a1e7503b95ce6a5"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "FAST-01-P0-0018",
+      "tender_id": "FAST-01",
+      "severity": "P0",
+      "frozen_semantic_label": "DISTORTED",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Source Truth要求不同投标供应商的文件创建标识码“不得一致”，Production却生成“文件创建标识码一致”，否定极性被反转。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "FAST-01|09205461-08a0-4b7a-8f85-5df9c67680f2",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 1,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-cbf29aa66df0ad8e.json",
+            "sha256": "sha256:ec94556b22289b6c78f3e4c7a6a2b007d79509739d2d76066507215d23e45267"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-f27befd5717e8e99.json",
+            "sha256": "sha256:5e6dbcd163a8dd71fbd097af35ce22cd54c12e708aead500775205daf3af33d3"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-50148d8c46bc66b8.json",
+            "sha256": "sha256:3c6133e8f13f2426f8169d3b60e14cc9be5791845a4505c46b70a514e99d1d61"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-573ead81190ec18e.json",
+            "sha256": "sha256:a66af4b4eaca719333fa874024744a7844832b452f5f98904a1e7503b95ce6a5"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "FAST-01-P0-0019",
+      "tender_id": "FAST-01",
+      "severity": "P0",
+      "frozen_semantic_label": "DISTORTED",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Source Truth要求“不得存在”其他法定无效情形，Production仅保留“法律、法规、规章、规范性文件规定的其他情形”，丢失无效/禁止治理语境，实质含义发生改变。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "FAST-01|380eb289-f8c6-41a7-b0d4-acc1b20c0baa",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 6,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-6cb000a80512ce6d.json",
+            "sha256": "sha256:2744d904c73101a720e2f7e3d969f9d372db4f7353a974e366ce492a9b2ab48c"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-1865d9ec044c78eb.json",
+            "sha256": "sha256:460404b34f1a05071281102bb353c8317488cb7f6d80d177a1ee7987e567a2fb"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-9ee4a18c6853b318.json",
+            "sha256": "sha256:28055097e616302f75717512980e98a27e115ceeae309025457333e97f9638ab"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-0fbf78289cc41797.json",
+            "sha256": "sha256:ddad352a537b790f4b46d0f7f19e9af1d015fbafe7e4574b05099ad62d885e02"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-74fc0fb6c8c78782.json",
+            "sha256": "sha256:a638c03e91d323dab04dc336ddd15921d4627a7ba7773d9f5a61d73b5595d99e"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-c8387cf88cb64085.json",
+            "sha256": "sha256:e4e0f82da5e2fc21141df8888808d92114f65e909ba946b086db0ad003a54aac"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "FAST-01-P0-0022",
+      "tender_id": "FAST-01",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production存在一般投标有效期相关内容，但未保留本条明确的“120个日历日”阈值，因此没有可承担该P0义务的Canonical。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "FAST-01|a71888e4-476b-44c5-9e5b-5e91a6e3f848",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 3,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-cbf29aa66df0ad8e.json",
+            "sha256": "sha256:ec94556b22289b6c78f3e4c7a6a2b007d79509739d2d76066507215d23e45267"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-f27befd5717e8e99.json",
+            "sha256": "sha256:5e6dbcd163a8dd71fbd097af35ce22cd54c12e708aead500775205daf3af33d3"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-50148d8c46bc66b8.json",
+            "sha256": "sha256:3c6133e8f13f2426f8169d3b60e14cc9be5791845a4505c46b70a514e99d1d61"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-573ead81190ec18e.json",
+            "sha256": "sha256:a66af4b4eaca719333fa874024744a7844832b452f5f98904a1e7503b95ce6a5"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "FAST-04-P0-0203",
+      "tender_id": "FAST-04",
+      "severity": "P0",
+      "frozen_semantic_label": "DISTORTED",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Source Truth的业务义务是支持ODBC兼容；Production生成“支持ODBC 92兼容”，把表格行号92污染进业务语义。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "FAST-04|5014cc94-baf5-402b-a5d6-75e1e544caa4",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 6,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-a3babac4c04af549.json",
+            "sha256": "sha256:240acf6645930a965890077fe9d7632ea891de508acadb8ce3e4e8fefd54ed10"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-a0bb07c1f744ffa3.json",
+            "sha256": "sha256:76ebcf0c889e11466a5735e0b24a1a567db0cc5217881fa141931d9fa7dc8fa8"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-139c628eebd540c2.json",
+            "sha256": "sha256:7e7cfcac446370c10c15f300ddd6a81d76708b85cdf570f6c5a18df801cef56d"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-99120becd6edc43b.json",
+            "sha256": "sha256:b031f29e8e93eaa2929901e8a5cc7dc60d02f4e57b7d2e204b31cb9811121058"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "FAST-04-P0-0204",
+      "tender_id": "FAST-04",
+      "severity": "P0",
+      "frozen_semantic_label": "DISTORTED",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Source Truth的业务义务是支持JDBC兼容；Production生成“支持JDBC 93兼容”，把表格行号93污染进业务语义。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "FAST-04|5014cc94-baf5-402b-a5d6-75e1e544caa4",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 6,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-a3babac4c04af549.json",
+            "sha256": "sha256:240acf6645930a965890077fe9d7632ea891de508acadb8ce3e4e8fefd54ed10"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-a0bb07c1f744ffa3.json",
+            "sha256": "sha256:76ebcf0c889e11466a5735e0b24a1a567db0cc5217881fa141931d9fa7dc8fa8"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-139c628eebd540c2.json",
+            "sha256": "sha256:7e7cfcac446370c10c15f300ddd6a81d76708b85cdf570f6c5a18df801cef56d"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-99120becd6edc43b.json",
+            "sha256": "sha256:b031f29e8e93eaa2929901e8a5cc7dc60d02f4e57b7d2e204b31cb9811121058"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "FAST-04-P0-0216",
+      "tender_id": "FAST-04",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production未形成失信被执行人、重大税收违法案件当事人、政府采购严重违法失信主体三类信用排除义务。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "FAST-04|6eb53b24-56fd-4aae-b1be-32ed4aabc603",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 2,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-ab16323ebd86ec39.json",
+            "sha256": "sha256:cf089132490e071e8bc46b47eebdc8f5ce3f37a06a3cdcae23f23e379c2abe03"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-d4c174a2832f71fb.json",
+            "sha256": "sha256:c79443c642d44f24e31246401a65f09942948182cad27e8ef282096334f0104f"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-20db80353e44f1a2.json",
+            "sha256": "sha256:b0c1d10673c967aa5f4ed582d1588d537ac253dfec41360d6b833d06d0464707"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-e7e6be46818a4526.json",
+            "sha256": "sha256:de48d78b035662dc253b912086716b219c9b552bbab508a3b1a47965bc262509"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "FAST-04-P0-0221",
+      "tender_id": "FAST-04",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production未形成“投标报价不得超过项目/采购包预算金额或最高限价”的独立约束。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "FAST-04|9a38f9d5-42b3-4f25-bd23-2c3dae72ad5b",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 8,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-f1fb06f331753484.json",
+            "sha256": "sha256:1050906ea4f1cde5590ef81b24fdce199bdd4aaf778dbadf99841edb3c498d39"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-9be270a410319a75.json",
+            "sha256": "sha256:9698c8becb08defe6949948104288f6e2b221acfe753f7d9a70f7a28f06ceef2"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-df8d64081a372178.json",
+            "sha256": "sha256:ebb2977e969ecb9abb6091d125c0b753efbdea760b7c4a4403bbc501de4b440a"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-e7b8348f75a66717.json",
+            "sha256": "sha256:386639abed0429c171510a39dc490904cc4b29ed37322d425ae27cba28e156ca"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "FAST-04-P0-0222",
+      "tender_id": "FAST-04",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production未形成“不得提供可选择性或可调整报价（另有规定除外）”的独立约束。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "CANONICAL_OUTPUT",
+        "reason": "Candidate reached canonical output but quality gate did not PASS.",
+        "failure_code": null
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "FAST-04|34822c65-bb18-419e-bade-4b340b7153e4",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 0,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "REVIEW_REQUIRED_OR_EMPTY",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-f1fb06f331753484.json",
+            "sha256": "sha256:1050906ea4f1cde5590ef81b24fdce199bdd4aaf778dbadf99841edb3c498d39"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-9be270a410319a75.json",
+            "sha256": "sha256:9698c8becb08defe6949948104288f6e2b221acfe753f7d9a70f7a28f06ceef2"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-df8d64081a372178.json",
+            "sha256": "sha256:ebb2977e969ecb9abb6091d125c0b753efbdea760b7c4a4403bbc501de4b440a"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-e7b8348f75a66717.json",
+            "sha256": "sha256:386639abed0429c171510a39dc490904cc4b29ed37322d425ae27cba28e156ca"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "FAST-04-P0-0225",
+      "tender_id": "FAST-04",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production未形成“涉及报价修正时须对修正后的报价予以确认”的独立要求。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "CANONICAL_OUTPUT",
+        "reason": "Candidate reached canonical output but quality gate did not PASS.",
+        "failure_code": null
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "FAST-04|34822c65-bb18-419e-bade-4b340b7153e4",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 0,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "REVIEW_REQUIRED_OR_EMPTY",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-f1fb06f331753484.json",
+            "sha256": "sha256:1050906ea4f1cde5590ef81b24fdce199bdd4aaf778dbadf99841edb3c498d39"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-9be270a410319a75.json",
+            "sha256": "sha256:9698c8becb08defe6949948104288f6e2b221acfe753f7d9a70f7a28f06ceef2"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-df8d64081a372178.json",
+            "sha256": "sha256:ebb2977e969ecb9abb6091d125c0b753efbdea760b7c4a4403bbc501de4b440a"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-e7b8348f75a66717.json",
+            "sha256": "sha256:386639abed0429c171510a39dc490904cc4b29ed37322d425ae27cba28e156ca"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "FAST-WATER-01-P0-0008",
+      "tender_id": "FAST-WATER-01",
+      "severity": "P0",
+      "frozen_semantic_label": "PARTIAL",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production保留了数据备份、安全加固、功能/流程完善、安全检查和应急故障处理，但漏掉“使用技术咨询”，因此为实质内容部分缺失。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "FAST-WATER-01|0a4b60d9-3aea-4df0-bea0-27ad4dddefc3",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 31,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-6fb78f903c8c697a.json",
+            "sha256": "sha256:ce84510b77134a3c9716b74f1052c3b2e896f39f014b9ec1f33884a94d4929b7"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-ac84679c1e7a75c0.json",
+            "sha256": "sha256:dfb7b233e94796dd795dbdff904b2a47799e66c1ee2b32815ff2b424fdeb6164"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-e453fd02ef7f5619.json",
+            "sha256": "sha256:47faf5fd466c93c8f593fe59978f48b1f89e1580460e71a4142de2d20d8f3001"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-81fd4b0988968ff6.json",
+            "sha256": "sha256:f35d79a1cc7c550cb9d15a459e3e6b59b7b362cfdad2817087f3cd1bf4bdcd85"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "FAST-WATER-01-P0-0072",
+      "tender_id": "FAST-WATER-01",
+      "severity": "P0",
+      "frozen_semantic_label": "DISTORTED",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Source Truth冻结为“严重故障次数目标0次/年”，Production写成“平均每季度发生严重故障次数，目标0次”，改变了周期/范围。原始表格同时存在“次数/年”与“平均每季度”的内部冲突，需保留Source Internal Conflict复核标记。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "FAST-WATER-01|2509f76d-3bf9-401b-8a2a-d6231f41590e",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 4,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-7051020045cde5e4.json",
+            "sha256": "sha256:dad2ad0cb69a0f5626dc3dbd8df08be84eb6aa638e374354de23dc12abe56d63"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-f3610579d0103998.json",
+            "sha256": "sha256:8ae1dda7393ddcf96802832bf0eedd4c95f6695404cd869efe7a8ef06c69634a"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-d491036fb635de5f.json",
+            "sha256": "sha256:c0cbe1dff42e4e95f7e3ce147731c84ed2334668c34f2fcb098db751320676ad"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-6858f38a4e5489f7.json",
+            "sha256": "sha256:a7fed0cd2a5267882437134357b54e3498c5e195ab99a3f3e54f7b47509fdf42"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "FAST-WATER-01-P0-0078",
+      "tender_id": "FAST-WATER-01",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production未形成合同价款70%/20%/10%的三阶段付款进度要求。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "FAST-WATER-01|809b3fc1-fdd2-49a6-bb27-17131bb28c5c",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 5,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-7051020045cde5e4.json",
+            "sha256": "sha256:dad2ad0cb69a0f5626dc3dbd8df08be84eb6aa638e374354de23dc12abe56d63"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-f3610579d0103998.json",
+            "sha256": "sha256:8ae1dda7393ddcf96802832bf0eedd4c95f6695404cd869efe7a8ef06c69634a"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-d491036fb635de5f.json",
+            "sha256": "sha256:c0cbe1dff42e4e95f7e3ce147731c84ed2334668c34f2fcb098db751320676ad"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-6858f38a4e5489f7.json",
+            "sha256": "sha256:a7fed0cd2a5267882437134357b54e3498c5e195ab99a3f3e54f7b47509fdf42"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "FAST-WATER-01-P0-0079",
+      "tender_id": "FAST-WATER-01",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production未形成“付款方式为转账支票或汇款”的独立付款方式要求。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "FAST-WATER-01|809b3fc1-fdd2-49a6-bb27-17131bb28c5c",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 5,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-7051020045cde5e4.json",
+            "sha256": "sha256:dad2ad0cb69a0f5626dc3dbd8df08be84eb6aa638e374354de23dc12abe56d63"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-f3610579d0103998.json",
+            "sha256": "sha256:8ae1dda7393ddcf96802832bf0eedd4c95f6695404cd869efe7a8ef06c69634a"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-d491036fb635de5f.json",
+            "sha256": "sha256:c0cbe1dff42e4e95f7e3ce147731c84ed2334668c34f2fcb098db751320676ad"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-6858f38a4e5489f7.json",
+            "sha256": "sha256:a7fed0cd2a5267882437134357b54e3498c5e195ab99a3f3e54f7b47509fdf42"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "FAST-WATER-01-P0-0080",
+      "tender_id": "FAST-WATER-01",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production未形成“供应商须在每笔付款前提供合规发票”的独立付款前置要求。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "FAST-WATER-01|809b3fc1-fdd2-49a6-bb27-17131bb28c5c",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 5,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-7051020045cde5e4.json",
+            "sha256": "sha256:dad2ad0cb69a0f5626dc3dbd8df08be84eb6aa638e374354de23dc12abe56d63"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-f3610579d0103998.json",
+            "sha256": "sha256:8ae1dda7393ddcf96802832bf0eedd4c95f6695404cd869efe7a8ef06c69634a"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-d491036fb635de5f.json",
+            "sha256": "sha256:c0cbe1dff42e4e95f7e3ce147731c84ed2334668c34f2fcb098db751320676ad"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-6858f38a4e5489f7.json",
+            "sha256": "sha256:a7fed0cd2a5267882437134357b54e3498c5e195ab99a3f3e54f7b47509fdf42"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "FAST-WATER-01-P0-0087",
+      "tender_id": "FAST-WATER-01",
+      "severity": "P0",
+      "frozen_semantic_label": "PARTIAL",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production保留了重大税收违法案件当事人和政府采购严重违法失信记录两类信用排除，但漏掉“失信被执行人”，因此三类资格排除义务不完整。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "FAST-WATER-01|873b4868-64fc-44a6-a04c-f9bebdc04283",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 4,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-596a3debf4e1bb83.json",
+            "sha256": "sha256:e13e2e445a78081833d18318b7e42f01afff9f9e0eb00b75d771e89e01454599"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-573341006c65656d.json",
+            "sha256": "sha256:02275b71bba29570dbb1eb148eda88393334f19c92a5ada73fee4c9efd87d6a6"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-9383ffd8368d2751.json",
+            "sha256": "sha256:b242ad384c1513f3d9380c1b1062a4d20647e6a6443ebf37f0a4b80aa884d87b"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-5adcd96a60c4fbf2.json",
+            "sha256": "sha256:43b1008030e8479a904f9c9cab638bb6e34f5136c67577d27b8dd86d8d42d562"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "FAST-WATER-01-P0-0092",
+      "tender_id": "FAST-WATER-01",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production未形成“投标报价不得超过预算金额或最高限价”的独立约束。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "FAST-WATER-01|af4f9abe-50c7-48c6-be35-795eaa227e19",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 7,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-687c3bd005b40cd4.json",
+            "sha256": "sha256:2cbe8254aac6c15e752abdb83229b71c26c9454634c3cb60a1b2c0b1b471c8ce"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-6fccff36c3aff230.json",
+            "sha256": "sha256:f863763ebbd23602123064bccfc6f52bf218a00bcd3854479901b338e7ae380b"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-995a44ca657abefa.json",
+            "sha256": "sha256:962fa0cde5d4e92822853c2ae1c7446a44b5d687bde34252b0c5b8955eb6c4bd"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-441fc5237cac44dc.json",
+            "sha256": "sha256:8dc2e6183508f52d6267c68e0db3f14062a83afde2d1334cb9e9bf28df88ce5d"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "FAST-WATER-01-P0-0093",
+      "tender_id": "FAST-WATER-01",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production未形成“不得出现可选择性或可调整报价”的独立约束。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "FAST-WATER-01|af4f9abe-50c7-48c6-be35-795eaa227e19",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 7,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-687c3bd005b40cd4.json",
+            "sha256": "sha256:2cbe8254aac6c15e752abdb83229b71c26c9454634c3cb60a1b2c0b1b471c8ce"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-6fccff36c3aff230.json",
+            "sha256": "sha256:f863763ebbd23602123064bccfc6f52bf218a00bcd3854479901b338e7ae380b"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-995a44ca657abefa.json",
+            "sha256": "sha256:962fa0cde5d4e92822853c2ae1c7446a44b5d687bde34252b0c5b8955eb6c4bd"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-441fc5237cac44dc.json",
+            "sha256": "sha256:8dc2e6183508f52d6267c68e0db3f14062a83afde2d1334cb9e9bf28df88ce5d"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    },
+    {
+      "atom_id": "FAST-WATER-01-P0-0097",
+      "tender_id": "FAST-WATER-01",
+      "severity": "P0",
+      "frozen_semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "semantic_reason": "Production未形成“涉及报价修正时须对修正后的报价予以确认”的独立要求。",
+      "observability_state": "TARGETED_REPLAY_REQUIRED",
+      "mechanical_first_divergence": {
+        "status": "DETERMINED",
+        "stage": "SOURCE_RESOLUTION",
+        "reason": "Candidate source reference could not be resolved by the existing resolver.",
+        "failure_code": "SOURCE_LOCATION_UNRESOLVED"
+      },
+      "replay_status": "COMPLETED_TARGETED_ONLY",
+      "gpt_semantic_review_required": true,
+      "replay_evidence": {
+        "replay_key": "FAST-WATER-01|af4f9abe-50c7-48c6-be35-795eaa227e19",
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "schema_pass": true,
+        "candidate_count": 7,
+        "source_resolution_pass": false,
+        "canonicalization_pass": false,
+        "quality_gate_decision": "BLOCKED",
+        "restricted_evidence_refs": [
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\PROVIDER_INPUT_SNAPSHOT-687c3bd005b40cd4.json",
+            "sha256": "sha256:2cbe8254aac6c15e752abdb83229b71c26c9454634c3cb60a1b2c0b1b471c8ce"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\RAW_PROVIDER_RESPONSE_SNAPSHOT-6fccff36c3aff230.json",
+            "sha256": "sha256:f863763ebbd23602123064bccfc6f52bf218a00bcd3854479901b338e7ae380b"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\NORMALIZED_CANDIDATE_SNAPSHOT-995a44ca657abefa.json",
+            "sha256": "sha256:962fa0cde5d4e92822853c2ae1c7446a44b5d687bde34252b0c5b8955eb6c4bd"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICALIZATION_DECISION_SNAPSHOT-6d5f4b87e17df041.json",
+            "sha256": "sha256:4bf354a3819b1ca8c7d3b86bdda24680dbc1fec2f96e28c0617679f9bc65baaf"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\SOURCE_RESOLUTION_SNAPSHOT-441fc5237cac44dc.json",
+            "sha256": "sha256:8dc2e6183508f52d6267c68e0db3f14062a83afde2d1334cb9e9bf28df88ce5d"
+          },
+          {
+            "path": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-badcase-replay-vRA37F\\V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V1\\restricted-evidence\\CANONICAL_OUTPUT_SNAPSHOT-d0da7ddefd62c282.json",
+            "sha256": "sha256:edda6e75b0c6bbd0584633b8850be053882b9d63cd72ff80893fb43e34a31c0d"
+          }
+        ]
+      }
+    }
+  ],
+  "replay_status": "COMPLETED_TARGETED_ONLY"
+}

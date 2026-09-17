@@ -68,6 +68,7 @@ test('干净 response_payload_json 成功并按契约发送三个 inputs', async
   }).run(request);
 
   assert.equal(result.envelope.schema_version, '4.3-gateway');
+  assert.equal(result.audit.gateway_http_status, 200);
   assert.equal(result.audit.raw_response_payload_json, raw);
   assert.deepEqual(sentBody.inputs, {
     task_type: request.task_type,
@@ -81,9 +82,18 @@ test('干净 response_payload_json 成功并按契约发送三个 inputs', async
 test('probe-v1 成功响应保留安全 Provider 链路诊断，普通请求不暴露诊断', async () => {
   const raw = JSON.stringify(gatewayEnvelope());
   const diagnostics = {
+    provider: 'deepseek_official',
+    model: 'deepseek-v4-pro',
+    configured_provider: 'deepseek_official',
+    configured_model: 'deepseek-v4-pro',
+    requested_provider: 'deepseek_official',
+    requested_model: 'deepseek-v4-pro',
+    response_provider: 'deepseek_official',
+    endpoint: '/responses',
     provider_adapter_invoked: true,
     fetch_invoked: true,
     provider_http_reached: true,
+    gateway_http_status: 200,
     provider_http_status: 200,
     finish_reason: 'stop',
     model_content: 'PRIVATE_MODEL_CONTENT',
@@ -98,7 +108,11 @@ test('probe-v1 成功响应保留安全 Provider 链路诊断，普通请求不�
   assert.equal(probe.audit.probe_diagnostics.provider_adapter_invoked, true);
   assert.equal(probe.audit.probe_diagnostics.fetch_invoked, true);
   assert.equal(probe.audit.probe_diagnostics.provider_http_reached, true);
+  assert.equal(probe.audit.probe_diagnostics.gateway_http_status, 200);
   assert.equal(probe.audit.probe_diagnostics.provider_http_status, 200);
+  assert.equal(probe.audit.probe_diagnostics.provider, 'deepseek_official');
+  assert.equal(probe.audit.probe_diagnostics.requested_model, 'deepseek-v4-pro');
+  assert.equal(probe.audit.probe_diagnostics.endpoint, '/responses');
   assert.equal(Object.hasOwn(probe.audit.probe_diagnostics, 'model_content'), false);
   assert.equal(Object.hasOwn(probe.audit.probe_diagnostics, 'parsed_json'), false);
   assert.doesNotMatch(JSON.stringify(probe.audit), /PRIVATE_MODEL_CONTENT/);
@@ -431,6 +445,46 @@ test('backend/.env 使用唯一绝对路径并覆盖长期进程继承的旧网�
   assert.equal(dotenvOptions.override, true);
   assert.equal(dotenvOptions.processEnv, env);
   assert.equal(runtime.env.V43_GATEWAY_API_BASE, 'http://127.0.0.1:18080/v1');
+});
+
+test('Gateway HTTP 与 Provider HTTP 状态在安全审计中分离', async () => {
+  const diagnostics = {
+    provider: 'deepseek_official',
+    model: 'deepseek-v4-pro',
+    configured_provider: 'deepseek_official',
+    configured_model: 'deepseek-v4-pro',
+    requested_provider: 'deepseek_official',
+    requested_model: 'deepseek-v4-pro',
+    response_provider: null,
+    endpoint: '/responses',
+    provider_adapter_invoked: true,
+    fetch_invoked: true,
+    provider_http_reached: true,
+    gateway_http_status: 502,
+    provider_http_status: 422,
+    provider_error_code: 'PROVIDER_HTTP_ERROR',
+    gateway_error_code: 'PROVIDER_HTTP_FAILURE',
+    safe_error_code: 'PROVIDER_HTTP_ERROR'
+  };
+  const response = new Response(JSON.stringify({
+    error_code: 'PROVIDER_HTTP_FAILURE',
+    probe_diagnostics: diagnostics
+  }), {
+    status: 502,
+    headers: { 'Content-Type': 'application/json' }
+  });
+  await assert.rejects(
+    () => client(async () => response.clone()).run(request, { diagnosticMode: 'probe-v1' }),
+    error => {
+      assert.equal(error.audit.http_status, 502);
+      assert.equal(error.audit.gateway_http_status, 502);
+      assert.equal(error.audit.probe_diagnostics.gateway_http_status, 502);
+      assert.equal(error.audit.probe_diagnostics.provider_http_status, 422);
+      assert.equal(error.audit.probe_diagnostics.gateway_error_code, 'PROVIDER_HTTP_FAILURE');
+      assert.equal(error.audit.probe_diagnostics.provider_error_code, 'PROVIDER_HTTP_ERROR');
+      return true;
+    }
+  );
 });
 
 test('容器运行时保留 Compose 注入的内部连接覆盖，不被挂载 backend/.env 反向覆盖', () => {

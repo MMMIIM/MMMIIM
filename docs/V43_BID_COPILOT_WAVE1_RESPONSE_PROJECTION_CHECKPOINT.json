@@ -1,0 +1,201 @@
+{
+  "artifact_type": "V43_BID_COPILOT_WAVE1_RESPONSE_PROJECTION_CHECKPOINT",
+  "artifact_version": "v1",
+  "generated_at": "2026-09-08T17:11:12.524Z",
+  "projection_version": "v43-response-projection-v1",
+  "input_artifact": "docs\\V43_REQUIREMENT_GOLD_V2_SIX_TENDER_CANONICAL_INPUT.json",
+  "input_sha256": "ff07402688a3013af9a9b8be01f613f76848b7ea905208c1955a604432422fe1",
+  "cohorts": [
+    {
+      "cohort": "CORE6",
+      "source_file": "docs\\V43_REQUIREMENT_GOLD_V2_SIX_TENDER_CANONICAL_INPUT.json",
+      "source_sha256": "ff07402688a3013af9a9b8be01f613f76848b7ea905208c1955a604432422fe1",
+      "total_requirements": 1009,
+      "response_role_distribution": {
+        "NONE": 486,
+        "TECHNICAL": 292,
+        "CONTRACT": 140,
+        "COMPLIANCE": 87,
+        "SCORING": 4
+      },
+      "response_mode_distribution": {
+        "NEED_REVIEW": 576,
+        "EVIDENCE": 248,
+        "SOLUTION": 73,
+        "COMMITMENT": 25,
+        "COMPLIANCE": 87
+      },
+      "risk_tier_distribution": {
+        "MEDIUM": 553,
+        "HIGH": 378,
+        "LOW": 67,
+        "P0": 11
+      },
+      "scoring_related_count": 13,
+      "deep_chain_required_count": 248,
+      "deep_chain_required_rate": 0.2458,
+      "deep_chain_avoidable_count": 761,
+      "deep_chain_avoidable_rate": 0.7542,
+      "need_review_count": 576,
+      "p0_count": 11,
+      "high_risk_count": 378,
+      "project_commitment_count": 25,
+      "role_coverage_complete": true,
+      "mode_coverage_complete": true,
+      "risk_coverage_complete": true,
+      "scoring_priority_values_valid": true
+    },
+    {
+      "cohort": "HOLDOUT_V1",
+      "source_file": "backend\\eval\\requirement-unseen-holdout-v1\\results\\unseen-holdout-v1-2026-09-08T06-21-08-203Z-5faac1ab\\canonical-requirements.json",
+      "source_sha256": "20bd8af5e9226a70a5ffa2cd3ad0c20b991fe69a452dea9a09a4dc932b326407",
+      "total_requirements": 397,
+      "response_role_distribution": {
+        "NONE": 86,
+        "CONTRACT": 96,
+        "COMPLIANCE": 165,
+        "TECHNICAL": 45,
+        "SCORING": 5
+      },
+      "response_mode_distribution": {
+        "NEED_REVIEW": 144,
+        "SOLUTION": 24,
+        "COMPLIANCE": 165,
+        "EVIDENCE": 42,
+        "COMMITMENT": 22
+      },
+      "risk_tier_distribution": {
+        "MEDIUM": 153,
+        "LOW": 20,
+        "HIGH": 187,
+        "P0": 37
+      },
+      "scoring_related_count": 11,
+      "deep_chain_required_count": 42,
+      "deep_chain_required_rate": 0.1058,
+      "deep_chain_avoidable_count": 355,
+      "deep_chain_avoidable_rate": 0.8942,
+      "need_review_count": 144,
+      "p0_count": 37,
+      "high_risk_count": 187,
+      "project_commitment_count": 22,
+      "role_coverage_complete": true,
+      "mode_coverage_complete": true,
+      "risk_coverage_complete": true,
+      "scoring_priority_values_valid": true
+    },
+    {
+      "cohort": "HOLDOUT_V2",
+      "source_file": "backend\\eval\\requirement-unseen-holdout-v2\\results\\unseen-holdout-v2-2026-09-08T16-24-57-426Z-69cf5c50\\canonical-requirements.json",
+      "source_sha256": "afe390510a4700c9d099087ad0143aa0436f7933b1638daff89cc0a292b8cb1e",
+      "total_requirements": 772,
+      "response_role_distribution": {
+        "CONTRACT": 138,
+        "COMPLIANCE": 128,
+        "TECHNICAL": 223,
+        "NONE": 274,
+        "SCORING": 9
+      },
+      "response_mode_distribution": {
+        "SOLUTION": 27,
+        "NEED_REVIEW": 358,
+        "COMPLIANCE": 128,
+        "COMMITMENT": 15,
+        "EVIDENCE": 244
+      },
+      "risk_tier_distribution": {
+        "LOW": 26,
+        "MEDIUM": 318,
+        "P0": 23,
+        "HIGH": 405
+      },
+      "scoring_related_count": 16,
+      "deep_chain_required_count": 244,
+      "deep_chain_required_rate": 0.3161,
+      "deep_chain_avoidable_count": 528,
+      "deep_chain_avoidable_rate": 0.6839,
+      "need_review_count": 358,
+      "p0_count": 23,
+      "high_risk_count": 405,
+      "project_commitment_count": 15,
+      "role_coverage_complete": true,
+      "mode_coverage_complete": true,
+      "risk_coverage_complete": true,
+      "scoring_priority_values_valid": true
+    }
+  ],
+  "corpus_counts": {
+    "CORE6": 1009,
+    "HOLDOUT_V1": 397,
+    "HOLDOUT_V2": 772
+  },
+  "response_role_distribution": {
+    "NONE": 846,
+    "TECHNICAL": 560,
+    "CONTRACT": 374,
+    "COMPLIANCE": 380,
+    "SCORING": 18
+  },
+  "response_mode_distribution": {
+    "NEED_REVIEW": 1078,
+    "EVIDENCE": 534,
+    "SOLUTION": 124,
+    "COMMITMENT": 62,
+    "COMPLIANCE": 380
+  },
+  "risk_tier_distribution": {
+    "MEDIUM": 1024,
+    "HIGH": 970,
+    "LOW": 113,
+    "P0": 71
+  },
+  "scoring_related_count": 40,
+  "deep_chain_required_count": 534,
+  "deep_chain_required_rate": 0.2452,
+  "deep_chain_avoidable_count": 1644,
+  "deep_chain_avoidable_rate": 0.7548,
+  "need_review_count": 1078,
+  "p0_count": 71,
+  "high_risk_count": 970,
+  "project_commitment_count": 62,
+  "representative_case_counts": {
+    "SOLUTION": 20,
+    "EVIDENCE": 20,
+    "COMMITMENT": 20,
+    "COMPLIANCE": 20,
+    "NEED_REVIEW": 20
+  },
+  "calibration_packet": {
+    "file": "docs/V43_RESPONSE_PROJECTION_GPT_CALIBRATION_PACKET.json",
+    "case_count": 1158,
+    "no_verdict_or_gold": true
+  },
+  "read_model_contract": {
+    "current_evidence_status": "NOT_EVALUATED",
+    "response_decision_status": "NOT_EVALUATED",
+    "allowed_response_decisions": [
+      "READY",
+      "READY_WITH_EVIDENCE",
+      "PLAN_RESPONSE",
+      "NEED_CONFIRMATION",
+      "NO_EVIDENCE",
+      "CONFLICT",
+      "DO_NOT_ASSERT",
+      "NOT_EVALUATED"
+    ]
+  },
+  "deterministic_controls": {
+    "idempotence_pass": true,
+    "no_requirement_mutation": true,
+    "provider_calls": 0,
+    "production_db_writes": 0,
+    "fact_persistence": 0,
+    "gold_mutations": 0,
+    "mapping_actions": 0,
+    "claim_actions": 0,
+    "writer_actions": 0,
+    "production_routing_change": 0,
+    "llm_calls": 0
+  },
+  "status": "READY_FOR_GPT_RESPONSE_PROJECTION_WAVE1_ADJUDICATION"
+}

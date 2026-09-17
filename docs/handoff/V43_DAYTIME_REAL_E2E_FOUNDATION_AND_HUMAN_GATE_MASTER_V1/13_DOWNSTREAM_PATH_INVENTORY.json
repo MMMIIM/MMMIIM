@@ -1,0 +1,112 @@
+{
+  "inventory_type": "READ_ONLY_DOWNSTREAM_CAPABILITY_INVENTORY",
+  "entries": [
+    {
+      "capability": "Fact Candidate V2.2",
+      "status": "READY_WITH_WIRING",
+      "module": "backend/src/pipeline/evidence-fact-candidate-v2-1.js",
+      "inputs": "source window + compact aliases",
+      "outputs": "candidate contract",
+      "authority_bearing": false
+    },
+    {
+      "capability": "Fact canonicalizer/grounding",
+      "status": "READY",
+      "module": "backend/src/pipeline/evidence-fact-candidate-v2.js",
+      "inputs": "candidate + source snapshot",
+      "outputs": "canonicalization + grounding decision",
+      "authority_bearing": false
+    },
+    {
+      "capability": "Fact persistence",
+      "status": "READY_WITH_WIRING",
+      "module": "backend/src/evidence-source-fact-service.js",
+      "table": "evidence_source_facts",
+      "inputs": "review-approved fact",
+      "outputs": "canonical fact persistence",
+      "authority_bearing": true
+    },
+    {
+      "capability": "RequirementEvidenceFactMappingService",
+      "status": "READY_WITH_WIRING",
+      "module": "backend/src/requirement-evidence-fact-mapping-service.js",
+      "table": "requirement_evidence_fact_mappings",
+      "inputs": "canonical requirement + fact",
+      "outputs": "mapping candidate/decision",
+      "authority_bearing": true
+    },
+    {
+      "capability": "Canonical Mapping evaluator",
+      "status": "READY_WITH_WIRING",
+      "module": "backend/src/pipeline/semantic-gateway-mapping-evaluator.js",
+      "inputs": "mapping input contract",
+      "outputs": "strict mapping result",
+      "authority_bearing": false
+    },
+    {
+      "capability": "Evidence sufficiency",
+      "status": "READY_WITH_WIRING",
+      "module": "backend/src/pipeline/evidence-support-assessment-gateway-contract-v1.js",
+      "inputs": "fact/evidence context",
+      "outputs": "sufficiency decision",
+      "authority_bearing": false
+    },
+    {
+      "capability": "Claim Gate",
+      "status": "READY",
+      "module": "backend/src/claim-gate-service.js",
+      "inputs": "approved mapping + authority snapshot",
+      "outputs": "claim allow/deny",
+      "authority_bearing": true
+    },
+    {
+      "capability": "ResponseUnit",
+      "status": "READY",
+      "module": "backend/src/pipeline/response-unit-v1.js",
+      "inputs": "canonical requirement + response decision",
+      "outputs": "response unit",
+      "authority_bearing": false
+    },
+    {
+      "capability": "Writer Authorization Snapshot",
+      "status": "READY",
+      "module": "backend/src/pipeline/writer-authorization-snapshot.js",
+      "inputs": "authorized claims + generation identity",
+      "outputs": "snapshot",
+      "authority_bearing": true
+    },
+    {
+      "capability": "Writer",
+      "status": "READY_WITH_WIRING",
+      "module": "backend/src/writer-execution-service.js",
+      "inputs": "safe context + snapshot",
+      "outputs": "draft/output",
+      "authority_bearing": true
+    },
+    {
+      "capability": "Validator/Sanitizer",
+      "status": "READY",
+      "module": "backend/src/pipeline/writer-execution-contract-v1.js",
+      "inputs": "writer output",
+      "outputs": "validated/sanitized output",
+      "authority_bearing": false
+    },
+    {
+      "capability": "Final Reconciliation",
+      "status": "READY",
+      "module": "backend/src/pipeline/final-requirement-reconciliation.js",
+      "inputs": "response units",
+      "outputs": "coverage reconciliation",
+      "authority_bearing": false
+    },
+    {
+      "capability": "DOCX export",
+      "status": "READY_WITH_WIRING",
+      "module": "backend/src/pipeline/document-generation-service.js",
+      "inputs": "finalized document plan",
+      "outputs": "DOCX artifact",
+      "authority_bearing": false
+    }
+  ],
+  "authority_bearing_execution": "NOT_RUN_IN_THIS_TASK"
+}

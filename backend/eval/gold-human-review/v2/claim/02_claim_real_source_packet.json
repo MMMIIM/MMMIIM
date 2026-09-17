@@ -1,0 +1,996 @@
+{
+  "artifact_type": "claim_real_human_review_source_packet",
+  "artifact_version": "claim-real-source-packet-v1",
+  "data_classification": "REAL_PUBLIC_DERIVED_SOURCE_ONLY",
+  "source_dataset_schema_version": "4.3-evidence-claim-gold-v1",
+  "source_dataset_project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+  "source_dataset_path": "backend/eval/evidence-gold/gold-candidates.json",
+  "source_dataset_sha256": "d7151db9420186a9e4f63e72dbe7ebb03f7f3ccea461c92fae1fb5c40581ed12",
+  "source_candidate_count": 60,
+  "selected_candidate_count": 12,
+  "selection_rule": "HIGH_INFORMATION_SOURCE_ONLY_MANUAL_SELECTION_NO_PADDING",
+  "upstream_mapping_gold_v2_status": "SUCCESSOR_BUILT_NOT_ACTIVATED",
+  "authority_order": [
+    "TENDER_REQUIREMENT",
+    "ENTERPRISE_EVIDENCE",
+    "EVIDENCE_FACT",
+    "REQUIREMENT_EVIDENCE_MAPPING",
+    "CLAIM_GATE",
+    "WRITER_AUTHORIZATION",
+    "WRITER"
+  ],
+  "candidates": [
+    {
+      "case_id": "CLM-001-1-1",
+      "source_case_id": "EVD-001-01",
+      "data_classification": "REAL_PUBLIC_DERIVED_SOURCE_ONLY",
+      "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+      "source_fixture": "backend/eval/evidence-gold/gold-candidates.json",
+      "requirement": {
+        "requirement_id": "REQ-001",
+        "text": "制定统一的技术标准、数据标准和业务标准，通过“一网统管”核心平台和数字底座实现城市治理。",
+        "category": "context",
+        "source_reference": "legacy://tender/requirements/REQ-001",
+        "source_hash": null,
+        "source_hash_status": "NOT_DECLARED_IN_LEGACY_SOURCE",
+        "source_excerpt": "制定统一的技术标准、数据标准和业务标准，通过“一网统管”核心平台和数字底座实现城市治理。"
+      },
+      "claim": {
+        "claim_id": null,
+        "text": "制定统一的技术标准、数据标准和业务标准，通过“一网统管”核心平台和数字底座实现城市治理。",
+        "text_hash": "30f555910144ab27b9e1b222f3157f7e4db5e286acb569020fefb514e7bd3e6a",
+        "claim_type": "enterprise_capability",
+        "identity_status": "CLAIM_ID_NOT_PRESENT_IN_LEGACY_CLAIM_SLICE"
+      },
+      "facts": [
+        {
+          "fact_id": null,
+          "fact_ref": null,
+          "evidence_id": null,
+          "fact_type": null,
+          "subject": null,
+          "entities": [],
+          "status": null,
+          "scopes": [],
+          "quantities": [],
+          "validity": null,
+          "currentness": null,
+          "source_reference": "db://company_materials/5a4674b0-aaab-475a-964b-977ae4b1ff65/chunks/MCH-FA451031DA8F9F7EAEAF6EFBF97440D5",
+          "source_hash": "64739a2b900319c0ec60bb99ed1b1a2f74c67967b4eef2d3f7ea0f9d27c3c583",
+          "source_excerpt": "以技术创新为驱动，实现数据互联互通、城市管理智能化、服务便捷高效化、生态可持续发展",
+          "source_metadata": {
+            "material_id": "5a4674b0-aaab-475a-964b-977ae4b1ff65",
+            "material_name": "东软智慧城市公开资料",
+            "material_type": "company_profile"
+          },
+          "provenance_status": "NO_CANONICAL_FACT_IN_LEGACY_CLAIM_SLICE"
+        }
+      ],
+      "mapping": {
+        "mapping_id": null,
+        "authority_status": "NOT_PRESENT_IN_LEGACY_CLAIM_SLICE",
+        "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+        "support_level": "partial_support",
+        "authority_context": null,
+        "source_reference": "db://company_materials/5a4674b0-aaab-475a-964b-977ae4b1ff65/chunks/MCH-FA451031DA8F9F7EAEAF6EFBF97440D5",
+        "source_hash": "64739a2b900319c0ec60bb99ed1b1a2f74c67967b4eef2d3f7ea0f9d27c3c583"
+      },
+      "provenance": {
+        "resolvable": false,
+        "requirement_source_resolvable": false,
+        "fact_identity_resolvable": false,
+        "mapping_identity_resolvable": false,
+        "source_reference": "db://company_materials/5a4674b0-aaab-475a-964b-977ae4b1ff65/chunks/MCH-FA451031DA8F9F7EAEAF6EFBF97440D5",
+        "anchor_chunk_id": "MCH-FA451031DA8F9F7EAEAF6EFBF97440D5",
+        "anchor_source_hash": "64739a2b900319c0ec60bb99ed1b1a2f74c67967b4eef2d3f7ea0f9d27c3c583",
+        "authority_note": "Legacy source slice is retained for human review preparation only; no canonical aliases are invented."
+      },
+      "review_boundary": "HUMAN_REVIEW_REQUIRED_BEFORE_ANY_SCORING",
+      "source_identity": {
+        "claim_id": null,
+        "claim_text_hash": "30f555910144ab27b9e1b222f3157f7e4db5e286acb569020fefb514e7bd3e6a",
+        "requirement_id": "REQ-001",
+        "requirement_source_hash": null,
+        "fact_identity_set": [],
+        "fact_source_hash_set": [
+          "64739a2b900319c0ec60bb99ed1b1a2f74c67967b4eef2d3f7ea0f9d27c3c583"
+        ],
+        "mapping_id": null,
+        "mapping_authority_context": null
+      }
+    },
+    {
+      "case_id": "CLM-015-1-1",
+      "source_case_id": "EVD-015-01",
+      "data_classification": "REAL_PUBLIC_DERIVED_SOURCE_ONLY",
+      "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+      "source_fixture": "backend/eval/evidence-gold/gold-candidates.json",
+      "requirement": {
+        "requirement_id": "REQ-015",
+        "text": "兼容X86架构，配合支持国产化的操作系统和数据库改造。",
+        "category": "technical",
+        "source_reference": "legacy://tender/requirements/REQ-015",
+        "source_hash": null,
+        "source_hash_status": "NOT_DECLARED_IN_LEGACY_SOURCE",
+        "source_excerpt": "兼容X86架构，配合支持国产化的操作系统和数据库改造。"
+      },
+      "claim": {
+        "claim_id": null,
+        "text": "兼容X86架构，配合支持国产化的操作系统和数据库改造。",
+        "text_hash": "0fa1b9f28209242fa994e3665830c8fc0889bf326db6efe5430ec6174dbb9852",
+        "claim_type": "enterprise_capability",
+        "identity_status": "CLAIM_ID_NOT_PRESENT_IN_LEGACY_CLAIM_SLICE"
+      },
+      "facts": [
+        {
+          "fact_id": null,
+          "fact_ref": null,
+          "evidence_id": null,
+          "fact_type": null,
+          "subject": null,
+          "entities": [],
+          "status": null,
+          "scopes": [],
+          "quantities": [],
+          "validity": null,
+          "currentness": null,
+          "source_reference": "db://company_materials/c7542760-5ed9-479e-a642-1ebf7999f446/chunks/MCH-B7A88ECC982E0F418C0036C9AB74F538",
+          "source_hash": "fb8777920d6b9ff664626a85788f57027e0f7bc4e4fb52dec130fd47597a1204",
+          "source_excerpt": "# 系统集成",
+          "source_metadata": {
+            "material_id": "c7542760-5ed9-479e-a642-1ebf7999f446",
+            "material_name": "东软系统集成公开资料",
+            "material_type": "product_documentation"
+          },
+          "provenance_status": "NO_CANONICAL_FACT_IN_LEGACY_CLAIM_SLICE"
+        }
+      ],
+      "mapping": {
+        "mapping_id": null,
+        "authority_status": "NOT_PRESENT_IN_LEGACY_CLAIM_SLICE",
+        "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+        "support_level": "partial_support",
+        "authority_context": null,
+        "source_reference": "db://company_materials/c7542760-5ed9-479e-a642-1ebf7999f446/chunks/MCH-B7A88ECC982E0F418C0036C9AB74F538",
+        "source_hash": "fb8777920d6b9ff664626a85788f57027e0f7bc4e4fb52dec130fd47597a1204"
+      },
+      "provenance": {
+        "resolvable": false,
+        "requirement_source_resolvable": false,
+        "fact_identity_resolvable": false,
+        "mapping_identity_resolvable": false,
+        "source_reference": "db://company_materials/c7542760-5ed9-479e-a642-1ebf7999f446/chunks/MCH-B7A88ECC982E0F418C0036C9AB74F538",
+        "anchor_chunk_id": "MCH-B7A88ECC982E0F418C0036C9AB74F538",
+        "anchor_source_hash": "fb8777920d6b9ff664626a85788f57027e0f7bc4e4fb52dec130fd47597a1204",
+        "authority_note": "Legacy source slice is retained for human review preparation only; no canonical aliases are invented."
+      },
+      "review_boundary": "HUMAN_REVIEW_REQUIRED_BEFORE_ANY_SCORING",
+      "source_identity": {
+        "claim_id": null,
+        "claim_text_hash": "0fa1b9f28209242fa994e3665830c8fc0889bf326db6efe5430ec6174dbb9852",
+        "requirement_id": "REQ-015",
+        "requirement_source_hash": null,
+        "fact_identity_set": [],
+        "fact_source_hash_set": [
+          "fb8777920d6b9ff664626a85788f57027e0f7bc4e4fb52dec130fd47597a1204"
+        ],
+        "mapping_id": null,
+        "mapping_authority_context": null
+      }
+    },
+    {
+      "case_id": "CLM-016-1",
+      "source_case_id": "EVD-016-01",
+      "data_classification": "REAL_PUBLIC_DERIVED_SOURCE_ONLY",
+      "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+      "source_fixture": "backend/eval/evidence-gold/gold-candidates.json",
+      "requirement": {
+        "requirement_id": "REQ-016",
+        "text": "数据服务类接口响应时间需<=1秒。",
+        "category": "technical",
+        "source_reference": "legacy://tender/requirements/REQ-016",
+        "source_hash": null,
+        "source_hash_status": "NOT_DECLARED_IN_LEGACY_SOURCE",
+        "source_excerpt": "数据服务类接口响应时间需<=1秒。"
+      },
+      "claim": {
+        "claim_id": null,
+        "text": "材料提供系统集成能力参考。",
+        "text_hash": "4ea4f5db9b672644cdabae88a06dacb2cddbb7b6eb4304a4ada4d0360a0acb80",
+        "claim_type": "enterprise_capability",
+        "identity_status": "CLAIM_ID_NOT_PRESENT_IN_LEGACY_CLAIM_SLICE"
+      },
+      "facts": [
+        {
+          "fact_id": null,
+          "fact_ref": null,
+          "evidence_id": "EVI-23A3A617-B910-4ED8-9AA0-8395E680AA9E",
+          "fact_type": "legacy_seed_fact",
+          "subject": "unknown",
+          "entities": [
+            "系统集成"
+          ],
+          "status": "unknown",
+          "scopes": [
+            "integration_capability_reference"
+          ],
+          "quantities": [],
+          "validity": "unknown",
+          "currentness": null,
+          "source_reference": "db://company_materials/c7542760-5ed9-479e-a642-1ebf7999f446/chunks/MCH-B7A88ECC982E0F418C0036C9AB74F538",
+          "source_hash": "911ef7337ec4bfe4c8d6f50b2757ee230dc1e9c064914d3a5991ed076aefb21d",
+          "source_excerpt": "# 系统集成",
+          "source_metadata": {
+            "material_id": "c7542760-5ed9-479e-a642-1ebf7999f446",
+            "material_name": "东软系统集成公开资料",
+            "material_type": "product_documentation"
+          },
+          "provenance_status": "LEGACY_SEED_WITHOUT_CANONICAL_FACT_ID"
+        }
+      ],
+      "mapping": {
+        "mapping_id": null,
+        "authority_status": "NOT_PRESENT_IN_LEGACY_CLAIM_SLICE",
+        "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+        "support_level": "partial_support",
+        "authority_context": null,
+        "source_reference": "db://company_materials/c7542760-5ed9-479e-a642-1ebf7999f446/chunks/MCH-B7A88ECC982E0F418C0036C9AB74F538",
+        "source_hash": "911ef7337ec4bfe4c8d6f50b2757ee230dc1e9c064914d3a5991ed076aefb21d"
+      },
+      "provenance": {
+        "resolvable": false,
+        "requirement_source_resolvable": false,
+        "fact_identity_resolvable": false,
+        "mapping_identity_resolvable": false,
+        "source_reference": "db://company_materials/c7542760-5ed9-479e-a642-1ebf7999f446/chunks/MCH-B7A88ECC982E0F418C0036C9AB74F538",
+        "anchor_chunk_id": "MCH-B7A88ECC982E0F418C0036C9AB74F538",
+        "anchor_source_hash": "fb8777920d6b9ff664626a85788f57027e0f7bc4e4fb52dec130fd47597a1204",
+        "authority_note": "Legacy source slice is retained for human review preparation only; no canonical aliases are invented."
+      },
+      "review_boundary": "HUMAN_REVIEW_REQUIRED_BEFORE_ANY_SCORING",
+      "source_identity": {
+        "claim_id": null,
+        "claim_text_hash": "4ea4f5db9b672644cdabae88a06dacb2cddbb7b6eb4304a4ada4d0360a0acb80",
+        "requirement_id": "REQ-016",
+        "requirement_source_hash": null,
+        "fact_identity_set": [
+          "EVI-23A3A617-B910-4ED8-9AA0-8395E680AA9E"
+        ],
+        "fact_source_hash_set": [
+          "911ef7337ec4bfe4c8d6f50b2757ee230dc1e9c064914d3a5991ed076aefb21d"
+        ],
+        "mapping_id": null,
+        "mapping_authority_context": null
+      }
+    },
+    {
+      "case_id": "CLM-016-2-2",
+      "source_case_id": "EVD-016-02",
+      "data_classification": "REAL_PUBLIC_DERIVED_SOURCE_ONLY",
+      "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+      "source_fixture": "backend/eval/evidence-gold/gold-candidates.json",
+      "requirement": {
+        "requirement_id": "REQ-016",
+        "text": "数据服务类接口响应时间需<=1秒。",
+        "category": "technical",
+        "source_reference": "legacy://tender/requirements/REQ-016",
+        "source_hash": null,
+        "source_hash_status": "NOT_DECLARED_IN_LEGACY_SOURCE",
+        "source_excerpt": "数据服务类接口响应时间需<=1秒。"
+      },
+      "claim": {
+        "claim_id": null,
+        "text": "数据服务类接口响应时间需<=1秒。（候选边界扩张探针，待人工审核）",
+        "text_hash": "3bbc9a665648cf49ddcada7361c8797115c66846d3fe84a7a83eadffb94fd5d9",
+        "claim_type": "enterprise_capability",
+        "identity_status": "CLAIM_ID_NOT_PRESENT_IN_LEGACY_CLAIM_SLICE"
+      },
+      "facts": [
+        {
+          "fact_id": null,
+          "fact_ref": null,
+          "evidence_id": null,
+          "fact_type": null,
+          "subject": null,
+          "entities": [],
+          "status": null,
+          "scopes": [],
+          "quantities": [],
+          "validity": null,
+          "currentness": null,
+          "source_reference": "db://company_materials/5a4674b0-aaab-475a-964b-977ae4b1ff65/chunks/MCH-EBF43A05B86AE140B95F2196C96C7884",
+          "source_hash": "6336677b4ab418a310644287e52056c0d4bffeb53d2d2769243aebb8b62ea25e",
+          "source_excerpt": "汇集城市数据，赋能城市服务与产业发展",
+          "source_metadata": {
+            "material_id": "5a4674b0-aaab-475a-964b-977ae4b1ff65",
+            "material_name": "东软智慧城市公开资料",
+            "material_type": "company_profile"
+          },
+          "provenance_status": "NO_CANONICAL_FACT_IN_LEGACY_CLAIM_SLICE"
+        }
+      ],
+      "mapping": {
+        "mapping_id": null,
+        "authority_status": "NOT_PRESENT_IN_LEGACY_CLAIM_SLICE",
+        "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+        "support_level": "partial_support",
+        "authority_context": null,
+        "source_reference": "db://company_materials/5a4674b0-aaab-475a-964b-977ae4b1ff65/chunks/MCH-EBF43A05B86AE140B95F2196C96C7884",
+        "source_hash": "6336677b4ab418a310644287e52056c0d4bffeb53d2d2769243aebb8b62ea25e"
+      },
+      "provenance": {
+        "resolvable": false,
+        "requirement_source_resolvable": false,
+        "fact_identity_resolvable": false,
+        "mapping_identity_resolvable": false,
+        "source_reference": "db://company_materials/5a4674b0-aaab-475a-964b-977ae4b1ff65/chunks/MCH-EBF43A05B86AE140B95F2196C96C7884",
+        "anchor_chunk_id": "MCH-EBF43A05B86AE140B95F2196C96C7884",
+        "anchor_source_hash": "6336677b4ab418a310644287e52056c0d4bffeb53d2d2769243aebb8b62ea25e",
+        "authority_note": "Legacy source slice is retained for human review preparation only; no canonical aliases are invented."
+      },
+      "review_boundary": "HUMAN_REVIEW_REQUIRED_BEFORE_ANY_SCORING",
+      "source_identity": {
+        "claim_id": null,
+        "claim_text_hash": "3bbc9a665648cf49ddcada7361c8797115c66846d3fe84a7a83eadffb94fd5d9",
+        "requirement_id": "REQ-016",
+        "requirement_source_hash": null,
+        "fact_identity_set": [],
+        "fact_source_hash_set": [
+          "6336677b4ab418a310644287e52056c0d4bffeb53d2d2769243aebb8b62ea25e"
+        ],
+        "mapping_id": null,
+        "mapping_authority_context": null
+      }
+    },
+    {
+      "case_id": "CLM-027-2-1",
+      "source_case_id": "EVD-027-02",
+      "data_classification": "REAL_PUBLIC_DERIVED_SOURCE_ONLY",
+      "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+      "source_fixture": "backend/eval/evidence-gold/gold-candidates.json",
+      "requirement": {
+        "requirement_id": "REQ-027",
+        "text": "系统安全性好，按用户需求设定严格安全等级。",
+        "category": "technical",
+        "source_reference": "legacy://tender/requirements/REQ-027",
+        "source_hash": null,
+        "source_hash_status": "NOT_DECLARED_IN_LEGACY_SOURCE",
+        "source_excerpt": "系统安全性好，按用户需求设定严格安全等级。"
+      },
+      "claim": {
+        "claim_id": null,
+        "text": "系统安全性好，按用户需求设定严格安全等级。",
+        "text_hash": "2e0d7f4c7ba2b2852621feab699f03ff85d9920e29d905d8653b67566db55cf9",
+        "claim_type": "enterprise_capability",
+        "identity_status": "CLAIM_ID_NOT_PRESENT_IN_LEGACY_CLAIM_SLICE"
+      },
+      "facts": [
+        {
+          "fact_id": null,
+          "fact_ref": null,
+          "evidence_id": null,
+          "fact_type": null,
+          "subject": null,
+          "entities": [],
+          "status": null,
+          "scopes": [],
+          "quantities": [],
+          "validity": null,
+          "currentness": null,
+          "source_reference": "db://company_materials/c7542760-5ed9-479e-a642-1ebf7999f446/chunks/MCH-48202DF58B4AE77901564A543F237D5B",
+          "source_hash": "3e6581fcab7d38429962ebbb1512de05fe85987644ce0cbfbfef5dbd2c6dbb66",
+          "source_excerpt": "信息系统建设和服务能力评估CS5级；CCRC信息系统安全集成服务一级；ISO 27001信息安全管理体系",
+          "source_metadata": {
+            "material_id": "c7542760-5ed9-479e-a642-1ebf7999f446",
+            "material_name": "东软系统集成公开资料",
+            "material_type": "product_documentation"
+          },
+          "provenance_status": "NO_CANONICAL_FACT_IN_LEGACY_CLAIM_SLICE"
+        }
+      ],
+      "mapping": {
+        "mapping_id": null,
+        "authority_status": "NOT_PRESENT_IN_LEGACY_CLAIM_SLICE",
+        "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+        "support_level": "partial_support",
+        "authority_context": null,
+        "source_reference": "db://company_materials/c7542760-5ed9-479e-a642-1ebf7999f446/chunks/MCH-48202DF58B4AE77901564A543F237D5B",
+        "source_hash": "3e6581fcab7d38429962ebbb1512de05fe85987644ce0cbfbfef5dbd2c6dbb66"
+      },
+      "provenance": {
+        "resolvable": false,
+        "requirement_source_resolvable": false,
+        "fact_identity_resolvable": false,
+        "mapping_identity_resolvable": false,
+        "source_reference": "db://company_materials/c7542760-5ed9-479e-a642-1ebf7999f446/chunks/MCH-48202DF58B4AE77901564A543F237D5B",
+        "anchor_chunk_id": "MCH-48202DF58B4AE77901564A543F237D5B",
+        "anchor_source_hash": "3e6581fcab7d38429962ebbb1512de05fe85987644ce0cbfbfef5dbd2c6dbb66",
+        "authority_note": "Legacy source slice is retained for human review preparation only; no canonical aliases are invented."
+      },
+      "review_boundary": "HUMAN_REVIEW_REQUIRED_BEFORE_ANY_SCORING",
+      "source_identity": {
+        "claim_id": null,
+        "claim_text_hash": "2e0d7f4c7ba2b2852621feab699f03ff85d9920e29d905d8653b67566db55cf9",
+        "requirement_id": "REQ-027",
+        "requirement_source_hash": null,
+        "fact_identity_set": [],
+        "fact_source_hash_set": [
+          "3e6581fcab7d38429962ebbb1512de05fe85987644ce0cbfbfef5dbd2c6dbb66"
+        ],
+        "mapping_id": null,
+        "mapping_authority_context": null
+      }
+    },
+    {
+      "case_id": "CLM-030-1",
+      "source_case_id": "EVD-030-01",
+      "data_classification": "REAL_PUBLIC_DERIVED_SOURCE_ONLY",
+      "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+      "source_fixture": "backend/eval/evidence-gold/gold-candidates.json",
+      "requirement": {
+        "requirement_id": "REQ-030",
+        "text": "通过数据交换共享平台实现与其它异构系统之间的数据交换和共享。",
+        "category": "technical",
+        "source_reference": "legacy://tender/requirements/REQ-030",
+        "source_hash": null,
+        "source_hash_status": "NOT_DECLARED_IN_LEGACY_SOURCE",
+        "source_excerpt": "通过数据交换共享平台实现与其它异构系统之间的数据交换和共享。"
+      },
+      "claim": {
+        "claim_id": null,
+        "text": "东软集团股份有限公司中标数据共享交换平台管理中心软件。",
+        "text_hash": "7c889a6ba490fe34a557c518ba56fd651c2e26cd9b500e1d046a9447284cee3f",
+        "claim_type": "enterprise_capability",
+        "identity_status": "CLAIM_ID_NOT_PRESENT_IN_LEGACY_CLAIM_SLICE"
+      },
+      "facts": [
+        {
+          "fact_id": null,
+          "fact_ref": null,
+          "evidence_id": "EVI-E3B553E9-DD8F-4EFD-88FD-B475143D3A01",
+          "fact_type": "legacy_seed_fact",
+          "subject": "东软集团股份有限公司",
+          "entities": [
+            "数据共享交换平台管理中心软件"
+          ],
+          "status": "award",
+          "scopes": [
+            "award_fact"
+          ],
+          "quantities": [],
+          "validity": "not_applicable",
+          "currentness": null,
+          "source_reference": "db://company_materials/2e553e66-a909-4ed1-b99e-a57c25b51824/chunks/MCH-8234C37AC4B13E751A8FBAB743BBDF34",
+          "source_hash": "852f3c682d66dd7b52fec16548895e10aaa648000b1427dadc9c653dbc2bcb05",
+          "source_excerpt": "货物名称：数据共享交换平台管理中心软件",
+          "source_metadata": {
+            "material_id": "2e553e66-a909-4ed1-b99e-a57c25b51824",
+            "material_name": "国家信息中心三大平台项目中标公告",
+            "material_type": "project_case"
+          },
+          "provenance_status": "LEGACY_SEED_WITHOUT_CANONICAL_FACT_ID"
+        }
+      ],
+      "mapping": {
+        "mapping_id": null,
+        "authority_status": "NOT_PRESENT_IN_LEGACY_CLAIM_SLICE",
+        "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+        "support_level": "partial_support",
+        "authority_context": null,
+        "source_reference": "db://company_materials/2e553e66-a909-4ed1-b99e-a57c25b51824/chunks/MCH-8234C37AC4B13E751A8FBAB743BBDF34",
+        "source_hash": "852f3c682d66dd7b52fec16548895e10aaa648000b1427dadc9c653dbc2bcb05"
+      },
+      "provenance": {
+        "resolvable": false,
+        "requirement_source_resolvable": false,
+        "fact_identity_resolvable": false,
+        "mapping_identity_resolvable": false,
+        "source_reference": "db://company_materials/2e553e66-a909-4ed1-b99e-a57c25b51824/chunks/MCH-8234C37AC4B13E751A8FBAB743BBDF34",
+        "anchor_chunk_id": "MCH-8234C37AC4B13E751A8FBAB743BBDF34",
+        "anchor_source_hash": "b678b47c22955e02c27fd84fd561022fb2c1773216834ab6e73bafab0ccedba3",
+        "authority_note": "Legacy source slice is retained for human review preparation only; no canonical aliases are invented."
+      },
+      "review_boundary": "HUMAN_REVIEW_REQUIRED_BEFORE_ANY_SCORING",
+      "source_identity": {
+        "claim_id": null,
+        "claim_text_hash": "7c889a6ba490fe34a557c518ba56fd651c2e26cd9b500e1d046a9447284cee3f",
+        "requirement_id": "REQ-030",
+        "requirement_source_hash": null,
+        "fact_identity_set": [
+          "EVI-E3B553E9-DD8F-4EFD-88FD-B475143D3A01"
+        ],
+        "fact_source_hash_set": [
+          "852f3c682d66dd7b52fec16548895e10aaa648000b1427dadc9c653dbc2bcb05"
+        ],
+        "mapping_id": null,
+        "mapping_authority_context": null
+      }
+    },
+    {
+      "case_id": "CLM-030-2",
+      "source_case_id": "EVD-030-01",
+      "data_classification": "REAL_PUBLIC_DERIVED_SOURCE_ONLY",
+      "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+      "source_fixture": "backend/eval/evidence-gold/gold-candidates.json",
+      "requirement": {
+        "requirement_id": "REQ-030",
+        "text": "通过数据交换共享平台实现与其它异构系统之间的数据交换和共享。",
+        "category": "technical",
+        "source_reference": "legacy://tender/requirements/REQ-030",
+        "source_hash": null,
+        "source_hash_status": "NOT_DECLARED_IN_LEGACY_SOURCE",
+        "source_excerpt": "通过数据交换共享平台实现与其它异构系统之间的数据交换和共享。"
+      },
+      "claim": {
+        "claim_id": null,
+        "text": "东软集团股份有限公司已完成并验收数据共享交换平台全部建设内容。",
+        "text_hash": "d7a873e550e04d5f1e41ff31cb4735914bf8fff993d42fe0ee2fa743f3f249c3",
+        "claim_type": "enterprise_capability",
+        "identity_status": "CLAIM_ID_NOT_PRESENT_IN_LEGACY_CLAIM_SLICE"
+      },
+      "facts": [
+        {
+          "fact_id": null,
+          "fact_ref": null,
+          "evidence_id": "EVI-E3B553E9-DD8F-4EFD-88FD-B475143D3A01",
+          "fact_type": "legacy_seed_fact",
+          "subject": "东软集团股份有限公司",
+          "entities": [
+            "数据共享交换平台管理中心软件"
+          ],
+          "status": "award",
+          "scopes": [
+            "award_fact"
+          ],
+          "quantities": [],
+          "validity": "not_applicable",
+          "currentness": null,
+          "source_reference": "db://company_materials/2e553e66-a909-4ed1-b99e-a57c25b51824/chunks/MCH-8234C37AC4B13E751A8FBAB743BBDF34",
+          "source_hash": "852f3c682d66dd7b52fec16548895e10aaa648000b1427dadc9c653dbc2bcb05",
+          "source_excerpt": "货物名称：数据共享交换平台管理中心软件",
+          "source_metadata": {
+            "material_id": "2e553e66-a909-4ed1-b99e-a57c25b51824",
+            "material_name": "国家信息中心三大平台项目中标公告",
+            "material_type": "project_case"
+          },
+          "provenance_status": "LEGACY_SEED_WITHOUT_CANONICAL_FACT_ID"
+        }
+      ],
+      "mapping": {
+        "mapping_id": null,
+        "authority_status": "NOT_PRESENT_IN_LEGACY_CLAIM_SLICE",
+        "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+        "support_level": "partial_support",
+        "authority_context": null,
+        "source_reference": "db://company_materials/2e553e66-a909-4ed1-b99e-a57c25b51824/chunks/MCH-8234C37AC4B13E751A8FBAB743BBDF34",
+        "source_hash": "852f3c682d66dd7b52fec16548895e10aaa648000b1427dadc9c653dbc2bcb05"
+      },
+      "provenance": {
+        "resolvable": false,
+        "requirement_source_resolvable": false,
+        "fact_identity_resolvable": false,
+        "mapping_identity_resolvable": false,
+        "source_reference": "db://company_materials/2e553e66-a909-4ed1-b99e-a57c25b51824/chunks/MCH-8234C37AC4B13E751A8FBAB743BBDF34",
+        "anchor_chunk_id": "MCH-8234C37AC4B13E751A8FBAB743BBDF34",
+        "anchor_source_hash": "b678b47c22955e02c27fd84fd561022fb2c1773216834ab6e73bafab0ccedba3",
+        "authority_note": "Legacy source slice is retained for human review preparation only; no canonical aliases are invented."
+      },
+      "review_boundary": "HUMAN_REVIEW_REQUIRED_BEFORE_ANY_SCORING",
+      "source_identity": {
+        "claim_id": null,
+        "claim_text_hash": "d7a873e550e04d5f1e41ff31cb4735914bf8fff993d42fe0ee2fa743f3f249c3",
+        "requirement_id": "REQ-030",
+        "requirement_source_hash": null,
+        "fact_identity_set": [
+          "EVI-E3B553E9-DD8F-4EFD-88FD-B475143D3A01"
+        ],
+        "fact_source_hash_set": [
+          "852f3c682d66dd7b52fec16548895e10aaa648000b1427dadc9c653dbc2bcb05"
+        ],
+        "mapping_id": null,
+        "mapping_authority_context": null
+      }
+    },
+    {
+      "case_id": "CLM-047-1-1",
+      "source_case_id": "EVD-047-01",
+      "data_classification": "REAL_PUBLIC_DERIVED_SOURCE_ONLY",
+      "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+      "source_fixture": "backend/eval/evidence-gold/gold-candidates.json",
+      "requirement": {
+        "requirement_id": "REQ-047",
+        "text": "本项目部署在政务云平台，要求供应商具备云服务能力。",
+        "category": "technical",
+        "source_reference": "legacy://tender/requirements/REQ-047",
+        "source_hash": null,
+        "source_hash_status": "NOT_DECLARED_IN_LEGACY_SOURCE",
+        "source_excerpt": "本项目部署在政务云平台，要求供应商具备云服务能力。"
+      },
+      "claim": {
+        "claim_id": null,
+        "text": "本项目部署在政务云平台，要求供应商具备云服务能力。",
+        "text_hash": "0ae504ac40ef2acdfa80b52a90a699187b9018841ca67910ef30aa9592c38e65",
+        "claim_type": "enterprise_capability",
+        "identity_status": "CLAIM_ID_NOT_PRESENT_IN_LEGACY_CLAIM_SLICE"
+      },
+      "facts": [
+        {
+          "fact_id": null,
+          "fact_ref": null,
+          "evidence_id": null,
+          "fact_type": null,
+          "subject": null,
+          "entities": [],
+          "status": null,
+          "scopes": [],
+          "quantities": [],
+          "validity": null,
+          "currentness": null,
+          "source_reference": "db://company_materials/2e553e66-a909-4ed1-b99e-a57c25b51824/chunks/MCH-DB66BE98F88E8A2C2337DD6DB01CEF61",
+          "source_hash": "e9d1852a844168de46d33f31c8d55e2ed53c30aa117b7f22a1fc820f97dd7ec7",
+          "source_excerpt": "采购项目名称：三大平台-全国公共资源交易平台通用软件购置和实施项目",
+          "source_metadata": {
+            "material_id": "2e553e66-a909-4ed1-b99e-a57c25b51824",
+            "material_name": "国家信息中心三大平台项目中标公告",
+            "material_type": "project_case"
+          },
+          "provenance_status": "NO_CANONICAL_FACT_IN_LEGACY_CLAIM_SLICE"
+        }
+      ],
+      "mapping": {
+        "mapping_id": null,
+        "authority_status": "NOT_PRESENT_IN_LEGACY_CLAIM_SLICE",
+        "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+        "support_level": "partial_support",
+        "authority_context": null,
+        "source_reference": "db://company_materials/2e553e66-a909-4ed1-b99e-a57c25b51824/chunks/MCH-DB66BE98F88E8A2C2337DD6DB01CEF61",
+        "source_hash": "e9d1852a844168de46d33f31c8d55e2ed53c30aa117b7f22a1fc820f97dd7ec7"
+      },
+      "provenance": {
+        "resolvable": false,
+        "requirement_source_resolvable": false,
+        "fact_identity_resolvable": false,
+        "mapping_identity_resolvable": false,
+        "source_reference": "db://company_materials/2e553e66-a909-4ed1-b99e-a57c25b51824/chunks/MCH-DB66BE98F88E8A2C2337DD6DB01CEF61",
+        "anchor_chunk_id": "MCH-DB66BE98F88E8A2C2337DD6DB01CEF61",
+        "anchor_source_hash": "e9d1852a844168de46d33f31c8d55e2ed53c30aa117b7f22a1fc820f97dd7ec7",
+        "authority_note": "Legacy source slice is retained for human review preparation only; no canonical aliases are invented."
+      },
+      "review_boundary": "HUMAN_REVIEW_REQUIRED_BEFORE_ANY_SCORING",
+      "source_identity": {
+        "claim_id": null,
+        "claim_text_hash": "0ae504ac40ef2acdfa80b52a90a699187b9018841ca67910ef30aa9592c38e65",
+        "requirement_id": "REQ-047",
+        "requirement_source_hash": null,
+        "fact_identity_set": [],
+        "fact_source_hash_set": [
+          "e9d1852a844168de46d33f31c8d55e2ed53c30aa117b7f22a1fc820f97dd7ec7"
+        ],
+        "mapping_id": null,
+        "mapping_authority_context": null
+      }
+    },
+    {
+      "case_id": "CLM-048-1-1",
+      "source_case_id": "EVD-048-01",
+      "data_classification": "REAL_PUBLIC_DERIVED_SOURCE_ONLY",
+      "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+      "source_fixture": "backend/eval/evidence-gold/gold-candidates.json",
+      "requirement": {
+        "requirement_id": "REQ-048",
+        "text": "平台必须能够与外部风险防范和网格联动平台无缝对接。",
+        "category": "technical",
+        "source_reference": "legacy://tender/requirements/REQ-048",
+        "source_hash": null,
+        "source_hash_status": "NOT_DECLARED_IN_LEGACY_SOURCE",
+        "source_excerpt": "平台必须能够与外部风险防范和网格联动平台无缝对接。"
+      },
+      "claim": {
+        "claim_id": null,
+        "text": "平台必须能够与外部风险防范和网格联动平台无缝对接。",
+        "text_hash": "21d5dad0a51c85814d71a3cd9b52a39ec3da6460af1be27352b6537b88e8c199",
+        "claim_type": "enterprise_capability",
+        "identity_status": "CLAIM_ID_NOT_PRESENT_IN_LEGACY_CLAIM_SLICE"
+      },
+      "facts": [
+        {
+          "fact_id": null,
+          "fact_ref": null,
+          "evidence_id": null,
+          "fact_type": null,
+          "subject": null,
+          "entities": [],
+          "status": null,
+          "scopes": [],
+          "quantities": [],
+          "validity": null,
+          "currentness": null,
+          "source_reference": "db://company_materials/5a4674b0-aaab-475a-964b-977ae4b1ff65/chunks/MCH-AA7ACA34B5002854093D2F6FED45B89B",
+          "source_hash": "510a50d662b0bbd7d5b263d570125ca3cc8c30b06fe73e0ab0653640e2795937",
+          "source_excerpt": "# 智慧城市",
+          "source_metadata": {
+            "material_id": "5a4674b0-aaab-475a-964b-977ae4b1ff65",
+            "material_name": "东软智慧城市公开资料",
+            "material_type": "company_profile"
+          },
+          "provenance_status": "NO_CANONICAL_FACT_IN_LEGACY_CLAIM_SLICE"
+        }
+      ],
+      "mapping": {
+        "mapping_id": null,
+        "authority_status": "NOT_PRESENT_IN_LEGACY_CLAIM_SLICE",
+        "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+        "support_level": "partial_support",
+        "authority_context": null,
+        "source_reference": "db://company_materials/5a4674b0-aaab-475a-964b-977ae4b1ff65/chunks/MCH-AA7ACA34B5002854093D2F6FED45B89B",
+        "source_hash": "510a50d662b0bbd7d5b263d570125ca3cc8c30b06fe73e0ab0653640e2795937"
+      },
+      "provenance": {
+        "resolvable": false,
+        "requirement_source_resolvable": false,
+        "fact_identity_resolvable": false,
+        "mapping_identity_resolvable": false,
+        "source_reference": "db://company_materials/5a4674b0-aaab-475a-964b-977ae4b1ff65/chunks/MCH-AA7ACA34B5002854093D2F6FED45B89B",
+        "anchor_chunk_id": "MCH-AA7ACA34B5002854093D2F6FED45B89B",
+        "anchor_source_hash": "510a50d662b0bbd7d5b263d570125ca3cc8c30b06fe73e0ab0653640e2795937",
+        "authority_note": "Legacy source slice is retained for human review preparation only; no canonical aliases are invented."
+      },
+      "review_boundary": "HUMAN_REVIEW_REQUIRED_BEFORE_ANY_SCORING",
+      "source_identity": {
+        "claim_id": null,
+        "claim_text_hash": "21d5dad0a51c85814d71a3cd9b52a39ec3da6460af1be27352b6537b88e8c199",
+        "requirement_id": "REQ-048",
+        "requirement_source_hash": null,
+        "fact_identity_set": [],
+        "fact_source_hash_set": [
+          "510a50d662b0bbd7d5b263d570125ca3cc8c30b06fe73e0ab0653640e2795937"
+        ],
+        "mapping_id": null,
+        "mapping_authority_context": null
+      }
+    },
+    {
+      "case_id": "CLM-059-1-1",
+      "source_case_id": "EVD-059-01",
+      "data_classification": "REAL_PUBLIC_DERIVED_SOURCE_ONLY",
+      "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+      "source_fixture": "backend/eval/evidence-gold/gold-candidates.json",
+      "requirement": {
+        "requirement_id": "REQ-059",
+        "text": "事件汇聚收发网关应汇聚实时事件并对事件数据进行治理。",
+        "category": "technical",
+        "source_reference": "legacy://tender/requirements/REQ-059",
+        "source_hash": null,
+        "source_hash_status": "NOT_DECLARED_IN_LEGACY_SOURCE",
+        "source_excerpt": "事件汇聚收发网关应汇聚实时事件并对事件数据进行治理。"
+      },
+      "claim": {
+        "claim_id": null,
+        "text": "事件汇聚收发网关应汇聚实时事件并对事件数据进行治理。",
+        "text_hash": "4a1c2550eacb0a1de70836348859390254e5cf2eb005d2dcfcf8ce2798d1eddb",
+        "claim_type": "enterprise_capability",
+        "identity_status": "CLAIM_ID_NOT_PRESENT_IN_LEGACY_CLAIM_SLICE"
+      },
+      "facts": [
+        {
+          "fact_id": null,
+          "fact_ref": null,
+          "evidence_id": null,
+          "fact_type": null,
+          "subject": null,
+          "entities": [],
+          "status": null,
+          "scopes": [],
+          "quantities": [],
+          "validity": null,
+          "currentness": null,
+          "source_reference": "db://company_materials/c7542760-5ed9-479e-a642-1ebf7999f446/chunks/MCH-B7A88ECC982E0F418C0036C9AB74F538",
+          "source_hash": "fb8777920d6b9ff664626a85788f57027e0f7bc4e4fb52dec130fd47597a1204",
+          "source_excerpt": "# 系统集成",
+          "source_metadata": {
+            "material_id": "c7542760-5ed9-479e-a642-1ebf7999f446",
+            "material_name": "东软系统集成公开资料",
+            "material_type": "product_documentation"
+          },
+          "provenance_status": "NO_CANONICAL_FACT_IN_LEGACY_CLAIM_SLICE"
+        }
+      ],
+      "mapping": {
+        "mapping_id": null,
+        "authority_status": "NOT_PRESENT_IN_LEGACY_CLAIM_SLICE",
+        "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+        "support_level": "partial_support",
+        "authority_context": null,
+        "source_reference": "db://company_materials/c7542760-5ed9-479e-a642-1ebf7999f446/chunks/MCH-B7A88ECC982E0F418C0036C9AB74F538",
+        "source_hash": "fb8777920d6b9ff664626a85788f57027e0f7bc4e4fb52dec130fd47597a1204"
+      },
+      "provenance": {
+        "resolvable": false,
+        "requirement_source_resolvable": false,
+        "fact_identity_resolvable": false,
+        "mapping_identity_resolvable": false,
+        "source_reference": "db://company_materials/c7542760-5ed9-479e-a642-1ebf7999f446/chunks/MCH-B7A88ECC982E0F418C0036C9AB74F538",
+        "anchor_chunk_id": "MCH-B7A88ECC982E0F418C0036C9AB74F538",
+        "anchor_source_hash": "fb8777920d6b9ff664626a85788f57027e0f7bc4e4fb52dec130fd47597a1204",
+        "authority_note": "Legacy source slice is retained for human review preparation only; no canonical aliases are invented."
+      },
+      "review_boundary": "HUMAN_REVIEW_REQUIRED_BEFORE_ANY_SCORING",
+      "source_identity": {
+        "claim_id": null,
+        "claim_text_hash": "4a1c2550eacb0a1de70836348859390254e5cf2eb005d2dcfcf8ce2798d1eddb",
+        "requirement_id": "REQ-059",
+        "requirement_source_hash": null,
+        "fact_identity_set": [],
+        "fact_source_hash_set": [
+          "fb8777920d6b9ff664626a85788f57027e0f7bc4e4fb52dec130fd47597a1204"
+        ],
+        "mapping_id": null,
+        "mapping_authority_context": null
+      }
+    },
+    {
+      "case_id": "CLM-070-1-1",
+      "source_case_id": "EVD-070-01",
+      "data_classification": "REAL_PUBLIC_DERIVED_SOURCE_ONLY",
+      "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+      "source_fixture": "backend/eval/evidence-gold/gold-candidates.json",
+      "requirement": {
+        "requirement_id": "REQ-070",
+        "text": "构建平台精网微格体系、警网融合应用和网格学院。",
+        "category": "technical",
+        "source_reference": "legacy://tender/requirements/REQ-070",
+        "source_hash": null,
+        "source_hash_status": "NOT_DECLARED_IN_LEGACY_SOURCE",
+        "source_excerpt": "构建平台精网微格体系、警网融合应用和网格学院。"
+      },
+      "claim": {
+        "claim_id": null,
+        "text": "构建平台精网微格体系、警网融合应用和网格学院。",
+        "text_hash": "ca860c6f12d339e31e667bc66cff2f6fa70e332149b0e8aaabb905e6852da2bc",
+        "claim_type": "enterprise_capability",
+        "identity_status": "CLAIM_ID_NOT_PRESENT_IN_LEGACY_CLAIM_SLICE"
+      },
+      "facts": [
+        {
+          "fact_id": null,
+          "fact_ref": null,
+          "evidence_id": null,
+          "fact_type": null,
+          "subject": null,
+          "entities": [],
+          "status": null,
+          "scopes": [],
+          "quantities": [],
+          "validity": null,
+          "currentness": null,
+          "source_reference": "db://company_materials/5a4674b0-aaab-475a-964b-977ae4b1ff65/chunks/MCH-5E9E9962FF6319012DA5B886CBB6F431",
+          "source_hash": "b2d5cfb9260c1a2567d5b117af2ce63cc001c13c7918176de6799b4465710c9d",
+          "source_excerpt": "整合智慧城市资源，构建多方参与融合发展体系",
+          "source_metadata": {
+            "material_id": "5a4674b0-aaab-475a-964b-977ae4b1ff65",
+            "material_name": "东软智慧城市公开资料",
+            "material_type": "company_profile"
+          },
+          "provenance_status": "NO_CANONICAL_FACT_IN_LEGACY_CLAIM_SLICE"
+        }
+      ],
+      "mapping": {
+        "mapping_id": null,
+        "authority_status": "NOT_PRESENT_IN_LEGACY_CLAIM_SLICE",
+        "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+        "support_level": "partial_support",
+        "authority_context": null,
+        "source_reference": "db://company_materials/5a4674b0-aaab-475a-964b-977ae4b1ff65/chunks/MCH-5E9E9962FF6319012DA5B886CBB6F431",
+        "source_hash": "b2d5cfb9260c1a2567d5b117af2ce63cc001c13c7918176de6799b4465710c9d"
+      },
+      "provenance": {
+        "resolvable": false,
+        "requirement_source_resolvable": false,
+        "fact_identity_resolvable": false,
+        "mapping_identity_resolvable": false,
+        "source_reference": "db://company_materials/5a4674b0-aaab-475a-964b-977ae4b1ff65/chunks/MCH-5E9E9962FF6319012DA5B886CBB6F431",
+        "anchor_chunk_id": "MCH-5E9E9962FF6319012DA5B886CBB6F431",
+        "anchor_source_hash": "b2d5cfb9260c1a2567d5b117af2ce63cc001c13c7918176de6799b4465710c9d",
+        "authority_note": "Legacy source slice is retained for human review preparation only; no canonical aliases are invented."
+      },
+      "review_boundary": "HUMAN_REVIEW_REQUIRED_BEFORE_ANY_SCORING",
+      "source_identity": {
+        "claim_id": null,
+        "claim_text_hash": "ca860c6f12d339e31e667bc66cff2f6fa70e332149b0e8aaabb905e6852da2bc",
+        "requirement_id": "REQ-070",
+        "requirement_source_hash": null,
+        "fact_identity_set": [],
+        "fact_source_hash_set": [
+          "b2d5cfb9260c1a2567d5b117af2ce63cc001c13c7918176de6799b4465710c9d"
+        ],
+        "mapping_id": null,
+        "mapping_authority_context": null
+      }
+    },
+    {
+      "case_id": "CLM-187-1",
+      "source_case_id": "EVD-187-01",
+      "data_classification": "REAL_PUBLIC_DERIVED_SOURCE_ONLY",
+      "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+      "source_fixture": "backend/eval/evidence-gold/gold-candidates.json",
+      "requirement": {
+        "requirement_id": "REQ-187",
+        "text": "防火墙需支持一体化安全策略并提供第三方权威检测报告扫描件。",
+        "category": "technical",
+        "source_reference": "legacy://tender/requirements/REQ-187",
+        "source_hash": null,
+        "source_hash_status": "NOT_DECLARED_IN_LEGACY_SOURCE",
+        "source_excerpt": "防火墙需支持一体化安全策略并提供第三方权威检测报告扫描件。"
+      },
+      "claim": {
+        "claim_id": null,
+        "text": "材料列示ISO9001:2015资质信息，可供参考。",
+        "text_hash": "dd045d06345a8ac9b79e0ef256eb35c7435eea6f99177443566d5feaa095593a",
+        "claim_type": "enterprise_capability",
+        "identity_status": "CLAIM_ID_NOT_PRESENT_IN_LEGACY_CLAIM_SLICE"
+      },
+      "facts": [
+        {
+          "fact_id": null,
+          "fact_ref": null,
+          "evidence_id": "EVI-56250BBD-0A33-4086-9C29-208B584DADB9",
+          "fact_type": "legacy_seed_fact",
+          "subject": "unknown",
+          "entities": [
+            "ISO9001:2015"
+          ],
+          "status": "unknown",
+          "scopes": [
+            "qualification_fact"
+          ],
+          "quantities": [],
+          "validity": "unknown",
+          "currentness": null,
+          "source_reference": "db://company_materials/427e5615-72e0-4d3d-b38a-f44891b993e2/chunks/MCH-67F99E2E347B54EA6E600C4ACE97C52D",
+          "source_hash": "1fa44899e3fe5a0a037cb13660d0d8a400df14244b0d778381948d785a045b63",
+          "source_excerpt": "# 资质认证",
+          "source_metadata": {
+            "material_id": "427e5615-72e0-4d3d-b38a-f44891b993e2",
+            "material_name": "东软资质认证公开资料",
+            "material_type": "qualification"
+          },
+          "provenance_status": "LEGACY_SEED_WITHOUT_CANONICAL_FACT_ID"
+        }
+      ],
+      "mapping": {
+        "mapping_id": null,
+        "authority_status": "NOT_PRESENT_IN_LEGACY_CLAIM_SLICE",
+        "project_id": "112b3805-df67-4483-b1aa-c8941a111465",
+        "support_level": "reference_only",
+        "authority_context": null,
+        "source_reference": "db://company_materials/427e5615-72e0-4d3d-b38a-f44891b993e2/chunks/MCH-67F99E2E347B54EA6E600C4ACE97C52D",
+        "source_hash": "1fa44899e3fe5a0a037cb13660d0d8a400df14244b0d778381948d785a045b63"
+      },
+      "provenance": {
+        "resolvable": false,
+        "requirement_source_resolvable": false,
+        "fact_identity_resolvable": false,
+        "mapping_identity_resolvable": false,
+        "source_reference": "db://company_materials/427e5615-72e0-4d3d-b38a-f44891b993e2/chunks/MCH-67F99E2E347B54EA6E600C4ACE97C52D",
+        "anchor_chunk_id": "MCH-67F99E2E347B54EA6E600C4ACE97C52D",
+        "anchor_source_hash": "11df61a7d0ccecdd5a6f25860832d5c0c28805c428b9ab06e6dd3e171fe1f238",
+        "authority_note": "Legacy source slice is retained for human review preparation only; no canonical aliases are invented."
+      },
+      "review_boundary": "HUMAN_REVIEW_REQUIRED_BEFORE_ANY_SCORING",
+      "source_identity": {
+        "claim_id": null,
+        "claim_text_hash": "dd045d06345a8ac9b79e0ef256eb35c7435eea6f99177443566d5feaa095593a",
+        "requirement_id": "REQ-187",
+        "requirement_source_hash": null,
+        "fact_identity_set": [
+          "EVI-56250BBD-0A33-4086-9C29-208B584DADB9"
+        ],
+        "fact_source_hash_set": [
+          "1fa44899e3fe5a0a037cb13660d0d8a400df14244b0d778381948d785a045b63"
+        ],
+        "mapping_id": null,
+        "mapping_authority_context": null
+      }
+    }
+  ]
+}

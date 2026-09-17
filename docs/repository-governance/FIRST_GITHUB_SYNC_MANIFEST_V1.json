@@ -1,0 +1,125 @@
+{
+  "artifact_type": "FIRST_GITHUB_SYNC_MANIFEST_V1",
+  "artifact_version": "v1",
+  "status": "PREPARED_DO_NOT_COMMIT_OR_PUSH",
+  "audit_timestamp": "2026-09-17T12:48:11.0068593+08:00",
+  "repository": {
+    "root": "D:/AI工作/AI/标书平台/标书平台",
+    "branch": "feat/v4.3-semantic-boundary-routing",
+    "local_head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+    "remote_name": "origin",
+    "remote_url_sanitized": "https://github.com/MMMIIM/Bid-Pilot.git",
+    "remote_branch": "feat/v4.3-semantic-boundary-routing",
+    "remote_head_before": null,
+    "remote_head_probe": "BLOCKED_SEC_E_NO_CREDENTIALS",
+    "local_remote_parity": null,
+    "branch_policy": {
+      "authoritative_branch": "feat/v4.3-semantic-boundary-routing",
+      "production_sync_policy": "ff-preferred-stop-on-divergence",
+      "force_push_allowed": false,
+      "automatic_reset_allowed": false
+    }
+  },
+  "dirty_worktree_before_governance_writes": {
+    "status_entry_count": 721,
+    "tracked_modified_count": 103,
+    "untracked_status_entry_count": 618,
+    "untracked_expanded_file_count": 3121,
+    "deleted_count": 0,
+    "ignored_status_entry_count": 88,
+    "ignored_expanded_file_count": 42979,
+    "tracked_file_count": 709
+  },
+  "inventory": {
+    "scanned_file_count_excluding_git_node_modules_pnpm_store": 4446,
+    "directory_status_summary": {
+      ".codex": { "status_entries": 1, "tracked_modified": 1, "untracked": 0 },
+      "backend": { "status_entries": 295, "tracked_modified": 79, "untracked": 216 },
+      "data": { "status_entries": 1, "tracked_modified": 0, "untracked": 1 },
+      "docs": { "status_entries": 401, "tracked_modified": 6, "untracked": 395 },
+      "frontend": { "status_entries": 4, "tracked_modified": 4, "untracked": 0 },
+      "packages": { "status_entries": 3, "tracked_modified": 2, "untracked": 1 },
+      "services": { "status_entries": 13, "tracked_modified": 8, "untracked": 5 },
+      "root_files": { "status_entries": 3, "tracked_modified": 3, "untracked": 0 }
+    },
+    "size_distribution": { "lt_10mb": 4430, "10_to_50mb": 15, "50_to_100mb": 1, "gt_100mb": 0 }
+  },
+  "classification": {
+    "commit_now": {
+      "file_count": 8,
+      "authorized_this_task": false,
+      "paths": [
+        "docs/project-state/CURRENT_STATE.md",
+        "docs/project-state/DECISION_REGISTRY.md",
+        "docs/repository-governance/GIT_SYNC_POLICY.md",
+        "docs/repository-governance/REPOSITORY_CLASSIFICATION.md",
+        "docs/repository-governance/FIRST_GITHUB_SYNC_MANIFEST_V1.json",
+        "docs/repository-governance/FIRST_GITHUB_SYNC_MANIFEST_V1.md",
+        "docs/repository-governance/V43_REPOSITORY_GOVERNANCE_AND_GITHUB_SYNC_FOUNDATION_CHECKPOINT_V1.json",
+        "docs/repository-governance/V43_REPOSITORY_GOVERNANCE_AND_GITHUB_SYNC_FOUNDATION_CHECKPOINT_V1.md"
+      ]
+    },
+    "ignore": { "expanded_file_count": 42979, "policy": "existing .gitignore patterns; no .gitignore change proposed in this task" },
+    "git_lfs": { "approved_file_count": 0, "candidate_file_count_pending_private_review": 4 },
+    "external_only": { "large_generated_json_count": 11, "raw_payload_sync": "NOT_RECOMMENDED" },
+    "gpt_review_required": { "status_entry_count_after_excluding_governance_proposal": 721, "reason": "broad dirty worktree, production/code/migration changes, private materials, secret suspicion, and ambiguous generated artifacts" }
+  },
+  "secret_scan": {
+    "result": "PASS_WITH_LOCAL_SECRET_REVIEW",
+    "tracked_private_key_or_token_literal_reported": false,
+    "local_secret_bearing_files": [
+      { "path": "backend/.env", "tracked": false, "ignored": true, "categories": ["API_KEY", "TOKEN", "DATABASE_CREDENTIAL", "GATEWAY_CREDENTIAL"], "redacted_file_fingerprint": "97309F8DC2A18C01", "values_printed": false },
+      { "path": "services/semantic-gateway/.env", "tracked": false, "ignored": true, "categories": ["API_KEY", "TOKEN", "GATEWAY_CREDENTIAL"], "redacted_file_fingerprint": "9E13FACCA33C68B2", "values_printed": false }
+    ],
+    "tracked_templates": [".env.example", "backend/.env.example", "services/semantic-gateway/.env.example"],
+    "history_remediation_required": "NOT_DETERMINED_BY_CURRENT_SCAN; no destructive history rewrite performed"
+  },
+  "large_file_audit": {
+    "large_file_count": 15,
+    "git_lfs_approved": false,
+    "files": [
+      { "path": "docs/eval/p0-recall/V43_P0_487_PROVENANCE_TRACE_INDEX.json", "bytes": 67530346, "megabytes": 64.4, "type": "generated_json", "tracked": false, "recommendation": "EXTERNAL_STORAGE" },
+      { "path": "data/eval/real-enterprise-upload-test-v1/raw/HW-001.pdf", "bytes": 37180178, "megabytes": 35.46, "type": "source_pdf", "tracked": false, "recommendation": "GPT_REVIEW_REQUIRED_PRIVATE_SOURCE; possible GIT_LFS after authorization" },
+      { "path": "data/eval/real-pdf-pilot-storage/5d724373-3d88-41ec-b72d-0d7a01107af7/061de778-001c-48c7-a30b-ffd2e0a6bfb4.pdf", "bytes": 37180178, "megabytes": 35.46, "type": "source_pdf", "tracked": false, "recommendation": "GPT_REVIEW_REQUIRED_PRIVATE_SOURCE; possible GIT_LFS after authorization" },
+      { "path": "docs/eval/p0-recall/V43_P0_SOURCE_FIDELITY_EVIDENCE.json", "bytes": 34100000, "megabytes": 32.52, "type": "generated_json", "tracked": false, "recommendation": "EXTERNAL_STORAGE" },
+      { "path": "docs/eval/flywheel/V43-FLYWHEEL-P0-487-R3/V43_P0_487_PROVENANCE_TRACE_INDEX.json", "bytes": 20808854, "megabytes": 19.84, "type": "generated_json", "tracked": false, "recommendation": "EXTERNAL_STORAGE" },
+      { "path": "docs/eval/flywheel/p0-badcase-repair-v2/V43_REQUIREMENT_P0_487_TEXTUAL_INPUT_COVERAGE_V6.json", "bytes": 16311264, "megabytes": 15.56, "type": "generated_json", "tracked": false, "recommendation": "EXTERNAL_STORAGE" },
+      { "path": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/09_R0_RESULTS.json", "bytes": 13259534, "megabytes": 12.65, "type": "generated_json", "tracked": false, "recommendation": "EXTERNAL_STORAGE" },
+      { "path": "docs/handoff/V43_REFERENCE_RETRIEVAL_SCHEMA_PARITY_CORE6_REPLAY_V2/09_R0_RESULTS.json", "bytes": 13259534, "megabytes": 12.65, "type": "generated_json", "tracked": false, "recommendation": "EXTERNAL_STORAGE" },
+      { "path": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/10_R1_RESULTS.json", "bytes": 13259519, "megabytes": 12.65, "type": "generated_json", "tracked": false, "recommendation": "EXTERNAL_STORAGE" },
+      { "path": "docs/handoff/V43_REFERENCE_RETRIEVAL_SCHEMA_PARITY_CORE6_REPLAY_V2/06_R1_HYGIENE_RESULTS.json", "bytes": 13259399, "megabytes": 12.65, "type": "generated_json", "tracked": false, "recommendation": "EXTERNAL_STORAGE" },
+      { "path": "docs/handoff/V43_REFERENCE_RETRIEVAL_SCHEMA_PARITY_CORE6_REPLAY_V2/05_R0_CURRENT_RESULTS.json", "bytes": 13259362, "megabytes": 12.65, "type": "generated_json", "tracked": false, "recommendation": "EXTERNAL_STORAGE" },
+      { "path": "data/eval/real-enterprise-upload-test-v1/raw/HW-003.pdf", "bytes": 12891442, "megabytes": 12.29, "type": "source_pdf", "tracked": false, "recommendation": "GPT_REVIEW_REQUIRED_PRIVATE_SOURCE; possible GIT_LFS after authorization" },
+      { "path": "data/eval/real-pdf-pilot-storage/5d724373-3d88-41ec-b72d-0d7a01107af7/13c1eb7e-4ab4-48c7-864d-354abf50a8aa.pdf", "bytes": 12891442, "megabytes": 12.29, "type": "source_pdf", "tracked": false, "recommendation": "GPT_REVIEW_REQUIRED_PRIVATE_SOURCE; possible GIT_LFS after authorization" },
+      { "path": "backend/eval/requirement-unseen-holdout-v3/results/unseen-holdout-v3-2026-09-09T15-43-27-853Z-0dba352e/parsed-sources/HOLDOUT-REQ-V3-01.json", "bytes": 12063326, "megabytes": 11.5, "type": "generated_json", "tracked": false, "recommendation": "EXTERNAL_STORAGE" },
+      { "path": "backend/eval/requirement-unseen-holdout-v3/results/unseen-holdout-v3-2026-09-09T15-43-27-853Z-0dba352e/V43_REQUIREMENT_UNSEEN_HOLDOUT_V3_GPT_REVIEW_PACKET.json", "bytes": 11728303, "megabytes": 11.18, "type": "generated_json", "tracked": false, "recommendation": "EXTERNAL_STORAGE" }
+    ]
+  },
+  "files_requiring_gpt_review": [
+    "all current tracked production/source/migration/config changes",
+    "all ambiguous untracked Eval and docs groups not explicitly listed as governance support",
+    "data/eval/** and private source PDFs",
+    "backend/.env and services/semantic-gateway/.env exclusion/rotation review",
+    "the 11 large generated JSON payloads before any external retention or sync decision"
+  ],
+  "governance_files_changed": [
+    "docs/project-state/CURRENT_STATE.md",
+    "docs/project-state/DECISION_REGISTRY.md",
+    "docs/repository-governance/GIT_SYNC_POLICY.md",
+    "docs/repository-governance/REPOSITORY_CLASSIFICATION.md",
+    "docs/repository-governance/FIRST_GITHUB_SYNC_MANIFEST_V1.json",
+    "docs/repository-governance/FIRST_GITHUB_SYNC_MANIFEST_V1.md",
+    "docs/repository-governance/V43_REPOSITORY_GOVERNANCE_AND_GITHUB_SYNC_FOUNDATION_CHECKPOINT_V1.json",
+    "docs/repository-governance/V43_REPOSITORY_GOVERNANCE_AND_GITHUB_SYNC_FOUNDATION_CHECKPOINT_V1.md"
+  ],
+  "commit_count": 0,
+  "push_count": 0,
+  "merge_count": 0,
+  "deploy_count": 0,
+  "force_push_count": 0,
+  "history_rewrite_count": 0,
+  "destructive_git_count": 0,
+  "first_sync_blocker": "BLOCKED_REMOTE_HEAD_UNAVAILABLE_CREDENTIALS; FIRST_BULK_SYNC_GPT_REVIEW_REQUIRED; SECRET_AND_PRIVATE_SOURCE_REVIEW_REQUIRED",
+  "proposed_next_action": "GPT_REVIEW_FIRST_GITHUB_SYNC_MANIFEST_THEN_SEPARATELY_AUTHORIZE_FIRST_BULK_SYNC",
+  "final_status": "READY_FOR_FIRST_GITHUB_SYNC_REVIEW"
+}

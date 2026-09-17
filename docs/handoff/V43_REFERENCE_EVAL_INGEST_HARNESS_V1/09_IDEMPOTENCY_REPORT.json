@@ -1,0 +1,9 @@
+{
+  "artifact_type": "V43_IDEMPOTENCY_REPORT",
+  "status": "PASS_PLAN",
+  "material_identity_key": "source_id + source_sha256 + adapter_version_or_production-parser",
+  "chunk_identity_key": "material_id + enterprise-material-v1 + chunk_index + offsets + chunk_hash",
+  "writes_use_on_conflict_do_nothing": true,
+  "delete_or_recreate": false,
+  "rerun_expected": "same source/material/chunk/embedding identities are reused; conflicting hash fails closed"
+}

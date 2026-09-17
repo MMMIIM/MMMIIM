@@ -255,6 +255,8 @@ export function assembleEvidenceSupportAssessment({ adapter, deterministicCheck,
   });
 }
 
+// ADR-020: semantic_relevance and evidence_capability ownership remain
+// unresolved; this metadata is not a semantic fallback or authority change.
 export const EVIDENCE_SUPPORT_FIELD_OWNERS = Object.freeze({
   semantic_relevance: { owner: 'STAGE17_RERANK', source_type: 'RETRIEVAL_DERIVED', current_producer: 'not_explicitly_emitted', consumer: 'EvidenceSupportAssessment' },
   retrieval_scores: { owner: 'STAGE17_RERANK', source_type: 'RETRIEVAL_DERIVED', current_producer: 'semantic-retrieval-reranker', consumer: 'ranking/audit' },

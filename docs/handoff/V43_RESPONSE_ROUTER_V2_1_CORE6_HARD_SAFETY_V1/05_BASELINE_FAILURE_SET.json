@@ -1,0 +1,472 @@
+{
+  "artifact_type": "V43_RESPONSE_ROUTER_V2_1_CORE6_BASELINE_FAILURE_SET",
+  "artifact_version": "v1",
+  "historical_prior_aggregate_count": 25,
+  "registry_entry_count": 23,
+  "current_failure_count": 29,
+  "current_run_test_count": 1475,
+  "current_run_pass_count": 1446,
+  "current_fail_count": 29,
+  "classification_policy": "Only exact identity plus registry signature is mechanically confirmed pre-existing; otherwise identity remains unknown. No task regression is asserted without evidence.",
+  "classification_summary": {
+    "CONFIRMED_PRE_EXISTING": 23,
+    "NEW_TASK_REGRESSION": 0,
+    "UNKNOWN_BASELINE_IDENTITY": 6
+  },
+  "set_equivalence_status": "NOT_VERIFIABLE_AND_COUNT_DRIFT",
+  "current_failures": [
+    {
+      "test_id": "eval/requirement-p1-semantic-calibration/gpt-calibration-safety-prep.test.mjs",
+      "failure_family": "KNOWN_BASELINE_FAILURE",
+      "failure_signature": "sig:missing-V43_REQUIREMENT_P1_GPT_SEMANTIC_CALIBRATION_PACKET_RECOVERED",
+      "failure_signature_sha256": "297facfcb09a4460aa8e6a6425efb8e380602d69904edebe71d6ffda3ca8e7c9",
+      "evidence_ref": "ENOENT backend/docs/V43_REQUIREMENT_P1_GPT_SEMANTIC_CALIBRATION_PACKET_RECOVERED.json",
+      "classification": "CONFIRMED_PRE_EXISTING",
+      "classification_basis": "exact test identity and registry signature match"
+    },
+    {
+      "test_id": "eval/requirement-p1-semantic-calibration/metric-and-packet.test.mjs",
+      "failure_family": "KNOWN_BASELINE_FAILURE",
+      "failure_signature": "sig:missing-V43_REQUIREMENT_P1_GPT_SEMANTIC_CALIBRATION_PACKET",
+      "failure_signature_sha256": "a64d6719b12efa5cb18cdb62b30a3fc8118e1aef64fc5488420deae5b3f3fcc8",
+      "evidence_ref": "ENOENT backend/docs/V43_REQUIREMENT_P1_GPT_SEMANTIC_CALIBRATION_PACKET.json",
+      "classification": "CONFIRMED_PRE_EXISTING",
+      "classification_basis": "exact test identity and registry signature match"
+    },
+    {
+      "test_id": "test/claim-writer-gold-v2-source-authority.test.js",
+      "failure_family": "KNOWN_BASELINE_FAILURE",
+      "failure_signature": "sig:missing-claim-real-source-packet",
+      "failure_signature_sha256": "58da5fdb18fcf815a9b299ae93500242b42a62f980aa7aaa3dce0a671e2688cb",
+      "evidence_ref": "ENOENT backend/backend/eval/gold-human-review/v2/claim/02_claim_real_source_packet.json",
+      "classification": "CONFIRMED_PRE_EXISTING",
+      "classification_basis": "exact test identity and registry signature match"
+    },
+    {
+      "test_id": "engineering governance declares Parity as a focused review dimension",
+      "failure_family": "KNOWN_BASELINE_FAILURE",
+      "failure_signature": "sig:governance-parity-assertion",
+      "failure_signature_sha256": "197a8714023e4088ce90b60ee4e5e71af399f14828e0bfacb9c1ee7fa53c786b",
+      "evidence_ref": "existing governance assertion failure",
+      "classification": "CONFIRMED_PRE_EXISTING",
+      "classification_basis": "exact test identity and registry signature match"
+    },
+    {
+      "test_id": "engineering governance requires fail-closed canonical input parity before Provider",
+      "failure_family": "KNOWN_BASELINE_FAILURE",
+      "failure_signature": "sig:governance-canonical-parity-assertion",
+      "failure_signature_sha256": "0d619fcc319eb486ecc1a584c5a90e667f5659de3bf9257ca413e5a87a7925b6",
+      "evidence_ref": "existing governance assertion failure",
+      "classification": "CONFIRMED_PRE_EXISTING",
+      "classification_basis": "exact test identity and registry signature match"
+    },
+    {
+      "test_id": "engineering governance requires cross-run identity and evaluation certification invariants",
+      "failure_family": "KNOWN_BASELINE_FAILURE",
+      "failure_signature": "sig:governance-cross-run-identity-assertion",
+      "failure_signature_sha256": "8f5cbed17799c73b9af4b5a6a3e8307d1d24fe603e39ae821f4b37abdc6572a8",
+      "evidence_ref": "existing governance assertion failure",
+      "classification": "CONFIRMED_PRE_EXISTING",
+      "classification_basis": "exact test identity and registry signature match"
+    },
+    {
+      "test_id": "frozen real packets are checked without promoting duplicate supplemental candidates",
+      "failure_family": "KNOWN_BASELINE_FAILURE",
+      "failure_signature": "sig:missing-mapping-parent-packet",
+      "failure_signature_sha256": "58a8d6ea67edbce5641c485046d8cbbcb2866d0f8ebd52d39c3fd9e62b9ea860",
+      "evidence_ref": "existing Gold fixture unavailable",
+      "classification": "CONFIRMED_PRE_EXISTING",
+      "classification_basis": "exact test identity and registry signature match"
+    },
+    {
+      "test_id": "source packet render parity gate preserves every canonical Fact identity",
+      "failure_family": "KNOWN_BASELINE_FAILURE",
+      "failure_signature": "sig:missing-mapping-parent-packet-parity",
+      "failure_signature_sha256": "a92c28630aaf478e8a52293ab2bdf08c45ba17c40e96a18a9b338614ceed3522",
+      "evidence_ref": "existing Gold fixture unavailable",
+      "classification": "CONFIRMED_PRE_EXISTING",
+      "classification_basis": "exact test identity and registry signature match"
+    },
+    {
+      "test_id": "Batch01 human authority preserves all supplied cases and aggregate parity",
+      "failure_family": "KNOWN_BASELINE_FAILURE",
+      "failure_signature": "sig:missing-batch01-adjudication",
+      "failure_signature_sha256": "3781ed70274edd9c5b308bc34c29d968c1c9b703abf57545d3bd4fee410c8a6c",
+      "evidence_ref": "existing Gold fixture unavailable",
+      "classification": "CONFIRMED_PRE_EXISTING",
+      "classification_basis": "exact test identity and registry signature match"
+    },
+    {
+      "test_id": "novel supplemental human-review packet is source-complete and blind",
+      "failure_family": "KNOWN_BASELINE_FAILURE",
+      "failure_signature": "sig:missing-supplemental-source-packet",
+      "failure_signature_sha256": "510a2177c210568492bc60fbd6ee84531d45d72e37aa277ddca920ab5bd215e7",
+      "evidence_ref": "existing Gold fixture unavailable",
+      "classification": "CONFIRMED_PRE_EXISTING",
+      "classification_basis": "exact test identity and registry signature match"
+    },
+    {
+      "test_id": "frozen source and active Gold hashes remain unchanged while repair artifacts are evaluated",
+      "failure_family": "KNOWN_BASELINE_FAILURE",
+      "failure_signature": "sig:missing-frozen-source-packet",
+      "failure_signature_sha256": "8071f2f25537e6f081397cb183383956b8eeaf26a1cad15c184360ba984e03ee",
+      "evidence_ref": "existing Gold fixture unavailable",
+      "classification": "CONFIRMED_PRE_EXISTING",
+      "classification_basis": "exact test identity and registry signature match"
+    },
+    {
+      "test_id": "extraction audit reports source verification but leaves gold recall/precision unknown",
+      "failure_family": "KNOWN_BASELINE_FAILURE",
+      "failure_signature": "sig:existing-extraction-audit-assertion",
+      "failure_signature_sha256": "3b6db12ff18f6fb504200eae01556336a5f9db4ea7856cd137a96432bbbfb495",
+      "evidence_ref": "existing audit fixture state",
+      "classification": "CONFIRMED_PRE_EXISTING",
+      "classification_basis": "exact test identity and registry signature match"
+    },
+    {
+      "test_id": "test/mapping-gold-full-human-review-export.test.js",
+      "failure_family": "KNOWN_BASELINE_FAILURE",
+      "failure_signature": "sig:missing-mapping-real-source-packet",
+      "failure_signature_sha256": "617793d2a9fda8f4865c8043424a0dad4e41be379049a909b1c29fe3c83c4558",
+      "evidence_ref": "ENOENT backend/backend/eval/gold-human-review/v2/01_mapping_real_source_packet.json",
+      "classification": "CONFIRMED_PRE_EXISTING",
+      "classification_basis": "exact test identity and registry signature match"
+    },
+    {
+      "test_id": "test/mapping-gold-v2-successor.test.js",
+      "failure_family": "KNOWN_BASELINE_FAILURE",
+      "failure_signature": "sig:missing-mapping-real-derived-gold",
+      "failure_signature_sha256": "5611595ecff21f82549f4200c511ba67bcb5f77d10f56e1bf09be297a3246d61",
+      "evidence_ref": "ENOENT backend/backend/eval/requirement-evidence-mapping-v2/real-derived-gold-v1.json",
+      "classification": "CONFIRMED_PRE_EXISTING",
+      "classification_basis": "exact test identity and registry signature match"
+    },
+    {
+      "test_id": "识别六类文档章节且 Requirement 范围只选择第四章",
+      "failure_family": null,
+      "failure_signature": null,
+      "failure_signature_sha256": null,
+      "evidence_ref": null,
+      "classification": "UNKNOWN_BASELINE_IDENTITY",
+      "classification_basis": "current identity is not present in the 23-entry registry; no pre-task per-test signature artifact available"
+    },
+    {
+      "test_id": "空分片继续成功处理；仅所有分片为空时整体 NO_REQUIREMENTS_EXTRACTED",
+      "failure_family": null,
+      "failure_signature": null,
+      "failure_signature_sha256": null,
+      "evidence_ref": null,
+      "classification": "UNKNOWN_BASELINE_IDENTITY",
+      "classification_basis": "current identity is not present in the 23-entry registry; no pre-task per-test signature artifact available"
+    },
+    {
+      "test_id": "targeted selector projects historical Gold refs onto current provider chunks",
+      "failure_family": null,
+      "failure_signature": null,
+      "failure_signature_sha256": null,
+      "evidence_ref": null,
+      "classification": "UNKNOWN_BASELINE_IDENTITY",
+      "classification_basis": "current identity is not present in the 23-entry registry; no pre-task per-test signature artifact available"
+    },
+    {
+      "test_id": "provided 21-case cohort recovers case-level records without blanket attribution",
+      "failure_family": "KNOWN_BASELINE_FAILURE",
+      "failure_signature": "sig:existing-21-case-cohort-assertion",
+      "failure_signature_sha256": "f539067bea69af169f7970ab8eb655cddddafa2e7783a5bccd019ef92fa758db",
+      "evidence_ref": "existing attribution fixture state",
+      "classification": "CONFIRMED_PRE_EXISTING",
+      "classification_basis": "exact test identity and registry signature match"
+    },
+    {
+      "test_id": "real-path preflight uses frozen source windows and shared production chunking offline",
+      "failure_family": null,
+      "failure_signature": null,
+      "failure_signature_sha256": null,
+      "evidence_ref": null,
+      "classification": "UNKNOWN_BASELINE_IDENTITY",
+      "classification_basis": "current identity is not present in the 23-entry registry; no pre-task per-test signature artifact available"
+    },
+    {
+      "test_id": "frozen 199 Gold requirements retain an eligible or unknown source span after routing",
+      "failure_family": "KNOWN_BASELINE_FAILURE",
+      "failure_signature": "sig:missing-fast01-semantic-boundary-packet",
+      "failure_signature_sha256": "6a3418bee1632b10074efe2eb24a0092f05dbdcaceeb918aee2b4599962f0477",
+      "evidence_ref": "ENOENT backend/backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json",
+      "classification": "CONFIRMED_PRE_EXISTING",
+      "classification_basis": "exact test identity and registry signature match"
+    },
+    {
+      "test_id": "successor resolves all six tenders with source and canonical linkage gates",
+      "failure_family": "KNOWN_BASELINE_FAILURE",
+      "failure_signature": "sig:successor-source-linkage-assertion",
+      "failure_signature_sha256": "cff206836ef8898470fdca068ac383cc8374742c0eca0beb72da6c34c0e00cad",
+      "evidence_ref": "existing successor fixture state",
+      "classification": "CONFIRMED_PRE_EXISTING",
+      "classification_basis": "exact test identity and registry signature match"
+    },
+    {
+      "test_id": "unknown tender is represented as unresolved and cannot pass the gate",
+      "failure_family": "KNOWN_BASELINE_FAILURE",
+      "failure_signature": "sig:successor-unknown-tender-assertion",
+      "failure_signature_sha256": "10686764415d86a6d80a56bcea4a13848cfbbdc09f4e5144810c18f117ee5404",
+      "evidence_ref": "existing successor fixture state",
+      "classification": "CONFIRMED_PRE_EXISTING",
+      "classification_basis": "exact test identity and registry signature match"
+    },
+    {
+      "test_id": "DS Flash and Candidate V3 runtime decision records the accepted live freeze",
+      "failure_family": "KNOWN_BASELINE_FAILURE",
+      "failure_signature": "sig:runtime-decision-text-drift",
+      "failure_signature_sha256": "403d272069917f13c17ff1581577801cdd3c3a1982741ffba4f7f09616cf8fb3",
+      "evidence_ref": "existing runtime decision document drift",
+      "classification": "CONFIRMED_PRE_EXISTING",
+      "classification_basis": "exact test identity and registry signature match"
+    },
+    {
+      "test_id": "project instructions route Codex to the persistent runtime boundary",
+      "failure_family": "KNOWN_BASELINE_FAILURE",
+      "failure_signature": "sig:project-instructions-runtime-text-drift",
+      "failure_signature_sha256": "cf8ca52dcced148817ff69de51ab78e8cc01676686c6ff20d7bf30a0d5dfae52",
+      "evidence_ref": "existing AGENTS.md text drift",
+      "classification": "CONFIRMED_PRE_EXISTING",
+      "classification_basis": "exact test identity and registry signature match"
+    },
+    {
+      "test_id": "static runtime config guard covers canonical names, roles, secrets and legacy isolation",
+      "failure_family": "KNOWN_BASELINE_FAILURE",
+      "failure_signature": "sig:static-runtime-config-guard",
+      "failure_signature_sha256": "c70322b5819f9a76d85dce547c63cd5750455b63e5de4c621128ab1c9fdbe96c",
+      "evidence_ref": "existing runtime configuration state",
+      "classification": "CONFIRMED_PRE_EXISTING",
+      "classification_basis": "exact test identity and registry signature match"
+    },
+    {
+      "test_id": "generated source universes preserve role boundaries and remain blind",
+      "failure_family": "KNOWN_BASELINE_FAILURE",
+      "failure_signature": "sig:missing-source-role-projection",
+      "failure_signature_sha256": "8ae2f9dc62c0a07f900c90a1cf6670935cbaf59fb9719773104f9db1ef35f990",
+      "evidence_ref": "existing Gold fixture unavailable",
+      "classification": "CONFIRMED_PRE_EXISTING",
+      "classification_basis": "exact test identity and registry signature match"
+    },
+    {
+      "test_id": "P1-002 generation identity changes when current Writer authorization changes",
+      "failure_family": null,
+      "failure_signature": null,
+      "failure_signature_sha256": null,
+      "evidence_ref": null,
+      "classification": "UNKNOWN_BASELINE_IDENTITY",
+      "classification_basis": "current identity is not present in the 23-entry registry; no pre-task per-test signature artifact available"
+    },
+    {
+      "test_id": "HTTP production generation route retains requirement_response authorization and invalidates changed authorization",
+      "failure_family": null,
+      "failure_signature": null,
+      "failure_signature_sha256": null,
+      "evidence_ref": null,
+      "classification": "UNKNOWN_BASELINE_IDENTITY",
+      "classification_basis": "current identity is not present in the 23-entry registry; no pre-task per-test signature artifact available"
+    },
+    {
+      "test_id": "test/writer-provider-fidelity-authority-gap-audit.test.js",
+      "failure_family": "KNOWN_BASELINE_FAILURE",
+      "failure_signature": "sig:missing-writer-provider-fidelity-packet",
+      "failure_signature_sha256": "13e6c0ad25309bb81faa190506b2240b1f85d870a43af27c99c1694b83d864a3",
+      "evidence_ref": "ENOENT backend/backend/eval/gold-human-review/v2/writer/02_writer_provider_fidelity_source_packet.json",
+      "classification": "CONFIRMED_PRE_EXISTING",
+      "classification_basis": "exact test identity and registry signature match"
+    }
+  ],
+  "registry_entries": [
+    {
+      "test_id": "eval/requirement-p1-semantic-calibration/gpt-calibration-safety-prep.test.mjs",
+      "failure_signature": "sig:missing-V43_REQUIREMENT_P1_GPT_SEMANTIC_CALIBRATION_PACKET_RECOVERED",
+      "classification": "KNOWN_BASELINE_FAILURE",
+      "first_seen": "2026-09-11",
+      "evidence_ref": "ENOENT backend/docs/V43_REQUIREMENT_P1_GPT_SEMANTIC_CALIBRATION_PACKET_RECOVERED.json",
+      "status": "OPEN"
+    },
+    {
+      "test_id": "eval/requirement-p1-semantic-calibration/metric-and-packet.test.mjs",
+      "failure_signature": "sig:missing-V43_REQUIREMENT_P1_GPT_SEMANTIC_CALIBRATION_PACKET",
+      "classification": "KNOWN_BASELINE_FAILURE",
+      "first_seen": "2026-09-11",
+      "evidence_ref": "ENOENT backend/docs/V43_REQUIREMENT_P1_GPT_SEMANTIC_CALIBRATION_PACKET.json",
+      "status": "OPEN"
+    },
+    {
+      "test_id": "test/claim-writer-gold-v2-source-authority.test.js",
+      "failure_signature": "sig:missing-claim-real-source-packet",
+      "classification": "KNOWN_BASELINE_FAILURE",
+      "first_seen": "2026-09-11",
+      "evidence_ref": "ENOENT backend/backend/eval/gold-human-review/v2/claim/02_claim_real_source_packet.json",
+      "status": "OPEN"
+    },
+    {
+      "test_id": "engineering governance declares Parity as a focused review dimension",
+      "failure_signature": "sig:governance-parity-assertion",
+      "classification": "KNOWN_BASELINE_FAILURE",
+      "first_seen": "2026-09-11",
+      "evidence_ref": "existing governance assertion failure",
+      "status": "OPEN"
+    },
+    {
+      "test_id": "engineering governance requires fail-closed canonical input parity before Provider",
+      "failure_signature": "sig:governance-canonical-parity-assertion",
+      "classification": "KNOWN_BASELINE_FAILURE",
+      "first_seen": "2026-09-11",
+      "evidence_ref": "existing governance assertion failure",
+      "status": "OPEN"
+    },
+    {
+      "test_id": "engineering governance requires cross-run identity and evaluation certification invariants",
+      "failure_signature": "sig:governance-cross-run-identity-assertion",
+      "classification": "KNOWN_BASELINE_FAILURE",
+      "first_seen": "2026-09-11",
+      "evidence_ref": "existing governance assertion failure",
+      "status": "OPEN"
+    },
+    {
+      "test_id": "frozen real packets are checked without promoting duplicate supplemental candidates",
+      "failure_signature": "sig:missing-mapping-parent-packet",
+      "classification": "KNOWN_BASELINE_FAILURE",
+      "first_seen": "2026-09-11",
+      "evidence_ref": "existing Gold fixture unavailable",
+      "status": "OPEN"
+    },
+    {
+      "test_id": "source packet render parity gate preserves every canonical Fact identity",
+      "failure_signature": "sig:missing-mapping-parent-packet-parity",
+      "classification": "KNOWN_BASELINE_FAILURE",
+      "first_seen": "2026-09-11",
+      "evidence_ref": "existing Gold fixture unavailable",
+      "status": "OPEN"
+    },
+    {
+      "test_id": "Batch01 human authority preserves all supplied cases and aggregate parity",
+      "failure_signature": "sig:missing-batch01-adjudication",
+      "classification": "KNOWN_BASELINE_FAILURE",
+      "first_seen": "2026-09-11",
+      "evidence_ref": "existing Gold fixture unavailable",
+      "status": "OPEN"
+    },
+    {
+      "test_id": "novel supplemental human-review packet is source-complete and blind",
+      "failure_signature": "sig:missing-supplemental-source-packet",
+      "classification": "KNOWN_BASELINE_FAILURE",
+      "first_seen": "2026-09-11",
+      "evidence_ref": "existing Gold fixture unavailable",
+      "status": "OPEN"
+    },
+    {
+      "test_id": "frozen source and active Gold hashes remain unchanged while repair artifacts are evaluated",
+      "failure_signature": "sig:missing-frozen-source-packet",
+      "classification": "KNOWN_BASELINE_FAILURE",
+      "first_seen": "2026-09-11",
+      "evidence_ref": "existing Gold fixture unavailable",
+      "status": "OPEN"
+    },
+    {
+      "test_id": "extraction audit reports source verification but leaves gold recall/precision unknown",
+      "failure_signature": "sig:existing-extraction-audit-assertion",
+      "classification": "KNOWN_BASELINE_FAILURE",
+      "first_seen": "2026-09-11",
+      "evidence_ref": "existing audit fixture state",
+      "status": "OPEN"
+    },
+    {
+      "test_id": "test/mapping-gold-full-human-review-export.test.js",
+      "failure_signature": "sig:missing-mapping-real-source-packet",
+      "classification": "KNOWN_BASELINE_FAILURE",
+      "first_seen": "2026-09-11",
+      "evidence_ref": "ENOENT backend/backend/eval/gold-human-review/v2/01_mapping_real_source_packet.json",
+      "status": "OPEN"
+    },
+    {
+      "test_id": "test/mapping-gold-v2-successor.test.js",
+      "failure_signature": "sig:missing-mapping-real-derived-gold",
+      "classification": "KNOWN_BASELINE_FAILURE",
+      "first_seen": "2026-09-11",
+      "evidence_ref": "ENOENT backend/backend/eval/requirement-evidence-mapping-v2/real-derived-gold-v1.json",
+      "status": "OPEN"
+    },
+    {
+      "test_id": "provided 21-case cohort recovers case-level records without blanket attribution",
+      "failure_signature": "sig:existing-21-case-cohort-assertion",
+      "classification": "KNOWN_BASELINE_FAILURE",
+      "first_seen": "2026-09-11",
+      "evidence_ref": "existing attribution fixture state",
+      "status": "OPEN"
+    },
+    {
+      "test_id": "frozen 199 Gold requirements retain an eligible or unknown source span after routing",
+      "failure_signature": "sig:missing-fast01-semantic-boundary-packet",
+      "classification": "KNOWN_BASELINE_FAILURE",
+      "first_seen": "2026-09-11",
+      "evidence_ref": "ENOENT backend/backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/packets/FAST-01.json",
+      "status": "OPEN"
+    },
+    {
+      "test_id": "successor resolves all six tenders with source and canonical linkage gates",
+      "failure_signature": "sig:successor-source-linkage-assertion",
+      "classification": "KNOWN_BASELINE_FAILURE",
+      "first_seen": "2026-09-11",
+      "evidence_ref": "existing successor fixture state",
+      "status": "OPEN"
+    },
+    {
+      "test_id": "unknown tender is represented as unresolved and cannot pass the gate",
+      "failure_signature": "sig:successor-unknown-tender-assertion",
+      "classification": "KNOWN_BASELINE_FAILURE",
+      "first_seen": "2026-09-11",
+      "evidence_ref": "existing successor fixture state",
+      "status": "OPEN"
+    },
+    {
+      "test_id": "DS Flash and Candidate V3 runtime decision records the accepted live freeze",
+      "failure_signature": "sig:runtime-decision-text-drift",
+      "classification": "KNOWN_BASELINE_FAILURE",
+      "first_seen": "2026-09-11",
+      "evidence_ref": "existing runtime decision document drift",
+      "status": "OPEN"
+    },
+    {
+      "test_id": "project instructions route Codex to the persistent runtime boundary",
+      "failure_signature": "sig:project-instructions-runtime-text-drift",
+      "classification": "KNOWN_BASELINE_FAILURE",
+      "first_seen": "2026-09-11",
+      "evidence_ref": "existing AGENTS.md text drift",
+      "status": "OPEN"
+    },
+    {
+      "test_id": "static runtime config guard covers canonical names, roles, secrets and legacy isolation",
+      "failure_signature": "sig:static-runtime-config-guard",
+      "classification": "KNOWN_BASELINE_FAILURE",
+      "first_seen": "2026-09-11",
+      "evidence_ref": "existing runtime configuration state",
+      "status": "OPEN"
+    },
+    {
+      "test_id": "generated source universes preserve role boundaries and remain blind",
+      "failure_signature": "sig:missing-source-role-projection",
+      "classification": "KNOWN_BASELINE_FAILURE",
+      "first_seen": "2026-09-11",
+      "evidence_ref": "existing Gold fixture unavailable",
+      "status": "OPEN"
+    },
+    {
+      "test_id": "test/writer-provider-fidelity-authority-gap-audit.test.js",
+      "failure_signature": "sig:missing-writer-provider-fidelity-packet",
+      "classification": "KNOWN_BASELINE_FAILURE",
+      "first_seen": "2026-09-11",
+      "evidence_ref": "ENOENT backend/backend/eval/gold-human-review/v2/writer/02_writer_provider_fidelity_source_packet.json",
+      "status": "OPEN"
+    }
+  ],
+  "side_effects": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0
+  }
+}

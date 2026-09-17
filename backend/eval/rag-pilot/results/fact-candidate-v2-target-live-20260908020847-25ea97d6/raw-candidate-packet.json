@@ -1,0 +1,251 @@
+{
+  "run_id": "fact-candidate-v2-target-live-20260908020847-25ea97d6",
+  "packet_type": "RAW_MODEL_CANDIDATE_V2",
+  "eval_only": true,
+  "cases": [
+    {
+      "case_id": "CCV2-U13-01",
+      "execution_id": "fact-candidate-v2-target-live-20260908020847-25ea97d6-CCV2-U13-01",
+      "source_snapshot": {
+        "material_id": "CCV2-U13-01",
+        "material_version": "eval-snapshot-v1",
+        "source_hash": "9408fc5a50ffcad28def68d844c2d701405b99655f2d5904aeb89874f55ae575",
+        "chunk_id": "CCV2-U13-01-FULL-CHUNK-001",
+        "chunk_hash": "9408fc5a50ffcad28def68d844c2d701405b99655f2d5904aeb89874f55ae575",
+        "source_span_id": "CCV2-U13-01-FULL-SPAN-001",
+        "source_span_hash": "9408fc5a50ffcad28def68d844c2d701405b99655f2d5904aeb89874f55ae575",
+        "approved_review_identity": null
+      },
+      "source_ref": "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document",
+      "source_hash": "9408fc5a50ffcad28def68d844c2d701405b99655f2d5904aeb89874f55ae575",
+      "candidate_schema_version": "4.3-evidence-fact-candidate-v2",
+      "candidate_schema_hash": "9b40ac9be7d5a262e39d1a142bb5165ba113e213cfa9f56b7888ae241693f834",
+      "raw_model_candidate_v2": [
+        {
+          "entity_mentions": [
+            {
+              "provenance": {
+                "source_refs": [
+                  "CCV2-U13-01"
+                ],
+                "source_text": "澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。"
+              },
+              "type_hint": "product",
+              "value": "澄川政企数字平台 XDP 5.2 5.2.2"
+            }
+          ],
+          "quantity_items": [
+            {
+              "condition_text": "4个应用节点、每节点8核16GB环境",
+              "name": "应用节点数",
+              "provenance": {
+                "source_refs": [
+                  "CCV2-U13-01"
+                ],
+                "source_text": "澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。"
+              },
+              "unit_text": "个",
+              "value_text": "4"
+            },
+            {
+              "condition_text": "4个应用节点、每节点8核16GB环境",
+              "name": "每节点CPU核数",
+              "provenance": {
+                "source_refs": [
+                  "CCV2-U13-01"
+                ],
+                "source_text": "澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。"
+              },
+              "unit_text": "核",
+              "value_text": "8"
+            },
+            {
+              "condition_text": "4个应用节点、每节点8核16GB环境",
+              "name": "每节点内存",
+              "provenance": {
+                "source_refs": [
+                  "CCV2-U13-01"
+                ],
+                "source_text": "澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。"
+              },
+              "unit_text": "GB",
+              "value_text": "16"
+            }
+          ],
+          "scope_items": [
+            {
+              "provenance": {
+                "source_refs": [
+                  "CCV2-U13-01"
+                ],
+                "source_text": "本记录属于澄川数智科技有限公司（Synthetic Demo Company）的受控开发企业材料，面向性能与响应主题。"
+              },
+              "value": "澄川数智科技有限公司（Synthetic Demo Company）"
+            }
+          ],
+          "statement": "澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。",
+          "status_text": "完成性能测试",
+          "subject_name": "澄川政企数字平台 XDP 5.2 5.2.2",
+          "subject_type_hint": "product",
+          "temporal_items": []
+        },
+        {
+          "entity_mentions": [
+            {
+              "provenance": {
+                "source_refs": [
+                  "CCV2-U13-01"
+                ],
+                "source_text": "标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。"
+              },
+              "type_hint": "product",
+              "value": "澄川政企数字平台 XDP 5.2 5.2.2"
+            }
+          ],
+          "quantity_items": [
+            {
+              "condition_text": "标准查询场景",
+              "name": "并发虚拟用户数",
+              "provenance": {
+                "source_refs": [
+                  "CCV2-U13-01"
+                ],
+                "source_text": "标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。"
+              },
+              "unit_text": "并发虚拟用户",
+              "value_text": "8,000"
+            },
+            {
+              "condition_text": "标准查询场景",
+              "name": "P95响应时间",
+              "provenance": {
+                "source_refs": [
+                  "CCV2-U13-01"
+                ],
+                "source_text": "标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。"
+              },
+              "unit_text": "毫秒",
+              "value_text": "820"
+            }
+          ],
+          "scope_items": [
+            {
+              "provenance": {
+                "source_refs": [
+                  "CCV2-U13-01"
+                ],
+                "source_text": "本记录属于澄川数智科技有限公司（Synthetic Demo Company）的受控开发企业材料，面向性能与响应主题。"
+              },
+              "value": "澄川数智科技有限公司（Synthetic Demo Company）"
+            }
+          ],
+          "statement": "标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。",
+          "status_text": "P95响应时间为820毫秒",
+          "subject_name": "澄川政企数字平台 XDP 5.2 5.2.2",
+          "subject_type_hint": "product",
+          "temporal_items": []
+        },
+        {
+          "entity_mentions": [
+            {
+              "provenance": {
+                "source_refs": [
+                  "CCV2-U13-01"
+                ],
+                "source_text": "混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。"
+              },
+              "type_hint": "product",
+              "value": "澄川政企数字平台 XDP 5.2 5.2.2"
+            }
+          ],
+          "quantity_items": [
+            {
+              "condition_text": "混合写入场景",
+              "name": "稳定吞吐",
+              "provenance": {
+                "source_refs": [
+                  "CCV2-U13-01"
+                ],
+                "source_text": "混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。"
+              },
+              "unit_text": "事务/秒",
+              "value_text": "1,650"
+            },
+            {
+              "condition_text": "混合写入场景",
+              "name": "错误率",
+              "provenance": {
+                "source_refs": [
+                  "CCV2-U13-01"
+                ],
+                "source_text": "混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。"
+              },
+              "unit_text": "%",
+              "value_text": "0.18"
+            }
+          ],
+          "scope_items": [
+            {
+              "provenance": {
+                "source_refs": [
+                  "CCV2-U13-01"
+                ],
+                "source_text": "本记录属于澄川数智科技有限公司（Synthetic Demo Company）的受控开发企业材料，面向性能与响应主题。"
+              },
+              "value": "澄川数智科技有限公司（Synthetic Demo Company）"
+            }
+          ],
+          "statement": "混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。",
+          "status_text": "稳定吞吐为1,650事务/秒，错误率0.18%",
+          "subject_name": "澄川政企数字平台 XDP 5.2 5.2.2",
+          "subject_type_hint": "product",
+          "temporal_items": []
+        },
+        {
+          "entity_mentions": [
+            {
+              "provenance": {
+                "source_refs": [
+                  "CCV2-U13-01"
+                ],
+                "source_text": "测试持续时间为120分钟。"
+              },
+              "type_hint": "product",
+              "value": "澄川政企数字平台 XDP 5.2 5.2.2"
+            }
+          ],
+          "quantity_items": [
+            {
+              "condition_text": "测试持续时间",
+              "name": "测试持续时间",
+              "provenance": {
+                "source_refs": [
+                  "CCV2-U13-01"
+                ],
+                "source_text": "测试持续时间为120分钟。"
+              },
+              "unit_text": "分钟",
+              "value_text": "120"
+            }
+          ],
+          "scope_items": [
+            {
+              "provenance": {
+                "source_refs": [
+                  "CCV2-U13-01"
+                ],
+                "source_text": "本记录属于澄川数智科技有限公司（Synthetic Demo Company）的受控开发企业材料，面向性能与响应主题。"
+              },
+              "value": "澄川数智科技有限公司（Synthetic Demo Company）"
+            }
+          ],
+          "statement": "测试持续时间为120分钟。",
+          "status_text": "测试持续时间为120分钟",
+          "subject_name": "澄川政企数字平台 XDP 5.2 5.2.2",
+          "subject_type_hint": "product",
+          "temporal_items": []
+        }
+      ]
+    }
+  ]
+}

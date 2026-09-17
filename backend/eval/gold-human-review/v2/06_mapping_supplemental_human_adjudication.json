@@ -1,0 +1,60 @@
+{
+  "artifact_type": "supplemental_human_adjudication_record",
+  "artifact_version": "mapping-real-supplemental-human-adjudication-v1",
+  "dataset": "requirement-evidence-mapping-v1-gold-2026-09-02",
+  "packet_version": "mapping-real-source-packet-v1-supplemental",
+  "packet_sha256": "a3a0c1abb4f98eef4d77fd120f4d4e47639fa1680a1a17139c65077756032bd0",
+  "source_review_packet": "backend/eval/gold-human-review/v2/05_mapping_real_supplemental_human_review_packet.json",
+  "case_count": 3,
+  "adjudication_source": "user_provided_human_adjudication",
+  "final_gold_promotion": "NOT_YET_AUTHORIZED",
+  "records": [
+    {
+      "candidate_id": "REAL-MAP-SUPP-007",
+      "pool_status": "HOLD_REDUNDANT",
+      "review_status": "ACCEPTED",
+      "scored": false,
+      "exclusion_reason": "REDUNDANT",
+      "semantic_judgment": "partial_support",
+      "expected_decision": null,
+      "expected_dimensions": null,
+      "confidence": "HIGH",
+      "human_rationale": "同一 REQ-058 下更换为 generic integration capability Fact。该 Fact 支持系统联动/集成子范围，但不证明事件字段标准化、规则匹配、标准库或接口规范。语义为 partial support，但与已有 CAND-021 高度重复。适合作为 fact-substitution / stability regression，而不是新增 Real Semantic Gold 权重。"
+    },
+    {
+      "candidate_id": "REAL-MAP-SUPP-009",
+      "pool_status": "ACCEPT_FOR_GOLD_POOL",
+      "review_status": "ACCEPTED",
+      "scored": true,
+      "expected_decision": "unrelated",
+      "expected_dimensions": {
+        "subject": "mismatch",
+        "scope": "unknown",
+        "status": "not_applicable",
+        "quantity": "unknown",
+        "entity": "mismatch",
+        "validity": "not_applicable"
+      },
+      "confidence": "HIGH",
+      "human_rationale": "Requirement 是防火墙硬件规格。Fact 是数据共享交换平台管理中心软件采购记录。产品实体、产品类型以及全部硬件规格均不匹配。真实采购事实不能证明任意其他产品要求。"
+    },
+    {
+      "candidate_id": "REAL-MAP-SUPP-010",
+      "pool_status": "ACCEPT_FOR_GOLD_POOL",
+      "review_status": "ACCEPTED",
+      "scored": true,
+      "expected_decision": "related_insufficient",
+      "expected_dimensions": {
+        "subject": "unknown",
+        "scope": "unknown",
+        "status": "not_applicable",
+        "quantity": "not_applicable",
+        "entity": "unknown",
+        "validity": "not_applicable"
+      },
+      "confidence": "HIGH",
+      "human_rationale": "Fact 能证明一般系统集成/实施服务能力，因此与项目实施存在业务相关性。但完全不能证明项目主要人员不少于6人、项目负责人、专业技术人员不少于5人、辅助人员不少于10人、技术负责人/需求分析师等角色。所以属于 related_insufficient。"
+    }
+  ]
+}
+

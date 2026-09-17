@@ -1,0 +1,51 @@
+{
+  "checkpoint": "V43_RESPONSE_ROUTER_V2_2_1_OVERNIGHT_CLOSURE",
+  "run_id": "V43-RR-V2_2_1-V3-REPLAY-69189288fbba4593",
+  "router_version": "v43-response-router-v2.2.1",
+  "repair_iterations": 1,
+  "full_replay_count": 2178,
+  "metrics": {
+    "overall_primary_mode_agreement": {
+      "matched": 1769,
+      "total": 2178,
+      "rate": 0.812213
+    },
+    "per_cohort": {
+      "CORE6": {
+        "matched": 822,
+        "total": 1009,
+        "rate": 0.814668
+      },
+      "HOLDOUT_V1": {
+        "matched": 270,
+        "total": 397,
+        "rate": 0.680101
+      },
+      "HOLDOUT_V2": {
+        "matched": 677,
+        "total": 772,
+        "rate": 0.876943
+      }
+    },
+    "v21_correct_v221_wrong": 0,
+    "v21_wrong_v221_correct": 79,
+    "true_high_risk_evidence_false_negative": 0,
+    "true_future_commitment_as_existing_fact": 0,
+    "p0_compliance_escape": 0,
+    "overlay_primary_mode_mismatch": 0,
+    "overlay_evidence_dependency_mismatch": 0,
+    "need_review_count": 22
+  },
+  "need_review": 22,
+  "risk_tier_mismatches": 842,
+  "side_effects": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "requirement_mutations": 0,
+    "source_truth_mutations": 0,
+    "reference_v3_mutations": 0
+  },
+  "status": "ITERATION_1_FINAL_REPLAY"
+}

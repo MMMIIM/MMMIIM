@@ -1,0 +1,14 @@
+DECISION
+V43_REAL_ENTERPRISE_UPLOAD_TEST_PACK_V1
+
+1. Download the 12 direct official PDF URLs in 01_REAL_DOCUMENT_MANIFEST.json.
+2. Do not scrape HTML pages as source content.
+3. Treat each downloaded PDF exactly like a user-uploaded enterprise document.
+4. Freeze source_url, resolved_url, sha256, byte_size, content_type.
+5. Run existing upload -> parse -> chunk -> Fact extraction path.
+6. Keep extraction requirement-blind.
+7. No Mapping / Claim / Writer in this task.
+8. If any URL is inaccessible, report it and continue only if >=8 real PDFs are successfully acquired.
+9. Do not substitute synthetic documents for failed real PDFs without GPT decision.
+10. Return READY_FOR_GPT_REAL_ENTERPRISE_UPLOAD_PACK_RECERT.
+

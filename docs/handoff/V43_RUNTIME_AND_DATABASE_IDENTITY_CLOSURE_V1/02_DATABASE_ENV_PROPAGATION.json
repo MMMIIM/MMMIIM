@@ -1,0 +1,36 @@
+{
+  "artifact_type": "V43_RUNTIME_AND_DATABASE_IDENTITY_CLOSURE_V1_DATABASE_ENV_PROPAGATION",
+  "inspection_mode": "READ_ONLY",
+  "layers": {
+    "HOST_ENV_DB": {
+      "database": "NOT_SET_DURING_PRIOR_DIAGNOSTIC",
+      "evidence": "PowerShell process DATABASE_URL was not set"
+    },
+    "BACKEND_DOTENV_DB": {
+      "database": "bid_platform",
+      "source": "backend/.env DATABASE_URL (database component only)"
+    },
+    "RUNNER_ENV_DB_WITHOUT_EXPLICIT_HOST_URL": {
+      "database": "bid_platform",
+      "evidence": "createBackendRuntime loaded backend/.env; preserveHostDatabaseUrl received empty hostDatabaseUrl"
+    },
+    "RUNNER_ENV_DB_WITH_EXPLICIT_HOST_URL": {
+      "database": "bid_platform_flow_audit_test",
+      "evidence": "preserveHostDatabaseUrl result mechanically parsed in pre-provider smoke"
+    },
+    "EXECUTOR_ENV_DB": {
+      "database": "bid_platform",
+      "evidence": "docker compose backend environment sets DATABASE_URL to postgres service /bid_platform"
+    },
+    "ACTUAL_CONNECTION_DB_PRE_PROVIDER_SMOKE": {
+      "database": "bid_platform_flow_audit_test",
+      "schema": "public",
+      "evidence": "SELECT current_database(), current_schema()"
+    }
+  },
+  "change_point": "Host runner process: absent DATABASE_URL caused dotenv fallback to bid_platform. Supplying an explicit isolated DATABASE_URL selected bid_platform_flow_audit_test.",
+  "compose_database_target": "bid_platform",
+  "production_database_write": 0,
+  "env_propagation_root_cause": "ENV_PROPAGATION_DRIFT_CONFIRMED_FOR_PRIOR_UNSET_HOST_RUN",
+  "secrets_printed": false
+}

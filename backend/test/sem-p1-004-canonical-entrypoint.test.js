@@ -45,6 +45,7 @@ function baseRepository(overrides = {}) {
     getProject: async (id) => ({ id, name: 'synthetic project' }),
     getProjectMembership: async () => ({ role: 'OWNER', status: 'ACTIVE' }),
     getEvidenceReviewProject: async () => ({ project_id: PROJECT }),
+    getRequirementEvidenceFactMappingCurrent: async () => ({ mapping_id: 'MAP-1', project_id: PROJECT }),
     listEvidenceCatalog: async () => ({ evidences: [{ evidence_id: 'HIST-1', approval_status: 'approved', metadata: {} }], counts: { approved: 1 } }),
     getDocumentGenerationInput: async () => ({ project: { id: PROJECT }, baseline: { id: 'baseline' }, requirements: [], plans: [], claims: [], evidence: [{ evidence_id: EVIDENCE, approval_status: 'approved', metadata: marker }], coverage: [] }),
     ...overrides
@@ -60,6 +61,7 @@ function appFor(repository, services = {}) {
     evidenceSourceFactService: services.evidenceSourceFactService,
     requirementEvidenceFactMappingService: services.requirementEvidenceFactMappingService,
     documentGenerationService: services.documentGenerationService || new DocumentGenerationService({ repository, provider: { draft: async () => ({ content: '' }) } }),
+    projectAuthorizationService: { assertProjectAccess: async () => {} },
     actorResolver: () => ({ actor_id: 'trusted-reviewer', actor_type: 'test', source: 'test' })
   });
 }

@@ -1,0 +1,19 @@
+{
+  "artifact_type": "V43_CURRENT_FACT_V22_PATH_AUDIT",
+  "status": "PASS_CURRENT_PATH_IDENTIFIED",
+  "owners": {
+    "candidate_span": "Evidence Search final candidate/source span projection",
+    "fact_extraction": "backend/src/pipeline/semantic-gateway-evidence-fact-extractor.js (V2.2 opt-in Eval path)",
+    "attribution_validation": "backend/eval/real-enterprise-upload-test-v1/fact-pilot-v1-1-helpers.mjs classifyEnterpriseFactCandidateV22 + backend/src/pipeline/enterprise-evidence-source-router.js",
+    "canonicalization_grounding": "backend/src/pipeline/evidence-fact-candidate-v2-1.js",
+    "canonical_fact_acceptance_rejection": "backend/src/evidence-source-fact-service.js + backend/src/pipeline/evidence-fact-contract-v1.js",
+    "persistence_boundary": "repository.upsertEvidenceSourceFactsAtomic (not invoked in this provider-neutral empty run)"
+  },
+  "path_trace": "candidate span -> V2.2 strict transport -> Backend source-ref resolution -> canonicalization/grounding -> attribution audit -> EvidenceSourceFactService canonical/persistence boundary",
+  "v22_is_opt_in_eval_only": true,
+  "production_authority": "NONE",
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "recency_authority_rule": "File recency was not used as authority; no material conflict in used sources."
+}

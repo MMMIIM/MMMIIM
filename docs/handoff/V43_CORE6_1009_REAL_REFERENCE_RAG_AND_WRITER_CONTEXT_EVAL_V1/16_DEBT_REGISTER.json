@@ -1,0 +1,25 @@
+{
+  "artifact_type": "V43_DEBT_REGISTER",
+  "blockers": [
+    {
+      "code": "PRODUCTION_RETRIEVAL_SCHEMA_MISSING_TABLE",
+      "reason": "Current production retrieval query requires missing table(s): project_material_bindings"
+    },
+    {
+      "code": "REFERENCE_EVAL_SET_BELOW_MINIMUM",
+      "reason": "Current production response semantics produced 36 mechanically eligible cases across 6/6 tenders; the decision requires at least 45 without cross-tender backfill."
+    },
+    {
+      "code": "R2_TRUE_VECTOR_MMR_NOT_EXECUTED",
+      "reason": "Actual candidate vectors were unavailable or retrieval was blocked; no lexical proxy used."
+    },
+    {
+      "code": "PACKAGING_HASH_DEBT_NON_BLOCKING_FOR_CORE6_1009_EVAL",
+      "reason": "JY-001 recovered packet manifest whole-file SHA stale; Core6 run anchored to canonical input SHA and row-level source identity."
+    }
+  ],
+  "semantic_debt_classification": "PENDING_GPT",
+  "semantic_labels_created": 0,
+  "task_cumulative_query_embedding_calls": 2,
+  "current_run_query_embedding_calls": 0
+}

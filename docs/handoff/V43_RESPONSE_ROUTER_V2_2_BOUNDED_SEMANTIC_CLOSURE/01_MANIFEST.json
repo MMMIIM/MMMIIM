@@ -1,0 +1,69 @@
+{
+  "artifact_type": "V43_HANDOFF_RESPONSE_ROUTER_V2_2_BOUNDED_SEMANTIC_CLOSURE",
+  "generated_at": "2026-09-12T17:29:49.078Z",
+  "reference_v3": {
+    "locator": "docs\\V43_RESPONSE_ROUTER_FULL_CORPUS_GPT_SEMANTIC_REFERENCE_V3_PACKAGE.zip#V43_RESPONSE_ROUTER_FULL_CORPUS_GPT_SEMANTIC_REFERENCE_V3_2178.json",
+    "sha256": "3c7f151678c8c99aee25ab995d438496b4a0e5fc661386b70204f3be72e2e744",
+    "row_count": 2178,
+    "cohort_counts": {
+      "CORE6": 1009,
+      "HOLDOUT_V1": 397,
+      "HOLDOUT_V2": 772
+    }
+  },
+  "gpt_adjudication": {
+    "locator": "..\\V43_GPT_ADJUDICATION_BUNDLE_20260912.zip#V43_GPT_RESPONSE_ROUTER_V2_1_CORE6_HARD_SAFETY_ADJUDICATION.json",
+    "sha256": "372eeb3f192a47dfa1fe633d1187f25641eabf8c6489b40680508f8d7b97baa5",
+    "row_count": 76,
+    "overlay_row_count": 20,
+    "true_router_defect_count": 56
+  },
+  "router_identity": {
+    "path": "backend\\src\\pipeline\\requirement-response-router-v2-2.js",
+    "sha256": "88eb370529d0d9d7ce6bb4028668e59f519c60d2f829ecdd5d2bc409fbc326f6",
+    "projection_version": "v43-response-router-v2.2",
+    "implementation_id": "v43-response-router-v2.2-bounded-semantic-closure"
+  },
+  "run_id": "V43-RR-V2_2-V3-REPLAY-b0f598700e89b030",
+  "packet_case_count": 89,
+  "required_files": [
+    "00_GPT_README.md",
+    "01_MANIFEST.json",
+    "02_GPT_SEMANTIC_REVIEW_PACKET.json",
+    "03_GPT_OVERLAY.json",
+    "04_ROUTER_V2_2_REPLAY.json",
+    "05_EXECUTION_LAYER_RECERT.json",
+    "06_BACKEND_FAILURE_SET_COMPARISON.json",
+    "07_CHECKPOINT.json",
+    "evidence/",
+    "SHA256SUMS.txt"
+  ],
+  "side_effects": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "source_truth_mutations": 0,
+    "requirement_mutations": 0,
+    "reference_v3_mutations": 0,
+    "router_mutations": 0,
+    "commit": 0,
+    "push": 0,
+    "merge": 0,
+    "deploy": 0
+  },
+  "call_count_semantics": {
+    "offline_phase_provider_calls": 0,
+    "final_replay_provider_calls": 0,
+    "task_cumulative_provider_calls": 0,
+    "authoritative_replay_run_provider_calls": 0
+  },
+  "source_artifacts": {
+    "reference_v3_package": "docs/V43_RESPONSE_ROUTER_FULL_CORPUS_GPT_SEMANTIC_REFERENCE_V3_PACKAGE.zip",
+    "gpt_adjudication_bundle": "V43_GPT_ADJUDICATION_BUNDLE_20260912.zip",
+    "requirement_freeze_checkpoint": "docs/V43_REQUIREMENT_V6_4_FREEZE_CHECKPOINT.json"
+  },
+  "execution_layer_recert_status": "PASS",
+  "backend_failure_set_equivalent": true,
+  "status": "READY_FOR_GPT_RESPONSE_ROUTER_V2_2_FINAL_ADJUDICATION"
+}

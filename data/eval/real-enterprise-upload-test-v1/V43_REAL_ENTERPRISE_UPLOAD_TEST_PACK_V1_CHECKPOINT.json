@@ -1,0 +1,31 @@
+{
+  "checkpoint": "V43_REAL_ENTERPRISE_UPLOAD_TEST_PACK_V1",
+  "decision_source": "REAL_ENTERPRISE_UPLOAD_TEST_PACK_V1/02_CODEX_DECISION.txt",
+  "package_sha256": "abcba2e3609095180075d02c400348ab34edd9dfce6da9ee7fbad48606a29b41",
+  "enterprise": "Huawei",
+  "manifest_document_count": 12,
+  "real_pdf_acquired_count": 6,
+  "real_pdf_minimum_to_continue": 8,
+  "inaccessible_count": 6,
+  "acquired_ids": ["HW-001", "HW-002", "HW-003", "HW-004", "HW-005", "HW-006"],
+  "inaccessible_ids": ["HW-007", "HW-008", "HW-009", "HW-010", "HW-011", "HW-012"],
+  "download_status": "BLOCKED_REAL_PDF_ACQUISITION_BELOW_MINIMUM_8",
+  "upload_parse_chunk_fact_extraction": "NOT_STARTED_PACKAGE_MINIMUM_NOT_MET",
+  "provider_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "html_ingestion": 0,
+  "synthetic_substitution": 0,
+  "source_manifest": "data/eval/real-enterprise-upload-test-v1/01_REAL_DOCUMENT_MANIFEST.json",
+  "download_report": "data/eval/real-enterprise-upload-test-v1/download_report.json",
+  "raw_pdf_directory": "data/eval/real-enterprise-upload-test-v1/raw",
+  "notes": [
+    "Only manifest-listed official PDF URLs were requested.",
+    "Responses classified as text/html or 404 were not retained as source documents.",
+    "The package decision requires at least 8 real PDFs before continuing to upload, parse, chunk, or Fact extraction."
+  ]
+}

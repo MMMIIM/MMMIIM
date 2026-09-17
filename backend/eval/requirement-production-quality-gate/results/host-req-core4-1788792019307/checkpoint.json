@@ -1,0 +1,58 @@
+{
+  "checkpoint": "V43_HOST_REQUIREMENT_CORE4_LIVE_CHECKPOINT",
+  "run_id": "host-req-core4-1788792019307",
+  "generated_at": "2026-09-07T14:40:19.307Z",
+  "targets": [
+    {
+      "tender_id": "JY-001",
+      "chunk_number": 23
+    },
+    {
+      "tender_id": "FAST-01",
+      "chunk_number": 5
+    }
+  ],
+  "provider_calls": 2,
+  "retry_count": 0,
+  "cases": [
+    {
+      "case_id": "JY-001-CHUNK-23",
+      "status": "PASS",
+      "candidate_count": 4,
+      "canonical_count": 4,
+      "attempts": 1,
+      "error_code": null
+    },
+    {
+      "case_id": "FAST-01-CHUNK-05",
+      "status": "PASS",
+      "candidate_count": 16,
+      "canonical_count": 16,
+      "attempts": 1,
+      "error_code": null
+    }
+  ],
+  "preflight": {
+    "ok": true,
+    "ready": {
+      "status": 200,
+      "ok": true,
+      "latency_ms": 29
+    },
+    "info": {
+      "status": 200,
+      "ok": true,
+      "latency_ms": 11,
+      "build_revision": "dev-working-tree",
+      "task_registry_loaded": true,
+      "task_type_registered": true,
+      "requirement_contract_version": "4.3-requirement-extraction-v3.1.1",
+      "requirement_prompt_hash": "9b8fe6582e774a64f36b2be307274e297fafb309cf17270a4d8fc463da817305"
+    }
+  },
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0
+}

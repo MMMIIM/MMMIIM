@@ -1,0 +1,120 @@
+{
+  "artifact_type": "V43_PARALLEL_FINAL_DETERMINISTIC_GATES_CHECKPOINT",
+  "eval_only": true,
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "worktree": "DIRTY_EXISTING_CHANGES_PRESERVED",
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "fact_persistence": 0,
+  "gold_mutations": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "production_logic_files_touched": [
+    "backend/src/pipeline/requirement-quality-gate.js",
+    "backend/src/pipeline/evidence-fact-candidate-v2.js"
+  ],
+  "production_semantic_contract_change": 0,
+  "prompt_schema_model_provider_changes": 0,
+  "track_a_requirement_critical_structure": {
+    "status": "READY_FOR_GPT_FINAL_CRITICAL_STRUCTURE_ADJUDICATION",
+    "detector": "GOVERNING_CRITICAL_STRUCTURE_LIST_OR_TABLE",
+    "holdout_v1": {
+      "total": 397,
+      "before": { "accept": 258, "review_required": 139, "reject": 0 },
+      "after": { "accept": 256, "review_required": 141, "reject": 0 },
+      "transitions": {
+        "ACCEPT->ACCEPT": 256,
+        "REVIEW_REQUIRED->REVIEW_REQUIRED": 139,
+        "ACCEPT->REVIEW_REQUIRED": 2
+      },
+      "source_unresolved": 0,
+      "broad_false_positive_signal": "NONE_OBSERVED"
+    },
+    "six_tender_canonical_replay": {
+      "total": 1009,
+      "after": { "accept": 758, "review_required": 251, "reject": 0 },
+      "source_unresolved": 0,
+      "before_decision_available": false,
+      "interpretation": "OFFLINE_REPLAY_ONLY; INPUT ARTIFACT DOES NOT RETAIN PRIOR DECISION CLASS"
+    },
+    "anchors": {
+      "CAN-0149": { "after": "REVIEW_REQUIRED", "alignment": "GOVERNING_CRITICAL_LIST" },
+      "CAN-0208": { "after": "REVIEW_REQUIRED", "alignment": "GOVERNING_CRITICAL_TABLE", "marker": "附表二", "relation": "全部内容，否则其投标无效" },
+      "POST-FIX-V2-015": { "after": "REVIEW_REQUIRED", "reason": "NEGATION_DISTORTION" }
+    },
+    "controls": {
+      "p0_governing_structure": "12/12",
+      "negative_containment": "4/4",
+      "number_controls": "4/4",
+      "canonical_source_mutation": 0,
+      "provider_calls": 0
+    },
+    "gpt_delta_packet": "backend/eval/requirement-unseen-holdout-v1/results/unseen-holdout-v1-2026-09-08T06-21-08-203Z-5faac1ab/critical-structure-final-20260908094523/V43_REQUIREMENT_CRITICAL_STRUCTURE_DELTA_GPT_PACKET.json"
+  },
+  "track_b_fact_candidate_v2_1": {
+    "status": "READY_FOR_GPT_FACT_FALSE_REJECT_DELTA_ADJUDICATION",
+    "source_run": "backend/eval/rag-pilot/results/fact-candidate-v2-1-fresh-20260908085537-f852ae10",
+    "candidate_count": 26,
+    "classification_counts": {
+      "A_TRUE_ACCEPT": 5,
+      "B_TRUE_REVIEW": 3,
+      "C_TRUE_REJECT": 8,
+      "D_FALSE_REJECT": 2,
+      "E_FALSE_REVIEW_OR_OVERCONSERVATIVE": 0,
+      "F_NON_ENTERPRISE_CONTEXT_NOISE": 8
+    },
+    "grounding_reject_before": 18,
+    "false_reject_anchors": 2,
+    "noise_count": 8,
+    "noise_policy": "FOLLOW_UP_DEBT; NO_NEW_SUBSYSTEM",
+    "required_anchor_outcomes": {
+      "COM-06-A": "REVIEW_REQUIRED_STATUS_ENUM_UNRESOLVED",
+      "COM-06-B": "ACCEPT_REFERENCE_BOUNDARY",
+      "CCV2-U13-01_820ms": "REVIEW_REQUIRED_QUANTITY_CONDITION_UNRESOLVED",
+      "CCV2-U13-01_1650tps_0.18pct": "REVIEW_REQUIRED_QUANTITY_CONDITION_OR_UNIT_UNRESOLVED",
+      "CCV2-U13-01_120min": "REVIEW_REQUIRED_QUANTITY_CONDITION_UNRESOLVED"
+    },
+    "critical_grounding_escape_count": 0,
+    "canonicalizer_change": 0,
+    "fact_delta_packet": "backend/eval/rag-pilot/results/fact-candidate-v2-1-fresh-20260908085537-f852ae10/deterministic-delta-20260908094528/V43_FACT_V21_CANONICALIZER_GROUNDING_DELTA_GPT_PACKET.json"
+  },
+  "regression": {
+    "focused_requirement_fact_suite": "81/81 PASS",
+    "requirement_wider_suite": "48/50 PASS; 2 PRE_EXISTING_UNRELATED_BASELINE source-parity fixture failures",
+    "fact_authority_contract_suite": "52/52 PASS",
+    "frontend": "51/51 PASS",
+    "build": "PASS",
+    "lint": "PASS",
+    "git_diff_check": "PASS",
+    "npm_test": "FAIL_PRE_EXISTING_UNRELATED_BASELINE",
+    "npm_test_observed_unrelated_failures": [
+      "missing historical P1 calibration packet fixtures",
+      "governance instruction/runtime fixture assertions",
+      "source-role projection fixture path",
+      "existing Gold governance fixture/parity assertions"
+    ]
+  },
+  "independent_review": {
+    "result": "PASS_WITH_NON_BLOCKING_FINDINGS",
+    "findings": [
+      "Six-tender replay artifact has no prior decision class, so its transition matrix is UNKNOWN->ACCEPT/REVIEW rather than a before/after comparison.",
+      "Fact replay keeps canonicalization before/after unchanged by design; the delta is grounding/projection only.",
+      "Eight non-enterprise-context observations remain explicit follow-up debt and are not promoted to semantic Gold."
+    ],
+    "authority_boundary": "PASS",
+    "provider_and_write_safety": "PASS",
+    "case_specific_hardcode": "NOT_FOUND"
+  },
+  "readiness": {
+    "track_a": "READY_FOR_GPT_FINAL_CRITICAL_STRUCTURE_ADJUDICATION",
+    "track_b": "READY_FOR_GPT_FACT_FALSE_REJECT_DELTA_ADJUDICATION",
+    "requirement_production_certified": "NO",
+    "fact_production_ready": "NO",
+    "mapping_input_ready": "NO",
+    "holdout_v2": "NOT_STARTED",
+    "fixed12": "NOT_STARTED",
+    "next_step": "GPT adjudication only; no automatic promotion or live execution"
+  }
+}

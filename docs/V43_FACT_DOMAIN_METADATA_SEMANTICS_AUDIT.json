@@ -1,0 +1,176 @@
+{
+  "decision": "V43_FACT_DOMAIN_METADATA_SEMANTICS_AUDIT",
+  "provider_calls": 0,
+  "canary_replayed": false,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "first_introduced": {
+    "first_introduced_commit": "8ad0915de4feb996ac9c6ef2f549c5bf336d908a",
+    "first_introduced_commit_short": "8ad0915",
+    "first_introduced_file": "backend/migrations/023_evidence_facts.sql",
+    "first_introduced_files": [
+      "backend/migrations/023_evidence_facts.sql",
+      "backend/src/evidence-fact-service.js",
+      "backend/test/evidence-fact-contract.test.js"
+    ],
+    "canonical_contract_follow_up": {
+      "commit": "12f76ae4d810d6dbc50c450c16388f8b41d0ab07",
+      "files": [
+        "backend/src/pipeline/evidence-fact-contract-v1.js",
+        "backend/migrations/027_evidence_fact_v1.sql",
+        "backend/test/evidence-fact-contract-v1.test.js"
+      ]
+    },
+    "shared_transport_schema_history": "No committed introduction found for domain_metadata in packages/semantic-contracts/index.js; the field is present in the current dirty worktree while HEAD f509514 has no such field."
+  },
+  "original_schema": {
+    "migration_023": "jsonb NOT NULL DEFAULT '{}'::jsonb with CHECK(jsonb_typeof(domain_metadata)='object')",
+    "migration_027": "jsonb NOT NULL DEFAULT '{}'::jsonb",
+    "transport_schema_current": {
+      "field_required": true,
+      "type": "object",
+      "top_level_empty_object_allowed": true,
+      "namespace_pattern": "^[a-z][a-z0-9_]*$",
+      "namespace_value_type": "object",
+      "namespace_value_min_properties": 1,
+      "additional_properties": false
+    },
+    "canonical_factory_current": "candidate.domain_metadata defaults to {}; each declared namespace must be a non-array object with at least one property."
+  },
+  "original_test_expectation": {
+    "commit_8ad0915": "Direct EvidenceFactService tests exercised non-empty namespaced metadata using {namespace, version, values}.",
+    "commit_12f76ae": "Canonical Fact contract fixture defaulted domain_metadata to {}.",
+    "current_tests": [
+      "backend/test/evidence-fact-domain-metadata-parity.test.js: {} is valid; non-empty namespace objects are valid; malformed primitives and empty namespace objects are rejected.",
+      "services/semantic-gateway/test/contract-parity.test.js: {} is a valid transport fixture.",
+      "backend/test/evidence-fact-contract-v1.test.js: {} is the default canonical fixture."
+    ]
+  },
+  "original_design_comment": {
+    "explicit_comment": "No committed inline design comment assigning final domain_metadata ownership was found.",
+    "adr_021": "docs/decisions/021-evidence-fact-semantic-authority-and-requirement-independence.md explicitly records domain_metadata ownership and source-grounding policy as unresolved and says it is not a transport garbage-bin."
+  },
+  "repository_evidence": {
+    "definitions_and_projections": [
+      "packages/semantic-contracts/index.js: transport instruction, schema, and candidate validator",
+      "backend/src/pipeline/evidence-fact-contract-v1.js: canonical payload default, shape validation, payload_hash and fact_id inputs",
+      "backend/src/pipeline/semantic-gateway-evidence-fact-extractor.js: transport projection defaults missing/falsy metadata to {}",
+      "backend/src/evidence-fact-service.js: direct service accepts {} and validates its non-empty form as {namespace, version, values}",
+      "backend/migrations/023_evidence_facts.sql and backend/migrations/027_evidence_fact_v1.sql: object storage/defaults"
+    ],
+    "fixtures_and_docs": [
+      "backend/test/evidence-fact-domain-metadata-parity.test.js",
+      "backend/test/evidence-fact-contract-v1.test.js",
+      "services/semantic-gateway/test/contract-parity.test.js",
+      "backend/eval/rag-pilot/fact-provider-shape-canary-fixtures.js",
+      "docs/V43_FACT_PROVIDER_SHAPE_CANARY_GATE_CHECKPOINT.md",
+      "docs/V43_FACT_PROVIDER_SHAPE_CANARY_GATE_CHECKPOINT.json"
+    ]
+  },
+  "field_role_assessment": {
+    "classification": "D",
+    "classification_name": "UNRESOLVED / HISTORICAL_DRIFT",
+    "reason": "Operational evidence is consistent with an optional extension container and accepts {}, but formal semantic ownership remains unresolved in ADR-021 and the direct service and transport layers use different non-empty shapes. The evidence is insufficient to freeze C as the final business contract."
+  },
+  "semantics": {
+    "domain_metadata_first_introduced_at": "8ad0915 (storage/service), extended by 12f76ae (canonical Fact contract); current shared transport additions are uncommitted.",
+    "original_intent": "A typed JSON object field carried through Fact storage/contract; no committed evidence assigns a final domain-specific authority owner.",
+    "current_schema_semantics": "Top-level {} is valid. If namespaces are present, each key must be lower snake_case and map to a non-empty object; no extra properties are allowed.",
+    "current_business_semantics": "Core Fact behavior does not require non-empty domain_metadata; {} is accepted by current tests, persistence defaults, projection, and canonical factory. Final domain-specific meaning and grounding ownership remain unresolved.",
+    "downstream_nonempty_dependencies": false,
+    "empty_object_historically_allowed": true,
+    "contract_drift": true
+  },
+  "downstream_consumer_audit": [
+    {
+      "component": "EvidenceSourceFactService / canonical Fact factory",
+      "reads_domain_metadata": "YES",
+      "requires_nonempty": "NO",
+      "authority_depends_on_value": "NO",
+      "evidence": "Defaults {} and includes the value in canonical payload construction; source/material/review gates provide authority."
+    },
+    {
+      "component": "Fact identity / payload hash / supersession",
+      "reads_domain_metadata": "YES (indirectly)",
+      "requires_nonempty": "NO",
+      "authority_depends_on_value": "NO",
+      "evidence": "domain_metadata is part of the hashed canonical payload, so a value change changes identity; it does not grant authority."
+    },
+    {
+      "component": "Fact grounding",
+      "reads_domain_metadata": "NO",
+      "requires_nonempty": "NO",
+      "authority_depends_on_value": "NO",
+      "evidence": "Grounding checks cover subject, entity, status, scopes, quantities, and validity; no domain_metadata source quote policy exists."
+    },
+    {
+      "component": "Fact persistence",
+      "reads_domain_metadata": "YES",
+      "requires_nonempty": "NO",
+      "authority_depends_on_value": "NO",
+      "evidence": "JSONB object column with {} default/check."
+    },
+    {
+      "component": "Fact approval/currentness",
+      "reads_domain_metadata": "NO",
+      "requires_nonempty": "NO",
+      "authority_depends_on_value": "NO",
+      "evidence": "Approval/currentness use lifecycle, lineage, validity, source and material authority predicates."
+    },
+    {
+      "component": "Retrieval",
+      "reads_domain_metadata": "NO",
+      "requires_nonempty": "NO",
+      "authority_depends_on_value": "NO",
+      "evidence": "No repository consumer found."
+    },
+    {
+      "component": "Mapping / Sufficiency",
+      "reads_domain_metadata": "NO",
+      "requires_nonempty": "NO",
+      "authority_depends_on_value": "NO",
+      "evidence": "No repository consumer found."
+    },
+    {
+      "component": "Claim / Writer",
+      "reads_domain_metadata": "NO",
+      "requires_nonempty": "NO",
+      "authority_depends_on_value": "NO",
+      "evidence": "No repository consumer found."
+    }
+  ],
+  "empty_object_impact": {
+    "fact_core_semantics_missing": "NO based on current fixtures and consumers; other core fields carry Fact meaning.",
+    "fact_identity_stability": "{} is deterministic, but any future metadata value participates in payload_hash/fact_id; ownership is unresolved.",
+    "mapping_error": "NO direct dependency found.",
+    "claim_authority_loss": "NO direct dependency found."
+  },
+  "canary_interpretation": {
+    "observed_failure": "Nested empty namespace object (for example capability: {}) was rejected at data.facts[0].domain_metadata; top-level {} is separately valid in current tests.",
+    "provider_calls": 0,
+    "classification": "NOT_RECLASSIFIED_UNTIL_DOMAIN_METADATA_OWNER_IS_RESOLVED",
+    "provider_switch_required": "NOT_DETERMINED_BY_THIS_AUDIT",
+    "canary_rerun": "FORBIDDEN_IN_THIS_AUDIT"
+  },
+  "schema_patch": {
+    "required": "NOT_AUTHORIZED",
+    "reason": "The requested top-level {} behavior already exists; the remaining nested empty-namespace behavior cannot be changed without first resolving the formal semantic owner and shape contract.",
+    "production_files_changed": 0
+  },
+  "verification": {
+    "test_command": "node --test backend/test/evidence-fact-domain-metadata-parity.test.js",
+    "tests": 4,
+    "passed": 4,
+    "failed": 0,
+    "provider_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "canary_replayed": false
+  },
+  "changed_files_by_this_audit": [
+    "docs/V43_FACT_DOMAIN_METADATA_SEMANTICS_AUDIT.md",
+    "docs/V43_FACT_DOMAIN_METADATA_SEMANTICS_AUDIT.json"
+  ],
+  "final_classification": "D",
+  "final_verdict": "DOMAIN_METADATA_SEMANTICS_REVIEW_REQUIRED_NO_PROVIDER_OR_SCHEMA_ACTION_AUTHORIZED"
+}

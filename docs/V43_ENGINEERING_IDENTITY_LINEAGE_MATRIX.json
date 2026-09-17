@@ -1,0 +1,21 @@
+{
+  "artifact_type": "V43_ENGINEERING_IDENTITY_LINEAGE_MATRIX",
+  "audit_id": "V43_PRODUCTION_SHAPED_FLOW_ENGINEERING_QUALITY_AUDIT_V1",
+  "runtime_verified": false,
+  "rows": [
+    {"identity":"requirement baseline","classification":"CURRENTNESS_GUARDED","evidence":["backend/src/db.js","backend/migrations/003_tender_parse_confirmation.sql"],"persisted_or_runtime_readable":"persisted","defect":null},
+    {"identity":"tender source identity","classification":"PRESERVED","evidence":["backend/src/db.js","backend/test/canonical-requirements-v1.test.js"],"persisted_or_runtime_readable":"persisted","defect":null},
+    {"identity":"response router decision","classification":"PRESERVED","evidence":["backend/src/pipeline/response-router-service.js","backend/test/flow-completion.test.js"],"persisted_or_runtime_readable":"runtime-readable projection","defect":null},
+    {"identity":"safe response packet","classification":"PRESERVED","evidence":["backend/src/pipeline/safe-response-packet-builder.js","backend/test/flow-completion.test.js"],"persisted_or_runtime_readable":"packet hash/runtime-readable","defect":null},
+    {"identity":"claim currentness","classification":"CURRENTNESS_GUARDED","evidence":["backend/src/pipeline/writer-input-authorization-v1.js","backend/src/db.js"],"persisted_or_runtime_readable":"persisted gate fields","defect":null},
+    {"identity":"project fact currentness","classification":"CURRENTNESS_GUARDED","evidence":["backend/src/pipeline/writer-input-authorization-v1.js","backend/src/db.js"],"persisted_or_runtime_readable":"persisted/project-scoped","defect":null},
+    {"identity":"writer task lineage","classification":"PRESERVED","evidence":["backend/src/pipeline/writer-generation-batch-builder-v2.js","backend/src/pipeline/document-generation-service.js"],"persisted_or_runtime_readable":"persisted task input","defect":null},
+    {"identity":"generation identity","classification":"CURRENTNESS_GUARDED","evidence":["backend/src/pipeline/document-generation-service.js","backend/src/db.js","backend/migrations/050_writer_generation_identity.sql","backend/test/writer-authorization-snapshot.test.js"],"persisted_or_runtime_readable":"persisted input_snapshot_hash","defect":"finalizeV2 version rule_versions omits writer_authorization_snapshot_hash although generation identity includes it; metadata consistency observation"},
+    {"identity":"document version identity","classification":"PARTIAL","evidence":["backend/src/db.js","backend/src/pipeline/document-generation-service.js"],"persisted_or_runtime_readable":"persisted","defect":"runtime/PG persistence not independently exercised; final version identity metadata needs runtime confirmation"},
+    {"identity":"final reconciliation version","classification":"PRESERVED","evidence":["backend/src/pipeline/final-requirement-reconciliation.js","backend/test/flow-completion.test.js"],"persisted_or_runtime_readable":"runtime-readable projection","defect":null},
+    {"identity":"project ownership on new read projections","classification":"UNKNOWN","evidence":["backend/src/app.js"],"persisted_or_runtime_readable":"not runtime-verified","defect":"mutation middleware authorizes project writes; new projection GET routes have no observed project read authorization in app.js"}
+  ],
+  "identity_currentness_defect_count": 1,
+  "lineage_defect_count": 0,
+  "qualification": "Counts are evidence-scoped; PostgreSQL/runtime verification was blocked by Docker/port access."
+}

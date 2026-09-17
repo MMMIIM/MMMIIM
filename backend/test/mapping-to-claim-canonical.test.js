@@ -51,6 +51,10 @@ test('MC1 approved canonical Fact Mapping supplies Claim support and lineage', a
   assert.deepEqual(item.claim.basis_evidence_ids, ['FACT-001']);
   assert.deepEqual(item.v2_evaluation.mapping_ids, ['MAP-001']);
   assert.deepEqual(item.v2_evaluation.evidence_ids, ['FACT-001']);
+  assert.match(item.v2_evaluation.claim_assertion_hash, /^[0-9a-f]{64}$/);
+  assert.match(item.v2_evaluation.input_snapshot_hash, /^[0-9a-f]{64}$/);
+  assert.match(item.v2_evaluation.gate_result_id, /^CGR-[A-F0-9]{32}$/);
+  assert.equal(item.v2_evaluation.lineage_current, true);
 });
 
 test('MC2 legacy Mapping only never becomes new Claim support', async () => {

@@ -1,0 +1,15 @@
+{
+  "phase": "06",
+  "baseline_fingerprint": "318d53c8a8785952d38a173dc086efd1d044c5871e288e305614e52e14a19641",
+  "confirmed_current": ["deterministic support checks active", "ambiguous path returns ASSESSMENT_UNAVAILABLE", "readiness preserves NEEDS_REVIEW", "no old support-task fallback"],
+  "historical_fixed": ["mapping/claim approval boundaries"],
+  "open": ["production semantic adjudicator availability and certification"],
+  "conflicting": ["semantic support adapter exists but is not runtime-wired"],
+  "unknown": ["future adjudicator behavior"],
+  "risks": ["P1-SUPPORT-001", "P1-SUPPORT-002"],
+  "evidence_refs": ["backend/src/pipeline/evidence-support-review-evaluator.js", "backend/src/pipeline/evidence-support-responsibility.js", "backend/src/evidence-readiness-service.js"],
+  "fact_revisions": ["support gate is FAIL_CLOSED; availability gap remains"],
+  "next_dependencies": ["07_WRITER_AUTHORIZATION_BYPASS_CHECKPOINT"],
+  "gate": "EVIDENCE_SUPPORT_GATE=FAIL_CLOSED",
+  "safe_to_continue": true
+}

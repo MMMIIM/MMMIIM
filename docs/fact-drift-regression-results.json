@@ -1,0 +1,123 @@
+{
+  "checks": [
+    {
+      "name": "unknown_source_ref_fail_closed",
+      "passed": true,
+      "error_code": "UNKNOWN_SOURCE_ALIAS"
+    },
+    {
+      "name": "valid_source_ref_dereference",
+      "passed": true
+    },
+    {
+      "name": "source_snapshot_same_identity_matches",
+      "passed": true
+    },
+    {
+      "name": "source_snapshot_drift_fails_closed",
+      "passed": true
+    },
+    {
+      "name": "material_authority_positive",
+      "passed": true
+    },
+    {
+      "name": "material_quarantine_fail_closed",
+      "passed": true
+    },
+    {
+      "name": "canonicalizer_does_not_invent_semantics",
+      "passed": true
+    },
+    {
+      "name": "grounding_accepts_backend_snapshot",
+      "passed": true
+    },
+    {
+      "name": "grounding_escape_is_rejected",
+      "passed": true
+    },
+    {
+      "name": "fact_mapping_currentness_detects_payload_drift",
+      "passed": true
+    },
+    {
+      "name": "mapping_policy_caps_reference_only",
+      "passed": true
+    },
+    {
+      "name": "claim_current_allow_positive",
+      "passed": true
+    },
+    {
+      "name": "claim_currentness_stale_gate_rejected",
+      "passed": true
+    },
+    {
+      "name": "writer_snapshot_changes_with_authorization_input",
+      "passed": true
+    },
+    {
+      "name": "writer_context_does_not_assert_without_current_binding",
+      "passed": true
+    },
+    {
+      "name": "v21_stale_field_references_absent",
+      "passed": true,
+      "stale_refs": []
+    },
+    {
+      "name": "candidate_direct_downstream_path_absent",
+      "passed": true,
+      "paths": []
+    },
+    {
+      "name": "v21_not_persisted",
+      "passed": true
+    },
+    {
+      "name": "v21_no_semantic_retry",
+      "passed": true
+    },
+    {
+      "name": "v21_no_provider_fallback",
+      "passed": true
+    },
+    {
+      "name": "provider_model_telemetry_is_distinct",
+      "passed": true
+    },
+    {
+      "name": "prompt_schema_pairing",
+      "passed": true
+    },
+    {
+      "name": "candidate_v21_is_eval_opt_in",
+      "passed": true
+    },
+    {
+      "name": "production_default_remains_legacy_fact_task",
+      "passed": true
+    },
+    {
+      "name": "no_generic_unknown_strip",
+      "passed": true
+    },
+    {
+      "name": "model_facing_source_text_disabled",
+      "passed": true
+    },
+    {
+      "name": "runtime_registry_parity",
+      "passed": true,
+      "http_status": 200,
+      "build_revision": "dev-working-tree"
+    }
+  ],
+  "score": {
+    "passed": 27,
+    "failed": 0,
+    "total": 27
+  },
+  "p0_critical_drift_count": 0
+}

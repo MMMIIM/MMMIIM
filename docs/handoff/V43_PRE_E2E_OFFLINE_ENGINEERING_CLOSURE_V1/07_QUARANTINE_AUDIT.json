@@ -1,0 +1,81 @@
+{
+  "artifact_type": "V43_QUARANTINE_AUDIT_V1",
+  "generated_at": "2026-09-16",
+  "execution_mode": "OFFLINE_ONLY",
+  "provider_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "gold_mutations": 0,
+  "production_semantic_changes": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "commit": 0,
+  "push": 0,
+  "merge": 0,
+  "deploy": 0,
+  "current_enforcement": {
+    "source": {
+      "path": "backend/eval/rag-governance/15_material_source_authority_quarantine_checkpoint.json",
+      "exists": true,
+      "bytes": 2129,
+      "sha256": "a24355d97ef0716fc04c77d313390c0a9fabf83bb2509636cbdc84db95704261",
+      "status": "CURRENT_REUSABLE",
+      "roles": [
+        "QUARANTINE_ENFORCEMENT"
+      ],
+      "notes": []
+    },
+    "checkpoint": "V43_MATERIAL_SOURCE_AUTHORITY_QUARANTINE_CHECKPOINT",
+    "material_lifecycle_mechanism": "company_materials.lifecycle_status=QUARANTINED with quarantine_reason and quarantined_at; replay-compatible lifecycle constraint",
+    "new_schema_fields": [
+      "quarantine_reason",
+      "quarantined_at"
+    ],
+    "neusoft_material_count": 4,
+    "neusoft_quarantined_count": 4,
+    "neusoft_retrieval_results_after_quarantine": 0,
+    "neusoft_historical_fact_count": 6,
+    "neusoft_current_authority_fact_count": 0,
+    "neusoft_historical_mapping_count": 6,
+    "neusoft_current_claim_authority_mapping_count": 0,
+    "neusoft_current_claim_authorization_count": 0,
+    "neusoft_writer_safe_context_exposure_count": 0,
+    "non_neusoft_retrieval_control": "PASS: active non-Neusoft private material remained retrievable (1 chunk)",
+    "non_neusoft_authority_control": "PASS: active non-Neusoft private material remains policy-eligible",
+    "authority_fail_closed_gate": "PASS",
+    "historical_lineage_gate": "PASS",
+    "performance_query_gate": "PASS: batched SQL/lateral authority reads; no per-claim authority query",
+    "production_files_changed": "8 runtime files; 2 migration files (041 replay compatibility and 051 quarantine schema)",
+    "db_writes": "4 owning-service quarantine transitions; no deletion or content rewrite",
+    "focused_tests": "15/15 unit and 2/2 PostgreSQL integration PASS",
+    "postgresql": "57/57 PASS",
+    "backend": "1163/1176 PASS; 13 unrelated pre-existing dirty-worktree baseline failures",
+    "frontend": "51/51 PASS",
+    "requirement_eval": "PASS (recall 100%, precision 100%, source verified 100%)",
+    "build": "PASS",
+    "lint": "PASS",
+    "git_diff_check": "PASS",
+    "fresh_migration": "PASS (001-051 isolated chain)",
+    "existing_migration": "PASS (full runner)",
+    "second_migration_pass": "PASS (full runner)",
+    "illegal_material_type_check": "PASS (PostgreSQL 23514)",
+    "provider_calls": 0,
+    "production_authority_semantics_changed": false,
+    "final_verdict": "MATERIAL_SOURCE_AUTHORITY_QUARANTINE_ENFORCED; RAG_PRODUCTION_READY_NOT_CLAIMED; MAPPING_GOLD_READY_NOT_CLAIMED; CLAIM_GOLD_READY_NOT_CLAIMED"
+  },
+  "historical_snapshot": {
+    "source": {
+      "path": "docs/handoff/V43_REFERENCE_RETRIEVAL_SCHEMA_PARITY_CORE6_REPLAY_V2/17_CHECKPOINT.json",
+      "exists": true,
+      "bytes": 5884,
+      "sha256": "a283e47e520aa327ded034fdc4b871d41cf7f03c70763c2288b3c7a7987e1c6b",
+      "status": "HISTORICAL_ARCHIVE_ONLY",
+      "roles": [],
+      "notes": []
+    },
+    "status": "READY_FOR_GPT_CORE6_REAL_REFERENCE_RAG_ADJUDICATION"
+  },
+  "conclusion": "Neusoft quarantined; retrieval and authority exposure are fail-closed in later enforcement artifact; earlier snapshots are superseded."
+}

@@ -1,4 +1,3 @@
-import { createHash } from 'node:crypto';
 import { SemanticGatewayError } from './semantic-gateway-client.js';
 import {
   EVIDENCE_SUPPORT_GATEWAY_CONTRACT_VERSION,
@@ -6,7 +5,8 @@ import {
 } from './semantic-gateway-task-registry.js';
 import {
   EVIDENCE_SUPPORT_OBSERVATION_TYPES,
-  EVIDENCE_SUPPORT_REASON_CODES
+  EVIDENCE_SUPPORT_REASON_CODES,
+  getEvidenceSupportInvariantViolation
 } from './evidence-support-assessment-contract-v1.js';
 import {
   EVIDENCE_CAPABILITY,
@@ -17,6 +17,7 @@ import {
 } from './evidence-review-contract.js';
 import { MAPPING_RELATIONSHIPS } from './requirement-evidence-mapping-contract-v1.js';
 import { resolveSemanticTaskInstruction } from '../../../packages/semantic-contracts/index.js';
+import { hashSource } from './source-location-resolver.js';
 
 export { EVIDENCE_SUPPORT_GATEWAY_CONTRACT_VERSION, EVIDENCE_SUPPORT_GATEWAY_TASK_TYPE };
 
@@ -27,7 +28,8 @@ export const EVIDENCE_SUPPORT_GATEWAY_INSTRUCTION = resolveSemanticTaskInstructi
 const SHA256 = /^[0-9a-f]{64}$/;
 const object = value => value && typeof value === 'object' && !Array.isArray(value);
 const text = value => typeof value === 'string' ? value.trim() : '';
-const hash = value => createHash('sha256').update(String(value)).digest('hex');
+const exactSourceText = value => typeof value === 'string' ? value : String(value ?? '');
+const hash = hashSource;
 const unique = values => [...new Set(values)];
 
 function contractError(code, message, audit = {}) {
@@ -82,7 +84,8 @@ function normalizedSource(sourceRecord, index, audit) {
   if (!object(source)) {
     throw contractError('EVIDENCE_SUPPORT_INPUT_INVALID', `sources[${index}] 必须是对象。`, audit);
   }
-  const sourceText = requiredText(sourceTextFromAdapter(sourceRecord), `sources[${index}].source_text`, audit);
+  const sourceText = exactSourceText(sourceTextFromAdapter(sourceRecord));
+  if (!sourceText.trim()) throw contractError('SCHEMA_INVALID', `sources[${index}].source_text 不能为空。`, audit);
   const sourceId = requiredText(source.source_id, `sources[${index}].source_id`, audit);
   const sourceSpanId = requiredText(source.source_span_id, `sources[${index}].source_span_id`, audit);
   const sourceKind = oneOf(source.source_kind, ['retrieval_candidate', 'evidence_fact'], `sources[${index}].source_kind`, audit);
@@ -196,16 +199,15 @@ function validateAssessment(value, input, index, audit) {
   if (!Array.isArray(value.support_observations)) {
     throw contractError('SCHEMA_INVALID', `${name}.support_observations 必须是数组。`, audit);
   }
-  if ((relevance === 'unknown' || capability === 'unknown' || support === 'unknown')
-    && (relationship === 'direct' || support === 'full_support')) {
-    throw contractError('SCHEMA_INVALID', `${name} unknown 不得伪装成 full/direct。`, audit);
-  }
-  if (relationship === 'direct' && (relevance !== 'relevant' || capability !== 'capable' || support !== 'full_support')) {
-    throw contractError('SCHEMA_INVALID', `${name} direct 必须由 relevant/capable/full_support 完整支持。`, audit);
-  }
-  if (support === 'full_support' && relationship !== 'direct') {
-    throw contractError('SCHEMA_INVALID', `${name} full_support 必须绑定 direct。`, audit);
-  }
+  // Cross-field business invariant. Do not relax independently from the
+  // canonical assessment factory. See ADR-020.
+  const invariantViolation = getEvidenceSupportInvariantViolation({
+    semanticRelevance: relevance,
+    evidenceCapability: capability,
+    supportLevel: support,
+    semanticRelationship: relationship
+  });
+  if (invariantViolation) throw contractError('SCHEMA_INVALID', `${name} ${invariantViolation}。`, audit);
   return {
     ...value,
     source_id: source.source_id,

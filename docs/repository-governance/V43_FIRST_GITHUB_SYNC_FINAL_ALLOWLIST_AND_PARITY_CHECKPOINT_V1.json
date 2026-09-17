@@ -1,0 +1,85 @@
+{
+  "checkpoint_id": "V43_FIRST_GITHUB_SYNC_FINAL_ALLOWLIST_AND_PARITY_CHECKPOINT_V1",
+  "status": "BLOCKED_GITHUB_AUTH_INTERACTIVE_REQUIRED",
+  "mode": "FINAL_FIRST_SYNC_ALLOWLIST_AND_PARITY_PREPARATION",
+  "repository": {
+    "canonical_full_name": "MMMIIM/MMMIIM",
+    "canonical_url": "https://github.com/MMMIIM/MMMIIM.git",
+    "origin": "https://github.com/MMMIIM/MMMIIM.git",
+    "branch": "feat/v4.3-semantic-boundary-routing",
+    "local_head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+    "remote_branch": "feat/v4.3-semantic-boundary-routing",
+    "remote_head": null,
+    "relationship": "UNKNOWN_REMOTE_HEAD_UNAVAILABLE",
+    "remote_probe": "SEC_E_NO_CREDENTIALS",
+    "credential_state": "BLOCKED_GITHUB_AUTH_INTERACTIVE_REQUIRED"
+  },
+  "state_reconciliation": {
+    "current_state": "docs/project-state/CURRENT_STATE.md",
+    "decision_registry": "docs/project-state/DECISION_REGISTRY.md",
+    "architecture": "ARCHITECTURE_ENGINEERING_COMPLETE_PENDING_RAG_QUALITY_ACCEPTANCE",
+    "rag_p0": "COMPLETE / FROZEN",
+    "rag_p1a": "PASS / COMPLETE / EVAL ONLY; PRODUCTION PROMOTION NOT AUTHORIZED",
+    "rag_p1b": "PASS / ENGINEERING VALIDATION COMPLETE; GPT GATE OVERRIDDEN BY P1C",
+    "rag_p1c": "COMPLETE / EVAL CHALLENGER; DEVELOPMENT_SELECTED_CANDIDATE_K=NONE; NO_CHANGE_YET",
+    "e2e": "BOUNDED_3_CASE_E2E_COMPLETED_PROVIDER_OFF_FAIL_CLOSED; STOP_BEFORE_WRITER_CANARY",
+    "e2e_exact_blocker": "NONE"
+  },
+  "manifest": {
+    "id": "FIRST_GITHUB_SYNC_MANIFEST_V3",
+    "json_path": "docs/repository-governance/FIRST_GITHUB_SYNC_MANIFEST_V3.json",
+    "markdown_path": "docs/repository-governance/FIRST_GITHUB_SYNC_MANIFEST_V3.md",
+    "json_sha256": "17ED6AE36EF8F54280CD746B0734353DF5830B5BC658649D09E188E3AEDB5BEB",
+    "status_entries": 3254,
+    "tracked_modified": 104,
+    "untracked": 3150,
+    "categories": {
+      "FIRST_SYNC_INCLUDE": 2941,
+      "FIRST_SYNC_IGNORE": 0,
+      "FIRST_SYNC_EXTERNAL_RAW": 41,
+      "FIRST_SYNC_COPYRIGHT_LINK_ONLY": 129,
+      "FIRST_SYNC_LOCAL_SECRET": 2,
+      "FIRST_SYNC_REVIEW_REQUIRED": 143
+    },
+    "large_raw": {
+      "decision_listed_count": 11,
+      "additional_count": 30
+    },
+    "private_source_count": 0,
+    "copyright_duplicate_groups_for_known_four_pdfs": 2
+  },
+  "secret_history": {
+    "tracked_secret_suspicion_count": 0,
+    "historical_env_inclusion_count": 0,
+    "credential_pattern_suspicion_count": 0,
+    "affected_commit_or_path": [],
+    "full_secret_values_printed": false,
+    "history_rewrite": 0,
+    "credential_rotation": 0
+  },
+  "validation": {
+    "full_backend_suite": "FAIL_EXISTING_MISSING_FIXTURES_AND_ASSERTIONS",
+    "targeted_retrieval_contract": "42/42_PASS",
+    "semantic_gateway": "85/85_PASS",
+    "frontend_tests": "52/52_PASS",
+    "frontend_build": "PASS",
+    "lint": "NOOP_NO_LINT_SCRIPT",
+    "git_diff_check": "PASS_WITH_LINE_ENDING_WARNINGS",
+    "evidence_path": "docs/repository-governance/FIRST_SYNC_VALIDATION_EVIDENCE_V1.json"
+  },
+  "safety_counts": {
+    "commit": 0,
+    "push": 0,
+    "merge": 0,
+    "rebase": 0,
+    "force_push": 0,
+    "history_rewrite": 0,
+    "destructive_git": 0,
+    "deploy": 0
+  },
+  "exact_blocker": "BLOCKED_GITHUB_AUTH_INTERACTIVE_REQUIRED",
+  "secondary_review_gates": ["BLOCKED_FIRST_SYNC_REVIEW_REQUIRED", "BLOCKED_TEST_REGRESSION"],
+  "next_action": "Restore supported non-interactive GitHub credentials, probe remote HEAD, classify local/remote relationship, resolve V3 review-required files, then request separate baseline commit/push authorization.",
+  "document_contents_printed": false,
+  "historical_manifests_preserved": ["FIRST_GITHUB_SYNC_MANIFEST_V1", "FIRST_GITHUB_SYNC_MANIFEST_V2"]
+}

@@ -55,6 +55,35 @@ export class CompanyMaterialService {
     if(!material) throw new AppError('MATERIAL_NOT_FOUND', '企业材料不存在。', 404);
     return { material, chunks:await this.repository.listMaterialChunks(materialId) };
   }
+
+  /**
+   * Quarantine is an owning-service transition. It preserves the material,
+   * chunks and historical lineage while removing the material from the central
+   * source-authority policy. The repository operation is idempotent.
+   */
+  async quarantine(materialId, { reason } = {}) {
+    assertUuid(materialId, 'INVALID_MATERIAL_ID', '企业材料 ID 格式无效。');
+    const normalizedReason = String(reason || '').trim();
+    if (!normalizedReason) throw new AppError('MATERIAL_QUARANTINE_REASON_REQUIRED', '隔离材料必须提供原因。', 422);
+    const current = await this.repository.getCompanyMaterial(materialId);
+    if (!current) throw new AppError('MATERIAL_NOT_FOUND', '企业材料不存在。', 404);
+    if (typeof this.repository.quarantineCompanyMaterial !== 'function') {
+      throw new AppError('MATERIAL_QUARANTINE_UNAVAILABLE', '材料隔离服务尚未配置。', 503);
+    }
+    return this.repository.quarantineCompanyMaterial({ materialId, reason: normalizedReason });
+  }
+
+  async quarantineMatching({ predicate, reason } = {}) {
+    if (typeof this.repository.listAllCompanyMaterials !== 'function') {
+      throw new AppError('MATERIAL_QUARANTINE_UNAVAILABLE', '材料隔离服务尚未配置。', 503);
+    }
+    if (typeof predicate !== 'function') throw new AppError('MATERIAL_QUARANTINE_SELECTOR_REQUIRED', '材料隔离选择器无效。', 422);
+    const materials = await this.repository.listAllCompanyMaterials();
+    const selected = materials.filter(predicate);
+    const quarantined = [];
+    for (const material of selected) quarantined.push(await this.quarantine(material.id, { reason }));
+    return { materials: quarantined };
+  }
 }
 
 export function createEvidenceIdentifier() {

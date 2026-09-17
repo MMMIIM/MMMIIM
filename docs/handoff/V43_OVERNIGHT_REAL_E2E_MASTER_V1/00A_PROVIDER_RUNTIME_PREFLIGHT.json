@@ -1,0 +1,344 @@
+{
+  "artifact_type": "V43_E2E_PROVIDER_RUNTIME_PREFLIGHT",
+  "version": "v1",
+  "status": "PROVIDER_RUNTIME_READY_WITH_HOST_GATE",
+  "generated_at": "2026-09-15T16:45:25.907Z",
+  "fresh_read": {
+    "git": {
+      "branch": "feat/v4.3-semantic-boundary-routing",
+      "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e"
+    },
+    "dirty": true,
+    "status_entry_count": 705,
+    "env_files_read": [
+      "backend/.env",
+      "services/semantic-gateway/.env"
+    ]
+  },
+  "runtime_observed_from_stored_artifacts": {
+    "backend_health": "PASS",
+    "semantic_gateway_ready": "PASS",
+    "semantic_gateway_info": "PASS",
+    "database": "bid_platform_flow_audit_test reachable"
+  },
+  "environment_profiles": {
+    "backend_env": {
+      "DIFY_API_BASE": {
+        "present": true,
+        "value": "https://api.dify.ai/v1"
+      },
+      "DIFY_API_KEY": {
+        "present": true,
+        "value": "<REDACTED>"
+      },
+      "PORT": {
+        "present": true,
+        "value": "3001"
+      },
+      "DATABASE_URL": {
+        "present": true,
+        "value": "<REDACTED>"
+      },
+      "GENERATION_PROVIDER": {
+        "present": true,
+        "value": "semantic_gateway"
+      },
+      "V43_GATEWAY_API_BASE": {
+        "present": true,
+        "value": "http://127.0.0.1:18080/v1"
+      },
+      "V43_GATEWAY_API_KEY": {
+        "present": true,
+        "value": "<REDACTED>"
+      },
+      "V43_GATEWAY_USER": {
+        "present": true,
+        "value": "local-smoke-test"
+      },
+      "V43_GATEWAY_REQUIREMENT_EXTRACTION_TIMEOUT_MS": {
+        "present": true,
+        "value": "300000"
+      },
+      "V43_WRITER_GATEWAY_API_BASE": {
+        "present": true,
+        "value": "http://127.0.0.1:18080/v1"
+      },
+      "V43_WRITER_GATEWAY_API_KEY": {
+        "present": true,
+        "value": "<REDACTED>"
+      },
+      "V43_WRITER_TIMEOUT_MS": {
+        "present": true,
+        "value": "300000"
+      },
+      "V43_REVISION_GATEWAY_API_BASE": {
+        "present": true,
+        "value": "http://127.0.0.1:18080/v1"
+      },
+      "V43_REVISION_GATEWAY_API_KEY": {
+        "present": true,
+        "value": "<REDACTED>"
+      },
+      "V43_REVISION_TIMEOUT_MS": {
+        "present": true,
+        "value": "300000"
+      },
+      "V43_EMBEDDING_API_BASE": {
+        "present": true,
+        "value": "https://api.siliconflow.cn/v1"
+      },
+      "V43_EMBEDDING_API_KEY": {
+        "present": true,
+        "value": "<REDACTED>"
+      },
+      "V43_EMBEDDING_MODEL": {
+        "present": true,
+        "value": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      "V43_EMBEDDING_VERSION": {
+        "present": true,
+        "value": "1"
+      },
+      "V43_EMBEDDING_DIMENSION": {
+        "present": true,
+        "value": "1024"
+      },
+      "EMBEDDING_PROXY_URL": {
+        "present": false,
+        "value": ""
+      },
+      "EXTERNAL_WRITER_API_BASE": {
+        "present": true,
+        "value": "https://api.siliconflow.cn/v1"
+      },
+      "EXTERNAL_WRITER_API_KEY": {
+        "present": true,
+        "value": "<REDACTED>"
+      },
+      "EXTERNAL_WRITER_MODEL": {
+        "present": true,
+        "value": "Qwen/Qwen2.5-7B-Instruct"
+      },
+      "EXTERNAL_WRITER_MODEL_AVAILABLE": {
+        "present": true,
+        "value": "true"
+      },
+      "SEMANTIC_GATEWAY_API_BASE": {
+        "present": true,
+        "value": "http://127.0.0.1:18082"
+      },
+      "SEMANTIC_GATEWAY_API_KEY": {
+        "present": true,
+        "value": "<REDACTED>"
+      }
+    },
+    "semantic_gateway_env": {
+      "SEMANTIC_GATEWAY_PROVIDER": {
+        "present": true,
+        "value": "openai_compatible"
+      },
+      "SEMANTIC_GATEWAY_API_KEY": {
+        "present": true,
+        "value": "<REDACTED>"
+      },
+      "SEMANTIC_GATEWAY_PROVIDER_API_BASE": {
+        "present": true,
+        "value": "https://api.siliconflow.cn/v1"
+      },
+      "SEMANTIC_GATEWAY_PROVIDER_API_KEY": {
+        "present": true,
+        "value": "<REDACTED>"
+      },
+      "SEMANTIC_GATEWAY_MODEL": {
+        "present": true,
+        "value": "deepseek-ai/DeepSeek-V4-Flash"
+      },
+      "SEMANTIC_GATEWAY_API_BASE": {
+        "present": true,
+        "value": "http://127.0.0.1:18082"
+      },
+      "SEMANTIC_GATEWAY_ENABLE_THINKING": {
+        "present": true,
+        "value": "false"
+      },
+      "SEMANTIC_GATEWAY_TEMPERATURE": {
+        "present": true,
+        "value": "0.1"
+      },
+      "SEMANTIC_GATEWAY_TOP_P": {
+        "present": true,
+        "value": "1"
+      },
+      "SEMANTIC_GATEWAY_TOP_K": {
+        "present": true,
+        "value": "50"
+      },
+      "SEMANTIC_GATEWAY_FREQUENCY_PENALTY": {
+        "present": true,
+        "value": "0"
+      },
+      "SEMANTIC_GATEWAY_MAX_TOKENS": {
+        "present": true,
+        "value": "<REDACTED>"
+      },
+      "SEMANTIC_GATEWAY_STREAM": {
+        "present": true,
+        "value": "false"
+      },
+      "SEMANTIC_GATEWAY_N": {
+        "present": true,
+        "value": "1"
+      },
+      "DEEPSEEK_OFFICIAL_API_KEY": {
+        "present": true,
+        "value": "<REDACTED>"
+      },
+      "DEEPSEEK_OFFICIAL_API_BASE": {
+        "present": true,
+        "value": "https://api.deepseek.com"
+      },
+      "DEEPSEEK_OFFICIAL_FACT_MODEL": {
+        "present": true,
+        "value": "deepseek-v4-pro"
+      }
+    }
+  },
+  "provider_owners": [
+    {
+      "stage": "Embedding",
+      "owner_module": "backend/src/pipeline/embedding-client.js",
+      "service_consumer": "backend/src/pipeline/enterprise-retrieval-service.js",
+      "provider": "siliconflow",
+      "model": "Qwen/Qwen3-Embedding-0.6B",
+      "api_base_source": "backend/.env:V43_EMBEDDING_API_BASE",
+      "api_base_host": "api.siliconflow.cn",
+      "endpoint": "/embeddings",
+      "network_required": true,
+      "current_execution_environment": "backend process / Host required for live external HTTPS in this task",
+      "transport_from_current_backend_env": "DIRECT_HTTPS",
+      "offline_or_replay_path": "backend/scripts/smoke-embedding.js; backend/eval/real-e2e/run-retrieval-smoke-utf8.mjs",
+      "host_execution_script": "backend/scripts/smoke-embedding.js",
+      "reusable_stored_artifacts": [
+        "docs/handoff/V43_REAL_E2E_AUTHORITY_AND_PROJECT_MATERIAL_BINDING_IMPLEMENTATION_V1/host-retrieval-utf8.json",
+        "docs/handoff/V43_REAL_E2E_AUTHORITY_AND_PROJECT_MATERIAL_BINDING_IMPLEMENTATION_V1/04_TB006_HUAWEI_BINDINGS.json"
+      ]
+    },
+    {
+      "stage": "Fact semantic extraction",
+      "owner_module": "backend/src/pipeline/semantic-gateway-evidence-fact-extractor.js",
+      "service_consumer": "backend/src/evidence-source-fact-service.js",
+      "provider": "deepseek_official (task-specific gateway provider)",
+      "model": "deepseek-v4-pro",
+      "api_base_source": "services/semantic-gateway/.env:DEEPSEEK_OFFICIAL_API_BASE",
+      "api_base_host": "api.deepseek.com",
+      "endpoint": "/responses",
+      "network_required": true,
+      "current_execution_environment": "semantic-gateway task provider",
+      "gateway_default_provider": "openai_compatible",
+      "gateway_default_model": "deepseek-ai/DeepSeek-V4-Flash",
+      "offline_or_replay_path": "backend/eval/rag-pilot/fact-candidate-v2-1-fixed12-runner.mjs; backend/test/evidence-fact-candidate-v2-2.test.js",
+      "host_execution_script": "backend/eval/rag-pilot/deepseek-official-fact3-runner.mjs",
+      "reusable_stored_artifacts": [
+        "docs/V43_CHENGCHUAN_CONTROLLED_REAL_FACT_INVENTORY.json",
+        "docs/V43_CHENGCHUAN_CONTROLLED_REAL_FACT_QUALITY_AUDIT.json"
+      ]
+    },
+    {
+      "stage": "Mapping semantic evaluation",
+      "owner_module": "backend/src/pipeline/semantic-gateway-mapping-evaluator.js",
+      "service_consumer": "backend/src/requirement-evidence-fact-mapping-service.js",
+      "provider": "openai_compatible",
+      "model": "deepseek-ai/DeepSeek-V4-Flash",
+      "api_base_source": "services/semantic-gateway/.env:SEMANTIC_GATEWAY_PROVIDER_API_BASE",
+      "api_base_host": "api.siliconflow.cn",
+      "endpoint": "semantic gateway task requirement_evidence_mapping",
+      "network_required": true,
+      "current_execution_environment": "backend semantic gateway client",
+      "offline_or_replay_path": "backend/eval/mapping-benchmark-v1/mapping-eval-runner.js; backend/test/mapping-eval-v1.test.js",
+      "host_execution_script": null,
+      "reusable_stored_artifacts": [
+        "backend/eval/mapping-benchmark-v1/results"
+      ]
+    },
+    {
+      "stage": "Claim generation and gate",
+      "owner_module": "backend/src/pipeline/production-task-provider.js; backend/src/pipeline/claim-gate-service.js",
+      "service_consumer": "backend/src/pipeline/claim-gate-service.js",
+      "provider": "semantic_gateway",
+      "model": null,
+      "api_base_source": "backend/.env:V43_CLAIM_GATEWAY_API_BASE (if configured)",
+      "api_base_host": null,
+      "endpoint": "semantic gateway task claim_generation; deterministic claim gate after response",
+      "network_required": true,
+      "current_execution_environment": "backend production-task provider plus deterministic Claim Gate",
+      "offline_or_replay_path": "backend/test/claim-gate-targeted-remediation.test.js; backend/eval/claim-eval-v1/runner.js",
+      "host_execution_script": null,
+      "reusable_stored_artifacts": [
+        "backend/eval/claim-eval-v1/results"
+      ]
+    },
+    {
+      "stage": "Writer",
+      "owner_module": "backend/src/pipeline/writer-provider.js; backend/src/writer-execution-service.js",
+      "service_consumer": "backend/src/pipeline/document-generation-service.js",
+      "provider": "semantic_gateway",
+      "model": null,
+      "api_base_source": "backend/.env:V43_WRITER_GATEWAY_API_BASE / V43_REVISION_GATEWAY_API_BASE",
+      "api_base_host": null,
+      "endpoint": "semantic gateway tasks section_drafting / targeted_revision",
+      "network_required": true,
+      "current_execution_environment": "backend document generation service",
+      "offline_or_replay_path": "backend/src/writer-execution-service.js deterministic path; backend/test/writer-eval-provider-off-foundation.test.js",
+      "host_execution_script": null,
+      "reusable_stored_artifacts": [
+        "backend/eval/gold-human-review/v2/writer"
+      ]
+    }
+  ],
+  "network": {
+    "attempted_this_run": false,
+    "provider_calls_this_run": 0,
+    "classification": "CODEX_RUNTIME_EGRESS_BLOCKED",
+    "classification_basis": [
+      "docs/handoff/V43_DAYTIME_REAL_E2E_FOUNDATION_AND_HUMAN_GATE_MASTER_V1/15_E2E_RESUME_MANIFEST.json",
+      "docs/handoff/V43_REFERENCE_CORPUS_SPECIFICITY_UPGRADE_AND_PAIRED_RETEST_V1/05_NEW_CHUNK_EMBEDDING_AUDIT.json"
+    ],
+    "host_direct_success_basis": "docs/handoff/V43_REAL_E2E_AUTHORITY_AND_PROJECT_MATERIAL_BINDING_IMPLEMENTATION_V1/host-retrieval-utf8.json",
+    "provider_model_config_failure_not_inferred": true
+  },
+  "evidence": [
+    {
+      "path": "docs/handoff/V43_OVERNIGHT_REAL_E2E_MASTER_V1/01_E2E_PATH_INVENTORY.json",
+      "exists": true,
+      "sha256": "9c4ca52d132f2015e8805515035e8f905b8ba10638b254d649171b21ae3167f7"
+    },
+    {
+      "path": "docs/handoff/V43_REAL_E2E_AUTHORITY_AND_PROJECT_MATERIAL_BINDING_IMPLEMENTATION_V1/host-retrieval-utf8.json",
+      "exists": true,
+      "sha256": "149ab98182180421940a7d448691cad5e3fd04e6a6ed42228df6729d0a169d2c"
+    },
+    {
+      "path": "docs/handoff/V43_REAL_E2E_AUTHORITY_AND_PROJECT_MATERIAL_BINDING_IMPLEMENTATION_V1/04_TB006_HUAWEI_BINDINGS.json",
+      "exists": true,
+      "sha256": "33959995edf584962de5283a40a0f6d6df29478cfb0b68355dc8c5e02db342e5"
+    },
+    {
+      "path": "docs/V43_CHENGCHUAN_REAL_FACT_ZERO_AUDIT.json",
+      "exists": true,
+      "sha256": "4f6df4cc11ae4afa7f796a0d0fa23cd9a1afceb12cecc9a2e10c3e680ea1a127"
+    },
+    {
+      "path": "docs/V43_CHENGCHUAN_V2_IMPORT_CHECKPOINT.json",
+      "exists": true,
+      "sha256": "f545f890314d882c408c692291f5ad01d34ddbbebca71ed244299f06b1330744"
+    }
+  ],
+  "side_effects": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "eval_db_writes": 0,
+    "gold_mutations": 0,
+    "production_semantic_changes": 0
+  }
+}

@@ -1,0 +1,2153 @@
+{
+  "artifact_type": "V43_REQUIREMENT_UNSEEN_HOLDOUT_V1_FAIL_ADJUDICATION_AND_CRITICAL_ESCAPE_FORENSIC",
+  "artifact_version": "1",
+  "run_id": "unseen-holdout-v1-2026-09-08T06-21-08-203Z-5faac1ab",
+  "holdout_v1_final_status": "FAIL",
+  "holdout_v1_status_transition": "FAILED_DEVELOPMENT_EVIDENCE",
+  "requirement_production_certified": false,
+  "gold_v2_ready": false,
+  "mapping_ready": false,
+  "confirmed_p0_escape_count": 1,
+  "confirmed_p0_case_ids": [
+    "HOLDOUT-REQ-01-CAN-0149"
+  ],
+  "adjudication": {
+    "holdout_tender_id": "HOLDOUT-REQ-01",
+    "canonical_requirement_id": "HOLDOUT-REQ-01-CAN-0149",
+    "expected_semantic_label": "TRUE_ERROR",
+    "semantic_error_class": "OMITTED_DISQUALIFICATION_CONSEQUENCE",
+    "severity": "P0_COMPLIANCE_CRITICAL",
+    "expected_gate": "REVIEW_REQUIRED",
+    "actual_gate": "ACCEPT",
+    "critical_escape": true,
+    "source_text": "5) \t投标有效期不满足招标文件要求的；",
+    "parent_context": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+    "candidate_text": [
+      "投标有效期须满足招标文件要求。"
+    ],
+    "canonical_text": "投标有效期须满足招标文件要求。",
+    "source_refs": [
+      "C014-S009"
+    ],
+    "source_location_verified": true
+  },
+  "duplicate_semantic_review": {
+    "first_case_id": "HOLDOUT-REQ-01-CAN-0149",
+    "second_case_id": "HOLDOUT-REQ-01-CAN-0208",
+    "canonical_text_equal": true,
+    "first_source_refs": [
+      "C014-S009"
+    ],
+    "second_source_refs": [
+      "C015-S100"
+    ],
+    "source_identity_distinct": true,
+    "first_exact_source_text": "5) \t投标有效期不满足招标文件要求的；",
+    "second_exact_source_text": "7 \t投标有效期 \t投标有效期满足招标文件要求的。",
+    "classification": "SAME_UNDERLYING_REQUIREMENT_DUPLICATED_IN_DOCUMENT",
+    "counted_as_independent_p0_escape": false,
+    "rationale": "Canonical text is identical, while source refs and source contexts are distinct locations in the same Tender. The second occurrence is retained for audit but is not double-counted as an independent semantic escape."
+  },
+  "forensic_comparison": [
+    {
+      "canonical_requirement_id": "HOLDOUT-REQ-01-CAN-0145",
+      "source_parent_context": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+      "exact_source_refs": [
+        "C014-S003",
+        "C014-S004"
+      ],
+      "exact_source_text": [
+        "1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出",
+        "具银行不符合招标文件要求的；"
+      ],
+      "exact_source_locations": [
+        {
+          "source_text": "1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；",
+          "source_context_text": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+          "source_page": 14,
+          "source_paragraph": 478,
+          "source_page_start": 14,
+          "source_page_end": 14,
+          "source_paragraph_start": 478,
+          "source_paragraph_end": 479,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 478,
+              "page": 14,
+              "text_hash": "6fb901b7e01059b23aaa447a63d8d9b276bf950e74a5df3bac925b049eaa4ffa"
+            },
+            {
+              "paragraph": 479,
+              "page": 14,
+              "text_hash": "51aedf8e0d1159837de1ddd88f78820bd8b6cf8875e849a55fc36736cf1c6984"
+            }
+          ],
+          "source_hash": "8e9c8d177cc05b2506e8070ecc010a95ac5aabec23e64b75ebc4ffd22e53aaa9",
+          "source_start_offset": 12973,
+          "source_end_offset": 13030,
+          "source_section": "投标人须知",
+          "source_clause_id": "7.3",
+          "source_chunk_id": null,
+          "source_match_type": "exact_multi_paragraph_span",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S003",
+            "C014-S004"
+          ]
+        },
+        {
+          "source_text": "1、具有计算机相关专业本科或以上学历证书；2、具有高级工程师或以上\n级别（专业为以下专业类别其中之一：电子、机电、物联网）职称 ；3、\n软件设计师证书（计算机技术与软件专业技术资格证书）。 每提供一个证\n书得2分，最高得6分。 注：须提供以上相应资格证书扫描件，并提供人员\n在本单位任职的外部证明材料（如加盖政府有关部门印章的打印日期在本\n项目报价截止日之前6个月以内任意一个月的《投保单》或《社会保险参\n保人员证明》。",
+          "source_context_text": "1、具有计算机相关专业本科或以上学历证书；2、具有高级工程师或以上\n级别（专业为以下专业类别其中之一：电子、机电、物联网）职称 ；3、\n软件设计师证书（计算机技术与软件专业技术资格证书）。 每提供一个证\n书得2分，最高得6分。 注：须提供以上相应资格证书扫描件，并提供人员\n在本单位任职的外部证明材料（如加盖政府有关部门印章的打印日期在本\n项目报价截止日之前6个月以内任意一个月的《投保单》或《社会保险参\n保人员证明》。\n本项目基础运维技术支撑团队人\n员实力情况（除项目经理外） (",
+          "source_page": 21,
+          "source_paragraph": 829,
+          "source_page_start": 21,
+          "source_page_end": 21,
+          "source_paragraph_start": 829,
+          "source_paragraph_end": 835,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 829,
+              "page": 21,
+              "text_hash": "28609cd81b75331d989dce00a89f6523fd857fbe68048df31c8dd41ed2db906a"
+            },
+            {
+              "paragraph": 830,
+              "page": 21,
+              "text_hash": "8235b494f026bf3ce8dbbe054efdd8d40d621541df7fb0b0577c71a87071d250"
+            },
+            {
+              "paragraph": 831,
+              "page": 21,
+              "text_hash": "6607598ddc4b3415c104dcdbf176d632950503595a2dcf2e8e8d02fc87b073af"
+            },
+            {
+              "paragraph": 832,
+              "page": 21,
+              "text_hash": "5c337f665ec800d34d6fa329d47ce231894ee61f873533edbdc9bdb712f4640c"
+            },
+            {
+              "paragraph": 833,
+              "page": 21,
+              "text_hash": "c69b69c35135d41e42a33cf42c610efe3ae4991db203e48f234e252c9bcef6e3"
+            },
+            {
+              "paragraph": 834,
+              "page": 21,
+              "text_hash": "ed01fc03d65a8a404679e28c7a5582cfee5b5736a6ee4a9010f218ee8b05757e"
+            },
+            {
+              "paragraph": 835,
+              "page": 21,
+              "text_hash": "e175cf7ebdd4d9a842ff79907c097c2f0cef4281f2309c58ec8baa0f8bf8d5bc"
+            }
+          ],
+          "source_hash": "323f7884eab4577a52958285412ea600e8770867b85de4522319c7b45b6c622c",
+          "source_start_offset": 26006,
+          "source_end_offset": 26216,
+          "source_section": "第四章 评标\t评标",
+          "source_clause_id": "2.3",
+          "source_chunk_id": null,
+          "source_match_type": "exact_multi_paragraph_span",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S001",
+            "C014-S002",
+            "C014-S003",
+            "C014-S004",
+            "C014-S005",
+            "C014-S006",
+            "C014-S007"
+          ]
+        }
+      ],
+      "candidate_text": [
+        "投标人须按时提交投标保证金，且投标保证金的金额、形式或投标保函出具银行须符合招标文件要求。"
+      ],
+      "canonical_text": "投标人须按时提交投标保证金，且投标保证金的金额、形式或投标保函出具银行须符合招标文件要求。",
+      "gate_decision": "REVIEW_REQUIRED",
+      "reason_codes": [
+        "NEGATION_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_location_verified": true
+    },
+    {
+      "canonical_requirement_id": "HOLDOUT-REQ-01-CAN-0146",
+      "source_parent_context": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+      "exact_source_refs": [
+        "C014-S005",
+        "C014-S006"
+      ],
+      "exact_source_text": [
+        "2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授",
+        "权书的；"
+      ],
+      "exact_source_locations": [
+        {
+          "source_text": "2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；",
+          "source_context_text": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+          "source_page": 14,
+          "source_paragraph": 480,
+          "source_page_start": 14,
+          "source_page_end": 14,
+          "source_paragraph_start": 480,
+          "source_paragraph_end": 481,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 480,
+              "page": 14,
+              "text_hash": "cd3bbdd12da979b9d6adddf9fe3ce154f0059dd4b544827ca78f33899fc32546"
+            },
+            {
+              "paragraph": 481,
+              "page": 14,
+              "text_hash": "90cde1540f71ed198a041acc980cfa9c99aa6be587917695ac60e91e09503d44"
+            }
+          ],
+          "source_hash": "58ec06cd2d0ab865ec4ed13096eca65640091cafa9f5cfb0ae0a4e0af19478dd",
+          "source_start_offset": 13031,
+          "source_end_offset": 13078,
+          "source_section": "投标人须知",
+          "source_clause_id": "7.3",
+          "source_chunk_id": null,
+          "source_match_type": "exact_multi_paragraph_span",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S005",
+            "C014-S006"
+          ]
+        },
+        {
+          "source_text": "1、具有计算机相关专业本科或以上学历证书；2、具有高级工程师或以上\n级别（专业为以下专业类别其中之一：电子、机电、物联网）职称 ；3、\n软件设计师证书（计算机技术与软件专业技术资格证书）。 每提供一个证\n书得2分，最高得6分。 注：须提供以上相应资格证书扫描件，并提供人员\n在本单位任职的外部证明材料（如加盖政府有关部门印章的打印日期在本\n项目报价截止日之前6个月以内任意一个月的《投保单》或《社会保险参\n保人员证明》。",
+          "source_context_text": "1、具有计算机相关专业本科或以上学历证书；2、具有高级工程师或以上\n级别（专业为以下专业类别其中之一：电子、机电、物联网）职称 ；3、\n软件设计师证书（计算机技术与软件专业技术资格证书）。 每提供一个证\n书得2分，最高得6分。 注：须提供以上相应资格证书扫描件，并提供人员\n在本单位任职的外部证明材料（如加盖政府有关部门印章的打印日期在本\n项目报价截止日之前6个月以内任意一个月的《投保单》或《社会保险参\n保人员证明》。\n本项目基础运维技术支撑团队人\n员实力情况（除项目经理外） (",
+          "source_page": 21,
+          "source_paragraph": 829,
+          "source_page_start": 21,
+          "source_page_end": 21,
+          "source_paragraph_start": 829,
+          "source_paragraph_end": 835,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 829,
+              "page": 21,
+              "text_hash": "28609cd81b75331d989dce00a89f6523fd857fbe68048df31c8dd41ed2db906a"
+            },
+            {
+              "paragraph": 830,
+              "page": 21,
+              "text_hash": "8235b494f026bf3ce8dbbe054efdd8d40d621541df7fb0b0577c71a87071d250"
+            },
+            {
+              "paragraph": 831,
+              "page": 21,
+              "text_hash": "6607598ddc4b3415c104dcdbf176d632950503595a2dcf2e8e8d02fc87b073af"
+            },
+            {
+              "paragraph": 832,
+              "page": 21,
+              "text_hash": "5c337f665ec800d34d6fa329d47ce231894ee61f873533edbdc9bdb712f4640c"
+            },
+            {
+              "paragraph": 833,
+              "page": 21,
+              "text_hash": "c69b69c35135d41e42a33cf42c610efe3ae4991db203e48f234e252c9bcef6e3"
+            },
+            {
+              "paragraph": 834,
+              "page": 21,
+              "text_hash": "ed01fc03d65a8a404679e28c7a5582cfee5b5736a6ee4a9010f218ee8b05757e"
+            },
+            {
+              "paragraph": 835,
+              "page": 21,
+              "text_hash": "e175cf7ebdd4d9a842ff79907c097c2f0cef4281f2309c58ec8baa0f8bf8d5bc"
+            }
+          ],
+          "source_hash": "323f7884eab4577a52958285412ea600e8770867b85de4522319c7b45b6c622c",
+          "source_start_offset": 26006,
+          "source_end_offset": 26216,
+          "source_section": "第四章 评标\t评标",
+          "source_clause_id": "2.3",
+          "source_chunk_id": null,
+          "source_match_type": "exact_multi_paragraph_span",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S001",
+            "C014-S002",
+            "C014-S003",
+            "C014-S004",
+            "C014-S005",
+            "C014-S006",
+            "C014-S007"
+          ]
+        }
+      ],
+      "candidate_text": [
+        "投标文件须有投标单位公章、法定代表人签字或人名章，签字人须有法定代表人有效授权书。"
+      ],
+      "canonical_text": "投标文件须有投标单位公章、法定代表人签字或人名章，签字人须有法定代表人有效授权书。",
+      "gate_decision": "REVIEW_REQUIRED",
+      "reason_codes": [
+        "NEGATION_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_location_verified": true
+    },
+    {
+      "canonical_requirement_id": "HOLDOUT-REQ-01-CAN-0147",
+      "source_parent_context": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+      "exact_source_refs": [
+        "C014-S007"
+      ],
+      "exact_source_text": [
+        "3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；"
+      ],
+      "exact_source_locations": [
+        {
+          "source_text": "3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；",
+          "source_context_text": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+          "source_page": 14,
+          "source_paragraph": 482,
+          "source_page_start": 14,
+          "source_page_end": 14,
+          "source_paragraph_start": 482,
+          "source_paragraph_end": 482,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 482,
+              "page": 14,
+              "text_hash": "aca9ba6af14cd47395e438f0f9072d026ecb7a0afcd515a83270a530c8d217f9"
+            }
+          ],
+          "source_hash": "aca9ba6af14cd47395e438f0f9072d026ecb7a0afcd515a83270a530c8d217f9",
+          "source_start_offset": 13079,
+          "source_end_offset": 13121,
+          "source_section": "投标人须知",
+          "source_clause_id": "7.3",
+          "source_chunk_id": null,
+          "source_match_type": "exact_single_paragraph",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S007"
+          ]
+        },
+        {
+          "source_text": "1、具有计算机相关专业本科或以上学历证书；2、具有高级工程师或以上\n级别（专业为以下专业类别其中之一：电子、机电、物联网）职称 ；3、\n软件设计师证书（计算机技术与软件专业技术资格证书）。 每提供一个证\n书得2分，最高得6分。 注：须提供以上相应资格证书扫描件，并提供人员\n在本单位任职的外部证明材料（如加盖政府有关部门印章的打印日期在本\n项目报价截止日之前6个月以内任意一个月的《投保单》或《社会保险参\n保人员证明》。",
+          "source_context_text": "1、具有计算机相关专业本科或以上学历证书；2、具有高级工程师或以上\n级别（专业为以下专业类别其中之一：电子、机电、物联网）职称 ；3、\n软件设计师证书（计算机技术与软件专业技术资格证书）。 每提供一个证\n书得2分，最高得6分。 注：须提供以上相应资格证书扫描件，并提供人员\n在本单位任职的外部证明材料（如加盖政府有关部门印章的打印日期在本\n项目报价截止日之前6个月以内任意一个月的《投保单》或《社会保险参\n保人员证明》。\n本项目基础运维技术支撑团队人\n员实力情况（除项目经理外） (",
+          "source_page": 21,
+          "source_paragraph": 829,
+          "source_page_start": 21,
+          "source_page_end": 21,
+          "source_paragraph_start": 829,
+          "source_paragraph_end": 835,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 829,
+              "page": 21,
+              "text_hash": "28609cd81b75331d989dce00a89f6523fd857fbe68048df31c8dd41ed2db906a"
+            },
+            {
+              "paragraph": 830,
+              "page": 21,
+              "text_hash": "8235b494f026bf3ce8dbbe054efdd8d40d621541df7fb0b0577c71a87071d250"
+            },
+            {
+              "paragraph": 831,
+              "page": 21,
+              "text_hash": "6607598ddc4b3415c104dcdbf176d632950503595a2dcf2e8e8d02fc87b073af"
+            },
+            {
+              "paragraph": 832,
+              "page": 21,
+              "text_hash": "5c337f665ec800d34d6fa329d47ce231894ee61f873533edbdc9bdb712f4640c"
+            },
+            {
+              "paragraph": 833,
+              "page": 21,
+              "text_hash": "c69b69c35135d41e42a33cf42c610efe3ae4991db203e48f234e252c9bcef6e3"
+            },
+            {
+              "paragraph": 834,
+              "page": 21,
+              "text_hash": "ed01fc03d65a8a404679e28c7a5582cfee5b5736a6ee4a9010f218ee8b05757e"
+            },
+            {
+              "paragraph": 835,
+              "page": 21,
+              "text_hash": "e175cf7ebdd4d9a842ff79907c097c2f0cef4281f2309c58ec8baa0f8bf8d5bc"
+            }
+          ],
+          "source_hash": "323f7884eab4577a52958285412ea600e8770867b85de4522319c7b45b6c622c",
+          "source_start_offset": 26006,
+          "source_end_offset": 26216,
+          "source_section": "第四章 评标\t评标",
+          "source_clause_id": "2.3",
+          "source_chunk_id": null,
+          "source_match_type": "exact_multi_paragraph_span",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S001",
+            "C014-S002",
+            "C014-S003",
+            "C014-S004",
+            "C014-S005",
+            "C014-S006",
+            "C014-S007"
+          ]
+        }
+      ],
+      "candidate_text": [
+        "使用投标专用章时，须在法人代表授权书中对投标专用章（含编号）授权等同于公章。"
+      ],
+      "canonical_text": "使用投标专用章时，须在法人代表授权书中对投标专用章（含编号）授权等同于公章。",
+      "gate_decision": "REVIEW_REQUIRED",
+      "reason_codes": [
+        "NEGATION_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_location_verified": true
+    },
+    {
+      "canonical_requirement_id": "HOLDOUT-REQ-01-CAN-0148",
+      "source_parent_context": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+      "exact_source_refs": [
+        "C014-S008"
+      ],
+      "exact_source_text": [
+        "4) \t投标文件未按照招标文件要求签署、盖章的；"
+      ],
+      "exact_source_locations": [
+        {
+          "source_text": "4) \t投标文件未按照招标文件要求签署、盖章的；",
+          "source_context_text": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+          "source_page": 14,
+          "source_paragraph": 483,
+          "source_page_start": 14,
+          "source_page_end": 14,
+          "source_paragraph_start": 483,
+          "source_paragraph_end": 483,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 483,
+              "page": 14,
+              "text_hash": "db36fa4bd3e5abf36cd5c08fef51be70430447c7e5d5cf66f3c1062985102834"
+            }
+          ],
+          "source_hash": "db36fa4bd3e5abf36cd5c08fef51be70430447c7e5d5cf66f3c1062985102834",
+          "source_start_offset": 13122,
+          "source_end_offset": 13146,
+          "source_section": "投标人须知",
+          "source_clause_id": "7.3",
+          "source_chunk_id": null,
+          "source_match_type": "exact_single_paragraph",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S008"
+          ]
+        }
+      ],
+      "candidate_text": [
+        "投标文件须按照招标文件要求签署、盖章。"
+      ],
+      "canonical_text": "投标文件须按照招标文件要求签署、盖章。",
+      "gate_decision": "REVIEW_REQUIRED",
+      "reason_codes": [
+        "NEGATION_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_location_verified": true
+    },
+    {
+      "canonical_requirement_id": "HOLDOUT-REQ-01-CAN-0149",
+      "source_parent_context": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+      "exact_source_refs": [
+        "C014-S009"
+      ],
+      "exact_source_text": [
+        "5) \t投标有效期不满足招标文件要求的；"
+      ],
+      "exact_source_locations": [
+        {
+          "source_text": "5) \t投标有效期不满足招标文件要求的；",
+          "source_context_text": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+          "source_page": 14,
+          "source_paragraph": 484,
+          "source_page_start": 14,
+          "source_page_end": 14,
+          "source_paragraph_start": 484,
+          "source_paragraph_end": 484,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 484,
+              "page": 14,
+              "text_hash": "dfe4f375601ae8857eb94c262de549aa0535ad92f979ce084d1d6d893d19ca05"
+            }
+          ],
+          "source_hash": "dfe4f375601ae8857eb94c262de549aa0535ad92f979ce084d1d6d893d19ca05",
+          "source_start_offset": 13147,
+          "source_end_offset": 13167,
+          "source_section": "投标人须知",
+          "source_clause_id": "7.3",
+          "source_chunk_id": null,
+          "source_match_type": "exact_single_paragraph",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S009"
+          ]
+        }
+      ],
+      "candidate_text": [
+        "投标有效期须满足招标文件要求。"
+      ],
+      "canonical_text": "投标有效期须满足招标文件要求。",
+      "gate_decision": "ACCEPT",
+      "reason_codes": [],
+      "source_location_verified": true
+    },
+    {
+      "canonical_requirement_id": "HOLDOUT-REQ-01-CAN-0150",
+      "source_parent_context": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+      "exact_source_refs": [
+        "C014-S010"
+      ],
+      "exact_source_text": [
+        "6) \t超过项目预算金额或招标控制价的；"
+      ],
+      "exact_source_locations": [
+        {
+          "source_text": "6) \t超过项目预算金额或招标控制价的；",
+          "source_context_text": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+          "source_page": 14,
+          "source_paragraph": 485,
+          "source_page_start": 14,
+          "source_page_end": 14,
+          "source_paragraph_start": 485,
+          "source_paragraph_end": 485,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 485,
+              "page": 14,
+              "text_hash": "3926a1ab442382ff20b2097d7c04a92a05d766d1960c99220c75344d97b350a2"
+            }
+          ],
+          "source_hash": "3926a1ab442382ff20b2097d7c04a92a05d766d1960c99220c75344d97b350a2",
+          "source_start_offset": 13168,
+          "source_end_offset": 13188,
+          "source_section": "投标人须知",
+          "source_clause_id": "7.3",
+          "source_chunk_id": null,
+          "source_match_type": "exact_single_paragraph",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S010"
+          ]
+        }
+      ],
+      "candidate_text": [
+        "投标总价不得超过项目预算金额或招标控制价。"
+      ],
+      "canonical_text": "投标总价不得超过项目预算金额或招标控制价。",
+      "gate_decision": "REVIEW_REQUIRED",
+      "reason_codes": [
+        "NEGATION_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_location_verified": true
+    },
+    {
+      "canonical_requirement_id": "HOLDOUT-REQ-01-CAN-0151",
+      "source_parent_context": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+      "exact_source_refs": [
+        "C014-S011",
+        "C014-S012"
+      ],
+      "exact_source_text": [
+        "7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服",
+        "10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；"
+      ],
+      "exact_source_locations": [
+        {
+          "source_text": "7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；",
+          "source_context_text": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+          "source_page": 14,
+          "source_paragraph": 486,
+          "source_page_start": 14,
+          "source_page_end": 14,
+          "source_paragraph_start": 486,
+          "source_paragraph_end": 490,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 486,
+              "page": 14,
+              "text_hash": "7c5fa712560b024372a894ccab2394c631331f23a2bf3d581e3931fe33ae328b"
+            },
+            {
+              "paragraph": 490,
+              "page": 14,
+              "text_hash": "8a4b84e1a4ab56fdb2ef2fd95dc96820fff0d52f87059f719e671d69ffd91e8c"
+            }
+          ],
+          "source_hash": "457c4bc5adae1082d7a33e0052452af901295d0714012010acb82d00ab68ecfa",
+          "source_start_offset": 13189,
+          "source_end_offset": 13325,
+          "source_section": "投标人须知",
+          "source_clause_id": "7.3",
+          "source_chunk_id": null,
+          "source_match_type": "exact_multi_paragraph_span",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S011",
+            "C014-S012"
+          ]
+        },
+        {
+          "source_text": "（1）具有数据库系统工程师（计算机技术与软件专业技术资格证书）每\n提供一人得2分，本项最高得2分；（2）具有网络工程师证书（计算机技\n术与软件专业技术资格证书），每人2分，最高2分。（3）具有网络规划\n设计师证书（计算机技术与软件专业技术资格证书），每人2分，最高2分\n。注：同一人拥有多个证书不重复计算,只计算得分最高的一个证书得分。\n须提供相关证书扫描件，提供以上人员在本单位任职的外部证明材料（如\n加盖政府有关部门印章的打印日期在本项目报价截止日之前6个月以内任\n意一个月的《投保单》或《社会保险参保人员证明》。",
+          "source_context_text": "6.0分)\n（1）具有数据库系统工程师（计算机技术与软件专业技术资格证书）每\n提供一人得2分，本项最高得2分；（2）具有网络工程师证书（计算机技\n术与软件专业技术资格证书），每人2分，最高2分。（3）具有网络规划\n设计师证书（计算机技术与软件专业技术资格证书），每人2分，最高2分\n。注：同一人拥有多个证书不重复计算,只计算得分最高的一个证书得分。\n须提供相关证书扫描件，提供以上人员在本单位任职的外部证明材料（如\n加盖政府有关部门印章的打印日期在本项目报价截止日之前6个月以内任\n意一个月的《投保单》或《社会保险参保人员证明》。\n本项目应用类系统技术支撑团队\n人员实力情况（除项目经理外）\n(3.0分)\n（1）系统架构设计师证书（计算机技术与软件专业技术资格证书），每\n人2分，最高2分。 （2）具有软件设计师证书（计算机技术与软件专业技\n术资格证书），每人1分，最高1分。注：同一人拥有多个证书不重复计算,\n只计算得分最高的一个证书得分。须提供相关证书扫描件，提供以上人员\n在本单位任职的外部证明材料（如加盖政府有关部门印章的打印日期在本\n项目报价截止日之前6个月以内任意一个月的《投保单》或《社会保险参\n保人员证明》。\n二线技术支持人员 (6.0分)\n（1）具有高级工程师或以上级别（专业为以下专业类别其中之一：电子\n、电气、机电）职称，每提供一人得1分，本项最高得4分。（2）网络工\n程师证书（计算机技术与软件专业技术资格证书）每提供一人得1分，本\n6个月以内任意一个月的《投保单》或《社会保险参保人员证明》。\n企业运维工具情况 (2.0分)\n具有运维管理类软件著作权登记证书得2分，最高得2分。 注：①自主开发\n的，提供证书扫描件，名称可有差异，实质性内容满足即符合得分要求；\n②非自有须提供购买合同扫描件或授权使用证明文件或租赁合同、购买发\n票以及平台使用截图，同时提供承诺合同签订后在本项目应用上述功能系\n统或软件的承诺书；③若投标时无法提供，提供承诺函承诺签订合同前提\n供上述①或②的资料亦可得分\n-第21页-\n综合信用分 综合信用评价 (5.0分)\n综合信用评价得分=综合信用评价得分(属于商务部分的一部分)=投标人的\n广州公共资源交易信用评价（政府采购供应商信用评价分）×5%。 投标\n人的信用评价分以开标当天广州交易集团有限公司网站公布的分值为准（\n通过“广州交易集团有限公司网站-信用信息-广州公共资源交易信用平台3.\n0” 进行核实，未能在网站查询到供应商信用评价分的，以当天信用评价基\n准分计算）。供应商为联合体的，以牵头方信用评价分计算。\n4.汇总、排序\t汇总、排序\n采购包1：\n评标结果按评审后总得分由高到低顺序排列。总得分相同的按投标报价由低到高顺序排列。得分且投标报价相同的，由评\n委会采取随机抽取的方式确定。排名第一的投标供应商为第一中标候选人，排名第二的投标供应商为第二中标候选人（提供相\n定，其他同品牌投标人不作为中标候选人）。\n5.中标价的确定\t中标价的确定\n除了按第四章第一点第7条修正并经投标人确认的投标报价作为中标价外，中标价以开标时公开唱标价为准。\n6.其他无效投标的情形：\t其他无效投标的情形：\n(1)评标期间，投标人没有按评标委员会的要求提交法定代表人或其委托代理人签字的澄清、说明、补正或改变了投标文\n件的实质性内容的。\n(2)投标文件提供虚假材料的。\n(3)投标人以他人名义投标、串通投标、以行贿手段谋取中标或者以其他弄虚作假方式投标的。\n(4)投标人对采购人、采购代理机构、评标委员会及其工作人员施加影响，有碍招标公平、公正的。\n(5)投标文件含有采购人不能接受的附加条件的。\n(6)法律、法规和招标文件规定的其他无效情形。\n-第22页-",
+          "source_page": 21,
+          "source_paragraph": 839,
+          "source_page_start": 21,
+          "source_page_end": 21,
+          "source_paragraph_start": 839,
+          "source_paragraph_end": 846,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 839,
+              "page": 21,
+              "text_hash": "fd6126fd18eee46bb8e6bf9102994c8b57b54a653c63973c923030fb199abc8b"
+            },
+            {
+              "paragraph": 840,
+              "page": 21,
+              "text_hash": "334dd37876401bf7dd798cd50f6d077d0cf0e4af013a49f80cfec5cc98f37bf0"
+            },
+            {
+              "paragraph": 841,
+              "page": 21,
+              "text_hash": "1f819cc3fc2ec7e8d2f7a4c10800d9397a64c4e8a766d9a4b10ecb5881f7207f"
+            },
+            {
+              "paragraph": 842,
+              "page": 21,
+              "text_hash": "f3bf7674cdc1ed93f6451448ec4ec2da1b266338ff3398a3f4db4c6f410f4c8b"
+            },
+            {
+              "paragraph": 843,
+              "page": 21,
+              "text_hash": "01944f653426f4b15b2a2ff62b758723309dcdd0a9c33432716fbf4ef84d9cd8"
+            },
+            {
+              "paragraph": 844,
+              "page": 21,
+              "text_hash": "ebdf6dcd313a316f43fb0bffd5266c70100250e0c2fb52e01f142c89961c5281"
+            },
+            {
+              "paragraph": 845,
+              "page": 21,
+              "text_hash": "1c31983cbdea569875994994361fa66c0a307e5f2429da9e96d1647c219a5be4"
+            },
+            {
+              "paragraph": 846,
+              "page": 21,
+              "text_hash": "ff8f954f980702bc23fcb0d66e3c55ef0edba9b233369ea8f2b40a4f6e490719"
+            }
+          ],
+          "source_hash": "01a257a4355898430b111cedf6782a97cef70ad33ce3e43ac83a07f8c459a41f",
+          "source_start_offset": 26254,
+          "source_end_offset": 26513,
+          "source_section": "第四章 评标\t评标",
+          "source_clause_id": "6.0",
+          "source_chunk_id": null,
+          "source_match_type": "exact_multi_paragraph_span",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S011",
+            "C014-S012",
+            "C014-S013",
+            "C014-S014",
+            "C014-S015",
+            "C014-S016",
+            "C014-S017",
+            "C014-S018"
+          ]
+        },
+        {
+          "source_text": "10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；",
+          "source_context_text": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+          "source_page": 14,
+          "source_paragraph": 490,
+          "source_page_start": 14,
+          "source_page_end": 14,
+          "source_paragraph_start": 490,
+          "source_paragraph_end": 490,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 490,
+              "page": 14,
+              "text_hash": "8a4b84e1a4ab56fdb2ef2fd95dc96820fff0d52f87059f719e671d69ffd91e8c"
+            }
+          ],
+          "source_hash": "8a4b84e1a4ab56fdb2ef2fd95dc96820fff0d52f87059f719e671d69ffd91e8c",
+          "source_start_offset": 13289,
+          "source_end_offset": 13325,
+          "source_section": "投标人须知",
+          "source_clause_id": "7.3",
+          "source_chunk_id": null,
+          "source_match_type": "exact_single_paragraph",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S012"
+          ]
+        }
+      ],
+      "candidate_text": [
+        "投标人不得递交两份或多份内容不同的投标文件，或在一份投标文件中对同一招标货物或服务提交不同内容。"
+      ],
+      "canonical_text": "投标人不得递交两份或多份内容不同的投标文件，或在一份投标文件中对同一招标货物或服务提交不同内容。",
+      "gate_decision": "REVIEW_REQUIRED",
+      "reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "NEGATION_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_location_verified": true
+    },
+    {
+      "canonical_requirement_id": "HOLDOUT-REQ-01-CAN-0152",
+      "source_parent_context": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+      "exact_source_refs": [
+        "C014-S012"
+      ],
+      "exact_source_text": [
+        "10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；"
+      ],
+      "exact_source_locations": [
+        {
+          "source_text": "7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；",
+          "source_context_text": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+          "source_page": 14,
+          "source_paragraph": 486,
+          "source_page_start": 14,
+          "source_page_end": 14,
+          "source_paragraph_start": 486,
+          "source_paragraph_end": 490,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 486,
+              "page": 14,
+              "text_hash": "7c5fa712560b024372a894ccab2394c631331f23a2bf3d581e3931fe33ae328b"
+            },
+            {
+              "paragraph": 490,
+              "page": 14,
+              "text_hash": "8a4b84e1a4ab56fdb2ef2fd95dc96820fff0d52f87059f719e671d69ffd91e8c"
+            }
+          ],
+          "source_hash": "457c4bc5adae1082d7a33e0052452af901295d0714012010acb82d00ab68ecfa",
+          "source_start_offset": 13189,
+          "source_end_offset": 13325,
+          "source_section": "投标人须知",
+          "source_clause_id": "7.3",
+          "source_chunk_id": null,
+          "source_match_type": "exact_multi_paragraph_span",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S011",
+            "C014-S012"
+          ]
+        },
+        {
+          "source_text": "10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；",
+          "source_context_text": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+          "source_page": 14,
+          "source_paragraph": 490,
+          "source_page_start": 14,
+          "source_page_end": 14,
+          "source_paragraph_start": 490,
+          "source_paragraph_end": 490,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 490,
+              "page": 14,
+              "text_hash": "8a4b84e1a4ab56fdb2ef2fd95dc96820fff0d52f87059f719e671d69ffd91e8c"
+            }
+          ],
+          "source_hash": "8a4b84e1a4ab56fdb2ef2fd95dc96820fff0d52f87059f719e671d69ffd91e8c",
+          "source_start_offset": 13289,
+          "source_end_offset": 13325,
+          "source_section": "投标人须知",
+          "source_clause_id": "7.3",
+          "source_chunk_id": null,
+          "source_match_type": "exact_single_paragraph",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S012"
+          ]
+        },
+        {
+          "source_text": "（1）具有数据库系统工程师（计算机技术与软件专业技术资格证书）每\n提供一人得2分，本项最高得2分；（2）具有网络工程师证书（计算机技\n术与软件专业技术资格证书），每人2分，最高2分。（3）具有网络规划\n设计师证书（计算机技术与软件专业技术资格证书），每人2分，最高2分\n。注：同一人拥有多个证书不重复计算,只计算得分最高的一个证书得分。\n须提供相关证书扫描件，提供以上人员在本单位任职的外部证明材料（如\n加盖政府有关部门印章的打印日期在本项目报价截止日之前6个月以内任\n意一个月的《投保单》或《社会保险参保人员证明》。",
+          "source_context_text": "6.0分)\n（1）具有数据库系统工程师（计算机技术与软件专业技术资格证书）每\n提供一人得2分，本项最高得2分；（2）具有网络工程师证书（计算机技\n术与软件专业技术资格证书），每人2分，最高2分。（3）具有网络规划\n设计师证书（计算机技术与软件专业技术资格证书），每人2分，最高2分\n。注：同一人拥有多个证书不重复计算,只计算得分最高的一个证书得分。\n须提供相关证书扫描件，提供以上人员在本单位任职的外部证明材料（如\n加盖政府有关部门印章的打印日期在本项目报价截止日之前6个月以内任\n意一个月的《投保单》或《社会保险参保人员证明》。\n本项目应用类系统技术支撑团队\n人员实力情况（除项目经理外）\n(3.0分)\n（1）系统架构设计师证书（计算机技术与软件专业技术资格证书），每\n人2分，最高2分。 （2）具有软件设计师证书（计算机技术与软件专业技\n术资格证书），每人1分，最高1分。注：同一人拥有多个证书不重复计算,\n只计算得分最高的一个证书得分。须提供相关证书扫描件，提供以上人员\n在本单位任职的外部证明材料（如加盖政府有关部门印章的打印日期在本\n项目报价截止日之前6个月以内任意一个月的《投保单》或《社会保险参\n保人员证明》。\n二线技术支持人员 (6.0分)\n（1）具有高级工程师或以上级别（专业为以下专业类别其中之一：电子\n、电气、机电）职称，每提供一人得1分，本项最高得4分。（2）网络工\n程师证书（计算机技术与软件专业技术资格证书）每提供一人得1分，本\n6个月以内任意一个月的《投保单》或《社会保险参保人员证明》。\n企业运维工具情况 (2.0分)\n具有运维管理类软件著作权登记证书得2分，最高得2分。 注：①自主开发\n的，提供证书扫描件，名称可有差异，实质性内容满足即符合得分要求；\n②非自有须提供购买合同扫描件或授权使用证明文件或租赁合同、购买发\n票以及平台使用截图，同时提供承诺合同签订后在本项目应用上述功能系\n统或软件的承诺书；③若投标时无法提供，提供承诺函承诺签订合同前提\n供上述①或②的资料亦可得分\n-第21页-\n综合信用分 综合信用评价 (5.0分)\n综合信用评价得分=综合信用评价得分(属于商务部分的一部分)=投标人的\n广州公共资源交易信用评价（政府采购供应商信用评价分）×5%。 投标\n人的信用评价分以开标当天广州交易集团有限公司网站公布的分值为准（\n通过“广州交易集团有限公司网站-信用信息-广州公共资源交易信用平台3.\n0” 进行核实，未能在网站查询到供应商信用评价分的，以当天信用评价基\n准分计算）。供应商为联合体的，以牵头方信用评价分计算。\n4.汇总、排序\t汇总、排序\n采购包1：\n评标结果按评审后总得分由高到低顺序排列。总得分相同的按投标报价由低到高顺序排列。得分且投标报价相同的，由评\n委会采取随机抽取的方式确定。排名第一的投标供应商为第一中标候选人，排名第二的投标供应商为第二中标候选人（提供相\n定，其他同品牌投标人不作为中标候选人）。\n5.中标价的确定\t中标价的确定\n除了按第四章第一点第7条修正并经投标人确认的投标报价作为中标价外，中标价以开标时公开唱标价为准。\n6.其他无效投标的情形：\t其他无效投标的情形：\n(1)评标期间，投标人没有按评标委员会的要求提交法定代表人或其委托代理人签字的澄清、说明、补正或改变了投标文\n件的实质性内容的。\n(2)投标文件提供虚假材料的。\n(3)投标人以他人名义投标、串通投标、以行贿手段谋取中标或者以其他弄虚作假方式投标的。\n(4)投标人对采购人、采购代理机构、评标委员会及其工作人员施加影响，有碍招标公平、公正的。\n(5)投标文件含有采购人不能接受的附加条件的。\n(6)法律、法规和招标文件规定的其他无效情形。\n-第22页-",
+          "source_page": 21,
+          "source_paragraph": 839,
+          "source_page_start": 21,
+          "source_page_end": 21,
+          "source_paragraph_start": 839,
+          "source_paragraph_end": 846,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 839,
+              "page": 21,
+              "text_hash": "fd6126fd18eee46bb8e6bf9102994c8b57b54a653c63973c923030fb199abc8b"
+            },
+            {
+              "paragraph": 840,
+              "page": 21,
+              "text_hash": "334dd37876401bf7dd798cd50f6d077d0cf0e4af013a49f80cfec5cc98f37bf0"
+            },
+            {
+              "paragraph": 841,
+              "page": 21,
+              "text_hash": "1f819cc3fc2ec7e8d2f7a4c10800d9397a64c4e8a766d9a4b10ecb5881f7207f"
+            },
+            {
+              "paragraph": 842,
+              "page": 21,
+              "text_hash": "f3bf7674cdc1ed93f6451448ec4ec2da1b266338ff3398a3f4db4c6f410f4c8b"
+            },
+            {
+              "paragraph": 843,
+              "page": 21,
+              "text_hash": "01944f653426f4b15b2a2ff62b758723309dcdd0a9c33432716fbf4ef84d9cd8"
+            },
+            {
+              "paragraph": 844,
+              "page": 21,
+              "text_hash": "ebdf6dcd313a316f43fb0bffd5266c70100250e0c2fb52e01f142c89961c5281"
+            },
+            {
+              "paragraph": 845,
+              "page": 21,
+              "text_hash": "1c31983cbdea569875994994361fa66c0a307e5f2429da9e96d1647c219a5be4"
+            },
+            {
+              "paragraph": 846,
+              "page": 21,
+              "text_hash": "ff8f954f980702bc23fcb0d66e3c55ef0edba9b233369ea8f2b40a4f6e490719"
+            }
+          ],
+          "source_hash": "01a257a4355898430b111cedf6782a97cef70ad33ce3e43ac83a07f8c459a41f",
+          "source_start_offset": 26254,
+          "source_end_offset": 26513,
+          "source_section": "第四章 评标\t评标",
+          "source_clause_id": "6.0",
+          "source_chunk_id": null,
+          "source_match_type": "exact_multi_paragraph_span",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S011",
+            "C014-S012",
+            "C014-S013",
+            "C014-S014",
+            "C014-S015",
+            "C014-S016",
+            "C014-S017",
+            "C014-S018"
+          ]
+        }
+      ],
+      "candidate_text": [
+        "投标人的投标函和/或资格证明文件须提供且符合招标文件要求。"
+      ],
+      "canonical_text": "投标人的投标函和/或资格证明文件须提供且符合招标文件要求。",
+      "gate_decision": "REVIEW_REQUIRED",
+      "reason_codes": [
+        "NEGATION_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_location_verified": true
+    },
+    {
+      "canonical_requirement_id": "HOLDOUT-REQ-01-CAN-0153",
+      "source_parent_context": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+      "exact_source_refs": [
+        "C014-S013"
+      ],
+      "exact_source_text": [
+        "11) \t投标人不符合招标文件资格性审查、符合性审查要求的；"
+      ],
+      "exact_source_locations": [
+        {
+          "source_text": "11) \t投标人不符合招标文件资格性审查、符合性审查要求的；",
+          "source_context_text": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+          "source_page": 14,
+          "source_paragraph": 491,
+          "source_page_start": 14,
+          "source_page_end": 14,
+          "source_paragraph_start": 491,
+          "source_paragraph_end": 491,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 491,
+              "page": 14,
+              "text_hash": "11316b3baf39ebe4c347a33bce7825e46be0277c30a61c1d40c05323a82f4ee0"
+            }
+          ],
+          "source_hash": "11316b3baf39ebe4c347a33bce7825e46be0277c30a61c1d40c05323a82f4ee0",
+          "source_start_offset": 13326,
+          "source_end_offset": 13356,
+          "source_section": "投标人须知",
+          "source_clause_id": "7.3",
+          "source_chunk_id": null,
+          "source_match_type": "exact_single_paragraph",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S013"
+          ]
+        },
+        {
+          "source_text": "（1）具有数据库系统工程师（计算机技术与软件专业技术资格证书）每\n提供一人得2分，本项最高得2分；（2）具有网络工程师证书（计算机技\n术与软件专业技术资格证书），每人2分，最高2分。（3）具有网络规划\n设计师证书（计算机技术与软件专业技术资格证书），每人2分，最高2分\n。注：同一人拥有多个证书不重复计算,只计算得分最高的一个证书得分。\n须提供相关证书扫描件，提供以上人员在本单位任职的外部证明材料（如\n加盖政府有关部门印章的打印日期在本项目报价截止日之前6个月以内任\n意一个月的《投保单》或《社会保险参保人员证明》。",
+          "source_context_text": "6.0分)\n（1）具有数据库系统工程师（计算机技术与软件专业技术资格证书）每\n提供一人得2分，本项最高得2分；（2）具有网络工程师证书（计算机技\n术与软件专业技术资格证书），每人2分，最高2分。（3）具有网络规划\n设计师证书（计算机技术与软件专业技术资格证书），每人2分，最高2分\n。注：同一人拥有多个证书不重复计算,只计算得分最高的一个证书得分。\n须提供相关证书扫描件，提供以上人员在本单位任职的外部证明材料（如\n加盖政府有关部门印章的打印日期在本项目报价截止日之前6个月以内任\n意一个月的《投保单》或《社会保险参保人员证明》。\n本项目应用类系统技术支撑团队\n人员实力情况（除项目经理外）\n(3.0分)\n（1）系统架构设计师证书（计算机技术与软件专业技术资格证书），每\n人2分，最高2分。 （2）具有软件设计师证书（计算机技术与软件专业技\n术资格证书），每人1分，最高1分。注：同一人拥有多个证书不重复计算,\n只计算得分最高的一个证书得分。须提供相关证书扫描件，提供以上人员\n在本单位任职的外部证明材料（如加盖政府有关部门印章的打印日期在本\n项目报价截止日之前6个月以内任意一个月的《投保单》或《社会保险参\n保人员证明》。\n二线技术支持人员 (6.0分)\n（1）具有高级工程师或以上级别（专业为以下专业类别其中之一：电子\n、电气、机电）职称，每提供一人得1分，本项最高得4分。（2）网络工\n程师证书（计算机技术与软件专业技术资格证书）每提供一人得1分，本\n6个月以内任意一个月的《投保单》或《社会保险参保人员证明》。\n企业运维工具情况 (2.0分)\n具有运维管理类软件著作权登记证书得2分，最高得2分。 注：①自主开发\n的，提供证书扫描件，名称可有差异，实质性内容满足即符合得分要求；\n②非自有须提供购买合同扫描件或授权使用证明文件或租赁合同、购买发\n票以及平台使用截图，同时提供承诺合同签订后在本项目应用上述功能系\n统或软件的承诺书；③若投标时无法提供，提供承诺函承诺签订合同前提\n供上述①或②的资料亦可得分\n-第21页-\n综合信用分 综合信用评价 (5.0分)\n综合信用评价得分=综合信用评价得分(属于商务部分的一部分)=投标人的\n广州公共资源交易信用评价（政府采购供应商信用评价分）×5%。 投标\n人的信用评价分以开标当天广州交易集团有限公司网站公布的分值为准（\n通过“广州交易集团有限公司网站-信用信息-广州公共资源交易信用平台3.\n0” 进行核实，未能在网站查询到供应商信用评价分的，以当天信用评价基\n准分计算）。供应商为联合体的，以牵头方信用评价分计算。\n4.汇总、排序\t汇总、排序\n采购包1：\n评标结果按评审后总得分由高到低顺序排列。总得分相同的按投标报价由低到高顺序排列。得分且投标报价相同的，由评\n委会采取随机抽取的方式确定。排名第一的投标供应商为第一中标候选人，排名第二的投标供应商为第二中标候选人（提供相\n定，其他同品牌投标人不作为中标候选人）。\n5.中标价的确定\t中标价的确定\n除了按第四章第一点第7条修正并经投标人确认的投标报价作为中标价外，中标价以开标时公开唱标价为准。\n6.其他无效投标的情形：\t其他无效投标的情形：\n(1)评标期间，投标人没有按评标委员会的要求提交法定代表人或其委托代理人签字的澄清、说明、补正或改变了投标文\n件的实质性内容的。\n(2)投标文件提供虚假材料的。\n(3)投标人以他人名义投标、串通投标、以行贿手段谋取中标或者以其他弄虚作假方式投标的。\n(4)投标人对采购人、采购代理机构、评标委员会及其工作人员施加影响，有碍招标公平、公正的。\n(5)投标文件含有采购人不能接受的附加条件的。\n(6)法律、法规和招标文件规定的其他无效情形。\n-第22页-",
+          "source_page": 21,
+          "source_paragraph": 839,
+          "source_page_start": 21,
+          "source_page_end": 21,
+          "source_paragraph_start": 839,
+          "source_paragraph_end": 846,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 839,
+              "page": 21,
+              "text_hash": "fd6126fd18eee46bb8e6bf9102994c8b57b54a653c63973c923030fb199abc8b"
+            },
+            {
+              "paragraph": 840,
+              "page": 21,
+              "text_hash": "334dd37876401bf7dd798cd50f6d077d0cf0e4af013a49f80cfec5cc98f37bf0"
+            },
+            {
+              "paragraph": 841,
+              "page": 21,
+              "text_hash": "1f819cc3fc2ec7e8d2f7a4c10800d9397a64c4e8a766d9a4b10ecb5881f7207f"
+            },
+            {
+              "paragraph": 842,
+              "page": 21,
+              "text_hash": "f3bf7674cdc1ed93f6451448ec4ec2da1b266338ff3398a3f4db4c6f410f4c8b"
+            },
+            {
+              "paragraph": 843,
+              "page": 21,
+              "text_hash": "01944f653426f4b15b2a2ff62b758723309dcdd0a9c33432716fbf4ef84d9cd8"
+            },
+            {
+              "paragraph": 844,
+              "page": 21,
+              "text_hash": "ebdf6dcd313a316f43fb0bffd5266c70100250e0c2fb52e01f142c89961c5281"
+            },
+            {
+              "paragraph": 845,
+              "page": 21,
+              "text_hash": "1c31983cbdea569875994994361fa66c0a307e5f2429da9e96d1647c219a5be4"
+            },
+            {
+              "paragraph": 846,
+              "page": 21,
+              "text_hash": "ff8f954f980702bc23fcb0d66e3c55ef0edba9b233369ea8f2b40a4f6e490719"
+            }
+          ],
+          "source_hash": "01a257a4355898430b111cedf6782a97cef70ad33ce3e43ac83a07f8c459a41f",
+          "source_start_offset": 26254,
+          "source_end_offset": 26513,
+          "source_section": "第四章 评标\t评标",
+          "source_clause_id": "6.0",
+          "source_chunk_id": null,
+          "source_match_type": "exact_multi_paragraph_span",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S011",
+            "C014-S012",
+            "C014-S013",
+            "C014-S014",
+            "C014-S015",
+            "C014-S016",
+            "C014-S017",
+            "C014-S018"
+          ]
+        }
+      ],
+      "candidate_text": [
+        "投标人须符合招标文件资格性审查、符合性审查要求。"
+      ],
+      "canonical_text": "投标人须符合招标文件资格性审查、符合性审查要求。",
+      "gate_decision": "REVIEW_REQUIRED",
+      "reason_codes": [
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_location_verified": true
+    },
+    {
+      "canonical_requirement_id": "HOLDOUT-REQ-01-CAN-0154",
+      "source_parent_context": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+      "exact_source_refs": [
+        "C014-S014"
+      ],
+      "exact_source_text": [
+        "12) \t未按招标文件要求提供承诺函的；"
+      ],
+      "exact_source_locations": [
+        {
+          "source_text": "12) \t未按招标文件要求提供承诺函的；",
+          "source_context_text": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+          "source_page": 14,
+          "source_paragraph": 492,
+          "source_page_start": 14,
+          "source_page_end": 14,
+          "source_paragraph_start": 492,
+          "source_paragraph_end": 492,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 492,
+              "page": 14,
+              "text_hash": "f11d9ed1e74b8382e0c11f374069fdfdacbf491a86197e188917a5a0b3ea3b79"
+            }
+          ],
+          "source_hash": "f11d9ed1e74b8382e0c11f374069fdfdacbf491a86197e188917a5a0b3ea3b79",
+          "source_start_offset": 13357,
+          "source_end_offset": 13377,
+          "source_section": "投标人须知",
+          "source_clause_id": "7.3",
+          "source_chunk_id": null,
+          "source_match_type": "exact_single_paragraph",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S014"
+          ]
+        },
+        {
+          "source_text": "（1）具有数据库系统工程师（计算机技术与软件专业技术资格证书）每\n提供一人得2分，本项最高得2分；（2）具有网络工程师证书（计算机技\n术与软件专业技术资格证书），每人2分，最高2分。（3）具有网络规划\n设计师证书（计算机技术与软件专业技术资格证书），每人2分，最高2分\n。注：同一人拥有多个证书不重复计算,只计算得分最高的一个证书得分。\n须提供相关证书扫描件，提供以上人员在本单位任职的外部证明材料（如\n加盖政府有关部门印章的打印日期在本项目报价截止日之前6个月以内任\n意一个月的《投保单》或《社会保险参保人员证明》。",
+          "source_context_text": "6.0分)\n（1）具有数据库系统工程师（计算机技术与软件专业技术资格证书）每\n提供一人得2分，本项最高得2分；（2）具有网络工程师证书（计算机技\n术与软件专业技术资格证书），每人2分，最高2分。（3）具有网络规划\n设计师证书（计算机技术与软件专业技术资格证书），每人2分，最高2分\n。注：同一人拥有多个证书不重复计算,只计算得分最高的一个证书得分。\n须提供相关证书扫描件，提供以上人员在本单位任职的外部证明材料（如\n加盖政府有关部门印章的打印日期在本项目报价截止日之前6个月以内任\n意一个月的《投保单》或《社会保险参保人员证明》。\n本项目应用类系统技术支撑团队\n人员实力情况（除项目经理外）\n(3.0分)\n（1）系统架构设计师证书（计算机技术与软件专业技术资格证书），每\n人2分，最高2分。 （2）具有软件设计师证书（计算机技术与软件专业技\n术资格证书），每人1分，最高1分。注：同一人拥有多个证书不重复计算,\n只计算得分最高的一个证书得分。须提供相关证书扫描件，提供以上人员\n在本单位任职的外部证明材料（如加盖政府有关部门印章的打印日期在本\n项目报价截止日之前6个月以内任意一个月的《投保单》或《社会保险参\n保人员证明》。\n二线技术支持人员 (6.0分)\n（1）具有高级工程师或以上级别（专业为以下专业类别其中之一：电子\n、电气、机电）职称，每提供一人得1分，本项最高得4分。（2）网络工\n程师证书（计算机技术与软件专业技术资格证书）每提供一人得1分，本\n6个月以内任意一个月的《投保单》或《社会保险参保人员证明》。\n企业运维工具情况 (2.0分)\n具有运维管理类软件著作权登记证书得2分，最高得2分。 注：①自主开发\n的，提供证书扫描件，名称可有差异，实质性内容满足即符合得分要求；\n②非自有须提供购买合同扫描件或授权使用证明文件或租赁合同、购买发\n票以及平台使用截图，同时提供承诺合同签订后在本项目应用上述功能系\n统或软件的承诺书；③若投标时无法提供，提供承诺函承诺签订合同前提\n供上述①或②的资料亦可得分\n-第21页-\n综合信用分 综合信用评价 (5.0分)\n综合信用评价得分=综合信用评价得分(属于商务部分的一部分)=投标人的\n广州公共资源交易信用评价（政府采购供应商信用评价分）×5%。 投标\n人的信用评价分以开标当天广州交易集团有限公司网站公布的分值为准（\n通过“广州交易集团有限公司网站-信用信息-广州公共资源交易信用平台3.\n0” 进行核实，未能在网站查询到供应商信用评价分的，以当天信用评价基\n准分计算）。供应商为联合体的，以牵头方信用评价分计算。\n4.汇总、排序\t汇总、排序\n采购包1：\n评标结果按评审后总得分由高到低顺序排列。总得分相同的按投标报价由低到高顺序排列。得分且投标报价相同的，由评\n委会采取随机抽取的方式确定。排名第一的投标供应商为第一中标候选人，排名第二的投标供应商为第二中标候选人（提供相\n定，其他同品牌投标人不作为中标候选人）。\n5.中标价的确定\t中标价的确定\n除了按第四章第一点第7条修正并经投标人确认的投标报价作为中标价外，中标价以开标时公开唱标价为准。\n6.其他无效投标的情形：\t其他无效投标的情形：\n(1)评标期间，投标人没有按评标委员会的要求提交法定代表人或其委托代理人签字的澄清、说明、补正或改变了投标文\n件的实质性内容的。\n(2)投标文件提供虚假材料的。\n(3)投标人以他人名义投标、串通投标、以行贿手段谋取中标或者以其他弄虚作假方式投标的。\n(4)投标人对采购人、采购代理机构、评标委员会及其工作人员施加影响，有碍招标公平、公正的。\n(5)投标文件含有采购人不能接受的附加条件的。\n(6)法律、法规和招标文件规定的其他无效情形。\n-第22页-",
+          "source_page": 21,
+          "source_paragraph": 839,
+          "source_page_start": 21,
+          "source_page_end": 21,
+          "source_paragraph_start": 839,
+          "source_paragraph_end": 846,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 839,
+              "page": 21,
+              "text_hash": "fd6126fd18eee46bb8e6bf9102994c8b57b54a653c63973c923030fb199abc8b"
+            },
+            {
+              "paragraph": 840,
+              "page": 21,
+              "text_hash": "334dd37876401bf7dd798cd50f6d077d0cf0e4af013a49f80cfec5cc98f37bf0"
+            },
+            {
+              "paragraph": 841,
+              "page": 21,
+              "text_hash": "1f819cc3fc2ec7e8d2f7a4c10800d9397a64c4e8a766d9a4b10ecb5881f7207f"
+            },
+            {
+              "paragraph": 842,
+              "page": 21,
+              "text_hash": "f3bf7674cdc1ed93f6451448ec4ec2da1b266338ff3398a3f4db4c6f410f4c8b"
+            },
+            {
+              "paragraph": 843,
+              "page": 21,
+              "text_hash": "01944f653426f4b15b2a2ff62b758723309dcdd0a9c33432716fbf4ef84d9cd8"
+            },
+            {
+              "paragraph": 844,
+              "page": 21,
+              "text_hash": "ebdf6dcd313a316f43fb0bffd5266c70100250e0c2fb52e01f142c89961c5281"
+            },
+            {
+              "paragraph": 845,
+              "page": 21,
+              "text_hash": "1c31983cbdea569875994994361fa66c0a307e5f2429da9e96d1647c219a5be4"
+            },
+            {
+              "paragraph": 846,
+              "page": 21,
+              "text_hash": "ff8f954f980702bc23fcb0d66e3c55ef0edba9b233369ea8f2b40a4f6e490719"
+            }
+          ],
+          "source_hash": "01a257a4355898430b111cedf6782a97cef70ad33ce3e43ac83a07f8c459a41f",
+          "source_start_offset": 26254,
+          "source_end_offset": 26513,
+          "source_section": "第四章 评标\t评标",
+          "source_clause_id": "6.0",
+          "source_chunk_id": null,
+          "source_match_type": "exact_multi_paragraph_span",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S011",
+            "C014-S012",
+            "C014-S013",
+            "C014-S014",
+            "C014-S015",
+            "C014-S016",
+            "C014-S017",
+            "C014-S018"
+          ]
+        }
+      ],
+      "candidate_text": [
+        "投标人须按招标文件要求提供承诺函。"
+      ],
+      "canonical_text": "投标人须按招标文件要求提供承诺函。",
+      "gate_decision": "REVIEW_REQUIRED",
+      "reason_codes": [
+        "NEGATION_DISTORTION",
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_location_verified": true
+    },
+    {
+      "canonical_requirement_id": "HOLDOUT-REQ-01-CAN-0155",
+      "source_parent_context": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+      "exact_source_refs": [
+        "C014-S016"
+      ],
+      "exact_source_text": [
+        "13) \t违约责任不满足招标文件要求的；"
+      ],
+      "exact_source_locations": [
+        {
+          "source_text": "13) \t违约责任不满足招标文件要求的；",
+          "source_context_text": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+          "source_page": 15,
+          "source_paragraph": 494,
+          "source_page_start": 15,
+          "source_page_end": 15,
+          "source_paragraph_start": 494,
+          "source_paragraph_end": 494,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 494,
+              "page": 15,
+              "text_hash": "f3e49431efb59cd6c4464d39ddf4017ab93dac23ea858c9c09716ad7ad74f4ce"
+            }
+          ],
+          "source_hash": "f3e49431efb59cd6c4464d39ddf4017ab93dac23ea858c9c09716ad7ad74f4ce",
+          "source_start_offset": 13387,
+          "source_end_offset": 13407,
+          "source_section": "投标人须知",
+          "source_clause_id": "7.3",
+          "source_chunk_id": null,
+          "source_match_type": "exact_single_paragraph",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S016"
+          ]
+        },
+        {
+          "source_text": "（1）具有数据库系统工程师（计算机技术与软件专业技术资格证书）每\n提供一人得2分，本项最高得2分；（2）具有网络工程师证书（计算机技\n术与软件专业技术资格证书），每人2分，最高2分。（3）具有网络规划\n设计师证书（计算机技术与软件专业技术资格证书），每人2分，最高2分\n。注：同一人拥有多个证书不重复计算,只计算得分最高的一个证书得分。\n须提供相关证书扫描件，提供以上人员在本单位任职的外部证明材料（如\n加盖政府有关部门印章的打印日期在本项目报价截止日之前6个月以内任\n意一个月的《投保单》或《社会保险参保人员证明》。",
+          "source_context_text": "6.0分)\n（1）具有数据库系统工程师（计算机技术与软件专业技术资格证书）每\n提供一人得2分，本项最高得2分；（2）具有网络工程师证书（计算机技\n术与软件专业技术资格证书），每人2分，最高2分。（3）具有网络规划\n设计师证书（计算机技术与软件专业技术资格证书），每人2分，最高2分\n。注：同一人拥有多个证书不重复计算,只计算得分最高的一个证书得分。\n须提供相关证书扫描件，提供以上人员在本单位任职的外部证明材料（如\n加盖政府有关部门印章的打印日期在本项目报价截止日之前6个月以内任\n意一个月的《投保单》或《社会保险参保人员证明》。\n本项目应用类系统技术支撑团队\n人员实力情况（除项目经理外）\n(3.0分)\n（1）系统架构设计师证书（计算机技术与软件专业技术资格证书），每\n人2分，最高2分。 （2）具有软件设计师证书（计算机技术与软件专业技\n术资格证书），每人1分，最高1分。注：同一人拥有多个证书不重复计算,\n只计算得分最高的一个证书得分。须提供相关证书扫描件，提供以上人员\n在本单位任职的外部证明材料（如加盖政府有关部门印章的打印日期在本\n项目报价截止日之前6个月以内任意一个月的《投保单》或《社会保险参\n保人员证明》。\n二线技术支持人员 (6.0分)\n（1）具有高级工程师或以上级别（专业为以下专业类别其中之一：电子\n、电气、机电）职称，每提供一人得1分，本项最高得4分。（2）网络工\n程师证书（计算机技术与软件专业技术资格证书）每提供一人得1分，本\n6个月以内任意一个月的《投保单》或《社会保险参保人员证明》。\n企业运维工具情况 (2.0分)\n具有运维管理类软件著作权登记证书得2分，最高得2分。 注：①自主开发\n的，提供证书扫描件，名称可有差异，实质性内容满足即符合得分要求；\n②非自有须提供购买合同扫描件或授权使用证明文件或租赁合同、购买发\n票以及平台使用截图，同时提供承诺合同签订后在本项目应用上述功能系\n统或软件的承诺书；③若投标时无法提供，提供承诺函承诺签订合同前提\n供上述①或②的资料亦可得分\n-第21页-\n综合信用分 综合信用评价 (5.0分)\n综合信用评价得分=综合信用评价得分(属于商务部分的一部分)=投标人的\n广州公共资源交易信用评价（政府采购供应商信用评价分）×5%。 投标\n人的信用评价分以开标当天广州交易集团有限公司网站公布的分值为准（\n通过“广州交易集团有限公司网站-信用信息-广州公共资源交易信用平台3.\n0” 进行核实，未能在网站查询到供应商信用评价分的，以当天信用评价基\n准分计算）。供应商为联合体的，以牵头方信用评价分计算。\n4.汇总、排序\t汇总、排序\n采购包1：\n评标结果按评审后总得分由高到低顺序排列。总得分相同的按投标报价由低到高顺序排列。得分且投标报价相同的，由评\n委会采取随机抽取的方式确定。排名第一的投标供应商为第一中标候选人，排名第二的投标供应商为第二中标候选人（提供相\n定，其他同品牌投标人不作为中标候选人）。\n5.中标价的确定\t中标价的确定\n除了按第四章第一点第7条修正并经投标人确认的投标报价作为中标价外，中标价以开标时公开唱标价为准。\n6.其他无效投标的情形：\t其他无效投标的情形：\n(1)评标期间，投标人没有按评标委员会的要求提交法定代表人或其委托代理人签字的澄清、说明、补正或改变了投标文\n件的实质性内容的。\n(2)投标文件提供虚假材料的。\n(3)投标人以他人名义投标、串通投标、以行贿手段谋取中标或者以其他弄虚作假方式投标的。\n(4)投标人对采购人、采购代理机构、评标委员会及其工作人员施加影响，有碍招标公平、公正的。\n(5)投标文件含有采购人不能接受的附加条件的。\n(6)法律、法规和招标文件规定的其他无效情形。\n-第22页-",
+          "source_page": 21,
+          "source_paragraph": 839,
+          "source_page_start": 21,
+          "source_page_end": 21,
+          "source_paragraph_start": 839,
+          "source_paragraph_end": 846,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 839,
+              "page": 21,
+              "text_hash": "fd6126fd18eee46bb8e6bf9102994c8b57b54a653c63973c923030fb199abc8b"
+            },
+            {
+              "paragraph": 840,
+              "page": 21,
+              "text_hash": "334dd37876401bf7dd798cd50f6d077d0cf0e4af013a49f80cfec5cc98f37bf0"
+            },
+            {
+              "paragraph": 841,
+              "page": 21,
+              "text_hash": "1f819cc3fc2ec7e8d2f7a4c10800d9397a64c4e8a766d9a4b10ecb5881f7207f"
+            },
+            {
+              "paragraph": 842,
+              "page": 21,
+              "text_hash": "f3bf7674cdc1ed93f6451448ec4ec2da1b266338ff3398a3f4db4c6f410f4c8b"
+            },
+            {
+              "paragraph": 843,
+              "page": 21,
+              "text_hash": "01944f653426f4b15b2a2ff62b758723309dcdd0a9c33432716fbf4ef84d9cd8"
+            },
+            {
+              "paragraph": 844,
+              "page": 21,
+              "text_hash": "ebdf6dcd313a316f43fb0bffd5266c70100250e0c2fb52e01f142c89961c5281"
+            },
+            {
+              "paragraph": 845,
+              "page": 21,
+              "text_hash": "1c31983cbdea569875994994361fa66c0a307e5f2429da9e96d1647c219a5be4"
+            },
+            {
+              "paragraph": 846,
+              "page": 21,
+              "text_hash": "ff8f954f980702bc23fcb0d66e3c55ef0edba9b233369ea8f2b40a4f6e490719"
+            }
+          ],
+          "source_hash": "01a257a4355898430b111cedf6782a97cef70ad33ce3e43ac83a07f8c459a41f",
+          "source_start_offset": 26254,
+          "source_end_offset": 26513,
+          "source_section": "第四章 评标\t评标",
+          "source_clause_id": "6.0",
+          "source_chunk_id": null,
+          "source_match_type": "exact_multi_paragraph_span",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S011",
+            "C014-S012",
+            "C014-S013",
+            "C014-S014",
+            "C014-S015",
+            "C014-S016",
+            "C014-S017",
+            "C014-S018"
+          ]
+        }
+      ],
+      "candidate_text": [
+        "投标人的违约责任须满足招标文件要求。"
+      ],
+      "canonical_text": "投标人的违约责任须满足招标文件要求。",
+      "gate_decision": "REVIEW_REQUIRED",
+      "reason_codes": [
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_location_verified": true
+    },
+    {
+      "canonical_requirement_id": "HOLDOUT-REQ-01-CAN-0156",
+      "source_parent_context": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+      "exact_source_refs": [
+        "C014-S017"
+      ],
+      "exact_source_text": [
+        "14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；"
+      ],
+      "exact_source_locations": [
+        {
+          "source_text": "14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；",
+          "source_context_text": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+          "source_page": 15,
+          "source_paragraph": 495,
+          "source_page_start": 15,
+          "source_page_end": 15,
+          "source_paragraph_start": 495,
+          "source_paragraph_end": 495,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 495,
+              "page": 15,
+              "text_hash": "4a87ee215cf32b75e043ce9be7e4fb390dc9177b2a344bc3e25724e200a386d3"
+            }
+          ],
+          "source_hash": "4a87ee215cf32b75e043ce9be7e4fb390dc9177b2a344bc3e25724e200a386d3",
+          "source_start_offset": 13408,
+          "source_end_offset": 13440,
+          "source_section": "投标人须知",
+          "source_clause_id": "7.3",
+          "source_chunk_id": null,
+          "source_match_type": "exact_single_paragraph",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S017"
+          ]
+        },
+        {
+          "source_text": "（1）具有数据库系统工程师（计算机技术与软件专业技术资格证书）每\n提供一人得2分，本项最高得2分；（2）具有网络工程师证书（计算机技\n术与软件专业技术资格证书），每人2分，最高2分。（3）具有网络规划\n设计师证书（计算机技术与软件专业技术资格证书），每人2分，最高2分\n。注：同一人拥有多个证书不重复计算,只计算得分最高的一个证书得分。\n须提供相关证书扫描件，提供以上人员在本单位任职的外部证明材料（如\n加盖政府有关部门印章的打印日期在本项目报价截止日之前6个月以内任\n意一个月的《投保单》或《社会保险参保人员证明》。",
+          "source_context_text": "6.0分)\n（1）具有数据库系统工程师（计算机技术与软件专业技术资格证书）每\n提供一人得2分，本项最高得2分；（2）具有网络工程师证书（计算机技\n术与软件专业技术资格证书），每人2分，最高2分。（3）具有网络规划\n设计师证书（计算机技术与软件专业技术资格证书），每人2分，最高2分\n。注：同一人拥有多个证书不重复计算,只计算得分最高的一个证书得分。\n须提供相关证书扫描件，提供以上人员在本单位任职的外部证明材料（如\n加盖政府有关部门印章的打印日期在本项目报价截止日之前6个月以内任\n意一个月的《投保单》或《社会保险参保人员证明》。\n本项目应用类系统技术支撑团队\n人员实力情况（除项目经理外）\n(3.0分)\n（1）系统架构设计师证书（计算机技术与软件专业技术资格证书），每\n人2分，最高2分。 （2）具有软件设计师证书（计算机技术与软件专业技\n术资格证书），每人1分，最高1分。注：同一人拥有多个证书不重复计算,\n只计算得分最高的一个证书得分。须提供相关证书扫描件，提供以上人员\n在本单位任职的外部证明材料（如加盖政府有关部门印章的打印日期在本\n项目报价截止日之前6个月以内任意一个月的《投保单》或《社会保险参\n保人员证明》。\n二线技术支持人员 (6.0分)\n（1）具有高级工程师或以上级别（专业为以下专业类别其中之一：电子\n、电气、机电）职称，每提供一人得1分，本项最高得4分。（2）网络工\n程师证书（计算机技术与软件专业技术资格证书）每提供一人得1分，本\n6个月以内任意一个月的《投保单》或《社会保险参保人员证明》。\n企业运维工具情况 (2.0分)\n具有运维管理类软件著作权登记证书得2分，最高得2分。 注：①自主开发\n的，提供证书扫描件，名称可有差异，实质性内容满足即符合得分要求；\n②非自有须提供购买合同扫描件或授权使用证明文件或租赁合同、购买发\n票以及平台使用截图，同时提供承诺合同签订后在本项目应用上述功能系\n统或软件的承诺书；③若投标时无法提供，提供承诺函承诺签订合同前提\n供上述①或②的资料亦可得分\n-第21页-\n综合信用分 综合信用评价 (5.0分)\n综合信用评价得分=综合信用评价得分(属于商务部分的一部分)=投标人的\n广州公共资源交易信用评价（政府采购供应商信用评价分）×5%。 投标\n人的信用评价分以开标当天广州交易集团有限公司网站公布的分值为准（\n通过“广州交易集团有限公司网站-信用信息-广州公共资源交易信用平台3.\n0” 进行核实，未能在网站查询到供应商信用评价分的，以当天信用评价基\n准分计算）。供应商为联合体的，以牵头方信用评价分计算。\n4.汇总、排序\t汇总、排序\n采购包1：\n评标结果按评审后总得分由高到低顺序排列。总得分相同的按投标报价由低到高顺序排列。得分且投标报价相同的，由评\n委会采取随机抽取的方式确定。排名第一的投标供应商为第一中标候选人，排名第二的投标供应商为第二中标候选人（提供相\n定，其他同品牌投标人不作为中标候选人）。\n5.中标价的确定\t中标价的确定\n除了按第四章第一点第7条修正并经投标人确认的投标报价作为中标价外，中标价以开标时公开唱标价为准。\n6.其他无效投标的情形：\t其他无效投标的情形：\n(1)评标期间，投标人没有按评标委员会的要求提交法定代表人或其委托代理人签字的澄清、说明、补正或改变了投标文\n件的实质性内容的。\n(2)投标文件提供虚假材料的。\n(3)投标人以他人名义投标、串通投标、以行贿手段谋取中标或者以其他弄虚作假方式投标的。\n(4)投标人对采购人、采购代理机构、评标委员会及其工作人员施加影响，有碍招标公平、公正的。\n(5)投标文件含有采购人不能接受的附加条件的。\n(6)法律、法规和招标文件规定的其他无效情形。\n-第22页-",
+          "source_page": 21,
+          "source_paragraph": 839,
+          "source_page_start": 21,
+          "source_page_end": 21,
+          "source_paragraph_start": 839,
+          "source_paragraph_end": 846,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 839,
+              "page": 21,
+              "text_hash": "fd6126fd18eee46bb8e6bf9102994c8b57b54a653c63973c923030fb199abc8b"
+            },
+            {
+              "paragraph": 840,
+              "page": 21,
+              "text_hash": "334dd37876401bf7dd798cd50f6d077d0cf0e4af013a49f80cfec5cc98f37bf0"
+            },
+            {
+              "paragraph": 841,
+              "page": 21,
+              "text_hash": "1f819cc3fc2ec7e8d2f7a4c10800d9397a64c4e8a766d9a4b10ecb5881f7207f"
+            },
+            {
+              "paragraph": 842,
+              "page": 21,
+              "text_hash": "f3bf7674cdc1ed93f6451448ec4ec2da1b266338ff3398a3f4db4c6f410f4c8b"
+            },
+            {
+              "paragraph": 843,
+              "page": 21,
+              "text_hash": "01944f653426f4b15b2a2ff62b758723309dcdd0a9c33432716fbf4ef84d9cd8"
+            },
+            {
+              "paragraph": 844,
+              "page": 21,
+              "text_hash": "ebdf6dcd313a316f43fb0bffd5266c70100250e0c2fb52e01f142c89961c5281"
+            },
+            {
+              "paragraph": 845,
+              "page": 21,
+              "text_hash": "1c31983cbdea569875994994361fa66c0a307e5f2429da9e96d1647c219a5be4"
+            },
+            {
+              "paragraph": 846,
+              "page": 21,
+              "text_hash": "ff8f954f980702bc23fcb0d66e3c55ef0edba9b233369ea8f2b40a4f6e490719"
+            }
+          ],
+          "source_hash": "01a257a4355898430b111cedf6782a97cef70ad33ce3e43ac83a07f8c459a41f",
+          "source_start_offset": 26254,
+          "source_end_offset": 26513,
+          "source_section": "第四章 评标\t评标",
+          "source_clause_id": "6.0",
+          "source_chunk_id": null,
+          "source_match_type": "exact_multi_paragraph_span",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S011",
+            "C014-S012",
+            "C014-S013",
+            "C014-S014",
+            "C014-S015",
+            "C014-S016",
+            "C014-S017",
+            "C014-S018"
+          ]
+        }
+      ],
+      "candidate_text": [
+        "投标总价缺少和漏项金额不得超过其投标总价的10%。"
+      ],
+      "canonical_text": "投标总价缺少和漏项金额不得超过其投标总价的10%。",
+      "gate_decision": "REVIEW_REQUIRED",
+      "reason_codes": [
+        "NEGATION_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_location_verified": true
+    },
+    {
+      "canonical_requirement_id": "HOLDOUT-REQ-01-CAN-0157",
+      "source_parent_context": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+      "exact_source_refs": [
+        "C014-S018"
+      ],
+      "exact_source_text": [
+        "15) \t投标文件中附有招标人/招标机构不能接受的条件的；"
+      ],
+      "exact_source_locations": [
+        {
+          "source_text": "15) \t投标文件中附有招标人/招标机构不能接受的条件的；",
+          "source_context_text": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+          "source_page": 15,
+          "source_paragraph": 496,
+          "source_page_start": 15,
+          "source_page_end": 15,
+          "source_paragraph_start": 496,
+          "source_paragraph_end": 496,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 496,
+              "page": 15,
+              "text_hash": "806b8ce4224f054b93073490f8b8d9c2a65b613c82739bad405d5773e90dafd7"
+            }
+          ],
+          "source_hash": "806b8ce4224f054b93073490f8b8d9c2a65b613c82739bad405d5773e90dafd7",
+          "source_start_offset": 13441,
+          "source_end_offset": 13470,
+          "source_section": "投标人须知",
+          "source_clause_id": "7.3",
+          "source_chunk_id": null,
+          "source_match_type": "exact_single_paragraph",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S018"
+          ]
+        },
+        {
+          "source_text": "（1）具有数据库系统工程师（计算机技术与软件专业技术资格证书）每\n提供一人得2分，本项最高得2分；（2）具有网络工程师证书（计算机技\n术与软件专业技术资格证书），每人2分，最高2分。（3）具有网络规划\n设计师证书（计算机技术与软件专业技术资格证书），每人2分，最高2分\n。注：同一人拥有多个证书不重复计算,只计算得分最高的一个证书得分。\n须提供相关证书扫描件，提供以上人员在本单位任职的外部证明材料（如\n加盖政府有关部门印章的打印日期在本项目报价截止日之前6个月以内任\n意一个月的《投保单》或《社会保险参保人员证明》。",
+          "source_context_text": "6.0分)\n（1）具有数据库系统工程师（计算机技术与软件专业技术资格证书）每\n提供一人得2分，本项最高得2分；（2）具有网络工程师证书（计算机技\n术与软件专业技术资格证书），每人2分，最高2分。（3）具有网络规划\n设计师证书（计算机技术与软件专业技术资格证书），每人2分，最高2分\n。注：同一人拥有多个证书不重复计算,只计算得分最高的一个证书得分。\n须提供相关证书扫描件，提供以上人员在本单位任职的外部证明材料（如\n加盖政府有关部门印章的打印日期在本项目报价截止日之前6个月以内任\n意一个月的《投保单》或《社会保险参保人员证明》。\n本项目应用类系统技术支撑团队\n人员实力情况（除项目经理外）\n(3.0分)\n（1）系统架构设计师证书（计算机技术与软件专业技术资格证书），每\n人2分，最高2分。 （2）具有软件设计师证书（计算机技术与软件专业技\n术资格证书），每人1分，最高1分。注：同一人拥有多个证书不重复计算,\n只计算得分最高的一个证书得分。须提供相关证书扫描件，提供以上人员\n在本单位任职的外部证明材料（如加盖政府有关部门印章的打印日期在本\n项目报价截止日之前6个月以内任意一个月的《投保单》或《社会保险参\n保人员证明》。\n二线技术支持人员 (6.0分)\n（1）具有高级工程师或以上级别（专业为以下专业类别其中之一：电子\n、电气、机电）职称，每提供一人得1分，本项最高得4分。（2）网络工\n程师证书（计算机技术与软件专业技术资格证书）每提供一人得1分，本\n6个月以内任意一个月的《投保单》或《社会保险参保人员证明》。\n企业运维工具情况 (2.0分)\n具有运维管理类软件著作权登记证书得2分，最高得2分。 注：①自主开发\n的，提供证书扫描件，名称可有差异，实质性内容满足即符合得分要求；\n②非自有须提供购买合同扫描件或授权使用证明文件或租赁合同、购买发\n票以及平台使用截图，同时提供承诺合同签订后在本项目应用上述功能系\n统或软件的承诺书；③若投标时无法提供，提供承诺函承诺签订合同前提\n供上述①或②的资料亦可得分\n-第21页-\n综合信用分 综合信用评价 (5.0分)\n综合信用评价得分=综合信用评价得分(属于商务部分的一部分)=投标人的\n广州公共资源交易信用评价（政府采购供应商信用评价分）×5%。 投标\n人的信用评价分以开标当天广州交易集团有限公司网站公布的分值为准（\n通过“广州交易集团有限公司网站-信用信息-广州公共资源交易信用平台3.\n0” 进行核实，未能在网站查询到供应商信用评价分的，以当天信用评价基\n准分计算）。供应商为联合体的，以牵头方信用评价分计算。\n4.汇总、排序\t汇总、排序\n采购包1：\n评标结果按评审后总得分由高到低顺序排列。总得分相同的按投标报价由低到高顺序排列。得分且投标报价相同的，由评\n委会采取随机抽取的方式确定。排名第一的投标供应商为第一中标候选人，排名第二的投标供应商为第二中标候选人（提供相\n定，其他同品牌投标人不作为中标候选人）。\n5.中标价的确定\t中标价的确定\n除了按第四章第一点第7条修正并经投标人确认的投标报价作为中标价外，中标价以开标时公开唱标价为准。\n6.其他无效投标的情形：\t其他无效投标的情形：\n(1)评标期间，投标人没有按评标委员会的要求提交法定代表人或其委托代理人签字的澄清、说明、补正或改变了投标文\n件的实质性内容的。\n(2)投标文件提供虚假材料的。\n(3)投标人以他人名义投标、串通投标、以行贿手段谋取中标或者以其他弄虚作假方式投标的。\n(4)投标人对采购人、采购代理机构、评标委员会及其工作人员施加影响，有碍招标公平、公正的。\n(5)投标文件含有采购人不能接受的附加条件的。\n(6)法律、法规和招标文件规定的其他无效情形。\n-第22页-",
+          "source_page": 21,
+          "source_paragraph": 839,
+          "source_page_start": 21,
+          "source_page_end": 21,
+          "source_paragraph_start": 839,
+          "source_paragraph_end": 846,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 839,
+              "page": 21,
+              "text_hash": "fd6126fd18eee46bb8e6bf9102994c8b57b54a653c63973c923030fb199abc8b"
+            },
+            {
+              "paragraph": 840,
+              "page": 21,
+              "text_hash": "334dd37876401bf7dd798cd50f6d077d0cf0e4af013a49f80cfec5cc98f37bf0"
+            },
+            {
+              "paragraph": 841,
+              "page": 21,
+              "text_hash": "1f819cc3fc2ec7e8d2f7a4c10800d9397a64c4e8a766d9a4b10ecb5881f7207f"
+            },
+            {
+              "paragraph": 842,
+              "page": 21,
+              "text_hash": "f3bf7674cdc1ed93f6451448ec4ec2da1b266338ff3398a3f4db4c6f410f4c8b"
+            },
+            {
+              "paragraph": 843,
+              "page": 21,
+              "text_hash": "01944f653426f4b15b2a2ff62b758723309dcdd0a9c33432716fbf4ef84d9cd8"
+            },
+            {
+              "paragraph": 844,
+              "page": 21,
+              "text_hash": "ebdf6dcd313a316f43fb0bffd5266c70100250e0c2fb52e01f142c89961c5281"
+            },
+            {
+              "paragraph": 845,
+              "page": 21,
+              "text_hash": "1c31983cbdea569875994994361fa66c0a307e5f2429da9e96d1647c219a5be4"
+            },
+            {
+              "paragraph": 846,
+              "page": 21,
+              "text_hash": "ff8f954f980702bc23fcb0d66e3c55ef0edba9b233369ea8f2b40a4f6e490719"
+            }
+          ],
+          "source_hash": "01a257a4355898430b111cedf6782a97cef70ad33ce3e43ac83a07f8c459a41f",
+          "source_start_offset": 26254,
+          "source_end_offset": 26513,
+          "source_section": "第四章 评标\t评标",
+          "source_clause_id": "6.0",
+          "source_chunk_id": null,
+          "source_match_type": "exact_multi_paragraph_span",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S011",
+            "C014-S012",
+            "C014-S013",
+            "C014-S014",
+            "C014-S015",
+            "C014-S016",
+            "C014-S017",
+            "C014-S018"
+          ]
+        }
+      ],
+      "candidate_text": [
+        "投标文件中不得附有招标人/招标机构不能接受的条件。"
+      ],
+      "canonical_text": "投标文件中不得附有招标人/招标机构不能接受的条件。",
+      "gate_decision": "REVIEW_REQUIRED",
+      "reason_codes": [
+        "NEGATION_DISTORTION"
+      ],
+      "source_location_verified": true
+    },
+    {
+      "canonical_requirement_id": "HOLDOUT-REQ-01-CAN-0158",
+      "source_parent_context": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+      "exact_source_refs": [
+        "C014-S019"
+      ],
+      "exact_source_text": [
+        "16) \t在投标文件中有虚假文件和/或资料的；"
+      ],
+      "exact_source_locations": [
+        {
+          "source_text": "16) \t在投标文件中有虚假文件和/或资料的；",
+          "source_context_text": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+          "source_page": 15,
+          "source_paragraph": 497,
+          "source_page_start": 15,
+          "source_page_end": 15,
+          "source_paragraph_start": 497,
+          "source_paragraph_end": 497,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 497,
+              "page": 15,
+              "text_hash": "8e206debbacea28f9e38bb8dc288c84eed6c56374a9e2cc20236677c4a3b2dab"
+            }
+          ],
+          "source_hash": "8e206debbacea28f9e38bb8dc288c84eed6c56374a9e2cc20236677c4a3b2dab",
+          "source_start_offset": 13471,
+          "source_end_offset": 13494,
+          "source_section": "投标人须知",
+          "source_clause_id": "7.3",
+          "source_chunk_id": null,
+          "source_match_type": "exact_single_paragraph",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S019"
+          ]
+        }
+      ],
+      "candidate_text": [
+        "投标文件中不得有虚假文件和/或资料。"
+      ],
+      "canonical_text": "投标文件中不得有虚假文件和/或资料。",
+      "gate_decision": "REVIEW_REQUIRED",
+      "reason_codes": [
+        "NEGATION_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_location_verified": true
+    },
+    {
+      "canonical_requirement_id": "HOLDOUT-REQ-01-CAN-0159",
+      "source_parent_context": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+      "exact_source_refs": [
+        "C014-S020",
+        "C014-S021"
+      ],
+      "exact_source_text": [
+        "17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投",
+        "标人的合法权益的；"
+      ],
+      "exact_source_locations": [
+        {
+          "source_text": "17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；",
+          "source_context_text": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+          "source_page": 15,
+          "source_paragraph": 498,
+          "source_page_start": 15,
+          "source_page_end": 15,
+          "source_paragraph_start": 498,
+          "source_paragraph_end": 499,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 498,
+              "page": 15,
+              "text_hash": "0e1ae29f6184242916a3e8fd1fbd33006e4643f2b259f608ff87178d8c64d0ec"
+            },
+            {
+              "paragraph": 499,
+              "page": 15,
+              "text_hash": "800a2e658fe5979a82235e39a2b8e700f0591526fc3431943a45f8bdee0b97a3"
+            }
+          ],
+          "source_hash": "dbe04178e7f365d888aea3c818a2b89823d8f8008d9e9a09df811353aa4aef3d",
+          "source_start_offset": 13495,
+          "source_end_offset": 13548,
+          "source_section": "投标人须知",
+          "source_clause_id": "7.3",
+          "source_chunk_id": null,
+          "source_match_type": "exact_multi_paragraph_span",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S020",
+            "C014-S021"
+          ]
+        }
+      ],
+      "candidate_text": [
+        "投标人不得采取相互串标、排挤其他投标人的不公平竞争，损害招标人/招标机构或其他投标人的合法权益。"
+      ],
+      "canonical_text": "投标人不得采取相互串标、排挤其他投标人的不公平竞争，损害招标人/招标机构或其他投标人的合法权益。",
+      "gate_decision": "REVIEW_REQUIRED",
+      "reason_codes": [
+        "NEGATION_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_location_verified": true
+    },
+    {
+      "canonical_requirement_id": "HOLDOUT-REQ-01-CAN-0160",
+      "source_parent_context": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+      "exact_source_refs": [
+        "C014-S022",
+        "C014-S023"
+      ],
+      "exact_source_text": [
+        "18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法",
+        "规的；"
+      ],
+      "exact_source_locations": [
+        {
+          "source_text": "18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；",
+          "source_context_text": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+          "source_page": 15,
+          "source_paragraph": 500,
+          "source_page_start": 15,
+          "source_page_end": 15,
+          "source_paragraph_start": 500,
+          "source_paragraph_end": 501,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 500,
+              "page": 15,
+              "text_hash": "9e4fc0ffcee7dd39dbf718430203167c974d14c78c42d43cf6cfa7fa3daaa46f"
+            },
+            {
+              "paragraph": 501,
+              "page": 15,
+              "text_hash": "9e53d300697cc8ccbae5b6478c59793fa853317a97d46cca9f232ae04c476451"
+            }
+          ],
+          "source_hash": "418ee0f10563550c80a4773b29ee549d466e60c746aafc0d94658a21c4fdf222",
+          "source_start_offset": 13549,
+          "source_end_offset": 13596,
+          "source_section": "投标人须知",
+          "source_clause_id": "7.3",
+          "source_chunk_id": null,
+          "source_match_type": "exact_multi_paragraph_span",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S022",
+            "C014-S023"
+          ]
+        },
+        {
+          "source_text": "（1）系统架构设计师证书（计算机技术与软件专业技术资格证书），每\n人2分，最高2分。 （2）具有软件设计师证书（计算机技术与软件专业技\n术资格证书），每人1分，最高1分。注：同一人拥有多个证书不重复计算,\n只计算得分最高的一个证书得分。须提供相关证书扫描件，提供以上人员\n在本单位任职的外部证明材料（如加盖政府有关部门印章的打印日期在本\n项目报价截止日之前6个月以内任意一个月的《投保单》或《社会保险参\n保人员证明》。",
+          "source_context_text": "6.0分)\n（1）具有数据库系统工程师（计算机技术与软件专业技术资格证书）每\n提供一人得2分，本项最高得2分；（2）具有网络工程师证书（计算机技\n术与软件专业技术资格证书），每人2分，最高2分。（3）具有网络规划\n设计师证书（计算机技术与软件专业技术资格证书），每人2分，最高2分\n。注：同一人拥有多个证书不重复计算,只计算得分最高的一个证书得分。\n须提供相关证书扫描件，提供以上人员在本单位任职的外部证明材料（如\n加盖政府有关部门印章的打印日期在本项目报价截止日之前6个月以内任\n意一个月的《投保单》或《社会保险参保人员证明》。\n本项目应用类系统技术支撑团队\n人员实力情况（除项目经理外）\n(3.0分)\n（1）系统架构设计师证书（计算机技术与软件专业技术资格证书），每\n人2分，最高2分。 （2）具有软件设计师证书（计算机技术与软件专业技\n术资格证书），每人1分，最高1分。注：同一人拥有多个证书不重复计算,\n只计算得分最高的一个证书得分。须提供相关证书扫描件，提供以上人员\n在本单位任职的外部证明材料（如加盖政府有关部门印章的打印日期在本\n项目报价截止日之前6个月以内任意一个月的《投保单》或《社会保险参\n保人员证明》。\n二线技术支持人员 (6.0分)\n（1）具有高级工程师或以上级别（专业为以下专业类别其中之一：电子\n、电气、机电）职称，每提供一人得1分，本项最高得4分。（2）网络工\n程师证书（计算机技术与软件专业技术资格证书）每提供一人得1分，本\n6个月以内任意一个月的《投保单》或《社会保险参保人员证明》。\n企业运维工具情况 (2.0分)\n具有运维管理类软件著作权登记证书得2分，最高得2分。 注：①自主开发\n的，提供证书扫描件，名称可有差异，实质性内容满足即符合得分要求；\n②非自有须提供购买合同扫描件或授权使用证明文件或租赁合同、购买发\n票以及平台使用截图，同时提供承诺合同签订后在本项目应用上述功能系\n统或软件的承诺书；③若投标时无法提供，提供承诺函承诺签订合同前提\n供上述①或②的资料亦可得分\n-第21页-\n综合信用分 综合信用评价 (5.0分)\n综合信用评价得分=综合信用评价得分(属于商务部分的一部分)=投标人的\n广州公共资源交易信用评价（政府采购供应商信用评价分）×5%。 投标\n人的信用评价分以开标当天广州交易集团有限公司网站公布的分值为准（\n通过“广州交易集团有限公司网站-信用信息-广州公共资源交易信用平台3.\n0” 进行核实，未能在网站查询到供应商信用评价分的，以当天信用评价基\n准分计算）。供应商为联合体的，以牵头方信用评价分计算。\n4.汇总、排序\t汇总、排序\n采购包1：\n评标结果按评审后总得分由高到低顺序排列。总得分相同的按投标报价由低到高顺序排列。得分且投标报价相同的，由评\n委会采取随机抽取的方式确定。排名第一的投标供应商为第一中标候选人，排名第二的投标供应商为第二中标候选人（提供相\n定，其他同品牌投标人不作为中标候选人）。\n5.中标价的确定\t中标价的确定\n除了按第四章第一点第7条修正并经投标人确认的投标报价作为中标价外，中标价以开标时公开唱标价为准。\n6.其他无效投标的情形：\t其他无效投标的情形：\n(1)评标期间，投标人没有按评标委员会的要求提交法定代表人或其委托代理人签字的澄清、说明、补正或改变了投标文\n件的实质性内容的。\n(2)投标文件提供虚假材料的。\n(3)投标人以他人名义投标、串通投标、以行贿手段谋取中标或者以其他弄虚作假方式投标的。\n(4)投标人对采购人、采购代理机构、评标委员会及其工作人员施加影响，有碍招标公平、公正的。\n(5)投标文件含有采购人不能接受的附加条件的。\n(6)法律、法规和招标文件规定的其他无效情形。\n-第22页-",
+          "source_page": 21,
+          "source_paragraph": 850,
+          "source_page_start": 21,
+          "source_page_end": 21,
+          "source_paragraph_start": 850,
+          "source_paragraph_end": 856,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 850,
+              "page": 21,
+              "text_hash": "570fcf6a93bcf6d86566a886aabb1460325b88c73332a5e6d70fc9dbb95616f1"
+            },
+            {
+              "paragraph": 851,
+              "page": 21,
+              "text_hash": "2fabcf5d457cc9414e8d868e3beb4c82166f0e25dc830f3c61033c4b1cd8a94a"
+            },
+            {
+              "paragraph": 852,
+              "page": 21,
+              "text_hash": "306ed3f6e434afc7a619a57eda3b65c4567a27d24def9789cea2fdad5552e50d"
+            },
+            {
+              "paragraph": 853,
+              "page": 21,
+              "text_hash": "bc5ab498baf05f635bfac2211ad1625fc69d9146bd674b53dffee36dc4548d05"
+            },
+            {
+              "paragraph": 854,
+              "page": 21,
+              "text_hash": "c69b69c35135d41e42a33cf42c610efe3ae4991db203e48f234e252c9bcef6e3"
+            },
+            {
+              "paragraph": 855,
+              "page": 21,
+              "text_hash": "ed01fc03d65a8a404679e28c7a5582cfee5b5736a6ee4a9010f218ee8b05757e"
+            },
+            {
+              "paragraph": 856,
+              "page": 21,
+              "text_hash": "e175cf7ebdd4d9a842ff79907c097c2f0cef4281f2309c58ec8baa0f8bf8d5bc"
+            }
+          ],
+          "source_hash": "c6b8d4e5df45430482cf4914f73bc23039635bac59a54391bd036e55d514c595",
+          "source_start_offset": 26551,
+          "source_end_offset": 26760,
+          "source_section": "第四章 评标\t评标",
+          "source_clause_id": "6.0",
+          "source_chunk_id": null,
+          "source_match_type": "exact_multi_paragraph_span",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S022",
+            "C014-S023",
+            "C014-S024",
+            "C014-S025",
+            "C014-S026",
+            "C014-S027",
+            "C014-S028"
+          ]
+        }
+      ],
+      "candidate_text": [
+        "投标人不得以行贿手段谋取中标或以其他弄虚作假方式投标，不得违反国家法律及相关法令法规。"
+      ],
+      "canonical_text": "投标人不得以行贿手段谋取中标或以其他弄虚作假方式投标，不得违反国家法律及相关法令法规。",
+      "gate_decision": "REVIEW_REQUIRED",
+      "reason_codes": [
+        "NEGATION_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_location_verified": true
+    },
+    {
+      "canonical_requirement_id": "HOLDOUT-REQ-01-CAN-0161",
+      "source_parent_context": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+      "exact_source_refs": [
+        "C014-S024"
+      ],
+      "exact_source_text": [
+        "19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；"
+      ],
+      "exact_source_locations": [
+        {
+          "source_text": "19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；",
+          "source_context_text": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+          "source_page": 15,
+          "source_paragraph": 502,
+          "source_page_start": 15,
+          "source_page_end": 15,
+          "source_paragraph_start": 502,
+          "source_paragraph_end": 502,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 502,
+              "page": 15,
+              "text_hash": "f75effd6756437786efae139fd295567b8afe9340a32739b2a21cbdddaf7d7fa"
+            }
+          ],
+          "source_hash": "f75effd6756437786efae139fd295567b8afe9340a32739b2a21cbdddaf7d7fa",
+          "source_start_offset": 13597,
+          "source_end_offset": 13629,
+          "source_section": "投标人须知",
+          "source_clause_id": "7.3",
+          "source_chunk_id": null,
+          "source_match_type": "exact_single_paragraph",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S024"
+          ]
+        },
+        {
+          "source_text": "（1）系统架构设计师证书（计算机技术与软件专业技术资格证书），每\n人2分，最高2分。 （2）具有软件设计师证书（计算机技术与软件专业技\n术资格证书），每人1分，最高1分。注：同一人拥有多个证书不重复计算,\n只计算得分最高的一个证书得分。须提供相关证书扫描件，提供以上人员\n在本单位任职的外部证明材料（如加盖政府有关部门印章的打印日期在本\n项目报价截止日之前6个月以内任意一个月的《投保单》或《社会保险参\n保人员证明》。",
+          "source_context_text": "6.0分)\n（1）具有数据库系统工程师（计算机技术与软件专业技术资格证书）每\n提供一人得2分，本项最高得2分；（2）具有网络工程师证书（计算机技\n术与软件专业技术资格证书），每人2分，最高2分。（3）具有网络规划\n设计师证书（计算机技术与软件专业技术资格证书），每人2分，最高2分\n。注：同一人拥有多个证书不重复计算,只计算得分最高的一个证书得分。\n须提供相关证书扫描件，提供以上人员在本单位任职的外部证明材料（如\n加盖政府有关部门印章的打印日期在本项目报价截止日之前6个月以内任\n意一个月的《投保单》或《社会保险参保人员证明》。\n本项目应用类系统技术支撑团队\n人员实力情况（除项目经理外）\n(3.0分)\n（1）系统架构设计师证书（计算机技术与软件专业技术资格证书），每\n人2分，最高2分。 （2）具有软件设计师证书（计算机技术与软件专业技\n术资格证书），每人1分，最高1分。注：同一人拥有多个证书不重复计算,\n只计算得分最高的一个证书得分。须提供相关证书扫描件，提供以上人员\n在本单位任职的外部证明材料（如加盖政府有关部门印章的打印日期在本\n项目报价截止日之前6个月以内任意一个月的《投保单》或《社会保险参\n保人员证明》。\n二线技术支持人员 (6.0分)\n（1）具有高级工程师或以上级别（专业为以下专业类别其中之一：电子\n、电气、机电）职称，每提供一人得1分，本项最高得4分。（2）网络工\n程师证书（计算机技术与软件专业技术资格证书）每提供一人得1分，本\n6个月以内任意一个月的《投保单》或《社会保险参保人员证明》。\n企业运维工具情况 (2.0分)\n具有运维管理类软件著作权登记证书得2分，最高得2分。 注：①自主开发\n的，提供证书扫描件，名称可有差异，实质性内容满足即符合得分要求；\n②非自有须提供购买合同扫描件或授权使用证明文件或租赁合同、购买发\n票以及平台使用截图，同时提供承诺合同签订后在本项目应用上述功能系\n统或软件的承诺书；③若投标时无法提供，提供承诺函承诺签订合同前提\n供上述①或②的资料亦可得分\n-第21页-\n综合信用分 综合信用评价 (5.0分)\n综合信用评价得分=综合信用评价得分(属于商务部分的一部分)=投标人的\n广州公共资源交易信用评价（政府采购供应商信用评价分）×5%。 投标\n人的信用评价分以开标当天广州交易集团有限公司网站公布的分值为准（\n通过“广州交易集团有限公司网站-信用信息-广州公共资源交易信用平台3.\n0” 进行核实，未能在网站查询到供应商信用评价分的，以当天信用评价基\n准分计算）。供应商为联合体的，以牵头方信用评价分计算。\n4.汇总、排序\t汇总、排序\n采购包1：\n评标结果按评审后总得分由高到低顺序排列。总得分相同的按投标报价由低到高顺序排列。得分且投标报价相同的，由评\n委会采取随机抽取的方式确定。排名第一的投标供应商为第一中标候选人，排名第二的投标供应商为第二中标候选人（提供相\n定，其他同品牌投标人不作为中标候选人）。\n5.中标价的确定\t中标价的确定\n除了按第四章第一点第7条修正并经投标人确认的投标报价作为中标价外，中标价以开标时公开唱标价为准。\n6.其他无效投标的情形：\t其他无效投标的情形：\n(1)评标期间，投标人没有按评标委员会的要求提交法定代表人或其委托代理人签字的澄清、说明、补正或改变了投标文\n件的实质性内容的。\n(2)投标文件提供虚假材料的。\n(3)投标人以他人名义投标、串通投标、以行贿手段谋取中标或者以其他弄虚作假方式投标的。\n(4)投标人对采购人、采购代理机构、评标委员会及其工作人员施加影响，有碍招标公平、公正的。\n(5)投标文件含有采购人不能接受的附加条件的。\n(6)法律、法规和招标文件规定的其他无效情形。\n-第22页-",
+          "source_page": 21,
+          "source_paragraph": 850,
+          "source_page_start": 21,
+          "source_page_end": 21,
+          "source_paragraph_start": 850,
+          "source_paragraph_end": 856,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 850,
+              "page": 21,
+              "text_hash": "570fcf6a93bcf6d86566a886aabb1460325b88c73332a5e6d70fc9dbb95616f1"
+            },
+            {
+              "paragraph": 851,
+              "page": 21,
+              "text_hash": "2fabcf5d457cc9414e8d868e3beb4c82166f0e25dc830f3c61033c4b1cd8a94a"
+            },
+            {
+              "paragraph": 852,
+              "page": 21,
+              "text_hash": "306ed3f6e434afc7a619a57eda3b65c4567a27d24def9789cea2fdad5552e50d"
+            },
+            {
+              "paragraph": 853,
+              "page": 21,
+              "text_hash": "bc5ab498baf05f635bfac2211ad1625fc69d9146bd674b53dffee36dc4548d05"
+            },
+            {
+              "paragraph": 854,
+              "page": 21,
+              "text_hash": "c69b69c35135d41e42a33cf42c610efe3ae4991db203e48f234e252c9bcef6e3"
+            },
+            {
+              "paragraph": 855,
+              "page": 21,
+              "text_hash": "ed01fc03d65a8a404679e28c7a5582cfee5b5736a6ee4a9010f218ee8b05757e"
+            },
+            {
+              "paragraph": 856,
+              "page": 21,
+              "text_hash": "e175cf7ebdd4d9a842ff79907c097c2f0cef4281f2309c58ec8baa0f8bf8d5bc"
+            }
+          ],
+          "source_hash": "c6b8d4e5df45430482cf4914f73bc23039635bac59a54391bd036e55d514c595",
+          "source_start_offset": 26551,
+          "source_end_offset": 26760,
+          "source_section": "第四章 评标\t评标",
+          "source_clause_id": "6.0",
+          "source_chunk_id": null,
+          "source_match_type": "exact_multi_paragraph_span",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S022",
+            "C014-S023",
+            "C014-S024",
+            "C014-S025",
+            "C014-S026",
+            "C014-S027",
+            "C014-S028"
+          ]
+        }
+      ],
+      "candidate_text": [
+        "投标人须遵守招标文件规定的其他导致其投标被否决的条款及要求。"
+      ],
+      "canonical_text": "投标人须遵守招标文件规定的其他导致其投标被否决的条款及要求。",
+      "gate_decision": "REVIEW_REQUIRED",
+      "reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_location_verified": true
+    },
+    {
+      "canonical_requirement_id": "HOLDOUT-REQ-01-CAN-0162",
+      "source_parent_context": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+      "exact_source_refs": [
+        "C014-S025"
+      ],
+      "exact_source_text": [
+        "20) \t低价恶意竞争。"
+      ],
+      "exact_source_locations": [
+        {
+          "source_text": "20) \t低价恶意竞争。",
+          "source_context_text": "7.3 \t实质上没有响应招标文件要求的投标将被否决。投标人不得通过修正或撤销不合要求的偏\n离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的，其投标将被否决：\n1) \t投标人未按时提交投标保证金、投标保证金的金额不足或投标保证金形式或投标保函出\n具银行不符合招标文件要求的；\n2) \t投标文件无投标单位公章、无法定代表人签字或人名章，或签字人无法定代表人有效授\n权书的；\n3) \t使用投标专用章但未在法人代表授权书中对投标专用章（含编号）授权等同于公章的；\n4) \t投标文件未按照招标文件要求签署、盖章的；\n5) \t投标有效期不满足招标文件要求的；\n6) \t超过项目预算金额或招标控制价的；\n7) \t投标人递交两份或多份内容不同的投标文件,或在一份投标文件中对同一招标货物或服\n10) \t投标人的投标函和/或资格证明文件未提供或不符合招标文件要求的；\n11) \t投标人不符合招标文件资格性审查、符合性审查要求的；\n12) \t未按招标文件要求提供承诺函的；\n第 \t13 \t页\n13) \t违约责任不满足招标文件要求的；\n14) \t投标总价缺少和漏项金额超过其投标总价 \t10%以上的；\n15) \t投标文件中附有招标人/招标机构不能接受的条件的；\n16) \t在投标文件中有虚假文件和/或资料的；\n17) \t投标人采取相互串标，排挤其他投标人的不公平竞争，损害招标人／招标机构或其他投\n标人的合法权益的；\n18) \t投标人以行贿手段谋取中标或者以其他弄虚作假方式投标，违反国家法律及相关法令法\n规的；\n19) \t存在招标文件规定的其他导致其投标被否决的条款及要求的；\n20) \t低价恶意竞争。",
+          "source_page": 15,
+          "source_paragraph": 503,
+          "source_page_start": 15,
+          "source_page_end": 15,
+          "source_paragraph_start": 503,
+          "source_paragraph_end": 503,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 503,
+              "page": 15,
+              "text_hash": "5513b2a022aaca90e6c37338c709a3b8546f4c8ebf263b708e7194486a06d3d4"
+            }
+          ],
+          "source_hash": "5513b2a022aaca90e6c37338c709a3b8546f4c8ebf263b708e7194486a06d3d4",
+          "source_start_offset": 13630,
+          "source_end_offset": 13642,
+          "source_section": "投标人须知",
+          "source_clause_id": "7.3",
+          "source_chunk_id": null,
+          "source_match_type": "exact_single_paragraph",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S025"
+          ]
+        },
+        {
+          "source_text": "（1）系统架构设计师证书（计算机技术与软件专业技术资格证书），每\n人2分，最高2分。 （2）具有软件设计师证书（计算机技术与软件专业技\n术资格证书），每人1分，最高1分。注：同一人拥有多个证书不重复计算,\n只计算得分最高的一个证书得分。须提供相关证书扫描件，提供以上人员\n在本单位任职的外部证明材料（如加盖政府有关部门印章的打印日期在本\n项目报价截止日之前6个月以内任意一个月的《投保单》或《社会保险参\n保人员证明》。",
+          "source_context_text": "6.0分)\n（1）具有数据库系统工程师（计算机技术与软件专业技术资格证书）每\n提供一人得2分，本项最高得2分；（2）具有网络工程师证书（计算机技\n术与软件专业技术资格证书），每人2分，最高2分。（3）具有网络规划\n设计师证书（计算机技术与软件专业技术资格证书），每人2分，最高2分\n。注：同一人拥有多个证书不重复计算,只计算得分最高的一个证书得分。\n须提供相关证书扫描件，提供以上人员在本单位任职的外部证明材料（如\n加盖政府有关部门印章的打印日期在本项目报价截止日之前6个月以内任\n意一个月的《投保单》或《社会保险参保人员证明》。\n本项目应用类系统技术支撑团队\n人员实力情况（除项目经理外）\n(3.0分)\n（1）系统架构设计师证书（计算机技术与软件专业技术资格证书），每\n人2分，最高2分。 （2）具有软件设计师证书（计算机技术与软件专业技\n术资格证书），每人1分，最高1分。注：同一人拥有多个证书不重复计算,\n只计算得分最高的一个证书得分。须提供相关证书扫描件，提供以上人员\n在本单位任职的外部证明材料（如加盖政府有关部门印章的打印日期在本\n项目报价截止日之前6个月以内任意一个月的《投保单》或《社会保险参\n保人员证明》。\n二线技术支持人员 (6.0分)\n（1）具有高级工程师或以上级别（专业为以下专业类别其中之一：电子\n、电气、机电）职称，每提供一人得1分，本项最高得4分。（2）网络工\n程师证书（计算机技术与软件专业技术资格证书）每提供一人得1分，本\n6个月以内任意一个月的《投保单》或《社会保险参保人员证明》。\n企业运维工具情况 (2.0分)\n具有运维管理类软件著作权登记证书得2分，最高得2分。 注：①自主开发\n的，提供证书扫描件，名称可有差异，实质性内容满足即符合得分要求；\n②非自有须提供购买合同扫描件或授权使用证明文件或租赁合同、购买发\n票以及平台使用截图，同时提供承诺合同签订后在本项目应用上述功能系\n统或软件的承诺书；③若投标时无法提供，提供承诺函承诺签订合同前提\n供上述①或②的资料亦可得分\n-第21页-\n综合信用分 综合信用评价 (5.0分)\n综合信用评价得分=综合信用评价得分(属于商务部分的一部分)=投标人的\n广州公共资源交易信用评价（政府采购供应商信用评价分）×5%。 投标\n人的信用评价分以开标当天广州交易集团有限公司网站公布的分值为准（\n通过“广州交易集团有限公司网站-信用信息-广州公共资源交易信用平台3.\n0” 进行核实，未能在网站查询到供应商信用评价分的，以当天信用评价基\n准分计算）。供应商为联合体的，以牵头方信用评价分计算。\n4.汇总、排序\t汇总、排序\n采购包1：\n评标结果按评审后总得分由高到低顺序排列。总得分相同的按投标报价由低到高顺序排列。得分且投标报价相同的，由评\n委会采取随机抽取的方式确定。排名第一的投标供应商为第一中标候选人，排名第二的投标供应商为第二中标候选人（提供相\n定，其他同品牌投标人不作为中标候选人）。\n5.中标价的确定\t中标价的确定\n除了按第四章第一点第7条修正并经投标人确认的投标报价作为中标价外，中标价以开标时公开唱标价为准。\n6.其他无效投标的情形：\t其他无效投标的情形：\n(1)评标期间，投标人没有按评标委员会的要求提交法定代表人或其委托代理人签字的澄清、说明、补正或改变了投标文\n件的实质性内容的。\n(2)投标文件提供虚假材料的。\n(3)投标人以他人名义投标、串通投标、以行贿手段谋取中标或者以其他弄虚作假方式投标的。\n(4)投标人对采购人、采购代理机构、评标委员会及其工作人员施加影响，有碍招标公平、公正的。\n(5)投标文件含有采购人不能接受的附加条件的。\n(6)法律、法规和招标文件规定的其他无效情形。\n-第22页-",
+          "source_page": 21,
+          "source_paragraph": 850,
+          "source_page_start": 21,
+          "source_page_end": 21,
+          "source_paragraph_start": 850,
+          "source_paragraph_end": 856,
+          "source_paragraphs_json": [
+            {
+              "paragraph": 850,
+              "page": 21,
+              "text_hash": "570fcf6a93bcf6d86566a886aabb1460325b88c73332a5e6d70fc9dbb95616f1"
+            },
+            {
+              "paragraph": 851,
+              "page": 21,
+              "text_hash": "2fabcf5d457cc9414e8d868e3beb4c82166f0e25dc830f3c61033c4b1cd8a94a"
+            },
+            {
+              "paragraph": 852,
+              "page": 21,
+              "text_hash": "306ed3f6e434afc7a619a57eda3b65c4567a27d24def9789cea2fdad5552e50d"
+            },
+            {
+              "paragraph": 853,
+              "page": 21,
+              "text_hash": "bc5ab498baf05f635bfac2211ad1625fc69d9146bd674b53dffee36dc4548d05"
+            },
+            {
+              "paragraph": 854,
+              "page": 21,
+              "text_hash": "c69b69c35135d41e42a33cf42c610efe3ae4991db203e48f234e252c9bcef6e3"
+            },
+            {
+              "paragraph": 855,
+              "page": 21,
+              "text_hash": "ed01fc03d65a8a404679e28c7a5582cfee5b5736a6ee4a9010f218ee8b05757e"
+            },
+            {
+              "paragraph": 856,
+              "page": 21,
+              "text_hash": "e175cf7ebdd4d9a842ff79907c097c2f0cef4281f2309c58ec8baa0f8bf8d5bc"
+            }
+          ],
+          "source_hash": "c6b8d4e5df45430482cf4914f73bc23039635bac59a54391bd036e55d514c595",
+          "source_start_offset": 26551,
+          "source_end_offset": 26760,
+          "source_section": "第四章 评标\t评标",
+          "source_clause_id": "6.0",
+          "source_chunk_id": null,
+          "source_match_type": "exact_multi_paragraph_span",
+          "source_match_score": 1,
+          "source_resolution_status": "verified",
+          "source_resolution_method": "automatic",
+          "source_verified": true,
+          "source_refs": [
+            "C014-S022",
+            "C014-S023",
+            "C014-S024",
+            "C014-S025",
+            "C014-S026",
+            "C014-S027",
+            "C014-S028"
+          ]
+        }
+      ],
+      "candidate_text": [
+        "投标人不得进行低价恶意竞争。"
+      ],
+      "canonical_text": "投标人不得进行低价恶意竞争。",
+      "gate_decision": "REVIEW_REQUIRED",
+      "reason_codes": [
+        "NEGATION_DISTORTION",
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_location_verified": true
+    }
+  ],
+  "root_cause_forensic": {
+    "primary_classification": "F_COMBINED_CAUSE",
+    "contributing_classes": [
+      "B_PARENT_CONTEXT_CONSEQUENCE_NOT_BOUND_TO_ATOMIC_ROW",
+      "C_NEGATION_DETECTOR_COVERAGE_GAP",
+      "D_QUALITY_GATE_ALIGNMENT_GAP"
+    ],
+    "producer_semantic_fidelity": "FAIL",
+    "quality_gate_safety_net": "FAIL",
+    "parent_consequence_ownership": {
+      "router": "NOT_BOUND_IN_THIS_PATH",
+      "source_resolver": "RESOLVES_ATOMIC_SOURCE_AND_CONTEXT_BUT_DOES_NOT_AUTHORIZE_PARENT_CONSEQUENCE_INHERITANCE",
+      "canonicalizer": "PERSISTS_natural_parent_context_FOR_PACKET_RENDERING_BUT_DOES_NOT_BIND_IT_IN_CANONICAL_TEXT_OR_GATE_INPUT",
+      "quality_gate": "RECEIVES_ATOMIC_source_text_ONLY; DOES_NOT_EVALUATE_PARENT_CONSEQUENCE"
+    },
+    "evidence": [
+      {
+        "path": "backend/eval/requirement-unseen-holdout-v1/execute-holdout-v1.mjs:428",
+        "symbol": "validForCanonical construction",
+        "observation": "source_text is entry.location.source_text (the atomic row), while source_context_text is retained separately."
+      },
+      {
+        "path": "backend/src/pipeline/canonical-requirements.js:32",
+        "symbol": "buildCanonicalRequirements",
+        "observation": "evaluateRequirementCandidateQuality(raw, { sourceText: evidence.source_text, ... }) is called with atomic source text; natural_parent_context is not supplied."
+      },
+      {
+        "path": "backend/src/pipeline/requirement-quality-gate.js:6,312-316",
+        "symbol": "NEGATION_PATTERN / evaluateRequirementCandidateQuality",
+        "observation": "The frozen negation pattern covers 不得/禁止/不能/不应/不可/无需/无须/未/无/非 but not bare 不; source and candidate token sets for CAN-0149 are therefore both empty. No parent-consequence detector exists."
+      }
+    ],
+    "not_selected_as_primary": "A_PRODUCER_CONSEQUENCE_OMISSION is subsumed by the demonstrated parent-context binding failure; a lexical-only conclusion would ignore the parent consequence boundary."
+  },
+  "same_failure_family_as_post_fix_v2_015": {
+    "value": "YES",
+    "reference_case": "POST-FIX-V2-015",
+    "reference_failure_family": "OMITTED_DISQUALIFICATION_CONSEQUENCE",
+    "evidence": "POST-FIX-V2-015 source explicitly states 未提供将作为无效投标, canonical text omits that consequence, and the gate routes to REVIEW_REQUIRED via NEGATION_DISTORTION."
+  },
+  "span_conservation_forensic": {
+    "root_classification": "FRONT_MATTER_OR_TOC",
+    "actual_requirement_bearing_source_loss": "NO",
+    "evidence": {
+      "holdout_01": {
+        "span_conservation_pass": false,
+        "parsed_block_count": 1631,
+        "source_resolution_failure_count": 0,
+        "exclusion_explanations": [
+          {
+            "tender_id": "HOLDOUT-REQ-01",
+            "unrouted_block_count": 8,
+            "classification": "FRONT_MATTER_OR_TOC_NOT_IN_SECTION_CLASSIFIER",
+            "source_pages": [
+              1,
+              2
+            ]
+          }
+        ]
+      },
+      "holdout_02": {
+        "span_conservation_pass": false,
+        "parsed_block_count": 1610,
+        "source_resolution_failure_count": 0,
+        "exclusion_explanations": [
+          {
+            "tender_id": "HOLDOUT-REQ-02",
+            "unrouted_block_count": 8,
+            "classification": "FRONT_MATTER_OR_TOC_NOT_IN_SECTION_CLASSIFIER",
+            "source_pages": [
+              1
+            ]
+          }
+        ]
+      },
+      "canonical_source_locations_verified": "397/397",
+      "lineage_unresolved_count": 0,
+      "explanation": "Both false span_conservation flags are accompanied by explicit stage-A exclusions of eight front-matter/TOC blocks per Tender; source-bearing blocks remain in the repaired source packets and all 397 canonical source locations resolve."
+    }
+  },
+  "review_burden": {
+    "quality_gate_review_total": 139,
+    "total_canonicals": 397,
+    "review_rate_percent": 35.0126,
+    "holdout_01": {
+      "review_required": 82,
+      "total": 233,
+      "rate_percent": 35.1931
+    },
+    "holdout_02": {
+      "review_required": 57,
+      "total": 164,
+      "rate_percent": 34.7561
+    },
+    "metric_label": "REVIEW_RATE_NOT_FALSE_POSITIVE_RATE"
+  },
+  "engineering_baseline": {
+    "code_freeze_parity": "PASS",
+    "source_freeze_parity": "PASS",
+    "actual_provider_calls": 43,
+    "transport_retry": 0,
+    "schema_failure": 0,
+    "provider_failure": 0,
+    "source_resolution_rate_percent": 100,
+    "cross_tender_source_mismatch": 0
+  },
+  "safety": {
+    "provider_calls_added": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "mapping_actions": 0,
+    "claim_actions": 0,
+    "writer_actions": 0
+  },
+  "source_side_upload_artifacts": [
+    "HOLDOUT-REQ-01-source-side.json",
+    "HOLDOUT-REQ-02-source-side.json"
+  ],
+  "input_artifact_sha256": {
+    "canonical_requirements": "20bd8af5e9226a70a5ffa2cd3ad0c20b991fe69a452dea9a09a4dc932b326407",
+    "candidate_lineage": "d1ab88f579334fc3f633244ffde1db1bf43e452c535faa3a7cf7731299e39660",
+    "quality_gate_results": "8a9b2cb087e4197468b39567f7cc0ca40eedb733f116aaead3444b4a2984d59f",
+    "execution_plan": "b11bde425abb481b38593b166861eb9543d680ac9e2354147d871b1de252c818",
+    "repaired_source_side_holdout_01": "31cd566b395f8b5c4349f06211a3a02dc4d0ad91fc8c439eb6da03074e7fad6c",
+    "repaired_source_side_holdout_02": "9ada5d05111f40345b9c8db114019ad738f036658c90c3b871849646270e7e0c"
+  },
+  "stop_reason": "Forensic adjudication and source-side packet preservation complete; no production or Gold remediation performed.",
+  "checkpoint": "V43_REQUIREMENT_UNSEEN_HOLDOUT_V1_FAIL_FORENSIC_CHECKPOINT"
+}

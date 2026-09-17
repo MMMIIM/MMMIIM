@@ -7,6 +7,7 @@ import {
   chunkExtractedText,
   resolveRequirementChunkBudget
 } from '../src/pipeline/requirement-chunker.js';
+import { combineRequirementExtractionSections } from '../src/pipeline/requirement-scope-router.js';
 import {
   defaultLiveExecutor,
   FROZEN_REQUIREMENT_EXTRACTION_PROMPT_HASH,
@@ -30,7 +31,7 @@ function gatewayResponse(candidate, diagnosticOverrides = {}) {
     data: {
       outputs: {
         response_payload_json: JSON.stringify({
-          schema_version: '4.3-requirement-extraction-v3',
+          schema_version: '4.3-requirement-extraction-v3.1.1',
           task_type: 'requirement_extraction',
           status: 'success',
           data: { requirements: [candidate] },
@@ -66,7 +67,7 @@ function healthyFetch(url) {
   if (url.endsWith('/info')) return new Response(JSON.stringify({
     service: 'semantic-gateway', task_registry_loaded: true,
     task_types: ['requirement_extraction'],
-    requirement_extraction_contract_version: '4.3-requirement-extraction-v3',
+    requirement_extraction_contract_version: '4.3-requirement-extraction-v3.1.1',
     requirement_extraction_prompt_hash: FROZEN_REQUIREMENT_EXTRACTION_PROMPT_HASH,
     candidate_schema_contract_version: '4.3-requirement-candidate-v3',
     candidate_schema_sha256: FROZEN_REQUIREMENT_CANDIDATE_SCHEMA_HASH
@@ -108,13 +109,62 @@ test('raw FAST-01-like input uses the production multi-chunk budget and preserve
   assert.equal(request.chunk, null);
   assert.equal(request.chunks.length, request.chunkCount);
   assert.ok(request.chunks.every((chunk) => chunk.character_count <= 2_000));
-  assert.ok(request.chunks.every((chunk) => chunk.segments.length <= 50));
+  assert.ok(request.chunks.every((chunk) => chunk.segments.length <= 100));
   const refs = request.chunks.flatMap((chunk) => chunk.segments.map((segment) => segment.source_ref));
   assert.equal(refs.length, 255);
   assert.equal(new Set(refs).size, refs.length);
   assert.deepEqual(refs.slice(0, 3), ['C001-S001', 'C001-S002', 'C001-S003']);
   assert.equal(refs.at(-1), `C${String(request.chunkCount).padStart(3, '0')}-S${String(request.chunks.at(-1).segments.length).padStart(3, '0')}`);
   assert.match(request.chunks[0].model_text, /^\[C001-S001\] /);
+});
+
+test('combined requirement scope preserves document-order absolute offsets across overlapping sections', () => {
+  const documentText = `${'前置内容。'.repeat(24)}第一段要求。\n第二段要求。\n第三段要求。`;
+  const firstStart = documentText.indexOf('第一段要求。');
+  const secondStart = documentText.indexOf('第二段要求。');
+  const thirdStart = documentText.indexOf('第三段要求。');
+  const paragraph = (text, start, number) => ({
+    text, paragraph: number, source_start_offset: start,
+    source_end_offset: start + text.length
+  });
+  const sections = [
+    {
+      section_key: 'technical_requirements',
+      title: '技术要求',
+      archive_role: 'requirement_extraction',
+      source_start_offset: firstStart,
+      paragraphs: [paragraph('第一段要求。', firstStart, 1), paragraph('第三段要求。', thirdStart, 3)]
+    },
+    {
+      section_key: 'unknown_section_1',
+      title: '补充要求',
+      archive_role: 'unknown_section',
+      source_start_offset: secondStart,
+      paragraphs: [paragraph('第二段要求。', secondStart, 2)]
+    }
+  ];
+  const scope = combineRequirementExtractionSections(sections);
+  assert.deepEqual(scope.paragraphs.map((item) => item.text), ['第一段要求。', '第二段要求。', '第三段要求。']);
+  const chunks = chunkExtractedText({
+    text: scope.content_text,
+    paragraphs: scope.paragraphs,
+    singleCallThreshold: 1,
+    characterBudget: 10,
+    tokenBudget: 100,
+    sourceSpanBudget: 2
+  });
+  assert.ok(chunks.length > 1);
+  assert.ok(chunks.every((chunk) => chunk.source_start_offset >= 0
+    && chunk.source_end_offset > chunk.source_start_offset
+    && chunk.source_end_offset <= documentText.length));
+  assert.deepEqual(chunks, chunkExtractedText({
+    text: scope.content_text,
+    paragraphs: scope.paragraphs,
+    singleCallThreshold: 1,
+    characterBudget: 10,
+    tokenBudget: 100,
+    sourceSpanBudget: 2
+  }));
 });
 
 test('live harness chunk output is identical to the production chunker for the same window', () => {
@@ -126,6 +176,72 @@ test('live harness chunk output is identical to the production chunker for the s
     ...resolveRequirementChunkBudget({})
   });
   assert.deepEqual(request.chunks, productionChunks);
+});
+
+test('production-like evaluation blocks an input drift before Provider invocation', async () => {
+  const liveRequest = buildRequirementExtractionLiveRequest({ text: '系统应提供审计日志。' });
+  const canonicalChunk = liveRequest.chunks[0];
+  const evalInput = canonicalChunk.text;
+  const driftedLiveRequest = {
+    ...liveRequest,
+    chunks: [{ ...canonicalChunk, provider_input_text: evalInput }]
+  };
+  let providerCalls = 0;
+  const result = await defaultLiveExecutor({
+    env,
+    liveRequest: driftedLiveRequest,
+    fetchImpl: async () => {
+      providerCalls += 1;
+      return gatewayResponse(candidate());
+    }
+  });
+  assert.equal(providerCalls, 0);
+  assert.equal(result.provider_request_count, 0);
+  assert.equal(result.technical_error_code, 'PRODUCTION_PARITY_VIOLATION');
+  assert.equal(result.final_probe_status, 'BLOCKED');
+});
+
+test('production-like evaluation allows an input equal to the canonical production resolver', async () => {
+  const liveRequest = buildRequirementExtractionLiveRequest({ text: '系统应提供审计日志。' });
+  const canonicalChunk = liveRequest.chunks[0];
+  const parityLiveRequest = {
+    ...liveRequest,
+    chunks: [{ ...canonicalChunk, provider_input_text: canonicalChunk.model_text }]
+  };
+  let providerCalls = 0;
+  const result = await defaultLiveExecutor({
+    env,
+    liveRequest: parityLiveRequest,
+    fetchImpl: async (_url, options) => {
+      providerCalls += 1;
+      const request = JSON.parse(options.body);
+      const payload = JSON.parse(request.inputs.task_payload_json);
+      assert.equal(payload.chunk_text, canonicalChunk.model_text);
+      assert.notEqual(payload.chunk_text, canonicalChunk.text);
+      return gatewayResponse(candidate());
+    }
+  });
+  assert.equal(providerCalls, 1);
+  assert.equal(result.provider_request_count, 1);
+  assert.equal(result.final_probe_status, 'PASS');
+});
+
+test('parity gate uses the canonical raw-text fallback when model_text is absent', async () => {
+  const liveRequest = buildRequirementExtractionLiveRequest({ text: '系统应提供审计日志。' });
+  const canonicalChunk = liveRequest.chunks[0];
+  const fallbackChunk = { ...canonicalChunk, model_text: '', provider_input_text: canonicalChunk.text };
+  let providerCalls = 0;
+  const result = await defaultLiveExecutor({
+    env,
+    liveRequest: { ...liveRequest, chunks: [fallbackChunk] },
+    fetchImpl: async () => {
+      providerCalls += 1;
+      return gatewayResponse(candidate());
+    }
+  });
+  assert.equal(providerCalls, 1);
+  assert.equal(result.provider_request_count, 1);
+  assert.equal(result.final_probe_status, 'PASS');
 });
 
 test('multi-chunk executor uses bounded concurrency and resolves each candidate in its own chunk', async () => {
@@ -227,6 +343,19 @@ test('unknown source ref blocks live before Canonical ingestion', async () => {
   assert.equal(result.source_resolution_pass, false);
   assert.equal(result.backend_ingestion_pass, false);
   assert.equal(result.technical_error_code, 'SOURCE_LOCATION_UNRESOLVED');
+});
+
+test('excluded-only Candidate provenance is rejected before Canonical ingestion', async () => {
+  const liveRequest = buildRequirementExtractionLiveRequest({ text: '价格条款原文。' });
+  liveRequest.chunks[0].segments[0].routing_role = 'COMMERCIAL';
+  const result = await defaultLiveExecutor({
+    env,
+    liveRequest,
+    fetchImpl: fetchFor(candidate())
+  });
+  assert.equal(result.source_resolution_pass, false);
+  assert.equal(result.backend_ingestion_pass, false);
+  assert.equal(result.technical_error_code, 'REQUIREMENT_SCOPE_EXCLUDED');
 });
 
 test('reversed source range blocks live before Canonical ingestion', async () => {

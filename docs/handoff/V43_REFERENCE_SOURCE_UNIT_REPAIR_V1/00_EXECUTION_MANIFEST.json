@@ -1,0 +1,225 @@
+{
+  "artifact_type": "V43_REFERENCE_SOURCE_UNIT_REPAIR_V1_EXECUTION_MANIFEST",
+  "mode": "OFFLINE_READ_ONLY",
+  "source_manifest": "docs/handoff/V43_REFERENCE_EVAL_INGEST_HARNESS_V1/02_SOURCE_IDENTITY_MANIFEST.json",
+  "target_source_ids": [
+    "H3C-003",
+    "H3C-004",
+    "H3C-010",
+    "H3C-011",
+    "H3C-012",
+    "H3C-013"
+  ],
+  "preparation_version": "canonical-html-source-unit-v1",
+  "production_chunker": "backend/src/pipeline/enterprise-material-chunker.js::chunkEnterpriseMaterial",
+  "no_embedding": true,
+  "no_provider": true,
+  "no_db_write": true,
+  "rule_summary": {
+    "H3C-003": {
+      "selector": "#documentContent",
+      "match": {
+        "tag": "div",
+        "id": "documentContent"
+      },
+      "exclusions": [
+        {
+          "tag": "style"
+        },
+        {
+          "tag": "script"
+        },
+        {
+          "tag": "noscript"
+        },
+        {
+          "tag": "template"
+        },
+        {
+          "tag": "svg"
+        }
+      ],
+      "semantic_selection_used": false,
+      "requirement_query_used": false,
+      "tender_id_used": false
+    },
+    "H3C-004": {
+      "selector": "#documentContent",
+      "match": {
+        "tag": "div",
+        "id": "documentContent"
+      },
+      "exclusions": [
+        {
+          "tag": "style"
+        },
+        {
+          "tag": "script"
+        },
+        {
+          "tag": "noscript"
+        },
+        {
+          "tag": "template"
+        },
+        {
+          "tag": "svg"
+        }
+      ],
+      "semantic_selection_used": false,
+      "requirement_query_used": false,
+      "tender_id_used": false
+    },
+    "H3C-010": {
+      "selector": "#ns-page-body",
+      "match": {
+        "tag": "div",
+        "id": "ns-page-body"
+      },
+      "exclusions": [
+        {
+          "id": "secondMenu"
+        },
+        {
+          "classes": [
+            "ns-breadcrumb"
+          ]
+        },
+        {
+          "tag": "a",
+          "classes": [
+            "ns-btn"
+          ]
+        },
+        {
+          "tag": "style"
+        },
+        {
+          "tag": "script"
+        },
+        {
+          "tag": "noscript"
+        },
+        {
+          "tag": "template"
+        },
+        {
+          "tag": "svg"
+        }
+      ],
+      "semantic_selection_used": false,
+      "requirement_query_used": false,
+      "tender_id_used": false
+    },
+    "H3C-011": {
+      "selector": ".detailBody",
+      "match": {
+        "tag": "div",
+        "classes": [
+          "detailBody"
+        ]
+      },
+      "exclusions": [
+        {
+          "tag": "style"
+        },
+        {
+          "tag": "script"
+        },
+        {
+          "tag": "noscript"
+        },
+        {
+          "tag": "template"
+        },
+        {
+          "tag": "svg"
+        }
+      ],
+      "semantic_selection_used": false,
+      "requirement_query_used": false,
+      "tender_id_used": false
+    },
+    "H3C-012": {
+      "selector": ".detailBody",
+      "match": {
+        "tag": "div",
+        "classes": [
+          "detailBody"
+        ]
+      },
+      "exclusions": [
+        {
+          "tag": "style"
+        },
+        {
+          "tag": "script"
+        },
+        {
+          "tag": "noscript"
+        },
+        {
+          "tag": "template"
+        },
+        {
+          "tag": "svg"
+        }
+      ],
+      "semantic_selection_used": false,
+      "requirement_query_used": false,
+      "tender_id_used": false
+    },
+    "H3C-013": {
+      "selector": ".content > .main.pd",
+      "match": {
+        "tag": "div",
+        "classes": [
+          "main",
+          "pd"
+        ],
+        "parent": {
+          "tag": "div",
+          "classes": [
+            "content"
+          ]
+        }
+      },
+      "exclusions": [
+        {
+          "classes": [
+            "video-box"
+          ]
+        },
+        {
+          "classes": [
+            "download-box"
+          ]
+        },
+        {
+          "tag": "video"
+        },
+        {
+          "tag": "img"
+        },
+        {
+          "tag": "style"
+        },
+        {
+          "tag": "script"
+        },
+        {
+          "tag": "noscript"
+        },
+        {
+          "tag": "template"
+        },
+        {
+          "tag": "svg"
+        }
+      ],
+      "semantic_selection_used": false,
+      "requirement_query_used": false,
+      "tender_id_used": false
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "checkpoint": "V43_MAPPING_GOLD_V2_FINAL_SELECTION_SUCCESSOR_BUILD",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "provider_calls": 0,
+  "dify_calls": 0,
+  "embedding_calls": 0,
+  "production_db_writes": 0,
+  "production_files_changed_by_task": 0,
+  "active_production_mapping_changed": 0,
+  "batch01_human_authority_restored": true,
+  "batch01_authority_count": 24,
+  "active_gold_changed": 0,
+  "batch01": {
+    "case_level_human_authority_count": 24,
+    "authority_status": "RESTORED_AFTER_SOURCE_PARITY_RECONFIRMATION",
+    "source_packet_render_parity": "PASS",
+    "cand013": {
+      "review_status": "ACCEPTED",
+      "fact_count": 2,
+      "fact_ids": [
+        "EFACT-51BBB3D4-8397-4E1E-B030-26DA8E4A9465",
+        "EFACT-CD2403D4-C896-4762-9DBC-8ECA23B7B1D4"
+      ],
+      "expected_decision": "unrelated",
+      "reconfirmation": "RECONFIRMED_AFTER_CORRECTED_SOURCE_RENDERING"
+    }
+  },
+  "supplemental": {
+    "original_count": 10,
+    "duplicate_parent_pair_count": 7,
+    "novel_count": 2,
+    "fact_set_changed_count": 1,
+    "human_review_packet_case_count": 3,
+    "duplicate_ids": [
+      "REAL-MAP-SUPP-001",
+      "REAL-MAP-SUPP-002",
+      "REAL-MAP-SUPP-003",
+      "REAL-MAP-SUPP-004",
+      "REAL-MAP-SUPP-005",
+      "REAL-MAP-SUPP-006",
+      "REAL-MAP-SUPP-008"
+    ],
+    "fact_set_changed_ids": ["REAL-MAP-SUPP-007"],
+    "novel_ids": ["REAL-MAP-SUPP-009", "REAL-MAP-SUPP-010"],
+    "supp007": {"pool_status": "HOLD_REDUNDANT", "review_status": "ACCEPTED", "scored": false, "exclusion_reason": "REDUNDANT"}
+  },
+  "real_derived_gold": {
+    "dataset_id": "mapping-real-derived-gold-v1",
+    "case_count": 12,
+    "scored_count": 12,
+    "selected_ids": [
+      "REAL-MAP-CAND-002",
+      "REAL-MAP-CAND-007",
+      "REAL-MAP-CAND-008",
+      "REAL-MAP-CAND-013",
+      "REAL-MAP-CAND-014",
+      "REAL-MAP-CAND-015",
+      "REAL-MAP-CAND-017",
+      "REAL-MAP-CAND-018",
+      "REAL-MAP-CAND-021",
+      "REAL-MAP-CAND-023",
+      "REAL-MAP-SUPP-009",
+      "REAL-MAP-SUPP-010"
+    ],
+    "distribution": {"partial_support": 3, "related_reference": 2, "related_insufficient": 4, "unrelated": 3, "direct_full": 0, "conflict": 0},
+    "reserve_ids": ["REAL-MAP-CAND-005", "REAL-MAP-CAND-012", "REAL-MAP-CAND-016", "REAL-MAP-CAND-024"]
+  },
+  "successor_partitions": {
+    "suite_id": "mapping-eval-suite-v2",
+    "dataset_ids": ["mapping-real-derived-gold-v1", "mapping-synthetic-boundary-gold-v2", "mapping-engineering-fixtures-v2", "mapping-disputed-cases-v2"],
+    "synthetic_semantic": {"dataset_id": "mapping-synthetic-boundary-gold-v2", "case_count": 29, "scored_count": 29},
+    "engineering": {"dataset_id": "mapping-engineering-fixtures-v2", "case_count": 6, "scored_count": 0, "ids": ["MAP-G023", "MAP-G024", "MAP-G025", "MAP-G026", "MAP-G027", "MAP-G028"]},
+    "disputed": {"dataset_id": "mapping-disputed-cases-v2", "case_count": 1, "scored_count": 0, "ids": ["MAP-G032"]},
+    "synthetic_correction_count": 6,
+    "synthetic_correction_ids": ["MAP-G004", "MAP-G005", "MAP-G008", "MAP-G016", "MAP-G017", "MAP-G033"]
+  },
+  "immutable_inputs": {
+    "parent_packet": {"path": "backend/eval/gold-human-review/v2/01_mapping_real_source_packet.json", "sha256": "5ca994228f7d4bfedb61aed0c0aac5ef5cf0b284aa573c7732ce4383ecde4acb"},
+    "corrected_parent_markdown": {"path": "backend/eval/gold-human-review/v2/01_mapping_real_source_packet.md", "sha256": "87545524d34e1554bc1cbc0f261f0325efac2908ca3b6e86ce40ef55efdaf276"},
+    "supplemental_packet": {"path": "backend/eval/gold-human-review/v2/03_mapping_real_supplemental_source_packet.json", "sha256": "a3a0c1abb4f98eef4d77fd120f4d4e47639fa1680a1a17139c65077756032bd0"},
+    "active_mapping_gold": {"path": "backend/eval/requirement-evidence-mapping-v1/gold-cases.json", "sha256": "5a6d9eb7c4e7b23f347da111b5276060375b3de2e07716b9cee88d15d5431707"}
+  },
+  "successor_hashes": {
+    "real-derived-gold-v1.json": "6e74e3892748107b9c41c17393a4e0d8f51ef166deb914879543856c9e829e4f",
+    "synthetic-boundary-gold-v2.json": "3377cde8ac059e7b2b3f39f7868d10c5a2f56729190c28b0096d2c15242b39ca",
+    "engineering-fixtures-v2.json": "36bda4cc92177f2a0f14a67d5df9b7706d8237b6111b39dc48003cb4a60457a8",
+    "disputed-cases-v2.json": "26dca1dd770747762fff1cccd1d194ee6c497e9c94752f71b07d604a502a0ce0",
+    "synthetic-corrections-v1.json": "03b2f7dfe4664f652847722f0905106934f9911861c271778683af6ec2d3cae2"
+  },
+  "old_gold_dataset_id": "requirement-evidence-mapping-v1-gold-2026-09-02",
+  "old_gold_sha": "5a6d9eb7c4e7b23f347da111b5276060375b3de2e07716b9cee88d15d5431707",
+  "successor_suite_id": "mapping-eval-suite-v2",
+  "successor_dataset_ids": ["mapping-real-derived-gold-v1", "mapping-synthetic-boundary-gold-v2", "mapping-engineering-fixtures-v2", "mapping-disputed-cases-v2"],
+  "successor_shas": {
+    "real-derived-gold-v1.json": "6e74e3892748107b9c41c17393a4e0d8f51ef166deb914879543856c9e829e4f",
+    "synthetic-boundary-gold-v2.json": "3377cde8ac059e7b2b3f39f7868d10c5a2f56729190c28b0096d2c15242b39ca",
+    "engineering-fixtures-v2.json": "36bda4cc92177f2a0f14a67d5df9b7706d8237b6111b39dc48003cb4a60457a8",
+    "disputed-cases-v2.json": "26dca1dd770747762fff1cccd1d194ee6c497e9c94752f71b07d604a502a0ce0",
+    "synthetic-corrections-v1.json": "03b2f7dfe4664f652847722f0905106934f9911861c271778683af6ec2d3cae2"
+  },
+  "source_packet_render_parity_gate": "PASS",
+  "novelty_gate": "PASS_WITH_DUPLICATES_AUDITABLE",
+  "immutability_gate": "PASS",
+  "classification_gate": "PASS",
+  "semantic_completeness_gate": "PASS",
+  "mutation_sensitivity_gate": "PASS",
+  "production_import_guard": "PASS",
+  "governance_gates": {
+    "IMMUTABILITY_GATE": "PASS",
+    "REVIEW_STATUS_GATE": "PASS",
+    "CLASSIFICATION_GATE": "PASS",
+    "SEMANTIC_COMPLETENESS_GATE": "PASS",
+    "IDENTITY_COLLISION_GATE": "PASS",
+    "BLIND_CONTAMINATION_GATE": "PASS",
+    "SOURCE_PACKET_RENDER_PARITY_GATE": "PASS",
+    "REAL_GOLD_NOVELTY_GATE": "PASS_WITH_DUPLICATES_AUDITABLE",
+    "PRODUCTION_IMPORT_GUARD": "PASS",
+    "STABLE_HASH_GATE": "PASS",
+    "MUTATION_SENSITIVITY_GATE": "PASS"
+  },
+  "dual_eval": {"status": "NOT_EXECUTED", "reason": "NO_TRUSTED_FROZEN_PREDICTIONS"},
+  "dual_eval_deltas": [],
+  "production_boundary_fingerprint": {"path": "backend/eval/gold-governance/production-boundary-manifest.json", "sha256": "c3d94d69debebeb82f2e6ab7c489b6c8d0db713e45b5d8ef79d8bac73afae992", "status": "RECORDED_UNCHANGED_BY_TASK"},
+  "real_gaps": ["direct_full real case missing", "conflict real case missing", "SOURCE_PROJECT_DIVERSITY=1", "PERFORMANCE_MEASUREMENT_FACT=MISSING"],
+  "test_result": {"focused_governance_and_successor_tests": "25/25 PASS", "mapping_governance_and_producer_tests": "45/45 PASS", "backend_test_delta": "FULL_BACKEND_NOT_RUN; no delta asserted", "lint": "PASS", "build": "PASS", "git_diff_check": "PASS", "provider_calls": 0, "dify_calls": 0, "embedding_calls": 0, "db_writes": 0},
+  "git_status": "DIRTY_PRE_EXISTING_AND_TASK_ARTIFACTS",
+  "git_safety": {"git_mutations": 0, "staged_changes": 0, "preexisting_dirty_worktree_preserved": true, "commit": false, "push": false, "merge": false, "reset": false, "clean": false, "stash": false},
+  "final_verdict": "MAPPING_GOLD_V2_SUCCESSOR_READY",
+  "not_claimed": ["MAPPING_GOLD_V2_FROZEN", "MAPPING_SEMANTIC_LIVE_PASS", "MAPPING_PRODUCTION_READY"]
+}

@@ -1,5 +1,5 @@
-import { createHash } from 'node:crypto';
 import { AppError } from '../errors.js';
+import { hashSource } from './source-location-resolver.js';
 
 export const EVIDENCE_SOURCE_RESOLVER_VERSION='evidence-source-span-v1';
 export const SOURCE_SPAN_MAX_CHARS=4000;
@@ -7,7 +7,7 @@ export const EVIDENCE_SOURCE_MAX_CHARS=SOURCE_SPAN_MAX_CHARS;
 export const EVIDENCE_SOURCE_MAX_PARAGRAPHS=12;
 export const EVIDENCE_SOURCE_STRATEGIES=Object.freeze(['anchor_only','paragraph_reconstruction','heading_group','bounded_paragraph_window']);
 const REQUESTED_STRATEGIES=new Set(['auto',...EVIDENCE_SOURCE_STRATEGIES]);
-const sha=(value)=>createHash('sha256').update(value).digest('hex');
+const sha=hashSource;
 const byIndex=(a,b)=>a.chunk_index-b.chunk_index;
 const heading=(value)=>{const match=/^(#{1,6})\s+(.+)$/m.exec(String(value||'').trim());return match?{level:match[1].length,text:match[2].trim()}:null;};
 const paragraphs=(source)=>[...source.matchAll(/\S[\s\S]*?(?=\r?\n\s*\r?\n|$)/g)].map((match,index)=>({index,start:match.index,end:match.index+match[0].length,text:match[0],heading:heading(match[0])}));

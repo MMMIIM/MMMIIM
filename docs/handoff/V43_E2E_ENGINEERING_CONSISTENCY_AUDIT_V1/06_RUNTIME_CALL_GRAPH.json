@@ -1,0 +1,21 @@
+{
+  "artifact_type": "V43_E2E_ENGINEERING_CONSISTENCY_AUDIT_V1_RUNTIME_CALL_GRAPH",
+  "runtime_entry": "backend/src/server.js",
+  "http_router": "backend/src/app.js",
+  "nodes": [
+    {"path": "backend/eval/real-e2e/run-requirement-retrieval-fact-canary.mjs", "entry": "runCanary", "role": "Eval orchestration", "authority_bearing": false, "material_gate": "preflight/database identity", "status": "PARTIAL"},
+    {"path": "backend/eval/real-e2e/run-requirement-retrieval-fact-canary.mjs", "entry": "runRetrieval", "role": "read-only retrieval diagnostic", "authority_bearing": false, "material_gate": "repository listChunksForRetrieval filters lifecycle/review/usage/extraction/index and MATERIAL_AUTHORITY_SQL", "status": "BLOCKED_PRE_PROVIDER"},
+    {"path": "backend/src/db.js", "entry": "listChunksForRetrieval", "role": "chunk/material join and scope query", "authority_bearing": true, "material_gate": "MATERIAL_AUTHORITY_SQL plus project_material_bindings", "status": "PARTIAL_TARGET_DB_DEPENDENT"},
+    {"path": "backend/src/pipeline/enterprise-retrieval-service.js", "entry": "retrieve", "role": "formal retrieval service", "authority_bearing": true, "material_gate": "canonical confirmed Requirement + material authority + project scope", "status": "ENFORCED_ON_INSPECTED_PATH"},
+    {"path": "backend/src/requirement-scope-authority-service.js", "entry": "recordDecision", "role": "human scope authority", "authority_bearing": true, "material_gate": "source identity/page/actor validation", "status": "ENFORCED_BUT_PRODUCTION_RELATION_ABSENT"},
+    {"path": "backend/src/evidence-review-service.js", "entry": "propose/decide", "role": "evidence review", "authority_bearing": true, "material_gate": "source material authority, currentness and deterministic support", "status": "ENFORCED_ON_INSPECTED_PATH"},
+    {"path": "backend/src/evidence-source-fact-service.js", "entry": "extract/decide", "role": "Evidence Source Fact lifecycle", "authority_bearing": true, "material_gate": "approved review, eligible current material, source span/hash", "status": "ENFORCED_ON_INSPECTED_PATH"},
+    {"path": "backend/src/requirement-evidence-fact-mapping-service.js", "entry": "propose/produceForRequirement", "role": "canonical mapping", "authority_bearing": true, "material_gate": "confirmed Requirement + approved/current Fact/review/source lineage", "status": "ENFORCED_ON_INSPECTED_PATH"},
+    {"path": "backend/src/pipeline/claim-gate-service.js", "entry": "evaluate", "role": "Claim Gate", "authority_bearing": true, "material_gate": "requirement basis, evidence lineage, commitments and risk rules", "status": "ENFORCED_ON_INSPECTED_PATH"},
+    {"path": "backend/src/pipeline/writer-input-authorization-v1.js", "entry": "createWriterSafeContext", "role": "Writer Safe Context", "authority_bearing": true, "material_gate": "approved/current Fact + allow Claim + gate identity", "status": "ENFORCED_ON_INSPECTED_PATH"},
+    {"path": "backend/src/pipeline/writer-authorization-snapshot.js", "entry": "snapshot/hash", "role": "authorization projection", "authority_bearing": true, "material_gate": "projects already-authorized state; no new approval", "status": "ENFORCED_ON_INSPECTED_PATH"}
+  ],
+  "blocked_edge": "runCanary -> runRetrieval -> database identity/schema query -> Provider",
+  "provider_calls_by_this_audit": 0,
+  "production_writes_by_this_audit": 0
+}

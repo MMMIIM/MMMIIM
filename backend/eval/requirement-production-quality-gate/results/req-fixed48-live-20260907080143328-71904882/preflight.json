@@ -1,0 +1,43 @@
+{
+  "artifact_type": "V43_REQUIREMENT_FIXED48_LIVE_CERTIFICATION_PREFLIGHT",
+  "artifact_version": "v1",
+  "run_id": "req-fixed48-live-20260907080143328-71904882",
+  "task_type": "requirement_extraction",
+  "fixed48_cases": 48,
+  "input_sha256_match": 48,
+  "source_sha256_match_tenders": 6,
+  "input_identity_status": "PASS",
+  "source_identity_status": "PASS",
+  "concurrency": 2,
+  "first_attempt_cases": 48,
+  "transient_retry_budget": 5,
+  "total_provider_call_cap": 53,
+  "gateway_probe": {
+    "ready_http_status": 200,
+    "ready_ok": true,
+    "gateway_provider_family": "openai_compatible",
+    "provider_configured": true,
+    "info_http_status": 200,
+    "info_ok": true,
+    "task_registry_loaded": true,
+    "local_config_provider": "mock",
+    "local_config_model": "mock-semantic-v1",
+    "local_config_gateway_host": "127.0.0.1",
+    "provider_identity_status": "ACTUAL_REQUEST_REQUIRED",
+    "sensitive_values_logged": false
+  },
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "historical_run_reused": false,
+  "historical_artifact_appended": false,
+  "frozen_input_artifact": "docs/V43_REQUIREMENT_FIXED_48_RUNTIME_RUN.json",
+  "source_files": {
+    "JY-001": "backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf",
+    "TB-003": "backend/eval/tender-benchmark-v1/sources/TB-003-jiaozuo-sidian.pdf",
+    "TB-006": "backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf",
+    "FAST-01": "backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf",
+    "FAST-04": "backend/eval/tender-benchmark-v1/sources/FAST-04-beijing-software.pdf",
+    "FAST-WATER-01": "backend/eval/tender-benchmark-v1/sources/FAST-WATER-01-beijing-water-ops.pdf"
+  }
+}

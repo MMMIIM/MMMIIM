@@ -11,10 +11,14 @@ import { gatewayConfigFromEnv } from '../src/gateway.js';
 test('shared task registry exposes one canonical contract set', () => {
   assert.deepEqual(SEMANTIC_TASK_TYPES.filter(task => task !== 'draft_sections'), [
     'requirement_extraction', 'response_planning', 'claim_generation',
-    'section_drafting', 'targeted_revision', 'evidence_support_assessment'
+    'section_drafting', 'targeted_revision', 'evidence_fact_extraction',
+    'evidence_fact_candidate_v2', 'evidence_fact_candidate_v2_1', 'evidence_fact_candidate_v2_2',
+    'evidence_support_assessment', 'requirement_evidence_mapping'
   ]);
-  assert.equal(getSemanticTaskContract('requirement_extraction').contract_version, '4.3-requirement-extraction-v3');
+  assert.equal(getSemanticTaskContract('requirement_extraction').contract_version, '4.3-requirement-extraction-v3.1.1');
   assert.equal(getSemanticTaskContract('evidence_support_assessment').contract_version, '4.3-evidence-support-assessment-v1');
+  assert.equal(getSemanticTaskContract('evidence_fact_candidate_v2_1').contract_version, '4.3-evidence-fact-candidate-v2.1');
+  assert.equal(getSemanticTaskContract('evidence_fact_candidate_v2_2').contract_version, '4.3-evidence-fact-candidate-v2.2');
 });
 
 test('OpenAI-compatible adapter posts the canonical request exactly once', async () => {
@@ -42,7 +46,7 @@ test('OpenAI-compatible adapter posts the canonical request exactly once', async
     { role: 'user', content: '{"value":1}' }
   ]);
   assert.equal(body.response_format.type, 'json_object');
-  assert.equal(body.max_tokens, 3200);
+  assert.equal(body.max_tokens, 4800);
   assert.equal(body.temperature, 0.1);
   assert.equal(body.top_p, 0.9);
   assert.equal(body.top_k, 20);
@@ -54,7 +58,7 @@ test('OpenAI-compatible adapter posts the canonical request exactly once', async
   assert.equal(result.provider_audit.current_stage, 'MODEL_CONTENT_EXTRACTED');
   assert.equal(result.provider_audit.finish_reason, null);
   assert.equal(result.provider_audit.model_content_length_chars, 11);
-  assert.equal(result.provider_audit.generation_config.max_tokens, 3200);
+  assert.equal(result.provider_audit.generation_config.max_tokens, 4800);
   assert.equal(result.provider_audit.outbound_prompt_diagnostics.contamination, false);
 });
 
@@ -95,7 +99,7 @@ test('DeepSeek Flash generation controls include non-thinking mode and single co
       top_p: 1,
       top_k: 50,
       frequency_penalty: 0,
-      max_tokens: 3200,
+      max_tokens: 4800,
       stream: false,
       n: 1
     },
@@ -112,7 +116,7 @@ test('DeepSeek Flash generation controls include non-thinking mode and single co
   assert.equal(request.top_p, 1);
   assert.equal(request.top_k, 50);
   assert.equal(request.frequency_penalty, 0);
-  assert.equal(request.max_tokens, 3200);
+  assert.equal(request.max_tokens, 4800);
   assert.equal(request.stream, false);
   assert.equal(request.n, 1);
   assert.equal(Object.hasOwn(request, 'thinking_budget'), false);
@@ -135,7 +139,7 @@ test('Gateway maps explicit runtime generation controls into the generic Provide
     SEMANTIC_GATEWAY_TOP_P: '1',
     SEMANTIC_GATEWAY_TOP_K: '50',
     SEMANTIC_GATEWAY_FREQUENCY_PENALTY: '0',
-    SEMANTIC_GATEWAY_MAX_TOKENS: '3200',
+    SEMANTIC_GATEWAY_MAX_TOKENS: '4800',
     SEMANTIC_GATEWAY_STREAM: 'false',
     SEMANTIC_GATEWAY_N: '1'
   });
@@ -144,7 +148,7 @@ test('Gateway maps explicit runtime generation controls into the generic Provide
   assert.equal(config.provider.generationConfig.top_p, 1);
   assert.equal(config.provider.generationConfig.top_k, 50);
   assert.equal(config.provider.generationConfig.frequency_penalty, 0);
-  assert.equal(config.provider.generationConfig.max_tokens, 3200);
+  assert.equal(config.provider.generationConfig.max_tokens, 4800);
   assert.equal(config.provider.generationConfig.stream, false);
   assert.equal(config.provider.generationConfig.n, 1);
 });

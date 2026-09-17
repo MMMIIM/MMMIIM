@@ -1,0 +1,22 @@
+{
+  "artifact_type": "V43_REAL_E2E_FAST01_V2_FAILURE_LEDGER",
+  "run_id": "V43-REAL-E2E-FAST01-20260911-0002",
+  "entries": [
+    {
+      "stage": "parse.chunk_persistence",
+      "code": "23514",
+      "constraint": "tender_parse_chunks_check",
+      "http_status": 200,
+      "mechanical_class": "P0_FLOW_BLOCKER",
+      "provider_reached": false,
+      "retry_eligible": false,
+      "retry_attempted": false,
+      "safe_observed_shape": {"chunk_number": 6, "source_start_offset": 45345, "source_end_offset": 7705},
+      "effect": "Generated chunks were not persisted; no Gateway, candidate or downstream stage ran.",
+      "recovery": "Not attempted; outside this classifier-only Decision."
+    }
+  ],
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0
+}

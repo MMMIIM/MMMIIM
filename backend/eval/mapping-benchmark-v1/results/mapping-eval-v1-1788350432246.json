@@ -1,0 +1,235 @@
+{
+  "schema_version": "4.3-mapping-eval-v1",
+  "run_id": "mapping-eval-v1-1788350432246",
+  "generated_at": "2026-09-02T12:00:32.259Z",
+  "mode": "fast",
+  "scope": "offline-contract-policy-downstream",
+  "git": {
+    "branch": "feat/v4.3-semantic-boundary-routing",
+    "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+    "dirty": true
+  },
+  "gold": {
+    "dataset_version": "requirement-evidence-mapping-v1-gold-2026-09-02",
+    "contract_version": "requirement-evidence-mapping-v1.1",
+    "authorship": "human-authored-static",
+    "case_count": 36,
+    "gold_hash": "5a6d9eb7c4e7b23f347da111b5276060375b3de2e07716b9cee88d15d5431707",
+    "validation": {
+      "ok": true,
+      "errors": [],
+      "gold_hash": "5a6d9eb7c4e7b23f347da111b5276060375b3de2e07716b9cee88d15d5431707",
+      "case_count": 36
+    }
+  },
+  "evaluator_identity": "production-mapping-projection-policy-v1",
+  "execution_policy": {
+    "provider_calls": 0,
+    "retries": 0,
+    "fallback": 0,
+    "db_writes": 0
+  },
+  "gates": {
+    "MAPPING_FAST_GATE": {
+      "status": "PASS",
+      "gate": "MAPPING_FAST_GATE",
+      "gold": {
+        "dataset_version": "requirement-evidence-mapping-v1-gold-2026-09-02",
+        "contract_version": "requirement-evidence-mapping-v1.1",
+        "authorship": "human-authored-static",
+        "case_count": 36,
+        "gold_hash": "5a6d9eb7c4e7b23f347da111b5276060375b3de2e07716b9cee88d15d5431707",
+        "validation": {
+          "ok": true,
+          "errors": [],
+          "gold_hash": "5a6d9eb7c4e7b23f347da111b5276060375b3de2e07716b9cee88d15d5431707",
+          "case_count": 36
+        }
+      },
+      "checks": {
+        "gold_integrity": true,
+        "transport": true,
+        "projection": true,
+        "policy": true,
+        "no_escalation": true,
+        "alias_integrity": true,
+        "batch_split": true,
+        "taxonomy": true,
+        "metrics": true,
+        "downstream_safety": true
+      },
+      "metrics": {
+        "cases": 35,
+        "schema_validity": 1,
+        "decision_accuracy": 1,
+        "dimension_accuracy": 1,
+        "final_mapping_accuracy": 1,
+        "false_positive_count": 12,
+        "false_positive_rate": 0.34285714285714286,
+        "false_full_count": 0,
+        "false_full_rate": 0,
+        "conflict_recall": 1,
+        "gold_conflicts": 5,
+        "detected_conflicts": 5,
+        "missed_conflict_count": 0,
+        "full_partial_accuracy": 1,
+        "true_gap_accuracy": 1
+      },
+      "taxonomy": {
+        "primary": {
+          "FALSE_FULL": 0,
+          "FALSE_PARTIAL": 0,
+          "FALSE_SUPPORT": 0,
+          "MISSED_CONFLICT": 0,
+          "RELATED_AS_SUPPORT": 0,
+          "QUANTITY_CONFUSION": 0,
+          "STATUS_CONFUSION": 0,
+          "SCOPE_CONFUSION": 0,
+          "ENTITY_CONFUSION": 0,
+          "VALIDITY_CONFUSION": 0,
+          "NA_MISUSE": 0,
+          "UNKNOWN_OVERUSE": 0,
+          "SCHEMA_FAILURE": 0,
+          "ALIAS_FAILURE": 0,
+          "OUTPUT_INCOMPLETE": 0,
+          "AUTHORITY_ESCALATION": 0,
+          "UNAUTHORIZED_CLAIM_ALLOW": 0,
+          "WRITER_AUTHORITY_BYPASS": 0
+        },
+        "secondary": {
+          "FALSE_FULL": 0,
+          "FALSE_PARTIAL": 0,
+          "FALSE_SUPPORT": 0,
+          "MISSED_CONFLICT": 0,
+          "RELATED_AS_SUPPORT": 0,
+          "QUANTITY_CONFUSION": 0,
+          "STATUS_CONFUSION": 0,
+          "SCOPE_CONFUSION": 0,
+          "ENTITY_CONFUSION": 0,
+          "VALIDITY_CONFUSION": 0,
+          "NA_MISUSE": 0,
+          "UNKNOWN_OVERUSE": 0,
+          "SCHEMA_FAILURE": 0,
+          "ALIAS_FAILURE": 0,
+          "OUTPUT_INCOMPLETE": 0,
+          "AUTHORITY_ESCALATION": 0,
+          "UNAUTHORIZED_CLAIM_ALLOW": 0,
+          "WRITER_AUTHORITY_BYPASS": 0
+        }
+      },
+      "negative_controls": {
+        "status": "PASS",
+        "metrics": {
+          "false_full": 0,
+          "authority_escalation": 0,
+          "unauthorized_claim_allow": 0,
+          "writer_authority_bypass": 0,
+          "cross_project_candidate_leakage": 0
+        },
+        "violations": []
+      },
+      "semantic_model_quality": "NOT_MEASURED",
+      "provider_calls": 0,
+      "db_writes": 0
+    },
+    "MAPPING_DB_GATE": {
+      "status": "NOT_EXECUTED",
+      "reason_code": "DB_OPT_IN_REQUIRED",
+      "provider_calls": 0,
+      "db_writes": 0
+    },
+    "MAPPING_SEMANTIC_GATE": {
+      "status": "NOT_EXECUTED",
+      "provider_calls": 0,
+      "semantic_model_quality": "NOT_MEASURED",
+      "cases": 0
+    },
+    "MAPPING_DOWNSTREAM_SAFETY_GATE": {
+      "status": "PASS",
+      "metrics": {
+        "false_full": 0,
+        "authority_escalation": 0,
+        "unauthorized_claim_allow": 0,
+        "writer_authority_bypass": 0,
+        "cross_project_candidate_leakage": 0
+      },
+      "violations": [],
+      "provider_calls": 0,
+      "db_writes": 0
+    },
+    "MAPPING_RELEASE_GATE": {
+      "status": "BLOCKED",
+      "reason_code": "REQUIRED_LAYER_NOT_VERIFIED"
+    }
+  },
+  "metrics": {
+    "cases": 35,
+    "schema_validity": 1,
+    "decision_accuracy": 1,
+    "dimension_accuracy": 1,
+    "final_mapping_accuracy": 1,
+    "false_positive_count": 12,
+    "false_positive_rate": 0.34285714285714286,
+    "false_full_count": 0,
+    "false_full_rate": 0,
+    "conflict_recall": 1,
+    "gold_conflicts": 5,
+    "detected_conflicts": 5,
+    "missed_conflict_count": 0,
+    "full_partial_accuracy": 1,
+    "true_gap_accuracy": 1
+  },
+  "taxonomy": {
+    "primary": {
+      "FALSE_FULL": 0,
+      "FALSE_PARTIAL": 0,
+      "FALSE_SUPPORT": 0,
+      "MISSED_CONFLICT": 0,
+      "RELATED_AS_SUPPORT": 0,
+      "QUANTITY_CONFUSION": 0,
+      "STATUS_CONFUSION": 0,
+      "SCOPE_CONFUSION": 0,
+      "ENTITY_CONFUSION": 0,
+      "VALIDITY_CONFUSION": 0,
+      "NA_MISUSE": 0,
+      "UNKNOWN_OVERUSE": 0,
+      "SCHEMA_FAILURE": 0,
+      "ALIAS_FAILURE": 0,
+      "OUTPUT_INCOMPLETE": 0,
+      "AUTHORITY_ESCALATION": 0,
+      "UNAUTHORIZED_CLAIM_ALLOW": 0,
+      "WRITER_AUTHORITY_BYPASS": 0
+    },
+    "secondary": {
+      "FALSE_FULL": 0,
+      "FALSE_PARTIAL": 0,
+      "FALSE_SUPPORT": 0,
+      "MISSED_CONFLICT": 0,
+      "RELATED_AS_SUPPORT": 0,
+      "QUANTITY_CONFUSION": 0,
+      "STATUS_CONFUSION": 0,
+      "SCOPE_CONFUSION": 0,
+      "ENTITY_CONFUSION": 0,
+      "VALIDITY_CONFUSION": 0,
+      "NA_MISUSE": 0,
+      "UNKNOWN_OVERUSE": 0,
+      "SCHEMA_FAILURE": 0,
+      "ALIAS_FAILURE": 0,
+      "OUTPUT_INCOMPLETE": 0,
+      "AUTHORITY_ESCALATION": 0,
+      "UNAUTHORIZED_CLAIM_ALLOW": 0,
+      "WRITER_AUTHORITY_BYPASS": 0
+    }
+  },
+  "semantic_model_quality": "NOT_MEASURED",
+  "provider_calls": 0,
+  "db_writes": 0,
+  "production_dependency_direction": {
+    "ok": true,
+    "offending_files": []
+  },
+  "artifact_lineage": {
+    "gold_file": "backend/eval/requirement-evidence-mapping-v1/gold-cases.json",
+    "source": "backend/eval/requirement-evidence-mapping-v1/gold-cases.json"
+  }
+}

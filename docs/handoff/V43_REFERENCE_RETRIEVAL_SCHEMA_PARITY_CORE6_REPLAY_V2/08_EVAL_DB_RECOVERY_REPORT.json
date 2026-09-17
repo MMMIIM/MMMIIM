@@ -1,0 +1,54 @@
+{
+  "artifact_type": "V43_ISOLATED_EVAL_DB_RECOVERY_REPORT",
+  "database": "bid_platform_reference_eval_v3",
+  "source_database": "bid_platform",
+  "exact_snapshot_template": "bid_platform",
+  "recovery": {
+    "database": "bid_platform_reference_eval_v3",
+    "action": "REUSED_OR_CREATED",
+    "created": false,
+    "migration_052_applied": false,
+    "writes": [
+      {
+        "database": "bid_platform_reference_eval_v3",
+        "operation": "INSERT company_materials",
+        "rows": 34,
+        "purpose": "exact current Production Public corpus snapshot"
+      },
+      {
+        "database": "bid_platform_reference_eval_v3",
+        "operation": "INSERT material_chunks",
+        "rows": 318,
+        "purpose": "exact current Production chunk snapshot; IDs/text/hashes preserved"
+      },
+      {
+        "database": "bid_platform_reference_eval_v3",
+        "operation": "INSERT material_chunk_embeddings",
+        "rows": 382,
+        "purpose": "exact current Production embedding snapshot; vectors not recomputed"
+      }
+    ],
+    "snapshot_source": {
+      "database": "bid_platform",
+      "project_id": "00000000-0000-4000-8000-000000000001",
+      "materials": 34,
+      "chunks": 318,
+      "embeddings": 382
+    },
+    "eval_counts_before_copy": {
+      "materials": 0,
+      "chunks": 0,
+      "embeddings": 0
+    },
+    "binding_projection": {
+      "classification": "DIRECT_PUBLIC_PROJECT_OWNER",
+      "authorized_binding_rows": 0,
+      "reason": "Current retrieval contract authorizes the public corpus through company_materials.project_id=PUBLIC_CORPUS_PROJECT_ID; ProjectMaterialBindingService is reserved for authority-eligible ENTERPRISE_PRIVATE cross-project bindings."
+    }
+  },
+  "post_recovery_schema_fingerprint": "ae3004bbbfe6c5880b2e8ad27bb5428ade00c7fd2fc6451e36988fd18156c3e7",
+  "post_recovery_public_corpus_digest": "12a587bf47f8ce72d0501e06eae38b3242d99cc0269011cac25e701024550409",
+  "production_writes": 0,
+  "production_migrations": 0,
+  "eval_db_writes": 3
+}

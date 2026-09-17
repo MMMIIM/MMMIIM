@@ -1,0 +1,16 @@
+{
+  "artifact_type": "V43_HUMAN_REQUIREMENT_SCOPE_AUTHORITY_IMPLEMENTATION",
+  "implementation_status": "PERSISTED",
+  "canonical_table": "requirement_scope_authority_decisions",
+  "canonical_service": "backend/src/requirement-scope-authority-service.js",
+  "canonical_repository": "PgRepository.upsertRequirementScopeAuthority",
+  "migration": "backend/migrations/052_requirement_scope_authority_and_project_material_bindings.sql",
+  "authority_type": "HUMAN",
+  "authority_reference": "explicit_user_confirmation",
+  "decision_source": "REAL_E2E_CASE_01",
+  "database_target": "bid_platform_flow_audit_test",
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "provider_calls": 0,
+  "conflict_policy": "same identity and same immutable payload is idempotent; conflicting payload fails closed"
+}

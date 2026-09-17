@@ -100,7 +100,7 @@ test('model Candidate v3 requires backend-derived provenance before Canonical ma
   assert.equal(mapRequirementCandidateToCanonicalInput({ ...resolved, source_excerpt: 'legacy' }, 1), null);
 });
 
-test('production semantic budget of 2,000 chars and 50 spans splits a dense 4,930-char window without losing spans', () => {
+test('production semantic budget of 2,000 chars and 100 spans splits a dense 4,930-char window without losing spans', () => {
   const paragraphTexts = [
     ...Array.from({ length: 254 }, () => '中'.repeat(18)),
     '中'.repeat(104)
@@ -116,11 +116,11 @@ test('production semantic budget of 2,000 chars and 50 spans splits a dense 4,93
   assert.equal(budget.singleCallThreshold, 2_000);
   assert.equal(budget.characterBudget, 2_000);
   assert.equal(budget.tokenBudget, 8_000);
-  assert.equal(budget.sourceSpanBudget, 50);
+  assert.equal(budget.sourceSpanBudget, 100);
   const chunks = chunkExtractedText({ text, paragraphs, ...budget });
   assert.ok(chunks.length > 1);
   assert.ok(chunks.every((chunk) => chunk.character_count <= 2_000));
-  assert.ok(chunks.every((chunk) => chunk.segments.length <= 50));
+  assert.ok(chunks.every((chunk) => chunk.segments.length <= budget.sourceSpanBudget));
   const segments = chunks.flatMap((chunk) => chunk.segments);
   assert.equal(segments.length, paragraphs.length);
   assert.deepEqual(segments.map((segment) => segment.text), paragraphTexts);
@@ -181,13 +181,37 @@ test('default budget enforces character, token, and source-span caps determinist
   assert.ok(chunks.every((chunk) => chunk.segments.length <= budget.sourceSpanBudget));
 });
 
+test('production default source-span budget allows a contiguous multi-paragraph range above 50 spans', () => {
+  const paragraphTexts = Array.from({ length: 60 }, (_, index) => `第${index + 1}项要求。`);
+  const text = paragraphTexts.join('\n');
+  const paragraphs = paragraphTexts.map((value, index) => ({
+    paragraph: index + 1,
+    page: 1,
+    text: value
+  }));
+  const budget = resolveRequirementChunkBudget({});
+  assert.equal(budget.sourceSpanBudget, 100);
+  const chunks = chunkExtractedText({ text, paragraphs, ...budget });
+  assert.equal(chunks.length, 1);
+  assert.equal(chunks[0].segments.length, 60);
+  const resolver = new SourceLocationResolver();
+  const resolved = resolver.resolve({ source_range: {
+    start_ref: 'C001-S001',
+    end_ref: 'C001-S060'
+  } }, chunks[0]);
+  assert.equal(resolved.location.source_verified, true);
+  assert.equal(resolved.location.source_match_type, 'exact_multi_paragraph_span');
+  assert.equal(resolved.location.source_refs.length, 60);
+  assert.equal(Object.hasOwn(resolved.location, 'synthetic_provenance'), false);
+});
+
 test('example environments declare the canonical production chunk budget', () => {
   for (const relative of ['../../.env.example', '../.env.example']) {
     const source = readFileSync(new URL(relative, import.meta.url), 'utf8');
     assert.match(source, /^REQUIREMENT_SINGLE_CALL_CHAR_THRESHOLD=2000$/m);
     assert.match(source, /^REQUIREMENT_CHUNK_CHAR_BUDGET=2000$/m);
     assert.match(source, /^REQUIREMENT_CHUNK_TOKEN_BUDGET=8000$/m);
-    assert.match(source, /^REQUIREMENT_CHUNK_SOURCE_SPAN_BUDGET=50$/m);
+    assert.match(source, /^REQUIREMENT_CHUNK_SOURCE_SPAN_BUDGET=100$/m);
   }
 });
 
@@ -350,4 +374,54 @@ test('a semantic group larger than the span cap still cuts atomically at the har
   });
   assert.deepEqual(chunks.map((chunk) => chunk.segments.length), [50, 10]);
   assert.deepEqual(chunks.flatMap((chunk) => chunk.segments).map((segment) => segment.text), paragraphs.map((item) => item.text));
+});
+
+test('source-span cap backtracks before an incomplete numbered obligation', () => {
+  const paragraphs = [
+    ...Array.from({ length: 99 }, (_, index) => ({
+      paragraph: index + 1,
+      page: 1,
+      text: index === 98 ? '上一项义务的前半段未完' : `前置条款${index + 1}。`
+    })),
+    { paragraph: 100, page: 1, text: '（3）出现疑难技术、业务问题和重大紧急情况时，及时向负' },
+    { paragraph: 101, page: 1, text: '责人报告。' }
+  ];
+  const text = paragraphs.map((item) => item.text).join('\n');
+  const chunks = chunkExtractedText({
+    text,
+    paragraphs,
+    singleCallThreshold: 1,
+    characterBudget: 10_000,
+    tokenBudget: 8_000,
+    sourceSpanBudget: 100
+  });
+  assert.deepEqual(chunks.map((chunk) => chunk.segments.length), [99, 2]);
+  assert.match(chunks[1].text, /及时向负\n责人报告。/);
+  assert.ok(chunks.every((chunk) => chunk.segments.length <= 100));
+});
+
+test('source-span cap backtracks before a numbered clause heading to keep a later sentence whole', () => {
+  const paragraphs = [
+    ...Array.from({ length: 98 }, (_, index) => ({
+      paragraph: index + 1,
+      page: 1,
+      source_clause_id: '2.2',
+      text: `前置条款${index + 1}。`
+    })),
+    { paragraph: 99, page: 1, source_clause_id: '2.2', text: '（4）响应的及时性' },
+    { paragraph: 100, page: 1, source_clause_id: '2.2', text: '系统发生故障时应在5分钟内响应，在1小时内恢复正常。故障处理完毕后提供相关系统宕' },
+    { paragraph: 101, page: 1, source_clause_id: '2.2', text: '机报告。' }
+  ];
+  const text = paragraphs.map((item) => item.text).join('\n');
+  const chunks = chunkExtractedText({
+    text,
+    paragraphs,
+    singleCallThreshold: 1,
+    characterBudget: 10_000,
+    tokenBudget: 8_000,
+    sourceSpanBudget: 100
+  });
+  assert.deepEqual(chunks.map((chunk) => chunk.segments.length), [98, 3]);
+  assert.match(chunks[1].text, /故障处理完毕后提供相关系统宕\n机报告。/);
+  assert.ok(chunks.every((chunk) => chunk.segments.length <= 100));
 });

@@ -1,0 +1,17 @@
+{
+  "v2_contract": "4.3-evidence-fact-candidate-v2",
+  "v2_1_contract": "4.3-evidence-fact-candidate-v2.1",
+  "changes": [
+    "Model-facing source segments use deterministic window-local aliases S001, S002, ... instead of authoritative URI-like refs.",
+    "Backend resolves aliases before canonicalization and grounding; authoritative refs remain in Eval evidence.",
+    "Prompt prohibits explanations, source quotes, duplicate narrative, alternatives, and multi-proposition output.",
+    "Truncated windows may split only at existing chunk boundaries to depth 2; unresolved truncation remains a hard gate."
+  ],
+  "unchanged": [
+    "Canonical Fact schema",
+    "Provider route",
+    "Fact authority",
+    "source lineage ownership",
+    "downstream Mapping/Claim/Writer"
+  ]
+}

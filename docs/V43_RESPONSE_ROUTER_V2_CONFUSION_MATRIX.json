@@ -1,0 +1,165 @@
+{
+  "artifact_type": "V43_RESPONSE_ROUTER_V2_CONFUSION_MATRIX",
+  "artifact_version": "v2",
+  "run_id": "V43-RR-V2-DEV-5cab74957e63926f",
+  "reference_sha256": "b6faf37c1ed33e5d8c26d830d6cf9d25f139b4bafeb4f78ac9294f13acb40507",
+  "router_sha256": "c2e787e361dd6e2a4e8c27b5f1def49821d4f869b46c4074c66229abb9bbefaa",
+  "case_count": 2178,
+  "primary_response_mode": {
+    "label_order": [
+      "SOLUTION",
+      "EVIDENCE",
+      "COMMITMENT",
+      "COMPLIANCE",
+      "NEED_REVIEW"
+    ],
+    "matrix_router_rows_gpt_columns": {
+      "SOLUTION": {
+        "SOLUTION": 107,
+        "EVIDENCE": 74,
+        "COMMITMENT": 55,
+        "COMPLIANCE": 33,
+        "NEED_REVIEW": 0
+      },
+      "EVIDENCE": {
+        "SOLUTION": 117,
+        "EVIDENCE": 728,
+        "COMMITMENT": 90,
+        "COMPLIANCE": 22,
+        "NEED_REVIEW": 0
+      },
+      "COMMITMENT": {
+        "SOLUTION": 61,
+        "EVIDENCE": 39,
+        "COMMITMENT": 351,
+        "COMPLIANCE": 30,
+        "NEED_REVIEW": 0
+      },
+      "COMPLIANCE": {
+        "SOLUTION": 30,
+        "EVIDENCE": 26,
+        "COMMITMENT": 45,
+        "COMPLIANCE": 370,
+        "NEED_REVIEW": 0
+      },
+      "NEED_REVIEW": {
+        "SOLUTION": 0,
+        "EVIDENCE": 0,
+        "COMMITMENT": 0,
+        "COMPLIANCE": 0,
+        "NEED_REVIEW": 0
+      }
+    },
+    "per_mode_precision_recall": {
+      "SOLUTION": {
+        "true_positive": 107,
+        "false_positive": 162,
+        "false_negative": 208,
+        "precision": 0.39777,
+        "recall": 0.339683
+      },
+      "EVIDENCE": {
+        "true_positive": 728,
+        "false_positive": 229,
+        "false_negative": 139,
+        "precision": 0.760711,
+        "recall": 0.839677
+      },
+      "COMMITMENT": {
+        "true_positive": 351,
+        "false_positive": 130,
+        "false_negative": 190,
+        "precision": 0.72973,
+        "recall": 0.648799
+      },
+      "COMPLIANCE": {
+        "true_positive": 370,
+        "false_positive": 101,
+        "false_negative": 85,
+        "precision": 0.785563,
+        "recall": 0.813187
+      },
+      "NEED_REVIEW": {
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": 0,
+        "recall": 0
+      }
+    },
+    "agreement_count": 1556,
+    "agreement_rate": 0.714417
+  },
+  "risk_tier": {
+    "label_order": [
+      "LOW",
+      "MEDIUM",
+      "HIGH",
+      "P0"
+    ],
+    "matrix_router_rows_gpt_columns": {
+      "LOW": {
+        "LOW": 106,
+        "MEDIUM": 105,
+        "HIGH": 41,
+        "P0": 13
+      },
+      "MEDIUM": {
+        "LOW": 131,
+        "MEDIUM": 769,
+        "HIGH": 131,
+        "P0": 53
+      },
+      "HIGH": {
+        "LOW": 64,
+        "MEDIUM": 225,
+        "HIGH": 390,
+        "P0": 26
+      },
+      "P0": {
+        "LOW": 1,
+        "MEDIUM": 27,
+        "HIGH": 6,
+        "P0": 90
+      }
+    },
+    "agreement_count": 1355,
+    "agreement_rate": 0.62213,
+    "p0_recall": 0.494505
+  },
+  "per_cohort": {
+    "CORE6": {
+      "case_count": 1009,
+      "primary_mode_agreement": 690,
+      "primary_mode_agreement_rate": 0.683845,
+      "risk_tier_agreement": 605,
+      "response_required_agreement": 920,
+      "scoring_agreement": 1006,
+      "evidence_dependency_agreement": 712,
+      "human_required_agreement": 859,
+      "need_review_count": 0
+    },
+    "HOLDOUT_V1": {
+      "case_count": 397,
+      "primary_mode_agreement": 236,
+      "primary_mode_agreement_rate": 0.594458,
+      "risk_tier_agreement": 219,
+      "response_required_agreement": 357,
+      "scoring_agreement": 389,
+      "evidence_dependency_agreement": 323,
+      "human_required_agreement": 297,
+      "need_review_count": 0
+    },
+    "HOLDOUT_V2": {
+      "case_count": 772,
+      "primary_mode_agreement": 630,
+      "primary_mode_agreement_rate": 0.816062,
+      "risk_tier_agreement": 531,
+      "response_required_agreement": 720,
+      "scoring_agreement": 761,
+      "evidence_dependency_agreement": 672,
+      "human_required_agreement": 656,
+      "need_review_count": 0
+    }
+  }
+}

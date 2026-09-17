@@ -1,0 +1,138 @@
+{
+  "artifact_type": "V43_REQUIREMENT_V6_4_BOUNDED_PRODUCER_SCOPE_ALIGNMENT_CHECKPOINT",
+  "artifact_version": "v1",
+  "implementation_status": "COMPLETE_PENDING_FINAL_ADJUDICATION",
+  "prompt_scope_alignment": {
+    "repair": "MINIMAL_GENERAL_PRODUCER_INSTRUCTION_REPAIR",
+    "production_contract_changed": false,
+    "schema_changed": false,
+    "provider_routing_changed": false,
+    "case_specific_hardcode": false,
+    "tdd_red_confirmed": true,
+    "tdd_green_focused": "PASS"
+  },
+  "gpt_authority": {
+    "source_artifact": "docs/handoff/V43_REQUIREMENT_V6_3_SEMANTIC_ADJUDICATION/02_GPT_DECISION_PACKET.json",
+    "repairable_cases": 15,
+    "human_authority_exceptions": [
+      "TB-003-P0-0002",
+      "FAST-04-P0-0203",
+      "FAST-04-P0-0204",
+      "FAST-WATER-01-P0-0008"
+    ],
+    "evidence_only_case": "JY-001-P0-0023"
+  },
+  "targeted_replay": {
+    "run_id": "V43-REQUIREMENT-V6.4-TARGETED-20260912151026",
+    "authorized_case_count": 15,
+    "unique_chunk_count": 9,
+    "completed_chunk_count": 9,
+    "provider_calls": 9,
+    "retries": 0,
+    "provider_failures": 0,
+    "schema_pass_count": 9,
+    "source_resolution_pass_count": 9,
+    "canonicalization_pass_count": 9,
+    "quality_gate_distribution": {
+      "REVIEW_REQUIRED_OR_BLOCKED": 9
+    },
+    "evidence_root": "docs/eval/flywheel/p0-badcase-repair-v2/v6-4-evidence-rerun-20260912151026"
+  },
+  "core6_offline_regression": {
+    "cases": 3,
+    "provider_calls": 0,
+    "production_db_writes": 0,
+    "status": "PASS"
+  },
+  "requirement_eval": {
+    "status": "PASS",
+    "metrics": {
+      "schema_pass_rate": 1,
+      "expected_requirement_recall": 1,
+      "precision": 1,
+      "false_positive_count": 0,
+      "mandatory_recall": 1,
+      "unsupported_content_count": 0,
+      "duplicate_rate": 0,
+      "source_verified_rate": 1,
+      "mandatory_source_verified_rate": 1,
+      "unresolved_count": 0,
+      "unsupported_document_block_rate": 1,
+      "baseline_created_on_failure": 0,
+      "runtime_ms": 5280
+    }
+  },
+  "full_backend_regression": {
+    "baseline_test_count": 1475,
+    "baseline_fail_count": 29,
+    "current_test_count": 1477,
+    "current_fail_count": 29,
+    "confirmed_pre_existing": 29,
+    "unknown_baseline_identity": 0,
+    "new_task_regression": 0,
+    "set_equal": true,
+    "added_identities": [],
+    "removed_identities": [],
+    "classification": "SET_EQUAL_PRE_EXISTING_BASELINE",
+    "note": "Branch-policy fixture identities are compared mechanically against the pre-task artifact; unrelated failures were not modified."
+  },
+  "verification": {
+    "focused_contract_tests": "PASS",
+    "focused_broader_suite": "69/71 PASS; 2 PRE_EXISTING_UNRELATED_BASELINE",
+    "postgresql_regression": {
+      "status": "SKIPPED_BLOCKED_ISOLATED_DB_UNAVAILABLE",
+      "production_db_writes": 0,
+      "reason": "No isolated writable PostgreSQL test database was available; the configured bid_platform database is production authority and was not touched."
+    },
+    "build": "PASS",
+    "lint": "PASS",
+    "diff_check": "PASS"
+  },
+  "readiness": {
+    "final_semantic_adjudication": "REQUIRED",
+    "requirement_gold_mutation": "NOT_AUTHORIZED",
+    "source_truth_mutation": "0",
+    "human_authority_exceptions_pending": 4
+  },
+  "side_effects": {
+    "provider_calls": 9,
+    "llm_calls": 9,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "fact_actions": 0,
+    "mapping_actions": 0,
+    "claim_actions": 0,
+    "writer_actions": 0,
+    "commits": 0,
+    "pushes": 0,
+    "merges": 0,
+    "deploys": 0
+  },
+  "independent_review": {
+    "status": "PASS_WITH_NON_BLOCKING_FINDINGS",
+    "scope": "V6.4 implementation, focused tests, artifacts, side effects, and readiness derivation",
+    "findings": [
+      "Runtime identity was recertified after Gateway reload and matched the local instruction hash.",
+      "PostgreSQL regression is skipped because no isolated writable test database is available; production authority is untouched.",
+      "No targeted atom IDs are present in production code; replay target selection is Eval-only and the producer repair is covered by a red/green test."
+    ],
+    "provider_calls_added_by_review": 0,
+    "production_db_writes_added_by_review": 0,
+    "gold_mutations_added_by_review": 0
+  },
+  "runtime_identity": {
+    "gateway_info_http_status": 200,
+    "gateway_build_revision": "dev-working-tree",
+    "gateway_working_tree_dirty": true,
+    "gateway_requirement_contract_version": "4.3-requirement-extraction-v3.1.1",
+    "gateway_requirement_instruction_hash": "cae64eb027365f1e9d39a9ef8b6375af20dc7b274d62ddc54c07ece3f39fc00d",
+    "local_requirement_contract_version": "4.3-requirement-extraction-v3.1.1",
+    "local_requirement_instruction_hash": "cae64eb027365f1e9d39a9ef8b6375af20dc7b274d62ddc54c07ece3f39fc00d",
+    "instruction_hash_match": true,
+    "gateway_fact_provider": "deepseek_official",
+    "gateway_fact_model": "deepseek-v4-pro"
+  },
+  "runtime_identity_gate": "PASS",
+  "final_status": "READY_FOR_GPT_REQUIREMENT_V6_4_FINAL_ADJUDICATION",
+  "blockers": []
+}

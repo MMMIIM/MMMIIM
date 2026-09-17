@@ -1,0 +1,28 @@
+{
+  "artifact": "V43_RAG_FACT_PRODUCTION_QUALITY_AUDIT",
+  "status": "BLOCKED_BEFORE_CERTIFICATION",
+  "hard_gates": {
+    "p0_fact_escape": 0,
+    "unsupported_fact_accepted": 0,
+    "source_traceability": "100% for 5 persisted Eval facts; full corpus not evaluated",
+    "source_span_mismatch": 0,
+    "critical_numeric_entity_status_mismatch": 0,
+    "cross_material_lineage_mismatch": 0,
+    "synthetic_to_real_escalation": 0,
+    "quarantine_escape": "NOT_EXECUTED"
+  },
+  "quality_metrics": {
+    "fact_precision": "NOT_EVALUATED",
+    "evidence_bearing_fact_recall": "NOT_EVALUATED",
+    "atomic_or_structured_rate": "NOT_EVALUATED",
+    "actionable_review_rate": "91/92 prior rows were escalated, but denominator classification must be rebuilt after targeted run"
+  },
+  "technical_failures": {
+    "gateway_or_contract": 55,
+    "input_window_heading_only": 14,
+    "network": 17,
+    "grounding_rejections": 5,
+    "unknown": 0
+  },
+  "decision": "Do not resume all 92 materials or declare Fact Producer readiness until the fixed 12-material targeted gate passes."
+}

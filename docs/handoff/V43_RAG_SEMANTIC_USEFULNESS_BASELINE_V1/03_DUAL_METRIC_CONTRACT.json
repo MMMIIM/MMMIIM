@@ -1,0 +1,35 @@
+{
+  "artifact_type": "V43_RAG_DUAL_METRIC_CONTRACT",
+  "version": "v1",
+  "authority": "Eval contract only; no semantic labels created",
+  "L1_RETRIEVAL_RECALL": {
+    "question": "Did the expected material enter the candidate set?",
+    "metrics": {
+      "HIT_AT_K": "count(cases with expected source rank <= K) / scored cases",
+      "EXPECTED_SOURCE_RECALL": "expected source identities recovered / expected source identities",
+      "MRR": "mean(1 / first expected-source rank) over cases with an expected source",
+      "MULTI_SOURCE_RECALL": "cases where every expected source identity is in candidate set / multi-source cases"
+    },
+    "semantic_interpretation": "none; candidate inclusion only"
+  },
+  "L2_SEMANTIC_USEFULNESS": {
+    "question": "Are the final Top-K items useful for their authorized lane?",
+    "reference": {
+      "REFERENCE_USEFUL_AT_K": "GPT/Human label required per query",
+      "OFF_TOPIC_RATE": "off-topic items / reviewed items",
+      "REDUNDANCY_RATE": "redundant items / reviewed items",
+      "WRONG_SCOPE_RATE": "wrong corpus scope items / reviewed items",
+      "WRONG_ROLE_RATE": "wrong source role items / reviewed items"
+    },
+    "evidence": {
+      "EVIDENCE_RELEVANCE_AT_K": "GPT/Human label required per requirement",
+      "EXACT_IDENTIFIER_HIT": "exact certificate/model/standard/identifier hit",
+      "NUMERIC_SIGNAL_HIT": "number+unit/operator signal hit",
+      "WRONG_ENTERPRISE_ESCAPE": "foreign/unapproved enterprise item rate",
+      "REFERENCE_ROLE_ESCAPE": "Reference-only item in Evidence lane rate",
+      "QUARANTINED_ESCAPE": "quarantined/ineligible item returned rate"
+    },
+    "semantic_label_owner": "GPT proposes; Human may freeze; Codex does not label"
+  },
+  "hard_boundary": "L1 high does not imply L2 high; corpus absence is distinct from search failure; Reference Material is not Enterprise Assertion Authority"
+}

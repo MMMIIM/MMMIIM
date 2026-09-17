@@ -1,0 +1,1058 @@
+{
+  "artifact_type": "V43_REQUIREMENT_POST_FIX_VALIDATION_V2_CASE_RESULTS",
+  "artifact_version": "v1",
+  "data_classification": "VALIDATION_ONLY_NOT_GOLD",
+  "expected_labels": "NOT_YET_ADJUDICATED",
+  "validation_v2_preseal_sha256": "27ca6e2f381f6a74937d25c081c416c4114e9fe048529851ac458fae4ae08361",
+  "validation_v2_count": 24,
+  "cases": [
+    {
+      "validation_v2_case_id": "POST-FIX-V2-001",
+      "tender_id": "FAST-01",
+      "canonical_requirement_id": "FAST-01:REQ-011",
+      "selection_stratum": "NON_NUMBER",
+      "source_context": {
+        "source_refs": [
+          "C003-S006",
+          "C003-S007",
+          "C003-S008"
+        ],
+        "source_excerpt": "（2）要求驻点服务人员应严格遵守医院各项规章制度，对工\n作期间接触到的医院的各项资料信息或秘密等进行保密。投标\n人应在工作日提供驻场维护服务，要求按照医院工作日时间为",
+        "source_span": {
+          "start_ref": "C003-S006",
+          "end_ref": "C003-S008",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "驻点服务人员须遵守医院规章制度，并对工作期间接触的医院资料、信息或秘密保密。",
+        "text_hash": "263ba556cd64b8d71238a01a04814961f88889d8ef5ed24184b24105e1c3d378",
+        "category": "security",
+        "risk_flags": []
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "0f0cce0662bd59e4acd21a41a52e7435ef99d80a746fb639a69355d740817a74",
+        "candidate_text_hash": "e0f51f74a377029dfb3c0d63ed3c005cb52ef309e1302a3068498ab309dc3699",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": [
+          {
+            "token": "2",
+            "classification": "STRUCTURAL_NUMBER"
+          }
+        ]
+      }
+    },
+    {
+      "validation_v2_case_id": "POST-FIX-V2-002",
+      "tender_id": "FAST-01",
+      "canonical_requirement_id": "FAST-01:REQ-017",
+      "selection_stratum": "SINGLE_ASSERTION_NUMERIC",
+      "source_context": {
+        "source_refs": [
+          "C003-S021",
+          "C003-S022",
+          "C003-S023"
+        ],
+        "source_excerpt": "（5）要求投标人为驻点服务人员配备值班手机，保证 24 小时\n通讯通畅，需提供应急电话和投诉电话，对反馈的问题及时跟\n踪处理。",
+        "source_span": {
+          "start_ref": "C003-S021",
+          "end_ref": "C003-S023",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "应为驻点人员配备值班手机，保证24小时通讯通畅，并提供应急电话和投诉电话，对问题及时跟踪处理。",
+        "text_hash": "7576bc26bfa088fe6c2eb21cd5401a4c05a77401a0c829b0ae541150d11d4ee6",
+        "category": "service",
+        "risk_flags": []
+      },
+      "actual": {
+        "decision": "REVIEW_REQUIRED",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "source_text_hash": "368c9076e13c55bd6044053a5c33e31d6e35c74689571ff1bbcd29d4755f0092",
+        "candidate_text_hash": "40a6ddbfe373ec39c78b7177baab3a207d965c3dca55ce178f0f177fe449c059",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": [
+          {
+            "token": "5",
+            "classification": "STRUCTURAL_NUMBER"
+          }
+        ]
+      }
+    },
+    {
+      "validation_v2_case_id": "POST-FIX-V2-003",
+      "tender_id": "FAST-01",
+      "canonical_requirement_id": "FAST-01:REQ-019",
+      "selection_stratum": "MULTI_SIBLING_NUMERIC_OR_NUMERIC_FALLBACK",
+      "source_context": {
+        "source_refs": [
+          "C003-S026",
+          "C003-S027",
+          "C003-S028",
+          "C003-S029"
+        ],
+        "source_excerpt": "作报告，要求每周四下 17：00 前递交上周的服务工作周报，\n每月 5 号下午 17：00 前递交服务工作月报，季度巡检报告要\n求巡检后 15 个工作日内提供，服务到期后递交年度服务整体\n报告。",
+        "source_span": {
+          "start_ref": "C003-S026",
+          "end_ref": "C003-S029",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "应按规定提交服务报告：周报每周四17:00前、月报每月5日17:00前、季度巡检报告巡检后15个工作日内、服务到期后提交年度整体报告。",
+        "text_hash": "4a62b0ad74c8de7caad35322a8b7e69189e9ec6576ef17ae18006820f03afee1",
+        "category": "delivery",
+        "risk_flags": []
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "01b10b6acebbc86281a8379731766eef006fb20464d32622b3ba6a0cd7753de9",
+        "candidate_text_hash": "9858708f03991a6c38573c3131a60353d24b651f3def60d07c0c898f841710bd",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      }
+    },
+    {
+      "validation_v2_case_id": "POST-FIX-V2-004",
+      "tender_id": "FAST-01",
+      "canonical_requirement_id": "FAST-01:REQ-014",
+      "selection_stratum": "NATURAL_MIXED_FALLBACK",
+      "source_context": {
+        "source_refs": [
+          "C003-S015",
+          "C003-S016"
+        ],
+        "source_excerpt": "能离开，如院方对驻点人员不满意要求调整时，投标人应一个\n月内进行更换，并确保调整后的人员满足院方要求。",
+        "source_span": {
+          "start_ref": "C003-S015",
+          "end_ref": "C003-S016",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "院方要求调整驻点人员时，投标人应在一个月内更换并确保新人员满足院方要求。",
+        "text_hash": "998f7791bd14fabaf50a92ae611a110022d5b411b373e57eb49ff2e8171f2146",
+        "category": "implementation",
+        "risk_flags": []
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "f4b17e404d0855d8e1769e9f05a3a5fd80e1d018bc13acf8fd90658281493175",
+        "candidate_text_hash": "2aeb2d8e8e637530d25e2328cfcd234e72a29ad5457f08c3a8bf648e0ba4c6ab",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      }
+    },
+    {
+      "validation_v2_case_id": "POST-FIX-V2-005",
+      "tender_id": "FAST-04",
+      "canonical_requirement_id": "FAST-04:REQ-011",
+      "selection_stratum": "NON_NUMBER",
+      "source_context": {
+        "source_refs": [
+          "C002-S011"
+        ],
+        "source_excerpt": "4) 提供必要的产品相关培训，使相关技术人员能熟练、准确地使用、维护产品。",
+        "source_span": {
+          "start_ref": "C002-S011",
+          "end_ref": "C002-S011",
+          "page_start": 39,
+          "page_end": 39,
+          "paragraph_start": 1262,
+          "paragraph_end": 1262,
+          "chunk_number": 2,
+          "source_start_offset": 27335,
+          "source_end_offset": 27372
+        },
+        "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "提供必要的产品相关培训，使相关技术人员能熟练、准确地使用、维护产品。",
+        "text_hash": "c2bfc7e0a5b8662b7c9a6703e56b4b6ed5d2b6c4f631efa8cbfc3db135c24c78",
+        "category": "service",
+        "risk_flags": []
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "e14f8b2565a4ea5951a5d254f11416847a0849920bd2a5b3ef03b3717ff9b6a6",
+        "candidate_text_hash": "6c9baa11893783513abd61872a2ba0b3b98bad19ab59238f3468ccb9ad09eff3",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": [
+          {
+            "token": "4",
+            "classification": "STRUCTURAL_NUMBER"
+          }
+        ]
+      }
+    },
+    {
+      "validation_v2_case_id": "POST-FIX-V2-006",
+      "tender_id": "FAST-04",
+      "canonical_requirement_id": "FAST-04:REQ-003",
+      "selection_stratum": "SINGLE_ASSERTION_NUMERIC",
+      "source_context": {
+        "source_refs": [
+          "C001-S029",
+          "C001-S030"
+        ],
+        "source_excerpt": "须满足《关于印发〈商品包装政府采购需求标准（试行）〉、〈快递包装政府采\n购需求标准（试行）〉的通知》（财办库﹝2020﹞123 号））。",
+        "source_span": {
+          "start_ref": "C001-S029",
+          "end_ref": "C001-S030",
+          "page_start": 38,
+          "page_end": 38,
+          "paragraph_start": 1233,
+          "paragraph_end": 1234,
+          "chunk_number": 1,
+          "source_start_offset": 26572,
+          "source_end_offset": 26640
+        },
+        "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "包装和运输须满足《关于印发〈商品包装政府采购需求标准（试行）〉、〈快递包装政府采购需求标准（试行）〉的通知》（财办库﹝2020﹞123号）的要求。",
+        "text_hash": "7015beef74b942113ae0c1056e21e461093221d2602a0031c0499c706ada5388",
+        "category": "delivery",
+        "risk_flags": []
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "974d2fcfa5f9b70f2a7d4f93f43b4a0d30d9c4c1c6ecfa86c055052a9bd16bbf",
+        "candidate_text_hash": "4dd95cb8c80e5624648aac751dca9f38c3ca89f287296cfd2ce47fe4cb46c0dc",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      }
+    },
+    {
+      "validation_v2_case_id": "POST-FIX-V2-007",
+      "tender_id": "FAST-04",
+      "canonical_requirement_id": "FAST-04:REQ-005",
+      "selection_stratum": "MULTI_SIBLING_NUMERIC_OR_NUMERIC_FALLBACK",
+      "source_context": {
+        "source_refs": [
+          "C001-S040",
+          "C001-S041",
+          "C001-S042",
+          "C001-S043"
+        ],
+        "source_excerpt": "投标人必须有完善的技术支持服务体系，可提供如下技术支持服务：\n1) 针对用户在使用过程中的技术问题提供解答；\n2) 投标人须提供技术适配服务，服务提供方式不限于现场、邮件、电话、即时通\n讯工具等服务形式。",
+        "source_span": {
+          "start_ref": "C001-S040",
+          "end_ref": "C001-S043",
+          "page_start": 38,
+          "page_end": 38,
+          "paragraph_start": 1244,
+          "paragraph_end": 1247,
+          "chunk_number": 1,
+          "source_start_offset": 26912,
+          "source_end_offset": 27014
+        },
+        "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "投标人必须有完善的技术支持服务体系，可提供如下技术支持服务：1) 针对用户在使用过程中的技术问题提供解答；2) 投标人须提供技术适配服务，服务提供方式不限于现场、邮件、电话、即时通讯工具等服务形式。",
+        "text_hash": "c486f2c10b9fd9dd5523cffc4347b059fb2ca5f7b020e9c664b2145b9f3f39ef",
+        "category": "service",
+        "risk_flags": []
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "f805ede386e0408bab6685a0f559e34eafadcf7e7eb7b77083f70f7fd7442873",
+        "candidate_text_hash": "f805ede386e0408bab6685a0f559e34eafadcf7e7eb7b77083f70f7fd7442873",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      }
+    },
+    {
+      "validation_v2_case_id": "POST-FIX-V2-008",
+      "tender_id": "FAST-04",
+      "canonical_requirement_id": "FAST-04:REQ-006",
+      "selection_stratum": "NATURAL_MIXED_FALLBACK",
+      "source_context": {
+        "source_refs": [
+          "C001-S045",
+          "C001-S046",
+          "C001-S047"
+        ],
+        "source_excerpt": "投标人应保证：\n1）所提供的产品为全新的、质量高的、并满足技术指标要求；\n2）质保期内，按照采购人要求负责软件产品的调整、更新和升级。",
+        "source_span": {
+          "start_ref": "C001-S045",
+          "end_ref": "C001-S047",
+          "page_start": 38,
+          "page_end": 38,
+          "paragraph_start": 1249,
+          "paragraph_end": 1251,
+          "chunk_number": 1,
+          "source_start_offset": 27027,
+          "source_end_offset": 27094
+        },
+        "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "投标人应保证：1）所提供的产品为全新的、质量高的、并满足技术指标要求；2）质保期内，按照采购人要求负责软件产品的调整、更新和升级。",
+        "text_hash": "30d01e94e17232df961bc083b56025b31e9437d914e2227edbebaa7bb59accf8",
+        "category": "service",
+        "risk_flags": []
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "1de1919adebb81c160842130d55c71874cfd3197f2967680711ca82fb362d92d",
+        "candidate_text_hash": "1de1919adebb81c160842130d55c71874cfd3197f2967680711ca82fb362d92d",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      }
+    },
+    {
+      "validation_v2_case_id": "POST-FIX-V2-009",
+      "tender_id": "FAST-WATER-01",
+      "canonical_requirement_id": "FAST-WATER-01:REQ-002",
+      "selection_stratum": "NON_NUMBER",
+      "source_context": {
+        "source_refs": [
+          "C005-S006"
+        ],
+        "source_excerpt": "综合信息平台巡检 每天",
+        "source_span": {
+          "start_ref": "C005-S006",
+          "end_ref": "C005-S006",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "应对综合信息平台提供每日巡检服务。",
+        "text_hash": "3dbee2a3e80ab43951788721b55c3d199500df086f42dfcad51263093f549d96",
+        "category": "service",
+        "risk_flags": []
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "945b1fbe238b40d66623c8838e6fd3f2dd32ba93a054ec87fceab2bf2009a277",
+        "candidate_text_hash": "3dbee2a3e80ab43951788721b55c3d199500df086f42dfcad51263093f549d96",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      }
+    },
+    {
+      "validation_v2_case_id": "POST-FIX-V2-010",
+      "tender_id": "FAST-WATER-01",
+      "canonical_requirement_id": "FAST-WATER-01:REQ-060",
+      "selection_stratum": "SINGLE_ASSERTION_NUMERIC",
+      "source_context": {
+        "source_refs": [
+          "C007-S047",
+          "C007-S048"
+        ],
+        "source_excerpt": "1.1.11 网络设备及服务器资产一年硬件保修服务\n为 20 台网络设备/服务器资产提供为期 1 年的硬件保修服务。",
+        "source_span": {
+          "start_ref": "C007-S047",
+          "end_ref": "C007-S048",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "应为20台网络设备/服务器资产提供为期1年的硬件保修服务。",
+        "text_hash": "8a20a282d35f98d78b8c11df0d46afba25ee16311db30bea09ddada936d1d60e",
+        "category": "service",
+        "risk_flags": []
+      },
+      "actual": {
+        "decision": "REVIEW_REQUIRED",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "source_text_hash": "fed143194c77f7a5291cc95189e84aebec135206499cbc443ec799242dda82bb",
+        "candidate_text_hash": "8a20a282d35f98d78b8c11df0d46afba25ee16311db30bea09ddada936d1d60e",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": [
+          {
+            "token": "1.1",
+            "classification": "STRUCTURAL_NUMBER"
+          },
+          {
+            "token": "11",
+            "classification": "STRUCTURAL_NUMBER"
+          }
+        ]
+      }
+    },
+    {
+      "validation_v2_case_id": "POST-FIX-V2-011",
+      "tender_id": "FAST-WATER-01",
+      "canonical_requirement_id": "FAST-WATER-01:REQ-061",
+      "selection_stratum": "MULTI_SIBLING_NUMERIC_OR_NUMERIC_FALLBACK",
+      "source_context": {
+        "source_refs": [
+          "C007-S049",
+          "C007-S050"
+        ],
+        "source_excerpt": "1.1.12 会议室资产一年硬件保修服务\n为 7 台会议室设备资产，提供为期 1 年的硬件保修服务。",
+        "source_span": {
+          "start_ref": "C007-S049",
+          "end_ref": "C007-S050",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "应为7台会议室设备资产提供为期1年的硬件保修服务。",
+        "text_hash": "60fe789c171d6cce5a109026bbe138ead1f1074f2a196e4cd0b2cbf6a02fa0a8",
+        "category": "service",
+        "risk_flags": []
+      },
+      "actual": {
+        "decision": "REVIEW_REQUIRED",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "source_text_hash": "703456d1c31f1504006dcf4dd85852de0f63c1b7a3731b5590a3a4d9bd52d31f",
+        "candidate_text_hash": "60fe789c171d6cce5a109026bbe138ead1f1074f2a196e4cd0b2cbf6a02fa0a8",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": [
+          {
+            "token": "1.1",
+            "classification": "STRUCTURAL_NUMBER"
+          },
+          {
+            "token": "12",
+            "classification": "STRUCTURAL_NUMBER"
+          },
+          {
+            "token": "1",
+            "classification": "STRUCTURAL_NUMBER"
+          }
+        ]
+      }
+    },
+    {
+      "validation_v2_case_id": "POST-FIX-V2-012",
+      "tender_id": "FAST-WATER-01",
+      "canonical_requirement_id": "FAST-WATER-01:REQ-003",
+      "selection_stratum": "NATURAL_MIXED_FALLBACK",
+      "source_context": {
+        "source_refs": [
+          "C005-S007"
+        ],
+        "source_excerpt": "综合信息平台数据备份 每天",
+        "source_span": {
+          "start_ref": "C005-S007",
+          "end_ref": "C005-S007",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "应对综合信息平台提供每日数据备份服务。",
+        "text_hash": "efc2f9d97426ce2936d35c41080458377a11548a989712617fa2eb54b4cee7a4",
+        "category": "service",
+        "risk_flags": []
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "ebdc5315c006bd481308c1d3aa64f0fd36ec3086c5908ecfddf2b8d36d974e8e",
+        "candidate_text_hash": "efc2f9d97426ce2936d35c41080458377a11548a989712617fa2eb54b4cee7a4",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      }
+    },
+    {
+      "validation_v2_case_id": "POST-FIX-V2-013",
+      "tender_id": "JY-001",
+      "canonical_requirement_id": "JY-001:REQ-027",
+      "selection_stratum": "NON_NUMBER",
+      "source_context": {
+        "source_refs": [
+          "C008-S064"
+        ],
+        "source_excerpt": "具有较强的系统安全性和灾难恢复能力。",
+        "source_span": {
+          "start_ref": "C008-S064",
+          "end_ref": "C008-S064",
+          "page_start": 19,
+          "page_end": 19,
+          "paragraph_start": 562,
+          "paragraph_end": 562,
+          "chunk_number": 8,
+          "source_start_offset": 16077,
+          "source_end_offset": 16095
+        },
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "具有较强的系统安全性和灾难恢复能力。",
+        "text_hash": "3725bb402a8891ad9a92c0c395aca577aac6aff21e310b688143d1be92af292b",
+        "category": "technical",
+        "risk_flags": []
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "3725bb402a8891ad9a92c0c395aca577aac6aff21e310b688143d1be92af292b",
+        "candidate_text_hash": "3725bb402a8891ad9a92c0c395aca577aac6aff21e310b688143d1be92af292b",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      }
+    },
+    {
+      "validation_v2_case_id": "POST-FIX-V2-014",
+      "tender_id": "JY-001",
+      "canonical_requirement_id": "JY-001:REQ-031",
+      "selection_stratum": "SINGLE_ASSERTION_NUMERIC",
+      "source_context": {
+        "source_refs": [
+          "C009-S004"
+        ],
+        "source_excerpt": "（2） \t兼容 \tIE9 \t以上，360、chrome \t等主流浏览器版本。",
+        "source_span": {
+          "start_ref": "C009-S004",
+          "end_ref": "C009-S004",
+          "page_start": 19,
+          "page_end": 19,
+          "paragraph_start": 570,
+          "paragraph_end": 570,
+          "chunk_number": 9,
+          "source_start_offset": 16284,
+          "source_end_offset": 16322
+        },
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "Web端兼容IE9以上,360、chrome等主流浏览器版本。",
+        "text_hash": "5ebafdf1742991c58b8f434f7cb446c08c4a58ea4e7d56879d458edc333b572f",
+        "category": "technical",
+        "risk_flags": []
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "79b838d91f11fe7e656315ecb94f9ecdc909c55d866622cd3fa230ed9394fbe5",
+        "candidate_text_hash": "5ebafdf1742991c58b8f434f7cb446c08c4a58ea4e7d56879d458edc333b572f",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": [
+          {
+            "token": "2",
+            "classification": "STRUCTURAL_NUMBER"
+          }
+        ]
+      }
+    },
+    {
+      "validation_v2_case_id": "POST-FIX-V2-015",
+      "tender_id": "JY-001",
+      "canonical_requirement_id": "JY-001:REQ-049",
+      "selection_stratum": "MULTI_SIBLING_NUMERIC_OR_NUMERIC_FALLBACK",
+      "source_context": {
+        "source_refs": [
+          "C009-S035",
+          "C009-S036",
+          "C009-S037",
+          "C009-S038"
+        ],
+        "source_excerpt": "阴市视频联网共享平台无缝对接。投标人须承诺中标后签订合同时提供无锡市社会稳定\n风险防范处置工作平台项目原厂商、市(县)区网格化联动处置平台 \t2020 \t年提升完善建设\n项目原厂商、江阴市视频联网共享平台原厂商出具的无缝对接证明函(加盖投标人及厂商\n公章)。（承诺书格式自拟，未提供将作为无效投标）",
+        "source_span": {
+          "start_ref": "C009-S035",
+          "end_ref": "C009-S038",
+          "page_start": 20,
+          "page_end": 20,
+          "paragraph_start": 601,
+          "paragraph_end": 604,
+          "chunk_number": 9,
+          "source_start_offset": 17164,
+          "source_end_offset": 17313
+        },
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "投标人须承诺中标后签订合同时提供无锡市社会稳定风险防范处置工作平台项目原厂商、市(县)区网格化联动处置平台2020年提升完善建设项目原厂商、江阴市视频联网共享平台原厂商出具的无缝对接证明函(加盖投标人及厂商公章)。",
+        "text_hash": "9c6356fac75c124a96b54ec7168156b17d7a87f2a92ab89e162bab90962c0316",
+        "category": "other",
+        "risk_flags": [
+          "INTERFACE_SCOPE_UNSPECIFIED"
+        ]
+      },
+      "actual": {
+        "decision": "REVIEW_REQUIRED",
+        "reason_codes": [
+          "NEGATION_DISTORTION"
+        ],
+        "source_text_hash": "dcdc12ad5e753eb137d85c5dcef12052530f6db4ebd870a0e0d6c8deeb0bc4c8",
+        "candidate_text_hash": "9c6356fac75c124a96b54ec7168156b17d7a87f2a92ab89e162bab90962c0316",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      }
+    },
+    {
+      "validation_v2_case_id": "POST-FIX-V2-016",
+      "tender_id": "JY-001",
+      "canonical_requirement_id": "JY-001:REQ-028",
+      "selection_stratum": "NATURAL_MIXED_FALLBACK",
+      "source_context": {
+        "source_refs": [
+          "C008-S066"
+        ],
+        "source_excerpt": "软件设计时应充分考虑软件的开放性，应充分考虑对不同业务数据和其他数据异构性的兼容。",
+        "source_span": {
+          "start_ref": "C008-S066",
+          "end_ref": "C008-S066",
+          "page_start": 19,
+          "page_end": 19,
+          "paragraph_start": 564,
+          "paragraph_end": 564,
+          "chunk_number": 8,
+          "source_start_offset": 16109,
+          "source_end_offset": 16150
+        },
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "软件设计时应充分考虑软件的开放性,应充分考虑对不同业务数据和其他数据异构性的兼容。",
+        "text_hash": "be0a595dc6ef450446f9a78a0816f4fb24987a74684b737795e19c57682586c6",
+        "category": "technical",
+        "risk_flags": []
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "be0a595dc6ef450446f9a78a0816f4fb24987a74684b737795e19c57682586c6",
+        "candidate_text_hash": "be0a595dc6ef450446f9a78a0816f4fb24987a74684b737795e19c57682586c6",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      }
+    },
+    {
+      "validation_v2_case_id": "POST-FIX-V2-017",
+      "tender_id": "TB-003",
+      "canonical_requirement_id": "TB-003:REQ-002",
+      "selection_stratum": "NON_NUMBER",
+      "source_context": {
+        "source_refs": [
+          "C002-S004",
+          "C002-S005"
+        ],
+        "source_excerpt": "不得因机构变更、人员更替、政策调整等原因拒绝或延迟资\n以上政策执行的，可向监督部门举报反映。",
+        "source_span": {
+          "start_ref": "C002-S004",
+          "end_ref": "C002-S005",
+          "page_start": 7,
+          "page_end": 7,
+          "paragraph_start": 55,
+          "paragraph_end": 58,
+          "chunk_number": 2,
+          "source_start_offset": 1176,
+          "source_end_offset": 1252
+        },
+        "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "不得因机构变更、人员更替、政策调整等原因拒绝或延迟资金支付。",
+        "text_hash": "4a202c5aebff38874604b52e367b8ba1d3d7e4692db0bca777b8a8ee0906a8a7",
+        "category": "delivery",
+        "risk_flags": []
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "c4024b18846a32d9f11b93e92c28f3bd0665a8c8bf0cb30154eaa9d4ef956822",
+        "candidate_text_hash": "4a202c5aebff38874604b52e367b8ba1d3d7e4692db0bca777b8a8ee0906a8a7",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      }
+    },
+    {
+      "validation_v2_case_id": "POST-FIX-V2-018",
+      "tender_id": "TB-003",
+      "canonical_requirement_id": "TB-003:REQ-001",
+      "selection_stratum": "SINGLE_ASSERTION_NUMERIC",
+      "source_context": {
+        "source_refs": [
+          "C002-S001",
+          "C002-S002",
+          "C002-S003"
+        ],
+        "source_excerpt": "十一、项目验收。鼓励自收到供应商项目验收建议之日\n起 1 个工作日内组织验收；鼓励验收结束后 1 个工作日内出\n具《验收报告》，并在焦作市政府采购网公告验收结果。",
+        "source_span": {
+          "start_ref": "C002-S001",
+          "end_ref": "C002-S003",
+          "page_start": 7,
+          "page_end": 7,
+          "paragraph_start": 51,
+          "paragraph_end": 53,
+          "chunk_number": 2,
+          "source_start_offset": 1069,
+          "source_end_offset": 1150
+        },
+        "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "自收到供应商项目验收建议之日起1个工作日内组织验收；鼓励验收结束后1个工作日内出具《验收报告》，并在焦作市政府采购网公告验收结果。",
+        "text_hash": "cff9e5a1fdf3e1bb896226df560b88515419ffd35ea57db67c8739d8e0090a2a",
+        "category": "delivery",
+        "risk_flags": []
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "e7d162977c0e2a15b387615d0df5b8756ba747221c45c2dfc8cd25a7a02d164b",
+        "candidate_text_hash": "a5a0c9f87a6db58346499a69b0f7ee1df2ba08204d66ef0a61c72459dc25038e",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      }
+    },
+    {
+      "validation_v2_case_id": "POST-FIX-V2-019",
+      "tender_id": "TB-003",
+      "canonical_requirement_id": "TB-003:REQ-073",
+      "selection_stratum": "MULTI_SIBLING_NUMERIC_OR_NUMERIC_FALLBACK",
+      "source_context": {
+        "source_refs": [
+          "C013-S066",
+          "C013-S067",
+          "C013-S068",
+          "C013-S069",
+          "C013-S070"
+        ],
+        "source_excerpt": "3、投标人或投标人所投产品厂商具有信息系统安全运维、信息系统\n安全集成、软件安全开发方面的信息安全服务资质认证证书（CCRC），\n且符合一级服务资质要求的每提供一项得 1 分，满分 3 分。(须提供\n证明材料复印件并加盖章投标人或所投产品厂商公章，未提供证明\n材料不得分）",
+        "source_span": {
+          "start_ref": "C013-S066",
+          "end_ref": "C013-S070",
+          "page_start": 38,
+          "page_end": 38,
+          "paragraph_start": 980,
+          "paragraph_end": 984,
+          "chunk_number": 13,
+          "source_start_offset": 24617,
+          "source_end_offset": 24753
+        },
+        "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "投标人或投标人所投产品厂商具有信息系统安全运维、信息系统安全集成、软件安全开发方面的信息安全服务资质认证证书（CCRC），且符合一级服务资质要求的，每提供一项得1分，满分3分；须提供证明材料复印件并加盖投标人或所投产品厂商公章。",
+        "text_hash": "93e3d7653022725bf666597b2c3bf1cc59784dbf2ba0b5ae5945d57a88b4b65a",
+        "category": "security",
+        "risk_flags": []
+      },
+      "actual": {
+        "decision": "REVIEW_REQUIRED",
+        "reason_codes": [
+          "NEGATION_DISTORTION"
+        ],
+        "source_text_hash": "57d649bcfb44ebc4eb055a3b3cb01c9106b4b1f7554dc8d56dd7311ae03e5cef",
+        "candidate_text_hash": "ae50f391a222607d2423df7f2dbdf9d363d4c70f155cc3438357c6eb6727e729",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": [
+          {
+            "token": "3",
+            "classification": "STRUCTURAL_NUMBER"
+          }
+        ]
+      }
+    },
+    {
+      "validation_v2_case_id": "POST-FIX-V2-020",
+      "tender_id": "TB-003",
+      "canonical_requirement_id": "TB-003:REQ-003",
+      "selection_stratum": "NATURAL_MIXED_FALLBACK",
+      "source_context": {
+        "source_refs": [
+          "C003-S009",
+          "C003-S010",
+          "C003-S011",
+          "C003-S012"
+        ],
+        "source_excerpt": "5、采购需求（包括但不限于标的的名称、数量、简要技术需求或服\n务要求等）：建设“四电”应用支撑平台、“四电”一体化工作门户、“四\n电”应用服务专区，进行系统国产化适配，实现与省“四电”平台、一体\n化政务服务平台等省、市系统对接。（详见招标文件第三部分）",
+        "source_span": {
+          "start_ref": "C003-S009",
+          "end_ref": "C003-S012",
+          "page_start": 13,
+          "page_end": 13,
+          "paragraph_start": 162,
+          "paragraph_end": 165,
+          "chunk_number": 3,
+          "source_start_offset": 3488,
+          "source_end_offset": 3614
+        },
+        "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "建设“四电”应用支撑平台、“四电”一体化工作门户、“四电”应用服务专区，进行系统国产化适配，实现与省“四电”平台、一体化政务服务平台等省、市系统对接。",
+        "text_hash": "e9fcaff809bf233ed2189c1f36d17fc393e63c881b416ec2c096dc85e0397dfa",
+        "category": "technical",
+        "risk_flags": [
+          "INTERFACE_SCOPE_UNSPECIFIED"
+        ]
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "1c090f7fc6e3cd9c754c4ba02c8062525618abbdf6c6bb7d71048c9b9b1c589b",
+        "candidate_text_hash": "db0d8edfe050c63f27821e49d842064acadc160aa501aca04491130f2119949e",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": [
+          {
+            "token": "5",
+            "classification": "SIBLING_ATOMIC_ASSERTION"
+          }
+        ]
+      }
+    },
+    {
+      "validation_v2_case_id": "POST-FIX-V2-021",
+      "tender_id": "TB-006",
+      "canonical_requirement_id": "TB-006:REQ-001",
+      "selection_stratum": "NON_NUMBER",
+      "source_context": {
+        "source_refs": [
+          "C002-S002",
+          "C002-S003",
+          "C002-S004"
+        ],
+        "source_excerpt": "（二）项目背景或概况\n根据北京市相关文件要求，北京市应急指挥调度能力提升工程项目购置的大\n模型软件需部署至市级政务云平台。",
+        "source_span": {
+          "start_ref": "C002-S002",
+          "end_ref": "C002-S004",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "大模型软件需部署至市级政务云平台。",
+        "text_hash": "86fc1c9a0f90e03bb54682db2576c5eafd8b30cd07172c2f1a7d3ecda78b046a",
+        "category": "implementation",
+        "risk_flags": []
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "c86df4657cbbca1b31cf1f5a4a6ccb54e04bab21fd37f6450879994bfceea00e",
+        "candidate_text_hash": "86fc1c9a0f90e03bb54682db2576c5eafd8b30cd07172c2f1a7d3ecda78b046a",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      }
+    },
+    {
+      "validation_v2_case_id": "POST-FIX-V2-022",
+      "tender_id": "TB-006",
+      "canonical_requirement_id": "TB-006:REQ-003",
+      "selection_stratum": "SINGLE_ASSERTION_NUMERIC",
+      "source_context": {
+        "source_refs": [
+          "C002-S008",
+          "C002-S009"
+        ],
+        "source_excerpt": "（二）服务期限\n服务期限：自合同签订之日起 10 个月。",
+        "source_span": {
+          "start_ref": "C002-S008",
+          "end_ref": "C002-S009",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "服务期限自合同签订之日起10个月。",
+        "text_hash": "d1ba8f3d92fd664f3825bd50cb8b61bfe777c6a14afc14edb3ab730ed5c1e55f",
+        "category": "constraint",
+        "risk_flags": []
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "44848134605f85c802fd51b9dabef2c541ce830ceff925c628631ccd0cc1ba6f",
+        "candidate_text_hash": "d1ba8f3d92fd664f3825bd50cb8b61bfe777c6a14afc14edb3ab730ed5c1e55f",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      }
+    },
+    {
+      "validation_v2_case_id": "POST-FIX-V2-023",
+      "tender_id": "TB-006",
+      "canonical_requirement_id": "TB-006:REQ-004",
+      "selection_stratum": "MULTI_SIBLING_NUMERIC_OR_NUMERIC_FALLBACK",
+      "source_context": {
+        "source_refs": [
+          "C002-S010",
+          "C002-S011",
+          "C002-S012"
+        ],
+        "source_excerpt": "（三）验收服务标准\n中标人所提供资源应满足招标文件及相关合同规定的要求。保证合同期内系\n统安全稳定运行，不因硬件故障导致服务中断 12 小时。服务期满后 30 个工作日",
+        "source_span": {
+          "start_ref": "C002-S010",
+          "end_ref": "C002-S012",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "合同期内系统应安全稳定运行，不得因硬件故障导致服务中断12小时。",
+        "text_hash": "947561fb3927a6fb8c317339ee3f8feef66192944cb5523b77bbe21b253f9273",
+        "category": "performance",
+        "risk_flags": []
+      },
+      "actual": {
+        "decision": "REVIEW_REQUIRED",
+        "reason_codes": [
+          "NEGATION_DISTORTION"
+        ],
+        "source_text_hash": "7c971aa3fa0ee4f47445db8c661360b50e639a0387d36e87a96b3f953708a8aa",
+        "candidate_text_hash": "a0dbbc91668f7e3adbb6e025402f202e75add73b7e81160e682a9014c654f53a",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": [
+          {
+            "token": "30",
+            "classification": "SIBLING_ATOMIC_ASSERTION"
+          }
+        ]
+      }
+    },
+    {
+      "validation_v2_case_id": "POST-FIX-V2-024",
+      "tender_id": "TB-006",
+      "canonical_requirement_id": "TB-006:REQ-002",
+      "selection_stratum": "NATURAL_MIXED_FALLBACK",
+      "source_context": {
+        "source_refs": [
+          "C002-S005",
+          "C002-S006",
+          "C002-S007"
+        ],
+        "source_excerpt": "二、商务要求\n（一）服务地点\n服务地点：北京市通州区。",
+        "source_span": {
+          "start_ref": "C002-S005",
+          "end_ref": "C002-S007",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "服务地点为北京市通州区。",
+        "text_hash": "4fdc9819f00b4e69413fc925b4d3e7edee36e7fd6e6387ae27423615e0f317da",
+        "category": "constraint",
+        "risk_flags": []
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "b4231a781e77dc4eace6bd31b3d6a50db32376513accb24e0803d81f203b2413",
+        "candidate_text_hash": "4fdc9819f00b4e69413fc925b4d3e7edee36e7fd6e6387ae27423615e0f317da",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      }
+    }
+  ],
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0
+}

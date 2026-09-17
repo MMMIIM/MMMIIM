@@ -399,8 +399,8 @@ test('SEM-P1-004 Fact-to-Mapping HTTP routes reject non-approved or cross-projec
       assert.equal(await mappingCount(),1);
 
       const crossProject = await request(base,`/api/projects/${fixture.otherProject.id}/requirement-evidence-fact-mappings`,'POST',{ requirement_id:'REQ-001', fact_id:approvedFact, source_type:'system_proposed' });
-      assert.equal(crossProject.response.status,404);
-      assert.equal(crossProject.body.error.code,'MAPPING_TARGET_NOT_FOUND');
+      assert.equal(crossProject.response.status,403);
+      assert.equal(crossProject.body.error.code,'PROJECT_ACCESS_DENIED');
       const wrongRequirement = await request(base,`/api/projects/${fixture.project.id}/requirement-evidence-fact-mappings`,'POST',{ requirement_id:'REQ-999', fact_id:approvedFact, source_type:'system_proposed' });
       assert.equal(wrongRequirement.response.status,404);
       assert.equal(wrongRequirement.body.error.code,'MAPPING_TARGET_NOT_FOUND');

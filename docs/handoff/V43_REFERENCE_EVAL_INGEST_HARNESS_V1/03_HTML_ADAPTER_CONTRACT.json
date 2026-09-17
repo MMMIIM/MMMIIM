@@ -1,0 +1,20 @@
+{
+  "artifact_type": "V43_HTML_ADAPTER_CONTRACT",
+  "adapter": "EVAL_ONLY_HTML_INPUT_ADAPTER",
+  "version": "eval-only-html-adapter-v1",
+  "input": ".html frozen bytes",
+  "output": "visible normalized source text",
+  "production_extension_policy_changed": false,
+  "synthetic_content_added": false,
+  "no_summary": true,
+  "no_llm": true,
+  "no_fact_path": true,
+  "deterministic_rules": [
+    "remove comments",
+    "remove script/style/noscript/template/svg blocks",
+    "convert block tags and br to line breaks",
+    "decode basic/numeric entities",
+    "remove residual tags",
+    "normalize whitespace"
+  ]
+}

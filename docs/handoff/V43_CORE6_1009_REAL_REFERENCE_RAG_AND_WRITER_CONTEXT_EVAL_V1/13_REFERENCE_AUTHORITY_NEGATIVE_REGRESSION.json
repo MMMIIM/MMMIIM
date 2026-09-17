@@ -1,0 +1,60 @@
+{
+  "artifact_type": "V43_REFERENCE_AUTHORITY_NEGATIVE_REGRESSION",
+  "source_role_rule": "REFERENCE_ONLY remains CONTEXT_ONLY; Safe Context does not promote reference text into facts or claims.",
+  "cases": [
+    {
+      "case_id": "REFERENCE_TO_ENTERPRISE_ASSERTION",
+      "source_text": "我司具备统一身份认证能力。",
+      "expected": "CONTEXT_ONLY",
+      "actual_reference_count": 1,
+      "project_facts_count": 0,
+      "assertable_claims_count": 0,
+      "reference_assertion_escape": 0,
+      "error": null
+    },
+    {
+      "case_id": "REFERENCE_TO_ENTERPRISE_ASSERTION",
+      "source_text": "我司已取得相关认证。",
+      "expected": "CONTEXT_ONLY",
+      "actual_reference_count": 1,
+      "project_facts_count": 0,
+      "assertable_claims_count": 0,
+      "reference_assertion_escape": 0,
+      "error": null
+    },
+    {
+      "case_id": "REFERENCE_STRONG_FACT_PROMOTION",
+      "source_text": "我司达到每秒万级处理能力。",
+      "expected": "CONTEXT_ONLY",
+      "actual_reference_count": 1,
+      "project_facts_count": 0,
+      "assertable_claims_count": 0,
+      "reference_assertion_escape": 0,
+      "error": null
+    },
+    {
+      "case_id": "REFERENCE_TO_ENTERPRISE_ASSERTION",
+      "source_text": "我司支持该平台。",
+      "expected": "CONTEXT_ONLY",
+      "actual_reference_count": 1,
+      "project_facts_count": 0,
+      "assertable_claims_count": 0,
+      "reference_assertion_escape": 0,
+      "error": null
+    },
+    {
+      "case_id": "REFERENCE_CUSTOMER_CASE_PROMOTION",
+      "source_text": "我司完成过同类项目。",
+      "expected": "CONTEXT_ONLY",
+      "actual_reference_count": 1,
+      "project_facts_count": 0,
+      "assertable_claims_count": 0,
+      "reference_assertion_escape": 0,
+      "error": null
+    }
+  ],
+  "REFERENCE_ASSERTION_ESCAPE": 0,
+  "provider_calls": 0,
+  "db_writes": 0,
+  "production_mutations": 0
+}

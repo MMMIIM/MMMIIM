@@ -1,0 +1,1775 @@
+{
+  "artifact_type": "V43_DRY_RUN_SOURCE_PARSE",
+  "status": "PASS",
+  "source_count": 11,
+  "source_byte_sha_verified": 11,
+  "production_parser_count": 5,
+  "html_adapter_count": 6,
+  "source_distribution": {
+    "HW-002": {
+      "format": "PDF",
+      "source_sha256": "736cd73199dd8d89a9897b47dfa5347a3bb952c43491aed84d5aeb4fc94082d6",
+      "normalized_text_sha256": "f90ff3e991a59f6d6653149a80fea8c1ea160053025c56c352ea6a98f79b0394",
+      "normalized_text_length": 75537,
+      "parser_status": "PASS",
+      "adapter_status": "NOT_APPLICABLE"
+    },
+    "HW-003": {
+      "format": "PDF",
+      "source_sha256": "8081099e23478068e7e43a55c6c93bd6d5efd8456670494d363bf949d3fe3990",
+      "normalized_text_sha256": "5e4723acdd0a70dcfbc157a235c8769424fe9ce4237ce4dc32672e9fab76c02b",
+      "normalized_text_length": 70508,
+      "parser_status": "PASS",
+      "adapter_status": "NOT_APPLICABLE"
+    },
+    "HW-004": {
+      "format": "PDF",
+      "source_sha256": "fcad3db24e3b8205842684935ad05b3338dedfa10367ac5388aa3df41a78ab5d",
+      "normalized_text_sha256": "493535f649ced24e4e28ca72fcddab7cac2c4c19bc4e3e7ef2e6512b738eaa76",
+      "normalized_text_length": 77302,
+      "parser_status": "PASS",
+      "adapter_status": "NOT_APPLICABLE"
+    },
+    "HW-005": {
+      "format": "PDF",
+      "source_sha256": "c6df081e4783e7c9f7efe736667394dd9392ab74a6f0aa582b56b98faca4c5fc",
+      "normalized_text_sha256": "c7807340d2b64059f8ee98fb85cdbb53e33d33cca5869208c8aa660038651cb4",
+      "normalized_text_length": 35694,
+      "parser_status": "PASS",
+      "adapter_status": "NOT_APPLICABLE"
+    },
+    "HW-006": {
+      "format": "PDF",
+      "source_sha256": "d262f8537f116f255e11f8a6b62783ed817eea585f5c6dd07c5763f044f36e2f",
+      "normalized_text_sha256": "14386d8d9faee60eae5eeeb11a201077ef129446bff99a6ed6b43f7fa4eee8e5",
+      "normalized_text_length": 12709,
+      "parser_status": "PASS",
+      "adapter_status": "NOT_APPLICABLE"
+    },
+    "H3C-003": {
+      "format": "HTML",
+      "source_sha256": "6f19b927fe5be63cd67a30f02d7cce3dfa224676380e073a20d53de954bb8483",
+      "normalized_text_sha256": "fcdfc10642d53fa52d2682462797713bb356e4786dc79cf72382a580e129e1a6",
+      "normalized_text_length": 21523,
+      "parser_status": "PASS",
+      "adapter_status": "PASS"
+    },
+    "H3C-004": {
+      "format": "HTML",
+      "source_sha256": "06dcaefa5359a6c191699de8b0e12e6a44974ef1114a954e28a76ebb3367626f",
+      "normalized_text_sha256": "76be00034e10f2e3e2e67bc342c70c6e9f33cb38e1bf789dc1ff01f8bbc3169a",
+      "normalized_text_length": 45018,
+      "parser_status": "PASS",
+      "adapter_status": "PASS"
+    },
+    "H3C-010": {
+      "format": "HTML",
+      "source_sha256": "c3fc853f7c5684821acb56851fd9d7fc0d054f6d8e895a91739f5319088e8755",
+      "normalized_text_sha256": "6bcd098bfa300ddd44105bc46f80b4dd1dcc0cf1e4c6058dc8d3e451d3f0179e",
+      "normalized_text_length": 9613,
+      "parser_status": "PASS",
+      "adapter_status": "PASS"
+    },
+    "H3C-011": {
+      "format": "HTML",
+      "source_sha256": "4a9c2f3dab42b8eae73c2db0f99b537a5dde54ab336c0ed495ed9b47f2ebe29d",
+      "normalized_text_sha256": "d1c38d7e6ab7111e1cc6144baefafbff12d1ad1fe98d18fd3f06acabe5fac9fb",
+      "normalized_text_length": 6872,
+      "parser_status": "PASS",
+      "adapter_status": "PASS"
+    },
+    "H3C-012": {
+      "format": "HTML",
+      "source_sha256": "0c33de5af7054c3704dd0673fe5ea52280f812951d50aee5df29e04a58908cc0",
+      "normalized_text_sha256": "f13f906f15838cfeae2ecab88ace91b277079366e19dfdb85bc70c34173485ac",
+      "normalized_text_length": 7544,
+      "parser_status": "PASS",
+      "adapter_status": "PASS"
+    },
+    "H3C-013": {
+      "format": "HTML",
+      "source_sha256": "4fd8da2c61d609ded484db5c45cfbe0fad1df143e40ef298e38c234a32c8684f",
+      "normalized_text_sha256": "537351c0c8dc40562fb6d2f4aa6656be1166376d04c65e895101435faac8f471",
+      "normalized_text_length": 2343,
+      "parser_status": "PASS",
+      "adapter_status": "PASS"
+    }
+  },
+  "rows": [
+    {
+      "source_id": "HW-002",
+      "title": "数据中心2030白皮书",
+      "source_file": "data/eval/real-enterprise-upload-test-v1/raw/HW-002.pdf",
+      "source_sha256": "736cd73199dd8d89a9897b47dfa5347a3bb952c43491aed84d5aeb4fc94082d6",
+      "source_byte_size": 9988610,
+      "parser": "backend/src/tender-text-extractor.js::extractTenderText",
+      "parser_mode": "PRODUCTION_PDF_PARSER",
+      "adapter": null,
+      "adapter_version": null,
+      "normalized_text_sha256": "f90ff3e991a59f6d6653149a80fea8c1ea160053025c56c352ea6a98f79b0394",
+      "normalized_text_length": 75537,
+      "extraction_warnings": [],
+      "pages": [
+        {
+          "page": 1,
+          "text_sha256": "e262bcd2ba9e2b37993d90f82273c4b5e5f9318d1f1e7af0771ef72c74c2d00d",
+          "text_length": 28
+        },
+        {
+          "page": 3,
+          "text_sha256": "4294e99b28f3c75cd7edc49cf458ad917711ae5c394f0699cb7aa448b1d644ea",
+          "text_length": 28
+        },
+        {
+          "page": 4,
+          "text_sha256": "259b153832d6668c12af76d16ac074e1a1b26ea987c52db80fd8778978acfd7a",
+          "text_length": 920
+        },
+        {
+          "page": 5,
+          "text_sha256": "f8d3ae68f063be6cfead6c222961ffe670083155a3e2503fb36980c995d313a7",
+          "text_length": 649
+        },
+        {
+          "page": 6,
+          "text_sha256": "34483ca27fd4c71362be98c368984d08877694678a891f35e9888f9728a206f2",
+          "text_length": 1505
+        },
+        {
+          "page": 7,
+          "text_sha256": "69d57081754eccc73a50b764cbff5f3f8cf60a9e9ba2a37c2171fb1a9c683fe4",
+          "text_length": 2695
+        },
+        {
+          "page": 8,
+          "text_sha256": "aacd834b5cdc64a329e27649143406dd068306542988dfc250d6184745894849",
+          "text_length": 2
+        },
+        {
+          "page": 9,
+          "text_sha256": "684902887d2be07293bd5f56cf48277bfe3f4e2c31614c4b91c494c21dd21aca",
+          "text_length": 11
+        },
+        {
+          "page": 10,
+          "text_sha256": "c1377ffa01d4c9da5cc390cfba6176ec09e5b573a9b615d25f40f9fbaa1cddab",
+          "text_length": 873
+        },
+        {
+          "page": 11,
+          "text_sha256": "4725c8421f74d2b046c4e19706e4c302be3acfa746c3228a832941cf2e2ff5c8",
+          "text_length": 1043
+        },
+        {
+          "page": 12,
+          "text_sha256": "a4b1f1a62669eb48ef438f74e5b1578a6c32b185ef2af53e8a08554f307e35fa",
+          "text_length": 989
+        },
+        {
+          "page": 13,
+          "text_sha256": "d7dc29338bb0a594804562fa1236985bf2eb3e2b04f6c3b857f034c0382b5d45",
+          "text_length": 339
+        },
+        {
+          "page": 14,
+          "text_sha256": "6b51d431df5d7f141cbececcf79edf3dd861c3b4069f0b11661a3eefacbba918",
+          "text_length": 2
+        },
+        {
+          "page": 15,
+          "text_sha256": "0ee55e0f5234c083527cb4a378368c229577de4ebc7d07ea87233201d4ce8d49",
+          "text_length": 16
+        },
+        {
+          "page": 16,
+          "text_sha256": "afbe3afa3e7e9c3723dd246808745c3e844f85a9525c34140aa419ec46c86c2e",
+          "text_length": 767
+        },
+        {
+          "page": 17,
+          "text_sha256": "9dda8284e7a2fa0c8743f36b5d953d2f8b59d2622fcb1871a2fea0241d9e221c",
+          "text_length": 1191
+        },
+        {
+          "page": 18,
+          "text_sha256": "b469b42be2b313b1f609084c677b6abba940c3a76b722fded423dc1c59ee6c01",
+          "text_length": 1127
+        },
+        {
+          "page": 19,
+          "text_sha256": "0fdc80e2616530c5f2614bcc201e8c18bed25a0a7ab21bf62004671d13e3b7fb",
+          "text_length": 916
+        },
+        {
+          "page": 20,
+          "text_sha256": "27af8016e63601f4c36838002f7c126710f92ed86ae75a4f98477817ca12cbb3",
+          "text_length": 799
+        },
+        {
+          "page": 21,
+          "text_sha256": "528a90e742ff38b515db4766d38fe03c4e1a8ac426d182d4ca058304bfb30995",
+          "text_length": 1009
+        },
+        {
+          "page": 22,
+          "text_sha256": "8de88a63ddf393987eaac728a01895a6eedb70b8f0561201ab13da0fd5348429",
+          "text_length": 813
+        },
+        {
+          "page": 23,
+          "text_sha256": "ce745737dc71f5c9d6cd88b2506a3bcb38f34ded6d2d6d59e218cbd2a4a0989f",
+          "text_length": 666
+        },
+        {
+          "page": 24,
+          "text_sha256": "785f3ec7eb32f30b90cd0fcf3657d388b5ff4297f2f9716ff66e9b69c05ddd09",
+          "text_length": 2
+        },
+        {
+          "page": 25,
+          "text_sha256": "e1c92e36522aec5ef39411351217298460562b92f46371e994d42c6a71b7510b",
+          "text_length": 16
+        },
+        {
+          "page": 26,
+          "text_sha256": "9f74aed27f596dddd49085e1630fa585a62229d96d428be4976e84d852f80b41",
+          "text_length": 328
+        },
+        {
+          "page": 27,
+          "text_sha256": "51942e07fe36153fec327facec06a90c03e07ce3656676945cd8238f25e737ff",
+          "text_length": 948
+        },
+        {
+          "page": 28,
+          "text_sha256": "7301d45e4eaa67c18ae15c44c682cad7fd0c356c5b7ce436022b6e149b7f0044",
+          "text_length": 1206
+        },
+        {
+          "page": 29,
+          "text_sha256": "53f3826b4a0f20d9858e49b3919102d91471f29c42de2085453000a9b4fe080d",
+          "text_length": 928
+        },
+        {
+          "page": 30,
+          "text_sha256": "4651deca9d65645541e4db202a98688a1eda6013b7a8b8ba723ef73bf53cd7d0",
+          "text_length": 1123
+        },
+        {
+          "page": 31,
+          "text_sha256": "0910e2c3b005cade253d506f0559561867607266e88feb7fd5443ae1870a761d",
+          "text_length": 945
+        },
+        {
+          "page": 32,
+          "text_sha256": "13c1dd7f7597cd8a510c3c3b51b8248d48b35cc132e3ddb9717b3df0a2821d70",
+          "text_length": 1149
+        },
+        {
+          "page": 33,
+          "text_sha256": "5a3a14e8f3f968dcdb02073c963407bd376d11b4b522c9c72597a96e904ef5c9",
+          "text_length": 692
+        },
+        {
+          "page": 34,
+          "text_sha256": "325ff177fee87328378a6816d4fe069a70a8eeda2150b5f5a51de3c7c1052ccf",
+          "text_length": 1192
+        },
+        {
+          "page": 35,
+          "text_sha256": "0296bbdb10e749c8bd46042a8780668bc2e9ab7f4badb0b7c98b8bd98d3b635d",
+          "text_length": 1027
+        },
+        {
+          "page": 36,
+          "text_sha256": "46ff3eb53a6a3bb772ef959c89e7109ee642d5da413ce70aa37f9c0d68b013f2",
+          "text_length": 1047
+        },
+        {
+          "page": 37,
+          "text_sha256": "702dfdebde6b0d7b96c35d487ee5b99a544fe6414c5a7ebc76c7953be3d8b359",
+          "text_length": 1381
+        },
+        {
+          "page": 38,
+          "text_sha256": "c9a54907ed9cd95c43703956753a63d7c01f622c829ea1864cab5e6579870410",
+          "text_length": 1141
+        },
+        {
+          "page": 39,
+          "text_sha256": "6262dc91a6b5d11cd419a00378c1143e1facb9eb274250c2fbd2cf99dc041960",
+          "text_length": 1034
+        },
+        {
+          "page": 40,
+          "text_sha256": "7d1390572502159037fd466407b6741a2564a3601129919a370dac7f31514b95",
+          "text_length": 1031
+        },
+        {
+          "page": 41,
+          "text_sha256": "241f8fe73f18e4efb19f13dcded7beb791fd7dddb3abec74988ee25381ac996d",
+          "text_length": 1203
+        },
+        {
+          "page": 42,
+          "text_sha256": "7b0862eb7dff4a96ec7753c778fc4a419fb0679965d94a7cf9c454b2230bef3b",
+          "text_length": 925
+        },
+        {
+          "page": 43,
+          "text_sha256": "ef26799145b5db37f11ad5cd169290318cc5b2cd9ac64be69ffbf9e44517d546",
+          "text_length": 1260
+        },
+        {
+          "page": 44,
+          "text_sha256": "85deb20069507c7659eb89bda4196b2bb1eb58fea8b1f8fb128a1ee4f4b7033e",
+          "text_length": 1262
+        },
+        {
+          "page": 45,
+          "text_sha256": "d1d04f89f794cd927472630d944d3c3a78c17813644a6f667832abbcf6739197",
+          "text_length": 1550
+        },
+        {
+          "page": 46,
+          "text_sha256": "7d31c5066cf2992a0ee2ee8e360aa460d4efcdef96b8d43ca3c13e1d88294ef2",
+          "text_length": 1272
+        },
+        {
+          "page": 47,
+          "text_sha256": "bfb9c69424093aa8634b72d1eed70e33d8ea8e45b921666ba3925c07bd19093e",
+          "text_length": 1414
+        },
+        {
+          "page": 48,
+          "text_sha256": "5fc1e572359ed3fb2c21f3150232edf307383c4c8ef6dba68ba010454afa8dbc",
+          "text_length": 1075
+        },
+        {
+          "page": 49,
+          "text_sha256": "3272a7f830cd1fa58fa939aaa16007225c450de284f975092483340883dc99ad",
+          "text_length": 1143
+        },
+        {
+          "page": 50,
+          "text_sha256": "22424b949dfa2eb74805f57c8726d187184a8ee69d9c3c418472f3bcb710c005",
+          "text_length": 1230
+        },
+        {
+          "page": 51,
+          "text_sha256": "816ff204127838ab94c222515cee188acb5e180563ce7b7bde829575ebb2f40c",
+          "text_length": 1225
+        },
+        {
+          "page": 52,
+          "text_sha256": "cbabba99fb538aa51c00afcdaf17609a7c5c910cee84abaa34490c87010bea24",
+          "text_length": 1039
+        },
+        {
+          "page": 53,
+          "text_sha256": "2653a4257fd1504271a7302c84a51a0bf2ce0db225dee72acd7a0d9c8c4ba813",
+          "text_length": 1229
+        },
+        {
+          "page": 54,
+          "text_sha256": "9dcd03de162baa68e32f2ce30a7efaa68a7c0f0156918d7bd3242684ea632600",
+          "text_length": 1248
+        },
+        {
+          "page": 55,
+          "text_sha256": "caf125847cbeea77f721c1834e7a29b7fe930092c5d38b6d943e0d439e6b8f74",
+          "text_length": 1212
+        },
+        {
+          "page": 56,
+          "text_sha256": "e19e2a7634ab19f527551384c9e9e42af256e548ce260a665eefb333948f4743",
+          "text_length": 978
+        },
+        {
+          "page": 57,
+          "text_sha256": "1c1af45e9c0de303b794c48e3e6fef795047829db7db00565a54b5a6fd3f7e65",
+          "text_length": 1165
+        },
+        {
+          "page": 58,
+          "text_sha256": "d3aa37d4af3513c0f1c1b15166338b835546e02f53b7e27ade824e347e44d149",
+          "text_length": 1388
+        },
+        {
+          "page": 59,
+          "text_sha256": "78846abb20297474230e3847275c338b41871ca94141ce4fd50488ba8f3cb8f1",
+          "text_length": 825
+        },
+        {
+          "page": 60,
+          "text_sha256": "d0426b59b3e0467a2e673b7f2b91210fa02a1942ded69c8fcbcc86bc9c71366e",
+          "text_length": 1040
+        },
+        {
+          "page": 61,
+          "text_sha256": "97f78ecfa64e2711a83cf60225f80021da114485a268ef3a88838cf9b07775dd",
+          "text_length": 1087
+        },
+        {
+          "page": 62,
+          "text_sha256": "e3359bbc29641941af5d100c259ac8e915705a5c1a2eb0274910a9a5d28e499b",
+          "text_length": 1538
+        },
+        {
+          "page": 63,
+          "text_sha256": "8ceb76a73349c029d765452d1fc234dd40951d667942b6c7cb3ccf62a6235a96",
+          "text_length": 1016
+        },
+        {
+          "page": 64,
+          "text_sha256": "7e5c3a277021fc234e0503790906aa41d7d99b7c4e492c1d38c7a575b9e979f7",
+          "text_length": 990
+        },
+        {
+          "page": 65,
+          "text_sha256": "b03d5088d8ae4923ffa6a1149fd9d3422c4d8b85c99912834a57a872c49f5131",
+          "text_length": 820
+        },
+        {
+          "page": 66,
+          "text_sha256": "a68b412c4282555f15546cf6e1fc42893b7e07f271557ceb021821098dd66c1b",
+          "text_length": 2
+        },
+        {
+          "page": 67,
+          "text_sha256": "307c519ff6bd7e0594c8c08810805903b1ab9722e896a0ded37faf5e776bcbb8",
+          "text_length": 17
+        },
+        {
+          "page": 68,
+          "text_sha256": "55e15d7b75514e4f73deaf06ebb22cbb15bb66e2a92dd0f0dd64650e5e77a33a",
+          "text_length": 723
+        },
+        {
+          "page": 69,
+          "text_sha256": "ffed3a0c529ce7dcf2047bfb8cc28d1f5af8732bf680dcf85496a79a25e2c508",
+          "text_length": 952
+        },
+        {
+          "page": 70,
+          "text_sha256": "df8e24b5e5c11f988a0b6124e25f10c4c43dbdd8a1d6fb64a920738840824264",
+          "text_length": 1167
+        },
+        {
+          "page": 71,
+          "text_sha256": "c973dd2557454b2d97ee0c9abc131eda5f6535197d5408493ae664436cb86d62",
+          "text_length": 1102
+        },
+        {
+          "page": 72,
+          "text_sha256": "2f12d0e7573213eadb55770fb0cf131e4bb366c88ebe43ffe0b4b7f2f70e4e4a",
+          "text_length": 1049
+        },
+        {
+          "page": 73,
+          "text_sha256": "a2ad9d4d1fbda0922798ce8c52dfb3a73589e3a61830c8546d4c9e512d0b9f90",
+          "text_length": 897
+        },
+        {
+          "page": 74,
+          "text_sha256": "07171ff2a679eb48163346b73334cdee94b7abef572f42aee9f81d1636d8d3e2",
+          "text_length": 633
+        },
+        {
+          "page": 75,
+          "text_sha256": "96061e92f58e4bdcdee73df36183fe3ac64747c81c26f6c83aada8d2aabb1864",
+          "text_length": 2
+        },
+        {
+          "page": 76,
+          "text_sha256": "eb624dbe56eb6620ae62080c10a273cab73ae8eca98ab17b731446a31c79393a",
+          "text_length": 2
+        },
+        {
+          "page": 77,
+          "text_sha256": "040aba756b9a5dd971e38592a520fe6fbccbfe502367b0d3ae2a90c248ffdd9f",
+          "text_length": 12
+        },
+        {
+          "page": 78,
+          "text_sha256": "35740e3017142153193df0272672f09d929d3c9d45869513ff2d9467bc4f4e80",
+          "text_length": 430
+        },
+        {
+          "page": 79,
+          "text_sha256": "ed2d9fa0bb09a348ebe45cbbab528e580c583c91b79d1a86651b4b090b5897c6",
+          "text_length": 201
+        },
+        {
+          "page": 80,
+          "text_sha256": "175bec66450e3677b40a053b67d1b8ac6fbc2ce4798867730a27e480907f2c71",
+          "text_length": 940
+        },
+        {
+          "page": 81,
+          "text_sha256": "8816a469dd491fb9437c9cd9a4105da8161c633803f49efeab013b8293a73245",
+          "text_length": 213
+        },
+        {
+          "page": 82,
+          "text_sha256": "e706986bed35b51bef069e751adfe0e8a76d5237d862212dfd4356f034a91795",
+          "text_length": 997
+        },
+        {
+          "page": 83,
+          "text_sha256": "384f6783f6c1537f76a7c4caa4b083ea79b914920f7756e20868a87430300619",
+          "text_length": 900
+        },
+        {
+          "page": 84,
+          "text_sha256": "1b315743d40e0afdfb81032b816653076aacdac3c6026bdf08ce7e176a4a0fad",
+          "text_length": 803
+        },
+        {
+          "page": 85,
+          "text_sha256": "11050c6e4fdb012a97e8fc09c2168342828ed4f0d5d929011e1f3ab4e7daabdf",
+          "text_length": 900
+        },
+        {
+          "page": 86,
+          "text_sha256": "f95bbaea2971a902abf1ac059aff59b3e9ca1c38824e0b6ee9cc984b51260121",
+          "text_length": 839
+        },
+        {
+          "page": 87,
+          "text_sha256": "0c4c67ab2748f4c0ec3c172c2693db66295060fac0735e4ce77bdf7e1003b937",
+          "text_length": 216
+        },
+        {
+          "page": 88,
+          "text_sha256": "7c16245c900aa6f8e98bb0d06e13616fd4abd4d0c1530db05376fc6482389a55",
+          "text_length": 655
+        },
+        {
+          "page": 89,
+          "text_sha256": "a774a1f7da632a9cbc0a86109f3477d3bd7b76a36eb023689a1d34e5b218fe39",
+          "text_length": 576
+        },
+        {
+          "page": 90,
+          "text_sha256": "79c89e54aa4358147a93be7b6f45ecb4de6a748af696771c3bd329dd6199f003",
+          "text_length": 12
+        },
+        {
+          "page": 91,
+          "text_sha256": "c8b75ee72bcdd6112bceae3e08d72ebedc5292abe925fe23a710ac97748bc9a0",
+          "text_length": 12
+        },
+        {
+          "page": 92,
+          "text_sha256": "e5a41803d480a6f9d0e835839bc3813fa1ff32cf9dcdb49df38936ff780c28dc",
+          "text_length": 393
+        }
+      ],
+      "material_id": "52ef7b83-fb10-535e-8f93-17a85e73df8a",
+      "source_role": "REFERENCE_ONLY",
+      "corpus_scope": "GOVERNMENT_ENTERPRISE",
+      "chunker": "backend/src/pipeline/enterprise-material-chunker.js::chunkEnterpriseMaterial",
+      "chunker_version": "enterprise-material-v1",
+      "planned_chunk_count": 109
+    },
+    {
+      "source_id": "HW-003",
+      "title": "AI DC白皮书",
+      "source_file": "data/eval/real-enterprise-upload-test-v1/raw/HW-003.pdf",
+      "source_sha256": "8081099e23478068e7e43a55c6c93bd6d5efd8456670494d363bf949d3fe3990",
+      "source_byte_size": 12891442,
+      "parser": "backend/src/tender-text-extractor.js::extractTenderText",
+      "parser_mode": "PRODUCTION_PDF_PARSER",
+      "adapter": null,
+      "adapter_version": null,
+      "normalized_text_sha256": "5e4723acdd0a70dcfbc157a235c8769424fe9ce4237ce4dc32672e9fab76c02b",
+      "normalized_text_length": 70508,
+      "extraction_warnings": [],
+      "pages": [
+        {
+          "page": 1,
+          "text_sha256": "b2a4b73ae7a1b19644a4d8e3fe8b5a57d6de2f4bac80d81f48487767b04f67cf",
+          "text_length": 70
+        },
+        {
+          "page": 2,
+          "text_sha256": "80c9b7934dc519a596bdf316b4078d812219e817a246ac7ca19295a213e8ee69",
+          "text_length": 21
+        },
+        {
+          "page": 3,
+          "text_sha256": "d8b53035a5757c8d8829814f4b839b669cd021ccac046413740bdbf91e02821f",
+          "text_length": 1302
+        },
+        {
+          "page": 4,
+          "text_sha256": "bff733037714edde0e8d81eef1b8e92719530cdae92367ec88288286c37ef32b",
+          "text_length": 881
+        },
+        {
+          "page": 5,
+          "text_sha256": "9974c9aab11455f57d0135445632f747d93088dfc3364f237407a02f1d0d44a1",
+          "text_length": 859
+        },
+        {
+          "page": 6,
+          "text_sha256": "9b8d2b678301a76a0e245215a6f44a99693c6e7e5ee787dae9ee02ca13af3b25",
+          "text_length": 1328
+        },
+        {
+          "page": 7,
+          "text_sha256": "d0342d88e105b9549a313c9d51ec212d63d3431cdc2f19e02ad0b90f0e1dc5ff",
+          "text_length": 715
+        },
+        {
+          "page": 8,
+          "text_sha256": "64b268c79ae8a343ff820c24af9449d9bbb39bef774fd7196d18ebed3eae2a3b",
+          "text_length": 1403
+        },
+        {
+          "page": 9,
+          "text_sha256": "b56fcc10312a3c4731d37a9ecd25f8a4e55ab10c29e609cad8dbb55f032c2d85",
+          "text_length": 1618
+        },
+        {
+          "page": 10,
+          "text_sha256": "caab1bd510a076f69c93e7f9573f27e9332edc6ed22833f722ddea32e3f37dc3",
+          "text_length": 2448
+        },
+        {
+          "page": 11,
+          "text_sha256": "cb89b7a2bb19965d8f3ddf2c4d48b59671fc764666099e0e1ce79fa3dca5c359",
+          "text_length": 961
+        },
+        {
+          "page": 12,
+          "text_sha256": "848a9d356b1b339dcff65c154da3227b87d2c5374ba4396260ac256e503748dd",
+          "text_length": 1627
+        },
+        {
+          "page": 13,
+          "text_sha256": "5bbb20dce1c12dc6acc1027ddaffc06a740e57192463eab820d2616c1829f1c4",
+          "text_length": 1549
+        },
+        {
+          "page": 14,
+          "text_sha256": "9d551fe42bdf6687c8adcaaa4b83cedb8bbd1f8ae22dc86a4b9cae0d06fe3c7a",
+          "text_length": 1278
+        },
+        {
+          "page": 15,
+          "text_sha256": "43c5c882fa275380bba11035e9b599eca17f0e2f775519160a6339c6298df50c",
+          "text_length": 1649
+        },
+        {
+          "page": 16,
+          "text_sha256": "fb7882434c318f1108c15a49a0aa879d1ad2d85da0e6110dc063e5a61c09709b",
+          "text_length": 822
+        },
+        {
+          "page": 17,
+          "text_sha256": "452a7cc2cba139ca9caa56d0ef0698dc0ffb5365b87c04f73c1c85136c9e2833",
+          "text_length": 1265
+        },
+        {
+          "page": 18,
+          "text_sha256": "5f1b65ae62fdd219523ea1fb2d3946296a748bba5461882c7e0ed6bd1466c275",
+          "text_length": 1027
+        },
+        {
+          "page": 19,
+          "text_sha256": "40149effd42e28c6e8c45fcfa5969ad66a82cbbecad73e5330a96e61242c1e33",
+          "text_length": 681
+        },
+        {
+          "page": 20,
+          "text_sha256": "4a20c0a298e094fced1e75749df84d9546868320704d7bb3f202be2a05e713b1",
+          "text_length": 1086
+        },
+        {
+          "page": 21,
+          "text_sha256": "5f550b1323dc861d7287e237472ac9e83625911c55d4228895aeb6327562ea9d",
+          "text_length": 2016
+        },
+        {
+          "page": 22,
+          "text_sha256": "5138e27fce7cfb693f9088879b245f29b0945475e379b30f76a3e3d90bab6c54",
+          "text_length": 1511
+        },
+        {
+          "page": 23,
+          "text_sha256": "cfae62c8bbb597861bacdffe9c82e4685608ff2fc31271be98ed3114f3591b9b",
+          "text_length": 1207
+        },
+        {
+          "page": 24,
+          "text_sha256": "366046626f2573e8f76aee34c448fcc4dcbeb492e124260b3d235220c752cff9",
+          "text_length": 1706
+        },
+        {
+          "page": 25,
+          "text_sha256": "49eb50a81b5483589973cebf6cb26d5d5619178f6f68ca02b08a711b3833405c",
+          "text_length": 1278
+        },
+        {
+          "page": 26,
+          "text_sha256": "f5f4a8c61941f999c94fe0b39acdb3b709d9517fc496419614d6b88b10853adb",
+          "text_length": 1834
+        },
+        {
+          "page": 27,
+          "text_sha256": "10a43d9899f5c6199b8ee9f8f5a9cd3fee03bb8f7a9de641c6be333061634a9e",
+          "text_length": 1468
+        },
+        {
+          "page": 28,
+          "text_sha256": "47b75b85e43bf537aee9d22a780e381083f4259d5c18ccb0b531e628cfd2330e",
+          "text_length": 1749
+        },
+        {
+          "page": 29,
+          "text_sha256": "4fb233577d09c977c1650e4e931d3a25886581418d075df355e088c1640e1ba8",
+          "text_length": 1683
+        },
+        {
+          "page": 30,
+          "text_sha256": "848a6b335f5710a19efdaea4a73cedb7d62297b2ee3b8da2f7a389ca8ba6c4b1",
+          "text_length": 680
+        },
+        {
+          "page": 31,
+          "text_sha256": "c8ee7aeee918b6df23fe8ff32dd70d9adcfc08c7627b0531dea9c5fa21c1087f",
+          "text_length": 1310
+        },
+        {
+          "page": 32,
+          "text_sha256": "40e99317d37f641e921c1ecd0d1a569c7942df7211510158eb18df6ec3f9a046",
+          "text_length": 1086
+        },
+        {
+          "page": 33,
+          "text_sha256": "4a0ddf3b57ab4970bb80e798579b5790fc70c52f847d2ab798ee73b4ab8835e2",
+          "text_length": 1760
+        },
+        {
+          "page": 34,
+          "text_sha256": "fc2bc1f06c5776b603ec46fb52fb1d3e77a37367fc91fdba1b276e5310edf5c4",
+          "text_length": 1563
+        },
+        {
+          "page": 35,
+          "text_sha256": "25ea4800489b5acd367d73132d62f5cf0afb07977e7e1189ca3e8a15d40aca4a",
+          "text_length": 1536
+        },
+        {
+          "page": 36,
+          "text_sha256": "9e3243a4b9e2824ebf71b6242b8de11172efde3b3755700142f8f9eb1b3327d3",
+          "text_length": 1676
+        },
+        {
+          "page": 37,
+          "text_sha256": "45873dbad10315adabad5bda8e0340179f3f5f1c82883fc4481b7f1c4c266009",
+          "text_length": 1270
+        },
+        {
+          "page": 38,
+          "text_sha256": "9735a3061c8f460c53b953a690599edf9f918faf004b6a2c800798cb9b91ede7",
+          "text_length": 1251
+        },
+        {
+          "page": 39,
+          "text_sha256": "a22b2cd7deadcb5311e0af1581c4dfe93cede02350d577c63681e8841b36c0d5",
+          "text_length": 1846
+        },
+        {
+          "page": 40,
+          "text_sha256": "85c83920357febc57a174f9694cfc1e304d0026e946283ad88be567199bd1c79",
+          "text_length": 1085
+        },
+        {
+          "page": 41,
+          "text_sha256": "ea9ef75645f39167dfb2b618998c7130c8dfddadd712f83a56e6d8ae5eda05f1",
+          "text_length": 1774
+        },
+        {
+          "page": 42,
+          "text_sha256": "59e0d03650dca81c3c525ee76d692c34ef5ec0ef0909c0d75f2016220fd773f8",
+          "text_length": 2883
+        },
+        {
+          "page": 43,
+          "text_sha256": "c72d2c4674c4f8fa073d93d062bf14a78b1fe1c808c1c118669ebbe3f1f025a6",
+          "text_length": 1440
+        },
+        {
+          "page": 44,
+          "text_sha256": "fe31b29db70fe3763fc6fe345d024226f47d0addc6bb453e1578521c955f3947",
+          "text_length": 1041
+        },
+        {
+          "page": 45,
+          "text_sha256": "8484e20733a88ea2e46b1487e592a4af54f65c9251800ac4c9823409c2cc92b1",
+          "text_length": 953
+        },
+        {
+          "page": 46,
+          "text_sha256": "e95a5675bbb140772753e7384a00ef57e5ac68c9edd902cb8a7ccc33d2397865",
+          "text_length": 995
+        },
+        {
+          "page": 47,
+          "text_sha256": "64ff2ed97dc9a6f22a03e2d64dd6c067010ebdd18fcc372af79f8b793cde1869",
+          "text_length": 1814
+        },
+        {
+          "page": 48,
+          "text_sha256": "66d1818d575ada0a784602be2d079f24a692f72225cb7a963bedeaa5c1b38752",
+          "text_length": 1304
+        },
+        {
+          "page": 49,
+          "text_sha256": "4356994b7a76c5fa259b48a8ed23638b22e6664b2a737650a4e1e94c590f3925",
+          "text_length": 788
+        },
+        {
+          "page": 50,
+          "text_sha256": "13c73412504bd3ef5ef3700d057df8a68240e5e03f4465d4bd166d87ac2cf3fd",
+          "text_length": 1161
+        },
+        {
+          "page": 51,
+          "text_sha256": "594df3cbd32adad4f7461f780ea610bf0256a5b49d932f3db892b17730f3d985",
+          "text_length": 1670
+        },
+        {
+          "page": 52,
+          "text_sha256": "b8246516d09288567bbea656b2f5ae90d6dd9ca76ef5c63999ac5a68f33de0eb",
+          "text_length": 1429
+        },
+        {
+          "page": 53,
+          "text_sha256": "59053098a5b863b6b2b7c9209fa36028a4b4a3959f5a484983f10f609cbe8ecc",
+          "text_length": 686
+        },
+        {
+          "page": 54,
+          "text_sha256": "17c01b2227614c0a61a54fc244f66cb57f39790a49f0edd6abfc66a247b4a84b",
+          "text_length": 359
+        }
+      ],
+      "material_id": "1bdb5a57-e7c7-5c56-9640-a7a1a9ee4194",
+      "source_role": "REFERENCE_ONLY",
+      "corpus_scope": "GOVERNMENT_ENTERPRISE",
+      "chunker": "backend/src/pipeline/enterprise-material-chunker.js::chunkEnterpriseMaterial",
+      "chunker_version": "enterprise-material-v1",
+      "planned_chunk_count": 90
+    },
+    {
+      "source_id": "HW-004",
+      "title": "韧性DC白皮书",
+      "source_file": "data/eval/real-enterprise-upload-test-v1/raw/HW-004.pdf",
+      "source_sha256": "fcad3db24e3b8205842684935ad05b3338dedfa10367ac5388aa3df41a78ab5d",
+      "source_byte_size": 7370981,
+      "parser": "backend/src/tender-text-extractor.js::extractTenderText",
+      "parser_mode": "PRODUCTION_PDF_PARSER",
+      "adapter": null,
+      "adapter_version": null,
+      "normalized_text_sha256": "493535f649ced24e4e28ca72fcddab7cac2c4c19bc4e3e7ef2e6512b738eaa76",
+      "normalized_text_length": 77302,
+      "extraction_warnings": [],
+      "pages": [
+        {
+          "page": 1,
+          "text_sha256": "ac13545c4e5e91f326300712f0399f5db407720dbf47ee7bc6f9c841bb53a1fd",
+          "text_length": 19
+        },
+        {
+          "page": 2,
+          "text_sha256": "79fbe3294270d5dcb7343490dd6a7a2020535f61ef3e9b6d5a34b685b71ac24f",
+          "text_length": 44
+        },
+        {
+          "page": 3,
+          "text_sha256": "6abacff61624c7c57029166fca7c9311d6c5d1195f2e5a1247b3ba1c35a04bce",
+          "text_length": 1447
+        },
+        {
+          "page": 4,
+          "text_sha256": "ae128145c4bc506a71c5f7fd3e90ed6abfd348ab7ed882982a6505c507b25942",
+          "text_length": 1267
+        },
+        {
+          "page": 5,
+          "text_sha256": "404e6a48430cb955a574690a144e6789bb2f7a0a8d152aa97967cccaaf99f1fe",
+          "text_length": 1485
+        },
+        {
+          "page": 6,
+          "text_sha256": "05be28f730cbc532608c0506fe18ddb2a8e7185154751934703b62b3003241ca",
+          "text_length": 855
+        },
+        {
+          "page": 7,
+          "text_sha256": "40b76599b31644b592b1c897bff9311b73093fb989721e4f60f19cf273a4aab7",
+          "text_length": 1260
+        },
+        {
+          "page": 8,
+          "text_sha256": "2a9d27a9993fcde02184e969b71f52f0d234b179f1e281b4f9137ea4bb53aba2",
+          "text_length": 886
+        },
+        {
+          "page": 9,
+          "text_sha256": "244edc5374ab1b7c9f28b1cc8f8d1b5b39f8ea28abf442db525c020c1ab70ae7",
+          "text_length": 1626
+        },
+        {
+          "page": 10,
+          "text_sha256": "8defc79866d5e006a53e6f09ab4cecdb665c09f7360f56b8139227e8519fdd10",
+          "text_length": 1119
+        },
+        {
+          "page": 11,
+          "text_sha256": "3194cc550c56e193104dc2bb2194ceb17ba5b4fd25e11f645aa8dd242c5d1c60",
+          "text_length": 1571
+        },
+        {
+          "page": 12,
+          "text_sha256": "e01092619c3d32ebb665088d9836e1aa129f8636b8d32696a3d66d1dcf5d6cb6",
+          "text_length": 1854
+        },
+        {
+          "page": 13,
+          "text_sha256": "612b568e386b6c7f90c912f112a5b2b10671ec4ff215ac0fde52126d39720d77",
+          "text_length": 1898
+        },
+        {
+          "page": 14,
+          "text_sha256": "1e0c6de82345e4a3fd074c007b7e62c6c4dcbf8f89c5f668dd5b62c791503352",
+          "text_length": 731
+        },
+        {
+          "page": 15,
+          "text_sha256": "f32503e741c3d2c4e44dcf3a74065512a4f25f3fa68cb6c4f67d266ca054a908",
+          "text_length": 1429
+        },
+        {
+          "page": 16,
+          "text_sha256": "c41989b2fb8b55a75b8a81593a1437a13feb41e72f1485f54adbd608f988867e",
+          "text_length": 1611
+        },
+        {
+          "page": 17,
+          "text_sha256": "884d53d2705aabd32f9a100b7b15a0122ec6c39ef9073b9791a8a78f2e506685",
+          "text_length": 1874
+        },
+        {
+          "page": 18,
+          "text_sha256": "e272d935071087d99f53344d3e5194e9742f156a110c8520313b0727c729f256",
+          "text_length": 1350
+        },
+        {
+          "page": 19,
+          "text_sha256": "ba6ab5add8061240453e7bed42cd754eefea7ed0b67d232c1a508f0a4e18046a",
+          "text_length": 1679
+        },
+        {
+          "page": 20,
+          "text_sha256": "69e135d98d388e6c9b7c2adb659ba22264349a876c964616b63729d6ea04d18c",
+          "text_length": 1651
+        },
+        {
+          "page": 21,
+          "text_sha256": "06c1fee545dde58429a1d49c2f0eaa851c44ef5c55973129a28314c46656afe4",
+          "text_length": 1544
+        },
+        {
+          "page": 22,
+          "text_sha256": "d13f51f64730e85b02f913ffec9a6e2898cb4d6c7019a48db6b9d0185a44563f",
+          "text_length": 1861
+        },
+        {
+          "page": 23,
+          "text_sha256": "a68b629687b0317f2566edae128ce893bbc1188e55884e8ab0c906189cfa60ca",
+          "text_length": 2269
+        },
+        {
+          "page": 24,
+          "text_sha256": "79d8506c32746c995e25d8301503be3b0ed7d943090df8ae9680e1dfede3b02d",
+          "text_length": 2114
+        },
+        {
+          "page": 25,
+          "text_sha256": "cabf0bd80df17ce1a76bd4016ba67e1c8d8d11a061758dd51fd3c260e2bfec76",
+          "text_length": 1823
+        },
+        {
+          "page": 26,
+          "text_sha256": "2ad67cddc47a2b7e9fd626f8a3f946c7bf58f0a77698a48ebf831aaf439f114f",
+          "text_length": 1380
+        },
+        {
+          "page": 27,
+          "text_sha256": "dd41e7a62e1ba5c8564732a87af4864f628c6aeee21b10956bbf1c49cc4b070b",
+          "text_length": 1904
+        },
+        {
+          "page": 28,
+          "text_sha256": "41ddc92af50c2592104f3c7d213d01b383289071b247376b7dbddf4181a71b90",
+          "text_length": 1895
+        },
+        {
+          "page": 29,
+          "text_sha256": "9074dd4c8804c3df0e1c807da6687db5ee5c6ce2cdf5cef9c3a735d7f486eb29",
+          "text_length": 1615
+        },
+        {
+          "page": 30,
+          "text_sha256": "7051d5f665a239d302886f4ccfbb49aae2b06e9553bd1d63265572b1694cfed5",
+          "text_length": 1475
+        },
+        {
+          "page": 31,
+          "text_sha256": "4c8091e83cfd4e77b07433d024a3ef35fe5fa8a8e487aa5028ff770f429f2891",
+          "text_length": 1666
+        },
+        {
+          "page": 32,
+          "text_sha256": "1cb60b92cf01717486522e43acff23b33a1d278481b3b2fd7a69874a5c66ea73",
+          "text_length": 1853
+        },
+        {
+          "page": 33,
+          "text_sha256": "005c436653aa89008bee65f30cd837c66ec779f1887301e280558a39d5b86e90",
+          "text_length": 1837
+        },
+        {
+          "page": 34,
+          "text_sha256": "4e82f74e90bdd4dc312f87750c19e0aa927bf0bede9a9cb62126ec11973155d0",
+          "text_length": 1512
+        },
+        {
+          "page": 35,
+          "text_sha256": "db953b74e21430be58ecaafd80732960964ee85a21713cd53a4876d98e73c86b",
+          "text_length": 2057
+        },
+        {
+          "page": 36,
+          "text_sha256": "77b458eee102a4e49cbbd293521e05aef654cc1be07527b961ddb2ddc77b59eb",
+          "text_length": 2110
+        },
+        {
+          "page": 37,
+          "text_sha256": "032991f98228d2ee2ba34140c2d29cb1e4082579fca7dbfd18914f8f142b0968",
+          "text_length": 1259
+        },
+        {
+          "page": 38,
+          "text_sha256": "74d6e07c2a0b233da97e8f324b50932aa9b76b40d58284a8b2ebd80444aa6fe4",
+          "text_length": 1408
+        },
+        {
+          "page": 39,
+          "text_sha256": "188971d5945ce1fa03e9fb158a2dbddb31ab48a398d814edcfe818ce8fc01e9c",
+          "text_length": 1392
+        },
+        {
+          "page": 40,
+          "text_sha256": "591da4d78f928d76d054c7477fc4e721944b59738969a26b5c3555d4d84ac2d9",
+          "text_length": 1604
+        },
+        {
+          "page": 41,
+          "text_sha256": "f4c7796bfbd0771d3884e9ece4abc092d7a922f1691da543d279f31c2898e0c2",
+          "text_length": 1685
+        },
+        {
+          "page": 42,
+          "text_sha256": "d3eabe8029f3da50b1e7c1ae3e032a8a18b2f2b601f78b3a406bc2a346c5b817",
+          "text_length": 1426
+        },
+        {
+          "page": 43,
+          "text_sha256": "ce5d28f39bd1cf69bf792aae3b2ec851b6652b20216274b59d81d48319010d50",
+          "text_length": 1555
+        },
+        {
+          "page": 44,
+          "text_sha256": "fbf0484c90e23981ed19d35efe2f2d7243f5874e34c1d9f187aa5b132f58ee47",
+          "text_length": 1165
+        },
+        {
+          "page": 45,
+          "text_sha256": "b952b10e31aa627496e3ebe2cc03c1d2dc16ccef6f32a88291e68e096a3afbb3",
+          "text_length": 1645
+        },
+        {
+          "page": 46,
+          "text_sha256": "0faec47d5837f5dd7861c263c2ca85e092a127ab5c2040b78015554705347f6a",
+          "text_length": 1360
+        },
+        {
+          "page": 47,
+          "text_sha256": "ba34fd37b4f6a9cf88f9bdc2d0f5d402da4a568a3488b9a366b783e6aadb19e6",
+          "text_length": 1609
+        },
+        {
+          "page": 48,
+          "text_sha256": "f1435ba2cb0a48637c1b88b78bacdff0a1c8e70984bf315c2a561022b2d2ba57",
+          "text_length": 2101
+        },
+        {
+          "page": 49,
+          "text_sha256": "97418a5291729a249642888002e6feb60e564cc3e5673208e3c40ab01b460315",
+          "text_length": 712
+        },
+        {
+          "page": 50,
+          "text_sha256": "5dfe4d69c606d4fe1ee393b79166e8980c70a8b886b8bfec4ca94ba86f17bfbd",
+          "text_length": 1319
+        },
+        {
+          "page": 51,
+          "text_sha256": "e09d992ffcb238dd4fc705b691cc4e845f146c33c2712e53e0e048d3cdc8d45f",
+          "text_length": 1342
+        },
+        {
+          "page": 52,
+          "text_sha256": "07e53f782db456bd2adf50733ac3379551d88282bdbf9ce0805d9193e435bd03",
+          "text_length": 719
+        },
+        {
+          "page": 53,
+          "text_sha256": "2f522cc9a99fbc9ea7cbec67600619a51e7d8f05b3b00b6389e223ec19711212",
+          "text_length": 326
+        }
+      ],
+      "material_id": "1a30fff0-29b4-57e1-b824-1642f3906e56",
+      "source_role": "REFERENCE_ONLY",
+      "corpus_scope": "GOVERNMENT_ENTERPRISE",
+      "chunker": "backend/src/pipeline/enterprise-material-chunker.js::chunkEnterpriseMaterial",
+      "chunker_version": "enterprise-material-v1",
+      "planned_chunk_count": 96
+    },
+    {
+      "source_id": "HW-005",
+      "title": "迈向智能世界白皮书2023—数据存储",
+      "source_file": "data/eval/real-enterprise-upload-test-v1/raw/HW-005.pdf",
+      "source_sha256": "c6df081e4783e7c9f7efe736667394dd9392ab74a6f0aa582b56b98faca4c5fc",
+      "source_byte_size": 6388542,
+      "parser": "backend/src/tender-text-extractor.js::extractTenderText",
+      "parser_mode": "PRODUCTION_PDF_PARSER",
+      "adapter": null,
+      "adapter_version": null,
+      "normalized_text_sha256": "c7807340d2b64059f8ee98fb85cdbb53e33d33cca5869208c8aa660038651cb4",
+      "normalized_text_length": 35694,
+      "extraction_warnings": [],
+      "pages": [
+        {
+          "page": 1,
+          "text_sha256": "fdb27e611588caf9278282fa0b00b8722d645dcfffc4dcd4bd0f011a8f1c2a12",
+          "text_length": 33
+        },
+        {
+          "page": 2,
+          "text_sha256": "50d882e868bf6bfef645a3aa80999431687058da765d59b658215024c2e47a56",
+          "text_length": 520
+        },
+        {
+          "page": 3,
+          "text_sha256": "88af54acb86d207f6b26012908a45c2c329da3bb71b34250d8e25ed0d68cf49a",
+          "text_length": 421
+        },
+        {
+          "page": 4,
+          "text_sha256": "bb6f8926c6c6c2c4811d2533ac9b9f253f0a297a8a7fc0083ada4efc48d906a4",
+          "text_length": 112
+        },
+        {
+          "page": 5,
+          "text_sha256": "6d7106d48b0433512d0a0ebcbcbeca7407ed770a4f58eb58ac84789f2b3fbfa6",
+          "text_length": 107
+        },
+        {
+          "page": 6,
+          "text_sha256": "e4706fb24f93f7154949dd94f210ea90cd51e9d3087436c8f61a0763f45d28cf",
+          "text_length": 732
+        },
+        {
+          "page": 7,
+          "text_sha256": "c6886685c818eefe98973ecc7f0b819c354cb0a4d49f3bc30bab0fae31032714",
+          "text_length": 573
+        },
+        {
+          "page": 8,
+          "text_sha256": "0ac99d1e4067676268f1f808ce1c0af6c21bcb89bd8baef03203f40b0f2f55f1",
+          "text_length": 502
+        },
+        {
+          "page": 9,
+          "text_sha256": "d431327d1fcb2f91eb36e72b19167f626fc800421d2fdfd37aa4a5625d8af099",
+          "text_length": 15
+        },
+        {
+          "page": 10,
+          "text_sha256": "81cf6ecb0fb50f53a90586a4fd5ac508699a1d83adcfec47dd318aad8af08132",
+          "text_length": 611
+        },
+        {
+          "page": 11,
+          "text_sha256": "dc27e57f224e6bc5a1e6bf648176c33b188fdba09f3f6661062f1de884f2e0eb",
+          "text_length": 1035
+        },
+        {
+          "page": 12,
+          "text_sha256": "2edb8ec09a4aee775064282c0f62b85faa52aeb9576fc3103ffaea28ef7b0668",
+          "text_length": 1016
+        },
+        {
+          "page": 13,
+          "text_sha256": "b748d0b01d692a327f8d67b5e8536f6fe57871ae417d668450b2461ff3af9e75",
+          "text_length": 803
+        },
+        {
+          "page": 14,
+          "text_sha256": "61842bb6f06e462a06156475b00d8c385ea25443cb87e3b90821c3bd1233154a",
+          "text_length": 904
+        },
+        {
+          "page": 15,
+          "text_sha256": "f3fd8472360476e5a3089fbfcc49ce6d591020cb79c025ee4801e9ba488e68cd",
+          "text_length": 779
+        },
+        {
+          "page": 16,
+          "text_sha256": "38e183eef4e31288c132f70f8a184aa3cb56cf4141c32b2623db38dcc3ad06fd",
+          "text_length": 945
+        },
+        {
+          "page": 17,
+          "text_sha256": "3885cc7a327b8582cf22a1426d2c2dce06fd18307fb7ea07bb663fa9b064949d",
+          "text_length": 864
+        },
+        {
+          "page": 18,
+          "text_sha256": "44aff25911d087e083b063da9fd3938bbab7d4ddeb253a28f04ca68c491f713c",
+          "text_length": 637
+        },
+        {
+          "page": 19,
+          "text_sha256": "425601b492721072157a51fc9001d36d7c46d935ae903e2ab5ca23060dc26438",
+          "text_length": 447
+        },
+        {
+          "page": 20,
+          "text_sha256": "550559a2a4ea236b108eb2f5ad8b53a64a52a34b9de5685535b363c910aa1818",
+          "text_length": 14
+        },
+        {
+          "page": 21,
+          "text_sha256": "efb10f92c215c186bf147f880f4f6dc558cf4ae5bd7f889faa0a40261029a684",
+          "text_length": 525
+        },
+        {
+          "page": 22,
+          "text_sha256": "e2491af60b45d894e7c72ae8dc87d7db3fa7602aa191054503b272d8629ded58",
+          "text_length": 765
+        },
+        {
+          "page": 23,
+          "text_sha256": "ce22624ba9e6014ee5c45110cc1fea906cbe955975f6abc2ff4aecc19f940497",
+          "text_length": 545
+        },
+        {
+          "page": 24,
+          "text_sha256": "4104b3621450408d02b30cf6622d6fac031612acc7f8f9cc0ebfd8c35a06b31f",
+          "text_length": 504
+        },
+        {
+          "page": 25,
+          "text_sha256": "d116a5133293594914d475f3171fb3d0f175cda7cdc95213b5c98ecadb041d38",
+          "text_length": 17
+        },
+        {
+          "page": 26,
+          "text_sha256": "dd5092d8ab613586f48eeca0567334c32da195315c398f26a011307d48664024",
+          "text_length": 591
+        },
+        {
+          "page": 27,
+          "text_sha256": "d777f7c923cd785671ba45e6a4e0b4b0ed787394c21969cd3f85dc062bcfa42f",
+          "text_length": 1015
+        },
+        {
+          "page": 28,
+          "text_sha256": "36ef9fb12ce88694daa086dfcb937ccdf26db3897a3784659a29344a39f058b6",
+          "text_length": 515
+        },
+        {
+          "page": 29,
+          "text_sha256": "8bc3d47dc00c9974a362e2a28ffa69cc535d7d8bf51e122b15a8238f638a9f18",
+          "text_length": 14
+        },
+        {
+          "page": 30,
+          "text_sha256": "dfa94a851529cf96777f68b2e16818ff8321e71d7781668e34a305aee2e63af9",
+          "text_length": 571
+        },
+        {
+          "page": 31,
+          "text_sha256": "c6f0300b6e9cc6fef9c13e1a322db70896d20e5cd43edfa731aa197909d7bb23",
+          "text_length": 703
+        },
+        {
+          "page": 32,
+          "text_sha256": "c18b5c9ada96f3d6d0a20d6eb88d6015e277da21e90feb11b58a2cea019d1a1e",
+          "text_length": 551
+        },
+        {
+          "page": 33,
+          "text_sha256": "48afad88d57c102f36f8f4568ebc2c2da7c3a672c70d80a1f12caed559c3d5ec",
+          "text_length": 669
+        },
+        {
+          "page": 34,
+          "text_sha256": "cf15c9ac229b6d7d98402a0befa07d0e1526565544deef71a761e7a1c3b62bb6",
+          "text_length": 17
+        },
+        {
+          "page": 35,
+          "text_sha256": "3d653ea5a2489a98d2ef61826ed29fc66fc0a31d13046ece0272b5fc0d12c551",
+          "text_length": 665
+        },
+        {
+          "page": 36,
+          "text_sha256": "6218bb8eccdebb7a7303baba4eb57bd62c0b6689fa6c6d895503423cf518628b",
+          "text_length": 925
+        },
+        {
+          "page": 37,
+          "text_sha256": "74b9454ebbf9fefe257fbd8e1d00c4073e7b04ae9982dd1aacb30948e3812678",
+          "text_length": 592
+        },
+        {
+          "page": 38,
+          "text_sha256": "6880d90dc112bc51253ec8072ccd1bc131d0dd716d135bb204e27f7be7914d0f",
+          "text_length": 17
+        },
+        {
+          "page": 39,
+          "text_sha256": "beb7a0f8c58b41bb802bcded7c4ca155cf51b8fd2c7bc4a4ba0ce5e67bf9dcba",
+          "text_length": 775
+        },
+        {
+          "page": 40,
+          "text_sha256": "97a3d849301a69a48ca46972ef1c1e38e3d18c021a6a91dbbd9cde95ab194a80",
+          "text_length": 464
+        },
+        {
+          "page": 41,
+          "text_sha256": "b870b44dd118edeccf0020f7e9828fa1cf829493fa360dbac98c8fbcb1eba510",
+          "text_length": 747
+        },
+        {
+          "page": 42,
+          "text_sha256": "28fbaf57926791a0aeb46a788ffc2f38fc052114668261f515259e9244ac303e",
+          "text_length": 600
+        },
+        {
+          "page": 43,
+          "text_sha256": "0b09d6aa24d64393db1fb5d7068d674271d9f55fcada3d96617af9710393127a",
+          "text_length": 18
+        },
+        {
+          "page": 44,
+          "text_sha256": "ad3ca869f17d264a9c45b6c3e2c20dbea8324bab4765df82a2eab813e78b5ea2",
+          "text_length": 295
+        },
+        {
+          "page": 45,
+          "text_sha256": "de5ffad0519e8cdd6b74a1a51f56574c97984cfbf4213017cc057478f8666b00",
+          "text_length": 734
+        },
+        {
+          "page": 46,
+          "text_sha256": "5eedee701223da8e940e2227a3dabfd01c605c8d42c429aa73ade70235e541b2",
+          "text_length": 864
+        },
+        {
+          "page": 47,
+          "text_sha256": "02c9f1a51743a2c54fc5fa452659b9190d35c6570293a9eaeaf63b7dab6847f0",
+          "text_length": 20
+        },
+        {
+          "page": 48,
+          "text_sha256": "a935c36d1fabe05fe33789718f9be380cd19b952356a176a659cca2bb070ac50",
+          "text_length": 612
+        },
+        {
+          "page": 49,
+          "text_sha256": "51bdabc62305e52fe02078e9fdcde136985a7fac615a98d8371b6bd5b35ef2b0",
+          "text_length": 733
+        },
+        {
+          "page": 50,
+          "text_sha256": "3ec13c7c5b5f94698b7682ce27c3bdd2e01c46c41bea6daeb94eb54de27aed77",
+          "text_length": 17
+        },
+        {
+          "page": 51,
+          "text_sha256": "5ee107bf3015d1a3ea06a09f6cf5270224d6061f750c4c681ea5f44c8117f62d",
+          "text_length": 523
+        },
+        {
+          "page": 52,
+          "text_sha256": "149194665253b4568bc909059a9e56323f620a42239aa98ee07e920377ff6a4f",
+          "text_length": 702
+        },
+        {
+          "page": 53,
+          "text_sha256": "e59e421277d67fc1b6683cd8ab28ef06c79e127f3b3e43d189f44bd0883a9649",
+          "text_length": 1004
+        },
+        {
+          "page": 54,
+          "text_sha256": "152ec46332632dff631490237950a7db523bb8370458778145be172ca2171a73",
+          "text_length": 637
+        },
+        {
+          "page": 55,
+          "text_sha256": "fff0130219d9cef7e3d436d3b2c222d7f8372e582ea4da58bc1aa316249d52ee",
+          "text_length": 18
+        },
+        {
+          "page": 56,
+          "text_sha256": "6b88e0dc8c7f288e96611185f5c1ea627542b2d2f888fd52812870914cc04a03",
+          "text_length": 472
+        },
+        {
+          "page": 57,
+          "text_sha256": "64b9a3e815c0cd9359222b07c0a2673eaad934264f69c159196377741ab19312",
+          "text_length": 1045
+        },
+        {
+          "page": 58,
+          "text_sha256": "449a6d1f7b1328f9593e9d44888067b69fc5c4376f7e45519f9cc44b4056d78e",
+          "text_length": 854
+        },
+        {
+          "page": 59,
+          "text_sha256": "c437841e6a54a077e71e2aa7261a70713bd7fee54670b4c12c98f2cae4f18938",
+          "text_length": 314
+        },
+        {
+          "page": 60,
+          "text_sha256": "8a18ffc6c0a07ab30620bf7927171d10d3eae9b537b29df05b634ae988bd1b01",
+          "text_length": 17
+        },
+        {
+          "page": 61,
+          "text_sha256": "228ef95fad35b6f38cfb929bd239ef18199e6bba555cff9a245855a10fd3cb59",
+          "text_length": 1077
+        },
+        {
+          "page": 62,
+          "text_sha256": "f470b927ff9c0aa0aaa08e80d67334185ee4f979fac6a9aa2db8627fb658a435",
+          "text_length": 851
+        },
+        {
+          "page": 63,
+          "text_sha256": "e1c4329fda1700a9ac96395c613b4ed6e7dba6c592eebd7085976355b6ba72f9",
+          "text_length": 285
+        },
+        {
+          "page": 64,
+          "text_sha256": "e568dcdd7bcd360b4924103a39fbbf2d87600cf1ebd396ccc8dedb254877be96",
+          "text_length": 1042
+        },
+        {
+          "page": 65,
+          "text_sha256": "4a76f0af66b6c859ff48f1b896dd484e9084b2fbfdeef34f5bd8bef00abdd169",
+          "text_length": 575
+        }
+      ],
+      "material_id": "6ac6cdb5-9642-58c8-867e-f56fec745a31",
+      "source_role": "REFERENCE_ONLY",
+      "corpus_scope": "GOVERNMENT_ENTERPRISE",
+      "chunker": "backend/src/pipeline/enterprise-material-chunker.js::chunkEnterpriseMaterial",
+      "chunker_version": "enterprise-material-v1",
+      "planned_chunk_count": 65
+    },
+    {
+      "source_id": "HW-006",
+      "title": "华为数据中心能源十大趋势白皮书",
+      "source_file": "data/eval/real-enterprise-upload-test-v1/raw/HW-006.pdf",
+      "source_sha256": "d262f8537f116f255e11f8a6b62783ed817eea585f5c6dd07c5763f044f36e2f",
+      "source_byte_size": 5677134,
+      "parser": "backend/src/tender-text-extractor.js::extractTenderText",
+      "parser_mode": "PRODUCTION_PDF_PARSER",
+      "adapter": null,
+      "adapter_version": null,
+      "normalized_text_sha256": "14386d8d9faee60eae5eeeb11a201077ef129446bff99a6ed6b43f7fa4eee8e5",
+      "normalized_text_length": 12709,
+      "extraction_warnings": [],
+      "pages": [
+        {
+          "page": 1,
+          "text_sha256": "0413d497be67b7432afb5f3f981303eb0e1c887cedddc3ee81de559dabfcfb3c",
+          "text_length": 320
+        },
+        {
+          "page": 2,
+          "text_sha256": "603eac60ec9d84fb5ad3392cfe210559f3fc2a18a65ee33f1785b73e963a4233",
+          "text_length": 1057
+        },
+        {
+          "page": 3,
+          "text_sha256": "5a23b36b9114186502f8eef39633e18fba0177a6c9d871c880a4fb8a26638035",
+          "text_length": 525
+        },
+        {
+          "page": 4,
+          "text_sha256": "f9f03feb214d738f29621ae6102b1545975af9cb80d44350d658f9497911cc2a",
+          "text_length": 1342
+        },
+        {
+          "page": 5,
+          "text_sha256": "1d0dcea02e9a122470c10fbb5360079ffecf48561bbc4a1d5f5ff5275cf74f15",
+          "text_length": 1242
+        },
+        {
+          "page": 6,
+          "text_sha256": "8697b563327abbee746546355fadbc71b0e106c249ee10b54447e8bae46e8ee9",
+          "text_length": 566
+        },
+        {
+          "page": 7,
+          "text_sha256": "930271468afc9656cf1f4a09d6da77e18276df754bfbec0e228ba0cbf4039f13",
+          "text_length": 1342
+        },
+        {
+          "page": 8,
+          "text_sha256": "04296cacb3a110ea29998a931a450d055cb5f784ce376263910415fcb238dfe9",
+          "text_length": 698
+        },
+        {
+          "page": 9,
+          "text_sha256": "8b14d9e9354ec98254cb7f45bf0bf51bc67443b751ee7ecd3af6d00766eb77e4",
+          "text_length": 1136
+        },
+        {
+          "page": 10,
+          "text_sha256": "081bd88a6751d7a34f8f99e6a0590679d4773b182dc7bdd553cfced0e64190b3",
+          "text_length": 726
+        },
+        {
+          "page": 11,
+          "text_sha256": "e51a976f6e85f61f607be6171f89c84e157525928ef7f76bb7b6064effe903ab",
+          "text_length": 970
+        },
+        {
+          "page": 12,
+          "text_sha256": "c67590c6df79444ea265e6cbe8ab85f62cecdf820bf64182720c3686e35e6f27",
+          "text_length": 1244
+        },
+        {
+          "page": 13,
+          "text_sha256": "16f7b1973c23749a9f8222b02c4a5281c9786fa0d295ca8d38611cb6cd767e45",
+          "text_length": 852
+        },
+        {
+          "page": 14,
+          "text_sha256": "fd7ca7206b2a34dfda9d1e0357c5070dec926a830b3c4e6b6ad0dca615c3138b",
+          "text_length": 663
+        }
+      ],
+      "material_id": "c7bda19e-bf00-546f-b535-253b9993cf4f",
+      "source_role": "REFERENCE_ONLY",
+      "corpus_scope": "GOVERNMENT_ENTERPRISE",
+      "chunker": "backend/src/pipeline/enterprise-material-chunker.js::chunkEnterpriseMaterial",
+      "chunker_version": "enterprise-material-v1",
+      "planned_chunk_count": 18
+    },
+    {
+      "source_id": "H3C-003",
+      "title": "H3C U-Center 5.0安装部署指导",
+      "source_file": "data/eval/h3c-public-real-v1/raw/H3C-003_H3C_U-Center_5.0安装部署指导.html",
+      "source_sha256": "6f19b927fe5be63cd67a30f02d7cce3dfa224676380e073a20d53de954bb8483",
+      "source_byte_size": 363456,
+      "parser": "backend/src/tender-text-extractor.js::extractTenderText",
+      "parser_mode": "EVAL_ONLY_HTML_INPUT_ADAPTER_THEN_PRODUCTION_TEXT_NORMALIZER",
+      "adapter": {
+        "adapter": "EVAL_ONLY_HTML_INPUT_ADAPTER",
+        "adapter_version": "eval-only-html-adapter-v1",
+        "source_byte_sha256": "6f19b927fe5be63cd67a30f02d7cce3dfa224676380e073a20d53de954bb8483",
+        "output_text_sha256": "fbe35a387b3806c7b193458ece1788fcf8f55e6e38b730822a5e4e8d0819dd23",
+        "output_text_length": 28395,
+        "synthetic_content_added": false,
+        "production_upload_fidelity": "NOT_CLAIMED",
+        "reference_fidelity": "PARTIAL_EVAL_ADAPTER"
+      },
+      "adapter_version": "eval-only-html-adapter-v1",
+      "normalized_text_sha256": "fcdfc10642d53fa52d2682462797713bb356e4786dc79cf72382a580e129e1a6",
+      "normalized_text_length": 21523,
+      "extraction_warnings": [],
+      "pages": [],
+      "material_id": "7e3718cb-e558-5407-ae70-d04932bd4ae1",
+      "source_role": "REFERENCE_ONLY",
+      "corpus_scope": "GOVERNMENT_ENTERPRISE",
+      "chunker": "backend/src/pipeline/enterprise-material-chunker.js::chunkEnterpriseMaterial",
+      "chunker_version": "enterprise-material-v1",
+      "planned_chunk_count": 1160
+    },
+    {
+      "source_id": "H3C-004",
+      "title": "U-Center NTA用户手册",
+      "source_file": "data/eval/h3c-public-real-v1/raw/H3C-004_U-Center_NTA用户手册.html",
+      "source_sha256": "06dcaefa5359a6c191699de8b0e12e6a44974ef1114a954e28a76ebb3367626f",
+      "source_byte_size": 344732,
+      "parser": "backend/src/tender-text-extractor.js::extractTenderText",
+      "parser_mode": "EVAL_ONLY_HTML_INPUT_ADAPTER_THEN_PRODUCTION_TEXT_NORMALIZER",
+      "adapter": {
+        "adapter": "EVAL_ONLY_HTML_INPUT_ADAPTER",
+        "adapter_version": "eval-only-html-adapter-v1",
+        "source_byte_sha256": "06dcaefa5359a6c191699de8b0e12e6a44974ef1114a954e28a76ebb3367626f",
+        "output_text_sha256": "02ba2889d30b4ed95e0be651fbfc38fa71a6ec74d550314e37323ae0ea0a3c98",
+        "output_text_length": 51904,
+        "synthetic_content_added": false,
+        "production_upload_fidelity": "NOT_CLAIMED",
+        "reference_fidelity": "PARTIAL_EVAL_ADAPTER"
+      },
+      "adapter_version": "eval-only-html-adapter-v1",
+      "normalized_text_sha256": "76be00034e10f2e3e2e67bc342c70c6e9f33cb38e1bf789dc1ff01f8bbc3169a",
+      "normalized_text_length": 45018,
+      "extraction_warnings": [],
+      "pages": [],
+      "material_id": "cd9328ef-686c-51f6-b049-8820b532ec28",
+      "source_role": "REFERENCE_ONLY",
+      "corpus_scope": "GOVERNMENT_ENTERPRISE",
+      "chunker": "backend/src/pipeline/enterprise-material-chunker.js::chunkEnterpriseMaterial",
+      "chunker_version": "enterprise-material-v1",
+      "planned_chunk_count": 1677
+    },
+    {
+      "source_id": "H3C-010",
+      "title": "数据备份与保护",
+      "source_file": "data/eval/h3c-public-real-v1/raw/H3C-010_数据备份与保护.html",
+      "source_sha256": "c3fc853f7c5684821acb56851fd9d7fc0d054f6d8e895a91739f5319088e8755",
+      "source_byte_size": 141563,
+      "parser": "backend/src/tender-text-extractor.js::extractTenderText",
+      "parser_mode": "EVAL_ONLY_HTML_INPUT_ADAPTER_THEN_PRODUCTION_TEXT_NORMALIZER",
+      "adapter": {
+        "adapter": "EVAL_ONLY_HTML_INPUT_ADAPTER",
+        "adapter_version": "eval-only-html-adapter-v1",
+        "source_byte_sha256": "c3fc853f7c5684821acb56851fd9d7fc0d054f6d8e895a91739f5319088e8755",
+        "output_text_sha256": "7be2da4cbde55ffd9df6afe74da2f1dff37a061c6d4e1220a3a49a05480a5009",
+        "output_text_length": 14225,
+        "synthetic_content_added": false,
+        "production_upload_fidelity": "NOT_CLAIMED",
+        "reference_fidelity": "PARTIAL_EVAL_ADAPTER"
+      },
+      "adapter_version": "eval-only-html-adapter-v1",
+      "normalized_text_sha256": "6bcd098bfa300ddd44105bc46f80b4dd1dcc0cf1e4c6058dc8d3e451d3f0179e",
+      "normalized_text_length": 9613,
+      "extraction_warnings": [],
+      "pages": [],
+      "material_id": "730299e6-d6cc-57e0-84ba-a4b0d6339b88",
+      "source_role": "REFERENCE_ONLY",
+      "corpus_scope": "GOVERNMENT_ENTERPRISE",
+      "chunker": "backend/src/pipeline/enterprise-material-chunker.js::chunkEnterpriseMaterial",
+      "chunker_version": "enterprise-material-v1",
+      "planned_chunk_count": 660
+    },
+    {
+      "source_id": "H3C-011",
+      "title": "新一代电子政务外网方案",
+      "source_file": "data/eval/h3c-public-real-v1/raw/H3C-011_新一代电子政务外网方案.html",
+      "source_sha256": "4a9c2f3dab42b8eae73c2db0f99b537a5dde54ab336c0ed495ed9b47f2ebe29d",
+      "source_byte_size": 128744,
+      "parser": "backend/src/tender-text-extractor.js::extractTenderText",
+      "parser_mode": "EVAL_ONLY_HTML_INPUT_ADAPTER_THEN_PRODUCTION_TEXT_NORMALIZER",
+      "adapter": {
+        "adapter": "EVAL_ONLY_HTML_INPUT_ADAPTER",
+        "adapter_version": "eval-only-html-adapter-v1",
+        "source_byte_sha256": "4a9c2f3dab42b8eae73c2db0f99b537a5dde54ab336c0ed495ed9b47f2ebe29d",
+        "output_text_sha256": "8cdf8886ff645714fa0a637edc4543f473aed698ce64ee5ed0c60e35206b144d",
+        "output_text_length": 11429,
+        "synthetic_content_added": false,
+        "production_upload_fidelity": "NOT_CLAIMED",
+        "reference_fidelity": "PARTIAL_EVAL_ADAPTER"
+      },
+      "adapter_version": "eval-only-html-adapter-v1",
+      "normalized_text_sha256": "d1c38d7e6ab7111e1cc6144baefafbff12d1ad1fe98d18fd3f06acabe5fac9fb",
+      "normalized_text_length": 6872,
+      "extraction_warnings": [],
+      "pages": [],
+      "material_id": "fcc8e415-5d50-5607-9609-fd831768d323",
+      "source_role": "REFERENCE_ONLY",
+      "corpus_scope": "GOVERNMENT_ENTERPRISE",
+      "chunker": "backend/src/pipeline/enterprise-material-chunker.js::chunkEnterpriseMaterial",
+      "chunker_version": "enterprise-material-v1",
+      "planned_chunk_count": 596
+    },
+    {
+      "source_id": "H3C-012",
+      "title": "电子政务外网安全防护",
+      "source_file": "data/eval/h3c-public-real-v1/raw/H3C-012_电子政务外网安全防护.html",
+      "source_sha256": "0c33de5af7054c3704dd0673fe5ea52280f812951d50aee5df29e04a58908cc0",
+      "source_byte_size": 134866,
+      "parser": "backend/src/tender-text-extractor.js::extractTenderText",
+      "parser_mode": "EVAL_ONLY_HTML_INPUT_ADAPTER_THEN_PRODUCTION_TEXT_NORMALIZER",
+      "adapter": {
+        "adapter": "EVAL_ONLY_HTML_INPUT_ADAPTER",
+        "adapter_version": "eval-only-html-adapter-v1",
+        "source_byte_sha256": "0c33de5af7054c3704dd0673fe5ea52280f812951d50aee5df29e04a58908cc0",
+        "output_text_sha256": "0f32b212441b6f55d9f3ac8c78cb08a9bb18321434656e2d8db0268504a73fb7",
+        "output_text_length": 12191,
+        "synthetic_content_added": false,
+        "production_upload_fidelity": "NOT_CLAIMED",
+        "reference_fidelity": "PARTIAL_EVAL_ADAPTER"
+      },
+      "adapter_version": "eval-only-html-adapter-v1",
+      "normalized_text_sha256": "f13f906f15838cfeae2ecab88ace91b277079366e19dfdb85bc70c34173485ac",
+      "normalized_text_length": 7544,
+      "extraction_warnings": [],
+      "pages": [],
+      "material_id": "1d8353aa-0977-5162-a169-5abf27d4ee8e",
+      "source_role": "REFERENCE_ONLY",
+      "corpus_scope": "GOVERNMENT_ENTERPRISE",
+      "chunker": "backend/src/pipeline/enterprise-material-chunker.js::chunkEnterpriseMaterial",
+      "chunker_version": "enterprise-material-v1",
+      "planned_chunk_count": 613
+    },
+    {
+      "source_id": "H3C-013",
+      "title": "电子政务外网乡镇延伸",
+      "source_file": "data/eval/h3c-public-real-v1/raw/H3C-013_电子政务外网乡镇延伸.html",
+      "source_sha256": "4fd8da2c61d609ded484db5c45cfbe0fad1df143e40ef298e38c234a32c8684f",
+      "source_byte_size": 32435,
+      "parser": "backend/src/tender-text-extractor.js::extractTenderText",
+      "parser_mode": "EVAL_ONLY_HTML_INPUT_ADAPTER_THEN_PRODUCTION_TEXT_NORMALIZER",
+      "adapter": {
+        "adapter": "EVAL_ONLY_HTML_INPUT_ADAPTER",
+        "adapter_version": "eval-only-html-adapter-v1",
+        "source_byte_sha256": "4fd8da2c61d609ded484db5c45cfbe0fad1df143e40ef298e38c234a32c8684f",
+        "output_text_sha256": "29322adaa91a3eb44b42b3af2280e4e119d32ac5b00c8678dca9490b22fae5d1",
+        "output_text_length": 3619,
+        "synthetic_content_added": false,
+        "production_upload_fidelity": "NOT_CLAIMED",
+        "reference_fidelity": "PARTIAL_EVAL_ADAPTER"
+      },
+      "adapter_version": "eval-only-html-adapter-v1",
+      "normalized_text_sha256": "537351c0c8dc40562fb6d2f4aa6656be1166376d04c65e895101435faac8f471",
+      "normalized_text_length": 2343,
+      "extraction_warnings": [],
+      "pages": [],
+      "material_id": "a1c1dd93-1de4-565a-b2dd-04d4636fec5f",
+      "source_role": "REFERENCE_ONLY",
+      "corpus_scope": "GOVERNMENT_ENTERPRISE",
+      "chunker": "backend/src/pipeline/enterprise-material-chunker.js::chunkEnterpriseMaterial",
+      "chunker_version": "enterprise-material-v1",
+      "planned_chunk_count": 127
+    }
+  ]
+}

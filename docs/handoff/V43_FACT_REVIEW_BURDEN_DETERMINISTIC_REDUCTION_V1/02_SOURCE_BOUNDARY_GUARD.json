@@ -1,0 +1,51 @@
+{
+  "artifact_type": "V43_FACT_REVIEW_BURDEN_DETERMINISTIC_REDUCTION_V1_SOURCE_BOUNDARY_GUARD",
+  "rule": "If a Backend-owned source unit has no terminal punctuation, ends in a conservative incomplete marker or identifier-like token, and a candidate adds text after a contiguous overlap of at least 8 normalized characters, return REVIEW_REQUIRED with SOURCE_BOUNDARY_COMPLETION_UNRESOLVED; never auto-accept.",
+  "candidate_17_replay": {
+    "candidate_id": "MCH-CE770B545973FB9CF092951FCDC402B5#candidate-17",
+    "source_tail": "过技术创新、安全解决方\n案帮助客户应对新挑战：\n创新应对新技术风险。AI领域，围绕大模型作业流，\n通过基于定向抑制的多模态安全对齐、基于语义理\n解的多模态内容审核、对抗攻击检测等内生安全关\n键技术，构筑数据安全、模型安全、内容安全、应\n用安全、运营运维安全五道护栏，保障大模型安全\n做事。我们打造媒体证真框架与水印等关键",
+    "candidate_statement": "华为打造媒体证真框架与水印等关键技术。",
+    "grounding_decision": "REVIEW_REQUIRED",
+    "grounding_reasons": [
+      "SOURCE_BOUNDARY_COMPLETION_UNRESOLVED"
+    ],
+    "accepted": false,
+    "pass": true
+  },
+  "deterministic_cases": [
+    {
+      "name": "incomplete_suffix",
+      "source_text": "获得ISO 27001",
+      "candidate_statement": "获得ISO 27001认证证书",
+      "grounding_decision": "REVIEW_REQUIRED",
+      "grounding_reasons": [
+        "SOURCE_BOUNDARY_COMPLETION_UNRESOLVED"
+      ],
+      "accepted": false,
+      "fail_closed": true
+    },
+    {
+      "name": "complete_source",
+      "source_text": "获得ISO 27001认证证书",
+      "candidate_statement": "获得ISO 27001认证证书",
+      "grounding_decision": "ACCEPT",
+      "grounding_reasons": [],
+      "accepted": true,
+      "fail_closed": false
+    },
+    {
+      "name": "unrelated_complete",
+      "source_text": "系统支持100个用户。",
+      "candidate_statement": "系统支持200个用户。",
+      "grounding_decision": "REVIEW_REQUIRED",
+      "grounding_reasons": [
+        "STATEMENT_SEMANTIC_GROUNDING_UNRESOLVED"
+      ],
+      "accepted": false,
+      "fail_closed": true
+    }
+  ],
+  "no_candidate_specific_branch": true,
+  "no_fuzzy_acceptance": true,
+  "all_tests_pass": true
+}

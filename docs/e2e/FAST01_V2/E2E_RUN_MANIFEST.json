@@ -1,0 +1,62 @@
+{
+  "artifact_type": "V43_REAL_E2E_FAST01_V2_RUN_MANIFEST",
+  "run_id": "V43-REAL-E2E-FAST01-20260911-0002",
+  "decision": "V43_FAST01_P0_SECTION_CLASSIFIER_MINIMAL_REPAIR_V1",
+  "status": "BLOCKED_FAST01_E2E_V2_ENVIRONMENT",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "project": {
+    "project_id": "4f7f770f-2998-44c9-b860-5b5b650ce210",
+    "name": "E2E-V43-REAL-FAST01-V2",
+    "data_classification": "PUBLIC_EVAL_TENDER",
+    "customer_private_data_observed": false
+  },
+  "tender": {
+    "tender_file_id": "6b080989-7b0a-40be-b0f7-304c92595439",
+    "original_name": "FAST-01-dapeng-healthcare.pdf",
+    "source_path": "backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf",
+    "source_sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+    "source_bytes": 1234398
+  },
+  "parse": {
+    "parse_job_id": "54bcfd98-9bed-44e3-856d-15d0ee4ceb22",
+    "status": "failed",
+    "phase": "failed",
+    "section_classification": {
+      "requirement_section_found": true,
+      "observed_heading": "用户需求书",
+      "classified_role": "REQUIREMENT_ELIGIBLE",
+      "no_technical_requirements_found_recurred": false
+    },
+    "chunk_generation": {"generated_chunk_count": 25, "persisted_chunk_count": 0},
+    "candidate_count": 0,
+    "provider_reached": false,
+    "error_code": "23514",
+    "error_message_safe": "tender_parse_chunks_check constraint violation"
+  },
+  "runtime": {
+    "backend_url": "http://127.0.0.1:3011",
+    "health": "PASS",
+    "database": "connected",
+    "semantic_gateway_url": "http://127.0.0.1:18082",
+    "semantic_gateway_ready": "PASS",
+    "semantic_gateway_build_revision": "f509514"
+  },
+  "execution_policy": {
+    "provider_calls": 0,
+    "retries": 0,
+    "manual_database_writes": 0,
+    "normal_api_business_writes": {"project": 1, "tender_file": 1, "parse_job": 1, "total": 3},
+    "gold_mutations": 0,
+    "downstream_actions": 0
+  },
+  "root_cause": {
+    "class": "P0_FLOW_BLOCKER",
+    "stage": "parse.chunk_persistence",
+    "detail": "Chunk 6 was generated with source_end_offset 7705 not greater than source_start_offset 45345; the formal tender_parse_chunks_check rejected the batch before Gateway invocation.",
+    "code_path": "backend/src/requirement-parse-service.js:231-244",
+    "schema_source": "backend/migrations/004_requirement_extraction_chunks.sql:32-55",
+    "retry_attempted": false,
+    "classifier_repair_regression": "section classification passed; downstream persistence blocker is new evidence and was not repaired"
+  }
+}

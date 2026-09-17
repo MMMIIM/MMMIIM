@@ -12,11 +12,21 @@ import {
   chunkExtractedText,
   resolveRequirementChunkBudget
 } from './pipeline/requirement-chunker.js';
+import {
+  combineRequirementExtractionSections,
+  validateCandidateSourceScope
+} from './pipeline/requirement-scope-router.js';
 import { SourceLocationResolver } from './pipeline/source-location-resolver.js';
 import { summarizeSourceReadiness } from './requirement-source-service.js';
 import { DocumentCapabilityDetector } from './pipeline/document-capability-detector.js';
 import { clearUnverifiedLocation, deriveCandidateSourceStatus } from './pipeline/requirement-source-status.js';
 import { requireFormalActorId } from './request-actor.js';
+import {
+  annotatePdfTableLayout,
+  applyTableAnnotationsToChunks,
+  applyTableAnnotationsToParagraphs,
+  collectPdfLayout
+} from './pipeline/pdf-table-layout-annotator.js';
 
 const MAX_EXTRACTED_CHARACTERS = 300_000;
 const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
@@ -42,8 +52,32 @@ function sha256(value) {
   return createHash('sha256').update(value).digest('hex');
 }
 
+function candidateAuditIdentity(candidate = {}) {
+  return candidate.candidate_id ?? candidate.requirement_id ?? candidate.req_id ?? candidate.id ?? null;
+}
+
+function resolvedSourceSpanAudit(location = {}) {
+  return {
+    source_refs: Array.isArray(location.source_refs) ? [...location.source_refs] : [],
+    source_hash: location.source_hash ?? null,
+    source_page_start: location.source_page_start ?? location.source_page ?? null,
+    source_page_end: location.source_page_end ?? location.source_page ?? null,
+    source_paragraph_start: location.source_paragraph_start ?? location.source_paragraph ?? null,
+    source_paragraph_end: location.source_paragraph_end ?? location.source_paragraph ?? null,
+    source_start_offset: location.source_start_offset ?? null,
+    source_end_offset: location.source_end_offset ?? null,
+    source_match_type: location.source_match_type ?? null,
+    source_resolution_status: location.source_resolution_status ?? null
+  };
+}
+
 function scheduleImmediately(task) {
   setImmediate(task);
+}
+
+function isPdfDocument(tenderFile = {}) {
+  return String(tenderFile.mime_type || '').toLowerCase() === 'application/pdf'
+    || /\.pdf$/i.test(String(tenderFile.original_name || ''));
 }
 
 export class RequirementParseService {
@@ -56,7 +90,11 @@ export class RequirementParseService {
     env = process.env,
     chunkBudget = resolveRequirementChunkBudget(env),
     capabilityDetector = new DocumentCapabilityDetector(),
-    scheduler = scheduleImmediately
+    scheduler = scheduleImmediately,
+    pdfLayoutCollector = collectPdfLayout,
+    pdfTableAnnotator = annotatePdfTableLayout,
+    tableParagraphApplier = applyTableAnnotationsToParagraphs,
+    scopeValidator = validateCandidateSourceScope
   }) {
     this.repository = repository;
     this.storage = storage;
@@ -66,6 +104,10 @@ export class RequirementParseService {
     this.chunkBudget = chunkBudget;
     this.capabilityDetector = capabilityDetector;
     this.scheduler = scheduler;
+    this.pdfLayoutCollector = pdfLayoutCollector;
+    this.pdfTableAnnotator = pdfTableAnnotator;
+    this.tableParagraphApplier = tableParagraphApplier;
+    this.scopeValidator = scopeValidator;
     this.sourceLocationResolver = new SourceLocationResolver();
   }
 
@@ -144,16 +186,21 @@ export class RequirementParseService {
         extractedCharacterCount: extraction.text.length
       });
       sectionAnalysis = classifyTenderSections(extraction);
-      if (!sectionAnalysis.technicalSection) {
+      const extractionScope = sectionAnalysis.technicalSection
+          ? combineRequirementExtractionSections(sectionAnalysis.sections, { includeNonScoringSections: true })
+          || sectionAnalysis.requirementExtractionSections?.find((section) => (
+            section.section_key === 'technical_requirements'
+          )) || sectionAnalysis.technicalSection
+        : null;
+      if (!extractionScope) {
         throw new AppError('NO_TECHNICAL_REQUIREMENTS_FOUND', '未识别到可处理的技术或项目需求章节。', 422);
       }
-      mandatoryScopeRules = detectMandatoryScopeRules(sectionAnalysis.technicalSection);
+      mandatoryScopeRules = detectMandatoryScopeRules(extractionScope);
       await this.repository.saveParseDocumentAnalysis({
         jobId: job.id,
         sections: sectionAnalysis.sections,
         mandatoryScopeRules
       });
-      const extractionScope = sectionAnalysis.technicalSection;
       const extractionSummary = {
         file_name: tenderFile.original_name,
         page_count: extraction.pages.length || null,
@@ -169,6 +216,39 @@ export class RequirementParseService {
         extractedTextSha256, extractedCharacterCount: extraction.text.length
       });
 
+      // Layout is auxiliary evidence for deterministic table boundaries only.
+      // Canonical extracted text, paragraph numbering and source provenance are
+      // never regenerated or persisted from this path.  Table metadata is
+      // overlaid after chunking so the existing Cxxx-Sxxx windows remain exact.
+      let annotatedParagraphs = extractionScope.paragraphs;
+      if (isPdfDocument(tenderFile) && this.pdfLayoutCollector) {
+        try {
+          const pages = [...new Set(extractionScope.paragraphs
+            .map((paragraph) => Number(paragraph.page))
+            .filter((page) => Number.isInteger(page) && page > 0))];
+          const layout = await this.pdfLayoutCollector(buffer, { pages });
+          const tableAnnotations = this.pdfTableAnnotator({
+            paragraphs: extractionScope.paragraphs,
+            layout
+          });
+          annotatedParagraphs = this.tableParagraphApplier(
+            extractionScope.paragraphs,
+            tableAnnotations.rows,
+            tableAnnotations.headers
+          );
+          if (tableAnnotations.ambiguous_rows > 0) {
+            this.logger.warn?.('Ambiguous PDF table rows left on ordinary paragraph path', {
+              parseJobId: job.id, ambiguousRows: tableAnnotations.ambiguous_rows
+            });
+          }
+        } catch (layoutError) {
+          this.logger.warn?.('PDF layout annotation unavailable; using canonical paragraph path', {
+            parseJobId: job.id,
+            errorCode: layoutError?.code || 'PDF_LAYOUT_ANNOTATION_UNAVAILABLE'
+          });
+        }
+      }
+
       chunks = chunkExtractedText({
         text: extractionScope.content_text,
         paragraphs: extractionScope.paragraphs,
@@ -177,6 +257,9 @@ export class RequirementParseService {
         tokenBudget: this.chunkBudget.tokenBudget,
         sourceSpanBudget: this.chunkBudget.sourceSpanBudget
       }).map((chunk) => ({ ...chunk, content_sha256: sha256(chunk.text) }));
+      if (annotatedParagraphs !== extractionScope.paragraphs) {
+        chunks = applyTableAnnotationsToChunks(chunks, annotatedParagraphs);
+      }
       const persistedChunks = await this.repository.initializeParseChunks(job.id, chunks);
       if (Array.isArray(persistedChunks)) {
         const ids = new Map(persistedChunks.map((item) => [item.chunk_number, item.id]));
@@ -200,28 +283,70 @@ export class RequirementParseService {
             sectionName: extractionScope.title,
             chunkCount: chunks.length
           });
-          const resolvedCandidates = gatewayResult.candidates.map((candidate, index) => ({
-            candidate,
-            candidateIndex: index + 1,
-            resolution: this.sourceLocationResolver.resolve(candidate, chunk)
-          }));
+          const rawCandidates = Array.isArray(gatewayResult.candidates) ? gatewayResult.candidates : [];
+          const scopeAudit = {
+            chunk_id: chunk.id ?? chunk.chunk_id ?? null,
+            chunk_number: chunk.chunk_number,
+            raw_candidates: rawCandidates.length,
+            scope_accepted: 0,
+            scope_rejected: 0,
+            rejections: []
+          };
+          const resolvedCandidates = [];
+          for (const [index, candidate] of rawCandidates.entries()) {
+            const resolution = this.sourceLocationResolver.resolve(candidate, chunk);
+            try {
+              this.scopeValidator(candidate, chunk);
+              scopeAudit.scope_accepted += 1;
+              resolvedCandidates.push({ candidate, candidateIndex: index + 1, resolution });
+            } catch (scopeError) {
+              const normalizedScopeError = normalizeError(scopeError);
+              if (normalizedScopeError.code !== 'REQUIREMENT_SCOPE_EXCLUDED') throw scopeError;
+              scopeAudit.scope_rejected += 1;
+              scopeAudit.rejections.push({
+                chunk_id: chunk.id ?? chunk.chunk_id ?? null,
+                chunk_number: chunk.chunk_number,
+                candidate_index: index + 1,
+                candidate_identity: candidateAuditIdentity(candidate),
+                resolved_source_span: resolvedSourceSpanAudit(resolution.location),
+                source_role: Array.isArray(scopeError.scope_roles)
+                  ? [...scopeError.scope_roles]
+                  : Array.isArray(scopeError.details?.scope_roles) ? [...scopeError.details.scope_roles] : [],
+                scope_decision: 'OUT_OF_SCOPE',
+                rejection_reason: 'REQUIREMENT_SCOPE_EXCLUDED',
+                scope_reason: scopeError.scope_reason ?? null,
+                non_applicability_source_ref: scopeError.non_applicability_source_ref ?? null,
+                source_hash: resolution.location.source_hash ?? null
+              });
+            }
+          }
+          scopeAudit.outcome = rawCandidates.length === 0
+            ? 'SUCCESS_EMPTY'
+            : resolvedCandidates.length === 0
+              ? 'SUCCESS_EMPTY_AFTER_SCOPE_FILTER'
+              : 'SUCCESS';
           const candidates = resolvedCandidates.map(({ candidate, resolution }) => ({
             ...candidate, ...resolution.location
           }));
           const runtimeMs = Date.now() - chunkStartedAt;
+          const sanitizedGatewayAudit = sanitizeAuditJson(gatewayResult.audit);
           await this.repository.completeParseChunk({
             jobId: job.id, chunkNumber: chunk.chunk_number,
             candidateCount: candidates.length, runtimeMs,
-            gatewayAudit: sanitizeAuditJson(gatewayResult.audit)
+            gatewayAudit: {
+              ...(sanitizedGatewayAudit && typeof sanitizedGatewayAudit === 'object' && !Array.isArray(sanitizedGatewayAudit)
+                ? sanitizedGatewayAudit : {}),
+              scope_audit: scopeAudit
+            }
           });
-          chunkWarnings[chunkIndex].push(...gatewayResult.warnings.map((warning) => ({
+          chunkWarnings[chunkIndex].push(...(gatewayResult.warnings || []).map((warning) => ({
             ...warning, chunk_number: chunk.chunk_number
           })));
           chunkWarnings[chunkIndex].push(...resolvedCandidates.filter(({ resolution }) => resolution.warning).map(({ candidateIndex, resolution }) => ({
             ...resolution.warning, chunk_number: chunk.chunk_number,
             candidate_index: candidateIndex
           })));
-          chunkResults[chunkIndex] = { chunk_number: chunk.chunk_number, candidates };
+          chunkResults[chunkIndex] = { chunk_number: chunk.chunk_number, candidates, scope_audit: scopeAudit };
         } catch (caught) {
           const error = normalizeError(caught);
           const runtimeMs = Date.now() - chunkStartedAt;
@@ -282,6 +407,11 @@ export class RequirementParseService {
           token_budget: this.chunkBudget.tokenBudget,
           source_span_budget: this.chunkBudget.sourceSpanBudget,
           empty_chunk_count: chunkResults.filter((result) => result.candidates.length === 0).length,
+          raw_candidate_count: chunkResults.reduce((total, result) => total + (result.scope_audit?.raw_candidates || 0), 0),
+          scope_accepted_count: chunkResults.reduce((total, result) => total + (result.scope_audit?.scope_accepted || 0), 0),
+          scope_rejected_count: chunkResults.reduce((total, result) => total + (result.scope_audit?.scope_rejected || 0), 0),
+          success_empty_count: chunkResults.filter((result) => result.scope_audit?.outcome === 'SUCCESS_EMPTY').length,
+          success_empty_after_scope_filter_count: chunkResults.filter((result) => result.scope_audit?.outcome === 'SUCCESS_EMPTY_AFTER_SCOPE_FILTER').length,
           requirement_count: candidates.length,
           canonicalization_audit: candidates.audit
         },

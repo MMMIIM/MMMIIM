@@ -1,0 +1,26 @@
+{
+  "generated_at": "2026-09-16T17:31:38.432Z",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "dirty_worktree": true,
+  "authority": "SYNTHETIC_EVAL_ONLY",
+  "production_authority": "NONE",
+  "schema_version": "v43-claim-boundary-v1",
+  "owner": "Claim Gate",
+  "adapter": "claim-gate-input-adapter-v1",
+  "decisions": [
+    "allow",
+    "restrict",
+    "reject",
+    "needs_review"
+  ],
+  "guards": [
+    "unapproved Fact/Mapping reject",
+    "partial/insufficient/conflict/unknown cannot allow",
+    "scope/status/quantity/validity overclaim is blocked or restricted"
+  ],
+  "fixture_probe": {
+    "decision": "reject",
+    "writer_eligible": false
+  }
+}

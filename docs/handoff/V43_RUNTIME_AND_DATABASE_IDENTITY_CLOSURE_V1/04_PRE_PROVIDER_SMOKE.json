@@ -1,0 +1,33 @@
+{
+  "artifact_type": "V43_RUNTIME_AND_DATABASE_IDENTITY_CLOSURE_V1_PRE_PROVIDER_SMOKE",
+  "mode": "READ_ONLY_NO_PROVIDER",
+  "execution": {
+    "runner_executor": "local-node-module",
+    "BACKEND_RUNTIME_MODE": "container",
+    "explicit_database": "bid_platform_flow_audit_test",
+    "project_id": "7a038c5d-38e4-46ae-b24d-39437bb3b545",
+    "provider_calls": 0,
+    "llm_calls": 0
+  },
+  "database_identity": {
+    "current_database": "bid_platform_flow_audit_test",
+    "current_schema": "public"
+  },
+  "schema_preflight": {
+    "status": "PASS",
+    "material_version_column_required": false,
+    "source_version_column_used": true
+  },
+  "source_version_query": {
+    "status": "PASS",
+    "target_materials": 6,
+    "target_chunks": 590,
+    "rows_with_source_version": 590
+  },
+  "sqlstate_42703_material_version": "NOT_REPRODUCED",
+  "provider_reached": false,
+  "fact_persistence": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "gold_mutations": 0
+}

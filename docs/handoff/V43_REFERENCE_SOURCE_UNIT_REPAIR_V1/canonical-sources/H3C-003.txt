@@ -1,0 +1,2710 @@
+目   录
+
+
+1 概述
+
+
+2 安装流程
+
+
+3 安装前的准备工作
+
+
+3.1 软硬件配置需求
+
+
+3.1.1 硬件配置需求
+
+
+3.1.2 操作系统要求
+
+
+3.1.3 客户端配置要求
+
+
+3.2 获取软件包
+
+
+3.3 验证软件包
+
+
+3.4 安装规划
+
+
+3.4.1 磁盘分区
+
+
+3.4.2 网络规划
+
+
+3.5 安装环境确认
+
+
+4 安装统一数字底盘
+
+
+5 安装U-Center 5.0
+
+
+5.1 安装说明
+
+
+5.2 安装应用（标准模式）
+
+
+5.2.1 上传安装包
+
+
+5.2.2 开始安装
+
+
+5.3 安装应用（Proxy模式）
+
+
+5.3.1 Proxy部署说明
+
+
+5.3.2 ‍‍上传安装包
+
+
+5.3.3 开始安装
+
+
+5.3.4 启动region
+
+
+6 访问U-Center 5.0
+
+
+7 软件注册
+
+
+7.1 License支持情况说明
+
+
+7.2 安装并获取授权
+
+
+8 备份恢复
+
+
+9 集群故障重建与恢复
+
+
+10 卸载U-Center 5.0
+
+
+11 常见问题解答
+
+
+
+
+
+
+
+
+
+
+1 概述
+
+
+H3C U-Center 5.0 提供企业级统一运维解决方案，涵盖“监、管、控、服、析”各业务领域，实现“云、网、端、安”ICT全域资源统一管理；支持对海量资源“直采直控”，同时支持对新华三运营、管理软件和第三方运维工具进行整合，为运维人员提供统一门户、统一告警、统一资源、统一流程、统一分析的全面运维解决方案。
+
+
+本文的目的是提供精细化安装部署指导方法，帮助市场及一线人员或用户准确地部署U-Center 5.0运行环境。
+
+
+
+
+
+
+
+
+2 安装流程
+
+
+U-Center 5.0支持1个节点的单机部署和3个Master节点+N个Worker节点（N≥0）的集群部署两种部署模式。
+
+
+部署流程如 表2-1 所示。
+
+
+表2-1 U-Center 5.0 部署流程汇总
+
+
+
+
+
+
+
+
+步骤
+
+
+
+
+具体操作
+
+
+
+
+说明
+
+
+
+
+
+
+
+服务器准备
+
+
+
+
+· 单机部署模式准备1台服务器
+
+
+· 集群部署模式准备至少3台服务器
+
+
+
+
+必选
+
+
+硬件和软件需求，请参见“ 3.1  软硬件配置需求 ”
+
+
+
+
+
+
+部署统一数字底盘
+
+
+
+
+安装操作系统、Matrix等
+
+
+
+
+必选
+
+
+具体方法请参见《H3C统一数字底盘部署指导》
+
+
+
+
+
+
+部署U-Center 5.0
+
+
+
+
+部署U-Center 5.0的各个组件
+
+
+
+
+支持融合部署方式部署
+
+
+具体方法请参见“ 5 安装U-Center 5.0 ”
+
+
+
+
+
+
+
+
+
+
+
+
+
+3 安装前的准备工作
+
+
+3.1  软硬件配置需求
+
+
+3.1.1  硬件配置需求
+
+
+硬件配置需求可通过以下方式获取：
+
+
+· 在 硬件资源计算工具 中输入数据后获取评估结果，该评估结果用于参考。
+
+
+· 联系一线工程师帮忙评估。
+
+
+
+
+
+
+
+
+
+
+为了确保业务的正常运行，必须将服务器的CPU供电模式设置为高性能（performance）模式，并关闭RAID卡的PR（Patrol Read，巡读）和CC（Consistency Check，一致性校验）功能（如不支持PRCC，则无需关闭）。具体操作方式请参见服务器/RAID卡相关产品手册，或联系服务器/RAID卡的生产厂家技术支持人员。
+
+
+
+
+
+
+3.1.2  操作系统要求
+
+
+
+
+
+
+
+
+
+
+集群中所有节点必须安装相同版本的操作系统。
+
+
+
+
+
+
+表3-1 U-Center 5.0 支持的操作系统及版本
+
+
+
+
+
+
+
+
+版本
+
+
+
+
+支持操作系统
+
+
+
+
+
+
+
+x86
+
+
+
+
+NingOS V3-1.0.2403
+
+
+
+
+
+
+Red Hat Enterprise Linux 8.8
+
+
+
+
+
+
+Red Hat Enterprise Linux 8.10
+
+
+
+
+
+
+TencentOS-Server-3.1-20240925.0-TK4
+
+
+
+
+
+
+uniontechos-server-20-1050a-amd64-UFU
+
+
+
+
+
+
+Kylin-Server-10-SP2-x86-RC01-Build09-20210524
+
+
+
+
+
+
+Kylin-Server-V10-SP3-General-Release-2303
+
+
+
+
+
+
+Kylin-Server-V10-SP3-2403-Release-20240426
+
+
+
+
+
+
+ARM
+
+
+
+
+NingOS V3-1.0.2403
+
+
+
+
+
+
+TencentOS-Server-3.1-20240925.0-TK4
+
+
+
+
+
+
+Kylin-Server-10-SP2-aarch64-RC01-Build09-20210524
+
+
+
+
+
+
+
+Kylin-Server-V10-SP3-General-Release-2303
+
+
+
+
+
+
+
+3.1.3  客户端配置要求
+
+
+用户不需要安装客户端软件，使用浏览器即可访问U-Center 5.0。推荐使用的浏览器为Google Chrome 96、 Firefox 97 及以上版本，分辨率显示宽度不低于1600。
+
+
+3.2  获取软件包
+
+
+此处以H3C自研的NingOS操作系统为例进行说明。当选择其它操作系统时，NingOS的ISO文件不是必选项。
+
+
+安装包的名称格式如 表3-2 所示，其中 version 为版本号， platform 为CPU架构类型。
+
+
+说明列的“必选”意为：如需正常运行U-Center 5.0，必须安装的应用包；“可选”意为：可根据需求安装应用包，如不安装，将无该功能。
+
+
+
+
+
+
+
+
+
+
+不同的组件、不同的版本可能仅发布x86或ARM安装包，具体请以版本发布文件为准。
+
+
+
+
+
+
+表3-2 应用安装包说明
+
+
+
+
+
+
+
+产品包
+
+
+
+
+安装包名称
+
+
+
+
+功能说明
+
+
+
+
+说明
+
+
+
+
+依赖组件
+
+
+
+
+
+
+OS
+
+
+
+
+NingOS- version_ platform .iso
+
+
+
+
+H3C自研的NingOS操作系统
+
+
+
+
+必选
+
+
+
+
+-
+
+
+
+
+
+
+UDTP
+
+
+
+
+UDTP_Base_ version_ platform .zip
+
+
+
+
+基础服务组件：提供融合部署、用户管理、权限管理、资源管理、租户管理、菜单管理、日志中心、备份恢复和健康检查等基础功能
+
+
+
+
+必选
+
+
+
+
+-
+
+
+
+
+
+
+BMP
+
+
+
+
+BMP_Common_ version_ platform .zip
+
+
+
+
+通用服务组件：提供大屏管理、告警、告警聚合和告警订阅等功能
+
+
+
+
+可选
+
+
+
+
+-
+
+
+
+
+
+
+BMP_Connect_ version_ platform .zip
+
+
+
+
+连接服务组件：提供上下级站点管理、WebSocket通道管理和NETCONF通道管理功能
+
+
+
+
+可选
+
+
+
+
+-
+
+
+
+
+
+
+BMP_Extension_ version_ platform .zip
+
+
+
+
+扩展服务组件：提供异地容灾、快照回滚、证书服务、自监控、智能算法库、单点登录和密码平台等功能
+
+
+
+
+可选
+
+
+
+
+BMP_Common
+
+
+
+
+
+
+BMP_Syslog_ version_ platform .zip
+
+
+
+
+Syslog服务组件：提供Syslog报文的收发、Syslog浏览和聚合、Syslog生成告警等功能
+
+
+
+
+可选
+
+
+
+
+BMP_Common
+
+
+
+
+
+
+BMP_REPORT_ version_ platform .zip
+
+
+
+
+提供全面的报表功能：
+
+
+· 数据源管理
+
+
+· 数据集管理
+
+
+· 图表管理
+
+
+· 自助查询
+
+
+· 模板管理
+
+
+· 任务管理
+
+
+
+
+可选
+
+
+
+
+BMP_Common
+
+
+
+
+
+
+BMP_UCP_BasePlat_ version_ platform .zip
+
+
+
+
+提供U-Center公共平台组件服务（ETCD、运维域菜单注册、可视化组件）
+
+
+
+
+必选
+
+
+
+
+BMP_Common
+
+
+
+
+
+
+BMP_UCP_CollectPlat_ version_x86.zip
+
+
+
+
+提供模板、挂牌、采集平台、统一资源、资源发现、文件传输服务
+
+
+
+
+可选
+
+
+
+
+BMP_Common
+
+
+BMP_UCP_BasePlat
+
+
+
+
+
+
+BMP_UCP_SmartCompute_ version_ platform .zip
+
+
+
+
+提供动态阈值、容量
+
+
+
+
+可选
+
+
+
+
+BMP_Common
+
+
+BMP_Extension
+
+
+BMP_UCP_BasePlat
+
+
+
+
+
+
+BMP_UCP_Capacity_ version_ platform .zip
+
+
+
+
+提供监控资源指标容量分析、容量预测
+
+
+
+
+可选
+
+
+
+
+BMP_Extension
+
+
+BMP_Common
+
+
+BMP_UCP_BasePlat
+
+
+BMP_UCP_CollectPlat
+
+
+BMP_UCP_SmartCompute
+
+
+
+
+
+
+BMP_CMDB_ version_ platform .zip
+
+
+
+
+配置管理数据库
+
+
+
+
+可选
+
+
+
+
+BMP_Common
+
+
+
+
+
+
+BMP_AIOps-Copilot_ version_ platform .zip
+
+
+
+
+提供基于大模型的AI智能运维服务
+
+
+
+
+可选
+
+
+
+
+BMP_Common
+
+
+
+
+
+
+ITOM
+
+
+
+
+ITOM-AGENT_ version_ platform .zip
+
+
+
+
+Agent采集服务
+
+
+
+
+可选
+
+
+
+
+BMP_Common
+
+
+BMP_UCP_BasePlat
+
+
+BMP_UCP_CollectPlat
+
+
+
+
+
+
+
+ITOM_IOM_ version_ platform .zip
+
+
+
+
+IOM服务、JAVA采集器、CPP采集器
+
+
+
+
+可选
+
+
+
+
+BMP_Common
+
+
+BMP_UCP_BasePlat
+
+
+BMP_UCP_CollectPlat
+
+
+
+
+
+
+ITOM_VKVM_ version_ platform .zip
+
+
+
+
+服务器虚拟远程控制台
+
+
+
+
+可选
+
+
+
+
+ITOM_IOM
+
+
+
+
+
+
+ITOM_BSM_ version_ platform .zip
+
+
+
+
+业务健康分析服务
+
+
+
+
+可选
+
+
+
+
+BMP_Common
+
+
+BMP_UCP_BasePlat
+
+
+BMP_UCP_CollectPlat
+
+
+BMP_CMDB
+
+
+
+
+
+
+ITOM_UEM_ version_ platform .zip
+
+
+
+
+访问体验分析服务
+
+
+
+
+可选
+
+
+
+
+BMP_Common
+
+
+BMP_UCP_BasePlat
+
+
+BMP_UCP_CollectPlat
+
+
+
+
+
+
+ITOM_ITSM_ version_ platform .zip
+
+
+
+
+流程管理服务
+
+
+
+
+可选
+
+
+
+
+BMP_Common
+
+
+
+
+
+
+ITOM_NTA_ version_ platform .zip
+
+
+
+
+流量监控服务
+
+
+
+
+可选
+
+
+
+
+BMP_Common
+
+
+NSM_RES
+
+
+BMP_UCP_BasePlat
+
+
+BMP_UCP_CollectPlat
+
+
+
+
+
+
+ITOM_STM_ version_ platform .zip
+
+
+
+
+业务拨测管理
+
+
+
+
+可选
+
+
+
+
+BMP_Common
+
+
+BMP_UCP_BasePlat
+
+
+BMP_UCP_CollectPlat
+
+
+
+
+
+
+ITOM_NQA_ version_ platform .zip
+
+
+
+
+NQA拨测管理
+
+
+
+
+可选
+
+
+
+
+BMP_Common
+
+
+BMP_UCP_BasePlat
+
+
+BMP_UCP_CollectPlat
+
+
+NSM_RES
+
+
+
+
+
+
+ITOM_PYCOLLECTOR_ version_ platform .zip
+
+
+
+
+AOM采集器
+
+
+
+
+可选
+
+
+
+
+BMP_Common
+
+
+BMP_UCP_BasePlat
+
+
+BMP_UCP_CollectPlat
+
+
+
+
+
+
+ITOM_ICE_ version_ platform .zip
+
+
+
+
+巡检管家服务
+
+
+
+
+可选
+
+
+
+
+BMP_Common
+
+
+BMP_UCP_BasePlat
+
+
+BMP_UCP_CollectPlat
+
+
+ITOM_PYCOLLECTOR
+
+
+
+
+
+
+ITOM_IPMS_ version_ platform .zip
+
+
+
+
+IP 地址管理中的 IP 扫描组件
+
+
+
+
+可选
+
+
+
+
+BMP_Common
+
+
+BMP_UCP_BasePlat
+
+
+BMP_UCP_CollectPlat
+
+
+ITOM_PIPM
+
+
+ITOM_PYCOLLECTOR
+
+
+
+
+
+
+ITOM_PIPM_ version_ platform .zip
+
+
+
+
+IP 地址管理中的 IP 规划与分配
+
+
+
+
+可选
+
+
+
+
+BMP_Common
+
+
+BMP_UCP_BasePlat
+
+
+BMP_UCP_CollectPlat
+
+
+
+
+
+
+ITOM_JOB_ version_ platform .zip
+
+
+
+
+作业平台
+
+
+
+
+可选
+
+
+
+
+BMP_Common
+
+
+BMP_UCP_BasePlat
+
+
+BMP_UCP_CollectPlat
+
+
+ITOM_PYCOLLECTOR
+
+
+
+
+
+
+NSM
+
+
+
+
+NSM_RES_ version_ platform .zip
+
+
+
+
+网络资源安装包
+
+
+
+
+可选
+
+
+
+
+BMP_Common
+
+
+BMP_UCP_BasePlat
+
+
+BMP_UCP_CollectPlat
+
+
+BMP_UCP_BasePlat
+
+
+
+
+
+
+NSM_TOPO_ version.zip
+
+
+
+
+网络拓扑安装包
+
+
+
+
+可选
+
+
+
+
+BMP_Common
+
+
+BMP_UCP_CollectPlat
+
+
+BMP_UCP_BasePlat
+
+
+NSM_RES
+
+
+BMP_CMDB
+
+
+
+
+
+
+NSM_PERF_ version_ platform .zip
+
+
+
+
+网络性能监控安装包
+
+
+
+
+可选
+
+
+
+
+BMP_Common
+
+
+BMP_UCP_CollectPlat
+
+
+BMP_UCP_BasePlat
+
+
+NSM_RES
+
+
+
+
+
+
+NSM_ICC_ version.zip
+
+
+
+
+网管智能配置中心安装包
+
+
+
+
+可选
+
+
+
+
+BMP_Common
+
+
+BMP_UCP_CollectPlat
+
+
+BMP_UCP_BasePlat
+
+
+NSM_RES
+
+
+
+
+
+
+NSM_Tools_ version _ platform.zip
+
+
+
+
+网管工具安装包
+
+
+
+
+可选
+
+
+
+
+BMP_Common
+
+
+BMP_UCP_CollectPlat
+
+
+BMP_UCP_BasePlat
+
+
+NSM_RES
+
+
+
+
+
+
+NSM_Extend
+
+
+
+
+NSM_VPNM 
+_version_platform.zip
+
+
+
+
+提供VPN业务管理功能
+
+
+
+
+可选
+
+
+
+
+BMP_Common
+
+
+BMP_Connect
+
+
+BMP_UCP_CollectPlat
+
+
+BMP_UCP_BasePlat
+
+
+NSM_RES
+
+
+NSM_PERF
+
+
+
+
+
+
+NSM_WSM _version_platform.zip
+
+
+
+
+提供无线网络业务管理功能，包括无线设备监控、配置、管理和拓扑等
+
+
+
+
+可选
+
+
+
+
+BMP_Common
+
+
+BMP_Connect
+
+
+BMP_UCP_CollectPlat
+
+
+BMP_UCP_BasePlat
+
+
+NSM_RES
+
+
+
+
+
+
+NSM_ONM _version_platform.zip
+
+
+
+
+提供全光网络业务管理功能，包括影终端、EPON/GPON ONU、分光器管理和拓扑等
+
+
+
+
+可选
+
+
+
+
+BMP_Common
+
+
+NSM_RES
+
+
+NSM_PERF
+
+
+NSM_ICC
+
+
+
+
+
+
+
+3.3  验证软件包
+
+
+在安装软件前，请参考如下命令对软件包执行MD5验证，确保软件包的完整性和正确性。
+
+
+(1) 查看已上传的安装包。
+
+
+[root@node1~]# cd /opt/matrix/app/install/packages/
+
+
+[root@node1~]# ls
+
+
+ITOM-IOM_E7301_x86.zip    
+
+
+…略…
+
+
+(2) 查看安装包的MD5值，以ITOM-IOM_E7301_x86.zip为例。
+
+
+[root@node1~]# md5sum ITOM-IOM_E7301_x86.zip
+
+
+bf6e49e3e8ef1fc562a3a84f12349859 
+ITOM-IOM_E7301_x86.zip
+
+
+(3) 将上述步骤中获取到的MD5值与发布的软件版本文件MD5值进行比对，若一致，则软件包正确。
+
+
+
+
+3.4  安装规划
+
+
+3.4.1  磁盘分区
+
+
+请按照 硬件资源计算工具 计算结果中的“单台Master节点本地存储空间”数据配置磁盘分区。
+
+
+seasqlplus-uc分区说明：
+
+
+· 数据盘seasqlplus-uc主要用于保存历史监控性能数据。
+
+
+· 硬件资源计算工具自动计算是否需要配置seasqlplus-uc：
+
+
+¡ 当等效网元数量小于2000时（等效网元数量=网管管理网元数+IOM管理资源数+NTA接口数量*10），不需要配置seasqlplus-uc独立分区。
+
+
+¡ 当等效网元数量大于2000时，需要配置seasqlplus-uc分区并挂载独立磁盘。原因是：当业务量较大时，seasqlplus-uc可能会导致较高的磁盘IO，如果与其他业务共用一块磁盘，可能会影响其他业务的正常运行。
+
+
+· seasqlplus-uc挂载独立磁盘后的剩余空间不能分配给其他分区使用。
+
+
+· seasqlplus-uc挂载独立磁盘的方法见 11 1. 如何为seasqlplus-uc挂载独立磁盘？
+
+
+3.4.2  网络规划
+
+
+1. 组网规划
+
+
+U-Center 5.0在Matrix集群部署模式下，至少需要3个Master节点+N个Worker节点（N≥0，N根据任务负载情况决定），典型组网规划如下所示：
+
+
+图3-1 组网规划
+
+
+
+
+
+
+2. IP 地址规划
+
+
+
+
+
+
+
+
+
+
+若具体业务场景需要多张网卡，有如下注意事项：1、部署集群前的检查，集群使用的网卡需要是ifconfig命令检测到的第一块网卡。2、如果不满足上述条件，则需要保证集群使用的是之前配置的网卡，并满足以下条件之一：
+
+
+· 条件1：网卡down状态且onboot=no。
+
+
+· 条件2：网卡UP状态，已配置IP，且需要配置安全策略。
+
+
+当集群的南北向网络使用不同网卡但处于同一VLAN网段时，应在南向网卡配置中设置NOZEROCONF=yes。
+
+
+
+
+
+
+U-Center 5.0支持IPv4部署，IP地址规划如 表3-3 所示。
+
+
+表3-3 组网明细
+
+
+
+
+
+
+
+
+IP 地址规划
+
+
+
+
+作用
+
+
+
+
+备注
+
+
+
+
+
+
+
+Master节点1 IP
+
+
+
+
+为安装了操作系统的Master节点分配的IP地址
+
+
+
+
+必选项（单机部署模式只需要一个Master节点）
+
+
+加入同一集群的所有Master节点的IP地址必须处于同一网段
+
+
+
+
+
+
+Master节点2 IP
+
+
+
+
+为安装了操作系统的Master节点分配的IP地址
+
+
+
+
+
+
+Master节点3 IP
+
+
+
+
+为安装了操作系统的Master节点分配的IP地址
+
+
+
+
+
+
+北向业务虚IP
+
+
+
+
+通过Matrix页面部署的应用的统一外部访问地址
+
+
+
+
+必选项
+
+
+北向业务虚IP必须在Master节点所处的网段内
+
+
+
+
+
+
+Worker节点IP
+
+
+
+
+为Worker节点分配的IP地址
+
+
+
+
+可选项
+
+
+Worker节点的IP地址必须与加入同一集群内的Master节点的IP处于同一网段
+
+
+
+
+
+
+
+3.5  安装环境确认
+
+
+安装环境请参考 表3-4 中所示的各个检测项目，确保安装U-Center 5.0的条件已经具备。
+
+
+表3-4 安装环境确认
+
+
+
+
+
+
+
+
+检测项
+
+
+
+
+检测标准
+
+
+
+
+
+
+
+服务器或虚拟机
+
+
+
+
+硬件检查
+
+
+
+
+请检查硬件是否符合要求（包括CPU、内存、硬盘、网卡等）
+
+
+
+
+
+
+软件检查
+
+
+
+
+请检查如下几点：
+
+
+· 操作系统版本符合要求
+
+
+· 请检查系统时间已配置完成，建议配置NTP时间同步，整网使用统一的时钟源同步时间，且保证NTP服务器时间与当前时间一致
+
+
+· 请确保服务器已配置磁盘阵列
+
+
+
+
+
+
+客户端
+
+
+
+
+请确保浏览器版本符合要求
+
+
+
+
+
+
+服务器和操作系统兼容性
+
+
+
+
+请参见以下链接，查看H3C服务器和操作系统的兼容性列表： http://www.h3c.com/cn/home/qr/default.htm?id=367
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+· 推荐将服务器或虚拟机的下一次启动模式配置为UEFI模式。其中VMware的引导固件，请选择下拉框中的EFI，不要勾选“是否为此虚拟机启用UEFI安全引导”选项。若安装的VMware是英文版本，请不要勾选“Secure Boot”选项。
+
+
+· 安装操作系统时，请勿同时使用KVM给多个服务器安装同一镜像。
+
+
+· H5 KVM性能不稳定，可能出现加载镜像停止或缓慢等问题，建议使用Java KVM挂载镜像安装操作系统。
+
+
+· 安装过程中禁止输入Scroll Lock键，否则可能会导致安装失败。
+
+
+· 安装过程中异常断电会导致部分服务安装失败，请重新安装以保证功能完整性。
+
+
+· U-Center 5.0安装部署过程中，请勿进行开启或关闭防火墙的操作。
+
+
+· 集群部署完成后，请勿修改系统时间，否则可能导致集群异常。
+
+
+
+
+
+
+
+
+
+
+4 安装统一数字底盘
+
+
+
+
+
+
+
+
+
+
+在非root环境（如admin环境）下，请在部署统一数字底盘应用前，使用root用户手动创建日志目录，并修改所有者，命令如下：
+
+
+mkdir -p /var/log/matrix-diag/deploy/
+&& chown admin:wheel /var/log/matrix-diag/deploy/
+
+
+ll -d
+/var/log/matrix-diag/deploy/
+
+
+若集群存在多个节点，则所有节点均需执行同样的操作。
+
+
+
+
+
+
+部署U-Center 5.0前需要先部署统一数字底盘，在底盘的Matrix中部署U-Center 5.0组件。
+
+
+部署统一数字底盘的具体步骤请参见《H3C统一数字底盘部署指导》。
+
+
+
+
+
+
+
+
+5 安装 U-Center 5.0
+
+
+5.1  安装说明
+
+
+· 安装时间会根据网络规模和组件的不同而有所变化，以单机小规模为例，通常需要0.6~0.7小时。
+
+
+· 底盘单机部署时，U-Center可以在标准模式或Proxy模式下进行部署，安装详细步骤分别见 5.2  安装应用（标准模式） 和 5.3  安装应用（Proxy模式） 。
+
+
+· NSM详细安装步骤请见《H3C NSM 安装部署指导》。
+
+
+5.2  安装应用（标准模式）
+
+
+表3-2 为U-Center组件相关的安装包，用户可以按需部署安装包。
+
+
+5.2.1  上传安装包
+
+
+
+
+
+
+
+
+
+
+· 融合部署页面可对指定应用进行查看详情、扩容、升级等操作。
+
+
+· 请通过Matrix前台页面进行安装包上传操作，严禁通过后台传包。如果在特殊网络环境下需要通过后台传包，请联系技术支持工程师。
+
+
+
+
+
+
+(1) 在浏览器中访问标准模式的底盘环境“https:// ip_address :8443/matrix/ui”，输入Matrix的用户名和密码（默认用户名为admin）登录Matrix。其中“ ip_address ”为北向业务虚IP地址。
+
+
+(2) 单击[部署>融合部署]菜单项，进入融合部署页面。
+
+
+图5-1 融合部署
+
+
+
+
+
+
+(3) 单击<安装包管理>按钮，进入安装包管理页面。该页面支持对融合部署安装包进行上传、删除等操作。
+
+
+图5-2 安装包管理
+
+
+
+
+
+
+(4) 单击<上传>按钮，在弹出窗口中单击<选择文件>按钮，选择一个或多个安装包文件后，单击<上传>按钮开始上传，上传完成后将自动回到安装包管理页面。
+
+
+
+
+
+
+
+
+
+
+上传安装包支持两种方式：
+
+
+· 上传ITOM包：上传ITOM组件总包，上传后会自动解压成组件安装包。
+
+
+· 上传组件包：直接上传各组件安装包。
+
+
+
+
+
+
+图5-3 上传安装包
+
+
+
+
+
+
+5.2.2  开始安装
+
+
+(1) 安装包上传完成后，返回融合部署页面。
+
+
+(2) 单击<安装>按钮，进入应用选择页面。
+
+
+¡ 场景选择：系统预置了3个场景，分别是U-Center统一运维场景、U-Center基础网管场景和U-Center ICT监控场景。用户可以按需选择单个或多个场景，系统将自动勾选已上传安装包且为该场景推荐的应用，用户可以根据需要取消或增加其他应用。
+
+
+¡ 自定义选择：用户可以根据需要自定义勾选一个或多个应用来进行安装。
+
+
+
+
+
+
+
+
+
+
+· 当场景推荐的应用已全部安装时，场景名字展示为置灰状态无法勾选。
+
+
+· 对于有依赖关系的应用，将自动勾选其所依赖的应用。如果依赖的应用未被部署或不在当前已有安装包内，则会提示相关信息。
+
+
+
+
+
+
+图5-4 应用选择
+
+
+
+
+
+
+(3) 单击<下一步>按钮，进入安装包选择页面。系统将自动选择默认安装包，用户也可以手动选择，选择后系统将对安装包进行校验。
+
+
+图5-5 安装包选择
+
+
+
+
+
+
+(4) 校验通过后，单击<下一步>按钮，进入资源配置页面，选择合适的资源档位。资源档位根据 硬件资源计算工具 中的“资源档位”结果进行选择。
+
+
+图5-6 资源配置
+
+
+
+
+
+
+(5) 单击<下一步>按钮，进入参数配置页面。根据页面提示，有些应用无需配置参数。若需配置参数，用户需选择部署的节点。单机部署模式下只有一个节点且必选。
+
+
+图5-7 参数配置
+
+
+
+
+
+
+(6) 单击<部署>按钮，在弹出对话框中对依赖的中间节点和需要安装的应用进行确认，若在上一步骤有选择部署节点，还需确认应用节点。单击<确定>按钮，开始部署。
+
+
+图5-8 参数确认
+
+
+
+
+
+
+图5-9 部署中
+
+
+
+
+
+
+(7) 部署成功后，将自动回到融合部署页面，查看已部署的应用。
+
+
+图5-10 查看已部署应用
+
+
+
+
+
+
+5.3  安装应用（Proxy 模式）
+
+
+5.3.1  Proxy 部署说明
+
+
+Proxy部署至少需准备两套环境：U-Center 5.0 Server（即按标准模式部署的底盘环境）和U-Center 5.0 Proxy（即按代理模式部署的底盘环境），Server为用户提供了统一的操作入口，用户所有的操作都在Server端进行，Proxy端只负责数据采集。
+
+
+Proxy部署模式下，仅支持安装部分U-Center组件，如下表所示，用户可以按需部署安装包。
+
+
+表5-1 Proxy 部署应用安装包
+
+
+
+
+
+
+
+产品包
+
+
+
+
+安装包名称
+
+
+
+
+说明
+
+
+
+
+版本
+
+
+
+
+
+
+UDTP
+
+
+
+
+UDTP_Base_ version_ platform .zip
+
+
+
+
+必选
+
+
+
+
+E7104及以后版本
+
+
+
+
+
+
+BMP
+
+
+
+
+BMP_Connect_ version_ platform .zip
+
+
+
+
+必选
+
+
+
+
+
+
+BMP_UCP_BasePlat_ version_ platform .zip
+
+
+
+
+可选
+
+
+
+
+
+
+BMP_UCP_CollectPlat_ version_x86.zip
+
+
+
+
+可选
+
+
+
+
+
+
+BMP_UCP_Agent_ version_ platform .zip
+
+
+
+
+可选
+
+
+
+
+
+
+ITOM
+
+
+
+
+ITOM_IOM_ version_ platform .zip
+
+
+
+
+可选
+
+
+
+
+E7103及以后版本
+
+
+
+
+
+
+ITOM_STM_ version_ platform .zip
+
+
+
+
+可选
+
+
+
+
+
+
+ITOM_NQA_ version_ platform .zip
+
+
+
+
+可选
+
+
+
+
+
+
+ITOM_PYCOLLECTOR_ version_ platform .zip
+
+
+
+
+可选
+
+
+
+
+
+
+NSM
+
+
+
+
+NSM_RES_ version_ platform .zip
+
+
+
+
+可选
+
+
+
+
+E7104及以后版本
+
+
+
+
+
+
+NSM_PERF_ version_ platform .zip
+
+
+
+
+可选
+
+
+
+
+
+
+NSM_ICC_ version_ platform .zip
+
+
+
+
+可选
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+如需在Proxy部署模式下使用Agent采集应用，必须安装BMP_UCP_Agent。
+
+
+
+
+
+
+5.3.2  ‍‍ 上传安装包
+
+
+
+
+
+
+
+
+
+
+请通过Matrix前台页面进行安装包上传操作，严禁通过后台传包。如果在特殊网络环境下需要通过后台传包，请联系技术支持工程师。
+
+
+
+
+
+
+(1) 在浏览器中访问Proxy模式的底盘环境“https:// ip_address :8443/matrix/ui”，输入Matrix的用户名和密码（默认用户名为admin）登录Matrix。其中“ ip_address ”为北向业务虚IP地址。
+
+
+(2) 单击[部署>应用]菜单项，进入应用列表页面。
+
+
+图5-11 应用列表
+
+
+
+
+
+
+(3) 单击<部署应用>按钮，进入选择安装包页面。该页面支持对安装包进行上传、删除等操作。
+
+
+图5-12 安装包管理
+
+
+
+
+
+
+(4) 单击<上传>按钮，在弹出窗口中单击选择一个或多个安装包文件后，单击<上传>按钮开始上传。
+
+
+图5-13 上传安装包
+
+
+
+
+
+
+5.3.3  开始安装
+
+
+(1) 安装包上传完成后，选择需要安装的应用安装包，单击<下一步>按钮，开始解析安装包。
+
+
+图5-14 选择安装包
+
+
+
+
+
+
+(2) 安装包解析完成后，进入选择应用页面，确认已选择的应用。
+
+
+图5-15 选择应用
+
+
+
+
+
+
+(3) 单击<下一步>按钮，进入配置参数页面。查看当前应用软件包的各配置项及对应的配置项参数，并可按实际的网络规模和业务规模修改资源档位。资源档位根据 硬件资源计算工具 中的“资源档位”结果进行选择。
+
+
+图5-16 配置参数
+
+
+
+
+
+
+(4) 单击<部署>按钮，开始部署。
+
+
+图5-17 部署中
+
+
+
+
+
+
+(5) 部署成功后，单击<确定>按钮，将自动回到应用列表页面，查看已部署的应用。
+
+
+图5-18 查看已部署应用
+
+
+
+
+
+
+5.3.4  启动region
+
+
+Proxy部署应用完成后，需启动region应用，确保U-Center中的“分级管理”菜单显示。
+
+
+(1) 前往Proxy关联的Server端，在顶部导航“观测”菜单下，单击[监控>应用监控]菜单项，进入应用监控页面。
+
+
+(2) 展开BMP_Connect组件下的应用，单击region应用操作列的 按钮，开启region。
+
+
+图5-19 开启region
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6 访问U-Center 5.0
+
+
+(1) 在浏览器中输入U-Center 5.0的登录地址“http:// ip_address:30000 ”，其中“ ip_address ”为配置的北向业务虚IP，30000为缺省端口号，进入如 图6-1 所示登录页面。
+
+
+
+
+
+
+
+
+
+
+Proxy所在环境IP不支持访问U-Center，仅能通过其关联的Server端的IP进行访问。
+
+
+
+
+
+
+图6-1 登录 U-Center 5.0
+
+
+
+
+
+
+(2) 输入操作员名称和密码（默认用户名为admin）后，单击<登录>按钮，进入U-Center 5.0主页面。
+
+
+(3) 若在Proxy部署应用中已启动region，则在[系统>系统配置]菜单下将会显示“分级管理”菜单，并可在该页面对管理站进行管理操作，例如增加Proxy站点并在增加监控资源时使用，具体操作请见页面联机帮助。
+
+
+图6-2 分级管理菜单
+
+
+
+
+
+
+
+
+
+
+
+
+7 软件注册
+
+
+U-Center 5.0部署完成后，需要获取License授权后才能正常使用。已购买产品的用户，使用软件授权函中包含的授权码进行后续注册流程。如果是项目试用，请联系H3C相关市场人员进行试用授权申请获取相关授权。
+
+
+7.1  License 支持情况说明
+
+
+License支持情况说明介绍了U-Center 5.0具体各个组件功能需要通过License授权以及License授权的相关属性，请参见 《H3C AD-NET&U-Center方案License支 持情况说明》 中的“U-Center”章节。
+
+
+7.2  安装并获取授权
+
+
+关于授权的申请和安装详细过程，请参见 《H3C软件产品远程授权License使用指南》 。License文件导入H3C License Server授权管理系统后，需配置U-Center 5.0统一运维平台（作为License Client）使其与License Server联通。
+
+
+1. 创建License Server客户端
+
+
+(1) 登录H3C License Server授权管理系统，单击[首页>客户端管理>客户端配置]菜单项，进入客户端配置页面。
+
+
+(2) 单击<增加>按钮，进入增加客户端页面，配置客户端名称与客户端密码。
+
+
+(3) 单击<确认>按钮，增加客户端。
+
+
+2. 配置客户端连接
+
+
+用于配置客户端连接License Server并获取授权。
+
+
+(1) 登录U-Center 5.0统一运维平台。
+
+
+(2) 选择“系统”页签，在左导航中单击[License管理>License信息]菜单项。
+
+
+(3) 在License Server信息区域的输入框中输入License Server IP地址等参数，单击<连接>按钮，开始与License server建立连接。参数说明如下：
+
+
+¡ IP地址：License Server所在服务器的IP地址。
+
+
+¡ 端口号：缺省值为“5555”，与License Server授权服务端口号保持一致。
+
+
+¡ 客户端名称：License Server中设置的客户端名称。
+
+
+¡ 客户端密码：License Server中设置的客户端名称对应的密码。
+
+
+(4) 成功建立连接即可从License server上获取授权。连接状态显示“连接成功”后，等待一会儿，单击 按钮可刷新当前License信息。
+
+
+
+
+
+
+
+
+
+
+· 启动客户端服务时，需保证License Server的防火墙处于关闭状态，否则可能造成License Server不可连接。
+
+
+· 启动客户端服务时，需保证License Server有未被申请的授权，否则可能造成License Client服务取不到任何授权。
+
+
+
+
+
+
+3. 查看License使用状况
+
+
+登录License Server授权管理系统，单击“客户端管理>客户端连接”菜单项，进入客户端连接信息页面。该页面用于显示License Server的客户端连接信息，并可对客户端连接进行管理，如进行强制下线等操作。
+
+
+· 在列表中单击最左侧的复选框选中指定客户端，单击<下线客户端>按钮，可批量下线已选中的所有客户端，或单击<下线全部客户端>按钮，可下线所有客户端。
+
+
+· 在“操作”区段中单击“详情”图标，进入客户端连接详情页面。单击授权列表操作列“强制回收授权”图标，可以强制回收该授权，或单击<强制回收所有授权>按钮，可以强制回收分配给该客户端的所有授权。
+
+
+
+
+
+
+
+
+
+
+8 备份恢复
+
+
+在统一数字底盘中可对U-Center 5.0各组件执行备份恢复操作，具体步骤请参见《H3C统一数字底盘部署指导》。
+
+
+
+
+
+
+
+
+9 集群故障重建与恢复
+
+
+若集群节点服务器的硬件出现故障，导致节点服务器运行异常且无法恢复时，需要更换新的节点服务器，或节点服务器操作系统异常，都需在原服务器上重新安装操作系统和Matrix。在统一数字底盘中可对集群执行故障恢复操作，具体步骤请参见《H3C统一数字底盘部署指导》。
+
+
+
+
+
+
+
+
+
+
+10 卸载U-Center 5.0
+
+
+
+
+
+
+
+
+
+
+· 当使用直接卸载Matrix的方式来卸载U-Center 5.0时，底盘组件本身的卸载处理并不会被触发执行，会存在残留数据，重新安装底盘之前，需要清空所有Matrix节点/var/lib/ssdata/目录下的内容。
+
+
+· 卸载模块或单个应用包会导致相关数据被删除，卸载前需确认该模块或应用是否正在被使用，请谨慎执行卸载操作。
+
+
+· 如需保留组件配置和数据，请在卸载前使用备份功能，请参见“ 8 备份恢复 ”。
+
+
+· 如果要卸载的应用被其他应用所依赖，系统会一并勾选依赖于该应用的所有应用，以保证应用运行的完整性。此情况下，无法单独卸载该应用。
+
+
+· 此处以在标准模式下卸载U-Center 5.0为例进行介绍。
+
+
+
+
+
+
+(1) ‍在浏览器中访问“https:// ip_address :8443/matrix/ui”，输入用户名和密码（默认用户名为admin）登录Matrix。其中“ ip_address ”为北向业务虚IP地址。
+
+
+(2) 单击[部署>融合部署]菜单项，进入融合部署页面。
+
+
+(3) 在列表中勾选一个或多个应用后，单击<卸载>按钮。
+
+
+(4) 在弹出提示框中单击<确定>按钮，即可卸载应用。
+
+
+图10-1 卸载应用
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11 常见问题解答
+
+
+1. 如何为 seasqlplus-uc挂载独立磁盘？
+
+
+(1) 为seasqlplus-uc每个节点分别准备一块独立的磁盘。磁盘容量基于 硬件资源计算工具 计算结果中的数据盘“/var/lib/ssdata/middleware/seasqlplus-uc”大小确定。
+
+
+图11-1 准备独立磁盘
+
+
+
+
+
+
+(2) 安装操作系统时，选择已准备的独立磁盘。
+
+
+图11-2 选择磁盘
+
+
+
+
+
+
+(3) 为分区/var/lib/ssdata/middleware/seasqlplus-uc挂载独立磁盘，期望容量为 硬件资源计算工具 计算结果中该分区计算的大小，文件系统类型为ext4。修改设备，选择准备的独立磁盘配置挂载点。
+
+
+图11-3 手动分区
+
+
+
+
+
+
+图11-4 配置挂载点
+
+
+
+
+
+
+(4) 完成后，即可按照该部署手册正常安装。

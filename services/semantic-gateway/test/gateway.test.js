@@ -4,11 +4,19 @@ import { createStandaloneGatewayServer } from '../src/gateway.js';
 import { SemanticGatewayClient } from '../../../backend/src/pipeline/semantic-gateway-client.js';
 import { adaptRetrievalCandidate, aggregateEvidenceSufficiency } from '../../../backend/src/pipeline/evidence-support-assessment-contract-v1.js';
 import { SemanticGatewayEvidenceSupportEvaluator } from '../../../backend/src/pipeline/semantic-gateway-evidence-support-evaluator.js';
-import { REQUIREMENT_CANDIDATE_SCHEMA_SHA256, REQUIREMENT_CANDIDATE_SCHEMA_VERSION } from '../../../packages/semantic-contracts/index.js';
+import {
+  EVIDENCE_FACT_TRANSPORT_SCHEMA_SHA256,
+  REQUIREMENT_CANDIDATE_SCHEMA_SHA256,
+  REQUIREMENT_CANDIDATE_SCHEMA_VERSION,
+  SEMANTIC_TASK_CONTRACTS,
+  schemaSha256,
+  stableSha256
+} from '../../../packages/semantic-contracts/index.js';
 
-async function withGateway(fn, { provider = 'mock', key = 'gateway-test-key' } = {}) {
+async function withGateway(fn, { provider = 'mock', key = 'gateway-test-key', taskRegistry } = {}) {
   const server = createStandaloneGatewayServer({
-    env: { SEMANTIC_GATEWAY_PROVIDER: provider, SEMANTIC_GATEWAY_API_KEY: key, SEMANTIC_GATEWAY_MODEL: 'mock-semantic-v1' }
+    env: { SEMANTIC_GATEWAY_PROVIDER: provider, SEMANTIC_GATEWAY_API_KEY: key, SEMANTIC_GATEWAY_MODEL: 'mock-semantic-v1' },
+    ...(taskRegistry ? { taskRegistry } : {})
   });
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   const port = server.address().port;
@@ -50,12 +58,20 @@ test('standalone gateway /info exposes safe runtime and contract diagnostics', a
     const info = await response.json();
     assert.equal(info.service, 'semantic-gateway');
     assert.equal(info.gateway_schema_version, 'semantic-gateway-envelope-v1');
-    assert.equal(info.requirement_extraction_contract_version, '4.3-requirement-extraction-v3');
-    assert.equal(info.requirement_extraction_prompt_version, '4.3-requirement-extraction-v3');
+    assert.equal(info.requirement_extraction_contract_version, '4.3-requirement-extraction-v3.1.1');
+    assert.equal(info.requirement_extraction_prompt_version, '4.3-requirement-extraction-v3.1.1');
     assert.match(info.requirement_extraction_instruction_hash, /^[a-f0-9]{64}$/);
     assert.equal(info.requirement_extraction_prompt_hash, info.requirement_extraction_instruction_hash);
     assert.equal(info.candidate_schema_contract_version, REQUIREMENT_CANDIDATE_SCHEMA_VERSION);
     assert.equal(info.candidate_schema_sha256, REQUIREMENT_CANDIDATE_SCHEMA_SHA256);
+    assert.equal(info.semantic_tasks.evidence_fact_extraction.contract_version, '4.3-evidence-fact-extraction-v1');
+    assert.equal(info.semantic_tasks.evidence_fact_extraction.candidate_schema_sha256, EVIDENCE_FACT_TRANSPORT_SCHEMA_SHA256);
+    assert.equal(info.semantic_tasks.evidence_fact_extraction.task_data_schema_sha256, schemaSha256(SEMANTIC_TASK_CONTRACTS.evidence_fact_extraction.data_schema));
+    assert.match(info.semantic_tasks.evidence_fact_extraction.instruction_hash, /^[a-f0-9]{64}$/);
+    assert.ok(info.semantic_tasks.requirement_extraction);
+    assert.deepEqual(Object.keys(info.semantic_tasks), info.task_types);
+    assert.equal(Object.hasOwn(info.semantic_tasks.evidence_fact_extraction, 'data_schema'), false);
+    assert.equal(Object.hasOwn(info.semantic_tasks.evidence_fact_extraction, 'candidate_schema'), false);
     assert.equal(info.service_version, '0.1.0');
     assert.equal(info.build_revision, 'dev-working-tree');
     assert.ok(Array.isArray(info.task_types));
@@ -136,16 +152,101 @@ test('OpenAI-compatible readiness fails closed when Provider key is missing', as
 test('backend SemanticGatewayClient uses the same /workflows/run transport contract', async () => {
   await withGateway(async ({ port, key }) => {
     const result = await client(port, key).run({ task_type: 'requirement_extraction', task_instruction: 'backend instruction', task_payload_json: '{}' });
-    assert.equal(result.envelope.schema_version, '4.3-requirement-extraction-v3');
+    assert.equal(result.envelope.schema_version, '4.3-requirement-extraction-v3.1.1');
     assert.equal(result.envelope.task_type, 'requirement_extraction');
     assert.deepEqual(result.envelope.data, { requirements: [] });
+  });
+});
+
+test('standalone gateway /info exposes the configured Fact model without secrets', async () => {
+  const configured = createStandaloneGatewayServer({
+    env: {
+      SEMANTIC_GATEWAY_PROVIDER: 'openai_compatible',
+      SEMANTIC_GATEWAY_API_KEY: 'service-key',
+      SEMANTIC_GATEWAY_PROVIDER_API_BASE: 'https://api.siliconflow.cn/v1',
+      SEMANTIC_GATEWAY_PROVIDER_API_KEY: 'siliconflow-key',
+      SEMANTIC_GATEWAY_MODEL: 'deepseek-ai/DeepSeek-V4-Flash',
+      DEEPSEEK_OFFICIAL_API_BASE: 'https://api.deepseek.com',
+      DEEPSEEK_OFFICIAL_API_KEY: 'deepseek-key',
+      DEEPSEEK_OFFICIAL_FACT_MODEL: 'deepseek-v4-pro'
+    }
+  });
+  await new Promise(resolve => configured.listen(0, '127.0.0.1', resolve));
+  try {
+    const info = await (await fetch(`http://127.0.0.1:${configured.address().port}/info`)).json();
+    assert.equal(info.fact_provider, 'deepseek_official');
+    assert.equal(info.fact_provider_configured, true);
+    assert.equal(info.fact_provider_endpoint, '/responses');
+    assert.equal(info.fact_model, 'deepseek-v4-pro');
+    assert.equal(Object.hasOwn(info, 'api_key'), false);
+    assert.equal(Object.hasOwn(info, 'provider_api_key'), false);
+  } finally {
+    await new Promise(resolve => configured.close(resolve));
+  }
+});
+
+test('standalone gateway /info does not invent an unconfigured Fact model', async () => {
+  await withGateway(async ({ port }) => {
+    const info = await (await fetch(`http://127.0.0.1:${port}/info`)).json();
+    assert.equal(info.fact_provider, 'deepseek_official');
+    assert.equal(info.fact_provider_configured, false);
+    assert.equal(info.fact_model, null);
+  });
+});
+
+test('semantic task identity projection is registry-driven for synthetic registered tasks', async () => {
+  const syntheticContract = {
+    task_type: 'synthetic_identity_probe',
+    contract_version: 'synthetic-contract-v1',
+    instruction_hash: 'a'.repeat(64),
+    data_schema: {
+      type: 'object',
+      required: ['facts'],
+      additionalProperties: false,
+      properties: { facts: { type: 'array', items: { type: 'object', properties: { value: { type: 'string' } } } } }
+    }
+  };
+  await withGateway(async ({ port }) => {
+    const info = await (await fetch(`http://127.0.0.1:${port}/info`)).json();
+    assert.deepEqual(Object.keys(info.semantic_tasks), ['synthetic_identity_probe']);
+    assert.deepEqual(info.task_types, ['synthetic_identity_probe']);
+    assert.equal(info.semantic_tasks.synthetic_identity_probe.contract_version, 'synthetic-contract-v1');
+    assert.equal(info.semantic_tasks.synthetic_identity_probe.candidate_schema_sha256, schemaSha256(syntheticContract.data_schema.properties.facts.items));
+    assert.equal(info.semantic_tasks.synthetic_identity_probe.task_data_schema_sha256, schemaSha256(syntheticContract.data_schema));
+    assert.equal(info.semantic_tasks.synthetic_identity_probe.instruction_hash, 'a'.repeat(64));
+  }, { taskRegistry: { synthetic_identity_probe: syntheticContract } });
+});
+
+test('semantic schema hash is stable across object key insertion order', () => {
+  const first = { type: 'object', properties: { b: { type: 'number' }, a: { type: 'string' } }, required: ['a'] };
+  const reordered = { required: ['a'], properties: { a: { type: 'string' }, b: { type: 'number' } }, type: 'object' };
+  assert.equal(stableSha256(first), stableSha256(reordered));
+  assert.notEqual(stableSha256(first), stableSha256({ ...first, required: ['b'] }));
+});
+
+test('evidence_fact_extraction is registered end-to-end with strict Fact data', async () => {
+  await withGateway(async ({ port, key }) => {
+    const result = await client(port, key).run({
+      task_type: 'evidence_fact_extraction',
+      task_instruction: 'caller text is ignored by the task router',
+      task_payload_json: JSON.stringify({
+        review: { review_id: 'EREVIEW-1', project_id: 'PROJECT-1', review_status: 'approved', contract_version: 'evidence-review-v1', evidence_capability: 'capable', support_level: 'full_support' },
+        source_span: { source_span_id: 'ESPAN-1', anchor_chunk_id: 'CHUNK-1', source_text_hash: 'hash', source_text: '产品支持 50 并发用户。' },
+        material: { material_id: 'MATERIAL-1', material_type: 'project_case' },
+        source_text: '产品支持 50 并发用户。'
+      })
+    });
+    assert.equal(result.envelope.schema_version, '4.3-evidence-fact-extraction-v1');
+    assert.equal(result.envelope.task_type, 'evidence_fact_extraction');
+    assert.deepEqual(result.envelope.data, { facts: [] });
+    assert.equal(result.audit.task_type, 'evidence_fact_extraction');
   });
 });
 
 test('all existing formal tasks dispatch through the same mock provider contract', async () => {
   await withGateway(async ({ port, key }) => {
     const cases = [
-      ['requirement_extraction', {}, '4.3-requirement-extraction-v3', data => Array.isArray(data.requirements)],
+      ['requirement_extraction', {}, '4.3-requirement-extraction-v3.1.1', data => Array.isArray(data.requirements)],
       ['response_planning', { requirements: [{ req_id: 'REQ-001' }] }, '4.3-response-planning', data => Array.isArray(data.response_plans)],
       ['claim_generation', { plans: [{ requirement_id: 'REQ-001', response_summary: 'x' }] }, '4.3-claim-generation', data => Array.isArray(data.claims)],
       ['section_drafting', { chapter_id: 'chapter-1' }, '4.3-section-drafting', data => typeof data.content_markdown === 'string'],
@@ -372,6 +473,11 @@ test('probe-only diagnostics expose safe structure and validator details without
     assert.equal(body.probe_diagnostics.provider_adapter_invoked, true);
     assert.equal(body.probe_diagnostics.fetch_invoked, true);
     assert.equal(body.probe_diagnostics.provider_http_reached, false);
+    assert.equal(body.probe_diagnostics.gateway_http_status, 422);
+    assert.equal(body.probe_diagnostics.gateway_error_code, 'OUTPUT_SCHEMA_INVALID');
+    assert.equal(body.probe_diagnostics.semantic_error_code, 'OUTPUT_SCHEMA_INVALID');
+    assert.equal(body.probe_diagnostics.provider_error_code, 'FETCH_FAILED');
+    assert.equal(body.probe_diagnostics.provider_http_status, 200);
     assert.equal(body.probe_diagnostics.failure_stage, 'FETCH_INVOKED');
     assert.equal(body.probe_diagnostics.safe_error_code, 'FETCH_FAILED');
     assert.doesNotMatch(JSON.stringify(body), /must not be echoed|系统应提供审计日志/);
@@ -455,6 +561,185 @@ test('Requirement Extraction probe diagnostics distinguish candidate schema fail
     } finally {
       await new Promise(resolve => server.close(resolve));
     }
+  }
+});
+
+test('Fact output schema diagnostics expose FACT stage and safe field details', async () => {
+  const key = 'gateway-fact-diagnostic-key';
+  const server = createStandaloneGatewayServer({
+    config: {
+      apiKey: key,
+      providerName: 'mock',
+      provider: {
+        model: 'fixture-fact',
+        async invoke() {
+          return {
+              data: {
+              facts: [{
+                subject_type: 'product',
+                subject_name: '平台',
+                entities: '平台',
+                status: 'unknown',
+                scopes: [],
+                quantities: [],
+                validity: { status: 'unknown' },
+                domain_metadata: {}
+              }]
+            },
+            provider_audit: { http_status: 200, provider_http_reached: true, json_parse_success: true }
+          };
+        }
+      }
+    }
+  });
+  await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
+  try {
+    const response = await fetch(`http://127.0.0.1:${server.address().port}/workflows/run`, {
+      method: 'POST',
+      headers: {
+        authorization: `Bearer ${key}`,
+        'content-type': 'application/json',
+        'x-semantic-gateway-diagnostic': 'probe-v1'
+      },
+      body: JSON.stringify({ inputs: {
+        task_type: 'evidence_fact_extraction',
+        task_instruction: 'x',
+        task_payload_json: '{}'
+      } })
+    });
+    assert.equal(response.status, 422);
+    const body = await response.json();
+    assert.equal(body.error_code, 'OUTPUT_SCHEMA_INVALID');
+    assert.equal(body.probe_diagnostics.fact_normalization_diagnostic.projection_invoked, true);
+    assert.equal(body.probe_diagnostics.fact_normalization_diagnostic.normalizer_invoked, true);
+    assert.deepEqual(body.probe_diagnostics.schema_validation_errors[0], {
+      stage: 'FACT',
+      path: 'data.facts[0].entities',
+      keyword: 'type',
+      actual_type: 'string',
+      validator_code: 'type',
+      expected: 'array',
+      observed_category: 'string',
+      message: 'Semantic Fact candidate failed the canonical task schema.'
+    });
+    assert.equal(Object.hasOwn(body.probe_diagnostics, 'parsed_json'), false);
+    assert.equal(Object.hasOwn(body.probe_diagnostics, 'model_content'), false);
+  } finally {
+    await new Promise(resolve => server.close(resolve));
+  }
+});
+
+test('Fact output schema diagnostics expose a safe known-field type error', async () => {
+  const key = 'gateway-fact-additional-property-key';
+  const server = createStandaloneGatewayServer({
+    config: {
+      apiKey: key,
+      providerName: 'mock',
+      provider: {
+        model: 'fixture-fact',
+        async invoke() {
+          return {
+            data: {
+              facts: [{
+                subject_type: { value: 'product' },
+                subject_name: '平台',
+                entities: [],
+                status: 'unknown',
+                scopes: [],
+                quantities: [],
+                validity: { status: 'unknown' },
+                domain_metadata: {}
+              }]
+            },
+            provider_audit: { http_status: 200, provider_http_reached: true, json_parse_success: true }
+          };
+        }
+      }
+    }
+  });
+  await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
+  try {
+    const response = await fetch(`http://127.0.0.1:${server.address().port}/workflows/run`, {
+      method: 'POST',
+      headers: {
+        authorization: `Bearer ${key}`,
+        'content-type': 'application/json',
+        'x-semantic-gateway-diagnostic': 'probe-v1'
+      },
+      body: JSON.stringify({ inputs: {
+        task_type: 'evidence_fact_extraction',
+        task_instruction: 'x',
+        task_payload_json: '{}'
+      } })
+    });
+    assert.equal(response.status, 422);
+    const body = await response.json();
+    const diagnostic = body.probe_diagnostics.schema_validation_errors[0];
+    assert.equal(diagnostic.stage, 'FACT');
+    assert.equal(diagnostic.path, 'data.facts[0].subject_type');
+    assert.equal(diagnostic.keyword, 'type');
+    assert.equal(diagnostic.actual_type, 'object');
+    assert.doesNotMatch(JSON.stringify(body), /product/);
+  } finally {
+    await new Promise(resolve => server.close(resolve));
+  }
+});
+
+test('Fact output rejects unknown candidate fields and exposes a safe diagnostic', async () => {
+  const key = 'gateway-fact-projection-key';
+  const server = createStandaloneGatewayServer({
+    config: {
+      apiKey: key,
+      providerName: 'mock',
+      provider: {
+        model: 'fixture-fact',
+        async invoke() {
+          return {
+            data: {
+              facts: [{
+                subject_type: 'product',
+                subject_name: '平台',
+                entities: [],
+                status: 'unknown',
+                scopes: [],
+                quantities: [],
+                validity: { status: 'unknown' },
+                domain_metadata: {},
+                explanation: 'not authoritative'
+              }]
+            },
+            provider_audit: { http_status: 200, provider_http_reached: true, json_parse_success: true }
+          };
+        }
+      }
+    }
+  });
+  await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
+  try {
+    const response = await fetch(`http://127.0.0.1:${server.address().port}/workflows/run`, {
+      method: 'POST',
+      headers: {
+        authorization: `Bearer ${key}`,
+        'content-type': 'application/json',
+        'x-semantic-gateway-diagnostic': 'probe-v1'
+      },
+      body: JSON.stringify({ inputs: {
+        task_type: 'evidence_fact_extraction',
+        task_instruction: 'x',
+        task_payload_json: '{}'
+      } })
+    });
+    assert.equal(response.status, 422);
+    const body = await response.json();
+    assert.equal(body.error_code, 'OUTPUT_SCHEMA_INVALID');
+    assert.equal(body.probe_diagnostics.schema_validation_errors[0].additional_property, 'explanation');
+    assert.deepEqual(body.probe_diagnostics.fact_semantic_diagnostic, {
+      stage: 'FACT',
+      diagnostic: 'FACT_SEMANTIC_UNKNOWN_FIELDS_REJECTED',
+      unknown_fields: ['explanation']
+    });
+  } finally {
+    await new Promise(resolve => server.close(resolve));
   }
 });
 

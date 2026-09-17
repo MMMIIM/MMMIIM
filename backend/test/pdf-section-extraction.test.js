@@ -51,6 +51,23 @@ test('找不到第四章标题时使用受控全文回退并产生 warning', () 
   assert.equal(analysis.warnings[0].code, 'TECHNICAL_SECTION_FALLBACK');
 });
 
+test('识别用户需求书的结构化章节标题变体为技术需求范围', () => {
+  for (const heading of ['第三章 用户需求书', '第三章　用户需求书', '3 用户需求书', '用户需求书']) {
+    const analysis = classifyTenderSections(extractionFromParagraphs([heading, '系统应提供运维服务。']));
+    assert.equal(analysis.technicalSection?.section_key, 'technical_requirements', heading);
+    assert.equal(analysis.technicalSection?.routing_role, 'REQUIREMENT_ELIGIBLE', heading);
+  }
+});
+
+test('合同章节正文中的项目需求引用不会被提升为技术需求章节', () => {
+  const analysis = classifyTenderSections(extractionFromParagraphs([
+    '第五章 合同条款及格式',
+    '（仅供参考，具体以项目需求及采购结果为准）'
+  ]));
+  assert.equal(analysis.technicalSection, null);
+  assert.equal(analysis.sections.find((section) => section.section_key === 'contract')?.routing_role, 'LEGAL');
+});
+
 test('约46k字符短段落同时受字符与来源段预算约束，不产生微型 chunk', () => {
   const values = Array.from({ length: 1400 }, (_, index) => (
     `${Math.floor(index / 20) + 1}.${(index % 20) + 1} ${'技术要求与验收说明'.repeat(3)}`
@@ -60,8 +77,8 @@ test('约46k字符短段落同时受字符与来源段预算约束，不产生�
   const chunks = chunkExtractedText({
     ...extraction, singleCallThreshold: 8000, characterBudget: 8000, tokenBudget: 8000
   });
-  assert.equal(chunks.length, 28);
-  assert.ok(chunks.every((chunk) => chunk.segments.length <= 50));
+  assert.equal(chunks.length, 14);
+  assert.ok(chunks.every((chunk) => chunk.segments.length <= 100));
   assert.ok(chunks.every((chunk) => chunk.character_count > 1000));
 });
 
@@ -99,7 +116,7 @@ test('章节级 mandatory scope 传播到第四章候选但排除5.2.6', () => {
 test('网关 requirements 空数组是合法成功，非数组和多余字段仍失败', () => {
   const result = validateRequirementExtractionEnvelope({
     envelope: {
-      schema_version: '4.3-requirement-extraction-v3', task_type: 'requirement_extraction',
+      schema_version: '4.3-requirement-extraction-v3.1.1', task_type: 'requirement_extraction',
       status: 'success', data: { requirements: [] }, warnings: []
     },
     audit: { provider: 'semantic_gateway' }
@@ -108,7 +125,7 @@ test('网关 requirements 空数组是合法成功，非数组和多余字段仍
   for (const data of [{ requirements: 'invalid' }, { requirements: [], extra: true }, {}]) {
     assert.throws(() => validateRequirementExtractionEnvelope({
       envelope: {
-        schema_version: '4.3-requirement-extraction-v3', task_type: 'requirement_extraction',
+      schema_version: '4.3-requirement-extraction-v3.1.1', task_type: 'requirement_extraction',
         status: 'success', data, warnings: []
       }, audit: {}
     }), (error) => error.code === 'GATEWAY_REQUIREMENTS_INVALID');

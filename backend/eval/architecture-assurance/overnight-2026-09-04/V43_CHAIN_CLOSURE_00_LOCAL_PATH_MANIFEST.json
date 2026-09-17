@@ -1,0 +1,39 @@
+{
+  "manifest": "V43_CHAIN_CLOSURE_00_LOCAL_PATH_MANIFEST",
+  "audit_mode": "read_only_inventory",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "production_writes": 0,
+  "provider_calls": 0,
+  "gold_mutations": 0,
+  "material_authority_gate": {
+    "path": "backend/src/pipeline/material-source-authority-policy.js",
+    "version": "material-source-authority-v1",
+    "single_source": true,
+    "status": "ENFORCED"
+  },
+  "paths": [
+    {"surface":"material_lifecycle","path":"backend/src/company-material-service.js; backend/src/db.js","entry_point":"company-material quarantine API","authority_bearing":true,"status":"ENFORCED"},
+    {"surface":"new_retrieval","path":"backend/src/pipeline/enterprise-retrieval-service.js; backend/src/db.js","entry_point":"POST /api/requirements/:requirementId/enterprise-retrieval","authority_bearing":true,"gate":"MATERIAL_AUTHORITY_SQL","status":"ENFORCED"},
+    {"surface":"historical_retrieval_reload","path":"backend/src/pipeline/enterprise-retrieval-service.js; backend/src/db.js","entry_point":"GET /api/enterprise-retrieval-runs/:runId","authority_bearing":true,"status":"BYPASS_FOUND","finding":"getRetrievalRun result reload lacks lifecycle predicate"},
+    {"surface":"review_proposal","path":"backend/src/evidence-review-service.js; backend/src/db.js","entry_point":"POST /api/projects/:projectId/requirements/:requirementId/evidence-reviews","authority_bearing":true,"status":"BYPASS_FOUND","finding":"candidate query lacks lifecycle predicate"},
+    {"surface":"review_decision","path":"backend/src/evidence-review-service.js; backend/src/db.js","entry_point":"POST /api/evidence-reviews/:reviewId/approve|reject","authority_bearing":true,"status":"BYPASS_FOUND","finding":"current/update path lacks lifecycle predicate"},
+    {"surface":"canonical_fact_draft_edit","path":"backend/src/evidence-source-fact-service.js; backend/src/db.js","entry_point":"fact extract/edit routes","authority_bearing":true,"status":"PARTIAL","finding":"approval gate exists; draft/edit does not uniformly fail closed"},
+    {"surface":"canonical_fact_approval","path":"backend/src/evidence-source-fact-service.js; backend/src/db.js","entry_point":"POST /api/evidence-source-facts/:factId/approve","authority_bearing":true,"status":"ENFORCED"},
+    {"surface":"legacy_fact_mutation","path":"backend/src/evidence-fact-service.js; backend/src/db.js","entry_point":"legacy evidence-facts create/decision routes","authority_bearing":true,"status":"BYPASS_FOUND"},
+    {"surface":"legacy_mapping_mutation","path":"backend/src/evidence-service.js; backend/src/db.js","entry_point":"legacy evidence mapping create/decision routes","authority_bearing":true,"status":"BYPASS_FOUND"},
+    {"surface":"canonical_mapping","path":"backend/src/requirement-evidence-fact-mapping-service.js; backend/src/pipeline/mapping-candidate-builder.js","entry_point":"canonical mapping routes","authority_bearing":true,"status":"ENFORCED"},
+    {"surface":"canonical_claim","path":"backend/src/pipeline/claim-gate-service.js; backend/src/pipeline/claim-gate-v2-contract.js; backend/src/pipeline/claim-gate-input-adapter-v1.js","entry_point":"claim evaluation/persistence","authority_bearing":true,"status":"ENFORCED"},
+    {"surface":"writer_authorization","path":"backend/src/writer-input-authorization-service.js; backend/src/pipeline/writer-input-authorization-v1.js","entry_point":"document generation","authority_bearing":true,"status":"ENFORCED"},
+    {"surface":"writer_safe_context","path":"backend/src/pipeline/document-generation-service.js; backend/src/pipeline/writer-authorization-snapshot.js","entry_point":"generation entry point","authority_bearing":true,"status":"ENFORCED"},
+    {"surface":"track_a_entrypoint_tests","path":"backend/integration/track-a-authority-remediation.integration.js","entry_point":"isolated PostgreSQL NC02-NC05 plus valid-material positive control","authority_bearing":false,"status":"ENFORCED"},
+    {"surface":"track_a_eval","path":"backend/eval/architecture-assurance/overnight-2026-09-04/V43_P0_RAG_MATERIAL_AUTHORITY_FAIL_CLOSED_ROOT_CAUSE_CHECKPOINT.*","entry_point":"audit artifacts","authority_bearing":false,"status":"NOT_VERIFIED","finding":"new NC02-NC05 pending"},
+    {"surface":"gold_and_track_b_eval","path":"backend/eval/gold-human-review; backend/eval/mapping-benchmark-v1; backend/eval/claim-eval-v1; backend/eval/rag-pilot","entry_point":"eval/audit runners","authority_bearing":false,"status":"ENFORCED","finding":"governance only; no production authority"}
+  ],
+  "confirmed_track_a_scope": [
+    "historical retrieval reload",
+    "review context/proposal/decision",
+    "canonical Fact draft/edit",
+    "legacy Fact/Mapping mutation boundary"
+  ]
+}

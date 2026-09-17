@@ -1,0 +1,29 @@
+{
+  "generated_at": "2026-09-16T17:31:38.432Z",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "dirty_worktree": true,
+  "authority": "SYNTHETIC_EVAL_ONLY",
+  "production_authority": "NONE",
+  "schema_version": "v43-support-mapping-boundary-v1",
+  "support_owner": "EvidenceSupportAssessment + responsibility router",
+  "mapping_owner": "RequirementEvidenceFactMappingService",
+  "mapping_contract": "requirement-evidence-mapping-v1.1",
+  "states": [
+    "EVIDENCE_REVIEW_READY",
+    "NO_RELEVANT_EVIDENCE",
+    "INSUFFICIENT_EVIDENCE",
+    "CONFLICTING_EVIDENCE",
+    "ASSESSMENT_UNAVAILABLE"
+  ],
+  "non_escalation": [
+    "rank is not support",
+    "partial/insufficient/unknown never upgrades",
+    "assessment does not create lifecycle authority"
+  ],
+  "fixture_probe": {
+    "route": "NEEDS_SEMANTIC_ADJUDICATION",
+    "partial": "INSUFFICIENT_EVIDENCE",
+    "empty": "NO_RELEVANT_EVIDENCE"
+  }
+}

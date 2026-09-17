@@ -1,0 +1,93 @@
+{
+  "artifact_type": "V43_CORE6_1009_PROVENANCE_CHAIN",
+  "chain": [
+    {
+      "stage": "EVAL_CANDIDATE_POOL",
+      "path": "docs/REQUIREMENT_CANDIDATE_POOL_V2_COMPLETED.json",
+      "sha256": "de5dfbaafb9b0a3ae094b0168987624e53533cb5f0853afa4a5b365477671c27",
+      "count": 1010,
+      "source_verified_count": 1009,
+      "authority_status": "PENDING_HUMAN_AUTHORITY",
+      "production_db_writes": 0,
+      "provider_calls": 58
+    },
+    {
+      "stage": "CANONICAL_INPUT_BUILD",
+      "path": "backend/eval/gold-governance/v43-requirement-six-tender/build-six-tender-canonical-input.js",
+      "sha256": "83c32cab26f03fea5c2cee88c0c88222250928133c366cea1bcdb7a09b10a531",
+      "evidence_markers": [
+        "POOL_PATH=REQUIREMENT_CANDIDATE_POOL_V2_COMPLETED.json",
+        "buildCanonicalRequirements(...)",
+        "usableCandidates=candidates.filter(source_excerpt)",
+        "writes V43_REQUIREMENT_GOLD_V2_SIX_TENDER_CANONICAL_INPUT.json"
+      ],
+      "source_constants": {
+        "pool_path": true,
+        "canonical_writer": true,
+        "canonicalizer": true
+      }
+    },
+    {
+      "stage": "CORE6_CANONICAL_INPUT",
+      "path": "docs/V43_REQUIREMENT_GOLD_V2_SIX_TENDER_CANONICAL_INPUT.json",
+      "sha256": "ff07402688a3013af9a9b8be01f613f76848b7ea905208c1955a604432422fe1",
+      "count": 1009,
+      "tender_counts": {
+        "JY-001": 193,
+        "TB-003": 265,
+        "TB-006": 46,
+        "FAST-01": 39,
+        "FAST-04": 353,
+        "FAST-WATER-01": 113
+      },
+      "blind": true,
+      "eval_only": true,
+      "provider_calls": 0,
+      "production_db_writes": 0
+    },
+    {
+      "stage": "BLIND_ROUTER_PROJECTION",
+      "path": "docs/V43_RESPONSE_ROUTER_BLIND_GPT_V2_CORE6_1009.json",
+      "sha256": "49f161d5f13561e78fdbea3b9a647130735f820b32809b0425097486f7939243",
+      "source_artifact": "docs/V43_REQUIREMENT_GOLD_V2_SIX_TENDER_CANONICAL_INPUT.json",
+      "source_artifact_sha256": "ff07402688a3013af9a9b8be01f613f76848b7ea905208c1955a604432422fe1",
+      "count": 1009,
+      "blind": true,
+      "gpt_label_fields_null": true
+    }
+  ],
+  "origin_classification": {
+    "classification": "E_OTHER_COMPOSED_EVAL_CANONICALIZATION_AND_BLIND_PROJECTION",
+    "why": "Direct chain is an Eval candidate-pool canonicalization plus mechanical blind field projection; it is not a six-runtime merge, not Production output, and contains no GPT semantic reference labels."
+  },
+  "direct_upstream_identity": {
+    "path": "docs/V43_REQUIREMENT_GOLD_V2_SIX_TENDER_CANONICAL_INPUT.json",
+    "sha256": "ff07402688a3013af9a9b8be01f613f76848b7ea905208c1955a604432422fe1"
+  },
+  "source_pdfs": [
+    {
+      "tender_id": "JY-001",
+      "sha256": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145"
+    },
+    {
+      "tender_id": "TB-003",
+      "sha256": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1"
+    },
+    {
+      "tender_id": "TB-006",
+      "sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480"
+    },
+    {
+      "tender_id": "FAST-01",
+      "sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29"
+    },
+    {
+      "tender_id": "FAST-04",
+      "sha256": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "sha256": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535"
+    }
+  ]
+}

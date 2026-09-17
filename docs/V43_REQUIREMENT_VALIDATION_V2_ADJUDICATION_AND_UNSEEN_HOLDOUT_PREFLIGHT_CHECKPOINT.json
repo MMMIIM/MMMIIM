@@ -1,0 +1,109 @@
+{
+  "checkpoint": "V43_REQUIREMENT_VALIDATION_V2_ADJUDICATION_AND_UNSEEN_HOLDOUT_PREFLIGHT",
+  "recorded_at": "2026-09-08",
+  "eval_only": true,
+  "validation_v2_adjudication": {
+    "total": 24,
+    "gpt_safe": 20,
+    "gpt_true_error": 3,
+    "gpt_context_required": 1,
+    "adjudicable_case_count": 23,
+    "safe_false_positive_rate": 0.2,
+    "true_error_detection_recall": 0.666667,
+    "true_error_escape_rate": 0.333333,
+    "review_required_total": 6,
+    "review_precision": 0.333333,
+    "new_unseen_p0_escape": 0,
+    "new_unseen_substantive_p1_escape": 1,
+    "known_p1_development_debt": ["POST-FIX-V2-018"],
+    "context_debt_count": 1,
+    "number_omission_final_micro_fix": "PASS",
+    "quality_gate_overall": "CONDITIONAL_PASS_FOR_DEVELOPMENT_FREEZE",
+    "production_certified": false,
+    "gold_v2_ready": false,
+    "mapping_ready": false
+  },
+  "holdout_preflight": {
+    "holdout_candidate_tender_count": 0,
+    "holdout_tender_ids": [],
+    "unseen_independence": "FAIL",
+    "overlap_with_six_tender": 0,
+    "overlap_with_calibration": 0,
+    "overlap_with_validation_v1": 0,
+    "overlap_with_validation_v2": 0,
+    "overlap_with_safety": 0,
+    "candidate_inventory": [
+      {
+        "tender_id": "TB-016",
+        "source_file": "backend/eval/tender-benchmark-v1/sources/TB-016-shenzhen-water-operations.pdf",
+        "source_sha256": "fbf1af7ce6eedc3bf7ed86f8988a4416dce838e45bb3412f62b733689881a46c",
+        "pdf_pages": 32,
+        "source_observation": "2026 年深圳市智慧水务综合指挥调度和保障中心部门预算",
+        "admission": "REJECTED_NOT_VERIFIED_TENDER",
+        "reason": "Budget document rather than a verified tender solicitation; no tender source manifest, requirement packet, or contract/technical tender identity is present. It is therefore not admitted as an unseen holdout."
+      }
+    ],
+    "source_inventory_result": {
+      "known_development_tenders": ["JY-001", "TB-003", "TB-006", "FAST-01", "FAST-04", "FAST-WATER-01"],
+      "additional_pdf_sources": ["TB-016"],
+      "duplicate_uploads_of_known_source": 3,
+      "eligible_unseen_tender_found": false
+    }
+  },
+  "frozen_requirement_runtime_identity": {
+    "prompt_version": "4.3-requirement-extraction-v3.1.1",
+    "prompt_hash": "9b8fe6582e774a64f36b2be307274e297fafb309cf17270a4d8fc463da817305",
+    "schema_version": "4.3-requirement-extraction-v3.1.1",
+    "schema_hash": "9ee6ebb2a34e5ff3131d3b0bdbbcee45b1c8c33ac38d8325bd8925836abb7acc",
+    "candidate_schema_hash": "1f5bd20f624a34a5f0bfd76e226f24d3595cc8a1e06bdc176c3d40e9694edbba",
+    "router": {
+      "path": "services/semantic-gateway/src/task-router.js",
+      "sha256": "cad8077807d7e6859de04d0eb69dc0d88d096c23f3ae57806b007702c38f1509"
+    },
+    "canonicalizer": {
+      "path": "backend/src/pipeline/canonical-requirements.js",
+      "version": "4.3-canonical-requirement-1",
+      "sha256": "9d21df8a18163f960d565df4a088232b60c669f101d5a776e60b5647103e1c99"
+    },
+    "quality_gate": {
+      "path": "backend/src/pipeline/requirement-quality-gate.js",
+      "version": "4.3-requirement-quality-gate-1",
+      "sha256": "6a14c5e8e0dea8f6eba1a5f6a2fa55008725b4c9ae61a675b60af6560ec02b14",
+      "tracked_in_git": false
+    },
+    "source_resolver": {
+      "path": "backend/src/pipeline/source-location-resolver.js",
+      "version": "NO_EXPLICIT_VERSION_CONSTANT",
+      "sha256": "6acac0ad8d027a9dae5b4868714230556c0da02dffa5e1cd7f69cc2f349a065c"
+    },
+    "requirement_extraction": {
+      "path": "backend/src/pipeline/requirement-extraction.js",
+      "sha256": "54a3be043763114ba8517bf30f29e123236dd7057178605962283170cb6017fa"
+    },
+    "semantic_contracts": {
+      "path": "packages/semantic-contracts/index.js",
+      "sha256": "7e8be5baeb08e5b1b120cd6b4f13918ad196b82b75863b733080cc878564b115"
+    }
+  },
+  "authority": {
+    "branch": "feat/v4.3-semantic-boundary-routing",
+    "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+    "worktree": "DIRTY_USER_AUTHORITY_PRESERVED",
+    "status_entry_count_at_checkpoint": 394,
+    "provider_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "mapping_actions": 0,
+    "claim_actions": 0,
+    "writer_actions": 0
+  },
+  "holdout_policy": {
+    "critical_escape_threshold": 0,
+    "mandatory_critical_detection_recall": 1.0,
+    "source_ref_resolution_threshold": 1.0,
+    "cross_tender_source_mismatch_threshold": 0,
+    "unexplained_provenance_gap_threshold": 0,
+    "execution": "NOT_STARTED_PENDING_GPT_REVIEW"
+  },
+  "final_verdict": "HOLDOUT_PREFLIGHT_BLOCKED_NO_ELIGIBLE_UNSEEN_TENDER"
+}

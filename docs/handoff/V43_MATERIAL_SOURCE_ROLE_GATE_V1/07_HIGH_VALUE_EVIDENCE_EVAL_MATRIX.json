@@ -1,0 +1,116 @@
+{
+  "artifact_type": "V43_HIGH_VALUE_EVIDENCE_EVAL_MATRIX",
+  "eval_only": true,
+  "synthetic_real_gold_created": false,
+  "rows": [
+    {
+      "id": "A",
+      "category": "Qualification Certificate",
+      "required_observation_fields": [
+        "enterprise",
+        "certificate_name",
+        "issuer",
+        "certificate_no",
+        "valid_from",
+        "valid_until"
+      ],
+      "source_role_required": "EVIDENCE_CANDIDATE",
+      "human_review_required": true
+    },
+    {
+      "id": "B",
+      "category": "Product Certification",
+      "required_observation_fields": [
+        "enterprise",
+        "product",
+        "certificate_name",
+        "issuer",
+        "validity"
+      ],
+      "source_role_required": "EVIDENCE_CANDIDATE",
+      "human_review_required": true
+    },
+    {
+      "id": "C",
+      "category": "Project Contract",
+      "required_observation_fields": [
+        "enterprise",
+        "project_name",
+        "customer",
+        "contract_date",
+        "amount_if_present"
+      ],
+      "source_role_required": "EVIDENCE_CANDIDATE",
+      "human_review_required": true
+    },
+    {
+      "id": "D",
+      "category": "Acceptance Report",
+      "required_observation_fields": [
+        "enterprise",
+        "project_name",
+        "customer",
+        "acceptance_date",
+        "completion_status"
+      ],
+      "source_role_required": "EVIDENCE_CANDIDATE",
+      "human_review_required": true
+    },
+    {
+      "id": "E",
+      "category": "Performance Test",
+      "required_observation_fields": [
+        "product_or_system",
+        "metric",
+        "value",
+        "operator",
+        "unit",
+        "test_condition",
+        "test_date"
+      ],
+      "source_role_required": "EVIDENCE_CANDIDATE",
+      "human_review_required": true
+    },
+    {
+      "id": "F",
+      "category": "Personnel Credential",
+      "required_observation_fields": [
+        "person",
+        "credential",
+        "level",
+        "issuer",
+        "validity",
+        "enterprise_relation_if_supported"
+      ],
+      "source_role_required": "EVIDENCE_CANDIDATE",
+      "human_review_required": true
+    },
+    {
+      "id": "G",
+      "category": "Financial Proof",
+      "required_observation_fields": [
+        "enterprise",
+        "statement_or_audit_type",
+        "period",
+        "issuer",
+        "amount_if_present"
+      ],
+      "source_role_required": "EVIDENCE_CANDIDATE",
+      "human_review_required": true
+    },
+    {
+      "id": "H",
+      "category": "Service Capability Record",
+      "required_observation_fields": [
+        "enterprise",
+        "service",
+        "scope",
+        "validity",
+        "source_date"
+      ],
+      "source_role_required": "EVIDENCE_CANDIDATE",
+      "human_review_required": true
+    }
+  ],
+  "provider_calls": 0
+}

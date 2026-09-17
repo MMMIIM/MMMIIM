@@ -1,0 +1,42 @@
+{
+  "artifact_type": "V43_NEGATIVE_AUTHORITY_REGRESSION",
+  "checks": [
+    {
+      "name": "missing_three_packets_do_not_pass_authority_gate",
+      "result": "PASS",
+      "evidence": "Recovered packets explicitly carry gold_authority=PENDING_HUMAN_REVIEW and gold_frozen=false."
+    },
+    {
+      "name": "runtime_artifact_not_authority",
+      "result": "PASS",
+      "evidence": "CORE6 runtime manifest semantic_adjudication=not performed."
+    },
+    {
+      "name": "production_canonical_substitute",
+      "result": "NOT_USED",
+      "evidence": "No Production canonical rows were consumed or substituted for missing Human authority."
+    },
+    {
+      "name": "resolver_does_not_expand_upstream_authority",
+      "result": "PASS",
+      "evidence": "Resolver remains bound to the frozen three-tender semantic-boundary manifest."
+    }
+  ],
+  "side_effects": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "eval_db_writes": 0,
+    "requirement_mutations": 0,
+    "gold_mutations": 0,
+    "fact_mutations": 0,
+    "mapping_actions": 0,
+    "claim_actions": 0,
+    "writer_actions": 0,
+    "migrations_executed": 0,
+    "commit": 0,
+    "push": 0,
+    "merge": 0,
+    "deploy": 0
+  }
+}

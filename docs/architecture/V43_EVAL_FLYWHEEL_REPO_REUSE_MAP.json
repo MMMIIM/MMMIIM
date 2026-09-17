@@ -1,0 +1,184 @@
+{
+  "artifact_type": "V43_EVAL_FLYWHEEL_REPO_REUSE_MAP",
+  "artifact_version": "v1",
+  "status": "ARCHITECTURE_ONLY_NOT_IMPLEMENTED",
+  "generated_at": "2026-09-11",
+  "current_branch": "feat/v4.3-semantic-boundary-routing",
+  "current_head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "inventory_scope": {
+    "repository_root": "D:/AI工作/AI/标书平台/标书平台",
+    "production_code_changed_by_this_decision": false,
+    "provider_calls_by_this_decision": 0,
+    "llm_calls_by_this_decision": 0,
+    "production_db_writes_by_this_decision": 0,
+    "gold_mutations_by_this_decision": 0,
+    "migrations_executed_by_this_decision": 0
+  },
+  "components": [
+    {
+      "component": "EvalRunRegistry",
+      "classification": "NEW",
+      "existing_implementation_or_path": ["backend/src/verification/requirement-extraction-report.js", "backend/src/verification/requirement-extraction-verifier.js", "backend/eval/**"],
+      "capability": "Reports have run_id, contract/runtime/gate metadata and safe writing, but no generic immutable EvalRun registry or identity conflict handling.",
+      "reuse_action": "Extend existing report identity/hash conventions through one Eval-only registry; do not reuse production tables.",
+      "reuse_percentage_estimate": 55,
+      "new_work_required": "Generic run contract, identity hash, immutable file record, idempotent create/load.",
+      "risk": "Mutable or aggregate-only run records make historical comparisons ambiguous; identity mismatch must fail closed."
+    },
+    {
+      "component": "ArtifactSnapshot",
+      "classification": "EXTEND",
+      "existing_implementation_or_path": ["backend/eval/requirement-extraction-real-tender-pilot-v1/evaluation-artifact.js", "backend/src/verification/requirement-extraction-report.js", "backend/eval/** checkpoint/manifests"],
+      "capability": "Artifact writers/readers and sanitation preserve exact inputs, hashes, run identity and bounded safe output.",
+      "reuse_action": "Reuse byte/hash and safe artifact conventions; add a generic manifest wrapper only in Eval space.",
+      "reuse_percentage_estimate": 75,
+      "new_work_required": "Common ArtifactSnapshot shape and deterministic manifest hash.",
+      "risk": "Duplicated source/provider payloads can expose sensitive text or create hash drift; keep large evidence in existing artifacts."
+    },
+    {
+      "component": "ProvenanceTracer",
+      "classification": "EXTEND",
+      "existing_implementation_or_path": ["backend/src/pipeline/source-location-resolver.js", "backend/src/pipeline/traceability-service.js", "backend/eval/requirement-extraction-real-tender-pilot-v1/run-live-eval.js", "docs/eval/p0-recall/V43_P0_*.json"],
+      "capability": "SourceLocationResolver resolves refs/hashes; traceability-service covers requirement/section; P0 artifacts contain 487-atom mechanical evidence.",
+      "reuse_action": "Add generic ordered stages and a Requirement adapter consuming these APIs and prior artifacts; never rebuild Provider evidence.",
+      "reuse_percentage_estimate": 65,
+      "new_work_required": "Generic TraceStage, evidence-gap marker, first mechanical divergence and adapter indexer.",
+      "risk": "Missing historical payload must remain an evidence gap, not a semantic miss or regenerated Provider call."
+    },
+    {
+      "component": "DeterministicEvaluator",
+      "classification": "EXTEND",
+      "existing_implementation_or_path": ["backend/src/eval/requirement-extraction-evaluator.js", "backend/eval/requirement-production-quality-gate/run-quality-gate.js", "backend/eval/requirement-production-quality-gate/recovery.js"],
+      "capability": "Existing evaluators validate envelopes, source spans, hashes, duplicates, replay determinism and mutation sensitivity.",
+      "reuse_action": "Adapt deterministic check interfaces while keeping current module evaluators intact.",
+      "reuse_percentage_estimate": 70,
+      "new_work_required": "Unified check IDs, observation schema, risk-signal collection and first-divergence calculation.",
+      "risk": "Numeric/negation/table risks cannot become MATCH/PARTIAL/DISTORTED/MISS."
+    },
+    {
+      "component": "BadCaseRegistry",
+      "classification": "NEW",
+      "existing_implementation_or_path": ["backend/eval/requirement-production-quality-gate/attribute-21-source-misses.mjs", "backend/eval/requirement-production-quality-gate/run-quality-gate.js", "backend/eval/** failure ledgers"],
+      "capability": "Attribution and quality reports carry case-level classifications and evidence, but no reusable lifecycle/idempotent registry with nullable semantic labels.",
+      "reuse_action": "Reuse case-level ledger/checkpoint conventions; implement one generic Eval-only registry.",
+      "reuse_percentage_estimate": 45,
+      "new_work_required": "BadCase lifecycle, label provenance validation, evidence refs and frozen-ledger importer.",
+      "risk": "Aggregate counts or Codex-inferred labels would contaminate Gold; absent exact 44-row ledger stays SEED_LEDGER_INPUT_PENDING_GPT."
+    },
+    {
+      "component": "FailureFamilyRegistry",
+      "classification": "NEW",
+      "existing_implementation_or_path": ["backend/eval/requirement-unseen-holdout-v2/results/**", "backend/eval/requirement-production-quality-gate/recovery.js"],
+      "capability": "Results include per-case failure_family fields, but no versioned family definitions or membership registry.",
+      "reuse_action": "Reuse result/version conventions; add versioned Eval-only definitions and membership.",
+      "reuse_percentage_estimate": 35,
+      "new_work_required": "Family lifecycle, owner/status and idempotent membership.",
+      "risk": "Example family names are schema examples, not current diagnoses."
+    },
+    {
+      "component": "RegressionRunner",
+      "classification": "EXTEND",
+      "existing_implementation_or_path": ["backend/eval/requirement-production-quality-gate/run-quality-gate.js", "backend/eval/requirement-unseen-holdout-v2/execute-holdout-v2.mjs", "backend/eval/requirement-unseen-holdout-v3/run-first-production-pass.mjs", "backend/eval/retrieval-baseline/benchmark.js"],
+      "capability": "Runners execute targeted, replay, quality-gate and holdout comparisons with per-case artifacts.",
+      "reuse_action": "Wrap current runners behind explicit scope/partition identity and preserve per-check outcomes.",
+      "reuse_percentage_estimate": 65,
+      "new_work_required": "RegressionResult shape, baseline/current identity checks and Core6-versus-Holdout guard.",
+      "risk": "Core6 development cases must not be reported as an independent fresh holdout."
+    },
+    {
+      "component": "RequirementAdapter",
+      "classification": "NEW",
+      "existing_implementation_or_path": ["backend/src/pipeline/requirement-extraction.js", "backend/eval/requirement-extraction-real-tender-pilot-v1/evaluation-artifact.js", "backend/eval/requirement-production-quality-gate/recovery.js"],
+      "capability": "Production extraction, source resolution, canonical projection and exports expose required stage identities.",
+      "reuse_action": "Create only a typed adapter at the tracer boundary; no second extractor or canonicalizer.",
+      "reuse_percentage_estimate": 60,
+      "new_work_required": "Tender Source→Section→Chunk→Provider Input→Raw Candidate→Normalization→Source Resolution→Canonical Requirement mapping.",
+      "risk": "Adapter must preserve production run/source identity and mark absent evidence rather than fill it."
+    },
+    {
+      "component": "Developer CLI",
+      "classification": "NEW",
+      "existing_implementation_or_path": ["backend/package.json", "backend/eval/** runner.js and *.mjs conventions"],
+      "capability": "Many module-specific Node ESM runners exist, but no single flywheel entrypoint.",
+      "reuse_action": "Add one eval:flywheel script delegating to one runner; no second CLI framework.",
+      "reuse_percentage_estimate": 50,
+      "new_work_required": "trace, evaluate, import-badcases, regression and summary subcommands with safe fixture root.",
+      "risk": "CLI must not write production tables, call Provider or silently mix datasets."
+    },
+    {
+      "component": "Eval persistence",
+      "classification": "NEW",
+      "existing_implementation_or_path": ["backend/migrations/001_project_foundation.sql", "backend/migrations/051_material_source_authority_quarantine.sql", "backend/src/db.js"],
+      "capability": "Production/domain persistence is extensive, but dedicated eval_runs/eval_cases/bad_cases/failure_families/regression_results tables were not found.",
+      "reuse_action": "Use file-first immutable artifacts for V1; no migration in this Decision. Revisit one bounded Eval migration only after a separate decision proves query need.",
+      "reuse_percentage_estimate": 25,
+      "new_work_required": "Storage adapter over artifact directories and an optional future DB adapter.",
+      "risk": "Reusing production authority tables for Eval rows could mutate or confuse business truth."
+    }
+  ],
+  "existing_eval_components": [
+    {"path": "backend/src/eval/requirement-extraction-evaluator.js", "role": "Requirement schema/case evaluator"},
+    {"path": "backend/eval/requirement-production-quality-gate/run-quality-gate.js", "role": "Source, duplicate, replay and mutation quality audit"},
+    {"path": "backend/eval/requirement-production-quality-gate/recovery.js", "role": "Runtime identity, smoke and artifact recovery orchestration"},
+    {"path": "backend/eval/requirement-extraction-real-tender-pilot-v1/evaluation-artifact.js", "role": "Chunk/candidate/evaluation artifact persistence"},
+    {"path": "backend/eval/requirement-extraction-real-tender-pilot-v1/run-live-eval.js", "role": "Production-shaped runtime identity and provenance capture"},
+    {"path": "backend/eval/requirement-unseen-holdout-v2/execute-holdout-v2.mjs", "role": "Holdout execution and result artifacts"},
+    {"path": "backend/eval/response-router-v2-dev-corpus-eval.mjs", "role": "Deterministic full-corpus comparison and manifest conventions"},
+    {"path": "backend/eval/gold-governance/**", "role": "Gold governance and review packet conventions"}
+  ],
+  "runtime_lineage_components": [
+    {"path": "backend/src/pipeline/requirement-extraction.js", "role": "Canonical Requirement provider input and envelope validation"},
+    {"path": "backend/src/pipeline/source-location-resolver.js", "role": "Source span and source hash resolution"},
+    {"path": "backend/src/pipeline/requirement-chunker.js", "role": "Chunk and candidate-to-canonical projection support"},
+    {"path": "backend/src/pipeline/traceability-service.js", "role": "Requirement-to-section coverage matrix"},
+    {"path": "backend/src/pipeline/generation-audit.js", "role": "Ordered production generation state audit; not a generic Eval registry"},
+    {"path": "backend/src/db.js", "role": "Production repository access; read-only references for flywheel"},
+    {"path": "backend/src/verification/requirement-extraction-report.js", "role": "Safe report sanitation and artifact writing"}
+  ],
+  "persistence_observations": {
+    "dedicated_eval_tables_found": false,
+    "production_tables_observed": ["requirements", "requirement_baselines", "requirement_candidates", "tender_parse_chunks", "company_materials", "material_chunks", "material_chunk_embeddings", "enterprise_retrieval_runs", "enterprise_retrieval_results", "evidence_source_spans", "evidence_source_facts", "requirement_evidence_fact_mappings", "claim_gate_evaluations", "writer_safe_contexts", "document_generations", "document_generation_tasks"],
+    "v1_decision": "File-first Eval artifacts; production tables are read-only authority and are not Eval registry storage.",
+    "migration_executed": false
+  },
+  "artifact_conventions": {
+    "locations": ["docs/eval/**", "backend/eval/**/results/**", "docs/export/**"],
+    "formats": ["JSON", "JSONL", "Markdown", "CSV"],
+    "common_identity_fields": ["run_id", "artifact_type", "artifact_version", "generated_at", "sha256", "source_hash", "provider_calls", "production_db_writes", "gold_mutations"],
+    "safe_logging": "Reuse requirement-extraction-report sanitizer; credentials, prompts, raw provider content and unbounded source fields are not written to registry records."
+  },
+  "estimates": {
+    "new_files": 12,
+    "modified_files": 2,
+    "migration_count_for_this_decision": 0,
+    "possible_future_eval_migration_count": 1,
+    "new_production_dependencies": 0,
+    "estimated_tests": 36,
+    "estimate_basis": "Ten TDD tasks in the accompanying plan; counts are planning estimates, not current files."
+  },
+  "safety": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "production_code_changed": false,
+    "production_semantic_changes": 0,
+    "migrations_executed": 0,
+    "commits": 0,
+    "pushes": 0,
+    "merges": 0,
+    "deploys": 0,
+    "semantic_labels_inferred": false,
+    "current_44_seed_imported": false
+  },
+  "acceptance": {
+    "repo_reconnaissance_complete": true,
+    "reuse_map_complete": true,
+    "v1_scope_preserved": true,
+    "no_semantic_judge_agent": true,
+    "no_automatic_gold_mutation": true,
+    "no_production_authority_mutation": true,
+    "core6_holdout_distinction_preserved": true,
+    "status": "READY_FOR_GPT_EVAL_FLYWHEEL_V1_SPEC_REVIEW"
+  }
+}

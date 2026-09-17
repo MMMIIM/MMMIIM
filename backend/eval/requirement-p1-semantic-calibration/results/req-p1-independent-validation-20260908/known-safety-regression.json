@@ -1,0 +1,227 @@
+{
+  "artifact_type": "V43_REQUIREMENT_POST_FIX_KNOWN_SAFETY_REGRESSION",
+  "artifact_version": "v1",
+  "denominator_excluded_from_validation": true,
+  "control_count": 12,
+  "detected_count": 12,
+  "accept_escape_count": 0,
+  "expected_detected_count": 12,
+  "expected_accept_escape_count": 0,
+  "cases": [
+    {
+      "control_id": "SAFETY-PC-001",
+      "mutation_id": "REQ-MUT-001",
+      "dimension": "number",
+      "severity": "P0",
+      "expected_decision": "FAIL_CLOSED",
+      "actual_decision": "REVIEW_REQUIRED",
+      "actual_reason_codes": [
+        "NUMBER_DISTORTION"
+      ],
+      "detected": true,
+      "accept_escape": false,
+      "quality_gate_version": "4.3-requirement-quality-gate-1",
+      "provider_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0
+    },
+    {
+      "control_id": "SAFETY-PC-002",
+      "mutation_id": "REQ-MUT-002",
+      "dimension": "number",
+      "severity": "P0",
+      "expected_decision": "FAIL_CLOSED",
+      "actual_decision": "REVIEW_REQUIRED",
+      "actual_reason_codes": [
+        "NUMBER_DISTORTION"
+      ],
+      "detected": true,
+      "accept_escape": false,
+      "quality_gate_version": "4.3-requirement-quality-gate-1",
+      "provider_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0
+    },
+    {
+      "control_id": "SAFETY-PC-003",
+      "mutation_id": "REQ-MUT-003",
+      "dimension": "number",
+      "severity": "P0",
+      "expected_decision": "FAIL_CLOSED",
+      "actual_decision": "REVIEW_REQUIRED",
+      "actual_reason_codes": [
+        "NUMBER_DISTORTION"
+      ],
+      "detected": true,
+      "accept_escape": false,
+      "quality_gate_version": "4.3-requirement-quality-gate-1",
+      "provider_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0
+    },
+    {
+      "control_id": "SAFETY-PC-004",
+      "mutation_id": "REQ-MUT-004",
+      "dimension": "negation",
+      "severity": "P0",
+      "expected_decision": "FAIL_CLOSED",
+      "actual_decision": "REVIEW_REQUIRED",
+      "actual_reason_codes": [
+        "NEGATION_DISTORTION"
+      ],
+      "detected": true,
+      "accept_escape": false,
+      "quality_gate_version": "4.3-requirement-quality-gate-1",
+      "provider_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0
+    },
+    {
+      "control_id": "SAFETY-PC-005",
+      "mutation_id": "REQ-MUT-005",
+      "dimension": "negation",
+      "severity": "P0",
+      "expected_decision": "FAIL_CLOSED",
+      "actual_decision": "REVIEW_REQUIRED",
+      "actual_reason_codes": [
+        "NEGATION_DISTORTION"
+      ],
+      "detected": true,
+      "accept_escape": false,
+      "quality_gate_version": "4.3-requirement-quality-gate-1",
+      "provider_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0
+    },
+    {
+      "control_id": "SAFETY-PC-006",
+      "mutation_id": "REQ-MUT-006",
+      "dimension": "negation",
+      "severity": "P0",
+      "expected_decision": "FAIL_CLOSED",
+      "actual_decision": "REVIEW_REQUIRED",
+      "actual_reason_codes": [
+        "NEGATION_DISTORTION"
+      ],
+      "detected": true,
+      "accept_escape": false,
+      "quality_gate_version": "4.3-requirement-quality-gate-1",
+      "provider_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0
+    },
+    {
+      "control_id": "SAFETY-PC-007",
+      "mutation_id": "REQ-MUT-007",
+      "dimension": "entity",
+      "severity": "P0",
+      "expected_decision": "FAIL_CLOSED",
+      "actual_decision": "REVIEW_REQUIRED",
+      "actual_reason_codes": [
+        "NUMBER_DISTORTION",
+        "NEGATION_DISTORTION",
+        "ENTITY_MISMATCH_REVIEW",
+        "OBVIOUS_SEMANTIC_MUTATION"
+      ],
+      "detected": true,
+      "accept_escape": false,
+      "quality_gate_version": "4.3-requirement-quality-gate-1",
+      "provider_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0
+    },
+    {
+      "control_id": "SAFETY-PC-008",
+      "mutation_id": "REQ-MUT-010",
+      "dimension": "scope",
+      "severity": "P0",
+      "expected_decision": "FAIL_CLOSED",
+      "actual_decision": "REVIEW_REQUIRED",
+      "actual_reason_codes": [
+        "SCOPE_EXPANSION_REVIEW",
+        "OBVIOUS_SEMANTIC_MUTATION"
+      ],
+      "detected": true,
+      "accept_escape": false,
+      "quality_gate_version": "4.3-requirement-quality-gate-1",
+      "provider_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0
+    },
+    {
+      "control_id": "SAFETY-PC-009",
+      "mutation_id": "REQ-MUT-011",
+      "dimension": "scope",
+      "severity": "P0",
+      "expected_decision": "FAIL_CLOSED",
+      "actual_decision": "REVIEW_REQUIRED",
+      "actual_reason_codes": [
+        "SCOPE_EXPANSION_REVIEW",
+        "OBVIOUS_SEMANTIC_MUTATION"
+      ],
+      "detected": true,
+      "accept_escape": false,
+      "quality_gate_version": "4.3-requirement-quality-gate-1",
+      "provider_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0
+    },
+    {
+      "control_id": "SAFETY-PC-010",
+      "mutation_id": "REQ-MUT-022",
+      "dimension": "table_header",
+      "severity": "P0",
+      "expected_decision": "FAIL_CLOSED",
+      "actual_decision": "REVIEW_REQUIRED",
+      "actual_reason_codes": [
+        "OBVIOUS_SEMANTIC_MUTATION"
+      ],
+      "detected": true,
+      "accept_escape": false,
+      "quality_gate_version": "4.3-requirement-quality-gate-1",
+      "provider_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0
+    },
+    {
+      "control_id": "SAFETY-PC-011",
+      "mutation_id": "REQ-MUT-013",
+      "dimension": "status",
+      "severity": "P0",
+      "expected_decision": "FAIL_CLOSED",
+      "actual_decision": "REVIEW_REQUIRED",
+      "actual_reason_codes": [
+        "STATUS_DISTORTION",
+        "OBVIOUS_SEMANTIC_MUTATION"
+      ],
+      "detected": true,
+      "accept_escape": false,
+      "quality_gate_version": "4.3-requirement-quality-gate-1",
+      "provider_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0
+    },
+    {
+      "control_id": "SAFETY-PC-012",
+      "mutation_id": "REQ-MUT-016",
+      "dimension": "temporal",
+      "severity": "P0",
+      "expected_decision": "FAIL_CLOSED",
+      "actual_decision": "REVIEW_REQUIRED",
+      "actual_reason_codes": [
+        "NUMBER_DISTORTION",
+        "STATUS_DISTORTION",
+        "OBVIOUS_SEMANTIC_MUTATION"
+      ],
+      "detected": true,
+      "accept_escape": false,
+      "quality_gate_version": "4.3-requirement-quality-gate-1",
+      "provider_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0
+    }
+  ],
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0
+}

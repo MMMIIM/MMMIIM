@@ -2,12 +2,14 @@ import { randomUUID } from 'node:crypto';
 import http from 'node:http';
 import {
   SEMANTIC_TASK_TYPES,
+  SEMANTIC_TASK_CONTRACTS,
   SEMANTIC_GATEWAY_ERROR_CODES,
   getSemanticTaskContract,
   createGatewayEnvelope,
   REQUIREMENT_CANDIDATE_SCHEMA,
   REQUIREMENT_CANDIDATE_SCHEMA_VERSION,
-  REQUIREMENT_CANDIDATE_SCHEMA_SHA256
+  REQUIREMENT_CANDIDATE_SCHEMA_SHA256,
+  schemaSha256
 } from '../../../packages/semantic-contracts/index.js';
 import { createMockProvider } from './provider/mock-provider.js';
 import { OpenAICompatibleProvider } from './provider/openai-compatible-provider.js';
@@ -19,6 +21,12 @@ import {
 } from '../../../packages/semantic-contracts/runtime-config.js';
 
 const safeErrorCodes = new Set(SEMANTIC_GATEWAY_ERROR_CODES);
+const semanticOutputErrorCodes = new Set([
+  'OUTPUT_SCHEMA_INVALID',
+  'MAPPING_OUTPUT_SCHEMA_INVALID',
+  'MAPPING_SEMANTIC_INCONSISTENT',
+  'SUPPORT_SPAN_INVALID'
+]);
 
 function parseBooleanEnv(value, fallback) {
   if (value === true || value === 'true') return true;
@@ -43,7 +51,7 @@ function generationConfigFromEnv(env = process.env) {
     top_p: parseFiniteEnv(env.SEMANTIC_GATEWAY_TOP_P, 0.9),
     top_k: parsePositiveIntegerEnv(env.SEMANTIC_GATEWAY_TOP_K, 20),
     frequency_penalty: parseFiniteEnv(env.SEMANTIC_GATEWAY_FREQUENCY_PENALTY, 0),
-    max_tokens: parsePositiveIntegerEnv(env.SEMANTIC_GATEWAY_MAX_TOKENS, 3200),
+    max_tokens: parsePositiveIntegerEnv(env.SEMANTIC_GATEWAY_MAX_TOKENS, 4800),
     stream: parseBooleanEnv(env.SEMANTIC_GATEWAY_STREAM, false),
     n: parsePositiveIntegerEnv(env.SEMANTIC_GATEWAY_N, 1)
   };
@@ -53,25 +61,66 @@ function configFromEnv(env = process.env) {
   const runtime = readSemanticGatewayRuntimeConfig(env);
   const providerName = runtime.provider;
   const timeoutMs = runtime.timeoutMs;
+  const generationConfig = generationConfigFromEnv(env);
   const runtimeValidation = validateSemanticGatewayRuntimeConfig(env, {
     requireProvider: providerName === 'openai_compatible'
+  });
+  const provider = providerName === 'mock'
+    ? createMockProvider({ model: runtime.model })
+    : new OpenAICompatibleProvider({
+      baseUrl: runtime.providerApiBase,
+      apiKey: runtime.providerApiKey,
+      model: runtime.model,
+      timeoutMs,
+      generationConfig,
+      logger: console
+    });
+  const deepseekOfficialProvider = new OpenAICompatibleProvider({
+    baseUrl: runtime.deepseekOfficialApiBase,
+    apiKey: runtime.deepseekOfficialApiKey,
+    model: runtime.deepseekOfficialFactModel,
+    timeoutMs,
+    endpointPath: '/responses',
+    protocol: 'responses',
+    providerName: 'deepseek_official',
+    generationConfig: {
+      ...generationConfig,
+      enable_thinking: false
+    },
+    logger: console
+  });
+  const deepseekConfigured = Boolean(
+    runtime.deepseekOfficialApiBase
+      && runtime.deepseekOfficialApiKey
+      && runtime.deepseekOfficialFactModel
+  );
+  // Fact extraction and Candidate V2 share the same explicitly configured
+  // Official DeepSeek boundary.  Candidate V2 is intentionally mapped even
+  // when the Official provider is not configured so the router fails closed
+  // through the adapter instead of falling back to the default provider.
+  const taskProviders = Object.freeze({
+    ...(providerName === 'mock' && !deepseekConfigured ? {} : {
+      evidence_fact_extraction: deepseekOfficialProvider
+    }),
+    evidence_fact_candidate_v2: deepseekOfficialProvider,
+    evidence_fact_candidate_v2_1: deepseekOfficialProvider,
+    evidence_fact_candidate_v2_2: deepseekOfficialProvider
   });
   return {
     providerName,
     apiKey: runtime.serviceApiKey,
-    provider: providerName === 'mock'
-      ? createMockProvider({ model: runtime.model })
-      : new OpenAICompatibleProvider({
-        baseUrl: runtime.providerApiBase,
-        apiKey: runtime.providerApiKey,
-        model: runtime.model,
-        timeoutMs,
-        generationConfig: generationConfigFromEnv(env),
-        logger: console
-      }),
+    provider,
+    generationConfig,
+    taskProviders,
+    deepseekOfficialProvider,
     timeoutMs,
     runtimeValidation,
-    runtimeSummary: safeSemanticGatewayRuntimeSummary(runtime)
+    runtimeSummary: {
+      ...safeSemanticGatewayRuntimeSummary(runtime),
+      fact_provider: 'deepseek_official',
+      fact_provider_configured: deepseekConfigured,
+      fact_provider_endpoint: '/responses'
+    }
   };
 }
 
@@ -89,7 +138,9 @@ function errorCode(error) {
 
 function statusFor(code) {
   if (code === 'AUTH_INVALID') return 401;
-  if (code === 'TASK_UNSUPPORTED' || code === 'SEMANTIC_CONTRACT_DRIFT' || code === 'INPUT_SCHEMA_INVALID' || code === 'OUTPUT_SCHEMA_INVALID' || code === 'SUPPORT_SPAN_INVALID') return 422;
+  if (code === 'TASK_UNSUPPORTED' || code === 'SEMANTIC_CONTRACT_DRIFT' || code === 'INPUT_SCHEMA_INVALID'
+    || code === 'OUTPUT_SCHEMA_INVALID' || code === 'MAPPING_OUTPUT_SCHEMA_INVALID'
+    || code === 'MAPPING_SEMANTIC_INCONSISTENT' || code === 'SUPPORT_SPAN_INVALID') return 422;
   if (code === 'PROVIDER_TIMEOUT') return 504;
   if (code === 'PROVIDER_HTTP_FAILURE' || code === 'PROVIDER_UNAVAILABLE' || code === 'PROVIDER_OUTPUT_INVALID') return 502;
   return 500;
@@ -106,6 +157,8 @@ function safeMessage(code) {
     PROVIDER_HTTP_FAILURE: 'Semantic provider returned an HTTP failure.',
     PROVIDER_OUTPUT_INVALID: 'Semantic provider output failed strict JSON validation.',
     OUTPUT_SCHEMA_INVALID: 'Semantic output failed the task schema.',
+    MAPPING_OUTPUT_SCHEMA_INVALID: 'Mapping semantic output failed the task schema.',
+    MAPPING_SEMANTIC_INCONSISTENT: 'Mapping semantic output is internally inconsistent.',
     SUPPORT_SPAN_INVALID: 'Semantic support span is not source-bound.',
     INTERNAL_GATEWAY_ERROR: 'Semantic gateway internal error.'
   }[code] || 'Semantic gateway error.';
@@ -142,6 +195,35 @@ function legacySchemaDetected(value, observedTokens = []) {
 }
 
 const REQUIREMENT_CANDIDATE_FIELDS = Object.freeze([...REQUIREMENT_CANDIDATE_SCHEMA.required]);
+
+function candidateSchemaForContract(contract) {
+  const properties = contract?.data_schema?.properties;
+  if (!properties || typeof properties !== 'object' || Array.isArray(properties)) return null;
+  const arrayProperty = Object.values(properties).find(property => (
+    property && property.type === 'array' && property.items
+      && property.items.type === 'object'
+  ));
+  return arrayProperty?.items || null;
+}
+
+/**
+ * Project the actual registered semantic task contracts into safe runtime
+ * identity metadata.  This is an observer projection only; it never mutates
+ * or replaces the registry and intentionally exposes no schema bodies.
+ */
+export function buildSemanticTaskIdentities(taskRegistry = SEMANTIC_TASK_CONTRACTS) {
+  return Object.fromEntries(Object.entries(taskRegistry || {}).map(([taskType, contract]) => {
+    const candidateSchema = candidateSchemaForContract(contract);
+    return [taskType, {
+      task_type: contract?.task_type || taskType,
+      contract_version: contract?.contract_version || null,
+      candidate_schema_sha256: candidateSchema ? schemaSha256(candidateSchema) : null,
+      task_data_schema_sha256: contract?.data_schema ? schemaSha256(contract.data_schema) : null,
+      instruction_hash: typeof contract?.instruction_hash === 'string'
+        ? contract.instruction_hash : 'NOT_AVAILABLE'
+    }];
+  }));
+}
 
 function observedType(value) {
   if (value === null) return 'null';
@@ -227,26 +309,96 @@ function unavailableStructureSummary() {
   };
 }
 
+function safeMappingSemanticDiagnostic(value) {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return null;
+  const dimensions = value.parsed_semantic_fields?.dimensions;
+  return {
+    result_index: Number.isInteger(value.result_index) ? value.result_index : null,
+    response_keys: Array.isArray(value.response_keys)
+      ? value.response_keys.filter(key => typeof key === 'string').slice(0, 20).map(key => key.slice(0, 80))
+      : [],
+    parsed_semantic_fields: {
+      decision: typeof value.parsed_semantic_fields?.decision === 'string'
+        ? value.parsed_semantic_fields.decision.slice(0, 40) : null,
+      dimensions: dimensions && typeof dimensions === 'object' && !Array.isArray(dimensions)
+        ? Object.fromEntries(Object.entries(dimensions).slice(0, 20).map(([key, item]) => [
+          key.slice(0, 80), typeof item === 'string' ? item.slice(0, 40) : null
+        ]))
+        : {}
+    },
+    exact_failure_path: typeof value.exact_failure_path === 'string'
+      ? value.exact_failure_path.slice(0, 240) : null,
+    consistency_rule: typeof value.consistency_rule === 'string'
+      ? value.consistency_rule.slice(0, 120) : null
+  };
+}
+
 function safeValidationErrors(errors) {
   return Array.isArray(errors) ? errors.slice(0, 100).map(error => ({
+    stage: typeof error?.stage === 'string' ? error.stage.slice(0, 40) : null,
     path: typeof error?.path === 'string' ? error.path.slice(0, 200) : null,
-    validator_code: typeof error?.validator_code === 'string' ? error.validator_code.slice(0, 80) : null,
+    keyword: typeof error?.keyword === 'string'
+      ? error.keyword.slice(0, 80)
+      : typeof error?.validator_code === 'string' ? error.validator_code.slice(0, 80) : null,
+    actual_type: typeof error?.actual_type === 'string'
+      ? error.actual_type.slice(0, 80)
+      : typeof error?.observed_category === 'string' ? error.observed_category.slice(0, 80) : null,
+    validator_code: typeof error?.validator_code === 'string'
+      ? error.validator_code.slice(0, 80)
+      : typeof error?.keyword === 'string' ? error.keyword.slice(0, 80) : null,
     expected: typeof error?.expected === 'string' ? error.expected.slice(0, 240) : null,
-    observed_category: typeof error?.observed_category === 'string' ? error.observed_category.slice(0, 80) : null,
+    ...(typeof error?.additional_property === 'string' ? {
+      additional_property: error.additional_property.slice(0, 120)
+    } : {}),
+    observed_category: typeof error?.observed_category === 'string'
+      ? error.observed_category.slice(0, 80)
+      : typeof error?.actual_type === 'string' ? error.actual_type.slice(0, 80) : null,
+    ...(typeof error?.safe_offending_fragment === 'string'
+      ? { safe_offending_fragment: error.safe_offending_fragment.slice(0, 240) } : {}),
     message: typeof error?.message === 'string' ? error.message.slice(0, 240) : null
   })) : [];
 }
 
-function safeProbeDiagnostics({ providerAudit = null, validationErrors = [], envelopeErrors = [], parsedJson = null, taskType = null } = {}) {
+function safeProbeDiagnostics({ providerAudit = null, gatewayHttpStatus = null, gatewayErrorCode = null, validationErrors = [], envelopeErrors = [], parsedJson = null, taskType = null, configuredProvider = null, configuredModel = null } = {}) {
   const audit = providerAudit && typeof providerAudit === 'object' ? providerAudit : {};
+  const semanticErrorCode = typeof audit.semantic_error_code === 'string'
+    ? audit.semantic_error_code
+    : semanticOutputErrorCodes.has(gatewayErrorCode) ? gatewayErrorCode : null;
   const parsed = audit.parsed_json ?? parsedJson;
   return {
+    task_type: typeof taskType === 'string' ? taskType.slice(0, 80) : null,
     json_parse_success: typeof audit.json_parse_success === 'boolean' ? audit.json_parse_success : null,
     markdown_fence_present: typeof audit.markdown_fence_present === 'boolean' ? audit.markdown_fence_present : null,
+    gateway_http_status: Number.isInteger(gatewayHttpStatus) ? gatewayHttpStatus : null,
+    gateway_error_code: typeof gatewayErrorCode === 'string' ? gatewayErrorCode.slice(0, 120) : null,
+    semantic_error_code: typeof semanticErrorCode === 'string' ? semanticErrorCode.slice(0, 120) : null,
+    provider_error_code: typeof audit.provider_error_code === 'string'
+      ? audit.provider_error_code.slice(0, 120)
+      : typeof audit.safe_error_code === 'string' ? audit.safe_error_code.slice(0, 120) : null,
     provider_http_status: Number.isInteger(audit.http_status) ? audit.http_status : null,
+    latency_ms: Number.isInteger(audit.latency_ms) && audit.latency_ms >= 0 ? audit.latency_ms : null,
+    provider: typeof audit.provider === 'string' ? audit.provider : null,
+    model: typeof audit.model === 'string' ? audit.model : null,
+    configured_provider: typeof configuredProvider === 'string' ? configuredProvider : null,
+    configured_model: typeof configuredModel === 'string' ? configuredModel : null,
+    requested_provider: typeof audit.requested_provider === 'string' ? audit.requested_provider : (typeof audit.provider === 'string' ? audit.provider : null),
+    requested_model: typeof audit.requested_model === 'string' ? audit.requested_model : (typeof audit.model === 'string' ? audit.model : null),
+    response_provider: typeof audit.response_provider === 'string' ? audit.response_provider : null,
+    response_model: typeof audit.response_model === 'string' ? audit.response_model : null,
+    endpoint: typeof audit.endpoint === 'string' ? audit.endpoint : null,
+    configured_default_max_tokens: Number.isInteger(audit.configured_default_max_tokens)
+      ? audit.configured_default_max_tokens : null,
+    task_override_applied: typeof audit.task_override_applied === 'boolean' ? audit.task_override_applied : null,
+    resolved_max_output_tokens: Number.isInteger(audit.resolved_max_output_tokens)
+      ? audit.resolved_max_output_tokens : null,
     provider_adapter_invoked: audit.provider_adapter_invoked === true,
     fetch_invoked: audit.fetch_invoked === true,
     provider_http_reached: audit.provider_http_reached === true,
+    empty_domain_namespace_normalized_count: Number.isInteger(audit.empty_domain_namespace_normalized_count)
+      && audit.empty_domain_namespace_normalized_count >= 0
+      ? audit.empty_domain_namespace_normalized_count : 0,
+    retry_attempt: Number.isInteger(audit.retry_attempt) && audit.retry_attempt >= 0 ? audit.retry_attempt : null,
+    retry_reason: typeof audit.retry_reason === 'string' ? audit.retry_reason.slice(0, 120) : null,
     current_stage: typeof audit.current_stage === 'string' ? audit.current_stage : null,
     failure_stage: typeof audit.failure_stage === 'string' ? audit.failure_stage : null,
     error_name: typeof audit.error_name === 'string' ? audit.error_name : null,
@@ -259,7 +411,6 @@ function safeProbeDiagnostics({ providerAudit = null, validationErrors = [], env
     prompt_tokens: Number.isInteger(audit.prompt_tokens) ? audit.prompt_tokens : null,
     completion_tokens: Number.isInteger(audit.completion_tokens) ? audit.completion_tokens : null,
     total_tokens: Number.isInteger(audit.total_tokens) ? audit.total_tokens : null,
-    response_model: typeof audit.response_model === 'string' ? audit.response_model : null,
     response_id: typeof audit.response_id === 'string' ? audit.response_id : null,
     provider_trace_id: typeof audit.provider_trace_id === 'string' ? audit.provider_trace_id : null,
     semantic_contract_version: typeof audit.semantic_contract_version === 'string' ? audit.semantic_contract_version : null,
@@ -308,6 +459,37 @@ function safeProbeDiagnostics({ providerAudit = null, validationErrors = [], env
       }
       : null,
     schema_validation_errors: safeValidationErrors(validationErrors),
+    fact_semantic_diagnostic: audit.fact_semantic_diagnostic && typeof audit.fact_semantic_diagnostic === 'object'
+      ? {
+        stage: audit.fact_semantic_diagnostic.stage === 'FACT' ? 'FACT' : null,
+        diagnostic: audit.fact_semantic_diagnostic.diagnostic === 'FACT_SEMANTIC_UNKNOWN_FIELDS_REJECTED'
+          ? 'FACT_SEMANTIC_UNKNOWN_FIELDS_REJECTED' : null,
+        unknown_fields: Array.isArray(audit.fact_semantic_diagnostic.unknown_fields)
+          ? audit.fact_semantic_diagnostic.unknown_fields
+            .filter(field => typeof field === 'string').slice(0, 100).map(field => field.slice(0, 120))
+          : []
+      }
+      : null,
+    fact_normalization_diagnostic: audit.fact_normalization_diagnostic && typeof audit.fact_normalization_diagnostic === 'object'
+      ? {
+        projection_invoked: audit.fact_normalization_diagnostic.projection_invoked === true,
+        normalizer_invoked: audit.fact_normalization_diagnostic.normalizer_invoked === true,
+        pre_normalization_fact_keys: Array.isArray(audit.fact_normalization_diagnostic.pre_normalization_fact_keys)
+          ? audit.fact_normalization_diagnostic.pre_normalization_fact_keys.slice(0, 100).map(keys => Array.isArray(keys)
+            ? keys.filter(key => typeof key === 'string').slice(0, 80).map(key => key.slice(0, 120)) : []) : [],
+        post_normalization_fact_keys: Array.isArray(audit.fact_normalization_diagnostic.post_normalization_fact_keys)
+          ? audit.fact_normalization_diagnostic.post_normalization_fact_keys.slice(0, 100).map(keys => Array.isArray(keys)
+            ? keys.filter(key => typeof key === 'string').slice(0, 80).map(key => key.slice(0, 120)) : []) : [],
+        unexpected_property_names: Array.isArray(audit.fact_normalization_diagnostic.unexpected_property_names)
+          ? audit.fact_normalization_diagnostic.unexpected_property_names.filter(key => typeof key === 'string').slice(0, 100).map(key => key.slice(0, 120)) : [],
+        allowed_property_names: Array.isArray(audit.fact_normalization_diagnostic.allowed_property_names)
+          ? audit.fact_normalization_diagnostic.allowed_property_names.filter(key => typeof key === 'string').slice(0, 100).map(key => key.slice(0, 120)) : [],
+        removed_property_names: Array.isArray(audit.fact_normalization_diagnostic.removed_property_names)
+          ? audit.fact_normalization_diagnostic.removed_property_names.filter(key => typeof key === 'string').slice(0, 100).map(key => key.slice(0, 120)) : [],
+        exact_validation_path: typeof audit.fact_normalization_diagnostic.exact_validation_path === 'string'
+          ? audit.fact_normalization_diagnostic.exact_validation_path.slice(0, 240) : null
+      } : null,
+    mapping_semantic_diagnostic: safeMappingSemanticDiagnostic(audit.mapping_semantic_diagnostic),
     envelope_validation_errors: safeValidationErrors(envelopeErrors),
     legacy_schema_detected: legacySchemaDetected(parsed, audit.legacy_schema_tokens_observed),
     structural_summary: taskType === 'requirement_extraction'
@@ -316,8 +498,12 @@ function safeProbeDiagnostics({ providerAudit = null, validationErrors = [], env
   };
 }
 
-export function createStandaloneGatewayHandler({ env = process.env, config = configFromEnv(env), logger = console } = {}) {
-  const router = config.taskRouter || createSemanticTaskRouter({ provider: config.provider });
+export function createStandaloneGatewayHandler({ env = process.env, config = configFromEnv(env), logger = console, taskRegistry = SEMANTIC_TASK_CONTRACTS } = {}) {
+  const router = config.taskRouter || createSemanticTaskRouter({
+    provider: config.provider,
+    providers: config.taskProviders,
+    generationConfig: config.generationConfig
+  });
   return async function handle(request, response) {
     const requestId = randomUUID();
     const started = Date.now();
@@ -338,6 +524,8 @@ export function createStandaloneGatewayHandler({ env = process.env, config = con
     }
     if (request.method === 'GET' && request.url === '/info') {
       const requirementContract = getSemanticTaskContract('requirement_extraction');
+      const semanticTasks = buildSemanticTaskIdentities(taskRegistry);
+      const runtimeTaskTypes = Object.keys(taskRegistry || {});
       const serviceVersion = String(env.SEMANTIC_GATEWAY_BUILD_VERSION || env.SEMANTIC_GATEWAY_VERSION || '0.1.0');
       const buildRevision = String(env.SEMANTIC_GATEWAY_COMMIT || env.GIT_COMMIT || 'dev-working-tree');
       const workingTreeDirty = env.SEMANTIC_GATEWAY_WORKTREE_DIRTY === 'true'
@@ -353,15 +541,20 @@ export function createStandaloneGatewayHandler({ env = process.env, config = con
         version: serviceVersion,
         commit: buildRevision,
         gateway_schema_version: 'semantic-gateway-envelope-v1',
-        task_registry_loaded: SEMANTIC_TASK_TYPES.length > 0,
-        task_types: SEMANTIC_TASK_TYPES,
+        task_registry_loaded: runtimeTaskTypes.length > 0,
+        task_types: runtimeTaskTypes,
         requirement_extraction_contract_version: requirementContract?.contract_version || null,
         requirement_extraction_prompt_version: promptVersion,
         requirement_extraction_prompt_hash: promptHash,
         // Historical field name retained as a read-only alias.
         requirement_extraction_instruction_hash: promptHash,
         candidate_schema_contract_version: REQUIREMENT_CANDIDATE_SCHEMA_VERSION,
-        candidate_schema_sha256: REQUIREMENT_CANDIDATE_SCHEMA_SHA256
+        candidate_schema_sha256: REQUIREMENT_CANDIDATE_SCHEMA_SHA256,
+        semantic_tasks: semanticTasks,
+        fact_provider: config.runtimeSummary.fact_provider,
+        fact_provider_configured: config.runtimeSummary.fact_provider_configured,
+        fact_provider_endpoint: config.runtimeSummary.fact_provider_endpoint,
+        fact_model: config.runtimeSummary.deepseek_official_fact_model
       });
       return;
     }
@@ -394,8 +587,15 @@ export function createStandaloneGatewayHandler({ env = process.env, config = con
         request_id: requestId,
         task_type: taskType,
         contract_version: contract.contract_version,
-        provider: config.providerName,
-        model: config.provider?.model || 'mock-semantic-v1',
+        provider: routed.provider_audit?.provider || config.providerName,
+        model: routed.provider_audit?.model || config.provider?.model || 'mock-semantic-v1',
+        requested_provider: routed.provider_audit?.requested_provider || routed.provider_audit?.provider || config.providerName,
+        requested_model: routed.provider_audit?.requested_model || routed.provider_audit?.model || config.provider?.model || 'mock-semantic-v1',
+        response_model: routed.provider_audit?.response_model || null,
+        endpoint: routed.provider_audit?.endpoint || null,
+        configured_default_max_tokens: routed.provider_audit?.configured_default_max_tokens ?? null,
+        task_override_applied: routed.provider_audit?.task_override_applied ?? null,
+        resolved_max_output_tokens: routed.provider_audit?.resolved_max_output_tokens ?? null,
         latency_ms: elapsed,
         http_status: 200,
         input_bytes: Buffer.byteLength(inputs.task_payload_json),
@@ -403,7 +603,13 @@ export function createStandaloneGatewayHandler({ env = process.env, config = con
       });
       const result = { data: { outputs: { response_payload_json: JSON.stringify(envelope) } } };
       if (diagnosticsRequested) {
-        result.probe_diagnostics = safeProbeDiagnostics({ providerAudit: routed.provider_audit, taskType });
+        result.probe_diagnostics = safeProbeDiagnostics({
+          providerAudit: routed.provider_audit,
+          gatewayHttpStatus: 200,
+          taskType,
+          configuredProvider: taskType.startsWith('evidence_fact_') ? 'deepseek_official' : config.providerName,
+          configuredModel: taskType.startsWith('evidence_fact_') ? config.runtimeSummary?.deepseek_official_fact_model || null : config.provider?.model
+        });
       }
       writeJson(response, 200, result);
     } catch (error) {
@@ -412,7 +618,14 @@ export function createStandaloneGatewayHandler({ env = process.env, config = con
       logger?.warn?.('Semantic gateway request failed', {
         request_id: requestId,
         task_type: taskType || null,
-        provider: config.providerName,
+        provider: error?.provider_audit?.provider || config.providerName,
+        requested_provider: error?.provider_audit?.requested_provider || error?.provider_audit?.provider || config.providerName,
+        requested_model: error?.provider_audit?.requested_model || error?.provider_audit?.model || null,
+        response_model: error?.provider_audit?.response_model || null,
+        endpoint: error?.provider_audit?.endpoint || null,
+        configured_default_max_tokens: error?.provider_audit?.configured_default_max_tokens ?? null,
+        task_override_applied: error?.provider_audit?.task_override_applied ?? null,
+        resolved_max_output_tokens: error?.provider_audit?.resolved_max_output_tokens ?? null,
         latency_ms: elapsed,
         error_classification: code
       });
@@ -420,9 +633,13 @@ export function createStandaloneGatewayHandler({ env = process.env, config = con
       if (diagnosticsRequested) {
         result.probe_diagnostics = safeProbeDiagnostics({
           providerAudit: error?.provider_audit,
+          gatewayHttpStatus: statusFor(code),
+          gatewayErrorCode: code,
           validationErrors: error?.validation_diagnostics,
           envelopeErrors: error?.envelope_validation_diagnostics,
-          taskType
+          taskType,
+          configuredProvider: taskType?.startsWith('evidence_fact_') ? 'deepseek_official' : config.providerName,
+          configuredModel: taskType?.startsWith('evidence_fact_') ? config.runtimeSummary?.deepseek_official_fact_model || null : config.provider?.model
         });
       }
       writeJson(response, statusFor(code), result);

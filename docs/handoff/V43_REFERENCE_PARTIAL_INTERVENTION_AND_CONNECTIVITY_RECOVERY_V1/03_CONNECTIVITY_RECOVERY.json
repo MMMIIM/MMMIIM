@@ -1,0 +1,23 @@
+{
+  "artifact_type": "V43_EMBEDDING_CONNECTIVITY_RECOVERY",
+  "status": "BLOCKED_EMBEDDING_PROVIDER_CONNECTIVITY",
+  "provider": "siliconflow",
+  "model": "Qwen/Qwen3-Embedding-0.6B",
+  "version": "1",
+  "dimension": 1024,
+  "endpoint_configured": "https://api.siliconflow.cn/v1",
+  "transport": "direct",
+  "attempts": [
+    {
+      "attempt": 1,
+      "reached": false,
+      "error_code": "EMBEDDING_NETWORK_ERROR",
+      "network_class": "SANDBOX_NETWORK_OR_HOST_POLICY"
+    }
+  ],
+  "max_attempts": 3,
+  "retries_performed": 0,
+  "provider_switch": false,
+  "model_switch": false,
+  "note": "Escalated execution was rejected by the execution policy; no workaround attempted."
+}

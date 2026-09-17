@@ -1,0 +1,36 @@
+{
+  "artifact_type": "V43_SCOPE_CONTROL_FLOW_DIFF",
+  "owner": "backend/src/requirement-parse-service.js",
+  "pre_fix_behavior": "Any REQUIREMENT_SCOPE_EXCLUDED raised from candidate processing aborted the parse job and was not candidate-scoped.",
+  "post_fix_behavior": "Each candidate is resolved then validated; REQUIREMENT_SCOPE_EXCLUDED is rejected and audited while the chunk completes. Other resolver/scope errors remain fatal.",
+  "allowed_scope": "Candidate-level source scope filtering only; no semantic, prompt, schema, Gold, Requirement, or Provider contract change.",
+  "audit_fields": [
+    "chunk_id",
+    "chunk_number",
+    "candidate_index",
+    "candidate_identity",
+    "resolved_source_span",
+    "source_role",
+    "scope_decision",
+    "rejection_reason",
+    "source_hash"
+  ],
+  "counters": [
+    "raw_candidate_count",
+    "scope_accepted_count",
+    "scope_rejected_count",
+    "success_empty_count",
+    "success_empty_after_scope_filter_count"
+  ],
+  "changed_files": [
+    "backend/src/requirement-parse-service.js",
+    "backend/test/requirement-resilience.test.js"
+  ],
+  "regression_proof": {
+    "focused_requirement_resilience": "19/19 PASS",
+    "relevant_requirement_suites": "128/128 PASS",
+    "provider_calls_during_tests": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0
+  }
+}

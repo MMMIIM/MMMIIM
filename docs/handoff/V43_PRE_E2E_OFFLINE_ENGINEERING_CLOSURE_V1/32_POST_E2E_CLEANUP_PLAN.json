@@ -1,0 +1,2135 @@
+{
+  "artifact_type": "V43_POST_E2E_STORAGE_CLEANUP_PLAN",
+  "generated_at_utc": "2026-09-15T17:23:01.563Z",
+  "status": "READ_ONLY_RECOMMENDATIONS_ONLY",
+  "policy": {
+    "CANONICAL": "Retain; source/schema/governance authority.",
+    "REPRODUCIBILITY_REQUIRED": "Retain through repeatability and review; no deletion.",
+    "ARCHIVE_AFTER_E2E": "Archive candidate only after E2E completion and explicit retention approval.",
+    "REGENERABLE_AFTER_E2E": "May be regenerated from lockfiles/build inputs after E2E; no action taken.",
+    "DELETE_SAFE_AFTER_E2E": "Only if independently proven disposable and unreferenced; none asserted safe by this audit.",
+    "UNKNOWN_DO_NOT_TOUCH": "No action without owner/authority evidence."
+  },
+  "estimated_archiveable_size_bytes": 237148565,
+  "estimated_safely_deletable_size_bytes": 0,
+  "unknown_risk_size_bytes": 84800987,
+  "archive_after_e2e_candidates_top_100": [
+    {
+      "path": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/09_R0_RESULTS.json",
+      "bytes": 13259534,
+      "sha256": "e4514e226a9d72d6ee66a9d08184826582d02b73275261324bbf95c33089cbe6",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_RETRIEVAL_SCHEMA_PARITY_CORE6_REPLAY_V2/09_R0_RESULTS.json",
+      "bytes": 13259534,
+      "sha256": "e4514e226a9d72d6ee66a9d08184826582d02b73275261324bbf95c33089cbe6",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/10_R1_RESULTS.json",
+      "bytes": 13259519,
+      "sha256": "0aaa30b27a93e521209de0227ae8462a23d1f5667a7d9d7fd74d95a9ae401a15",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_RETRIEVAL_SCHEMA_PARITY_CORE6_REPLAY_V2/10_R1_RESULTS.json",
+      "bytes": 13259519,
+      "sha256": "0aaa30b27a93e521209de0227ae8462a23d1f5667a7d9d7fd74d95a9ae401a15",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_RETRIEVAL_SCHEMA_PARITY_CORE6_REPLAY_V2/06_R1_HYGIENE_RESULTS.json",
+      "bytes": 13259399,
+      "sha256": "7c3504735bfc4cce20161b37b7995724ade88428d5c06e712c3341170185a6e5",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_RETRIEVAL_SCHEMA_PARITY_CORE6_REPLAY_V2/05_R0_CURRENT_RESULTS.json",
+      "bytes": 13259362,
+      "sha256": "e0847941f3513011c129c6152098abefe24b1b136f6c207a30d1825b604ee182",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_1_TARGETED/06_FACT_EXTRACTION_REPORT.json",
+      "bytes": 8919774,
+      "sha256": "261478d182b9ff2fcbb3d938c47641e39d6c314fb083fb192c2150c04dbe0f9e",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_1_TARGETED/08_GPT_REVIEW_PACKET.json",
+      "bytes": 8652958,
+      "sha256": "63653ee7c64f2e6245a1259f8ab9de8444756368d3a4cd4bb58277e6e879e9bd",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_1_TRUNCATION_CLOSURE/10_GPT_REVIEW_PACKET.json",
+      "bytes": 8652824,
+      "sha256": "e8e07712ac3f183ba322a975d125d77e176296f8a3b08ba06fb5d599b7e4ba71",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_1_TARGETED/07_REAL_PDF_PILOT_CANDIDATES.json",
+      "bytes": 8652778,
+      "sha256": "afe560e73413f0d11dc3eebf913cdb1e5d4a7a75dbff7e29b63fa2f5a08a8ad9",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_RESPONSE_ROUTER_V2_2_1_OVERNIGHT_CLOSURE/04_FULL_REPLAY.json",
+      "bytes": 7745713,
+      "sha256": "c9c23810001d9db134ae6108530370e5c791ba5a0b9135b2a1ff776f2d92a23f",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_RESPONSE_ROUTER_V2_2_1_OVERNIGHT_CLOSURE/05_V21_V221_DELTA.json",
+      "bytes": 7489223,
+      "sha256": "048a2938a329415ca03adfde082e8013d7e4555978d62ae79900390854925f68",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_2_E2E_GATE_TARGETED/06_FACT_EXTRACTION_REPORT.json",
+      "bytes": 7039483,
+      "sha256": "9ea21f4e4d1d870c08ee76e27f78cb7b8899032c45967911e27e3e608eae0190",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_RESPONSE_ROUTER_V2_2_BOUNDED_SEMANTIC_CLOSURE/04_ROUTER_V2_2_REPLAY.json",
+      "bytes": 6834169,
+      "sha256": "dddd07786095fc39b0effe229d8c294ce04ef22efd3cd2ef1cb4277584e9f53e",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_2_E2E_GATE_TARGETED/08_GPT_REVIEW_PACKET.json",
+      "bytes": 6746177,
+      "sha256": "54d66b397254f2c58b39fbab3d0b874bbb626559f4913cc8ecf193e16b59d491",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_2_E2E_GATE_TARGETED/07_REAL_PDF_PILOT_CANDIDATES.json",
+      "bytes": 6745997,
+      "sha256": "1b0ad29f98346b360574d65276e2923587f0dfd0623c47d670769b428694b321",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_DAYTIME_ROUTER_V2_2_2_AND_FACT_READINESS/05_ROUTER_FULL_REPLAY.json",
+      "bytes": 6352226,
+      "sha256": "527c5c207db5cffea036588294f5800a619a3e5f6cf4764da71a560e31bd2589",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_DAYTIME_ROUTER_V2_2_2_AND_FACT_READINESS/06_ROUTER_SEMANTIC_DELTA.json",
+      "bytes": 6095587,
+      "sha256": "564457786a361b1dfcbe550cab6892e45c78ed7af2c93a4c18b6ed2bfa9af99b",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_2_E2E_GATE/09_GPT_SEMANTIC_REVIEW_PACKET.json",
+      "bytes": 4313409,
+      "sha256": "fb4ef13088194dffbb8cd918d2b8de0294d6e422d21c88db3bfa102b09fb07bb",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_REAL_E2E_CASE_01_REQUIREMENT_HUMAN_GATE/03_TB006_REQUIREMENT_RUN_V2.json",
+      "bytes": 4083530,
+      "sha256": "3d10f1fa67ccd4a8c1ee64ff1587468551a7098fbd9f581bcc4c7e810f90ab70",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_DAYTIME_REAL_E2E_FOUNDATION_AND_HUMAN_GATE_MASTER_V1/03_TB006_POST_RECERT_REQUIREMENTS.json",
+      "bytes": 4077259,
+      "sha256": "5e7cf764f1e501fc0b1b81c5a337929d6950e414b31a33acd7239c009aa459db",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_OVERNIGHT_REQUIREMENT_SCOPE_RECERT_E2E_FOUNDATION_V1/08_TB006_REQUIREMENT_RUN_V3.json",
+      "bytes": 4069623,
+      "sha256": "bd08de5b85747b59bc91a2275d979a0de85b66d5b34e6bfc72f3986a9e5ef54d",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_EVAL_INGEST_HARNESS_V1/02_SOURCE_IDENTITY_MANIFEST.json",
+      "bytes": 3405426,
+      "sha256": "14e3c6d4f2a62d66e0cc64a162ac0c33406f9b50912ea65c2ac826ec6e242216",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_EVAL_INGEST_HARNESS_V1/07_DRY_RUN_CHUNK_PLAN.json",
+      "bytes": 3189586,
+      "sha256": "af4401d178df5183cb070f4d881782d3dfe87700f11de3d24b96f11432cf6c36",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_REAL_E2E_CASE_01_REQUIREMENT_HUMAN_GATE/06_AUTHORITY_REPLAY_ANALYSIS.json",
+      "bytes": 2628500,
+      "sha256": "5a6ef68122cc749f6fa29655dde93b8eb8bdd9e1c9c026e75030eb495e61d959",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_REAL_E2E_CASE_01_REQUIREMENT_HUMAN_GATE/07_HUMAN_REQUIREMENT_REVIEW_PACKET.json",
+      "bytes": 2060701,
+      "sha256": "46fff042ac4de7710fdac30785d4eb08e49a0c112042894a68062dc807ff1aa6",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/14_GPT_SEMANTIC_REVIEW_PACKET.json",
+      "bytes": 1830470,
+      "sha256": "357d4102eccac3faeaa3ae06bf896c4ceb9b275b377b12c18acc4865ed80a19e",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_RETRIEVAL_SCHEMA_PARITY_CORE6_REPLAY_V2/13_GPT_SEMANTIC_REVIEW_PACKET.json",
+      "bytes": 1830470,
+      "sha256": "357d4102eccac3faeaa3ae06bf896c4ceb9b275b377b12c18acc4865ed80a19e",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_RETRIEVAL_SCHEMA_PARITY_CORE6_REPLAY_V2/14_GPT_SEMANTIC_REVIEW_PACKET.json",
+      "bytes": 1830470,
+      "sha256": "357d4102eccac3faeaa3ae06bf896c4ceb9b275b377b12c18acc4865ed80a19e",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_RETRIEVAL_SCHEMA_PARITY_CORE6_REPLAY_V2/09_GPT_SEMANTIC_REVIEW_PACKET.json",
+      "bytes": 1830350,
+      "sha256": "f8b7ba22040e981db7c4a586628f84adc0971dd3ca49e62cfa1cdad3646b9a24",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_1_TRUNCATION_CLOSURE/04_SOURCE_ALIAS_RESOLUTION_REPORT.json",
+      "bytes": 1808997,
+      "sha256": "62f3efa6f11e672604d41a113fbb1b3ea198f8f3012113eaa829fab8f0339739",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_SOURCE_UNIT_REPAIR_V1/03_CANONICAL_CHUNK_PLAN.json",
+      "bytes": 1108412,
+      "sha256": "6c0e3cfcf84d520db496bf89f28802caf1a326de8fa1992ce25e2114f845e2de",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_1_TRUNCATION_CLOSURE.zip",
+      "bytes": 939341,
+      "sha256": "22323386f19b4705734d91c82ce27db4f55b64f1127db42fe7410c1f687325af",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_RAG_SEMANTIC_ADJUDICATION_AND_FAILURE_DECOMPOSITION_V1/05_R1_OFFLINE_REPLAY.json",
+      "bytes": 917894,
+      "sha256": "ab393c8b5f2d3aa31b8645992deb94fd662894e1a8d714d8549d0b49bd162852",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_RAG_REFERENCE_HYGIENE_MMR_CHALLENGER_V1/09_GPT_SEMANTIC_AB_REVIEW_PACKET.json",
+      "bytes": 889311,
+      "sha256": "2165b34916c6f6945ca27fa33a9aa947f68c3b24e9b548c151a525fe164e3669",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_RETRIEVAL_SCHEMA_PARITY_CORE6_REPLAY_V2/05_DATABASE_SCHEMA_PARITY.json",
+      "bytes": 743268,
+      "sha256": "5cbf2dd49b9c80a6ad6aacf4753284cda83686369c404ad4e40fdc21958bf47e",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_RESPONSE_ROUTER_V2_2_1_OVERNIGHT_CLOSURE.zip",
+      "bytes": 690732,
+      "sha256": "8a7f68c55799918c066febd2c3baac01a45b5c6c5b4e4fa45cb9f7e9941ca568",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_DAYTIME_ROUTER_V2_2_2_AND_FACT_READINESS.zip",
+      "bytes": 663283,
+      "sha256": "f1b7ddb32841f31e1c3445df5511fd94a0793acf65219c18538d5086dc3c4c04",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_REAL_E2E_CASE_01_REQUIREMENT_HUMAN_GATE/V43_HANDOFF_REAL_E2E_CASE_01_REQUIREMENT_HUMAN_GATE.zip",
+      "bytes": 652150,
+      "sha256": "eb443d49ff53c460f0f7e4fe79d86325328c89c55e677e5a12e9e16b152ab7ff",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_RAG_SEMANTIC_ADJUDICATION_AND_FAILURE_DECOMPOSITION_V1/01_GPT_R1_SEMANTIC_ADJUDICATION.json",
+      "bytes": 576906,
+      "sha256": "c50f7e647438e15a635a91ba01a2977ffb20fc247db863aa1558b70319ea00f9",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_REAL_PDF_GATE_TARGETED-POSTRESTART/06_FACT_EXTRACTION_REPORT.json",
+      "bytes": 497379,
+      "sha256": "ba9eae67242a412983e4c8c4c339988842b1cb830c879417f3ebdebc66062adb",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_RAG_SEMANTIC_USEFULNESS_BASELINE_V1/06_GPT_SEMANTIC_REVIEW_PACKET.json",
+      "bytes": 480289,
+      "sha256": "77d208f37682f26968a70353de1cbdeb2470cb022d056757a2f37d6ed209aaba",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_RAG_SEMANTIC_USEFULNESS_BASELINE_V1/05_REFERENCE_RETRIEVAL_RESULTS.json",
+      "bytes": 479398,
+      "sha256": "1bdb43317422baf83c386e3484eb38df4b2feedd50e4f05c9561c0d889bd4d62",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_RESPONSE_ROUTER_V2_2_BOUNDED_SEMANTIC_CLOSURE.zip",
+      "bytes": 447752,
+      "sha256": "615d2d13538efd7402e32769a790db9b0d72dc317e0d9ce80b4cc5ddf7b1038e",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_REAL_REQUIREMENT_REFERENCE_RAG_DAYTIME_LONG_V1/03_OLD_30CASE_REGRESSION.json",
+      "bytes": 441390,
+      "sha256": "ba16302fd799c098e288e9790a0f90066cf110cfb8bd0aac05a4c77b30352bcd",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_OVERNIGHT_REQUIREMENT_SCOPE_RECERT_E2E_FOUNDATION_V1.zip",
+      "bytes": 440417,
+      "sha256": "90b2f53e19219eacd7fdbfd7634a15420acb3b891cbb0978dcb2759d5752590b",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_REQUIREMENT_V6_4_RUNTIME_RECERT/02_GPT_SEMANTIC_REVIEW_PACKET.json",
+      "bytes": 437871,
+      "sha256": "6f9c551c7bed2420b8b3bd0f0eb525cef17f11e562934ade1340f940a9d5a38b",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_RETRIEVAL_SCHEMA_PARITY_CORE6_REPLAY_V2/01_REFERENCE_ELIGIBILITY_V2.json",
+      "bytes": 433425,
+      "sha256": "87d923a069fded259b1b0482adb78187af86b9b0faa48d3a8b5ad3885eb200fe",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_RETRIEVAL_SCHEMA_PARITY_CORE6_REPLAY_V2/03_REFERENCE_DENOMINATOR.json",
+      "bytes": 433042,
+      "sha256": "7338d81ba1f1e59525de5974941b24ed645de5222a953697c033c809ab878bb7",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/07_REFERENCE_DENOMINATOR_89.json",
+      "bytes": 432601,
+      "sha256": "6e2798558419ff237785ca7762dc9e9385a3a3c9969716b671c8df5235bec37b",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_RETRIEVAL_SCHEMA_PARITY_CORE6_REPLAY_V2/02_FULL_REFERENCE_DENOMINATOR.json",
+      "bytes": 432601,
+      "sha256": "6e2798558419ff237785ca7762dc9e9385a3a3c9969716b671c8df5235bec37b",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_RETRIEVAL_SCHEMA_PARITY_CORE6_REPLAY_V2/07_REFERENCE_DENOMINATOR_89.json",
+      "bytes": 432601,
+      "sha256": "6e2798558419ff237785ca7762dc9e9385a3a3c9969716b671c8df5235bec37b",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_REAL_FACT_V2_REAL_PDF_PILOT_V1/06_FACT_EXTRACTION_REPORT.json",
+      "bytes": 425994,
+      "sha256": "1d69140ac49e1880140043209c3598b334ddc2809f59b608781d3db0fc5a98c2",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_DAYTIME_REAL_E2E_FOUNDATION_AND_HUMAN_GATE_MASTER_V1.zip",
+      "bytes": 424766,
+      "sha256": "13b485418163514e7cb525b239746bc9722507be570b04c54c1e4cc2330ba977",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_REQUIREMENT_V6_3_SEMANTIC_ADJUDICATION.zip",
+      "bytes": 409028,
+      "sha256": "071e1465fd563fe0b6f6a3758e44baa2f1334da6a103d3291b43c5f8346a8c0f",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_FACT_REVIEW_BURDEN_DETERMINISTIC_REDUCTION_V1/06_OFFLINE_BEFORE_AFTER.json",
+      "bytes": 408735,
+      "sha256": "ee112767f886c308cf92e1c5b805dd7e38a39becb245833e39299ec5e123ea75",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_RESPONSE_ROUTER_V2_1_CORE6_HARD_SAFETY_V1/02_GPT_DECISION_PACKET.json",
+      "bytes": 376786,
+      "sha256": "2240347038ba510ddeecc802f17edefc94f6232627ad2db3ce9eff94ddd47b58",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_FACT_GROUNDING_FALSE_NEGATIVE_CLOSURE_V1/04_OFFLINE_BEFORE_AFTER.json",
+      "bytes": 366238,
+      "sha256": "080d899649f7cfefcc29a86f4a0a0fa20aa26988b697c216b6809c1aa09b8cb3",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_FACT_GROUNDING_REVIEW_BOUNDARY_V2/04_OFFLINE_BEFORE_AFTER.json",
+      "bytes": 361351,
+      "sha256": "9eb6073cf5af76122654b3fa5d1d4f8594c40e2910ce7c16af69787a46ca7e41",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_REAL_E2E_REQUIREMENT_RETRIEVAL_AND_FACT_CANARY_V1/04_REAL_REQUIREMENT_RETRIEVAL_REPORT.json",
+      "bytes": 351015,
+      "sha256": "53e6e5d0f9ab7b073ec2a1a72c9753793473163070aa2669cc7dbe00311fbd3a",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_CORE6_AUTHORITATIVE_REQUIREMENT_ARTIFACT_RECOVERY_V2/01_DIRTY_WORKTREE_AUTHORITY_INVENTORY.json",
+      "bytes": 347609,
+      "sha256": "dac771a855df0c8ff8ed3086a564c2e5c52825643d4468ebc3505529a2329626",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_REAL_PDF_GATE_TARGETED-POSTRESTART/08_GPT_REVIEW_PACKET.json",
+      "bytes": 347485,
+      "sha256": "21bd6e4e56a2d31834cb52d3b26dfe0d566f51bdeaa9555d515a786c9710924b",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_REAL_PDF_GATE/11_GPT_REVIEW_PACKET.json",
+      "bytes": 347418,
+      "sha256": "a23686b6ccfcd849e94045e7064c4ce08a5f49514874858f3302d623a6fbf997",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_REAL_PDF_GATE_TARGETED-POSTRESTART/07_REAL_PDF_PILOT_CANDIDATES.json",
+      "bytes": 347360,
+      "sha256": "cf58f30a4d78b569dd0e03b5d2df5ee8188242b5761b4bd173ca02be8ac59ae0",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_REAL_PDF_GATE/09_V2_CANDIDATES.json",
+      "bytes": 347301,
+      "sha256": "ac0acf76241973918a0c31486d1630560f51e6e32fdeb423659032cbd5765097",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_REAL_PDF_GATE_TARGETED-FINAL/06_FACT_EXTRACTION_REPORT.json",
+      "bytes": 330297,
+      "sha256": "c29a05207b0e2e51d81cb86367ceccc06e403211708d0e4f71f181cd6a9489a6",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_RESPONSE_ROUTER_V2_2_3_FINAL_AUTHORITY_CLOSURE.zip",
+      "bytes": 320244,
+      "sha256": "aa879f52495b34c429411ced2679f70ee6be01a8e9c1b59731d3522b1a28d41d",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_OVERNIGHT_FACT_DETERMINISTIC_STABILIZATION_MASTER_V1/05_FULL_OFFLINE_REPLAY_RESULTS.json",
+      "bytes": 316277,
+      "sha256": "db257513eb98a03d52de5e3fc6b9e23764269fc6e08e97a371d34e7654c40853",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_TARGETED_FACT_HOST_REPLAY_V3/03_PROVIDER_EXECUTION_REPORT.json",
+      "bytes": 302080,
+      "sha256": "aa0d6d82632b5563f852454391a783321a2856c461600e83a5a6c36ceeb8328a",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_RAG_REFERENCE_HYGIENE_MMR_CHALLENGER_V1/05_HYGIENE_ONLY_TOP4.json",
+      "bytes": 300528,
+      "sha256": "661dcac7f1bcdb38e4bb9568f3ec2b90b7ed55333cf9bd84019cd261997bbd4c",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/03_PRODUCTION_CORPUS_SNAPSHOT_MANIFEST.json",
+      "bytes": 292974,
+      "sha256": "c2087cd46a1642452915658ff1e687be27e40e4c674008a85ad63f780b7fcdae",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_RETRIEVAL_SCHEMA_PARITY_CORE6_REPLAY_V2/03_PRODUCTION_CORPUS_SNAPSHOT_MANIFEST.json",
+      "bytes": 292974,
+      "sha256": "c2087cd46a1642452915658ff1e687be27e40e4c674008a85ad63f780b7fcdae",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_2_E2E_GATE.zip",
+      "bytes": 283111,
+      "sha256": "79eb6ced08445ae9e857527a8c7118a242372937c25b0aed3635674228eb7de3",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_DAYTIME_REAL_E2E_FOUNDATION_AND_HUMAN_GATE_MASTER_V1/11_HUMAN_REQUIREMENT_REVIEW_PACKET_V2.json",
+      "bytes": 282920,
+      "sha256": "27e7956b8f2d05139bf52cc4521ab4b7cdef43d5452bd9818394fe5da794c2cf",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_REAL_PDF_GATE_TARGETED-FINAL/08_GPT_REVIEW_PACKET.json",
+      "bytes": 282903,
+      "sha256": "43e38ce287defd505c607d0b83aacfaf43b607e584e313039f839465ad6a66ef",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_EVIDENCE_FACT_CANDIDATE_V2_REAL_PDF_GATE_TARGETED-FINAL/07_REAL_PDF_PILOT_CANDIDATES.json",
+      "bytes": 282778,
+      "sha256": "9cc469d4a5f3e6028f67dceb9da5127b1924a2ee3ed03c7b1aae20772b82aeab",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_OVERNIGHT_REQUIREMENT_SCOPE_RECERT_E2E_FOUNDATION_V1/14_COMPACT_HUMAN_REVIEW_PACKET.json",
+      "bytes": 281301,
+      "sha256": "cec7135c29ad9f19eed0917a097c8ce80a2b8ce3385ba88c509523a27ce3f097",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_DAYTIME_ROUTER_V2_2_2_AND_FACT_READINESS/02_ROUTER_FINAL_SAFETY_PACKET.json",
+      "bytes": 242874,
+      "sha256": "88bbed8896e3fdf55a1672863c33336e2955ec8c8298fca1fed154b92fdefa6b",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_OVERNIGHT_REQUIREMENT_SCOPE_RECERT_E2E_FOUNDATION_V1/11_FRESH_HISTORICAL_ALIGNMENT_REPORT.json",
+      "bytes": 240588,
+      "sha256": "8695e0096a480de0c189f2c0525c3ea6ab6f4143af6582cf29e5f41f1f9e322b",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_FACT_V2_2_1_E2E_RELEASE_CLOSURE/residual-replay-result.json",
+      "bytes": 239903,
+      "sha256": "b01132fcfd57e6fca2edf9eb08249f3ce589818db68d4482ce5e2fd215f05a85",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_SOURCE_UNIT_REPAIR_V1/canonical-sources/H3C-003.html",
+      "bytes": 233222,
+      "sha256": "63d9978ae686d41d8d1ee805c13e3a54fd56225d365936de2e38232244085431",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_RESPONSE_ROUTER_V2_2_BOUNDED_SEMANTIC_CLOSURE/02_GPT_SEMANTIC_REVIEW_PACKET.json",
+      "bytes": 232390,
+      "sha256": "abc824a122c83d40754d87bde2b1487d9f5df531a33d9d061921199db362b7ae",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_HTML_TEXT_SHAPE_DIAGNOSTIC_V1/01_SAMPLED_CHUNKS.json",
+      "bytes": 218356,
+      "sha256": "b68900cacedd3c475cf45a8b94130c7e98b6833531e14e699da4f20456cdd323",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_RAG_REFERENCE_HYGIENE_MMR_CHALLENGER_V1/07_MMR_09_CHALLENGER_TOP4.json",
+      "bytes": 216711,
+      "sha256": "4cf141914aee259530fdf7991afd78f92ce999c4b771fdebf19f69f2984ad37d",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_RESPONSE_ROUTER_V2_2_1_OVERNIGHT_CLOSURE/07_RISK_TIER_AUDIT.json",
+      "bytes": 216062,
+      "sha256": "e64ed72da569e162fe4245eef8f47188915ffc73321f8f70c0ed3c04f4eb1c57",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_SOURCE_UNIT_REPAIR_V1/canonical-sources/H3C-004.html",
+      "bytes": 214766,
+      "sha256": "23e53e243ad15a8aa2dda034cfc2a8fbfe602a2478759dce8e6ff58f4436ede6",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_RAG_REFERENCE_HYGIENE_MMR_CHALLENGER_V1/04_CURRENT_BASELINE_TOP4.json",
+      "bytes": 213433,
+      "sha256": "9373787842b1a11e2520378685c81a906e303a54ca7f1aac7b4357969728cef7",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_TARGETED_FACT_HOST_REPLAY_V3/06_GPT_FACT_SEMANTIC_REVIEW_PACKET.json",
+      "bytes": 212091,
+      "sha256": "abca61aa54dc4e4b7e2004b41babc36ece8128375e5471ea9b391bc3b0e10d80",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_RAG_REFERENCE_HYGIENE_MMR_CHALLENGER_V1/06_DIVERSITY_CHALLENGER_TOP4.json",
+      "bytes": 212007,
+      "sha256": "e910e3556676275689ec555332079f876233ac3023d4f6da8c587a8d932c0bff",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_REAL_REQUIREMENT_REFERENCE_RAG_DAYTIME_LONG_V1/07_R0_BASELINE_RESULTS.json",
+      "bytes": 207649,
+      "sha256": "e17f34febef175cdda97a855ab44faaad1ff81fc7c99d3549b85a27d7cbf3955",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/08_EXECUTION_COHORT.json",
+      "bytes": 201657,
+      "sha256": "c7bd3b36588b6adac386363480c92d82261faa2a6b00441bc600b2632a9f893e",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_RETRIEVAL_SCHEMA_PARITY_CORE6_REPLAY_V2/08_EXECUTION_COHORT.json",
+      "bytes": 201657,
+      "sha256": "c7bd3b36588b6adac386363480c92d82261faa2a6b00441bc600b2632a9f893e",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_RETRIEVAL_SCHEMA_PARITY_CORE6_REPLAY_V2/04_REAL_6TENDER_EVAL_SET.json",
+      "bytes": 201488,
+      "sha256": "f0af2a5969209e5b039aecef7e0d5675e736b5c254ce276fe2c532a07af2deba",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_REAL_REQUIREMENT_REFERENCE_RAG_DAYTIME_LONG_V1/08_R1_HYGIENE_RESULTS.json",
+      "bytes": 195935,
+      "sha256": "938f6237efb1d2627651932a6443caca6b82ac2f8d7f8e60fc79e0b0b7abf293",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_DAYTIME_REAL_E2E_FOUNDATION_AND_HUMAN_GATE_MASTER_V1/15_E2E_RESUME_MANIFEST.json",
+      "bytes": 187525,
+      "sha256": "c19a727d034756d7c2d0f1df4aab56bcc082d2aa387d2a26739b541cf68d46d0",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_REQUIREMENT_V6_4_RUNTIME_RECERT.zip",
+      "bytes": 140635,
+      "sha256": "842e341e841d138442055763fd470db97cef9671ce23f93cd734fa9a45a38527",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_HANDOFF_REAL_FACT_V2_REAL_PDF_PILOT_V1/05_PROVIDER_REPORT.json",
+      "bytes": 134374,
+      "sha256": "cf291b9a5a42d9b897889f742eeb149439d446df03ff855af3fce79e69d80fc0",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_REFERENCE_RAG_SEMANTIC_ADJUDICATION_AND_FAILURE_DECOMPOSITION_V1/06_RANKING_FAILURE_FORENSICS.json",
+      "bytes": 119160,
+      "sha256": "3135c263e9fa6641b952d1e8aa8f23fe0992df905b4fd58923d82b5633d7fe26",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_TARGETED_FACT_HOST_REPLAY_V3/05_FACT_VALIDATION_REPORT.json",
+      "bytes": 117360,
+      "sha256": "96d5715af3c718574fa18ab6c73a19994ad2aced758aca2958fec4287c087a2b",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    },
+    {
+      "path": "docs/handoff/V43_FACT_GROUNDING_FALSE_NEGATIVE_CLOSURE_V1/02_GROUNDING_FAILURE_FAMILY.json",
+      "bytes": 109207,
+      "sha256": "3f66354ba68446650e923cfbfa7fd2278fcb053fd7e4355d494298e620dd0a85",
+      "classification": "ARCHIVE_AFTER_E2E",
+      "classification_reason": "Historical handoff/evidence candidate; archive only after retention review"
+    }
+  ],
+  "regenerate_after_e2e_candidates_top_100": [
+    {
+      "path": "node_modules/@napi-rs/canvas-win32-x64-msvc/skia.win32-x64-msvc.node",
+      "bytes": 26272256,
+      "sha256": "30646342fc284109aa9542155287d37147c97132d5168cf621f851a9c69e0c99",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/.pnpm/@esbuild+win32-x64@0.25.12/node_modules/@esbuild/win32-x64/esbuild.exe",
+      "bytes": 10617344,
+      "sha256": "cae1bbc86f4df800b01d99e28aea0a154b02243de6797e98f48a9b88a64a7be0",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/@esbuild/win32-x64/esbuild.exe",
+      "bytes": 10617344,
+      "sha256": "cae1bbc86f4df800b01d99e28aea0a154b02243de6797e98f48a9b88a64a7be0",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/@napi-rs/canvas-win32-x64-msvc/icudtl.dat",
+      "bytes": 10468208,
+      "sha256": "9ae98c06cbb0ea43c5cd6b5725310c008c65e46072421a1118cb88e1de9a8b92",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdf-parse/dist/pdf-parse/web/pdf.worker.mjs.map",
+      "bytes": 5273301,
+      "sha256": "0715e12eab18be4081cda615cda8c06d8fb3471e55b720c1ac8e4c7770ec9e2d",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdfjs-dist/legacy/build/pdf.worker.mjs.map",
+      "bytes": 5273301,
+      "sha256": "0715e12eab18be4081cda615cda8c06d8fb3471e55b720c1ac8e4c7770ec9e2d",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdfjs-dist/build/pdf.worker.mjs.map",
+      "bytes": 5057546,
+      "sha256": "c62b4da7a76cf27bc8148b0584804df1cd548d558d8d30f4aa74b12c109335e0",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/.pnpm/lucide-react@0.468.0_react@19.2.8/node_modules/lucide-react/dist/umd/lucide-react.js.map",
+      "bytes": 4408807,
+      "sha256": "ef0c9e7585bc1eab6612f3630a945e935ce5b38cfa88090292ee8f1d2fb4848f",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/lucide-react/dist/umd/lucide-react.js.map",
+      "bytes": 4408807,
+      "sha256": "ef0c9e7585bc1eab6612f3630a945e935ce5b38cfa88090292ee8f1d2fb4848f",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/.pnpm/lucide-react@0.468.0_react@19.2.8/node_modules/lucide-react/dist/cjs/lucide-react.js.map",
+      "bytes": 4340063,
+      "sha256": "6b427d80d75b381f52711b9ac8a9798d904c629467001b30107fd60a04004037",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/lucide-react/dist/cjs/lucide-react.js.map",
+      "bytes": 4340063,
+      "sha256": "6b427d80d75b381f52711b9ac8a9798d904c629467001b30107fd60a04004037",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/.pnpm/lucide-react@0.468.0_react@19.2.8/node_modules/lucide-react/dist/umd/lucide-react.min.js.map",
+      "bytes": 3828353,
+      "sha256": "ace2a9cd4be5b26b0772eeef2f7be3991ae4d8d4a507392b7d9949285efc3b15",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/lucide-react/dist/umd/lucide-react.min.js.map",
+      "bytes": 3828353,
+      "sha256": "ace2a9cd4be5b26b0772eeef2f7be3991ae4d8d4a507392b7d9949285efc3b15",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/.pnpm/@rollup+rollup-win32-x64-msvc@4.62.4/node_modules/@rollup/rollup-win32-x64-msvc/rollup.win32-x64-msvc.node",
+      "bytes": 2623488,
+      "sha256": "397ef6f183536e03adb15653acc34660245881a74b3c248db06df8ff3c4c6b49",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/@rollup/rollup-win32-x64-msvc/rollup.win32-x64-msvc.node",
+      "bytes": 2588672,
+      "sha256": "25f3aff7df413483e9aa3c5d9c59a166a6e07d9ba3e7e85a81fe8c00a2c289e3",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdfjs-dist/legacy/build/pdf.mjs.map",
+      "bytes": 2321242,
+      "sha256": "cacb3bacf22eb546fe2ad4feb76cc2e40789905aa47907d87493e14e31806618",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdfjs-dist/build/pdf.mjs.map",
+      "bytes": 2092086,
+      "sha256": "9a07bcc7009f292e40bc73e34c478002655da4dffa49be79405cd0b093085730",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdf-parse/dist/pdf-parse/web/pdf.worker.mjs",
+      "bytes": 2076112,
+      "sha256": "044d2faff688e8502bdfa8e91222dc2420443f9a35f5d9a8ed06d9de6c39bb28",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdfjs-dist/legacy/build/pdf.worker.mjs",
+      "bytes": 2076112,
+      "sha256": "044d2faff688e8502bdfa8e91222dc2420443f9a35f5d9a8ed06d9de6c39bb28",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/.pnpm/@rollup+rollup-win32-x64-gnu@4.62.4/node_modules/@rollup/rollup-win32-x64-gnu/rollup.win32-x64-gnu.node",
+      "bytes": 2032128,
+      "sha256": "bea28daa1bfe05f96cb21c3a86b6922c310409d1fb491680ee6e1315ddfd6dbd",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/@rollup/rollup-win32-x64-gnu/rollup.win32-x64-gnu.node",
+      "bytes": 2008576,
+      "sha256": "d046465cddcd0a26486c61bbab4039fb464b56104426f9de519235a0b24ddaeb",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/.pnpm/lucide-react@0.468.0_react@19.2.8/node_modules/lucide-react/dist/lucide-react.d.ts",
+      "bytes": 1956084,
+      "sha256": "40eb4eb274d7def754b3352c23328af96a69261fe5e99d20df41f1d5de8d0f5e",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/lucide-react/dist/lucide-react.d.ts",
+      "bytes": 1956084,
+      "sha256": "40eb4eb274d7def754b3352c23328af96a69261fe5e99d20df41f1d5de8d0f5e",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/.pnpm/lucide-react@0.468.0_react@19.2.8/node_modules/lucide-react/dynamicIconImports.d.ts",
+      "bytes": 1909174,
+      "sha256": "c9504b3e350bdaa32427f00aa42661dbfdb6ce3cc1f3708be07dce5cb793f334",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/lucide-react/dynamicIconImports.d.ts",
+      "bytes": 1909174,
+      "sha256": "c9504b3e350bdaa32427f00aa42661dbfdb6ce3cc1f3708be07dce5cb793f334",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdfjs-dist/build/pdf.worker.mjs",
+      "bytes": 1906302,
+      "sha256": "1d5e6c184487083144b0486514843fa283aec3558f2461263de097c92d3a4796",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/.pnpm/lucide-react@0.468.0_react@19.2.8/node_modules/lucide-react/dist/lucide-react.prefixed.d.ts",
+      "bytes": 1878686,
+      "sha256": "0e7077da60a596c6f834b6a9dfb4c705318dfdcccb1c489870477b07b5964107",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/lucide-react/dist/lucide-react.prefixed.d.ts",
+      "bytes": 1878686,
+      "sha256": "0e7077da60a596c6f834b6a9dfb4c705318dfdcccb1c489870477b07b5964107",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/.pnpm/lucide-react@0.468.0_react@19.2.8/node_modules/lucide-react/dist/lucide-react.suffixed.d.ts",
+      "bytes": 1875200,
+      "sha256": "5e1ffa1bf5a73293289fcc266a9dfd9f6a0c2a127666b69b47ff126aa1e4c60c",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/lucide-react/dist/lucide-react.suffixed.d.ts",
+      "bytes": 1875200,
+      "sha256": "5e1ffa1bf5a73293289fcc266a9dfd9f6a0c2a127666b69b47ff126aa1e4c60c",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdf-parse/dist/pdf-parse/web/pdf-parse.umd.js.map",
+      "bytes": 1793025,
+      "sha256": "8e0205b9b33b8d160d9cf5e667e314e36133c3259cb5570fdf01268387258830",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdf-parse/dist/pdf-parse/cjs/index.cjs.map",
+      "bytes": 1793018,
+      "sha256": "9a4462e07233b12038d536e0998728d89fb28d16c986856d88a5b0e56bed8478",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdf-parse/dist/pdf-parse/web/pdf-parse.es.js.map",
+      "bytes": 1783682,
+      "sha256": "cee166bdc6842d3359de59ad9023d142ab3695c60f2cc726f52085b7d4e86b17",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/.pnpm/vite@6.4.3/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js",
+      "bytes": 1504267,
+      "sha256": "88f9adf5652dc907fa20c9bf936a91fbe1c1328ca3624c39c649692eccb301e6",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js",
+      "bytes": 1504267,
+      "sha256": "88f9adf5652dc907fa20c9bf936a91fbe1c1328ca3624c39c649692eccb301e6",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdf-parse/dist/worker/cjs/index.cjs",
+      "bytes": 1469238,
+      "sha256": "a4411fc83b3a11f577da2a300b52b1ae3dd07beebc44be75ce7684ad31bb3d92",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdf-parse/dist/worker/esm/index.js",
+      "bytes": 1467459,
+      "sha256": "b0731d0fe57ecfbc923b1840420c281e887d01210e6756539eff6fc35965a874",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/.pnpm/@babel+parser@7.29.8/node_modules/@babel/parser/lib/index.js.map",
+      "bytes": 1436340,
+      "sha256": "2a1c92ad2eb5f2b72482f370b10ec1c55b7de6b382099566d7b791ed635864db",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/@babel/parser/lib/index.js.map",
+      "bytes": 1434020,
+      "sha256": "c874e49de10b8ba53e50969f020908f5a4c1b9b9ed0f548c1518d99caf57a903",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdf-parse/dist/pdf-parse/cjs/pdf.worker.mjs",
+      "bytes": 1099167,
+      "sha256": "90b49a1bf7b6c4d689d7d7bc0a52869bb3b1bc5935a0fa0ea6413b49f85ac8de",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdf-parse/dist/pdf-parse/esm/pdf.worker.mjs",
+      "bytes": 1099167,
+      "sha256": "90b49a1bf7b6c4d689d7d7bc0a52869bb3b1bc5935a0fa0ea6413b49f85ac8de",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdf-parse/dist/worker/pdf.worker.mjs",
+      "bytes": 1099167,
+      "sha256": "90b49a1bf7b6c4d689d7d7bc0a52869bb3b1bc5935a0fa0ea6413b49f85ac8de",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdfjs-dist/legacy/build/pdf.worker.min.mjs",
+      "bytes": 1099167,
+      "sha256": "90b49a1bf7b6c4d689d7d7bc0a52869bb3b1bc5935a0fa0ea6413b49f85ac8de",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/.pnpm/react-dom@19.2.8_react@19.2.8/node_modules/react-dom/cjs/react-dom-profiling.development.js",
+      "bytes": 1082082,
+      "sha256": "68b75445dcd5d7ee62f712f017765e7d4c53c12366ab6581883415890620bd9c",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/react-dom/cjs/react-dom-profiling.development.js",
+      "bytes": 1082082,
+      "sha256": "89077895320761aed66ef6d6833e57249a47570191dec9dfdff3bcd018e496ae",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/.pnpm/react-dom@19.2.8_react@19.2.8/node_modules/react-dom/cjs/react-dom-client.development.js",
+      "bytes": 1065698,
+      "sha256": "261c3275492d8f0b1f9b76f78268882316c8435217c39c78c65853bdcd89d500",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/react-dom/cjs/react-dom-client.development.js",
+      "bytes": 1065698,
+      "sha256": "638fcb800207eaf4c5b2427f13fb82362b8e06df51e65d92fa350fbfeaa8fd89",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdfjs-dist/build/pdf.worker.min.mjs",
+      "bytes": 1046214,
+      "sha256": "dbcae78a691b3c501508f74b774c6066a57a14a76cefdc9e25ad86b651bb75d5",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdf-parse/dist/pdf-parse/web/pdf-parse.es.js",
+      "bytes": 1012345,
+      "sha256": "09aae66fe6f9f5ecae92b5426ae6758bdac5f7a132087b8f2c56755a024bba42",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdfjs-dist/legacy/web/pdf_viewer.mjs.map",
+      "bytes": 976154,
+      "sha256": "37ea5012cf45921ed732241ed78c064c81bc12d0bbc2a89aeb3a2a4bd8334918",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdfjs-dist/legacy/build/pdf.mjs",
+      "bytes": 964809,
+      "sha256": "5d408104b55dfa88bd542df8520798dd449504157933efeb638c30664902419d",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/.pnpm/rollup@4.62.4/node_modules/rollup/dist/es/shared/node-entry.js",
+      "bytes": 953593,
+      "sha256": "955a6d21d0b1c2c2c44b068ba1195560d8b347d3f6d09acf1d1ad12dd598555b",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/.pnpm/rollup@4.62.4/node_modules/rollup/dist/shared/rollup.js",
+      "bytes": 952786,
+      "sha256": "1902c14fd9a87196900a5c8cdf24c1ae3a9602111a5c02e78aa1c79c9b32f109",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdfjs-dist/legacy/build/pdf.sandbox.mjs",
+      "bytes": 952546,
+      "sha256": "09fe5ab8914aeea6b20e6f3e4615e51ecf60caf501c713caace0a6a313c5a6e0",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/rollup/dist/es/shared/node-entry.js",
+      "bytes": 946685,
+      "sha256": "ff87480287712c570ac947e7e450ac1e737ea81b8ceb86430fbc5c24ccc23698",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/rollup/dist/shared/rollup.js",
+      "bytes": 945891,
+      "sha256": "9eb8be0aa6bb8c9100cabc60ad84aec7de35213406fe8955f379a0ef5e513292",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/mammoth/mammoth.browser.js",
+      "bytes": 885118,
+      "sha256": "a48b3a31e8f79e1ebe7e6bc284889a19a99804901840ad58268ccd16b4d3a64b",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdfjs-dist/legacy/image_decoders/pdf.image_decoders.mjs.map",
+      "bytes": 881837,
+      "sha256": "b2cc9603fd82301db142ac6cbce7070262e5f1cf20fa5f91475ed24476505118",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/docx/dist/index.umd.cjs",
+      "bytes": 858220,
+      "sha256": "74b1fea88820bf8cd66ee7e69e91e1e9b436db58a88a17bcc65fee36c00ca683",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/docx/dist/index.iife.js",
+      "bytes": 857630,
+      "sha256": "ecef72931c98461fc327aa6e95867820aced5db4c3d971ac5ad38ccda21dd360",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/docx/dist/index.cjs",
+      "bytes": 811546,
+      "sha256": "8c57e70fa90aba6062b21df08b0bfc919e13536ac4b7fdc4ef6755d267f0eaae",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/docx/dist/index.mjs",
+      "bytes": 803970,
+      "sha256": "21a9b418075bf88ba388dff7776cd4449d90f3f63f7788e92427fe01a933b7c5",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdfjs-dist/web/pdf_viewer.mjs.map",
+      "bytes": 800150,
+      "sha256": "e6a20037115f6fabeb2f622022182890252929377cc450b737092c6ebcc6cc0d",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdfjs-dist/legacy/build/pdf.sandbox.mjs.map",
+      "bytes": 799319,
+      "sha256": "85f4a9651962dadcaf90ff17cc947ce98a8206784b7f9626b76e9e5ab052b2da",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/.pnpm/lucide-react@0.468.0_react@19.2.8/node_modules/lucide-react/dist/umd/lucide-react.js",
+      "bytes": 795184,
+      "sha256": "27dbb16c9df3f14b153021635b42d2a94f428d5e8f04134f6b6010e5444d017e",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/lucide-react/dist/umd/lucide-react.js",
+      "bytes": 795184,
+      "sha256": "27dbb16c9df3f14b153021635b42d2a94f428d5e8f04134f6b6010e5444d017e",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdfjs-dist/build/pdf.mjs",
+      "bytes": 784780,
+      "sha256": "19766f37e43af0adbc35c463b37684150df247b381c7a894b16b6c92fe072aa9",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/.pnpm/lucide-react@0.468.0_react@19.2.8/node_modules/lucide-react/dist/cjs/lucide-react.js",
+      "bytes": 755672,
+      "sha256": "f3b5ed31c6cc3068ea3e5ab8c7486ae72c4f9f47c7258bc7b22a4773b56b94f2",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/lucide-react/dist/cjs/lucide-react.js",
+      "bytes": 755672,
+      "sha256": "f3b5ed31c6cc3068ea3e5ab8c7486ae72c4f9f47c7258bc7b22a4773b56b94f2",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdfjs-dist/legacy/build/pdf.sandbox.min.mjs",
+      "bytes": 743583,
+      "sha256": "d798217817b7241cdc365f0c8be5fcae33a7c0681a2b384717ac765d05b88581",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdfjs-dist/build/pdf.sandbox.mjs",
+      "bytes": 728534,
+      "sha256": "81b9335aa4bc79552b99fb7346978594cc4b8997bfd9aef2ad9400a52808ea47",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdfjs-dist/image_decoders/pdf.image_decoders.mjs.map",
+      "bytes": 684664,
+      "sha256": "86bd3478ffb6becb129707ae0c4ec082501e42c69d3d8a6213e0380a29594c70",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdfjs-dist/build/pdf.sandbox.min.mjs",
+      "bytes": 674142,
+      "sha256": "efe8ebeffe858fd8189028f45ea4660a3fc90041433439a9d2675e478aad50a6",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/@babel/types/lib/index.d.ts",
+      "bytes": 666005,
+      "sha256": "556ccd493ec36c7d7cb130d51be66e147b91cc1415be383d71da0f1e49f742a9",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/.pnpm/@babel+types@7.29.8/node_modules/@babel/types/lib/index.d.ts",
+      "bytes": 665892,
+      "sha256": "69d4b61c408556b97b796782a1110f7e01a03ed80f31741f2c59b722185830ed",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdfjs-dist/build/pdf.sandbox.mjs.map",
+      "bytes": 646082,
+      "sha256": "2d8497a6fbb913f81b037469360803d6dc36e7b3534164be0f3f4718add08255",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/mammoth/mammoth.browser.min.js",
+      "bytes": 636199,
+      "sha256": "0180991546a6dab1e03e387e8273cd7e8a74957dfb6b3eae7c66a7d8de7f5926",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/.pnpm/react-dom@19.2.8_react@19.2.8/node_modules/react-dom/cjs/react-dom-profiling.profiling.js",
+      "bytes": 607634,
+      "sha256": "0fdba3845eb5eb31d00dd0532ecd24d9b04a114501f43f34d0f3f97919d5f336",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/react-dom/cjs/react-dom-profiling.profiling.js",
+      "bytes": 607634,
+      "sha256": "24dc481445f340b4e57f74c2c76b9839dea1b702f515fff2444700b74a221c47",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/.pnpm/rxjs@7.8.2/node_modules/rxjs/dist/bundles/rxjs.umd.js.map",
+      "bytes": 549283,
+      "sha256": "cc08f77b80b923006b40dff4a02bc2d4dfb7f3e2030821a91a4a60f69d0feb19",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/.pnpm/react-dom@19.2.8_react@19.2.8/node_modules/react-dom/cjs/react-dom-client.production.js",
+      "bytes": 536016,
+      "sha256": "6cf4932e0c20a4572ae395035ca2e512a42d7d49c1a659fa73d6197069c28df0",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/react-dom/cjs/react-dom-client.production.js",
+      "bytes": 536016,
+      "sha256": "9d2de2ee4a588c5d0b8580ff3467f796b8d9bbc45bdc35b257f7d1380e686c56",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/.pnpm/lucide-react@0.468.0_react@19.2.8/node_modules/lucide-react/dist/umd/lucide-react.min.js",
+      "bytes": 514566,
+      "sha256": "d84f77936faface365d6fe86da65c6fddffb57f188f6d701946a4ffaf3bf183c",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/lucide-react/dist/umd/lucide-react.min.js",
+      "bytes": 514566,
+      "sha256": "d84f77936faface365d6fe86da65c6fddffb57f188f6d701946a4ffaf3bf183c",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/.pnpm/@babel+parser@7.29.8/node_modules/@babel/parser/lib/index.js",
+      "bytes": 513214,
+      "sha256": "6969920ae0610df927b6b3e675d1309372c268e36d391652af8e3e0183cbe8f8",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/@babel/parser/lib/index.js",
+      "bytes": 512666,
+      "sha256": "201724d1415df7749087d9d6e88af50f2bcafe2eb68dfbe9347f49d3361ff426",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdf-parse/dist/pdf-parse/web/pdf-parse.umd.js",
+      "bytes": 480992,
+      "sha256": "546400701df4a7e5301754df88cf1466ce7047ab9a884d0fcb76f56d332f84fd",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdf-parse/dist/pdf-parse/cjs/index.cjs",
+      "bytes": 480695,
+      "sha256": "1c03368bd59dd4af0a3a3473da34def02e2d7af526d696f5a8b4ef8d74b4a01d",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdfjs-dist/legacy/build/pdf.min.mjs",
+      "bytes": 476495,
+      "sha256": "a7a8724af7516e99f2616938246713d8043697fb5340df884496e762b45d0418",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdfjs-dist/wasm/openjpeg_nowasm_fallback.js",
+      "bytes": 451777,
+      "sha256": "07c3c3361827308741bc31c561b59e705ebb4d1e8efb84e4d24884e230dbb894",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdfjs-dist/legacy/web/pdf_viewer.mjs",
+      "bytes": 442894,
+      "sha256": "6b8b1cb6c7a6cfa2b830246a3113a426e4a547777b122762bb3019c697f0a534",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/.pnpm/react-dom@19.2.8_react@19.2.8/node_modules/react-dom/cjs/react-dom-server.node.development.js",
+      "bytes": 429423,
+      "sha256": "acde2438469e46eb28a0d85828b0576ebf515844a00bbe243b554ac854374297",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/react-dom/cjs/react-dom-server.node.development.js",
+      "bytes": 429423,
+      "sha256": "73132465e63885ab68b9360e6458bdecaade1a4729778a7d8097ff69b2f81869",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/.pnpm/react-dom@19.2.8_react@19.2.8/node_modules/react-dom/cjs/react-dom-server.edge.development.js",
+      "bytes": 425439,
+      "sha256": "1995755e66224806c95bdfb151f43ce2ec3c62fb296ff7bf31c6058312c2c0b9",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/react-dom/cjs/react-dom-server.edge.development.js",
+      "bytes": 425439,
+      "sha256": "dc4dce854c6eded71c3697e4dec291e0f7e7bfef01fdbc29d73396196266b6eb",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/.pnpm/react-dom@19.2.8_react@19.2.8/node_modules/react-dom/cjs/react-dom-server.browser.development.js",
+      "bytes": 424658,
+      "sha256": "3243d514280f0bfd1312c91b6e66b8a58c1e90eb5f8767425c7068a81a973300",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/react-dom/cjs/react-dom-server.browser.development.js",
+      "bytes": 424658,
+      "sha256": "3fa9d8b81d166f59464ae40ceb0a9102b2690628d8ad6e8a3256f95db14c7a08",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdfjs-dist/build/pdf.min.mjs",
+      "bytes": 418792,
+      "sha256": "343b4166b06716a55a8f87175b83223cb1a9ab701eb8a96b2577509d47fbaf4a",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/pdfjs-dist/legacy/image_decoders/pdf.image_decoders.mjs",
+      "bytes": 399065,
+      "sha256": "10ed16c74a64da50192d1b3d3aa45596e1bf8be36ebe5d0158cb1a8703c9055c",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    },
+    {
+      "path": "node_modules/.pnpm/react-dom@19.2.8_react@19.2.8/node_modules/react-dom/cjs/react-dom-server-legacy.browser.development.js",
+      "bytes": 395197,
+      "sha256": "6724ab5822dbc9337c1fc45e7979238bc8053ee3fbbd58ad7f8db4556d13ed85",
+      "classification": "REGENERABLE_AFTER_E2E",
+      "classification_reason": "Dependency/cache tree reproducible from lockfiles"
+    }
+  ],
+  "delete_safe_after_e2e_candidates": [],
+  "unknown_do_not_touch_top_100": [
+    {
+      "path": ".git/objects/pack/pack-d3c70f4fec73c99b4902d0fc3581b77e861edb1f.pack",
+      "bytes": 6104835,
+      "sha256": "e31be5b713667829f4c140bd94746fc70545edfcd68c9e48927fef1c3a0a01bd",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/1b/f2cb244125781721165bbdb896df07e4db62e3",
+      "bytes": 5750848,
+      "sha256": "e70fe888d14756b5a6047e1535f6624b8438abdd2da33dd14d782615b9bd7e7d",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/1b/tmp_obj_1BURJX",
+      "bytes": 5750848,
+      "sha256": "e70fe888d14756b5a6047e1535f6624b8438abdd2da33dd14d782615b9bd7e7d",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/1b/tmp_obj_Ak1CiJ",
+      "bytes": 4530176,
+      "sha256": "0442f2e1b4d6dc0678c4ebd054869f1dd7a2a54484813e1f99ba5a5023a93c5b",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/pack/pack-d28f91855d10e5f891a8c2232620db20392890f7.pack",
+      "bytes": 3143428,
+      "sha256": "41c3c68c1b3b5377962c0b638ae7953baea43e404aa64b4aee9878a0c2833e3e",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": "frontend/node_modules/.vite/deps/lucide-react.js.map",
+      "bytes": 2776987,
+      "sha256": "d7cd96b2e33b79d53e442990a5d854af8980eaf74f7c8f525205a87631586bf6",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "No deterministic retention authority established"
+    },
+    {
+      "path": "uploads/6bd7820f-5b0f-48b4-a555-bcedcf7fa822/046f1dd1-e447-4ec5-9461-90187037d1d4.pdf",
+      "bytes": 2227173,
+      "sha256": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "User/runtime data; ownership and retention not mechanically proven"
+    },
+    {
+      "path": ".git/objects/50/0eb80ee267bc6c41d53635cc06b85158a68b34",
+      "bytes": 1638788,
+      "sha256": "686860d99cbfa360bb02783f93ce300a938860edec9efe9c8978902566014633",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": "frontend/node_modules/.vite/deps/react-dom_client.js.map",
+      "bytes": 1559204,
+      "sha256": "fd9d9bd48ebe24158fbfa0e32ef93876d8a1c252ab368ef1196aff97c8999773",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "No deterministic retention authority established"
+    },
+    {
+      "path": ".git/objects/5c/5f5a697aa6996224967bf88bd95b329dc62635",
+      "bytes": 1382614,
+      "sha256": "158dea17be69f5b687d851ef2bec3569ee0b2137ef71140e6231015b544af38b",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": "uploads/0e30c45e-40bf-490e-9784-5a6be9bbfa6b/9eaf78eb-b962-4f2d-9a96-d597c8e57508.pdf",
+      "bytes": 1234398,
+      "sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "User/runtime data; ownership and retention not mechanically proven"
+    },
+    {
+      "path": "uploads/23d0d9e5-2e1e-4cf6-a2d6-bcfd61771158/9958dd13-1208-445e-946e-3f789cd30186.pdf",
+      "bytes": 1234398,
+      "sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "User/runtime data; ownership and retention not mechanically proven"
+    },
+    {
+      "path": "uploads/48a3f5cf-3f7e-4ead-bacc-5f085ae73297/46abb5a2-c4e9-466e-9d7a-636b9c68813b.pdf",
+      "bytes": 1234398,
+      "sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "User/runtime data; ownership and retention not mechanically proven"
+    },
+    {
+      "path": "uploads/4f7f770f-2998-44c9-b860-5b5b650ce210/b6874e54-635b-4da9-8716-976070972b25.pdf",
+      "bytes": 1234398,
+      "sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "User/runtime data; ownership and retention not mechanically proven"
+    },
+    {
+      "path": "uploads/43aa9133-5110-456c-9620-64c4d3efb844/8db33774-a22c-4b1b-bca8-46956b72a4e7.pdf",
+      "bytes": 1073874,
+      "sha256": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "User/runtime data; ownership and retention not mechanically proven"
+    },
+    {
+      "path": ".git/objects/05/7e51956962a16daba72db570a52bb328ad4d42",
+      "bytes": 1042329,
+      "sha256": "c39704372cd3e189632c3616625dbd94d6daea3bae7d9522c66eb8f14dcf8389",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": "frontend/node_modules/.vite/deps/react-dom_client.js",
+      "bytes": 1005529,
+      "sha256": "110a11516de1dac499f8e981e1559253807fb6c0b97cd69981742778bc523915",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "No deterministic retention authority established"
+    },
+    {
+      "path": ".git/objects/3c/e1059a208b202439a087f99ea5af6d64d7e1ea",
+      "bytes": 894156,
+      "sha256": "bf11eb2dd9408ff820976157728baa31a8882446b05e050f8f5363598a8c9290",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".superpowers/sdd/gold-v2-foundation-writer-eval-prep/task-1-fix2-review.diff",
+      "bytes": 885170,
+      "sha256": "550d44934f5a77164e74e9a920c5d95e730aaeb59be3c57c2d1ad5359e87d3c1",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Tooling/configuration state; no deletion authority"
+    },
+    {
+      "path": "frontend/node_modules/.vite/deps/lucide-react.js",
+      "bytes": 878340,
+      "sha256": "d2b2fb2edc2a80199e5aa9a0b12271a8befe855c2cc5c255a8eb16f250b22409",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "No deterministic retention authority established"
+    },
+    {
+      "path": ".superpowers/sdd/gold-v2-foundation-writer-eval-prep/task-1-fix-review.diff",
+      "bytes": 853983,
+      "sha256": "6f78d4a773081d4c1bf566a1625e03ab4e67dfc319e4f169aba644bd36c44d3b",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Tooling/configuration state; no deletion authority"
+    },
+    {
+      "path": ".superpowers/sdd/gold-v2-foundation-writer-eval-prep/task-1-review.diff",
+      "bytes": 851063,
+      "sha256": "5187b9425e78bc463d0a0c72d1052bdfdcd2c61ebe50144a31e1b33a197b3467",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Tooling/configuration state; no deletion authority"
+    },
+    {
+      "path": "uploads/dac7ce8e-85b3-4881-8e4b-73fd44c48bb4/2b37dab9-7f75-474e-9126-383949e8458c.pdf",
+      "bytes": 806109,
+      "sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "User/runtime data; ownership and retention not mechanically proven"
+    },
+    {
+      "path": ".git/objects/b8/8057e547d66fd824f2e270ca680a2555ab95d6",
+      "bytes": 772760,
+      "sha256": "77145b1f4162412fd1fff8b213948c55e7d2666b7908dc3d0c04d5f04dde5d35",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": "uploads/05b80ce4-35fb-4a35-b05c-ca32ae5d470e/8bed6587-b503-4526-9f3c-2b306bbbd2ab.pdf",
+      "bytes": 756019,
+      "sha256": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "User/runtime data; ownership and retention not mechanically proven"
+    },
+    {
+      "path": ".git/objects/95/45e14ae81b3a90b63605e822c6e9016a266eba",
+      "bytes": 694797,
+      "sha256": "a584ba843629051e09a64a25c9eacc3c2a5911b88a43bb60c38b2bac72910152",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/b6/fe44bd990c92dbb0ad29376e85a059027a0309",
+      "bytes": 522899,
+      "sha256": "0567c8486636ee5b24eb377ec260e6b78ed433016d4e5628854416394cf45b11",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": "uploads/112b3805-df67-4483-b1aa-c8941a111465/95e5ec91-9011-4312-99bb-50bf0848dfa0.pdf",
+      "bytes": 511488,
+      "sha256": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "User/runtime data; ownership and retention not mechanically proven"
+    },
+    {
+      "path": "uploads/6cebb391-f5ef-488c-8aee-eac6da4f7065/1bbd194b-52c0-4579-9157-7852f8047b1b.pdf",
+      "bytes": 511488,
+      "sha256": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "User/runtime data; ownership and retention not mechanically proven"
+    },
+    {
+      "path": "uploads/91ab7f01-2bfb-4d49-8a81-ddfcb20ee903/5af9be43-8589-4e34-848c-e4a277d4c8b9.pdf",
+      "bytes": 511488,
+      "sha256": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "User/runtime data; ownership and retention not mechanically proven"
+    },
+    {
+      "path": "uploads/c75a8dc9-1674-445c-adf6-de14b0fe0a0d/98abab58-0054-4fcb-a31a-c7eaacd8f8ff.pdf",
+      "bytes": 511488,
+      "sha256": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "User/runtime data; ownership and retention not mechanically proven"
+    },
+    {
+      "path": ".git/objects/d7/61c3bea9eb77fc02365855f29c4acf97009e30",
+      "bytes": 497693,
+      "sha256": "2309531ca22e589db8209839754d3441839b7b62a5c2acb49eb50055bcd7693f",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/c9/f30c24061901a22984afd6a69d6b74d9c98399",
+      "bytes": 477396,
+      "sha256": "b7a9528d8a506eb243f876e373bac6b572a8eaae4a023313b94bda68d1250c69",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/40/62a9d1680b67247234c7258ea4363cab4eecb0",
+      "bytes": 472117,
+      "sha256": "16de1743798d9bf9c530d818e48d869832543067cfa3fa37c0efdf0b4473da4f",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/e8/4cce46cac9d73406f113aced481827a4496bfc",
+      "bytes": 462328,
+      "sha256": "48357605f1940247fa19997b195ad4ecee602871fb4d7756410d9b7b93e10052",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/6c/6cf9adc7f91bfe393818ff1a986100dcb9ed6d",
+      "bytes": 395578,
+      "sha256": "9c416a3c1cbff54dbaa05dc3930cb28456027aaba1535e647ac824aa2f3dd9f0",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/0c/a29eb5479d516df5627ed4e305f5422d1f3171",
+      "bytes": 387925,
+      "sha256": "339e7e41d611137c727cb1df0d8017497fcfe464dfb0e66dfa1960cd347b8074",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": "frontend/dist/assets/index-B2W1D2rd.js",
+      "bytes": 352697,
+      "sha256": "bf00dc56da3f8f0d1ac00e4a3c3f59085c72aa55f16faf8438aa2be8ab8f6b6e",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "No deterministic retention authority established"
+    },
+    {
+      "path": ".git/objects/6c/ed9dfee7f023d967a10e1d3ae0c38bd011cae1",
+      "bytes": 349561,
+      "sha256": "74a928914ed5ecdc6ea1e609792e3201f767677dbf556c39d0f271a692f12619",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/fc/8c683992d6be59d5c7713777733182b1747d35",
+      "bytes": 339638,
+      "sha256": "0537c91785983bbcb927746f18419d06a1ab7cc6448397b63d5d52752d3897ea",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": "frontend/node_modules/vitest/dist/chunks/cli-api.DWGBtMmz.js",
+      "bytes": 339628,
+      "sha256": "123e44ea39aee4f9e7a0d8f91fd78d9091c161e56d0f15ece5ab7e807ac5eaed",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "No deterministic retention authority established"
+    },
+    {
+      "path": ".git/objects/ac/5956283152a015a2e9f1b161dcbc92351a03e8",
+      "bytes": 335576,
+      "sha256": "50ffd08b0098094be1107f3dfb79cc48e8c42e8d646772ffc33fbde34b91a299",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/bb/3542e8c8f4e1145896c6561bf114d01719e2a5",
+      "bytes": 331239,
+      "sha256": "bdf4bec641777d927ed0fcffda47207f49ed21bf4bb6bcba27d3451460fd88ab",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/7a/23c5f9e58dcd32c1b616ce8576c98e681fe128",
+      "bytes": 330289,
+      "sha256": "bb5b732c43a4db08870b828cf5ab99001c097d9fd71959d9848ecfe86c681c17",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/c0/ebcd667317359c55d0dde02ea89cf775baa84c",
+      "bytes": 325866,
+      "sha256": "fa46762a10ae9009f2438d1c11a0bedf465ed053383057ab10adb45b806431aa",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/82/64aff73222d3c2b9c6fd552915213ab6b990cf",
+      "bytes": 324170,
+      "sha256": "9a92fbf88bdf74d6979e68a1f5b16b180433833399a61bfe15f53cc4229efeed",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/c7/749d26e41b6393d908dca303bd6a7e308cd8d2",
+      "bytes": 316257,
+      "sha256": "0d132aedae2d479ca5ded9663e8e156fd3430cdae1f9e70d21442175926bcaa5",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/f0/89bb4bec361af1693c4cebb3543f88d6f964a6",
+      "bytes": 309391,
+      "sha256": "b1addd5ffca2f3139310688350b07dae59291124d926e2728e7c21c8174863e9",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/a5/bf03257e6106c1523bdd85899e181b13d15657",
+      "bytes": 285466,
+      "sha256": "1cd118f2e1e1dca95427d3b81212fa9075681b53dc97b719a6eef9e757a7c03c",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/3d/104c08b36b9e1e567d5351268247381c11d9a3",
+      "bytes": 285123,
+      "sha256": "3a3a3997f9ea32ae1f68592de1731c252f1482f9bdbf13fb50643de11738ca52",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/a3/854948b2c746014e71ae0e3e79e61e37fa8f35",
+      "bytes": 278128,
+      "sha256": "fb936ec3bd212d7308f7597c2b317351f00f4d6c10c4720141f888c5cb0d18fc",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/7e/06275a5e46a8e649779f3a1d5fd8e55bd2c82b",
+      "bytes": 271708,
+      "sha256": "8c6c7696ff750962a7438ab8d7ab38061df292f60f88167a35e696a3cf267e37",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/c8/a05a20615febeb580d6ebffdc9280ecf1c52cf",
+      "bytes": 260003,
+      "sha256": "d4e1191e9f2a48165ecd8f55d0054410f783f03d76f5a9b5172ee438f9a905e3",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/5e/66c87b64d25555285a024d0c2615f069ab9ef5",
+      "bytes": 252934,
+      "sha256": "2e27cc35c74dab60fdebd179a105b4990c7c54eec5adf17f452f4bb10acbd7ea",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/f4/654e55ce3e31987e8549a38328b661c28df8bf",
+      "bytes": 252180,
+      "sha256": "6584523a6dbb629113fa8e441dbe3b8454b7bda929c7f5e9c9ae89781fda492b",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/ba/22c9c545f52dfece2ff8dd7c5dcfed6b16ccff",
+      "bytes": 234179,
+      "sha256": "685a9b380ac6cb9293bbee727c1ec8655e5b34786a54b942d32898396fa61cd7",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/ce/cf7a17cab5fbe84b44b7469c3bf450d1ca034a",
+      "bytes": 226176,
+      "sha256": "4f992f45e2a32c7ed4b9462db0f0d63a803ed55e90b3fbdb5e614b8b9a141224",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/d5/ca4a4e98d4adfbdc06b3c2fd4fb3f750c0a73f",
+      "bytes": 213995,
+      "sha256": "35b984304cd591c214d3e802cad454bc5b933f4cbaaeec05695ce1cb24ed7f92",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/12/4a2d33cac33f1f14eb6600e50151d450c008d9",
+      "bytes": 209397,
+      "sha256": "e8ea7ab18404c01042aa02e7f3e0ecc923a362eec6eab84cabbf2b3bf6e01d5d",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/07/67148e4c8577cdbb5544994ea4e940f3de07e5",
+      "bytes": 209320,
+      "sha256": "c465a4bd52b75654e52138c9f8bfe2a2ae64dc6e0a8067803d32ace08cf8b536",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/fa/45af60d837c73bc561c536542fc7dfeb68ae24",
+      "bytes": 205520,
+      "sha256": "e33fe2c02cd3aff8f5f641b6ddbcef8e8fe64f077d91e7cd4d98f11c318e37eb",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/4b/06e4cb7d21fd9ffbc3422b515402b39be8ca18",
+      "bytes": 203616,
+      "sha256": "51a3b4610181afebf18c0f60df1689604c9f88c08ef0030d32e8dc711102b3b2",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/fd/aae9b6ff0339f2a19a871e6c06e57e54a0c83b",
+      "bytes": 193471,
+      "sha256": "a119cf06b3b37edad2994dbbfa80aee7922fb9ee9c27b54996e11ff334322071",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": "frontend/node_modules/vitest/dist/chunks/index.X0nbfr6-.js",
+      "bytes": 181053,
+      "sha256": "3e5b625998909c9e10020025997a5a7567bfe9c84f93e25638ab571d6649d245",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "No deterministic retention authority established"
+    },
+    {
+      "path": ".git/objects/4a/0e15dec5070a4496d55aa49835c86b398b56bc",
+      "bytes": 173782,
+      "sha256": "e9eaa002070b614b8c5b06dc3c050a951173e2e653e429656fc071ad83e9fade",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/0c/4b96dfbb0c9d36d38fef3c85edc828f0b0dcc7",
+      "bytes": 165532,
+      "sha256": "eaae61bb96f617d61b525f572d1d02112c3b4eeb9dc034ef7a1d0ac607df7cd7",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/98/ece89e10f2425a06b7f9667e1a8959d5b44935",
+      "bytes": 154816,
+      "sha256": "85aca41fc4ddb5571b18765db6185fe66d8a1da6c4e7ec399247dc9e4936bb2f",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": "frontend/node_modules/vitest/dist/chunks/coverage.DfSpMS-b.js",
+      "bytes": 148575,
+      "sha256": "37b63dd27952c9779fb1cbcd962cf111147a0c42663f3df83dd8094409ff6500",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "No deterministic retention authority established"
+    },
+    {
+      "path": ".git/objects/fb/13d7f5be49edffa8e4db2cb485a398255f18e6",
+      "bytes": 147732,
+      "sha256": "5ee1458c76c5a3d46da3aff8d3c9ae384f2aaf6add08fdc243f065830699b21b",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": "frontend/node_modules/.vite/deps/marked.js.map",
+      "bytes": 142746,
+      "sha256": "d0c479a87ad6e36be0c280b8103c5e5d24857e8d5aa94818b6b4d646319ca4dd",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "No deterministic retention authority established"
+    },
+    {
+      "path": "frontend/node_modules/vitest/dist/chunks/vi.bdSIJ99Y.js",
+      "bytes": 137333,
+      "sha256": "fee26ac20b050ce1790ba71ccfe50fe63f92858b9a14983971ccce68fdfde0f4",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "No deterministic retention authority established"
+    },
+    {
+      "path": ".git/objects/pack/multi-pack-index",
+      "bytes": 133992,
+      "sha256": "69ae358f13e326a5c307e1162e0f7dd9eb10f2488530e9c88419f0a61f5bfe5d",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/79/6ba768a05f4b88b039c44c907d25ff64479849",
+      "bytes": 130838,
+      "sha256": "8bcc781fea3f437f3b627be3feebd757a989ab2c3994aae786c6e47ca0506ac0",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/5b/62ddcf27aaa4cd6d9de4883c67e87f609d0dfc",
+      "bytes": 124509,
+      "sha256": "83bf6c25001e59f5b52f7d2c23dfd79de6a885a4e83cdece394c8c28a1aa8ad3",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/53/4d48d69768e58c53a2df688e8c8564db0d6134",
+      "bytes": 123183,
+      "sha256": "e5b8f918cb695cddaa0a65ca50223ca50833099ac928dce2c6297e2913a65c67",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/58/a02b22846faa04f941ddbbfbb041ed29483bf5",
+      "bytes": 119002,
+      "sha256": "7942d0d249f791ec2be90114afd576289eca5e4efbd1623ff30b626f563a65cc",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/42/f15e554aec5f939c48c5f62b620c175762cabf",
+      "bytes": 118561,
+      "sha256": "e11fab1eb0c0cec22633806332a928ef51a8271c8ba2aba2795675b3a5351496",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/9c/91dc5ace837fb4a726dd3f322b6982fa6594d1",
+      "bytes": 116279,
+      "sha256": "f3aeb3c43e39ef2d7a938810475ff2ea7e900ab104d093d0cd593a7495efdeea",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/e7/2f125124e42ce4483ca3d54f1119a69dc6a9a4",
+      "bytes": 115550,
+      "sha256": "08448e6da8858221db3f5ca32de3bc26b8f65fae1fa83e1ce83914afeef7793a",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/a1/644e10e860384beae1832488234642299f5bb5",
+      "bytes": 112934,
+      "sha256": "0c6b3f4a7e076c81aa653e52ed9eacf0228c06c63b94628115e7f1b63cfa5ce6",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/d6/997d1731263448e8991e3c342e8ea2a7e324d1",
+      "bytes": 112934,
+      "sha256": "f7bf3b940051720988fa0b7e5e2333c21172ecc302eec773c18a247940a486ce",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/94/805019d51b849b341e482f14d2d8b05055446d",
+      "bytes": 112929,
+      "sha256": "d35615f10393a58039d85adbe2377cc3bd9c3c3a6700ca5c937abe34360ed1dc",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/aa/4d4606f7016d349f04e3b3bdb8198a3a13948c",
+      "bytes": 112633,
+      "sha256": "1c7c8388b8e5776c074cf8bcb6c417f3981fad35259159bb4e7622b8b9a4752c",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/fa/573c352aed1e4a4f6c13c9efed029604412dfd",
+      "bytes": 111877,
+      "sha256": "f9bb022465789aa593bbb4cf7e7fde9906cdf0d8333e32cbb0f02e325e0d5071",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/pack/pack-d28f91855d10e5f891a8c2232620db20392890f7.idx",
+      "bytes": 110860,
+      "sha256": "32965e9024108a75c6b198cac2d467ca3969449e0d9714108b2c3d6791fde428",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/30/9317733e86fc12b6ed654bf6cee4d85f5fcbaa",
+      "bytes": 107618,
+      "sha256": "cb8640075f01da26660c891237616e73209870e0f3aec34d2396806ce4ce5a61",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/cb/b5e39ff21a42517026ecf521b3228723c1b55e",
+      "bytes": 107142,
+      "sha256": "b00f13452c49a07c542c0e886b2d4ae719196a641e16e33bd51aaf65b83eec2a",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/fb/f5769d929f798a8df81027e3183bf752622fe3",
+      "bytes": 106960,
+      "sha256": "4927e086b4629e3aa06302f572a8e66a35d4b1b23eba538d57e0c88a069dc36c",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/1d/3044fe96a192c2fb468ab195e201c3abda7f58",
+      "bytes": 104243,
+      "sha256": "0b15e129d485c06faa7b16ef3c4bf93ce9e04e5d5b1890b95e12ffdc6493d3c0",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/13/8f855fbf87b81f8b3c339c9c5252c2a1eac169",
+      "bytes": 103412,
+      "sha256": "043483f56fa2dfed282263176c7a4b3b09c4c9e03d27905770b54511acea2c3a",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/bd/3eda342bc1e58691690dd03b460974279f9092",
+      "bytes": 103175,
+      "sha256": "973532590caec200ad562f3a013bc6d6afe27e74320f5e92023e84dd76fe4162",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": "frontend/node_modules/vitest/dist/chunks/reporters.d.BuRON0I0.d.ts",
+      "bytes": 99967,
+      "sha256": "ab80d2cb170a92c61ca8c822d0db0fc50eb15c7c6cf1a24cb01852a5a15a7db8",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "No deterministic retention authority established"
+    },
+    {
+      "path": ".git/objects/92/65dfac126a64f1f55bf8f9d7d8d7079cd19da4",
+      "bytes": 99405,
+      "sha256": "0d424016b1623f6d604bb812d07d372e9660c1730f472aee6ccab3c572cf79d5",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/55/5ecd63cc2e12ae2388129ade81fd578324457b",
+      "bytes": 95262,
+      "sha256": "fbfc04ad7fbd8ed269d991d1573e6cc1e9f4ae9f35077fc6b6d52cdf8fc1a64c",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/3e/c8b44d6f1b2d1d24ac99365a49c9b5df4fe1c4",
+      "bytes": 95006,
+      "sha256": "ce5518878be720fc1e4da33c736c6d2f7318c14fc6e4cd51a41eaed640d16a48",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/92/5f1516075c33c148894fbcb5c0c0e1f19f7324",
+      "bytes": 92853,
+      "sha256": "7fede7aa2d3fb0e1b10523089ba2dc39c561074eac36560245135a1688a74b01",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/fa/c5c33c5ad5c1d5ac8c8c57deb6091811558a18",
+      "bytes": 92257,
+      "sha256": "7c331d0db08e1a82cddc1339a05730cd0a5ed3c247b0168b9239b1b1ba4311ca",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/d4/8bb32bb48d4fb51bacf9150ae169ebc509c74d",
+      "bytes": 91461,
+      "sha256": "3b62cebbffd4e099a2c5896295290b8dd32122492a50baec4efc0fb97200d98c",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/objects/fd/tmp_obj_Jxqbpn",
+      "bytes": 90112,
+      "sha256": "da693390ffd6cb3e14ba387cce5ab570d46ddc274c3fc08422fad867bba2b582",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    },
+    {
+      "path": ".git/index",
+      "bytes": 86231,
+      "sha256": "3542d4275f280fe06e898cf85cf2106fa495a039c917cfa60232804be865d01d",
+      "classification": "UNKNOWN_DO_NOT_TOUCH",
+      "classification_reason": "Git object/database data; preserve history"
+    }
+  ],
+  "required_follow_up_before_any_cleanup": [
+    "Obtain explicit owner/retention approval for each archive candidate.",
+    "Verify references and reproducibility outside this mechanical audit.",
+    "Run a separate authorized cleanup decision."
+  ],
+  "mutation_counts": {
+    "deleted": 0,
+    "moved": 0,
+    "renamed": 0,
+    "compressed": 0,
+    "references_changed": 0
+  }
+}

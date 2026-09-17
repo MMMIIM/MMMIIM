@@ -1,0 +1,4146 @@
+{
+  "artifact_type": "V43_P0_487_SEMANTIC_RECONSTRUCTION_REVIEW_PACKET",
+  "artifact_version": "v1",
+  "blind": true,
+  "semantic_labels_present": false,
+  "historical_aggregate_included": false,
+  "tender_id": "TB-006",
+  "source_truth": {
+    "id": "GPT_SOURCE_TRUTH_P0_CORE6_V1",
+    "sha256": "sha256:9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+    "atom_count": 19
+  },
+  "production_identity": {
+    "run_id": "V43-CORE6-20260911",
+    "source_sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+    "export_path": "docs/eval/requirement-production-core6-20260911/TB-006.production-requirements.json"
+  },
+  "mechanical_trace_identity": {
+    "eval_run_id": "V43-FLYWHEEL-P0-487-R3",
+    "artifact_path": "docs/eval/flywheel/V43-FLYWHEEL-P0-487-R3/V43_P0_487_PROVENANCE_TRACE_INDEX.json"
+  },
+  "rows": [
+    {
+      "atom_id": "TB-006-P0-0001",
+      "tender_id": "TB-006",
+      "source_truth": {
+        "atom_id": "TB-006-P0-0001",
+        "tender_id": "TB-006",
+        "page": 3,
+        "atomic_requirement": "满足《中华人民共和国政府采购法》第二十二条规定。",
+        "source_excerpt": "满足《中华人民共和国政府采购法》第二十二条规定。",
+        "source_text": "满足《中华人民共和国政府采购法》第二十二条规定。",
+        "source_text_origin": "R3.trace.source.text",
+        "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_truth_sha256": "sha256:9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "QUALIFICATION",
+        "risk_tier": "P0",
+        "applicability": "ACTIVE",
+        "source_mode": "GPT_ATOMIC_NORMALIZATION",
+        "note": null,
+        "context": {
+          "page": 3,
+          "text": "满足《中华人民共和国政府采购法》第二十二条规定。",
+          "context_origin": "frozen-source-truth-and-r3-trace"
+        }
+      },
+      "production_identity": {
+        "production_run_id": "V43-CORE6-20260911",
+        "tender_id": "TB-006",
+        "source_sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_file": "TB-006-beijing-emergency-model-cloud.pdf",
+        "production_export_path": "docs/eval/requirement-production-core6-20260911/TB-006.production-requirements.json"
+      },
+      "mechanical_trace": {
+        "r3_case_id": "TB-006-P0-0001",
+        "trace_id": "trace:3a4f7f3ade05eae2ebc501f4",
+        "source_linked": true,
+        "no_mechanical_link_found": false,
+        "linked_candidate_count_observed": 5,
+        "link_methods_observed": [
+          "same_page_span_only",
+          "normalized_exact_substring"
+        ],
+        "stage_statuses": {
+          "Tender Source": "PRESENT",
+          "Section": "PRESENT",
+          "Chunk": "PRESENT",
+          "Provider Input": "EVIDENCE_NOT_PERSISTED",
+          "Raw Candidate": "EVIDENCE_NOT_PERSISTED",
+          "Normalization": "EVIDENCE_NOT_PERSISTED",
+          "Source Resolution": "PRESENT",
+          "Canonical Requirement": "PRESENT"
+        },
+        "evidence_gaps": [
+          {
+            "stage": "Provider Input",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Raw Candidate",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Normalization",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          }
+        ]
+      },
+      "candidate_canonicals": [
+        {
+          "requirement_id": "REQ-004",
+          "tender_id": "TB-006",
+          "requirement_text": "满足《中华人民共和国政府采购法》第二十二条规定。",
+          "source_excerpt": "1.满足《中华人民共和国政府采购法》第二十二条规定；",
+          "source_page_start": 3,
+          "source_page_end": 3,
+          "source_refs": [
+            "C001-S029"
+          ],
+          "source_hash": "a923bc6839207959852b42ff0805430b847f9f5f6a76f2d962cf80ed1ae921b4",
+          "source_span": {
+            "page_start": 3,
+            "page_end": 3,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "normalized_exact_substring",
+          "ranking_features": {
+            "method_priority": 3,
+            "normalized_exact_substring": true,
+            "shared_8gram_count": 16,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.916666666667,
+            "mechanical_score": 3016000.9166666665
+          }
+        },
+        {
+          "requirement_id": "REQ-005",
+          "tender_id": "TB-006",
+          "requirement_text": "本项目不专门面向中小企业预留采购份额。",
+          "source_excerpt": "☑本项目不专门面向中小企业预留采购份额。",
+          "source_page_start": 3,
+          "source_page_end": 3,
+          "source_refs": [
+            "C001-S031"
+          ],
+          "source_hash": "76e8e18080916b400f510b06f580220f2a42b0e585e6557880dd21a6c02aac8d",
+          "source_span": {
+            "page_start": 3,
+            "page_end": 3,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.025,
+            "mechanical_score": 1000000.025
+          }
+        },
+        {
+          "requirement_id": "REQ-001",
+          "tender_id": "TB-006",
+          "requirement_text": "采购包1：北京市应急指挥保障中心2025-2026年度北京市应急指挥调度能力提升工程项目大模型软件政务云租用项目，数量1，简要技术需求或服务要求详见第五章采购需求。",
+          "source_excerpt": "包号 标的名称\n采购包\n（万元）\n数量 简要技术需求或服务要求\n1\n北京市应急\n指挥保障中\n心2025-2026\n年度北京市\n应急指挥调\n度能力提升\n工程项目大\n模型软件政\n务云租用项\n目\n174.0352 1 详见第五章采购需求",
+          "source_page_start": 3,
+          "source_page_end": 3,
+          "source_refs": [
+            "C001-S010",
+            "C001-S011",
+            "C001-S012",
+            "C001-S013",
+            "C001-S014",
+            "C001-S015",
+            "C001-S016",
+            "C001-S017",
+            "C001-S018",
+            "C001-S019",
+            "C001-S020",
+            "C001-S021",
+            "C001-S022",
+            "C001-S023",
+            "C001-S024",
+            "C001-S025"
+          ],
+          "source_hash": "a8f67ef404bf060150f68d2d644afe23ed62b34070cc9a4856b1c43a7abd2b8e",
+          "source_span": {
+            "page_start": 3,
+            "page_end": 3,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.009259259259,
+            "mechanical_score": 1000000.0092592592
+          }
+        },
+        {
+          "requirement_id": "REQ-002",
+          "tender_id": "TB-006",
+          "requirement_text": "合同履行期限：自合同签订之日起10个月。",
+          "source_excerpt": "5.合同履行期限：自合同签订之日起 10 个月。",
+          "source_page_start": 3,
+          "source_page_end": 3,
+          "source_refs": [
+            "C001-S026"
+          ],
+          "source_hash": "714052e04728cc86332da2412f960ed0718621e85245882a137de622ab9cc6ce",
+          "source_span": {
+            "page_start": 3,
+            "page_end": 3,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0,
+            "mechanical_score": 1000000
+          }
+        },
+        {
+          "requirement_id": "REQ-003",
+          "tender_id": "TB-006",
+          "requirement_text": "本项目不接受联合体投标。",
+          "source_excerpt": "6.本项目是否接受联合体投标：□是 ☑否。",
+          "source_page_start": 3,
+          "source_page_end": 3,
+          "source_refs": [
+            "C001-S027"
+          ],
+          "source_hash": "da85ac4b1f89be157868c754ffdf3adce8aaef33bd3bcd3598e52388e394c9d2",
+          "source_span": {
+            "page_start": 3,
+            "page_end": 3,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0,
+            "mechanical_score": 1000000
+          }
+        }
+      ],
+      "candidate_status": "CANDIDATES_AVAILABLE"
+    },
+    {
+      "atom_id": "TB-006-P0-0002",
+      "tender_id": "TB-006",
+      "source_truth": {
+        "atom_id": "TB-006-P0-0002",
+        "tender_id": "TB-006",
+        "page": 4,
+        "atomic_requirement": "投标人须取得互联网资源协作服务相关许可，并提供《增值电信业务经营许可证》；业务种类须含互联网数据中心相关业务且机房所在地包含北京。",
+        "source_excerpt": "投标人须取得互联网资源协作服务相关许可，并提供《增值电信业务经营许可证》；业务种类须含互联网数据中心相关业务且机房所在地包含北京。",
+        "source_text": "投标人须取得互联网资源协作服务相关许可，并提供《增值电信业务经营许可证》；业务种类须含互联网数据中心相关业务且机房所在地包含北京。",
+        "source_text_origin": "R3.trace.source.text",
+        "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_truth_sha256": "sha256:9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "QUALIFICATION",
+        "risk_tier": "P0",
+        "applicability": "ACTIVE",
+        "source_mode": "GPT_ATOMIC_NORMALIZATION",
+        "note": null,
+        "context": {
+          "page": 4,
+          "text": "投标人须取得互联网资源协作服务相关许可，并提供《增值电信业务经营许可证》；业务种类须含互联网数据中心相关业务且机房所在地包含北京。",
+          "context_origin": "frozen-source-truth-and-r3-trace"
+        }
+      },
+      "production_identity": {
+        "production_run_id": "V43-CORE6-20260911",
+        "tender_id": "TB-006",
+        "source_sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_file": "TB-006-beijing-emergency-model-cloud.pdf",
+        "production_export_path": "docs/eval/requirement-production-core6-20260911/TB-006.production-requirements.json"
+      },
+      "mechanical_trace": {
+        "r3_case_id": "TB-006-P0-0002",
+        "trace_id": "trace:c965f14313cf21f66cd174ef",
+        "source_linked": true,
+        "no_mechanical_link_found": false,
+        "linked_candidate_count_observed": 3,
+        "link_methods_observed": [
+          "same_page_span_only",
+          "shared_8gram"
+        ],
+        "stage_statuses": {
+          "Tender Source": "PRESENT",
+          "Section": "PRESENT",
+          "Chunk": "PRESENT",
+          "Provider Input": "EVIDENCE_NOT_PERSISTED",
+          "Raw Candidate": "EVIDENCE_NOT_PERSISTED",
+          "Normalization": "EVIDENCE_NOT_PERSISTED",
+          "Source Resolution": "PRESENT",
+          "Canonical Requirement": "PRESENT"
+        },
+        "evidence_gaps": [
+          {
+            "stage": "Provider Input",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Raw Candidate",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Normalization",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          }
+        ]
+      },
+      "candidate_canonicals": [
+        {
+          "requirement_id": "REQ-007",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人应取得互联网资源协作服务业务许可，须提供《中华人民共和国增值电信业务经营许可证》复印件。",
+          "source_excerpt": "根据工业和信息化部《关于督促互联网网络接入服务企业依法持证经营的通知》工\n信管函〔2018〕84 号文件精神，投标人应取得互联网资源协作服务业务许可：\n投标人须提供《中华人民共和国增值电信业务经营许可证》复印件：",
+          "source_page_start": 4,
+          "source_page_end": 4,
+          "source_refs": [
+            "C001-S046",
+            "C001-S047",
+            "C001-S048"
+          ],
+          "source_hash": "4634357347091d7128f672365c9719b7ad2e0d37779b918eda0c3db70522620e",
+          "source_span": {
+            "page_start": 4,
+            "page_end": 4,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "shared_8gram",
+          "ranking_features": {
+            "method_priority": 2,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 9,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.213114754098,
+            "mechanical_score": 2009000.213114754
+          }
+        },
+        {
+          "requirement_id": "REQ-008",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人提供的《中华人民共和国增值电信业务经营许可证》中的“业务种类（服务项目）及覆盖范围”须包含第一类增值电信业务中的“互联网数据中心业务”或“互联网数据中心业务（不含互联网资源协作服务）”或“互联网数据中心业务（仅限互联网资源协作服务）”，机房所在地均须包含“北京”。",
+          "source_excerpt": "该许可证中的“业务种类（服务项目）及覆盖范围中”须包含第一类增值电信业务\n中的“互联网数据中心业务”或“互联网数据中心业务（不含互联网资源协作服务）”\n或“互联网数据中心业务（仅限互联网资源协作服务）”，机房所在地均须包含“北\n京”；",
+          "source_page_start": 4,
+          "source_page_end": 4,
+          "source_refs": [
+            "C001-S049",
+            "C001-S050",
+            "C001-S051",
+            "C001-S052"
+          ],
+          "source_hash": "ae6e048f1f73c2db11569eaf648ce1988d529b237bfca874e658c13ea822b940",
+          "source_span": {
+            "page_start": 4,
+            "page_end": 4,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "shared_8gram",
+          "ranking_features": {
+            "method_priority": 2,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 7,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.356435643564,
+            "mechanical_score": 2007000.3564356435
+          }
+        },
+        {
+          "requirement_id": "REQ-006",
+          "tender_id": "TB-006",
+          "requirement_text": "本项目不属于政府购买服务。",
+          "source_excerpt": "3.1 本项目是否属于政府购买服务：\n☑否",
+          "source_page_start": 4,
+          "source_page_end": 4,
+          "source_refs": [
+            "C001-S041",
+            "C001-S042"
+          ],
+          "source_hash": "142735d94adab566e4139b60aecef055261d477b277c193a28c073be5be49123",
+          "source_span": {
+            "page_start": 4,
+            "page_end": 4,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.013698630137,
+            "mechanical_score": 1000000.0136986302
+          }
+        }
+      ],
+      "candidate_status": "CANDIDATES_AVAILABLE"
+    },
+    {
+      "atom_id": "TB-006-P0-0003",
+      "tender_id": "TB-006",
+      "source_truth": {
+        "atom_id": "TB-006-P0-0003",
+        "tender_id": "TB-006",
+        "page": 24,
+        "atomic_requirement": "提供有效营业执照/事业单位法人证书/执业许可证等主体资格证明。",
+        "source_excerpt": "提供有效营业执照/事业单位法人证书/执业许可证等主体资格证明。",
+        "source_text": "提供有效营业执照/事业单位法人证书/执业许可证等主体资格证明。",
+        "source_text_origin": "R3.trace.source.text",
+        "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_truth_sha256": "sha256:9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "QUALIFICATION",
+        "risk_tier": "P0",
+        "applicability": "ACTIVE",
+        "source_mode": "GPT_ATOMIC_NORMALIZATION",
+        "note": null,
+        "context": {
+          "page": 24,
+          "text": "提供有效营业执照/事业单位法人证书/执业许可证等主体资格证明。",
+          "context_origin": "frozen-source-truth-and-r3-trace"
+        }
+      },
+      "production_identity": {
+        "production_run_id": "V43-CORE6-20260911",
+        "tender_id": "TB-006",
+        "source_sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_file": "TB-006-beijing-emergency-model-cloud.pdf",
+        "production_export_path": "docs/eval/requirement-production-core6-20260911/TB-006.production-requirements.json"
+      },
+      "mechanical_trace": {
+        "r3_case_id": "TB-006-P0-0003",
+        "trace_id": "trace:03ac4311dafff9bfd46cbc7e",
+        "source_linked": true,
+        "no_mechanical_link_found": false,
+        "linked_candidate_count_observed": 3,
+        "link_methods_observed": [
+          "shared_8gram",
+          "same_page_span_only"
+        ],
+        "stage_statuses": {
+          "Tender Source": "PRESENT",
+          "Section": "PRESENT",
+          "Chunk": "PRESENT",
+          "Provider Input": "EVIDENCE_NOT_PERSISTED",
+          "Raw Candidate": "EVIDENCE_NOT_PERSISTED",
+          "Normalization": "EVIDENCE_NOT_PERSISTED",
+          "Source Resolution": "PRESENT",
+          "Canonical Requirement": "PRESENT"
+        },
+        "evidence_gaps": [
+          {
+            "stage": "Provider Input",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Raw Candidate",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Normalization",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          }
+        ]
+      },
+      "candidate_canonicals": [
+        {
+          "requirement_id": "REQ-062",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人为企业（包括合伙企业）的，应提供有效的证明文件电子件或电子证照；投标人为事业单位的，应提供有效的“事业单位法人证书”；投标人是非企业机构的，应提供有效的“执业许可证”、“登记证书”等证明文件；投标人是个体工商户的，应提供有效的“个体工商户”证明；投标人是自然人的，应提供有效的自然人身份证明。",
+          "source_excerpt": "投标人为企业（包括合伙企业）的，应提供\n投标人为事业单位的，应提供有效的“事业单\n位法人证书”；\n投标人是非企业机构的，应提供有效的“执业\n许可证”、“登记证书”等证明文件；\n投标人是个体工商户的，应提供有效的“个体\n投标人是自然人的，应提供有效的自然人身\n份证明。\n分支机构参加投标的，应提供该分支机构或\n其所属法人/其他组织的相应证明文件；同时\n还应提供其所属法人/其他组织出具的授权其\n参与本项目的授权书（格式自拟，须加盖其\n所属法人/其他组织的公章）；对于银行、保\n险、石油石化、电力、电信等行业的分支机\n构，可以提供上述授权，也可以提供其所属\n法人/其他组织的有关文件或制度等能够证明\n授权其独立开展业务的证明材料。\n提 供 证 明 文\n件 的 电 子 件\n或电子证照",
+          "source_page_start": 24,
+          "source_page_end": 24,
+          "source_refs": [
+            "C007-S011",
+            "C007-S012",
+            "C007-S013",
+            "C007-S014",
+            "C007-S015",
+            "C007-S016",
+            "C007-S017",
+            "C007-S018",
+            "C007-S019",
+            "C007-S020",
+            "C007-S021",
+            "C007-S022",
+            "C007-S023",
+            "C007-S024",
+            "C007-S025",
+            "C007-S026",
+            "C007-S027",
+            "C007-S028",
+            "C007-S029",
+            "C007-S030"
+          ],
+          "source_hash": "c92251587be1e668524f46a8dc1de74b67c071204e378343325aee3607c085a4",
+          "source_span": {
+            "page_start": 24,
+            "page_end": 24,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "shared_8gram",
+          "ranking_features": {
+            "method_priority": 2,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 1,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.078947368421,
+            "mechanical_score": 2001000.0789473683
+          }
+        },
+        {
+          "requirement_id": "REQ-064",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人应提供符合招标文件要求的《投标人资格声明书》，格式见《投标文件格式》。",
+          "source_excerpt": "1-2 投标人资格声明\n书\n提供了符合招标文件要求的《投标人资格声\n明书》。\n格式见《投标\n文件格式》",
+          "source_page_start": 24,
+          "source_page_end": 24,
+          "source_refs": [
+            "C007-S031",
+            "C007-S032",
+            "C007-S033",
+            "C007-S034",
+            "C007-S035",
+            "C007-S036"
+          ],
+          "source_hash": "b9aac6f40f21d05ab55bb1926e4bd1dccaf9ae7ae63f6c1fea5f8bcc299abeb1",
+          "source_span": {
+            "page_start": 24,
+            "page_end": 24,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.032258064516,
+            "mechanical_score": 1000000.0322580645
+          }
+        },
+        {
+          "requirement_id": "REQ-063",
+          "tender_id": "TB-006",
+          "requirement_text": "分支机构参加投标的，应提供该分支机构或其所属法人/其他组织的相应证明文件；同时还应提供其所属法人/其他组织出具的授权其参与本项目的授权书（格式自拟，须加盖其所属法人/其他组织的公章）；对于银行、保险、石油石化、电力、电信等行业的分支机构，可以提供上述授权，也可以提供其所属法人/其他组织的有关文件或制度等能够证明授权其独立开展业务的证明材料。",
+          "source_excerpt": "分支机构参加投标的，应提供该分支机构或\n其所属法人/其他组织的相应证明文件；同时\n还应提供其所属法人/其他组织出具的授权其\n参与本项目的授权书（格式自拟，须加盖其\n所属法人/其他组织的公章）；对于银行、保\n险、石油石化、电力、电信等行业的分支机\n构，可以提供上述授权，也可以提供其所属\n法人/其他组织的有关文件或制度等能够证明\n授权其独立开展业务的证明材料。",
+          "source_page_start": 24,
+          "source_page_end": 24,
+          "source_refs": [
+            "C007-S019",
+            "C007-S020",
+            "C007-S021",
+            "C007-S022",
+            "C007-S023",
+            "C007-S024",
+            "C007-S025",
+            "C007-S026",
+            "C007-S027"
+          ],
+          "source_hash": "d7c389939bbd333bd306c741ef3f4c1b8f1f094e9a73eceaa29f0e82ef67794e",
+          "source_span": {
+            "page_start": 24,
+            "page_end": 24,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.022388059701,
+            "mechanical_score": 1000000.0223880596
+          }
+        }
+      ],
+      "candidate_status": "CANDIDATES_AVAILABLE"
+    },
+    {
+      "atom_id": "TB-006-P0-0004",
+      "tender_id": "TB-006",
+      "source_truth": {
+        "atom_id": "TB-006-P0-0004",
+        "tender_id": "TB-006",
+        "page": 24,
+        "atomic_requirement": "提供符合招标文件要求的投标人资格声明书。",
+        "source_excerpt": "提供符合招标文件要求的投标人资格声明书。",
+        "source_text": "提供符合招标文件要求的投标人资格声明书。",
+        "source_text_origin": "R3.trace.source.text",
+        "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_truth_sha256": "sha256:9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "QUALIFICATION",
+        "risk_tier": "P0",
+        "applicability": "ACTIVE",
+        "source_mode": "GPT_ATOMIC_NORMALIZATION",
+        "note": null,
+        "context": {
+          "page": 24,
+          "text": "提供符合招标文件要求的投标人资格声明书。",
+          "context_origin": "frozen-source-truth-and-r3-trace"
+        }
+      },
+      "production_identity": {
+        "production_run_id": "V43-CORE6-20260911",
+        "tender_id": "TB-006",
+        "source_sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_file": "TB-006-beijing-emergency-model-cloud.pdf",
+        "production_export_path": "docs/eval/requirement-production-core6-20260911/TB-006.production-requirements.json"
+      },
+      "mechanical_trace": {
+        "r3_case_id": "TB-006-P0-0004",
+        "trace_id": "trace:ec6aff57f8cde1fe096ae182",
+        "source_linked": true,
+        "no_mechanical_link_found": false,
+        "linked_candidate_count_observed": 3,
+        "link_methods_observed": [
+          "same_page_span_only",
+          "shared_8gram"
+        ],
+        "stage_statuses": {
+          "Tender Source": "PRESENT",
+          "Section": "PRESENT",
+          "Chunk": "PRESENT",
+          "Provider Input": "EVIDENCE_NOT_PERSISTED",
+          "Raw Candidate": "EVIDENCE_NOT_PERSISTED",
+          "Normalization": "EVIDENCE_NOT_PERSISTED",
+          "Source Resolution": "PRESENT",
+          "Canonical Requirement": "PRESENT"
+        },
+        "evidence_gaps": [
+          {
+            "stage": "Provider Input",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Raw Candidate",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Normalization",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          }
+        ]
+      },
+      "candidate_canonicals": [
+        {
+          "requirement_id": "REQ-064",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人应提供符合招标文件要求的《投标人资格声明书》，格式见《投标文件格式》。",
+          "source_excerpt": "1-2 投标人资格声明\n书\n提供了符合招标文件要求的《投标人资格声\n明书》。\n格式见《投标\n文件格式》",
+          "source_page_start": 24,
+          "source_page_end": 24,
+          "source_refs": [
+            "C007-S031",
+            "C007-S032",
+            "C007-S033",
+            "C007-S034",
+            "C007-S035",
+            "C007-S036"
+          ],
+          "source_hash": "b9aac6f40f21d05ab55bb1926e4bd1dccaf9ae7ae63f6c1fea5f8bcc299abeb1",
+          "source_span": {
+            "page_start": 24,
+            "page_end": 24,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "shared_8gram",
+          "ranking_features": {
+            "method_priority": 2,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 5,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.472222222222,
+            "mechanical_score": 2005000.4722222222
+          }
+        },
+        {
+          "requirement_id": "REQ-063",
+          "tender_id": "TB-006",
+          "requirement_text": "分支机构参加投标的，应提供该分支机构或其所属法人/其他组织的相应证明文件；同时还应提供其所属法人/其他组织出具的授权其参与本项目的授权书（格式自拟，须加盖其所属法人/其他组织的公章）；对于银行、保险、石油石化、电力、电信等行业的分支机构，可以提供上述授权，也可以提供其所属法人/其他组织的有关文件或制度等能够证明授权其独立开展业务的证明材料。",
+          "source_excerpt": "分支机构参加投标的，应提供该分支机构或\n其所属法人/其他组织的相应证明文件；同时\n还应提供其所属法人/其他组织出具的授权其\n参与本项目的授权书（格式自拟，须加盖其\n所属法人/其他组织的公章）；对于银行、保\n险、石油石化、电力、电信等行业的分支机\n构，可以提供上述授权，也可以提供其所属\n法人/其他组织的有关文件或制度等能够证明\n授权其独立开展业务的证明材料。",
+          "source_page_start": 24,
+          "source_page_end": 24,
+          "source_refs": [
+            "C007-S019",
+            "C007-S020",
+            "C007-S021",
+            "C007-S022",
+            "C007-S023",
+            "C007-S024",
+            "C007-S025",
+            "C007-S026",
+            "C007-S027"
+          ],
+          "source_hash": "d7c389939bbd333bd306c741ef3f4c1b8f1f094e9a73eceaa29f0e82ef67794e",
+          "source_span": {
+            "page_start": 24,
+            "page_end": 24,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.024390243902,
+            "mechanical_score": 1000000.0243902439
+          }
+        },
+        {
+          "requirement_id": "REQ-062",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人为企业（包括合伙企业）的，应提供有效的证明文件电子件或电子证照；投标人为事业单位的，应提供有效的“事业单位法人证书”；投标人是非企业机构的，应提供有效的“执业许可证”、“登记证书”等证明文件；投标人是个体工商户的，应提供有效的“个体工商户”证明；投标人是自然人的，应提供有效的自然人身份证明。",
+          "source_excerpt": "投标人为企业（包括合伙企业）的，应提供\n投标人为事业单位的，应提供有效的“事业单\n位法人证书”；\n投标人是非企业机构的，应提供有效的“执业\n许可证”、“登记证书”等证明文件；\n投标人是个体工商户的，应提供有效的“个体\n投标人是自然人的，应提供有效的自然人身\n份证明。\n分支机构参加投标的，应提供该分支机构或\n其所属法人/其他组织的相应证明文件；同时\n还应提供其所属法人/其他组织出具的授权其\n参与本项目的授权书（格式自拟，须加盖其\n所属法人/其他组织的公章）；对于银行、保\n险、石油石化、电力、电信等行业的分支机\n构，可以提供上述授权，也可以提供其所属\n法人/其他组织的有关文件或制度等能够证明\n授权其独立开展业务的证明材料。\n提 供 证 明 文\n件 的 电 子 件\n或电子证照",
+          "source_page_start": 24,
+          "source_page_end": 24,
+          "source_refs": [
+            "C007-S011",
+            "C007-S012",
+            "C007-S013",
+            "C007-S014",
+            "C007-S015",
+            "C007-S016",
+            "C007-S017",
+            "C007-S018",
+            "C007-S019",
+            "C007-S020",
+            "C007-S021",
+            "C007-S022",
+            "C007-S023",
+            "C007-S024",
+            "C007-S025",
+            "C007-S026",
+            "C007-S027",
+            "C007-S028",
+            "C007-S029",
+            "C007-S030"
+          ],
+          "source_hash": "c92251587be1e668524f46a8dc1de74b67c071204e378343325aee3607c085a4",
+          "source_span": {
+            "page_start": 24,
+            "page_end": 24,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.021052631579,
+            "mechanical_score": 1000000.0210526315
+          }
+        }
+      ],
+      "candidate_status": "CANDIDATES_AVAILABLE"
+    },
+    {
+      "atom_id": "TB-006-P0-0005",
+      "tender_id": "TB-006",
+      "source_truth": {
+        "atom_id": "TB-006-P0-0005",
+        "tender_id": "TB-006",
+        "page": 25,
+        "atomic_requirement": "不得属于信用记录认定的失信被执行人、重大税收违法案件当事人或政府采购严重违法失信主体。",
+        "source_excerpt": "不得属于信用记录认定的失信被执行人、重大税收违法案件当事人或政府采购严重违法失信主体。",
+        "source_text": "不得属于信用记录认定的失信被执行人、重大税收违法案件当事人或政府采购严重违法失信主体。",
+        "source_text_origin": "R3.trace.source.text",
+        "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_truth_sha256": "sha256:9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "QUALIFICATION",
+        "risk_tier": "P0",
+        "applicability": "ACTIVE",
+        "source_mode": "GPT_ATOMIC_NORMALIZATION",
+        "note": null,
+        "context": {
+          "page": 25,
+          "text": "不得属于信用记录认定的失信被执行人、重大税收违法案件当事人或政府采购严重违法失信主体。",
+          "context_origin": "frozen-source-truth-and-r3-trace"
+        }
+      },
+      "production_identity": {
+        "production_run_id": "V43-CORE6-20260911",
+        "tender_id": "TB-006",
+        "source_sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_file": "TB-006-beijing-emergency-model-cloud.pdf",
+        "production_export_path": "docs/eval/requirement-production-core6-20260911/TB-006.production-requirements.json"
+      },
+      "mechanical_trace": {
+        "r3_case_id": "TB-006-P0-0005",
+        "trace_id": "trace:2f37819e7c7d2593a4313570",
+        "source_linked": true,
+        "no_mechanical_link_found": false,
+        "linked_candidate_count_observed": 1,
+        "link_methods_observed": [
+          "same_page_span_only"
+        ],
+        "stage_statuses": {
+          "Tender Source": "PRESENT",
+          "Section": "PRESENT",
+          "Chunk": "PRESENT",
+          "Provider Input": "EVIDENCE_NOT_PERSISTED",
+          "Raw Candidate": "EVIDENCE_NOT_PERSISTED",
+          "Normalization": "EVIDENCE_NOT_PERSISTED",
+          "Source Resolution": "PRESENT",
+          "Canonical Requirement": "PRESENT"
+        },
+        "evidence_gaps": [
+          {
+            "stage": "Provider Input",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Raw Candidate",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Normalization",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          }
+        ]
+      },
+      "candidate_canonicals": [
+        {
+          "requirement_id": "REQ-065",
+          "tender_id": "TB-006",
+          "requirement_text": "当本项目（包）涉及预留份额专门面向中小企业采购时，投标人单独投标的，应提供《中小企业声明函》或《残疾人福利性单位声明函》或由省级以上监狱管理局、戒毒管理局（含新疆生产建设兵团）出具的属于监狱企业的证明文件；如招标文件要求以联合体形式参加或者要求合同分包的，且投标人为联合体或拟进行合同分包的，则联合体中的中小企业、签订分包意向协议的中小企业具体情况须在《中小企业声明函》或《残疾人福利性单位声明函》或由省级以上监狱管理局、戒毒管理局（含新疆生产建设兵团）出具的属于监狱企业的证明文件中如实填报，且满足招标文件关于预留份额的要求。",
+          "source_excerpt": "当本项目（包）涉及预留份额专门面向中小\n企业采购，此时建议在《资格证明文件》中\n提供。\n1、投标人单独投标的，应提供《中小企业声\n明函》或《残疾人福利性单位声明函》或由\n省级以上监狱管理局、戒毒管理局（含新疆\n生产建设兵团）出具的属于监狱企业的证明\n文件。\n2、如招标文件要求以联合体形式参加或者要\n求合同分包的，且投标人为联合体或拟进行\n合同分包的，则联合体中的中小企业、签订\n分包意向协议的中小企业具体情况须在《中\n小企业声明函》或《残疾人福利性单位声明\n函》或由省级以上监狱管理局、戒毒管理局\n（含新疆生产建设兵团）出具的属于监狱企\n业的证明文件中如实填报，且满足招标文件\n关于预留份额的要求。",
+          "source_page_start": 25,
+          "source_page_end": 25,
+          "source_refs": [
+            "C007-S064",
+            "C007-S065",
+            "C007-S066",
+            "C007-S067",
+            "C007-S068",
+            "C007-S069",
+            "C007-S070",
+            "C007-S071",
+            "C007-S072",
+            "C007-S073",
+            "C007-S074",
+            "C007-S075",
+            "C007-S076",
+            "C007-S077",
+            "C007-S078",
+            "C007-S079",
+            "C007-S080"
+          ],
+          "source_hash": "36acbd4115f73b2b202feab117556ee59f15db409a4cd5660d5450a72405e907",
+          "source_span": {
+            "page_start": 25,
+            "page_end": 25,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.010050251256,
+            "mechanical_score": 1000000.0100502513
+          }
+        }
+      ],
+      "candidate_status": "CANDIDATES_AVAILABLE"
+    },
+    {
+      "atom_id": "TB-006-P0-0006",
+      "tender_id": "TB-006",
+      "source_truth": {
+        "atom_id": "TB-006-P0-0006",
+        "tender_id": "TB-006",
+        "page": 3,
+        "atomic_requirement": "本项目不接受联合体投标。",
+        "source_excerpt": "本项目不接受联合体投标。",
+        "source_text": "本项目不接受联合体投标。",
+        "source_text_origin": "R3.trace.source.text",
+        "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_truth_sha256": "sha256:9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "QUALIFICATION",
+        "risk_tier": "P0",
+        "applicability": "ACTIVE",
+        "source_mode": "GPT_ATOMIC_NORMALIZATION",
+        "note": null,
+        "context": {
+          "page": 3,
+          "text": "本项目不接受联合体投标。",
+          "context_origin": "frozen-source-truth-and-r3-trace"
+        }
+      },
+      "production_identity": {
+        "production_run_id": "V43-CORE6-20260911",
+        "tender_id": "TB-006",
+        "source_sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_file": "TB-006-beijing-emergency-model-cloud.pdf",
+        "production_export_path": "docs/eval/requirement-production-core6-20260911/TB-006.production-requirements.json"
+      },
+      "mechanical_trace": {
+        "r3_case_id": "TB-006-P0-0006",
+        "trace_id": "trace:345487654642ba7bbc652c36",
+        "source_linked": true,
+        "no_mechanical_link_found": false,
+        "linked_candidate_count_observed": 5,
+        "link_methods_observed": [
+          "same_page_span_only"
+        ],
+        "stage_statuses": {
+          "Tender Source": "PRESENT",
+          "Section": "PRESENT",
+          "Chunk": "PRESENT",
+          "Provider Input": "EVIDENCE_NOT_PERSISTED",
+          "Raw Candidate": "EVIDENCE_NOT_PERSISTED",
+          "Normalization": "EVIDENCE_NOT_PERSISTED",
+          "Source Resolution": "PRESENT",
+          "Canonical Requirement": "PRESENT"
+        },
+        "evidence_gaps": [
+          {
+            "stage": "Provider Input",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Raw Candidate",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Normalization",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          }
+        ]
+      },
+      "candidate_canonicals": [
+        {
+          "requirement_id": "REQ-003",
+          "tender_id": "TB-006",
+          "requirement_text": "本项目不接受联合体投标。",
+          "source_excerpt": "6.本项目是否接受联合体投标：□是 ☑否。",
+          "source_page_start": 3,
+          "source_page_end": 3,
+          "source_refs": [
+            "C001-S027"
+          ],
+          "source_hash": "da85ac4b1f89be157868c754ffdf3adce8aaef33bd3bcd3598e52388e394c9d2",
+          "source_span": {
+            "page_start": 3,
+            "page_end": 3,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": true,
+            "shared_8gram_count": 4,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.526315789474,
+            "mechanical_score": 1004000.5263157894
+          }
+        },
+        {
+          "requirement_id": "REQ-005",
+          "tender_id": "TB-006",
+          "requirement_text": "本项目不专门面向中小企业预留采购份额。",
+          "source_excerpt": "☑本项目不专门面向中小企业预留采购份额。",
+          "source_page_start": 3,
+          "source_page_end": 3,
+          "source_refs": [
+            "C001-S031"
+          ],
+          "source_hash": "76e8e18080916b400f510b06f580220f2a42b0e585e6557880dd21a6c02aac8d",
+          "source_span": {
+            "page_start": 3,
+            "page_end": 3,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.115384615385,
+            "mechanical_score": 1000000.1153846154
+          }
+        },
+        {
+          "requirement_id": "REQ-001",
+          "tender_id": "TB-006",
+          "requirement_text": "采购包1：北京市应急指挥保障中心2025-2026年度北京市应急指挥调度能力提升工程项目大模型软件政务云租用项目，数量1，简要技术需求或服务要求详见第五章采购需求。",
+          "source_excerpt": "包号 标的名称\n采购包\n（万元）\n数量 简要技术需求或服务要求\n1\n北京市应急\n指挥保障中\n心2025-2026\n年度北京市\n应急指挥调\n度能力提升\n工程项目大\n模型软件政\n务云租用项\n目\n174.0352 1 详见第五章采购需求",
+          "source_page_start": 3,
+          "source_page_end": 3,
+          "source_refs": [
+            "C001-S010",
+            "C001-S011",
+            "C001-S012",
+            "C001-S013",
+            "C001-S014",
+            "C001-S015",
+            "C001-S016",
+            "C001-S017",
+            "C001-S018",
+            "C001-S019",
+            "C001-S020",
+            "C001-S021",
+            "C001-S022",
+            "C001-S023",
+            "C001-S024",
+            "C001-S025"
+          ],
+          "source_hash": "a8f67ef404bf060150f68d2d644afe23ed62b34070cc9a4856b1c43a7abd2b8e",
+          "source_span": {
+            "page_start": 3,
+            "page_end": 3,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.010416666667,
+            "mechanical_score": 1000000.0104166666
+          }
+        },
+        {
+          "requirement_id": "REQ-002",
+          "tender_id": "TB-006",
+          "requirement_text": "合同履行期限：自合同签订之日起10个月。",
+          "source_excerpt": "5.合同履行期限：自合同签订之日起 10 个月。",
+          "source_page_start": 3,
+          "source_page_end": 3,
+          "source_refs": [
+            "C001-S026"
+          ],
+          "source_hash": "714052e04728cc86332da2412f960ed0718621e85245882a137de622ab9cc6ce",
+          "source_span": {
+            "page_start": 3,
+            "page_end": 3,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0,
+            "mechanical_score": 1000000
+          }
+        },
+        {
+          "requirement_id": "REQ-004",
+          "tender_id": "TB-006",
+          "requirement_text": "满足《中华人民共和国政府采购法》第二十二条规定。",
+          "source_excerpt": "1.满足《中华人民共和国政府采购法》第二十二条规定；",
+          "source_page_start": 3,
+          "source_page_end": 3,
+          "source_refs": [
+            "C001-S029"
+          ],
+          "source_hash": "a923bc6839207959852b42ff0805430b847f9f5f6a76f2d962cf80ed1ae921b4",
+          "source_span": {
+            "page_start": 3,
+            "page_end": 3,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0,
+            "mechanical_score": 1000000
+          }
+        }
+      ],
+      "candidate_status": "CANDIDATES_AVAILABLE"
+    },
+    {
+      "atom_id": "TB-006-P0-0007",
+      "tender_id": "TB-006",
+      "source_truth": {
+        "atom_id": "TB-006-P0-0007",
+        "tender_id": "TB-006",
+        "page": 27,
+        "atomic_requirement": "须在规定期限通过北京市政府采购电子交易平台获取所参与包的招标文件。",
+        "source_excerpt": "须在规定期限通过北京市政府采购电子交易平台获取所参与包的招标文件。",
+        "source_text": "须在规定期限通过北京市政府采购电子交易平台获取所参与包的招标文件。",
+        "source_text_origin": "R3.trace.source.text",
+        "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_truth_sha256": "sha256:9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "QUALIFICATION",
+        "risk_tier": "P0",
+        "applicability": "ACTIVE",
+        "source_mode": "GPT_ATOMIC_NORMALIZATION",
+        "note": null,
+        "context": {
+          "page": 27,
+          "text": "须在规定期限通过北京市政府采购电子交易平台获取所参与包的招标文件。",
+          "context_origin": "frozen-source-truth-and-r3-trace"
+        }
+      },
+      "production_identity": {
+        "production_run_id": "V43-CORE6-20260911",
+        "tender_id": "TB-006",
+        "source_sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_file": "TB-006-beijing-emergency-model-cloud.pdf",
+        "production_export_path": "docs/eval/requirement-production-core6-20260911/TB-006.production-requirements.json"
+      },
+      "mechanical_trace": {
+        "r3_case_id": "TB-006-P0-0007",
+        "trace_id": "trace:5bd0c796b8c7312cbe9b688d",
+        "source_linked": true,
+        "no_mechanical_link_found": false,
+        "linked_candidate_count_observed": 3,
+        "link_methods_observed": [
+          "same_page_span_only",
+          "shared_8gram"
+        ],
+        "stage_statuses": {
+          "Tender Source": "PRESENT",
+          "Section": "PRESENT",
+          "Chunk": "PRESENT",
+          "Provider Input": "EVIDENCE_NOT_PERSISTED",
+          "Raw Candidate": "EVIDENCE_NOT_PERSISTED",
+          "Normalization": "EVIDENCE_NOT_PERSISTED",
+          "Source Resolution": "PRESENT",
+          "Canonical Requirement": "PRESENT"
+        },
+        "evidence_gaps": [
+          {
+            "stage": "Provider Input",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Raw Candidate",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Normalization",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          }
+        ]
+      },
+      "candidate_canonicals": [
+        {
+          "requirement_id": "REQ-079",
+          "tender_id": "TB-006",
+          "requirement_text": "在规定期限内通过北京市政府采购电子交易平台获取所参与包的招标文件。",
+          "source_excerpt": "5 获取招标文件\n在规定期限内通过北京市政府采购电子交易\n平台获取所参与包的招标文件。",
+          "source_page_start": 27,
+          "source_page_end": 27,
+          "source_refs": [
+            "C008-S075",
+            "C008-S076",
+            "C008-S077"
+          ],
+          "source_hash": "d72f6b8f351e9afe301c744d3da11e942806677dd9f477e0a7b9c4d4ad33404b",
+          "source_span": {
+            "page_start": 27,
+            "page_end": 27,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "shared_8gram",
+          "ranking_features": {
+            "method_priority": 2,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 19,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.783783783784,
+            "mechanical_score": 2019000.7837837837
+          }
+        },
+        {
+          "requirement_id": "REQ-078",
+          "tender_id": "TB-006",
+          "requirement_text": "如联合体中有同类资质的供应商按照联合体分工承担相同工作的，均应当提供资质证书电子件或电子证照。",
+          "source_excerpt": "注：如联合体中有同类资质的供应商按照联\n合体分工承担相同工作的，均应当提供资质\n证书电子件或电子证照。",
+          "source_page_start": 27,
+          "source_page_end": 27,
+          "source_refs": [
+            "C008-S069",
+            "C008-S070",
+            "C008-S071"
+          ],
+          "source_hash": "c351a666edcaffeb9f24fdedb6599864ac25dfbd5b4648a0d376367b63c42767",
+          "source_span": {
+            "page_start": 27,
+            "page_end": 27,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.013888888889,
+            "mechanical_score": 1000000.0138888889
+          }
+        },
+        {
+          "requirement_id": "REQ-077",
+          "tender_id": "TB-006",
+          "requirement_text": "如有其他特定资格要求，见第一章《投标邀请》。",
+          "source_excerpt": "3-3 其他特定资格要\n求\n如有，见第一章《投标邀请》",
+          "source_page_start": 27,
+          "source_page_end": 27,
+          "source_refs": [
+            "C008-S066",
+            "C008-S067",
+            "C008-S068"
+          ],
+          "source_hash": "a4a126c0c022fce880c065fa93fc5d9ea96dfb5e4561fe9c4b8fc2361d9651fc",
+          "source_span": {
+            "page_start": 27,
+            "page_end": 27,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0,
+            "mechanical_score": 1000000
+          }
+        }
+      ],
+      "candidate_status": "CANDIDATES_AVAILABLE"
+    },
+    {
+      "atom_id": "TB-006-P0-0008",
+      "tender_id": "TB-006",
+      "source_truth": {
+        "atom_id": "TB-006-P0-0008",
+        "tender_id": "TB-006",
+        "page": 28,
+        "atomic_requirement": "按招标文件要求提供授权委托书。",
+        "source_excerpt": "按招标文件要求提供授权委托书。",
+        "source_text": "按招标文件要求提供授权委托书。",
+        "source_text_origin": "R3.trace.source.text",
+        "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_truth_sha256": "sha256:9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY",
+        "risk_tier": "P0",
+        "applicability": "ACTIVE",
+        "source_mode": "GPT_ATOMIC_NORMALIZATION",
+        "note": null,
+        "context": {
+          "page": 28,
+          "text": "按招标文件要求提供授权委托书。",
+          "context_origin": "frozen-source-truth-and-r3-trace"
+        }
+      },
+      "production_identity": {
+        "production_run_id": "V43-CORE6-20260911",
+        "tender_id": "TB-006",
+        "source_sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_file": "TB-006-beijing-emergency-model-cloud.pdf",
+        "production_export_path": "docs/eval/requirement-production-core6-20260911/TB-006.production-requirements.json"
+      },
+      "mechanical_trace": {
+        "r3_case_id": "TB-006-P0-0008",
+        "trace_id": "trace:f26481595a1ff5e7fbb90f93",
+        "source_linked": true,
+        "no_mechanical_link_found": false,
+        "linked_candidate_count_observed": 8,
+        "link_methods_observed": [
+          "same_page_span_only",
+          "normalized_exact_substring",
+          "shared_8gram"
+        ],
+        "stage_statuses": {
+          "Tender Source": "PRESENT",
+          "Section": "PRESENT",
+          "Chunk": "PRESENT",
+          "Provider Input": "EVIDENCE_NOT_PERSISTED",
+          "Raw Candidate": "EVIDENCE_NOT_PERSISTED",
+          "Normalization": "EVIDENCE_NOT_PERSISTED",
+          "Source Resolution": "PRESENT",
+          "Canonical Requirement": "PRESENT"
+        },
+        "evidence_gaps": [
+          {
+            "stage": "Provider Input",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Raw Candidate",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Normalization",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          }
+        ]
+      },
+      "candidate_canonicals": [
+        {
+          "requirement_id": "REQ-082",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人必须按招标文件要求提供授权委托书。",
+          "source_excerpt": "1 授权委托书 按招标文件要求提供授权委托书；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S006"
+          ],
+          "source_hash": "8bbc1f71a475f914588a3a7eeb692dee7664b3205602c0437b49c61fe48f8733",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "normalized_exact_substring",
+          "ranking_features": {
+            "method_priority": 3,
+            "normalized_exact_substring": true,
+            "shared_8gram_count": 7,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.619047619048,
+            "mechanical_score": 3007000.619047619
+          }
+        },
+        {
+          "requirement_id": "REQ-081",
+          "tender_id": "TB-006",
+          "requirement_text": "投标文件必须满足招标文件第五章《采购需求》中★号条款要求，否则投标无效。",
+          "source_excerpt": "人的投标文件是否实质上响应招标文件进行符合性审查，并形成符合性审查\n评审结果。投标人《商务技术文件》有任何一项不符合《符合性审查要求》\n要求的，投标无效。\n符合性审查要求\n序号 审查因素 审查内容\n1 授权委托书 按招标文件要求提供授权委托书；\n2 投标完整性 未将一个采购包中的内容拆分投标；\n的除外）；\n5 投标有效期 投标文件中承诺的投标有效期满足招标文件中载明的投标有效\n期的；\n6 实质性格式 标记为“实质性格式”的文件均按招标文件要求提供且签署、盖\n章的；\n7 ★号条款响应 投标文件满足招标文件第五章《采购需求》中★号条款要求的；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S001",
+            "C009-S002",
+            "C009-S003",
+            "C009-S004",
+            "C009-S005",
+            "C009-S006",
+            "C009-S007",
+            "C009-S008",
+            "C009-S009",
+            "C009-S010",
+            "C009-S011",
+            "C009-S012",
+            "C009-S013"
+          ],
+          "source_hash": "c32044b4684c96833f706573360d8285d9d711dcf8982d39a75779301e7e28f4",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "normalized_exact_substring",
+          "ranking_features": {
+            "method_priority": 3,
+            "normalized_exact_substring": true,
+            "shared_8gram_count": 7,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.082802547771,
+            "mechanical_score": 3007000.0828025476
+          }
+        },
+        {
+          "requirement_id": "REQ-085",
+          "tender_id": "TB-006",
+          "requirement_text": "标记为“实质性格式”的文件必须均按招标文件要求提供且签署、盖章。",
+          "source_excerpt": "6 实质性格式 标记为“实质性格式”的文件均按招标文件要求提供且签署、盖\n章的；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S011",
+            "C009-S012"
+          ],
+          "source_hash": "ccc25b948b5060de71f958328d166e1dcd3002e459f1343b8c259c03dad7999f",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "shared_8gram",
+          "ranking_features": {
+            "method_priority": 2,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 2,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.222222222222,
+            "mechanical_score": 2002000.2222222222
+          }
+        },
+        {
+          "requirement_id": "REQ-080",
+          "tender_id": "TB-006",
+          "requirement_text": "投标文件满足招标文件第五章《采购需求》中★号条款要求。",
+          "source_excerpt": "27",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C008-S081"
+          ],
+          "source_hash": "670671cd97404156226e507973f2ab8330d3022ca96e0c93bdbdb320c41adcaf",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.117647058824,
+            "mechanical_score": 1000000.1176470588
+          }
+        },
+        {
+          "requirement_id": "REQ-084",
+          "tender_id": "TB-006",
+          "requirement_text": "投标文件中承诺的投标有效期必须满足招标文件中载明的投标有效期。",
+          "source_excerpt": "5 投标有效期 投标文件中承诺的投标有效期满足招标文件中载明的投标有效\n期的；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S009",
+            "C009-S010"
+          ],
+          "source_hash": "decdd32da3c0655ed8a6b8f12afef66aaea47e5b6c6760f9cbd983b46a8d011f",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.085714285714,
+            "mechanical_score": 1000000.0857142857
+          }
+        }
+      ],
+      "candidate_status": "CANDIDATES_AVAILABLE"
+    },
+    {
+      "atom_id": "TB-006-P0-0009",
+      "tender_id": "TB-006",
+      "source_truth": {
+        "atom_id": "TB-006-P0-0009",
+        "tender_id": "TB-006",
+        "page": 28,
+        "atomic_requirement": "不得将一个采购包中的内容拆分投标。",
+        "source_excerpt": "不得将一个采购包中的内容拆分投标。",
+        "source_text": "不得将一个采购包中的内容拆分投标。",
+        "source_text_origin": "R3.trace.source.text",
+        "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_truth_sha256": "sha256:9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY",
+        "risk_tier": "P0",
+        "applicability": "ACTIVE",
+        "source_mode": "GPT_ATOMIC_NORMALIZATION",
+        "note": null,
+        "context": {
+          "page": 28,
+          "text": "不得将一个采购包中的内容拆分投标。",
+          "context_origin": "frozen-source-truth-and-r3-trace"
+        }
+      },
+      "production_identity": {
+        "production_run_id": "V43-CORE6-20260911",
+        "tender_id": "TB-006",
+        "source_sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_file": "TB-006-beijing-emergency-model-cloud.pdf",
+        "production_export_path": "docs/eval/requirement-production-core6-20260911/TB-006.production-requirements.json"
+      },
+      "mechanical_trace": {
+        "r3_case_id": "TB-006-P0-0009",
+        "trace_id": "trace:beb8958affbc8c3b04647032",
+        "source_linked": true,
+        "no_mechanical_link_found": false,
+        "linked_candidate_count_observed": 8,
+        "link_methods_observed": [
+          "same_page_span_only",
+          "shared_8gram"
+        ],
+        "stage_statuses": {
+          "Tender Source": "PRESENT",
+          "Section": "PRESENT",
+          "Chunk": "PRESENT",
+          "Provider Input": "EVIDENCE_NOT_PERSISTED",
+          "Raw Candidate": "EVIDENCE_NOT_PERSISTED",
+          "Normalization": "EVIDENCE_NOT_PERSISTED",
+          "Source Resolution": "PRESENT",
+          "Canonical Requirement": "PRESENT"
+        },
+        "evidence_gaps": [
+          {
+            "stage": "Provider Input",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Raw Candidate",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Normalization",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          }
+        ]
+      },
+      "candidate_canonicals": [
+        {
+          "requirement_id": "REQ-083",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人不得将一个采购包中的内容拆分投标。",
+          "source_excerpt": "2 投标完整性 未将一个采购包中的内容拆分投标；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S007"
+          ],
+          "source_hash": "a60e385f061c65d5236deb8123390dc1e219284b98f443e10ad103ce4906a8ef",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "shared_8gram",
+          "ranking_features": {
+            "method_priority": 2,
+            "normalized_exact_substring": true,
+            "shared_8gram_count": 9,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.625,
+            "mechanical_score": 2009000.625
+          }
+        },
+        {
+          "requirement_id": "REQ-081",
+          "tender_id": "TB-006",
+          "requirement_text": "投标文件必须满足招标文件第五章《采购需求》中★号条款要求，否则投标无效。",
+          "source_excerpt": "人的投标文件是否实质上响应招标文件进行符合性审查，并形成符合性审查\n评审结果。投标人《商务技术文件》有任何一项不符合《符合性审查要求》\n要求的，投标无效。\n符合性审查要求\n序号 审查因素 审查内容\n1 授权委托书 按招标文件要求提供授权委托书；\n2 投标完整性 未将一个采购包中的内容拆分投标；\n的除外）；\n5 投标有效期 投标文件中承诺的投标有效期满足招标文件中载明的投标有效\n期的；\n6 实质性格式 标记为“实质性格式”的文件均按招标文件要求提供且签署、盖\n章的；\n7 ★号条款响应 投标文件满足招标文件第五章《采购需求》中★号条款要求的；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S001",
+            "C009-S002",
+            "C009-S003",
+            "C009-S004",
+            "C009-S005",
+            "C009-S006",
+            "C009-S007",
+            "C009-S008",
+            "C009-S009",
+            "C009-S010",
+            "C009-S011",
+            "C009-S012",
+            "C009-S013"
+          ],
+          "source_hash": "c32044b4684c96833f706573360d8285d9d711dcf8982d39a75779301e7e28f4",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "shared_8gram",
+          "ranking_features": {
+            "method_priority": 2,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 7,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.081761006289,
+            "mechanical_score": 2007000.0817610063
+          }
+        },
+        {
+          "requirement_id": "REQ-087",
+          "tender_id": "TB-006",
+          "requirement_text": "分包履行的内容、金额或者比例不得超出《投标人须知资料表》中的规定；分包承担主体必须具备《投标人须知资料表》载明的资质条件且提供了资质证书电子件（如有）。",
+          "source_excerpt": "9 分包其他要求\n（如有）\n分包履行的内容、金额或者比例未超出《投标人须知资料表》\n中的规定；\n分包承担主体具备《投标人须知资料表》载明的资质条件且提\n供了资质证书电子件（如有）；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S018",
+            "C009-S019",
+            "C009-S020",
+            "C009-S021",
+            "C009-S022",
+            "C009-S023"
+          ],
+          "source_hash": "a8322f12689a1647f76d656c3406b1fd34f6895a55b8d3fa9dce96e6cf771b40",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.0625,
+            "mechanical_score": 1000000.0625
+          }
+        },
+        {
+          "requirement_id": "REQ-080",
+          "tender_id": "TB-006",
+          "requirement_text": "投标文件满足招标文件第五章《采购需求》中★号条款要求。",
+          "source_excerpt": "27",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C008-S081"
+          ],
+          "source_hash": "670671cd97404156226e507973f2ab8330d3022ca96e0c93bdbdb320c41adcaf",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.052631578947,
+            "mechanical_score": 1000000.052631579
+          }
+        },
+        {
+          "requirement_id": "REQ-082",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人必须按招标文件要求提供授权委托书。",
+          "source_excerpt": "1 授权委托书 按招标文件要求提供授权委托书；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S006"
+          ],
+          "source_hash": "8bbc1f71a475f914588a3a7eeb692dee7664b3205602c0437b49c61fe48f8733",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.028571428571,
+            "mechanical_score": 1000000.0285714286
+          }
+        }
+      ],
+      "candidate_status": "CANDIDATES_AVAILABLE"
+    },
+    {
+      "atom_id": "TB-006-P0-0010",
+      "tender_id": "TB-006",
+      "source_truth": {
+        "atom_id": "TB-006-P0-0010",
+        "tender_id": "TB-006",
+        "page": 28,
+        "atomic_requirement": "投标报价不得超过预算金额或最高限价。",
+        "source_excerpt": "投标报价不得超过预算金额或最高限价。",
+        "source_text": "投标报价不得超过预算金额或最高限价。",
+        "source_text_origin": "R3.trace.source.text",
+        "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_truth_sha256": "sha256:9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY",
+        "risk_tier": "P0",
+        "applicability": "ACTIVE",
+        "source_mode": "GPT_ATOMIC_NORMALIZATION",
+        "note": null,
+        "context": {
+          "page": 28,
+          "text": "投标报价不得超过预算金额或最高限价。",
+          "context_origin": "frozen-source-truth-and-r3-trace"
+        }
+      },
+      "production_identity": {
+        "production_run_id": "V43-CORE6-20260911",
+        "tender_id": "TB-006",
+        "source_sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_file": "TB-006-beijing-emergency-model-cloud.pdf",
+        "production_export_path": "docs/eval/requirement-production-core6-20260911/TB-006.production-requirements.json"
+      },
+      "mechanical_trace": {
+        "r3_case_id": "TB-006-P0-0010",
+        "trace_id": "trace:a394e2c20f7a228e99bcae68",
+        "source_linked": true,
+        "no_mechanical_link_found": false,
+        "linked_candidate_count_observed": 8,
+        "link_methods_observed": [
+          "same_page_span_only"
+        ],
+        "stage_statuses": {
+          "Tender Source": "PRESENT",
+          "Section": "PRESENT",
+          "Chunk": "PRESENT",
+          "Provider Input": "EVIDENCE_NOT_PERSISTED",
+          "Raw Candidate": "EVIDENCE_NOT_PERSISTED",
+          "Normalization": "EVIDENCE_NOT_PERSISTED",
+          "Source Resolution": "PRESENT",
+          "Canonical Requirement": "PRESENT"
+        },
+        "evidence_gaps": [
+          {
+            "stage": "Provider Input",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Raw Candidate",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Normalization",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          }
+        ]
+      },
+      "candidate_canonicals": [
+        {
+          "requirement_id": "REQ-087",
+          "tender_id": "TB-006",
+          "requirement_text": "分包履行的内容、金额或者比例不得超出《投标人须知资料表》中的规定；分包承担主体必须具备《投标人须知资料表》载明的资质条件且提供了资质证书电子件（如有）。",
+          "source_excerpt": "9 分包其他要求\n（如有）\n分包履行的内容、金额或者比例未超出《投标人须知资料表》\n中的规定；\n分包承担主体具备《投标人须知资料表》载明的资质条件且提\n供了资质证书电子件（如有）；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S018",
+            "C009-S019",
+            "C009-S020",
+            "C009-S021",
+            "C009-S022",
+            "C009-S023"
+          ],
+          "source_hash": "a8322f12689a1647f76d656c3406b1fd34f6895a55b8d3fa9dce96e6cf771b40",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.061728395062,
+            "mechanical_score": 1000000.061728395
+          }
+        },
+        {
+          "requirement_id": "REQ-083",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人不得将一个采购包中的内容拆分投标。",
+          "source_excerpt": "2 投标完整性 未将一个采购包中的内容拆分投标；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S007"
+          ],
+          "source_hash": "a60e385f061c65d5236deb8123390dc1e219284b98f443e10ad103ce4906a8ef",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.052631578947,
+            "mechanical_score": 1000000.052631579
+          }
+        },
+        {
+          "requirement_id": "REQ-082",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人必须按招标文件要求提供授权委托书。",
+          "source_excerpt": "1 授权委托书 按招标文件要求提供授权委托书；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S006"
+          ],
+          "source_hash": "8bbc1f71a475f914588a3a7eeb692dee7664b3205602c0437b49c61fe48f8733",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.027777777778,
+            "mechanical_score": 1000000.0277777778
+          }
+        },
+        {
+          "requirement_id": "REQ-080",
+          "tender_id": "TB-006",
+          "requirement_text": "投标文件满足招标文件第五章《采购需求》中★号条款要求。",
+          "source_excerpt": "27",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C008-S081"
+          ],
+          "source_hash": "670671cd97404156226e507973f2ab8330d3022ca96e0c93bdbdb320c41adcaf",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.025,
+            "mechanical_score": 1000000.025
+          }
+        },
+        {
+          "requirement_id": "REQ-084",
+          "tender_id": "TB-006",
+          "requirement_text": "投标文件中承诺的投标有效期必须满足招标文件中载明的投标有效期。",
+          "source_excerpt": "5 投标有效期 投标文件中承诺的投标有效期满足招标文件中载明的投标有效\n期的；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S009",
+            "C009-S010"
+          ],
+          "source_hash": "decdd32da3c0655ed8a6b8f12afef66aaea47e5b6c6760f9cbd983b46a8d011f",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.025,
+            "mechanical_score": 1000000.025
+          }
+        }
+      ],
+      "candidate_status": "CANDIDATES_AVAILABLE"
+    },
+    {
+      "atom_id": "TB-006-P0-0011",
+      "tender_id": "TB-006",
+      "source_truth": {
+        "atom_id": "TB-006-P0-0011",
+        "tender_id": "TB-006",
+        "page": 28,
+        "atomic_requirement": "不得提供可选择性或可调整的报价。",
+        "source_excerpt": "不得提供可选择性或可调整的报价。",
+        "source_text": "不得提供可选择性或可调整的报价。",
+        "source_text_origin": "R3.trace.source.text",
+        "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_truth_sha256": "sha256:9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY",
+        "risk_tier": "P0",
+        "applicability": "ACTIVE",
+        "source_mode": "GPT_ATOMIC_NORMALIZATION",
+        "note": null,
+        "context": {
+          "page": 28,
+          "text": "不得提供可选择性或可调整的报价。",
+          "context_origin": "frozen-source-truth-and-r3-trace"
+        }
+      },
+      "production_identity": {
+        "production_run_id": "V43-CORE6-20260911",
+        "tender_id": "TB-006",
+        "source_sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_file": "TB-006-beijing-emergency-model-cloud.pdf",
+        "production_export_path": "docs/eval/requirement-production-core6-20260911/TB-006.production-requirements.json"
+      },
+      "mechanical_trace": {
+        "r3_case_id": "TB-006-P0-0011",
+        "trace_id": "trace:d2d357de46f700a0977c606f",
+        "source_linked": true,
+        "no_mechanical_link_found": false,
+        "linked_candidate_count_observed": 8,
+        "link_methods_observed": [
+          "same_page_span_only"
+        ],
+        "stage_statuses": {
+          "Tender Source": "PRESENT",
+          "Section": "PRESENT",
+          "Chunk": "PRESENT",
+          "Provider Input": "EVIDENCE_NOT_PERSISTED",
+          "Raw Candidate": "EVIDENCE_NOT_PERSISTED",
+          "Normalization": "EVIDENCE_NOT_PERSISTED",
+          "Source Resolution": "PRESENT",
+          "Canonical Requirement": "PRESENT"
+        },
+        "evidence_gaps": [
+          {
+            "stage": "Provider Input",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Raw Candidate",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Normalization",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          }
+        ]
+      },
+      "candidate_canonicals": [
+        {
+          "requirement_id": "REQ-082",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人必须按招标文件要求提供授权委托书。",
+          "source_excerpt": "1 授权委托书 按招标文件要求提供授权委托书；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S006"
+          ],
+          "source_hash": "8bbc1f71a475f914588a3a7eeb692dee7664b3205602c0437b49c61fe48f8733",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.029411764706,
+            "mechanical_score": 1000000.0294117647
+          }
+        },
+        {
+          "requirement_id": "REQ-083",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人不得将一个采购包中的内容拆分投标。",
+          "source_excerpt": "2 投标完整性 未将一个采购包中的内容拆分投标；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S007"
+          ],
+          "source_hash": "a60e385f061c65d5236deb8123390dc1e219284b98f443e10ad103ce4906a8ef",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.027027027027,
+            "mechanical_score": 1000000.027027027
+          }
+        },
+        {
+          "requirement_id": "REQ-087",
+          "tender_id": "TB-006",
+          "requirement_text": "分包履行的内容、金额或者比例不得超出《投标人须知资料表》中的规定；分包承担主体必须具备《投标人须知资料表》载明的资质条件且提供了资质证书电子件（如有）。",
+          "source_excerpt": "9 分包其他要求\n（如有）\n分包履行的内容、金额或者比例未超出《投标人须知资料表》\n中的规定；\n分包承担主体具备《投标人须知资料表》载明的资质条件且提\n供了资质证书电子件（如有）；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S018",
+            "C009-S019",
+            "C009-S020",
+            "C009-S021",
+            "C009-S022",
+            "C009-S023"
+          ],
+          "source_hash": "a8322f12689a1647f76d656c3406b1fd34f6895a55b8d3fa9dce96e6cf771b40",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.024390243902,
+            "mechanical_score": 1000000.0243902439
+          }
+        },
+        {
+          "requirement_id": "REQ-085",
+          "tender_id": "TB-006",
+          "requirement_text": "标记为“实质性格式”的文件必须均按招标文件要求提供且签署、盖章。",
+          "source_excerpt": "6 实质性格式 标记为“实质性格式”的文件均按招标文件要求提供且签署、盖\n章的；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S011",
+            "C009-S012"
+          ],
+          "source_hash": "ccc25b948b5060de71f958328d166e1dcd3002e459f1343b8c259c03dad7999f",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.022727272727,
+            "mechanical_score": 1000000.0227272727
+          }
+        },
+        {
+          "requirement_id": "REQ-086",
+          "tender_id": "TB-006",
+          "requirement_text": "如本项目（包）非因“落实政府采购政策”亦允许分包，且供应商拟进行分包时，必须提供拟分包情况说明；否则无须提供。",
+          "source_excerpt": "8 拟分包情况说\n明（如有）\n如本项目（包）非因“落实政府采购政策”亦允许分包，且供应\n商拟进行分包时，必须提供；否则无须提供；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S014",
+            "C009-S015",
+            "C009-S016",
+            "C009-S017"
+          ],
+          "source_hash": "6b00a83d3ad79ff3dced940ad191cd71d6549b22ffe356e9609978746a716aa6",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.016393442623,
+            "mechanical_score": 1000000.0163934426
+          }
+        }
+      ],
+      "candidate_status": "CANDIDATES_AVAILABLE"
+    },
+    {
+      "atom_id": "TB-006-P0-0012",
+      "tender_id": "TB-006",
+      "source_truth": {
+        "atom_id": "TB-006-P0-0012",
+        "tender_id": "TB-006",
+        "page": 28,
+        "atomic_requirement": "投标文件承诺的投标有效期须满足招标文件要求。",
+        "source_excerpt": "投标文件承诺的投标有效期须满足招标文件要求。",
+        "source_text": "投标文件承诺的投标有效期须满足招标文件要求。",
+        "source_text_origin": "R3.trace.source.text",
+        "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_truth_sha256": "sha256:9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY",
+        "risk_tier": "P0",
+        "applicability": "ACTIVE",
+        "source_mode": "GPT_ATOMIC_NORMALIZATION",
+        "note": null,
+        "context": {
+          "page": 28,
+          "text": "投标文件承诺的投标有效期须满足招标文件要求。",
+          "context_origin": "frozen-source-truth-and-r3-trace"
+        }
+      },
+      "production_identity": {
+        "production_run_id": "V43-CORE6-20260911",
+        "tender_id": "TB-006",
+        "source_sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_file": "TB-006-beijing-emergency-model-cloud.pdf",
+        "production_export_path": "docs/eval/requirement-production-core6-20260911/TB-006.production-requirements.json"
+      },
+      "mechanical_trace": {
+        "r3_case_id": "TB-006-P0-0012",
+        "trace_id": "trace:f0b2d5f575c5525754decb15",
+        "source_linked": true,
+        "no_mechanical_link_found": false,
+        "linked_candidate_count_observed": 8,
+        "link_methods_observed": [
+          "same_page_span_only",
+          "shared_8gram"
+        ],
+        "stage_statuses": {
+          "Tender Source": "PRESENT",
+          "Section": "PRESENT",
+          "Chunk": "PRESENT",
+          "Provider Input": "EVIDENCE_NOT_PERSISTED",
+          "Raw Candidate": "EVIDENCE_NOT_PERSISTED",
+          "Normalization": "EVIDENCE_NOT_PERSISTED",
+          "Source Resolution": "PRESENT",
+          "Canonical Requirement": "PRESENT"
+        },
+        "evidence_gaps": [
+          {
+            "stage": "Provider Input",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Raw Candidate",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Normalization",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          }
+        ]
+      },
+      "candidate_canonicals": [
+        {
+          "requirement_id": "REQ-084",
+          "tender_id": "TB-006",
+          "requirement_text": "投标文件中承诺的投标有效期必须满足招标文件中载明的投标有效期。",
+          "source_excerpt": "5 投标有效期 投标文件中承诺的投标有效期满足招标文件中载明的投标有效\n期的；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S009",
+            "C009-S010"
+          ],
+          "source_hash": "decdd32da3c0655ed8a6b8f12afef66aaea47e5b6c6760f9cbd983b46a8d011f",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "shared_8gram",
+          "ranking_features": {
+            "method_priority": 2,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 1,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.448275862069,
+            "mechanical_score": 2001000.448275862
+          }
+        },
+        {
+          "requirement_id": "REQ-081",
+          "tender_id": "TB-006",
+          "requirement_text": "投标文件必须满足招标文件第五章《采购需求》中★号条款要求，否则投标无效。",
+          "source_excerpt": "人的投标文件是否实质上响应招标文件进行符合性审查，并形成符合性审查\n评审结果。投标人《商务技术文件》有任何一项不符合《符合性审查要求》\n要求的，投标无效。\n符合性审查要求\n序号 审查因素 审查内容\n1 授权委托书 按招标文件要求提供授权委托书；\n2 投标完整性 未将一个采购包中的内容拆分投标；\n的除外）；\n5 投标有效期 投标文件中承诺的投标有效期满足招标文件中载明的投标有效\n期的；\n6 实质性格式 标记为“实质性格式”的文件均按招标文件要求提供且签署、盖\n章的；\n7 ★号条款响应 投标文件满足招标文件第五章《采购需求》中★号条款要求的；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S001",
+            "C009-S002",
+            "C009-S003",
+            "C009-S004",
+            "C009-S005",
+            "C009-S006",
+            "C009-S007",
+            "C009-S008",
+            "C009-S009",
+            "C009-S010",
+            "C009-S011",
+            "C009-S012",
+            "C009-S013"
+          ],
+          "source_hash": "c32044b4684c96833f706573360d8285d9d711dcf8982d39a75779301e7e28f4",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "shared_8gram",
+          "ranking_features": {
+            "method_priority": 2,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 1,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.094339622642,
+            "mechanical_score": 2001000.0943396227
+          }
+        },
+        {
+          "requirement_id": "REQ-080",
+          "tender_id": "TB-006",
+          "requirement_text": "投标文件满足招标文件第五章《采购需求》中★号条款要求。",
+          "source_excerpt": "27",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C008-S081"
+          ],
+          "source_hash": "670671cd97404156226e507973f2ab8330d3022ca96e0c93bdbdb320c41adcaf",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.2,
+            "mechanical_score": 1000000.2
+          }
+        },
+        {
+          "requirement_id": "REQ-082",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人必须按招标文件要求提供授权委托书。",
+          "source_excerpt": "1 授权委托书 按招标文件要求提供授权委托书；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S006"
+          ],
+          "source_hash": "8bbc1f71a475f914588a3a7eeb692dee7664b3205602c0437b49c61fe48f8733",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.1875,
+            "mechanical_score": 1000000.1875
+          }
+        },
+        {
+          "requirement_id": "REQ-085",
+          "tender_id": "TB-006",
+          "requirement_text": "标记为“实质性格式”的文件必须均按招标文件要求提供且签署、盖章。",
+          "source_excerpt": "6 实质性格式 标记为“实质性格式”的文件均按招标文件要求提供且签署、盖\n章的；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S011",
+            "C009-S012"
+          ],
+          "source_hash": "ccc25b948b5060de71f958328d166e1dcd3002e459f1343b8c259c03dad7999f",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.116279069767,
+            "mechanical_score": 1000000.1162790698
+          }
+        }
+      ],
+      "candidate_status": "CANDIDATES_AVAILABLE"
+    },
+    {
+      "atom_id": "TB-006-P0-0013",
+      "tender_id": "TB-006",
+      "source_truth": {
+        "atom_id": "TB-006-P0-0013",
+        "tender_id": "TB-006",
+        "page": 28,
+        "atomic_requirement": "实质性格式文件须按要求提供并签署、盖章。",
+        "source_excerpt": "实质性格式文件须按要求提供并签署、盖章。",
+        "source_text": "实质性格式文件须按要求提供并签署、盖章。",
+        "source_text_origin": "R3.trace.source.text",
+        "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_truth_sha256": "sha256:9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY",
+        "risk_tier": "P0",
+        "applicability": "ACTIVE",
+        "source_mode": "GPT_ATOMIC_NORMALIZATION",
+        "note": null,
+        "context": {
+          "page": 28,
+          "text": "实质性格式文件须按要求提供并签署、盖章。",
+          "context_origin": "frozen-source-truth-and-r3-trace"
+        }
+      },
+      "production_identity": {
+        "production_run_id": "V43-CORE6-20260911",
+        "tender_id": "TB-006",
+        "source_sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_file": "TB-006-beijing-emergency-model-cloud.pdf",
+        "production_export_path": "docs/eval/requirement-production-core6-20260911/TB-006.production-requirements.json"
+      },
+      "mechanical_trace": {
+        "r3_case_id": "TB-006-P0-0013",
+        "trace_id": "trace:dde7af6421e6c7fd8242dd77",
+        "source_linked": true,
+        "no_mechanical_link_found": false,
+        "linked_candidate_count_observed": 8,
+        "link_methods_observed": [
+          "same_page_span_only"
+        ],
+        "stage_statuses": {
+          "Tender Source": "PRESENT",
+          "Section": "PRESENT",
+          "Chunk": "PRESENT",
+          "Provider Input": "EVIDENCE_NOT_PERSISTED",
+          "Raw Candidate": "EVIDENCE_NOT_PERSISTED",
+          "Normalization": "EVIDENCE_NOT_PERSISTED",
+          "Source Resolution": "PRESENT",
+          "Canonical Requirement": "PRESENT"
+        },
+        "evidence_gaps": [
+          {
+            "stage": "Provider Input",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Raw Candidate",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Normalization",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          }
+        ]
+      },
+      "candidate_canonicals": [
+        {
+          "requirement_id": "REQ-085",
+          "tender_id": "TB-006",
+          "requirement_text": "标记为“实质性格式”的文件必须均按招标文件要求提供且签署、盖章。",
+          "source_excerpt": "6 实质性格式 标记为“实质性格式”的文件均按招标文件要求提供且签署、盖\n章的；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S011",
+            "C009-S012"
+          ],
+          "source_hash": "ccc25b948b5060de71f958328d166e1dcd3002e459f1343b8c259c03dad7999f",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.297297297297,
+            "mechanical_score": 1000000.2972972973
+          }
+        },
+        {
+          "requirement_id": "REQ-082",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人必须按招标文件要求提供授权委托书。",
+          "source_excerpt": "1 授权委托书 按招标文件要求提供授权委托书；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S006"
+          ],
+          "source_hash": "8bbc1f71a475f914588a3a7eeb692dee7664b3205602c0437b49c61fe48f8733",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.151515151515,
+            "mechanical_score": 1000000.1515151515
+          }
+        },
+        {
+          "requirement_id": "REQ-081",
+          "tender_id": "TB-006",
+          "requirement_text": "投标文件必须满足招标文件第五章《采购需求》中★号条款要求，否则投标无效。",
+          "source_excerpt": "人的投标文件是否实质上响应招标文件进行符合性审查，并形成符合性审查\n评审结果。投标人《商务技术文件》有任何一项不符合《符合性审查要求》\n要求的，投标无效。\n符合性审查要求\n序号 审查因素 审查内容\n1 授权委托书 按招标文件要求提供授权委托书；\n2 投标完整性 未将一个采购包中的内容拆分投标；\n的除外）；\n5 投标有效期 投标文件中承诺的投标有效期满足招标文件中载明的投标有效\n期的；\n6 实质性格式 标记为“实质性格式”的文件均按招标文件要求提供且签署、盖\n章的；\n7 ★号条款响应 投标文件满足招标文件第五章《采购需求》中★号条款要求的；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S001",
+            "C009-S002",
+            "C009-S003",
+            "C009-S004",
+            "C009-S005",
+            "C009-S006",
+            "C009-S007",
+            "C009-S008",
+            "C009-S009",
+            "C009-S010",
+            "C009-S011",
+            "C009-S012",
+            "C009-S013"
+          ],
+          "source_hash": "c32044b4684c96833f706573360d8285d9d711dcf8982d39a75779301e7e28f4",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.067484662577,
+            "mechanical_score": 1000000.0674846625
+          }
+        },
+        {
+          "requirement_id": "REQ-080",
+          "tender_id": "TB-006",
+          "requirement_text": "投标文件满足招标文件第五章《采购需求》中★号条款要求。",
+          "source_excerpt": "27",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C008-S081"
+          ],
+          "source_hash": "670671cd97404156226e507973f2ab8330d3022ca96e0c93bdbdb320c41adcaf",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.05,
+            "mechanical_score": 1000000.05
+          }
+        },
+        {
+          "requirement_id": "REQ-084",
+          "tender_id": "TB-006",
+          "requirement_text": "投标文件中承诺的投标有效期必须满足招标文件中载明的投标有效期。",
+          "source_excerpt": "5 投标有效期 投标文件中承诺的投标有效期满足招标文件中载明的投标有效\n期的；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S009",
+            "C009-S010"
+          ],
+          "source_hash": "decdd32da3c0655ed8a6b8f12afef66aaea47e5b6c6760f9cbd983b46a8d011f",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.024390243902,
+            "mechanical_score": 1000000.0243902439
+          }
+        }
+      ],
+      "candidate_status": "CANDIDATES_AVAILABLE"
+    },
+    {
+      "atom_id": "TB-006-P0-0014",
+      "tender_id": "TB-006",
+      "source_truth": {
+        "atom_id": "TB-006-P0-0014",
+        "tender_id": "TB-006",
+        "page": 28,
+        "atomic_requirement": "涉及报价修正时须对修正后的报价予以确认。",
+        "source_excerpt": "涉及报价修正时须对修正后的报价予以确认。",
+        "source_text": "涉及报价修正时须对修正后的报价予以确认。",
+        "source_text_origin": "R3.trace.source.text",
+        "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_truth_sha256": "sha256:9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY",
+        "risk_tier": "P0",
+        "applicability": "ACTIVE",
+        "source_mode": "GPT_ATOMIC_NORMALIZATION",
+        "note": null,
+        "context": {
+          "page": 28,
+          "text": "涉及报价修正时须对修正后的报价予以确认。",
+          "context_origin": "frozen-source-truth-and-r3-trace"
+        }
+      },
+      "production_identity": {
+        "production_run_id": "V43-CORE6-20260911",
+        "tender_id": "TB-006",
+        "source_sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_file": "TB-006-beijing-emergency-model-cloud.pdf",
+        "production_export_path": "docs/eval/requirement-production-core6-20260911/TB-006.production-requirements.json"
+      },
+      "mechanical_trace": {
+        "r3_case_id": "TB-006-P0-0014",
+        "trace_id": "trace:fed9c8a1b2edfd5d43007f10",
+        "source_linked": true,
+        "no_mechanical_link_found": false,
+        "linked_candidate_count_observed": 8,
+        "link_methods_observed": [
+          "same_page_span_only"
+        ],
+        "stage_statuses": {
+          "Tender Source": "PRESENT",
+          "Section": "PRESENT",
+          "Chunk": "PRESENT",
+          "Provider Input": "EVIDENCE_NOT_PERSISTED",
+          "Raw Candidate": "EVIDENCE_NOT_PERSISTED",
+          "Normalization": "EVIDENCE_NOT_PERSISTED",
+          "Source Resolution": "PRESENT",
+          "Canonical Requirement": "PRESENT"
+        },
+        "evidence_gaps": [
+          {
+            "stage": "Provider Input",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Raw Candidate",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Normalization",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          }
+        ]
+      },
+      "candidate_canonicals": [
+        {
+          "requirement_id": "REQ-080",
+          "tender_id": "TB-006",
+          "requirement_text": "投标文件满足招标文件第五章《采购需求》中★号条款要求。",
+          "source_excerpt": "27",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C008-S081"
+          ],
+          "source_hash": "670671cd97404156226e507973f2ab8330d3022ca96e0c93bdbdb320c41adcaf",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0,
+            "mechanical_score": 1000000
+          }
+        },
+        {
+          "requirement_id": "REQ-081",
+          "tender_id": "TB-006",
+          "requirement_text": "投标文件必须满足招标文件第五章《采购需求》中★号条款要求，否则投标无效。",
+          "source_excerpt": "人的投标文件是否实质上响应招标文件进行符合性审查，并形成符合性审查\n评审结果。投标人《商务技术文件》有任何一项不符合《符合性审查要求》\n要求的，投标无效。\n符合性审查要求\n序号 审查因素 审查内容\n1 授权委托书 按招标文件要求提供授权委托书；\n2 投标完整性 未将一个采购包中的内容拆分投标；\n的除外）；\n5 投标有效期 投标文件中承诺的投标有效期满足招标文件中载明的投标有效\n期的；\n6 实质性格式 标记为“实质性格式”的文件均按招标文件要求提供且签署、盖\n章的；\n7 ★号条款响应 投标文件满足招标文件第五章《采购需求》中★号条款要求的；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S001",
+            "C009-S002",
+            "C009-S003",
+            "C009-S004",
+            "C009-S005",
+            "C009-S006",
+            "C009-S007",
+            "C009-S008",
+            "C009-S009",
+            "C009-S010",
+            "C009-S011",
+            "C009-S012",
+            "C009-S013"
+          ],
+          "source_hash": "c32044b4684c96833f706573360d8285d9d711dcf8982d39a75779301e7e28f4",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0,
+            "mechanical_score": 1000000
+          }
+        },
+        {
+          "requirement_id": "REQ-082",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人必须按招标文件要求提供授权委托书。",
+          "source_excerpt": "1 授权委托书 按招标文件要求提供授权委托书；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S006"
+          ],
+          "source_hash": "8bbc1f71a475f914588a3a7eeb692dee7664b3205602c0437b49c61fe48f8733",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0,
+            "mechanical_score": 1000000
+          }
+        },
+        {
+          "requirement_id": "REQ-083",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人不得将一个采购包中的内容拆分投标。",
+          "source_excerpt": "2 投标完整性 未将一个采购包中的内容拆分投标；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S007"
+          ],
+          "source_hash": "a60e385f061c65d5236deb8123390dc1e219284b98f443e10ad103ce4906a8ef",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0,
+            "mechanical_score": 1000000
+          }
+        },
+        {
+          "requirement_id": "REQ-084",
+          "tender_id": "TB-006",
+          "requirement_text": "投标文件中承诺的投标有效期必须满足招标文件中载明的投标有效期。",
+          "source_excerpt": "5 投标有效期 投标文件中承诺的投标有效期满足招标文件中载明的投标有效\n期的；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S009",
+            "C009-S010"
+          ],
+          "source_hash": "decdd32da3c0655ed8a6b8f12afef66aaea47e5b6c6760f9cbd983b46a8d011f",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0,
+            "mechanical_score": 1000000
+          }
+        }
+      ],
+      "candidate_status": "CANDIDATES_AVAILABLE"
+    },
+    {
+      "atom_id": "TB-006-P0-0015",
+      "tender_id": "TB-006",
+      "source_truth": {
+        "atom_id": "TB-006-P0-0015",
+        "tender_id": "TB-006",
+        "page": 28,
+        "atomic_requirement": "报价异常低时须在规定时间内证明报价合理性。",
+        "source_excerpt": "报价异常低时须在规定时间内证明报价合理性。",
+        "source_text": "报价异常低时须在规定时间内证明报价合理性。",
+        "source_text_origin": "R3.trace.source.text",
+        "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_truth_sha256": "sha256:9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY",
+        "risk_tier": "P0",
+        "applicability": "ACTIVE",
+        "source_mode": "GPT_ATOMIC_NORMALIZATION",
+        "note": null,
+        "context": {
+          "page": 28,
+          "text": "报价异常低时须在规定时间内证明报价合理性。",
+          "context_origin": "frozen-source-truth-and-r3-trace"
+        }
+      },
+      "production_identity": {
+        "production_run_id": "V43-CORE6-20260911",
+        "tender_id": "TB-006",
+        "source_sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_file": "TB-006-beijing-emergency-model-cloud.pdf",
+        "production_export_path": "docs/eval/requirement-production-core6-20260911/TB-006.production-requirements.json"
+      },
+      "mechanical_trace": {
+        "r3_case_id": "TB-006-P0-0015",
+        "trace_id": "trace:72e1bf2570a1fd1f9a8c92a8",
+        "source_linked": true,
+        "no_mechanical_link_found": false,
+        "linked_candidate_count_observed": 8,
+        "link_methods_observed": [
+          "same_page_span_only"
+        ],
+        "stage_statuses": {
+          "Tender Source": "PRESENT",
+          "Section": "PRESENT",
+          "Chunk": "PRESENT",
+          "Provider Input": "EVIDENCE_NOT_PERSISTED",
+          "Raw Candidate": "EVIDENCE_NOT_PERSISTED",
+          "Normalization": "EVIDENCE_NOT_PERSISTED",
+          "Source Resolution": "PRESENT",
+          "Canonical Requirement": "PRESENT"
+        },
+        "evidence_gaps": [
+          {
+            "stage": "Provider Input",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Raw Candidate",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Normalization",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          }
+        ]
+      },
+      "candidate_canonicals": [
+        {
+          "requirement_id": "REQ-087",
+          "tender_id": "TB-006",
+          "requirement_text": "分包履行的内容、金额或者比例不得超出《投标人须知资料表》中的规定；分包承担主体必须具备《投标人须知资料表》载明的资质条件且提供了资质证书电子件（如有）。",
+          "source_excerpt": "9 分包其他要求\n（如有）\n分包履行的内容、金额或者比例未超出《投标人须知资料表》\n中的规定；\n分包承担主体具备《投标人须知资料表》载明的资质条件且提\n供了资质证书电子件（如有）；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S018",
+            "C009-S019",
+            "C009-S020",
+            "C009-S021",
+            "C009-S022",
+            "C009-S023"
+          ],
+          "source_hash": "a8322f12689a1647f76d656c3406b1fd34f6895a55b8d3fa9dce96e6cf771b40",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.011494252874,
+            "mechanical_score": 1000000.0114942528
+          }
+        },
+        {
+          "requirement_id": "REQ-080",
+          "tender_id": "TB-006",
+          "requirement_text": "投标文件满足招标文件第五章《采购需求》中★号条款要求。",
+          "source_excerpt": "27",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C008-S081"
+          ],
+          "source_hash": "670671cd97404156226e507973f2ab8330d3022ca96e0c93bdbdb320c41adcaf",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0,
+            "mechanical_score": 1000000
+          }
+        },
+        {
+          "requirement_id": "REQ-081",
+          "tender_id": "TB-006",
+          "requirement_text": "投标文件必须满足招标文件第五章《采购需求》中★号条款要求，否则投标无效。",
+          "source_excerpt": "人的投标文件是否实质上响应招标文件进行符合性审查，并形成符合性审查\n评审结果。投标人《商务技术文件》有任何一项不符合《符合性审查要求》\n要求的，投标无效。\n符合性审查要求\n序号 审查因素 审查内容\n1 授权委托书 按招标文件要求提供授权委托书；\n2 投标完整性 未将一个采购包中的内容拆分投标；\n的除外）；\n5 投标有效期 投标文件中承诺的投标有效期满足招标文件中载明的投标有效\n期的；\n6 实质性格式 标记为“实质性格式”的文件均按招标文件要求提供且签署、盖\n章的；\n7 ★号条款响应 投标文件满足招标文件第五章《采购需求》中★号条款要求的；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S001",
+            "C009-S002",
+            "C009-S003",
+            "C009-S004",
+            "C009-S005",
+            "C009-S006",
+            "C009-S007",
+            "C009-S008",
+            "C009-S009",
+            "C009-S010",
+            "C009-S011",
+            "C009-S012",
+            "C009-S013"
+          ],
+          "source_hash": "c32044b4684c96833f706573360d8285d9d711dcf8982d39a75779301e7e28f4",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0,
+            "mechanical_score": 1000000
+          }
+        },
+        {
+          "requirement_id": "REQ-082",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人必须按招标文件要求提供授权委托书。",
+          "source_excerpt": "1 授权委托书 按招标文件要求提供授权委托书；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S006"
+          ],
+          "source_hash": "8bbc1f71a475f914588a3a7eeb692dee7664b3205602c0437b49c61fe48f8733",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0,
+            "mechanical_score": 1000000
+          }
+        },
+        {
+          "requirement_id": "REQ-083",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人不得将一个采购包中的内容拆分投标。",
+          "source_excerpt": "2 投标完整性 未将一个采购包中的内容拆分投标；",
+          "source_page_start": 28,
+          "source_page_end": 28,
+          "source_refs": [
+            "C009-S007"
+          ],
+          "source_hash": "a60e385f061c65d5236deb8123390dc1e219284b98f443e10ad103ce4906a8ef",
+          "source_span": {
+            "page_start": 28,
+            "page_end": 28,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0,
+            "mechanical_score": 1000000
+          }
+        }
+      ],
+      "candidate_status": "CANDIDATES_AVAILABLE"
+    },
+    {
+      "atom_id": "TB-006-P0-0016",
+      "tender_id": "TB-006",
+      "source_truth": {
+        "atom_id": "TB-006-P0-0016",
+        "tender_id": "TB-006",
+        "page": 29,
+        "atomic_requirement": "不得恶意串通或存在妨碍公平竞争的行为。",
+        "source_excerpt": "不得恶意串通或存在妨碍公平竞争的行为。",
+        "source_text": "不得恶意串通或存在妨碍公平竞争的行为。",
+        "source_text_origin": "R3.trace.source.text",
+        "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_truth_sha256": "sha256:9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY",
+        "risk_tier": "P0",
+        "applicability": "ACTIVE",
+        "source_mode": "GPT_ATOMIC_NORMALIZATION",
+        "note": null,
+        "context": {
+          "page": 29,
+          "text": "不得恶意串通或存在妨碍公平竞争的行为。",
+          "context_origin": "frozen-source-truth-and-r3-trace"
+        }
+      },
+      "production_identity": {
+        "production_run_id": "V43-CORE6-20260911",
+        "tender_id": "TB-006",
+        "source_sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_file": "TB-006-beijing-emergency-model-cloud.pdf",
+        "production_export_path": "docs/eval/requirement-production-core6-20260911/TB-006.production-requirements.json"
+      },
+      "mechanical_trace": {
+        "r3_case_id": "TB-006-P0-0016",
+        "trace_id": "trace:6bf0ff76a5e0f53cb5fc5188",
+        "source_linked": true,
+        "no_mechanical_link_found": false,
+        "linked_candidate_count_observed": 10,
+        "link_methods_observed": [
+          "same_page_span_only"
+        ],
+        "stage_statuses": {
+          "Tender Source": "PRESENT",
+          "Section": "PRESENT",
+          "Chunk": "PRESENT",
+          "Provider Input": "EVIDENCE_NOT_PERSISTED",
+          "Raw Candidate": "EVIDENCE_NOT_PERSISTED",
+          "Normalization": "EVIDENCE_NOT_PERSISTED",
+          "Source Resolution": "PRESENT",
+          "Canonical Requirement": "PRESENT"
+        },
+        "evidence_gaps": [
+          {
+            "stage": "Provider Input",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Raw Candidate",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Normalization",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          }
+        ]
+      },
+      "candidate_canonicals": [
+        {
+          "requirement_id": "REQ-094",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人必须遵循公平竞争的原则，不存在恶意串通，妨碍其他投标人的竞争行为，不存在损害采购人或者其他投标人的合法权益情形。",
+          "source_excerpt": "14 公平竞争\n投标人遵循公平竞争的原则，不存在恶意串通，妨碍其他投标\n人的竞争行为，不存在损害采购人或者其他投标人的合法权益\n情形的；",
+          "source_page_start": 29,
+          "source_page_end": 29,
+          "source_refs": [
+            "C009-S055",
+            "C009-S056",
+            "C009-S057",
+            "C009-S058"
+          ],
+          "source_hash": "f8b3d2f76e3953a58a0d6bb634fd7398571861a314eeaf73cff81575cb630aa4",
+          "source_span": {
+            "page_start": 29,
+            "page_end": 29,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.175438596491,
+            "mechanical_score": 1000000.1754385965
+          }
+        },
+        {
+          "requirement_id": "REQ-097",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人、投标文件不得存在不符合法律、法规和招标文件规定的其他无效情形。",
+          "source_excerpt": "17 其他无效情形 投标人、投标文件不存在不符合法律、法规和招标文件规定的\n其他无效情形。",
+          "source_page_start": 29,
+          "source_page_end": 29,
+          "source_refs": [
+            "C009-S067",
+            "C009-S068"
+          ],
+          "source_hash": "8e37fb6d8d1d4c77d310ef1dcb20a8ae4acf285734257687bbd8dda67a541930",
+          "source_span": {
+            "page_start": 29,
+            "page_end": 29,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.041666666667,
+            "mechanical_score": 1000000.0416666666
+          }
+        },
+        {
+          "requirement_id": "REQ-095",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人不得存在《政府采购货物和服务招标投标管理办法》视为投标人串通投标的情形，包括：（一）不同投标人的投标文件由同一单位或者个人编制；（二）不同投标人委托同一单位或者个人办理投标事宜；（三）不同投标人的投标文件载明的项目管理成员或者联系人员为同一人；（四）不同投标人的投标文件异常一致或投标保证金从同一单位或者个人的账户转出。",
+          "source_excerpt": "15 串通投标\n不存在《政府采购货物和服务招标投标管理办法》视为投标人\n串通投标的情形：（一）不同投标人的投标文件由同一单位或\n者个人编制；（二）不同投标人委托同一单位或者个人办理投\n标事宜；（三）不同投标人的投标文件载明的项目管理成员或\n者联系人员为同一人；（四）不同投标人的投标文件异常一致\n的账户转出；",
+          "source_page_start": 29,
+          "source_page_end": 29,
+          "source_refs": [
+            "C009-S059",
+            "C009-S060",
+            "C009-S061",
+            "C009-S062",
+            "C009-S063",
+            "C009-S064",
+            "C009-S065"
+          ],
+          "source_hash": "f8daa732f34aa7886885b7b3af4e41446a91cbed6a09b88faf60473caad1d22d",
+          "source_span": {
+            "page_start": 29,
+            "page_end": 29,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.025,
+            "mechanical_score": 1000000.025
+          }
+        },
+        {
+          "requirement_id": "REQ-096",
+          "tender_id": "TB-006",
+          "requirement_text": "投标文件不得含有采购人不能接受的附加条件。",
+          "source_excerpt": "16 附加条件 投标文件未含有采购人不能接受的附加条件的；",
+          "source_page_start": 29,
+          "source_page_end": 29,
+          "source_refs": [
+            "C009-S066"
+          ],
+          "source_hash": "4e3643be5d03f8c017ce27367c06f3006ea2c09e078d62a98db0b3d613a79e64",
+          "source_span": {
+            "page_start": 29,
+            "page_end": 29,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.02380952381,
+            "mechanical_score": 1000000.0238095238
+          }
+        },
+        {
+          "requirement_id": "REQ-088",
+          "tender_id": "TB-006",
+          "requirement_text": "招标文件不接受进口产品投标的内容时，投标人所投产品不得含进口产品。",
+          "source_excerpt": "招标文件不接受进口产品投标的内容时，投标人所投产品不含\n进口产品；",
+          "source_page_start": 29,
+          "source_page_end": 29,
+          "source_refs": [
+            "C009-S029",
+            "C009-S030"
+          ],
+          "source_hash": "c4aef66603f9dbda60de56d12158869fc4f66153875b0606cf889a507a9f0956",
+          "source_span": {
+            "page_start": 29,
+            "page_end": 29,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.023255813953,
+            "mechanical_score": 1000000.023255814
+          }
+        }
+      ],
+      "candidate_status": "CANDIDATES_AVAILABLE"
+    },
+    {
+      "atom_id": "TB-006-P0-0017",
+      "tender_id": "TB-006",
+      "source_truth": {
+        "atom_id": "TB-006-P0-0017",
+        "tender_id": "TB-006",
+        "page": 29,
+        "atomic_requirement": "投标文件不得含采购人不能接受的附加条件。",
+        "source_excerpt": "投标文件不得含采购人不能接受的附加条件。",
+        "source_text": "投标文件不得含采购人不能接受的附加条件。",
+        "source_text_origin": "R3.trace.source.text",
+        "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_truth_sha256": "sha256:9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY",
+        "risk_tier": "P0",
+        "applicability": "ACTIVE",
+        "source_mode": "GPT_ATOMIC_NORMALIZATION",
+        "note": null,
+        "context": {
+          "page": 29,
+          "text": "投标文件不得含采购人不能接受的附加条件。",
+          "context_origin": "frozen-source-truth-and-r3-trace"
+        }
+      },
+      "production_identity": {
+        "production_run_id": "V43-CORE6-20260911",
+        "tender_id": "TB-006",
+        "source_sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_file": "TB-006-beijing-emergency-model-cloud.pdf",
+        "production_export_path": "docs/eval/requirement-production-core6-20260911/TB-006.production-requirements.json"
+      },
+      "mechanical_trace": {
+        "r3_case_id": "TB-006-P0-0017",
+        "trace_id": "trace:2de0bdf82cc199b07760bc02",
+        "source_linked": true,
+        "no_mechanical_link_found": false,
+        "linked_candidate_count_observed": 10,
+        "link_methods_observed": [
+          "same_page_span_only",
+          "shared_8gram"
+        ],
+        "stage_statuses": {
+          "Tender Source": "PRESENT",
+          "Section": "PRESENT",
+          "Chunk": "PRESENT",
+          "Provider Input": "EVIDENCE_NOT_PERSISTED",
+          "Raw Candidate": "EVIDENCE_NOT_PERSISTED",
+          "Normalization": "EVIDENCE_NOT_PERSISTED",
+          "Source Resolution": "PRESENT",
+          "Canonical Requirement": "PRESENT"
+        },
+        "evidence_gaps": [
+          {
+            "stage": "Provider Input",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Raw Candidate",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Normalization",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          }
+        ]
+      },
+      "candidate_canonicals": [
+        {
+          "requirement_id": "REQ-096",
+          "tender_id": "TB-006",
+          "requirement_text": "投标文件不得含有采购人不能接受的附加条件。",
+          "source_excerpt": "16 附加条件 投标文件未含有采购人不能接受的附加条件的；",
+          "source_page_start": 29,
+          "source_page_end": 29,
+          "source_refs": [
+            "C009-S066"
+          ],
+          "source_hash": "4e3643be5d03f8c017ce27367c06f3006ea2c09e078d62a98db0b3d613a79e64",
+          "source_span": {
+            "page_start": 29,
+            "page_end": 29,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "shared_8gram",
+          "ranking_features": {
+            "method_priority": 2,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 5,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.62962962963,
+            "mechanical_score": 2005000.6296296297
+          }
+        },
+        {
+          "requirement_id": "REQ-088",
+          "tender_id": "TB-006",
+          "requirement_text": "招标文件不接受进口产品投标的内容时，投标人所投产品不得含进口产品。",
+          "source_excerpt": "招标文件不接受进口产品投标的内容时，投标人所投产品不含\n进口产品；",
+          "source_page_start": 29,
+          "source_page_end": 29,
+          "source_refs": [
+            "C009-S029",
+            "C009-S030"
+          ],
+          "source_hash": "c4aef66603f9dbda60de56d12158869fc4f66153875b0606cf889a507a9f0956",
+          "source_span": {
+            "page_start": 29,
+            "page_end": 29,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.184210526316,
+            "mechanical_score": 1000000.1842105263
+          }
+        },
+        {
+          "requirement_id": "REQ-097",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人、投标文件不得存在不符合法律、法规和招标文件规定的其他无效情形。",
+          "source_excerpt": "17 其他无效情形 投标人、投标文件不存在不符合法律、法规和招标文件规定的\n其他无效情形。",
+          "source_page_start": 29,
+          "source_page_end": 29,
+          "source_refs": [
+            "C009-S067",
+            "C009-S068"
+          ],
+          "source_hash": "8e37fb6d8d1d4c77d310ef1dcb20a8ae4acf285734257687bbd8dda67a541930",
+          "source_span": {
+            "page_start": 29,
+            "page_end": 29,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.108695652174,
+            "mechanical_score": 1000000.1086956522
+          }
+        },
+        {
+          "requirement_id": "REQ-095",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人不得存在《政府采购货物和服务招标投标管理办法》视为投标人串通投标的情形，包括：（一）不同投标人的投标文件由同一单位或者个人编制；（二）不同投标人委托同一单位或者个人办理投标事宜；（三）不同投标人的投标文件载明的项目管理成员或者联系人员为同一人；（四）不同投标人的投标文件异常一致或投标保证金从同一单位或者个人的账户转出。",
+          "source_excerpt": "15 串通投标\n不存在《政府采购货物和服务招标投标管理办法》视为投标人\n串通投标的情形：（一）不同投标人的投标文件由同一单位或\n者个人编制；（二）不同投标人委托同一单位或者个人办理投\n标事宜；（三）不同投标人的投标文件载明的项目管理成员或\n者联系人员为同一人；（四）不同投标人的投标文件异常一致\n的账户转出；",
+          "source_page_start": 29,
+          "source_page_end": 29,
+          "source_refs": [
+            "C009-S059",
+            "C009-S060",
+            "C009-S061",
+            "C009-S062",
+            "C009-S063",
+            "C009-S064",
+            "C009-S065"
+          ],
+          "source_hash": "f8daa732f34aa7886885b7b3af4e41446a91cbed6a09b88faf60473caad1d22d",
+          "source_span": {
+            "page_start": 29,
+            "page_end": 29,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.050847457627,
+            "mechanical_score": 1000000.0508474576
+          }
+        },
+        {
+          "requirement_id": "REQ-094",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人必须遵循公平竞争的原则，不存在恶意串通，妨碍其他投标人的竞争行为，不存在损害采购人或者其他投标人的合法权益情形。",
+          "source_excerpt": "14 公平竞争\n投标人遵循公平竞争的原则，不存在恶意串通，妨碍其他投标\n人的竞争行为，不存在损害采购人或者其他投标人的合法权益\n情形的；",
+          "source_page_start": 29,
+          "source_page_end": 29,
+          "source_refs": [
+            "C009-S055",
+            "C009-S056",
+            "C009-S057",
+            "C009-S058"
+          ],
+          "source_hash": "f8b3d2f76e3953a58a0d6bb634fd7398571861a314eeaf73cff81575cb630aa4",
+          "source_span": {
+            "page_start": 29,
+            "page_end": 29,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.046153846154,
+            "mechanical_score": 1000000.0461538462
+          }
+        }
+      ],
+      "candidate_status": "CANDIDATES_AVAILABLE"
+    },
+    {
+      "atom_id": "TB-006-P0-0018",
+      "tender_id": "TB-006",
+      "source_truth": {
+        "atom_id": "TB-006-P0-0018",
+        "tender_id": "TB-006",
+        "page": 29,
+        "atomic_requirement": "不得存在法律、法规和招标文件规定的其他无效情形。",
+        "source_excerpt": "不得存在法律、法规和招标文件规定的其他无效情形。",
+        "source_text": "不得存在法律、法规和招标文件规定的其他无效情形。",
+        "source_text_origin": "R3.trace.source.text",
+        "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_truth_sha256": "sha256:9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY",
+        "risk_tier": "P0",
+        "applicability": "ACTIVE",
+        "source_mode": "GPT_ATOMIC_NORMALIZATION",
+        "note": null,
+        "context": {
+          "page": 29,
+          "text": "不得存在法律、法规和招标文件规定的其他无效情形。",
+          "context_origin": "frozen-source-truth-and-r3-trace"
+        }
+      },
+      "production_identity": {
+        "production_run_id": "V43-CORE6-20260911",
+        "tender_id": "TB-006",
+        "source_sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_file": "TB-006-beijing-emergency-model-cloud.pdf",
+        "production_export_path": "docs/eval/requirement-production-core6-20260911/TB-006.production-requirements.json"
+      },
+      "mechanical_trace": {
+        "r3_case_id": "TB-006-P0-0018",
+        "trace_id": "trace:eba0a036c0cd84080d922887",
+        "source_linked": true,
+        "no_mechanical_link_found": false,
+        "linked_candidate_count_observed": 10,
+        "link_methods_observed": [
+          "same_page_span_only",
+          "shared_8gram"
+        ],
+        "stage_statuses": {
+          "Tender Source": "PRESENT",
+          "Section": "PRESENT",
+          "Chunk": "PRESENT",
+          "Provider Input": "EVIDENCE_NOT_PERSISTED",
+          "Raw Candidate": "EVIDENCE_NOT_PERSISTED",
+          "Normalization": "EVIDENCE_NOT_PERSISTED",
+          "Source Resolution": "PRESENT",
+          "Canonical Requirement": "PRESENT"
+        },
+        "evidence_gaps": [
+          {
+            "stage": "Provider Input",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Raw Candidate",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Normalization",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          }
+        ]
+      },
+      "candidate_canonicals": [
+        {
+          "requirement_id": "REQ-097",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人、投标文件不得存在不符合法律、法规和招标文件规定的其他无效情形。",
+          "source_excerpt": "17 其他无效情形 投标人、投标文件不存在不符合法律、法规和招标文件规定的\n其他无效情形。",
+          "source_page_start": 29,
+          "source_page_end": 29,
+          "source_refs": [
+            "C009-S067",
+            "C009-S068"
+          ],
+          "source_hash": "8e37fb6d8d1d4c77d310ef1dcb20a8ae4acf285734257687bbd8dda67a541930",
+          "source_span": {
+            "page_start": 29,
+            "page_end": 29,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "shared_8gram",
+          "ranking_features": {
+            "method_priority": 2,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 11,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.588235294118,
+            "mechanical_score": 2011000.5882352942
+          }
+        },
+        {
+          "requirement_id": "REQ-088",
+          "tender_id": "TB-006",
+          "requirement_text": "招标文件不接受进口产品投标的内容时，投标人所投产品不得含进口产品。",
+          "source_excerpt": "招标文件不接受进口产品投标的内容时，投标人所投产品不含\n进口产品；",
+          "source_page_start": 29,
+          "source_page_end": 29,
+          "source_refs": [
+            "C009-S029",
+            "C009-S030"
+          ],
+          "source_hash": "c4aef66603f9dbda60de56d12158869fc4f66153875b0606cf889a507a9f0956",
+          "source_span": {
+            "page_start": 29,
+            "page_end": 29,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.090909090909,
+            "mechanical_score": 1000000.0909090909
+          }
+        },
+        {
+          "requirement_id": "REQ-096",
+          "tender_id": "TB-006",
+          "requirement_text": "投标文件不得含有采购人不能接受的附加条件。",
+          "source_excerpt": "16 附加条件 投标文件未含有采购人不能接受的附加条件的；",
+          "source_page_start": 29,
+          "source_page_end": 29,
+          "source_refs": [
+            "C009-S066"
+          ],
+          "source_hash": "4e3643be5d03f8c017ce27367c06f3006ea2c09e078d62a98db0b3d613a79e64",
+          "source_span": {
+            "page_start": 29,
+            "page_end": 29,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.068181818182,
+            "mechanical_score": 1000000.0681818182
+          }
+        },
+        {
+          "requirement_id": "REQ-095",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人不得存在《政府采购货物和服务招标投标管理办法》视为投标人串通投标的情形，包括：（一）不同投标人的投标文件由同一单位或者个人编制；（二）不同投标人委托同一单位或者个人办理投标事宜；（三）不同投标人的投标文件载明的项目管理成员或者联系人员为同一人；（四）不同投标人的投标文件异常一致或投标保证金从同一单位或者个人的账户转出。",
+          "source_excerpt": "15 串通投标\n不存在《政府采购货物和服务招标投标管理办法》视为投标人\n串通投标的情形：（一）不同投标人的投标文件由同一单位或\n者个人编制；（二）不同投标人委托同一单位或者个人办理投\n标事宜；（三）不同投标人的投标文件载明的项目管理成员或\n者联系人员为同一人；（四）不同投标人的投标文件异常一致\n的账户转出；",
+          "source_page_start": 29,
+          "source_page_end": 29,
+          "source_refs": [
+            "C009-S059",
+            "C009-S060",
+            "C009-S061",
+            "C009-S062",
+            "C009-S063",
+            "C009-S064",
+            "C009-S065"
+          ],
+          "source_hash": "f8daa732f34aa7886885b7b3af4e41446a91cbed6a09b88faf60473caad1d22d",
+          "source_span": {
+            "page_start": 29,
+            "page_end": 29,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.058333333333,
+            "mechanical_score": 1000000.0583333333
+          }
+        },
+        {
+          "requirement_id": "REQ-094",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人必须遵循公平竞争的原则，不存在恶意串通，妨碍其他投标人的竞争行为，不存在损害采购人或者其他投标人的合法权益情形。",
+          "source_excerpt": "14 公平竞争\n投标人遵循公平竞争的原则，不存在恶意串通，妨碍其他投标\n人的竞争行为，不存在损害采购人或者其他投标人的合法权益\n情形的；",
+          "source_page_start": 29,
+          "source_page_end": 29,
+          "source_refs": [
+            "C009-S055",
+            "C009-S056",
+            "C009-S057",
+            "C009-S058"
+          ],
+          "source_hash": "f8b3d2f76e3953a58a0d6bb634fd7398571861a314eeaf73cff81575cb630aa4",
+          "source_span": {
+            "page_start": 29,
+            "page_end": 29,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.044117647059,
+            "mechanical_score": 1000000.0441176471
+          }
+        }
+      ],
+      "candidate_status": "CANDIDATES_AVAILABLE"
+    },
+    {
+      "atom_id": "TB-006-P0-0019",
+      "tender_id": "TB-006",
+      "source_truth": {
+        "atom_id": "TB-006-P0-0019",
+        "tender_id": "TB-006",
+        "page": 20,
+        "atomic_requirement": "须在规定时间内完成电子投标文件解密；因非系统原因导致解密失败视为投标无效。",
+        "source_excerpt": "须在规定时间内完成电子投标文件解密；因非系统原因导致解密失败视为投标无效。",
+        "source_text": "须在规定时间内完成电子投标文件解密；因非系统原因导致解密失败视为投标无效。",
+        "source_text_origin": "R3.trace.source.text",
+        "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_truth_sha256": "sha256:9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+        "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+        "family": "CONFORMITY",
+        "risk_tier": "P0",
+        "applicability": "ACTIVE",
+        "source_mode": "GPT_ATOMIC_NORMALIZATION",
+        "note": null,
+        "context": {
+          "page": 20,
+          "text": "须在规定时间内完成电子投标文件解密；因非系统原因导致解密失败视为投标无效。",
+          "context_origin": "frozen-source-truth-and-r3-trace"
+        }
+      },
+      "production_identity": {
+        "production_run_id": "V43-CORE6-20260911",
+        "tender_id": "TB-006",
+        "source_sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_file": "TB-006-beijing-emergency-model-cloud.pdf",
+        "production_export_path": "docs/eval/requirement-production-core6-20260911/TB-006.production-requirements.json"
+      },
+      "mechanical_trace": {
+        "r3_case_id": "TB-006-P0-0019",
+        "trace_id": "trace:11dac32f14f89152d8a1e314",
+        "source_linked": true,
+        "no_mechanical_link_found": false,
+        "linked_candidate_count_observed": 3,
+        "link_methods_observed": [
+          "same_page_span_only"
+        ],
+        "stage_statuses": {
+          "Tender Source": "PRESENT",
+          "Section": "PRESENT",
+          "Chunk": "PRESENT",
+          "Provider Input": "EVIDENCE_NOT_PERSISTED",
+          "Raw Candidate": "EVIDENCE_NOT_PERSISTED",
+          "Normalization": "EVIDENCE_NOT_PERSISTED",
+          "Source Resolution": "PRESENT",
+          "Canonical Requirement": "PRESENT"
+        },
+        "evidence_gaps": [
+          {
+            "stage": "Provider Input",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Raw Candidate",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          },
+          {
+            "stage": "Normalization",
+            "code": "EVIDENCE_NOT_PERSISTED"
+          }
+        ]
+      },
+      "candidate_canonicals": [
+        {
+          "requirement_id": "REQ-060",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人应在招标文件要求提交投标文件截止时间前，将电子投标文件提交至电子交易平台。",
+          "source_excerpt": "16.1 投标人应在招标文件要求提交投标文件截止时间前，将电子投标文件提交至\n电子交易平台。",
+          "source_page_start": 20,
+          "source_page_end": 20,
+          "source_refs": [
+            "C005-S074",
+            "C005-S075"
+          ],
+          "source_hash": "39a06184fcaa009f318a0307cc2bcbbec9efbd5e185192a3c847811ee437c39b",
+          "source_span": {
+            "page_start": 20,
+            "page_end": 20,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.101694915254,
+            "mechanical_score": 1000000.1016949152
+          }
+        },
+        {
+          "requirement_id": "REQ-059",
+          "tender_id": "TB-006",
+          "requirement_text": "本项目使用北京市政府采购电子交易平台。投标人根据招标文件及电子交易平台供应商操作手册要求编制、生成并提交电子投标文件。",
+          "source_excerpt": "15.1 本项目使用北京市政府采购电子交易平台。投标人根据招标文件及电子交易\n19\n平台供应商操作手册要求编制、生成并提交电子投标文件。",
+          "source_page_start": 19,
+          "source_page_end": 20,
+          "source_refs": [
+            "C005-S071",
+            "C005-S072",
+            "C005-S073"
+          ],
+          "source_hash": "e865a37974a0cf29edcc2a2e6de61934b88d2a551e9e370dedc89785ed254053",
+          "source_span": {
+            "page_start": 19,
+            "page_end": 20,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.0625,
+            "mechanical_score": 1000000.0625
+          }
+        },
+        {
+          "requirement_id": "REQ-061",
+          "tender_id": "TB-006",
+          "requirement_text": "投标人对投标文件的补充、修改的内容应当按照招标文件要求签署、盖章，作为投标文件的组成部分。",
+          "source_excerpt": "17.2 投标人对投标文件的补充、修改的内容应当按照招标文件要求签署、盖章，\n作为投标文件的组成部分。",
+          "source_page_start": 20,
+          "source_page_end": 20,
+          "source_refs": [
+            "C005-S077",
+            "C005-S078"
+          ],
+          "source_hash": "f82f50619b3400b44f0aea6a340897bfef39818cad25c98c97976cbc173ee864",
+          "source_span": {
+            "page_start": 20,
+            "page_end": 20,
+            "chunk_number": null,
+            "source_start_offset": null,
+            "source_end_offset": null
+          },
+          "source_verified": true,
+          "candidate_origin": "TRACE_LINEAGE",
+          "link_method": "same_page_span_only",
+          "ranking_features": {
+            "method_priority": 1,
+            "normalized_exact_substring": false,
+            "shared_8gram_count": 0,
+            "number_overlap_count": 0,
+            "token_overlap_count": 0,
+            "normalized_bigram_overlap_ratio": 0.061538461538,
+            "mechanical_score": 1000000.0615384616
+          }
+        }
+      ],
+      "candidate_status": "CANDIDATES_AVAILABLE"
+    }
+  ],
+  "side_effects": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "flywheel_semantic_labels_created": 0
+  }
+}

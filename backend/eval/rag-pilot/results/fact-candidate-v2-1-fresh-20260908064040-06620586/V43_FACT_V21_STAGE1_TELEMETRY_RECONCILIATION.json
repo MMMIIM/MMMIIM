@@ -1,0 +1,109 @@
+{
+  "artifact": "V43_FACT_V21_STAGE1_TELEMETRY_RECONCILIATION",
+  "generated_at": "2026-09-08T09:12:19.081Z",
+  "original_run_id": "fact-candidate-v2-1-fresh-20260908064040-06620586",
+  "original_execution_id": "fact-candidate-v2-1-fresh-20260908064040-06620586-COM-01",
+  "original_checkpoint_sha256": "7ee6bdfcf9fcdbf639097da23c9301f555fef0e9a2dfdae231525159a1b8ca49",
+  "old_checkpoint_status": "BLOCKED_WITH_EVIDENCE",
+  "old_checkpoint_stop_reason": "STAGE1_SOURCE_OR_IDENTITY_GATE",
+  "configured_provider": "deepseek_official",
+  "runtime_resolved_provider": "deepseek_official",
+  "response_provider": null,
+  "response_provider_observability": "NOT_EMITTED_BY_RESPONSE",
+  "configured_model": "deepseek-v4-pro",
+  "requested_model": "deepseek-v4-pro",
+  "response_model": "deepseek-v4-pro",
+  "provider_route_evidence": {
+    "provider_route_identity": "VERIFIED_BY_RUNTIME_RESOLUTION",
+    "task_type": "evidence_fact_candidate_v2_1",
+    "mapped_provider": "deepseek_official",
+    "task_provider_selection": "TASK_PROVIDER_IF_PRESENT_ELSE_DEFAULT",
+    "dynamic_provider_fallback_for_candidate_task": false,
+    "alternate_provider_retry": false,
+    "provider_alias_rewrite": false,
+    "multi_provider_voting": false,
+    "request_time_provider_substitution": false,
+    "evidence_files": [
+      {
+        "path": "services/semantic-gateway/src/gateway.js",
+        "sha256": "0d232cb34379b6de16ee5b043e7dfb7ede4350ac7f0d1c1ab4d43a28423b8fcc",
+        "route_assertion": "evidence_fact_candidate_v2_1 -> deepseekOfficialProvider"
+      },
+      {
+        "path": "services/semantic-gateway/src/task-router.js",
+        "sha256": "cad8077807d7e6859de04d0eb69dc0d88d096c23f3ae57806b007702c38f1509",
+        "route_assertion": "task-specific provider selected deterministically when mapped"
+      }
+    ]
+  },
+  "runtime_build_revision": "f509514",
+  "runtime_info_observation": {
+    "source": "CURRENT_GATEWAY_INFO",
+    "http_status": 200,
+    "fact_provider": "deepseek_official",
+    "fact_provider_configured": true,
+    "fact_provider_endpoint": "/responses",
+    "fact_model": "deepseek-v4-pro"
+  },
+  "reconciliation_method": "READ_ONLY_JOIN_OF_FROZEN_EXECUTION_ARTIFACTS_RUNTIME_INFO_AND_STATIC_ROUTE_MAP",
+  "stage1_hard_stops": {
+    "response_model_expected": {
+      "result": true,
+      "actual": "deepseek-v4-pro"
+    },
+    "schema": {
+      "result": true
+    },
+    "facts_nonempty": {
+      "result": true,
+      "actual": 4
+    },
+    "source_ref_resolution": {
+      "result": true,
+      "actual": 1
+    },
+    "source_text_output_bytes": {
+      "result": true,
+      "actual": 0
+    },
+    "response_provider": {
+      "result": "NOT_A_HARD_STOP",
+      "actual": null
+    }
+  },
+  "mechanical_gate": "PASS",
+  "old_checkpoint_relationship": "HISTORICAL_FAIL_CLOSED_RESULT",
+  "new_reconciliation_relationship": "SUCCESSOR_INTERPRETATION_WITH_ADDITIONAL_TELEMETRY_EVIDENCE",
+  "raw_execution_mutation": 0,
+  "source_snapshot": {
+    "snapshot_id": "EVAL-SNAPSHOT-C7F1A4E58C970A4B",
+    "source_hash": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+    "source_file": "backend\\eval\\rag-pilot\\V43_RAG_CODEX_HANDOFF_1\\03_company_case_rag\\COM-01_公司概况与业务范围.md",
+    "source_text_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c"
+  },
+  "artifact_inputs": {
+    "checkpoint": "backend\\eval\\rag-pilot\\results\\fact-candidate-v2-1-fresh-20260908064040-06620586\\checkpoint.json",
+    "case_results": "backend\\eval\\rag-pilot\\results\\fact-candidate-v2-1-fresh-20260908064040-06620586\\case-results.json",
+    "raw_candidate_packet": "backend\\eval\\rag-pilot\\results\\fact-candidate-v2-1-fresh-20260908064040-06620586\\raw-candidate-packet.json",
+    "canonicalization_packet": "backend\\eval\\rag-pilot\\results\\fact-candidate-v2-1-fresh-20260908064040-06620586\\canonicalization-packet.json",
+    "pre_dispatch_ledger": "backend\\eval\\rag-pilot\\results\\fact-candidate-v2-1-fresh-20260908064040-06620586\\pre-dispatch-ledger.json"
+  },
+  "physical_provider_call_accounting": {
+    "historical_interrupted_provider_calls": "UNKNOWN_0_OR_1",
+    "diagnostic_invalid_run": 1,
+    "clean_com01_run": 1,
+    "total_new_physical_calls_so_far": 2,
+    "valid_canary_executions": 1,
+    "max_new_provider_calls_original": 4,
+    "remaining_physical_call_budget": 2,
+    "stage2_executions_required": 3,
+    "stage2_budget_authorized": "NO"
+  },
+  "provider_calls_this_task": 0,
+  "production_db_writes": 0,
+  "fact_persistence": 0,
+  "gold_mutations": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0
+}

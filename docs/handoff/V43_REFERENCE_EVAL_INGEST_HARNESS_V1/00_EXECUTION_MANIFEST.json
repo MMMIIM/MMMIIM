@@ -1,0 +1,53 @@
+{
+  "artifact_type": "V43_REFERENCE_EVAL_INGEST_HARNESS_V1_EXECUTION_MANIFEST",
+  "run_id": "V43-REFERENCE-EVAL-INGEST-V4-20260915144421",
+  "mode": "DRY_RUN",
+  "source_count": 11,
+  "activated_source_ids": [
+    "HW-002",
+    "HW-003",
+    "HW-004",
+    "HW-005",
+    "HW-006",
+    "H3C-003",
+    "H3C-004",
+    "H3C-010",
+    "H3C-011",
+    "H3C-012",
+    "H3C-013"
+  ],
+  "source_role": "REFERENCE_ONLY",
+  "evaluation_scope": "REFERENCE_CORPUS_INDEXING_ONLY",
+  "fidelity": "PARTIAL_EVAL_ADAPTER",
+  "baseline_snapshot_manifest": {
+    "path": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/03_PRODUCTION_CORPUS_SNAPSHOT_MANIFEST.json",
+    "sha256": "c2087cd46a1642452915658ff1e687be27e40e4c674008a85ad63f780b7fcdae",
+    "exact_snapshot": true,
+    "counts": {
+      "materials": 34,
+      "chunks": 318,
+      "embeddings": 382
+    }
+  },
+  "target_database": "bid_platform_reference_eval_v4",
+  "side_effects": {
+    "provider_calls": 0,
+    "embedding_calls": 0,
+    "db_writes": 0,
+    "production_db_writes": 0,
+    "fact_provider_calls": 0,
+    "fact_candidate_writes": 0,
+    "mapping_writes": 0,
+    "claim_writes": 0,
+    "writer_calls": 0,
+    "gold_mutations": 0
+  },
+  "forbidden_actions": [
+    "Fact extraction",
+    "Mapping",
+    "Claim",
+    "Writer",
+    "Production migration",
+    "Production API upload"
+  ]
+}

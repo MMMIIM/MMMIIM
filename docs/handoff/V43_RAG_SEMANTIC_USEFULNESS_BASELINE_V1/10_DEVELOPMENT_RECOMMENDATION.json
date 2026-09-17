@@ -1,0 +1,33 @@
+{
+  "artifact_type": "V43_RAG_DEVELOPMENT_RECOMMENDATION",
+  "status": "WAITING_GPT_SEMANTIC_REVIEW",
+  "champion": {
+    "name": "embedding-based Reference Retrieval",
+    "status": "KEEP_AS_BASELINE_CANDIDATE",
+    "reason": "current production path and captured runtime evidence"
+  },
+  "no_implementation_this_round": [
+    "MMR",
+    "Exact Signal challenger",
+    "Hybrid",
+    "Reranker",
+    "new vector database",
+    "new embedding model",
+    "full re-embedding",
+    "LLM query rewrite"
+  ],
+  "routing_after_review": {
+    "REDUNDANCY": "MMR candidate only after measured redundancy",
+    "EXACT_IDENTIFIER_MISS": "Exact Signal candidate",
+    "NUMERIC_SIGNAL_MISS": "bounded exact/numeric signal candidate",
+    "RECALL_MISS": "embedding/query/corpus analysis",
+    "RANKING_FAILURE": "ranking analysis; reranker only if deterministic options fail",
+    "WEAK_CORPUS": "corpus gap remediation",
+    "SEMANTIC_NEAR_MISS": "query/metadata/ranking analysis"
+  },
+  "hybrid_gate": "HYBRID_JUSTIFIED remains UNDECIDED until same corpus/query/metric A/B with no critical regression; not default",
+  "reranker_gate": "RERANKER_JUSTIFIED remains UNDECIDED; no implementation",
+  "evidence_lane": "Use separate Evidence Retrieval profile for EVIDENCE_CANDIDATE only; output remains candidate",
+  "corpus_gap_rule": "CORPUS_GAP is distinct from SEARCH_FAILURE",
+  "semantic_authority": "GPT proposes; Human may freeze; Codex does not promote labels"
+}

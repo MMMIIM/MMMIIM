@@ -1,0 +1,83 @@
+{
+  "artifact_type": "V43_PARALLEL_UPSTREAM_GATES_CHECKPOINT",
+  "generated_at": "2026-09-08",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "worktree": "DIRTY_PRE_EXISTING_AND_CURRENT_EVAL_ARTIFACTS",
+  "destructive_git_actions": 0,
+  "provider_calls_total_current_task": 4,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "requirement_track": {
+    "holdout_canonical_count": 397,
+    "holdout_before": { "accept": 258, "review_required": 139, "reject": 0 },
+    "holdout_after": { "accept": 257, "review_required": 140, "reject": 0 },
+    "holdout_transitions": { "ACCEPT->ACCEPT": 257, "REVIEW_REQUIRED->REVIEW_REQUIRED": 139, "ACCEPT->REVIEW_REQUIRED": 1 },
+    "can0149": { "old": "ACCEPT", "new": "REVIEW_REQUIRED", "reason": "PARENT_CRITICAL_CONSEQUENCE_OMISSION_REVIEW" },
+    "can0208": { "old": "ACCEPT", "new": "ACCEPT", "reason": null },
+    "post_fix_v2_015": { "old": "REVIEW_REQUIRED", "new": "REVIEW_REQUIRED", "reason_codes": ["NEGATION_DISTORTION"] },
+    "six_tender_1009_replay": { "total": 1009, "accept": 758, "review_required": 251, "reject": 0, "parent_detector_delta": 0 },
+    "known_p0_controls": "12/12 (existing frozen control artifact)",
+    "known_number_controls": "4/4",
+    "provider_calls": 0,
+    "delta_packet": "backend/eval/requirement-unseen-holdout-v1/results/unseen-holdout-v1-2026-09-08T06-21-08-203Z-5faac1ab/critical-consequence-offline/V43_REQUIREMENT_CRITICAL_CONSEQUENCE_DELTA_GPT_PACKET.json",
+    "replay_artifact": "backend/eval/requirement-unseen-holdout-v1/results/unseen-holdout-v1-2026-09-08T06-21-08-203Z-5faac1ab/critical-consequence-offline/offline-replay.json",
+    "engineering_gate": "READY_FOR_GPT_DELTA_ADJUDICATION"
+  },
+  "fact_track": {
+    "candidate_contract": "4.3-evidence-fact-candidate-v2.1",
+    "prompt_version": "4.3-evidence-fact-candidate-v2-prompt-v2",
+    "provider": "deepseek_official",
+    "endpoint": "/responses",
+    "configured_model": "deepseek-v4-pro",
+    "requested_model": "deepseek-v4-pro",
+    "historical_interrupted_execution": "QUARANTINED_UNRECOVERABLE_UNKNOWN_0_OR_1",
+    "fresh_provider_calls": 4,
+    "retry_count": 0,
+    "stage1": "PASS",
+    "stage2": "PASS_STRUCTURAL",
+    "executions": [
+      { "case_id": "COM-01", "http_status": 200, "schema": "PASS", "response_model": "deepseek-v4-pro", "fact_count": 4, "source_ref_resolution_rate": 1, "source_text_output_bytes": 0, "canonicalized": 1, "grounding_accept": 1, "grounding_review": 0, "grounding_reject": 3 },
+      { "case_id": "COM-06-A", "http_status": 200, "schema": "PASS", "response_model": "deepseek-v4-pro", "fact_count": 9, "source_ref_resolution_rate": 1, "source_text_output_bytes": 0, "canonicalized": 2, "grounding_accept": 1, "grounding_review": 0, "grounding_reject": 8 },
+      { "case_id": "COM-06-B", "http_status": 200, "schema": "PASS", "response_model": "deepseek-v4-pro", "fact_count": 9, "source_ref_resolution_rate": 1, "source_text_output_bytes": 0, "canonicalized": 4, "grounding_accept": 2, "grounding_review": 1, "grounding_reject": 6 },
+      { "case_id": "CCV2-U13-01", "http_status": 200, "schema": "PASS", "response_model": "deepseek-v4-pro", "fact_count": 4, "source_ref_resolution_rate": 1, "source_text_output_bytes": 0, "canonicalized": 1, "grounding_accept": 1, "grounding_review": 2, "grounding_reject": 1 }
+    ],
+    "aggregate": { "schema_pass": "4/4", "nonempty": "4/4", "semantic_empty": 0, "source_ref_resolution_rate": 1, "critical_grounding_escape": 0, "canonicalized": 8, "canonicalization_review_required": 18, "grounding_accept": 5, "grounding_review": 3, "grounding_reject": 18, "com06_stability_comparison_valid": true },
+    "gpt_packet": "backend/eval/rag-pilot/results/fact-candidate-v2-1-fresh-20260908085537-f852ae10/gpt-semantic-review-packet.json",
+    "raw_response_retention": "NOT_RETAINED_BY_SAFE_CLIENT; parsed candidates and bounded audit only",
+    "engineering_gate": "READY_FOR_GPT_SEMANTIC_ADJUDICATION"
+  },
+  "verification": {
+    "focused_requirement_quality_gate": "15/15 PASS",
+    "requirement_miss_number_readiness": "23/23 PASS",
+    "fact_dispatch_journal": "4/4 PASS",
+    "frontend": "51/51 PASS",
+    "build": "PASS",
+    "lint": "PASS",
+    "diff_check": "PASS",
+    "full_npm_test": "BLOCKED_PRE_EXISTING_UNRELATED_BASELINE",
+    "full_npm_test_failures": [
+      "missing backend/docs/V43_REQUIREMENT_P1_GPT_SEMANTIC_CALIBRATION_PACKET_RECOVERED.json",
+      "missing backend/docs/V43_REQUIREMENT_P1_GPT_SEMANTIC_CALIBRATION_PACKET.json",
+      "AGENTS.md runtime instruction fixture mismatch",
+      "semantic gateway runtime config static guard",
+      "source-role projection fixture path mismatch"
+    ]
+  },
+  "global_gates": {
+    "requirement_production_certified": "NO",
+    "fact_production_ready": "NO",
+    "mapping_ready": "NO",
+    "claim_ready": "NO",
+    "writer_real_gold_ready": "NO",
+    "production_default_candidate_v2_1": "NO",
+    "safe_to_start_gpt_delta_adjudication": "YES",
+    "safe_to_start_gpt_semantic_adjudication": "YES"
+  },
+  "remaining_blockers": [
+    "GPT semantic adjudication of Requirement delta packet",
+    "GPT semantic adjudication of Fact V2.1 packet",
+    "Full npm test has pre-existing unrelated fixture/governance failures",
+    "No production certification or default cutover authorized"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "artifact_type": "V43_FACT_CANARY_ROLE_RECLASSIFICATION",
+  "corpus": "HUAWEI-PUBLIC-REAL-PDF-PILOT-V1",
+  "source_material_type": "company_profile",
+  "source_role": "REFERENCE_ONLY",
+  "role_reason": "material_type_reference_only",
+  "existing_fact_candidate_count": 31,
+  "existing_fixture_artifact": "docs/handoff/V43_OVERNIGHT_FACT_DETERMINISTIC_STABILIZATION_MASTER_V1/13_CURRENT_31_CASE_REGRESSION.json",
+  "fixture_role": "ENGINEERING_FACT_BOUNDARY_REGRESSION_FIXTURE",
+  "allowed_fixture_usage": [
+    "Parser",
+    "Canonicalizer",
+    "Grounding",
+    "Negative Safety",
+    "Identity",
+    "Idempotency"
+  ],
+  "forbidden_usage": [
+    "Real Evidence Gold",
+    "Real Evidence Product Certification",
+    "Mapping-ready evidence"
+  ],
+  "fact_production_certification": "NOT_CLAIMED",
+  "review_rate_optimization_target": "DEPRIORITIZED_FOR_REFERENCE_MATERIAL",
+  "fixture_artifact_reported_provider_calls": 0,
+  "fixture_artifact_reported_fact_persistence": 0
+}

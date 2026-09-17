@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { PlatformShell, ProjectNavigation, ProfessionalWorkspaceNav } from './main.jsx';
+import { PlatformShell, ProjectNavigation, ProfessionalWorkspaceNav, ResponseMatrixWorkspace } from './main.jsx';
 
 describe('四阶段项目流程导航', () => {
   it('按业务阶段显示当前动作并保留专业工作区入口', () => {
@@ -20,5 +20,12 @@ describe('四阶段项目流程导航', () => {
     expect(html).toContain('企业资料库');
     expect(html).toContain('标书检查');
     expect(html).toContain('系统管理');
+  });
+
+  it('专业工作区提供只读响应矩阵入口和业务化状态', () => {
+    const html = renderToStaticMarkup(<><ProfessionalWorkspaceNav activeTab="响应矩阵" setActiveTab={() => {}} /><ResponseMatrixWorkspace projectId="P1" /></>);
+    expect(html).toContain('响应矩阵');
+    expect(html).toContain('只读');
+    expect(html).toContain('准备状态');
   });
 });

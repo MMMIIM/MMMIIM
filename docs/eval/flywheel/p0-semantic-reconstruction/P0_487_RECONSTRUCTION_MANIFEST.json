@@ -1,0 +1,121 @@
+{
+  "artifact_type": "V43_P0_487_RECONSTRUCTION_MANIFEST",
+  "artifact_version": "v1",
+  "blind": true,
+  "source_truth": {
+    "id": "GPT_SOURCE_TRUTH_P0_CORE6_V1",
+    "sha256": "sha256:9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+    "atom_count": 487,
+    "counts_by_tender": {
+      "JY-001": 89,
+      "TB-003": 25,
+      "TB-006": 19,
+      "FAST-01": 24,
+      "FAST-04": 229,
+      "FAST-WATER-01": 101
+    }
+  },
+  "production_identity": {
+    "run_id": "V43-CORE6-20260911",
+    "export_directory": "docs/eval/requirement-production-core6-20260911"
+  },
+  "mechanical_trace_identity": {
+    "eval_run_id": "V43-FLYWHEEL-P0-487-R3",
+    "artifact_path": "docs/eval/flywheel/V43-FLYWHEEL-P0-487-R3/V43_P0_487_PROVENANCE_TRACE_INDEX.json"
+  },
+  "ranking_policy": {
+    "candidate_precedence": [
+      "normalized_exact_substring",
+      "strongest_shared_8gram",
+      "same_page_span_only",
+      "tender_local_retrieval"
+    ],
+    "linked_limit": 5,
+    "no_link_limit": 8,
+    "semantic_judgement": false
+  },
+  "review_rows": 487,
+  "unique_atom_ids": 487,
+  "no_mechanical_link_count": 15,
+  "no_link_retrieval_coverage": 15,
+  "candidate_coverage_rows": 487,
+  "no_candidate_count": 0,
+  "average_candidates_per_atom": 4.794661,
+  "max_candidates_per_atom": 8,
+  "packet_files": [
+    {
+      "file": "JY-001.review-packet.json",
+      "tender_id": "JY-001",
+      "row_count": 89,
+      "candidate_count_total": 387,
+      "sha256": "0d754c314a11a39ea4387f749aaa1f46fe6f9059c4fda91c63607d926fd27ddd",
+      "bytes": 811881,
+      "path": "docs/eval/flywheel/p0-semantic-reconstruction/JY-001.review-packet.json"
+    },
+    {
+      "file": "TB-003.review-packet.json",
+      "tender_id": "TB-003",
+      "row_count": 25,
+      "candidate_count_total": 114,
+      "sha256": "1974bb2f42b3968f647b100c8fbd70f12daeaa16bddd880bd1d0081c5e26f877",
+      "bytes": 260800,
+      "path": "docs/eval/flywheel/p0-semantic-reconstruction/TB-003.review-packet.json"
+    },
+    {
+      "file": "TB-006.review-packet.json",
+      "tender_id": "TB-006",
+      "row_count": 19,
+      "candidate_count_total": 81,
+      "sha256": "42144216441196fbc81f95635a3052eec53e93696ad8ba4c733ff983ff81dfd5",
+      "bytes": 176560,
+      "path": "docs/eval/flywheel/p0-semantic-reconstruction/TB-006.review-packet.json"
+    },
+    {
+      "file": "FAST-01.review-packet.json",
+      "tender_id": "FAST-01",
+      "row_count": 24,
+      "candidate_count_total": 143,
+      "sha256": "2f5d6b6fe2cf1065d7ecc071d72da7b68770c2e553146d4a1a31da46cedf8f56",
+      "bytes": 289732,
+      "path": "docs/eval/flywheel/p0-semantic-reconstruction/FAST-01.review-packet.json"
+    },
+    {
+      "file": "FAST-04.review-packet.json",
+      "tender_id": "FAST-04",
+      "row_count": 229,
+      "candidate_count_total": 1134,
+      "sha256": "65dba132587e9983b9c514437f762ff1b5aed0a771f2ae508b1fc11a7bb9b84f",
+      "bytes": 2458187,
+      "path": "docs/eval/flywheel/p0-semantic-reconstruction/FAST-04.review-packet.json"
+    },
+    {
+      "file": "FAST-WATER-01.review-packet.json",
+      "tender_id": "FAST-WATER-01",
+      "row_count": 101,
+      "candidate_count_total": 476,
+      "sha256": "ec58b07761b81ced3604530bf3075be53731ae372066081cb3f0108742f4f241",
+      "bytes": 1074004,
+      "path": "docs/eval/flywheel/p0-semantic-reconstruction/FAST-WATER-01.review-packet.json"
+    }
+  ],
+  "review_index": {
+    "file": "P0_487_REVIEW_INDEX.json",
+    "bytes": 172415,
+    "sha256": "b94d92d3841136c896e71f06e980a87ccf99ce7fe582e577b4849f3ecd5e3a1a"
+  },
+  "post_adjudication_reference": {
+    "file": "P0_487_POST_ADJUDICATION_REFERENCE.json",
+    "bytes": 1189,
+    "sha256": "ea6a02fd8f5ef7492717ddc35d7485411d09a2a9b5911ee09d376569268764b2"
+  },
+  "side_effects": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "flywheel_semantic_labels_created": 0,
+    "prompts_changed": false,
+    "schemas_changed": false,
+    "production_changes": 0
+  }
+}

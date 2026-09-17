@@ -1,0 +1,79 @@
+{
+  "checkpoint": "V43_FACT_SECOND_SCHEMA_VIOLATION_DIAGNOSTIC_CHECKPOINT",
+  "run_id": "fact-second-schema-diagnostic-20260907081542070-584972d7",
+  "case_id": "COM-01",
+  "correlation_id": "07f053db-3613-4121-8135-557ad840d8b1",
+  "source_file": "COM-01_公司概况与业务范围.md",
+  "source_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+  "provider_calls": 1,
+  "retries": 0,
+  "provider_reached": true,
+  "provider_request_reached": true,
+  "provider_content_present": true,
+  "finish_reason": null,
+  "json_parse": true,
+  "provider_http_status": 200,
+  "gateway_http_status": 422,
+  "provider_identity": {
+    "provider": "semantic_gateway",
+    "model": "deepseek-ai/DeepSeek-V4-Flash"
+  },
+  "normalizer_invoked": null,
+  "normalizer_invoked_static_path": "CURRENT_SOURCE_CODE_PROJECTS_BEFORE_VALIDATE",
+  "runtime_telemetry_status": "NOT_OBSERVED_RUNTIME_REVISION",
+  "pre_normalization_fact_keys": [],
+  "post_normalization_fact_keys": [],
+  "unexpected_property_names": [
+    "predicate"
+  ],
+  "allowed_property_names": [
+    "domain_metadata",
+    "entities",
+    "quantities",
+    "scopes",
+    "status",
+    "status_source_text",
+    "subject_name",
+    "subject_type",
+    "validity"
+  ],
+  "removed_property_names": [],
+  "exact_validation_path": "data.facts[0]",
+  "schema_validation": "FAIL",
+  "schema_validation_detail": {
+    "valid": false,
+    "first_path": "data.facts[0]",
+    "first_keyword": "additionalProperties",
+    "first_expected": "no additional properties",
+    "first_actual_type": "object",
+    "first_additional_property": "predicate"
+  },
+  "semantic_grounding_gate": "NOT_RUN",
+  "classification": "TELEMETRY_NOT_OBSERVED",
+  "observed_property_classification": "CONTRACT_DRIFT_REQUIRES_DECISION",
+  "stop_reason": "Strict Fact Schema failed; fail-fast after the single permitted Provider call.",
+  "error_code": "FACT_SEMANTIC_EXTRACTION_FAILED",
+  "error_cause_code": "OUTPUT_SCHEMA_INVALID",
+  "backend_error_code": "FACT_SEMANTIC_EXTRACTION_FAILED",
+  "backend_cause_code": "OUTPUT_SCHEMA_INVALID",
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "raw_provider_content_persisted": false,
+  "provider_response_content_hash": "8ff013cd103b9962689edd39856c2c3d7a01185fd93652a7a86c8748ff7a296b",
+  "provider_response_content_length": 2294,
+  "preflight": {
+    "ready_status": 200,
+    "info_status": null,
+    "gateway_api_base_present": true,
+    "checked_at": "2026-09-07T08:15:42.074Z"
+  },
+  "outbound_input": {
+    "task_type": "evidence_fact_extraction",
+    "source_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+    "payload_hash": "52e3ee5fe9eaee75f298af58b77a15c84017e84ef6ef345c9bce47a5ea0f8fbe",
+    "requirement_blind": true
+  }
+}

@@ -33,7 +33,7 @@ export function createStage13AcceptanceFixture() {
     anchor_chunk_id: 'stage13-acceptance-chunk',
     source_text: state.source,
     source_text_hash: sha(state.source),
-    material_type: 'technical_whitepaper',
+    material_type: 'product_documentation',
     review_status: 'approved',
     requirement_ref: f.requirementId,
   };
@@ -52,6 +52,10 @@ export function createStage13AcceptanceFixture() {
     async upsertEvidenceSourceFact(fact) {
       state.facts.set(fact.fact_id, fact);
       return fact;
+    },
+    async upsertEvidenceSourceFactsAtomic(facts) {
+      for (const fact of facts) state.facts.set(fact.fact_id, fact);
+      return facts;
     },
     async getEvidenceSourceFactCurrent(factId) {
       const fact = state.facts.get(factId);
@@ -97,6 +101,16 @@ export function createStage13AcceptanceFixture() {
       };
     },
     async upsertRequirementEvidenceFactMapping(mapping) {
+      state.mappings.set(mapping.mapping_id, mapping);
+      return mapping;
+    },
+    async replaceRequirementEvidenceFactMappingAtomic(mapping) {
+      for (const current of state.mappings.values()) {
+        if (current.project_id === mapping.project_id
+          && current.requirement_db_id === mapping.requirement_db_id
+          && current.evidence_fact_id === mapping.evidence_fact_id
+          && current.mapping_id !== mapping.mapping_id) current.review_status = 'invalidated';
+      }
       state.mappings.set(mapping.mapping_id, mapping);
       return mapping;
     },

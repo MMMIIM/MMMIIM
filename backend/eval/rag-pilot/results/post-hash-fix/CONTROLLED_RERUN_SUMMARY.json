@@ -1,0 +1,161 @@
+{
+  "run_id": "POST_HASH_FIX_CONTROLLED_RERUN_01",
+  "previous_run": {
+    "status": "ABORTED",
+    "provider_calls": "UNKNOWN",
+    "included_in_benchmark_metrics": false
+  },
+  "new_run": {
+    "provider_budget": 90,
+    "observed_attempts": 78,
+    "ledger_complete": true,
+    "duplicate_runner_prevented": true
+  },
+  "semantic": {
+    "run_id": "POST_HASH_FIX_CONTROLLED_RERUN_01",
+    "previous_run": {
+      "status": "ABORTED",
+      "provider_calls": "UNKNOWN",
+      "included_in_benchmark_metrics": false
+    },
+    "phase": "SEMANTIC_REVIEW",
+    "cases": 36,
+    "provider_budget": 45,
+    "provider_attempts": 30,
+    "provider_reached": 30,
+    "metrics": {
+      "cases": 36,
+      "pass": 6,
+      "fail": 30,
+      "negative_false_positive": 0,
+      "reference_contamination": 0,
+      "schema_invalid": 30
+    },
+    "systemic_blocker": {
+      "source_hash_invalid": 0,
+      "stop_before_fact": false,
+      "affected_cases": []
+    },
+    "contract": {
+      "task_type": "evidence_support_assessment",
+      "contract_version": "4.3-evidence-support-assessment-v1",
+      "instruction_hash": "984653f19d08c2cb0d405c6c133416410f5ba82f6f6f1c2f111bb9c14b92502a",
+      "schema_hash": null,
+      "data_required": [
+        "assessments",
+        "conflict_observations"
+      ],
+      "data_allowed": [
+        "assessments",
+        "conflict_observations"
+      ],
+      "parser": "evidence-support-assessment-envelope-v1",
+      "provider": "mock",
+      "model": "mock-semantic-v1",
+      "provider_host": null,
+      "structured_output": {
+        "response_format": "json_schema",
+        "strict": true
+      },
+      "retry_policy": {
+        "max_attempts": 1
+      },
+      "label_mapping": {
+        "B-P01": "EXPECTED_POSITIVE",
+        "B-P02": "EXPECTED_POSITIVE",
+        "B-P03": "EXPECTED_POSITIVE",
+        "B-P04": "EXPECTED_POSITIVE",
+        "B-P05": "EXPECTED_POSITIVE",
+        "B-P06": "EXPECTED_POSITIVE",
+        "B-P07": "EXPECTED_POSITIVE",
+        "B-P08": "EXPECTED_POSITIVE",
+        "B-P09": "EXPECTED_POSITIVE",
+        "B-P10": "EXPECTED_POSITIVE",
+        "B-L01": "EXPECTED_LIMITED",
+        "B-L02": "EXPECTED_LIMITED",
+        "B-L03": "EXPECTED_LIMITED",
+        "B-L04": "EXPECTED_LIMITED",
+        "B-L05": "EXPECTED_LIMITED",
+        "B-L06": "EXPECTED_LIMITED",
+        "B-L07": "EXPECTED_LIMITED",
+        "B-L08": "EXPECTED_LIMITED",
+        "B-N01": "EXPECTED_NEGATIVE",
+        "B-N02": "EXPECTED_NEGATIVE",
+        "B-N03": "EXPECTED_NEGATIVE",
+        "B-N04": "EXPECTED_NEGATIVE",
+        "B-N05": "EXPECTED_NEGATIVE",
+        "B-N06": "EXPECTED_NEGATIVE",
+        "B-H01": "EXPECTED_NOT_SUPPORTING",
+        "B-H02": "EXPECTED_NOT_SUPPORTING",
+        "B-H03": "EXPECTED_NOT_SUPPORTING",
+        "B-H04": "EXPECTED_NOT_SUPPORTING",
+        "B-H05": "EXPECTED_NOT_SUPPORTING",
+        "B-H06": "EXPECTED_NOT_SUPPORTING",
+        "B-R01": "EXPECTED_REFERENCE_ONLY",
+        "B-R02": "EXPECTED_REFERENCE_ONLY",
+        "B-R03": "EXPECTED_REFERENCE_ONLY",
+        "B-R04": "EXPECTED_REFERENCE_ONLY",
+        "B-R05": "EXPECTED_REFERENCE_ONLY",
+        "B-R06": "EXPECTED_REFERENCE_ONLY"
+      }
+    }
+  },
+  "fact": {
+    "executed": true,
+    "eligible": 24,
+    "provider_reached": 24,
+    "metrics": {
+      "provider_cases": 24,
+      "final_valid_grounded": 0,
+      "first_pass": 0,
+      "retry_recovered": 0,
+      "human_escalation": 24,
+      "hallucination": 0,
+      "authority_contamination": 0,
+      "provenance_failure": 0,
+      "boundary_blocked": 8
+    },
+    "canonical_fact_count": 0
+  },
+  "call_ledger": {
+    "about_to_send": 78,
+    "terminal_events": 78,
+    "http_success": 27,
+    "http_error": 51,
+    "timeout": 0,
+    "validation_failure_after_http": 0,
+    "unmatched_send_records": 0,
+    "budget_exceeded": false,
+    "phases": {
+      "semantic": 30,
+      "fact": 48
+    }
+  },
+  "production_writes": 0,
+  "db_writes": 0,
+  "database_counts": {
+    "pre": {
+      "projects": 14,
+      "requirements": 272,
+      "company_materials": 56,
+      "material_chunks": 561,
+      "material_chunk_embeddings": 561,
+      "evidences": 7,
+      "evidence_candidate_reviews": 2,
+      "evidence_source_facts": 0,
+      "requirement_evidence_mappings": 6
+    },
+    "post": {
+      "projects": 14,
+      "requirements": 272,
+      "company_materials": 56,
+      "material_chunks": 561,
+      "material_chunk_embeddings": 561,
+      "evidences": 7,
+      "evidence_candidate_reviews": 2,
+      "evidence_source_facts": 0,
+      "requirement_evidence_mappings": 6
+    }
+  },
+  "final_status": "POST_HASH_FIX_CONTROLLED_RERUN_COMPLETE"
+}

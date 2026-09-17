@@ -1,0 +1,130 @@
+{
+  "artifact_type": "V43_RAG_RETRIEVAL_P0_HOLDOUT_BATCH_FREEZE_V1",
+  "artifact_version": "v1",
+  "status": "REPLAY_EXISTING_SUPPLEMENT_BATCH_CONTRACT_VERIFIED",
+  "execution_mode": "REPLAY_EXISTING_SUPPLEMENT_NO_PROVIDER_CALL",
+  "gold": {
+    "path": "backend/eval/retrieval-quality-p0/GPT_SEMANTIC_GOLD_V1.json",
+    "file_sha256": "7576C1D9A9FECD19F032AD49085E61E48BB008EFF4788E225A2CCEE3087492E7",
+    "gold_projection_version": "V43_RAG_RETRIEVAL_P0_K0_CONTRACT_AMENDMENT_V1",
+    "k0_projection_artifact_type": "V43_RAG_RETRIEVAL_P0_K0_CONTRACT_AMENDMENT_V1",
+    "k0_projection_content_hash": "9f0399cfa682806209ec7ffb3050d6ca3380f2297e8abe41dc99880f2c672da5"
+  },
+  "baseline_snapshot": {
+    "snapshot_id": "EVSNAP-D98FA52C-952F-416F-B57F-92C41EF9731D",
+    "file_sha256": "5D0A7F451D4090DEDBD8E9EE4F3B5851565F01F7A4170D5A40C673031BCC4578",
+    "identity_hash": "ec659099e70e6c00e5cebd664732be815b8447de3e4a86dca3ed16c6f28772e8"
+  },
+  "case_order": [
+    {
+      "ordinal": 1,
+      "case_id": "RAG-P0-HOLD-JY-001-REQ-027",
+      "requirement_id": "JY-001:REQ-027",
+      "query_text": "具有较强的系统安全性和灾难恢复能力。",
+      "query_hash": "3725bb402a8891ad9a92c0c395aca577aac6aff21e310b688143d1be92af292b",
+      "profile_class": "SERVICE",
+      "expected_retrieval_k0": false,
+      "expected_no_sufficient_evidence": false
+    },
+    {
+      "ordinal": 2,
+      "case_id": "RAG-P0-HOLD-JY-001-REQ-077",
+      "requirement_id": "JY-001:REQ-077",
+      "query_text": "12345工单闭环归档系统应进一步对12345工单闭环归档的管理升级,提供诉求受理模块,工单业务流程模块、督办管理模块、工单办理能效分析,提供后台分析统计等功能。",
+      "query_hash": "e5bd8b61b921ec1b7e0c8704f3552e4aae4af69fdf89a833f15dc58f23267e1d",
+      "profile_class": "PRODUCT_CAPABILITY",
+      "expected_retrieval_k0": false,
+      "expected_no_sufficient_evidence": true
+    },
+    {
+      "ordinal": 3,
+      "case_id": "RAG-P0-HOLD-JY-001-REQ-051",
+      "requirement_id": "JY-001:REQ-051",
+      "query_text": "建设江阴市市域社会治理现代化联勤联动指挥平台,包含事件联勤联动中心、运行指挥监管中心、事件标准库管理、事件汇聚收发网关、联勤联动移动端、通用辅助功能。",
+      "query_hash": "d6b00913d2e8eee0f357e4d129d856e4ab785bd122a940f1d77346a22e3abfb2",
+      "profile_class": "PRODUCT_CAPABILITY",
+      "expected_retrieval_k0": false,
+      "expected_no_sufficient_evidence": true
+    },
+    {
+      "ordinal": 4,
+      "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+      "requirement_id": "TB-003:REQ-119",
+      "query_text": "可靠性要求：平台应提供适当的容错和备份恢复功能，确保系统的可靠运行。保证在高并发的情况下有高效的性能，保证用户使用。平台具有广泛的兼容性，保证用户的使用体验。",
+      "query_hash": "c84c1275817dab37b80eb9304fc7a2cf5e21d8bef9045169abd9b874126892b7",
+      "profile_class": "PERFORMANCE",
+      "expected_retrieval_k0": false,
+      "expected_no_sufficient_evidence": true
+    },
+    {
+      "ordinal": 5,
+      "case_id": "RAG-P0-HOLD-TB-003-REQ-170",
+      "requirement_id": "TB-003:REQ-170",
+      "query_text": "国产数据库需满足以下需求：(1)具备数据存储、访问控制、身份鉴别、安全审计和数据备份恢复等功能；(2)支持国产化操作系统；(3)满足所有应用系统国产化改造需求；(4)支持同时创建并运行≥20个独立数据库，每个库可独立配置资源配额；(5)提供3年维护期内符合系统需求的免费升级服务。",
+      "query_hash": "c9201ba8c20da08b71197f89755b2cfaa2a36b070f2279937d969f62e5de7812",
+      "profile_class": "QUALIFICATION",
+      "expected_retrieval_k0": false,
+      "expected_no_sufficient_evidence": true
+    },
+    {
+      "ordinal": 6,
+      "case_id": "RAG-P0-HOLD-TB-006-REQ-037",
+      "requirement_id": "TB-006:REQ-037",
+      "query_text": "项目经理具有信息系统项目管理师（高级）证书。",
+      "query_hash": "c7e0097cd71887f92eb71f2dafdc57b3058d267ac6900b9be363b82f561d268f",
+      "profile_class": "QUALIFICATION",
+      "expected_retrieval_k0": true,
+      "expected_no_sufficient_evidence": true
+    },
+    {
+      "ordinal": 7,
+      "case_id": "RAG-P0-HOLD-JY-001-REQ-148",
+      "requirement_id": "JY-001:REQ-148",
+      "query_text": "防火墙需为2U标准机架设备,设备具有冗余电源,设备配置8个千兆自适应电口、4个千兆光口、4个万兆光口、2个扩展槽位、2个USB接口、1个RJ45 Console口。",
+      "query_hash": "08621828acd4d077bd2307309edefdbf057f0b64df07da92343827c6f1a8e3f4",
+      "profile_class": "PRODUCT_CAPABILITY",
+      "expected_retrieval_k0": true,
+      "expected_no_sufficient_evidence": true
+    }
+  ],
+  "metric_contract": {
+    "k_values": [
+      1,
+      3,
+      5,
+      8,
+      20
+    ],
+    "mrr_variant": "MRR_FULL",
+    "evidence_matcher_version": "EVIDENCE_MATCHER_V1_EXACT_ACCEPTED_SPAN_GRADE",
+    "evidence_matcher_hash": "ce675a8756ea325fe208a32a8143d5889586fb26a343c7dd430dce378fe5c4f2",
+    "evidence_matcher_contract": {
+      "candidate_unit": "snapshot material_id + chunk_id + chunk_hash",
+      "accepted_match": "candidate chunk identity equals a frozen Gold evidence item accepted span_ref chunk identity",
+      "alternative_match": "any frozen Gold evidence item span_ref listed for the atom is acceptable; no semantic expansion is permitted",
+      "relevance_source": "frozen Gold evidence item grade only",
+      "precision_relevant_grade": "grade >= 2",
+      "ndcg_grades": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "atom_recall_source": "frozen Gold evidence atom acceptable_span_refs only",
+      "post_hoc_rules": false
+    }
+  },
+  "provider_contract": {
+    "provider": "api.siliconflow.cn",
+    "model": "Qwen/Qwen3-Embedding-0.6B",
+    "version": "1",
+    "dimension": 1024,
+    "query_embeddings_only": true,
+    "corpus_re_embedding": false,
+    "llm_calls": false
+  },
+  "provider_call_order_is_frozen": true,
+  "all_query_embeddings_generated_before_retrieval_inspection": true,
+  "results_inspection_before_all_embeddings": false,
+  "deterministic_content_hash": "f1d8e47ca38e0146b9e9691d923fb9d10f8a5948a510dd6fff68eb1a1e0d5549"
+}

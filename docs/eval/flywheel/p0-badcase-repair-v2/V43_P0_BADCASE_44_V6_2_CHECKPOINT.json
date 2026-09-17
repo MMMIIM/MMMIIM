@@ -1,0 +1,29 @@
+{
+  "artifact_type": "V43_P0_BADCASE_44_V6_2_CHECKPOINT",
+  "source_truth_sha256": "9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+  "gpt_adjudication_sha256": "0a900c8e1d06a6a8cceb58dfe437478f1fbd338a542639130c67c1aec783df89",
+  "gpt_adjudication_repo_import": "PASS",
+  "total_cases": 44,
+  "direct_anchor_count": 30,
+  "materialized_anchor_case_count": 13,
+  "source_conflict_case_count": 1,
+  "source_anchor_authority_pass": true,
+  "production_input_visible_43": 0,
+  "production_input_first_loss_distribution": {
+    "SCOPE_ROUTER": 36,
+    "CROSS_CHUNK_SEMANTIC_SPLIT": 1,
+    "PAYLOAD_BUILDER": 10
+  },
+  "cross_chunk_semantic_split_count": 1,
+  "replay_eligible_case_count": 43,
+  "corrected_replay_plan_status": "FAIL",
+  "provider_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "prompt_changes": 0,
+  "schema_changes": 0,
+  "production_semantic_changes": 0,
+  "block_reason": "CURRENT_PRODUCTION_SCOPE_OR_PAYLOAD_DOES_NOT_EXPOSE_ALL_AUTHORITATIVE_ANCHORS; SCOPE_CHANGE_OR_PRODUCTION_REPARSE_REQUIRED",
+  "final_status": "BLOCKED_REQUIREMENT_SCOPE_CONTRACT_CHANGE_REQUIRED"
+}

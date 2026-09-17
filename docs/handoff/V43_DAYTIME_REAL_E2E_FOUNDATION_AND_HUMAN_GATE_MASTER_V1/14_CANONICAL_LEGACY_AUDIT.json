@@ -1,0 +1,44 @@
+{
+  "canonical_paths": {
+    "fact": {
+      "table": "evidence_source_facts",
+      "status": "CANONICAL"
+    },
+    "mapping": {
+      "table": "requirement_evidence_fact_mappings",
+      "status": "CANONICAL"
+    },
+    "claim": {
+      "path": "approved Mapping -> deterministic Claim Gate",
+      "status": "CANONICAL"
+    },
+    "writer": {
+      "path": "Writer Authorization Snapshot -> Safe Context",
+      "status": "CANONICAL"
+    }
+  },
+  "legacy_paths": [
+    {
+      "path": "evidence_facts",
+      "status": "LEGACY_NOT_AUTHORITY_BEARING"
+    },
+    {
+      "path": "requirement_evidence_mappings",
+      "status": "LEGACY_NOT_AUTHORITY_BEARING"
+    },
+    {
+      "path": "production-beta authority",
+      "status": "LEGACY_NOT_AUTHORITY_BEARING"
+    },
+    {
+      "path": "Dify Response Planning",
+      "status": "LEGACY_NOT_AUTHORITY_BEARING"
+    },
+    {
+      "path": "LLM Claim Generation",
+      "status": "LEGACY_NOT_AUTHORITY_BEARING"
+    }
+  ],
+  "next_e2e_legacy_calls": 0,
+  "provider_calls": 0
+}

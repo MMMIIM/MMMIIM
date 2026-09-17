@@ -1,0 +1,75 @@
+{
+  "checkpoint": "V43_FACT_POST_NORMALIZATION_CANARY_DIAGNOSTIC_CLOSE_CHECKPOINT",
+  "generated_at": "2026-09-07T07:49:50.761Z",
+  "scope": "COM-01 only",
+  "input": {
+    "source_file": "backend/eval/rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md",
+    "source_sha256": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+    "source_classification": "SYNTHETIC_ENTERPRISE_EVAL_ONLY"
+  },
+  "offline_diagnosis": {
+    "normalizer_offline_path_tests": "PASS",
+    "normalize_before_validation": "PASS",
+    "validation_path_telemetry": "PASS",
+    "durable_case_recovery": "PASS",
+    "durable_call_budget": "PASS",
+    "provider_calls": 0
+  },
+  "runtime_identity": {
+    "gateway_http_status": 200,
+    "build_revision": "f509514",
+    "task_registry_loaded": true,
+    "fact_contract_version": "4.3-evidence-fact-extraction-v1",
+    "fact_data_schema_sha256": "9b1c3dbe95e5817470032ce7594686bdc90e3d794babc7a207ced3ae443f42d9",
+    "fact_instruction_sha256": "f4303deae5b4382d26561d3cdadd29af4ef507496aa4200fe89e43307810925d",
+    "normalization_count_in_info": false
+  },
+  "live_canary": {
+    "case_id": "COM-01",
+    "provider_calls": 1,
+    "retries": 0,
+    "provider_reached": true,
+    "provider_http_status": 200,
+    "gateway_http_status": 422,
+    "gateway_failure_code": "OUTPUT_SCHEMA_INVALID",
+    "response_shape": "wrong_shape",
+    "json_parse": true,
+    "schema_valid": false,
+    "normalizer_invoked": "NOT_OBSERVED",
+    "empty_namespace_found_count": null,
+    "empty_namespace_removed_count": null,
+    "pre_normalization_shape_hash": null,
+    "post_normalization_shape_hash": null,
+    "exact_validation_path": "data.facts[0]",
+    "expected_shape": "no additional properties",
+    "observed_shape_type": "object",
+    "historical_pre_normalization_validation_path": "data.facts[0].domain_metadata",
+    "historical_pre_normalization_expected_shape": "non-empty object namespaces",
+    "durable_per_case_telemetry": true,
+    "classification": "SECOND_SCHEMA_VIOLATION_REVEALED",
+    "root_cause_boundary": "strict_fact_schema_after_prior_nested-domain-metadata failure; normalizer invocation telemetry is not exposed by this runtime response"
+  },
+  "gates": {
+    "com_01": "FAIL_CLOSED",
+    "three_case_gate": "NOT_STARTED",
+    "fixed12_material_gate": "NOT_STARTED",
+    "next_action": "STOP; do not call COM-06 or CCV2-U13-01 until the observed second schema violation is resolved by an explicitly authorized contract decision"
+  },
+  "safety": {
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "mapping_actions": 0,
+    "claim_actions": 0,
+    "writer_actions": 0,
+    "production_code_changed": false,
+    "prompt_changed": false,
+    "schema_changed": false,
+    "provider_or_model_changed": false,
+    "raw_provider_content_persisted": false,
+    "api_key_or_authorization_logged": false
+  },
+  "artifacts": {
+    "durable_ledger": "backend/eval/rag-pilot/results/fact-post-normalization-canary-20260907-v2/provider_call_ledger.jsonl",
+    "case_checkpoint": "backend/eval/rag-pilot/results/fact-post-normalization-canary-20260907-v2/checkpoint.json"
+  }
+}

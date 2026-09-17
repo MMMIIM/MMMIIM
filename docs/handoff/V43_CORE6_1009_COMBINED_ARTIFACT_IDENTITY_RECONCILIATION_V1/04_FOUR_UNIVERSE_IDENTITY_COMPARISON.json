@@ -1,0 +1,237 @@
+{
+  "artifact_type": "V43_FOUR_UNIVERSE_IDENTITY_COMPARISON",
+  "identity_key_definition": {
+    "components": [
+      "tender_id",
+      "source_sha256",
+      "source_ref_start/end",
+      "canonical_text_hash"
+    ],
+    "requirement_id_not_sufficient_across_universe": true,
+    "note": "For cross-artifact identity, source-ref endpoints are compared; page/paragraph offsets are retained as evidence but are not required when one artifact lacks them."
+  },
+  "universes": {
+    "legacy_human_gold": {
+      "total": 199,
+      "rows_by_tender": {
+        "TB-006": 46,
+        "FAST-01": 39,
+        "FAST-WATER-01": 114
+      },
+      "source": "semantic-boundary-v1.1 packets",
+      "semantic_labels": "frozen source-boundary rows; one SOURCE_AMBIGUOUS",
+      "human_gold_authority": true
+    },
+    "recovered_source_packets": {
+      "total": 1010,
+      "rows_by_tender": {
+        "JY-001": 193,
+        "TB-003": 265,
+        "TB-006": 46,
+        "FAST-01": 39,
+        "FAST-04": 353,
+        "FAST-WATER-01": 114
+      },
+      "source": "recovered-source-authority-v1 plus existing-three semantic packets",
+      "human_gold_authority": "only existing three frozen packets"
+    },
+    "core6_combined_1009": {
+      "total": 1009,
+      "rows_by_tender": {
+        "JY-001": 193,
+        "TB-003": 265,
+        "TB-006": 46,
+        "FAST-01": 39,
+        "FAST-04": 353,
+        "FAST-WATER-01": 113
+      },
+      "source": "docs/V43_RESPONSE_ROUTER_BLIND_GPT_V2_CORE6_1009.json",
+      "source_verified": 1009,
+      "semantic_labels": 0,
+      "human_gold_authority": false
+    },
+    "runtime_canonical_20260911": {
+      "total": 1998,
+      "rows_by_tender": {
+        "JY-001": 320,
+        "TB-003": 257,
+        "TB-006": 341,
+        "FAST-01": 220,
+        "FAST-04": 606,
+        "FAST-WATER-01": 254
+      },
+      "source": "docs/eval/requirement-production-core6-20260911/CORE6_RUNTIME_MANIFEST.json",
+      "provider_calls": 197,
+      "semantic_adjudication": 0
+    }
+  },
+  "overlap": {
+    "core6_vs_recovered_by_tender": [
+      {
+        "tender_id": "JY-001",
+        "a_count": 193,
+        "b_count": 193,
+        "exact_stable_identity_overlap": 193,
+        "a_unique": 193,
+        "b_unique": 193
+      },
+      {
+        "tender_id": "TB-003",
+        "a_count": 265,
+        "b_count": 265,
+        "exact_stable_identity_overlap": 265,
+        "a_unique": 265,
+        "b_unique": 265
+      },
+      {
+        "tender_id": "TB-006",
+        "a_count": 46,
+        "b_count": 46,
+        "exact_stable_identity_overlap": 46,
+        "a_unique": 46,
+        "b_unique": 46
+      },
+      {
+        "tender_id": "FAST-01",
+        "a_count": 39,
+        "b_count": 39,
+        "exact_stable_identity_overlap": 39,
+        "a_unique": 39,
+        "b_unique": 39
+      },
+      {
+        "tender_id": "FAST-04",
+        "a_count": 353,
+        "b_count": 353,
+        "exact_stable_identity_overlap": 353,
+        "a_unique": 353,
+        "b_unique": 353
+      },
+      {
+        "tender_id": "FAST-WATER-01",
+        "a_count": 113,
+        "b_count": 114,
+        "exact_stable_identity_overlap": 113,
+        "a_unique": 113,
+        "b_unique": 114
+      }
+    ],
+    "core6_vs_runtime_by_tender": [
+      {
+        "a_count": 193,
+        "b_count": 320,
+        "exact_stable_identity_overlap": 5,
+        "a_unique": 193,
+        "b_unique": 320,
+        "tender_id": "JY-001",
+        "comparison_basis": "source SHA + source-ref endpoints + canonical text hash",
+        "runtime_id_format": "REQ-NNN (tender-local)",
+        "core6_id_format": "TENDER:REQ-NNN",
+        "runtime_source_hash_note": "Runtime row source_hash is clause/text hash; source SHA is taken from runtime manifest top-level tender record."
+      },
+      {
+        "a_count": 265,
+        "b_count": 257,
+        "exact_stable_identity_overlap": 104,
+        "a_unique": 265,
+        "b_unique": 257,
+        "tender_id": "TB-003",
+        "comparison_basis": "source SHA + source-ref endpoints + canonical text hash",
+        "runtime_id_format": "REQ-NNN (tender-local)",
+        "core6_id_format": "TENDER:REQ-NNN",
+        "runtime_source_hash_note": "Runtime row source_hash is clause/text hash; source SHA is taken from runtime manifest top-level tender record."
+      },
+      {
+        "a_count": 46,
+        "b_count": 341,
+        "exact_stable_identity_overlap": 0,
+        "a_unique": 46,
+        "b_unique": 341,
+        "tender_id": "TB-006",
+        "comparison_basis": "source SHA + source-ref endpoints + canonical text hash",
+        "runtime_id_format": "REQ-NNN (tender-local)",
+        "core6_id_format": "TENDER:REQ-NNN",
+        "runtime_source_hash_note": "Runtime row source_hash is clause/text hash; source SHA is taken from runtime manifest top-level tender record."
+      },
+      {
+        "a_count": 39,
+        "b_count": 220,
+        "exact_stable_identity_overlap": 0,
+        "a_unique": 39,
+        "b_unique": 220,
+        "tender_id": "FAST-01",
+        "comparison_basis": "source SHA + source-ref endpoints + canonical text hash",
+        "runtime_id_format": "REQ-NNN (tender-local)",
+        "core6_id_format": "TENDER:REQ-NNN",
+        "runtime_source_hash_note": "Runtime row source_hash is clause/text hash; source SHA is taken from runtime manifest top-level tender record."
+      },
+      {
+        "a_count": 353,
+        "b_count": 606,
+        "exact_stable_identity_overlap": 0,
+        "a_unique": 353,
+        "b_unique": 606,
+        "tender_id": "FAST-04",
+        "comparison_basis": "source SHA + source-ref endpoints + canonical text hash",
+        "runtime_id_format": "REQ-NNN (tender-local)",
+        "core6_id_format": "TENDER:REQ-NNN",
+        "runtime_source_hash_note": "Runtime row source_hash is clause/text hash; source SHA is taken from runtime manifest top-level tender record."
+      },
+      {
+        "a_count": 113,
+        "b_count": 254,
+        "exact_stable_identity_overlap": 0,
+        "a_unique": 113,
+        "b_unique": 254,
+        "tender_id": "FAST-WATER-01",
+        "comparison_basis": "source SHA + source-ref endpoints + canonical text hash",
+        "runtime_id_format": "REQ-NNN (tender-local)",
+        "core6_id_format": "TENDER:REQ-NNN",
+        "runtime_source_hash_note": "Runtime row source_hash is clause/text hash; source SHA is taken from runtime manifest top-level tender record."
+      }
+    ],
+    "core6_vs_legacy_by_tender": [
+      {
+        "tender_id": "TB-006",
+        "core6_count": 46,
+        "semantic_packet_count": 46,
+        "stable_source_identity_overlap": 46,
+        "requirement_id_overlap": 0,
+        "classification": "LOSSLESS_PROJECTION",
+        "source_sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_sha_match": true,
+        "excluded_from_core6": []
+      },
+      {
+        "tender_id": "FAST-01",
+        "core6_count": 39,
+        "semantic_packet_count": 39,
+        "stable_source_identity_overlap": 39,
+        "requirement_id_overlap": 0,
+        "classification": "LOSSLESS_PROJECTION",
+        "source_sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_sha_match": true,
+        "excluded_from_core6": []
+      },
+      {
+        "tender_id": "FAST-WATER-01",
+        "core6_count": 113,
+        "semantic_packet_count": 114,
+        "stable_source_identity_overlap": 113,
+        "requirement_id_overlap": 0,
+        "classification": "LOSSLESS_PROJECTION_WITH_ONE_SOURCE_AMBIGUOUS_EXCLUDED",
+        "source_sha256": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+        "source_sha_match": true,
+        "excluded_from_core6": [
+          "FAST-WATER-01-G071"
+        ]
+      }
+    ]
+  },
+  "summary": {
+    "core6_vs_recovered_exact_missing_three": 811,
+    "core6_vs_legacy_stable_identity": 198,
+    "legacy_source_clear_198": 198,
+    "legacy_source_ambiguous_1": 1
+  }
+}

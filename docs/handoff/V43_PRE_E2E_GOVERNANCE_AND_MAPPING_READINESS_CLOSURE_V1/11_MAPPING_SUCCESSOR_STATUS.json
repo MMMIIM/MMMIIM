@@ -1,0 +1,48 @@
+{
+  "artifact_type": "V43_MAPPING_SUCCESSOR_STATUS_V1",
+  "execution_mode": "OFFLINE_ONLY",
+  "provider_calls": 0,
+  "embedding_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "gold_mutations": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "commit": 0,
+  "push": 0,
+  "merge": 0,
+  "deploy": 0,
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "manifest_path": "backend/eval/requirement-evidence-mapping-v2/successor-manifest.json",
+  "manifest_sha256": "13a7b7887987e5bfe1b46a466eaeb6ca43cfc28473e8566739010669eee395fd",
+  "activation_checkpoint": "docs/V43_MAPPING_V2_ACTIVATION_READINESS_CHECKPOINT.json",
+  "activation_checkpoint_sha256": "ab202890039a58bcda44dd1af024419fda399ad42b4e56db8c16fee27a223ce3",
+  "successor_status": "SUCCESSOR_BUILT_NOT_ACTIVATED",
+  "activation_allowed": "NO",
+  "dual_eval": {
+    "status": "NOT_EXECUTED",
+    "reason": "NO_TRUSTED_FROZEN_PREDICTIONS"
+  },
+  "real_partition_gaps": [
+    "direct_full real missing",
+    "conflict real missing",
+    "SOURCE_PROJECT_DIVERSITY=1",
+    "PERFORMANCE_MEASUREMENT_FACT=MISSING"
+  ],
+  "static_gates": {
+    "IMMUTABILITY_GATE": "PASS",
+    "REVIEW_STATUS_GATE": "PASS",
+    "CLASSIFICATION_GATE": "PASS",
+    "SEMANTIC_COMPLETENESS_GATE": "PASS",
+    "IDENTITY_COLLISION_GATE": "PASS",
+    "BLIND_CONTAMINATION_GATE": "PASS",
+    "SOURCE_PACKET_RENDER_PARITY_GATE": "PASS",
+    "REAL_GOLD_NOVELTY_GATE": "PASS_WITH_DUPLICATES_AUDITABLE",
+    "PRODUCTION_IMPORT_GUARD": "PASS",
+    "STABLE_HASH_GATE": "PASS",
+    "MUTATION_SENSITIVITY_GATE": "PASS"
+  }
+}

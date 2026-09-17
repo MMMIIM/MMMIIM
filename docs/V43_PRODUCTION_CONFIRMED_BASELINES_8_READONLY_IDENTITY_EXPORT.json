@@ -1,0 +1,43 @@
+{
+  "artifact_type": "V43_PRODUCTION_CONFIRMED_BASELINES_8_READONLY_IDENTITY_EXPORT",
+  "status": "BLOCKED_PRODUCTION_DATABASE_UNAVAILABLE",
+  "authority": "production_database_only",
+  "read_only": true,
+  "query_scope": {
+    "database": "bid_platform",
+    "confirmed_baseline_filter": "requirement_baselines.status = 'confirmed'",
+    "tables": [
+      "projects",
+      "tender_files",
+      "tender_parse_jobs",
+      "requirement_baselines",
+      "requirements"
+    ],
+    "requested_confirmed_baseline_count": 8,
+    "requested_confirmed_requirement_count": 272,
+    "requested_requirement_projection_per_baseline": 3,
+    "tender_mapping": "none"
+  },
+  "connection": {
+    "host": "127.0.0.1",
+    "port": 5432,
+    "database": "bid_platform",
+    "error_code": "ECONNREFUSED",
+    "error": "Read-only connection to the configured production database was refused from the current execution environment.",
+    "docker_access": "BLOCKED_CODEX_SANDBOX_DOCKER_PERMISSION_BOUNDARY"
+  },
+  "baselines": [],
+  "saved_production_runtime_export": {
+    "path": "docs/V43_PRODUCTION_CANONICAL_CORE6_REQUIREMENTS_READONLY_EXPORT.json",
+    "exists": true,
+    "used_as_substitute": false,
+    "reason": "The saved artifact is a prior six-tender lookup with core6_identity_lookup_result=NO_MATCH and zero requirement rows; it does not contain the eight baseline identity records requested here."
+  },
+  "provider_calls": 0,
+  "llm_calls": 0,
+  "database_writes": 0,
+  "requirement_rerun": 0,
+  "migration_run": 0,
+  "semantic_judgment": 0,
+  "match_miss_analysis": 0
+}

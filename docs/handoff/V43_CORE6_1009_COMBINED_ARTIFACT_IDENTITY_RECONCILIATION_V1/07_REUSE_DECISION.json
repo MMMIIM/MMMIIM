@@ -1,0 +1,47 @@
+{
+  "artifact_type": "V43_CORE6_1009_REUSE_DECISION",
+  "questions": {
+    "Q1_six_tender_single_combined_file": {
+      "answer": "YES",
+      "evidence": "docs/V43_RESPONSE_ROUTER_BLIND_GPT_V2_CORE6_1009.json"
+    },
+    "Q2_file_is_core6_1009": {
+      "answer": "YES",
+      "evidence": {
+        "rows": 1009,
+        "tender_counts": {
+          "JY-001": 193,
+          "TB-003": 265,
+          "TB-006": 46,
+          "FAST-01": 39,
+          "FAST-04": 353,
+          "FAST-WATER-01": 113
+        },
+        "unique_requirement_ids": 1009
+      }
+    },
+    "Q3_direct_rag_writer_requirement_eval_source": {
+      "answer": "YES_EVAL_ONLY",
+      "qualification": "Can be used as a development/Eval Requirement source with source-lineage gates; not Production authority."
+    },
+    "Q4_human_gold_authority": {
+      "answer": "NO",
+      "reason": "blind mechanical input; no Human semantic labels; missing-three packets remain PENDING_HUMAN_REVIEW; no Gold promotion."
+    },
+    "Q5_missing_three_rebuild_review_inventory": {
+      "answer": "NO_CONTENT_REBUILD_REQUIRED_BUT_HUMAN_AUTHORITY_OVERLAY_REQUIRED",
+      "reason": "All 811 rows mechanically reconcile IDENTICAL_IDENTITY to recovered packets; Human adjudication identity is still absent."
+    },
+    "Q6_reuse_core6_1009_for_human_overlay": {
+      "answer": "YES_WITH_BLINDNESS_AND_LINEAGE_PRESERVED",
+      "reason": "Reuse 1009 as mechanical base for a Human/GPT overlay; do not promote or relabel automatically."
+    },
+    "Q7_number_meanings": {
+      "1009": "Six-tender Eval-only combined canonical input: 193+265+46+39+353+113; ambiguous G071 excluded.",
+      "1998": "20260911 runtime canonical outputs: 320+257+341+220+606+254; runtime artifact, 197 provider calls, semantic adjudication not performed.",
+      "199_198": "199 frozen semantic-boundary rows for FAST-01/TB-006/FAST-WATER-01; 198 SOURCE_CLEAR/evaluable and 1 SOURCE_AMBIGUOUS (FAST-WATER-01-G071)."
+    }
+  },
+  "production_canonical_substitution": false,
+  "gold_mutation": false
+}

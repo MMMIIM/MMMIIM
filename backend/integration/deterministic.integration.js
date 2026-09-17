@@ -48,6 +48,80 @@ test('确定性 Plan 编辑保存 PostgreSQL 快照且 anchor 不可改',async()
  }finally{await pool.query(`DELETE FROM projects WHERE id=$1`,[project.id]);await pool.end();}
 });
 
+test('Writer generation identity is idempotent and failed generations remain retryable',async()=>{
+ const pool=createPool(),repository=new PgRepository(pool),project=await repository.createProject({name:`Writer identity ${Date.now()}`});
+ try{
+  const snapshot={coverage:{},requirements:[{req_id:'REQ-ID',text:'系统应提供审计日志。'}],claims:[{claim_id:'CLM-ID'}],evidence:[]},rules={writer_composition:'writer-v2',writer_contract:'4.3-section-drafting'},identity={generation_type:'writer-v2',input_snapshot_hash:'a'.repeat(64)};
+   const first=await repository.createDocumentGeneration(project.id,snapshot,rules,identity),second=await repository.createDocumentGeneration(project.id,snapshot,rules,identity);
+   assert.equal(first.id,second.id);assert.equal(second.idempotent_replay,true);
+   await repository.updateDocumentGeneration(first.id,{status:'finalized'});
+   const completedReplay=await repository.createDocumentGeneration(project.id,snapshot,rules,identity);assert.equal(completedReplay.id,first.id);assert.equal(completedReplay.idempotent_replay,true);
+   const changed=await repository.createDocumentGeneration(project.id,{...snapshot,claims:[{claim_id:'CLM-CHANGED'}]},rules,{...identity,input_snapshot_hash:'b'.repeat(64)});assert.notEqual(changed.id,first.id);
+   await repository.updateDocumentGeneration(changed.id,{status:'failed',error_code:'TEST_FAILED',error_message:'test'});
+   const retry=await repository.createDocumentGeneration(project.id,{...snapshot,claims:[{claim_id:'CLM-CHANGED'}]},rules,{...identity,input_snapshot_hash:'b'.repeat(64)});assert.notEqual(retry.id,changed.id);
+ } finally { await pool.query(`DELETE FROM projects WHERE id=$1`,[project.id]);await pool.end(); }
+});
+
+test('W-IDEMPOTENCY-AUTH-001 persisted requirement_response authorization and Writer snapshot identities survive PostgreSQL reload',async()=>{
+ const pool=createPool(),repository=new PgRepository(pool),project=await repository.createProject({name:`Writer auth snapshot ${Date.now()}`});
+ try{
+  const file=(await pool.query(`INSERT INTO tender_files(project_id,original_name,storage_key,mime_type,size_bytes) VALUES($1,'writer-auth.txt',$2,'text/plain',1) RETURNING *`,[project.id,`writer-auth-${project.id}`])).rows[0];
+  const job=(await pool.query(`INSERT INTO tender_parse_jobs(project_id,tender_file_id,status,phase) VALUES($1,$2,'succeeded','succeeded') RETURNING *`,[project.id,file.id])).rows[0];
+  const baseline=(await pool.query(`INSERT INTO requirement_baselines(project_id,parse_job_id,status) VALUES($1,$2,'building') RETURNING *`,[project.id,job.id])).rows[0];
+  await pool.query(`INSERT INTO requirements(baseline_id,project_id,req_id,content,source_excerpt,source_text,is_mandatory,target_sections,ordinal,source_status,confirmation_type,requirement_category,writer_eligible,classification_review_required,atomicity_review_required) VALUES($1,$2,'REQ-AUTH-001','系统应提供审计日志。','系统应提供审计日志。','系统应提供审计日志。',false,'["chapter-01"]',1,'verified','verified','technical',true,false,false)`,[baseline.id,project.id]);
+  await pool.query(`UPDATE requirement_baselines SET status='confirmed',confirmed_at=now(),confirmed_by='integration',confirmation_type='verified' WHERE id=$1`,[baseline.id]);
+  const service=new ProductionBetaService({repository});
+  await service.generatePlans(project.id);
+  await service.generateClaims(project.id);
+  const claims=await repository.listClaims(project.id),response=claims.find(item=>item.claim_type==='requirement_response');
+  assert.ok(response);
+  assert.equal(response.decision,'approved');
+  assert.equal(response.gate_result_decision,'allow');
+  assert.equal(response.writer_eligible,true);
+  assert.equal(response.lineage_current,true);
+  assert.match(response.claim_assertion_hash,/^[a-f0-9]{64}$/);
+  assert.match(response.input_snapshot_hash,/^[a-f0-9]{64}$/);
+  assert.match(response.gate_result_id,/^CGR-[A-F0-9]{32}$/);
+  const input=await repository.getDocumentGenerationInput(project.id);
+  const snapshot={coverage:input.coverage,requirements:input.requirements,plans:input.plans,claims:input.claims,evidence:input.evidence};
+  const rules={writer_composition:'writer-v2',writer_contract:'4.3-section-drafting',writer_authorization_snapshot_hash:response.input_snapshot_hash};
+  const same={generation_type:'writer-v2',input_snapshot_hash:response.input_snapshot_hash};
+  const first=await repository.createDocumentGeneration(project.id,snapshot,rules,same),replay=await repository.createDocumentGeneration(project.id,snapshot,rules,same);
+  assert.equal(replay.id,first.id);
+  assert.equal(replay.idempotent_replay,true);
+  const changed=await repository.createDocumentGeneration(project.id,snapshot,rules,{generation_type:'writer-v2',input_snapshot_hash:'e'.repeat(64)});
+  assert.notEqual(changed.id,first.id);
+ } finally { await pool.query(`DELETE FROM projects WHERE id=$1`,[project.id]); await pool.end(); }
+});
+
+test('Writer generation identity is PostgreSQL-safe under concurrent requests',async()=>{
+ const pool=createPool(),repository=new PgRepository(pool),project=await repository.createProject({name:`Writer concurrency ${Date.now()}`});
+ try{
+  const snapshot={coverage:{},requirements:[{req_id:'REQ-CONCURRENT',text:'系统应提供审计日志。'}],claims:[{claim_id:'CLM-CONCURRENT'}],evidence:[]};
+  const rules={writer_composition:'writer-v2',writer_contract:'4.3-section-drafting'};
+  const identity={generation_type:'writer-v2',input_snapshot_hash:'e'.repeat(64)};
+  const rows=await Promise.all([
+   repository.createDocumentGeneration(project.id,snapshot,rules,identity),
+   repository.createDocumentGeneration(project.id,snapshot,rules,identity)
+  ]);
+  assert.equal(rows[0].id,rows[1].id);
+  assert.equal((await pool.query(`SELECT count(*)::int count FROM document_generations WHERE project_id=$1 AND generation_type='writer-v2' AND input_snapshot_hash=$2 AND status<>'failed'`,[project.id,identity.input_snapshot_hash])).rows[0].count,1);
+  assert.equal(rows.filter((row)=>row.idempotent_replay===true).length,1);
+ } finally { await pool.query(`DELETE FROM projects WHERE id=$1`,[project.id]);await pool.end(); }
+});
+
+test('Writer execution persistence and finalization are atomic in PostgreSQL',async()=>{
+ const pool=createPool(),repository=new PgRepository(pool),project=await repository.createProject({name:`Writer atomic ${Date.now()}`}),authorization=new WriterInputAuthorizationService({repository}),execution=new WriterExecutionService({repository});
+ try{
+  const context=authorization.build({projectId:project.id,chapterId:'chapter-atomic',writerTaskId:'WT-ATOMIC',facts:[],bindings:[],claims:[],gateResults:[],versions:{}});await authorization.persist(context);
+  const task=execution.buildTask({safeContext:context,chapterRole:'test',chapterInstruction:'test'}),result=execution.runDeterministic(task);const saved=await execution.persist(result);assert.equal(saved.output.writer_output_id,result.output.writer_output_id);
+  const counts=await pool.query(`SELECT (SELECT count(*) FROM writer_execution_tasks WHERE writer_task_id=$1)::int tasks,(SELECT count(*) FROM writer_outputs WHERE writer_output_id=$2)::int outputs`,[task.writer_task_id,result.output.writer_output_id]);assert.deepEqual(counts.rows[0],{tasks:1,outputs:1});
+  const failedContext=authorization.build({projectId:project.id,chapterId:'chapter-atomic-fail',writerTaskId:'WT-ATOMIC-FAIL',facts:[],bindings:[],claims:[],gateResults:[],versions:{}});await authorization.persist(failedContext);const failedTask=execution.buildTask({safeContext:failedContext,chapterRole:'test',chapterInstruction:'test'}),failedResult=execution.runDeterministic(failedTask);failedResult.mentions=[{mention_id:'FM-BAD',project_id:project.id,chapter_id:'chapter-atomic-fail',writer_task_id:failedTask.writer_task_id,project_fact_id:null,project_fact_version:null,claim_id:null,gate_result_id:null,mention_role:'context_reference',source_context_hash:failedTask.safe_context_hash,document_anchor:null,status:'materialized',contract_version:'fact-mention-ledger-v1',output_id:'WO-MISSING',block_id:'b',start_offset:0,end_offset:1,mention_text:'x',mention_text_hash:'0'.repeat(64),authorization_ref:'bad'}];await assert.rejects(()=>execution.persist(failedResult));const failedCounts=await pool.query(`SELECT (SELECT count(*) FROM writer_execution_tasks WHERE writer_task_id=$1)::int tasks,(SELECT count(*) FROM writer_outputs WHERE writer_task_id=$1)::int outputs`,[failedTask.writer_task_id]);assert.deepEqual(failedCounts.rows[0],{tasks:0,outputs:0});
+  const generation=await repository.createDocumentGeneration(project.id,{coverage:{},requirements:[],claims:[],evidence:[]},{writer_composition:'writer-v2'},{generation_type:'writer-v2',input_snapshot_hash:'b'.repeat(64)});const validation={validation_status:'pass',warnings:[],errors:[]};const finalized=await repository.finalizeDocumentGenerationAtomic(generation.id,{generation,draft_text:'正文',sanitized_text:'正文',revised_text:null,final_text:'正文',sections_json:[{section_id:'S',title:'S',order:1,requirement_ids:[],content_markdown:'正文'}],validation,removed_items:[],rule_versions:{writer_composition:'writer-v2'}});assert.equal(finalized.generation.status,'finalized');assert.equal(finalized.version.status,'pending_review');
+  const broken=await repository.createDocumentGeneration(project.id,{coverage:{},requirements:[],claims:[],evidence:[]},{writer_composition:'writer-v2'},{generation_type:'writer-v2',input_snapshot_hash:'c'.repeat(64)});await assert.rejects(()=>repository.finalizeDocumentGenerationAtomic(broken.id,{generation:broken,draft_text:'正文',sanitized_text:'正文',revised_text:null,final_text:null,sections_json:[],validation,removed_items:[],rule_versions:{writer_composition:'writer-v2'}}));const state=(await pool.query(`SELECT status FROM document_generations WHERE id=$1`,[broken.id])).rows[0];assert.equal(state.status,'created');assert.equal((await pool.query(`SELECT count(*)::int count FROM document_versions WHERE project_id=$1 AND content_markdown IS NULL`,[project.id])).rows[0].count,0);
+ } finally { await pool.query(`DELETE FROM projects WHERE id=$1`,[project.id]);await pool.end(); }
+});
+
 test('Review Center 与 Evidence Readiness PostgreSQL 聚合保持未知状态可见',async()=>{const pool=createPool(),repository=new PgRepository(pool),project=await repository.createProject({name:`Review Center ${Date.now()}`}),control=new ProjectFactControlService({repository});try{const fact=await control.create({project_id:project.id,key:'review.pending.owner',fact_role:'assignment',value_type:'string',value:null,value_status:'pending',scope:['global_response'],created_by_type:'human',created_by:'integration',provenance_refs:[{source_type:'human_input',source_id:'review-center:owner',snapshot_hash:'0'.repeat(64),source_ref:{note:'pending'}}]});const pack=await new ReviewCenterService({repository}).get(project.id);assert.ok(pack.pending.some((item)=>item.project_fact_id===fact.project_fact_id));assert.equal(pack.summary.fact_confirmation,1);assert.equal(pack.project_facts[0].mention_count,0);const readiness=await new EvidenceReadinessService({repository}).get(project.id);assert.equal(readiness.summary.total_requirements,0);assert.equal(readiness.summary.readiness_rate,0);}finally{await pool.query(`DELETE FROM projects WHERE id=$1`,[project.id]);await pool.end();}});
 
 test('Batch 生成模式与规则版本持久化且旧记录默认兼容',async()=>{

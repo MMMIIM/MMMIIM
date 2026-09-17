@@ -1,0 +1,186 @@
+{
+  "schema_version": "requirement-extraction-verification-report-v2",
+  "run_id": "92812e92-a320-4fc5-bc08-6fbf383dae9a",
+  "mode": "doctor",
+  "started_at": "2026-09-05T13:24:02.737Z",
+  "completed_at": "2026-09-05T13:24:02.991Z",
+  "duration_ms": 254,
+  "git": {
+    "branch": "feat/v4.3-semantic-boundary-routing",
+    "branch_name": "feat/v4.3-semantic-boundary-routing",
+    "revision": "f509514",
+    "tracked_clean": false,
+    "branch_role": "AUTHORITATIVE",
+    "authoritative_branch": "feat/v4.3-semantic-boundary-routing",
+    "production_eligible": true,
+    "lineage_verified": true
+  },
+  "contract": {
+    "prompt_version": "4.3-requirement-extraction-v3.1.1",
+    "prompt_hash": "9b8fe6582e774a64f36b2be307274e297fafb309cf17270a4d8fc463da817305",
+    "candidate_schema_version": "4.3-requirement-candidate-v3",
+    "candidate_schema_hash": "1f5bd20f624a34a5f0bfd76e226f24d3595cc8a1e06bdc176c3d40e9694edbba",
+    "payload_keys": [
+      "project_name",
+      "section_name",
+      "chunk_index",
+      "chunk_count",
+      "chunk_text"
+    ]
+  },
+  "runtime": {
+    "backend": {
+      "url": "http://127.0.0.1:3001",
+      "http_status": null,
+      "reachable": false
+    },
+    "gateway": {
+      "url": "http://127.0.0.1:18082",
+      "http_status": null,
+      "reachable": false
+    },
+    "gateway_build_revision": null,
+    "routing": {
+      "requirement_extraction_target": "http://127.0.0.1:18082",
+      "config_source": "canonical_semantic_gateway",
+      "legacy_18080_fallback": "ABSENT",
+      "legacy_only_resolved_target": null,
+      "legacy_only_client_target": null
+    },
+    "provider_configured": false
+  },
+  "gates": [
+    {
+      "name": "git.branch_policy",
+      "status": "PASS",
+      "blocker_code": null,
+      "reason": "当前分支无法根据 branch-policy.json 证明与权威分支的有效 lineage。",
+      "branch_role": "AUTHORITATIVE",
+      "production_eligible": true,
+      "lineage_verified": true
+    },
+    {
+      "name": "contract.prompt_version",
+      "status": "PASS",
+      "blocker_code": null,
+      "reason": "Prompt contract version differs from the frozen contract."
+    },
+    {
+      "name": "contract.prompt_hash",
+      "status": "PASS",
+      "blocker_code": null,
+      "reason": "Prompt hash differs from the frozen contract."
+    },
+    {
+      "name": "contract.candidate_schema",
+      "status": "PASS",
+      "blocker_code": null,
+      "reason": "Candidate schema/version/hash or strictness differs from the frozen contract."
+    },
+    {
+      "name": "contract.model_payload",
+      "status": "PASS",
+      "blocker_code": null,
+      "reason": "Model-facing payload keys differ from the canonical builder."
+    },
+    {
+      "name": "routing.requirement_extraction",
+      "status": "PASS",
+      "blocker_code": null,
+      "reason": "Requirement Extraction must use the standalone :18082 Gateway."
+    },
+    {
+      "name": "runtime.backend",
+      "status": "FAIL",
+      "blocker_code": "BACKEND_UNREACHABLE",
+      "reason": "Backend health endpoint is not reachable.",
+      "http_status": null
+    },
+    {
+      "name": "runtime.gateway.health",
+      "status": "FAIL",
+      "blocker_code": "GATEWAY_UNREACHABLE",
+      "reason": "Gateway health endpoint is not reachable.",
+      "http_status": null
+    },
+    {
+      "name": "runtime.gateway.ready",
+      "status": "FAIL",
+      "blocker_code": "GATEWAY_NOT_READY",
+      "reason": "Gateway is not ready.",
+      "http_status": null
+    },
+    {
+      "name": "runtime.provider_configured",
+      "status": "FAIL",
+      "blocker_code": "PROVIDER_NOT_CONFIGURED",
+      "reason": "Gateway does not report a configured provider."
+    },
+    {
+      "name": "runtime.gateway.info",
+      "status": "FAIL",
+      "blocker_code": "GATEWAY_UNREACHABLE",
+      "reason": "Gateway info endpoint is not reachable or identifies another service.",
+      "http_status": null
+    },
+    {
+      "name": "runtime.gateway.task_registry",
+      "status": "FAIL",
+      "blocker_code": "CONTRACT_DRIFT",
+      "reason": "Requirement Extraction is not present in the loaded task registry."
+    },
+    {
+      "name": "runtime.gateway.contract_version",
+      "status": "FAIL",
+      "blocker_code": "CONTRACT_DRIFT",
+      "reason": "Running Gateway reports a different Requirement Extraction contract version."
+    },
+    {
+      "name": "runtime.gateway.prompt_hash",
+      "status": "FAIL",
+      "blocker_code": "PROMPT_HASH_MISMATCH",
+      "reason": "Running Gateway reports a different Requirement Extraction instruction hash."
+    },
+    {
+      "name": "runtime.gateway.candidate_schema",
+      "status": "FAIL",
+      "blocker_code": "CANDIDATE_SCHEMA_MISMATCH",
+      "reason": "Running Gateway reports a different Candidate Schema."
+    }
+  ],
+  "tests": [],
+  "live": {
+    "executed": false,
+    "verification_run_count": 0,
+    "production_chunk_count": 0,
+    "expected_chunk_count": 0,
+    "provider_request_count": 0,
+    "max_provider_request_count": 0,
+    "concurrency_limit": 0,
+    "retry_count": 0,
+    "fallback_count": 0,
+    "dify_call_count": 0,
+    "embedding_call_count": 0,
+    "gateway_http_status": null,
+    "provider_http_status": null,
+    "candidate_count": null,
+    "total_candidate_count": null,
+    "schema_pass": null,
+    "source_resolution_pass": null,
+    "backend_ingestion_pass": null,
+    "chunk_character_sizes": [],
+    "chunk_results": [],
+    "final_probe_status": null,
+    "diagnostics": null
+  },
+  "verdict": "BLOCKED",
+  "blockers": [
+    "BACKEND_UNREACHABLE",
+    "GATEWAY_UNREACHABLE",
+    "GATEWAY_NOT_READY",
+    "PROVIDER_NOT_CONFIGURED",
+    "CONTRACT_DRIFT",
+    "PROMPT_HASH_MISMATCH",
+    "CANDIDATE_SCHEMA_MISMATCH"
+  ]
+}

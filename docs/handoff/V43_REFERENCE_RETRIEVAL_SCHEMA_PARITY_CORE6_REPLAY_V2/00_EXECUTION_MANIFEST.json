@@ -1,0 +1,72 @@
+{
+  "artifact_type": "V43_REQUIREMENT_LEVEL_REFERENCE_RETRIEVAL_EVAL_V2_EXECUTION_MANIFEST",
+  "run_id": "V43-CORE6-REAL-REFERENCE-RAG-WRITER-20260915105535",
+  "evaluation_scope": "REQUIREMENT_LEVEL_REFERENCE_RETRIEVAL_EVAL",
+  "writer_reference_product_fidelity_claim": false,
+  "source_identity": {
+    "artifact": "docs\\V43_REQUIREMENT_GOLD_V2_SIX_TENDER_CANONICAL_INPUT.json",
+    "sha256": "ff07402688a3013af9a9b8be01f613f76848b7ea905208c1955a604432422fe1",
+    "row_count": 1009,
+    "unique_requirement_ids": 1009,
+    "tender_ids": [
+      "JY-001",
+      "TB-003",
+      "TB-006",
+      "FAST-01",
+      "FAST-04",
+      "FAST-WATER-01"
+    ],
+    "eval_only": true,
+    "human_gold_authority": false
+  },
+  "denominator_policy": "response_required=true AND response_mode=SOLUTION; evidence_dependency retained; human_required only Writer-ready subset",
+  "full_natural_denominator": 89,
+  "cohorts": {
+    "SOLUTION_PURE": 59,
+    "SOLUTION_WITH_EVIDENCE_SECONDARY": 30,
+    "WRITER_READY_SUBSET": 89,
+    "WRITER_NOT_READY_SUBSET": 0
+  },
+  "execution_max_query_embedding_calls": 80,
+  "execution_case_count": null,
+  "database": {
+    "source": "bid_platform",
+    "execution": "bid_platform_reference_eval_v3",
+    "exact_snapshot_copy": true
+  },
+  "schema_owner": {
+    "migration_file": "backend\\migrations\\052_requirement_scope_authority_and_project_material_bindings.sql",
+    "migration_sha256": "3a2fabb3a709cbb438d2e34c8f0b8828e9528706ec798d744b6e5cd918575d95",
+    "migration_creates_project_material_bindings": true,
+    "migration_creates_other_authority_table": true,
+    "migration_bundle_review": "PRODUCTION_MIGRATION_BUNDLE_REVIEW_REQUIRED",
+    "service_file": "backend\\src\\project-material-binding-service.js",
+    "service_sha256": "f7c8167abf44ae4c729cb06b855d3d247f1a48380ca882840dd5fb66cbac0a52",
+    "service_entry_points": [
+      "ProjectMaterialBindingService.create",
+      "ProjectMaterialBindingService.remove",
+      "ProjectMaterialBindingService.list"
+    ],
+    "selector_file": "backend\\src\\pipeline\\writer-reference-selector.js",
+    "selector_sha256": "1ad5e0aa19bad1dba1023d6bc38a4f34b4fd94cbb5c9f5f42fe0332b7efca875",
+    "retrieval_query_owner": "PgRepository.searchWriterReferenceChunks",
+    "migration_runner_file": "backend/src/migrate.js",
+    "production_migration_executed": false
+  },
+  "side_effects": {
+    "provider_calls_current_run": 0,
+    "task_cumulative_query_embedding_calls": null,
+    "generative_llm_calls": 0,
+    "production_db_writes": 0,
+    "production_migrations": 0,
+    "eval_db_writes": 3,
+    "gold_mutations": 0,
+    "requirement_mutations": 0,
+    "fact_mapping_claim_writer_mutations": 0,
+    "commit": 0,
+    "push": 0,
+    "merge": 0,
+    "deploy": 0
+  },
+  "child_artifacts": true
+}

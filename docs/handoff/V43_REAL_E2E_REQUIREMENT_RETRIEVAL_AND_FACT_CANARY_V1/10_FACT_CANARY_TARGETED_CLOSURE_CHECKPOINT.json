@@ -1,0 +1,33 @@
+{
+  "artifact_type": "V43_FACT_CANARY_TARGETED_CLOSURE_CHECKPOINT_V1",
+  "task": "V43_REAL_FACT_CANARY_TARGETED_CLOSURE_V1",
+  "source_context_dedup": "PASS",
+  "input_requirement_contexts": 20,
+  "unique_contexts_from_current_run": 13,
+  "duplicate_requirement_contexts_removed": 7,
+  "current_failed_unique_contexts": 1,
+  "current_failed_unique_source_context_ids": [
+    "MCH-CE770B545973FB9CF092951FCDC402B5"
+  ],
+  "historical_observed_case_count": 20,
+  "historical_provider_failure_count": 2,
+  "historical_payloads_reconstructable": false,
+  "historical_report_artifact_recovery": "MECHANICAL_ID_SUMMARY_ONLY",
+  "gpt_fact_review_packet": "NEED_TARGETED_HOST_REPLAY",
+  "provider_failure_diagnostic": "TARGETED_REPLAY_REQUIRED",
+  "evidence_source_routing_gap_packet": "READY",
+  "artifact_durability": "PASS",
+  "semantic_adjudication": "PENDING_GPT",
+  "provider_calls_added_by_diagnostics": 0,
+  "provider_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "fact_persistence": 0,
+  "gold_mutations": 0,
+  "requirement_mutations": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "final_verdict": "READY_FOR_TARGETED_FACT_HOST_REPLAY"
+}

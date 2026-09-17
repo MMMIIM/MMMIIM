@@ -1,0 +1,104 @@
+{
+  "artifact_type": "V43_MECHANICAL_STRATEGY_COMPARISON",
+  "run_id": "V43-CORE6-REAL-REFERENCE-RAG-WRITER-20260915105535",
+  "strategies": {
+    "R0_CURRENT_PRODUCTION_REFERENCE_PATH": {
+      "case_count": 80,
+      "returned_reference_count_distribution": {
+        "4": 80
+      },
+      "zero_reference_rate": 0,
+      "mean_reference_count": 4,
+      "heading_escape": 158,
+      "front_matter_escape": 0,
+      "metadata_escape": 0,
+      "citation_index_escape": 5,
+      "wrong_role_escape": 0,
+      "wrong_scope_escape": 0,
+      "quarantined_escape": 0,
+      "duplicate_chunk_escape": 13,
+      "same_material_max": 3,
+      "unique_material_count_mean": 3.3625,
+      "candidate_to_final_rank_delta": {
+        "mean": null,
+        "values": []
+      },
+      "lineage_completeness_rate": 1,
+      "input_text_size_estimate": {
+        "query_chars": 5015,
+        "estimated_tokens": 1254
+      },
+      "semantic_labels_created": 0
+    },
+    "R1_CURRENT_PLUS_ACCEPTED_HYGIENE": {
+      "case_count": 80,
+      "returned_reference_count_distribution": {
+        "1": 4,
+        "2": 3,
+        "3": 1,
+        "4": 72
+      },
+      "zero_reference_rate": 0,
+      "mean_reference_count": 3.7625,
+      "heading_escape": 0,
+      "front_matter_escape": 0,
+      "metadata_escape": 0,
+      "citation_index_escape": 0,
+      "wrong_role_escape": 0,
+      "wrong_scope_escape": 0,
+      "quarantined_escape": 0,
+      "duplicate_chunk_escape": 0,
+      "same_material_max": 3,
+      "unique_material_count_mean": 3.5,
+      "candidate_to_final_rank_delta": {
+        "mean": null,
+        "values": []
+      },
+      "lineage_completeness_rate": 1,
+      "input_text_size_estimate": {
+        "query_chars": 5015,
+        "estimated_tokens": 1254
+      },
+      "semantic_labels_created": 0
+    },
+    "R2_TRUE_VECTOR_MMR_LAMBDA_0_9": {
+      "case_count": 80,
+      "returned_reference_count_distribution": {
+        "2": 2,
+        "4": 78
+      },
+      "zero_reference_rate": 0,
+      "mean_reference_count": 3.95,
+      "heading_escape": 0,
+      "front_matter_escape": 0,
+      "metadata_escape": 0,
+      "citation_index_escape": 0,
+      "wrong_role_escape": 0,
+      "wrong_scope_escape": 0,
+      "quarantined_escape": 0,
+      "duplicate_chunk_escape": 6,
+      "same_material_max": 3,
+      "unique_material_count_mean": 3.7125,
+      "candidate_to_final_rank_delta": {
+        "mean": null,
+        "values": []
+      },
+      "lineage_completeness_rate": 1,
+      "input_text_size_estimate": {
+        "query_chars": 5015,
+        "estimated_tokens": 1254
+      },
+      "semantic_labels_created": 0
+    }
+  },
+  "deltas": {
+    "R1_minus_R0": {
+      "mean_reference_count": -0.23749999999999982,
+      "heading_escape_delta": -158,
+      "front_matter_escape_delta": 0,
+      "citation_index_escape_delta": -5
+    },
+    "R2_minus_R1": "NOT_EXECUTED"
+  },
+  "interpretation_boundary": "Mechanical candidate-shape/rank/lineage metrics only; no semantic usefulness conclusion."
+}

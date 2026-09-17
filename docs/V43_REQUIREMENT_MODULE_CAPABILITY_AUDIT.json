@@ -1,0 +1,117 @@
+{
+  "audit_type": "V43_REQUIREMENT_MODULE_CAPABILITY_AUDIT_READONLY",
+  "status": "REQUIREMENT_MODULE_CAPABILITY_AUDIT_COMPLETE",
+  "generated_at": "2026-09-06",
+  "repository": {
+    "branch": "feat/v4.3-semantic-boundary-routing",
+    "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+    "worktree_dirty_before_audit": true,
+    "worktree_changes_preserved": true,
+    "provider_calls": 0,
+    "database_writes": 0,
+    "gold_mutations": 0
+  },
+  "evidence_basis": {
+    "mode": "read_only_static",
+    "runtime_database_probe": "not_used_as_authority",
+    "schema_source": "migration_chain_and_repository_sql",
+    "gold_artifacts_modified": false,
+    "production_files_modified": false,
+    "inspected_paths": [
+      "backend/src/pipeline/requirement-extraction.js",
+      "backend/src/pipeline/requirement-chunker.js",
+      "backend/src/pipeline/canonical-requirements.js",
+      "backend/src/pipeline/mandatory-requirement.js",
+      "backend/src/requirement-parse-service.js",
+      "backend/src/requirement-source-service.js",
+      "backend/src/requirement-evidence-fact-mapping-service.js",
+      "backend/src/db.js",
+      "packages/semantic-contracts/index.js",
+      "backend/migrations/003_tender_parse_confirmation.sql",
+      "backend/migrations/004_requirement_extraction_chunks.sql",
+      "backend/migrations/005_mandatory_requirement_metadata.sql",
+      "backend/migrations/008_requirement_source_mapping.sql",
+      "backend/migrations/009_requirement_source_ranges.sql",
+      "backend/migrations/010_provisional_requirement_baseline.sql",
+      "backend/migrations/011_requirement_candidate_api_and_classification.sql",
+      "backend/migrations/017_canonical_requirement_v1.sql",
+      "backend/migrations/018_requirement_source_resolution_ambiguous.sql",
+      "backend/migrations/046_actor_boundary_requirement_classification.sql"
+    ],
+    "relevant_tests": [
+      "backend/test/canonical-requirements-v1.test.js",
+      "backend/test/requirement-chunker-v2.test.js",
+      "backend/test/requirement-extraction-contract-owner.test.js",
+      "backend/test/requirement-source-provenance.test.js",
+      "backend/test/requirement-source-reconstruction.test.js",
+      "backend/test/requirement-evaluation.test.js",
+      "backend/test/requirement-gold-eligibility.test.js",
+      "backend/test/provisional-requirement-baseline.test.js",
+      "backend/test/tender-parse.test.js"
+    ]
+  },
+  "extraction_capability": {
+    "pdf_chunk_input": { "status": "YES", "evidence": ["RequirementParseService.processJob", "chunkExtractedText", "DocumentCapabilityDetector"] },
+    "candidate_requirement_output": { "status": "YES", "evidence": ["createRequirementExtractionGateway.extract", "validateRequirementExtractionEnvelope"] },
+    "category_classification": { "status": "YES", "evidence": ["REQUIREMENT_CANDIDATE_CATEGORIES", "normalizedCategory", "DOWNSTREAM_CATEGORIES", "migration 011 formal category check"] },
+    "mandatory_judgment": { "status": "YES", "evidence": ["mandatory_observed", "enrichMandatoryRequirement", "assertMandatoryRequirementMetadata", "mandatory scope rules"] },
+    "requires_confirmation_judgment": { "status": "YES", "mode": "deterministic canonical derivation", "evidence": ["CONFIRMATION_RULES", "missingReference", "incompleteClause"] },
+    "source_lineage": { "status": "YES", "evidence": ["SourceLocationResolver", "source_hash", "source_chunk_id", "source ranges", "requirement_source_reconciliations"] }
+  },
+  "canonicalization_capability": {
+    "duplicate_detection": { "status": "YES", "mode": "exact normalized key before formal IDs" },
+    "candidate_aggregation": { "status": "YES", "evidence": ["aggregateRequirementCandidates", "merged_candidate_refs", "merged_candidate_count"] },
+    "canonical_requirement_id": { "status": "YES", "mode": "stable sequential REQ-001 style IDs after deduplication" },
+    "semantic_merge": { "status": "NO", "detail": "No embedding/fuzzy/similarity merge in Requirement module." },
+    "parent_child_requirement": { "status": "NO", "detail": "No parent-child hierarchy; atomicity_review_required is metadata only." },
+    "formal_requirement_validation": { "status": "LIMITED", "detail": "canonicalizeRequirements validates already-IDed formal rows and does not merge them." }
+  },
+  "importance_capability": {
+    "priority": "NO",
+    "importance": "NO",
+    "criticality": "NO",
+    "mandatory_level": "PARTIAL",
+    "evaluation_weight": "NO",
+    "detail": "Only boolean mandatory/marker/scope metadata exists; no graded importance model or weight was found in Requirement migrations or module code."
+  },
+  "baseline_role": {
+    "classification": "CONFIRMED_REQUIREMENT_SNAPSHOT_AND_VERSION_BOUNDARY",
+    "not_canonicalization_engine": true,
+    "facts": [
+      "One baseline per project and parse job linkage are defined in migration 003.",
+      "Baseline lifecycle is building to confirmed.",
+      "Confirmed baseline and Requirement rows are immutable via triggers.",
+      "confirmRequirementBaseline persists already canonicalized rows and confirmation actor/time/type."
+    ]
+  },
+  "gold_input_recommendation": {
+    "primary": "B_CANONICAL_REQUIREMENT",
+    "production_state_qualifier": "C_REQUIREMENT_BASELINE",
+    "raw_candidate_as_final_denominator": "NO",
+    "reason": "Canonicalization performs exact deduplication and stable REQ-ID assignment before persistence; Baseline supplies confirmed/versioned project state; Raw Candidates remain extraction and human-review staging inputs."
+  },
+  "capability_matrix": [
+    { "capability": "candidate extraction", "implemented": true, "location": ["backend/src/pipeline/requirement-extraction.js", "backend/src/requirement-parse-service.js"], "status": "ENFORCED" },
+    { "capability": "source lineage", "implemented": true, "location": ["backend/src/pipeline/source-location-resolver.js", "backend/src/requirement-source-service.js", "backend/migrations/008_requirement_source_mapping.sql", "backend/migrations/009_requirement_source_ranges.sql", "backend/migrations/018_requirement_source_resolution_ambiguous.sql"], "status": "ENFORCED" },
+    { "capability": "category classification", "implemented": true, "location": ["packages/semantic-contracts/index.js", "backend/src/pipeline/canonical-requirements.js", "backend/migrations/011_requirement_candidate_api_and_classification.sql"], "status": "ENFORCED" },
+    { "capability": "requirement merge", "implemented": true, "location": ["backend/src/pipeline/canonical-requirements.js", "backend/src/pipeline/requirement-chunker.js"], "status": "PARTIAL", "scope": "exact duplicate aggregation only" },
+    { "capability": "canonical requirement", "implemented": true, "location": ["backend/src/pipeline/canonical-requirements.js", "backend/src/db.js", "backend/migrations/017_canonical_requirement_v1.sql"], "status": "ENFORCED" },
+    { "capability": "importance classification", "implemented": false, "location": ["backend/src/pipeline/mandatory-requirement.js", "backend/migrations/005_mandatory_requirement_metadata.sql"], "status": "NOT_ENFORCED", "detail": "mandatory boolean exists; importance/priority/weight does not" },
+    { "capability": "baseline/version", "implemented": true, "location": ["backend/src/requirement-parse-service.js", "backend/src/db.js", "backend/migrations/003_tender_parse_confirmation.sql", "backend/migrations/010_provisional_requirement_baseline.sql"], "status": "ENFORCED" }
+  ],
+  "database_schema": {
+    "requirement_candidates": { "defined_by": ["003", "004", "005", "008", "009", "010", "011", "017", "046"], "role": "parse-job candidate with source, mandatory, classification, confirmation and dedup metadata" },
+    "requirements": { "defined_by": ["003", "005", "006", "008", "009", "010", "011", "017"], "role": "formal baseline-bound canonical Requirement row" },
+    "requirement_baselines": { "defined_by": ["003", "010"], "role": "project/parse-job confirmation snapshot and lifecycle boundary" },
+    "requirement_source_reconciliations": { "defined_by": ["009"], "role": "source/extracted-text hash reconciliation audit" },
+    "requirement_coverages": { "defined_by": ["007", "013"], "role": "downstream coverage projection, not canonicalization" },
+    "importance_fields_found": false
+  },
+  "explicit_non_capabilities": [
+    "No embedding or fuzzy semantic deduplication.",
+    "No parent-child Requirement hierarchy.",
+    "No graded importance/priority/evaluation-weight model.",
+    "No automatic Requirement Gold freeze or promotion.",
+    "Downstream Evidence/Fact/Mapping services do not canonicalize extraction candidates."
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "artifact_type": "V43_MATERIAL_VERSION_SCHEMA_DIAGNOSIS_CHECKPOINT",
+  "mode": "READ_ONLY_SCHEMA_DIAGNOSIS",
+  "database_identity": {
+    "current_codex_process_database_url_database": null,
+    "backend_env_database": "bid_platform",
+    "current_database": "bid_platform",
+    "current_schema": "public",
+    "expected_canary_database": "bid_platform_flow_audit_test",
+    "expected_canary_database_exists": true,
+    "current_target_matches_expected_canary": false,
+    "runtime_database_identity_evidence": [
+      "SELECT current_database(), current_schema() => bid_platform / public",
+      "backend/.env DATABASE_URL database component => bid_platform",
+      "process DATABASE_URL was not set in the diagnostic shell"
+    ]
+  },
+  "reported_failure": {
+    "sqlstate": "42703",
+    "message": "column m.material_version does not exist",
+    "reproduced_read_only": true,
+    "reproduction_query": "SELECT m.material_version FROM company_materials m LIMIT 1",
+    "reproduction_databases": [
+      { "database": "bid_platform", "result": "42703 column m.material_version does not exist" },
+      { "database": "bid_platform_flow_audit_test", "result": "42703 column m.material_version does not exist" }
+    ],
+    "failing_file": "NOT_FOUND_IN_CURRENT_REPOSITORY",
+    "failing_function": "NOT_DETERMINED_FROM_CURRENT_REPOSITORY",
+    "failing_query": "The reported m.material_version fragment is absent from the current checkout. The exact read-only reproduction query is SELECT m.material_version FROM company_materials m LIMIT 1.",
+    "alias_m_table": "company_materials",
+    "current_checked_out_canary_path": "run-requirement-retrieval-fact-canary.mjs -> runRetrieval -> read-only SELECT source_version from company_materials m",
+    "current_checked_out_canary_query_fragment": "SELECT e.embedding_id,c.chunk_id,c.material_id,c.source_text,c.chunk_hash,c.chunk_index,c.char_start,c.char_end,c.page_start,c.page_end,c.paragraph_start,c.paragraph_end,c.section,m.original_name,m.project_id,m.material_type,m.corpus_scope,m.source_version,1-(e.embedding <=> $1::vector) AS score FROM material_chunk_embeddings e JOIN material_chunks c ON c.chunk_id=e.chunk_id AND c.chunk_hash=e.chunk_hash JOIN company_materials m ON m.id=c.material_id ...",
+    "current_checked_out_query_uses_material_version": false
+  },
+  "actual_table_columns": {
+    "bid_platform.company_materials": [
+      "id", "project_id", "original_name", "storage_key", "material_type", "mime_type", "size_bytes", "file_hash", "extraction_status", "extracted_text", "extraction_error_code", "extraction_error_message", "created_at", "updated_at", "corpus_scope", "industry", "source_org", "source_url", "source_type", "document_number", "published_at", "effective_from", "effective_to", "effective_status", "source_version", "supersedes", "superseded_by", "authority_level", "usage_status", "quality_score", "review_status", "lifecycle_status", "index_status", "review_notes", "synthetic_test_material", "quarantine_reason", "quarantined_at"
+    ],
+    "bid_platform.material_chunks": [
+      "chunk_id", "material_id", "chunk_index", "source_text", "char_start", "char_end", "page_start", "page_end", "paragraph_start", "paragraph_end", "section", "chunk_hash", "chunker_version", "created_at"
+    ],
+    "bid_platform.material_chunk_embeddings": [
+      "embedding_id", "chunk_id", "chunk_hash", "embedding_model", "embedding_version", "embedding_dimension", "embedding", "created_at", "updated_at"
+    ],
+    "bid_platform_flow_audit_test.company_materials": [
+      "id", "project_id", "original_name", "storage_key", "material_type", "mime_type", "size_bytes", "file_hash", "extraction_status", "extracted_text", "extraction_error_code", "extraction_error_message", "created_at", "updated_at", "corpus_scope", "industry", "source_org", "source_url", "source_type", "document_number", "published_at", "effective_from", "effective_to", "effective_status", "source_version", "supersedes", "superseded_by", "authority_level", "usage_status", "quality_score", "review_status", "lifecycle_status", "index_status", "review_notes", "synthetic_test_material", "quarantine_reason", "quarantined_at"
+    ],
+    "bid_platform_flow_audit_test.material_chunks": [
+      "chunk_id", "material_id", "chunk_index", "source_text", "char_start", "char_end", "page_start", "page_end", "paragraph_start", "paragraph_end", "section", "chunk_hash", "chunker_version", "created_at"
+    ],
+    "bid_platform_flow_audit_test.material_chunk_embeddings": [
+      "embedding_id", "chunk_id", "chunk_hash", "embedding_model", "embedding_version", "embedding_dimension", "embedding", "created_at", "updated_at"
+    ],
+    "material_version_present_in_any_inspected_table": false
+  },
+  "expected_schema_source": {
+    "material_lifecycle_table": "company_materials",
+    "canonical_material_version_column": "company_materials.source_version",
+    "fact_source_snapshot_projection": "backend/eval/real-e2e/run-requirement-retrieval-fact-canary.mjs sourceSnapshotFor(row): material_version = row.source_version ?? null",
+    "contract_material_version_field": "backend/src/pipeline/evidence-fact-candidate-v2.js createEvidenceFactSourceSnapshot accepts a supplied material_version value; it is not a database column lookup",
+    "chunk_tables_supply_version": false,
+    "embedding_tables_supply_material_version": false
+  },
+  "migration_evidence": {
+    "material_version_definition_found": false,
+    "material_version_definition_files": [],
+    "source_version_definition_found": true,
+    "source_version_definition": {
+      "file": "backend/migrations/041_corpus_l3_public_materials.sql",
+      "table": "company_materials",
+      "operation": "ADD COLUMN IF NOT EXISTS source_version text"
+    },
+    "migration_052_inspected": {
+      "file": "backend/migrations/052_requirement_scope_authority_and_project_material_bindings.sql",
+      "material_version_definition": false,
+      "scope": "creates requirement_scope_authority_decisions and project_material_bindings",
+      "executed_by_this_diagnostic": false
+    },
+    "history_search_for_m_material_version": "no matching commit or current repository query found"
+  },
+  "project_and_material_presence": {
+    "configured_runtime_database": {
+      "database": "bid_platform",
+      "project_id": "7a038c5d-38e4-46ae-b24d-39437bb3b545",
+      "project_id_exists_in_db": false,
+      "target_materials_prefix": "HW-",
+      "target_materials_exist_in_db": false,
+      "target_material_count": 0,
+      "total_company_materials": 56
+    },
+    "expected_canary_database_read_only_comparison": {
+      "database": "bid_platform_flow_audit_test",
+      "project_id": "7a038c5d-38e4-46ae-b24d-39437bb3b545",
+      "project_id_exists_in_db": true,
+      "target_materials_exist_in_db": true,
+      "target_material_count": 6,
+      "target_chunk_count": 590,
+      "active_project_material_bindings": 6,
+      "direct_materials_on_canary_project": 0,
+      "material_source_version_values_present": true
+    }
+  },
+  "root_cause_classification": {
+    "primary": "CODE_SCHEMA_DRIFT",
+    "secondary": "WRONG_DATABASE_TARGET",
+    "evidence": [
+      "The reported query references m.material_version, which is absent in both inspected databases.",
+      "No migration defines material_version; migration 041 defines company_materials.source_version.",
+      "The current checked-out production-shaped canary explicitly selects m.source_version and has a regression test prohibiting m.material_version.",
+      "The current diagnostic runtime resolves backend/.env to bid_platform, while the canary preflight requires bid_platform_flow_audit_test; the configured target has no canary project or HW- materials."
+    ],
+    "not_classified": ["TEST_DB_SCHEMA_BEHIND", "QUERY_CONTRACT_DRIFT"],
+    "runtime_revision_uncertainty": "The emitting runtime file/function for the reported fragment is not present in the current checkout; a stale or different runtime query cannot be attributed to current code without its runtime evidence."
+  },
+  "recommended_minimal_fix": {
+    "implementation": "NONE_IN_THIS_DIAGNOSTIC",
+    "decision_needed": "Run the canary only against bid_platform_flow_audit_test and ensure the executing runtime uses the current source_version projection. Do not add a material_version column or fallback value.",
+    "provider_replay": "STOPPED_PENDING_DECISION"
+  },
+  "PROVIDER_CALLS": 0,
+  "PRODUCTION_DB_WRITES": 0,
+  "EVAL_DB_WRITES": 0,
+  "MIGRATIONS_EXECUTED": 0,
+  "safety": {
+    "provider_calls": 0,
+    "production_db_writes": 0,
+    "eval_db_writes": 0,
+    "migrations_executed": 0,
+    "fact_persistence": 0,
+    "mapping_actions": 0,
+    "claim_actions": 0,
+    "writer_actions": 0,
+    "gold_mutations": 0,
+    "code_modified": 0,
+    "config_modified": 0
+  },
+  "status": "BLOCKED_PENDING_GPT_DECISION"
+}

@@ -1,0 +1,658 @@
+{
+  "report_version": "context-recovery-runtime-verification-v1",
+  "generated_at": "2026-08-31T16:35:21.237Z",
+  "mode": "READ_ONLY_RUNTIME_VERIFICATION",
+  "implementation": {
+    "component_exists": true,
+    "components": [
+      {
+        "file": "backend/src/pipeline/evidence-context-expansion.js",
+        "function": "expandEvidenceContext",
+        "responsibility": "retain exact span and add same-sentence/paragraph, header, section, same-chunk and bounded adjacent context",
+        "input_contract": "exactSpan + material + ordered material chunks + missing dimensions",
+        "output_contract": "exact_evidence_span + context_window + dimension recovery state",
+        "bounded_rule": "same material/document; adjacent chunk_index only previous and next one; each added text is bounded by maxContextChars (default 2400); no recursive traversal",
+        "provenance_fields": "exact span source_text_hash/source_span_id/anchor_chunk_id; context entries origin/chunk_id; no char offsets on context entries"
+      },
+      {
+        "file": "backend/src/pipeline/evidence-source-context-resolver.js",
+        "function": "EvidenceSourceContextResolver.resolve",
+        "responsibility": "deterministically resolve retrieval anchor to exact source range before Evidence creation",
+        "input_contract": "material + material chunks + anchorChunkId + resolution strategy",
+        "output_contract": "span_id + source_text/hash + source_location + heading_path + source_chunk_ids",
+        "bounded_rule": "SOURCE_SPAN_MAX_CHARS=4000; EVIDENCE_SOURCE_MAX_PARAGRAPHS=12; stops at heading boundaries",
+        "provenance_fields": "material_id, source_chunk_ids, start/end offsets, paragraph/page bounds, heading path, resolver version"
+      }
+    ]
+  },
+  "wiring": {
+    "chain": "Retriever -> EnterpriseRetrievalService -> EvidenceService.createFromRetrieval -> EvidenceSourceContextResolver.resolve -> EvidenceSourceFact/Review boundary -> EvidenceReviewService.propose -> expandEvidenceContext -> semantic evidence support review -> createEvidenceReviewContract -> review persistence",
+    "runtime_callers": [
+      "backend/src/evidence-service.js:createFromRetrieval",
+      "backend/src/evidence-review-service.js:propose"
+    ],
+    "phase": "source review / evidence span, before Fact extraction; not raw retrieval and not Mapping",
+    "raw_retrieval_atomic": true,
+    "final_context_expanded": true,
+    "formal_review_rows_for_fixtures": false
+  },
+  "fixtures": {
+    "COM04": {
+      "key": "COM04",
+      "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+      "material_name": "COM-04_API与系统集成能力报告.md",
+      "query": "企业是否具备 API 接口集成、第三方系统对接和数据治理能力？有哪些可核验材料？",
+      "material_metadata": {
+        "material_type": "technical_solution",
+        "corpus_scope": "ENTERPRISE_PRIVATE",
+        "industry": "government+medical",
+        "source_type": "synthetic_company_evidence",
+        "source_org": "OFF-U03",
+        "authority_level": "enterprise_private"
+      },
+      "chunks": [
+        {
+          "chunk_id": "MCH-EE13BCB24F6A977A2B054A4FB85DE7B4",
+          "chunk_index": 0,
+          "char_start": 0,
+          "char_end": 14,
+          "paragraph_start": 1,
+          "paragraph_end": 1,
+          "section": null,
+          "source_text": "# API与系统集成能力报告"
+        },
+        {
+          "chunk_id": "MCH-F46EAFE6F29CB4A6F2E7BFE20FEA2B3D",
+          "chunk_index": 1,
+          "char_start": 16,
+          "char_end": 92,
+          "paragraph_start": 2,
+          "paragraph_end": 2,
+          "section": null,
+          "source_text": "> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。"
+        },
+        {
+          "chunk_id": "MCH-FB52222056B272025DB89E56558E3B76",
+          "chunk_index": 2,
+          "char_start": 94,
+          "char_end": 99,
+          "paragraph_start": 3,
+          "paragraph_end": 3,
+          "section": null,
+          "source_text": "## 接口"
+        },
+        {
+          "chunk_id": "MCH-0663AA700C01FD958515713C21CF5F5E",
+          "chunk_index": 3,
+          "char_start": 101,
+          "char_end": 149,
+          "paragraph_start": 4,
+          "paragraph_end": 4,
+          "section": null,
+          "source_text": "支持REST API、Webhook和批量文件交换；2026-07-12完成12个模拟接口联调。"
+        },
+        {
+          "chunk_id": "MCH-12DA2A7EF1D137EFB87E1170768F9B31",
+          "chunk_index": 4,
+          "char_start": 151,
+          "char_end": 156,
+          "paragraph_start": 5,
+          "paragraph_end": 5,
+          "section": null,
+          "source_text": "## 边界"
+        },
+        {
+          "chunk_id": "MCH-99497AE6286B2BAC390E35611FEE3A8A",
+          "chunk_index": 5,
+          "char_start": 158,
+          "char_end": 176,
+          "paragraph_start": 6,
+          "paragraph_end": 6,
+          "section": null,
+          "source_text": "不代表已对接任何真实政务或医院系统。"
+        },
+        {
+          "chunk_id": "MCH-1AF2E1849D13143E1105E44079F4463E",
+          "chunk_index": 6,
+          "char_start": 178,
+          "char_end": 190,
+          "paragraph_start": 7,
+          "paragraph_end": 7,
+          "section": null,
+          "source_text": "## 官方来源 / 依据"
+        },
+        {
+          "chunk_id": "MCH-9CF8507336652AD1E8F7FAC7BDF421F2",
+          "chunk_index": 7,
+          "char_start": 192,
+          "char_end": 345,
+          "paragraph_start": 8,
+          "paragraph_end": 8,
+          "section": null,
+          "source_text": "- **OFF-U03｜政务数据共享条例**｜国务院｜状态 `CURRENT_CONFIRMED`｜实施 `2025-08-01`｜最后核验 `2026-08-31`｜https://www.stats.gov.cn/gk/tjfg/xgfxfg/202506/t20250609_1960124.html"
+        },
+        {
+          "chunk_id": "MCH-04323E281C77264076D6284CE598A90C",
+          "chunk_index": 8,
+          "char_start": 347,
+          "char_end": 356,
+          "paragraph_start": 9,
+          "paragraph_end": 9,
+          "section": null,
+          "source_text": "## 时效使用规则"
+        },
+        {
+          "chunk_id": "MCH-963DB5E23E18716684C5726572029882",
+          "chunk_index": 9,
+          "char_start": 358,
+          "char_end": 581,
+          "paragraph_start": 10,
+          "paragraph_end": 10,
+          "section": null,
+          "source_text": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。"
+        }
+      ],
+      "retrieval": {
+        "run_count": 2,
+        "hits": [
+          {
+            "retrieval_run_id": "93fc4a7b-b064-4e35-8b75-268f93695ef7",
+            "requirement_id": "24859cdd-94f5-4a28-9c65-e5f4123fcceb",
+            "rank": 10,
+            "is_final": false,
+            "chunk_id": "MCH-9CF8507336652AD1E8F7FAC7BDF421F2",
+            "chunk_index": 7,
+            "chunk_role": "BUSINESS_CONTENT",
+            "candidate_eligibility": "EVIDENCE_ELIGIBLE",
+            "source_text": "- **OFF-U03｜政务数据共享条例**｜国务院｜状态 `CURRENT_CONFIRMED`｜实施 `2025-08-01`｜最后核验 `2026-08-31`｜https://www.stats.gov.cn/gk/tjfg/xgfxfg/202506/t20250609_1960124.html"
+          },
+          {
+            "retrieval_run_id": "93fc4a7b-b064-4e35-8b75-268f93695ef7",
+            "requirement_id": "24859cdd-94f5-4a28-9c65-e5f4123fcceb",
+            "rank": 11,
+            "is_final": false,
+            "chunk_id": "MCH-EE13BCB24F6A977A2B054A4FB85DE7B4",
+            "chunk_index": 0,
+            "chunk_role": "HEADING",
+            "candidate_eligibility": "EVIDENCE_ELIGIBLE",
+            "source_text": "# API与系统集成能力报告"
+          },
+          {
+            "retrieval_run_id": "25dbf1bc-90f9-4666-ac38-0068a75ac188",
+            "requirement_id": "b805e29f-17f7-4057-9eb0-ca20a4360dca",
+            "rank": 4,
+            "is_final": true,
+            "chunk_id": "MCH-99497AE6286B2BAC390E35611FEE3A8A",
+            "chunk_index": 5,
+            "chunk_role": "BUSINESS_CONTENT",
+            "candidate_eligibility": "EVIDENCE_ELIGIBLE",
+            "source_text": "不代表已对接任何真实政务或医院系统。"
+          },
+          {
+            "retrieval_run_id": "25dbf1bc-90f9-4666-ac38-0068a75ac188",
+            "requirement_id": "b805e29f-17f7-4057-9eb0-ca20a4360dca",
+            "rank": 6,
+            "is_final": false,
+            "chunk_id": "MCH-EE13BCB24F6A977A2B054A4FB85DE7B4",
+            "chunk_index": 0,
+            "chunk_role": "HEADING",
+            "candidate_eligibility": "CONTEXT_ONLY",
+            "source_text": "# API与系统集成能力报告"
+          }
+        ]
+      },
+      "production_path_observation": {
+        "label": "actual_retrieval_final_hit",
+        "retrieval_hit": {
+          "chunk_id": "MCH-99497AE6286B2BAC390E35611FEE3A8A",
+          "chunk_index": 5,
+          "role": "BUSINESS_CONTENT",
+          "candidate_eligibility": "EVIDENCE_ELIGIBLE",
+          "text": "不代表已对接任何真实政务或医院系统。"
+        },
+        "resolved_span": {
+          "span_id": "ESPAN-D1A99A1CD1ACC1F465B25CFC2D6AD390",
+          "resolver_strategy": "heading_group",
+          "source_text": "## 边界\n\n不代表已对接任何真实政务或医院系统。\n\n",
+          "provenance": {
+            "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+            "source_chunk_ids": [
+              "MCH-12DA2A7EF1D137EFB87E1170768F9B31",
+              "MCH-99497AE6286B2BAC390E35611FEE3A8A"
+            ],
+            "char_start": 151,
+            "char_end": 178,
+            "paragraph_start": 5,
+            "paragraph_end": 6,
+            "heading_path": [
+              "API与系统集成能力报告",
+              "边界"
+            ]
+          }
+        },
+        "expanded_context": {
+          "exact_evidence_span": {
+            "source_text": "## 边界\n\n不代表已对接任何真实政务或医院系统。",
+            "source_text_hash": "4d2651ca3f2d9b05c9956577f931ee9bf50893681b3d8f878e009dceb04b64b3",
+            "source_span_id": "ESPAN-D1A99A1CD1ACC1F465B25CFC2D6AD390",
+            "source_id": "ESPAN-D1A99A1CD1ACC1F465B25CFC2D6AD390",
+            "anchor_chunk_id": "MCH-99497AE6286B2BAC390E35611FEE3A8A"
+          },
+          "context_window": [
+            {
+              "origin": "SECTION_HEADING",
+              "text": "边界",
+              "chunk_id": "MCH-99497AE6286B2BAC390E35611FEE3A8A"
+            },
+            {
+              "origin": "SAME_CHUNK_CONTEXT",
+              "text": "不代表已对接任何真实政务或医院系统。",
+              "chunk_id": "MCH-99497AE6286B2BAC390E35611FEE3A8A"
+            },
+            {
+              "origin": "ADJACENT_CHUNK",
+              "text": "## 边界",
+              "chunk_id": "MCH-12DA2A7EF1D137EFB87E1170768F9B31"
+            },
+            {
+              "origin": "ADJACENT_CHUNK",
+              "text": "## 官方来源 / 依据",
+              "chunk_id": "MCH-1AF2E1849D13143E1105E44079F4463E"
+            },
+            {
+              "origin": "MATERIAL_METADATA",
+              "text": "material_name=COM-04_API与系统集成能力报告.md；material_type=technical_solution；corpus_scope=ENTERPRISE_PRIVATE；source_type=synthetic_company_evidence；source_org=OFF-U03",
+              "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c"
+            }
+          ],
+          "recovery_state": "RESOLVED_BY_CONTEXT",
+          "recovered_context_chars": 228,
+          "source_chunk_ids": [
+            "MCH-12DA2A7EF1D137EFB87E1170768F9B31",
+            "MCH-99497AE6286B2BAC390E35611FEE3A8A",
+            "MCH-1AF2E1849D13143E1105E44079F4463E"
+          ]
+        },
+        "semantic_checks": {
+          "heading_recovered": true,
+          "positive_capability_recovered": false,
+          "negative_boundary_recovered": true,
+          "body_recovered": false,
+          "boundary_treated_as_positive": "NOT_DETERMINED_BY_CONTEXT_COMPONENT"
+        },
+        "component_observation": {
+          "anchor_chunk": {
+            "chunk_id": "MCH-99497AE6286B2BAC390E35611FEE3A8A",
+            "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+            "chunk_index": 5,
+            "source_text": "不代表已对接任何真实政务或医院系统。",
+            "char_start": 158,
+            "char_end": 176,
+            "page_start": null,
+            "page_end": null,
+            "paragraph_start": 6,
+            "paragraph_end": 6,
+            "section": null,
+            "chunk_hash": "368d8deb15ff8ff690f09b33dfbd503c66410c5dc4be8e8916e3c7e09f189a9e",
+            "chunker_version": "enterprise-material-v1",
+            "created_at": "2026-08-31T15:40:36.745Z"
+          },
+          "adjacent_policy": "previous one + next one, same material/document only"
+        }
+      },
+      "positive_span_probe": {
+        "label": "positive_span_probe_using_production_resolver",
+        "retrieval_hit": {
+          "chunk_id": "MCH-0663AA700C01FD958515713C21CF5F5E",
+          "chunk_index": 3,
+          "role": "BUSINESS_CONTENT",
+          "candidate_eligibility": "EVIDENCE_ELIGIBLE",
+          "text": "支持REST API、Webhook和批量文件交换；2026-07-12完成12个模拟接口联调。"
+        },
+        "resolved_span": {
+          "span_id": "ESPAN-709632A1A25EF2E14625CFCFB00A3D4A",
+          "resolver_strategy": "heading_group",
+          "source_text": "## 接口\n\n支持REST API、Webhook和批量文件交换；2026-07-12完成12个模拟接口联调。\n\n",
+          "provenance": {
+            "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+            "source_chunk_ids": [
+              "MCH-FB52222056B272025DB89E56558E3B76",
+              "MCH-0663AA700C01FD958515713C21CF5F5E"
+            ],
+            "char_start": 94,
+            "char_end": 151,
+            "paragraph_start": 3,
+            "paragraph_end": 4,
+            "heading_path": [
+              "API与系统集成能力报告",
+              "接口"
+            ]
+          }
+        },
+        "expanded_context": {
+          "exact_evidence_span": {
+            "source_text": "## 接口\n\n支持REST API、Webhook和批量文件交换；2026-07-12完成12个模拟接口联调。",
+            "source_text_hash": "339230a1682d85ca5344e83731d6f713191d4ce3c99a658a76f8c2ca6b9e4b6a",
+            "source_span_id": "ESPAN-709632A1A25EF2E14625CFCFB00A3D4A",
+            "source_id": "ESPAN-709632A1A25EF2E14625CFCFB00A3D4A",
+            "anchor_chunk_id": "MCH-0663AA700C01FD958515713C21CF5F5E"
+          },
+          "context_window": [
+            {
+              "origin": "SECTION_HEADING",
+              "text": "接口",
+              "chunk_id": "MCH-0663AA700C01FD958515713C21CF5F5E"
+            },
+            {
+              "origin": "SAME_CHUNK_CONTEXT",
+              "text": "支持REST API、Webhook和批量文件交换；2026-07-12完成12个模拟接口联调。",
+              "chunk_id": "MCH-0663AA700C01FD958515713C21CF5F5E"
+            },
+            {
+              "origin": "ADJACENT_CHUNK",
+              "text": "## 接口",
+              "chunk_id": "MCH-FB52222056B272025DB89E56558E3B76"
+            },
+            {
+              "origin": "ADJACENT_CHUNK",
+              "text": "## 边界",
+              "chunk_id": "MCH-12DA2A7EF1D137EFB87E1170768F9B31"
+            },
+            {
+              "origin": "MATERIAL_METADATA",
+              "text": "material_name=COM-04_API与系统集成能力报告.md；material_type=technical_solution；corpus_scope=ENTERPRISE_PRIVATE；source_type=synthetic_company_evidence；source_org=OFF-U03",
+              "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c"
+            }
+          ],
+          "recovery_state": "RESOLVED_BY_CONTEXT",
+          "recovered_context_chars": 281,
+          "source_chunk_ids": [
+            "MCH-FB52222056B272025DB89E56558E3B76",
+            "MCH-0663AA700C01FD958515713C21CF5F5E",
+            "MCH-12DA2A7EF1D137EFB87E1170768F9B31"
+          ]
+        },
+        "semantic_checks": {
+          "heading_recovered": true,
+          "positive_capability_recovered": true,
+          "negative_boundary_recovered": false,
+          "body_recovered": false,
+          "boundary_treated_as_positive": "NOT_DETERMINED_BY_CONTEXT_COMPONENT"
+        },
+        "component_observation": {
+          "anchor_chunk": {
+            "chunk_id": "MCH-0663AA700C01FD958515713C21CF5F5E",
+            "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+            "chunk_index": 3,
+            "source_text": "支持REST API、Webhook和批量文件交换；2026-07-12完成12个模拟接口联调。",
+            "char_start": 101,
+            "char_end": 149,
+            "page_start": null,
+            "page_end": null,
+            "paragraph_start": 4,
+            "paragraph_end": 4,
+            "section": null,
+            "chunk_hash": "4cfeecd92d540c0bb407ae32151d79e6eb9c95c17ff5c8f7fc47ec44a194659a",
+            "chunker_version": "enterprise-material-v1",
+            "created_at": "2026-08-31T15:40:36.745Z"
+          },
+          "adjacent_policy": "previous one + next one, same material/document only"
+        }
+      },
+      "database_source_spans": 0,
+      "database_reviews": 0
+    },
+    "GOV02": {
+      "key": "GOV02",
+      "material_id": "08d5580a-d81b-491f-8c9b-d37ca4251840",
+      "material_name": "GOV-02_政务数据目录、共享与跨部门协同.md",
+      "query": "政务数据共享、数据目录、跨部门协同和系统接口建设通常需要哪些能力？",
+      "material_metadata": {
+        "material_type": "technical_whitepaper",
+        "corpus_scope": "GOVERNMENT_ENTERPRISE",
+        "industry": "government",
+        "source_type": "government_guidance",
+        "source_org": "OFF-U03,OFF-U06,OFF-U07",
+        "authority_level": "official"
+      },
+      "chunks": [
+        {
+          "chunk_id": "MCH-9B1EE59AC49517697E22459FF10EF20E",
+          "chunk_index": 0,
+          "char_start": 0,
+          "char_end": 17,
+          "paragraph_start": 1,
+          "paragraph_end": 1,
+          "section": null,
+          "source_text": "# 政务数据目录、共享与跨部门协同"
+        },
+        {
+          "chunk_id": "MCH-F10ED69DC3BF77C66D6A0EA805EC99AA",
+          "chunk_index": 1,
+          "char_start": 19,
+          "char_end": 61,
+          "paragraph_start": 2,
+          "paragraph_end": 2,
+          "section": null,
+          "source_text": "> 官方资料结构化摘要。正式投标与合规判断需回到原始法律、标准、政策或项目文件核验。"
+        },
+        {
+          "chunk_id": "MCH-10E05647593D617773818984CFB50208",
+          "chunk_index": 2,
+          "char_start": 63,
+          "char_end": 71,
+          "paragraph_start": 3,
+          "paragraph_end": 3,
+          "section": null,
+          "source_text": "## 目录与共享"
+        },
+        {
+          "chunk_id": "MCH-B7204C620F6A0CF603CEE34E625A583C",
+          "chunk_index": 3,
+          "char_start": 73,
+          "char_end": 100,
+          "paragraph_start": 4,
+          "paragraph_end": 4,
+          "section": null,
+          "source_text": "需明确数据目录、共享属性、使用条件、授权、安全和记录。"
+        },
+        {
+          "chunk_id": "MCH-839D2B25854C0D1C9B5BB49408B32F22",
+          "chunk_index": 4,
+          "char_start": 102,
+          "char_end": 114,
+          "paragraph_start": 5,
+          "paragraph_end": 5,
+          "section": null,
+          "source_text": "## 官方来源 / 依据"
+        },
+        {
+          "chunk_id": "MCH-257ECF848FECAB04572BF502D68A1173",
+          "chunk_index": 5,
+          "char_start": 116,
+          "char_end": 623,
+          "paragraph_start": 6,
+          "paragraph_end": 6,
+          "section": null,
+          "source_text": "- **OFF-U03｜政务数据共享条例**｜国务院｜状态 `CURRENT_CONFIRMED`｜实施 `2025-08-01`｜最后核验 `2026-08-31`｜https://www.stats.gov.cn/gk/tjfg/xgfxfg/202506/t20250609_1960124.html\n- **OFF-U06｜中华人民共和国数据安全法**｜全国人大常委会｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-09-01`｜最后核验 `2026-08-31`｜https://www.npc.gov.cn/npc/c2/c30834/202106/t20210610_311888.html\n- **OFF-U07｜中华人民共和国个人信息保护法**｜全国人大常委会｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-11-01`｜最后核验 `2026-08-31`｜https://www.miit.gov.cn/zwgk/zcwj/flfg/art/2022/art_04a0f1fb5df244e39688fd5372623a8d.html"
+        },
+        {
+          "chunk_id": "MCH-26B5F534B4D5091391A9D8B4EC47FFCB",
+          "chunk_index": 6,
+          "char_start": 625,
+          "char_end": 634,
+          "paragraph_start": 7,
+          "paragraph_end": 7,
+          "section": null,
+          "source_text": "## 时效使用规则"
+        },
+        {
+          "chunk_id": "MCH-1FAE191CF4949121A8D999CFF59DB104",
+          "chunk_index": 7,
+          "char_start": 636,
+          "char_end": 859,
+          "paragraph_start": 8,
+          "paragraph_end": 8,
+          "section": null,
+          "source_text": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。"
+        }
+      ],
+      "retrieval": {
+        "run_count": 1,
+        "hits": [
+          {
+            "retrieval_run_id": "93fc4a7b-b064-4e35-8b75-268f93695ef7",
+            "requirement_id": "24859cdd-94f5-4a28-9c65-e5f4123fcceb",
+            "rank": 1,
+            "is_final": true,
+            "chunk_id": "MCH-9B1EE59AC49517697E22459FF10EF20E",
+            "chunk_index": 0,
+            "chunk_role": "HEADING",
+            "candidate_eligibility": "EVIDENCE_ELIGIBLE",
+            "source_text": "# 政务数据目录、共享与跨部门协同"
+          },
+          {
+            "retrieval_run_id": "93fc4a7b-b064-4e35-8b75-268f93695ef7",
+            "requirement_id": "24859cdd-94f5-4a28-9c65-e5f4123fcceb",
+            "rank": 4,
+            "is_final": true,
+            "chunk_id": "MCH-B7204C620F6A0CF603CEE34E625A583C",
+            "chunk_index": 3,
+            "chunk_role": "BUSINESS_CONTENT",
+            "candidate_eligibility": "EVIDENCE_ELIGIBLE",
+            "source_text": "需明确数据目录、共享属性、使用条件、授权、安全和记录。"
+          }
+        ]
+      },
+      "production_path_observation": {
+        "label": "actual_retrieval_final_hit",
+        "retrieval_hit": {
+          "chunk_id": "MCH-9B1EE59AC49517697E22459FF10EF20E",
+          "chunk_index": 0,
+          "role": "HEADING",
+          "candidate_eligibility": "EVIDENCE_ELIGIBLE",
+          "text": "# 政务数据目录、共享与跨部门协同"
+        },
+        "resolved_span": {
+          "span_id": "ESPAN-7EED305607248AE1FEB064DAA134038B",
+          "resolver_strategy": "heading_group",
+          "source_text": "# 政务数据目录、共享与跨部门协同\n\n> 官方资料结构化摘要。正式投标与合规判断需回到原始法律、标准、政策或项目文件核验。\n\n## 目录与共享\n\n需明确数据目录、共享属性、使用条件、授权、安全和记录。\n\n## 官方来源 / 依据\n\n- **OFF-U03｜政务数据共享条例**｜国务院｜状态 `CURRENT_CONFIRMED`｜实施 `2025-08-01`｜最后核验 `2026-08-31`｜https://www.stats.gov.cn/gk/tjfg/xgfxfg/202506/t20250609_1960124.html\n- **OFF-U06｜中华人民共和国数据安全法**｜全国人大常委会｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-09-01`｜最后核验 `2026-08-31`｜https://www.npc.gov.cn/npc/c2/c30834/202106/t20210610_311888.html\n- **OFF-U07｜中华人民共和国个人信息保护法**｜全国人大常委会｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-11-01`｜最后核验 `2026-08-31`｜https://www.miit.gov.cn/zwgk/zcwj/flfg/art/2022/art_04a0f1fb5df244e39688fd5372623a8d.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+          "provenance": {
+            "material_id": "08d5580a-d81b-491f-8c9b-d37ca4251840",
+            "source_chunk_ids": [
+              "MCH-9B1EE59AC49517697E22459FF10EF20E",
+              "MCH-F10ED69DC3BF77C66D6A0EA805EC99AA",
+              "MCH-10E05647593D617773818984CFB50208",
+              "MCH-B7204C620F6A0CF603CEE34E625A583C",
+              "MCH-839D2B25854C0D1C9B5BB49408B32F22",
+              "MCH-257ECF848FECAB04572BF502D68A1173",
+              "MCH-26B5F534B4D5091391A9D8B4EC47FFCB",
+              "MCH-1FAE191CF4949121A8D999CFF59DB104"
+            ],
+            "char_start": 0,
+            "char_end": 859,
+            "paragraph_start": 1,
+            "paragraph_end": 8,
+            "heading_path": [
+              "政务数据目录、共享与跨部门协同"
+            ]
+          }
+        },
+        "expanded_context": {
+          "exact_evidence_span": {
+            "source_text": "# 政务数据目录、共享与跨部门协同\n\n> 官方资料结构化摘要。正式投标与合规判断需回到原始法律、标准、政策或项目文件核验。\n\n## 目录与共享\n\n需明确数据目录、共享属性、使用条件、授权、安全和记录。\n\n## 官方来源 / 依据\n\n- **OFF-U03｜政务数据共享条例**｜国务院｜状态 `CURRENT_CONFIRMED`｜实施 `2025-08-01`｜最后核验 `2026-08-31`｜https://www.stats.gov.cn/gk/tjfg/xgfxfg/202506/t20250609_1960124.html\n- **OFF-U06｜中华人民共和国数据安全法**｜全国人大常委会｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-09-01`｜最后核验 `2026-08-31`｜https://www.npc.gov.cn/npc/c2/c30834/202106/t20210610_311888.html\n- **OFF-U07｜中华人民共和国个人信息保护法**｜全国人大常委会｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-11-01`｜最后核验 `2026-08-31`｜https://www.miit.gov.cn/zwgk/zcwj/flfg/art/2022/art_04a0f1fb5df244e39688fd5372623a8d.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "source_text_hash": "b115c4a85ce345fe591e2e12f9c3f1f1cecc22721df9fd91c7a1d303b81f2f87",
+            "source_span_id": "ESPAN-7EED305607248AE1FEB064DAA134038B",
+            "source_id": "ESPAN-7EED305607248AE1FEB064DAA134038B",
+            "anchor_chunk_id": "MCH-9B1EE59AC49517697E22459FF10EF20E"
+          },
+          "context_window": [
+            {
+              "origin": "SECTION_HEADING",
+              "text": "政务数据目录、共享与跨部门协同",
+              "chunk_id": "MCH-9B1EE59AC49517697E22459FF10EF20E"
+            },
+            {
+              "origin": "SAME_CHUNK_CONTEXT",
+              "text": "# 政务数据目录、共享与跨部门协同",
+              "chunk_id": "MCH-9B1EE59AC49517697E22459FF10EF20E"
+            },
+            {
+              "origin": "ADJACENT_CHUNK",
+              "text": "> 官方资料结构化摘要。正式投标与合规判断需回到原始法律、标准、政策或项目文件核验。",
+              "chunk_id": "MCH-F10ED69DC3BF77C66D6A0EA805EC99AA"
+            },
+            {
+              "origin": "MATERIAL_METADATA",
+              "text": "material_name=GOV-02_政务数据目录、共享与跨部门协同.md；material_type=technical_whitepaper；corpus_scope=GOVERNMENT_ENTERPRISE；source_type=government_guidance；source_org=OFF-U03,OFF-U06,OFF-U07",
+              "material_id": "08d5580a-d81b-491f-8c9b-d37ca4251840"
+            }
+          ],
+          "recovery_state": "RESOLVED_BY_CONTEXT",
+          "recovered_context_chars": 1113,
+          "source_chunk_ids": [
+            "MCH-9B1EE59AC49517697E22459FF10EF20E",
+            "MCH-F10ED69DC3BF77C66D6A0EA805EC99AA",
+            "MCH-10E05647593D617773818984CFB50208",
+            "MCH-B7204C620F6A0CF603CEE34E625A583C",
+            "MCH-839D2B25854C0D1C9B5BB49408B32F22",
+            "MCH-257ECF848FECAB04572BF502D68A1173",
+            "MCH-26B5F534B4D5091391A9D8B4EC47FFCB",
+            "MCH-1FAE191CF4949121A8D999CFF59DB104"
+          ]
+        },
+        "semantic_checks": {
+          "heading_recovered": true,
+          "positive_capability_recovered": false,
+          "negative_boundary_recovered": false,
+          "body_recovered": true,
+          "boundary_treated_as_positive": "NOT_DETERMINED_BY_CONTEXT_COMPONENT"
+        },
+        "component_observation": {
+          "anchor_chunk": {
+            "chunk_id": "MCH-9B1EE59AC49517697E22459FF10EF20E",
+            "material_id": "08d5580a-d81b-491f-8c9b-d37ca4251840",
+            "chunk_index": 0,
+            "source_text": "# 政务数据目录、共享与跨部门协同",
+            "char_start": 0,
+            "char_end": 17,
+            "page_start": null,
+            "page_end": null,
+            "paragraph_start": 1,
+            "paragraph_end": 1,
+            "section": null,
+            "chunk_hash": "685173038f80b85956677ee8e1ec7992144907ec485bb83a258d4d55ad16a30d",
+            "chunker_version": "enterprise-material-v1",
+            "created_at": "2026-08-31T15:40:36.316Z"
+          },
+          "adjacent_policy": "previous one + next one, same material/document only"
+        }
+      },
+      "positive_span_probe": null,
+      "database_source_spans": 0,
+      "database_reviews": 0
+    }
+  },
+  "heading_behavior": {
+    "case_a": false,
+    "case_b": false,
+    "case_c": true,
+    "case_d": false,
+    "explanation": "A heading anchor is resolved by EvidenceSourceContextResolver before Evidence creation. For GOV-02 top-level heading, auto heading_group spans the material and includes body. For a persisted span, expandEvidenceContext then adds only one adjacent chunk on each side. The helper itself does not classify polarity."
+  },
+  "calls": {
+    "siliconflow_embedding": 0,
+    "provider_generation": 0,
+    "deepseek": 0,
+    "dify": 0
+  },
+  "tests": {
+    "executed": false,
+    "note": "Report generation exercised the production resolver and expansion functions directly against read-only DB rows; no mock recovery algorithm or external call was used."
+  },
+  "git": {
+    "production_writes": 0,
+    "db_writes": 0,
+    "commit_push_deploy": false
+  }
+}

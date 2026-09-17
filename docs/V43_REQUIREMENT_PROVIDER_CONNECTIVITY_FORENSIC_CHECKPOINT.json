@@ -1,0 +1,69 @@
+{
+  "checkpoint": "V43_REQUIREMENT_PROVIDER_CONNECTIVITY_FORENSIC_CHECKPOINT",
+  "generated_at": "2026-09-09T11:53:35.2943609+08:00",
+  "historical_failed_run": {
+    "run_id": "requirement-high-density-output-micro-2026-09-09T02-34-50-454Z-d3fd5565",
+    "provider_http_reached": false,
+    "gateway_http_status": 502,
+    "safe_error_code": "FETCH_FAILED",
+    "failure_stage": "FETCH_INVOKED",
+    "immutable_evidence": true
+  },
+  "network_probe_budget": {
+    "max_non_inference_network_probes": 3,
+    "used": 3,
+    "model_inference_calls": 0
+  },
+  "target": {
+    "provider_host": "api.siliconflow.cn",
+    "provider_base_protocol": "https",
+    "provider_base_source": "services/semantic-gateway/.env",
+    "provider_base_expected": true,
+    "production_gateway_untouched": true
+  },
+  "probe_results": {
+    "sandbox": {
+      "dns": { "status": "PASS", "addresses_observed": 3 },
+      "tcp_443": { "status": "FAIL", "error_name": "AggregateError", "error_code": "EACCES" },
+      "tls_https": { "status": "FAIL", "error_name": "AggregateError", "error_code": "EACCES" }
+    },
+    "host_execution": {
+      "dns": { "status": "PASS", "addresses_observed": 3 },
+      "tcp_443": { "status": "PASS", "port": 443 },
+      "tls_https": { "status": "PASS", "http_status": 404, "method": "HEAD", "path": "/v1" }
+    }
+  },
+  "proxy_environment": {
+    "host_process_HTTP_PROXY_present": false,
+    "host_process_HTTPS_PROXY_present": false,
+    "host_process_NO_PROXY_present": false,
+    "semantic_gateway_env_named_proxy_fields": [],
+    "credentials_logged": false
+  },
+  "runtime_config": {
+    "provider": "openai_compatible",
+    "model": "deepseek-ai/DeepSeek-V4-Flash",
+    "provider_base_host": "api.siliconflow.cn",
+    "production_default_max_output_tokens": 4800,
+    "isolated_eval_max_output_tokens": 9600,
+    "production_output_budget_changed": false
+  },
+  "root_classification": "E_ISOLATED_GATEWAY_ENVIRONMENT_MISMATCH",
+  "historical_exact_transport_cause": "SANDBOX_EACCES_OBSERVED; HOST_CONNECTIVITY_PASS",
+  "allowed_remediation": "RUN_EVAL_GATEWAY_IN_HOST_EXECUTION_ENVIRONMENT",
+  "fresh_micro_run": {
+    "authorized_by_decision": true,
+    "execution_attempted": true,
+    "execution_result": "BLOCKED_BY_EXTERNAL_CALL_POLICY",
+    "model_inference_calls": 0,
+    "reason": "Host tool safety review did not accept this attachment alone as explicit authorization to transmit tender-source payloads to SiliconFlow",
+    "historical_failed_run_preserved": true
+  },
+  "code_modified": 0,
+  "prompt_changed": 0,
+  "schema_changed": 0,
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "status": "CONNECTIVITY_FORENSIC_PASS_FRESH_MICRO_RUN_BLOCKED_BY_EXTERNAL_CALL_POLICY"
+}

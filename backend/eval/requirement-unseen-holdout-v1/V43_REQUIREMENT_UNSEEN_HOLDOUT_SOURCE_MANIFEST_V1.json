@@ -1,0 +1,177 @@
+{
+  "manifest_version": "v43-requirement-unseen-holdout-source-manifest-v1",
+  "sealed_at": "2026-09-08T12:42:03.749+08:00",
+  "selection_policy": "WHOLE_DOCUMENT_SOLICITATION_ONLY",
+  "blindness_policy": {
+    "requirement_extraction": "NOT_STARTED",
+    "candidate_generation": "NOT_STARTED",
+    "quality_gate": "NOT_STARTED",
+    "gold_annotation": "NOT_STARTED",
+    "canonical_visibility": "NOT_APPLICABLE_PRESEAL"
+  },
+  "code_freeze_identity": {
+    "branch": "feat/v4.3-semantic-boundary-routing",
+    "head_baseline": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+    "prompt_version": "4.3-requirement-extraction-v3.1.1",
+    "prompt_hash": "9b8fe6582e774a64f36b2be307274e297fafb309cf17270a4d8fc463da817305",
+    "schema_version": "4.3-requirement-extraction-v3.1.1",
+    "schema_hash": "9ee6ebb2a34e5ff3131d3b0bdbbcee45b1c8c33ac38d8325bd8925836abb7acc",
+    "router": {
+      "path": "services/semantic-gateway/src/task-router.js",
+      "sha256": "cad8077807d7e6859de04d0eb69dc0d88d096c23f3ae57806b007702c38f1509"
+    },
+    "canonicalizer": {
+      "path": "backend/src/pipeline/canonical-requirements.js",
+      "version": "4.3-canonical-requirement-1",
+      "sha256": "9d21df8a18163f960d565df4a088232b60c669f101d5a776e60b5647103e1c99"
+    },
+    "quality_gate": {
+      "path": "backend/src/pipeline/requirement-quality-gate.js",
+      "version": "4.3-requirement-quality-gate-1",
+      "sha256": "6a14c5e8e0dea8f6eba1a5f6a2fa55008725b4c9ae61a675b60af6560ec02b14"
+    },
+    "source_resolver": {
+      "path": "backend/src/pipeline/source-location-resolver.js",
+      "version": "NO_EXPLICIT_VERSION_CONSTANT",
+      "sha256": "6acac0ad8d027a9dae5b4868714230556c0da02dffa5e1cd7f69cc2f349a065c"
+    },
+    "requirement_extraction": {
+      "path": "backend/src/pipeline/requirement-extraction.js",
+      "sha256": "54a3be043763114ba8517bf30f29e123236dd7057178605962283170cb6017fa"
+    },
+    "semantic_contracts": {
+      "path": "packages/semantic-contracts/index.js",
+      "sha256": "7e8be5baeb08e5b1b120cd6b4f13918ad196b82b75863b733080cc878564b115"
+    },
+    "parity": "PASS"
+  },
+  "candidate_count": 2,
+  "eligible_count": 2,
+  "candidates": [
+    {
+      "holdout_tender_id": "HOLDOUT-REQ-01",
+      "project_number": "CECOM-2026-BD03-6016",
+      "project_name": "三大平台-全国公共资源交易平台通用软件购置和实施项目",
+      "document_title": "招标文件",
+      "document_type": "完整公开招标文件",
+      "purchaser": "国家信息中心",
+      "procurement_type": "国内公开招标",
+      "candidate_file": "backend/eval/requirement-unseen-holdout-v1/source-candidates/三大平台-全国公共资源交易平台通用软件购置和实施项目招标文件.pdf",
+      "candidate_file_type": "pdf",
+      "candidate_file_size": 730398,
+      "acquisition_sha256": "d7000d6aea6a86991425b8968ccd12432ff3492c1f081ec894e06178539cd949",
+      "primary_solicitation_file": "backend/eval/requirement-unseen-holdout-v1/source-candidates/三大平台-全国公共资源交易平台通用软件购置和实施项目招标文件.pdf",
+      "primary_solicitation_sha256": "d7000d6aea6a86991425b8968ccd12432ff3492c1f081ec894e06178539cd949",
+      "primary_solicitation_text_fingerprint_sha256": "f5459b81d31fafa8c88e35209a9cd7b4d3b9e3e65ab06e783dcdeea7748827eb",
+      "page_count": 66,
+      "source_content_identity": {
+        "project_number_verified": true,
+        "title_verified": true,
+        "purchaser_verified": true,
+        "identity_evidence": "cover_and_first_chapter"
+      },
+      "requirement_bearing": "YES",
+      "requirement_bearing_sections_observed": [
+        "招标公告",
+        "投标人须知",
+        "资格审查、评标办法和标准",
+        "合同条款",
+        "采购需求书",
+        "投标文件格式"
+      ],
+      "tender_identity_verified": "YES",
+      "source_health": "PASS",
+      "duplicate_of_development": "NO",
+      "independence_status": "PASS",
+      "eligibility_status": "PASS",
+      "failure_reason": null
+    },
+    {
+      "holdout_tender_id": "HOLDOUT-REQ-02",
+      "project_number": "CZ2026-0132",
+      "project_name": "2026-2027年信息化运维项目",
+      "document_title": "广东省政府采购公开招标文件",
+      "document_type": "完整公开招标文件",
+      "purchaser": "广州市越秀区人民法院",
+      "procurement_type": "公开招标",
+      "candidate_file": "backend/eval/requirement-unseen-holdout-v1/source-candidates/8a7edc559c42e6cb019c4c29830a1245.zip",
+      "candidate_file_type": "zip",
+      "candidate_file_size": 387845,
+      "acquisition_sha256": "937c6faaa7bdc23560e98cfc253b1fd4b5db2609e7a7e53f5682324777b13871",
+      "zip_entry_list": [
+        "2026-2027年信息化运维项目招标文件（2026021102）.pdf",
+        "2026-2027年信息化运维项目招标文件（2026021102）.docx"
+      ],
+      "unpacked_work_directory": "backend/eval/requirement-unseen-holdout-v1/work/HOLDOUT-REQ-02/",
+      "primary_solicitation_file": "backend/eval/requirement-unseen-holdout-v1/work/HOLDOUT-REQ-02/2026-2027年信息化运维项目招标文件（2026021102）.pdf",
+      "primary_solicitation_sha256": "15e7517e78a4cd6d6663587e2e93b1abd426818c78afb5871f7fa24900e6a196",
+      "primary_solicitation_text_fingerprint_sha256": "12ca84ee375e3777f4259248354e25cdfe05bb5eafe768e61fd720d543d21b6c",
+      "supporting_docx_sha256": "8ef6e73a9e80db9cc8ddca47d4fe0f4498a4691aebb3616c5c641280b091dc5f",
+      "page_count": 61,
+      "source_content_identity": {
+        "project_number_verified": true,
+        "title_verified": true,
+        "purchaser_verified": true,
+        "identity_evidence": "cover_and_first_chapter"
+      },
+      "requirement_bearing": "YES",
+      "requirement_bearing_sections_observed": [
+        "第一章投标邀请",
+        "第二章采购需求",
+        "主要商务要求",
+        "技术标准与要求",
+        "第三章投标人须知",
+        "评标办法"
+      ],
+      "tender_identity_verified": "YES",
+      "source_health": "PASS",
+      "duplicate_of_development": "NO",
+      "independence_status": "PASS",
+      "eligibility_status": "PASS",
+      "failure_reason": null
+    }
+  ],
+  "development_cohort_dedup": {
+    "development_tenders": ["JY-001", "TB-003", "TB-006", "FAST-01", "FAST-04", "FAST-WATER-01"],
+    "development_source_sha256": {
+      "JY-001": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "TB-003": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "TB-006": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+      "FAST-01": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+      "FAST-04": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "FAST-WATER-01": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535"
+    },
+    "development_text_fingerprint_sha256": {
+      "JY-001": "fdf38f39f664c24f55c3e3f685d0afe5775836d3b909e4bee3e114a9d0d7340f",
+      "TB-003": "04664d6709eb307c1e1c3f128e6c23ade23cfb43156a69b70664c56cbeb378ce",
+      "TB-006": "e692a2b9fb76ea001702e073707e39329501d11c26a2b467ea948a442978d9a8",
+      "FAST-01": "372f516bcd26d4e80546b8155b2e9efde82afa98f4e96e3aecfce0d2defef722",
+      "FAST-04": "5fb9708f0adb700f3ca99be80cac0578a5bdc4d185b3544da57b792f74df9eac",
+      "FAST-WATER-01": "da6e0deb5c38268ca405a7a62e00aeb6dfd44a0b0cb5e7ae03dcae4eb4c7674b"
+    },
+    "comparison_key": "project_number + document_title + purchaser + exact_file_sha256 + normalized_text_fingerprint_sha256",
+    "exact_file_sha_overlap": 0,
+    "project_number_overlap": 0,
+    "title_purchaser_identity_overlap": 0,
+    "source_content_fingerprint_overlap": 0,
+    "status": "PASS"
+  },
+  "eval_set_independence": {
+    "overlap_with_six_tender": 0,
+    "overlap_with_calibration": 0,
+    "overlap_with_validation_v1": 0,
+    "overlap_with_validation_v2": 0,
+    "overlap_with_safety": 0,
+    "overlap_with_mutation_controls": 0,
+    "unseen_independence": "PASS"
+  },
+  "safety": {
+    "provider_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "mapping_actions": 0,
+    "claim_actions": 0,
+    "writer_actions": 0,
+    "holdout_execution": "NOT_STARTED"
+  }
+}

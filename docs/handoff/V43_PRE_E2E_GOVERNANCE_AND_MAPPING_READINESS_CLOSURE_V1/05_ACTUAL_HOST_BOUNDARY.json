@@ -1,0 +1,32 @@
+{
+  "artifact_type": "V43_ACTUAL_FIRST_HOST_GATE_V1",
+  "execution_mode": "OFFLINE_ONLY",
+  "provider_calls": 0,
+  "embedding_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "gold_mutations": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "commit": 0,
+  "push": 0,
+  "merge": 0,
+  "deploy": 0,
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "previous_recorded_first_host_gate": "ENTERPRISE_INDEXING_EMBEDDING_PREFLIGHT",
+  "recalculation_basis": {
+    "default_corpus": "CHENGCHUAN_BASE16",
+    "existing_embedding_rows": 160,
+    "identity_model_version_dimension": "PASS",
+    "reembed_required": false,
+    "extension_h3c_huawei_excluded": true
+  },
+  "actual_first_host_gate": "RETRIEVAL_QUERY_EMBEDDING_HOST_PREFLIGHT",
+  "host_required": true,
+  "reason": "Corpus vectors are reused; the first new network operation for E2E retrieval is the query embedding request.",
+  "codex_status": "HOST_NETWORK_BOUNDARY_NOT_EXECUTED",
+  "next_after_host_gate": "RETRIEVAL_AND_DOWNSTREAM_SYNTHETIC_ENGINEERING_E2E"
+}

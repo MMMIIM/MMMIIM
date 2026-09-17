@@ -1,0 +1,94 @@
+{
+  "artifact_type": "V43_P0_BADCASE_44_V6_3_CHECKPOINT",
+  "final_status": "READY_FOR_GPT_P0_43_SEMANTIC_ROOT_CAUSE_ADJUDICATION_V6_3",
+  "scope_contract": "CANONICAL_REQUIREMENT_SCOPE_V1_1",
+  "source_truth_sha256": "9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+  "anchor_case_count": 44,
+  "non_conflict_case_count": 43,
+  "minimum_support_span_count": 47,
+  "old_v6_2_visibility_distribution": {
+    "SOURCE_SCOPE_LOSS": 36,
+    "CROSS_CHUNK_SEMANTIC_SPLIT": 1,
+    "PRODUCTION_INPUT_VISIBLE": 10
+  },
+  "corrected_visibility_distribution": {
+    "SOURCE_IN_SCOPE": 0,
+    "SOURCE_IN_PARSE_CHUNK": 0,
+    "SOURCE_IN_PROVIDER_INPUT": 47,
+    "CROSS_CHUNK_SEMANTIC_SPLIT": 0,
+    "SOURCE_SCOPE_LOSS": 0,
+    "PAYLOAD_COVERAGE_LOSS": 0
+  },
+  "corrected_provider_visible_case_count": 43,
+  "source_scope_losses_repaired": 0,
+  "payload_coverage_losses_repaired": 0,
+  "cross_chunk_repairs": 0,
+  "core6_regression": [
+    {
+      "tender_id": "JY-001",
+      "character_delta": null,
+      "chunk_delta": 1,
+      "scope_chunk_count": 29
+    },
+    {
+      "tender_id": "TB-003",
+      "character_delta": null,
+      "chunk_delta": 1,
+      "scope_chunk_count": 34
+    },
+    {
+      "tender_id": "TB-006",
+      "character_delta": null,
+      "chunk_delta": 1,
+      "scope_chunk_count": 33
+    },
+    {
+      "tender_id": "FAST-01",
+      "character_delta": null,
+      "chunk_delta": 5,
+      "scope_chunk_count": 31
+    },
+    {
+      "tender_id": "FAST-04",
+      "character_delta": null,
+      "chunk_delta": 2,
+      "scope_chunk_count": 53
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "character_delta": null,
+      "chunk_delta": 3,
+      "scope_chunk_count": 30
+    }
+  ],
+  "corrected_replay_plan_status": "PASS",
+  "provider_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "prompt_changes": 0,
+  "schema_changes": 0,
+  "production_semantic_changes": 0,
+  "source_truth_mutations": 0,
+  "gold_labels_reinterpreted": false,
+  "tests": {
+    "provider_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0
+  },
+  "block_reason": null,
+  "replay_run_id": "V43-FLYWHEEL-P0-43-CORRECTED-V6.3-20260912104145",
+  "replay_status": "COMPLETED",
+  "replay_unique_chunk_count": 26,
+  "replay_completed_chunk_count": 26,
+  "replay_provider_calls": 26,
+  "replay_provider_failures": 0,
+  "replay_schema_pass_count": 26,
+  "replay_source_resolution_pass_count": 21,
+  "replay_canonicalization_pass_count": 21,
+  "replay_status_distribution": {
+    "RESPONSE_RECEIVED": 26
+  },
+  "replay_restricted_evidence_root": "C:\\Users\\WINDOWS\\AppData\\Local\\Temp\\v43-p0-v63-replay-o8EpVI",
+  "semantic_root_cause": "PENDING_GPT"
+}

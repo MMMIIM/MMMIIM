@@ -1,0 +1,52 @@
+{
+  "artifact_type": "V43_FACT_QUANTITY_QUALIFIER_PROJECTION_CLOSURE",
+  "source_artifact": "docs/handoff/V43_FACT_REVIEW_BURDEN_DETERMINISTIC_REDUCTION_V1/06_OFFLINE_BEFORE_AFTER.json",
+  "source_artifact_sha256": "ee112767f886c308cf92e1c5b805dd7e38a39becb245833e39299ec5e123ea75",
+  "prior_checkpoint": "docs/handoff/V43_FACT_REVIEW_BURDEN_DETERMINISTIC_REDUCTION_V1/09_CHECKPOINT.json",
+  "prior_checkpoint_sha256": "6ebd69980ab1c618d0cda668f97b028a02420bef168a158eeee1ab19bf3a1128",
+  "candidate_count": 31,
+  "quantity_item_count": 14,
+  "textual_qualifier_count": 8,
+  "relation_qualifier_count": 1,
+  "classification_counts": {
+    "OPERATOR_MAPPED": 0,
+    "COVERED_BY_SCOPE": 6,
+    "COVERED_BY_TEMPORAL": 1,
+    "COVERED_BY_METRIC_NAME": 1,
+    "UNREPRESENTED": 1
+  },
+  "unrepresented_count": 1,
+  "unrepresented_proofs": [
+    {
+      "qualifier_type": "QUANTITY_RELATION",
+      "quantity_index": null,
+      "quantity_name": null,
+      "condition_text": null,
+      "classification": "UNREPRESENTED",
+      "proof": "multiple quantity items have no explicit relation field in the canonical quantity transport",
+      "candidate_id": "MCH-CE770B545973FB9CF092951FCDC402B5#candidate-07"
+    }
+  ],
+  "prior_deterministic_gap_rows": [
+    "MCH-586AF54E29E13328B1D105D03FF08957#candidate-01",
+    "MCH-586AF54E29E13328B1D105D03FF08957#candidate-02",
+    "MCH-CE770B545973FB9CF092951FCDC402B5#candidate-04",
+    "MCH-CE770B545973FB9CF092951FCDC402B5#candidate-05",
+    "MCH-CE770B545973FB9CF092951FCDC402B5#candidate-06",
+    "MCH-CE770B545973FB9CF092951FCDC402B5#candidate-07",
+    "MCH-CE770B545973FB9CF092951FCDC402B5#candidate-10",
+    "MCH-CE770B545973FB9CF092951FCDC402B5#candidate-11"
+  ],
+  "prior_quantity_qualifier_contract_gap_count": 9,
+  "qualifier_projection_closed": false,
+  "canonical_contract_has_textual_qualifier_slot": false,
+  "bounded_proof_only": true,
+  "forbidden_matching": [
+    "embedding",
+    "fuzzy",
+    "synonym expansion",
+    "llm"
+  ],
+  "stop_boundary": "PHASE_A",
+  "required_decision": "BLOCKED_QUANTITY_QUALIFIER_REQUIRES_CONTRACT_DECISION"
+}

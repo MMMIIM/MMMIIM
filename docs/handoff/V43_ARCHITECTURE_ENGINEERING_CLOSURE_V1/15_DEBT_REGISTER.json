@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-09-16T17:31:38.432Z",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "dirty_worktree": true,
+  "authority": "SYNTHETIC_EVAL_ONLY",
+  "production_authority": "NONE",
+  "schema_version": "v43-debt-register-v1",
+  "open": [
+    {
+      "id": "RAG-HOLDOUT-REPLAY",
+      "status": "EXTERNAL_GATE",
+      "next_action": "separately authorize/query-vector replay"
+    },
+    {
+      "id": "FACT-OBSERVABILITY-LEGACY-ASSERTION",
+      "status": "PRE_EXISTING_TEST",
+      "next_action": "separate decision; out of closure scope"
+    }
+  ],
+  "closed": [
+    "REQ057 old semantic blocker",
+    "per-slot search_run_id lineage inconsistency"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "phase": "07",
+  "baseline_fingerprint": "318d53c8a8785952d38a173dc086efd1d044c5871e288e305614e52e14a19641",
+  "confirmed_current": ["allow/current claim gate required for assertable claims", "enterprise facts without allow blocked", "reference-only context is non-assertable", "revision reuses safe context/snapshot"],
+  "historical_fixed": ["Writer enterprise Fact assertion bypass", "Writer gate identity loss"],
+  "open": ["provider fidelity", "strong typed separation of context-only payload fields"],
+  "conflicting": ["raw context fields coexist with assertable projection"],
+  "unknown": ["provider interpretation outside contract"],
+  "risks": ["P1-WRITER-001", "P1-WRITER-002"],
+  "evidence_refs": ["backend/src/pipeline/writer-input-authorization-v1.js", "backend/src/pipeline/writer-execution-contract-v1.js", "backend/src/pipeline/writer-generation-batch-builder-v2.js", "backend/src/pipeline/document-generation-service.js"],
+  "fact_revisions": ["writer assertion authority enforced with context-boundary debt"],
+  "next_dependencies": ["08_GENERATION_REUSE_SAFETY_CHECKPOINT"],
+  "gate": "WRITER_ASSERTION_AUTHORITY=ENFORCED_WITH_BOUNDARY_DEBT",
+  "safe_to_continue": true
+}

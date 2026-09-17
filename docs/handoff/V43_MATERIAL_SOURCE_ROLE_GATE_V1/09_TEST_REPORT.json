@@ -1,0 +1,61 @@
+{
+  "artifact_type": "V43_MATERIAL_SOURCE_ROLE_GATE_V1_TEST_REPORT",
+  "test_runs": [
+    {
+      "command": "node --test backend/test/material-source-role-gate.test.js",
+      "status": "PASS",
+      "tests": 14
+    },
+    {
+      "command": "node --test backend/test/evidence-fact-contract-v1.test.js",
+      "status": "PASS",
+      "tests": 14
+    },
+    {
+      "command": "node --test backend/test/writer-input-authorization-v1.test.js",
+      "status": "PASS",
+      "tests": 33
+    },
+    {
+      "command": "node --test backend/test/enterprise-claim-gate-v2.test.js",
+      "status": "PASS",
+      "tests": 14
+    },
+    {
+      "command": "node --test backend/test/evidence-fact-source-role.test.js",
+      "status": "PASS",
+      "tests": 5
+    },
+    {
+      "command": "node --test backend/test/claim-gate-input-adapter-v1.test.js",
+      "status": "PASS",
+      "tests": 14
+    },
+    {
+      "command": "node --test backend/test/evidence-fact-claim-gate.test.js backend/test/claim-gate-targeted-remediation.test.js",
+      "status": "PASS",
+      "tests": 21
+    },
+    {
+      "command": "node --test backend/test/company-material-evidence.test.js backend/test/evidence-service.test.js backend/test/requirement-evidence-mapping-contract-v1.test.js backend/test/mapping-to-claim-entrypoint.test.js backend/test/mapping-to-claim-canonical.test.js",
+      "status": "PASS",
+      "tests": 50
+    },
+    {
+      "command": "node --test backend/test/enterprise-retrieval.test.js backend/test/production-retrieval-contract.test.js backend/test/writer-v2-composition.test.js backend/test/writer-authority-p0.test.js backend/test/evidence-review-contract.test.js",
+      "status": "PASS",
+      "tests": 54
+    },
+    {
+      "command": "node --test backend/eval/rag-governance/rag-corpus-inventory.test.js",
+      "status": "PASS",
+      "tests": 4
+    }
+  ],
+  "focused_total": 223,
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "gold_mutations": 0,
+  "note": "Build, lint and git diff --check are reported in the checkpoint after this artifact generator completes."
+}

@@ -1,0 +1,212 @@
+{
+  "artifact_type": "V43_PARALLEL_FINAL_DETERMINISTIC_CONTROL_MATRIX",
+  "eval_only": true,
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "p0_controls": {
+    "total": 12,
+    "passed": 12,
+    "results": [
+      {
+        "id": "P0-LIST-01",
+        "expected": "REVIEW_REQUIRED",
+        "actual": "REVIEW_REQUIRED",
+        "reason_codes": [
+          "PARENT_CRITICAL_CONSEQUENCE_OMISSION_REVIEW"
+        ],
+        "pass": true
+      },
+      {
+        "id": "P0-LIST-02",
+        "expected": "REVIEW_REQUIRED",
+        "actual": "REVIEW_REQUIRED",
+        "reason_codes": [
+          "PARENT_CRITICAL_CONSEQUENCE_OMISSION_REVIEW"
+        ],
+        "pass": true
+      },
+      {
+        "id": "P0-LIST-03",
+        "expected": "REVIEW_REQUIRED",
+        "actual": "REVIEW_REQUIRED",
+        "reason_codes": [
+          "PARENT_CRITICAL_CONSEQUENCE_OMISSION_REVIEW"
+        ],
+        "pass": true
+      },
+      {
+        "id": "P0-LIST-04",
+        "expected": "REVIEW_REQUIRED",
+        "actual": "REVIEW_REQUIRED",
+        "reason_codes": [
+          "PARENT_CRITICAL_CONSEQUENCE_OMISSION_REVIEW"
+        ],
+        "pass": true
+      },
+      {
+        "id": "P0-TABLE-01",
+        "expected": "REVIEW_REQUIRED",
+        "actual": "REVIEW_REQUIRED",
+        "reason_codes": [
+          "PARENT_CRITICAL_CONSEQUENCE_OMISSION_REVIEW"
+        ],
+        "pass": true
+      },
+      {
+        "id": "P0-TABLE-02",
+        "expected": "REVIEW_REQUIRED",
+        "actual": "REVIEW_REQUIRED",
+        "reason_codes": [
+          "PARENT_CRITICAL_CONSEQUENCE_OMISSION_REVIEW"
+        ],
+        "pass": true
+      },
+      {
+        "id": "P0-TABLE-03",
+        "expected": "REVIEW_REQUIRED",
+        "actual": "REVIEW_REQUIRED",
+        "reason_codes": [
+          "PARENT_CRITICAL_CONSEQUENCE_OMISSION_REVIEW"
+        ],
+        "pass": true
+      },
+      {
+        "id": "P0-TABLE-04",
+        "expected": "REVIEW_REQUIRED",
+        "actual": "REVIEW_REQUIRED",
+        "reason_codes": [
+          "PARENT_CRITICAL_CONSEQUENCE_OMISSION_REVIEW"
+        ],
+        "pass": true
+      },
+      {
+        "id": "P0-TABLE-05",
+        "expected": "REVIEW_REQUIRED",
+        "actual": "REVIEW_REQUIRED",
+        "reason_codes": [
+          "PARENT_CRITICAL_CONSEQUENCE_OMISSION_REVIEW"
+        ],
+        "pass": true
+      },
+      {
+        "id": "P0-TABLE-06",
+        "expected": "REVIEW_REQUIRED",
+        "actual": "REVIEW_REQUIRED",
+        "reason_codes": [
+          "PARENT_CRITICAL_CONSEQUENCE_OMISSION_REVIEW"
+        ],
+        "pass": true
+      },
+      {
+        "id": "P0-TABLE-07",
+        "expected": "REVIEW_REQUIRED",
+        "actual": "REVIEW_REQUIRED",
+        "reason_codes": [
+          "PARENT_CRITICAL_CONSEQUENCE_OMISSION_REVIEW"
+        ],
+        "pass": true
+      },
+      {
+        "id": "P0-TABLE-08",
+        "expected": "REVIEW_REQUIRED",
+        "actual": "REVIEW_REQUIRED",
+        "reason_codes": [
+          "PARENT_CRITICAL_CONSEQUENCE_OMISSION_REVIEW"
+        ],
+        "pass": true
+      }
+    ]
+  },
+  "negative_containment_controls": {
+    "total": 4,
+    "passed": 4,
+    "results": [
+      {
+        "id": "P0-NEG-01",
+        "expected": "NO_PARENT_REVIEW",
+        "actual": "NO_PARENT_REVIEW",
+        "reason_codes": [
+          "NUMBER_OMISSION_REVIEW",
+          "MODALITY_ADDITION_REVIEW",
+          "TABLE_HEADER_OR_ROW_LOSS",
+          "STATUS_DISTORTION"
+        ],
+        "pass": true
+      },
+      {
+        "id": "P0-NEG-02",
+        "expected": "NO_PARENT_REVIEW",
+        "actual": "NO_PARENT_REVIEW",
+        "reason_codes": [
+          "NUMBER_OMISSION_REVIEW",
+          "MODALITY_ADDITION_REVIEW",
+          "STATUS_DISTORTION"
+        ],
+        "pass": true
+      },
+      {
+        "id": "P0-NEG-03",
+        "expected": "NO_PARENT_REVIEW",
+        "actual": "NO_PARENT_REVIEW",
+        "reason_codes": [],
+        "pass": true
+      },
+      {
+        "id": "P0-NEG-04",
+        "expected": "NO_PARENT_REVIEW",
+        "actual": "NO_PARENT_REVIEW",
+        "reason_codes": [
+          "NEGATION_DISTORTION",
+          "MODALITY_ADDITION_REVIEW",
+          "TABLE_HEADER_OR_ROW_LOSS"
+        ],
+        "pass": true
+      }
+    ]
+  },
+  "combined_structure_controls": {
+    "total": 16,
+    "passed": 16
+  },
+  "number_controls": {
+    "total": 4,
+    "passed": 4,
+    "results": [
+      {
+        "id": "NUM-01-STRUCTURAL-SUPPRESS",
+        "expected": "PASS",
+        "actual": "PASS",
+        "reason_codes": [],
+        "pass": true
+      },
+      {
+        "id": "NUM-02-STRUCTURAL-REVIEW",
+        "expected": "REVIEW_REQUIRED",
+        "actual": "REVIEW_REQUIRED",
+        "reason_codes": [
+          "NUMBER_OMISSION_REVIEW"
+        ],
+        "pass": true
+      },
+      {
+        "id": "NUM-03-BUSINESS-DISTORTION",
+        "expected": "NUMBER_DISTORTION",
+        "actual": "NUMBER_DISTORTION",
+        "reason_codes": [
+          "NUMBER_DISTORTION"
+        ],
+        "pass": true
+      },
+      {
+        "id": "NUM-04-IDENTIFIER-DISTORTION",
+        "expected": "NUMBER_DISTORTION",
+        "actual": "NUMBER_DISTORTION",
+        "reason_codes": [
+          "NUMBER_DISTORTION"
+        ],
+        "pass": true
+      }
+    ]
+  }
+}

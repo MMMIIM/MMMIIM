@@ -1,0 +1,60 @@
+{
+  "checkpoint": "V43_REQUIREMENT_FIXED48_RUNNER_DURABILITY_RECOVERY_GATE",
+  "status": "PASS",
+  "implementation_scope": "EVAL_RUNNER_DURABILITY_AND_ACCOUNTING_ONLY",
+  "historical_run": {
+    "status": "NON_RESUMABLE_HISTORICAL_RUN",
+    "reused": false,
+    "provider_calls_inferred": false
+  },
+  "durable_ledger": {
+    "implementation": "backend/eval/requirement-production-quality-gate/fixed48-durable-runner.js",
+    "format": "append_only_jsonl",
+    "fsync_before_dispatch": true,
+    "events": ["CASE_REGISTERED", "CALL_RESERVED", "CALL_DISPATCHED", "PROVIDER_RETURNED", "CASE_FINALIZED", "CASE_FAILED_BEFORE_DISPATCH", "CASE_UNKNOWN_AFTER_DISPATCH"],
+    "safe_fields_only": true
+  },
+  "state_machine": {
+    "pending": "PENDING",
+    "call_reserved": "CALL_RESERVED",
+    "dispatched": "DISPATCHED",
+    "response_received": "RESPONSE_RECEIVED",
+    "finalized": "FINALIZED",
+    "failed_before_dispatch": "FAILED_BEFORE_DISPATCH",
+    "unknown_after_dispatch": "UNKNOWN_AFTER_DISPATCH"
+  },
+  "tests": {
+    "command": "node --test backend/test/fixed48-runner-durability.test.js backend/test/requirement-production-quality-gate.test.js backend/test/requirement-production-readiness-recovery.test.js",
+    "passed": 21,
+    "failed": 0,
+    "provider_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "crash_before_reserve": "PASS",
+    "reserved_before_dispatch_conservative_budget": "PASS",
+    "unknown_after_dispatch_no_retry": "PASS",
+    "response_received_resume_finalize": "PASS",
+    "completed_prefix_resume": "PASS",
+    "ledger_derived_budget_cap": "PASS",
+    "safe_telemetry": "PASS",
+    "git_diff_check": "PASS"
+  },
+  "gate": {
+    "fixed48_runner_durability": "PASS",
+    "per_case_telemetry_durable": "YES",
+    "call_accounting_durable": "YES",
+    "crash_recovery": "PASS",
+    "no_duplicate_call_on_resume": "PASS",
+    "unknown_dispatch_fail_closed": "PASS",
+    "budget_cap_enforced": "PASS"
+  },
+  "side_effects": {
+    "provider_calls_this_gate": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "production_code_changes": 0,
+    "new_migrations": 0,
+    "new_live_fixed48_run": false
+  },
+  "next_gate": "NEW_FIXED_48_LIVE_CERTIFICATION_REQUIRES_NEW_SCOPED_PROVIDER_AUTHORIZATION"
+}

@@ -1,0 +1,93 @@
+{
+  "artifact_type": "V43_REFERENCE_CORPUS_SPECIFICITY_TOPIC_SOURCE_PLAN",
+  "physical_corpus_gap": "PHYSICAL_CORPUS_GAP_NOT_OBSERVED",
+  "max_new_materials_without_new_decision": 14,
+  "topic_families": [
+    {
+      "topic_family": "video_ar_surveillance",
+      "priority": "P1",
+      "selected_source_ids": [
+        "H3C-004",
+        "H3C-020"
+      ],
+      "status": "SOURCE_CONTENT_AVAILABLE_FOR_BOUNDED_REVIEW",
+      "density": "LOW_OR_PARTIAL"
+    },
+    {
+      "topic_family": "urban_governance_grid",
+      "priority": "P1",
+      "selected_source_ids": [
+        "H3C-011",
+        "H3C-013"
+      ],
+      "status": "SOURCE_CONTENT_AVAILABLE_FOR_BOUNDED_REVIEW",
+      "density": "LOW_OR_PARTIAL"
+    },
+    {
+      "topic_family": "call_center_speech_ai",
+      "priority": "P2",
+      "selected_source_ids": [],
+      "status": "SEMANTIC_CORPUS_GAP_OR_LOW_DENSITY",
+      "density": "NO_SUITABLE_LOCAL_TECHNICAL_SOURCE"
+    },
+    {
+      "topic_family": "database_internals",
+      "priority": "P2",
+      "selected_source_ids": [
+        "H3C-003",
+        "H3C-004",
+        "HW-005"
+      ],
+      "status": "SEMANTIC_CORPUS_GAP_OR_LOW_DENSITY",
+      "density": "LOW_OR_PARTIAL"
+    },
+    {
+      "topic_family": "document_material_platform",
+      "priority": "P2",
+      "selected_source_ids": [],
+      "status": "SEMANTIC_CORPUS_GAP_OR_LOW_DENSITY",
+      "density": "NO_SUITABLE_LOCAL_TECHNICAL_SOURCE"
+    },
+    {
+      "topic_family": "electronic_signature_ca",
+      "priority": "P2",
+      "selected_source_ids": [],
+      "status": "SEMANTIC_CORPUS_GAP_OR_LOW_DENSITY",
+      "density": "NO_SUITABLE_LOCAL_TECHNICAL_SOURCE"
+    },
+    {
+      "topic_family": "ux_interaction",
+      "priority": "P2",
+      "selected_source_ids": [
+        "H3C-003",
+        "H3C-004"
+      ],
+      "status": "SEMANTIC_CORPUS_GAP_OR_LOW_DENSITY",
+      "density": "LOW_OR_PARTIAL"
+    },
+    {
+      "topic_family": "esg",
+      "priority": "P3",
+      "selected_source_ids": [
+        "HW-002",
+        "HW-006"
+      ],
+      "status": "SOURCE_CONTENT_AVAILABLE_FOR_BOUNDED_REVIEW",
+      "density": "LOW_OR_PARTIAL"
+    },
+    {
+      "topic_family": "unclassified_from_available_text",
+      "priority": "REVIEW",
+      "selected_source_ids": [],
+      "status": "REVIEW_REQUIRED",
+      "density": "UNCLASSIFIED_RETAINED"
+    }
+  ],
+  "source_content_blockers": [
+    "call_center_speech_ai",
+    "document_material_platform",
+    "electronic_signature_ca"
+  ],
+  "no_synthetic_sources": true,
+  "no_llm_authored_sources": true
+}

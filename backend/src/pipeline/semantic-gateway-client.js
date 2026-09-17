@@ -5,6 +5,12 @@ import { readSemanticGatewayRuntimeConfig } from '../../../packages/semantic-con
 const VALID_GATEWAY_STATUSES = new Set(['success', 'failed']);
 const CONTROLLED_GATEWAY_ERROR_CODES = new Set(SEMANTIC_GATEWAY_ERROR_CODES);
 const PROBE_DIAGNOSTIC_MODE = 'probe-v1';
+const SEMANTIC_OUTPUT_ERROR_CODES = new Set([
+  'OUTPUT_SCHEMA_INVALID',
+  'MAPPING_OUTPUT_SCHEMA_INVALID',
+  'MAPPING_SEMANTIC_INCONSISTENT',
+  'SUPPORT_SPAN_INVALID'
+]);
 
 function normalizeBaseUrl(value) {
   return String(value || '').trim().replace(/\/+$/, '');
@@ -16,17 +22,24 @@ function positiveTimeout(value, fallback) {
 }
 
 export function parseSemanticGatewayConfig(env = {}, { taskType = null } = {}) {
-  const canonicalTask = taskType === 'evidence_support_assessment' || taskType === 'requirement_extraction';
+  const canonicalTask = taskType === 'evidence_support_assessment' || taskType === 'requirement_extraction' || taskType === 'evidence_fact_extraction' || taskType === 'evidence_fact_candidate_v2' || taskType === 'evidence_fact_candidate_v2_1' || taskType === 'evidence_fact_candidate_v2_2' || taskType === 'requirement_evidence_mapping';
   const canonicalEvidenceSupport = taskType === 'evidence_support_assessment';
   const canonicalRequirementExtraction = taskType === 'requirement_extraction';
+  const canonicalEvidenceFactExtraction = taskType === 'evidence_fact_extraction';
+  const canonicalEvidenceFactCandidateV2 = taskType === 'evidence_fact_candidate_v2' || taskType === 'evidence_fact_candidate_v2_1' || taskType === 'evidence_fact_candidate_v2_2';
+  const canonicalRequirementEvidenceMapping = taskType === 'requirement_evidence_mapping';
   const canonicalRuntime = readSemanticGatewayRuntimeConfig(env);
   const timeoutMs = positiveTimeout(
     canonicalEvidenceSupport
       ? (env.SEMANTIC_GATEWAY_EVIDENCE_SUPPORT_TIMEOUT_MS || env.SEMANTIC_GATEWAY_TIMEOUT_MS)
       : canonicalRequirementExtraction
         ? (env.SEMANTIC_GATEWAY_REQUIREMENT_EXTRACTION_TIMEOUT_MS || env.SEMANTIC_GATEWAY_TIMEOUT_MS)
+        : canonicalEvidenceFactExtraction || canonicalEvidenceFactCandidateV2
+        ? (env.SEMANTIC_GATEWAY_EVIDENCE_FACT_TIMEOUT_MS || env.SEMANTIC_GATEWAY_TIMEOUT_MS)
+      : canonicalRequirementEvidenceMapping
+        ? (env.SEMANTIC_GATEWAY_MAPPING_TIMEOUT_MS || env.SEMANTIC_GATEWAY_TIMEOUT_MS)
       : env.V43_GATEWAY_TIMEOUT_MS,
-    canonicalEvidenceSupport ? 120_000 : canonicalRequirementExtraction ? 300_000 : 30_000
+    canonicalEvidenceSupport ? 120_000 : canonicalRequirementExtraction ? 300_000 : canonicalEvidenceFactExtraction || canonicalEvidenceFactCandidateV2 ? 120_000 : canonicalRequirementEvidenceMapping ? 120_000 : 30_000
   );
   return Object.freeze({
     apiBase: normalizeBaseUrl(canonicalTask ? canonicalRuntime.gatewayApiBase : env.V43_GATEWAY_API_BASE),
@@ -45,6 +58,36 @@ export function parseSemanticGatewayConfig(env = {}, { taskType = null } = {}) {
           ? env.SEMANTIC_GATEWAY_REQUIREMENT_EXTRACTION_TIMEOUT_MS
           : env.V43_GATEWAY_REQUIREMENT_EXTRACTION_TIMEOUT_MS,
         300_000
+      ),
+      evidence_fact_extraction: positiveTimeout(
+        canonicalEvidenceFactExtraction
+          ? env.SEMANTIC_GATEWAY_EVIDENCE_FACT_TIMEOUT_MS
+          : env.V43_EVIDENCE_FACT_TIMEOUT_MS,
+        120_000
+      ),
+      evidence_fact_candidate_v2: positiveTimeout(
+        canonicalEvidenceFactCandidateV2
+          ? env.SEMANTIC_GATEWAY_EVIDENCE_FACT_TIMEOUT_MS
+          : env.V43_EVIDENCE_FACT_TIMEOUT_MS,
+        120_000
+      ),
+      evidence_fact_candidate_v2_1: positiveTimeout(
+        canonicalEvidenceFactCandidateV2
+          ? env.SEMANTIC_GATEWAY_EVIDENCE_FACT_TIMEOUT_MS
+          : env.V43_EVIDENCE_FACT_TIMEOUT_MS,
+        120_000
+      ),
+      evidence_fact_candidate_v2_2: positiveTimeout(
+        canonicalEvidenceFactCandidateV2
+          ? env.SEMANTIC_GATEWAY_EVIDENCE_FACT_TIMEOUT_MS
+          : env.V43_EVIDENCE_FACT_TIMEOUT_MS,
+        120_000
+      ),
+      requirement_evidence_mapping: positiveTimeout(
+        canonicalRequirementEvidenceMapping
+          ? env.SEMANTIC_GATEWAY_MAPPING_TIMEOUT_MS
+          : env.V43_GATEWAY_MAPPING_TIMEOUT_MS,
+        120_000
       )
     })
   });
@@ -78,10 +121,16 @@ function safeDiagnosticScalar(value, maxLength = 240) {
 function safeValidationDiagnostics(value) {
   if (!Array.isArray(value)) return [];
   return value.slice(0, 100).map(item => ({
+    stage: safeDiagnosticScalar(item?.stage, 40),
     path: safeDiagnosticScalar(item?.path, 200),
-    validator_code: safeDiagnosticScalar(item?.validator_code, 80),
+    keyword: safeDiagnosticScalar(item?.keyword, 80) || safeDiagnosticScalar(item?.validator_code, 80),
+    actual_type: safeDiagnosticScalar(item?.actual_type, 80) || safeDiagnosticScalar(item?.observed_category, 80),
+    validator_code: safeDiagnosticScalar(item?.validator_code, 80) || safeDiagnosticScalar(item?.keyword, 80),
     expected: safeDiagnosticScalar(item?.expected, 240),
-    observed_category: safeDiagnosticScalar(item?.observed_category, 80),
+    ...(typeof item?.additional_property === 'string' ? {
+      additional_property: safeDiagnosticScalar(item.additional_property, 120)
+    } : {}),
+    observed_category: safeDiagnosticScalar(item?.observed_category, 80) || safeDiagnosticScalar(item?.actual_type, 80),
     message: safeDiagnosticScalar(item?.message, 240)
   }));
 }
@@ -123,15 +172,80 @@ function safeStructuralSummary(value) {
   };
 }
 
+function safeOutboundPromptDiagnostics(value) {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return null;
+  return {
+    instruction_sha256: safeDiagnosticScalar(value.instruction_sha256, 64),
+    instruction_char_count: Number.isInteger(value.instruction_char_count) ? value.instruction_char_count : null,
+    payload_sha256: safeDiagnosticScalar(value.payload_sha256, 64),
+    payload_char_count: Number.isInteger(value.payload_char_count) ? value.payload_char_count : null,
+    legacy_schema_tokens_observed: Array.isArray(value.legacy_schema_tokens_observed)
+      ? value.legacy_schema_tokens_observed.filter(token => typeof token === 'string').slice(0, 20).map(token => token.slice(0, 80))
+      : [],
+    legacy_schema_positive_schema_context: value.legacy_schema_positive_schema_context === true,
+    contamination: value.contamination === true
+  };
+}
+
+function safeMappingSemanticDiagnostic(value) {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return null;
+  const dimensions = value.parsed_semantic_fields?.dimensions;
+  return {
+    result_index: Number.isInteger(value.result_index) ? value.result_index : null,
+    response_keys: Array.isArray(value.response_keys)
+      ? value.response_keys.filter(key => typeof key === 'string').slice(0, 20).map(key => key.slice(0, 80))
+      : [],
+    parsed_semantic_fields: {
+      decision: typeof value.parsed_semantic_fields?.decision === 'string'
+        ? value.parsed_semantic_fields.decision.slice(0, 40) : null,
+      dimensions: dimensions && typeof dimensions === 'object' && !Array.isArray(dimensions)
+        ? Object.fromEntries(Object.entries(dimensions).slice(0, 20).map(([key, item]) => [
+          key.slice(0, 80), typeof item === 'string' ? item.slice(0, 40) : null
+        ]))
+        : {}
+    },
+    exact_failure_path: typeof value.exact_failure_path === 'string'
+      ? value.exact_failure_path.slice(0, 240) : null,
+    consistency_rule: typeof value.consistency_rule === 'string'
+      ? value.consistency_rule.slice(0, 120) : null
+  };
+}
+
 function safeProbeDiagnostics(value) {
   if (!value || typeof value !== 'object' || Array.isArray(value)) return null;
+  const semanticErrorCode = typeof value.semantic_error_code === 'string'
+    ? value.semantic_error_code
+    : SEMANTIC_OUTPUT_ERROR_CODES.has(value.gateway_error_code) ? value.gateway_error_code : null;
   const safe = {
+    task_type: safeDiagnosticScalar(value.task_type, 80),
     json_parse_success: typeof value.json_parse_success === 'boolean' ? value.json_parse_success : null,
     markdown_fence_present: typeof value.markdown_fence_present === 'boolean' ? value.markdown_fence_present : null,
+    gateway_http_status: Number.isInteger(value.gateway_http_status) ? value.gateway_http_status : null,
+    gateway_error_code: safeDiagnosticScalar(value.gateway_error_code, 120),
+    semantic_error_code: safeDiagnosticScalar(semanticErrorCode, 120),
+    provider_error_code: safeDiagnosticScalar(value.provider_error_code, 120),
     provider_http_status: Number.isInteger(value.provider_http_status) ? value.provider_http_status : null,
+    provider: safeDiagnosticScalar(value.provider, 80),
+    model: safeDiagnosticScalar(value.model, 160),
+    configured_provider: safeDiagnosticScalar(value.configured_provider, 80),
+    configured_model: safeDiagnosticScalar(value.configured_model, 160),
+    requested_provider: safeDiagnosticScalar(value.requested_provider, 80),
+    requested_model: safeDiagnosticScalar(value.requested_model, 160),
+    response_provider: safeDiagnosticScalar(value.response_provider, 80),
+    configured_default_max_tokens: Number.isInteger(value.configured_default_max_tokens)
+      ? value.configured_default_max_tokens : null,
+    task_override_applied: typeof value.task_override_applied === 'boolean' ? value.task_override_applied : null,
+    resolved_max_output_tokens: Number.isInteger(value.resolved_max_output_tokens)
+      ? value.resolved_max_output_tokens : null,
+    endpoint: safeDiagnosticScalar(value.endpoint, 80),
     provider_adapter_invoked: value.provider_adapter_invoked === true,
     fetch_invoked: value.fetch_invoked === true,
     provider_http_reached: value.provider_http_reached === true,
+    empty_domain_namespace_normalized_count: Number.isInteger(value.empty_domain_namespace_normalized_count)
+      && value.empty_domain_namespace_normalized_count >= 0
+      ? value.empty_domain_namespace_normalized_count : 0,
+    retry_attempt: Number.isInteger(value.retry_attempt) && value.retry_attempt >= 0 ? value.retry_attempt : null,
+    retry_reason: safeDiagnosticScalar(value.retry_reason, 120),
     current_stage: safeDiagnosticScalar(value.current_stage, 80),
     failure_stage: safeDiagnosticScalar(value.failure_stage, 80),
     error_name: safeDiagnosticScalar(value.error_name, 80),
@@ -147,6 +261,7 @@ function safeProbeDiagnostics(value) {
     response_model: safeDiagnosticScalar(value.response_model, 120),
     response_id: safeDiagnosticScalar(value.response_id, 128),
     provider_trace_id: safeDiagnosticScalar(value.provider_trace_id, 128),
+    latency_ms: Number.isInteger(value.latency_ms) && value.latency_ms >= 0 ? value.latency_ms : null,
     model_content_length_chars: Number.isInteger(value.model_content_length_chars) ? value.model_content_length_chars : null,
     output_truncated: value.output_truncated === true,
     response_format_type: value.response_format_type === 'json_schema' || value.response_format_type === 'json_object'
@@ -172,6 +287,37 @@ function safeProbeDiagnostics(value) {
       } : null,
     json_parse_error_offset: Number.isInteger(value.json_parse_error_offset) ? value.json_parse_error_offset : null,
     schema_validation_errors: safeValidationDiagnostics(value.schema_validation_errors),
+    fact_semantic_diagnostic: value.fact_semantic_diagnostic && typeof value.fact_semantic_diagnostic === 'object'
+      ? {
+        stage: value.fact_semantic_diagnostic.stage === 'FACT' ? 'FACT' : null,
+        diagnostic: value.fact_semantic_diagnostic.diagnostic === 'FACT_SEMANTIC_UNKNOWN_FIELDS_REJECTED'
+          ? 'FACT_SEMANTIC_UNKNOWN_FIELDS_REJECTED' : null,
+        unknown_fields: Array.isArray(value.fact_semantic_diagnostic.unknown_fields)
+          ? value.fact_semantic_diagnostic.unknown_fields
+            .filter(field => typeof field === 'string').slice(0, 100).map(field => field.slice(0, 120))
+          : []
+      }
+      : null,
+    fact_normalization_diagnostic: value.fact_normalization_diagnostic && typeof value.fact_normalization_diagnostic === 'object'
+      ? {
+        projection_invoked: value.fact_normalization_diagnostic.projection_invoked === true,
+        normalizer_invoked: value.fact_normalization_diagnostic.normalizer_invoked === true,
+        pre_normalization_fact_keys: Array.isArray(value.fact_normalization_diagnostic.pre_normalization_fact_keys)
+          ? value.fact_normalization_diagnostic.pre_normalization_fact_keys.slice(0, 100).map(keys => Array.isArray(keys)
+            ? keys.filter(key => typeof key === 'string').slice(0, 80).map(key => key.slice(0, 120)) : []) : [],
+        post_normalization_fact_keys: Array.isArray(value.fact_normalization_diagnostic.post_normalization_fact_keys)
+          ? value.fact_normalization_diagnostic.post_normalization_fact_keys.slice(0, 100).map(keys => Array.isArray(keys)
+            ? keys.filter(key => typeof key === 'string').slice(0, 80).map(key => key.slice(0, 120)) : []) : [],
+        unexpected_property_names: Array.isArray(value.fact_normalization_diagnostic.unexpected_property_names)
+          ? value.fact_normalization_diagnostic.unexpected_property_names.filter(key => typeof key === 'string').slice(0, 100).map(key => key.slice(0, 120)) : [],
+        allowed_property_names: Array.isArray(value.fact_normalization_diagnostic.allowed_property_names)
+          ? value.fact_normalization_diagnostic.allowed_property_names.filter(key => typeof key === 'string').slice(0, 100).map(key => key.slice(0, 120)) : [],
+        removed_property_names: Array.isArray(value.fact_normalization_diagnostic.removed_property_names)
+          ? value.fact_normalization_diagnostic.removed_property_names.filter(key => typeof key === 'string').slice(0, 100).map(key => key.slice(0, 120)) : [],
+        exact_validation_path: safeDiagnosticScalar(value.fact_normalization_diagnostic.exact_validation_path, 240)
+      } : null,
+    outbound_prompt_diagnostics: safeOutboundPromptDiagnostics(value.outbound_prompt_diagnostics),
+    mapping_semantic_diagnostic: safeMappingSemanticDiagnostic(value.mapping_semantic_diagnostic),
     envelope_validation_errors: safeValidationDiagnostics(value.envelope_validation_errors),
     legacy_schema_detected: value.legacy_schema_detected === true,
     structural_summary: safeStructuralSummary(value.structural_summary)
@@ -189,7 +335,13 @@ async function parseStructuredGatewayError(response, { diagnosticMode = null } =
   }
   if (!body || typeof body !== 'object' || Array.isArray(body)
     || !CONTROLLED_GATEWAY_ERROR_CODES.has(body.error_code)) return null;
-  const audit = { http_status: response.status, gateway_error_code: body.error_code };
+  const audit = {
+    // `http_status` is retained as the historical Gateway status alias.
+    http_status: response.status,
+    gateway_http_status: response.status,
+    gateway_error_code: body.error_code,
+    ...(SEMANTIC_OUTPUT_ERROR_CODES.has(body.error_code) ? { semantic_error_code: body.error_code } : {})
+  };
   if (typeof body.request_id === 'string' && body.request_id.length > 0 && body.request_id.length <= 128) {
     audit.request_id = body.request_id;
   }
@@ -424,7 +576,7 @@ export class SemanticGatewayClient {
       throw new SemanticGatewayError(
         'GATEWAY_HTTP_ERROR',
         'Semantic Gateway 返回非成功 HTTP 状态。',
-        auditFor(taskType, { http_status: response.status }),
+        auditFor(taskType, { http_status: response.status, gateway_http_status: response.status }),
         response.status >= 500 ? 502 : 400
       );
     }
@@ -436,7 +588,7 @@ export class SemanticGatewayClient {
       throw new SemanticGatewayError(
         'GATEWAY_ENVELOPE_INVALID',
         'Semantic Gateway 外层响应不是合法 JSON。',
-        auditFor(taskType)
+        auditFor(taskType, { gateway_http_status: response.status })
       );
     }
 
@@ -448,17 +600,20 @@ export class SemanticGatewayClient {
       throw new SemanticGatewayError(
         'GATEWAY_RESPONSE_PAYLOAD_MISSING',
         'Semantic Gateway 缺少 response_payload_json。',
-        auditFor(taskType)
+        auditFor(taskType, { gateway_http_status: response.status })
       );
     }
 
     const rawResponsePayloadJson = outputs.response_payload_json;
-    const audit = auditFor(taskType, { raw_response_payload_json: rawResponsePayloadJson });
+    const audit = auditFor(taskType, {
+      gateway_http_status: response.status,
+      raw_response_payload_json: rawResponsePayloadJson
+    });
     if (diagnosticMode === PROBE_DIAGNOSTIC_MODE) {
       const diagnostics = safeProbeDiagnostics(outerPayload.probe_diagnostics);
       if (diagnostics) audit.probe_diagnostics = diagnostics;
     }
-    const errorAudit = auditFor(taskType);
+    const errorAudit = auditFor(taskType, { gateway_http_status: response.status });
     let normalized;
     try {
       normalized = normalizeGatewayTransport(rawResponsePayloadJson, {

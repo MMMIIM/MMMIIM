@@ -1,0 +1,31 @@
+{
+  "artifact_type": "V43_E2E_ENGINEERING_CONSISTENCY_AUDIT_V1_MATERIAL_VERSION_FIRST_FAILURE",
+  "boundary": "PRE_PROVIDER",
+  "failure": {
+    "sqlstate": "42703",
+    "message": "column m.material_version does not exist",
+    "reported_query_fragment": "m.material_version",
+    "read_only_reproduction_query": "SELECT m.material_version FROM company_materials m LIMIT 1",
+    "alias_m_table": "company_materials",
+    "reproduced_in": ["bid_platform", "bid_platform_flow_audit_test"],
+    "failing_file_in_current_checkout": "NOT_FOUND",
+    "failing_function_in_current_checkout": "NOT_DETERMINED",
+    "exact_runtime_revision_emitting_reported_query": "NOT_VERIFIED"
+  },
+  "current_checkout_path": {
+    "entry": "backend/eval/real-e2e/run-requirement-retrieval-fact-canary.mjs",
+    "functions": ["runCanary", "runRetrieval", "sourceSnapshotFor"],
+    "repository": "backend/src/db.js PgRepository.listChunksForRetrieval",
+    "version_projection": "company_materials.source_version",
+    "material_version_contract_projection": "sourceSnapshotFor maps row.source_version to a material_version field in an evaluation snapshot; it does not query a material_version database column",
+    "provider_reached": false
+  },
+  "first_failure_classification": {
+    "primary": "DATABASE_IDENTITY_AND_SCHEMA_QUERY",
+    "secondary": "RUNTIME_REVISION_UNVERIFIED",
+    "not_proven": ["current_checked_out_query_defect", "provider_api_failure", "model_failure"]
+  },
+  "safe_interpretation": "The reported runtime query is incompatible with both inspected schemas, while the current checkout uses source_version. A stale or different runtime must not be attributed to current code without runtime evidence.",
+  "provider_calls": 0,
+  "database_writes": 0
+}

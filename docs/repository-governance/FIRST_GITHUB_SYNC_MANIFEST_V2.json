@@ -1,0 +1,264 @@
+{
+  "artifact_type": "FIRST_GITHUB_SYNC_MANIFEST_V2",
+  "status": "PREPARED_DO_NOT_COMMIT_OR_PUSH",
+  "generated_at": "2026-09-17",
+  "repository": {
+    "repository_full_name": "MMMIIM/MMMIIM",
+    "canonical_url": "https://github.com/MMMIIM/MMMIIM.git",
+    "origin_url": "https://github.com/MMMIIM/MMMIIM.git",
+    "branch": "feat/v4.3-semantic-boundary-routing",
+    "local_head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+    "remote_branch": "feat/v4.3-semantic-boundary-routing",
+    "remote_head": null,
+    "remote_head_probe": "BLOCKED_GITHUB_AUTH_INTERACTIVE_REQUIRED",
+    "local_remote_relationship": "UNKNOWN_REMOTE_HEAD_UNAVAILABLE"
+  },
+  "authority_model": {
+    "TRACKED_AUTHORITY_PARITY": "LOCAL_HEAD == ORIGIN_CURRENT_BRANCH_HEAD after the remote branch HEAD is readable",
+    "LOCAL_ARTIFACT_PRESENCE": "Local, ignored, secret, or external-only files may remain on the workstation and do not by themselves invalidate tracked authority parity",
+    "ignored_local_external_do_not_participate_in_tracked_parity": true
+  },
+  "worktree_audit": {
+    "status_entries": 3238,
+    "tracked_file_count": 709,
+    "tracked_modified": 103,
+    "untracked_expanded": 3135,
+    "deleted": 0,
+    "operation_counts": {
+      "commit": 0,
+      "push": 0,
+      "merge": 0,
+      "rebase": 0,
+      "force_push": 0,
+      "history_rewrite": 0,
+      "destructive_git": 0
+    },
+    "directory_status_counts": {
+      ".codex": {"status_entries": 1, "tracked_modified": 1, "untracked": 0},
+      "backend": {"status_entries": 1072, "tracked_modified": 79, "untracked": 993},
+      "data": {"status_entries": 47, "tracked_modified": 0, "untracked": 47},
+      "docs": {"status_entries": 1862, "tracked_modified": 6, "untracked": 1856},
+      "frontend": {"status_entries": 4, "tracked_modified": 4, "untracked": 0},
+      "packages": {"status_entries": 3, "tracked_modified": 2, "untracked": 1},
+      "root_files": {"status_entries": 236, "tracked_modified": 3, "untracked": 233},
+      "services": {"status_entries": 13, "tracked_modified": 8, "untracked": 5}
+    }
+  },
+  "classification": {
+    "SYNC_APPROVED": {
+      "status": "CANDIDATE_ALLOWLIST_PENDING_HUMAN_BASELINE_COMMIT_AUTHORIZATION",
+      "directory_level_counts": {
+        ".codex": 1,
+        "backend": 514,
+        "config": 1,
+        "docs": 48,
+        "frontend": 19,
+        "packages": 1,
+        "root_files": 18,
+        "services": 4,
+        "total": 606
+      },
+      "scope": "Unmodified tracked files at the local baseline candidate; this is not a commit or push authorization",
+      "additional_sync_eligible_groups": [
+        {
+          "group": "RECONCILIATION_GOVERNANCE_ARTIFACTS",
+          "directory_level_counts": {
+            "docs/project-state": 2,
+            "docs/repository-governance": 5,
+            "total": 7
+          },
+          "paths": [
+            "docs/project-state/CURRENT_STATE.md",
+            "docs/project-state/DECISION_REGISTRY.md",
+            "docs/repository-governance/GIT_SYNC_POLICY.md",
+            "docs/repository-governance/FIRST_GITHUB_SYNC_MANIFEST_V2.md",
+            "docs/repository-governance/FIRST_GITHUB_SYNC_MANIFEST_V2.json",
+            "docs/repository-governance/V43_FIRST_GITHUB_SYNC_RECONCILIATION_AND_REMOTE_READINESS_CHECKPOINT_V1.md",
+            "docs/repository-governance/V43_FIRST_GITHUB_SYNC_RECONCILIATION_AND_REMOTE_READINESS_CHECKPOINT_V1.json"
+          ]
+        },
+        {
+          "group": "SYNTHETIC_P1B_EVAL_ARTIFACTS",
+          "directory_level_counts": {
+            "backend/eval/retrieval-quality-p1b": 4,
+            "docs/handoff/V43_RAG_RETRIEVAL_P1B_PRODUCTION_SHAPE_HYGIENE_CANARY_V1": 2,
+            "total": 6
+          },
+          "paths": [
+            "backend/eval/retrieval-quality-p1b/run-p1b-production-shape-hygiene-canary-v1.mjs",
+            "backend/eval/retrieval-quality-p1b/results/V43_RAG_RETRIEVAL_P1B_DEVELOPMENT_VALIDATION_LABEL_OVERLAY_V1.json",
+            "backend/eval/retrieval-quality-p1b/results/V43_RAG_RETRIEVAL_P1B_PRODUCTION_SHAPE_HYGIENE_CANARY_REPLAY_V1.json",
+            "backend/eval/retrieval-quality-p1b/results/V43_RAG_RETRIEVAL_P1B_PRODUCTION_SHAPE_QUERY_BATCH_FREEZE_V1.json",
+            "docs/handoff/V43_RAG_RETRIEVAL_P1B_PRODUCTION_SHAPE_HYGIENE_CANARY_V1/V43_RAG_RETRIEVAL_P1B_PRODUCTION_SHAPE_HYGIENE_CANARY_CHECKPOINT_V1.md",
+            "docs/handoff/V43_RAG_RETRIEVAL_P1B_PRODUCTION_SHAPE_HYGIENE_CANARY_V1/V43_RAG_RETRIEVAL_P1B_PRODUCTION_SHAPE_HYGIENE_CANARY_CHECKPOINT_V1.json"
+          ]
+        }
+      ]
+    },
+    "LOCAL_ONLY_SECRET": {
+      "count": 2,
+      "files": [
+        {
+          "path": "backend/.env",
+          "bytes": 1238,
+          "redacted_fingerprint": "97309F8DC2A18C01",
+          "sync_status": "EXCLUDE_LOCAL_ONLY"
+        },
+        {
+          "path": "services/semantic-gateway/.env",
+          "bytes": 762,
+          "redacted_fingerprint": "9E13FACCA33C68B2",
+          "sync_status": "EXCLUDE_LOCAL_ONLY"
+        }
+      ],
+      "values_printed": false
+    },
+    "LOCAL_ONLY_EXTERNAL_ARTIFACT": {
+      "count": 11,
+      "raw_sync": false,
+      "policy": "Retain manifest, SHA256, identity, and generation recipe; keep raw generated payload local/external"
+    },
+    "PRIVATE_SOURCE_EXCLUDED": {
+      "count": 0,
+      "reason": "The public-source amendment says external PDFs are not private by default"
+    },
+    "LARGE_RAW_ARTIFACT_EXCLUDED": {
+      "count": 11,
+      "git_lfs": 0,
+      "artifacts": [
+        {"path": "docs/eval/p0-recall/V43_P0_487_PROVENANCE_TRACE_INDEX.json", "bytes": 67530346, "sha256": "49BEC736E81C6CE90088F43BD337DB5F8CE8CD20FD71440F03550D62CE031040"},
+        {"path": "docs/eval/p0-recall/V43_P0_SOURCE_FIDELITY_EVIDENCE.json", "bytes": 34100000, "sha256": "080A2A96A296BAA64809A4E00230C1463210FA0CA6B9D672028C07D0BC6E8944"},
+        {"path": "docs/eval/flywheel/V43-FLYWHEEL-P0-487-R3/V43_P0_487_PROVENANCE_TRACE_INDEX.json", "bytes": 20808854, "sha256": "7F180356C2EE5753AE3CFDDB28C8085ABC546E66C5897E89B523B9CB3787D327"},
+        {"path": "docs/eval/flywheel/p0-badcase-repair-v2/V43_REQUIREMENT_P0_487_TEXTUAL_INPUT_COVERAGE_V6.json", "bytes": 16311264, "sha256": "E31B06594A79807F12DC7ECFA1C3DD16D1E69BA9A8710CBE10BFE4071F45F10A"},
+        {"path": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/09_R0_RESULTS.json", "bytes": 13259534, "sha256": "E4514E226A9D72D6EE66A9D08184826582D02B73275261324BBF95C33089CBE6"},
+        {"path": "docs/handoff/V43_REFERENCE_RETRIEVAL_SCHEMA_PARITY_CORE6_REPLAY_V2/09_R0_RESULTS.json", "bytes": 13259534, "sha256": "E4514E226A9D72D6EE66A9D08184826582D02B73275261324BBF95C33089CBE6"},
+        {"path": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/10_R1_RESULTS.json", "bytes": 13259519, "sha256": "0AAA30B27A93E521209DE0227AE8462A23D1F5667A7D9D7FD74D95A9AE401A15"},
+        {"path": "docs/handoff/V43_REFERENCE_RETRIEVAL_SCHEMA_PARITY_CORE6_REPLAY_V2/06_R1_HYGIENE_RESULTS.json", "bytes": 13259399, "sha256": "7C3504735BFC4CCE20161B37B7995724ADE88428D5C06E712C3341170185A6E5"},
+        {"path": "docs/handoff/V43_REFERENCE_RETRIEVAL_SCHEMA_PARITY_CORE6_REPLAY_V2/05_R0_CURRENT_RESULTS.json", "bytes": 13259362, "sha256": "E0847941F3513011C129C6152098ABEFE24B1B136F6C207A30D1825B604EE182"},
+        {"path": "backend/eval/requirement-unseen-holdout-v3/results/unseen-holdout-v3-2026-09-09T15-43-27-853Z-0dba352e/parsed-sources/HOLDOUT-REQ-V3-01.json", "bytes": 12063326, "sha256": "EB2DFA602824F9D8FEB4C6E180FDF8BB7C00BB620FC2324FB4B4CE1EC2305BB0"},
+        {"path": "backend/eval/requirement-unseen-holdout-v3/results/unseen-holdout-v3-2026-09-09T15-43-27-853Z-0dba352e/V43_REQUIREMENT_UNSEEN_HOLDOUT_V3_GPT_REVIEW_PACKET.json", "bytes": 11728303, "sha256": "00494E3E49E64139A6BD2C4D87C7232DB1BB850FF1F49B69371AFC50AD00E267"}
+      ],
+      "additional_large_generated_duplicate_observed": {
+        "path": "docs/handoff/V43_REFERENCE_RETRIEVAL_SCHEMA_PARITY_CORE6_REPLAY_V2/10_R1_RESULTS.json",
+        "bytes": 13259519,
+        "sha256": "0AAA30B27A93E521209DE0227AE8462A23D1F5667A7D9D7FD74D95A9AE401A15",
+        "duplicate_of": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/10_R1_RESULTS.json",
+        "classification": "AMBIGUOUS_REVIEW_REQUIRED",
+        "reason": "Fresh physical-file scan found one additional exact duplicate beyond the decision-listed 11 payloads"
+      }
+    },
+    "AMBIGUOUS_REVIEW_REQUIRED": [
+      {
+        "group": "PUBLIC_EXTERNAL_PDF_LICENSE_REVIEW",
+        "physical_file_count": 4,
+        "duplicate_group_count": 2,
+        "redistribution_status": "UNKNOWN_LICENSE_REVIEW",
+        "privacy_status": "NOT_PRIVATE_BY_DEFAULT",
+        "raw_sync": false,
+        "duplicate_groups": [
+          {
+            "identity": "HW-001",
+            "sha256": "525BA4ED4CB5AABDACB18ABF2D8BC3A03AE5808365E1C3B20AB49486D1667D44",
+            "bytes": 37180178,
+            "source_url": "https://www.huawei.com/minisite/annual-report-download/annual_report_2024_cn.pdf",
+            "source_type": "PUBLIC_EXTERNAL_PDF",
+            "paths": [
+              "data/eval/real-enterprise-upload-test-v1/raw/HW-001.pdf",
+              "data/eval/real-pdf-pilot-storage/5d724373-3d88-41ec-b72d-0d7a01107af7/061de778-001c-48c7-a30b-ffd2e0a6bfb4.pdf"
+            ]
+          },
+          {
+            "identity": "HW-003",
+            "sha256": "8081099E23478068E7E43A55C6C93BD6D5EFD8456670494D363BF949D3FE3990",
+            "bytes": 12891442,
+            "source_url": "https://www-file.huawei.com/admin/asset/v1/pro/view/69461adcb6364954a697f250678a64ad.pdf",
+            "source_type": "PUBLIC_EXTERNAL_PDF",
+            "paths": [
+              "data/eval/real-enterprise-upload-test-v1/raw/HW-003.pdf",
+              "data/eval/real-pdf-pilot-storage/5d724373-3d88-41ec-b72d-0d7a01107af7/13c1eb7e-4ab4-48c7-864d-354abf50a8aa.pdf"
+            ]
+          }
+        ],
+        "contents_printed": false
+      },
+      {
+        "group": "PRE_EXISTING_TRACKED_MODIFICATIONS",
+        "directory_level_counts": {
+          ".codex": 1,
+          "backend": 79,
+          "docs": 6,
+          "frontend": 4,
+          "packages": 2,
+          "root_files": 3,
+          "services": 8,
+          "total": 103
+        },
+        "action": "Do not silently absorb into the first-sync allowlist"
+      },
+      {
+        "group": "PRE_EXISTING_UNTRACKED_WORKTREE",
+        "directory_level_counts": {
+          "backend": 993,
+          "data": 47,
+          "docs": 1856,
+          "packages": 1,
+          "root_files": 233,
+          "services": 5,
+          "total": 3135
+        },
+        "action": "Require explicit classification before any baseline commit"
+      },
+      {
+        "group": "HISTORICAL_GOVERNANCE_RECORDS_PRESERVED",
+        "paths": [
+          "docs/repository-governance/FIRST_GITHUB_SYNC_MANIFEST_V1.md",
+          "docs/repository-governance/FIRST_GITHUB_SYNC_MANIFEST_V1.json",
+          "docs/repository-governance/V43_REPOSITORY_GOVERNANCE_AND_GITHUB_SYNC_FOUNDATION_CHECKPOINT_V1.md",
+          "docs/repository-governance/V43_REPOSITORY_GOVERNANCE_AND_GITHUB_SYNC_FOUNDATION_CHECKPOINT_V1.json"
+        ],
+        "reason": "Historical observations may retain the old Bid-Pilot URL; they are not canonical identity sources"
+      }
+    ]
+  },
+  "source_policy": {
+    "synthetic_self_generated": "PUBLIC_SYNC_ALLOWED",
+    "publicly_sourced": "NO_PRIVACY_BLOCK",
+    "redistribution_statuses": [
+      "REDISTRIBUTION_CONFIRMED",
+      "PUBLIC_SOURCE_NO_EXPLICIT_RESTRICTION",
+      "LINK_ONLY_RECOMMENDED",
+      "UNKNOWN_LICENSE_REVIEW"
+    ],
+    "future_real_enterprise_data_gate": "REPOSITORY_VISIBILITY_REVIEW",
+    "git_lfs_in_first_sync": false
+  },
+  "secret_history_scan": {
+    "mode": "READ_ONLY",
+    "tracked_secret_suspicion_count": 0,
+    "historical_env_inclusion_count": 0,
+    "credential_pattern_suspicion_count": 0,
+    "affected_commit_path": [],
+    "redacted_fingerprint": null,
+    "full_secret_values_printed": false,
+    "history_rewritten": false,
+    "credentials_rotated": false
+  },
+  "remote_credential_state": {
+    "git_credential_helper": "manager",
+    "github_cli_auth": "UNAUTHENTICATED",
+    "supported_non_interactive_recovery_attempted": true,
+    "authentication_result": "SEC_E_NO_CREDENTIALS",
+    "interactive_login_attempted": false,
+    "tokens_printed_or_written": false
+  },
+  "reconciliation": {
+    "current_state_path": "docs/project-state/CURRENT_STATE.md",
+    "decision_registry_path": "docs/project-state/DECISION_REGISTRY.md",
+    "sync_policy_path": "docs/repository-governance/GIT_SYNC_POLICY.md",
+    "manifest_path": "docs/repository-governance/FIRST_GITHUB_SYNC_MANIFEST_V2.json",
+    "checkpoint_path": "docs/repository-governance/V43_FIRST_GITHUB_SYNC_RECONCILIATION_AND_REMOTE_READINESS_CHECKPOINT_V1.json",
+    "historical_v1_preserved": true
+  },
+  "blocker": "BLOCKED_GITHUB_AUTH_INTERACTIVE_REQUIRED",
+  "next_action": "Human restores the existing supported GitHub credential mechanism, then rerun non-interactive ls-remote for the current branch. Only after remote HEAD is readable should local/remote parity and first baseline commit/push readiness be decided."
+}

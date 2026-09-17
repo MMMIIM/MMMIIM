@@ -1,0 +1,3701 @@
+{
+  "artifact_type": "V43_FACT_V21_COMPOSITIONAL_GROUNDING_SOURCE_ROLE_OFFLINE_REPLAY",
+  "eval_only": true,
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "candidate_count": 26,
+  "classification_counts": {
+    "FALSE_REJECT_FIXED": 5,
+    "TRUE_ACCEPT": 2,
+    "REFERENCE_CONTEXT_EXCLUDED": 8,
+    "GOVERNANCE_CONTEXT_EXCLUDED": 6,
+    "TRUE_REVIEW": 5
+  },
+  "source_role_distribution": {
+    "ENTERPRISE_PROFILE_ELIGIBLE": 1,
+    "ENTERPRISE_CAPABILITY_ELIGIBLE": 1,
+    "REFERENCE_CONTEXT_ONLY": 8,
+    "ENTERPRISE_PERFORMANCE_ELIGIBLE": 1,
+    "SOURCE_ROLE_UNKNOWN": 9,
+    "GOVERNANCE_CONTEXT_ONLY": 6
+  },
+  "grounding_reject_before_count": 18,
+  "false_reject_anchor_count": 5,
+  "non_enterprise_context_noise_count": 14,
+  "reference_to_enterprise_authority_escape_count": 0,
+  "governance_to_enterprise_authority_escape_count": 0,
+  "rows": [
+    {
+      "case_id": "COM-01",
+      "candidate_index": 0,
+      "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+      "source_hash": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+      "source_excerpt": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_un",
+      "candidate": {
+        "statement": "澄川数智科技有限公司为虚构测试企业，定位政企与医疗信息化软件服务商。",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "subject_name": "澄川数智科技有限公司",
+        "subject_type_hint": "公司",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "entity_mentions": [
+          {
+            "name": "澄川数智科技有限公司",
+            "type_hint": "公司",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          }
+        ],
+        "status_text": "虚构测试企业",
+        "status_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "scope_items": [
+          {
+            "text": "政企与医疗信息化软件服务商",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          }
+        ],
+        "quantity_items": [],
+        "temporal_items": []
+      },
+      "source_role": "ENTERPRISE_PROFILE_ELIGIBLE",
+      "source_role_eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+      "resolved_bounded_source_unit": "澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。",
+      "source_heading_path": [
+        "公司概况与业务范围",
+        "公司"
+      ],
+      "source_role_evidence": "BOUNDED_HEADING_ALIGNMENT",
+      "synthetic_source": true,
+      "claim_permission": false,
+      "canonicalization_before": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "公司",
+            "name": "澄川数智科技有限公司"
+          },
+          "entities": [
+            {
+              "type": "公司",
+              "name": "澄川数智科技有限公司"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "虚构测试企业",
+          "scopes": [
+            "政企与医疗信息化软件服务商"
+          ],
+          "scope_source_texts": {
+            "政企与医疗信息化软件服务商": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。"
+          },
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "unchanged_from_after": true
+      },
+      "canonicalization_after": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "公司",
+            "name": "澄川数智科技有限公司"
+          },
+          "entities": [
+            {
+              "type": "公司",
+              "name": "澄川数智科技有限公司"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "虚构测试企业",
+          "scopes": [
+            "政企与医疗信息化软件服务商"
+          ],
+          "scope_source_texts": {
+            "政企与医疗信息化软件服务商": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。"
+          },
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        }
+      },
+      "grounding_before": {
+        "decision": "REJECT",
+        "reasons": [
+          "statement is not grounded"
+        ]
+      },
+      "grounding_after": {
+        "decision": "REVIEW_REQUIRED",
+        "final_decision": "REVIEW_REQUIRED",
+        "reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "source_grounding": {
+          "mode": "BOUNDED_COMPOSITIONAL",
+          "unit": {
+            "text": "澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。",
+            "heading_path": [
+              "公司概况与业务范围",
+              "公司"
+            ]
+          }
+        }
+      },
+      "classification": "FALSE_REJECT_FIXED",
+      "deterministic_rule": "BOUNDED_COMPOSITIONAL_ALIGNMENT",
+      "source_ref_resolved": true
+    },
+    {
+      "case_id": "COM-01",
+      "candidate_index": 1,
+      "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+      "source_hash": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+      "source_excerpt": "ragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管",
+      "candidate": {
+        "statement": "测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "subject_name": "测试能力",
+        "subject_type_hint": "能力范围",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "entity_mentions": [
+          {
+            "name": "业务平台",
+            "type_hint": "能力项",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          },
+          {
+            "name": "数据治理",
+            "type_hint": "能力项",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          },
+          {
+            "name": "接口集成",
+            "type_hint": "能力项",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          },
+          {
+            "name": "RAG/Agent",
+            "type_hint": "能力项",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          },
+          {
+            "name": "实施与运维",
+            "type_hint": "能力项",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          }
+        ],
+        "status_text": "",
+        "status_source_refs": [],
+        "scope_items": [
+          {
+            "text": "业务平台",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          },
+          {
+            "text": "数据治理",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          },
+          {
+            "text": "接口集成",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          },
+          {
+            "text": "RAG/Agent",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          },
+          {
+            "text": "实施与运维",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          }
+        ],
+        "quantity_items": [],
+        "temporal_items": []
+      },
+      "source_role": "ENTERPRISE_CAPABILITY_ELIGIBLE",
+      "source_role_eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+      "resolved_bounded_source_unit": "测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。",
+      "source_heading_path": [
+        "公司概况与业务范围",
+        "范围"
+      ],
+      "source_role_evidence": "BOUNDED_HEADING_ALIGNMENT",
+      "synthetic_source": true,
+      "claim_permission": false,
+      "canonicalization_before": {
+        "status": "CANONICALIZED",
+        "review_reasons": [],
+        "canonical": {
+          "subject": {
+            "type": "能力范围",
+            "name": "测试能力"
+          },
+          "entities": [
+            {
+              "type": "能力项",
+              "name": "业务平台"
+            },
+            {
+              "type": "能力项",
+              "name": "数据治理"
+            },
+            {
+              "type": "能力项",
+              "name": "接口集成"
+            },
+            {
+              "type": "能力项",
+              "name": "RAG/Agent"
+            },
+            {
+              "type": "能力项",
+              "name": "实施与运维"
+            }
+          ],
+          "status": "unknown",
+          "scopes": [
+            "业务平台",
+            "数据治理",
+            "接口集成",
+            "RAG/Agent",
+            "实施与运维"
+          ],
+          "scope_source_texts": {
+            "业务平台": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "数据治理": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "接口集成": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "RAG/Agent": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "实施与运维": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。"
+          },
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "unchanged_from_after": true
+      },
+      "canonicalization_after": {
+        "status": "CANONICALIZED",
+        "review_reasons": [],
+        "canonical": {
+          "subject": {
+            "type": "能力范围",
+            "name": "测试能力"
+          },
+          "entities": [
+            {
+              "type": "能力项",
+              "name": "业务平台"
+            },
+            {
+              "type": "能力项",
+              "name": "数据治理"
+            },
+            {
+              "type": "能力项",
+              "name": "接口集成"
+            },
+            {
+              "type": "能力项",
+              "name": "RAG/Agent"
+            },
+            {
+              "type": "能力项",
+              "name": "实施与运维"
+            }
+          ],
+          "status": "unknown",
+          "scopes": [
+            "业务平台",
+            "数据治理",
+            "接口集成",
+            "RAG/Agent",
+            "实施与运维"
+          ],
+          "scope_source_texts": {
+            "业务平台": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "数据治理": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "接口集成": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "RAG/Agent": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "实施与运维": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: null\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"LOW\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2027-02-28\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 公司概况与业务范围\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 公司\n\n澄川数智科技有限公司（Synthetic Demo Company） 为虚构测试企业，定位政企与医疗信息化软件服务商。\n\n## 范围\n\n测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。\n\n## 官方来源 / 依据\n\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。"
+          },
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        }
+      },
+      "grounding_before": {
+        "decision": "ACCEPT",
+        "reasons": []
+      },
+      "grounding_after": {
+        "decision": "ACCEPT",
+        "final_decision": "ACCEPT",
+        "reasons": [],
+        "source_grounding": {
+          "mode": "EXACT",
+          "unit": null
+        }
+      },
+      "classification": "TRUE_ACCEPT",
+      "deterministic_rule": "NO_DECISION_CHANGE",
+      "source_ref_resolved": true
+    },
+    {
+      "case_id": "COM-01",
+      "candidate_index": 2,
+      "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+      "source_hash": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+      "source_excerpt": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_un",
+      "candidate": {
+        "statement": "OFF-U01 为政府采购需求管理办法，发布单位为财政部，状态为 CURRENT_NO_REPEAL_FOUND，实施日期为 2021-07-01，最后核验日期为 2026-08-31。",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "subject_name": "政府采购需求管理办法",
+        "subject_type_hint": "官方来源",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "entity_mentions": [
+          {
+            "name": "财政部",
+            "type_hint": "发布单位",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          }
+        ],
+        "status_text": "CURRENT_NO_REPEAL_FOUND",
+        "status_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "scope_items": [],
+        "quantity_items": [],
+        "temporal_items": [
+          {
+            "value_text": "2021-07-01",
+            "event_text": "实施",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          },
+          {
+            "value_text": "2026-08-31",
+            "event_text": "最后核验",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          }
+        ]
+      },
+      "source_role": "REFERENCE_CONTEXT_ONLY",
+      "source_role_eligibility": "REFERENCE_CONTEXT_ONLY",
+      "resolved_bounded_source_unit": "- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html",
+      "source_heading_path": [
+        "公司概况与业务范围",
+        "官方来源 / 依据"
+      ],
+      "source_role_evidence": "BOUNDED_HEADING_ALIGNMENT",
+      "synthetic_source": true,
+      "claim_permission": false,
+      "canonicalization_before": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "官方来源",
+            "name": "政府采购需求管理办法"
+          },
+          "entities": [
+            {
+              "type": "发布单位",
+              "name": "财政部"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "CURRENT_NO_REPEAL_FOUND",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "unchanged_from_after": true
+      },
+      "canonicalization_after": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "官方来源",
+            "name": "政府采购需求管理办法"
+          },
+          "entities": [
+            {
+              "type": "发布单位",
+              "name": "财政部"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "CURRENT_NO_REPEAL_FOUND",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        }
+      },
+      "grounding_before": {
+        "decision": "REJECT",
+        "reasons": [
+          "statement is not grounded"
+        ]
+      },
+      "grounding_after": {
+        "decision": "REVIEW_REQUIRED",
+        "final_decision": "EXCLUDED_REFERENCE",
+        "reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "source_grounding": {
+          "mode": "BOUNDED_COMPOSITIONAL",
+          "unit": {
+            "text": "- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html",
+            "heading_path": [
+              "公司概况与业务范围",
+              "官方来源 / 依据"
+            ]
+          }
+        }
+      },
+      "classification": "REFERENCE_CONTEXT_EXCLUDED",
+      "deterministic_rule": "SOURCE_GROUNDED_REVIEWABLE_OBSERVATION",
+      "source_ref_resolved": true
+    },
+    {
+      "case_id": "COM-01",
+      "candidate_index": 3,
+      "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+      "source_hash": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+      "source_excerpt": "---\ndoc_id: \"COM-01\"\ntitle: \"公司概况与业务范围\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U01\"\n  - \"U29\"\nevidence_category: \"COMPANY_PROFILE\"\nsource_ids:\n  - \"OFF-U01\"\n  - \"OFF-U02\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_un",
+      "candidate": {
+        "statement": "OFF-U02 为国家政务信息化项目建设管理办法，发布单位为国务院办公厅，状态为 CURRENT_CONFIRMED，实施日期为 2020-02-01，最后核验日期为 2026-08-31。",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "subject_name": "国家政务信息化项目建设管理办法",
+        "subject_type_hint": "官方来源",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "entity_mentions": [
+          {
+            "name": "国务院办公厅",
+            "type_hint": "发布单位",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          }
+        ],
+        "status_text": "CURRENT_CONFIRMED",
+        "status_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+        ],
+        "scope_items": [],
+        "quantity_items": [],
+        "temporal_items": [
+          {
+            "value_text": "2020-02-01",
+            "event_text": "实施",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          },
+          {
+            "value_text": "2026-08-31",
+            "event_text": "最后核验",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+            ]
+          }
+        ]
+      },
+      "source_role": "REFERENCE_CONTEXT_ONLY",
+      "source_role_eligibility": "REFERENCE_CONTEXT_ONLY",
+      "resolved_bounded_source_unit": "- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html",
+      "source_heading_path": [
+        "公司概况与业务范围",
+        "官方来源 / 依据"
+      ],
+      "source_role_evidence": "BOUNDED_HEADING_ALIGNMENT",
+      "synthetic_source": true,
+      "claim_permission": false,
+      "canonicalization_before": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "官方来源",
+            "name": "国家政务信息化项目建设管理办法"
+          },
+          "entities": [
+            {
+              "type": "发布单位",
+              "name": "国务院办公厅"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "CURRENT_CONFIRMED",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "unchanged_from_after": true
+      },
+      "canonicalization_after": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "官方来源",
+            "name": "国家政务信息化项目建设管理办法"
+          },
+          "entities": [
+            {
+              "type": "发布单位",
+              "name": "国务院办公厅"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "CURRENT_CONFIRMED",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        }
+      },
+      "grounding_before": {
+        "decision": "REJECT",
+        "reasons": [
+          "statement is not grounded"
+        ]
+      },
+      "grounding_after": {
+        "decision": "REVIEW_REQUIRED",
+        "final_decision": "EXCLUDED_REFERENCE",
+        "reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "source_grounding": {
+          "mode": "BOUNDED_COMPOSITIONAL",
+          "unit": {
+            "text": "- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm\n- **OFF-U02｜国家政务信息化项目建设管理办法**｜国务院办公厅｜状态 `CURRENT_CONFIRMED`｜实施 `2020-02-01`｜最后核验 `2026-08-31`｜https://www.beijing.gov.cn/zhengce/zhengcefagui/202001/t20200122_1620360.html",
+            "heading_path": [
+              "公司概况与业务范围",
+              "官方来源 / 依据"
+            ]
+          }
+        }
+      },
+      "classification": "REFERENCE_CONTEXT_EXCLUDED",
+      "deterministic_rule": "SOURCE_GROUNDED_REVIEWABLE_OBSERVATION",
+      "source_ref_resolved": true
+    },
+    {
+      "case_id": "COM-06-A",
+      "candidate_index": 0,
+      "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+      "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+      "source_excerpt": "supersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 权限、安全与审计测试报告\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 测试\n\n2026-08-01对v3.2测试环境执行账号、角色、最小权限、登录审计、关键操作和数据导出审计。\n\n## 边界\n\n不代表通过等保、密评或第三方认证。\n\n## 官方来源 / 依据\n\n- **OFF-U05｜中华人民共和国网络安全法（2025年修正）**｜全国人大常委会｜状态 `CURRENT_CONFIRMED`｜实施 `2026-01-01`｜最后核验 `2026-08-31`｜https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm\n- **OFF-U08｜GB/T 222",
+      "candidate": {
+        "statement": "2026-08-01对v3.2测试环境执行账号、角色、最小权限、登录审计、关键操作和数据导出审计。",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "subject_name": "v3.2测试环境",
+        "subject_type_hint": "测试环境",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "entity_mentions": [
+          {
+            "name": "账号",
+            "type_hint": "审计对象",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          },
+          {
+            "name": "角色",
+            "type_hint": "审计对象",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          },
+          {
+            "name": "最小权限",
+            "type_hint": "审计对象",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          },
+          {
+            "name": "登录审计",
+            "type_hint": "审计对象",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          },
+          {
+            "name": "关键操作",
+            "type_hint": "审计对象",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          },
+          {
+            "name": "数据导出审计",
+            "type_hint": "审计对象",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          }
+        ],
+        "status_text": "",
+        "status_source_refs": [],
+        "scope_items": [],
+        "quantity_items": [],
+        "temporal_items": [
+          {
+            "value_text": "2026-08-01",
+            "event_text": "对v3.2测试环境执行账号、角色、最小权限、登录审计、关键操作和数据导出审计",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          }
+        ]
+      },
+      "source_role": "ENTERPRISE_PERFORMANCE_ELIGIBLE",
+      "source_role_eligibility": "ENTERPRISE_FACT_ELIGIBLE",
+      "resolved_bounded_source_unit": "2026-08-01对v3.2测试环境执行账号、角色、最小权限、登录审计、关键操作和数据导出审计。",
+      "source_heading_path": [
+        "权限、安全与审计测试报告",
+        "测试"
+      ],
+      "source_role_evidence": "BOUNDED_HEADING_ALIGNMENT",
+      "synthetic_source": true,
+      "claim_permission": false,
+      "canonicalization_before": {
+        "status": "CANONICALIZED",
+        "review_reasons": [],
+        "canonical": {
+          "subject": {
+            "type": "测试环境",
+            "name": "v3.2测试环境"
+          },
+          "entities": [
+            {
+              "type": "审计对象",
+              "name": "账号"
+            },
+            {
+              "type": "审计对象",
+              "name": "角色"
+            },
+            {
+              "type": "审计对象",
+              "name": "最小权限"
+            },
+            {
+              "type": "审计对象",
+              "name": "登录审计"
+            },
+            {
+              "type": "审计对象",
+              "name": "关键操作"
+            },
+            {
+              "type": "审计对象",
+              "name": "数据导出审计"
+            }
+          ],
+          "status": "unknown",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "unchanged_from_after": true
+      },
+      "canonicalization_after": {
+        "status": "CANONICALIZED",
+        "review_reasons": [],
+        "canonical": {
+          "subject": {
+            "type": "测试环境",
+            "name": "v3.2测试环境"
+          },
+          "entities": [
+            {
+              "type": "审计对象",
+              "name": "账号"
+            },
+            {
+              "type": "审计对象",
+              "name": "角色"
+            },
+            {
+              "type": "审计对象",
+              "name": "最小权限"
+            },
+            {
+              "type": "审计对象",
+              "name": "登录审计"
+            },
+            {
+              "type": "审计对象",
+              "name": "关键操作"
+            },
+            {
+              "type": "审计对象",
+              "name": "数据导出审计"
+            }
+          ],
+          "status": "unknown",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        }
+      },
+      "grounding_before": {
+        "decision": "ACCEPT",
+        "reasons": []
+      },
+      "grounding_after": {
+        "decision": "ACCEPT",
+        "final_decision": "ACCEPT",
+        "reasons": [],
+        "source_grounding": {
+          "mode": "EXACT",
+          "unit": null
+        }
+      },
+      "classification": "TRUE_ACCEPT",
+      "deterministic_rule": "NO_DECISION_CHANGE",
+      "source_ref_resolved": true
+    },
+    {
+      "case_id": "COM-06-A",
+      "candidate_index": 1,
+      "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+      "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+      "source_excerpt": "---\ndoc_id: \"COM-06\"\ntitle: \"权限、安全与审计测试报告\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U09\"\n  - \"U10\"\n  - \"U11\"\nevidence_category: \"SECURITY\"\nsource_ids:\n  - \"OFF-U05\"\n  - \"OFF-U08\"\n  - \"OFF-U10\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"",
+      "candidate": {
+        "statement": "该测试报告不代表通过等保、密评或第三方认证。",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "subject_name": "权限、安全与审计测试报告",
+        "subject_type_hint": "测试报告",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "entity_mentions": [
+          {
+            "name": "等保",
+            "type_hint": "认证类型",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          },
+          {
+            "name": "密评",
+            "type_hint": "认证类型",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          },
+          {
+            "name": "第三方认证",
+            "type_hint": "认证类型",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          }
+        ],
+        "status_text": "不代表通过",
+        "status_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "scope_items": [],
+        "quantity_items": [],
+        "temporal_items": []
+      },
+      "source_role": "SOURCE_ROLE_UNKNOWN",
+      "source_role_eligibility": "SOURCE_ROLE_UNKNOWN",
+      "resolved_bounded_source_unit": null,
+      "source_heading_path": [],
+      "source_role_evidence": "NO_BOUNDED_UNIT",
+      "synthetic_source": true,
+      "claim_permission": false,
+      "canonicalization_before": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "测试报告",
+            "name": "权限、安全与审计测试报告"
+          },
+          "entities": [
+            {
+              "type": "认证类型",
+              "name": "等保"
+            },
+            {
+              "type": "认证类型",
+              "name": "密评"
+            },
+            {
+              "type": "认证类型",
+              "name": "第三方认证"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "不代表通过",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "unchanged_from_after": true
+      },
+      "canonicalization_after": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "测试报告",
+            "name": "权限、安全与审计测试报告"
+          },
+          "entities": [
+            {
+              "type": "认证类型",
+              "name": "等保"
+            },
+            {
+              "type": "认证类型",
+              "name": "密评"
+            },
+            {
+              "type": "认证类型",
+              "name": "第三方认证"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "不代表通过",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        }
+      },
+      "grounding_before": {
+        "decision": "REJECT",
+        "reasons": [
+          "statement is not grounded"
+        ]
+      },
+      "grounding_after": {
+        "decision": "REVIEW_REQUIRED",
+        "final_decision": "REVIEW_REQUIRED",
+        "reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "source_grounding": {
+          "mode": "GENERIC_REFERENTIAL_PREFIX",
+          "unit": null
+        }
+      },
+      "classification": "FALSE_REJECT_FIXED",
+      "deterministic_rule": "SOURCE_GROUNDED_GENERIC_REFERENCE_PREFIX",
+      "source_ref_resolved": true
+    },
+    {
+      "case_id": "COM-06-A",
+      "candidate_index": 2,
+      "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+      "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+      "source_excerpt": "---\ndoc_id: \"COM-06\"\ntitle: \"权限、安全与审计测试报告\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U09\"\n  - \"U10\"\n  - \"U11\"\nevidence_category: \"SECURITY\"\nsource_ids:\n  - \"OFF-U05\"\n  - \"OFF-U08\"\n  - \"OFF-U10\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"",
+      "candidate": {
+        "statement": "OFF-U05为中华人民共和国网络安全法（2025年修正），状态为CURRENT_CONFIRMED，实施日期为2026-01-01，最后核验日期为2026-08-31。",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "subject_name": "OFF-U05",
+        "subject_type_hint": "官方来源",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "entity_mentions": [
+          {
+            "name": "中华人民共和国网络安全法（2025年修正）",
+            "type_hint": "法律法规",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          },
+          {
+            "name": "全国人大常委会",
+            "type_hint": "发布机构",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          }
+        ],
+        "status_text": "CURRENT_CONFIRMED",
+        "status_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "scope_items": [],
+        "quantity_items": [],
+        "temporal_items": [
+          {
+            "value_text": "2026-01-01",
+            "event_text": "OFF-U05实施",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          },
+          {
+            "value_text": "2026-08-31",
+            "event_text": "OFF-U05最后核验",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          }
+        ]
+      },
+      "source_role": "REFERENCE_CONTEXT_ONLY",
+      "source_role_eligibility": "REFERENCE_CONTEXT_ONLY",
+      "resolved_bounded_source_unit": "- **OFF-U05｜中华人民共和国网络安全法（2025年修正）**｜全国人大常委会｜状态 `CURRENT_CONFIRMED`｜实施 `2026-01-01`｜最后核验 `2026-08-31`｜https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm\n- **OFF-U08｜GB/T 22239-2019 网络安全等级保护基本要求**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2019-12-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=BAFB47E8874764186BDB7865E8344DAF\n- **OFF-U10｜GB/T 35273-2020 个人信息安全规范**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2020-10-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=4568F276E0F8346EB0FBA097AA0CE05E",
+      "source_heading_path": [
+        "权限、安全与审计测试报告",
+        "官方来源 / 依据"
+      ],
+      "source_role_evidence": "BOUNDED_HEADING_ALIGNMENT",
+      "synthetic_source": true,
+      "claim_permission": false,
+      "canonicalization_before": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "官方来源",
+            "name": "OFF-U05"
+          },
+          "entities": [
+            {
+              "type": "法律法规",
+              "name": "中华人民共和国网络安全法（2025年修正）"
+            },
+            {
+              "type": "发布机构",
+              "name": "全国人大常委会"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "CURRENT_CONFIRMED",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "unchanged_from_after": true
+      },
+      "canonicalization_after": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "官方来源",
+            "name": "OFF-U05"
+          },
+          "entities": [
+            {
+              "type": "法律法规",
+              "name": "中华人民共和国网络安全法（2025年修正）"
+            },
+            {
+              "type": "发布机构",
+              "name": "全国人大常委会"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "CURRENT_CONFIRMED",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        }
+      },
+      "grounding_before": {
+        "decision": "REJECT",
+        "reasons": [
+          "statement is not grounded"
+        ]
+      },
+      "grounding_after": {
+        "decision": "REJECT",
+        "final_decision": "EXCLUDED_REFERENCE",
+        "reasons": [
+          "statement is not grounded"
+        ],
+        "source_grounding": {
+          "mode": "UNKNOWN",
+          "unit": null
+        }
+      },
+      "classification": "REFERENCE_CONTEXT_EXCLUDED",
+      "deterministic_rule": "SOURCE_GROUNDED_REVIEWABLE_OBSERVATION",
+      "source_ref_resolved": true
+    },
+    {
+      "case_id": "COM-06-A",
+      "candidate_index": 3,
+      "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+      "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+      "source_excerpt": "---\ndoc_id: \"COM-06\"\ntitle: \"权限、安全与审计测试报告\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U09\"\n  - \"U10\"\n  - \"U11\"\nevidence_category: \"SECURITY\"\nsource_ids:\n  - \"OFF-U05\"\n  - \"OFF-U08\"\n  - \"OFF-U10\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"",
+      "candidate": {
+        "statement": "OFF-U08为GB/T 22239-2019 网络安全等级保护基本要求，状态为CURRENT_CONFIRMED，实施日期为2019-12-01，最后核验日期为2026-08-31。",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "subject_name": "OFF-U08",
+        "subject_type_hint": "官方来源",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "entity_mentions": [
+          {
+            "name": "GB/T 22239-2019 网络安全等级保护基本要求",
+            "type_hint": "标准",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          },
+          {
+            "name": "国家市场监督管理总局",
+            "type_hint": "发布机构",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          },
+          {
+            "name": "国家标准化管理委员会",
+            "type_hint": "发布机构",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          }
+        ],
+        "status_text": "CURRENT_CONFIRMED",
+        "status_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "scope_items": [],
+        "quantity_items": [],
+        "temporal_items": [
+          {
+            "value_text": "2019-12-01",
+            "event_text": "OFF-U08实施",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          },
+          {
+            "value_text": "2026-08-31",
+            "event_text": "OFF-U08最后核验",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          }
+        ]
+      },
+      "source_role": "REFERENCE_CONTEXT_ONLY",
+      "source_role_eligibility": "REFERENCE_CONTEXT_ONLY",
+      "resolved_bounded_source_unit": "- **OFF-U05｜中华人民共和国网络安全法（2025年修正）**｜全国人大常委会｜状态 `CURRENT_CONFIRMED`｜实施 `2026-01-01`｜最后核验 `2026-08-31`｜https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm\n- **OFF-U08｜GB/T 22239-2019 网络安全等级保护基本要求**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2019-12-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=BAFB47E8874764186BDB7865E8344DAF\n- **OFF-U10｜GB/T 35273-2020 个人信息安全规范**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2020-10-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=4568F276E0F8346EB0FBA097AA0CE05E",
+      "source_heading_path": [
+        "权限、安全与审计测试报告",
+        "官方来源 / 依据"
+      ],
+      "source_role_evidence": "BOUNDED_HEADING_ALIGNMENT",
+      "synthetic_source": true,
+      "claim_permission": false,
+      "canonicalization_before": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "官方来源",
+            "name": "OFF-U08"
+          },
+          "entities": [
+            {
+              "type": "标准",
+              "name": "GB/T 22239-2019 网络安全等级保护基本要求"
+            },
+            {
+              "type": "发布机构",
+              "name": "国家市场监督管理总局"
+            },
+            {
+              "type": "发布机构",
+              "name": "国家标准化管理委员会"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "CURRENT_CONFIRMED",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "unchanged_from_after": true
+      },
+      "canonicalization_after": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "官方来源",
+            "name": "OFF-U08"
+          },
+          "entities": [
+            {
+              "type": "标准",
+              "name": "GB/T 22239-2019 网络安全等级保护基本要求"
+            },
+            {
+              "type": "发布机构",
+              "name": "国家市场监督管理总局"
+            },
+            {
+              "type": "发布机构",
+              "name": "国家标准化管理委员会"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "CURRENT_CONFIRMED",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        }
+      },
+      "grounding_before": {
+        "decision": "REJECT",
+        "reasons": [
+          "statement is not grounded"
+        ]
+      },
+      "grounding_after": {
+        "decision": "REJECT",
+        "final_decision": "EXCLUDED_REFERENCE",
+        "reasons": [
+          "statement is not grounded"
+        ],
+        "source_grounding": {
+          "mode": "UNKNOWN",
+          "unit": null
+        }
+      },
+      "classification": "REFERENCE_CONTEXT_EXCLUDED",
+      "deterministic_rule": "SOURCE_GROUNDED_REVIEWABLE_OBSERVATION",
+      "source_ref_resolved": true
+    },
+    {
+      "case_id": "COM-06-A",
+      "candidate_index": 4,
+      "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+      "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+      "source_excerpt": "---\ndoc_id: \"COM-06\"\ntitle: \"权限、安全与审计测试报告\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U09\"\n  - \"U10\"\n  - \"U11\"\nevidence_category: \"SECURITY\"\nsource_ids:\n  - \"OFF-U05\"\n  - \"OFF-U08\"\n  - \"OFF-U10\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"",
+      "candidate": {
+        "statement": "OFF-U10为GB/T 35273-2020 个人信息安全规范，状态为CURRENT_CONFIRMED，实施日期为2020-10-01，最后核验日期为2026-08-31。",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "subject_name": "OFF-U10",
+        "subject_type_hint": "官方来源",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "entity_mentions": [
+          {
+            "name": "GB/T 35273-2020 个人信息安全规范",
+            "type_hint": "标准",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          },
+          {
+            "name": "国家市场监督管理总局",
+            "type_hint": "发布机构",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          },
+          {
+            "name": "国家标准化管理委员会",
+            "type_hint": "发布机构",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          }
+        ],
+        "status_text": "CURRENT_CONFIRMED",
+        "status_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "scope_items": [],
+        "quantity_items": [],
+        "temporal_items": [
+          {
+            "value_text": "2020-10-01",
+            "event_text": "OFF-U10实施",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          },
+          {
+            "value_text": "2026-08-31",
+            "event_text": "OFF-U10最后核验",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          }
+        ]
+      },
+      "source_role": "REFERENCE_CONTEXT_ONLY",
+      "source_role_eligibility": "REFERENCE_CONTEXT_ONLY",
+      "resolved_bounded_source_unit": "- **OFF-U05｜中华人民共和国网络安全法（2025年修正）**｜全国人大常委会｜状态 `CURRENT_CONFIRMED`｜实施 `2026-01-01`｜最后核验 `2026-08-31`｜https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm\n- **OFF-U08｜GB/T 22239-2019 网络安全等级保护基本要求**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2019-12-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=BAFB47E8874764186BDB7865E8344DAF\n- **OFF-U10｜GB/T 35273-2020 个人信息安全规范**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2020-10-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=4568F276E0F8346EB0FBA097AA0CE05E",
+      "source_heading_path": [
+        "权限、安全与审计测试报告",
+        "官方来源 / 依据"
+      ],
+      "source_role_evidence": "BOUNDED_HEADING_ALIGNMENT",
+      "synthetic_source": true,
+      "claim_permission": false,
+      "canonicalization_before": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "官方来源",
+            "name": "OFF-U10"
+          },
+          "entities": [
+            {
+              "type": "标准",
+              "name": "GB/T 35273-2020 个人信息安全规范"
+            },
+            {
+              "type": "发布机构",
+              "name": "国家市场监督管理总局"
+            },
+            {
+              "type": "发布机构",
+              "name": "国家标准化管理委员会"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "CURRENT_CONFIRMED",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "unchanged_from_after": true
+      },
+      "canonicalization_after": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "官方来源",
+            "name": "OFF-U10"
+          },
+          "entities": [
+            {
+              "type": "标准",
+              "name": "GB/T 35273-2020 个人信息安全规范"
+            },
+            {
+              "type": "发布机构",
+              "name": "国家市场监督管理总局"
+            },
+            {
+              "type": "发布机构",
+              "name": "国家标准化管理委员会"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "CURRENT_CONFIRMED",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        }
+      },
+      "grounding_before": {
+        "decision": "REJECT",
+        "reasons": [
+          "statement is not grounded"
+        ]
+      },
+      "grounding_after": {
+        "decision": "REJECT",
+        "final_decision": "EXCLUDED_REFERENCE",
+        "reasons": [
+          "statement is not grounded"
+        ],
+        "source_grounding": {
+          "mode": "UNKNOWN",
+          "unit": null
+        }
+      },
+      "classification": "REFERENCE_CONTEXT_EXCLUDED",
+      "deterministic_rule": "SOURCE_GROUNDED_REVIEWABLE_OBSERVATION",
+      "source_ref_resolved": true
+    },
+    {
+      "case_id": "COM-06-A",
+      "candidate_index": 5,
+      "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+      "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+      "source_excerpt": "---\ndoc_id: \"COM-06\"\ntitle: \"权限、安全与审计测试报告\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U09\"\n  - \"U10\"\n  - \"U11\"\nevidence_category: \"SECURITY\"\nsource_ids:\n  - \"OFF-U05\"\n  - \"OFF-U08\"\n  - \"OFF-U10\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"",
+      "candidate": {
+        "statement": "召回后同时检查evidence_temporal_status与Source Registry的validity_status。",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "subject_name": "evidence_temporal_status",
+        "subject_type_hint": "时效状态",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "entity_mentions": [
+          {
+            "name": "Source Registry",
+            "type_hint": "来源注册表",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          },
+          {
+            "name": "validity_status",
+            "type_hint": "有效性状态",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          }
+        ],
+        "status_text": "",
+        "status_source_refs": [],
+        "scope_items": [],
+        "quantity_items": [],
+        "temporal_items": []
+      },
+      "source_role": "GOVERNANCE_CONTEXT_ONLY",
+      "source_role_eligibility": "GOVERNANCE_CONTEXT_ONLY",
+      "resolved_bounded_source_unit": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+      "source_heading_path": [
+        "权限、安全与审计测试报告",
+        "时效使用规则"
+      ],
+      "source_role_evidence": "BOUNDED_HEADING_ALIGNMENT",
+      "synthetic_source": true,
+      "claim_permission": false,
+      "canonicalization_before": {
+        "status": "CANONICALIZED",
+        "review_reasons": [],
+        "canonical": {
+          "subject": {
+            "type": "时效状态",
+            "name": "evidence_temporal_status"
+          },
+          "entities": [
+            {
+              "type": "来源注册表",
+              "name": "Source Registry"
+            },
+            {
+              "type": "有效性状态",
+              "name": "validity_status"
+            }
+          ],
+          "status": "unknown",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "unchanged_from_after": true
+      },
+      "canonicalization_after": {
+        "status": "CANONICALIZED",
+        "review_reasons": [],
+        "canonical": {
+          "subject": {
+            "type": "时效状态",
+            "name": "evidence_temporal_status"
+          },
+          "entities": [
+            {
+              "type": "来源注册表",
+              "name": "Source Registry"
+            },
+            {
+              "type": "有效性状态",
+              "name": "validity_status"
+            }
+          ],
+          "status": "unknown",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        }
+      },
+      "grounding_before": {
+        "decision": "REJECT",
+        "reasons": [
+          "statement is not grounded"
+        ]
+      },
+      "grounding_after": {
+        "decision": "ACCEPT",
+        "final_decision": "EXCLUDED_GOVERNANCE",
+        "reasons": [],
+        "source_grounding": {
+          "mode": "BOUNDED_COMPOSITIONAL",
+          "unit": {
+            "text": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "heading_path": [
+              "权限、安全与审计测试报告",
+              "时效使用规则"
+            ]
+          }
+        }
+      },
+      "classification": "GOVERNANCE_CONTEXT_EXCLUDED",
+      "deterministic_rule": "SOURCE_GROUNDED_REVIEWABLE_OBSERVATION",
+      "source_ref_resolved": true
+    },
+    {
+      "case_id": "COM-06-A",
+      "candidate_index": 6,
+      "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+      "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+      "source_excerpt": "---\ndoc_id: \"COM-06\"\ntitle: \"权限、安全与审计测试报告\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U09\"\n  - \"U10\"\n  - \"U11\"\nevidence_category: \"SECURITY\"\nsource_ids:\n  - \"OFF-U05\"\n  - \"OFF-U08\"\n  - \"OFF-U10\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"",
+      "candidate": {
+        "statement": "HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED不能直接当作当前强制要求。",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "subject_name": "HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED",
+        "subject_type_hint": "时效状态",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "entity_mentions": [],
+        "status_text": "不能直接当作当前强制要求",
+        "status_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "scope_items": [],
+        "quantity_items": [],
+        "temporal_items": []
+      },
+      "source_role": "GOVERNANCE_CONTEXT_ONLY",
+      "source_role_eligibility": "GOVERNANCE_CONTEXT_ONLY",
+      "resolved_bounded_source_unit": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+      "source_heading_path": [
+        "权限、安全与审计测试报告",
+        "时效使用规则"
+      ],
+      "source_role_evidence": "BOUNDED_HEADING_ALIGNMENT",
+      "synthetic_source": true,
+      "claim_permission": false,
+      "canonicalization_before": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "时效状态",
+            "name": "HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED"
+          },
+          "entities": [],
+          "status": "unknown",
+          "status_source_text": "不能直接当作当前强制要求",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "unchanged_from_after": true
+      },
+      "canonicalization_after": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "时效状态",
+            "name": "HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED"
+          },
+          "entities": [],
+          "status": "unknown",
+          "status_source_text": "不能直接当作当前强制要求",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        }
+      },
+      "grounding_before": {
+        "decision": "REJECT",
+        "reasons": [
+          "statement is not grounded"
+        ]
+      },
+      "grounding_after": {
+        "decision": "REVIEW_REQUIRED",
+        "final_decision": "EXCLUDED_GOVERNANCE",
+        "reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "source_grounding": {
+          "mode": "BOUNDED_COMPOSITIONAL",
+          "unit": {
+            "text": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "heading_path": [
+              "权限、安全与审计测试报告",
+              "时效使用规则"
+            ]
+          }
+        }
+      },
+      "classification": "GOVERNANCE_CONTEXT_EXCLUDED",
+      "deterministic_rule": "SOURCE_GROUNDED_REVIEWABLE_OBSERVATION",
+      "source_ref_resolved": true
+    },
+    {
+      "case_id": "COM-06-A",
+      "candidate_index": 7,
+      "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+      "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+      "source_excerpt": "---\ndoc_id: \"COM-06\"\ntitle: \"权限、安全与审计测试报告\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U09\"\n  - \"U10\"\n  - \"U11\"\nevidence_category: \"SECURITY\"\nsource_ids:\n  - \"OFF-U05\"\n  - \"OFF-U08\"\n  - \"OFF-U10\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"",
+      "candidate": {
+        "statement": "到达next_review_at只代表必须重新核验，不等于自动失效。",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "subject_name": "next_review_at",
+        "subject_type_hint": "复核时间",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "entity_mentions": [],
+        "status_text": "不等于自动失效",
+        "status_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "scope_items": [],
+        "quantity_items": [],
+        "temporal_items": []
+      },
+      "source_role": "GOVERNANCE_CONTEXT_ONLY",
+      "source_role_eligibility": "GOVERNANCE_CONTEXT_ONLY",
+      "resolved_bounded_source_unit": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+      "source_heading_path": [
+        "权限、安全与审计测试报告",
+        "时效使用规则"
+      ],
+      "source_role_evidence": "BOUNDED_HEADING_ALIGNMENT",
+      "synthetic_source": true,
+      "claim_permission": false,
+      "canonicalization_before": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "复核时间",
+            "name": "next_review_at"
+          },
+          "entities": [],
+          "status": "unknown",
+          "status_source_text": "不等于自动失效",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "unchanged_from_after": true
+      },
+      "canonicalization_after": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "复核时间",
+            "name": "next_review_at"
+          },
+          "entities": [],
+          "status": "unknown",
+          "status_source_text": "不等于自动失效",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        }
+      },
+      "grounding_before": {
+        "decision": "REJECT",
+        "reasons": [
+          "statement is not grounded"
+        ]
+      },
+      "grounding_after": {
+        "decision": "REVIEW_REQUIRED",
+        "final_decision": "EXCLUDED_GOVERNANCE",
+        "reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "source_grounding": {
+          "mode": "BOUNDED_COMPOSITIONAL",
+          "unit": {
+            "text": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "heading_path": [
+              "权限、安全与审计测试报告",
+              "时效使用规则"
+            ]
+          }
+        }
+      },
+      "classification": "GOVERNANCE_CONTEXT_EXCLUDED",
+      "deterministic_rule": "SOURCE_GROUNDED_REVIEWABLE_OBSERVATION",
+      "source_ref_resolved": true
+    },
+    {
+      "case_id": "COM-06-A",
+      "candidate_index": 8,
+      "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+      "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+      "source_excerpt": "---\ndoc_id: \"COM-06\"\ntitle: \"权限、安全与审计测试报告\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U09\"\n  - \"U10\"\n  - \"U11\"\nevidence_category: \"SECURITY\"\nsource_ids:\n  - \"OFF-U05\"\n  - \"OFF-U08\"\n  - \"OFF-U10\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"",
+      "candidate": {
+        "statement": "公司Evidence的有效期与官方Source的有效期是两个不同维度。",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "subject_name": "公司Evidence的有效期",
+        "subject_type_hint": "有效期",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "entity_mentions": [
+          {
+            "name": "官方Source的有效期",
+            "type_hint": "有效期",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          }
+        ],
+        "status_text": "两个不同维度",
+        "status_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "scope_items": [],
+        "quantity_items": [],
+        "temporal_items": []
+      },
+      "source_role": "GOVERNANCE_CONTEXT_ONLY",
+      "source_role_eligibility": "GOVERNANCE_CONTEXT_ONLY",
+      "resolved_bounded_source_unit": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+      "source_heading_path": [
+        "权限、安全与审计测试报告",
+        "时效使用规则"
+      ],
+      "source_role_evidence": "BOUNDED_HEADING_ALIGNMENT",
+      "synthetic_source": true,
+      "claim_permission": false,
+      "canonicalization_before": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "有效期",
+            "name": "公司Evidence的有效期"
+          },
+          "entities": [
+            {
+              "type": "有效期",
+              "name": "官方Source的有效期"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "两个不同维度",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "unchanged_from_after": true
+      },
+      "canonicalization_after": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "有效期",
+            "name": "公司Evidence的有效期"
+          },
+          "entities": [
+            {
+              "type": "有效期",
+              "name": "官方Source的有效期"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "两个不同维度",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        }
+      },
+      "grounding_before": {
+        "decision": "REJECT",
+        "reasons": [
+          "statement is not grounded"
+        ]
+      },
+      "grounding_after": {
+        "decision": "REJECT",
+        "final_decision": "EXCLUDED_GOVERNANCE",
+        "reasons": [
+          "subject.name is not grounded"
+        ],
+        "source_grounding": {
+          "mode": "BOUNDED_COMPOSITIONAL",
+          "unit": {
+            "text": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "heading_path": [
+              "权限、安全与审计测试报告",
+              "时效使用规则"
+            ]
+          }
+        }
+      },
+      "classification": "GOVERNANCE_CONTEXT_EXCLUDED",
+      "deterministic_rule": "SOURCE_GROUNDED_REVIEWABLE_OBSERVATION",
+      "source_ref_resolved": true
+    },
+    {
+      "case_id": "COM-06-B",
+      "candidate_index": 0,
+      "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+      "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+      "source_excerpt": "supersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 权限、安全与审计测试报告\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 测试\n\n2026-08-01对v3.2测试环境执行账号、角色、最小权限、登录审计、关键操作和数据导出审计。\n\n## 边界\n\n不代表通过等保、密评或第三方认证。\n\n## 官方来源 / 依据\n\n- **OFF-U05｜中华人民共和国网络安全法（2025年修正）**｜全国人大常委会｜状态 `CURRENT_CONFIRMED`｜实施 `2026-01-01`｜最后核验 `2026-08-31`｜https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm\n- **OFF-U08｜GB/T 222",
+      "candidate": {
+        "statement": "2026-08-01对v3.2测试环境执行账号、角色、最小权限、登录审计、关键操作和数据导出审计。",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "subject_name": "权限、安全与审计测试报告",
+        "subject_type_hint": "测试报告",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "entity_mentions": [
+          {
+            "name": "v3.2测试环境",
+            "type_hint": "测试环境",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          }
+        ],
+        "status_text": "",
+        "status_source_refs": [],
+        "scope_items": [
+          {
+            "text": "账号、角色、最小权限、登录审计、关键操作和数据导出审计",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          }
+        ],
+        "quantity_items": [],
+        "temporal_items": [
+          {
+            "value_text": "2026-08-01",
+            "event_text": "执行测试",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          }
+        ]
+      },
+      "source_role": "SOURCE_ROLE_UNKNOWN",
+      "source_role_eligibility": "SOURCE_ROLE_UNKNOWN",
+      "resolved_bounded_source_unit": null,
+      "source_heading_path": [],
+      "source_role_evidence": "NO_BOUNDED_UNIT",
+      "synthetic_source": true,
+      "claim_permission": false,
+      "canonicalization_before": {
+        "status": "CANONICALIZED",
+        "review_reasons": [],
+        "canonical": {
+          "subject": {
+            "type": "测试报告",
+            "name": "权限、安全与审计测试报告"
+          },
+          "entities": [
+            {
+              "type": "测试环境",
+              "name": "v3.2测试环境"
+            }
+          ],
+          "status": "unknown",
+          "scopes": [
+            "账号、角色、最小权限、登录审计、关键操作和数据导出审计"
+          ],
+          "scope_source_texts": {
+            "账号、角色、最小权限、登录审计、关键操作和数据导出审计": "---\ndoc_id: \"COM-06\"\ntitle: \"权限、安全与审计测试报告\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U09\"\n  - \"U10\"\n  - \"U11\"\nevidence_category: \"SECURITY\"\nsource_ids:\n  - \"OFF-U05\"\n  - \"OFF-U08\"\n  - \"OFF-U10\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-08-01\"\nvalid_until: \"2027-01-31\"\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"HIGH\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2026-11-01\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 权限、安全与审计测试报告\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 测试\n\n2026-08-01对v3.2测试环境执行账号、角色、最小权限、登录审计、关键操作和数据导出审计。\n\n## 边界\n\n不代表通过等保、密评或第三方认证。\n\n## 官方来源 / 依据\n\n- **OFF-U05｜中华人民共和国网络安全法（2025年修正）**｜全国人大常委会｜状态 `CURRENT_CONFIRMED`｜实施 `2026-01-01`｜最后核验 `2026-08-31`｜https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm\n- **OFF-U08｜GB/T 22239-2019 网络安全等级保护基本要求**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2019-12-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=BAFB47E8874764186BDB7865E8344DAF\n- **OFF-U10｜GB/T 35273-2020 个人信息安全规范**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2020-10-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=4568F276E0F8346EB0FBA097AA0CE05E\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。"
+          },
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "unchanged_from_after": true
+      },
+      "canonicalization_after": {
+        "status": "CANONICALIZED",
+        "review_reasons": [],
+        "canonical": {
+          "subject": {
+            "type": "测试报告",
+            "name": "权限、安全与审计测试报告"
+          },
+          "entities": [
+            {
+              "type": "测试环境",
+              "name": "v3.2测试环境"
+            }
+          ],
+          "status": "unknown",
+          "scopes": [
+            "账号、角色、最小权限、登录审计、关键操作和数据导出审计"
+          ],
+          "scope_source_texts": {
+            "账号、角色、最小权限、登录审计、关键操作和数据导出审计": "---\ndoc_id: \"COM-06\"\ntitle: \"权限、安全与审计测试报告\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U09\"\n  - \"U10\"\n  - \"U11\"\nevidence_category: \"SECURITY\"\nsource_ids:\n  - \"OFF-U05\"\n  - \"OFF-U08\"\n  - \"OFF-U10\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-08-01\"\nvalid_until: \"2027-01-31\"\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"HIGH\"\nlast_verified_at: \"2026-08-31\"\nnext_review_at: \"2026-11-01\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\n---\n\n# 权限、安全与审计测试报告\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 测试\n\n2026-08-01对v3.2测试环境执行账号、角色、最小权限、登录审计、关键操作和数据导出审计。\n\n## 边界\n\n不代表通过等保、密评或第三方认证。\n\n## 官方来源 / 依据\n\n- **OFF-U05｜中华人民共和国网络安全法（2025年修正）**｜全国人大常委会｜状态 `CURRENT_CONFIRMED`｜实施 `2026-01-01`｜最后核验 `2026-08-31`｜https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm\n- **OFF-U08｜GB/T 22239-2019 网络安全等级保护基本要求**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2019-12-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=BAFB47E8874764186BDB7865E8344DAF\n- **OFF-U10｜GB/T 35273-2020 个人信息安全规范**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2020-10-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=4568F276E0F8346EB0FBA097AA0CE05E\n\n## 时效使用规则\n\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。"
+          },
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        }
+      },
+      "grounding_before": {
+        "decision": "ACCEPT",
+        "reasons": []
+      },
+      "grounding_after": {
+        "decision": "ACCEPT",
+        "final_decision": "REVIEW_REQUIRED",
+        "reasons": [],
+        "source_grounding": {
+          "mode": "EXACT",
+          "unit": null
+        }
+      },
+      "classification": "TRUE_REVIEW",
+      "deterministic_rule": "CANONICALIZATION_OR_ROLE_REVIEW_REQUIRED",
+      "source_ref_resolved": true
+    },
+    {
+      "case_id": "COM-06-B",
+      "candidate_index": 1,
+      "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+      "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+      "source_excerpt": "then_paragraph\"\n---\n\n# 权限、安全与审计测试报告\n\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。\n\n## 测试\n\n2026-08-01对v3.2测试环境执行账号、角色、最小权限、登录审计、关键操作和数据导出审计。\n\n## 边界\n\n不代表通过等保、密评或第三方认证。\n\n## 官方来源 / 依据\n\n- **OFF-U05｜中华人民共和国网络安全法（2025年修正）**｜全国人大常委会｜状态 `CURRENT_CONFIRMED`｜实施 `2026-01-01`｜最后核验 `2026-08-31`｜https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm\n- **OFF-U08｜GB/T 22239-2019 网络安全等级保护基本要求**｜国家市",
+      "candidate": {
+        "statement": "不代表通过等保、密评或第三方认证。",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "subject_name": "权限、安全与审计测试报告",
+        "subject_type_hint": "测试报告",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "entity_mentions": [],
+        "status_text": "不代表通过等保、密评或第三方认证",
+        "status_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "scope_items": [],
+        "quantity_items": [],
+        "temporal_items": []
+      },
+      "source_role": "SOURCE_ROLE_UNKNOWN",
+      "source_role_eligibility": "SOURCE_ROLE_UNKNOWN",
+      "resolved_bounded_source_unit": null,
+      "source_heading_path": [],
+      "source_role_evidence": "NO_BOUNDED_UNIT",
+      "synthetic_source": true,
+      "claim_permission": false,
+      "canonicalization_before": {
+        "status": "CANONICALIZED",
+        "review_reasons": [],
+        "canonical": {
+          "subject": {
+            "type": "测试报告",
+            "name": "权限、安全与审计测试报告"
+          },
+          "entities": [],
+          "status": "certified",
+          "status_source_text": "不代表通过等保、密评或第三方认证",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "unchanged_from_after": true
+      },
+      "canonicalization_after": {
+        "status": "CANONICALIZED",
+        "review_reasons": [],
+        "canonical": {
+          "subject": {
+            "type": "测试报告",
+            "name": "权限、安全与审计测试报告"
+          },
+          "entities": [],
+          "status": "certified",
+          "status_source_text": "不代表通过等保、密评或第三方认证",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        }
+      },
+      "grounding_before": {
+        "decision": "ACCEPT",
+        "reasons": []
+      },
+      "grounding_after": {
+        "decision": "ACCEPT",
+        "final_decision": "REVIEW_REQUIRED",
+        "reasons": [],
+        "source_grounding": {
+          "mode": "EXACT",
+          "unit": null
+        }
+      },
+      "classification": "TRUE_REVIEW",
+      "deterministic_rule": "CANONICALIZATION_OR_ROLE_REVIEW_REQUIRED",
+      "source_ref_resolved": true
+    },
+    {
+      "case_id": "COM-06-B",
+      "candidate_index": 2,
+      "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+      "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+      "source_excerpt": "---\ndoc_id: \"COM-06\"\ntitle: \"权限、安全与审计测试报告\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U09\"\n  - \"U10\"\n  - \"U11\"\nevidence_category: \"SECURITY\"\nsource_ids:\n  - \"OFF-U05\"\n  - \"OFF-U08\"\n  - \"OFF-U10\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"",
+      "candidate": {
+        "statement": "OFF-U05｜中华人民共和国网络安全法（2025年修正）｜全国人大常委会｜状态 CURRENT_CONFIRMED｜实施 2026-01-01｜最后核验 2026-08-31",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "subject_name": "中华人民共和国网络安全法（2025年修正）",
+        "subject_type_hint": "法律",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "entity_mentions": [
+          {
+            "name": "全国人大常委会",
+            "type_hint": "机构",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          }
+        ],
+        "status_text": "CURRENT_CONFIRMED",
+        "status_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "scope_items": [],
+        "quantity_items": [],
+        "temporal_items": [
+          {
+            "value_text": "2026-01-01",
+            "event_text": "实施",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          },
+          {
+            "value_text": "2026-08-31",
+            "event_text": "最后核验",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          }
+        ]
+      },
+      "source_role": "REFERENCE_CONTEXT_ONLY",
+      "source_role_eligibility": "REFERENCE_CONTEXT_ONLY",
+      "resolved_bounded_source_unit": "- **OFF-U05｜中华人民共和国网络安全法（2025年修正）**｜全国人大常委会｜状态 `CURRENT_CONFIRMED`｜实施 `2026-01-01`｜最后核验 `2026-08-31`｜https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm\n- **OFF-U08｜GB/T 22239-2019 网络安全等级保护基本要求**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2019-12-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=BAFB47E8874764186BDB7865E8344DAF\n- **OFF-U10｜GB/T 35273-2020 个人信息安全规范**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2020-10-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=4568F276E0F8346EB0FBA097AA0CE05E",
+      "source_heading_path": [
+        "权限、安全与审计测试报告",
+        "官方来源 / 依据"
+      ],
+      "source_role_evidence": "BOUNDED_HEADING_ALIGNMENT",
+      "synthetic_source": true,
+      "claim_permission": false,
+      "canonicalization_before": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "法律",
+            "name": "中华人民共和国网络安全法（2025年修正）"
+          },
+          "entities": [
+            {
+              "type": "机构",
+              "name": "全国人大常委会"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "CURRENT_CONFIRMED",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "unchanged_from_after": true
+      },
+      "canonicalization_after": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "法律",
+            "name": "中华人民共和国网络安全法（2025年修正）"
+          },
+          "entities": [
+            {
+              "type": "机构",
+              "name": "全国人大常委会"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "CURRENT_CONFIRMED",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        }
+      },
+      "grounding_before": {
+        "decision": "REJECT",
+        "reasons": [
+          "statement is not grounded"
+        ]
+      },
+      "grounding_after": {
+        "decision": "REVIEW_REQUIRED",
+        "final_decision": "EXCLUDED_REFERENCE",
+        "reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "source_grounding": {
+          "mode": "BOUNDED_COMPOSITIONAL",
+          "unit": {
+            "text": "- **OFF-U05｜中华人民共和国网络安全法（2025年修正）**｜全国人大常委会｜状态 `CURRENT_CONFIRMED`｜实施 `2026-01-01`｜最后核验 `2026-08-31`｜https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm\n- **OFF-U08｜GB/T 22239-2019 网络安全等级保护基本要求**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2019-12-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=BAFB47E8874764186BDB7865E8344DAF\n- **OFF-U10｜GB/T 35273-2020 个人信息安全规范**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2020-10-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=4568F276E0F8346EB0FBA097AA0CE05E",
+            "heading_path": [
+              "权限、安全与审计测试报告",
+              "官方来源 / 依据"
+            ]
+          }
+        }
+      },
+      "classification": "REFERENCE_CONTEXT_EXCLUDED",
+      "deterministic_rule": "SOURCE_GROUNDED_REVIEWABLE_OBSERVATION",
+      "source_ref_resolved": true
+    },
+    {
+      "case_id": "COM-06-B",
+      "candidate_index": 3,
+      "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+      "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+      "source_excerpt": "---\ndoc_id: \"COM-06\"\ntitle: \"权限、安全与审计测试报告\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U09\"\n  - \"U10\"\n  - \"U11\"\nevidence_category: \"SECURITY\"\nsource_ids:\n  - \"OFF-U05\"\n  - \"OFF-U08\"\n  - \"OFF-U10\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"",
+      "candidate": {
+        "statement": "OFF-U08｜GB/T 22239-2019 网络安全等级保护基本要求｜国家市场监督管理总局、国家标准化管理委员会｜状态 CURRENT_CONFIRMED｜实施 2019-12-01｜最后核验 2026-08-31",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "subject_name": "GB/T 22239-2019 网络安全等级保护基本要求",
+        "subject_type_hint": "标准",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "entity_mentions": [
+          {
+            "name": "国家市场监督管理总局",
+            "type_hint": "机构",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          },
+          {
+            "name": "国家标准化管理委员会",
+            "type_hint": "机构",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          }
+        ],
+        "status_text": "CURRENT_CONFIRMED",
+        "status_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "scope_items": [],
+        "quantity_items": [],
+        "temporal_items": [
+          {
+            "value_text": "2019-12-01",
+            "event_text": "实施",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          },
+          {
+            "value_text": "2026-08-31",
+            "event_text": "最后核验",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          }
+        ]
+      },
+      "source_role": "REFERENCE_CONTEXT_ONLY",
+      "source_role_eligibility": "REFERENCE_CONTEXT_ONLY",
+      "resolved_bounded_source_unit": "- **OFF-U05｜中华人民共和国网络安全法（2025年修正）**｜全国人大常委会｜状态 `CURRENT_CONFIRMED`｜实施 `2026-01-01`｜最后核验 `2026-08-31`｜https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm\n- **OFF-U08｜GB/T 22239-2019 网络安全等级保护基本要求**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2019-12-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=BAFB47E8874764186BDB7865E8344DAF\n- **OFF-U10｜GB/T 35273-2020 个人信息安全规范**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2020-10-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=4568F276E0F8346EB0FBA097AA0CE05E",
+      "source_heading_path": [
+        "权限、安全与审计测试报告",
+        "官方来源 / 依据"
+      ],
+      "source_role_evidence": "BOUNDED_HEADING_ALIGNMENT",
+      "synthetic_source": true,
+      "claim_permission": false,
+      "canonicalization_before": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "标准",
+            "name": "GB/T 22239-2019 网络安全等级保护基本要求"
+          },
+          "entities": [
+            {
+              "type": "机构",
+              "name": "国家市场监督管理总局"
+            },
+            {
+              "type": "机构",
+              "name": "国家标准化管理委员会"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "CURRENT_CONFIRMED",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "unchanged_from_after": true
+      },
+      "canonicalization_after": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "标准",
+            "name": "GB/T 22239-2019 网络安全等级保护基本要求"
+          },
+          "entities": [
+            {
+              "type": "机构",
+              "name": "国家市场监督管理总局"
+            },
+            {
+              "type": "机构",
+              "name": "国家标准化管理委员会"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "CURRENT_CONFIRMED",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        }
+      },
+      "grounding_before": {
+        "decision": "REJECT",
+        "reasons": [
+          "statement is not grounded"
+        ]
+      },
+      "grounding_after": {
+        "decision": "REVIEW_REQUIRED",
+        "final_decision": "EXCLUDED_REFERENCE",
+        "reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "source_grounding": {
+          "mode": "BOUNDED_COMPOSITIONAL",
+          "unit": {
+            "text": "- **OFF-U05｜中华人民共和国网络安全法（2025年修正）**｜全国人大常委会｜状态 `CURRENT_CONFIRMED`｜实施 `2026-01-01`｜最后核验 `2026-08-31`｜https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm\n- **OFF-U08｜GB/T 22239-2019 网络安全等级保护基本要求**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2019-12-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=BAFB47E8874764186BDB7865E8344DAF\n- **OFF-U10｜GB/T 35273-2020 个人信息安全规范**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2020-10-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=4568F276E0F8346EB0FBA097AA0CE05E",
+            "heading_path": [
+              "权限、安全与审计测试报告",
+              "官方来源 / 依据"
+            ]
+          }
+        }
+      },
+      "classification": "REFERENCE_CONTEXT_EXCLUDED",
+      "deterministic_rule": "SOURCE_GROUNDED_REVIEWABLE_OBSERVATION",
+      "source_ref_resolved": true
+    },
+    {
+      "case_id": "COM-06-B",
+      "candidate_index": 4,
+      "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+      "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+      "source_excerpt": "---\ndoc_id: \"COM-06\"\ntitle: \"权限、安全与审计测试报告\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U09\"\n  - \"U10\"\n  - \"U11\"\nevidence_category: \"SECURITY\"\nsource_ids:\n  - \"OFF-U05\"\n  - \"OFF-U08\"\n  - \"OFF-U10\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"",
+      "candidate": {
+        "statement": "OFF-U10｜GB/T 35273-2020 个人信息安全规范｜国家市场监督管理总局、国家标准化管理委员会｜状态 CURRENT_CONFIRMED｜实施 2020-10-01｜最后核验 2026-08-31",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "subject_name": "GB/T 35273-2020 个人信息安全规范",
+        "subject_type_hint": "标准",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "entity_mentions": [
+          {
+            "name": "国家市场监督管理总局",
+            "type_hint": "机构",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          },
+          {
+            "name": "国家标准化管理委员会",
+            "type_hint": "机构",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          }
+        ],
+        "status_text": "CURRENT_CONFIRMED",
+        "status_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "scope_items": [],
+        "quantity_items": [],
+        "temporal_items": [
+          {
+            "value_text": "2020-10-01",
+            "event_text": "实施",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          },
+          {
+            "value_text": "2026-08-31",
+            "event_text": "最后核验",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          }
+        ]
+      },
+      "source_role": "REFERENCE_CONTEXT_ONLY",
+      "source_role_eligibility": "REFERENCE_CONTEXT_ONLY",
+      "resolved_bounded_source_unit": "- **OFF-U05｜中华人民共和国网络安全法（2025年修正）**｜全国人大常委会｜状态 `CURRENT_CONFIRMED`｜实施 `2026-01-01`｜最后核验 `2026-08-31`｜https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm\n- **OFF-U08｜GB/T 22239-2019 网络安全等级保护基本要求**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2019-12-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=BAFB47E8874764186BDB7865E8344DAF\n- **OFF-U10｜GB/T 35273-2020 个人信息安全规范**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2020-10-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=4568F276E0F8346EB0FBA097AA0CE05E",
+      "source_heading_path": [
+        "权限、安全与审计测试报告",
+        "官方来源 / 依据"
+      ],
+      "source_role_evidence": "BOUNDED_HEADING_ALIGNMENT",
+      "synthetic_source": true,
+      "claim_permission": false,
+      "canonicalization_before": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "标准",
+            "name": "GB/T 35273-2020 个人信息安全规范"
+          },
+          "entities": [
+            {
+              "type": "机构",
+              "name": "国家市场监督管理总局"
+            },
+            {
+              "type": "机构",
+              "name": "国家标准化管理委员会"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "CURRENT_CONFIRMED",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "unchanged_from_after": true
+      },
+      "canonicalization_after": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "标准",
+            "name": "GB/T 35273-2020 个人信息安全规范"
+          },
+          "entities": [
+            {
+              "type": "机构",
+              "name": "国家市场监督管理总局"
+            },
+            {
+              "type": "机构",
+              "name": "国家标准化管理委员会"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "CURRENT_CONFIRMED",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        }
+      },
+      "grounding_before": {
+        "decision": "REJECT",
+        "reasons": [
+          "statement is not grounded"
+        ]
+      },
+      "grounding_after": {
+        "decision": "REVIEW_REQUIRED",
+        "final_decision": "EXCLUDED_REFERENCE",
+        "reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "source_grounding": {
+          "mode": "BOUNDED_COMPOSITIONAL",
+          "unit": {
+            "text": "- **OFF-U05｜中华人民共和国网络安全法（2025年修正）**｜全国人大常委会｜状态 `CURRENT_CONFIRMED`｜实施 `2026-01-01`｜最后核验 `2026-08-31`｜https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm\n- **OFF-U08｜GB/T 22239-2019 网络安全等级保护基本要求**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2019-12-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=BAFB47E8874764186BDB7865E8344DAF\n- **OFF-U10｜GB/T 35273-2020 个人信息安全规范**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2020-10-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=4568F276E0F8346EB0FBA097AA0CE05E",
+            "heading_path": [
+              "权限、安全与审计测试报告",
+              "官方来源 / 依据"
+            ]
+          }
+        }
+      },
+      "classification": "REFERENCE_CONTEXT_EXCLUDED",
+      "deterministic_rule": "SOURCE_GROUNDED_REVIEWABLE_OBSERVATION",
+      "source_ref_resolved": true
+    },
+    {
+      "case_id": "COM-06-B",
+      "candidate_index": 5,
+      "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+      "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+      "source_excerpt": "---\ndoc_id: \"COM-06\"\ntitle: \"权限、安全与审计测试报告\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U09\"\n  - \"U10\"\n  - \"U11\"\nevidence_category: \"SECURITY\"\nsource_ids:\n  - \"OFF-U05\"\n  - \"OFF-U08\"\n  - \"OFF-U10\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"",
+      "candidate": {
+        "statement": "召回后同时检查 evidence_temporal_status 与 Source Registry 的 validity_status。",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "subject_name": "时效使用规则",
+        "subject_type_hint": "规则",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "entity_mentions": [
+          {
+            "name": "evidence_temporal_status",
+            "type_hint": "字段",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          },
+          {
+            "name": "Source Registry",
+            "type_hint": "注册表",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          },
+          {
+            "name": "validity_status",
+            "type_hint": "字段",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          }
+        ],
+        "status_text": "",
+        "status_source_refs": [],
+        "scope_items": [],
+        "quantity_items": [],
+        "temporal_items": []
+      },
+      "source_role": "SOURCE_ROLE_UNKNOWN",
+      "source_role_eligibility": "SOURCE_ROLE_UNKNOWN",
+      "resolved_bounded_source_unit": null,
+      "source_heading_path": [],
+      "source_role_evidence": "NO_BOUNDED_UNIT",
+      "synthetic_source": true,
+      "claim_permission": false,
+      "canonicalization_before": {
+        "status": "CANONICALIZED",
+        "review_reasons": [],
+        "canonical": {
+          "subject": {
+            "type": "规则",
+            "name": "时效使用规则"
+          },
+          "entities": [
+            {
+              "type": "字段",
+              "name": "evidence_temporal_status"
+            },
+            {
+              "type": "注册表",
+              "name": "Source Registry"
+            },
+            {
+              "type": "字段",
+              "name": "validity_status"
+            }
+          ],
+          "status": "unknown",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "unchanged_from_after": true
+      },
+      "canonicalization_after": {
+        "status": "CANONICALIZED",
+        "review_reasons": [],
+        "canonical": {
+          "subject": {
+            "type": "规则",
+            "name": "时效使用规则"
+          },
+          "entities": [
+            {
+              "type": "字段",
+              "name": "evidence_temporal_status"
+            },
+            {
+              "type": "注册表",
+              "name": "Source Registry"
+            },
+            {
+              "type": "字段",
+              "name": "validity_status"
+            }
+          ],
+          "status": "unknown",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        }
+      },
+      "grounding_before": {
+        "decision": "REJECT",
+        "reasons": [
+          "statement is not grounded"
+        ]
+      },
+      "grounding_after": {
+        "decision": "REJECT",
+        "final_decision": "REVIEW_REQUIRED",
+        "reasons": [
+          "statement is not grounded"
+        ],
+        "source_grounding": {
+          "mode": "UNKNOWN",
+          "unit": null
+        }
+      },
+      "classification": "FALSE_REJECT_FIXED",
+      "deterministic_rule": "SOURCE_GROUNDED_REVIEWABLE_OBSERVATION",
+      "source_ref_resolved": true
+    },
+    {
+      "case_id": "COM-06-B",
+      "candidate_index": 6,
+      "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+      "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+      "source_excerpt": "---\ndoc_id: \"COM-06\"\ntitle: \"权限、安全与审计测试报告\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U09\"\n  - \"U10\"\n  - \"U11\"\nevidence_category: \"SECURITY\"\nsource_ids:\n  - \"OFF-U05\"\n  - \"OFF-U08\"\n  - \"OFF-U10\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"",
+      "candidate": {
+        "statement": "HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED 不能直接当作当前强制要求。",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "subject_name": "HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED",
+        "subject_type_hint": "状态",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "entity_mentions": [],
+        "status_text": "不能直接当作当前强制要求",
+        "status_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "scope_items": [],
+        "quantity_items": [],
+        "temporal_items": []
+      },
+      "source_role": "GOVERNANCE_CONTEXT_ONLY",
+      "source_role_eligibility": "GOVERNANCE_CONTEXT_ONLY",
+      "resolved_bounded_source_unit": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+      "source_heading_path": [
+        "权限、安全与审计测试报告",
+        "时效使用规则"
+      ],
+      "source_role_evidence": "BOUNDED_HEADING_ALIGNMENT",
+      "synthetic_source": true,
+      "claim_permission": false,
+      "canonicalization_before": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "状态",
+            "name": "HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED"
+          },
+          "entities": [],
+          "status": "unknown",
+          "status_source_text": "不能直接当作当前强制要求",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "unchanged_from_after": true
+      },
+      "canonicalization_after": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "状态",
+            "name": "HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED"
+          },
+          "entities": [],
+          "status": "unknown",
+          "status_source_text": "不能直接当作当前强制要求",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        }
+      },
+      "grounding_before": {
+        "decision": "REJECT",
+        "reasons": [
+          "statement is not grounded"
+        ]
+      },
+      "grounding_after": {
+        "decision": "REVIEW_REQUIRED",
+        "final_decision": "EXCLUDED_GOVERNANCE",
+        "reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "source_grounding": {
+          "mode": "BOUNDED_COMPOSITIONAL",
+          "unit": {
+            "text": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+            "heading_path": [
+              "权限、安全与审计测试报告",
+              "时效使用规则"
+            ]
+          }
+        }
+      },
+      "classification": "GOVERNANCE_CONTEXT_EXCLUDED",
+      "deterministic_rule": "SOURCE_GROUNDED_REVIEWABLE_OBSERVATION",
+      "source_ref_resolved": true
+    },
+    {
+      "case_id": "COM-06-B",
+      "candidate_index": 7,
+      "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+      "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+      "source_excerpt": "---\ndoc_id: \"COM-06\"\ntitle: \"权限、安全与审计测试报告\"\nlibrary_scope: \"company_case\"\ndomain: \"government+medical\"\nrequirement_themes:\n  - \"U09\"\n  - \"U10\"\n  - \"U11\"\nevidence_category: \"SECURITY\"\nsource_ids:\n  - \"OFF-U05\"\n  - \"OFF-U08\"\n  - \"OFF-U10\"\nsource_kind: \"synthetic_company_evidence\"\nevidence_status: \"synthetic_pilot_evidence\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"",
+      "candidate": {
+        "statement": "到达 next_review_at 只代表必须重新核验，不等于自动失效。",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "subject_name": "next_review_at",
+        "subject_type_hint": "时间字段",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "entity_mentions": [],
+        "status_text": "到达只代表必须重新核验，不等于自动失效",
+        "status_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "scope_items": [],
+        "quantity_items": [],
+        "temporal_items": []
+      },
+      "source_role": "SOURCE_ROLE_UNKNOWN",
+      "source_role_eligibility": "SOURCE_ROLE_UNKNOWN",
+      "resolved_bounded_source_unit": null,
+      "source_heading_path": [],
+      "source_role_evidence": "NO_BOUNDED_UNIT",
+      "synthetic_source": true,
+      "claim_permission": false,
+      "canonicalization_before": {
+        "status": "CANONICALIZED",
+        "review_reasons": [],
+        "canonical": {
+          "subject": {
+            "type": "时间字段",
+            "name": "next_review_at"
+          },
+          "entities": [],
+          "status": "verified",
+          "status_source_text": "到达只代表必须重新核验，不等于自动失效",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "unchanged_from_after": true
+      },
+      "canonicalization_after": {
+        "status": "CANONICALIZED",
+        "review_reasons": [],
+        "canonical": {
+          "subject": {
+            "type": "时间字段",
+            "name": "next_review_at"
+          },
+          "entities": [],
+          "status": "verified",
+          "status_source_text": "到达只代表必须重新核验，不等于自动失效",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        }
+      },
+      "grounding_before": {
+        "decision": "REJECT",
+        "reasons": [
+          "statement is not grounded"
+        ]
+      },
+      "grounding_after": {
+        "decision": "REJECT",
+        "final_decision": "REVIEW_REQUIRED",
+        "reasons": [
+          "statement is not grounded"
+        ],
+        "source_grounding": {
+          "mode": "UNKNOWN",
+          "unit": null
+        }
+      },
+      "classification": "FALSE_REJECT_FIXED",
+      "deterministic_rule": "SOURCE_GROUNDED_REVIEWABLE_OBSERVATION",
+      "source_ref_resolved": true
+    },
+    {
+      "case_id": "COM-06-B",
+      "candidate_index": 8,
+      "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+      "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+      "source_excerpt": "后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。\n",
+      "candidate": {
+        "statement": "公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+        "source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "subject_name": "公司 Evidence 的有效期",
+        "subject_type_hint": "有效期",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "entity_mentions": [
+          {
+            "name": "官方 Source 的有效期",
+            "type_hint": "有效期",
+            "source_refs": [
+              "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+            ]
+          }
+        ],
+        "status_text": "是两个不同维度",
+        "status_source_refs": [
+          "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+        ],
+        "scope_items": [],
+        "quantity_items": [],
+        "temporal_items": []
+      },
+      "source_role": "GOVERNANCE_CONTEXT_ONLY",
+      "source_role_eligibility": "GOVERNANCE_CONTEXT_ONLY",
+      "resolved_bounded_source_unit": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+      "source_heading_path": [
+        "权限、安全与审计测试报告",
+        "时效使用规则"
+      ],
+      "source_role_evidence": "BOUNDED_HEADING_ALIGNMENT",
+      "synthetic_source": true,
+      "claim_permission": false,
+      "canonicalization_before": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "有效期",
+            "name": "公司 Evidence 的有效期"
+          },
+          "entities": [
+            {
+              "type": "有效期",
+              "name": "官方 Source 的有效期"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "是两个不同维度",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "unchanged_from_after": true
+      },
+      "canonicalization_after": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "有效期",
+            "name": "公司 Evidence 的有效期"
+          },
+          "entities": [
+            {
+              "type": "有效期",
+              "name": "官方 Source 的有效期"
+            }
+          ],
+          "status": "unknown",
+          "status_source_text": "是两个不同维度",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        }
+      },
+      "grounding_before": {
+        "decision": "REVIEW_REQUIRED",
+        "reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ]
+      },
+      "grounding_after": {
+        "decision": "REVIEW_REQUIRED",
+        "final_decision": "EXCLUDED_GOVERNANCE",
+        "reasons": [
+          "STATUS_ENUM_UNRESOLVED"
+        ],
+        "source_grounding": {
+          "mode": "EXACT",
+          "unit": null
+        }
+      },
+      "classification": "GOVERNANCE_CONTEXT_EXCLUDED",
+      "deterministic_rule": "GOVERNANCE_CONTEXT_NOT_ENTERPRISE_AUTHORITY",
+      "source_ref_resolved": true
+    },
+    {
+      "case_id": "CCV2-U13-01",
+      "candidate_index": 0,
+      "source_ref": "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document",
+      "source_hash": "9408fc5a50ffcad28def68d844c2d701405b99655f2d5904aeb89874f55ae575",
+      "source_excerpt": "ge_forbidden: true\nsource_authority: \"SYNTHETIC_DEVELOPMENT_ONLY\"\n---\n\n# 性能与响应-PERFORMANCE_TEST\n\n## 记录对象\n\n本记录属于澄川数智科技有限公司（Synthetic Demo Company）的受控开发企业材料，面向性能与响应主题。\n\n## 可核验记录\n\n1. 澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。\n2. 标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。\n3. 混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。\n4. 测试持续时间为120分钟。\n\n## 使用边界\n\n本材料仅用于 V4.3 RAG / Fact / Mapping / Claim / Writer 开发与评测。\n不得晋升为 REAL_ENTERPRISE_EVIDENCE，不得作为真实投标企业能力声明依据。\n事实使用必须同时保留 ente",
+      "candidate": {
+        "statement": "澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。",
+        "source_refs": [
+          "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+        ],
+        "subject_name": "澄川政企数字平台 XDP 5.2 5.2.2",
+        "subject_type_hint": "软件平台",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+        ],
+        "entity_mentions": [
+          {
+            "name": "澄川数智科技有限公司",
+            "type_hint": "企业",
+            "source_refs": [
+              "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+            ]
+          }
+        ],
+        "status_text": "完成性能测试",
+        "status_source_refs": [
+          "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+        ],
+        "scope_items": [
+          {
+            "text": "4个应用节点、每节点8核16GB环境",
+            "source_refs": [
+              "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+            ]
+          }
+        ],
+        "quantity_items": [],
+        "temporal_items": []
+      },
+      "source_role": "SOURCE_ROLE_UNKNOWN",
+      "source_role_eligibility": "SOURCE_ROLE_UNKNOWN",
+      "resolved_bounded_source_unit": null,
+      "source_heading_path": [],
+      "source_role_evidence": "NO_BOUNDED_UNIT",
+      "synthetic_source": true,
+      "claim_permission": false,
+      "canonicalization_before": {
+        "status": "CANONICALIZED",
+        "review_reasons": [],
+        "canonical": {
+          "subject": {
+            "type": "软件平台",
+            "name": "澄川政企数字平台 XDP 5.2 5.2.2"
+          },
+          "entities": [
+            {
+              "type": "企业",
+              "name": "澄川数智科技有限公司"
+            }
+          ],
+          "status": "completed",
+          "status_source_text": "完成性能测试",
+          "scopes": [
+            "4个应用节点、每节点8核16GB环境"
+          ],
+          "scope_source_texts": {
+            "4个应用节点、每节点8核16GB环境": "---\ndoc_id: \"CCV2-U13-01\"\ntitle: \"性能与响应-PERFORMANCE_TEST\"\nlibrary_scope: \"controlled_enterprise\"\ndomain: \"cross_industry\"\nenterprise_id: \"SYNTH-CHENGCHUAN-001\"\nenterprise_name: \"澄川数智科技有限公司（Synthetic Demo Company）\"\nrequirement_themes: [\"U13\"]\nmatrix_theme: \"U13\"\nevidence_slot: \"PERFORMANCE_TEST\"\ncollection_basis: \"GENERIC_TENDER_MATRIX\"\nrequirement_blind: true\nsource_kind: \"controlled_synthetic_enterprise_evidence\"\nevidence_status: \"synthetic_development_only\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: \"2027-06-30\"\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"HIGH\"\nlast_verified_at: \"2026-09-06\"\nnext_review_at: \"2026-12-31\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\ncorpus_generation: \"CHENGCHUAN_DEPTH_V2\"\nmerge_relation: \"EXTENDS_EXISTING_COM_01_COM_16\"\nmerge_policy: \"DOCUMENT_ISOLATED_NO_TEXT_CONCAT\"\nfact_auto_merge_forbidden: true\nsource_authority: \"SYNTHETIC_DEVELOPMENT_ONLY\"\n---\n\n# 性能与响应-PERFORMANCE_TEST\n\n## 记录对象\n\n本记录属于澄川数智科技有限公司（Synthetic Demo Company）的受控开发企业材料，面向性能与响应主题。\n\n## 可核验记录\n\n1. 澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。\n2. 标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。\n3. 混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。\n4. 测试持续时间为120分钟。\n\n## 使用边界\n\n本材料仅用于 V4.3 RAG / Fact / Mapping / Claim / Writer 开发与评测。\n不得晋升为 REAL_ENTERPRISE_EVIDENCE，不得作为真实投标企业能力声明依据。\n事实使用必须同时保留 enterprise_id、产品/对象、版本、有效期和 source lineage。"
+          },
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "unchanged_from_after": true
+      },
+      "canonicalization_after": {
+        "status": "CANONICALIZED",
+        "review_reasons": [],
+        "canonical": {
+          "subject": {
+            "type": "软件平台",
+            "name": "澄川政企数字平台 XDP 5.2 5.2.2"
+          },
+          "entities": [
+            {
+              "type": "企业",
+              "name": "澄川数智科技有限公司"
+            }
+          ],
+          "status": "completed",
+          "status_source_text": "完成性能测试",
+          "scopes": [
+            "4个应用节点、每节点8核16GB环境"
+          ],
+          "scope_source_texts": {
+            "4个应用节点、每节点8核16GB环境": "---\ndoc_id: \"CCV2-U13-01\"\ntitle: \"性能与响应-PERFORMANCE_TEST\"\nlibrary_scope: \"controlled_enterprise\"\ndomain: \"cross_industry\"\nenterprise_id: \"SYNTH-CHENGCHUAN-001\"\nenterprise_name: \"澄川数智科技有限公司（Synthetic Demo Company）\"\nrequirement_themes: [\"U13\"]\nmatrix_theme: \"U13\"\nevidence_slot: \"PERFORMANCE_TEST\"\ncollection_basis: \"GENERIC_TENDER_MATRIX\"\nrequirement_blind: true\nsource_kind: \"controlled_synthetic_enterprise_evidence\"\nevidence_status: \"synthetic_development_only\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: \"2027-06-30\"\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"HIGH\"\nlast_verified_at: \"2026-09-06\"\nnext_review_at: \"2026-12-31\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\ncorpus_generation: \"CHENGCHUAN_DEPTH_V2\"\nmerge_relation: \"EXTENDS_EXISTING_COM_01_COM_16\"\nmerge_policy: \"DOCUMENT_ISOLATED_NO_TEXT_CONCAT\"\nfact_auto_merge_forbidden: true\nsource_authority: \"SYNTHETIC_DEVELOPMENT_ONLY\"\n---\n\n# 性能与响应-PERFORMANCE_TEST\n\n## 记录对象\n\n本记录属于澄川数智科技有限公司（Synthetic Demo Company）的受控开发企业材料，面向性能与响应主题。\n\n## 可核验记录\n\n1. 澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。\n2. 标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。\n3. 混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。\n4. 测试持续时间为120分钟。\n\n## 使用边界\n\n本材料仅用于 V4.3 RAG / Fact / Mapping / Claim / Writer 开发与评测。\n不得晋升为 REAL_ENTERPRISE_EVIDENCE，不得作为真实投标企业能力声明依据。\n事实使用必须同时保留 enterprise_id、产品/对象、版本、有效期和 source lineage。"
+          },
+          "quantities": [],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        }
+      },
+      "grounding_before": {
+        "decision": "ACCEPT",
+        "reasons": []
+      },
+      "grounding_after": {
+        "decision": "ACCEPT",
+        "final_decision": "REVIEW_REQUIRED",
+        "reasons": [],
+        "source_grounding": {
+          "mode": "EXACT",
+          "unit": null
+        }
+      },
+      "classification": "TRUE_REVIEW",
+      "deterministic_rule": "CANONICALIZATION_OR_ROLE_REVIEW_REQUIRED",
+      "source_ref_resolved": true
+    },
+    {
+      "case_id": "CCV2-U13-01",
+      "candidate_index": 1,
+      "source_ref": "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document",
+      "source_hash": "9408fc5a50ffcad28def68d844c2d701405b99655f2d5904aeb89874f55ae575",
+      "source_excerpt": "OPMENT_ONLY\"\n---\n\n# 性能与响应-PERFORMANCE_TEST\n\n## 记录对象\n\n本记录属于澄川数智科技有限公司（Synthetic Demo Company）的受控开发企业材料，面向性能与响应主题。\n\n## 可核验记录\n\n1. 澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。\n2. 标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。\n3. 混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。\n4. 测试持续时间为120分钟。\n\n## 使用边界\n\n本材料仅用于 V4.3 RAG / Fact / Mapping / Claim / Writer 开发与评测。\n不得晋升为 REAL_ENTERPRISE_EVIDENCE，不得作为真实投标企业能力声明依据。\n事实使用必须同时保留 enterprise_id、产品/对象、版本、有效期和 source lineag",
+      "candidate": {
+        "statement": "标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。",
+        "source_refs": [
+          "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+        ],
+        "subject_name": "标准查询场景",
+        "subject_type_hint": "测试场景",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+        ],
+        "entity_mentions": [],
+        "status_text": "",
+        "status_source_refs": [],
+        "scope_items": [
+          {
+            "text": "8,000并发虚拟用户",
+            "source_refs": [
+              "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+            ]
+          }
+        ],
+        "quantity_items": [
+          {
+            "name": "P95响应时间",
+            "value_text": "820",
+            "unit_text": "毫秒",
+            "condition_text": "标准查询场景在8,000并发虚拟用户下",
+            "source_refs": [
+              "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+            ]
+          }
+        ],
+        "temporal_items": []
+      },
+      "source_role": "SOURCE_ROLE_UNKNOWN",
+      "source_role_eligibility": "SOURCE_ROLE_UNKNOWN",
+      "resolved_bounded_source_unit": "1. 澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。\n2. 标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。\n3. 混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。\n4. 测试持续时间为120分钟。",
+      "source_heading_path": [
+        "性能与响应-PERFORMANCE_TEST",
+        "可核验记录"
+      ],
+      "source_role_evidence": "BOUNDED_HEADING_ALIGNMENT",
+      "synthetic_source": true,
+      "claim_permission": false,
+      "canonicalization_before": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "QUANTITY_CONDITION_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "测试场景",
+            "name": "标准查询场景"
+          },
+          "entities": [],
+          "status": "unknown",
+          "scopes": [
+            "8,000并发虚拟用户"
+          ],
+          "scope_source_texts": {
+            "8,000并发虚拟用户": "---\ndoc_id: \"CCV2-U13-01\"\ntitle: \"性能与响应-PERFORMANCE_TEST\"\nlibrary_scope: \"controlled_enterprise\"\ndomain: \"cross_industry\"\nenterprise_id: \"SYNTH-CHENGCHUAN-001\"\nenterprise_name: \"澄川数智科技有限公司（Synthetic Demo Company）\"\nrequirement_themes: [\"U13\"]\nmatrix_theme: \"U13\"\nevidence_slot: \"PERFORMANCE_TEST\"\ncollection_basis: \"GENERIC_TENDER_MATRIX\"\nrequirement_blind: true\nsource_kind: \"controlled_synthetic_enterprise_evidence\"\nevidence_status: \"synthetic_development_only\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: \"2027-06-30\"\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"HIGH\"\nlast_verified_at: \"2026-09-06\"\nnext_review_at: \"2026-12-31\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\ncorpus_generation: \"CHENGCHUAN_DEPTH_V2\"\nmerge_relation: \"EXTENDS_EXISTING_COM_01_COM_16\"\nmerge_policy: \"DOCUMENT_ISOLATED_NO_TEXT_CONCAT\"\nfact_auto_merge_forbidden: true\nsource_authority: \"SYNTHETIC_DEVELOPMENT_ONLY\"\n---\n\n# 性能与响应-PERFORMANCE_TEST\n\n## 记录对象\n\n本记录属于澄川数智科技有限公司（Synthetic Demo Company）的受控开发企业材料，面向性能与响应主题。\n\n## 可核验记录\n\n1. 澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。\n2. 标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。\n3. 混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。\n4. 测试持续时间为120分钟。\n\n## 使用边界\n\n本材料仅用于 V4.3 RAG / Fact / Mapping / Claim / Writer 开发与评测。\n不得晋升为 REAL_ENTERPRISE_EVIDENCE，不得作为真实投标企业能力声明依据。\n事实使用必须同时保留 enterprise_id、产品/对象、版本、有效期和 source lineage。"
+          },
+          "quantities": [
+            {
+              "metric": "P95响应时间",
+              "value": "820",
+              "unit": "MILLISECOND",
+              "source_text": "---\ndoc_id: \"CCV2-U13-01\"\ntitle: \"性能与响应-PERFORMANCE_TEST\"\nlibrary_scope: \"controlled_enterprise\"\ndomain: \"cross_industry\"\nenterprise_id: \"SYNTH-CHENGCHUAN-001\"\nenterprise_name: \"澄川数智科技有限公司（Synthetic Demo Company）\"\nrequirement_themes: [\"U13\"]\nmatrix_theme: \"U13\"\nevidence_slot: \"PERFORMANCE_TEST\"\ncollection_basis: \"GENERIC_TENDER_MATRIX\"\nrequirement_blind: true\nsource_kind: \"controlled_synthetic_enterprise_evidence\"\nevidence_status: \"synthetic_development_only\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: \"2027-06-30\"\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"HIGH\"\nlast_verified_at: \"2026-09-06\"\nnext_review_at: \"2026-12-31\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\ncorpus_generation: \"CHENGCHUAN_DEPTH_V2\"\nmerge_relation: \"EXTENDS_EXISTING_COM_01_COM_16\"\nmerge_policy: \"DOCUMENT_ISOLATED_NO_TEXT_CONCAT\"\nfact_auto_merge_forbidden: true\nsource_authority: \"SYNTHETIC_DEVELOPMENT_ONLY\"\n---\n\n# 性能与响应-PERFORMANCE_TEST\n\n## 记录对象\n\n本记录属于澄川数智科技有限公司（Synthetic Demo Company）的受控开发企业材料，面向性能与响应主题。\n\n## 可核验记录\n\n1. 澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。\n2. 标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。\n3. 混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。\n4. 测试持续时间为120分钟。\n\n## 使用边界\n\n本材料仅用于 V4.3 RAG / Fact / Mapping / Claim / Writer 开发与评测。\n不得晋升为 REAL_ENTERPRISE_EVIDENCE，不得作为真实投标企业能力声明依据。\n事实使用必须同时保留 enterprise_id、产品/对象、版本、有效期和 source lineage。\n"
+            }
+          ],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "unchanged_from_after": true
+      },
+      "canonicalization_after": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "QUANTITY_CONDITION_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "测试场景",
+            "name": "标准查询场景"
+          },
+          "entities": [],
+          "status": "unknown",
+          "scopes": [
+            "8,000并发虚拟用户"
+          ],
+          "scope_source_texts": {
+            "8,000并发虚拟用户": "---\ndoc_id: \"CCV2-U13-01\"\ntitle: \"性能与响应-PERFORMANCE_TEST\"\nlibrary_scope: \"controlled_enterprise\"\ndomain: \"cross_industry\"\nenterprise_id: \"SYNTH-CHENGCHUAN-001\"\nenterprise_name: \"澄川数智科技有限公司（Synthetic Demo Company）\"\nrequirement_themes: [\"U13\"]\nmatrix_theme: \"U13\"\nevidence_slot: \"PERFORMANCE_TEST\"\ncollection_basis: \"GENERIC_TENDER_MATRIX\"\nrequirement_blind: true\nsource_kind: \"controlled_synthetic_enterprise_evidence\"\nevidence_status: \"synthetic_development_only\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: \"2027-06-30\"\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"HIGH\"\nlast_verified_at: \"2026-09-06\"\nnext_review_at: \"2026-12-31\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\ncorpus_generation: \"CHENGCHUAN_DEPTH_V2\"\nmerge_relation: \"EXTENDS_EXISTING_COM_01_COM_16\"\nmerge_policy: \"DOCUMENT_ISOLATED_NO_TEXT_CONCAT\"\nfact_auto_merge_forbidden: true\nsource_authority: \"SYNTHETIC_DEVELOPMENT_ONLY\"\n---\n\n# 性能与响应-PERFORMANCE_TEST\n\n## 记录对象\n\n本记录属于澄川数智科技有限公司（Synthetic Demo Company）的受控开发企业材料，面向性能与响应主题。\n\n## 可核验记录\n\n1. 澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。\n2. 标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。\n3. 混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。\n4. 测试持续时间为120分钟。\n\n## 使用边界\n\n本材料仅用于 V4.3 RAG / Fact / Mapping / Claim / Writer 开发与评测。\n不得晋升为 REAL_ENTERPRISE_EVIDENCE，不得作为真实投标企业能力声明依据。\n事实使用必须同时保留 enterprise_id、产品/对象、版本、有效期和 source lineage。"
+          },
+          "quantities": [
+            {
+              "metric": "P95响应时间",
+              "value": "820",
+              "unit": "MILLISECOND",
+              "source_text": "---\ndoc_id: \"CCV2-U13-01\"\ntitle: \"性能与响应-PERFORMANCE_TEST\"\nlibrary_scope: \"controlled_enterprise\"\ndomain: \"cross_industry\"\nenterprise_id: \"SYNTH-CHENGCHUAN-001\"\nenterprise_name: \"澄川数智科技有限公司（Synthetic Demo Company）\"\nrequirement_themes: [\"U13\"]\nmatrix_theme: \"U13\"\nevidence_slot: \"PERFORMANCE_TEST\"\ncollection_basis: \"GENERIC_TENDER_MATRIX\"\nrequirement_blind: true\nsource_kind: \"controlled_synthetic_enterprise_evidence\"\nevidence_status: \"synthetic_development_only\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: \"2027-06-30\"\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"HIGH\"\nlast_verified_at: \"2026-09-06\"\nnext_review_at: \"2026-12-31\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\ncorpus_generation: \"CHENGCHUAN_DEPTH_V2\"\nmerge_relation: \"EXTENDS_EXISTING_COM_01_COM_16\"\nmerge_policy: \"DOCUMENT_ISOLATED_NO_TEXT_CONCAT\"\nfact_auto_merge_forbidden: true\nsource_authority: \"SYNTHETIC_DEVELOPMENT_ONLY\"\n---\n\n# 性能与响应-PERFORMANCE_TEST\n\n## 记录对象\n\n本记录属于澄川数智科技有限公司（Synthetic Demo Company）的受控开发企业材料，面向性能与响应主题。\n\n## 可核验记录\n\n1. 澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。\n2. 标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。\n3. 混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。\n4. 测试持续时间为120分钟。\n\n## 使用边界\n\n本材料仅用于 V4.3 RAG / Fact / Mapping / Claim / Writer 开发与评测。\n不得晋升为 REAL_ENTERPRISE_EVIDENCE，不得作为真实投标企业能力声明依据。\n事实使用必须同时保留 enterprise_id、产品/对象、版本、有效期和 source lineage。\n"
+            }
+          ],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        }
+      },
+      "grounding_before": {
+        "decision": "REVIEW_REQUIRED",
+        "reasons": [
+          "QUANTITY_CONDITION_UNRESOLVED"
+        ]
+      },
+      "grounding_after": {
+        "decision": "REVIEW_REQUIRED",
+        "final_decision": "REVIEW_REQUIRED",
+        "reasons": [
+          "QUANTITY_CONDITION_UNRESOLVED"
+        ],
+        "source_grounding": {
+          "mode": "EXACT",
+          "unit": null
+        }
+      },
+      "classification": "TRUE_REVIEW",
+      "deterministic_rule": "CANONICALIZATION_OR_ROLE_REVIEW_REQUIRED",
+      "source_ref_resolved": true
+    },
+    {
+      "case_id": "CCV2-U13-01",
+      "candidate_index": 2,
+      "source_ref": "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document",
+      "source_hash": "9408fc5a50ffcad28def68d844c2d701405b99655f2d5904aeb89874f55ae575",
+      "source_excerpt": "_TEST\n\n## 记录对象\n\n本记录属于澄川数智科技有限公司（Synthetic Demo Company）的受控开发企业材料，面向性能与响应主题。\n\n## 可核验记录\n\n1. 澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。\n2. 标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。\n3. 混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。\n4. 测试持续时间为120分钟。\n\n## 使用边界\n\n本材料仅用于 V4.3 RAG / Fact / Mapping / Claim / Writer 开发与评测。\n不得晋升为 REAL_ENTERPRISE_EVIDENCE，不得作为真实投标企业能力声明依据。\n事实使用必须同时保留 enterprise_id、产品/对象、版本、有效期和 source lineage。\n",
+      "candidate": {
+        "statement": "混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。",
+        "source_refs": [
+          "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+        ],
+        "subject_name": "混合写入场景",
+        "subject_type_hint": "测试场景",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+        ],
+        "entity_mentions": [],
+        "status_text": "",
+        "status_source_refs": [],
+        "scope_items": [],
+        "quantity_items": [
+          {
+            "name": "稳定吞吐",
+            "value_text": "1,650",
+            "unit_text": "事务/秒",
+            "condition_text": "混合写入场景",
+            "source_refs": [
+              "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+            ]
+          },
+          {
+            "name": "错误率",
+            "value_text": "0.18",
+            "unit_text": "%",
+            "condition_text": "混合写入场景",
+            "source_refs": [
+              "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+            ]
+          }
+        ],
+        "temporal_items": []
+      },
+      "source_role": "SOURCE_ROLE_UNKNOWN",
+      "source_role_eligibility": "SOURCE_ROLE_UNKNOWN",
+      "resolved_bounded_source_unit": "1. 澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。\n2. 标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。\n3. 混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。\n4. 测试持续时间为120分钟。",
+      "source_heading_path": [
+        "性能与响应-PERFORMANCE_TEST",
+        "可核验记录"
+      ],
+      "source_role_evidence": "BOUNDED_HEADING_ALIGNMENT",
+      "synthetic_source": true,
+      "claim_permission": false,
+      "canonicalization_before": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "QUANTITY_CONDITION_UNRESOLVED",
+          "QUANTITY_VALUE_OR_UNIT_UNRESOLVED",
+          "QUANTITY_CONDITION_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "测试场景",
+            "name": "混合写入场景"
+          },
+          "entities": [],
+          "status": "unknown",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [
+            {
+              "metric": "错误率",
+              "value": "0.18",
+              "unit": "%",
+              "source_text": "---\ndoc_id: \"CCV2-U13-01\"\ntitle: \"性能与响应-PERFORMANCE_TEST\"\nlibrary_scope: \"controlled_enterprise\"\ndomain: \"cross_industry\"\nenterprise_id: \"SYNTH-CHENGCHUAN-001\"\nenterprise_name: \"澄川数智科技有限公司（Synthetic Demo Company）\"\nrequirement_themes: [\"U13\"]\nmatrix_theme: \"U13\"\nevidence_slot: \"PERFORMANCE_TEST\"\ncollection_basis: \"GENERIC_TENDER_MATRIX\"\nrequirement_blind: true\nsource_kind: \"controlled_synthetic_enterprise_evidence\"\nevidence_status: \"synthetic_development_only\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: \"2027-06-30\"\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"HIGH\"\nlast_verified_at: \"2026-09-06\"\nnext_review_at: \"2026-12-31\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\ncorpus_generation: \"CHENGCHUAN_DEPTH_V2\"\nmerge_relation: \"EXTENDS_EXISTING_COM_01_COM_16\"\nmerge_policy: \"DOCUMENT_ISOLATED_NO_TEXT_CONCAT\"\nfact_auto_merge_forbidden: true\nsource_authority: \"SYNTHETIC_DEVELOPMENT_ONLY\"\n---\n\n# 性能与响应-PERFORMANCE_TEST\n\n## 记录对象\n\n本记录属于澄川数智科技有限公司（Synthetic Demo Company）的受控开发企业材料，面向性能与响应主题。\n\n## 可核验记录\n\n1. 澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。\n2. 标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。\n3. 混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。\n4. 测试持续时间为120分钟。\n\n## 使用边界\n\n本材料仅用于 V4.3 RAG / Fact / Mapping / Claim / Writer 开发与评测。\n不得晋升为 REAL_ENTERPRISE_EVIDENCE，不得作为真实投标企业能力声明依据。\n事实使用必须同时保留 enterprise_id、产品/对象、版本、有效期和 source lineage。\n"
+            }
+          ],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "unchanged_from_after": true
+      },
+      "canonicalization_after": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "QUANTITY_CONDITION_UNRESOLVED",
+          "QUANTITY_VALUE_OR_UNIT_UNRESOLVED",
+          "QUANTITY_CONDITION_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "测试场景",
+            "name": "混合写入场景"
+          },
+          "entities": [],
+          "status": "unknown",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [
+            {
+              "metric": "错误率",
+              "value": "0.18",
+              "unit": "%",
+              "source_text": "---\ndoc_id: \"CCV2-U13-01\"\ntitle: \"性能与响应-PERFORMANCE_TEST\"\nlibrary_scope: \"controlled_enterprise\"\ndomain: \"cross_industry\"\nenterprise_id: \"SYNTH-CHENGCHUAN-001\"\nenterprise_name: \"澄川数智科技有限公司（Synthetic Demo Company）\"\nrequirement_themes: [\"U13\"]\nmatrix_theme: \"U13\"\nevidence_slot: \"PERFORMANCE_TEST\"\ncollection_basis: \"GENERIC_TENDER_MATRIX\"\nrequirement_blind: true\nsource_kind: \"controlled_synthetic_enterprise_evidence\"\nevidence_status: \"synthetic_development_only\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: \"2027-06-30\"\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"HIGH\"\nlast_verified_at: \"2026-09-06\"\nnext_review_at: \"2026-12-31\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\ncorpus_generation: \"CHENGCHUAN_DEPTH_V2\"\nmerge_relation: \"EXTENDS_EXISTING_COM_01_COM_16\"\nmerge_policy: \"DOCUMENT_ISOLATED_NO_TEXT_CONCAT\"\nfact_auto_merge_forbidden: true\nsource_authority: \"SYNTHETIC_DEVELOPMENT_ONLY\"\n---\n\n# 性能与响应-PERFORMANCE_TEST\n\n## 记录对象\n\n本记录属于澄川数智科技有限公司（Synthetic Demo Company）的受控开发企业材料，面向性能与响应主题。\n\n## 可核验记录\n\n1. 澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。\n2. 标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。\n3. 混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。\n4. 测试持续时间为120分钟。\n\n## 使用边界\n\n本材料仅用于 V4.3 RAG / Fact / Mapping / Claim / Writer 开发与评测。\n不得晋升为 REAL_ENTERPRISE_EVIDENCE，不得作为真实投标企业能力声明依据。\n事实使用必须同时保留 enterprise_id、产品/对象、版本、有效期和 source lineage。\n"
+            }
+          ],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        }
+      },
+      "grounding_before": {
+        "decision": "REVIEW_REQUIRED",
+        "reasons": [
+          "QUANTITY_CONDITION_UNRESOLVED",
+          "QUANTITY_VALUE_OR_UNIT_UNRESOLVED",
+          "QUANTITY_CONDITION_UNRESOLVED"
+        ]
+      },
+      "grounding_after": {
+        "decision": "REVIEW_REQUIRED",
+        "final_decision": "REVIEW_REQUIRED",
+        "reasons": [
+          "QUANTITY_CONDITION_UNRESOLVED",
+          "QUANTITY_VALUE_OR_UNIT_UNRESOLVED",
+          "QUANTITY_CONDITION_UNRESOLVED"
+        ],
+        "source_grounding": {
+          "mode": "EXACT",
+          "unit": null
+        }
+      },
+      "classification": "TRUE_REVIEW",
+      "deterministic_rule": "CANONICALIZATION_OR_ROLE_REVIEW_REQUIRED",
+      "source_ref_resolved": true
+    },
+    {
+      "case_id": "CCV2-U13-01",
+      "candidate_index": 3,
+      "source_ref": "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document",
+      "source_hash": "9408fc5a50ffcad28def68d844c2d701405b99655f2d5904aeb89874f55ae575",
+      "source_excerpt": "nthetic Demo Company）的受控开发企业材料，面向性能与响应主题。\n\n## 可核验记录\n\n1. 澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。\n2. 标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。\n3. 混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。\n4. 测试持续时间为120分钟。\n\n## 使用边界\n\n本材料仅用于 V4.3 RAG / Fact / Mapping / Claim / Writer 开发与评测。\n不得晋升为 REAL_ENTERPRISE_EVIDENCE，不得作为真实投标企业能力声明依据。\n事实使用必须同时保留 enterprise_id、产品/对象、版本、有效期和 source lineage。\n",
+      "candidate": {
+        "statement": "测试持续时间为120分钟。",
+        "source_refs": [
+          "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+        ],
+        "subject_name": "测试",
+        "subject_type_hint": "性能测试",
+        "subject_source_refs": [
+          "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+        ],
+        "entity_mentions": [],
+        "status_text": "",
+        "status_source_refs": [],
+        "scope_items": [],
+        "quantity_items": [
+          {
+            "name": "持续时间",
+            "value_text": "120",
+            "unit_text": "分钟",
+            "condition_text": "测试",
+            "source_refs": [
+              "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+            ]
+          }
+        ],
+        "temporal_items": []
+      },
+      "source_role": "SOURCE_ROLE_UNKNOWN",
+      "source_role_eligibility": "SOURCE_ROLE_UNKNOWN",
+      "resolved_bounded_source_unit": "1. 澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。\n2. 标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。\n3. 混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。\n4. 测试持续时间为120分钟。",
+      "source_heading_path": [
+        "性能与响应-PERFORMANCE_TEST",
+        "可核验记录"
+      ],
+      "source_role_evidence": "BOUNDED_HEADING_ALIGNMENT",
+      "synthetic_source": true,
+      "claim_permission": false,
+      "canonicalization_before": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "QUANTITY_CONDITION_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "性能测试",
+            "name": "测试"
+          },
+          "entities": [],
+          "status": "unknown",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [
+            {
+              "metric": "持续时间",
+              "value": "120",
+              "unit": "MINUTE",
+              "source_text": "---\ndoc_id: \"CCV2-U13-01\"\ntitle: \"性能与响应-PERFORMANCE_TEST\"\nlibrary_scope: \"controlled_enterprise\"\ndomain: \"cross_industry\"\nenterprise_id: \"SYNTH-CHENGCHUAN-001\"\nenterprise_name: \"澄川数智科技有限公司（Synthetic Demo Company）\"\nrequirement_themes: [\"U13\"]\nmatrix_theme: \"U13\"\nevidence_slot: \"PERFORMANCE_TEST\"\ncollection_basis: \"GENERIC_TENDER_MATRIX\"\nrequirement_blind: true\nsource_kind: \"controlled_synthetic_enterprise_evidence\"\nevidence_status: \"synthetic_development_only\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: \"2027-06-30\"\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"HIGH\"\nlast_verified_at: \"2026-09-06\"\nnext_review_at: \"2026-12-31\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\ncorpus_generation: \"CHENGCHUAN_DEPTH_V2\"\nmerge_relation: \"EXTENDS_EXISTING_COM_01_COM_16\"\nmerge_policy: \"DOCUMENT_ISOLATED_NO_TEXT_CONCAT\"\nfact_auto_merge_forbidden: true\nsource_authority: \"SYNTHETIC_DEVELOPMENT_ONLY\"\n---\n\n# 性能与响应-PERFORMANCE_TEST\n\n## 记录对象\n\n本记录属于澄川数智科技有限公司（Synthetic Demo Company）的受控开发企业材料，面向性能与响应主题。\n\n## 可核验记录\n\n1. 澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。\n2. 标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。\n3. 混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。\n4. 测试持续时间为120分钟。\n\n## 使用边界\n\n本材料仅用于 V4.3 RAG / Fact / Mapping / Claim / Writer 开发与评测。\n不得晋升为 REAL_ENTERPRISE_EVIDENCE，不得作为真实投标企业能力声明依据。\n事实使用必须同时保留 enterprise_id、产品/对象、版本、有效期和 source lineage。\n"
+            }
+          ],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        },
+        "unchanged_from_after": true
+      },
+      "canonicalization_after": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "QUANTITY_CONDITION_UNRESOLVED"
+        ],
+        "canonical": {
+          "subject": {
+            "type": "性能测试",
+            "name": "测试"
+          },
+          "entities": [],
+          "status": "unknown",
+          "scopes": [],
+          "scope_source_texts": {},
+          "quantities": [
+            {
+              "metric": "持续时间",
+              "value": "120",
+              "unit": "MINUTE",
+              "source_text": "---\ndoc_id: \"CCV2-U13-01\"\ntitle: \"性能与响应-PERFORMANCE_TEST\"\nlibrary_scope: \"controlled_enterprise\"\ndomain: \"cross_industry\"\nenterprise_id: \"SYNTH-CHENGCHUAN-001\"\nenterprise_name: \"澄川数智科技有限公司（Synthetic Demo Company）\"\nrequirement_themes: [\"U13\"]\nmatrix_theme: \"U13\"\nevidence_slot: \"PERFORMANCE_TEST\"\ncollection_basis: \"GENERIC_TENDER_MATRIX\"\nrequirement_blind: true\nsource_kind: \"controlled_synthetic_enterprise_evidence\"\nevidence_status: \"synthetic_development_only\"\nclaim_permission: false\nhuman_review_required: true\nsynthetic_company_evidence: true\nvalid_from: \"2026-01-01\"\nvalid_until: \"2027-06-30\"\nevidence_temporal_status: \"CURRENT\"\nfreshness_sensitivity: \"HIGH\"\nlast_verified_at: \"2026-09-06\"\nnext_review_at: \"2026-12-31\"\nsupersession_check_required: true\nchunking_hint: \"heading_then_paragraph\"\ncorpus_generation: \"CHENGCHUAN_DEPTH_V2\"\nmerge_relation: \"EXTENDS_EXISTING_COM_01_COM_16\"\nmerge_policy: \"DOCUMENT_ISOLATED_NO_TEXT_CONCAT\"\nfact_auto_merge_forbidden: true\nsource_authority: \"SYNTHETIC_DEVELOPMENT_ONLY\"\n---\n\n# 性能与响应-PERFORMANCE_TEST\n\n## 记录对象\n\n本记录属于澄川数智科技有限公司（Synthetic Demo Company）的受控开发企业材料，面向性能与响应主题。\n\n## 可核验记录\n\n1. 澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。\n2. 标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。\n3. 混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。\n4. 测试持续时间为120分钟。\n\n## 使用边界\n\n本材料仅用于 V4.3 RAG / Fact / Mapping / Claim / Writer 开发与评测。\n不得晋升为 REAL_ENTERPRISE_EVIDENCE，不得作为真实投标企业能力声明依据。\n事实使用必须同时保留 enterprise_id、产品/对象、版本、有效期和 source lineage。\n"
+            }
+          ],
+          "validity": {
+            "status": "unknown",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "domain_metadata": {}
+        }
+      },
+      "grounding_before": {
+        "decision": "REJECT",
+        "reasons": [
+          "quantity.unit is not grounded"
+        ]
+      },
+      "grounding_after": {
+        "decision": "REVIEW_REQUIRED",
+        "final_decision": "REVIEW_REQUIRED",
+        "reasons": [
+          "QUANTITY_CONDITION_UNRESOLVED"
+        ],
+        "source_grounding": {
+          "mode": "EXACT",
+          "unit": null
+        }
+      },
+      "classification": "FALSE_REJECT_FIXED",
+      "deterministic_rule": "MINUTE_SOURCE_UNIT_ALIAS",
+      "source_ref_resolved": true
+    }
+  ]
+}

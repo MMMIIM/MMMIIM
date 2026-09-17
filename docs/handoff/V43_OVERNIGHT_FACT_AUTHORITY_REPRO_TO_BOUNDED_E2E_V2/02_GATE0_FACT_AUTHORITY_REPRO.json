@@ -1,0 +1,220 @@
+{
+  "artifact_type": "V43_GATE0_FACT_AUTHORITY_REPRO_V2",
+  "status": "PASS",
+  "authority": "SYNTHETIC_EVAL_ONLY",
+  "production_authority": "NONE",
+  "enterprise_id": "SYNTH-CHENGCHUAN-001",
+  "provider_calls": 0,
+  "cases": [
+    {
+      "case_id": "A_PURE_NATIONAL_STANDARD",
+      "input": {
+        "statement": "GB/T 22239-2019 网络安全等级保护基本要求。",
+        "subject_name": "GB/T 22239-2019",
+        "subject_type_hint": "standard",
+        "source_hash": "9a6e15e146bdb68c9d78463bf152893d3082048de1d9603362a08442cfb67343"
+      },
+      "source_ref_resolution": {
+        "total": 3,
+        "resolved": 3,
+        "unresolved": 0,
+        "rate": 1
+      },
+      "canonicalization": {
+        "status": "CANONICALIZED",
+        "review_reasons": []
+      },
+      "grounding": {
+        "decision": "ACCEPT",
+        "reasons": []
+      },
+      "attribution": {
+        "classification": "REFERENCE_KNOWLEDGE_REJECTED",
+        "reason": "no_explicit_enterprise_relationship",
+        "enterprise_id": "SYNTH-CHENGCHUAN-001",
+        "evidence": {
+          "cited_enterprise": false,
+          "statement_enterprise": false,
+          "subject_enterprise": false,
+          "ownership_lineage": false
+        }
+      },
+      "canonical_enterprise_fact_count": 0,
+      "fail_closed_outcome": "NO_ENTERPRISE_ATTRIBUTION",
+      "processing_error": null,
+      "authority": "SYNTHETIC_EVAL_ONLY",
+      "production_authority": "NONE",
+      "provider_calls": 0
+    },
+    {
+      "case_id": "B_PURE_OFFICIAL_SOURCE_URL",
+      "input": {
+        "statement": "财政部《政府采购需求管理办法》：https://www.mof.gov.cn/zhengce。",
+        "subject_name": "财政部",
+        "subject_type_hint": "official_source",
+        "source_hash": "9da57900b34c838fa3a0315666d1e4804210f09d2d2d56126c7f52b3ea84cbed"
+      },
+      "source_ref_resolution": {
+        "total": 3,
+        "resolved": 3,
+        "unresolved": 0,
+        "rate": 1
+      },
+      "canonicalization": {
+        "status": "CANONICALIZED",
+        "review_reasons": []
+      },
+      "grounding": {
+        "decision": "ACCEPT",
+        "reasons": []
+      },
+      "attribution": {
+        "classification": "REFERENCE_KNOWLEDGE_REJECTED",
+        "reason": "no_explicit_enterprise_relationship",
+        "enterprise_id": "SYNTH-CHENGCHUAN-001",
+        "evidence": {
+          "cited_enterprise": false,
+          "statement_enterprise": false,
+          "subject_enterprise": false,
+          "ownership_lineage": false
+        }
+      },
+      "canonical_enterprise_fact_count": 0,
+      "fail_closed_outcome": "NO_ENTERPRISE_ATTRIBUTION",
+      "processing_error": null,
+      "authority": "SYNTHETIC_EVAL_ONLY",
+      "production_authority": "NONE",
+      "provider_calls": 0
+    },
+    {
+      "case_id": "C_GENERIC_TEMPORAL_SOURCE_REGISTRY",
+      "input": {
+        "statement": "召回后同时检查 evidence_temporal_status，到 next_review_at 需重新核验。",
+        "subject_name": "evidence_temporal_status",
+        "subject_type_hint": "governance",
+        "source_hash": "69af05f2c276c51d48c33017bf61a5c8c3319538f5906ee4ce7f5ade282def77"
+      },
+      "source_ref_resolution": {
+        "total": 3,
+        "resolved": 3,
+        "unresolved": 0,
+        "rate": 1
+      },
+      "canonicalization": {
+        "status": "CANONICALIZED",
+        "review_reasons": []
+      },
+      "grounding": {
+        "decision": "ACCEPT",
+        "reasons": []
+      },
+      "attribution": {
+        "classification": "REFERENCE_KNOWLEDGE_REJECTED",
+        "reason": "no_explicit_enterprise_relationship",
+        "enterprise_id": "SYNTH-CHENGCHUAN-001",
+        "evidence": {
+          "cited_enterprise": false,
+          "statement_enterprise": false,
+          "subject_enterprise": false,
+          "ownership_lineage": false
+        }
+      },
+      "canonical_enterprise_fact_count": 0,
+      "fail_closed_outcome": "NO_ENTERPRISE_ATTRIBUTION",
+      "processing_error": null,
+      "authority": "SYNTHETIC_EVAL_ONLY",
+      "production_authority": "NONE",
+      "provider_calls": 0
+    },
+    {
+      "case_id": "D_SYNTHETIC_DISCLAIMER_ONLY",
+      "input": {
+        "statement": "Synthetic Company Evidence：仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。",
+        "subject_name": "Synthetic Company Evidence",
+        "subject_type_hint": "disclaimer",
+        "source_hash": "af4fea8ad7fd1628443a5e864f869fdbef2ac2887b250dd34f1c9745612576d5"
+      },
+      "source_ref_resolution": {
+        "total": 3,
+        "resolved": 3,
+        "unresolved": 0,
+        "rate": 1
+      },
+      "canonicalization": {
+        "status": "CANONICALIZATION_REVIEW_REQUIRED",
+        "review_reasons": [
+          "NEGATED_OR_LIMITED_SCOPE"
+        ]
+      },
+      "grounding": {
+        "decision": "REVIEW_REQUIRED",
+        "reasons": [
+          "NEGATED_OR_LIMITED_SCOPE"
+        ]
+      },
+      "attribution": {
+        "classification": "REFERENCE_KNOWLEDGE_REJECTED",
+        "reason": "no_explicit_enterprise_relationship",
+        "enterprise_id": "SYNTH-CHENGCHUAN-001",
+        "evidence": {
+          "cited_enterprise": false,
+          "statement_enterprise": false,
+          "subject_enterprise": false,
+          "ownership_lineage": false
+        }
+      },
+      "canonical_enterprise_fact_count": 0,
+      "fail_closed_outcome": "NO_ENTERPRISE_ATTRIBUTION",
+      "processing_error": null,
+      "authority": "SYNTHETIC_EVAL_ONLY",
+      "production_authority": "NONE",
+      "provider_calls": 0
+    },
+    {
+      "case_id": "E_ENTERPRISE_ASSERTION_PLUS_CITATION",
+      "input": {
+        "statement": "澄川平台支持 REST API 和 Webhook，相关测试依据 GB/T XXXX，报告编号 TEST-001。",
+        "subject_name": "澄川平台",
+        "subject_type_hint": "product",
+        "source_hash": "0082a7b2557deab67c69accbdb49b6bca1296d3407df5d7b1c901ff8cc6007f8"
+      },
+      "source_ref_resolution": {
+        "total": 3,
+        "resolved": 3,
+        "unresolved": 0,
+        "rate": 1
+      },
+      "canonicalization": {
+        "status": "CANONICALIZED",
+        "review_reasons": []
+      },
+      "grounding": {
+        "decision": "ACCEPT",
+        "reasons": []
+      },
+      "attribution": {
+        "classification": "REAL_ENTERPRISE_FACT_CANDIDATE",
+        "reason": "statement_explicit_enterprise_relationship",
+        "enterprise_id": "SYNTH-CHENGCHUAN-001",
+        "evidence": {
+          "cited_enterprise": true,
+          "statement_enterprise": true,
+          "subject_enterprise": true,
+          "ownership_lineage": false
+        }
+      },
+      "canonical_enterprise_fact_count": 1,
+      "fail_closed_outcome": null,
+      "processing_error": null,
+      "authority": "SYNTHETIC_EVAL_ONLY",
+      "production_authority": "NONE",
+      "provider_calls": 0
+    }
+  ],
+  "negative_case_count": 4,
+  "negative_canonical_enterprise_fact_count": 0,
+  "external_reference_fact_authority_escape_count": 0,
+  "enterprise_assertion_with_citation_eligible": true,
+  "semantic_labels_assigned": false,
+  "note": "These are bounded engineering boundary fixtures, not semantic Gold labels."
+}

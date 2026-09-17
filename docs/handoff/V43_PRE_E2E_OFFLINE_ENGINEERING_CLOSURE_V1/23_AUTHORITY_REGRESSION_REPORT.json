@@ -1,0 +1,73 @@
+{
+  "artifact_type": "V43_AUTHORITY_REGRESSION_REPORT_V1",
+  "generated_at": "2026-09-16",
+  "execution_mode": "OFFLINE_ONLY",
+  "provider_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "gold_mutations": 0,
+  "production_semantic_changes": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "commit": 0,
+  "push": 0,
+  "merge": 0,
+  "deploy": 0,
+  "checks": [
+    {
+      "name": "material source role separation",
+      "status": "PASS",
+      "evidence": {
+        "path": "docs/handoff/V43_E2E_ENGINEERING_CONSISTENCY_AUDIT_V1/07_AUTHORITY_PERSISTENCE_MATRIX.json",
+        "exists": true,
+        "bytes": 3244,
+        "sha256": "c3771d960e996be208862111c3a6f46b99f62a091e5631e47f40cfc0c722f844",
+        "status": "CURRENT_REUSABLE",
+        "roles": [],
+        "notes": []
+      }
+    },
+    {
+      "name": "Neusoft quarantine fail-closed",
+      "status": "MATERIAL_SOURCE_AUTHORITY_QUARANTINE_ENFORCED; RAG_PRODUCTION_READY_NOT_CLAIMED; MAPPING_GOLD_READY_NOT_CLAIMED; CLAIM_GOLD_READY_NOT_CLAIMED",
+      "evidence": {
+        "path": "backend/eval/rag-governance/15_material_source_authority_quarantine_checkpoint.json",
+        "exists": true,
+        "bytes": 2129,
+        "sha256": "a24355d97ef0716fc04c77d313390c0a9fabf83bb2509636cbdc84db95704261",
+        "status": "CURRENT_REUSABLE",
+        "roles": [],
+        "notes": []
+      }
+    },
+    {
+      "name": "provider runtime preflight telemetry",
+      "status": "PASS",
+      "evidence": {
+        "path": "docs/handoff/V43_OVERNIGHT_REAL_E2E_MASTER_V1/00A_PROVIDER_RUNTIME_PREFLIGHT.json",
+        "exists": true,
+        "bytes": 12100,
+        "sha256": "0dc5b743993d1d4fc1a820d24ec095c2bdd1fa123d74446287554f6ff8e0adcc",
+        "status": "CURRENT_REUSABLE",
+        "roles": [],
+        "notes": []
+      }
+    },
+    {
+      "name": "synthetic-to-production authority escalation",
+      "status": "PASS_ZERO_ESCALATION",
+      "evidence": {
+        "path": "docs/V43_CHENGCHUAN_V2_IMPORT_CHECKPOINT.json",
+        "exists": true,
+        "bytes": 1472,
+        "sha256": "e2f341d6c355274c281d1bf0ddec64a4592b5319456563fb6a7967604c861fe6",
+        "status": "BLOCKED_BUT_DIAGNOSTICALLY_VALID",
+        "roles": [],
+        "notes": []
+      }
+    }
+  ],
+  "new_task_regression": "NOT_RUN_UNTIL_TEST_REPORT_PHASE"
+}

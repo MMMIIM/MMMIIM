@@ -1,0 +1,36 @@
+{
+  "artifact": "V43_REAL_FACT_V2_BLOCKER_ANALYSIS",
+  "downstream_not_reached": [
+    "EVIDENCE_SPAN",
+    "FACT_CANDIDATE_PRODUCER",
+    "FACT_NORMALIZATION_AND_PROJECTION",
+    "FACT_QUALITY_AND_GROUNDING",
+    "CANONICAL_FACT_AND_CURRENTNESS",
+    "PERSISTENCE"
+  ],
+  "eval_only": true,
+  "evidence": {
+    "material_total": 56,
+    "projection": "backend/eval/gold-human-review/v2/mapping-real-rebuild/00_source_role_projection.json",
+    "projection_schema_version": "v43-source-role-projection-v1",
+    "real_enterprise_evidence_candidates": 0,
+    "role_counts": {
+      "QUARANTINED": 4,
+      "REFERENCE_CONTEXT_ONLY": 34,
+      "SYNTHETIC_ENTERPRISE_EVIDENCE": 16,
+      "UNKNOWN_REVIEW_REQUIRED": 2
+    },
+    "source_inventory_blockers": [
+      "NO_AUTHORITY_ELIGIBLE_REAL_ENTERPRISE_SOURCE_FIRST_WINDOW",
+      "NO_APPROVED_EVIDENCE_REVIEW_CONTEXT_FOR_SOURCE_FIRST_PRODUCER",
+      "QUARANTINED_ENTERPRISE_MATERIALS_EXCLUDED",
+      "SYNTHETIC_ENTERPRISE_LANE_NOT_REAL_FACT_AUTHORITY"
+    ],
+    "source_inventory_eligible": 0
+  },
+  "exact_reason": "Current source-role projection contains zero REAL_ENTERPRISE_EVIDENCE_CANDIDATE materials; all 56 projected materials are synthetic, reference-only, quarantined, or unknown-review-required.",
+  "first_blocker_family": "NO_ELIGIBLE_SOURCE",
+  "first_blocking_stage": "SOURCE_ROLE_AND_ELIGIBILITY",
+  "real_fact_v2_eligible_candidates": 0,
+  "semantic_conclusion": "No semantic Fact quality conclusion is drawn because no authority-eligible real enterprise source enters the producer."
+}

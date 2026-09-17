@@ -1,0 +1,1062 @@
+{
+  "artifact_type": "V43_RESPONSE_ROUTER_V2_2_1_FINAL_SEMANTIC_DELTA_PACKET",
+  "router_identity": {
+    "version": "v43-response-router-v2.2.1",
+    "implementation_id": "v43-response-router-v2.2.1-bounded-semantic-closure",
+    "path": "backend/src/pipeline/requirement-response-router-v2-2-1.js",
+    "sha256": "06932df7dc13a56e72c4618331c9c3be170c9d40c8aed13cbd809fe265cf61ea"
+  },
+  "reference_v3_sha256": "3c7f151678c8c99aee25ab995d438496b4a0e5fc661386b70204f3be72e2e744",
+  "gpt_adjudication_sha256": "372eeb3f192a47dfa1fe633d1187f25641eabf8c6489b40680508f8d7b97baa5",
+  "run_id": "V43-RR-V2_2_1-V3-REPLAY-69189288fbba4593",
+  "semantic_root_cause_policy": "PENDING_GPT",
+  "aggregate_proof": {
+    "full_replay_count": 2178,
+    "v21_correct_v221_wrong": 0,
+    "v21_wrong_v221_correct": 79,
+    "unexplained_primary_mode_drift": 0,
+    "overlay_primary_mode_mismatch": 0,
+    "overlay_evidence_dependency_mismatch": 0,
+    "true_high_risk_evidence_false_negative": 0,
+    "true_future_commitment_as_existing_fact": 0,
+    "p0_compliance_escape": 0,
+    "need_review_count": 22,
+    "risk_tier_mismatch_count": 842,
+    "p0_or_invalidity_downgrade_count": 32
+  },
+  "remaining_v21_correct_v221_wrong": [],
+  "unexplained_routing_changes": [],
+  "gpt_overlay_mismatches": [],
+  "hard_safety_disagreements": [],
+  "material_need_review_ambiguity": [
+    {
+      "case_id": "CORE6:TB-003:TB-003:REQ-068",
+      "tender_id": "TB-003",
+      "requirement_id": "TB-003:REQ-068",
+      "requirement_text": "投标人或投标人所投产品厂商拟派项目负责人同时具有信息系统项目管理师(高级)、注册信息安全工程师（CISE）、IT服务项目经理（ITSS）认证的，每提供一项得1分，满分3分；须提供相关证明材料复印件和近三个月社保证明文件，并加盖投标人或投标人所投产品厂商公章。",
+      "reference": {
+        "primary_response_mode": "EVIDENCE",
+        "evidence_dependency": true,
+        "risk_tier": "HIGH",
+        "response_required": true,
+        "human_required": false,
+        "scoring_related": true,
+        "secondary_dependencies": [
+          "ENTERPRISE_EVIDENCE",
+          "PROOF_DOCUMENT",
+          "SCORING"
+        ],
+        "semantic_status": "CLEAR",
+        "reason": "描述所投/既有产品、企业、人员、资质、案例或可验证能力，Primary为EVIDENCE。同时直接关联评分。证明/表单要求作为二级依赖，不改变Primary。"
+      },
+      "router_v221": {
+        "requirement_id": "TB-003:REQ-068",
+        "response_role": "SCORING",
+        "response_mode": "NEED_REVIEW",
+        "response_required": true,
+        "risk_tier": "HIGH",
+        "is_scoring_related": true,
+        "scoring_priority": "HIGH",
+        "routing_reasons": [
+          "AMBIGUOUS_SUBJECT_OR_TEMPORAL_BOUNDARY",
+          "ENTERPRISE_OR_PRODUCT_EVIDENCE",
+          "SCORING_RELATED"
+        ],
+        "secondary_dependencies": [
+          "PROOF_DOCUMENT",
+          "SCORING"
+        ],
+        "evidence_dependency": true,
+        "deep_chain_required": true,
+        "human_required": true,
+        "projection_version": "v43-response-router-v2.2.1",
+        "implementation_id": "v43-response-router-v2.2.1-bounded-semantic-closure",
+        "baseline_v2_mode": "EVIDENCE",
+        "baseline_v21_mode": "NEED_REVIEW",
+        "baseline_v22_mode": "NEED_REVIEW",
+        "bounded_correction_family": null
+      },
+      "changed_dimensions": [
+        "router_projection"
+      ],
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "CORE6:TB-003:TB-003:REQ-070",
+      "tender_id": "TB-003",
+      "requirement_id": "TB-003:REQ-070",
+      "requirement_text": "投标人或投标人所投产品厂商拟派项目团队中（除项目负责人、技术负责人外）包含系统架构设计师、信息系统项目管理师(高级)、高级UI设计师、高级软件技术开发工程师的技术人员，每提供一项得1分，满分4分；须提供人员证书复印件以及近三个月社保证明文件。",
+      "reference": {
+        "primary_response_mode": "EVIDENCE",
+        "evidence_dependency": true,
+        "risk_tier": "HIGH",
+        "response_required": true,
+        "human_required": false,
+        "scoring_related": true,
+        "secondary_dependencies": [
+          "ENTERPRISE_EVIDENCE",
+          "PROOF_DOCUMENT",
+          "SCORING"
+        ],
+        "semantic_status": "CLEAR",
+        "reason": "描述所投/既有产品、企业、人员、资质、案例或可验证能力，Primary为EVIDENCE。同时直接关联评分。证明/表单要求作为二级依赖，不改变Primary。"
+      },
+      "router_v221": {
+        "requirement_id": "TB-003:REQ-070",
+        "response_role": "SCORING",
+        "response_mode": "NEED_REVIEW",
+        "response_required": true,
+        "risk_tier": "HIGH",
+        "is_scoring_related": true,
+        "scoring_priority": "HIGH",
+        "routing_reasons": [
+          "AMBIGUOUS_SUBJECT_OR_TEMPORAL_BOUNDARY",
+          "ENTERPRISE_OR_PRODUCT_EVIDENCE",
+          "SCORING_RELATED"
+        ],
+        "secondary_dependencies": [
+          "PROOF_DOCUMENT",
+          "SCORING"
+        ],
+        "evidence_dependency": true,
+        "deep_chain_required": true,
+        "human_required": true,
+        "projection_version": "v43-response-router-v2.2.1",
+        "implementation_id": "v43-response-router-v2.2.1-bounded-semantic-closure",
+        "baseline_v2_mode": "EVIDENCE",
+        "baseline_v21_mode": "NEED_REVIEW",
+        "baseline_v22_mode": "NEED_REVIEW",
+        "bounded_correction_family": null
+      },
+      "changed_dimensions": [
+        "router_projection"
+      ],
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "CORE6:TB-003:TB-003:REQ-213",
+      "tender_id": "TB-003",
+      "requirement_id": "TB-003:REQ-213",
+      "requirement_text": "构建焦作市“四电”平台项目网络安全体系，按照国家信息安全等级保护相关规定以及国家保密管理和密码管理有关要求，充分利用焦作市电子政务外网和政务云已有安全基础设施，确保政务数据安全和公民个人数据合法应用。开展平台建设的同时，提前规划“互联网+政务服务”安全运行体系，保障各类信息系统安全稳定运行。",
+      "reference": {
+        "primary_response_mode": "SOLUTION",
+        "evidence_dependency": false,
+        "risk_tier": "MEDIUM",
+        "response_required": true,
+        "human_required": false,
+        "scoring_related": false,
+        "secondary_dependencies": [],
+        "semantic_status": "CLEAR",
+        "reason": "描述当前项目应如何建设、设计、实施或组织技术方案，Primary为SOLUTION。"
+      },
+      "router_v221": {
+        "requirement_id": "TB-003:REQ-213",
+        "response_role": "NONE",
+        "response_mode": "NEED_REVIEW",
+        "response_required": true,
+        "risk_tier": "HIGH",
+        "is_scoring_related": false,
+        "scoring_priority": "NONE",
+        "routing_reasons": [
+          "AMBIGUOUS_SUBJECT_OR_TEMPORAL_BOUNDARY",
+          "ENTERPRISE_OR_PRODUCT_EVIDENCE"
+        ],
+        "secondary_dependencies": [],
+        "evidence_dependency": true,
+        "deep_chain_required": true,
+        "human_required": true,
+        "projection_version": "v43-response-router-v2.2.1",
+        "implementation_id": "v43-response-router-v2.2.1-bounded-semantic-closure",
+        "baseline_v2_mode": "SOLUTION",
+        "baseline_v21_mode": "NEED_REVIEW",
+        "baseline_v22_mode": "NEED_REVIEW",
+        "bounded_correction_family": null
+      },
+      "changed_dimensions": [
+        "router_projection"
+      ],
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "CORE6:TB-003:TB-003:REQ-242",
+      "tender_id": "TB-003",
+      "requirement_id": "TB-003:REQ-242",
+      "requirement_text": "合同价款包括乙方所提供的焦作市“四电”平台项目策划、设计、开发制作、软硬件安装调试、对接、测试、内容填充、第三方软件测评费、安全等级保护测评费、商用密码应用安全性评估费、技术服务、培训、税费等一切费用。",
+      "reference": {
+        "primary_response_mode": "COMMITMENT",
+        "evidence_dependency": false,
+        "risk_tier": "HIGH",
+        "response_required": true,
+        "human_required": true,
+        "scoring_related": false,
+        "secondary_dependencies": [
+          "PROJECT_LOCKED_DECISION"
+        ],
+        "semantic_status": "CLEAR",
+        "reason": "描述中标后或项目履约期间必须承担的交付、服务、人员、时限、责任或合同义务，Primary为COMMITMENT。"
+      },
+      "router_v221": {
+        "requirement_id": "TB-003:REQ-242",
+        "response_role": "NONE",
+        "response_mode": "NEED_REVIEW",
+        "response_required": true,
+        "risk_tier": "HIGH",
+        "is_scoring_related": false,
+        "scoring_priority": "NONE",
+        "routing_reasons": [
+          "AMBIGUOUS_SUBJECT_OR_TEMPORAL_BOUNDARY",
+          "ENTERPRISE_OR_PRODUCT_EVIDENCE"
+        ],
+        "secondary_dependencies": [
+          "PROOF_DOCUMENT"
+        ],
+        "evidence_dependency": true,
+        "deep_chain_required": true,
+        "human_required": true,
+        "projection_version": "v43-response-router-v2.2.1",
+        "implementation_id": "v43-response-router-v2.2.1-bounded-semantic-closure",
+        "baseline_v2_mode": "COMMITMENT",
+        "baseline_v21_mode": "NEED_REVIEW",
+        "baseline_v22_mode": "NEED_REVIEW",
+        "bounded_correction_family": null
+      },
+      "changed_dimensions": [
+        "router_projection"
+      ],
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "CORE6:FAST-04:FAST-04:REQ-004",
+      "tender_id": "FAST-04",
+      "requirement_id": "FAST-04:REQ-004",
+      "requirement_text": "投标人应为本项目组建实施团队，包含一名专职项目经理和一名项目技术负责人。项目经理负责完成人力调度、采购安排、进度控制以及与采购人协调等工作；项目经理需具备本科及以上学历，具有10年（含）以上相关工作经验，并持有下列任意2个证书：信息系统项目管理师、系统集成项目管理工程师、注册信息安全专业人员认证证书（CISP）。技术负责人需具备本科及以上学历，具有5年（含）以上相关工作经验，并持有下列任意1个证书：系统规划与管理师、系统架构设计师、CCRC信息安全保障人员认证证书。",
+      "reference": {
+        "primary_response_mode": "COMMITMENT",
+        "evidence_dependency": true,
+        "risk_tier": "HIGH",
+        "response_required": true,
+        "human_required": true,
+        "scoring_related": false,
+        "secondary_dependencies": [
+          "PROJECT_LOCKED_DECISION",
+          "ENTERPRISE_EVIDENCE"
+        ],
+        "semantic_status": "CLEAR",
+        "reason": "描述中标后或项目履约期间必须承担的交付、服务、人员、时限、责任或合同义务，Primary为COMMITMENT。"
+      },
+      "router_v221": {
+        "requirement_id": "FAST-04:REQ-004",
+        "response_role": "NONE",
+        "response_mode": "NEED_REVIEW",
+        "response_required": true,
+        "risk_tier": "HIGH",
+        "is_scoring_related": false,
+        "scoring_priority": "NONE",
+        "routing_reasons": [
+          "AMBIGUOUS_SUBJECT_OR_TEMPORAL_BOUNDARY",
+          "ENTERPRISE_OR_PRODUCT_EVIDENCE"
+        ],
+        "secondary_dependencies": [
+          "PROOF_DOCUMENT"
+        ],
+        "evidence_dependency": true,
+        "deep_chain_required": true,
+        "human_required": true,
+        "projection_version": "v43-response-router-v2.2.1",
+        "implementation_id": "v43-response-router-v2.2.1-bounded-semantic-closure",
+        "baseline_v2_mode": "EVIDENCE",
+        "baseline_v21_mode": "NEED_REVIEW",
+        "baseline_v22_mode": "NEED_REVIEW",
+        "bounded_correction_family": null
+      },
+      "changed_dimensions": [
+        "router_projection"
+      ],
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "CORE6:FAST-04:FAST-04:REQ-015",
+      "tender_id": "FAST-04",
+      "requirement_id": "FAST-04:REQ-015",
+      "requirement_text": "投标人承诺所投数据库产品在交付和实施过程中，能够搭建满足集中式数据库通用参数“集群管理”技术指标（序号第54条和第55条）要求的数据库，提供承诺函并加盖投标人公章。",
+      "reference": {
+        "primary_response_mode": "EVIDENCE",
+        "evidence_dependency": true,
+        "risk_tier": "HIGH",
+        "response_required": true,
+        "human_required": false,
+        "scoring_related": false,
+        "secondary_dependencies": [
+          "ENTERPRISE_EVIDENCE",
+          "PROOF_DOCUMENT"
+        ],
+        "semantic_status": "CLEAR",
+        "reason": "描述所投/既有产品、企业、人员、资质、案例或可验证能力，Primary为EVIDENCE。证明/表单要求作为二级依赖，不改变Primary。"
+      },
+      "router_v221": {
+        "requirement_id": "FAST-04:REQ-015",
+        "response_role": "NONE",
+        "response_mode": "NEED_REVIEW",
+        "response_required": true,
+        "risk_tier": "HIGH",
+        "is_scoring_related": false,
+        "scoring_priority": "NONE",
+        "routing_reasons": [
+          "AMBIGUOUS_SUBJECT_OR_TEMPORAL_BOUNDARY"
+        ],
+        "secondary_dependencies": [
+          "PROOF_DOCUMENT"
+        ],
+        "evidence_dependency": true,
+        "deep_chain_required": true,
+        "human_required": true,
+        "projection_version": "v43-response-router-v2.2.1",
+        "implementation_id": "v43-response-router-v2.2.1-bounded-semantic-closure",
+        "baseline_v2_mode": "COMMITMENT",
+        "baseline_v21_mode": "NEED_REVIEW",
+        "baseline_v22_mode": "NEED_REVIEW",
+        "bounded_correction_family": null
+      },
+      "changed_dimensions": [
+        "router_projection"
+      ],
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "CORE6:FAST-04:FAST-04:REQ-324",
+      "tender_id": "FAST-04",
+      "requirement_id": "FAST-04:REQ-324",
+      "requirement_text": "a)提供多种形式支持服务，包含电话、电子邮件、远程连接等；b)提供技术支持服务，支持同城4h、异地12h响应要求，两个工作日解决问题，对于未能解决的问题和故障提供可行的升级方案；c)提供培训材料、产品手册、培训视频等培训相关内容；d)建立全国技术服务体系和服务团队，符合专业服务体系标准要求，提供原厂中文服务；e)服务周期内支持版本免费升级；f)开源产品对获得的社区源代码进行安全性和知识产权审查与管理；g)提供数据库参数、慢SQL语句的性能优化指南，包含性能优化。",
+      "reference": {
+        "primary_response_mode": "COMMITMENT",
+        "evidence_dependency": true,
+        "risk_tier": "HIGH",
+        "response_required": true,
+        "human_required": true,
+        "scoring_related": false,
+        "secondary_dependencies": [
+          "PROJECT_LOCKED_DECISION",
+          "ENTERPRISE_EVIDENCE"
+        ],
+        "semantic_status": "CLEAR",
+        "reason": "描述中标后或项目履约期间必须承担的交付、服务、人员、时限、责任或合同义务，Primary为COMMITMENT。"
+      },
+      "router_v221": {
+        "requirement_id": "FAST-04:REQ-324",
+        "response_role": "NONE",
+        "response_mode": "NEED_REVIEW",
+        "response_required": true,
+        "risk_tier": "HIGH",
+        "is_scoring_related": false,
+        "scoring_priority": "NONE",
+        "routing_reasons": [
+          "AMBIGUOUS_SUBJECT_OR_TEMPORAL_BOUNDARY"
+        ],
+        "secondary_dependencies": [],
+        "evidence_dependency": true,
+        "deep_chain_required": true,
+        "human_required": true,
+        "projection_version": "v43-response-router-v2.2.1",
+        "implementation_id": "v43-response-router-v2.2.1-bounded-semantic-closure",
+        "baseline_v2_mode": "COMMITMENT",
+        "baseline_v21_mode": "EVIDENCE",
+        "baseline_v22_mode": "NEED_REVIEW",
+        "bounded_correction_family": "MIXED_BOUNDARY"
+      },
+      "changed_dimensions": [
+        "router_projection"
+      ],
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "CORE6:FAST-04:FAST-04:REQ-352",
+      "tender_id": "FAST-04",
+      "requirement_id": "FAST-04:REQ-352",
+      "requirement_text": "投标人针对本项目编制项目实施方案，包括但不限于供货方案(包括供应商管理、到货验收)，操作系统与数据库安装、适配、调优方案，进度控制、偏差处理措施等。",
+      "reference": {
+        "primary_response_mode": "SOLUTION",
+        "evidence_dependency": false,
+        "risk_tier": "MEDIUM",
+        "response_required": true,
+        "human_required": false,
+        "scoring_related": false,
+        "secondary_dependencies": [],
+        "semantic_status": "CLEAR",
+        "reason": "描述当前项目应如何建设、设计、实施或组织技术方案，Primary为SOLUTION。"
+      },
+      "router_v221": {
+        "requirement_id": "FAST-04:REQ-352",
+        "response_role": "NONE",
+        "response_mode": "NEED_REVIEW",
+        "response_required": true,
+        "risk_tier": "HIGH",
+        "is_scoring_related": false,
+        "scoring_priority": "NONE",
+        "routing_reasons": [
+          "AMBIGUOUS_SUBJECT_OR_TEMPORAL_BOUNDARY"
+        ],
+        "secondary_dependencies": [],
+        "evidence_dependency": true,
+        "deep_chain_required": true,
+        "human_required": true,
+        "projection_version": "v43-response-router-v2.2.1",
+        "implementation_id": "v43-response-router-v2.2.1-bounded-semantic-closure",
+        "baseline_v2_mode": "EVIDENCE",
+        "baseline_v21_mode": "NEED_REVIEW",
+        "baseline_v22_mode": "NEED_REVIEW",
+        "bounded_correction_family": null
+      },
+      "changed_dimensions": [
+        "router_projection"
+      ],
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "CORE6:FAST-WATER-01:FAST-WATER-01:REQ-092",
+      "tender_id": "FAST-WATER-01",
+      "requirement_id": "FAST-WATER-01:REQ-092",
+      "requirement_text": "供应商应建立完善的运维服务制度和良好的用户服务记录，并备有保障网络连续运行的相应备品备件。",
+      "reference": {
+        "primary_response_mode": "EVIDENCE",
+        "evidence_dependency": true,
+        "risk_tier": "HIGH",
+        "response_required": true,
+        "human_required": false,
+        "scoring_related": false,
+        "secondary_dependencies": [
+          "ENTERPRISE_EVIDENCE"
+        ],
+        "semantic_status": "CLEAR",
+        "reason": "描述所投/既有产品、企业、人员、资质、案例或可验证能力，Primary为EVIDENCE。"
+      },
+      "router_v221": {
+        "requirement_id": "FAST-WATER-01:REQ-092",
+        "response_role": "NONE",
+        "response_mode": "NEED_REVIEW",
+        "response_required": true,
+        "risk_tier": "HIGH",
+        "is_scoring_related": false,
+        "scoring_priority": "NONE",
+        "routing_reasons": [
+          "AMBIGUOUS_SUBJECT_OR_TEMPORAL_BOUNDARY"
+        ],
+        "secondary_dependencies": [],
+        "evidence_dependency": true,
+        "deep_chain_required": true,
+        "human_required": true,
+        "projection_version": "v43-response-router-v2.2.1",
+        "implementation_id": "v43-response-router-v2.2.1-bounded-semantic-closure",
+        "baseline_v2_mode": "COMMITMENT",
+        "baseline_v21_mode": "COMMITMENT",
+        "baseline_v22_mode": "NEED_REVIEW",
+        "bounded_correction_family": "MIXED_BOUNDARY"
+      },
+      "changed_dimensions": [
+        "router_projection"
+      ],
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "HOLDOUT_V1:HOLDOUT-REQ-01:HOLDOUT-REQ-01-CAN-0004",
+      "tender_id": "HOLDOUT-REQ-01",
+      "requirement_id": "HOLDOUT-REQ-01-CAN-0004",
+      "requirement_text": "投标人须对以下服务要求出具承诺函并加盖投标人公章：（一）投标产品须为国产厂商自主可控产品，源代码自主可控度高，具有国内自主知识产权，提供产品软件著作权证书；（二）负责本项目采购软件的部署实施工作，负责按照招标人要求的进度完成现有交换通道到新通道的切换，负责提出本项目原有交换任务等配置数据迁移方案，确保迁移与切换过程中的配置数据完整性与安全性，并针对可能存在的风险问题提供风险应对方案，保障业务平稳过渡到新平台。",
+      "reference": {
+        "primary_response_mode": "NEED_REVIEW",
+        "evidence_dependency": false,
+        "risk_tier": "HIGH",
+        "response_required": true,
+        "human_required": true,
+        "scoring_related": false,
+        "secondary_dependencies": [],
+        "semantic_status": "GENUINE_AMBIGUOUS_BOUNDARY",
+        "reason": "同一原子要求同时混合既有产品证据、项目实施承诺与方案义务，无法安全确定单一Primary，需人工边界确认。"
+      },
+      "router_v221": {
+        "requirement_id": "HOLDOUT-REQ-01-CAN-0004",
+        "response_role": "NONE",
+        "response_mode": "NEED_REVIEW",
+        "response_required": true,
+        "risk_tier": "HIGH",
+        "is_scoring_related": false,
+        "scoring_priority": "NONE",
+        "routing_reasons": [
+          "AMBIGUOUS_SUBJECT_OR_TEMPORAL_BOUNDARY",
+          "ENTERPRISE_OR_PRODUCT_EVIDENCE"
+        ],
+        "secondary_dependencies": [
+          "PROOF_DOCUMENT"
+        ],
+        "evidence_dependency": true,
+        "deep_chain_required": true,
+        "human_required": true,
+        "projection_version": "v43-response-router-v2.2.1",
+        "implementation_id": "v43-response-router-v2.2.1-bounded-semantic-closure",
+        "baseline_v2_mode": "EVIDENCE",
+        "baseline_v21_mode": "NEED_REVIEW",
+        "baseline_v22_mode": "NEED_REVIEW",
+        "bounded_correction_family": null
+      },
+      "changed_dimensions": [
+        "router_projection"
+      ],
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "HOLDOUT_V1:HOLDOUT-REQ-01:HOLDOUT-REQ-01-CAN-0039",
+      "tender_id": "HOLDOUT-REQ-01",
+      "requirement_id": "HOLDOUT-REQ-01-CAN-0039",
+      "requirement_text": "投标人须提供资格证明文件，包括：法人登记证书原件复印件（或社会团体法人登记证书、民办非企业单位登记证书原件复印件）；经审计的财务报告（含现金流量表、利润表、所有者权益变动表及其附注）或其基本开户银行出具的资信证明原件；依法缴纳税收和社会保障资金的证明材料复印件；具备履行合同所必需的设备和专业技术能力的承诺原件；参加政府采购活动近3年内在经营活动中没有重大违法记录的书面声明原件；控股股东名称、控股公司的名称和存在管理、被管理关系的单位名称说明；以及投标人是否属于为本项目提供整体设计、规范编制或者项目管理、监理、检测等服务，不是本项目的招标代理机构或其分支机构，不是联合体形式的投标，不以任何形式进行转包的投标人声明。以上提供的原件、扫描件、复印件必须加盖投标人公章。",
+      "reference": {
+        "primary_response_mode": "COMPLIANCE",
+        "evidence_dependency": true,
+        "risk_tier": "HIGH",
+        "response_required": true,
+        "human_required": true,
+        "scoring_related": false,
+        "secondary_dependencies": [
+          "COMPLIANCE_DOCUMENT",
+          "ENTERPRISE_EVIDENCE"
+        ],
+        "semantic_status": "CLEAR",
+        "reason": "描述投标前资格、文件、程序、实质性响应或投标有效性要求，Primary为COMPLIANCE。证明/表单要求作为二级依赖，不改变Primary。"
+      },
+      "router_v221": {
+        "requirement_id": "HOLDOUT-REQ-01-CAN-0039",
+        "response_role": "NONE",
+        "response_mode": "NEED_REVIEW",
+        "response_required": true,
+        "risk_tier": "HIGH",
+        "is_scoring_related": false,
+        "scoring_priority": "NONE",
+        "routing_reasons": [
+          "AMBIGUOUS_SUBJECT_OR_TEMPORAL_BOUNDARY"
+        ],
+        "secondary_dependencies": [
+          "PROOF_DOCUMENT"
+        ],
+        "evidence_dependency": true,
+        "deep_chain_required": true,
+        "human_required": true,
+        "projection_version": "v43-response-router-v2.2.1",
+        "implementation_id": "v43-response-router-v2.2.1-bounded-semantic-closure",
+        "baseline_v2_mode": "COMPLIANCE",
+        "baseline_v21_mode": "NEED_REVIEW",
+        "baseline_v22_mode": "NEED_REVIEW",
+        "bounded_correction_family": null
+      },
+      "changed_dimensions": [
+        "router_projection"
+      ],
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "HOLDOUT_V1:HOLDOUT-REQ-01:HOLDOUT-REQ-01-CAN-0176",
+      "tender_id": "HOLDOUT-REQ-01",
+      "requirement_id": "HOLDOUT-REQ-01-CAN-0176",
+      "requirement_text": "投标人不得以任何方式进行必要的澄清、说明或者补正的情形除外。",
+      "reference": {
+        "primary_response_mode": "NEED_REVIEW",
+        "evidence_dependency": false,
+        "risk_tier": "HIGH",
+        "response_required": true,
+        "human_required": true,
+        "scoring_related": false,
+        "secondary_dependencies": [],
+        "semantic_status": "GENUINE_AMBIGUOUS_BOUNDARY",
+        "reason": "条款文本存在明显语义残缺/否定关系异常，无法可靠确定合规义务含义，需回看原文确认。"
+      },
+      "router_v221": {
+        "requirement_id": "HOLDOUT-REQ-01-CAN-0176",
+        "response_role": "NONE",
+        "response_mode": "NEED_REVIEW",
+        "response_required": true,
+        "risk_tier": "HIGH",
+        "is_scoring_related": false,
+        "scoring_priority": "NONE",
+        "routing_reasons": [
+          "INCOMPLETE_OR_BROKEN_BOUNDARY"
+        ],
+        "secondary_dependencies": [],
+        "evidence_dependency": false,
+        "deep_chain_required": false,
+        "human_required": true,
+        "projection_version": "v43-response-router-v2.2.1",
+        "implementation_id": "v43-response-router-v2.2.1-bounded-semantic-closure",
+        "baseline_v2_mode": "COMMITMENT",
+        "baseline_v21_mode": "NEED_REVIEW",
+        "baseline_v22_mode": "NEED_REVIEW",
+        "bounded_correction_family": null
+      },
+      "changed_dimensions": [
+        "router_projection"
+      ],
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "HOLDOUT_V1:HOLDOUT-REQ-02:HOLDOUT-REQ-02-CAN-0041",
+      "tender_id": "HOLDOUT-REQ-02",
+      "requirement_id": "HOLDOUT-REQ-02-CAN-0041",
+      "requirement_text": "有关信息以及补充条款等，但应当在合理的必要范围内。对任何已经公布过的内容或与之内容相同的资料，以及供应商已经泄露或公开的，无须再承担保密责任。",
+      "reference": {
+        "primary_response_mode": "NEED_REVIEW",
+        "evidence_dependency": false,
+        "risk_tier": "HIGH",
+        "response_required": true,
+        "human_required": true,
+        "scoring_related": false,
+        "secondary_dependencies": [],
+        "semantic_status": "GENUINE_AMBIGUOUS_BOUNDARY",
+        "reason": "保密条款为残缺续句，责任主体与完整义务边界不足，需回看原文确认。"
+      },
+      "router_v221": {
+        "requirement_id": "HOLDOUT-REQ-02-CAN-0041",
+        "response_role": "NONE",
+        "response_mode": "NEED_REVIEW",
+        "response_required": true,
+        "risk_tier": "HIGH",
+        "is_scoring_related": false,
+        "scoring_priority": "NONE",
+        "routing_reasons": [
+          "INCOMPLETE_OR_BROKEN_BOUNDARY"
+        ],
+        "secondary_dependencies": [],
+        "evidence_dependency": false,
+        "deep_chain_required": false,
+        "human_required": true,
+        "projection_version": "v43-response-router-v2.2.1",
+        "implementation_id": "v43-response-router-v2.2.1-bounded-semantic-closure",
+        "baseline_v2_mode": "SOLUTION",
+        "baseline_v21_mode": "NEED_REVIEW",
+        "baseline_v22_mode": "NEED_REVIEW",
+        "bounded_correction_family": null
+      },
+      "changed_dimensions": [
+        "router_projection"
+      ],
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "HOLDOUT_V2:HOLDOUT-REQ-V2-01:HOLDOUT-REQ-V2-01-CAN-0027",
+      "tender_id": "HOLDOUT-REQ-V2-01",
+      "requirement_id": "HOLDOUT-REQ-V2-01-CAN-0027",
+      "requirement_text": "投标人的投标报价应为投标货物在采购人指定地点交货并完成安装调试和正常运行（含售后质量保证及技术支持、培训、备件等所有伴随服务）的最终价格。",
+      "reference": {
+        "primary_response_mode": "COMPLIANCE",
+        "evidence_dependency": false,
+        "risk_tier": "MEDIUM",
+        "response_required": true,
+        "human_required": false,
+        "scoring_related": false,
+        "secondary_dependencies": [],
+        "semantic_status": "CLEAR",
+        "reason": "描述投标前资格、文件、程序、实质性响应或投标有效性要求，Primary为COMPLIANCE。"
+      },
+      "router_v221": {
+        "requirement_id": "HOLDOUT-REQ-V2-01-CAN-0027",
+        "response_role": "NONE",
+        "response_mode": "NEED_REVIEW",
+        "response_required": true,
+        "risk_tier": "HIGH",
+        "is_scoring_related": false,
+        "scoring_priority": "NONE",
+        "routing_reasons": [
+          "AMBIGUOUS_SUBJECT_OR_TEMPORAL_BOUNDARY"
+        ],
+        "secondary_dependencies": [],
+        "evidence_dependency": true,
+        "deep_chain_required": true,
+        "human_required": true,
+        "projection_version": "v43-response-router-v2.2.1",
+        "implementation_id": "v43-response-router-v2.2.1-bounded-semantic-closure",
+        "baseline_v2_mode": "COMPLIANCE",
+        "baseline_v21_mode": "NEED_REVIEW",
+        "baseline_v22_mode": "NEED_REVIEW",
+        "bounded_correction_family": null
+      },
+      "changed_dimensions": [
+        "router_projection"
+      ],
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "HOLDOUT_V2:HOLDOUT-REQ-V2-01:HOLDOUT-REQ-V2-01-CAN-0051",
+      "tender_id": "HOLDOUT-REQ-V2-01",
+      "requirement_id": "HOLDOUT-REQ-V2-01-CAN-0051",
+      "requirement_text": "成功通过项目电子化交易系统上传提交电子加密投标文件是指在投标截止时间前，上传提交按照最终版本招标文件编制加密的投标文件，并获取相应的《投标（响应）文件签收回执单》。",
+      "reference": {
+        "primary_response_mode": "COMPLIANCE",
+        "evidence_dependency": false,
+        "risk_tier": "HIGH",
+        "response_required": true,
+        "human_required": true,
+        "scoring_related": false,
+        "secondary_dependencies": [],
+        "semantic_status": "CLEAR",
+        "reason": "描述投标前资格、文件、程序、实质性响应或投标有效性要求，Primary为COMPLIANCE。"
+      },
+      "router_v221": {
+        "requirement_id": "HOLDOUT-REQ-V2-01-CAN-0051",
+        "response_role": "NONE",
+        "response_mode": "NEED_REVIEW",
+        "response_required": true,
+        "risk_tier": "HIGH",
+        "is_scoring_related": false,
+        "scoring_priority": "NONE",
+        "routing_reasons": [
+          "AMBIGUOUS_SUBJECT_OR_TEMPORAL_BOUNDARY"
+        ],
+        "secondary_dependencies": [],
+        "evidence_dependency": true,
+        "deep_chain_required": true,
+        "human_required": true,
+        "projection_version": "v43-response-router-v2.2.1",
+        "implementation_id": "v43-response-router-v2.2.1-bounded-semantic-closure",
+        "baseline_v2_mode": "COMPLIANCE",
+        "baseline_v21_mode": "NEED_REVIEW",
+        "baseline_v22_mode": "NEED_REVIEW",
+        "bounded_correction_family": null
+      },
+      "changed_dimensions": [
+        "router_projection"
+      ],
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "HOLDOUT_V2:HOLDOUT-REQ-V2-01:HOLDOUT-REQ-V2-01-CAN-0469",
+      "tender_id": "HOLDOUT-REQ-V2-01",
+      "requirement_id": "HOLDOUT-REQ-V2-01-CAN-0469",
+      "requirement_text": "交货时间：合同生效之日起30个日历日内。初步验收时间：货物到达交货地点且上电检验完成并收到乙方提交验收申请后30天内进行货物到货初步验收。上线验收时间：在安装集成工作完毕、设备正式上线、收到原厂维保服务生效证明后，并收到乙方提交验收申请之日起30天内。最终验收时间：计划2028年2月2日前完成最终验收。免费质量保证期：自初步验收通过之日起6年。",
+      "reference": {
+        "primary_response_mode": "COMMITMENT",
+        "evidence_dependency": true,
+        "risk_tier": "HIGH",
+        "response_required": true,
+        "human_required": true,
+        "scoring_related": false,
+        "secondary_dependencies": [
+          "PROJECT_LOCKED_DECISION",
+          "ENTERPRISE_EVIDENCE"
+        ],
+        "semantic_status": "CLEAR",
+        "reason": "描述中标后或项目履约期间必须承担的交付、服务、人员、时限、责任或合同义务，Primary为COMMITMENT。"
+      },
+      "router_v221": {
+        "requirement_id": "HOLDOUT-REQ-V2-01-CAN-0469",
+        "response_role": "NONE",
+        "response_mode": "NEED_REVIEW",
+        "response_required": true,
+        "risk_tier": "HIGH",
+        "is_scoring_related": false,
+        "scoring_priority": "NONE",
+        "routing_reasons": [
+          "AMBIGUOUS_SUBJECT_OR_TEMPORAL_BOUNDARY"
+        ],
+        "secondary_dependencies": [
+          "PROOF_DOCUMENT"
+        ],
+        "evidence_dependency": true,
+        "deep_chain_required": true,
+        "human_required": true,
+        "projection_version": "v43-response-router-v2.2.1",
+        "implementation_id": "v43-response-router-v2.2.1-bounded-semantic-closure",
+        "baseline_v2_mode": "COMMITMENT",
+        "baseline_v21_mode": "NEED_REVIEW",
+        "baseline_v22_mode": "NEED_REVIEW",
+        "bounded_correction_family": null
+      },
+      "changed_dimensions": [
+        "router_projection"
+      ],
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "HOLDOUT_V2:HOLDOUT-REQ-V2-01:HOLDOUT-REQ-V2-01-CAN-0508",
+      "tender_id": "HOLDOUT-REQ-V2-01",
+      "requirement_id": "HOLDOUT-REQ-V2-01-CAN-0508",
+      "requirement_text": "供应商投入到本项目现场服务的项目经理至少1人，项目经理从事项目管理工作满5年；项目经理具备本科及以上学历且具备由国家机构颁发的项目管理方面资质（如有效期内的由国家人力资源和社会保障部、工业和信息化部共同颁发的信息系统项目管理师等资质）；供应商投入到本项目现场服务的工程师至少6名；除上述现场实施人员以外，供应商至少额外投入2名具备10年及以上大型网络集成维护工作经验的工程师作为网络专家库；供应商投入到本项目的现场工程师，具有本科及以上学历且持有由国家人力资源和社会保障部、工业和信息化部颁发的网络工程师或网络规划设计师证书3年及以上的，每满足1名得1分，3年以下的，每满足1名得0.5分，参与本项评分的具有本科及以上学历且持有该证书3年以下的现场工程师至多4名；供应商投入到本项目的网络专家库，具有本科及以上学历且持有该证书10年及以上的，每满足1名得1分，10年以下且3年及以上的，每满足1名得0.5分，参与本项评分的具有本科及以上学历且持有该证书10年以下且3年及以上的网络专家库至多2名；须提供相应有效期内的证书（若证书上无有效期，则须同时提供在证书授予机构官网查询的证书有效期结果）、社保缴纳证明、工作履历、学历证明。",
+      "reference": {
+        "primary_response_mode": "COMMITMENT",
+        "evidence_dependency": true,
+        "risk_tier": "HIGH",
+        "response_required": true,
+        "human_required": true,
+        "scoring_related": true,
+        "secondary_dependencies": [
+          "PROJECT_LOCKED_DECISION",
+          "ENTERPRISE_EVIDENCE",
+          "SCORING"
+        ],
+        "semantic_status": "CLEAR",
+        "reason": "描述中标后或项目履约期间必须承担的交付、服务、人员、时限、责任或合同义务，Primary为COMMITMENT。同时直接关联评分。"
+      },
+      "router_v221": {
+        "requirement_id": "HOLDOUT-REQ-V2-01-CAN-0508",
+        "response_role": "SCORING",
+        "response_mode": "NEED_REVIEW",
+        "response_required": true,
+        "risk_tier": "HIGH",
+        "is_scoring_related": true,
+        "scoring_priority": "MEDIUM",
+        "routing_reasons": [
+          "AMBIGUOUS_SUBJECT_OR_TEMPORAL_BOUNDARY",
+          "ENTERPRISE_OR_PRODUCT_EVIDENCE",
+          "SCORING_RELATED"
+        ],
+        "secondary_dependencies": [
+          "PROOF_DOCUMENT",
+          "SCORING"
+        ],
+        "evidence_dependency": true,
+        "deep_chain_required": true,
+        "human_required": true,
+        "projection_version": "v43-response-router-v2.2.1",
+        "implementation_id": "v43-response-router-v2.2.1-bounded-semantic-closure",
+        "baseline_v2_mode": "COMPLIANCE",
+        "baseline_v21_mode": "NEED_REVIEW",
+        "baseline_v22_mode": "NEED_REVIEW",
+        "bounded_correction_family": null
+      },
+      "changed_dimensions": [
+        "router_projection"
+      ],
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "HOLDOUT_V2:HOLDOUT-REQ-V2-02:HOLDOUT-REQ-V2-02-CAN-0075",
+      "tender_id": "HOLDOUT-REQ-V2-02",
+      "requirement_id": "HOLDOUT-REQ-V2-02-CAN-0075",
+      "requirement_text": "在金融监管总局机关数据机房以及金融监管总局指定的其他地点部署机架服务器、网络及安全设备；负责完成实施方案的编制工作；提供本项目所需的设备与辅助材料，完成安装与施工，完成设备的调试，并通过招标人验收；在施工过程中，需确保机房原有设备设施正常运转不停机；在施工完成后，需提供各类项目资料，包括但不限于软硬件设备清单、设备与系统操作手册、应急故障处置手册、检测报告和过程文档等；在合同签订后90日内完成到货安装验收；自验收通过之日起机架服务器和交换机1提供不少于5年的免费维保服务，防火墙、交换机2和安全设备提供不少于6年的免费维保服务，提供7×24小时电话技术支持和7×24小时设备与系统维修服务，提供免费系统管理培训，确保金融监管总局工作人员可完成日常运行操作及简单故障处理。",
+      "reference": {
+        "primary_response_mode": "COMMITMENT",
+        "evidence_dependency": true,
+        "risk_tier": "HIGH",
+        "response_required": true,
+        "human_required": true,
+        "scoring_related": false,
+        "secondary_dependencies": [
+          "PROJECT_LOCKED_DECISION",
+          "ENTERPRISE_EVIDENCE"
+        ],
+        "semantic_status": "CLEAR",
+        "reason": "描述中标后或项目履约期间必须承担的交付、服务、人员、时限、责任或合同义务，Primary为COMMITMENT。"
+      },
+      "router_v221": {
+        "requirement_id": "HOLDOUT-REQ-V2-02-CAN-0075",
+        "response_role": "NONE",
+        "response_mode": "NEED_REVIEW",
+        "response_required": true,
+        "risk_tier": "HIGH",
+        "is_scoring_related": false,
+        "scoring_priority": "NONE",
+        "routing_reasons": [
+          "AMBIGUOUS_SUBJECT_OR_TEMPORAL_BOUNDARY",
+          "ENTERPRISE_OR_PRODUCT_EVIDENCE"
+        ],
+        "secondary_dependencies": [
+          "PROOF_DOCUMENT"
+        ],
+        "evidence_dependency": true,
+        "deep_chain_required": true,
+        "human_required": true,
+        "projection_version": "v43-response-router-v2.2.1",
+        "implementation_id": "v43-response-router-v2.2.1-bounded-semantic-closure",
+        "baseline_v2_mode": "COMMITMENT",
+        "baseline_v21_mode": "NEED_REVIEW",
+        "baseline_v22_mode": "NEED_REVIEW",
+        "bounded_correction_family": null
+      },
+      "changed_dimensions": [
+        "router_projection"
+      ],
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "HOLDOUT_V2:HOLDOUT-REQ-V2-02:HOLDOUT-REQ-V2-02-CAN-0150",
+      "tender_id": "HOLDOUT-REQ-V2-02",
+      "requirement_id": "HOLDOUT-REQ-V2-02-CAN-0150",
+      "requirement_text": "投标人承诺为本项目所投标各类产品提供售后质保服务，具体承诺的售后质保服务内容包括：（1）确保产品最终用户为金融监管总局。“服务器 1”“服务器 2”“服务器 3”“交换机 1”提供从项目验收之日起不少于 5 年 7×24 小时免费维保服务，“万兆防火墙”“交换机 2”“流量回溯与分析设备”“SSL 应用安全网关”“零信任系统”提供从项目验收之日起不少于 6 年 7×24 小时免费维保服务。维保服务内容包括但不限于产品相关硬件维保（包括操作系统、BIOS、微码、固件等）、安全加固、缺陷修复、硬件故障受理、安装使用手册、技术方案等，且不再单独收费，服务形式包括但不限于热线电话、邮件等远程在线支持、现场技术支持（在系统升级、重点项目实施、重大保障活动等对系统设备稳定运行要求较高的时段，需根据金融监管总局需求现场支持服务）等，提供硬盘不返还服务（即服务器硬盘故障后，提供全新硬盘，不得将故障硬盘带离国家金融监督管理总局）；提供 7×24 小时电话技术支持与故障解决服务，接到故障申请后应于 1 小时内响应，按客户需要 2 小时内到达服务现场解决问题，并提供应急解决方案；（2）提供 7×12 小时备品备件更换服务，接到备品备件申请后，48 小时内完成设备更换；提供 7×12 小时设备维修服务。按金融监管总局要求，投标人在接收到提供备机备件任务后 24 小时内送达现场，故障设备和配件及时送修，确保相关基础环境持续稳定运行，如涉及软硬件产品，必须保证金融监管总局对该产品拥有合法的使用权，所需费用由投标人承担。投标人承诺在保修期内，除不可抗力及使用不当造成外，某一部件出现四次故障，此部件将终身免费保修或金融监管总局有权要求服务商予以整机更换；（3）由投标人（非原厂商）提供每年不少于 4 次的现场深度健康检查服务，其中“服务器 2”“交换机 1”产品须根据金融监管总局需要由投标人分别提供不低于 5 人/天的现场服务。",
+      "reference": {
+        "primary_response_mode": "COMMITMENT",
+        "evidence_dependency": true,
+        "risk_tier": "HIGH",
+        "response_required": true,
+        "human_required": true,
+        "scoring_related": false,
+        "secondary_dependencies": [
+          "PROJECT_LOCKED_DECISION",
+          "ENTERPRISE_EVIDENCE"
+        ],
+        "semantic_status": "CLEAR",
+        "reason": "描述中标后或项目履约期间必须承担的交付、服务、人员、时限、责任或合同义务，Primary为COMMITMENT。"
+      },
+      "router_v221": {
+        "requirement_id": "HOLDOUT-REQ-V2-02-CAN-0150",
+        "response_role": "NONE",
+        "response_mode": "NEED_REVIEW",
+        "response_required": true,
+        "risk_tier": "HIGH",
+        "is_scoring_related": false,
+        "scoring_priority": "NONE",
+        "routing_reasons": [
+          "AMBIGUOUS_SUBJECT_OR_TEMPORAL_BOUNDARY"
+        ],
+        "secondary_dependencies": [
+          "PROOF_DOCUMENT"
+        ],
+        "evidence_dependency": true,
+        "deep_chain_required": true,
+        "human_required": true,
+        "projection_version": "v43-response-router-v2.2.1",
+        "implementation_id": "v43-response-router-v2.2.1-bounded-semantic-closure",
+        "baseline_v2_mode": "COMMITMENT",
+        "baseline_v21_mode": "NEED_REVIEW",
+        "baseline_v22_mode": "NEED_REVIEW",
+        "bounded_correction_family": null
+      },
+      "changed_dimensions": [
+        "router_projection"
+      ],
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "HOLDOUT_V2:HOLDOUT-REQ-V2-02:HOLDOUT-REQ-V2-02-CAN-0161",
+      "tender_id": "HOLDOUT-REQ-V2-02",
+      "requirement_id": "HOLDOUT-REQ-V2-02-CAN-0161",
+      "requirement_text": "到货后15个自然日内完成上架部署安装（包括综合布线、测试、联调等），具备初步验收条件；投标人须充分考虑设备运输等情况，制定详细的实施计划安排，保证项目按计划目标时间完成。",
+      "reference": {
+        "primary_response_mode": "COMMITMENT",
+        "evidence_dependency": false,
+        "risk_tier": "HIGH",
+        "response_required": true,
+        "human_required": true,
+        "scoring_related": false,
+        "secondary_dependencies": [
+          "PROJECT_LOCKED_DECISION"
+        ],
+        "semantic_status": "CLEAR",
+        "reason": "描述中标后或项目履约期间必须承担的交付、服务、人员、时限、责任或合同义务，Primary为COMMITMENT。"
+      },
+      "router_v221": {
+        "requirement_id": "HOLDOUT-REQ-V2-02-CAN-0161",
+        "response_role": "NONE",
+        "response_mode": "NEED_REVIEW",
+        "response_required": true,
+        "risk_tier": "HIGH",
+        "is_scoring_related": false,
+        "scoring_priority": "NONE",
+        "routing_reasons": [
+          "AMBIGUOUS_SUBJECT_OR_TEMPORAL_BOUNDARY"
+        ],
+        "secondary_dependencies": [],
+        "evidence_dependency": true,
+        "deep_chain_required": true,
+        "human_required": true,
+        "projection_version": "v43-response-router-v2.2.1",
+        "implementation_id": "v43-response-router-v2.2.1-bounded-semantic-closure",
+        "baseline_v2_mode": "EVIDENCE",
+        "baseline_v21_mode": "NEED_REVIEW",
+        "baseline_v22_mode": "NEED_REVIEW",
+        "bounded_correction_family": null
+      },
+      "changed_dimensions": [
+        "router_projection"
+      ],
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "HOLDOUT_V2:HOLDOUT-REQ-V2-02:HOLDOUT-REQ-V2-02-CAN-0188",
+      "tender_id": "HOLDOUT-REQ-V2-02",
+      "requirement_id": "HOLDOUT-REQ-V2-02-CAN-0188",
+      "requirement_text": "若甲方经进一步检验或在使用中发现货物内在的、非显而易见的损坏或缺陷，或者货物质量与合同规定不符但并非在验收时属于显而易见（A情形）；或者在货物质量保证期内（B情形）、合理使用寿命期限结束前6个月内（C情形）证实货物或零部件是有缺陷的（包括潜在缺陷或使用不符合要求的材料等），甲方有权要求乙方免费更换成没有缺陷的货物或零部件，且处理后甲方待遇不得低于国家部委级别发布的“三包”规定标准。其中：A情形应当用崭新且尚未拆封、未曾使用也未曾展示过的正品合格品整机、整件货物更换而不得仅更换零部件；B情形应当用崭新且尚未拆封、未曾使用也未曾展示过的正品合格品更换；C情形应当用不低于需更换货物成新的正品合格品更换。甲方可以在发现该情形后尽快并且至迟应当在各对应期限结束之日起7个工作日内以书面形式通知乙方，乙方应在收到甲方通知后7个工作日内免费完成更换，按本合同前述各条款项规定交付及验收。",
+      "reference": {
+        "primary_response_mode": "COMMITMENT",
+        "evidence_dependency": false,
+        "risk_tier": "HIGH",
+        "response_required": true,
+        "human_required": true,
+        "scoring_related": false,
+        "secondary_dependencies": [
+          "PROJECT_LOCKED_DECISION"
+        ],
+        "semantic_status": "CLEAR",
+        "reason": "描述中标后或项目履约期间必须承担的交付、服务、人员、时限、责任或合同义务，Primary为COMMITMENT。"
+      },
+      "router_v221": {
+        "requirement_id": "HOLDOUT-REQ-V2-02-CAN-0188",
+        "response_role": "NONE",
+        "response_mode": "NEED_REVIEW",
+        "response_required": true,
+        "risk_tier": "HIGH",
+        "is_scoring_related": false,
+        "scoring_priority": "NONE",
+        "routing_reasons": [
+          "AMBIGUOUS_SUBJECT_OR_TEMPORAL_BOUNDARY"
+        ],
+        "secondary_dependencies": [],
+        "evidence_dependency": true,
+        "deep_chain_required": true,
+        "human_required": true,
+        "projection_version": "v43-response-router-v2.2.1",
+        "implementation_id": "v43-response-router-v2.2.1-bounded-semantic-closure",
+        "baseline_v2_mode": "COMMITMENT",
+        "baseline_v21_mode": "NEED_REVIEW",
+        "baseline_v22_mode": "NEED_REVIEW",
+        "bounded_correction_family": null
+      },
+      "changed_dimensions": [
+        "router_projection"
+      ],
+      "semantic_root_cause": "PENDING_GPT"
+    },
+    {
+      "case_id": "HOLDOUT_V2:HOLDOUT-REQ-V2-02:HOLDOUT-REQ-V2-02-CAN-0260",
+      "tender_id": "HOLDOUT-REQ-V2-02",
+      "requirement_id": "HOLDOUT-REQ-V2-02-CAN-0260",
+      "requirement_text": "投标人须按招标文件第五部分采购需求中的指标要求逐项填写投标货物技术规范偏离表，对采购货物、服务、实施方案一览表逐项制表响应；对于有证明材料要求的指标，必须按要求附上相应证明材料，只填写“满足”而不能提供相关证明材料或证明材料不符合要求的，不作为评审依据。",
+      "reference": {
+        "primary_response_mode": "COMPLIANCE",
+        "evidence_dependency": false,
+        "risk_tier": "MEDIUM",
+        "response_required": true,
+        "human_required": false,
+        "scoring_related": false,
+        "secondary_dependencies": [
+          "COMPLIANCE_DOCUMENT"
+        ],
+        "semantic_status": "CLEAR",
+        "reason": "描述投标前资格、文件、程序、实质性响应或投标有效性要求，Primary为COMPLIANCE。证明/表单要求作为二级依赖，不改变Primary。"
+      },
+      "router_v221": {
+        "requirement_id": "HOLDOUT-REQ-V2-02-CAN-0260",
+        "response_role": "SCORING",
+        "response_mode": "NEED_REVIEW",
+        "response_required": true,
+        "risk_tier": "HIGH",
+        "is_scoring_related": true,
+        "scoring_priority": "MEDIUM",
+        "routing_reasons": [
+          "AMBIGUOUS_SUBJECT_OR_TEMPORAL_BOUNDARY",
+          "SCORING_RELATED"
+        ],
+        "secondary_dependencies": [
+          "PROOF_DOCUMENT",
+          "SCORING"
+        ],
+        "evidence_dependency": true,
+        "deep_chain_required": true,
+        "human_required": true,
+        "projection_version": "v43-response-router-v2.2.1",
+        "implementation_id": "v43-response-router-v2.2.1-bounded-semantic-closure",
+        "baseline_v2_mode": "COMPLIANCE",
+        "baseline_v21_mode": "NEED_REVIEW",
+        "baseline_v22_mode": "NEED_REVIEW",
+        "bounded_correction_family": null
+      },
+      "changed_dimensions": [
+        "router_projection"
+      ],
+      "semantic_root_cause": "PENDING_GPT"
+    }
+  ]
+}

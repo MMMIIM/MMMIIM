@@ -1,0 +1,58 @@
+{
+  "artifact_type": "V43_CORPUS_HOLD_MATRIX_V1",
+  "execution_mode": "OFFLINE_ONLY",
+  "provider_calls": 0,
+  "embedding_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "gold_mutations": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "commit": 0,
+  "push": 0,
+  "merge": 0,
+  "deploy": 0,
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "corpora": [
+    {
+      "corpus": "CHENGCHUAN_BASE16",
+      "materials": 16,
+      "chunks": 160,
+      "embeddings": 160,
+      "status": "DEFAULT_E2E_INPUT",
+      "authority": "SYNTHETIC_DEVELOPMENT_ONLY"
+    },
+    {
+      "corpus": "CHENGCHUAN_V2_EXTENSION",
+      "materials": 92,
+      "chunks": 676,
+      "embeddings": null,
+      "status": "HOLD_NOT_DEFAULT_E2E_INPUT",
+      "reason": "vector rows not evidenced"
+    },
+    {
+      "corpus": "HUAWEI_PUBLIC_REAL_PDF_PILOT_V1",
+      "materials": 6,
+      "chunks": 590,
+      "embeddings": 590,
+      "status": "REAL_DOCUMENT_SMOKE_ONLY"
+    },
+    {
+      "corpus": "H3C_REFERENCE",
+      "status": "EXPLORATORY_WEB_ONLY"
+    },
+    {
+      "corpus": "NEUSOFT",
+      "materials": 4,
+      "status": "QUARANTINED_AUTHORITY_ZERO"
+    },
+    {
+      "corpus": "UNKNOWN",
+      "materials": 2,
+      "status": "UNKNOWN_REVIEW_REQUIRED"
+    }
+  ]
+}

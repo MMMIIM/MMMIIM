@@ -1,9 +1,31 @@
 import { createHash } from 'node:crypto';
 
 export const ENTERPRISE_MATERIAL_CHUNKER_VERSION='enterprise-material-v1';
+export const CHUNK_QUALITY_GATE_VERSION='chunk-quality-gate-v1';
 const MAX_CHARS=1200;
 
 const sha=(value)=>createHash('sha256').update(value).digest('hex');
+
+const structuralLine=(value)=>/^#{1,6}\s+\S.*$/u.test(value)||/^[-*•]\s*$/u.test(value)||/^-{3,}$/u.test(value);
+
+/**
+ * Additive, deterministic chunk-quality metadata. The current database
+ * schema remains unchanged; retrieval may use this metadata as a gate while
+ * preserving the original chunk text and identity.
+ */
+export function classifyEnterpriseChunkQuality(sourceText, { parentSectionId=null, headingPath=[] }={}) {
+  const source=String(sourceText ?? '');
+  const lines=source.split(/\r?\n/).map(line=>line.trim()).filter(Boolean);
+  const structuralOnly=!lines.length||lines.every(structuralLine);
+  return {
+    chunk_role: structuralOnly?'STRUCTURAL_ONLY':'SUBSTANTIVE_TEXT',
+    parent_section_id: parentSectionId,
+    heading_path: Array.isArray(headingPath)?[...headingPath]:[],
+    content_length: source.length,
+    content_hash: sha(source),
+    chunk_quality_gate_version: CHUNK_QUALITY_GATE_VERSION
+  };
+}
 
 export function chunkEnterpriseMaterial(materialId, extractedText, { maxChars=MAX_CHARS, chunkerVersion=ENTERPRISE_MATERIAL_CHUNKER_VERSION }={}) {
   const source=String(extractedText ?? '');
@@ -18,6 +40,7 @@ export function chunkEnterpriseMaterial(materialId, extractedText, { maxChars=MA
   }
   return segments.map((item,chunkIndex)=>{
     const chunkHash=sha(item.source_text);
-    return {chunk_id:`MCH-${sha(`${materialId}|${chunkerVersion}|${chunkIndex}|${item.char_start}|${item.char_end}|${chunkHash}`).slice(0,32).toUpperCase()}`,material_id:materialId,chunk_index:chunkIndex,...item,page_start:null,page_end:null,section:null,chunk_hash:chunkHash,chunker_version:chunkerVersion};
+    const quality=classifyEnterpriseChunkQuality(item.source_text);
+    return {chunk_id:`MCH-${sha(`${materialId}|${chunkerVersion}|${chunkIndex}|${item.char_start}|${item.char_end}|${chunkHash}`).slice(0,32).toUpperCase()}`,material_id:materialId,chunk_index:chunkIndex,...item,page_start:null,page_end:null,section:null,chunk_hash:chunkHash,chunker_version:chunkerVersion,...quality,content_hash:chunkHash};
   });
 }

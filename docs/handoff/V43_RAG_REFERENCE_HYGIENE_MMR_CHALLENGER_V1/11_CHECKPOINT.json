@@ -1,0 +1,97 @@
+{
+  "artifact_type": "V43_RAG_REFERENCE_HYGIENE_MMR_CHALLENGER_CHECKPOINT",
+  "status": "READY_FOR_GPT_REFERENCE_STRATEGY_AB_ADJUDICATION",
+  "source_artifact": "backend/eval/rag-pilot/results/overnight/01_retrieval_context_40case.json",
+  "source_sha256": "7fde0c5434718a238ba74301dae001ffc82089d3af86f6dba3a017ec68c77d42",
+  "reference_denominator": {
+    "A01_A30": 30,
+    "deferred_A31_A40": 10,
+    "deferred_lane": "EVIDENCE_RETRIEVAL_LANE"
+  },
+  "strategies": {
+    "A": {
+      "case_count": 30,
+      "top4_rows": 120,
+      "heading_count_top4": 2,
+      "citation_index_like_count_top4": 23,
+      "substantive_count_top4": 120,
+      "expected_doc_hit_at_4_count": 28,
+      "expected_doc_hit_at_4_rate": 0.9333333333333333,
+      "max_same_material_count": 4,
+      "mean_same_material_max_count": 1.6333333333333333,
+      "mean_unique_material_count": 3.2666666666666666,
+      "semantic_labels_created": 0
+    },
+    "B": {
+      "case_count": 30,
+      "top4_rows": 120,
+      "heading_count_top4": 2,
+      "citation_index_like_count_top4": 0,
+      "substantive_count_top4": 120,
+      "expected_doc_hit_at_4_count": 27,
+      "expected_doc_hit_at_4_rate": 0.9,
+      "max_same_material_count": 2,
+      "mean_same_material_max_count": 1.4666666666666666,
+      "mean_unique_material_count": 3.5,
+      "semantic_labels_created": 0
+    },
+    "C": {
+      "case_count": 30,
+      "top4_rows": 120,
+      "heading_count_top4": 2,
+      "citation_index_like_count_top4": 0,
+      "substantive_count_top4": 120,
+      "expected_doc_hit_at_4_count": 27,
+      "expected_doc_hit_at_4_rate": 0.9,
+      "max_same_material_count": 2,
+      "mean_same_material_max_count": 1.4666666666666666,
+      "mean_unique_material_count": 3.5,
+      "semantic_labels_created": 0
+    },
+    "D": {
+      "case_count": 30,
+      "top4_rows": 120,
+      "heading_count_top4": 2,
+      "citation_index_like_count_top4": 0,
+      "substantive_count_top4": 120,
+      "expected_doc_hit_at_4_count": 27,
+      "expected_doc_hit_at_4_rate": 0.9,
+      "max_same_material_count": 2,
+      "mean_same_material_max_count": 1.4666666666666666,
+      "mean_unique_material_count": 3.5,
+      "semantic_labels_created": 0
+    }
+  },
+  "mmr": {
+    "lambda": 0.9,
+    "challenger_only": true,
+    "true_vector_reproducible": false,
+    "proxy": "token_jaccard_redundancy_with_persisted_similarity"
+  },
+  "semantic_review": {
+    "packet": "09_GPT_SEMANTIC_AB_REVIEW_PACKET.json",
+    "labels_created": 0,
+    "status": "PENDING_GPT_HUMAN_REVIEW"
+  },
+  "authority_boundary": {
+    "reference_to_enterprise_assertion_escape_count": 0,
+    "inherited_regression": "10_AUTHORITY_NEGATIVE_REGRESSION.json"
+  },
+  "implementation": {
+    "production_changes": 0,
+    "production_strategy_promotion": 0,
+    "new_schema": 0,
+    "new_migration": 0
+  },
+  "side_effects": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "eval_db_writes": 0,
+    "fact": 0,
+    "mapping": 0,
+    "claim": 0,
+    "writer_generation": 0,
+    "gold_mutations": 0
+  }
+}

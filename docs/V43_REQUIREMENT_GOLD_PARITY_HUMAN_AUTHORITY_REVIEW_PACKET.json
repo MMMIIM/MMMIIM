@@ -1,0 +1,114 @@
+{
+  "artifact_type": "REQUIREMENT_GOLD_PARITY_HUMAN_AUTHORITY_REVIEW_PACKET",
+  "artifact_version": "v43-requirement-gold-parity-human-authority-review-v1",
+  "eval_only": true,
+  "blind": true,
+  "authority_status": "NO_AUTHORITATIVE_UPGRADE",
+  "gold_promotion": "NOT_PERFORMED",
+  "source_reconstruction_packet": "backend/eval/gold-governance/v43-gold-v2-foundation/REQUIREMENT_SOURCE_RECONSTRUCTION_BLIND_PACKET.json",
+  "source_manifest": "backend/eval/tender-benchmark-v1/reports/tender-benchmark-pilot-census-v1.json",
+  "tenders": [
+    {
+      "tender_id": "JY-001",
+      "source_file": "backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf",
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "candidate_requirements": {
+        "source_artifact": "backend/eval/gold-governance/v43-gold-v2-foundation/REQUIREMENT_SOURCE_RECONSTRUCTION_BLIND_PACKET.json#tenders[JY-001].candidate_requirements",
+        "count": 193,
+        "source_span_count": 193,
+        "source_span_hash_count": 193,
+        "formal_requirement_id_count": 0,
+        "authority_decision_count": 0
+      },
+      "source_excerpt": {
+        "value": null,
+        "status": "NOT_CAPTURED_IN_HISTORICAL_ARTIFACT",
+        "present_count": 0,
+        "required_action": "Human must verify each cited source span against the original PDF; no excerpt is synthesized."
+      },
+      "candidate_confidence": {
+        "value": null,
+        "status": "NOT_PRESENT_IN_SOURCE_ARTIFACT"
+      },
+      "review_required_fields": [
+        "formal_requirement_id",
+        "authority_decision",
+        "source_excerpt_verification",
+        "candidate_confidence",
+        "source_span_requirement_text_consistency",
+        "ambiguity_or_conflict_resolution",
+        "Requirement_Gold_inclusion_decision"
+      ],
+      "status": "CANDIDATE_PENDING_HUMAN_AUTHORITY"
+    },
+    {
+      "tender_id": "TB-003",
+      "source_file": "backend/eval/tender-benchmark-v1/sources/TB-003-jiaozuo-sidian.pdf",
+      "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "candidate_requirements": {
+        "source_artifact": "backend/eval/gold-governance/v43-gold-v2-foundation/REQUIREMENT_SOURCE_RECONSTRUCTION_BLIND_PACKET.json#tenders[TB-003].candidate_requirements",
+        "count": 0,
+        "source_span_count": 0,
+        "source_span_hash_count": 0,
+        "formal_requirement_id_count": 0,
+        "authority_decision_count": 0
+      },
+      "source_excerpt": {
+        "value": null,
+        "status": "NOT_AVAILABLE_RAW_SOURCE_ONLY",
+        "present_count": 0,
+        "required_action": "Obtain an authorized source packet or manual reconstruction; no automatic re-extraction is performed."
+      },
+      "candidate_confidence": {
+        "value": null,
+        "status": "NO_CANDIDATE"
+      },
+      "review_required_fields": [
+        "authorized_source_packet_or_manual_reconstruction",
+        "candidate_requirement",
+        "exact_source_span_and_text",
+        "candidate_confidence",
+        "Human_Authority_decision"
+      ],
+      "status": "BLOCKED_RAW_SOURCE_ONLY"
+    },
+    {
+      "tender_id": "FAST-04",
+      "source_file": "backend/eval/tender-benchmark-v1/sources/FAST-04-beijing-software.pdf",
+      "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "candidate_requirements": {
+        "source_artifact": "backend/eval/gold-governance/v43-gold-v2-foundation/REQUIREMENT_SOURCE_RECONSTRUCTION_BLIND_PACKET.json#tenders[FAST-04].candidate_requirements",
+        "count": 0,
+        "source_span_count": 0,
+        "source_span_hash_count": 0,
+        "formal_requirement_id_count": 0,
+        "authority_decision_count": 0
+      },
+      "source_excerpt": {
+        "value": null,
+        "status": "NOT_AVAILABLE_RAW_SOURCE_ONLY",
+        "present_count": 0,
+        "required_action": "Obtain an authorized source packet or manual reconstruction; no automatic re-extraction is performed."
+      },
+      "candidate_confidence": {
+        "value": null,
+        "status": "NO_CANDIDATE"
+      },
+      "review_required_fields": [
+        "authorized_source_packet_or_manual_reconstruction",
+        "candidate_requirement",
+        "exact_source_span_and_text",
+        "candidate_confidence",
+        "Human_Authority_decision"
+      ],
+      "status": "BLOCKED_RAW_SOURCE_ONLY"
+    }
+  ],
+  "side_effects": {
+    "provider_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "production_changes": 0,
+    "formal_req_id_assignments": 0
+  }
+}

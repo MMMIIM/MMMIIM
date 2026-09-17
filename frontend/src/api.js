@@ -159,6 +159,12 @@ export const api = {
   generateClaims(projectId) { return request(`/api/projects/${projectId}/claims/generate`, { method:'POST', body:'{}' }); },
   getCoverage(projectId) { return request(`/api/projects/${projectId}/coverage`); },
   getReviewCenter(projectId) { return request(`/api/projects/${projectId}/review-center`); },
+  getResponseDecision(projectId, requirementId) { return request(`/api/projects/${projectId}/requirements/${encodeURIComponent(requirementId)}/response-decision`); },
+  getSafeResponsePacket(projectId, requirementId) { return request(`/api/projects/${projectId}/requirements/${encodeURIComponent(requirementId)}/safe-response-packet`); },
+  getFinalRequirementReconciliation(projectId, versionId = '') { const query = versionId ? `?version_id=${encodeURIComponent(versionId)}` : ''; return request(`/api/projects/${projectId}/final-reconciliation${query}`); },
+  getGateATasks(projectId) { return request(`/api/projects/${projectId}/gate-a/tasks`); },
+  getComplianceMatrix(projectId) { return request(`/api/projects/${projectId}/compliance-matrix`); },
+  getBidResponseMatrix(projectId) { return request(`/api/projects/${projectId}/bid-response-matrix`); },
   getEvidenceReadiness(projectId) { return request(`/api/projects/${projectId}/evidence-readiness`); },
   getMaterialProcessing(projectId) { return request(`/api/projects/${projectId}/material-processing`); },
   getCopilotContext(projectId, context = {}) {

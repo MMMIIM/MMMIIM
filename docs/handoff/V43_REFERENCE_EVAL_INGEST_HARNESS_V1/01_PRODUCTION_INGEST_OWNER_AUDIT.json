@@ -1,0 +1,56 @@
+{
+  "artifact_type": "V43_PRODUCTION_INGEST_OWNER_AUDIT",
+  "status": "PASS_REUSE_EXISTING_OWNERS",
+  "owners": {
+    "text_normalization": {
+      "file": "backend/src/tender-text-extractor.js",
+      "function": "extractTenderText (private normalizeText)",
+      "reused": true
+    },
+    "pdf_parse": {
+      "file": "backend/src/tender-text-extractor.js",
+      "function": "extractTenderText → extractPdf",
+      "reused": true
+    },
+    "html_input": {
+      "file": "backend/eval/rag-governance/reference-eval-html-adapter.js",
+      "function": "adaptHtmlToSourceText",
+      "eval_only": true
+    },
+    "chunking": {
+      "file": "backend/src/pipeline/enterprise-material-chunker.js",
+      "function": "chunkEnterpriseMaterial",
+      "reused": true
+    },
+    "chunk_identity": {
+      "file": "backend/src/pipeline/enterprise-material-chunker.js",
+      "function": "chunkEnterpriseMaterial",
+      "version": "enterprise-material-v1",
+      "reused": true
+    },
+    "embedding_payload": {
+      "file": "backend/src/pipeline/embedding-client.js",
+      "function": "EmbeddingClient.embed",
+      "reused": true
+    },
+    "embedding_persistence": {
+      "file": "backend/src/db.js",
+      "function": "PgRepository.upsertMaterialChunkEmbeddings (SQL shape reused by harness)",
+      "side_effects_isolated_eval_only": true
+    },
+    "writer_reference_persistence": {
+      "file": "backend/src/db.js",
+      "function": "public material retrieval tables",
+      "reused": false,
+      "reason": "not invoked; corpus indexing stops before Writer"
+    },
+    "forbidden_importer": {
+      "file": "backend/eval/rag-pilot/h3c-real-fact-extraction.mjs",
+      "invoked": false,
+      "reason": "contains placeholder embeddings and Fact extraction"
+    }
+  },
+  "duplicate_chunk_logic_added": false,
+  "production_files_changed": false,
+  "fact_path_reachable": false
+}

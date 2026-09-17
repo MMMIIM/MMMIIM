@@ -11,11 +11,11 @@ import { BidCopilot } from './bid-copilot.jsx';
 import { MATERIAL_TYPES, formatMaterialType } from './material-types.js';
 import './styles.css';
 
-const tabs = ['概览', '材料准备度', '材料处理', '审核中心', '招标文件', '需求解析', '响应规划', '企业材料', '企业证据复核', '标书', '风险复核', '版本记录'];
+const tabs = ['概览', '材料准备度', '材料处理', '审核中心', '招标文件', '需求解析', '响应决策', '响应矩阵', '响应规划', '企业材料', '企业证据复核', '标书', '风险复核', '版本记录'];
 const flowStages = [
   { label: '项目准备', tabs: ['概览', '招标文件', '需求解析', '企业材料'] },
   { label: '审核与补充', tabs: ['材料准备度', '材料处理', '审核中心', '企业证据复核'] },
-  { label: '标书生成', tabs: ['标书', '响应规划'] },
+  { label: '标书生成', tabs: ['响应决策', '响应矩阵', '标书', '响应规划'] },
   { label: '投标检查', tabs: ['风险复核', '版本记录'] },
 ];
 const projectTypes = ['智慧城市', '数据治理', '系统集成', '园区运营', '应急管理', 'AI 应用'];
@@ -169,6 +169,53 @@ function CreateProject({ onBack, onCreated }) {
   return <PageShell title="新建项目" subtitle="建立项目归档并关联首份招标文件" onBack={onBack}><form className="card form-card" onSubmit={submit}><label className="field"><span>项目名称 *</span><input value={form.name} onChange={(event) => setForm({ ...form, name: event.target.value })} placeholder="例如：某市智慧城市综合治理平台" /></label><label className="field"><span>截止时间</span><input type="datetime-local" value={form.deadline} onChange={(event) => setForm({ ...form, deadline: event.target.value })} /></label><label className="field"><span>招标文件</span><input type="file" onChange={(event) => setForm({ ...form, file: event.target.files?.[0] || null })} /></label><p className="helper">文件保存在后端配置的存储目录，不进入 Git。单个文件最大 50 MB。</p>{state.error ? <Notice kind="error">{state.error}</Notice> : null}<button className="primary-button" disabled={state.loading}>{state.loading ? <Loader2 className="spin" size={18} /> : <FolderPlus size={18} />}{state.loading ? '创建中…' : '创建项目'}</button></form></PageShell>;
 }
 
+function ResponseDecisionProjection({ projectId, baseline }) {
+  const requirements = baseline?.requirements || [];
+  const [selected, setSelected] = useState(requirements[0]?.req_id || '');
+  const [state, setState] = useState({ loading: false, decision: null, tasks: [], compliance: null, error: '' });
+  useEffect(() => { if (!selected) return; let active = true; setState((current) => ({ ...current, loading: true, error: '' })); Promise.all([api.getResponseDecision(projectId, selected), api.getGateATasks(projectId), api.getComplianceMatrix(projectId)]).then(([decision, tasks, compliance]) => { if (active) setState({ loading: false, decision, tasks: tasks.tasks || [], compliance, error: '' }); }).catch((error) => { if (active) setState((current) => ({ ...current, loading: false, error: error.message })); }); return () => { active = false; }; }, [projectId, selected]);
+  const decision = state.decision?.decision;
+  const row = (state.compliance?.rows || []).find((item) => item.requirement_id === selected);
+  return <div className="document-layout"><section className="card"><div className="section-heading"><div><h2>响应决策投影</h2><p>Router V2.1 仅提供 advisory suggestion；正式 authority 仍来自后端服务与人工审核。</p></div><select aria-label="选择 Requirement" value={selected} onChange={(event) => setSelected(event.target.value)}><option value="">选择 Requirement</option>{requirements.map((item) => <option key={item.req_id} value={item.req_id}>{item.req_id}</option>)}</select></div>{state.error ? <Notice kind="error">{state.error}</Notice> : null}{state.loading ? <Loading text="正在读取响应投影" /> : decision ? <><div className="parse-summary"><Stat label="建议模式" value={decision.response_mode} /><Stat label="风险" value={decision.risk_tier} /><Stat label="需要响应" value={decision.response_required ? '是' : '否'} /><Stat label="人工处理" value={decision.human_required ? '需要' : '暂不需要'} /><Stat label="权限状态" value={decision.authority?.status || 'ADVISORY_ONLY'} /></div><Notice kind={decision.authority?.granted ? 'error' : 'warning'}>这是 AI/Router 建议，不是批准或 Claim/Writer 权限。</Notice><p><strong>下一步：</strong>{decision.next_action}</p><p><strong>路由原因：</strong>{(decision.routing_reasons || []).join('、') || '—'}</p><p><strong>Evidence dependency：</strong>{decision.evidence_dependency ? '是' : '否'}</p>{row?.human_action_required ? <Notice kind="warning">当前 Requirement 仍有人工处理或最终核对事项。</Notice> : null}</> : <Empty title="暂无响应投影" text="请先确认 Requirement Baseline。" />}</section><section className="card"><h2>Gate A / 合规待办</h2>{state.tasks.length ? <div className="action-list">{state.tasks.slice(0, 12).map((task) => <div className="task-item" key={task.task_id}><div><strong>{task.requirement_id || task.kind}</strong><p>{task.reason}</p></div><Badge type={String(task.severity || '').toLowerCase()}>{task.severity}</Badge></div>)}</div> : <Empty title="暂无待办" text="现有领域服务未返回需要人工处理的任务。" />}</section></div>;
+}
+
+const responseModeLabels = { SOLUTION: '方案响应', EVIDENCE: '证据响应', COMMITMENT: '承诺响应', COMPLIANCE: '合规处理' };
+const readinessLabels = { READY_FOR_WRITER: '可生成方案', EVIDENCE_REQUIRED: '缺企业证据', HUMAN_DECISION_REQUIRED: '需负责人确认', COMPLIANCE_ACTION_REQUIRED: '需合规处理', NO_RESPONSE_REQUIRED: '无需响应', NEED_REVIEW: '待确认' };
+const matrixFilters = [
+  { key: 'all', label: '全部' },
+  { key: 'action', label: '需处理' },
+  { key: 'risk', label: 'P0 / HIGH' },
+  { key: 'scoring', label: '评分相关' },
+  { key: 'human', label: '需人工' },
+  { key: 'evidence', label: '缺企业证据' },
+  { key: 'review', label: '待确认' }
+];
+
+export function ResponseMatrixWorkspace({ projectId }) {
+  const [state, setState] = useState({ loading: true, rows: [], error: '', filter: 'all' });
+  useEffect(() => {
+    let active = true;
+    api.getBidResponseMatrix(projectId).then((payload) => { if (active) setState((current) => ({ ...current, loading: false, rows: payload.rows || [], error: '' })); }).catch((error) => { if (active) setState((current) => ({ ...current, loading: false, error: error.message })); });
+    return () => { active = false; };
+  }, [projectId]);
+  const rows = state.rows.filter((row) => {
+    const decision = row.response_decision || {};
+    if (state.filter === 'action') return row.response_required !== false;
+    if (state.filter === 'risk') return ['P0', 'HIGH'].includes(decision.risk_tier);
+    if (state.filter === 'scoring') return row.scoring_related === true;
+    if (state.filter === 'human') return decision.human_required === true || ['HUMAN_DECISION_REQUIRED', 'NEED_REVIEW'].includes(row.readiness_status);
+    if (state.filter === 'evidence') return row.readiness_status === 'EVIDENCE_REQUIRED';
+    if (state.filter === 'review') return row.readiness_status === 'NEED_REVIEW';
+    return true;
+  });
+  return <section className="card response-matrix-workspace">
+    <div className="section-heading"><div><h2>响应矩阵</h2><p>按 Requirement 查看响应方式、风险和下一步处理；这是只读流程投影，不会自动批准证据或承诺。</p></div><Badge>只读</Badge></div>
+    <div className="response-matrix-filters" role="group" aria-label="响应矩阵筛选">{matrixFilters.map((item) => <button type="button" key={item.key} className={state.filter === item.key ? 'active' : ''} onClick={() => setState((current) => ({ ...current, filter: item.key }))}>{item.label}</button>)}</div>
+    {state.error ? <Notice kind="error">暂时无法读取响应矩阵：{state.error}</Notice> : null}
+    <div className="response-matrix-table-wrap"><table className="response-matrix-table"><thead><tr><th>Requirement</th><th>来源</th><th>内容类型</th><th>风险</th><th>响应方式</th><th>需要处理</th><th>准备状态</th></tr></thead><tbody>{state.loading ? <tr><td colSpan="7"><Loading text="正在读取响应矩阵" /></td></tr> : rows.length ? rows.map((row) => { const decision = row.response_decision || {}; return <tr key={row.requirement_id}><td><strong>{row.requirement_id}</strong><small>{row.requirement_text}</small></td><td>{row.source?.page ? `第 ${row.source.page} 页` : '—'}<small>{row.source?.source_verified ? '来源已核验' : '来源待核验'}</small></td><td>{row.content_category || '—'}</td><td><Badge type={String(decision.risk_tier || '').toLowerCase()}>{decision.risk_tier || '—'}</Badge></td><td>{decision.response_mode ? responseModeLabels[decision.response_mode] || decision.response_mode : '待确认'}</td><td>{row.response_required === false ? '无需响应' : decision.human_required ? '需人工' : '系统处理'}</td><td><Badge type={row.readiness_status === 'READY_FOR_WRITER' ? 'success' : 'warning'}>{readinessLabels[row.readiness_status] || row.readiness_status}</Badge></td></tr>; }) : <tr><td colSpan="7"><Empty title="暂无匹配 Requirement" text="可切换筛选条件，或先确认 Requirement Baseline。" /></td></tr>}</tbody></table></div>
+  </section>;
+}
+
 function Workspace({ projectId, onBack }) {
   const [activeTab, setActiveTab] = useState('概览');
   const [materialGapContext, setMaterialGapContext] = useState(null);
@@ -192,7 +239,7 @@ function Workspace({ projectId, onBack }) {
   if (activeTab === '材料准备度') content = <EvidenceReadiness projectId={projectId} onOpenReview={()=>setActiveTab('审核中心')} onSupplementMaterial={(gap)=>{setMaterialGapContext(gap);setActiveTab('企业材料');}} />;
   else if (activeTab === '材料处理') content = <MaterialProcessingCenter projectId={projectId} focusMaterialId={focusMaterialId} onOpenReview={(materialId)=>{setFocusReviewMaterialId(materialId);setActiveTab('审核中心');}} onOpenReadiness={()=>setActiveTab('材料准备度')} />;
   else if (activeTab === '审核中心') content = <ReviewWorkbench projectId={projectId} focusMaterialId={focusReviewMaterialId} onClearMaterialFocus={()=>setFocusReviewMaterialId(null)} />;
-  else content = <>{activeTab === '概览' ? <Overview data={data} /> : null}{activeTab === '招标文件' ? <TenderFiles projectId={projectId} files={data.tenderFiles} onChanged={load} /> : null}{activeTab === '需求解析' ? <RequirementParsing projectId={projectId} files={data.tenderFiles} parseJobs={data.parseJobs || []} baseline={data.requirementBaseline} onChanged={load} /> : null}{activeTab === '响应规划' ? <ProductionBeta projectId={projectId} baseline={data.requirementBaseline} /> : null}{activeTab === '企业材料' ? <CompanyMaterials projectId={projectId} baseline={data.requirementBaseline} gapContext={materialGapContext} onUploaded={(material)=>{setFocusMaterialId(material?.id||null);setMaterialGapContext(null);setActiveTab('材料处理');}} /> : null}{activeTab === '企业证据复核' ? <EvidenceReview projectId={projectId} requirements={data.requirementBaseline?.requirements||[]} /> : null}{activeTab === '标书' ? <BidDocument project={data.project} generations={data.documentGenerations || []} version={latestVersion} onGenerated={load} onStartCheck={()=>setActiveTab('风险复核')} /> : null}{activeTab === '风险复核' ? <RiskReview version={latestVersion} baseline={data.requirementBaseline} onConfirmed={load} /> : null}{activeTab === '版本记录' ? <Versions versions={data.versions} /> : null}</>;
+  else content = <>{activeTab === '概览' ? <Overview data={data} /> : null}{activeTab === '招标文件' ? <TenderFiles projectId={projectId} files={data.tenderFiles} onChanged={load} /> : null}{activeTab === '需求解析' ? <RequirementParsing projectId={projectId} files={data.tenderFiles} parseJobs={data.parseJobs || []} baseline={data.requirementBaseline} onChanged={load} /> : null}{activeTab === '响应决策' ? <ResponseDecisionProjection projectId={projectId} baseline={data.requirementBaseline} /> : null}{activeTab === '响应矩阵' ? <ResponseMatrixWorkspace projectId={projectId} /> : null}{activeTab === '响应规划' ? <ProductionBeta projectId={projectId} baseline={data.requirementBaseline} /> : null}{activeTab === '企业材料' ? <CompanyMaterials projectId={projectId} baseline={data.requirementBaseline} gapContext={materialGapContext} onUploaded={(material)=>{setFocusMaterialId(material?.id||null);setMaterialGapContext(null);setActiveTab('材料处理');}} /> : null}{activeTab === '企业证据复核' ? <EvidenceReview projectId={projectId} requirements={data.requirementBaseline?.requirements||[]} /> : null}{activeTab === '标书' ? <BidDocument project={data.project} generations={data.documentGenerations || []} version={latestVersion} onGenerated={load} onStartCheck={()=>setActiveTab('风险复核')} /> : null}{activeTab === '风险复核' ? <RiskReview version={latestVersion} baseline={data.requirementBaseline} onConfirmed={load} /> : null}{activeTab === '版本记录' ? <Versions versions={data.versions} /> : null}</>;
   return <PageShell title={data.project.name} subtitle={`项目工作台 · ${activeTab === '概览' ? (statusLabels[data.project.status] || data.project.status) : activeTab}`} onBack={onBack}>{navigation}<div className="workspace-layout"><ProfessionalWorkspaceNav activeTab={activeTab} setActiveTab={setActiveTab} /><section className="workspace-main">{error ? <Notice kind="error">{error}</Notice> : null}{content}<BidCopilot projectId={projectId} context={{ current_route: activeTab, requirement_id: activeTab === '需求解析' ? undefined : undefined }} onNavigate={(action) => { if (action?.route) { const next = action.route.split('/').pop(); const tab = { 'evidence-readiness': '材料准备度', 'review-center': '审核中心', materials: '企业材料', requirements: '需求解析', generation: '标书', 'document-delivery': '版本记录', 'bid-check': '风险复核' }[next]; if (tab) setActiveTab(tab); } }} /></section></div></PageShell>;
 }
 

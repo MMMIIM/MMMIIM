@@ -1,0 +1,103 @@
+{
+  "artifact_type": "V43_P0_BADCASE_44_FAILURE_FAMILY_PROPOSALS_V2",
+  "artifact_version": "v2",
+  "run_id": "V43-FLYWHEEL-P0-487-TARGETED-REPAIR-V2",
+  "source_truth_sha256": "9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+  "proposals": [
+    {
+      "failure_family_id": "MECHANICAL_QUALITY_GATE",
+      "proposed_name": "Mechanical first divergence at QUALITY_GATE",
+      "member_badcase_ids": [
+        "JY-001-P0-0002",
+        "JY-001-P0-0007",
+        "JY-001-P0-0023",
+        "TB-003-P0-0001",
+        "TB-003-P0-0002",
+        "TB-003-P0-0006",
+        "TB-003-P0-0023",
+        "TB-003-P0-0024",
+        "TB-003-P0-0025",
+        "FAST-01-P0-0001",
+        "FAST-01-P0-0005",
+        "FAST-01-P0-0011",
+        "FAST-01-P0-0017",
+        "FAST-01-P0-0018",
+        "FAST-01-P0-0019",
+        "FAST-04-P0-0203",
+        "FAST-04-P0-0204",
+        "FAST-04-P0-0216",
+        "FAST-WATER-01-P0-0087"
+      ],
+      "count": 19,
+      "label_distribution": {
+        "MISS": 10,
+        "PARTIAL": 4,
+        "DISTORTED": 5
+      },
+      "first_divergence_distribution": {
+        "QUALITY_GATE": 19
+      },
+      "shared_evidence_pattern": "Targeted replay mechanically reported first stage QUALITY_GATE; no semantic interpretation is added.",
+      "suspected_root_cause": "MECHANICAL_STAGE_OBSERVATION_ONLY",
+      "confidence": "HIGH",
+      "repair_candidate": "NONE_PENDING_GPT_HUMAN_REVIEW",
+      "semantic_review_required": true
+    },
+    {
+      "failure_family_id": "MECHANICAL_SOURCE_RESOLUTION",
+      "proposed_name": "Mechanical first divergence at SOURCE_RESOLUTION",
+      "member_badcase_ids": [
+        "JY-001-P0-0013",
+        "JY-001-P0-0015",
+        "JY-001-P0-0016",
+        "JY-001-P0-0019",
+        "JY-001-P0-0020",
+        "JY-001-P0-0022",
+        "JY-001-P0-0089",
+        "TB-006-P0-0005",
+        "TB-006-P0-0010",
+        "TB-006-P0-0011",
+        "TB-006-P0-0014",
+        "TB-006-P0-0015",
+        "TB-006-P0-0019",
+        "FAST-01-P0-0022",
+        "FAST-04-P0-0221",
+        "FAST-04-P0-0222",
+        "FAST-04-P0-0225",
+        "FAST-WATER-01-P0-0008",
+        "FAST-WATER-01-P0-0072",
+        "FAST-WATER-01-P0-0078",
+        "FAST-WATER-01-P0-0079",
+        "FAST-WATER-01-P0-0080",
+        "FAST-WATER-01-P0-0092",
+        "FAST-WATER-01-P0-0093",
+        "FAST-WATER-01-P0-0097"
+      ],
+      "count": 25,
+      "label_distribution": {
+        "MISS": 21,
+        "PARTIAL": 3,
+        "DISTORTED": 1
+      },
+      "first_divergence_distribution": {
+        "SOURCE_RESOLUTION": 25
+      },
+      "shared_evidence_pattern": "Targeted replay mechanically reported first stage SOURCE_RESOLUTION; no semantic interpretation is added.",
+      "suspected_root_cause": "MECHANICAL_STAGE_OBSERVATION_ONLY",
+      "confidence": "HIGH",
+      "repair_candidate": "NONE_PENDING_GPT_HUMAN_REVIEW",
+      "semantic_review_required": true
+    }
+  ],
+  "status": "PENDING_GPT_FAILURE_FAMILY_SEMANTIC_REVIEW",
+  "replay_execution": {
+    "status": "COMPLETED",
+    "provider_calls": 23,
+    "retry_count": 0,
+    "mechanical_first_divergence_distribution": {
+      "QUALITY_GATE": 19,
+      "SOURCE_RESOLUTION": 25
+    },
+    "semantic_root_cause_frozen": false
+  }
+}

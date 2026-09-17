@@ -1,0 +1,177 @@
+{
+  "artifact": "V43_REAL_FACT_V2_PRODUCTION_PATH_TRACE",
+  "eval_only": true,
+  "producer_status": "FULLY_IMPLEMENTED",
+  "producer_status_basis": "Production server constructs SemanticGatewayEvidenceFactExtractor and exposes EvidenceSourceFactService extraction routes; semantic quality/readiness is not certified by this read-only audit.",
+  "requirement_blind": true,
+  "source_first": true,
+  "stages": [
+    {
+      "db_dependent": true,
+      "entry_point": "CompanyMaterialService",
+      "eval": "backend/eval/rag-governance/rag-corpus-inventory.js",
+      "implemented": true,
+      "input_contract": "uploaded material metadata + file",
+      "module": "backend/src/company-material-service.js",
+      "output_contract": "company_materials row",
+      "production_used": true,
+      "provider_dependent": false,
+      "stage": "MATERIAL_INGEST",
+      "stub": false,
+      "tests": [
+        "backend/test/material-source-authority-policy.test.js"
+      ]
+    },
+    {
+      "db_dependent": true,
+      "entry_point": "company_materials repository methods",
+      "eval": "backend/eval/gold-governance/source-first-fact-inventory-v1.js",
+      "implemented": true,
+      "input_contract": "project/material identity",
+      "module": "backend/src/db.js",
+      "output_contract": "material identity, hash, lifecycle, source metadata",
+      "production_used": true,
+      "provider_dependent": false,
+      "stage": "OBJECT_FILE_AUTHORITY",
+      "stub": false,
+      "tests": [
+        "backend/test/material-source-authority-policy.test.js"
+      ]
+    },
+    {
+      "db_dependent": false,
+      "entry_point": "chunkEnterpriseMaterial",
+      "eval": "backend/eval/rag-pilot/fact-input-window-selection.test.js",
+      "implemented": true,
+      "input_contract": "authorized material text",
+      "module": "backend/src/pipeline/enterprise-material-chunker.js",
+      "output_contract": "material_chunks with source offsets/hashes",
+      "production_used": true,
+      "provider_dependent": false,
+      "stage": "CHUNKING",
+      "stub": false,
+      "tests": [
+        "backend/test/requirement-chunker-v2.test.js"
+      ]
+    },
+    {
+      "db_dependent": true,
+      "entry_point": "materialAuthorityStatus / MATERIAL_AUTHORITY_SQL",
+      "eval": "backend/eval/gold-governance/source-first-fact-inventory-v1.js",
+      "implemented": true,
+      "input_contract": "material lifecycle/source metadata",
+      "module": "backend/src/pipeline/material-source-authority-policy.js",
+      "output_contract": "authority eligibility predicate",
+      "production_used": true,
+      "provider_dependent": false,
+      "stage": "SOURCE_ROLE_AND_ELIGIBILITY",
+      "stub": false,
+      "tests": [
+        "backend/test/material-source-authority-policy.test.js",
+        "backend/test/evidence-fact-source-role.test.js"
+      ]
+    },
+    {
+      "db_dependent": true,
+      "entry_point": "EvidenceSourceSpanService",
+      "eval": "backend/eval/rag-pilot/fact-precert-engineering-audit.mjs",
+      "implemented": true,
+      "input_contract": "approved review + chunk anchor",
+      "module": "backend/src/evidence-source-span-service.js",
+      "output_contract": "evidence_source_spans identity/text/hash",
+      "production_used": true,
+      "provider_dependent": false,
+      "stage": "EVIDENCE_SPAN",
+      "stub": false,
+      "tests": [
+        "backend/test/evidence-fact-contract-v1.test.js"
+      ]
+    },
+    {
+      "db_dependent": false,
+      "entry_point": "SemanticGatewayEvidenceFactExtractor.extract",
+      "eval": "backend/eval/rag-pilot/fact-precert-engineering-audit.mjs",
+      "implemented": true,
+      "input_contract": "approved Evidence Review source context",
+      "module": "backend/src/pipeline/semantic-gateway-evidence-fact-extractor.js",
+      "note": "Gateway-backed producer is wired by backend/src/server.js; the ProviderNeutralEvidenceFactExtractor default compatibility class returns [] only when callers omit the production extractor.",
+      "output_contract": "strict evidence_fact_extraction candidates",
+      "production_used": true,
+      "provider_dependent": true,
+      "stage": "FACT_CANDIDATE_PRODUCER",
+      "stub": false,
+      "tests": [
+        "backend/test/evidence-fact-execution-observability.test.js",
+        "backend/test/evidence-fact-transport-v2.test.js"
+      ]
+    },
+    {
+      "db_dependent": false,
+      "entry_point": "evidence_fact_extraction task route",
+      "eval": "backend/eval/rag-pilot/fact-precert-engineering-audit.mjs",
+      "implemented": true,
+      "input_contract": "Provider response envelope",
+      "module": "services/semantic-gateway/src/gateway.js; services/semantic-gateway/src/task-router.js",
+      "output_contract": "strict task data after bounded normalization/projection",
+      "production_used": true,
+      "provider_dependent": true,
+      "stage": "FACT_NORMALIZATION_AND_PROJECTION",
+      "stub": false,
+      "tests": [
+        "services/semantic-gateway/test/gateway.test.js",
+        "services/semantic-gateway/test/task-router-response-format.test.js"
+      ]
+    },
+    {
+      "db_dependent": false,
+      "entry_point": "createEvidenceFactContract / canonicalizeAndGroundEvidenceFactCandidateV21",
+      "eval": "backend/eval/rag-pilot/fact-precert-engineering-audit.mjs",
+      "implemented": true,
+      "input_contract": "candidate + frozen source span",
+      "module": "backend/src/pipeline/evidence-fact-contract-v1.js; backend/src/pipeline/evidence-fact-candidate-v2-1.js",
+      "output_contract": "grounded canonical Fact payload or fail-closed error",
+      "production_used": true,
+      "provider_dependent": false,
+      "stage": "FACT_QUALITY_AND_GROUNDING",
+      "stub": false,
+      "tests": [
+        "backend/test/evidence-fact-contract-v1.test.js",
+        "backend/test/evidence-fact-candidate-v2-1.test.js"
+      ]
+    },
+    {
+      "db_dependent": true,
+      "entry_point": "EvidenceSourceFactService.extract / decide / edit",
+      "eval": "backend/eval/gold-governance/source-first-fact-inventory-v1.js",
+      "implemented": true,
+      "input_contract": "approved review + grounded candidate",
+      "module": "backend/src/evidence-source-fact-service.js",
+      "output_contract": "draft/approved/current evidence_source_facts row",
+      "production_used": true,
+      "provider_dependent": false,
+      "stage": "CANONICAL_FACT_AND_CURRENTNESS",
+      "stub": false,
+      "tests": [
+        "backend/test/evidence-fact-execution-observability.test.js",
+        "backend/test/formal-mutation-authorization.test.js"
+      ]
+    },
+    {
+      "db_dependent": true,
+      "entry_point": "upsertEvidenceSourceFactsAtomic / replaceEvidenceSourceFactAtomic",
+      "eval": "docs/V43_RAG_FACT_PRODUCTION_READINESS_RECOVERY_CHECKPOINT.json",
+      "implemented": true,
+      "input_contract": "validated canonical Fact DTO",
+      "module": "backend/src/db.js; backend/migrations/027_evidence_fact_v1.sql; backend/migrations/051_material_source_authority_quarantine.sql",
+      "output_contract": "atomic evidence_source_facts persistence with authority gate",
+      "production_used": true,
+      "provider_dependent": false,
+      "stage": "PERSISTENCE",
+      "stub": false,
+      "tests": [
+        "backend/integration/postgres.integration.js",
+        "backend/test/canonical-persistence-atomicity.test.js"
+      ]
+    }
+  ]
+}

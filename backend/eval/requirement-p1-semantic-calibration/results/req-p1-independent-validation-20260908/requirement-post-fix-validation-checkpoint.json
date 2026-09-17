@@ -1,0 +1,57 @@
+{
+  "checkpoint": "V43_REQUIREMENT_POST_FIX_INDEPENDENT_VALIDATION_CHECKPOINT",
+  "status": "BLOCKED_WITH_EVIDENCE",
+  "block_reason": "CASE_LEVEL_EXPECTED_SEMANTIC_LABELS_UNAVAILABLE; no SAFE/TRUE_ERROR/AMBIGUOUS labels may be invented",
+  "validation_total": 24,
+  "validation_reserve_independence": {
+    "status": "PASS",
+    "reserve_count": 24,
+    "unique_ids": 24,
+    "overlap_with_calibration_case_ids": [],
+    "micro_fix_checkpoint_validation_reserve_executed": false,
+    "source": [
+      "docs/V43_REQUIREMENT_P1_GPT_SEMANTIC_CALIBRATION_PACKET.json",
+      "docs/quality-gate-micro-fix-checkpoint.json"
+    ]
+  },
+  "safe_case_count": null,
+  "safe_accept_count": null,
+  "safe_false_positive_count": null,
+  "safe_false_positive_rate": null,
+  "true_error_count": null,
+  "true_error_detected": null,
+  "true_error_recall": null,
+  "critical_true_error_count": null,
+  "critical_true_error_detected": null,
+  "critical_accept_escape": null,
+  "ambiguous_count": null,
+  "ambiguous_reviewed": null,
+  "ambiguous_accepted": null,
+  "number_validation_metrics": null,
+  "entity_validation_metrics": null,
+  "modality_validation_metrics": null,
+  "fidelity_validation_metrics": null,
+  "top_false_positive_reasons": null,
+  "top_true_positive_reasons": null,
+  "known_p0_controls": 12,
+  "known_p0_detected": 12,
+  "known_p0_accept_escape": 0,
+  "actual_quality_gate_decision_counts": {
+    "PASS": 18,
+    "REVIEW_REQUIRED": 6
+  },
+  "observed_reason_counts": {
+    "NUMBER_OMISSION_REVIEW": 6
+  },
+  "missing_canonical_ids": [],
+  "provider_calls": 0,
+  "prompt_changes": 0,
+  "schema_changes": 0,
+  "quality_gate_changes": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "mapping_actions": 0,
+  "holdout_executed": false,
+  "validation_only": true,
+  "final_status": "BLOCKED_WITH_EVIDENCE"
+}

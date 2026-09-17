@@ -1,0 +1,64 @@
+{
+  "status": "COMPLETE_WAITING_HUMAN_AUTHORITY_REVIEW",
+  "checkpoint": "V43_REQUIREMENT_GOLD_V2_COMPLETION",
+  "generated_at": "2026-09-05T16:08:19.834Z",
+  "tender_coverage": {
+    "JY-001": 193,
+    "FAST-01": 39,
+    "FAST-WATER-01": 114,
+    "TB-006": 46,
+    "TB-003": 265,
+    "FAST-04": 353
+  },
+  "candidate_count_total": 1010,
+  "gold_suitable_count": 950,
+  "boundary_candidate_count": 33,
+  "exclude_count": 60,
+  "source_verified_rate": 0.999009900990099,
+  "provider_calls": 58,
+  "retries": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "gold_promotion": false,
+  "formal_req_id_assignments": 0,
+  "per_tender": {
+    "TB-003": {
+      "chunk_count": 33,
+      "provider_calls": 33,
+      "candidate_count": 265,
+      "source_verified_count": 265,
+      "source_verified_rate": 1,
+      "failure_count": 0,
+      "extraction_status": "PROVIDER_EXTRACTION_COMPLETE",
+      "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1"
+    },
+    "FAST-04": {
+      "chunk_count": 25,
+      "provider_calls": 25,
+      "candidate_count": 353,
+      "source_verified_count": 353,
+      "source_verified_rate": 1,
+      "failure_count": 0,
+      "extraction_status": "PROVIDER_EXTRACTION_COMPLETE",
+      "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce"
+    }
+  },
+  "requirement_gold_v2": "WAITING_HUMAN_AUTHORITY_REVIEW",
+  "blockers": [
+    "HUMAN_AUTHORITY_REVIEW_REQUIRED"
+  ],
+  "non_authoritative_notice": "No Gold created or frozen; no Production DB writes.",
+  "artifact_integrity": {
+    "completed_pool_sha256": "f7c0aa1d27d3ab1d44373f75e4411dd25684be5b53eae2e7a4f6284035835efd",
+    "suitability_candidate_pool_sha256": "f7c0aa1d27d3ab1d44373f75e4411dd25684be5b53eae2e7a4f6284035835efd",
+    "source_span_mapping_verified": true,
+    "new_candidate_source_excerpt_exact": true,
+    "source_span_shape": "page + chunk_number + span refs/offsets + paragraph range",
+    "assessment_dimensions": [
+      "eval_coverage_value",
+      "semantic_stability",
+      "boundary_value",
+      "traceability"
+    ]
+  }
+}

@@ -1,0 +1,255 @@
+{
+  "dataset_id": "mapping-engineering-fixtures-v2",
+  "dataset_version": 1,
+  "contract_version": "requirement-evidence-mapping-v1.1",
+  "authorship": "human_adjudication_and_governance_projection",
+  "data_classification": "EVAL_ENGINEERING_ONLY",
+  "source_dataset": {
+    "dataset_version": "requirement-evidence-mapping-v1-gold-2026-09-02",
+    "sha256": "5a6d9eb7c4e7b23f347da111b5276060375b3de2e07716b9cee88d15d5431707"
+  },
+  "cases": [
+    {
+      "case_id": "MAP-G023",
+      "label": "zero evidence",
+      "requirement": {
+        "text": "提供统一认证"
+      },
+      "facts": [],
+      "expected": {
+        "decision": "unknown",
+        "dimensions": {
+          "subject": "unknown",
+          "scope": "unknown",
+          "status": "unknown",
+          "quantity": "unknown",
+          "entity": "unknown",
+          "validity": "unknown"
+        }
+      },
+      "classification": "ENGINEERING_FIXTURE",
+      "review_status": "ACCEPTED",
+      "scored": false,
+      "exclusion_reason": "ENGINEERING_REGRESSION",
+      "governance_purpose": "zero-fact persistence/unknown fallback"
+    },
+    {
+      "case_id": "MAP-G024",
+      "label": "superseded fact",
+      "requirement": {
+        "text": "当前平台版本"
+      },
+      "facts": [
+        {
+          "fact_ref": "F024",
+          "subject": {
+            "type": "system",
+            "name": "旧平台"
+          },
+          "entities": [],
+          "fact_status": "completed",
+          "scopes": [
+            "enterprise"
+          ],
+          "quantities": [],
+          "validity": {
+            "status": "known"
+          },
+          "fact_current": false
+        }
+      ],
+      "expected": {
+        "decision": "unknown",
+        "dimensions": {
+          "subject": "unknown",
+          "scope": "unknown",
+          "status": "unknown",
+          "quantity": "unknown",
+          "entity": "unknown",
+          "validity": "unknown"
+        }
+      },
+      "classification": "ENGINEERING_FIXTURE",
+      "review_status": "ACCEPTED",
+      "scored": false,
+      "exclusion_reason": "ENGINEERING_REGRESSION",
+      "governance_purpose": "stale-currentness rejection"
+    },
+    {
+      "case_id": "MAP-G025",
+      "label": "cross project fact",
+      "requirement": {
+        "text": "本项目平台"
+      },
+      "facts": [
+        {
+          "fact_ref": "F025",
+          "project_id": "other-project",
+          "subject": {
+            "type": "system",
+            "name": "平台"
+          },
+          "entities": [],
+          "fact_status": "completed",
+          "scopes": [
+            "enterprise"
+          ],
+          "quantities": [],
+          "validity": {
+            "status": "known"
+          }
+        }
+      ],
+      "expected": {
+        "decision": "unknown",
+        "dimensions": {
+          "subject": "unknown",
+          "scope": "unknown",
+          "status": "unknown",
+          "quantity": "unknown",
+          "entity": "unknown",
+          "validity": "unknown"
+        }
+      },
+      "classification": "ENGINEERING_FIXTURE",
+      "review_status": "ACCEPTED",
+      "scored": false,
+      "exclusion_reason": "ENGINEERING_REGRESSION",
+      "governance_purpose": "cross-project isolation"
+    },
+    {
+      "case_id": "MAP-G026",
+      "label": "upstream partial attempted full",
+      "requirement": {
+        "text": "统一认证与权限管理"
+      },
+      "facts": [
+        {
+          "fact_ref": "F026",
+          "subject": {
+            "type": "capability",
+            "name": "统一认证与权限管理"
+          },
+          "entities": [],
+          "fact_status": "unknown",
+          "scopes": [
+            "enterprise"
+          ],
+          "quantities": [],
+          "validity": {
+            "status": "unknown"
+          }
+        }
+      ],
+      "upstream_support_level": "partial_support",
+      "expected": {
+        "decision": "direct_full",
+        "dimensions": {
+          "subject": "match",
+          "scope": "match",
+          "status": "not_applicable",
+          "quantity": "not_applicable",
+          "entity": "not_applicable",
+          "validity": "not_applicable"
+        },
+        "backend_expected_support": "partial_support"
+      },
+      "classification": "ENGINEERING_FIXTURE",
+      "review_status": "ACCEPTED",
+      "scored": false,
+      "exclusion_reason": "ENGINEERING_REGRESSION",
+      "governance_purpose": "upstream partial support cannot escalate"
+    },
+    {
+      "case_id": "MAP-G027",
+      "label": "human override",
+      "requirement": {
+        "text": "统一认证"
+      },
+      "facts": [
+        {
+          "fact_ref": "F027",
+          "subject": {
+            "type": "capability",
+            "name": "统一认证"
+          },
+          "entities": [],
+          "fact_status": "unknown",
+          "scopes": [
+            "enterprise"
+          ],
+          "quantities": [],
+          "validity": {
+            "status": "unknown"
+          }
+        }
+      ],
+      "existing_mapping": {
+        "reviewer_type": "human",
+        "review_status": "approved"
+      },
+      "expected": {
+        "decision": "direct_full",
+        "dimensions": {
+          "subject": "match",
+          "scope": "match",
+          "status": "not_applicable",
+          "quantity": "not_applicable",
+          "entity": "not_applicable",
+          "validity": "not_applicable"
+        },
+        "human_mapping_preserved": true
+      },
+      "classification": "ENGINEERING_FIXTURE",
+      "review_status": "ACCEPTED",
+      "scored": false,
+      "exclusion_reason": "ENGINEERING_REGRESSION",
+      "governance_purpose": "human approval identity preservation"
+    },
+    {
+      "case_id": "MAP-G028",
+      "label": "batch split six plus one",
+      "requirement": {
+        "text": "平台能力清单"
+      },
+      "facts": [
+        {
+          "fact_ref": "F028-1"
+        },
+        {
+          "fact_ref": "F028-2"
+        },
+        {
+          "fact_ref": "F028-3"
+        },
+        {
+          "fact_ref": "F028-4"
+        },
+        {
+          "fact_ref": "F028-5"
+        },
+        {
+          "fact_ref": "F028-6"
+        },
+        {
+          "fact_ref": "F028-7"
+        }
+      ],
+      "expected": {
+        "batch_sizes": [
+          6,
+          1
+        ],
+        "all_fact_refs_required": true
+      },
+      "classification": "ENGINEERING_FIXTURE",
+      "review_status": "ACCEPTED",
+      "scored": false,
+      "exclusion_reason": "ENGINEERING_REGRESSION",
+      "governance_purpose": "deterministic batch split and fact retention"
+    }
+  ],
+  "semantic_scoring": false,
+  "classification_rule": "ENGINEERING_FIXTURE cases are regression evidence and excluded from semantic denominator"
+}
+

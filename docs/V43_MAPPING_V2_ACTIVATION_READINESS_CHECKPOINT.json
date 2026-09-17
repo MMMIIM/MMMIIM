@@ -1,0 +1,71 @@
+{
+  "checkpoint": "V43_MAPPING_V2_ACTIVATION_READINESS_CHECKPOINT",
+  "audit_mode": "READ_ONLY",
+  "generated_at": "2026-09-05",
+  "constraints": {
+    "new_datasets": 0,
+    "new_schemas": 0,
+    "production_changes": 0,
+    "gold_mutations": 0,
+    "provider_calls": 0,
+    "production_db_writes": 0
+  },
+  "requirement_reconstruction": {
+    "source": "backend/eval/gold-governance/v43-gold-v2-foundation/REQUIREMENT_SOURCE_RECONSTRUCTION_BLIND_PACKET.json",
+    "tenders": [
+      {"tender_id": "JY-001", "classification": "B_HUMAN_RECONSTRUCTION_POSSIBLE", "reconstruction_status": "CANDIDATE_PACKET_READY_FOR_HUMAN_AUTHORITY", "candidate_count": 193, "human_authority": "REQUIRED", "authority_upgrade": "NOT_PERFORMED", "gold_status": "CANDIDATE_PENDING_NOT_GOLD", "blocker": null},
+      {"tender_id": "TB-003", "classification": "C_REEXTRACTION_REQUIRED", "reconstruction_status": "BLOCKED_RAW_SOURCE_ONLY", "candidate_count": 0, "human_authority": "REQUIRED_AFTER_SOURCE_PACKET_OR_MANUAL_RECONSTRUCTION", "authority_upgrade": "NOT_PERFORMED", "gold_status": "NO_CANDIDATE", "blocker": "NO_HISTORICAL_PACKET_OR_SOURCE_INDEX", "reextraction_authorization": "NOT_AUTHORIZED"},
+      {"tender_id": "FAST-04", "classification": "C_REEXTRACTION_REQUIRED", "reconstruction_status": "BLOCKED_RAW_SOURCE_ONLY", "candidate_count": 0, "human_authority": "REQUIRED_AFTER_SOURCE_PACKET_OR_MANUAL_RECONSTRUCTION", "authority_upgrade": "NOT_PERFORMED", "gold_status": "NO_CANDIDATE", "blocker": "NO_HISTORICAL_PACKET_OR_SOURCE_INDEX", "reextraction_authorization": "NOT_AUTHORIZED"}
+    ],
+    "packet_authority_status": "NO_AUTHORITATIVE_UPGRADE",
+    "human_review_packet_gaps": [
+      "JY-001 packet exists only as blind candidate; no Human authority decision or authoritative packet.",
+      "TB-003 has raw source identity only; no historical packet/source index for candidate rendering.",
+      "FAST-04 has raw source identity only; no historical packet/source index for candidate rendering."
+    ],
+    "authority_adjudication_checkpoint": "backend/eval/gold-governance/v43-real-gold-v2-authority-adjudication/V43_REAL_GOLD_V2_AUTHORITY_ADJUDICATION_CHECKPOINT.json"
+  },
+  "mapping_successor": {
+    "manifest": "backend/eval/requirement-evidence-mapping-v2/successor-manifest.json",
+    "static_gates": {
+      "IMMUTABILITY_GATE": "PASS",
+      "REVIEW_STATUS_GATE": "PASS",
+      "CLASSIFICATION_GATE": "PASS",
+      "SEMANTIC_COMPLETENESS_GATE": "PASS",
+      "IDENTITY_COLLISION_GATE": "PASS",
+      "BLIND_CONTAMINATION_GATE": "PASS",
+      "SOURCE_PACKET_RENDER_PARITY_GATE": "PASS",
+      "REAL_GOLD_NOVELTY_GATE": "PASS_WITH_DUPLICATES_AUDITABLE",
+      "PRODUCTION_IMPORT_GUARD": "PASS",
+      "STABLE_HASH_GATE": "PASS",
+      "MUTATION_SENSITIVITY_GATE": "PASS"
+    },
+    "activation_conditions_observed": {
+      "dual_eval": "NOT_EXECUTED",
+      "dual_eval_reason": "NO_TRUSTED_FROZEN_PREDICTIONS",
+      "old_gold_immutable": true,
+      "no_promotion": true,
+      "no_production_import": true,
+      "semantic_live_not_run": true,
+      "documented_scope": "DETERMINISTIC_EVAL_DEVELOPMENT_ONLY"
+    },
+    "real_partition_gaps": ["direct_full real missing", "conflict real missing", "SOURCE_PROJECT_DIVERSITY=1", "PERFORMANCE_MEASUREMENT_FACT=MISSING"],
+    "activation_status": "SUCCESSOR_BUILT_NOT_ACTIVATED"
+  },
+  "semantic_denominators": [
+    {"partition": "REAL_SEMANTIC", "dataset": "backend/eval/requirement-evidence-mapping-v2/real-derived-gold-v1.json", "cases": 12, "scored": 12, "allowed_denominator": true, "aggregation": "SEPARATE"},
+    {"partition": "SYNTHETIC_SEMANTIC", "dataset": "backend/eval/requirement-evidence-mapping-v2/synthetic-boundary-gold-v2.json", "cases": 29, "scored": 29, "allowed_denominator": true, "aggregation": "SEPARATE"},
+    {"partition": "ENGINEERING", "dataset": "backend/eval/requirement-evidence-mapping-v2/engineering-fixtures-v2.json", "cases": 6, "scored": 0, "allowed_denominator": false, "aggregation": "REGRESSION_ONLY"},
+    {"partition": "DISPUTED", "dataset": "backend/eval/requirement-evidence-mapping-v2/disputed-cases-v2.json", "cases": 1, "scored": 0, "allowed_denominator": false, "aggregation": "AUDITABLE_UNSCORED"},
+    {"partition": "LEGACY_V1", "dataset": "backend/eval/requirement-evidence-mapping-v1/gold-cases.json", "cases": 36, "scored": "UNDECLARED_IN_V1", "allowed_denominator": false, "aggregation": "IMMUTABLE_CONTRACT_FIXTURE_SEPARATE"}
+  ],
+  "REQUIREMENT_GOLD_STATUS": "PARTIAL/BLOCKED_FOR_AUTHORITATIVE_PARITY",
+  "FACT_EVAL_POOL_STATUS": "PRESENT_EVAL_ONLY; REAL_FACT_GOLD_NOT_ESTABLISHED",
+  "MAPPING_GOLD_V2_READINESS": "SUCCESSOR_BUILT_NOT_ACTIVATED",
+  "ACTIVATION_ALLOWED": "NO",
+  "BLOCKERS_ONLY": [
+    "TB-003 and FAST-04 lack candidate packets; JY-001 lacks Human authority.",
+    "No trusted frozen predictions for dual evaluation; promotion/import/semantic-live remain disabled.",
+    "Real semantic partition has direct_full, conflict, source diversity and performance measurement fact gaps."
+  ]
+}

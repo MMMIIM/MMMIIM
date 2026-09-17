@@ -1,0 +1,1475 @@
+{
+  "artifact_type": "V43_RAG_RETRIEVAL_P1D_EXISTING_RERANK_REACHABILITY_DIAGNOSTIC_CHECKPOINT_V1",
+  "artifact_version": "1.0.0",
+  "status": "PROVISIONAL_BLOCKED_BEFORE_EXISTING_RERANK_REPLAY",
+  "execution_mode": "EVAL_ENGINEERING_DIAGNOSTIC_ONLY",
+  "decision_gate": "EXISTING_RERANK_NOT_EVALUABLE",
+  "recommendation": "RETURN_TO_GPT_ARCHITECTURE_DECISION",
+  "frozen_inputs": {
+    "snapshot": {
+      "identity": "EVSNAP-D98FA52C-952F-416F-B57F-92C41EF9731D",
+      "path": "docs/handoff/V43_EVIDENCE_SEARCH_SUPPORT_ARCHITECTURE_ENGINEERING_V1/evidence-vector-snapshot/EVSNAP-D98FA52C-952F-416F-B57F-92C41EF9731D.json",
+      "sha256": "5D0A7F451D4090DEDBD8E9EE4F3B5851565F01F7A4170D5A40C673031BCC4578",
+      "material_count": 9,
+      "chunk_count": 94
+    },
+    "embedding": {
+      "model": "Qwen/Qwen3-Embedding-0.6B",
+      "dimensions": 1024
+    },
+    "gold": {
+      "path": "backend/eval/retrieval-quality-p0/GPT_SEMANTIC_GOLD_V1.json",
+      "sha256": "7576C1D9A9FECD19F032AD49085E61E48BB008EFF4788E225A2CCEE3087492E7",
+      "authority": "DEVELOPMENT_EVAL_ONLY"
+    },
+    "matcher": {
+      "version": "EVIDENCE_MATCHER_V1_EXACT_ACCEPTED_SPAN_GRADE",
+      "sha256": "ce675a8756ea325fe208a32a8143d5889586fb26a343c7dd430dce378fe5c4f2"
+    },
+    "p1c_replay": {
+      "path": "backend/eval/retrieval-quality-p1c/results/V43_RAG_RETRIEVAL_P1C_BOUNDED_OVERFETCH_REPLAY_V1.json",
+      "sha256": "2C95BBF90942C1665580A2AEF73E7CCBE70A6A0A1F0919CB8B11F0A3B6ABB42B"
+    },
+    "query_batch_freeze": {
+      "path": "backend/eval/retrieval-quality-p1c/results/V43_RAG_RETRIEVAL_P1C_BOUNDED_OVERFETCH_QUERY_BATCH_FREEZE_V1.json",
+      "sha256": "2844924B2237B21503A9314CD5D4C6A512087D4B008FA0926FB7E6DFD16D4AB4",
+      "content_hash": "d2ab7da2762ceecafcd0c65995f67b4dc00c96bfe029047462b9ef3b7313c444"
+    },
+    "candidate_k_ladder": [
+      20,
+      32,
+      48,
+      64
+    ],
+    "final_k": 8,
+    "development_case_count": 7,
+    "development_case_order": [
+      "JY-001:REQ-027",
+      "JY-001:REQ-077",
+      "JY-001:REQ-051",
+      "TB-003:REQ-119",
+      "TB-003:REQ-170",
+      "TB-006:REQ-037",
+      "JY-001:REQ-148"
+    ]
+  },
+  "production_implementation": {
+    "contract_version": "4.3-production-retrieval-v1",
+    "rerank_version": "4.3-role-need-rerank-v1",
+    "route": "POST /api/requirements/:requirementId/enterprise-retrieval",
+    "service_function": "EnterpriseRetrievalService.retrieve",
+    "reranker_function": "rerankProductionCandidates",
+    "raw_candidate_k": 20,
+    "final_k": 8,
+    "activation": "semantic_metadata usable predicate; otherwise RAW_VECTOR_FALLBACK",
+    "fallback": "bounded shift 0; deterministic raw rank/similarity/source-id order",
+    "compatibility_shift_contract": {
+      "preferred": -2,
+      "compatible": -1,
+      "unknown": 0,
+      "weak": 1,
+      "incompatible": 2,
+      "max_absolute_shift": 4
+    },
+    "final_order": [
+      "bounded_rank",
+      "raw_vector_rank",
+      "raw_similarity_desc",
+      "stable_source_identity"
+    ],
+    "role_lookup_key_before_normalization": "chunk_id",
+    "candidate_normalization_accepts": [
+      "source_chunk_id",
+      "chunk_id"
+    ],
+    "source_hashes": {
+      "reranker": {
+        "path": "backend/src/pipeline/semantic-retrieval-reranker.js",
+        "sha256": "F5447CE21E98409D62F8B35837638424B99DC706EA777B8A5CD29AC1DF67E884"
+      },
+      "retrievalService": {
+        "path": "backend/src/pipeline/enterprise-retrieval-service.js",
+        "sha256": "772D35497116922E6C24410513D16EA1414D053D4F35EC3FC8D25F01C072C040"
+      },
+      "profileBuilder": {
+        "path": "backend/src/evidence-need-profile-builder.js",
+        "sha256": "F6AAFE16604E035D0B3E4F5445247CEEF69DEBC755D57BA9755F46D2E7F35881"
+      },
+      "chunkRole": {
+        "path": "backend/src/pipeline/retrieval-chunk-role.js",
+        "sha256": "C8114A420F9AD3357E9C574E094ED82119A8A6E482C26185A8DC6674FFB06579"
+      },
+      "route": {
+        "path": "backend/src/app.js",
+        "sha256": "E4AAFA9D6BA82BC3A48DE54E5A2A2DC632163D55EBD6029C4400161A3DAA194F"
+      },
+      "evalContract": {
+        "path": "backend/eval/production-retrieval-contract/production-retrieval-contract-v1.js",
+        "sha256": "E4081BAAC2728A0711806CA454A465B51FFD36D787A6E3B536F29186FEC876AC"
+      }
+    },
+    "reranker_uses_gold": false,
+    "reranker_uses_llm": false,
+    "actual_route_builds_production_profile": false
+  },
+  "activation_contract": {
+    "requirement_role": "approved and non-unknown",
+    "evidence_needs": "non-empty; every need approved and non-unknown",
+    "candidate_roles": "every candidate role approved and non-unknown",
+    "if_not_usable": "RAW_VECTOR_FALLBACK"
+  },
+  "metadata_reachability": [
+    {
+      "input": "canonical requirement id/text/query hash",
+      "production_path": "EnterpriseRetrievalService.retrieve → repository.getRequirement; query hash is derived from the canonical query path",
+      "status": "AVAILABLE_UPSTREAM",
+      "eval_status": "AVAILABLE_UPSTREAM",
+      "note": "Caller-supplied query_text is not accepted as the canonical production query."
+    },
+    {
+      "input": "EvidenceNeedProfile.version/profile_hash",
+      "production_path": "No buildEvidenceNeedProfile call in EnterpriseRetrievalService.retrieve",
+      "status": "NOT_AVAILABLE",
+      "eval_status": "NOT_AVAILABLE",
+      "note": "The existing profile builder is a separate module and is not invoked by the actual route."
+    },
+    {
+      "input": "requirement_role.value/status",
+      "production_path": "input.semantic_metadata.requirement_role is caller-supplied; no Backend-owned profile projection",
+      "status": "UNAUTHORIZED_FOR_EVAL",
+      "eval_status": "UNAUTHORIZED_FOR_EVAL",
+      "note": "It cannot be supplied from Gold or accepted as a synthetic Eval input."
+    },
+    {
+      "input": "evidence_needs[].value/status",
+      "production_path": "input.semantic_metadata.evidence_needs is caller-supplied; no Backend-owned profile projection",
+      "status": "UNAUTHORIZED_FOR_EVAL",
+      "eval_status": "UNAUTHORIZED_FOR_EVAL",
+      "note": "Production reranker requires approved/non-unknown needs; no approved source is reachable."
+    },
+    {
+      "input": "candidate.chunk_role/substantive_candidate",
+      "production_path": "partitionRetrievalCandidates → applyRetrievalChunkRole",
+      "status": "AVAILABLE_UPSTREAM",
+      "eval_status": "AVAILABLE_BUT_DROPPED_BY_EVAL_ADAPTER",
+      "note": "P1C replay candidates retain hashes/spans but not source text or chunk_role."
+    },
+    {
+      "input": "semanticMetadata.candidate_roles[chunk_id]",
+      "production_path": "Required by semantic-retrieval-reranker.js; no adapter from chunk_role in the production service",
+      "status": "NOT_AVAILABLE",
+      "eval_status": "NOT_AVAILABLE",
+      "note": "The P1C artifact cannot safely reconstruct this map without inventing or adding an unauthorized adapter."
+    },
+    {
+      "input": "raw_vector_rank/raw_similarity/source ids",
+      "production_path": "Dense candidate preparation and reranker normalization",
+      "status": "AVAILABLE_UPSTREAM",
+      "eval_status": "AVAILABLE_UPSTREAM",
+      "note": "These fields are present in the frozen P1C replay."
+    },
+    {
+      "input": "GPT Gold profile_class / Gold grades",
+      "production_path": "Eval-only Gold artifact",
+      "status": "UNAUTHORIZED_FOR_EVAL",
+      "eval_status": "UNAUTHORIZED_FOR_EVAL",
+      "note": "Gold is used only by the frozen matcher after a replay, never to activate rerank inputs."
+    }
+  ],
+  "retrieval_input_trace": [
+    {
+      "required_input": "canonical requirement query text / requirement_id",
+      "canonical_requirement": "AVAILABLE_UPSTREAM",
+      "evidence_need_profile": "NOT_AVAILABLE",
+      "candidate_evidence_packet": "UNKNOWN",
+      "retrieval_candidate": "AVAILABLE_UPSTREAM",
+      "rerank_input": "AVAILABLE_UPSTREAM",
+      "note": "EnterpriseRetrievalService loads the Canonical Requirement and blocks caller query_text."
+    },
+    {
+      "required_input": "requirement_role.value/status",
+      "canonical_requirement": "AVAILABLE_UPSTREAM",
+      "evidence_need_profile": "NOT_AVAILABLE",
+      "candidate_evidence_packet": "UNKNOWN",
+      "retrieval_candidate": "NOT_AVAILABLE",
+      "rerank_input": "UNAUTHORIZED_FOR_EVAL",
+      "note": "No Backend-owned Production EvidenceNeedProfile is built in the actual route."
+    },
+    {
+      "required_input": "evidence_needs[].value/status and profile_hash/version",
+      "canonical_requirement": "AVAILABLE_UPSTREAM",
+      "evidence_need_profile": "NOT_AVAILABLE",
+      "candidate_evidence_packet": "UNKNOWN",
+      "retrieval_candidate": "NOT_AVAILABLE",
+      "rerank_input": "UNAUTHORIZED_FOR_EVAL",
+      "note": "Gold profile_class is Eval-only and cannot populate production semantic metadata."
+    },
+    {
+      "required_input": "candidate_roles[chunk_id]",
+      "canonical_requirement": "NOT_APPLICABLE",
+      "evidence_need_profile": "NOT_APPLICABLE",
+      "candidate_evidence_packet": "UNKNOWN",
+      "retrieval_candidate": "AVAILABLE_BUT_DROPPED_BY_EVAL_ADAPTER",
+      "rerank_input": "NOT_AVAILABLE",
+      "note": "Production partitioning computes chunk_role, but the actual reranker input requires candidate_roles and P1C did not retain the source fields needed for an adapter."
+    },
+    {
+      "required_input": "raw_vector_rank/raw_similarity/source ids",
+      "canonical_requirement": "NOT_APPLICABLE",
+      "evidence_need_profile": "NOT_APPLICABLE",
+      "candidate_evidence_packet": "AVAILABLE_UPSTREAM",
+      "retrieval_candidate": "AVAILABLE_UPSTREAM",
+      "rerank_input": "AVAILABLE_UPSTREAM",
+      "note": "Frozen P1C replay preserves deterministic raw identity and rank fields."
+    }
+  ],
+  "r_fallback": {
+    "status": "EXECUTED_FROM_FROZEN_P1C_REPLAY",
+    "shape": "dense → existing Production Hygiene → raw-vector fallback → final Top8",
+    "metrics_by_depth": {
+      "20": {
+        "candidate_k": 20,
+        "raw_candidate_count": {
+          "total": 140,
+          "mean": 20,
+          "per_case": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ]
+        },
+        "hygiene_filtered_count": {
+          "total": 92,
+          "mean": 13.142857142857,
+          "per_case": [
+            12,
+            15,
+            16,
+            9,
+            11,
+            12,
+            17
+          ]
+        },
+        "hygiene_survivor_count": {
+          "total": 48,
+          "mean": 6.857142857143,
+          "min": 3,
+          "max": 11,
+          "per_case": [
+            8,
+            5,
+            4,
+            11,
+            9,
+            8,
+            3
+          ]
+        },
+        "final_returned_candidate_count": {
+          "total": 44,
+          "mean": 6.285714285714,
+          "min": 3,
+          "max": 8,
+          "per_case": [
+            8,
+            5,
+            4,
+            8,
+            8,
+            8,
+            3
+          ]
+        },
+        "final_pool_fill_rate": 0.785714285714,
+        "cases_final_pool_lt_8": 3,
+        "raw_to_final_survival_ratio": 0.314285714286,
+        "grade_gte_2_entering_from_gt20": {
+          "raw_pool_entry_count": 0,
+          "post_hygiene_survivor_count": 0,
+          "post_hygiene_case_count": 0,
+          "final_review_candidate_count": 0,
+          "final_review_case_count": 0,
+          "candidates_in_survivor_pool": [],
+          "candidates_in_final_review": []
+        },
+        "final_review_metrics_at_k": {
+          "1": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.6,
+            "candidate_precision": 0.428571428571,
+            "ndcg": 0.5,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "3": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.7,
+            "candidate_precision": 0.190476190476,
+            "ndcg": 0.471039109522,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "5": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.7,
+            "candidate_precision": 0.114285714286,
+            "ndcg": 0.471039109522,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "8": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.8,
+            "candidate_precision": 0.089285714286,
+            "ndcg": 0.503276843458,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          }
+        },
+        "MRR_FINAL_AT_8": {
+          "value": 0.5,
+          "hit_count": 4,
+          "case_count": 7,
+          "contract": "MRR_FINAL@8; misses contribute 0; final-review set is capped at 8"
+        },
+        "raw_mrr": {
+          "value": 0.380952380952,
+          "hit_count": 4,
+          "case_count": 7,
+          "metric": "MRR_RAW@20",
+          "contract": "dense raw candidate pool only; never mixed with final-review MRR"
+        }
+      },
+      "32": {
+        "candidate_k": 32,
+        "raw_candidate_count": {
+          "total": 224,
+          "mean": 32,
+          "per_case": [
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32
+          ]
+        },
+        "hygiene_filtered_count": {
+          "total": 141,
+          "mean": 20.142857142857,
+          "per_case": [
+            19,
+            23,
+            24,
+            12,
+            18,
+            19,
+            26
+          ]
+        },
+        "hygiene_survivor_count": {
+          "total": 83,
+          "mean": 11.857142857143,
+          "min": 6,
+          "max": 20,
+          "per_case": [
+            13,
+            9,
+            8,
+            20,
+            14,
+            13,
+            6
+          ]
+        },
+        "final_returned_candidate_count": {
+          "total": 54,
+          "mean": 7.714285714286,
+          "min": 6,
+          "max": 8,
+          "per_case": [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            6
+          ]
+        },
+        "final_pool_fill_rate": 0.964285714286,
+        "cases_final_pool_lt_8": 1,
+        "raw_to_final_survival_ratio": 0.241071428571,
+        "grade_gte_2_entering_from_gt20": {
+          "raw_pool_entry_count": 2,
+          "post_hygiene_survivor_count": 2,
+          "post_hygiene_case_count": 2,
+          "final_review_candidate_count": 0,
+          "final_review_case_count": 0,
+          "candidates_in_survivor_pool": [
+            {
+              "source_chunk_id": "MCH-AA94BB7D153A30F95E869D78DC45A0E5",
+              "dense_rank": 27,
+              "post_hygiene_rank": 17,
+              "gold_grade": 2,
+              "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+              "requirement_id": "TB-003:REQ-119"
+            },
+            {
+              "source_chunk_id": "MCH-2EEFA4F9B214B94D417935EEB260A88E",
+              "dense_rank": 25,
+              "post_hygiene_rank": 11,
+              "gold_grade": 2,
+              "case_id": "RAG-P0-HOLD-TB-003-REQ-170",
+              "requirement_id": "TB-003:REQ-170"
+            }
+          ],
+          "candidates_in_final_review": []
+        },
+        "final_review_metrics_at_k": {
+          "1": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.6,
+            "candidate_precision": 0.428571428571,
+            "ndcg": 0.5,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "3": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.7,
+            "candidate_precision": 0.190476190476,
+            "ndcg": 0.471039109522,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "5": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.7,
+            "candidate_precision": 0.114285714286,
+            "ndcg": 0.471039109522,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "8": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.8,
+            "candidate_precision": 0.089285714286,
+            "ndcg": 0.517757288697,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          }
+        },
+        "MRR_FINAL_AT_8": {
+          "value": 0.5,
+          "hit_count": 4,
+          "case_count": 7,
+          "contract": "MRR_FINAL@8; misses contribute 0; final-review set is capped at 8"
+        },
+        "raw_mrr": {
+          "value": 0.386243386243,
+          "hit_count": 5,
+          "case_count": 7,
+          "metric": "MRR_RAW@32",
+          "contract": "dense raw candidate pool only; never mixed with final-review MRR"
+        }
+      },
+      "48": {
+        "candidate_k": 48,
+        "raw_candidate_count": {
+          "total": 336,
+          "mean": 48,
+          "per_case": [
+            48,
+            48,
+            48,
+            48,
+            48,
+            48,
+            48
+          ]
+        },
+        "hygiene_filtered_count": {
+          "total": 215,
+          "mean": 30.714285714286,
+          "per_case": [
+            27,
+            35,
+            37,
+            26,
+            30,
+            24,
+            36
+          ]
+        },
+        "hygiene_survivor_count": {
+          "total": 121,
+          "mean": 17.285714285714,
+          "min": 11,
+          "max": 24,
+          "per_case": [
+            21,
+            13,
+            11,
+            22,
+            18,
+            24,
+            12
+          ]
+        },
+        "final_returned_candidate_count": {
+          "total": 56,
+          "mean": 8,
+          "min": 8,
+          "max": 8,
+          "per_case": [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8
+          ]
+        },
+        "final_pool_fill_rate": 1,
+        "cases_final_pool_lt_8": 0,
+        "raw_to_final_survival_ratio": 0.166666666667,
+        "grade_gte_2_entering_from_gt20": {
+          "raw_pool_entry_count": 3,
+          "post_hygiene_survivor_count": 3,
+          "post_hygiene_case_count": 2,
+          "final_review_candidate_count": 0,
+          "final_review_case_count": 0,
+          "candidates_in_survivor_pool": [
+            {
+              "source_chunk_id": "MCH-AA94BB7D153A30F95E869D78DC45A0E5",
+              "dense_rank": 27,
+              "post_hygiene_rank": 17,
+              "gold_grade": 2,
+              "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+              "requirement_id": "TB-003:REQ-119"
+            },
+            {
+              "source_chunk_id": "MCH-2EEFA4F9B214B94D417935EEB260A88E",
+              "dense_rank": 46,
+              "post_hygiene_rank": 22,
+              "gold_grade": 2,
+              "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+              "requirement_id": "TB-003:REQ-119"
+            },
+            {
+              "source_chunk_id": "MCH-2EEFA4F9B214B94D417935EEB260A88E",
+              "dense_rank": 25,
+              "post_hygiene_rank": 11,
+              "gold_grade": 2,
+              "case_id": "RAG-P0-HOLD-TB-003-REQ-170",
+              "requirement_id": "TB-003:REQ-170"
+            }
+          ],
+          "candidates_in_final_review": []
+        },
+        "final_review_metrics_at_k": {
+          "1": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.6,
+            "candidate_precision": 0.428571428571,
+            "ndcg": 0.5,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "3": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.7,
+            "candidate_precision": 0.190476190476,
+            "ndcg": 0.471039109522,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "5": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.7,
+            "candidate_precision": 0.114285714286,
+            "ndcg": 0.471039109522,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "8": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.8,
+            "candidate_precision": 0.089285714286,
+            "ndcg": 0.517757288697,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          }
+        },
+        "MRR_FINAL_AT_8": {
+          "value": 0.5,
+          "hit_count": 4,
+          "case_count": 7,
+          "contract": "MRR_FINAL@8; misses contribute 0; final-review set is capped at 8"
+        },
+        "raw_mrr": {
+          "value": 0.386243386243,
+          "hit_count": 5,
+          "case_count": 7,
+          "metric": "MRR_RAW@48",
+          "contract": "dense raw candidate pool only; never mixed with final-review MRR"
+        }
+      },
+      "64": {
+        "candidate_k": 64,
+        "raw_candidate_count": {
+          "total": 448,
+          "mean": 64,
+          "per_case": [
+            64,
+            64,
+            64,
+            64,
+            64,
+            64,
+            64
+          ]
+        },
+        "hygiene_filtered_count": {
+          "total": 274,
+          "mean": 39.142857142857,
+          "per_case": [
+            38,
+            44,
+            40,
+            32,
+            40,
+            37,
+            43
+          ]
+        },
+        "hygiene_survivor_count": {
+          "total": 174,
+          "mean": 24.857142857143,
+          "min": 20,
+          "max": 32,
+          "per_case": [
+            26,
+            20,
+            24,
+            32,
+            24,
+            27,
+            21
+          ]
+        },
+        "final_returned_candidate_count": {
+          "total": 56,
+          "mean": 8,
+          "min": 8,
+          "max": 8,
+          "per_case": [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8
+          ]
+        },
+        "final_pool_fill_rate": 1,
+        "cases_final_pool_lt_8": 0,
+        "raw_to_final_survival_ratio": 0.125,
+        "grade_gte_2_entering_from_gt20": {
+          "raw_pool_entry_count": 3,
+          "post_hygiene_survivor_count": 3,
+          "post_hygiene_case_count": 2,
+          "final_review_candidate_count": 0,
+          "final_review_case_count": 0,
+          "candidates_in_survivor_pool": [
+            {
+              "source_chunk_id": "MCH-AA94BB7D153A30F95E869D78DC45A0E5",
+              "dense_rank": 27,
+              "post_hygiene_rank": 17,
+              "gold_grade": 2,
+              "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+              "requirement_id": "TB-003:REQ-119"
+            },
+            {
+              "source_chunk_id": "MCH-2EEFA4F9B214B94D417935EEB260A88E",
+              "dense_rank": 46,
+              "post_hygiene_rank": 22,
+              "gold_grade": 2,
+              "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+              "requirement_id": "TB-003:REQ-119"
+            },
+            {
+              "source_chunk_id": "MCH-2EEFA4F9B214B94D417935EEB260A88E",
+              "dense_rank": 25,
+              "post_hygiene_rank": 11,
+              "gold_grade": 2,
+              "case_id": "RAG-P0-HOLD-TB-003-REQ-170",
+              "requirement_id": "TB-003:REQ-170"
+            }
+          ],
+          "candidates_in_final_review": []
+        },
+        "final_review_metrics_at_k": {
+          "1": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.6,
+            "candidate_precision": 0.428571428571,
+            "ndcg": 0.5,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "3": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.7,
+            "candidate_precision": 0.190476190476,
+            "ndcg": 0.471039109522,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "5": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.7,
+            "candidate_precision": 0.114285714286,
+            "ndcg": 0.471039109522,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          },
+          "8": {
+            "case_count": 7,
+            "evidence_atom_recall": 0.8,
+            "candidate_precision": 0.089285714286,
+            "ndcg": 0.517757288697,
+            "expected_retrieval_k0_count": 2,
+            "expected_no_sufficient_evidence_count": 6,
+            "false_positive_retrieval_candidate_rate": 0,
+            "false_negative_retrieval_k0_rate": 0
+          }
+        },
+        "MRR_FINAL_AT_8": {
+          "value": 0.5,
+          "hit_count": 4,
+          "case_count": 7,
+          "contract": "MRR_FINAL@8; misses contribute 0; final-review set is capped at 8"
+        },
+        "raw_mrr": {
+          "value": 0.386243386243,
+          "hit_count": 5,
+          "case_count": 7,
+          "metric": "MRR_RAW@64",
+          "contract": "dense raw candidate pool only; never mixed with final-review MRR"
+        }
+      }
+    },
+    "cases": [
+      {
+        "case_id": "RAG-P0-HOLD-JY-001-REQ-027",
+        "requirement_id": "JY-001:REQ-027",
+        "governance_split": "DEVELOPMENT_VALIDATION_SET",
+        "fallback_first_grade_gte_2": {
+          "20": {
+            "dense_rank": 6,
+            "post_hygiene_rank": 2,
+            "final_review_rank": 2,
+            "entered_final_review": true
+          },
+          "32": {
+            "dense_rank": 6,
+            "post_hygiene_rank": 2,
+            "final_review_rank": 2,
+            "entered_final_review": true
+          },
+          "48": {
+            "dense_rank": 6,
+            "post_hygiene_rank": 2,
+            "final_review_rank": 2,
+            "entered_final_review": true
+          },
+          "64": {
+            "dense_rank": 6,
+            "post_hygiene_rank": 2,
+            "final_review_rank": 2,
+            "entered_final_review": true
+          }
+        }
+      },
+      {
+        "case_id": "RAG-P0-HOLD-JY-001-REQ-077",
+        "requirement_id": "JY-001:REQ-077",
+        "governance_split": "DEVELOPMENT_VALIDATION_SET",
+        "fallback_first_grade_gte_2": {
+          "20": {
+            "dense_rank": 1,
+            "post_hygiene_rank": 1,
+            "final_review_rank": 1,
+            "entered_final_review": true
+          },
+          "32": {
+            "dense_rank": 1,
+            "post_hygiene_rank": 1,
+            "final_review_rank": 1,
+            "entered_final_review": true
+          },
+          "48": {
+            "dense_rank": 1,
+            "post_hygiene_rank": 1,
+            "final_review_rank": 1,
+            "entered_final_review": true
+          },
+          "64": {
+            "dense_rank": 1,
+            "post_hygiene_rank": 1,
+            "final_review_rank": 1,
+            "entered_final_review": true
+          }
+        }
+      },
+      {
+        "case_id": "RAG-P0-HOLD-JY-001-REQ-051",
+        "requirement_id": "JY-001:REQ-051",
+        "governance_split": "DEVELOPMENT_VALIDATION_SET",
+        "fallback_first_grade_gte_2": {
+          "20": {
+            "dense_rank": 1,
+            "post_hygiene_rank": 1,
+            "final_review_rank": 1,
+            "entered_final_review": true
+          },
+          "32": {
+            "dense_rank": 1,
+            "post_hygiene_rank": 1,
+            "final_review_rank": 1,
+            "entered_final_review": true
+          },
+          "48": {
+            "dense_rank": 1,
+            "post_hygiene_rank": 1,
+            "final_review_rank": 1,
+            "entered_final_review": true
+          },
+          "64": {
+            "dense_rank": 1,
+            "post_hygiene_rank": 1,
+            "final_review_rank": 1,
+            "entered_final_review": true
+          }
+        }
+      },
+      {
+        "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+        "requirement_id": "TB-003:REQ-119",
+        "governance_split": "DEVELOPMENT_VALIDATION_SET",
+        "fallback_first_grade_gte_2": {
+          "20": {
+            "dense_rank": 27,
+            "post_hygiene_rank": null,
+            "final_review_rank": null,
+            "entered_final_review": false
+          },
+          "32": {
+            "dense_rank": 27,
+            "post_hygiene_rank": 17,
+            "final_review_rank": null,
+            "entered_final_review": false
+          },
+          "48": {
+            "dense_rank": 27,
+            "post_hygiene_rank": 17,
+            "final_review_rank": null,
+            "entered_final_review": false
+          },
+          "64": {
+            "dense_rank": 27,
+            "post_hygiene_rank": 17,
+            "final_review_rank": null,
+            "entered_final_review": false
+          }
+        }
+      },
+      {
+        "case_id": "RAG-P0-HOLD-TB-003-REQ-170",
+        "requirement_id": "TB-003:REQ-170",
+        "governance_split": "DEVELOPMENT_VALIDATION_SET",
+        "fallback_first_grade_gte_2": {
+          "20": {
+            "dense_rank": 2,
+            "post_hygiene_rank": 1,
+            "final_review_rank": 1,
+            "entered_final_review": true
+          },
+          "32": {
+            "dense_rank": 2,
+            "post_hygiene_rank": 1,
+            "final_review_rank": 1,
+            "entered_final_review": true
+          },
+          "48": {
+            "dense_rank": 2,
+            "post_hygiene_rank": 1,
+            "final_review_rank": 1,
+            "entered_final_review": true
+          },
+          "64": {
+            "dense_rank": 2,
+            "post_hygiene_rank": 1,
+            "final_review_rank": 1,
+            "entered_final_review": true
+          }
+        }
+      },
+      {
+        "case_id": "RAG-P0-HOLD-TB-006-REQ-037",
+        "requirement_id": "TB-006:REQ-037",
+        "governance_split": "DEVELOPMENT_VALIDATION_SET",
+        "fallback_first_grade_gte_2": {
+          "20": {
+            "dense_rank": null,
+            "post_hygiene_rank": null,
+            "final_review_rank": null,
+            "entered_final_review": false
+          },
+          "32": {
+            "dense_rank": null,
+            "post_hygiene_rank": null,
+            "final_review_rank": null,
+            "entered_final_review": false
+          },
+          "48": {
+            "dense_rank": null,
+            "post_hygiene_rank": null,
+            "final_review_rank": null,
+            "entered_final_review": false
+          },
+          "64": {
+            "dense_rank": null,
+            "post_hygiene_rank": null,
+            "final_review_rank": null,
+            "entered_final_review": false
+          }
+        }
+      },
+      {
+        "case_id": "RAG-P0-HOLD-JY-001-REQ-148",
+        "requirement_id": "JY-001:REQ-148",
+        "governance_split": "DEVELOPMENT_VALIDATION_SET",
+        "fallback_first_grade_gte_2": {
+          "20": {
+            "dense_rank": null,
+            "post_hygiene_rank": null,
+            "final_review_rank": null,
+            "entered_final_review": false
+          },
+          "32": {
+            "dense_rank": null,
+            "post_hygiene_rank": null,
+            "final_review_rank": null,
+            "entered_final_review": false
+          },
+          "48": {
+            "dense_rank": null,
+            "post_hygiene_rank": null,
+            "final_review_rank": null,
+            "entered_final_review": false
+          },
+          "64": {
+            "dense_rank": null,
+            "post_hygiene_rank": null,
+            "final_review_rank": null,
+            "entered_final_review": false
+          }
+        }
+      }
+    ]
+  },
+  "r_existing": {
+    "status": "NOT_EXECUTED_METADATA_BLOCKED",
+    "invocation_count": 0,
+    "metrics_by_depth": {
+      "20": {
+        "status": "NOT_EVALUATED",
+        "reason": "APPROVED_PRODUCTION_EVIDENCE_NEED_PROFILE_UNAVAILABLE"
+      },
+      "32": {
+        "status": "NOT_EVALUATED",
+        "reason": "APPROVED_PRODUCTION_EVIDENCE_NEED_PROFILE_UNAVAILABLE"
+      },
+      "48": {
+        "status": "NOT_EVALUATED",
+        "reason": "APPROVED_PRODUCTION_EVIDENCE_NEED_PROFILE_UNAVAILABLE"
+      },
+      "64": {
+        "status": "NOT_EVALUATED",
+        "reason": "APPROVED_PRODUCTION_EVIDENCE_NEED_PROFILE_UNAVAILABLE"
+      }
+    },
+    "cases": [
+      {
+        "case_id": "RAG-P0-HOLD-JY-001-REQ-027",
+        "requirement_id": "JY-001:REQ-027",
+        "governance_split": "DEVELOPMENT_VALIDATION_SET",
+        "activation": "BLOCKED_BEFORE_RERANKER_INVOCATION",
+        "existing_rerank_rank": null,
+        "existing_rerank_atom_recall": null,
+        "reason": "APPROVED_PRODUCTION_EVIDENCE_NEED_PROFILE_UNAVAILABLE"
+      },
+      {
+        "case_id": "RAG-P0-HOLD-JY-001-REQ-077",
+        "requirement_id": "JY-001:REQ-077",
+        "governance_split": "DEVELOPMENT_VALIDATION_SET",
+        "activation": "BLOCKED_BEFORE_RERANKER_INVOCATION",
+        "existing_rerank_rank": null,
+        "existing_rerank_atom_recall": null,
+        "reason": "APPROVED_PRODUCTION_EVIDENCE_NEED_PROFILE_UNAVAILABLE"
+      },
+      {
+        "case_id": "RAG-P0-HOLD-JY-001-REQ-051",
+        "requirement_id": "JY-001:REQ-051",
+        "governance_split": "DEVELOPMENT_VALIDATION_SET",
+        "activation": "BLOCKED_BEFORE_RERANKER_INVOCATION",
+        "existing_rerank_rank": null,
+        "existing_rerank_atom_recall": null,
+        "reason": "APPROVED_PRODUCTION_EVIDENCE_NEED_PROFILE_UNAVAILABLE"
+      },
+      {
+        "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+        "requirement_id": "TB-003:REQ-119",
+        "governance_split": "DEVELOPMENT_VALIDATION_SET",
+        "activation": "BLOCKED_BEFORE_RERANKER_INVOCATION",
+        "existing_rerank_rank": null,
+        "existing_rerank_atom_recall": null,
+        "reason": "APPROVED_PRODUCTION_EVIDENCE_NEED_PROFILE_UNAVAILABLE"
+      },
+      {
+        "case_id": "RAG-P0-HOLD-TB-003-REQ-170",
+        "requirement_id": "TB-003:REQ-170",
+        "governance_split": "DEVELOPMENT_VALIDATION_SET",
+        "activation": "BLOCKED_BEFORE_RERANKER_INVOCATION",
+        "existing_rerank_rank": null,
+        "existing_rerank_atom_recall": null,
+        "reason": "APPROVED_PRODUCTION_EVIDENCE_NEED_PROFILE_UNAVAILABLE"
+      },
+      {
+        "case_id": "RAG-P0-HOLD-TB-006-REQ-037",
+        "requirement_id": "TB-006:REQ-037",
+        "governance_split": "DEVELOPMENT_VALIDATION_SET",
+        "activation": "BLOCKED_BEFORE_RERANKER_INVOCATION",
+        "existing_rerank_rank": null,
+        "existing_rerank_atom_recall": null,
+        "reason": "APPROVED_PRODUCTION_EVIDENCE_NEED_PROFILE_UNAVAILABLE"
+      },
+      {
+        "case_id": "RAG-P0-HOLD-JY-001-REQ-148",
+        "requirement_id": "JY-001:REQ-148",
+        "governance_split": "DEVELOPMENT_VALIDATION_SET",
+        "activation": "BLOCKED_BEFORE_RERANKER_INVOCATION",
+        "existing_rerank_rank": null,
+        "existing_rerank_atom_recall": null,
+        "reason": "APPROVED_PRODUCTION_EVIDENCE_NEED_PROFILE_UNAVAILABLE"
+      }
+    ],
+    "no_synthetic_metadata": true,
+    "gold_profile_used": false
+  },
+  "special_case_diagnostic": [
+    {
+      "requirement_id": "FAST-01:REQ-005",
+      "case_id": "RAG-P0-CAL-FAST-01-REQ-005",
+      "first_grade_gte_2_dense_rank": 40,
+      "first_grade_gte_2_outside_top20_dense_rank": 40,
+      "raw_candidate_k_required_for_entry": null,
+      "raw_candidate_k_required_for_survivor_entry": 48,
+      "raw_candidate_k_required_for_gt20_final_review_entry": null,
+      "post_hygiene_rank_by_depth": {
+        "20": null,
+        "32": null,
+        "48": 11,
+        "64": 11
+      },
+      "final_review_rank_by_depth": {
+        "20": null,
+        "32": null,
+        "48": null,
+        "64": null
+      },
+      "outside_top20_post_hygiene_rank_by_depth": {
+        "20": null,
+        "32": null,
+        "48": 11,
+        "64": 11
+      },
+      "outside_top20_final_review_rank_by_depth": {
+        "20": null,
+        "32": null,
+        "48": null,
+        "64": null
+      },
+      "atom_recall_at_8_by_depth": {
+        "20": 0,
+        "32": 0,
+        "48": 0,
+        "64": 0
+      },
+      "atom_recall_movement_vs_r0_at_8": {
+        "20": 0,
+        "32": 0,
+        "48": 0,
+        "64": 0
+      },
+      "governance_split": "CALIBRATION_SET",
+      "fallback_by_depth": {
+        "20": {
+          "post_hygiene_rank": null,
+          "final_review_rank": null
+        },
+        "32": {
+          "post_hygiene_rank": null,
+          "final_review_rank": null
+        },
+        "48": {
+          "post_hygiene_rank": 11,
+          "final_review_rank": null
+        },
+        "64": {
+          "post_hygiene_rank": 11,
+          "final_review_rank": null
+        }
+      },
+      "existing_rerank_by_depth": {
+        "20": {
+          "rank": null,
+          "atom_recall_at_8": null,
+          "status": "BLOCKED_BEFORE_INVOCATION"
+        },
+        "32": {
+          "rank": null,
+          "atom_recall_at_8": null,
+          "status": "BLOCKED_BEFORE_INVOCATION"
+        },
+        "48": {
+          "rank": null,
+          "atom_recall_at_8": null,
+          "status": "BLOCKED_BEFORE_INVOCATION"
+        },
+        "64": {
+          "rank": null,
+          "atom_recall_at_8": null,
+          "status": "BLOCKED_BEFORE_INVOCATION"
+        }
+      }
+    },
+    {
+      "requirement_id": "TB-003:REQ-119",
+      "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+      "first_grade_gte_2_dense_rank": 27,
+      "first_grade_gte_2_outside_top20_dense_rank": 27,
+      "raw_candidate_k_required_for_entry": null,
+      "raw_candidate_k_required_for_survivor_entry": 32,
+      "raw_candidate_k_required_for_gt20_final_review_entry": null,
+      "post_hygiene_rank_by_depth": {
+        "20": null,
+        "32": 17,
+        "48": 17,
+        "64": 17
+      },
+      "final_review_rank_by_depth": {
+        "20": null,
+        "32": null,
+        "48": null,
+        "64": null
+      },
+      "outside_top20_post_hygiene_rank_by_depth": {
+        "20": null,
+        "32": 17,
+        "48": 17,
+        "64": 17
+      },
+      "outside_top20_final_review_rank_by_depth": {
+        "20": null,
+        "32": null,
+        "48": null,
+        "64": null
+      },
+      "atom_recall_at_8_by_depth": {
+        "20": 0,
+        "32": 0,
+        "48": 0,
+        "64": 0
+      },
+      "atom_recall_movement_vs_r0_at_8": {
+        "20": 0,
+        "32": 0,
+        "48": 0,
+        "64": 0
+      },
+      "governance_split": "DEVELOPMENT_VALIDATION_SET",
+      "fallback_by_depth": {
+        "20": {
+          "post_hygiene_rank": null,
+          "final_review_rank": null
+        },
+        "32": {
+          "post_hygiene_rank": 17,
+          "final_review_rank": null
+        },
+        "48": {
+          "post_hygiene_rank": 17,
+          "final_review_rank": null
+        },
+        "64": {
+          "post_hygiene_rank": 17,
+          "final_review_rank": null
+        }
+      },
+      "existing_rerank_by_depth": {
+        "20": {
+          "rank": null,
+          "atom_recall_at_8": null,
+          "status": "BLOCKED_BEFORE_INVOCATION"
+        },
+        "32": {
+          "rank": null,
+          "atom_recall_at_8": null,
+          "status": "BLOCKED_BEFORE_INVOCATION"
+        },
+        "48": {
+          "rank": null,
+          "atom_recall_at_8": null,
+          "status": "BLOCKED_BEFORE_INVOCATION"
+        },
+        "64": {
+          "rank": null,
+          "atom_recall_at_8": null,
+          "status": "BLOCKED_BEFORE_INVOCATION"
+        }
+      }
+    },
+    {
+      "requirement_id": "JY-001:REQ-027",
+      "case_id": "RAG-P0-HOLD-JY-001-REQ-027",
+      "first_grade_gte_2_dense_rank": 6,
+      "first_grade_gte_2_outside_top20_dense_rank": null,
+      "raw_candidate_k_required_for_entry": 20,
+      "raw_candidate_k_required_for_survivor_entry": null,
+      "raw_candidate_k_required_for_gt20_final_review_entry": null,
+      "post_hygiene_rank_by_depth": {
+        "20": 2,
+        "32": 2,
+        "48": 2,
+        "64": 2
+      },
+      "final_review_rank_by_depth": {
+        "20": 2,
+        "32": 2,
+        "48": 2,
+        "64": 2
+      },
+      "outside_top20_post_hygiene_rank_by_depth": {
+        "20": null,
+        "32": null,
+        "48": null,
+        "64": null
+      },
+      "outside_top20_final_review_rank_by_depth": {
+        "20": null,
+        "32": null,
+        "48": null,
+        "64": null
+      },
+      "atom_recall_at_8_by_depth": {
+        "20": 1,
+        "32": 1,
+        "48": 1,
+        "64": 1
+      },
+      "atom_recall_movement_vs_r0_at_8": {
+        "20": 0,
+        "32": 0,
+        "48": 0,
+        "64": 0
+      },
+      "governance_split": "DEVELOPMENT_VALIDATION_SET",
+      "fallback_by_depth": {
+        "20": {
+          "post_hygiene_rank": 2,
+          "final_review_rank": 2
+        },
+        "32": {
+          "post_hygiene_rank": 2,
+          "final_review_rank": 2
+        },
+        "48": {
+          "post_hygiene_rank": 2,
+          "final_review_rank": 2
+        },
+        "64": {
+          "post_hygiene_rank": 2,
+          "final_review_rank": 2
+        }
+      },
+      "existing_rerank_by_depth": {
+        "20": {
+          "rank": null,
+          "atom_recall_at_8": null,
+          "status": "BLOCKED_BEFORE_INVOCATION"
+        },
+        "32": {
+          "rank": null,
+          "atom_recall_at_8": null,
+          "status": "BLOCKED_BEFORE_INVOCATION"
+        },
+        "48": {
+          "rank": null,
+          "atom_recall_at_8": null,
+          "status": "BLOCKED_BEFORE_INVOCATION"
+        },
+        "64": {
+          "rank": null,
+          "atom_recall_at_8": null,
+          "status": "BLOCKED_BEFORE_INVOCATION"
+        }
+      }
+    },
+    {
+      "requirement_id": "TB-003:REQ-170",
+      "case_id": "RAG-P0-HOLD-TB-003-REQ-170",
+      "first_grade_gte_2_dense_rank": 2,
+      "first_grade_gte_2_outside_top20_dense_rank": 25,
+      "raw_candidate_k_required_for_entry": 20,
+      "raw_candidate_k_required_for_survivor_entry": 32,
+      "raw_candidate_k_required_for_gt20_final_review_entry": null,
+      "post_hygiene_rank_by_depth": {
+        "20": 1,
+        "32": 1,
+        "48": 1,
+        "64": 1
+      },
+      "final_review_rank_by_depth": {
+        "20": 1,
+        "32": 1,
+        "48": 1,
+        "64": 1
+      },
+      "outside_top20_post_hygiene_rank_by_depth": {
+        "20": null,
+        "32": 11,
+        "48": 11,
+        "64": 11
+      },
+      "outside_top20_final_review_rank_by_depth": {
+        "20": null,
+        "32": null,
+        "48": null,
+        "64": null
+      },
+      "atom_recall_at_8_by_depth": {
+        "20": 1,
+        "32": 1,
+        "48": 1,
+        "64": 1
+      },
+      "atom_recall_movement_vs_r0_at_8": {
+        "20": 0,
+        "32": 0,
+        "48": 0,
+        "64": 0
+      },
+      "governance_split": "DEVELOPMENT_VALIDATION_SET",
+      "fallback_by_depth": {
+        "20": {
+          "post_hygiene_rank": 1,
+          "final_review_rank": 1
+        },
+        "32": {
+          "post_hygiene_rank": 1,
+          "final_review_rank": 1
+        },
+        "48": {
+          "post_hygiene_rank": 1,
+          "final_review_rank": 1
+        },
+        "64": {
+          "post_hygiene_rank": 1,
+          "final_review_rank": 1
+        }
+      },
+      "existing_rerank_by_depth": {
+        "20": {
+          "rank": null,
+          "atom_recall_at_8": null,
+          "status": "BLOCKED_BEFORE_INVOCATION"
+        },
+        "32": {
+          "rank": null,
+          "atom_recall_at_8": null,
+          "status": "BLOCKED_BEFORE_INVOCATION"
+        },
+        "48": {
+          "rank": null,
+          "atom_recall_at_8": null,
+          "status": "BLOCKED_BEFORE_INVOCATION"
+        },
+        "64": {
+          "rank": null,
+          "atom_recall_at_8": null,
+          "status": "BLOCKED_BEFORE_INVOCATION"
+        }
+      }
+    }
+  ],
+  "safety": {
+    "provider_calls": 0,
+    "embedding_calls": 0,
+    "llm_calls": 0,
+    "production_retrieval_changes": 0,
+    "production_db_writes": 0,
+    "eval_db_writes": 0,
+    "gold_mutations": 0,
+    "corpus_mutations": 0,
+    "embedding_mutations": 0,
+    "source_span_identity_changes": 0,
+    "lineage_changes": 0,
+    "authority_changes": 0,
+    "fact_mapping_claim_writer_mutations": 0,
+    "router_profile_mutations": 0
+  },
+  "generated_by": "backend/eval/retrieval-quality-p1d/run-p1d-existing-rerank-reachability-diagnostic-v1.mjs",
+  "deterministic_content_hash": "0cc56ddfc1ffd44510a59c6d93a4c41dfa62d725d55b5ea03441d7803e12db08"
+}

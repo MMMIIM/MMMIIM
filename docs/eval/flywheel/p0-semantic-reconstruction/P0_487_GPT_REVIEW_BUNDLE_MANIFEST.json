@@ -1,0 +1,82 @@
+{
+  "artifact_type": "V43_P0_487_GPT_REVIEW_BUNDLE_MANIFEST",
+  "artifact_version": "v1",
+  "blind": true,
+  "source_truth_id": "GPT_SOURCE_TRUTH_P0_CORE6_V1",
+  "source_truth_sha256": "sha256:9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+  "production_run_id": "V43-CORE6-20260911",
+  "r3_eval_run_id": "V43-FLYWHEEL-P0-487-R3",
+  "row_count": 487,
+  "counts_by_tender": {
+    "JY-001": 89,
+    "TB-003": 25,
+    "TB-006": 19,
+    "FAST-01": 24,
+    "FAST-04": 229,
+    "FAST-WATER-01": 101
+  },
+  "bundle_path": "docs/eval/flywheel/p0-semantic-reconstruction/P0_487_GPT_REVIEW_BUNDLE.jsonl",
+  "bundle_bytes": 3538365,
+  "bundle_sha256": "867965a6f2e0b1568278a62c05316b16bcb1b1dfd09e01705020f4b51d240a2d",
+  "original_six_packet_sha256": [
+    {
+      "original_path": "docs/eval/flywheel/p0-semantic-reconstruction/JY-001.review-packet.json",
+      "bytes": 811881,
+      "sha256": "0d754c314a11a39ea4387f749aaa1f46fe6f9059c4fda91c63607d926fd27ddd",
+      "row_count": 89
+    },
+    {
+      "original_path": "docs/eval/flywheel/p0-semantic-reconstruction/TB-003.review-packet.json",
+      "bytes": 260800,
+      "sha256": "1974bb2f42b3968f647b100c8fbd70f12daeaa16bddd880bd1d0081c5e26f877",
+      "row_count": 25
+    },
+    {
+      "original_path": "docs/eval/flywheel/p0-semantic-reconstruction/TB-006.review-packet.json",
+      "bytes": 176560,
+      "sha256": "42144216441196fbc81f95635a3052eec53e93696ad8ba4c733ff983ff81dfd5",
+      "row_count": 19
+    },
+    {
+      "original_path": "docs/eval/flywheel/p0-semantic-reconstruction/FAST-01.review-packet.json",
+      "bytes": 289732,
+      "sha256": "2f5d6b6fe2cf1065d7ecc071d72da7b68770c2e553146d4a1a31da46cedf8f56",
+      "row_count": 24
+    },
+    {
+      "original_path": "docs/eval/flywheel/p0-semantic-reconstruction/FAST-04.review-packet.json",
+      "bytes": 2458187,
+      "sha256": "65dba132587e9983b9c514437f762ff1b5aed0a771f2ae508b1fc11a7bb9b84f",
+      "row_count": 229
+    },
+    {
+      "original_path": "docs/eval/flywheel/p0-semantic-reconstruction/FAST-WATER-01.review-packet.json",
+      "bytes": 1074004,
+      "sha256": "ec58b07761b81ced3604530bf3075be53731ae372066081cb3f0108742f4f241",
+      "row_count": 101
+    }
+  ],
+  "validation": {
+    "unique_atom_ids": 487,
+    "candidate_coverage": 487,
+    "no_cross_tender_candidates": true,
+    "semantic_label_count": 0,
+    "historical_aggregate_leakage": 0,
+    "reconstructed_bundle_sha256": "867965a6f2e0b1568278a62c05316b16bcb1b1dfd09e01705020f4b51d240a2d",
+    "reconstruction_hash_match": true
+  },
+  "side_effects": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "db_writes": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "semantic_labels_created": 0,
+    "router_mutations": 0,
+    "production_changes": 0,
+    "commit": 0,
+    "push": 0,
+    "merge": 0,
+    "deploy": 0
+  }
+}

@@ -1,0 +1,382 @@
+{
+  "run_id": "real-e2e-retrieval-fact-20260914105046-74e1a88c",
+  "status": "PARTIAL",
+  "task_type": "evidence_fact_candidate_v2_2",
+  "schema_version": "4.3-evidence-fact-candidate-v2.2",
+  "schema_hash": "3dcece82464fcbd0351fe4444cc66994d36e40ca6ca97a3f2d0ba01e5e44f0b3",
+  "prompt_version": "4.3-evidence-fact-candidate-v2.2-prompt-v1",
+  "prompt_hash": "e4acf5f9f8180bf355ee3c5e5e55852749b51c649e9f8c1d321ee53d048762e7",
+  "contexts_available": 3,
+  "contexts_processed": 3,
+  "requirements_represented": 20,
+  "source_context_dedup": {
+    "key": "material_id+chunk_id+chunk_hash",
+    "input_requirement_contexts": 20,
+    "unique_contexts": 13,
+    "duplicate_requirement_contexts_removed": 7,
+    "targeted_chunk_filter": [
+      "MCH-93D4FDD592216F58BCD0237DDF4F8F0F",
+      "MCH-586AF54E29E13328B1D105D03FF08957",
+      "MCH-CE770B545973FB9CF092951FCDC402B5"
+    ],
+    "targeted_unique_contexts": 3
+  },
+  "provider_calls": 3,
+  "provider_failures": 2,
+  "candidate_total": 5,
+  "candidate_success_empty": 0,
+  "canonicalized_count": 5,
+  "canonicalization_review_required_count": 0,
+  "grounding_accept_count": 4,
+  "grounding_review_count": 0,
+  "grounding_reject_count": 1,
+  "unknown_source_alias_count": 0,
+  "provenance_complete_rate": 1,
+  "authority_escalation_count": 0,
+  "project_design_as_enterprise_fact_count": 0,
+  "future_commitment_as_existing_fact_count": 0,
+  "lineage_only_external_outcome_auto_promotion_count": 0,
+  "unresolved_output_truncation_count": 0,
+  "cases": [
+    {
+      "requirement_id": "REQ-099",
+      "requirement_ids": [
+        "REQ-099"
+      ],
+      "source_context_key": "da4b0715-9d47-4853-ab2f-df5eee22c597\u0000MCH-93D4FDD592216F58BCD0237DDF4F8F0F\u0000e8c3d73cc174a2dbb6274893c40ba448fefaa9bb417352f905b90887ecaada1c",
+      "source_material_id": "da4b0715-9d47-4853-ab2f-df5eee22c597",
+      "source_chunk_id": "MCH-93D4FDD592216F58BCD0237DDF4F8F0F",
+      "source_hash": "e8c3d73cc174a2dbb6274893c40ba448fefaa9bb417352f905b90887ecaada1c",
+      "source_ref": "MCH-93D4FDD592216F58BCD0237DDF4F8F0F",
+      "provider_call": 1,
+      "status": "PASS",
+      "candidate_count": 5,
+      "candidate_success_empty": false,
+      "duration_ms": 10512,
+      "error_code": null,
+      "provider_audit": {
+        "provider": "deepseek_official",
+        "model": "deepseek-v4-pro",
+        "requested_provider": "deepseek_official",
+        "requested_model": "deepseek-v4-pro",
+        "response_provider": null,
+        "response_model": "deepseek-v4-pro",
+        "endpoint": "/responses",
+        "provider_http_reached": true,
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "latency_ms": 10478,
+        "finish_reason": "completed",
+        "output_truncated": false,
+        "json_parse_success": true,
+        "safe_error_code": null,
+        "cause_code": null,
+        "response_envelope_hash": null,
+        "contract_validation_failure_family": null
+      },
+      "canonicalization": [
+        {
+          "canonicalization_status": "CANONICALIZED",
+          "grounding_decision": "REJECT",
+          "review_reasons": [],
+          "grounding_reasons": [
+            "entity.name is not grounded"
+          ],
+          "canonical_output": {
+            "subject": {
+              "type": "企业",
+              "name": "华为投资控股有限公司"
+            },
+            "entities": [
+              {
+                "type": "企业",
+                "name": "华为投资控股有限公司"
+              },
+              {
+                "type": "业务分部",
+                "name": "ICT基础设施业务"
+              },
+              {
+                "type": "业务分部",
+                "name": "终端业务"
+              },
+              {
+                "type": "业务分部",
+                "name": "云计算业务"
+              },
+              {
+                "type": "业务分部",
+                "name": "数字能源业务"
+              },
+              {
+                "type": "业务分部",
+                "name": "智能汽车解决方案业务"
+              }
+            ],
+            "status": "unknown",
+            "scopes": [],
+            "scope_source_texts": {},
+            "quantities": [],
+            "validity": {
+              "status": "unknown",
+              "valid_from": null,
+              "valid_until": null
+            },
+            "domain_metadata": {}
+          }
+        },
+        {
+          "canonicalization_status": "CANONICALIZED",
+          "grounding_decision": "ACCEPT",
+          "review_reasons": [],
+          "grounding_reasons": [],
+          "canonical_output": {
+            "subject": {
+              "type": "业务分部",
+              "name": "ICT基础设施业务"
+            },
+            "entities": [
+              {
+                "type": "企业",
+                "name": "华为投资控股有限公司"
+              },
+              {
+                "type": "业务分部",
+                "name": "ICT基础设施业务"
+              },
+              {
+                "type": "客户类型",
+                "name": "电信运营商"
+              },
+              {
+                "type": "客户类型",
+                "name": "政企客户"
+              }
+            ],
+            "status": "unknown",
+            "scopes": [],
+            "scope_source_texts": {},
+            "quantities": [],
+            "validity": {
+              "status": "unknown",
+              "valid_from": null,
+              "valid_until": null
+            },
+            "domain_metadata": {}
+          }
+        },
+        {
+          "canonicalization_status": "CANONICALIZED",
+          "grounding_decision": "ACCEPT",
+          "review_reasons": [],
+          "grounding_reasons": [],
+          "canonical_output": {
+            "subject": {
+              "type": "业务分部",
+              "name": "ICT基础设施业务"
+            },
+            "entities": [
+              {
+                "type": "企业",
+                "name": "华为投资控股有限公司"
+              },
+              {
+                "type": "业务分部",
+                "name": "ICT基础设施业务"
+              },
+              {
+                "type": "销售模式",
+                "name": "直销模式"
+              },
+              {
+                "type": "销售模式",
+                "name": "渠道销售模式"
+              }
+            ],
+            "status": "unknown",
+            "scopes": [],
+            "scope_source_texts": {},
+            "quantities": [],
+            "validity": {
+              "status": "unknown",
+              "valid_from": null,
+              "valid_until": null
+            },
+            "domain_metadata": {}
+          }
+        },
+        {
+          "canonicalization_status": "CANONICALIZED",
+          "grounding_decision": "ACCEPT",
+          "review_reasons": [],
+          "grounding_reasons": [],
+          "canonical_output": {
+            "subject": {
+              "type": "企业",
+              "name": "华为投资控股有限公司"
+            },
+            "entities": [
+              {
+                "type": "企业",
+                "name": "华为投资控股有限公司"
+              },
+              {
+                "type": "客户类型",
+                "name": "电信运营商客户"
+              },
+              {
+                "type": "销售模式",
+                "name": "直销模式"
+              }
+            ],
+            "status": "unknown",
+            "scopes": [],
+            "scope_source_texts": {},
+            "quantities": [],
+            "validity": {
+              "status": "unknown",
+              "valid_from": null,
+              "valid_until": null
+            },
+            "domain_metadata": {}
+          }
+        },
+        {
+          "canonicalization_status": "CANONICALIZED",
+          "grounding_decision": "ACCEPT",
+          "review_reasons": [],
+          "grounding_reasons": [],
+          "canonical_output": {
+            "subject": {
+              "type": "企业",
+              "name": "华为投资控股有限公司"
+            },
+            "entities": [
+              {
+                "type": "企业",
+                "name": "华为投资控股有限公司"
+              },
+              {
+                "type": "客户类型",
+                "name": "政企客户"
+              },
+              {
+                "type": "销售模式",
+                "name": "渠道销售模式"
+              }
+            ],
+            "status": "unknown",
+            "scopes": [],
+            "scope_source_texts": {},
+            "quantities": [],
+            "validity": {
+              "status": "unknown",
+              "valid_from": null,
+              "valid_until": null
+            },
+            "domain_metadata": {}
+          }
+        }
+      ]
+    },
+    {
+      "requirement_id": "REQ-014",
+      "requirement_ids": [
+        "REQ-014",
+        "REQ-023"
+      ],
+      "source_context_key": "da4b0715-9d47-4853-ab2f-df5eee22c597\u0000MCH-CE770B545973FB9CF092951FCDC402B5\u000084e4989a8cb5503bdbaf8ac99c830e26accb65a01e1b68d31dd100fc00ea2000",
+      "source_material_id": "da4b0715-9d47-4853-ab2f-df5eee22c597",
+      "source_chunk_id": "MCH-CE770B545973FB9CF092951FCDC402B5",
+      "source_hash": "84e4989a8cb5503bdbaf8ac99c830e26accb65a01e1b68d31dd100fc00ea2000",
+      "source_ref": "MCH-CE770B545973FB9CF092951FCDC402B5",
+      "provider_call": 2,
+      "status": "FAIL",
+      "candidate_count": 0,
+      "candidate_success_empty": false,
+      "duration_ms": 32200,
+      "error_code": "FACT_SEMANTIC_EXTRACTION_FAILED",
+      "provider_audit": {
+        "provider": "deepseek_official",
+        "model": "deepseek-v4-pro",
+        "requested_provider": "deepseek_official",
+        "requested_model": "deepseek-v4-pro",
+        "response_provider": null,
+        "response_model": "deepseek-v4-pro",
+        "endpoint": "/responses",
+        "provider_http_reached": true,
+        "provider_http_status": 200,
+        "gateway_http_status": 502,
+        "latency_ms": 32190,
+        "finish_reason": "incomplete",
+        "output_truncated": true,
+        "json_parse_success": false,
+        "safe_error_code": "OUTPUT_TRUNCATED",
+        "cause_code": "PROVIDER_OUTPUT_INVALID",
+        "response_envelope_hash": null,
+        "contract_validation_failure_family": null
+      },
+      "canonicalization": []
+    },
+    {
+      "requirement_id": "REQ-139",
+      "requirement_ids": [
+        "REQ-139"
+      ],
+      "source_context_key": "da4b0715-9d47-4853-ab2f-df5eee22c597\u0000MCH-586AF54E29E13328B1D105D03FF08957\u0000beaf393788e406b1728c57531b8c7061a0d51cb910d87df2fc040f1a0d5ff0aa",
+      "source_material_id": "da4b0715-9d47-4853-ab2f-df5eee22c597",
+      "source_chunk_id": "MCH-586AF54E29E13328B1D105D03FF08957",
+      "source_hash": "beaf393788e406b1728c57531b8c7061a0d51cb910d87df2fc040f1a0d5ff0aa",
+      "source_ref": "MCH-586AF54E29E13328B1D105D03FF08957",
+      "provider_call": 3,
+      "status": "FAIL",
+      "candidate_count": 0,
+      "candidate_success_empty": false,
+      "duration_ms": 32512,
+      "error_code": "FACT_SEMANTIC_EXTRACTION_FAILED",
+      "provider_audit": {
+        "provider": "deepseek_official",
+        "model": "deepseek-v4-pro",
+        "requested_provider": "deepseek_official",
+        "requested_model": "deepseek-v4-pro",
+        "response_provider": null,
+        "response_model": "deepseek-v4-pro",
+        "endpoint": "/responses",
+        "provider_http_reached": true,
+        "provider_http_status": 200,
+        "gateway_http_status": 502,
+        "latency_ms": 32505,
+        "finish_reason": "incomplete",
+        "output_truncated": true,
+        "json_parse_success": false,
+        "safe_error_code": "OUTPUT_TRUNCATED",
+        "cause_code": "PROVIDER_OUTPUT_INVALID",
+        "response_envelope_hash": null,
+        "contract_validation_failure_family": null
+      },
+      "canonicalization": []
+    }
+  ],
+  "runtime_preflight": {
+    "gateway_base": "http://127.0.0.1:18082",
+    "ready_status": 200,
+    "info_status": 200,
+    "info": {
+      "fact_provider": "deepseek_official",
+      "fact_provider_configured": true,
+      "fact_provider_endpoint": "/responses",
+      "fact_model": "deepseek-v4-pro",
+      "build_revision": "dev-working-tree"
+    }
+  },
+  "safety": {
+    "fact_persistence": 0,
+    "production_db_writes": 0,
+    "eval_db_writes": 0,
+    "gold_mutations": 0,
+    "requirement_mutations": 0,
+    "mapping_actions": 0,
+    "claim_actions": 0,
+    "writer_actions": 0
+  }
+}

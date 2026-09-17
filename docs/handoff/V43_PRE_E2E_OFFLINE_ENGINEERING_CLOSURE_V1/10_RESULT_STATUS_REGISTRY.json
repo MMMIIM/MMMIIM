@@ -1,0 +1,104 @@
+{
+  "artifact_type": "V43_RESULT_STATUS_REGISTRY_V1",
+  "generated_at": "2026-09-16",
+  "execution_mode": "OFFLINE_ONLY",
+  "provider_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "gold_mutations": 0,
+  "production_semantic_changes": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "commit": 0,
+  "push": 0,
+  "merge": 0,
+  "deploy": 0,
+  "statuses": [
+    {
+      "asset": "Requirement Core6 canonical input",
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "authority": "source-canonical eval authority pending Human review",
+      "evidence": {
+        "path": "docs/V43_REQUIREMENT_GOLD_V2_SIX_TENDER_CANONICAL_INPUT.json",
+        "exists": true,
+        "bytes": 1670324,
+        "sha256": "ff07402688a3013af9a9b8be01f613f76848b7ea905208c1955a604432422fe1",
+        "status": "CURRENT_PARTIAL_REUSABLE",
+        "roles": [],
+        "notes": []
+      }
+    },
+    {
+      "asset": "Router V2.2.3 full replay",
+      "status": "CURRENT_REUSABLE",
+      "authority": "deterministic router result",
+      "evidence": {
+        "path": "docs/handoff/V43_RESPONSE_ROUTER_V2_2_3_FINAL_AUTHORITY_CLOSURE/07_FULL_REPLAY.json",
+        "exists": true,
+        "bytes": 6622066,
+        "sha256": "6a89ee174a981c60b21364b2a43f05ba8fac652ca2862aac2b0196e1742e0b6a",
+        "status": "CURRENT_REUSABLE",
+        "roles": [],
+        "notes": []
+      }
+    },
+    {
+      "asset": "Huawei 6-material snapshot",
+      "status": "CURRENT_REUSABLE",
+      "authority": "official public PDF snapshot; host gate required",
+      "evidence": {
+        "path": "docs/handoff/V43_REAL_E2E_AUTHORITY_AND_PROJECT_MATERIAL_BINDING_IMPLEMENTATION_V1/04_TB006_HUAWEI_BINDINGS.json",
+        "exists": true,
+        "bytes": 1084,
+        "sha256": "f17277b4a7cf71f4ae2080351bbafad349e4a7fdfccc31581bfaea69b8f10cd8",
+        "status": "CURRENT_REUSABLE",
+        "roles": [],
+        "notes": []
+      }
+    },
+    {
+      "asset": "Chengchuan Fact inventory",
+      "status": "BLOCKED_BUT_DIAGNOSTICALLY_VALID",
+      "authority": "synthetic eval only",
+      "evidence": {
+        "path": "docs/V43_CHENGCHUAN_CONTROLLED_REAL_FACT_INVENTORY.json",
+        "exists": true,
+        "bytes": 100561,
+        "sha256": "65ca3e3a8e529d3c3404a7bc2b95ef0187f95fc8ad9cfa7016393c35e9a35811",
+        "status": "BLOCKED_BUT_DIAGNOSTICALLY_VALID",
+        "roles": [],
+        "notes": []
+      }
+    },
+    {
+      "asset": "Neusoft source set",
+      "status": "QUARANTINED_AUTHORITY_ZERO",
+      "authority": "not usable as enterprise authority",
+      "evidence": {
+        "path": "backend/eval/rag-governance/15_material_source_authority_quarantine_checkpoint.json",
+        "exists": true,
+        "bytes": 2129,
+        "sha256": "a24355d97ef0716fc04c77d313390c0a9fabf83bb2509636cbdc84db95704261",
+        "status": "CURRENT_REUSABLE",
+        "roles": [],
+        "notes": []
+      }
+    },
+    {
+      "asset": "H3C HTML sources",
+      "status": "EXPLORATORY_ONLY",
+      "authority": "reference-only exploratory web",
+      "evidence": {
+        "path": "docs/handoff/V43_REFERENCE_CORPUS_SPECIFICITY_UPGRADE_AND_PAIRED_RETEST_V1/15_CHECKPOINT.json",
+        "exists": true,
+        "bytes": 1629,
+        "sha256": "5e6eecf4407af508908058accb8e777b6df1f8b51af11466d7f6be4e54ffb2d8",
+        "status": "EXPLORATORY_ONLY",
+        "roles": [],
+        "notes": []
+      }
+    }
+  ]
+}

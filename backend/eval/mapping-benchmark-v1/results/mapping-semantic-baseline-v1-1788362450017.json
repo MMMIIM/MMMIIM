@@ -1,0 +1,178 @@
+{
+  "schema_version": "4.3-mapping-semantic-baseline-v1",
+  "baseline": "MAPPING_SEMANTIC_BASELINE_V1",
+  "generated_at": "2026-09-02T15:20:50.016Z",
+  "dataset": {
+    "id": "requirement-evidence-mapping-v1-gold-2026-09-02",
+    "contract": "requirement-evidence-mapping-v1.1",
+    "cases_total": 36,
+    "semantic_cases": 35,
+    "accepted_cases": 1,
+    "sha256": "5a6d9eb7c4e7b23f347da111b5276060375b3de2e07716b9cee88d15d5431707"
+  },
+  "runtime_identity": {
+    "task": "requirement_evidence_mapping",
+    "contract_version": "4.3-requirement-evidence-mapping-v1",
+    "schema_version": "4.3-requirement-evidence-mapping-v1",
+    "instruction_hash": "e56895a6d6379da52f585d25b1ab68c8677d7941b89b980069f51240fe73ed1d",
+    "evaluator_identity": "mapping-semantic-evaluator-v1:14c70dc9996d7cb058582477eb7fb9be1cc51296b138590d75b1e819ef685110",
+    "provider_category": "openai_compatible",
+    "model": "deepseek-ai/DeepSeek-V4-Flash",
+    "response_format": "json_schema",
+    "strict": true,
+    "enable_thinking": false,
+    "temperature": 0.1,
+    "max_tokens": 4800
+  },
+  "schema_validity": {
+    "valid_cases": 0,
+    "attempted_cases": 35,
+    "ratio": 0
+  },
+  "decision_metrics": {
+    "cases": 1,
+    "schema_validity": 0,
+    "decision_accuracy": 0,
+    "dimension_accuracy": 0,
+    "subject_accuracy": 0,
+    "scope_accuracy": 0,
+    "status_accuracy": 0,
+    "quantity_accuracy": 0,
+    "entity_accuracy": 0,
+    "validity_accuracy": 0,
+    "final_mapping_accuracy": 0,
+    "false_positive_count": 0,
+    "false_positive_rate": 0,
+    "false_full_count": 0,
+    "false_full_rate": 0,
+    "conflict_recall": null,
+    "gold_conflicts": 0,
+    "detected_conflicts": 0,
+    "missed_conflict_count": 0,
+    "full_partial_accuracy": 0,
+    "true_gap_accuracy": null
+  },
+  "dimension_metrics": {
+    "subject": 0,
+    "scope": 0,
+    "status": 0,
+    "quantity": 0,
+    "entity": 0,
+    "validity": 0
+  },
+  "decision_counts": {
+    "direct_full": 0,
+    "partial_support": 0,
+    "related_reference": 0,
+    "related_insufficient": 0,
+    "conflict": 0,
+    "unrelated": 0,
+    "unknown": 0
+  },
+  "hard_safety": {
+    "false_positive": 0,
+    "false_full": 0,
+    "authority_escalation": 0,
+    "unauthorized_claim_allow": 0,
+    "writer_bypass": 0,
+    "cross_project_leakage": 0
+  },
+  "provider": {
+    "calls": 2,
+    "retries": 0,
+    "latency_ms": {
+      "p50": 1940,
+      "p90": 1940,
+      "max": 3620
+    },
+    "tokens": {
+      "input_total": null,
+      "output_total": null,
+      "input_avg": null,
+      "output_avg": null
+    }
+  },
+  "infra_failures": [
+    {
+      "case_id": "MAP-G002",
+      "error_code": "MAPPING_SEMANTIC_FAILED",
+      "message": "Mapping semantic worker request failed.",
+      "attempt_count": 1,
+      "cause_code": "INTERNAL_GATEWAY_ERROR"
+    }
+  ],
+  "structured_output_failures": [],
+  "semantic_mismatches": [
+    {
+      "case_id": "MAP-G001",
+      "expected_decision": "direct_full",
+      "actual_decision": null,
+      "expected_dimensions": {
+        "subject": "match",
+        "scope": "match",
+        "status": "match",
+        "quantity": "not_applicable",
+        "entity": "not_applicable",
+        "validity": "match"
+      },
+      "actual_dimensions": {
+        "subject_match": "match",
+        "scope_match": "match",
+        "status_match": "match",
+        "quantitative_match": "not_applicable",
+        "entity_match": "match",
+        "validity_match": "match",
+        "support_sufficiency": "match"
+      },
+      "first_failing_boundary": "SEMANTIC_MODEL"
+    }
+  ],
+  "first_failure_layers": {
+    "MAP-G001": "SEMANTIC_MODEL"
+  },
+  "downstream_safety": {
+    "status": "PASS",
+    "metrics": {
+      "false_full": 0,
+      "authority_escalation": 0,
+      "unauthorized_claim_allow": 0,
+      "writer_authority_bypass": 0,
+      "cross_project_candidate_leakage": 0
+    },
+    "violations": [],
+    "provider_calls": 0,
+    "db_writes": 0
+  },
+  "db_writes": 0,
+  "elapsed_ms": 5562,
+  "git": {
+    "branch": null,
+    "head": null,
+    "dirty": null
+  },
+  "telemetry": [
+    {
+      "case_id": "MAP-G001",
+      "attempt": 1,
+      "start": "2026-09-02T15:20:44.440Z",
+      "end": "2026-09-02T15:20:48.060Z",
+      "duration_ms": 3620,
+      "http_status": 200,
+      "gateway_result_category": "success",
+      "response_payload_present": true,
+      "schema_valid": true
+    },
+    {
+      "case_id": "MAP-G002",
+      "attempt": 1,
+      "start": "2026-09-02T15:20:48.061Z",
+      "end": "2026-09-02T15:20:50.001Z",
+      "duration_ms": 1940,
+      "http_status": 500,
+      "gateway_result_category": "error",
+      "error_code": "INTERNAL_GATEWAY_ERROR",
+      "cause_code": null,
+      "schema_valid": false
+    }
+  ]
+}

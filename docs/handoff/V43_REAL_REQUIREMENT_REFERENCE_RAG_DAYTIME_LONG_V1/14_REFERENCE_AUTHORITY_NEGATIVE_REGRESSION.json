@@ -1,0 +1,46 @@
+{
+  "artifact_type": "V43_REFERENCE_AUTHORITY_NEGATIVE_REGRESSION",
+  "source_role_owner": "backend/src/pipeline/material-source-authority-policy.js",
+  "source_role_policy_version": "material-source-role-v1",
+  "reference_context_rule": "REFERENCE_ONLY remains context-only and cannot become Enterprise Assertion Authority.",
+  "inherited_existing_boundary_evidence": {
+    "artifact": "backend/eval/gold-governance/v43-gold-v2-foundation/V43_WRITER_EVAL_PROVIDER_OFF_FOUNDATION_CHECKPOINT.json",
+    "artifact_sha256": "a14960cbe162174dab43979e0a2280ecfbaca1ce664ebe34ed40a11252e9dbff",
+    "source_role_boundary": {
+      "ENTERPRISE_EVIDENCE_ASSERTABLE_PASS": "PASS",
+      "REFERENCE_SOLUTION_DESIGN_PASS": "PASS",
+      "REFERENCE_TO_ENTERPRISE_ASSERTION_FAIL": "FAIL_CLOSED",
+      "FOREIGN_ENTERPRISE_IDENTITY_CONTAMINATION_FAIL": "FAIL_CLOSED",
+      "REFERENCE_STRONG_FACT_PROMOTION_FAIL": "FAIL_CLOSED",
+      "MIXED_ASSERTABLE_REFERENCE_BOUNDARY": "FAIL_CLOSED"
+    }
+  },
+  "checks": [
+    {
+      "check_id": "REFERENCE_ONLY_CONTEXT_ONLY",
+      "expected": "PASS",
+      "status": "INHERITED_EXISTING_ENGINEERING_REGRESSION"
+    },
+    {
+      "check_id": "REFERENCE_TO_ENTERPRISE_ASSERTION",
+      "expected": "FAIL_CLOSED",
+      "status": "INHERITED_EXISTING_ENGINEERING_REGRESSION"
+    },
+    {
+      "check_id": "FOREIGN_ENTERPRISE_CONTAMINATION",
+      "expected": "FAIL_CLOSED",
+      "status": "INHERITED_EXISTING_ENGINEERING_REGRESSION"
+    },
+    {
+      "check_id": "REFERENCE_STRONG_FACT_PROMOTION",
+      "expected": "FAIL_CLOSED",
+      "status": "INHERITED_EXISTING_ENGINEERING_REGRESSION"
+    }
+  ],
+  "reference_to_enterprise_assertion_escape_count": 0,
+  "foreign_enterprise_contamination_escape_count": 0,
+  "note": "This challenger performs no Writer generation; zero escape counts mean no authority-bearing conversion was executed or introduced by this Eval overlay.",
+  "provider_calls": 0,
+  "db_writes": 0,
+  "production_mutations": 0
+}

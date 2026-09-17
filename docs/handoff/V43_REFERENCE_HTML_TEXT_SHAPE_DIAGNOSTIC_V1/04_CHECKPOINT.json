@@ -1,0 +1,318 @@
+{
+  "artifact_type": "V43_REFERENCE_HTML_TEXT_SHAPE_DIAGNOSTIC_V1_CHECKPOINT",
+  "status": "BLOCKED_REFERENCE_HTML_TEXT_GRANULARITY_NOT_RETRIEVAL_READY",
+  "review_status": "READY_FOR_GPT_REFERENCE_HTML_TEXT_SHAPE_DIAGNOSTIC_REVIEW",
+  "target_source_count": 4,
+  "sample_row_count": 95,
+  "existing_corpus_snapshot": {
+    "total_planned_chunks": 2197,
+    "html_planned_chunks": 1819,
+    "html_fragment_share": 0.960418,
+    "exact_duplicate_rate": 0.180701,
+    "cross_source_duplicate_rate": 0.001365,
+    "input_unit_parity": {
+      "production_chunker_parity": "PASS",
+      "input_unit_parity": "MECHANICALLY_ESTABLISHED",
+      "non_comparable_source_ids": [],
+      "canonical_unit_rule": "one unique structural main-content container per H3C source; no semantic/manual selection"
+    }
+  },
+  "sample_counts_by_source": {
+    "H3C-003": {
+      "UNDER_30": 10,
+      "FROM_30_TO_99": 10,
+      "AT_LEAST_100": 5
+    },
+    "H3C-004": {
+      "UNDER_30": 10,
+      "FROM_30_TO_99": 10,
+      "AT_LEAST_100": 5
+    },
+    "H3C-010": {
+      "UNDER_30": 10,
+      "FROM_30_TO_99": 10,
+      "AT_LEAST_100": 5
+    },
+    "H3C-013": {
+      "UNDER_30": 10,
+      "FROM_30_TO_99": 10,
+      "AT_LEAST_100": 0
+    }
+  },
+  "questions": {
+    "short_chunk_primary_cause": "PER_SOURCE_MECHANICAL_ANALYSIS_IN_02_CAUSE_ANALYSIS",
+    "deterministic_structural_reconstruction": "SOURCE_LEVEL_MECHANICAL_PLAUSIBILITY_ONLY; NO PRODUCTION CHANGE",
+    "clean_alternative_sources": "NONE_FOUND_IN_LOCAL_DATA_TREE",
+    "minimal_repair_option": "SOURCE_LEVEL_RECOMMENDATIONS_IN_02_CAUSE_ANALYSIS"
+  },
+  "per_source": [
+    {
+      "source_id": "H3C-003",
+      "source_file": "data/eval/h3c-public-real-v1/raw/H3C-003_H3C_U-Center_5.0安装部署指导.html",
+      "source_sha256": "6f19b927fe5be63cd67a30f02d7cce3dfa224676380e073a20d53de954bb8483",
+      "canonical_source_unit": "ONE_DETERMINISTIC_MAIN_CONTENT_CONTAINER",
+      "selector": "#documentContent",
+      "parsed_substantive_chars": 14586,
+      "planned_chunks": 558,
+      "median_chunk_length": 16,
+      "p95_chunk_length": 77.14999999999998,
+      "under_100_char_share": 0.962366,
+      "exact_duplicate_rate": 0.304659,
+      "cross_source_duplicate_rate_reference_corpus": 0.001365,
+      "html_fragment_share": 0.962366,
+      "input_unit_parity": {
+        "production_chunker_parity": "PASS",
+        "input_unit_parity": "MECHANICALLY_ESTABLISHED",
+        "non_comparable_source_ids": [],
+        "canonical_unit_rule": "one unique structural main-content container per H3C source; no semantic/manual selection"
+      },
+      "sample_counts": {
+        "UNDER_30": 10,
+        "FROM_30_TO_99": 10,
+        "AT_LEAST_100": 5
+      },
+      "sample_classification_counts": {
+        "HEADING": 10,
+        "PARAGRAPH": 8,
+        "LIST_ITEM": 0,
+        "TABLE_CELL": 7,
+        "MECHANICAL_FRAGMENT": 0,
+        "UNKNOWN": 0
+      },
+      "cause_analysis": {
+        "primary_cause": "E_MIXED_CAUSES",
+        "contributing_causes": [
+          "A_LEGITIMATE_SHORT_SEMANTIC_UNITS",
+          "C_TABLE_LIST_STRUCTURAL_LOSS"
+        ],
+        "sampled_classification_counts": {
+          "HEADING": 10,
+          "PARAGRAPH": 8,
+          "LIST_ITEM": 0,
+          "TABLE_CELL": 7,
+          "MECHANICAL_FRAGMENT": 0,
+          "UNKNOWN": 0
+        },
+        "page_chrome_sample_count": 0,
+        "unmapped_fragment_sample_count": 0,
+        "explanation_basis": "Mechanical DOM record match and chunk length statistics only; no semantic relevance or requirement signal used."
+      },
+      "structural_text_reconstruction_before_unchanged_chunker": {
+        "mechanically_plausible": true,
+        "expected_effect": "WOULD_NOT_BY_ITSELF_MERGE_ALL_LEGITIMATE_SHORT_UNITS",
+        "semantic_decision_used": false
+      },
+      "alternative_source_audit": {
+        "clean_local_pdf_docx_article_body_found": false,
+        "candidates": [],
+        "search_scope": "Local data/ tree; filename/source-id mechanical match only."
+      },
+      "minimal_repair_option": "STRUCTURAL_TEXT_RECONSTRUCTION"
+    },
+    {
+      "source_id": "H3C-004",
+      "source_file": "data/eval/h3c-public-real-v1/raw/H3C-004_U-Center_NTA用户手册.html",
+      "source_sha256": "06dcaefa5359a6c191699de8b0e12e6a44974ef1114a954e28a76ebb3367626f",
+      "canonical_source_unit": "ONE_DETERMINISTIC_MAIN_CONTENT_CONTAINER",
+      "selector": "#documentContent",
+      "parsed_substantive_chars": 38038,
+      "planned_chunks": 1076,
+      "median_chunk_length": 22,
+      "p95_chunk_length": 85,
+      "under_100_char_share": 0.966543,
+      "exact_duplicate_rate": 0.167286,
+      "cross_source_duplicate_rate_reference_corpus": 0.001365,
+      "html_fragment_share": 0.966543,
+      "input_unit_parity": {
+        "production_chunker_parity": "PASS",
+        "input_unit_parity": "MECHANICALLY_ESTABLISHED",
+        "non_comparable_source_ids": [],
+        "canonical_unit_rule": "one unique structural main-content container per H3C source; no semantic/manual selection"
+      },
+      "sample_counts": {
+        "UNDER_30": 10,
+        "FROM_30_TO_99": 10,
+        "AT_LEAST_100": 5
+      },
+      "sample_classification_counts": {
+        "HEADING": 10,
+        "PARAGRAPH": 15,
+        "LIST_ITEM": 0,
+        "TABLE_CELL": 0,
+        "MECHANICAL_FRAGMENT": 0,
+        "UNKNOWN": 0
+      },
+      "cause_analysis": {
+        "primary_cause": "A_LEGITIMATE_SHORT_SEMANTIC_UNITS",
+        "contributing_causes": [
+          "A_LEGITIMATE_SHORT_SEMANTIC_UNITS"
+        ],
+        "sampled_classification_counts": {
+          "HEADING": 10,
+          "PARAGRAPH": 15,
+          "LIST_ITEM": 0,
+          "TABLE_CELL": 0,
+          "MECHANICAL_FRAGMENT": 0,
+          "UNKNOWN": 0
+        },
+        "page_chrome_sample_count": 0,
+        "unmapped_fragment_sample_count": 0,
+        "explanation_basis": "Mechanical DOM record match and chunk length statistics only; no semantic relevance or requirement signal used."
+      },
+      "structural_text_reconstruction_before_unchanged_chunker": {
+        "mechanically_plausible": true,
+        "expected_effect": "WOULD_NOT_BY_ITSELF_MERGE_ALL_LEGITIMATE_SHORT_UNITS",
+        "semantic_decision_used": false
+      },
+      "alternative_source_audit": {
+        "clean_local_pdf_docx_article_body_found": false,
+        "candidates": [],
+        "search_scope": "Local data/ tree; filename/source-id mechanical match only."
+      },
+      "minimal_repair_option": "STRUCTURAL_TEXT_RECONSTRUCTION"
+    },
+    {
+      "source_id": "H3C-010",
+      "source_file": "data/eval/h3c-public-real-v1/raw/H3C-010_数据备份与保护.html",
+      "source_sha256": "c3fc853f7c5684821acb56851fd9d7fc0d054f6d8e895a91739f5319088e8755",
+      "canonical_source_unit": "ONE_DETERMINISTIC_MAIN_CONTENT_CONTAINER",
+      "selector": "#ns-page-body",
+      "parsed_substantive_chars": 2918,
+      "planned_chunks": 67,
+      "median_chunk_length": 23,
+      "p95_chunk_length": 130.49999999999997,
+      "under_100_char_share": 0.820896,
+      "exact_duplicate_rate": 0.283582,
+      "cross_source_duplicate_rate_reference_corpus": 0.001365,
+      "html_fragment_share": 0.820896,
+      "input_unit_parity": {
+        "production_chunker_parity": "PASS",
+        "input_unit_parity": "MECHANICALLY_ESTABLISHED",
+        "non_comparable_source_ids": [],
+        "canonical_unit_rule": "one unique structural main-content container per H3C source; no semantic/manual selection"
+      },
+      "sample_counts": {
+        "UNDER_30": 10,
+        "FROM_30_TO_99": 10,
+        "AT_LEAST_100": 5
+      },
+      "sample_classification_counts": {
+        "HEADING": 9,
+        "PARAGRAPH": 11,
+        "LIST_ITEM": 2,
+        "TABLE_CELL": 0,
+        "MECHANICAL_FRAGMENT": 3,
+        "UNKNOWN": 0
+      },
+      "cause_analysis": {
+        "primary_cause": "E_MIXED_CAUSES",
+        "contributing_causes": [
+          "A_LEGITIMATE_SHORT_SEMANTIC_UNITS",
+          "C_TABLE_LIST_STRUCTURAL_LOSS",
+          "D_RESIDUAL_PAGE_CHROME"
+        ],
+        "sampled_classification_counts": {
+          "HEADING": 9,
+          "PARAGRAPH": 11,
+          "LIST_ITEM": 2,
+          "TABLE_CELL": 0,
+          "MECHANICAL_FRAGMENT": 3,
+          "UNKNOWN": 0
+        },
+        "page_chrome_sample_count": 3,
+        "unmapped_fragment_sample_count": 0,
+        "explanation_basis": "Mechanical DOM record match and chunk length statistics only; no semantic relevance or requirement signal used."
+      },
+      "structural_text_reconstruction_before_unchanged_chunker": {
+        "mechanically_plausible": true,
+        "expected_effect": "WOULD_NOT_BY_ITSELF_MERGE_ALL_LEGITIMATE_SHORT_UNITS",
+        "semantic_decision_used": false
+      },
+      "alternative_source_audit": {
+        "clean_local_pdf_docx_article_body_found": false,
+        "candidates": [],
+        "search_scope": "Local data/ tree; filename/source-id mechanical match only."
+      },
+      "minimal_repair_option": "STRUCTURAL_TEXT_RECONSTRUCTION"
+    },
+    {
+      "source_id": "H3C-013",
+      "source_file": "data/eval/h3c-public-real-v1/raw/H3C-013_电子政务外网乡镇延伸.html",
+      "source_sha256": "4fd8da2c61d609ded484db5c45cfbe0fad1df143e40ef298e38c234a32c8684f",
+      "canonical_source_unit": "ONE_DETERMINISTIC_MAIN_CONTENT_CONTAINER",
+      "selector": ".content > .main.pd",
+      "parsed_substantive_chars": 1974,
+      "planned_chunks": 97,
+      "median_chunk_length": 14,
+      "p95_chunk_length": 52.19999999999999,
+      "under_100_char_share": 1,
+      "exact_duplicate_rate": 0.268041,
+      "cross_source_duplicate_rate_reference_corpus": 0.001365,
+      "html_fragment_share": 1,
+      "input_unit_parity": {
+        "production_chunker_parity": "PASS",
+        "input_unit_parity": "MECHANICALLY_ESTABLISHED",
+        "non_comparable_source_ids": [],
+        "canonical_unit_rule": "one unique structural main-content container per H3C source; no semantic/manual selection"
+      },
+      "sample_counts": {
+        "UNDER_30": 10,
+        "FROM_30_TO_99": 10,
+        "AT_LEAST_100": 0
+      },
+      "sample_classification_counts": {
+        "HEADING": 8,
+        "PARAGRAPH": 11,
+        "LIST_ITEM": 1,
+        "TABLE_CELL": 0,
+        "MECHANICAL_FRAGMENT": 0,
+        "UNKNOWN": 0
+      },
+      "cause_analysis": {
+        "primary_cause": "E_MIXED_CAUSES",
+        "contributing_causes": [
+          "A_LEGITIMATE_SHORT_SEMANTIC_UNITS",
+          "C_TABLE_LIST_STRUCTURAL_LOSS"
+        ],
+        "sampled_classification_counts": {
+          "HEADING": 8,
+          "PARAGRAPH": 11,
+          "LIST_ITEM": 1,
+          "TABLE_CELL": 0,
+          "MECHANICAL_FRAGMENT": 0,
+          "UNKNOWN": 0
+        },
+        "page_chrome_sample_count": 0,
+        "unmapped_fragment_sample_count": 0,
+        "explanation_basis": "Mechanical DOM record match and chunk length statistics only; no semantic relevance or requirement signal used."
+      },
+      "structural_text_reconstruction_before_unchanged_chunker": {
+        "mechanically_plausible": true,
+        "expected_effect": "WOULD_NOT_BY_ITSELF_MERGE_ALL_LEGITIMATE_SHORT_UNITS",
+        "semantic_decision_used": false
+      },
+      "alternative_source_audit": {
+        "clean_local_pdf_docx_article_body_found": false,
+        "candidates": [],
+        "search_scope": "Local data/ tree; filename/source-id mechanical match only."
+      },
+      "minimal_repair_option": "STRUCTURAL_TEXT_RECONSTRUCTION"
+    }
+  ],
+  "side_effects": {
+    "provider_calls": 0,
+    "embedding_calls": 0,
+    "db_writes": 0,
+    "production_db_writes": 0,
+    "source_mutations": 0,
+    "chunker_mutations": 0,
+    "semantic_labels_created": 0
+  },
+  "forbidden_actions_observed": [
+    "no production chunker modification",
+    "no embedding/provider",
+    "no database writes",
+    "no semantic requirement filtering",
+    "no commit/push/merge/deploy"
+  ]
+}

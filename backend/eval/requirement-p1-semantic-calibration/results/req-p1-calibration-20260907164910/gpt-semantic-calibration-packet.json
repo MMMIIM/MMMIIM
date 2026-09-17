@@ -1,0 +1,5993 @@
+{
+  "artifact_type": "V43_REQUIREMENT_P1_GPT_SEMANTIC_CALIBRATION_PACKET",
+  "run_id": "req-p1-calibration-20260907164910",
+  "data_classification": "DEVELOPMENT_CALIBRATION_ONLY",
+  "human_gold": false,
+  "holdout": false,
+  "production_gold": false,
+  "calibration_case_count": 48,
+  "bucket_counts": {
+    "NUMBER": 12,
+    "MODALITY": 12,
+    "ENTITY": 8,
+    "SOURCE_FIDELITY": 8,
+    "ATOMICITY": 4,
+    "ROLE": 4
+  },
+  "duplicate_primary_case_count": 0,
+  "natural_context_complete_count": 48,
+  "semantic_context_refs_complete_count": 48,
+  "validation_reserve_count": 24,
+  "cases": [
+    {
+      "calibration_case_id": "NUMBER-FAST-01:REQ-004",
+      "primary_bucket": "NUMBER",
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-004",
+      "candidate_id": "FAST-01:FAST-01-G004",
+      "canonical_id": "FAST-01:REQ-004",
+      "category": "service",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C002-S013"
+      ],
+      "source_text": "（1）问题处理，及时解决信息系统在使用过程中出现的问题。",
+      "parent_heading": null,
+      "section_role": "service",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-01:FAST-01-G004",
+        "source_refs": [
+          "C002-S013"
+        ],
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_span": {
+          "start_ref": "C002-S013",
+          "end_ref": "C002-S013",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "service",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "（1）问题处理，及时解决信息系统在使用过程中出现的问题。",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C002-S013",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "应及时处理信息系统使用过程中出现的问题。",
+      "quality_gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "token": "1",
+          "classification": "STRUCTURAL_NUMBER"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C002-S013",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "NUMBER-FAST-01:REQ-005",
+      "primary_bucket": "NUMBER",
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-005",
+      "candidate_id": "FAST-01:FAST-01-G005",
+      "canonical_id": "FAST-01:REQ-005",
+      "category": "performance",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C002-S014",
+        "C002-S015"
+      ],
+      "source_text": "（2）性能优化，及时优化处理信息系统操作变慢、性能降低\n等问题。",
+      "parent_heading": null,
+      "section_role": "performance",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-01:FAST-01-G005",
+        "source_refs": [
+          "C002-S014",
+          "C002-S015"
+        ],
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_span": {
+          "start_ref": "C002-S014",
+          "end_ref": "C002-S015",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "performance",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "（2）性能优化，及时优化处理信息系统操作变慢、性能降低\n等问题。",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C002-S014",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C002-S015",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "应及时优化处理信息系统操作变慢、性能降低等性能问题。",
+      "quality_gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "token": "2",
+          "classification": "STRUCTURAL_NUMBER"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C002-S014",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C002-S015",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "NUMBER-FAST-01:REQ-006",
+      "primary_bucket": "NUMBER",
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-006",
+      "candidate_id": "FAST-01:FAST-01-G006",
+      "canonical_id": "FAST-01:REQ-006",
+      "category": "service",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C002-S016",
+        "C002-S017"
+      ],
+      "source_text": "（3）操作培训，按院方要求指导培训使用人员熟练使用信息\n系统。",
+      "parent_heading": null,
+      "section_role": "service",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-01:FAST-01-G006",
+        "source_refs": [
+          "C002-S016",
+          "C002-S017"
+        ],
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_span": {
+          "start_ref": "C002-S016",
+          "end_ref": "C002-S017",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "service",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "（3）操作培训，按院方要求指导培训使用人员熟练使用信息\n系统。",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C002-S016",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C002-S017",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "应按院方要求指导培训使用人员熟练使用信息系统。",
+      "quality_gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "token": "3",
+          "classification": "STRUCTURAL_NUMBER"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C002-S016",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C002-S017",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "NUMBER-FAST-01:REQ-007",
+      "primary_bucket": "NUMBER",
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-007",
+      "candidate_id": "FAST-01:FAST-01-G007",
+      "canonical_id": "FAST-01:REQ-007",
+      "category": "data",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C002-S018"
+      ],
+      "source_text": "（4）数据处理，协助院方按照需求进行相关数据处理。",
+      "parent_heading": null,
+      "section_role": "technical",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-01:FAST-01-G007",
+        "source_refs": [
+          "C002-S018"
+        ],
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_span": {
+          "start_ref": "C002-S018",
+          "end_ref": "C002-S018",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "technical",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "（4）数据处理，协助院方按照需求进行相关数据处理。",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C002-S018",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "应协助院方按照需求进行相关数据处理。",
+      "quality_gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "token": "4",
+          "classification": "STRUCTURAL_NUMBER"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C002-S018",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "NUMBER-FAST-01:REQ-008",
+      "primary_bucket": "NUMBER",
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-008",
+      "candidate_id": "FAST-01:FAST-01-G008",
+      "canonical_id": "FAST-01:REQ-008",
+      "category": "service",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C002-S019",
+        "C002-S020"
+      ],
+      "source_text": "（5）定期巡检，每天检查服务器、应用系统的使用情况和运\n行日志，每季度进行一次深度检查。",
+      "parent_heading": null,
+      "section_role": "service",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-01:FAST-01-G008",
+        "source_refs": [
+          "C002-S019",
+          "C002-S020"
+        ],
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_span": {
+          "start_ref": "C002-S019",
+          "end_ref": "C002-S020",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "service",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "（5）定期巡检，每天检查服务器、应用系统的使用情况和运\n行日志，每季度进行一次深度检查。",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C002-S019",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C002-S020",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "应每天检查服务器、应用系统使用情况和运行日志，并每季度进行一次深度检查。",
+      "quality_gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "secondary_reason_codes": [],
+      "detector_evidence": [
+        {
+          "token": "5",
+          "classification": "STRUCTURAL_NUMBER"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C002-S019",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C002-S020",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "NUMBER-FAST-01:REQ-009",
+      "primary_bucket": "NUMBER",
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-009",
+      "candidate_id": "FAST-01:FAST-01-G009",
+      "canonical_id": "FAST-01:REQ-009",
+      "category": "security",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C002-S021",
+        "C002-S022",
+        "C002-S023"
+      ],
+      "source_text": "（6）系统安全问题处理，配合院方完成系统安全相关工作，\n包括但不限于运维相关系统及主机的补丁升级、漏洞修复以及\n安全检查的协助等。",
+      "parent_heading": null,
+      "section_role": "technical",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-01:FAST-01-G009",
+        "source_refs": [
+          "C002-S021",
+          "C002-S022",
+          "C002-S023"
+        ],
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_span": {
+          "start_ref": "C002-S021",
+          "end_ref": "C002-S023",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "technical",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "（6）系统安全问题处理，配合院方完成系统安全相关工作，\n包括但不限于运维相关系统及主机的补丁升级、漏洞修复以及\n安全检查的协助等。",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C002-S021",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C002-S022",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C002-S023",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "应配合院方完成系统安全相关工作，包括补丁升级、漏洞修复和安全检查协助等。",
+      "quality_gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "token": "6",
+          "classification": "STRUCTURAL_NUMBER"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C002-S021",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C002-S022",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C002-S023",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "NUMBER-FAST-01:REQ-010",
+      "primary_bucket": "NUMBER",
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-010",
+      "candidate_id": "FAST-01:FAST-01-G010",
+      "canonical_id": "FAST-01:REQ-010",
+      "category": "implementation",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C003-S003",
+        "C003-S004",
+        "C003-S005"
+      ],
+      "source_text": "（1）要求派驻 3 名软件维护工程师分别驻点在用户指定地点，\n提供巡检服务，主要包括各医院信息系统轮巡、现场系统故障\n处理、远程故障处理等服务，以便出现故障及时响应。",
+      "parent_heading": null,
+      "section_role": "implementation",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-01:FAST-01-G010",
+        "source_refs": [
+          "C003-S003",
+          "C003-S004",
+          "C003-S005"
+        ],
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_span": {
+          "start_ref": "C003-S003",
+          "end_ref": "C003-S005",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "implementation",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "（1）要求派驻 3 名软件维护工程师分别驻点在用户指定地点，\n提供巡检服务，主要包括各医院信息系统轮巡、现场系统故障\n处理、远程故障处理等服务，以便出现故障及时响应。",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C003-S003",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S004",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S005",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "应派驻3名软件维护工程师分别驻点用户指定地点，提供系统轮巡、现场及远程故障处理等服务。",
+      "quality_gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "token": "1",
+          "classification": "STRUCTURAL_NUMBER"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C003-S003",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S004",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S005",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "NUMBER-FAST-01:REQ-011",
+      "primary_bucket": "NUMBER",
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-011",
+      "candidate_id": "FAST-01:FAST-01-G011",
+      "canonical_id": "FAST-01:REQ-011",
+      "category": "security",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C003-S006",
+        "C003-S007",
+        "C003-S008"
+      ],
+      "source_text": "（2）要求驻点服务人员应严格遵守医院各项规章制度，对工\n作期间接触到的医院的各项资料信息或秘密等进行保密。投标\n人应在工作日提供驻场维护服务，要求按照医院工作日时间为",
+      "parent_heading": null,
+      "section_role": "technical",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-01:FAST-01-G011",
+        "source_refs": [
+          "C003-S006",
+          "C003-S007",
+          "C003-S008"
+        ],
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_span": {
+          "start_ref": "C003-S006",
+          "end_ref": "C003-S008",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "technical",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "（2）要求驻点服务人员应严格遵守医院各项规章制度，对工\n作期间接触到的医院的各项资料信息或秘密等进行保密。投标\n人应在工作日提供驻场维护服务，要求按照医院工作日时间为",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C003-S006",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S007",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S008",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "驻点服务人员须遵守医院规章制度，并对工作期间接触的医院资料、信息或秘密保密。",
+      "quality_gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "secondary_reason_codes": [],
+      "detector_evidence": [
+        {
+          "token": "2",
+          "classification": "STRUCTURAL_NUMBER"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C003-S006",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S007",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S008",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "NUMBER-FAST-01:REQ-013",
+      "primary_bucket": "NUMBER",
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-013",
+      "candidate_id": "FAST-01:FAST-01-G013",
+      "canonical_id": "FAST-01:REQ-013",
+      "category": "implementation",
+      "writer_eligible": true,
+      "current_response_role": "CONTRACT",
+      "source_refs": [
+        "C003-S012",
+        "C003-S013",
+        "C003-S014",
+        "C003-S015"
+      ],
+      "source_text": "（3）在合同期间，投标人需保证驻点服务人员的稳定，不得\n随意进行人员调整，如果因人员离职等特殊情况需要调整时，\n要提前一个月书面通知院方，经院方同意并工作交接完成后才\n能离开，如院方对驻点人员不满意要求调整时，投标人应一个",
+      "parent_heading": null,
+      "section_role": "implementation",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-01:FAST-01-G013",
+        "source_refs": [
+          "C003-S012",
+          "C003-S013",
+          "C003-S014",
+          "C003-S015"
+        ],
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_span": {
+          "start_ref": "C003-S012",
+          "end_ref": "C003-S015",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "implementation",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "（3）在合同期间，投标人需保证驻点服务人员的稳定，不得\n随意进行人员调整，如果因人员离职等特殊情况需要调整时，\n要提前一个月书面通知院方，经院方同意并工作交接完成后才\n能离开，如院方对驻点人员不满意要求调整时，投标人应一个",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C003-S012",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S013",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S014",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S015",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "合同期间应保持驻点人员稳定；特殊情况调整须提前一个月书面通知，经院方同意并完成交接后方可离开。",
+      "quality_gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "NEGATION_DISTORTION"
+      ],
+      "secondary_reason_codes": [
+        "NEGATION_DISTORTION"
+      ],
+      "detector_evidence": [
+        {
+          "token": "3",
+          "classification": "STRUCTURAL_NUMBER"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C003-S012",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S013",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S014",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S015",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "NUMBER-FAST-01:REQ-015",
+      "primary_bucket": "NUMBER",
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-015",
+      "candidate_id": "FAST-01:FAST-01-G015",
+      "canonical_id": "FAST-01:REQ-015",
+      "category": "service",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C003-S017",
+        "C003-S018"
+      ],
+      "source_text": "（4）驻点服务人员休假和请假期间，投标人需安排临时人员\n顶替，保证系统故障及时处理。信息系统发生宕机等意外事件",
+      "parent_heading": null,
+      "section_role": "service",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-01:FAST-01-G015",
+        "source_refs": [
+          "C003-S017",
+          "C003-S018"
+        ],
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_span": {
+          "start_ref": "C003-S017",
+          "end_ref": "C003-S018",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "service",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "（4）驻点服务人员休假和请假期间，投标人需安排临时人员\n顶替，保证系统故障及时处理。信息系统发生宕机等意外事件",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C003-S017",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S018",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "驻点人员休假或请假期间，应安排临时人员顶替以保证系统故障及时处理。",
+      "quality_gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "token": "4",
+          "classification": "STRUCTURAL_NUMBER"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C003-S017",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S018",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "NUMBER-FAST-01:REQ-017",
+      "primary_bucket": "NUMBER",
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-017",
+      "candidate_id": "FAST-01:FAST-01-G017",
+      "canonical_id": "FAST-01:REQ-017",
+      "category": "service",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C003-S021",
+        "C003-S022",
+        "C003-S023"
+      ],
+      "source_text": "（5）要求投标人为驻点服务人员配备值班手机，保证 24 小时\n通讯通畅，需提供应急电话和投诉电话，对反馈的问题及时跟\n踪处理。",
+      "parent_heading": null,
+      "section_role": "service",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-01:FAST-01-G017",
+        "source_refs": [
+          "C003-S021",
+          "C003-S022",
+          "C003-S023"
+        ],
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_span": {
+          "start_ref": "C003-S021",
+          "end_ref": "C003-S023",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "service",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "（5）要求投标人为驻点服务人员配备值班手机，保证 24 小时\n通讯通畅，需提供应急电话和投诉电话，对反馈的问题及时跟\n踪处理。",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C003-S021",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S022",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S023",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "应为驻点人员配备值班手机，保证24小时通讯通畅，并提供应急电话和投诉电话，对问题及时跟踪处理。",
+      "quality_gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "secondary_reason_codes": [],
+      "detector_evidence": [
+        {
+          "token": "5",
+          "classification": "STRUCTURAL_NUMBER"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C003-S021",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S022",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S023",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "NUMBER-FAST-01:REQ-018",
+      "primary_bucket": "NUMBER",
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-018",
+      "candidate_id": "FAST-01:FAST-01-G018",
+      "canonical_id": "FAST-01:REQ-018",
+      "category": "delivery",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C003-S024",
+        "C003-S025",
+        "C003-S026"
+      ],
+      "source_text": "（6）驻点服务人员应详细记录问题处理过程，包括问题描述、\n提出人、提出时间、解决时间、解决办法等内容，按时递交工\n作报告，要求每周四下 17：00 前递交上周的服务工作周报，",
+      "parent_heading": null,
+      "section_role": "delivery",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-01:FAST-01-G018",
+        "source_refs": [
+          "C003-S024",
+          "C003-S025",
+          "C003-S026"
+        ],
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_span": {
+          "start_ref": "C003-S024",
+          "end_ref": "C003-S026",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "delivery",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "（6）驻点服务人员应详细记录问题处理过程，包括问题描述、\n提出人、提出时间、解决时间、解决办法等内容，按时递交工\n作报告，要求每周四下 17：00 前递交上周的服务工作周报，",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C003-S024",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S025",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S026",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "驻点人员应详细记录问题处理过程，包括问题描述、提出人、提出时间、解决时间和解决办法等。",
+      "quality_gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "secondary_reason_codes": [],
+      "detector_evidence": [
+        {
+          "token": "6",
+          "classification": "STRUCTURAL_NUMBER"
+        },
+        {
+          "token": "17",
+          "classification": "AMBIGUOUS_NUMBER"
+        },
+        {
+          "token": "00",
+          "classification": "AMBIGUOUS_NUMBER"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C003-S024",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S025",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S026",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "MODALITY-FAST-01:REQ-032",
+      "primary_bucket": "MODALITY",
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-032",
+      "candidate_id": "FAST-01:FAST-01-G032",
+      "canonical_id": "FAST-01:REQ-032",
+      "category": "service",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C004-S048",
+        "C004-S049"
+      ],
+      "source_text": "（2）与用户运行维护体系其他部门和环节协同工作，密切配\n合，共同开展技术支持工作。",
+      "parent_heading": null,
+      "section_role": "service",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-01:FAST-01-G032",
+        "source_refs": [
+          "C004-S048",
+          "C004-S049"
+        ],
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_span": {
+          "start_ref": "C004-S048",
+          "end_ref": "C004-S049",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "service",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "（2）与用户运行维护体系其他部门和环节协同工作，密切配\n合，共同开展技术支持工作。",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C004-S048",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S049",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "应与用户运行维护体系其他部门和环节协同配合开展技术支持。",
+      "quality_gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "reason_codes": [
+            "NUMBER_OMISSION_REVIEW",
+            "MODALITY_ADDITION_REVIEW",
+            "ENTITY_MISMATCH_REVIEW"
+          ],
+          "classification": "AMBIGUOUS"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C004-S048",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S049",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "MODALITY-FAST-01:REQ-034",
+      "primary_bucket": "MODALITY",
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-034",
+      "candidate_id": "FAST-01:FAST-01-G034",
+      "canonical_id": "FAST-01:REQ-034",
+      "category": "constraint",
+      "writer_eligible": false,
+      "current_response_role": "UNCLASSIFIED",
+      "source_refs": [
+        "C005-S002",
+        "C005-S003"
+      ],
+      "source_text": "（4）现场技术支持时要精神饱满，穿着得体，谈吐文明，举\n止庄重。接听电话时要文明礼貌，语言清晰明了，语气和善。",
+      "parent_heading": null,
+      "section_role": "contractual",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-01:FAST-01-G034",
+        "source_refs": [
+          "C005-S002",
+          "C005-S003"
+        ],
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_span": {
+          "start_ref": "C005-S002",
+          "end_ref": "C005-S003",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "contractual",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "（4）现场技术支持时要精神饱满，穿着得体，谈吐文明，举\n止庄重。接听电话时要文明礼貌，语言清晰明了，语气和善。",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C005-S002",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C005-S003",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "现场技术支持及电话服务应保持规范、文明的职业行为和沟通。",
+      "quality_gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "reason_codes": [
+            "NUMBER_OMISSION_REVIEW",
+            "MODALITY_ADDITION_REVIEW"
+          ],
+          "classification": "AMBIGUOUS"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C005-S002",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C005-S003",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "MODALITY-FAST-04:REQ-001",
+      "primary_bucket": "MODALITY",
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-001",
+      "candidate_id": "FAST-04-EXTRACT-C001",
+      "canonical_id": "FAST-04:REQ-001",
+      "category": "technical",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C001-S012",
+        "C001-S013",
+        "C001-S014"
+      ],
+      "source_text": "★注：投标人所投产品符合财政部 工业和信息化部发布的《操作系统政府采购需求\n标准（2023 年版）》、《数据库政府采购需求标准（2023 年版）》标准要求，提供中国\n信息安全测评中心网站发布的“安全可靠测评结果公告”截图。否则投标无效。",
+      "parent_heading": null,
+      "section_role": "technical",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-04-EXTRACT-C001",
+        "source_refs": [
+          "C001-S012",
+          "C001-S013",
+          "C001-S014"
+        ],
+        "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+        "source_span": {
+          "start_ref": "C001-S012",
+          "end_ref": "C001-S014",
+          "page_start": 37,
+          "page_end": 37,
+          "paragraph_start": 1212,
+          "paragraph_end": 1214,
+          "chunk_number": 1,
+          "source_start_offset": 25959,
+          "source_end_offset": 26077
+        },
+        "parent_heading": null,
+        "section_role": "technical",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "★注：投标人所投产品符合财政部 工业和信息化部发布的《操作系统政府采购需求\n标准（2023 年版）》、《数据库政府采购需求标准（2023 年版）》标准要求，提供中国\n信息安全测评中心网站发布的“安全可靠测评结果公告”截图。否则投标无效。",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C001-S012",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C001-S013",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C001-S014",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "投标人所投产品须符合财政部、工业和信息化部发布的《操作系统政府采购需求标准（2023年版）》、《数据库政府采购需求标准（2023年版）》标准要求，并提供中国信息安全测评中心网站发布的“安全可靠测评结果公告”截图，否则投标无效。",
+      "quality_gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "reason_codes": [
+            "MODALITY_ADDITION_REVIEW",
+            "ENTITY_MISMATCH_REVIEW"
+          ],
+          "classification": "TRUE_MODALITY_ESCALATION"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C001-S012",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C001-S013",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C001-S014",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "MODALITY-FAST-04:REQ-026",
+      "primary_bucket": "MODALITY",
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-026",
+      "candidate_id": "FAST-04-EXTRACT-C026",
+      "canonical_id": "FAST-04:REQ-026",
+      "category": "functional",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C003-S001"
+      ],
+      "source_text": "式引导；b)支持 bootloader 引导，支持",
+      "parent_heading": null,
+      "section_role": "technical",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-04-EXTRACT-C026",
+        "source_refs": [
+          "C003-S001"
+        ],
+        "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+        "source_span": {
+          "start_ref": "C003-S001",
+          "end_ref": "C003-S001",
+          "page_start": 40,
+          "page_end": 40,
+          "paragraph_start": 1352,
+          "paragraph_end": 1352,
+          "chunk_number": 3,
+          "source_start_offset": 28674,
+          "source_end_offset": 28699
+        },
+        "parent_heading": null,
+        "section_role": "technical",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "式引导；b)支持 bootloader 引导，支持",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C003-S001",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "操作系统应支持UEFI2.0及以上规范固件引导，当计算机以UEFI模式启动安装时，安装程序应分配ESP，并在ESP中放置启动引导文件，使系统能以UEFI模式引导；支持bootloader引导，支持MBR及GPT式引导。",
+      "quality_gate_reason_codes": [
+        "NUMBER_DISTORTION",
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "NUMBER_DISTORTION",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "reason_codes": [
+            "NUMBER_DISTORTION",
+            "MODALITY_ADDITION_REVIEW",
+            "ENTITY_MISMATCH_REVIEW"
+          ],
+          "classification": "SAFE_REQUIREMENT_NORMALIZATION"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C003-S001",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "MODALITY-FAST-04:REQ-098",
+      "primary_bucket": "MODALITY",
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-098",
+      "candidate_id": "FAST-04-EXTRACT-C098",
+      "canonical_id": "FAST-04:REQ-098",
+      "category": "functional",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C007-S001",
+        "C007-S002",
+        "C007-S003"
+      ],
+      "source_text": "平台，并对提供的开源组件进行签名认\n证，确保组件的安全性、稳定性、可靠\n性",
+      "parent_heading": null,
+      "section_role": "technical",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-04-EXTRACT-C098",
+        "source_refs": [
+          "C007-S001",
+          "C007-S002",
+          "C007-S003"
+        ],
+        "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+        "source_span": {
+          "start_ref": "C007-S001",
+          "end_ref": "C007-S003",
+          "page_start": 44,
+          "page_end": 44,
+          "paragraph_start": 1752,
+          "paragraph_end": 1754,
+          "chunk_number": 7,
+          "source_start_offset": 32618,
+          "source_end_offset": 32655
+        },
+        "parent_heading": null,
+        "section_role": "technical",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "平台，并对提供的开源组件进行签名认\n证，确保组件的安全性、稳定性、可靠\n性",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C007-S001",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C007-S002",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C007-S003",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "供应商可通过安装镜像内置、软件仓库或附加光盘等方式提供开源云计算管理平台，并对提供的开源组件进行签名认证，确保组件的安全性、稳定性、可靠性。",
+      "quality_gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "reason_codes": [
+            "MODALITY_ADDITION_REVIEW",
+            "ENTITY_MISMATCH_REVIEW"
+          ],
+          "classification": "TRUE_MODALITY_ESCALATION"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C007-S001",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C007-S002",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C007-S003",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "MODALITY-FAST-04:REQ-107",
+      "primary_bucket": "MODALITY",
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-107",
+      "candidate_id": "FAST-04-EXTRACT-C107",
+      "canonical_id": "FAST-04:REQ-107",
+      "category": "functional",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C007-S100"
+      ],
+      "source_text": "87 易用性",
+      "parent_heading": null,
+      "section_role": "technical",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-04-EXTRACT-C107",
+        "source_refs": [
+          "C007-S100"
+        ],
+        "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+        "source_span": {
+          "start_ref": "C007-S100",
+          "end_ref": "C007-S100",
+          "page_start": 45,
+          "page_end": 45,
+          "paragraph_start": 1851,
+          "paragraph_end": 1851,
+          "chunk_number": 7,
+          "source_start_offset": 34055,
+          "source_end_offset": 34061
+        },
+        "parent_heading": null,
+        "section_role": "technical",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "87 易用性",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C007-S100",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "操作系统的多文种图形用户界面应支持GB18030规定。",
+      "quality_gate_reason_codes": [
+        "NUMBER_DISTORTION",
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "NUMBER_DISTORTION",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "reason_codes": [
+            "NUMBER_DISTORTION",
+            "MODALITY_ADDITION_REVIEW",
+            "ENTITY_MISMATCH_REVIEW"
+          ],
+          "classification": "AMBIGUOUS"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C007-S100",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "MODALITY-FAST-04:REQ-146",
+      "primary_bucket": "MODALITY",
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-146",
+      "candidate_id": "FAST-04-EXTRACT-C146",
+      "canonical_id": "FAST-04:REQ-146",
+      "category": "technical",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C009-S096",
+        "C009-S097",
+        "C009-S098",
+        "C009-S099",
+        "C009-S100"
+      ],
+      "source_text": "125 兼容性\n要求\n硬件\n兼容\n★部件兼容",
+      "parent_heading": null,
+      "section_role": "technical",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-04-EXTRACT-C146",
+        "source_refs": [
+          "C009-S096",
+          "C009-S097",
+          "C009-S098",
+          "C009-S099",
+          "C009-S100"
+        ],
+        "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+        "source_span": {
+          "start_ref": "C009-S096",
+          "end_ref": "C009-S100",
+          "page_start": 47,
+          "page_end": 47,
+          "paragraph_start": 2047,
+          "paragraph_end": 2051,
+          "chunk_number": 9,
+          "source_start_offset": 36005,
+          "source_end_offset": 36027
+        },
+        "parent_heading": null,
+        "section_role": "technical",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "125 兼容性\n要求\n硬件\n兼容\n★部件兼容",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C009-S096",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C009-S097",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C009-S098",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C009-S099",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C009-S100",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "供应商提供兼容的系统总线、HBA卡、RAID卡、网卡、光纤卡、AI加速卡、GPU、NPU等品牌及型号清单。",
+      "quality_gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "reason_codes": [
+            "NUMBER_OMISSION_REVIEW",
+            "MODALITY_ADDITION_REVIEW",
+            "ENTITY_MISMATCH_REVIEW"
+          ],
+          "classification": "AMBIGUOUS"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C009-S096",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C009-S097",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C009-S098",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C009-S099",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C009-S100",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "MODALITY-FAST-04:REQ-179",
+      "primary_bucket": "MODALITY",
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-179",
+      "candidate_id": "FAST-04-EXTRACT-C179",
+      "canonical_id": "FAST-04:REQ-179",
+      "category": "service",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C011-S094",
+        "C011-S095",
+        "C011-S096",
+        "C011-S097",
+        "C011-S098",
+        "C011-S099",
+        "C011-S100"
+      ],
+      "source_text": "156 服务要\n求\n★技术服务\n时效\n操作系统厂商满足同城 4h、异地 12h 响\n要求，两个工作日解决问题，对于未能\n解决的问题和故障提供可行的升级方案",
+      "parent_heading": null,
+      "section_role": "service",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-04-EXTRACT-C179",
+        "source_refs": [
+          "C011-S094",
+          "C011-S095",
+          "C011-S096",
+          "C011-S097",
+          "C011-S098",
+          "C011-S099",
+          "C011-S100"
+        ],
+        "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+        "source_span": {
+          "start_ref": "C011-S094",
+          "end_ref": "C011-S100",
+          "page_start": 50,
+          "page_end": 50,
+          "paragraph_start": 2245,
+          "paragraph_end": 2251,
+          "chunk_number": 11,
+          "source_start_offset": 38224,
+          "source_end_offset": 38301
+        },
+        "parent_heading": null,
+        "section_role": "service",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "156 服务要\n求\n★技术服务\n时效\n操作系统厂商满足同城 4h、异地 12h 响\n要求，两个工作日解决问题，对于未能\n解决的问题和故障提供可行的升级方案",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C011-S094",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C011-S095",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C011-S096",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C011-S097",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C011-S098",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C011-S099",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C011-S100",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "操作系统厂商满足同城4h、异地12h响应要求，两个工作日解决问题，对于未能解决的问题和故障提供可行的升级方案。",
+      "quality_gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "reason_codes": [
+            "NUMBER_OMISSION_REVIEW",
+            "MODALITY_ADDITION_REVIEW",
+            "ENTITY_MISMATCH_REVIEW"
+          ],
+          "classification": "TRUE_MODALITY_ESCALATION"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C011-S094",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C011-S095",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C011-S096",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C011-S097",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C011-S098",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C011-S099",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C011-S100",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "MODALITY-FAST-04:REQ-187",
+      "primary_bucket": "MODALITY",
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-187",
+      "candidate_id": "FAST-04-EXTRACT-C187",
+      "canonical_id": "FAST-04:REQ-187",
+      "category": "security",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C012-S051",
+        "C012-S052",
+        "C012-S053",
+        "C012-S054",
+        "C012-S055",
+        "C012-S056",
+        "C012-S057",
+        "C012-S058",
+        "C012-S059",
+        "C012-S060"
+      ],
+      "source_text": "164 供应保\n障要求\n代码无\n风险\n★代码无风\n险\n操作系统厂商提供源代码，源代码可供\n第三方机构审查，开源许可合规，代码\n知识产权无风险，无恶意安全漏洞或后\n门，代码可追溯、可重构",
+      "parent_heading": null,
+      "section_role": "technical",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-04-EXTRACT-C187",
+        "source_refs": [
+          "C012-S051",
+          "C012-S052",
+          "C012-S053",
+          "C012-S054",
+          "C012-S055",
+          "C012-S056",
+          "C012-S057",
+          "C012-S058",
+          "C012-S059",
+          "C012-S060"
+        ],
+        "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+        "source_span": {
+          "start_ref": "C012-S051",
+          "end_ref": "C012-S060",
+          "page_start": 50,
+          "page_end": 50,
+          "paragraph_start": 2302,
+          "paragraph_end": 2311,
+          "chunk_number": 12,
+          "source_start_offset": 38768,
+          "source_end_offset": 38860
+        },
+        "parent_heading": null,
+        "section_role": "technical",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "164 供应保\n障要求\n代码无\n风险\n★代码无风\n险\n操作系统厂商提供源代码，源代码可供\n第三方机构审查，开源许可合规，代码\n知识产权无风险，无恶意安全漏洞或后\n门，代码可追溯、可重构",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C012-S051",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C012-S052",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C012-S053",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C012-S054",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C012-S055",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C012-S056",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C012-S057",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C012-S058",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C012-S059",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C012-S060",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "操作系统厂商提供源代码，源代码可供第三方机构审查，开源许可合规，代码知识产权无风险，无恶意安全漏洞或后门，代码可追溯、可重构。",
+      "quality_gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "MODALITY_OMISSION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "reason_codes": [
+            "NUMBER_OMISSION_REVIEW",
+            "MODALITY_OMISSION_REVIEW",
+            "ENTITY_MISMATCH_REVIEW"
+          ],
+          "classification": "TRUE_MODALITY_WEAKENING"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C012-S051",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C012-S052",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C012-S053",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C012-S054",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C012-S055",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C012-S056",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C012-S057",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C012-S058",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C012-S059",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C012-S060",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "MODALITY-FAST-04:REQ-227",
+      "primary_bucket": "MODALITY",
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-227",
+      "candidate_id": "FAST-04-EXTRACT-C227",
+      "canonical_id": "FAST-04:REQ-227",
+      "category": "functional",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C015-S098",
+        "C015-S099",
+        "C015-S100"
+      ],
+      "source_text": "12 功能\n要求 自定义数据类型\n具备用户自定义数据类型的能",
+      "parent_heading": null,
+      "section_role": "technical",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-04-EXTRACT-C227",
+        "source_refs": [
+          "C015-S098",
+          "C015-S099",
+          "C015-S100"
+        ],
+        "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+        "source_span": {
+          "start_ref": "C015-S098",
+          "end_ref": "C015-S100",
+          "page_start": 54,
+          "page_end": 54,
+          "paragraph_start": 2594,
+          "paragraph_end": 2596,
+          "chunk_number": 15,
+          "source_start_offset": 42485,
+          "source_end_offset": 42515
+        },
+        "parent_heading": null,
+        "section_role": "technical",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "12 功能\n要求 自定义数据类型\n具备用户自定义数据类型的能",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C015-S098",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C015-S099",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C015-S100",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "自定义数据类型能力：具备用户自定义数据类型的能力，可支持不同应用场景的数据类型需求。",
+      "quality_gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "reason_codes": [
+            "NUMBER_OMISSION_REVIEW",
+            "MODALITY_ADDITION_REVIEW"
+          ],
+          "classification": "AMBIGUOUS"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C015-S098",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C015-S099",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C015-S100",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "MODALITY-FAST-04:REQ-252",
+      "primary_bucket": "MODALITY",
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-252",
+      "candidate_id": "FAST-04-EXTRACT-C252",
+      "canonical_id": "FAST-04:REQ-252",
+      "category": "functional",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C017-S099",
+        "C017-S100"
+      ],
+      "source_text": "35 功能\n要求 运维 ★运行时统计信",
+      "parent_heading": null,
+      "section_role": "technical",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-04-EXTRACT-C252",
+        "source_refs": [
+          "C017-S099",
+          "C017-S100"
+        ],
+        "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+        "source_span": {
+          "start_ref": "C017-S099",
+          "end_ref": "C017-S100",
+          "page_start": 57,
+          "page_end": 57,
+          "paragraph_start": 2795,
+          "paragraph_end": 2796,
+          "chunk_number": 17,
+          "source_start_offset": 44543,
+          "source_end_offset": 44562
+        },
+        "parent_heading": null,
+        "section_role": "technical",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "35 功能\n要求 运维 ★运行时统计信",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C017-S099",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C017-S100",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "数据库慢SQL统计：支持统计SQL语句、用户名、数据库名、执行时长；数据库性能状态统计：支持统计每秒事务数和查询数、SQL平均响应时间、高频SQL。",
+      "quality_gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "reason_codes": [
+            "NUMBER_OMISSION_REVIEW",
+            "MODALITY_ADDITION_REVIEW"
+          ],
+          "classification": "AMBIGUOUS"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C017-S099",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C017-S100",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "MODALITY-FAST-04:REQ-266",
+      "primary_bucket": "MODALITY",
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-266",
+      "candidate_id": "FAST-04-EXTRACT-C266",
+      "canonical_id": "FAST-04:REQ-266",
+      "category": "functional",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C019-S023",
+        "C019-S024",
+        "C019-S025",
+        "C019-S026",
+        "C019-S027",
+        "C019-S028"
+      ],
+      "source_text": "用户/模式备\n份、恢复\na)支持对数据库的所有或指定用\n户/模式下的数据进行备份；\nb)支持对数据库的所有或指定用\n户/模式下的数据备份进行恢复",
+      "parent_heading": null,
+      "section_role": "technical",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-04-EXTRACT-C266",
+        "source_refs": [
+          "C019-S023",
+          "C019-S024",
+          "C019-S025",
+          "C019-S026",
+          "C019-S027",
+          "C019-S028"
+        ],
+        "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+        "source_span": {
+          "start_ref": "C019-S023",
+          "end_ref": "C019-S028",
+          "page_start": 59,
+          "page_end": 59,
+          "paragraph_start": 2919,
+          "paragraph_end": 2924,
+          "chunk_number": 19,
+          "source_start_offset": 45862,
+          "source_end_offset": 45934
+        },
+        "parent_heading": null,
+        "section_role": "technical",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "用户/模式备\n份、恢复\na)支持对数据库的所有或指定用\n户/模式下的数据进行备份；\nb)支持对数据库的所有或指定用\n户/模式下的数据备份进行恢复",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C019-S023",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C019-S024",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C019-S025",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C019-S026",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C019-S027",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C019-S028",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "用户/模式备份、恢复：支持对数据库的所有或指定用户/模式下的数据进行备份，并支持对相应备份进行恢复。",
+      "quality_gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "secondary_reason_codes": [],
+      "detector_evidence": [
+        {
+          "reason_codes": [
+            "MODALITY_ADDITION_REVIEW"
+          ],
+          "classification": "AMBIGUOUS"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C019-S023",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C019-S024",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C019-S025",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C019-S026",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C019-S027",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C019-S028",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "ENTITY-TB-006:REQ-027",
+      "primary_bucket": "ENTITY",
+      "tender_id": "TB-006",
+      "req_id": "TB-006:REQ-027",
+      "candidate_id": "TB-006:TB-006-G027",
+      "canonical_id": "TB-006:REQ-027",
+      "category": "security",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C004-S043",
+        "C004-S044",
+        "C004-S045"
+      ],
+      "source_text": "（3）安全及保密要求\n投标人须严格遵守采购人的相关信息安全规定，不得利用系统维护服务时的\n便利对采购人数据及其他信息擅自修改或透漏给第三方。",
+      "parent_heading": null,
+      "section_role": "technical",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "TB-006:TB-006-G027",
+        "source_refs": [
+          "C004-S043",
+          "C004-S044",
+          "C004-S045"
+        ],
+        "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_span": {
+          "start_ref": "C004-S043",
+          "end_ref": "C004-S045",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "technical",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "（3）安全及保密要求\n投标人须严格遵守采购人的相关信息安全规定，不得利用系统维护服务时的\n便利对采购人数据及其他信息擅自修改或透漏给第三方。",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C004-S043",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S044",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S045",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "应遵守采购人信息安全规定，不得利用维护便利擅自修改采购人数据或向第三方泄露采购人数据及其他信息。",
+      "quality_gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "added_entities": [
+            "应遵守采购人",
+            "不得利用维护便利擅自修改采购人数据或向第三方泄露采购人"
+          ],
+          "classification": "TRUE_ENTITY_DRIFT"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C004-S043",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S044",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S045",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "ENTITY-TB-006:REQ-040",
+      "primary_bucket": "ENTITY",
+      "tender_id": "TB-006",
+      "req_id": "TB-006:REQ-040",
+      "candidate_id": "TB-006:TB-006-G037",
+      "canonical_id": "TB-006:REQ-040",
+      "category": "security",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C005-S035",
+        "C005-S036",
+        "C005-S037",
+        "C005-S038",
+        "C005-S039",
+        "C005-S040"
+      ],
+      "source_text": "（五）保密要求\n1、中标人因承接本合同约定项目所知悉的该项目信息或采购人信息，以及\n在项目实施过程中所产生的与该项目有关的全部信息均为采购人的保密信息，中\n标人应按照采购人关于保密工作的相关要求，对上述保密信息承担保密义务。中\n标人须严格遵守信息安全规定，不得利用系统维护服务时的便利对采购人数据及\n其他信息擅自修改或透漏给第三方。",
+      "parent_heading": null,
+      "section_role": "technical",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "TB-006:TB-006-G037",
+        "source_refs": [
+          "C005-S035",
+          "C005-S036",
+          "C005-S037",
+          "C005-S038",
+          "C005-S039",
+          "C005-S040"
+        ],
+        "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+        "source_span": {
+          "start_ref": "C005-S035",
+          "end_ref": "C005-S040",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "technical",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "（五）保密要求\n1、中标人因承接本合同约定项目所知悉的该项目信息或采购人信息，以及\n在项目实施过程中所产生的与该项目有关的全部信息均为采购人的保密信息，中\n标人应按照采购人关于保密工作的相关要求，对上述保密信息承担保密义务。中\n标人须严格遵守信息安全规定，不得利用系统维护服务时的便利对采购人数据及\n其他信息擅自修改或透漏给第三方。",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C005-S035",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C005-S036",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C005-S037",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C005-S038",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C005-S039",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C005-S040",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "中标人应对项目及采购人相关保密信息承担保密义务，不得擅自修改或向第三方泄露采购人数据和其他信息。",
+      "quality_gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "added_entities": [
+            "中标人应对项目及采购人",
+            "不得擅自修改或向第三方泄露采购人"
+          ],
+          "classification": "TRUE_ENTITY_DRIFT"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C005-S035",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C005-S036",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C005-S037",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C005-S038",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C005-S039",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C005-S040",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "ENTITY-FAST-01:REQ-002",
+      "primary_bucket": "ENTITY",
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-002",
+      "candidate_id": "FAST-01:FAST-01-G002",
+      "canonical_id": "FAST-01:REQ-002",
+      "category": "implementation",
+      "writer_eligible": true,
+      "current_response_role": "COMPLIANCE",
+      "source_refs": [
+        "C001-S037",
+        "C001-S038",
+        "C001-S039",
+        "C001-S040"
+      ],
+      "source_text": "★项目负责人为投标人自有员工且与招标文件中五、供应商基本情况表的项目负责\n人填报一致。要求提供社保部门出具的投标人为其缴纳的近一个月（含开标当月）\n的社保证明作为本单位员工的证明依据；如投标人注册成立时间不足 1 个月的，可\n提供承诺函(格式自拟)，无需提供相关人员社保证明。",
+      "parent_heading": null,
+      "section_role": "implementation",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-01:FAST-01-G002",
+        "source_refs": [
+          "C001-S037",
+          "C001-S038",
+          "C001-S039",
+          "C001-S040"
+        ],
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_span": {
+          "start_ref": "C001-S037",
+          "end_ref": "C001-S040",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "implementation",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "★项目负责人为投标人自有员工且与招标文件中五、供应商基本情况表的项目负责\n人填报一致。要求提供社保部门出具的投标人为其缴纳的近一个月（含开标当月）\n的社保证明作为本单位员工的证明依据；如投标人注册成立时间不足 1 个月的，可\n提供承诺函(格式自拟)，无需提供相关人员社保证明。",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C001-S037",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C001-S038",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C001-S039",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C001-S040",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "项目负责人须为投标人自有员工，并与供应商基本情况表填报一致；须按要求提供近一个月社保证明，注册不足1个月时可提供承诺函。",
+      "quality_gate_reason_codes": [
+        "NEGATION_DISTORTION",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "NEGATION_DISTORTION"
+      ],
+      "detector_evidence": [
+        {
+          "added_entities": [
+            "并与供应商"
+          ],
+          "classification": "SAFE_CONTEXTUAL_ENTITY_RESOLUTION"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C001-S037",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C001-S038",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C001-S039",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C001-S040",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "ENTITY-FAST-04:REQ-004",
+      "primary_bucket": "ENTITY",
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-004",
+      "candidate_id": "FAST-04-EXTRACT-C004",
+      "canonical_id": "FAST-04:REQ-004",
+      "category": "implementation",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C001-S032",
+        "C001-S033",
+        "C001-S034",
+        "C001-S035",
+        "C001-S036",
+        "C001-S037",
+        "C001-S038",
+        "C001-S039"
+      ],
+      "source_text": "投标人应为本项目组建实施团队，包含一名专职项目经理，一名项目技术负责人。\n项目经理负责完成人力调度、采购安排、进度控制，以及与采购人协调等工作。项\n目经理需具备本科及以上学历,具有 10 年（含）以上相关工作经验。\n项目经理需持有下列任意 2 个证书：信息系统项目管理师、系统集成项目管理工程\n师、注册信息安全专业人员认证证书（CISP）。\n技术负责人需具备本科及以上学历，具有 5 年（含）以上相关工作经验。\n技术负责人需持有下列任意 1 个证书：系统规划与管理师、系统架构设计师、CCRC\n信息安全保障人员认证证书。",
+      "parent_heading": null,
+      "section_role": "implementation",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-04-EXTRACT-C004",
+        "source_refs": [
+          "C001-S032",
+          "C001-S033",
+          "C001-S034",
+          "C001-S035",
+          "C001-S036",
+          "C001-S037",
+          "C001-S038",
+          "C001-S039"
+        ],
+        "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+        "source_span": {
+          "start_ref": "C001-S032",
+          "end_ref": "C001-S039",
+          "page_start": 38,
+          "page_end": 38,
+          "paragraph_start": 1236,
+          "paragraph_end": 1243,
+          "chunk_number": 1,
+          "source_start_offset": 26651,
+          "source_end_offset": 26911
+        },
+        "parent_heading": null,
+        "section_role": "implementation",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "投标人应为本项目组建实施团队，包含一名专职项目经理，一名项目技术负责人。\n项目经理负责完成人力调度、采购安排、进度控制，以及与采购人协调等工作。项\n目经理需具备本科及以上学历,具有 10 年（含）以上相关工作经验。\n项目经理需持有下列任意 2 个证书：信息系统项目管理师、系统集成项目管理工程\n师、注册信息安全专业人员认证证书（CISP）。\n技术负责人需具备本科及以上学历，具有 5 年（含）以上相关工作经验。\n技术负责人需持有下列任意 1 个证书：系统规划与管理师、系统架构设计师、CCRC\n信息安全保障人员认证证书。",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C001-S032",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C001-S033",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C001-S034",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C001-S035",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C001-S036",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C001-S037",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C001-S038",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C001-S039",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "投标人应为本项目组建实施团队，包含一名专职项目经理和一名项目技术负责人。项目经理负责完成人力调度、采购安排、进度控制以及与采购人协调等工作；项目经理需具备本科及以上学历，具有10年（含）以上相关工作经验，并持有下列任意2个证书：信息系统项目管理师、系统集成项目管理工程师、注册信息安全专业人员认证证书（CISP）。技术负责人需具备本科及以上学历，具有5年（含）以上相关工作经验，并持有下列任意1个证书：系统规划与管理师、系统架构设计师、CCRC信息安全保障人员认证证书。",
+      "quality_gate_reason_codes": [
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "secondary_reason_codes": [],
+      "detector_evidence": [
+        {
+          "added_entities": [
+            "包含一名专职项目经理和一名项目",
+            "进度控制以及与采购人"
+          ],
+          "classification": "SAFE_CONTEXTUAL_ENTITY_RESOLUTION"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C001-S032",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C001-S033",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C001-S034",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C001-S035",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C001-S036",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C001-S037",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C001-S038",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C001-S039",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "ENTITY-FAST-WATER-01:REQ-001",
+      "primary_bucket": "ENTITY",
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-001",
+      "candidate_id": "FAST-WATER-01:FAST-WATER-01-G001",
+      "canonical_id": "FAST-WATER-01:REQ-001",
+      "category": "service",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C004-S010",
+        "C004-S011",
+        "C004-S012",
+        "C004-S013"
+      ],
+      "source_text": "★2.采购内容\n本项目包括以下工作内容：\n（1）信息系统运行维护；\n（2）安全运行维护服务。",
+      "parent_heading": null,
+      "section_role": "service",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-WATER-01:FAST-WATER-01-G001",
+        "source_refs": [
+          "C004-S010",
+          "C004-S011",
+          "C004-S012",
+          "C004-S013"
+        ],
+        "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+        "source_span": {
+          "start_ref": "C004-S010",
+          "end_ref": "C004-S013",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "service",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "★2.采购内容\n本项目包括以下工作内容：\n（1）信息系统运行维护；\n（2）安全运行维护服务。",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C004-S010",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S011",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S012",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S013",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "项目采购内容包括信息系统运行维护和安全运行维护服务。",
+      "quality_gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "added_entities": [
+            "项目采购内容包括信息系统"
+          ],
+          "classification": "SAFE_CONTEXTUAL_ENTITY_RESOLUTION"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C004-S010",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S011",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S012",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S013",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "ENTITY-FAST-WATER-01:REQ-096",
+      "primary_bucket": "ENTITY",
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-096",
+      "candidate_id": "FAST-WATER-01:FAST-WATER-01-G062",
+      "canonical_id": "FAST-WATER-01:REQ-096",
+      "category": "implementation",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C012-S006",
+        "C012-S007",
+        "C012-S008"
+      ],
+      "source_text": "（8）供应商应指定维护人员专门负责本项目维护工作，维护人员应具备网络系统\n相关设备维护的现场维护经验，熟悉系统和设备的操作，有能力处理出现的各类问题，\n若出现人员调整应书面通知采购人；",
+      "parent_heading": null,
+      "section_role": "implementation",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-WATER-01:FAST-WATER-01-G062",
+        "source_refs": [
+          "C012-S006",
+          "C012-S007",
+          "C012-S008"
+        ],
+        "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+        "source_span": {
+          "start_ref": "C012-S006",
+          "end_ref": "C012-S008",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "implementation",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "（8）供应商应指定维护人员专门负责本项目维护工作，维护人员应具备网络系统\n相关设备维护的现场维护经验，熟悉系统和设备的操作，有能力处理出现的各类问题，\n若出现人员调整应书面通知采购人；",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C012-S006",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C012-S007",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C012-S008",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "应指定维护人员专门负责项目，维护人员应具备相关网络设备现场维护经验和处理问题能力；人员调整应书面通知采购人。",
+      "quality_gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "added_entities": [
+            "应指定维护人员专门负责项目",
+            "人员调整应书面通知采购人"
+          ],
+          "classification": "SAFE_CONTEXTUAL_ENTITY_RESOLUTION"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C012-S006",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C012-S007",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C012-S008",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "ENTITY-FAST-WATER-01:REQ-097",
+      "primary_bucket": "ENTITY",
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-097",
+      "candidate_id": "FAST-WATER-01:FAST-WATER-01-G063",
+      "canonical_id": "FAST-WATER-01:REQ-097",
+      "category": "delivery",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C012-S009",
+        "C012-S010"
+      ],
+      "source_text": "（9）运维服务人员应根据实际的工作内容要求，详细列出本项目的主要人员、备\n件设备等说明，并对人员分工作出说明。",
+      "parent_heading": null,
+      "section_role": "delivery",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-WATER-01:FAST-WATER-01-G063",
+        "source_refs": [
+          "C012-S009",
+          "C012-S010"
+        ],
+        "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+        "source_span": {
+          "start_ref": "C012-S009",
+          "end_ref": "C012-S010",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "delivery",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "（9）运维服务人员应根据实际的工作内容要求，详细列出本项目的主要人员、备\n件设备等说明，并对人员分工作出说明。",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C012-S009",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C012-S010",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "应根据实际工作内容详细列出项目主要人员、备件设备等并说明人员分工。",
+      "quality_gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "added_entities": [
+            "应根据实际工作内容详细列出项目"
+          ],
+          "classification": "SAFE_CONTEXTUAL_ENTITY_RESOLUTION"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C012-S009",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C012-S010",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "ENTITY-TB-003:REQ-035",
+      "primary_bucket": "ENTITY",
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-035",
+      "candidate_id": "TB-003-EXTRACT-C035",
+      "canonical_id": "TB-003:REQ-035",
+      "category": "delivery",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C007-S010",
+        "C007-S011",
+        "C007-S012",
+        "C007-S013"
+      ],
+      "source_text": "完成本项目的全部费用，包括焦作市“四电”平台项目策划、设计、开发\n制作、软硬件安装调试、对接、测试、内容填充、第三方软件测评费、安\n全等级保护测评费、商用密码应用安全性评估费、技术服务、培训、税费\n标总价中已包括所有费用。",
+      "parent_heading": null,
+      "section_role": "delivery",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "TB-003-EXTRACT-C035",
+        "source_refs": [
+          "C007-S010",
+          "C007-S011",
+          "C007-S012",
+          "C007-S013"
+        ],
+        "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+        "source_span": {
+          "start_ref": "C007-S010",
+          "end_ref": "C007-S013",
+          "page_start": 23,
+          "page_end": 23,
+          "paragraph_start": 425,
+          "paragraph_end": 430,
+          "chunk_number": 7,
+          "source_start_offset": 10841,
+          "source_end_offset": 11018
+        },
+        "parent_heading": null,
+        "section_role": "delivery",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "完成本项目的全部费用，包括焦作市“四电”平台项目策划、设计、开发\n制作、软硬件安装调试、对接、测试、内容填充、第三方软件测评费、安\n全等级保护测评费、商用密码应用安全性评估费、技术服务、培训、税费\n标总价中已包括所有费用。",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C007-S010",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C007-S011",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C007-S012",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C007-S013",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "投标总价应包括完成本项目的全部费用，包括焦作市“四电”平台项目策划、设计、开发制作、软硬件安装调试、对接、测试、内容填充、第三方软件测评费、安全等级保护测评费、商用密码应用安全性评估费、技术服务、培训、税费等所有费用。",
+      "quality_gate_reason_codes": [
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "secondary_reason_codes": [],
+      "detector_evidence": [
+        {
+          "added_entities": [
+            "投标总价应包括完成本项目"
+          ],
+          "classification": "SAFE_CONTEXTUAL_ENTITY_RESOLUTION"
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C007-S010",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C007-S011",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C007-S012",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C007-S013",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "SOURCE_FIDELITY-FAST-01:REQ-001",
+      "primary_bucket": "SOURCE_FIDELITY",
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-001",
+      "candidate_id": "FAST-01:FAST-01-G001",
+      "canonical_id": "FAST-01:REQ-001",
+      "category": "constraint",
+      "writer_eligible": false,
+      "current_response_role": "CONTRACT",
+      "source_refs": [
+        "C001-S032",
+        "C001-S033",
+        "C001-S034",
+        "C001-S035"
+      ],
+      "source_text": "★服务期限：本项目服务期限为 1 年，服务时间为 2025 年 12 月 1 日至 2026 年 11\n月 30 日。服务期满后，根据中标供应商履约及考核情况确定是否续签，续签不超过\n两次（一年一签），长期服务政府采购合同履行期限最长不得超过三十六个月，如\n采购方对履约情况不满意，采购方不再续约。",
+      "parent_heading": null,
+      "section_role": "contractual",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-01:FAST-01-G001",
+        "source_refs": [
+          "C001-S032",
+          "C001-S033",
+          "C001-S034",
+          "C001-S035"
+        ],
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_span": {
+          "start_ref": "C001-S032",
+          "end_ref": "C001-S035",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "contractual",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "★服务期限：本项目服务期限为 1 年，服务时间为 2025 年 12 月 1 日至 2026 年 11\n月 30 日。服务期满后，根据中标供应商履约及考核情况确定是否续签，续签不超过\n两次（一年一签），长期服务政府采购合同履行期限最长不得超过三十六个月，如\n采购方对履约情况不满意，采购方不再续约。",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C001-S032",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C001-S033",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C001-S034",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C001-S035",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "本项目服务期限为1年，服务时间为2025年12月1日至2026年11月30日；续签不超过两次且长期服务合同履行期限最长不超过36个月。",
+      "quality_gate_reason_codes": [
+        "NUMBER_DISTORTION",
+        "NEGATION_DISTORTION",
+        "MODALITY_OMISSION_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "NUMBER_DISTORTION",
+        "NEGATION_DISTORTION",
+        "MODALITY_OMISSION_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "quality_gate_reason_codes": [
+            "NUMBER_DISTORTION",
+            "NEGATION_DISTORTION",
+            "MODALITY_OMISSION_REVIEW"
+          ],
+          "atomicity_marker": null
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C001-S032",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C001-S033",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C001-S034",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C001-S035",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "SOURCE_FIDELITY-FAST-01:REQ-003",
+      "primary_bucket": "SOURCE_FIDELITY",
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-003",
+      "candidate_id": "FAST-01:FAST-01-G003",
+      "canonical_id": "FAST-01:REQ-003",
+      "category": "service",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C002-S009",
+        "C002-S010",
+        "C002-S011",
+        "C002-S012"
+      ],
+      "source_text": "本次项目维护服务内容包括对 HIS 系统、电子病历系统、\nPACS-RIS 系统、LIS 系统、体检信息系统、手术麻醉信息系统、\n心电管理系统、输血管理系统、院感管理系统、药事管理系统\n10 个业务软件系统及相关接口维护，主要服务内容要求如下：",
+      "parent_heading": null,
+      "section_role": "service",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-01:FAST-01-G003",
+        "source_refs": [
+          "C002-S009",
+          "C002-S010",
+          "C002-S011",
+          "C002-S012"
+        ],
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_span": {
+          "start_ref": "C002-S009",
+          "end_ref": "C002-S012",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "service",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "本次项目维护服务内容包括对 HIS 系统、电子病历系统、\nPACS-RIS 系统、LIS 系统、体检信息系统、手术麻醉信息系统、\n心电管理系统、输血管理系统、院感管理系统、药事管理系统\n10 个业务软件系统及相关接口维护，主要服务内容要求如下：",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C002-S009",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C002-S010",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C002-S011",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C002-S012",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "维护服务范围应覆盖HIS、电子病历、PACS-RIS、LIS、体检、手术麻醉、心电、输血、院感、药事等10个业务软件系统及相关接口。",
+      "quality_gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "SCOPE_EXPANSION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "SCOPE_EXPANSION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "quality_gate_reason_codes": [
+            "MODALITY_ADDITION_REVIEW",
+            "SCOPE_EXPANSION_REVIEW",
+            "ENTITY_MISMATCH_REVIEW"
+          ],
+          "atomicity_marker": null
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C002-S009",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C002-S010",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C002-S011",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C002-S012",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "SOURCE_FIDELITY-FAST-01:REQ-016",
+      "primary_bucket": "SOURCE_FIDELITY",
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-016",
+      "candidate_id": "FAST-01:FAST-01-G016",
+      "canonical_id": "FAST-01:REQ-016",
+      "category": "performance",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C003-S018",
+        "C003-S019",
+        "C003-S020"
+      ],
+      "source_text": "顶替，保证系统故障及时处理。信息系统发生宕机等意外事件\n严重影响医院业务，现场驻点维护人员预计 30 分钟内不能排\n除故障时，投标人应安排技术人员 2 小时内赶到现场处理。",
+      "parent_heading": null,
+      "section_role": "performance",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-01:FAST-01-G016",
+        "source_refs": [
+          "C003-S018",
+          "C003-S019",
+          "C003-S020"
+        ],
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_span": {
+          "start_ref": "C003-S018",
+          "end_ref": "C003-S020",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "performance",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "顶替，保证系统故障及时处理。信息系统发生宕机等意外事件\n严重影响医院业务，现场驻点维护人员预计 30 分钟内不能排\n除故障时，投标人应安排技术人员 2 小时内赶到现场处理。",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C003-S018",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S019",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S020",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "信息系统宕机等严重影响业务且现场人员预计30分钟内无法排除时，应安排技术人员2小时内到场处理。",
+      "quality_gate_reason_codes": [
+        "NEGATION_DISTORTION"
+      ],
+      "secondary_reason_codes": [
+        "NEGATION_DISTORTION"
+      ],
+      "detector_evidence": [
+        {
+          "quality_gate_reason_codes": [
+            "NEGATION_DISTORTION"
+          ],
+          "atomicity_marker": null
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C003-S018",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S019",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S020",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "SOURCE_FIDELITY-FAST-01:REQ-021",
+      "primary_bucket": "SOURCE_FIDELITY",
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-021",
+      "candidate_id": "FAST-01:FAST-01-G021",
+      "canonical_id": "FAST-01:REQ-021",
+      "category": "performance",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C003-S042",
+        "C003-S043",
+        "C003-S044",
+        "C003-S045",
+        "C003-S046",
+        "C003-S047",
+        "C003-S048"
+      ],
+      "source_text": "一级 数据库、应用信 立即 立即 ≦30\n15 / 56\n- 16 -\n息系统等故障，\n造成全院业务整\n体受影响\n分钟",
+      "parent_heading": null,
+      "section_role": "performance",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-01:FAST-01-G021",
+        "source_refs": [
+          "C003-S042",
+          "C003-S043",
+          "C003-S044",
+          "C003-S045",
+          "C003-S046",
+          "C003-S047",
+          "C003-S048"
+        ],
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_span": {
+          "start_ref": "C003-S042",
+          "end_ref": "C003-S048",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "performance",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "一级 数据库、应用信 立即 立即 ≦30\n15 / 56\n- 16 -\n息系统等故障，\n造成全院业务整\n体受影响\n分钟",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C003-S042",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S043",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S044",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S045",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S046",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S047",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S048",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "一级故障应立即响应、立即处理，并在30分钟内解决。",
+      "quality_gate_reason_codes": [
+        "NUMBER_DISTORTION"
+      ],
+      "secondary_reason_codes": [
+        "NUMBER_DISTORTION"
+      ],
+      "detector_evidence": [
+        {
+          "quality_gate_reason_codes": [
+            "NUMBER_DISTORTION"
+          ],
+          "atomicity_marker": null
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C003-S042",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S043",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S044",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S045",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S046",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S047",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S048",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "SOURCE_FIDELITY-FAST-01:REQ-022",
+      "primary_bucket": "SOURCE_FIDELITY",
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-022",
+      "candidate_id": "FAST-01:FAST-01-G022",
+      "canonical_id": "FAST-01:REQ-022",
+      "category": "performance",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C003-S049",
+        "C003-S050",
+        "C004-S001",
+        "C004-S002",
+        "C004-S003",
+        "C004-S004",
+        "C004-S005",
+        "C004-S006",
+        "C004-S007"
+      ],
+      "source_text": "二级 信息系统故障，\n导致单项业务整\n体受影响或不能\n中断的临床业务\n受影响\n立即 ≦10\n分钟\n≦50\n分钟",
+      "parent_heading": null,
+      "section_role": "performance",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-01:FAST-01-G022",
+        "source_refs": [
+          "C003-S049",
+          "C003-S050",
+          "C004-S001",
+          "C004-S002",
+          "C004-S003",
+          "C004-S004",
+          "C004-S005",
+          "C004-S006",
+          "C004-S007"
+        ],
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_span": {
+          "start_ref": "C003-S049",
+          "end_ref": "C004-S007",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "performance",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "二级 信息系统故障，\n导致单项业务整\n体受影响或不能\n中断的临床业务\n受影响\n立即 ≦10\n分钟\n≦50\n分钟",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C003-S049",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S050",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S001",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S002",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S003",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S004",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S005",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S006",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S007",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "二级故障应立即响应，处理时间不超过10分钟，解决时间不超过50分钟。",
+      "quality_gate_reason_codes": [
+        "NEGATION_DISTORTION"
+      ],
+      "secondary_reason_codes": [
+        "NEGATION_DISTORTION"
+      ],
+      "detector_evidence": [
+        {
+          "quality_gate_reason_codes": [
+            "NEGATION_DISTORTION"
+          ],
+          "atomicity_marker": null
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C003-S049",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S050",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S001",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S002",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S003",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S004",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S005",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S006",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S007",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "SOURCE_FIDELITY-FAST-01:REQ-023",
+      "primary_bucket": "SOURCE_FIDELITY",
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-023",
+      "candidate_id": "FAST-01:FAST-01-G023",
+      "canonical_id": "FAST-01:REQ-023",
+      "category": "performance",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C004-S008",
+        "C004-S009",
+        "C004-S010",
+        "C004-S011",
+        "C004-S012",
+        "C004-S013",
+        "C004-S014",
+        "C004-S015",
+        "C004-S016",
+        "C004-S017"
+      ],
+      "source_text": "三级 信息系统故障，\n导致个体工作站\n非紧急业务受影\n响\n≦10 分\n钟\n≦30\n分钟\n≦2 小\n时",
+      "parent_heading": null,
+      "section_role": "performance",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-01:FAST-01-G023",
+        "source_refs": [
+          "C004-S008",
+          "C004-S009",
+          "C004-S010",
+          "C004-S011",
+          "C004-S012",
+          "C004-S013",
+          "C004-S014",
+          "C004-S015",
+          "C004-S016",
+          "C004-S017"
+        ],
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_span": {
+          "start_ref": "C004-S008",
+          "end_ref": "C004-S017",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "performance",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "三级 信息系统故障，\n导致个体工作站\n非紧急业务受影\n响\n≦10 分\n钟\n≦30\n分钟\n≦2 小\n时",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C004-S008",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S009",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S010",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S011",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S012",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S013",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S014",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S015",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S016",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S017",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "三级故障响应时间不超过10分钟、处理时间不超过30分钟、解决时间不超过2小时。",
+      "quality_gate_reason_codes": [
+        "NEGATION_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "NEGATION_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "quality_gate_reason_codes": [
+            "NEGATION_DISTORTION",
+            "MODALITY_ADDITION_REVIEW"
+          ],
+          "atomicity_marker": null
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C004-S008",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S009",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S010",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S011",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S012",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S013",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S014",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S015",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S016",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S017",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "SOURCE_FIDELITY-FAST-01:REQ-024",
+      "primary_bucket": "SOURCE_FIDELITY",
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-024",
+      "candidate_id": "FAST-01:FAST-01-G024",
+      "canonical_id": "FAST-01:REQ-024",
+      "category": "performance",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C004-S018",
+        "C004-S019",
+        "C004-S020",
+        "C004-S021",
+        "C004-S022",
+        "C004-S023",
+        "C004-S024",
+        "C004-S025",
+        "C004-S026",
+        "C004-S027",
+        "C004-S028"
+      ],
+      "source_text": "四级 信息系统故障，\n导致个体工作站\n单个业务不能开\n展，日程工作不\n受影响\n≦20 分\n钟\n≦1 小\n时\n≦24\n小时",
+      "parent_heading": null,
+      "section_role": "performance",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-01:FAST-01-G024",
+        "source_refs": [
+          "C004-S018",
+          "C004-S019",
+          "C004-S020",
+          "C004-S021",
+          "C004-S022",
+          "C004-S023",
+          "C004-S024",
+          "C004-S025",
+          "C004-S026",
+          "C004-S027",
+          "C004-S028"
+        ],
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_span": {
+          "start_ref": "C004-S018",
+          "end_ref": "C004-S028",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "performance",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "四级 信息系统故障，\n导致个体工作站\n单个业务不能开\n展，日程工作不\n受影响\n≦20 分\n钟\n≦1 小\n时\n≦24\n小时",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C004-S018",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S019",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S020",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S021",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S022",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S023",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S024",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S025",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S026",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S027",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S028",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "四级故障响应时间不超过20分钟、处理时间不超过1小时、解决时间不超过24小时。",
+      "quality_gate_reason_codes": [
+        "NEGATION_DISTORTION"
+      ],
+      "secondary_reason_codes": [
+        "NEGATION_DISTORTION"
+      ],
+      "detector_evidence": [
+        {
+          "quality_gate_reason_codes": [
+            "NEGATION_DISTORTION"
+          ],
+          "atomicity_marker": null
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C004-S018",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S019",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S020",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S021",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S022",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S023",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S024",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S025",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S026",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S027",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S028",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "SOURCE_FIDELITY-FAST-01:REQ-026",
+      "primary_bucket": "SOURCE_FIDELITY",
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-026",
+      "candidate_id": "FAST-01:FAST-01-G026",
+      "canonical_id": "FAST-01:REQ-026",
+      "category": "constraint",
+      "writer_eligible": false,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C004-S031",
+        "C004-S032",
+        "C004-S033"
+      ],
+      "source_text": "认后方可进行调整维护。维护内容只限于现有功能模块及政策\n类的需求、各类接口优化及数据报表统计处理，不包括新增功\n能模块需求。一般需求要求一周内完成，重大需求最长不超过",
+      "parent_heading": null,
+      "section_role": "contractual",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-01:FAST-01-G026",
+        "source_refs": [
+          "C004-S031",
+          "C004-S032",
+          "C004-S033"
+        ],
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_span": {
+          "start_ref": "C004-S031",
+          "end_ref": "C004-S033",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "contractual",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "认后方可进行调整维护。维护内容只限于现有功能模块及政策\n类的需求、各类接口优化及数据报表统计处理，不包括新增功\n能模块需求。一般需求要求一周内完成，重大需求最长不超过",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C004-S031",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S032",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C004-S033",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "适应性调整维护仅限现有功能模块、政策类需求、接口优化及数据报表统计处理，不包括新增功能模块。",
+      "quality_gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "SCOPE_EXPANSION_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "SCOPE_EXPANSION_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "quality_gate_reason_codes": [
+            "MODALITY_ADDITION_REVIEW",
+            "SCOPE_EXPANSION_REVIEW"
+          ],
+          "atomicity_marker": null
+        }
+      ],
+      "current_audit_classification": "REVIEW_REQUIRED",
+      "semantic_context_refs": [
+        {
+          "ref": "C004-S031",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S032",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C004-S033",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "ATOMICITY-JY-001:REQ-021",
+      "primary_bucket": "ATOMICITY",
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-021",
+      "candidate_id": "JY-001:CAND-021",
+      "canonical_id": "JY-001:REQ-021",
+      "category": "technical",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [],
+      "source_text": "数据处理性能：单表查询（100 \t万条左右），响应<1 \t秒；数据多表关联查询<3 \t秒。",
+      "parent_heading": null,
+      "section_role": "technical",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "JY-001:CAND-021",
+        "source_refs": [],
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_span": {
+          "start_ref": null,
+          "end_ref": null,
+          "page_start": 19,
+          "page_end": 19,
+          "paragraph_start": 548,
+          "paragraph_end": 548,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "technical",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "数据处理性能：单表查询（100 \t万条左右），响应<1 \t秒；数据多表关联查询<3 \t秒。",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "canonical.source_span",
+            "origin": "canonical.source_span"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "单表查询(100万条左右),响应<1秒;数据多表关联查询<3秒。",
+      "quality_gate_reason_codes": [],
+      "secondary_reason_codes": [],
+      "detector_evidence": [
+        {
+          "quality_gate_reason_codes": [],
+          "atomicity_marker": {
+            "canonical_requirement_id": "JY-001:REQ-021",
+            "tender_id": "JY-001",
+            "reason": "ATOMICITY_REVIEW_REQUIRED",
+            "text_length": 32,
+            "text_preview": "单表查询(100万条左右),响应<1秒;数据多表关联查询<3秒。"
+          }
+        }
+      ],
+      "current_audit_classification": "ATOMICITY_REVIEW_QUEUE",
+      "semantic_context_refs": [
+        {
+          "ref": "canonical.source_span",
+          "origin": "canonical.source_span"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "ATOMICITY-JY-001:REQ-023",
+      "primary_bucket": "ATOMICITY",
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-023",
+      "candidate_id": "JY-001:CAND-023",
+      "canonical_id": "JY-001:REQ-023",
+      "category": "technical",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [],
+      "source_text": "3) \t简单报表（关联 \t3 \t张表数据，查询数据量百万级）响应时间：1-5（秒）；\n4) \t复杂报表（关联 \t3-5 \t张表数据，查询数据量千万级）响应时间：1-10（秒）；",
+      "parent_heading": null,
+      "section_role": "technical",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "JY-001:CAND-023",
+        "source_refs": [],
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_span": {
+          "start_ref": null,
+          "end_ref": null,
+          "page_start": 19,
+          "page_end": 19,
+          "paragraph_start": 555,
+          "paragraph_end": 556,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "technical",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "3) \t简单报表（关联 \t3 \t张表数据，查询数据量百万级）响应时间：1-5（秒）；\n4) \t复杂报表（关联 \t3-5 \t张表数据，查询数据量千万级）响应时间：1-10（秒）；",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "canonical.source_span",
+            "origin": "canonical.source_span"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "简单报表(关联3张表数据,查询数据量百万级)响应时间1-5秒;复杂报表(关联3-5张表数据,查询数据量千万级)响应时间1-10秒。",
+      "quality_gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "quality_gate_reason_codes": [
+            "NUMBER_OMISSION_REVIEW"
+          ],
+          "atomicity_marker": {
+            "canonical_requirement_id": "JY-001:REQ-023",
+            "tender_id": "JY-001",
+            "reason": "ATOMICITY_REVIEW_REQUIRED",
+            "text_length": 65,
+            "text_preview": "简单报表(关联3张表数据,查询数据量百万级)响应时间1-5秒;复杂报表(关联3-5张表数据,查询数据量千万级)响应时间1-10秒。"
+          }
+        }
+      ],
+      "current_audit_classification": "ATOMICITY_REVIEW_QUEUE",
+      "semantic_context_refs": [
+        {
+          "ref": "canonical.source_span",
+          "origin": "canonical.source_span"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "ATOMICITY-JY-001:REQ-073",
+      "primary_bucket": "ATOMICITY",
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-073",
+      "candidate_id": "JY-001:CAND-073",
+      "canonical_id": "JY-001:REQ-073",
+      "category": "technical",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [],
+      "source_text": "网格学院移动端通过微信公众号的形式，以微信小程序为载体，打通江苏省网格化\n平台账号体系，方便对学习人员进行有效的管理。管理员可以在网格学院后台对移动端\n学习课程进行管理，包含课程分类和课程管理，为后续课程归类做划分。包括不限于考\n试增、删、改、查，试题分类、题库管理、试卷分类、考试管理、成绩统计和纠错管理\n等。",
+      "parent_heading": null,
+      "section_role": "technical",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "JY-001:CAND-073",
+        "source_refs": [],
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_span": {
+          "start_ref": null,
+          "end_ref": null,
+          "page_start": 23,
+          "page_end": 23,
+          "paragraph_start": 713,
+          "paragraph_end": 717,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "technical",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "网格学院移动端通过微信公众号的形式，以微信小程序为载体，打通江苏省网格化\n平台账号体系，方便对学习人员进行有效的管理。管理员可以在网格学院后台对移动端\n学习课程进行管理，包含课程分类和课程管理，为后续课程归类做划分。包括不限于考\n试增、删、改、查，试题分类、题库管理、试卷分类、考试管理、成绩统计和纠错管理\n等。",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "canonical.source_span",
+            "origin": "canonical.source_span"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "网格学院移动端应通过微信公众号的形式,以微信小程序为载体,打通江苏省网格化平台账号体系,方便对学习人员进行有效的管理;管理员可以在网格学院后台对移动端学习课程进行管理,包含课程分类和课程管理,为后续课程归类做划分,包括不限于考试增、删、改、查,试题分类、题库管理、试卷分类、考试管理、成绩统计和纠错管理等。",
+      "quality_gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "quality_gate_reason_codes": [
+            "MODALITY_ADDITION_REVIEW"
+          ],
+          "atomicity_marker": {
+            "canonical_requirement_id": "JY-001:REQ-073",
+            "tender_id": "JY-001",
+            "reason": "ATOMICITY_REVIEW_REQUIRED",
+            "text_length": 153,
+            "text_preview": "网格学院移动端应通过微信公众号的形式,以微信小程序为载体,打通江苏省网格化平台账号体系,方便对学习人员进行有效的管理;管理员可以在网格学院后台对移动端学习课程进行管理,包含课程分类和课程管理,为后续课程归类做划分,包括不限于考试增、删、改、查,试题分类、题库管理、试卷分类、考试管"
+          }
+        }
+      ],
+      "current_audit_classification": "ATOMICITY_REVIEW_QUEUE",
+      "semantic_context_refs": [
+        {
+          "ref": "canonical.source_span",
+          "origin": "canonical.source_span"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "ATOMICITY-JY-001:REQ-080",
+      "primary_bucket": "ATOMICITY",
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-080",
+      "candidate_id": "JY-001:CAND-080",
+      "canonical_id": "JY-001:REQ-080",
+      "category": "technical",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [],
+      "source_text": "升级数据库，通过架构升级、数据结构优化、查询性能优化、历史数据迁移，保证业\n务连续的基础上，提升数据库整体性能。升级后整体性能应满足一下指标要求：\n数据服务类接口响应时间需<=1 \t秒。常规页面展示响应时间需<=3 \t秒。\n数据查询：事件类数据查询时间<1 \t秒。统计分析类查询响应时间需<=10 \t秒。",
+      "parent_heading": null,
+      "section_role": "technical",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "JY-001:CAND-080",
+        "source_refs": [],
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_span": {
+          "start_ref": null,
+          "end_ref": null,
+          "page_start": 24,
+          "page_end": 24,
+          "paragraph_start": 741,
+          "paragraph_end": 744,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "technical",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "升级数据库，通过架构升级、数据结构优化、查询性能优化、历史数据迁移，保证业\n务连续的基础上，提升数据库整体性能。升级后整体性能应满足一下指标要求：\n数据服务类接口响应时间需<=1 \t秒。常规页面展示响应时间需<=3 \t秒。\n数据查询：事件类数据查询时间<1 \t秒。统计分析类查询响应时间需<=10 \t秒。",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "canonical.source_span",
+            "origin": "canonical.source_span"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "12345数据库升级应通过架构升级、数据结构优化、查询性能优化、历史数据迁移,保证业务连续的基础上,提升数据库整体性能,升级后整体性能应满足以下指标要求:数据服务类接口响应时间需<=1秒,常规页面展示响应时间需<=3秒,事件类数据查询时间<1秒,统计分析类查询响应时间需<=10秒。",
+      "quality_gate_reason_codes": [
+        "NUMBER_DISTORTION"
+      ],
+      "secondary_reason_codes": [
+        "NUMBER_DISTORTION"
+      ],
+      "detector_evidence": [
+        {
+          "quality_gate_reason_codes": [
+            "NUMBER_DISTORTION"
+          ],
+          "atomicity_marker": {
+            "canonical_requirement_id": "JY-001:REQ-080",
+            "tender_id": "JY-001",
+            "reason": "ATOMICITY_REVIEW_REQUIRED",
+            "text_length": 141,
+            "text_preview": "12345数据库升级应通过架构升级、数据结构优化、查询性能优化、历史数据迁移,保证业务连续的基础上,提升数据库整体性能,升级后整体性能应满足以下指标要求:数据服务类接口响应时间需<=1秒,常规页面展示响应时间需<=3秒,事件类数据查询时间<1秒,统计分析类查询响应时间需<=10秒"
+          }
+        }
+      ],
+      "current_audit_classification": "ATOMICITY_REVIEW_QUEUE",
+      "semantic_context_refs": [
+        {
+          "ref": "canonical.source_span",
+          "origin": "canonical.source_span"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "ROLE-FAST-01:REQ-012",
+      "primary_bucket": "ROLE",
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-012",
+      "candidate_id": "FAST-01:FAST-01-G012",
+      "canonical_id": "FAST-01:REQ-012",
+      "category": "service",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C003-S008",
+        "C003-S009",
+        "C003-S010",
+        "C003-S011"
+      ],
+      "source_text": "人应在工作日提供驻场维护服务，要求按照医院工作日时间为\n上午 8：00-下午 17：00，其它时间可远程协助处理，必要时\n现场处理，如遇紧急情况或临时工作任务等需要加班时，驻点\n人员需积极配合院方。",
+      "parent_heading": null,
+      "section_role": "service",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-01:FAST-01-G012",
+        "source_refs": [
+          "C003-S008",
+          "C003-S009",
+          "C003-S010",
+          "C003-S011"
+        ],
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_span": {
+          "start_ref": "C003-S008",
+          "end_ref": "C003-S011",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "service",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "人应在工作日提供驻场维护服务，要求按照医院工作日时间为\n上午 8：00-下午 17：00，其它时间可远程协助处理，必要时\n现场处理，如遇紧急情况或临时工作任务等需要加班时，驻点\n人员需积极配合院方。",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C003-S008",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S009",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S010",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S011",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "工作日驻场维护时间为8:00-17:00，其他时间可远程协助，必要时现场处理，紧急或临时任务需配合加班。",
+      "quality_gate_reason_codes": [
+        "MODALITY_OMISSION_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "MODALITY_OMISSION_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "quality_gate_reason_codes": [
+            "MODALITY_OMISSION_REVIEW"
+          ],
+          "atomicity_marker": null
+        }
+      ],
+      "current_audit_classification": "TECHNICAL",
+      "semantic_context_refs": [
+        {
+          "ref": "C003-S008",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S009",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S010",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S011",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "ROLE-FAST-01:REQ-014",
+      "primary_bucket": "ROLE",
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-014",
+      "candidate_id": "FAST-01:FAST-01-G014",
+      "canonical_id": "FAST-01:REQ-014",
+      "category": "implementation",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C003-S015",
+        "C003-S016"
+      ],
+      "source_text": "能离开，如院方对驻点人员不满意要求调整时，投标人应一个\n月内进行更换，并确保调整后的人员满足院方要求。",
+      "parent_heading": null,
+      "section_role": "implementation",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-01:FAST-01-G014",
+        "source_refs": [
+          "C003-S015",
+          "C003-S016"
+        ],
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_span": {
+          "start_ref": "C003-S015",
+          "end_ref": "C003-S016",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "implementation",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "能离开，如院方对驻点人员不满意要求调整时，投标人应一个\n月内进行更换，并确保调整后的人员满足院方要求。",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C003-S015",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S016",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "院方要求调整驻点人员时，投标人应在一个月内更换并确保新人员满足院方要求。",
+      "quality_gate_reason_codes": [],
+      "secondary_reason_codes": [],
+      "detector_evidence": [
+        {
+          "quality_gate_reason_codes": [],
+          "atomicity_marker": null
+        }
+      ],
+      "current_audit_classification": "TECHNICAL",
+      "semantic_context_refs": [
+        {
+          "ref": "C003-S015",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S016",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "ROLE-FAST-01:REQ-019",
+      "primary_bucket": "ROLE",
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-019",
+      "candidate_id": "FAST-01:FAST-01-G019",
+      "canonical_id": "FAST-01:REQ-019",
+      "category": "delivery",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C003-S026",
+        "C003-S027",
+        "C003-S028",
+        "C003-S029"
+      ],
+      "source_text": "作报告，要求每周四下 17：00 前递交上周的服务工作周报，\n每月 5 号下午 17：00 前递交服务工作月报，季度巡检报告要\n求巡检后 15 个工作日内提供，服务到期后递交年度服务整体\n报告。",
+      "parent_heading": null,
+      "section_role": "delivery",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-01:FAST-01-G019",
+        "source_refs": [
+          "C003-S026",
+          "C003-S027",
+          "C003-S028",
+          "C003-S029"
+        ],
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_span": {
+          "start_ref": "C003-S026",
+          "end_ref": "C003-S029",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "delivery",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "作报告，要求每周四下 17：00 前递交上周的服务工作周报，\n每月 5 号下午 17：00 前递交服务工作月报，季度巡检报告要\n求巡检后 15 个工作日内提供，服务到期后递交年度服务整体\n报告。",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C003-S026",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S027",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S028",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S029",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "应按规定提交服务报告：周报每周四17:00前、月报每月5日17:00前、季度巡检报告巡检后15个工作日内、服务到期后提交年度整体报告。",
+      "quality_gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "quality_gate_reason_codes": [
+            "MODALITY_ADDITION_REVIEW"
+          ],
+          "atomicity_marker": null
+        }
+      ],
+      "current_audit_classification": "TECHNICAL",
+      "semantic_context_refs": [
+        {
+          "ref": "C003-S026",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S027",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S028",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S029",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    },
+    {
+      "calibration_case_id": "ROLE-FAST-01:REQ-020",
+      "primary_bucket": "ROLE",
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-020",
+      "candidate_id": "FAST-01:FAST-01-G020",
+      "canonical_id": "FAST-01:REQ-020",
+      "category": "service",
+      "writer_eligible": true,
+      "current_response_role": "TECHNICAL",
+      "source_refs": [
+        "C003-S030",
+        "C003-S031",
+        "C003-S032"
+      ],
+      "source_text": "（7）问题处理按照《表 1：故障分级及响应机制》，一级故\n障或未能在规定时间内解决其它级别故障，应及时报告院方指\n定人员，一级故障解决后应一天内递交重大信息事件报告。",
+      "parent_heading": null,
+      "section_role": "service",
+      "table_title": null,
+      "table_headers": null,
+      "row_header": null,
+      "natural_source_window": {
+        "candidate_id": "FAST-01:FAST-01-G020",
+        "source_refs": [
+          "C003-S030",
+          "C003-S031",
+          "C003-S032"
+        ],
+        "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+        "source_span": {
+          "start_ref": "C003-S030",
+          "end_ref": "C003-S032",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": null,
+          "paragraph_end": null,
+          "chunk_number": null,
+          "source_start_offset": null,
+          "source_end_offset": null
+        },
+        "parent_heading": null,
+        "section_role": "service",
+        "table_title": null,
+        "table_headers": null,
+        "row_header": null,
+        "natural_source_window": {
+          "previous_context": null,
+          "current_context": "（7）问题处理按照《表 1：故障分级及响应机制》，一级故\n障或未能在规定时间内解决其它级别故障，应及时报告院方指\n定人员，一级故障解决后应一天内递交重大信息事件报告。",
+          "next_context": null
+        },
+        "context_availability": {
+          "previous_context": false,
+          "current_context": true,
+          "next_context": false,
+          "parent_heading": false,
+          "table_context": false
+        },
+        "semantic_context_refs": [
+          {
+            "ref": "C003-S030",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S031",
+            "origin": "canonical.source_refs"
+          },
+          {
+            "ref": "C003-S032",
+            "origin": "canonical.source_refs"
+          }
+        ],
+        "semantic_context_refs_complete": true,
+        "natural_context_complete": true,
+        "context_note": "Only current canonical source excerpt/span is available in the authoritative packet; unavailable heading/table/sibling fields are explicit nulls, not inferred."
+      },
+      "candidate_text": null,
+      "canonical_text": "问题处理应遵循故障分级响应机制；一级故障或其他级别超时未解决时应及时报告指定人员，一级故障解决后一天内提交重大信息事件报告。",
+      "quality_gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "secondary_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "detector_evidence": [
+        {
+          "quality_gate_reason_codes": [
+            "NUMBER_OMISSION_REVIEW"
+          ],
+          "atomicity_marker": null
+        }
+      ],
+      "current_audit_classification": "TECHNICAL",
+      "semantic_context_refs": [
+        {
+          "ref": "C003-S030",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S031",
+          "origin": "canonical.source_refs"
+        },
+        {
+          "ref": "C003-S032",
+          "origin": "canonical.source_refs"
+        }
+      ],
+      "source_location_verified": true,
+      "semantic_provenance_complete": true,
+      "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION",
+      "not_gold": true,
+      "not_holdout": true,
+      "not_production_authority": true
+    }
+  ],
+  "validation_reserve": [
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-001",
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "reserved_for_independent_development_validation": true,
+      "adjudicated": false
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-002",
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "reserved_for_independent_development_validation": true,
+      "adjudicated": false
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-003",
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "reserved_for_independent_development_validation": true,
+      "adjudicated": false
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-004",
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "reserved_for_independent_development_validation": true,
+      "adjudicated": false
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-005",
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "reserved_for_independent_development_validation": true,
+      "adjudicated": false
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-006",
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "reserved_for_independent_development_validation": true,
+      "adjudicated": false
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-007",
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "reserved_for_independent_development_validation": true,
+      "adjudicated": false
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-008",
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "reserved_for_independent_development_validation": true,
+      "adjudicated": false
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-009",
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "reserved_for_independent_development_validation": true,
+      "adjudicated": false
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-010",
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "reserved_for_independent_development_validation": true,
+      "adjudicated": false
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-011",
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "reserved_for_independent_development_validation": true,
+      "adjudicated": false
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-012",
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "reserved_for_independent_development_validation": true,
+      "adjudicated": false
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-013",
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "reserved_for_independent_development_validation": true,
+      "adjudicated": false
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-014",
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "reserved_for_independent_development_validation": true,
+      "adjudicated": false
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-015",
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "reserved_for_independent_development_validation": true,
+      "adjudicated": false
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-016",
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "reserved_for_independent_development_validation": true,
+      "adjudicated": false
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-017",
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "reserved_for_independent_development_validation": true,
+      "adjudicated": false
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-018",
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "reserved_for_independent_development_validation": true,
+      "adjudicated": false
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-019",
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "reserved_for_independent_development_validation": true,
+      "adjudicated": false
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-020",
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "reserved_for_independent_development_validation": true,
+      "adjudicated": false
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-022",
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "reserved_for_independent_development_validation": true,
+      "adjudicated": false
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-024",
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "reserved_for_independent_development_validation": true,
+      "adjudicated": false
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-025",
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "reserved_for_independent_development_validation": true,
+      "adjudicated": false
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-026",
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "reserved_for_independent_development_validation": true,
+      "adjudicated": false
+    }
+  ],
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "adjudication_status": "PENDING_GPT_SEMANTIC_ADJUDICATION"
+}

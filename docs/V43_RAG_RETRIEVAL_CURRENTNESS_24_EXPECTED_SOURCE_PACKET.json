@@ -1,0 +1,40 @@
+{
+  "dataset": "chengchuan-expected-sources-v1",
+  "classification": "EVAL_ONLY_EXPECTED_SOURCE_PACKET",
+  "data_classification": "CONTROLLED_REAL_TEST",
+  "requirement_blind": true,
+  "source_corpus": {
+    "base_materials": 16,
+    "extension_materials": 76,
+    "total_materials": 92,
+    "manifest": "backend/eval/rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/00_meta/extension_import_manifest.jsonl",
+    "coverage_matrix": "backend/eval/rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/00_meta/coverage_matrix.json",
+    "expected_labels_basis": "independent corpus theme and source-slot curation; not tender requirements"
+  },
+  "cases": [
+    {"case_id":"RC-U01","theme":"U01","query":"请定位企业资料中关于公司概况与项目治理的可核验材料。","expected_doc_ids":["CCV2-U01-01","CCV2-U01-02"]},
+    {"case_id":"RC-U02","theme":"U02","query":"请定位企业产品与业务应用能力的可核验材料。","expected_doc_ids":["CCV2-U02-01","CCV2-U02-02"]},
+    {"case_id":"RC-U03","theme":"U03","query":"请定位企业技术架构及架构评审记录的可核验材料。","expected_doc_ids":["CCV2-U03-01","CCV2-U03-02"]},
+    {"case_id":"RC-U04","theme":"U04","query":"请定位企业部署模式和环境适配的可核验材料。","expected_doc_ids":["CCV2-U04-01","CCV2-U04-02"]},
+    {"case_id":"RC-U05","theme":"U05","query":"请定位企业 API、系统集成与互操作的可核验材料。","expected_doc_ids":["CCV2-U05-01","CCV2-U05-02"]},
+    {"case_id":"RC-U06","theme":"U06","query":"请定位企业数据迁移与数据交换实施的可核验材料。","expected_doc_ids":["CCV2-U06-01","CCV2-U06-02"]},
+    {"case_id":"RC-U07","theme":"U07","query":"请定位企业数据治理与数据质量控制的可核验材料。","expected_doc_ids":["CCV2-U07-01","CCV2-U07-02"]},
+    {"case_id":"RC-U08","theme":"U08","query":"请定位企业备份恢复与数据生命周期管理的可核验材料。","expected_doc_ids":["CCV2-U08-01","CCV2-U08-02"]},
+    {"case_id":"RC-U09","theme":"U09","query":"请定位企业身份认证、访问控制与权限测试的可核验材料。","expected_doc_ids":["CCV2-U09-01","CCV2-U09-02"]},
+    {"case_id":"RC-U10","theme":"U10","query":"请定位企业网络安全、隐私保护与安全测试的可核验材料。","expected_doc_ids":["CCV2-U10-01","CCV2-U10-02"]},
+    {"case_id":"RC-U11","theme":"U11","query":"请定位企业日志审计和可追溯能力的可核验材料。","expected_doc_ids":["CCV2-U11-01","CCV2-U11-02"]},
+    {"case_id":"RC-U12","theme":"U12","query":"请定位企业监控告警和运行保障的可核验材料。","expected_doc_ids":["CCV2-U12-01","CCV2-U12-02"]},
+    {"case_id":"RC-U13","theme":"U13","query":"请定位企业性能测试与性能基线的可核验材料。","expected_doc_ids":["CCV2-U13-01","CCV2-U13-02"]},
+    {"case_id":"RC-U14","theme":"U14","query":"请定位企业高可用、容灾设计与演练的可核验材料。","expected_doc_ids":["CCV2-U14-01","CCV2-U14-02"]},
+    {"case_id":"RC-U15","theme":"U15","query":"请定位企业容量测试与扩展性验证的可核验材料。","expected_doc_ids":["CCV2-U15-01","CCV2-U15-02"]},
+    {"case_id":"RC-U16","theme":"U16","query":"请定位企业国产化与信创环境适配的可核验材料。","expected_doc_ids":["CCV2-U16-01","CCV2-U16-02"]},
+    {"case_id":"RC-U17","theme":"U17","query":"请定位企业操作系统、数据库和中间件兼容性的可核验材料。","expected_doc_ids":["CCV2-U17-01","CCV2-U17-02"]},
+    {"case_id":"RC-U18","theme":"U18","query":"请定位企业 AI、知识库与智能体能力及评估的可核验材料。","expected_doc_ids":["CCV2-U18-01","CCV2-U18-02"]},
+    {"case_id":"RC-U19","theme":"U19","query":"请定位企业项目实施方法与实施计划的可核验材料。","expected_doc_ids":["CCV2-U19-01","CCV2-U19-02"]},
+    {"case_id":"RC-U20","theme":"U20","query":"请定位企业质量管理体系和质量审计记录的可核验材料。","expected_doc_ids":["CCV2-U20-01","CCV2-U20-02"]},
+    {"case_id":"RC-U21","theme":"U21","query":"请定位企业风险、变更和配置管理的可核验材料。","expected_doc_ids":["CCV2-U21-01","CCV2-U21-02"]},
+    {"case_id":"RC-U22","theme":"U22","query":"请定位企业项目团队与人员资格能力的可核验材料。","expected_doc_ids":["CCV2-U22-01","CCV2-U22-02"]},
+    {"case_id":"RC-U23","theme":"U23","query":"请定位企业测试方法与测试执行记录的可核验材料。","expected_doc_ids":["CCV2-U23-01","CCV2-U23-02"]},
+    {"case_id":"RC-U24","theme":"U24","query":"请定位企业试运行、验收方法和交付记录的可核验材料。","expected_doc_ids":["CCV2-U24-01","CCV2-U24-02"]}
+  ]
+}

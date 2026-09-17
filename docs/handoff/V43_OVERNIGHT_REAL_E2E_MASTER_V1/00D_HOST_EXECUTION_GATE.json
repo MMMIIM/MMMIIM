@@ -1,0 +1,45 @@
+{
+  "artifact_type": "V43_E2E_PROVIDER_RUNTIME_HOST_EXECUTION_GATE",
+  "status": "PROVIDER_RUNTIME_READY_WITH_HOST_GATE",
+  "first_host_required_stage": "ENTERPRISE_INDEXING_EMBEDDING_PREFLIGHT",
+  "host_required": true,
+  "codex_network_classification": "CODEX_RUNTIME_EGRESS_BLOCKED",
+  "network_probe_this_run": {
+    "attempted": false,
+    "provider_calls": 0,
+    "reason": "No provider or embedding call was authorized in this preflight."
+  },
+  "host_evidence": {
+    "historical_host_success": "docs/handoff/V43_REAL_E2E_AUTHORITY_AND_PROJECT_MATERIAL_BINDING_IMPLEMENTATION_V1/host-retrieval-utf8.json",
+    "historical_host_success_status": "PASS",
+    "historical_sandbox_failure": "docs/handoff/V43_DAYTIME_REAL_E2E_FOUNDATION_AND_HUMAN_GATE_MASTER_V1/15_E2E_RESUME_MANIFEST.json",
+    "historical_sandbox_failure_classification": "BLOCKED_ENVIRONMENT_SANDBOX_NETWORK_EACCES",
+    "interpretation": "Host/provider path is available in stored evidence; Codex sandbox egress is not a provider/model/config diagnosis."
+  },
+  "exact_next_host_command": {
+    "working_directory": "D:\\AI工作\\AI\\标书平台\\标书平台",
+    "command": "node backend/scripts/smoke-embedding.js",
+    "output": "stdout/stderr JSON from the existing embedding smoke script; no repository artifact path is forced by this script",
+    "secrets_in_command": false,
+    "repo_owned_script": "backend/scripts/smoke-embedding.js"
+  },
+  "offline_continuation": {
+    "completed_in_this_preflight": [
+      "provider owner/config inventory",
+      "embedding reuse audit",
+      "provider dependency map"
+    ],
+    "main_e2e_started": false,
+    "stop_at_first_host_boundary": true,
+    "no_provider_calls": true,
+    "no_db_writes": true
+  },
+  "side_effects": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "eval_db_writes": 0,
+    "gold_mutations": 0,
+    "production_semantic_changes": 0
+  }
+}

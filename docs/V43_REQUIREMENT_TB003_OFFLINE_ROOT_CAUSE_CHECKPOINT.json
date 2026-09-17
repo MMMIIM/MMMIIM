@@ -1,0 +1,64 @@
+{
+  "checkpoint": "V43_REQUIREMENT_LIVE_SMOKE_COMPLETION_GATE",
+  "mode": "OFFLINE_TB003_ROOT_CAUSE",
+  "generated_at": "2026-09-07T00:00:00.000Z",
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "TB003_SOURCE_TEXT": {
+    "source_file": "backend/eval/tender-benchmark-v1/sources/TB-003-jiaozuo-sidian.pdf",
+    "source_sha256": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+    "parser_status": "PASS",
+    "parser_character_count": 57853,
+    "parser_paragraph_count": 2239
+  },
+  "TB003_CHUNK_TEXT": {
+    "chunk_number": 1,
+    "chunk_sha256": "19c3bd6ff6f229f81862c7e2976e29963963478d8342e8301beaf4209707459b",
+    "chunk_character_count": 909,
+    "selected_chunk_class": "TITLE_AND_PROCUREMENT_POLICY_FRONT_MATTER",
+    "contains_clear_actionable_requirement": false,
+    "safe_preview": "项目标题、招标文件元数据及履约/质量保证金、中小企业采购等政策性前置内容；未进入项目第三部分采购需求主体。"
+  },
+  "TB003_SECTION_CONTEXT": {
+    "router_status": "PASS",
+    "scope_section": "controlled_fulltext_fallback_requirement_view",
+    "chunk_page_range": [1, 7],
+    "source_refs": ["C001-S001", "C001-S002", "C001-S003", "C001-S004", "C001-S006", "C001-S007", "C001-S043"],
+    "source_refs_note": "完整 chunk 含 C001-S001..C001-S043；此处仅列首尾代表性引用。",
+    "requirement_body_chunk_observed": 17
+  },
+  "TB003_TASK_INSTRUCTION_VERSION": {
+    "task_type": "requirement_extraction",
+    "contract_version": "4.3-requirement-extraction-v3.1.1",
+    "instruction_hash": "9b8fe6582e774a64f36b2be307274e297fafb309cf17270a4d8fc463da817305",
+    "schema_hash": "9ee6ebb2a34e5ff3131d3b0bdbbcee45b1c8c33ac38d8325bd8925836abb7acc"
+  },
+  "TB003_PROVIDER_INPUT_COMPLETE": {
+    "value": true,
+    "input_sha256": "08ad4a0bd3d7c571813fcb122f558930e3eabe01e64cdd8d2e3667e40cbceff5",
+    "input_character_count": 1425,
+    "input_source": "resolveRequirementExtractionProviderInput(chunk, fallbackText=chunk.text)",
+    "omitted_context": false
+  },
+  "TB003_PROVIDER_RAW_RESULT_CLASS": "VALID_RESPONSE_EMPTY_CANDIDATES",
+  "TB003_PARSED_CANDIDATE_COUNT": 0,
+  "TB003_FILTERED_CANDIDATE_COUNT": 0,
+  "TB003_FILTER_REJECTION_REASONS": ["NO_CANDIDATES_RETURNED_BY_PROVIDER"],
+  "prior_live_diagnostic": {
+    "provider_http_status": 200,
+    "response_shape": "response_payload_json_envelope",
+    "json_parse_success": true,
+    "model_content_length_chars": 24,
+    "gateway_http_status": null,
+    "gateway_http_status_note": "not captured by the prior probe; no value inferred"
+  },
+  "ROOT_CLASSIFICATION": "SMOKE_CASE_SELECTION_DEFECT",
+  "root_cause_reason": "The broad TB-003 TABLE selector matched policy/front-matter terms (e.g. 不得/单位/指标) in chunk 1. The selected chunk has no clear actionable project requirement, while chunk 17 is the first deterministic section containing the explicit 采购需求 body.",
+  "allowed_next_action": "Eval-only selector correction to a fixed TB-003 chunk containing the 采购需求 section; no production semantic change.",
+  "remediation_cycles_used": 0,
+  "tb003_rerun_count": 0
+}

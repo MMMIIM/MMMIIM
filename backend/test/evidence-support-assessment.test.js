@@ -73,6 +73,30 @@ test('direct/full support is source-bound and aggregates to review ready', () =>
   assert.equal(aggregateEvidenceSufficiency([assessment]).status, 'EVIDENCE_REVIEW_READY');
 });
 
+test('canonical factory rejects direct relationship without full support', () => {
+  const input = retrievalInput();
+  assert.throws(() => createEvidenceSupportAssessment(input, fullObservation({
+    support_level: 'partial_support',
+    semantic_relationship: 'direct'
+  })), error => error.code === 'EVIDENCE_SUPPORT_ASSESSMENT_INVALID');
+});
+
+test('canonical factory accepts direct relationship with full support', () => {
+  const input = retrievalInput();
+  assert.doesNotThrow(() => createEvidenceSupportAssessment(input, fullObservation({
+    support_level: 'full_support',
+    semantic_relationship: 'direct'
+  })));
+});
+
+test('canonical factory rejects full support without direct relationship', () => {
+  const input = retrievalInput();
+  assert.throws(() => createEvidenceSupportAssessment(input, fullObservation({
+    support_level: 'full_support',
+    semantic_relationship: 'partial'
+  })), error => error.code === 'EVIDENCE_SUPPORT_ASSESSMENT_INVALID');
+});
+
 test('partial support remains insufficient and never upgrades to ready', () => {
   const input = retrievalInput({ text: '系统平均响应时间约为1.4秒，测试条件另见附件。' });
   const assessment = createEvidenceSupportAssessment(input, {

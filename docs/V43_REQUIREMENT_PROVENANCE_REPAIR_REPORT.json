@@ -1,0 +1,123 @@
+{
+  "artifact_type": "V43_REQUIREMENT_PROVENANCE_REPAIR_REPORT",
+  "artifact_version": "v1",
+  "source_authority_root": [
+    "docs/REQUIREMENT_CANDIDATE_POOL_V2_COMPLETED.json",
+    "backend/eval/requirement-extraction-real-tender-pilot-v1/recovered-source-authority-v1/packets/JY-001.json",
+    "docs/V43_REQUIREMENT_GOLD_V2_SIX_TENDER_CANONICAL_INPUT.json"
+  ],
+  "initial_root_artifact_sha256": {
+    "docs/V43_REQUIREMENT_GOLD_V2_SIX_TENDER_CANONICAL_INPUT.json": "56bdf7f4d8cf1dd68c87dca9a63406dcc0b7bf5e5fe2bd3ee541293255767ede",
+    "docs/REQUIREMENT_CANDIDATE_POOL_V2_COMPLETED.json": "d9def33a17083254bead89b31173585e77166bb0b07a22494291e997beacd286",
+    "backend/eval/requirement-extraction-real-tender-pilot-v1/recovered-source-authority-v1/packets/JY-001.json": "f08c21a255e3c5ada63d87f415013e85a55eca532f3d0593bd77163d1ae4ca7f",
+    "docs/V43_REQUIREMENT_P1_GPT_SEMANTIC_CALIBRATION_PACKET_RECOVERED.json": "6d9fa9cc1960014684e5f6e755fe4aa893738a7d5425cb76c7e0056178458485",
+    "docs/V43_REQUIREMENT_FINAL_SEMANTIC_CERTIFICATION_OUTPUT_PACKET_V2.jsonl": "bb485a6b22550104a51fa539b16d623850ca1bded5b8472d15de485835737dc4"
+  },
+  "target_count": 6,
+  "recovered_count": 6,
+  "ambiguous_count": 0,
+  "target_reports": [
+    {
+      "req_id": "JY-001:REQ-069",
+      "before_source_refs": [],
+      "matched_source_refs": [
+        "C010-S055",
+        "C010-S056"
+      ],
+      "match_method": "JY_FROZEN_SOURCE_SEGMENT_INDEX_PAGE_PARAGRAPH_EXCERPT",
+      "source_hash_match": true,
+      "source_text_match": true,
+      "span_match": true,
+      "unique_match": true,
+      "status": "RECOVERED"
+    },
+    {
+      "req_id": "JY-001:REQ-021",
+      "before_source_refs": [],
+      "matched_source_refs": [
+        "C008-S050"
+      ],
+      "match_method": "JY_FROZEN_SOURCE_SEGMENT_INDEX_PAGE_PARAGRAPH_EXCERPT",
+      "source_hash_match": true,
+      "source_text_match": true,
+      "span_match": true,
+      "unique_match": true,
+      "status": "RECOVERED"
+    },
+    {
+      "req_id": "JY-001:REQ-023",
+      "before_source_refs": [],
+      "matched_source_refs": [
+        "C008-S057",
+        "C008-S058"
+      ],
+      "match_method": "JY_FROZEN_SOURCE_SEGMENT_INDEX_PAGE_PARAGRAPH_EXCERPT",
+      "source_hash_match": true,
+      "source_text_match": true,
+      "span_match": true,
+      "unique_match": true,
+      "status": "RECOVERED"
+    },
+    {
+      "req_id": "JY-001:REQ-139",
+      "before_source_refs": [],
+      "matched_source_refs": [
+        "C016-S021",
+        "C016-S022",
+        "C016-S023"
+      ],
+      "match_method": "JY_FROZEN_SOURCE_SEGMENT_INDEX_PAGE_PARAGRAPH_EXCERPT",
+      "source_hash_match": true,
+      "source_text_match": true,
+      "span_match": true,
+      "unique_match": true,
+      "status": "RECOVERED"
+    },
+    {
+      "req_id": "JY-001:REQ-073",
+      "before_source_refs": [],
+      "matched_source_refs": [
+        "C010-S070",
+        "C010-S071",
+        "C010-S072",
+        "C010-S073",
+        "C010-S074"
+      ],
+      "match_method": "JY_FROZEN_SOURCE_SEGMENT_INDEX_PAGE_PARAGRAPH_EXCERPT",
+      "source_hash_match": true,
+      "source_text_match": true,
+      "span_match": true,
+      "unique_match": true,
+      "status": "RECOVERED"
+    },
+    {
+      "req_id": "JY-001:REQ-072",
+      "before_source_refs": [],
+      "matched_source_refs": [
+        "C010-S065",
+        "C010-S066",
+        "C010-S067",
+        "C010-S068"
+      ],
+      "match_method": "JY_FROZEN_SOURCE_SEGMENT_INDEX_PAGE_PARAGRAPH_EXCERPT",
+      "source_hash_match": true,
+      "source_text_match": true,
+      "span_match": true,
+      "unique_match": true,
+      "status": "RECOVERED"
+    }
+  ],
+  "provenance_census": {
+    "total_canonicals": 1009,
+    "source_hash_present": 1009,
+    "source_span_present": 1009,
+    "authority_source_refs_present": 1009,
+    "unexplained_empty_source_refs": []
+  },
+  "target_semantic_fields_unchanged": true,
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "production_code_changes": 0,
+  "note": "Only deterministic provenance metadata was repaired at the authority packet root; semantic requirement fields were not changed."
+}

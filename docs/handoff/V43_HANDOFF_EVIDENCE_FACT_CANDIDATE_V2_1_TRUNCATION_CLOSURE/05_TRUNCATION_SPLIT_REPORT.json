@@ -1,0 +1,749 @@
+{
+  "run_id": "V43-REAL-PDF-PILOT-CANDIDATE-V2.1-20260913111648-ade77600",
+  "base_window_count": 8,
+  "processed_window_count": 30,
+  "split_children_calls": 22,
+  "split_depth_max": 2,
+  "unresolved_output_truncation": 1,
+  "single_chunk_output_density_blocker_count": 0,
+  "multi_chunk_window_density_blocker_count": 1,
+  "rows": [
+    {
+      "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0002",
+      "parent_window_id": null,
+      "split_depth": 0,
+      "status": "TRUNCATED_SPLIT",
+      "included_chunk_ids": [
+        "MCH-0A4E8252C190F7FB6CC94E9F8554197C",
+        "MCH-348E2C43EF94D18422741C67B4005CA9",
+        "MCH-8FEFF3287C65B6616BE4DEF5B526E39B",
+        "MCH-D0D7EB79C1BA7B85E396032AC9158225",
+        "MCH-3FDDD1ED7D6F408E665E218444D08A0A",
+        "MCH-1C3BE8948275DDF64E9EB30699C2107A",
+        "MCH-AA4E38D32601D10BFF409399EECB209F"
+      ],
+      "split_children": [
+        {
+          "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0002-S1",
+          "split_depth": 1,
+          "parent_window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0002",
+          "included_chunk_ids": [
+            "MCH-0A4E8252C190F7FB6CC94E9F8554197C",
+            "MCH-348E2C43EF94D18422741C67B4005CA9",
+            "MCH-8FEFF3287C65B6616BE4DEF5B526E39B",
+            "MCH-D0D7EB79C1BA7B85E396032AC9158225"
+          ],
+          "source_text_hash": "bc97fd897f2c88a48ccaa0ff832039423135a5fe35ec47a4ad7013584bb4ac85"
+        },
+        {
+          "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0002-S2",
+          "split_depth": 1,
+          "parent_window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0002",
+          "included_chunk_ids": [
+            "MCH-3FDDD1ED7D6F408E665E218444D08A0A",
+            "MCH-1C3BE8948275DDF64E9EB30699C2107A",
+            "MCH-AA4E38D32601D10BFF409399EECB209F"
+          ],
+          "source_text_hash": "446bb8cd27a3da289c4fcddb8b4a41cd5dc0ff6dd179f2d298fae91f2b047f68"
+        }
+      ],
+      "failure": {
+        "code": "FACT_SEMANTIC_EXTRACTION_FAILED",
+        "status": 502,
+        "message": "Fact Candidate V2.1 extraction failed.",
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "PROVIDER_OUTPUT_INVALID",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 502,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 29728,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "incomplete",
+          "prompt_tokens": 4780,
+          "completion_tokens": 4800,
+          "output_truncated": true,
+          "json_parse_success": false,
+          "safe_error_code": "OUTPUT_TRUNCATED",
+          "cause_code": "PROVIDER_OUTPUT_INVALID"
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0002-S1",
+      "parent_window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0002",
+      "split_depth": 1,
+      "status": "TRUNCATED_SPLIT",
+      "included_chunk_ids": [
+        "MCH-0A4E8252C190F7FB6CC94E9F8554197C",
+        "MCH-348E2C43EF94D18422741C67B4005CA9",
+        "MCH-8FEFF3287C65B6616BE4DEF5B526E39B",
+        "MCH-D0D7EB79C1BA7B85E396032AC9158225"
+      ],
+      "split_children": [
+        {
+          "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0002-S1-S1",
+          "split_depth": 2,
+          "parent_window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0002-S1",
+          "included_chunk_ids": [
+            "MCH-0A4E8252C190F7FB6CC94E9F8554197C",
+            "MCH-348E2C43EF94D18422741C67B4005CA9"
+          ],
+          "source_text_hash": "45b243d6495a46d702237fedf26ea69e80a727a5fa34d290e6dfced453c054d9"
+        },
+        {
+          "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0002-S1-S2",
+          "split_depth": 2,
+          "parent_window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0002-S1",
+          "included_chunk_ids": [
+            "MCH-8FEFF3287C65B6616BE4DEF5B526E39B",
+            "MCH-D0D7EB79C1BA7B85E396032AC9158225"
+          ],
+          "source_text_hash": "61af907b2a64b6fed478d34fc705b078dce230bd295e72535e7b718a3d8a7bf3"
+        }
+      ],
+      "failure": {
+        "code": "FACT_SEMANTIC_EXTRACTION_FAILED",
+        "status": 502,
+        "message": "Fact Candidate V2.1 extraction failed.",
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "PROVIDER_OUTPUT_INVALID",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 502,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 30065,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "incomplete",
+          "prompt_tokens": 3190,
+          "completion_tokens": 4800,
+          "output_truncated": true,
+          "json_parse_success": false,
+          "safe_error_code": "OUTPUT_TRUNCATED",
+          "cause_code": "PROVIDER_OUTPUT_INVALID"
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0004",
+      "parent_window_id": null,
+      "split_depth": 0,
+      "status": "TRUNCATED_SPLIT",
+      "included_chunk_ids": [
+        "MCH-E880A61741CE7B2780542FD687730161",
+        "MCH-35660E242C430BBB8E22F5D8855D4BCE",
+        "MCH-0EB6F8D7C07E618E86A785DBFD3C6030",
+        "MCH-C5B8971757CE4EB0AFDBE536E29C7C86",
+        "MCH-4E25581479DC70D5ECCECC6219EFF64E",
+        "MCH-F1FC0A8A419AE7D9996552ED5D18CFA7"
+      ],
+      "split_children": [
+        {
+          "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0004-S1",
+          "split_depth": 1,
+          "parent_window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0004",
+          "included_chunk_ids": [
+            "MCH-E880A61741CE7B2780542FD687730161",
+            "MCH-35660E242C430BBB8E22F5D8855D4BCE",
+            "MCH-0EB6F8D7C07E618E86A785DBFD3C6030"
+          ],
+          "source_text_hash": "31f720f4d18e5cf5067183c559c1b859375a75a8a136de93fe6ce8a9d0801f7c"
+        },
+        {
+          "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0004-S2",
+          "split_depth": 1,
+          "parent_window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0004",
+          "included_chunk_ids": [
+            "MCH-C5B8971757CE4EB0AFDBE536E29C7C86",
+            "MCH-4E25581479DC70D5ECCECC6219EFF64E",
+            "MCH-F1FC0A8A419AE7D9996552ED5D18CFA7"
+          ],
+          "source_text_hash": "0c4bf336de46e073f0b449b9645b6dfd6d76c4e54c26c97df4859a7599d3bc75"
+        }
+      ],
+      "failure": {
+        "code": "FACT_SEMANTIC_EXTRACTION_FAILED",
+        "status": 502,
+        "message": "Fact Candidate V2.1 extraction failed.",
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "PROVIDER_OUTPUT_INVALID",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 502,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 30110,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "incomplete",
+          "prompt_tokens": 4411,
+          "completion_tokens": 4800,
+          "output_truncated": true,
+          "json_parse_success": false,
+          "safe_error_code": "OUTPUT_TRUNCATED",
+          "cause_code": "PROVIDER_OUTPUT_INVALID"
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0004-S2",
+      "parent_window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0004",
+      "split_depth": 1,
+      "status": "TRUNCATED_SPLIT",
+      "included_chunk_ids": [
+        "MCH-C5B8971757CE4EB0AFDBE536E29C7C86",
+        "MCH-4E25581479DC70D5ECCECC6219EFF64E",
+        "MCH-F1FC0A8A419AE7D9996552ED5D18CFA7"
+      ],
+      "split_children": [
+        {
+          "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0004-S2-S1",
+          "split_depth": 2,
+          "parent_window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0004-S2",
+          "included_chunk_ids": [
+            "MCH-C5B8971757CE4EB0AFDBE536E29C7C86",
+            "MCH-4E25581479DC70D5ECCECC6219EFF64E"
+          ],
+          "source_text_hash": "c13f5c1ca97ff578989efbefe385d7cef9e4c904d34b300e0c536e3e1c5a5c92"
+        },
+        {
+          "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0004-S2-S2",
+          "split_depth": 2,
+          "parent_window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0004-S2",
+          "included_chunk_ids": [
+            "MCH-F1FC0A8A419AE7D9996552ED5D18CFA7"
+          ],
+          "source_text_hash": "5812b9e4c12cbf919534ff2d5157c46d21ff9da324a1ab1fec01919025094034"
+        }
+      ],
+      "failure": {
+        "code": "FACT_SEMANTIC_EXTRACTION_FAILED",
+        "status": 502,
+        "message": "Fact Candidate V2.1 extraction failed.",
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "PROVIDER_OUTPUT_INVALID",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 502,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 29805,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "incomplete",
+          "prompt_tokens": 2701,
+          "completion_tokens": 4800,
+          "output_truncated": true,
+          "json_parse_success": false,
+          "safe_error_code": "OUTPUT_TRUNCATED",
+          "cause_code": "PROVIDER_OUTPUT_INVALID"
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0005",
+      "parent_window_id": null,
+      "split_depth": 0,
+      "status": "TRUNCATED_SPLIT",
+      "included_chunk_ids": [
+        "MCH-D30FCBC758C263F922B23D2E853F5D33",
+        "MCH-08408B098E9015CE52821F0A2C98A956",
+        "MCH-7E13F799E939EF510E90CA601E679DE9",
+        "MCH-490E7C4187AE9358302437216BB79F59",
+        "MCH-090DDA1A61A8FD37AB8BF12D040DCCBB",
+        "MCH-FA385FDDE9D899536BE5F3586CEC6CF3",
+        "MCH-827FB14A7A22302DCB85C90659997B20"
+      ],
+      "split_children": [
+        {
+          "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0005-S1",
+          "split_depth": 1,
+          "parent_window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0005",
+          "included_chunk_ids": [
+            "MCH-D30FCBC758C263F922B23D2E853F5D33",
+            "MCH-08408B098E9015CE52821F0A2C98A956",
+            "MCH-7E13F799E939EF510E90CA601E679DE9",
+            "MCH-490E7C4187AE9358302437216BB79F59"
+          ],
+          "source_text_hash": "c3b9c1df8492bee7095e5e44b5151cace78a97b5a08a050cfa9f0b67c2ad34c2"
+        },
+        {
+          "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0005-S2",
+          "split_depth": 1,
+          "parent_window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0005",
+          "included_chunk_ids": [
+            "MCH-090DDA1A61A8FD37AB8BF12D040DCCBB",
+            "MCH-FA385FDDE9D899536BE5F3586CEC6CF3",
+            "MCH-827FB14A7A22302DCB85C90659997B20"
+          ],
+          "source_text_hash": "614839022e8035ba0c8e3c28898d1500db7b4530c4cd0343231d223f1688d605"
+        }
+      ],
+      "failure": {
+        "code": "FACT_SEMANTIC_EXTRACTION_FAILED",
+        "status": 502,
+        "message": "Fact Candidate V2.1 extraction failed.",
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "PROVIDER_OUTPUT_INVALID",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 502,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 29972,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "incomplete",
+          "prompt_tokens": 4544,
+          "completion_tokens": 4800,
+          "output_truncated": true,
+          "json_parse_success": false,
+          "safe_error_code": "OUTPUT_TRUNCATED",
+          "cause_code": "PROVIDER_OUTPUT_INVALID"
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0005-S1",
+      "parent_window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0005",
+      "split_depth": 1,
+      "status": "TRUNCATED_SPLIT",
+      "included_chunk_ids": [
+        "MCH-D30FCBC758C263F922B23D2E853F5D33",
+        "MCH-08408B098E9015CE52821F0A2C98A956",
+        "MCH-7E13F799E939EF510E90CA601E679DE9",
+        "MCH-490E7C4187AE9358302437216BB79F59"
+      ],
+      "split_children": [
+        {
+          "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0005-S1-S1",
+          "split_depth": 2,
+          "parent_window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0005-S1",
+          "included_chunk_ids": [
+            "MCH-D30FCBC758C263F922B23D2E853F5D33",
+            "MCH-08408B098E9015CE52821F0A2C98A956"
+          ],
+          "source_text_hash": "3d6bff15e89c824d6932c9180b185c2137811ca320138e744397d535c3cfc5e3"
+        },
+        {
+          "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0005-S1-S2",
+          "split_depth": 2,
+          "parent_window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0005-S1",
+          "included_chunk_ids": [
+            "MCH-7E13F799E939EF510E90CA601E679DE9",
+            "MCH-490E7C4187AE9358302437216BB79F59"
+          ],
+          "source_text_hash": "ad135a12749420571dfe62bd12517e2105ecc0a1015f9b0490cbce3c1a750e26"
+        }
+      ],
+      "failure": {
+        "code": "FACT_SEMANTIC_EXTRACTION_FAILED",
+        "status": 502,
+        "message": "Fact Candidate V2.1 extraction failed.",
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "PROVIDER_OUTPUT_INVALID",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 502,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 29399,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "incomplete",
+          "prompt_tokens": 3251,
+          "completion_tokens": 4800,
+          "output_truncated": true,
+          "json_parse_success": false,
+          "safe_error_code": "OUTPUT_TRUNCATED",
+          "cause_code": "PROVIDER_OUTPUT_INVALID"
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0006",
+      "parent_window_id": null,
+      "split_depth": 0,
+      "status": "TRUNCATED_SPLIT",
+      "included_chunk_ids": [
+        "MCH-AB56FDE7772267BBA65B951C1F3559AA",
+        "MCH-15CC8482CD940E329F5B47E4FEF10E0D",
+        "MCH-B62DD166B23CD865E7374ED659EB6CC7",
+        "MCH-2CA4681872D5E96FBD03EC6B40360DB6",
+        "MCH-AFEE9703BEBA928748933F7F3A36587F",
+        "MCH-A83ED22D5686023AFAB6ADA75C5978AF"
+      ],
+      "split_children": [
+        {
+          "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0006-S1",
+          "split_depth": 1,
+          "parent_window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0006",
+          "included_chunk_ids": [
+            "MCH-AB56FDE7772267BBA65B951C1F3559AA",
+            "MCH-15CC8482CD940E329F5B47E4FEF10E0D",
+            "MCH-B62DD166B23CD865E7374ED659EB6CC7"
+          ],
+          "source_text_hash": "f586fce0f17c25671479719f88e9e4d221f41ae18eda1f767d74e7c044ee406e"
+        },
+        {
+          "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0006-S2",
+          "split_depth": 1,
+          "parent_window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0006",
+          "included_chunk_ids": [
+            "MCH-2CA4681872D5E96FBD03EC6B40360DB6",
+            "MCH-AFEE9703BEBA928748933F7F3A36587F",
+            "MCH-A83ED22D5686023AFAB6ADA75C5978AF"
+          ],
+          "source_text_hash": "32798f5cdb72ba030b02122f3c22f42438f4d71eb95571005aac737ccc163c82"
+        }
+      ],
+      "failure": {
+        "code": "FACT_SEMANTIC_EXTRACTION_FAILED",
+        "status": 502,
+        "message": "Fact Candidate V2.1 extraction failed.",
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "PROVIDER_OUTPUT_INVALID",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 502,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 29646,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "incomplete",
+          "prompt_tokens": 4591,
+          "completion_tokens": 4800,
+          "output_truncated": true,
+          "json_parse_success": false,
+          "safe_error_code": "OUTPUT_TRUNCATED",
+          "cause_code": "PROVIDER_OUTPUT_INVALID"
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0006-S1",
+      "parent_window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0006",
+      "split_depth": 1,
+      "status": "TRUNCATED_SPLIT",
+      "included_chunk_ids": [
+        "MCH-AB56FDE7772267BBA65B951C1F3559AA",
+        "MCH-15CC8482CD940E329F5B47E4FEF10E0D",
+        "MCH-B62DD166B23CD865E7374ED659EB6CC7"
+      ],
+      "split_children": [
+        {
+          "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0006-S1-S1",
+          "split_depth": 2,
+          "parent_window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0006-S1",
+          "included_chunk_ids": [
+            "MCH-AB56FDE7772267BBA65B951C1F3559AA",
+            "MCH-15CC8482CD940E329F5B47E4FEF10E0D"
+          ],
+          "source_text_hash": "ca74f8da6e99410c26c261f5383beeb684e32e4fecda82a76ccf1e13721c8c19"
+        },
+        {
+          "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0006-S1-S2",
+          "split_depth": 2,
+          "parent_window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0006-S1",
+          "included_chunk_ids": [
+            "MCH-B62DD166B23CD865E7374ED659EB6CC7"
+          ],
+          "source_text_hash": "b0553e786bb47964cd2df36047f2c9dd717b469f0379822abb67ae0cc6b9e6fe"
+        }
+      ],
+      "failure": {
+        "code": "FACT_SEMANTIC_EXTRACTION_FAILED",
+        "status": 502,
+        "message": "Fact Candidate V2.1 extraction failed.",
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "PROVIDER_OUTPUT_INVALID",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 502,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 29169,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "incomplete",
+          "prompt_tokens": 2825,
+          "completion_tokens": 4800,
+          "output_truncated": true,
+          "json_parse_success": false,
+          "safe_error_code": "OUTPUT_TRUNCATED",
+          "cause_code": "PROVIDER_OUTPUT_INVALID"
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0008",
+      "parent_window_id": null,
+      "split_depth": 0,
+      "status": "TRUNCATED_SPLIT",
+      "included_chunk_ids": [
+        "MCH-2841017FC6263A37396C99F94E550B0D",
+        "MCH-174668FB50F2A5314C3B77588EE99E14",
+        "MCH-87774B9BE9F5FE53574E009534A122B5",
+        "MCH-9AF3D7208C7EA187D28B0E48893B90F4",
+        "MCH-602B8AAEC2738C115498BBDC7761E064",
+        "MCH-F368F80608511185E2170D3CBCD193C5"
+      ],
+      "split_children": [
+        {
+          "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0008-S1",
+          "split_depth": 1,
+          "parent_window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0008",
+          "included_chunk_ids": [
+            "MCH-2841017FC6263A37396C99F94E550B0D",
+            "MCH-174668FB50F2A5314C3B77588EE99E14",
+            "MCH-87774B9BE9F5FE53574E009534A122B5"
+          ],
+          "source_text_hash": "74fdc4c458d98b61bed80d627435073ef7d547c41ea5be70ae395db0876e53d1"
+        },
+        {
+          "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0008-S2",
+          "split_depth": 1,
+          "parent_window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0008",
+          "included_chunk_ids": [
+            "MCH-9AF3D7208C7EA187D28B0E48893B90F4",
+            "MCH-602B8AAEC2738C115498BBDC7761E064",
+            "MCH-F368F80608511185E2170D3CBCD193C5"
+          ],
+          "source_text_hash": "262efba08809e6c48917970f156d88e5760bb752b5c1b3a29666b04d7635d77b"
+        }
+      ],
+      "failure": {
+        "code": "FACT_SEMANTIC_EXTRACTION_FAILED",
+        "status": 502,
+        "message": "Fact Candidate V2.1 extraction failed.",
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "PROVIDER_OUTPUT_INVALID",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 502,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 29681,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "incomplete",
+          "prompt_tokens": 4569,
+          "completion_tokens": 4800,
+          "output_truncated": true,
+          "json_parse_success": false,
+          "safe_error_code": "OUTPUT_TRUNCATED",
+          "cause_code": "PROVIDER_OUTPUT_INVALID"
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0008-S2",
+      "parent_window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0008",
+      "split_depth": 1,
+      "status": "TRUNCATED_SPLIT",
+      "included_chunk_ids": [
+        "MCH-9AF3D7208C7EA187D28B0E48893B90F4",
+        "MCH-602B8AAEC2738C115498BBDC7761E064",
+        "MCH-F368F80608511185E2170D3CBCD193C5"
+      ],
+      "split_children": [
+        {
+          "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0008-S2-S1",
+          "split_depth": 2,
+          "parent_window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0008-S2",
+          "included_chunk_ids": [
+            "MCH-9AF3D7208C7EA187D28B0E48893B90F4",
+            "MCH-602B8AAEC2738C115498BBDC7761E064"
+          ],
+          "source_text_hash": "9ea05ca50b02bba8a34d92434291d38798b7e647a0d86345d8fa1f27b6c155da"
+        },
+        {
+          "window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0008-S2-S2",
+          "split_depth": 2,
+          "parent_window_id": "SW-da4b0715-9d47-4853-ab2f-df5eee22c597-0008-S2",
+          "included_chunk_ids": [
+            "MCH-F368F80608511185E2170D3CBCD193C5"
+          ],
+          "source_text_hash": "16ebb4fedb9af6791cd79f062afb87c9114899a0836ed1603cc552da4b2b23d1"
+        }
+      ],
+      "failure": {
+        "code": "FACT_SEMANTIC_EXTRACTION_FAILED",
+        "status": 502,
+        "message": "Fact Candidate V2.1 extraction failed.",
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "PROVIDER_OUTPUT_INVALID",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 502,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 29143,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "incomplete",
+          "prompt_tokens": 2711,
+          "completion_tokens": 4800,
+          "output_truncated": true,
+          "json_parse_success": false,
+          "safe_error_code": "OUTPUT_TRUNCATED",
+          "cause_code": "PROVIDER_OUTPUT_INVALID"
+        },
+        "schema_validation_errors": []
+      }
+    },
+    {
+      "window_id": "SW-08612896-881e-4c65-a39e-b4acc5056614-0007",
+      "parent_window_id": null,
+      "split_depth": 0,
+      "status": "TRUNCATED_SPLIT",
+      "included_chunk_ids": [
+        "MCH-2E9ECDFBD940201C1C19F2B2C3ED206C",
+        "MCH-4BDB56ED5974F6AA99CC30E9D001245F",
+        "MCH-00C6DC36CAB17B758007C383DF04CB3A",
+        "MCH-BD0B052289BB85A74668F6C344ED8054",
+        "MCH-E1AFAB63A8B0F298DA5DF49D56D8E047",
+        "MCH-3D286CA76D021FAA6935C6E8AAE67DC5"
+      ],
+      "split_children": [
+        {
+          "window_id": "SW-08612896-881e-4c65-a39e-b4acc5056614-0007-S1",
+          "split_depth": 1,
+          "parent_window_id": "SW-08612896-881e-4c65-a39e-b4acc5056614-0007",
+          "included_chunk_ids": [
+            "MCH-2E9ECDFBD940201C1C19F2B2C3ED206C",
+            "MCH-4BDB56ED5974F6AA99CC30E9D001245F",
+            "MCH-00C6DC36CAB17B758007C383DF04CB3A"
+          ],
+          "source_text_hash": "04591a37d6fb8741f5f729137d87e32b21498786b77227684e3b33f96cce1e11"
+        },
+        {
+          "window_id": "SW-08612896-881e-4c65-a39e-b4acc5056614-0007-S2",
+          "split_depth": 1,
+          "parent_window_id": "SW-08612896-881e-4c65-a39e-b4acc5056614-0007",
+          "included_chunk_ids": [
+            "MCH-BD0B052289BB85A74668F6C344ED8054",
+            "MCH-E1AFAB63A8B0F298DA5DF49D56D8E047",
+            "MCH-3D286CA76D021FAA6935C6E8AAE67DC5"
+          ],
+          "source_text_hash": "b084d79d36b0ec73ff8391a501474fb0645d7718d213ed52280e10962fabcedc"
+        }
+      ],
+      "failure": {
+        "code": "FACT_SEMANTIC_EXTRACTION_FAILED",
+        "status": 502,
+        "message": "Fact Candidate V2.1 extraction failed.",
+        "stage": "FACT",
+        "boundary": "SemanticGatewayEvidenceFactExtractor -> SemanticGatewayClient",
+        "cause_code": "PROVIDER_OUTPUT_INVALID",
+        "provider_audit": {
+          "provider": "deepseek_official",
+          "model": "deepseek-v4-pro",
+          "requested_provider": "deepseek_official",
+          "requested_model": "deepseek-v4-pro",
+          "response_provider": null,
+          "response_model": "deepseek-v4-pro",
+          "endpoint": "/responses",
+          "gateway_http_status": 502,
+          "provider_http_status": 200,
+          "provider_http_reached": true,
+          "latency_ms": 30708,
+          "retry_attempt": null,
+          "retry_reason": null,
+          "finish_reason": "incomplete",
+          "prompt_tokens": 4692,
+          "completion_tokens": 4800,
+          "output_truncated": true,
+          "json_parse_success": false,
+          "safe_error_code": "OUTPUT_TRUNCATED",
+          "cause_code": "PROVIDER_OUTPUT_INVALID"
+        },
+        "schema_validation_errors": []
+      }
+    }
+  ]
+}

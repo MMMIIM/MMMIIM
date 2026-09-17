@@ -1,0 +1,25 @@
+{
+  "run_id": "fact-candidate-v2-target-live-20260908020847-25ea97d6",
+  "diagnosis": "CANDIDATE_V2_PROVIDER_ROUTE_NOT_FROZEN_DEEPSEEK",
+  "static_route_owner": "services/semantic-gateway/src/gateway.js",
+  "static_route_evidence": [
+    "taskProviders maps only evidence_fact_extraction to deepseekOfficialProvider",
+    "evidence_fact_candidate_v2 is not present in taskProviders",
+    "task-router-candidate-v2.test.js uses default provider when no per-task provider mapping exists"
+  ],
+  "runtime_info": {
+    "fact_provider": "deepseek_official",
+    "fact_provider_configured": true,
+    "fact_provider_endpoint": "/responses",
+    "fact_model": "deepseek-v4-pro"
+  },
+  "live_provider_identity_observed": false,
+  "live_provider_identity_reason": "Candidate V2 extractor uses diagnosticMode candidate-v2-offline; client probe diagnostics are only retained for probe-v1, so underlying provider audit is not exposed in this run",
+  "provider_calls": 4,
+  "retries": 0,
+  "production_db_writes": 0,
+  "fact_persistence": 0,
+  "gold_mutations": 0,
+  "conclusion": "BLOCKED_WITH_EVIDENCE",
+  "no_additional_provider_calls": true
+}

@@ -3,7 +3,7 @@ import { buildCanonicalRequirements } from './canonical-requirements.js';
 const DEFAULT_SINGLE_CALL_THRESHOLD = 2_000;
 const DEFAULT_CHARACTER_BUDGET = 2_000;
 const DEFAULT_TOKEN_BUDGET = 8_000;
-const DEFAULT_SOURCE_SPAN_BUDGET = 50;
+const DEFAULT_SOURCE_SPAN_BUDGET = 100;
 const MAX_BOUNDARY_LOOKBACK = 64;
 
 function positiveInteger(value, fallback) {
@@ -39,6 +39,40 @@ function isCompleteStatement(text) {
   return /[。！？；;.!?》）)】]$/.test(String(text || '').trim());
 }
 
+function tableObject(value) {
+  return value && typeof value === 'object' && !Array.isArray(value) ? value : null;
+}
+
+/**
+ * Preserve table metadata only when an upstream extractor actually provides
+ * it. Plain PDF/text extraction remains on the existing paragraph path and
+ * receives no guessed table structure.
+ */
+export function normalizeTableSemanticMetadata(paragraph = {}) {
+  const table = tableObject(paragraph.table);
+  const tableId = paragraph.table_id ?? paragraph.tableId ?? table?.table_id ?? table?.id ?? null;
+  const rowId = paragraph.table_row_id ?? paragraph.row_id ?? paragraph.rowId
+    ?? table?.table_row_id ?? table?.row_id ?? table?.rowId ?? null;
+  if (tableId == null && rowId == null && !paragraph.table_header_context && !table?.header_context
+    && !Array.isArray(paragraph.table_cells) && !Array.isArray(table?.cells)) return null;
+  const headerContext = paragraph.table_header_context ?? paragraph.header_context ?? table?.header_context ?? null;
+  const cells = paragraph.table_cells ?? paragraph.cells ?? table?.cells ?? null;
+  return {
+    semantic_unit_type: 'TABLE_ROW',
+    table_id: tableId == null ? null : String(tableId),
+    table_row_id: rowId == null ? null : String(rowId),
+    table_header_context: headerContext == null ? null : String(headerContext),
+    table_cells: Array.isArray(cells) ? cells.map((cell) => String(cell ?? '')) : null
+  };
+}
+
+export function annotateTableSemanticUnits(paragraphs = []) {
+  return (Array.isArray(paragraphs) ? paragraphs : []).map((paragraph) => ({
+    ...paragraph,
+    ...(normalizeTableSemanticMetadata(paragraph) || { semantic_unit_type: 'PARAGRAPH' })
+  }));
+}
+
 /**
  * Classify the boundary between two source spans without consulting a model.
  * The result is intentionally small and deterministic so packing policy can
@@ -53,6 +87,29 @@ export function classifyBoundary(previousUnit, nextUnit) {
 
   if (isParentEnumerationIntro(previous.text) && isNumberedChild(next.text)) {
     return { classification: 'UNSAFE', reason: 'PARENT_ENUMERATION' };
+  }
+  // A PDF line break can leave the previous span incomplete even though the
+  // next span starts a new numbered obligation. Treat that marker as the
+  // nearest safe cut so the hard span cap does not split the obligation.
+  // A shared clause id is sufficient structural evidence when the previous
+  // span is complete (for example, a numbered subheading in one clause).
+  if (isNumberedChild(next.text) && !isParentEnumerationIntro(previous.text)
+    && (sameClause || !isCompleteStatement(previous.text))) {
+    return {
+      classification: 'MEDIUM',
+      reason: sameClause ? 'NUMBERED_CLAUSE_WITHIN_SOURCE' : 'NUMBERED_CHILD_BOUNDARY'
+    };
+  }
+  const sameTable = previous.table_id != null && next.table_id != null
+    && String(previous.table_id) === String(next.table_id);
+  if (sameTable) {
+    const sameRow = previous.table_row_id != null && next.table_row_id != null
+      && String(previous.table_row_id) === String(next.table_row_id);
+    if (sameRow) return { classification: 'UNSAFE', reason: 'SAME_TABLE_ROW' };
+    if (previous.table_row_id != null && next.table_row_id != null) {
+      return { classification: 'STRONG', reason: 'TABLE_ROW_CHANGE' };
+    }
+    return { classification: 'UNSAFE', reason: 'SAME_TABLE' };
   }
   if (sameClause) {
     return { classification: 'UNSAFE', reason: 'SAME_SOURCE_CLAUSE' };
@@ -118,7 +175,7 @@ export function isTitleBoundary(text) {
 
 function locateParagraphs(text, paragraphs) {
   let cursor = 0;
-  return paragraphs.filter((paragraph) => String(paragraph?.text || '').trim()).map((paragraph) => {
+  const located = paragraphs.filter((paragraph) => String(paragraph?.text || '').trim()).map((paragraph) => {
     const value = String(paragraph.text).trim();
     let start = Number.isInteger(paragraph.source_start_offset)
       ? paragraph.source_start_offset
@@ -129,6 +186,7 @@ function locateParagraphs(text, paragraphs) {
       : start + value.length;
     cursor = end;
     return {
+      ...paragraph,
       text: value,
       page: paragraph.page ?? null,
       paragraph: paragraph.paragraph ?? null,
@@ -139,6 +197,7 @@ function locateParagraphs(text, paragraphs) {
       starts_at_title_boundary: isTitleBoundary(value)
     };
   });
+  return annotateTableSemanticUnits(located);
 }
 
 function assertSourceSpanFitsBudget(unit, characterBudget, tokenBudget) {
@@ -156,9 +215,13 @@ function buildChunk(units, chunkNumber) {
     ...unit,
     source_ref: `C${String(chunkNumber).padStart(3, '0')}-S${String(index + 1).padStart(3, '0')}`
   }));
-  // The model receives deterministic span labels, while `text` remains the
-  // exact extracted content used for hashes, offsets, and persistence.
-  const modelText = segments.map((unit) => `[${unit.source_ref}] ${unit.text}`).join('\n');
+  // The model receives deterministic span labels and, for parser-provided
+  // tables, the original header context. `text` remains the exact extracted
+  // content used for hashes, offsets, and persistence.
+  const modelText = segments.map((unit) => {
+    const header = unit.table_header_context ? ` 表头：${unit.table_header_context}` : '';
+    return `[${unit.source_ref}]${header} ${unit.text}`;
+  }).join('\n');
   const pages = units.map((unit) => unit.page).filter(Number.isInteger);
   const paragraphs = units.map((unit) => unit.paragraph).filter(Number.isInteger);
   return {
@@ -174,7 +237,15 @@ function buildChunk(units, chunkNumber) {
     source_end_page: pages.length ? Math.max(...pages) : null,
     source_start_paragraph: paragraphs.length ? Math.min(...paragraphs) : null,
     source_end_paragraph: paragraphs.length ? Math.max(...paragraphs) : null,
-    starts_at_title_boundary: units[0].starts_at_title_boundary
+    starts_at_title_boundary: units[0].starts_at_title_boundary,
+    table_units: segments.filter((unit) => unit.semantic_unit_type === 'TABLE_ROW').map((unit) => ({
+      table_id: unit.table_id,
+      row_id: unit.table_row_id,
+      header_context: unit.table_header_context,
+      source_ref: unit.source_ref,
+      source_text: unit.text,
+      cells: unit.table_cells
+    }))
   };
 }
 
@@ -349,5 +420,5 @@ export function aggregateRequirementCandidates(chunkResults, { mandatoryScopeRul
       status: 422
     });
   }
-  return buildCanonicalRequirements(candidates, { mandatoryScopeRules, documentText });
+  return buildCanonicalRequirements(candidates, { mandatoryScopeRules, documentText, qualityGate: true });
 }

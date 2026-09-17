@@ -1,0 +1,36 @@
+{
+  "artifact_type": "V43_FACT_E2E_REUSE_DECISION_V1",
+  "execution_mode": "OFFLINE_ONLY",
+  "provider_calls": 0,
+  "embedding_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "gold_mutations": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "commit": 0,
+  "push": 0,
+  "merge": 0,
+  "deploy": 0,
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "default_corpus": "CHENGCHUAN_BASE16",
+  "embedding_reuse": "REUSE_EXISTING_160_EXACT_SNAPSHOT_VECTORS",
+  "embedding_identity": {
+    "model": "Qwen/Qwen3-Embedding-0.6B",
+    "version": "1",
+    "dimension": 1024,
+    "parity": "PASS"
+  },
+  "existing_fact_artifact": "docs/V43_CHENGCHUAN_CONTROLLED_REAL_FACT_INVENTORY.json",
+  "existing_fact_count": 5,
+  "existing_fact_material_ids": [
+    "03a7d63f-8406-40fc-967c-90c3a2b948e5"
+  ],
+  "base16_fact_material_id_exact_matches": [],
+  "decision": "NO_FACT_EXTRACTION_IN_THIS_OFFLINE_TASK; HOST_FACT_EXTRACTION_REMAINS_LATER_OPTION",
+  "production_authority": "NONE",
+  "synthetic_escalation": 0
+}

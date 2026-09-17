@@ -24,7 +24,7 @@ const PROVIDER_STAGES = Object.freeze({
 export const DEFAULT_GENERATION_CONFIG = Object.freeze({
   response_format: Object.freeze({ type: 'json_object' }),
   enable_thinking: false,
-  max_tokens: 3200,
+  max_tokens: 4800,
   temperature: 0.1,
   top_p: 0.9,
   top_k: 20,
@@ -143,10 +143,76 @@ function normalizedResponseFormat(value, { allowDefault = true } = {}) {
   throw Object.assign(new Error('Invalid explicit provider response format'), { code: 'PROVIDER_OUTPUT_INVALID' });
 }
 
-function createAudit(model, started, generationConfig, promptDiagnostics) {
+function responsesTextFormat(responseFormat) {
+  if (responseFormat.type === 'json_schema') {
+    return {
+      type: 'json_schema',
+      name: responseFormat.json_schema.name,
+      schema: structuredClone(responseFormat.json_schema.schema)
+    };
+  }
+  return { type: 'json_object' };
+}
+
+/** Pure request-body construction used by the adapter and Provider-0 audits. */
+export function buildOpenAICompatibleRequestBody({
+  protocol = 'chat_completions',
+  model,
+  instruction,
+  payload,
+  responseFormat,
+  generationConfig = DEFAULT_GENERATION_CONFIG
+} = {}) {
+  const effectiveProtocol = protocol === 'responses' ? 'responses' : 'chat_completions';
+  return effectiveProtocol === 'responses'
+    ? {
+      model,
+      instructions: instruction,
+      input: JSON.stringify(payload),
+      reasoning: { effort: 'none' },
+      text: { format: responsesTextFormat(responseFormat || { type: 'json_object' }) },
+      max_output_tokens: generationConfig.max_tokens,
+      temperature: generationConfig.temperature,
+      top_p: generationConfig.top_p,
+      stream: false
+    }
+    : {
+      model,
+      messages: [
+        { role: 'system', content: instruction },
+        { role: 'user', content: JSON.stringify(payload) }
+      ],
+      response_format: responseFormat || { type: 'json_object' },
+      enable_thinking: generationConfig.enable_thinking,
+      max_tokens: generationConfig.max_tokens,
+      temperature: generationConfig.temperature,
+      top_p: generationConfig.top_p,
+      top_k: generationConfig.top_k,
+      frequency_penalty: generationConfig.frequency_penalty,
+      stream: generationConfig.stream,
+      n: generationConfig.n
+    };
+}
+
+function responseOutputText(body) {
+  const messages = Array.isArray(body?.output)
+    ? body.output.filter(item => item?.type === 'message')
+    : [];
+  const parts = messages.flatMap(item => Array.isArray(item.content) ? item.content : []);
+  const textParts = parts
+    .filter(part => part?.type === 'output_text' && typeof part.text === 'string')
+    .map(part => part.text);
+  return textParts.length > 0 ? textParts.join('') : null;
+}
+
+function createAudit(model, started, generationConfig, promptDiagnostics, { providerName = 'openai_compatible', protocol = 'chat_completions' } = {}) {
   return {
-    provider: 'openai_compatible',
+    provider: providerName,
+    protocol,
     model,
+    requested_provider: providerName,
+    requested_model: model,
+    endpoint: protocol === 'responses' ? '/responses' : '/chat/completions',
     http_status: null,
     latency_ms: null,
     provider_adapter_invoked: true,
@@ -211,7 +277,10 @@ export class OpenAICompatibleProvider {
     timeoutMs = 120000,
     fetchImpl = fetch,
     logger = console,
-    generationConfig = {}
+    generationConfig = {},
+    endpointPath = '/chat/completions',
+    protocol = 'chat_completions',
+    providerName = 'openai_compatible'
   } = {}) {
     this.baseUrl = String(baseUrl || '').trim().replace(/\/+$/, '');
     this.apiKey = String(apiKey || '').trim();
@@ -219,6 +288,11 @@ export class OpenAICompatibleProvider {
     this.timeoutMs = Number.isInteger(Number(timeoutMs)) && Number(timeoutMs) > 0 ? Number(timeoutMs) : 120000;
     this.fetchImpl = fetchImpl;
     this.logger = logger;
+    this.endpointPath = String(endpointPath || '/chat/completions').startsWith('/')
+      ? String(endpointPath || '/chat/completions')
+      : `/${String(endpointPath || 'chat/completions')}`;
+    this.protocol = protocol === 'responses' ? 'responses' : 'chat_completions';
+    this.providerName = String(providerName || 'openai_compatible');
     this.generationConfig = Object.freeze({
       response_format: normalizedResponseFormat(generationConfig.response_format),
       enable_thinking: generationConfig.enable_thinking === true,
@@ -242,15 +316,22 @@ export class OpenAICompatibleProvider {
     return Boolean(this.baseUrl && this.apiKey && this.model);
   }
 
-  async invoke({ instruction, payload, response_format: requestedResponseFormat }) {
+  async invoke({ instruction, payload, response_format: requestedResponseFormat, generation_config: requestedGenerationConfig = null }) {
     const started = Date.now();
+    const resolvedConfig = requestedGenerationConfig && typeof requestedGenerationConfig === 'object'
+      && !Array.isArray(requestedGenerationConfig)
+      ? Object.freeze({ ...this.generationConfig, ...requestedGenerationConfig })
+      : this.generationConfig;
     let responseFormat;
     try {
       responseFormat = requestedResponseFormat === undefined
-        ? this.generationConfig.response_format
+        ? resolvedConfig.response_format
         : normalizedResponseFormat(requestedResponseFormat, { allowDefault: false });
     } catch (error) {
-      const audit = createAudit(this.model, started, this.generationConfig, outboundPromptDiagnostics(instruction, payload));
+      const audit = createAudit(this.model, started, resolvedConfig, outboundPromptDiagnostics(instruction, payload), {
+        providerName: this.providerName,
+        protocol: this.protocol
+      });
       audit.current_stage = PROVIDER_STAGES.CONFIG_RESOLVED;
       throw attachAudit(error, audit, started, {
         safeErrorCode: 'INVALID_RESPONSE_FORMAT',
@@ -258,8 +339,11 @@ export class OpenAICompatibleProvider {
         failureStage: PROVIDER_STAGES.CONFIG_RESOLVED
       });
     }
-    const generationConfig = Object.freeze({ ...this.generationConfig, response_format: responseFormat });
-    const audit = createAudit(this.model, started, generationConfig, outboundPromptDiagnostics(instruction, payload));
+    const generationConfig = Object.freeze({ ...resolvedConfig, response_format: responseFormat });
+    const audit = createAudit(this.model, started, generationConfig, outboundPromptDiagnostics(instruction, payload), {
+      providerName: this.providerName,
+      protocol: this.protocol
+    });
     if (!this.configured) {
       audit.current_stage = PROVIDER_STAGES.CONFIG_RESOLVED;
       throw attachAudit(
@@ -275,7 +359,7 @@ export class OpenAICompatibleProvider {
     try {
       let requestUrl;
       try {
-        requestUrl = `${this.baseUrl}/chat/completions`;
+        requestUrl = `${this.baseUrl}${this.endpointPath}`;
         new URL(requestUrl);
         audit.current_stage = PROVIDER_STAGES.REQUEST_URL_BUILT;
       } catch (error) {
@@ -290,22 +374,14 @@ export class OpenAICompatibleProvider {
 
       let requestBody;
       try {
-        requestBody = {
+        requestBody = buildOpenAICompatibleRequestBody({
+          protocol: this.protocol,
           model: this.model,
-          messages: [
-            { role: 'system', content: instruction },
-            { role: 'user', content: JSON.stringify(payload) }
-          ],
-          response_format: generationConfig.response_format,
-          enable_thinking: generationConfig.enable_thinking,
-          max_tokens: generationConfig.max_tokens,
-          temperature: generationConfig.temperature,
-          top_p: generationConfig.top_p,
-          top_k: generationConfig.top_k,
-          frequency_penalty: generationConfig.frequency_penalty,
-          stream: generationConfig.stream,
-          n: generationConfig.n
-        };
+          instruction,
+          payload,
+          responseFormat: generationConfig.response_format,
+          generationConfig
+        });
         audit.current_stage = PROVIDER_STAGES.REQUEST_BODY_BUILT;
       } catch (error) {
         audit.current_stage = PROVIDER_STAGES.REQUEST_BODY_BUILT;
@@ -369,18 +445,23 @@ export class OpenAICompatibleProvider {
           { safeErrorCode: 'RESPONSE_READ_FAILED', safeErrorMessage: 'Provider response body could not be read.', failureStage: PROVIDER_STAGES.RESPONSE_BODY_READ, cause: error }
         );
       }
-      const choice = body?.choices?.[0];
       const usage = body?.usage;
       const responseTraceId = response.headers?.get?.('x-siliconcloud-trace-id')
         || response.headers?.get?.('x-request-id');
-      audit.finish_reason = safeFinishReason(choice?.finish_reason);
-      audit.prompt_tokens = boundedInteger(usage?.prompt_tokens);
-      audit.completion_tokens = boundedInteger(usage?.completion_tokens);
+      const choice = body?.choices?.[0];
+      const responseStatus = this.protocol === 'responses' ? body?.status : null;
+      audit.finish_reason = safeFinishReason(this.protocol === 'responses'
+        ? responseStatus
+        : choice?.finish_reason);
+      audit.prompt_tokens = boundedInteger(this.protocol === 'responses' ? usage?.input_tokens : usage?.prompt_tokens);
+      audit.completion_tokens = boundedInteger(this.protocol === 'responses' ? usage?.output_tokens : usage?.completion_tokens);
       audit.total_tokens = boundedInteger(usage?.total_tokens);
       audit.response_model = boundedString(body?.model);
       audit.response_id = boundedString(body?.id);
       audit.provider_trace_id = boundedString(responseTraceId);
-      const content = choice?.message?.content;
+      const content = this.protocol === 'responses'
+        ? responseOutputText(body)
+        : choice?.message?.content;
       audit.current_stage = PROVIDER_STAGES.MODEL_CONTENT_EXTRACTED;
       if (typeof content !== 'string') {
         throw attachAudit(
@@ -392,7 +473,9 @@ export class OpenAICompatibleProvider {
       }
       audit.model_content_length_chars = content.length;
       audit.legacy_schema_tokens_observed = tokenOccurrences(content);
-      audit.output_truncated = audit.finish_reason === 'length';
+      audit.output_truncated = this.protocol === 'responses'
+        ? responseStatus === 'incomplete' && body?.incomplete_details?.reason === 'max_output_tokens'
+        : audit.finish_reason === 'length';
       if (audit.output_truncated) {
         throw attachAudit(
           Object.assign(new Error('Provider output reached the configured token limit'), { code: 'PROVIDER_OUTPUT_INVALID' }),
@@ -441,7 +524,7 @@ export class OpenAICompatibleProvider {
           { safeErrorCode: 'TIMEOUT', safeErrorMessage: 'Provider request timed out.', failureStage: PROVIDER_STAGES.FETCH_INVOKED, cause: error }
         );
       }
-      this.logger?.warn?.('Semantic provider diagnostic', { provider: 'openai_compatible', model: this.model, error_classification: error?.code || 'PROVIDER_FAILURE' });
+      this.logger?.warn?.('Semantic provider diagnostic', { provider: this.providerName, model: this.model, error_classification: error?.code || 'PROVIDER_FAILURE' });
       if (PUBLIC_PROVIDER_ERROR_CODES.has(error?.code)) throw error;
       throw attachAudit(
         Object.assign(new Error('Provider request failed'), { code: 'PROVIDER_UNAVAILABLE' }),

@@ -1,0 +1,62 @@
+{
+  "artifact_type": "REQUIREMENT_REEXTRACTION_CANDIDATE_PACKET",
+  "artifact_version": "v43-requirement-reextraction-candidate-v1",
+  "eval_only": true,
+  "blind": true,
+  "authority_status": "NO_AUTHORITATIVE_UPGRADE",
+  "gold_promotion": "NOT_PERFORMED",
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "production_changes": 0,
+  "source_reconstruction_packet": "backend/eval/gold-governance/v43-gold-v2-foundation/REQUIREMENT_SOURCE_RECONSTRUCTION_BLIND_PACKET.json",
+  "source_manifest": "backend/eval/tender-benchmark-v1/reports/tender-benchmark-pilot-census-v1.json",
+  "tenders": [
+    {
+      "tender_id": "JY-001",
+      "source_file": "backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf",
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "candidate_requirements": {
+        "records_ref": "backend/eval/gold-governance/v43-gold-v2-foundation/REQUIREMENT_SOURCE_RECONSTRUCTION_BLIND_PACKET.json#tenders[JY-001].candidate_requirements",
+        "count": 193,
+        "category_counts": {"technical":151,"contractual":19,"implementation":9,"delivery":8,"context":6},
+        "source_span_count": 193,
+        "source_span_hash_count": 193,
+        "source_excerpt_count": 0,
+        "confidence_count": 0,
+        "requires_human_review_count": 193
+      },
+      "source_excerpt": {"value": null, "status": "NOT_CAPTURED_IN_HISTORICAL_ARTIFACT", "present_count": 0},
+      "candidate_confidence": {"value": null, "status": "NOT_PRESENT_IN_SOURCE_ARTIFACT"},
+      "review_required_fields": ["exact_source_excerpt", "source_span_requirement_text_consistency", "candidate_confidence", "ambiguity_or_conflict", "formal_requirement_authority", "REQ_ID_and_Gold_eligibility"],
+      "requires_human_review": true,
+      "status": "CANDIDATE_PENDING_HUMAN_AUTHORITY"
+    },
+    {
+      "tender_id": "TB-003",
+      "source_file": "backend/eval/tender-benchmark-v1/sources/TB-003-jiaozuo-sidian.pdf",
+      "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "candidate_requirements": {"records_ref": "backend/eval/gold-governance/v43-gold-v2-foundation/REQUIREMENT_SOURCE_RECONSTRUCTION_BLIND_PACKET.json#tenders[TB-003].candidate_requirements", "count": 0, "source_span_count": 0, "source_span_hash_count": 0, "source_excerpt_count": 0, "confidence_count": 0},
+      "source_excerpt": {"value": null, "status": "NOT_AVAILABLE_RAW_SOURCE_ONLY", "present_count": 0},
+      "candidate_confidence": {"value": null, "status": "NO_CANDIDATE"},
+      "review_required_fields": ["authorized_source_packet_or_manual_reconstruction", "candidate_requirement", "exact_source_span_and_text", "candidate_confidence", "Human_Authority_decision"],
+      "requires_human_review": true,
+      "status": "BLOCKED_RAW_SOURCE_ONLY",
+      "blocker": "NO_HISTORICAL_PACKET_OR_SOURCE_INDEX"
+    },
+    {
+      "tender_id": "FAST-04",
+      "source_file": "backend/eval/tender-benchmark-v1/sources/FAST-04-beijing-software.pdf",
+      "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "candidate_requirements": {"records_ref": "backend/eval/gold-governance/v43-gold-v2-foundation/REQUIREMENT_SOURCE_RECONSTRUCTION_BLIND_PACKET.json#tenders[FAST-04].candidate_requirements", "count": 0, "source_span_count": 0, "source_span_hash_count": 0, "source_excerpt_count": 0, "confidence_count": 0},
+      "source_excerpt": {"value": null, "status": "NOT_AVAILABLE_RAW_SOURCE_ONLY", "present_count": 0},
+      "candidate_confidence": {"value": null, "status": "NO_CANDIDATE"},
+      "review_required_fields": ["authorized_source_packet_or_manual_reconstruction", "candidate_requirement", "exact_source_span_and_text", "candidate_confidence", "Human_Authority_decision"],
+      "requires_human_review": true,
+      "status": "BLOCKED_RAW_SOURCE_ONLY",
+      "blocker": "NO_HISTORICAL_PACKET_OR_SOURCE_INDEX"
+    }
+  ],
+  "validation": {"candidate_count": 193, "source_coverage": {"JY-001": "193/193 spans; 193/193 span hashes; 0/193 exact excerpts", "TB-003": "0 candidates", "FAST-04": "0 candidates"}, "missing_source_span_count": 0, "blocked_tender_count": 2},
+  "non_authoritative_notice": "This packet does not create canonical Requirements, assign formal REQ-IDs, promote Gold, or write Production state."
+}

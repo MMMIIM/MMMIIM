@@ -1,0 +1,32 @@
+{
+  "artifact_type": "V43_RUNTIME_AND_DATABASE_IDENTITY_CLOSURE_V1_RUNTIME_QUERY_IDENTITY",
+  "current_worktree": {
+    "runner_path": "backend/eval/real-e2e/run-requirement-retrieval-fact-canary.mjs",
+    "query_path": "runCanary -> runRetrieval -> runner read-only ranking SELECT",
+    "query_projection": "m.source_version",
+    "repository_path": "backend/src/db.js PgRepository.listChunksForRetrieval",
+    "repository_material_version_projection": "no m.material_version database column lookup",
+    "runner_source_snapshot_projection": "sourceSnapshotFor(row) maps row.source_version to the Fact snapshot field material_version",
+    "runner_sha256": "cca364e3f24e398676ed6743f752696ff7cc5aafa7ef3ca84233a3d992bbeb23",
+    "db_sha256": "2dff671f7afeaf42ec8d4d8ed9de5e16e80efd602f6d3e6d949c3e99b4a763e9"
+  },
+  "container_source_evidence": {
+    "backend_src_mount": true,
+    "backend_db_sha256_matches_current_worktree": true,
+    "backend_server_sha256_matches_current_worktree": true,
+    "backend_container_source_search_m_material_version": "NO_MATCH",
+    "semantic_gateway_source_mount": true
+  },
+  "reported_runtime_failure": {
+    "reported_query": "m.material_version",
+    "sqlstate": "42703",
+    "current_checkout_match": false,
+    "emitting_runtime_file": "NOT_FOUND_IN_CURRENT_CHECKOUT_OR_INSPECTED_CONTAINER_SOURCE",
+    "emitting_runtime_revision": "NOT_VERIFIED"
+  },
+  "actual_runtime_query_for_current_canary": "m.source_version",
+  "runtime_code_drift": "NOT_CONFIRMED_FOR_CURRENT_EXECUTOR; reported stale query has no identified emitter",
+  "stale_container_image": "NOT_EVIDENCED",
+  "stale_running_process": "NOT_EVIDENCED",
+  "compatibility_column_added": false
+}

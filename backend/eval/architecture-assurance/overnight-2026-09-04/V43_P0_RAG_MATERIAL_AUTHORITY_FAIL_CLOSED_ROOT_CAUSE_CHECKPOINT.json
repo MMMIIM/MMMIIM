@@ -1,0 +1,42 @@
+{
+  "terminal_status": "V43_P0_RAG_ROOT_CAUSE_CONFIRMED",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "baseline_drift": false,
+  "historical_remediation_existed": "PARTIAL",
+  "historical_remediation_scope": "MIXED",
+  "material_lifecycle_enforcement": "ENFORCED",
+  "retrieval_quarantine_gate": "BYPASS_FOUND",
+  "review_quarantine_gate": "NOT_ENFORCED",
+  "fact_quarantine_authority": "PARTIAL",
+  "mapping_quarantine_authority": "FAIL_CLOSED",
+  "claim_quarantine_authority": "FAIL_CLOSED",
+  "writer_quarantine_exposure": "ZERO",
+  "legacy_authority_bypass": "FOUND",
+  "negative_controls": {
+    "NC01": "PROVEN",
+    "NC02": "PARTIAL_NOT_PROVEN",
+    "NC03": "PARTIAL_NOT_PROVEN",
+    "NC04": "PARTIAL_NOT_PROVEN",
+    "NC05": "PARTIAL_NOT_PROVEN"
+  },
+  "source_role_vs_production_lifecycle": "CONFLICTING",
+  "primary_root_cause": "D",
+  "secondary_root_causes": ["B", "C"],
+  "p0_rag_001_final_classification": "P1_GOVERNANCE_GAP",
+  "remediation_required": true,
+  "safe_to_proceed_to_remediation": true,
+  "safe_to_reopen_real_fact_gold": false,
+  "safe_to_reopen_real_mapping_gold": false,
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "production_files_changed_by_this_audit": 0,
+  "git_mutations": false,
+  "evidence_files": [
+    "V43_P0_RAG_ROOT_CAUSE_01_HISTORICAL_FORENSICS.md",
+    "V43_P0_RAG_ROOT_CAUSE_02_CURRENT_RUNTIME_TRACE.md",
+    "V43_P0_RAG_ROOT_CAUSE_03_NEGATIVE_CONTROL.md",
+    "V43_P0_RAG_ROOT_CAUSE_04_RECONCILIATION.md"
+  ],
+  "notes": "Canonical current Claim/Writer authority is fail-closed, but stale Retrieval/Review reads and legacy Fact/Mapping writes omit the shared lifecycle predicate. This audit did not remediate."
+}

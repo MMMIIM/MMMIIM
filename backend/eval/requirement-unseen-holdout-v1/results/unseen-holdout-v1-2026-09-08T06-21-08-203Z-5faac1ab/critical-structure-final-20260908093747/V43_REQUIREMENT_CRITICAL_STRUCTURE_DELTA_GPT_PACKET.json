@@ -1,0 +1,103 @@
+{
+  "artifact_type": "V43_REQUIREMENT_CRITICAL_STRUCTURE_DELTA_GPT_PACKET",
+  "eval_only": true,
+  "expected_labels": "NOT_INCLUDED",
+  "codex_verdict": "NOT_INCLUDED",
+  "provider_calls": 0,
+  "cases": [
+    {
+      "case_id": "HOLDOUT-REQ-01-CAN-0149",
+      "tender_id": "HOLDOUT-REQ-01",
+      "source_refs": [
+        "C014-S009"
+      ],
+      "source_resolved": true,
+      "source_text_hash": "dfe4f375601ae8857eb94c262de549aa0535ad92f979ce084d1d6d893d19ca05",
+      "candidate_text_hash": "8dda53c2fdd8b8bf91b784758c4a472f64e970b39aa99a754d77bf04a5b6a429",
+      "old_decision": "ACCEPT",
+      "new_decision": "REVIEW_REQUIRED",
+      "old_reason_codes": [],
+      "new_reason_codes": [
+        "PARENT_CRITICAL_CONSEQUENCE_OMISSION_REVIEW"
+      ],
+      "parent_consequence": {
+        "matched": true,
+        "reason_code": "PARENT_CRITICAL_CONSEQUENCE_OMISSION_REVIEW",
+        "alignment": "GOVERNING_CRITICAL_LIST",
+        "evidence": {
+          "source_index": 242,
+          "source_text": "5)投标有效期不满足招标文件要求的;",
+          "governing_list_marker": "之一",
+          "governing_table_marker": null,
+          "governing_relation": null,
+          "governing_consequence": "投标将被否决",
+          "governing_context_excerpt": "决。投标人不得通过修正或撤销不合要求的偏离或保留从而使其投标成为实质上响应的投标。如发现下列情况之一的,其投标将被否决:1)投标人未按时提交投标保证金、投标保证金的金额不足或投标保证",
+          "candidate_retains_consequence": false
+        }
+      },
+      "natural_parent_context_present": true,
+      "atomic_source_hash": "dfe4f375601ae8857eb94c262de549aa0535ad92f979ce084d1d6d893d19ca05"
+    },
+    {
+      "case_id": "HOLDOUT-REQ-01-CAN-0208",
+      "tender_id": "HOLDOUT-REQ-01",
+      "source_refs": [
+        "C015-S100"
+      ],
+      "source_resolved": true,
+      "source_text_hash": "39d2450c34aa1cb2d156153dc21fd432ab7b15867b87358614d06e0051c03835",
+      "candidate_text_hash": "8dda53c2fdd8b8bf91b784758c4a472f64e970b39aa99a754d77bf04a5b6a429",
+      "old_decision": "ACCEPT",
+      "new_decision": "REVIEW_REQUIRED",
+      "old_reason_codes": [],
+      "new_reason_codes": [
+        "PARENT_CRITICAL_CONSEQUENCE_OMISSION_REVIEW"
+      ],
+      "parent_consequence": {
+        "matched": true,
+        "reason_code": "PARENT_CRITICAL_CONSEQUENCE_OMISSION_REVIEW",
+        "alignment": "GOVERNING_CRITICAL_TABLE",
+        "evidence": {
+          "source_index": 1121,
+          "source_text": "7投标有效期投标有效期满足招标文件要求的。",
+          "governing_list_marker": null,
+          "governing_table_marker": "附表二",
+          "governing_relation": "全部内容,否则其投标无效",
+          "governing_consequence": "投标无效",
+          "governing_context_excerpt": "3投标无效情形投标人须满足附表二符合性审查表的全部内容,否则其投标无效。第17页1投标人名称与投标登记、营业执照/《事业单位法人证书》",
+          "candidate_retains_consequence": false
+        }
+      },
+      "natural_parent_context_present": true,
+      "atomic_source_hash": "39d2450c34aa1cb2d156153dc21fd432ab7b15867b87358614d06e0051c03835"
+    },
+    {
+      "case_id": "POST-FIX-V2-015",
+      "tender_id": "JY-001",
+      "source_refs": [
+        "C009-S035",
+        "C009-S036",
+        "C009-S037",
+        "C009-S038"
+      ],
+      "source_resolved": true,
+      "source_text_hash": "5f9dca6cb405812de06dd33f2af201b630276b9ac65f27b8c29945b34d55cf3e",
+      "candidate_text_hash": "9c6356fac75c124a96b54ec7168156b17d7a87f2a92ab89e162bab90962c0316",
+      "old_decision": "REVIEW_REQUIRED",
+      "new_decision": "REVIEW_REQUIRED",
+      "old_reason_codes": [
+        "NEGATION_DISTORTION"
+      ],
+      "new_reason_codes": [
+        "NEGATION_DISTORTION"
+      ],
+      "parent_consequence": {
+        "matched": false,
+        "reason_code": null,
+        "alignment": "NO_GOVERNING_CRITICAL_STRUCTURE"
+      },
+      "natural_parent_context_present": true,
+      "atomic_source_hash": "5f9dca6cb405812de06dd33f2af201b630276b9ac65f27b8c29945b34d55cf3e"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "checkpoint": "V43_MAPPING_BATCH01_HUMAN_REVIEW_SOURCE_PARITY_CHECKPOINT",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "packet": "mapping-real-source-packet-v1",
+  "total_cases": 24,
+  "initial_observation": {
+    "json_markdown_parity_pass_count": 0,
+    "json_markdown_parity_fail_count": 24,
+    "candidate_id_parity": "24/24 PASS",
+    "requirement_id_parity": "24/24 PASS",
+    "requirement_source_hash_parity": "24/24 PASS",
+    "fact_id_set_parity": "23/24 PASS",
+    "fact_ref_set_parity": "23/24 PASS",
+    "fact_source_hash_parity": "0/24 PASS; Markdown rendered no Fact source_hash fields",
+    "affected_case_ids": [
+      "REAL-MAP-CAND-001",
+      "REAL-MAP-CAND-002",
+      "REAL-MAP-CAND-003",
+      "REAL-MAP-CAND-004",
+      "REAL-MAP-CAND-005",
+      "REAL-MAP-CAND-006",
+      "REAL-MAP-CAND-007",
+      "REAL-MAP-CAND-008",
+      "REAL-MAP-CAND-009",
+      "REAL-MAP-CAND-010",
+      "REAL-MAP-CAND-011",
+      "REAL-MAP-CAND-012",
+      "REAL-MAP-CAND-013",
+      "REAL-MAP-CAND-014",
+      "REAL-MAP-CAND-015",
+      "REAL-MAP-CAND-016",
+      "REAL-MAP-CAND-017",
+      "REAL-MAP-CAND-018",
+      "REAL-MAP-CAND-019",
+      "REAL-MAP-CAND-020",
+      "REAL-MAP-CAND-021",
+      "REAL-MAP-CAND-022",
+      "REAL-MAP-CAND-023",
+      "REAL-MAP-CAND-024"
+    ]
+  },
+  "cand013_investigation": {
+    "candidate_id": "REAL-MAP-CAND-013",
+    "requirement_id": "REQ-028",
+    "parent_json_fact_set": [
+      "EFACT-51BBB3D4-8397-4E1E-B030-26DA8E4A9465",
+      "EFACT-CD2403D4-C896-4762-9DBC-8ECA23B7B1D4"
+    ],
+    "parent_markdown_fact_set_before_repair": [
+      "EFACT-51BBB3D4-8397-4E1E-B030-26DA8E4A9465"
+    ],
+    "novelty_comparator_fact_set": [
+      "EFACT-51BBB3D4-8397-4E1E-B030-26DA8E4A9465",
+      "EFACT-CD2403D4-C896-4762-9DBC-8ECA23B7B1D4"
+    ],
+    "supplemental_candidate_id": "REAL-MAP-SUPP-005",
+    "supplemental_fact_set": [
+      "EFACT-51BBB3D4-8397-4E1E-B030-26DA8E4A9465",
+      "EFACT-CD2403D4-C896-4762-9DBC-8ECA23B7B1D4"
+    ],
+    "exact_duplicate_result": "SUPP-005 equals CAND-013 under Requirement identity plus sorted Fact identity"
+  },
+  "repair": {
+    "corrected_rendering_path": "backend/eval/gold-human-review/v2/01_mapping_real_source_packet.md",
+    "corrected_rendering_includes": [
+      "requirement_id",
+      "requirement_source_hash",
+      "fact_id",
+      "fact_ref",
+      "fact_source_hash"
+    ],
+    "post_repair_json_markdown_parity_pass_count": 24,
+    "post_repair_json_markdown_parity_fail_count": 0,
+    "source_packet_render_parity_gate": "PASS_AFTER_CORRECTED_RENDERING",
+    "original_markdown_sha256": "5ac54f42406d6a56f79267af87d9be060c2ab6b95b52a57b8bf553a8c3dbbf6a",
+    "corrected_markdown_sha256": "87545524d34e1554bc1cbc0f261f0325efac2908ca3b6e86ce40ef55efdaf276"
+  },
+  "human_authority": {
+    "rule": "Any original JSON/Markdown source mismatch suspends only affected cases pending Human review",
+    "current_status": "SUSPENDED_PENDING_REVIEW",
+    "suspended_case_ids": [
+      "REAL-MAP-CAND-001",
+      "REAL-MAP-CAND-002",
+      "REAL-MAP-CAND-003",
+      "REAL-MAP-CAND-004",
+      "REAL-MAP-CAND-005",
+      "REAL-MAP-CAND-006",
+      "REAL-MAP-CAND-007",
+      "REAL-MAP-CAND-008",
+      "REAL-MAP-CAND-009",
+      "REAL-MAP-CAND-010",
+      "REAL-MAP-CAND-011",
+      "REAL-MAP-CAND-012",
+      "REAL-MAP-CAND-013",
+      "REAL-MAP-CAND-014",
+      "REAL-MAP-CAND-015",
+      "REAL-MAP-CAND-016",
+      "REAL-MAP-CAND-017",
+      "REAL-MAP-CAND-018",
+      "REAL-MAP-CAND-019",
+      "REAL-MAP-CAND-020",
+      "REAL-MAP-CAND-021",
+      "REAL-MAP-CAND-022",
+      "REAL-MAP-CAND-023",
+      "REAL-MAP-CAND-024"
+    ]
+  },
+  "current_mapping_gold_sha_parity": {
+    "expected": "5a6d9eb7c4e7b23f347da111b5276060375b3de2e07716b9cee88d15d5431707",
+    "actual": "5a6d9eb7c4e7b23f347da111b5276060375b3de2e07716b9cee88d15d5431707",
+    "status": "PASS"
+  },
+  "production_files_changed": 0,
+  "active_gold_changed": 0,
+  "provider_calls": 0,
+  "db_writes": 0,
+  "permanent_test": "SOURCE_PACKET_RENDER_PARITY_GATE added and passing on corrected rendering; omission mutation fails closed",
+  "final_verdict": "HUMAN_REVIEW_SOURCE_PARITY_REMEDIATION_REQUIRED",
+  "notes": [
+    "No Human labels, expected decisions, Gold, Prompt, Schema, Production, or Fact content were changed.",
+    "The corrected rendering is source-only and does not restore suspended Human Authority.",
+    "No Provider, database, or Git operation was performed."
+  ]
+}

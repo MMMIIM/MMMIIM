@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "name": "unknown_source_ref_fail_closed",
+      "passed": true,
+      "error_code": "UNKNOWN_SOURCE_ALIAS"
+    },
+    {
+      "name": "valid_source_ref_dereference",
+      "passed": true
+    },
+    {
+      "name": "source_snapshot_same_identity_matches",
+      "passed": true
+    },
+    {
+      "name": "source_snapshot_drift_fails_closed",
+      "passed": true
+    },
+    {
+      "name": "material_authority_positive",
+      "passed": true
+    },
+    {
+      "name": "material_quarantine_fail_closed",
+      "passed": true
+    },
+    {
+      "name": "canonicalizer_does_not_invent_semantics",
+      "passed": true
+    },
+    {
+      "name": "grounding_accepts_backend_snapshot",
+      "passed": true
+    },
+    {
+      "name": "grounding_escape_is_rejected",
+      "passed": true
+    },
+    {
+      "name": "fact_mapping_currentness_detects_payload_drift",
+      "passed": true
+    },
+    {
+      "name": "mapping_policy_caps_reference_only",
+      "passed": true
+    },
+    {
+      "name": "claim_current_allow_positive",
+      "passed": true
+    },
+    {
+      "name": "claim_currentness_stale_gate_rejected",
+      "passed": true
+    }
+  ],
+  "source_authority": "FROZEN_BACKEND_SNAPSHOT",
+  "unknown_source_ref_behavior": "FAIL_CLOSED",
+  "material_quarantine_regression": "PASS"
+}

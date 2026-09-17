@@ -1,0 +1,74 @@
+{
+  "checkpoint": "V43_FACT_CANDIDATE_V2_1_INTERRUPTED_STAGE1_EXECUTION_RECOVERY_AND_RESUME_GATE",
+  "recorded_at": "2026-09-08T12:46:51.256+08:00",
+  "case_id_expected": "COM-01",
+  "interrupted_run_id": null,
+  "interrupted_execution_id": null,
+  "interrupted_case_id": "COM-01",
+  "interrupted_duration": "NOT_RECOVERABLE_HUMAN_REPORTED_APPROX_16S_ONLY",
+  "interrupted_state": "F_IDENTITY_AMBIGUOUS",
+  "gateway_reached": "NOT_OBSERVABLE",
+  "provider_request_dispatched": "NOT_OBSERVABLE",
+  "provider_response_observed": "NO_RECOVERABLE_EVIDENCE",
+  "schema_validation_observed": "NO_RECOVERABLE_EVIDENCE",
+  "interrupted_provider_calls": "UNRESOLVED_IDENTITY",
+  "interrupted_result_semantically_usable": "NO",
+  "recovered_requested_model": null,
+  "recovered_response_model": null,
+  "recovered_schema_result": null,
+  "recovered_raw_candidate_available": "NO",
+  "recovery_evidence": {
+    "candidate_v21_execution_artifact_count": 0,
+    "candidate_v21_execution_ids": [],
+    "candidate_v21_gateway_trace_ids": [],
+    "candidate_v21_request_hashes": [],
+    "candidate_v21_provider_response_artifacts": [],
+    "candidate_v21_schema_validator_artifacts": [],
+    "repo_local_gateway_or_runner_logs": "NOT_FOUND",
+    "excluded_older_runs": [
+      {
+        "run_id": "fact-candidate-v2-target-live-20260908020847-25ea97d6",
+        "schema_version": "4.3-evidence-fact-candidate-v2",
+        "prompt_version": "4.3-evidence-fact-candidate-v2-prompt-v1",
+        "classification": "EXCLUDED_OLD_V2_NOT_V2_1"
+      },
+      {
+        "run_id": "fact-candidate-v2-target-live-20260908030331-0007eb67",
+        "schema_version": "4.3-evidence-fact-candidate-v2",
+        "prompt_version": "4.3-evidence-fact-candidate-v2-prompt-v1",
+        "classification": "EXCLUDED_OLD_V2_NOT_V2_1"
+      }
+    ],
+    "v21_offline_identity": {
+      "schema_version": "4.3-evidence-fact-candidate-v2.1",
+      "prompt_version": "4.3-evidence-fact-candidate-v2-prompt-v2",
+      "configured_provider": "deepseek_official",
+      "configured_model": "deepseek-v4-pro",
+      "offline_provider_calls": 0
+    },
+    "classification_reason": "No uniquely matching v2.1 execution evidence proves whether COM-01 was dispatched, reached the Gateway, reached the Provider, or produced a response. Older v2 artifacts are contract-incompatible and cannot be reused."
+  },
+  "replacement_run_id": null,
+  "replacement_execution_id": null,
+  "replacement_reason": null,
+  "replacement_after_external_interruption": 0,
+  "total_provider_calls_including_interrupted": "UNRESOLVED_IDENTITY",
+  "valid_canary_execution_count": 0,
+  "stage2_executed": false,
+  "safety": {
+    "provider_calls_added": 0,
+    "production_db_writes": 0,
+    "fact_persistence": 0,
+    "gold_mutations": 0,
+    "mapping_actions": 0,
+    "claim_actions": 0,
+    "writer_actions": 0,
+    "prompt_changed": false,
+    "schema_changed": false,
+    "canonicalizer_changed": false,
+    "grounding_changed": false,
+    "production_routing_changed": false
+  },
+  "final_status": "BLOCKED_WITH_EVIDENCE",
+  "next_action": "STOP_AND_RETURN_TO_GPT; DO_NOT_REISSUE_COM_01_UNTIL_EXECUTION_IDENTITY_IS_RECOVERABLE"
+}

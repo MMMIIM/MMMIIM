@@ -1,0 +1,48 @@
+{
+  "checkpoint": "V43_REQUIREMENT_FIXED_48_RUNTIME_AND_SEMANTIC_CERTIFICATION_GATE",
+  "status": "FAIL_CLOSED_RUN_AUDIT_INCOMPLETE",
+  "fixed_source_artifact": "docs/V43_REQUIREMENT_LIVE_BENCHMARK.json",
+  "fixed_case_count": 48,
+  "source_input_parity": {
+    "exact_input_hash_count": 48,
+    "exact_input_hash_all": true,
+    "source_sha_verified": true
+  },
+  "first_case_probe": {
+    "case_id": "FIXED48-01",
+    "status": "PASS",
+    "provider_chain_reached": true,
+    "provider_http_status": 200,
+    "schema_valid": true,
+    "source_resolution_pass": true,
+    "canonicalization_pass": true,
+    "output_truncated": false,
+    "duration_ms": 13183
+  },
+  "bulk_run": {
+    "telemetry_persisted": false,
+    "process_completed_without_artifact": true,
+    "provider_calls_observed": 1,
+    "provider_calls_accounted": 1,
+    "provider_calls_unaccounted": "UNKNOWN",
+    "retries": 0,
+    "rerun_blocked_to_protect_call_cap": true
+  },
+  "provider_identity": {
+    "gateway_provider_family": "semantic_gateway",
+    "actual_provider_reached": "openai_compatible",
+    "actual_model_id": "PROVIDER_NOT_EXPOSED",
+    "identity_status": "CONDITIONAL_PROVIDER_IDENTITY"
+  },
+  "runtime_gate": "FAIL",
+  "semantic_certification": "NOT_STARTED",
+  "output_side_239_reused": false,
+  "source_side_72_reused": false,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "truncation_count": "NOT_DETERMINED",
+  "unexplained_runtime_failures": "NOT_DETERMINED",
+  "first_failure": "FIXED_48_RUNNER_TELEMETRY_NOT_PERSISTED",
+  "root_classification": "ENVIRONMENTAL_OR_RUNNER_AUDIT_FAILURE",
+  "next_action": "STOP; do not rerun fixed-48 without a persisted, cap-aware runner"
+}

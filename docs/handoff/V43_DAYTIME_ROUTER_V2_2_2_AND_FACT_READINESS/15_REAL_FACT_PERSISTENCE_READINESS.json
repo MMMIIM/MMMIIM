@@ -1,0 +1,30 @@
+{
+  "artifact": "V43_REAL_FACT_V2_PERSISTENCE_READINESS",
+  "authority_constraints": [
+    "MATERIAL_AUTHORITY_SQL checked before Fact insert",
+    "atomic transaction for batch insert/replacement",
+    "approved Evidence Review and current source lineage required"
+  ],
+  "basis": "Existing isolated Eval DB checkpoint plus current migrations/repository atomic write paths; no Production DB was contacted or modified in this audit.",
+  "eval_only": true,
+  "isolated_db_readiness": "READY",
+  "migrations": [
+    "backend/migrations/025_evidence_source_span_v1.sql",
+    "backend/migrations/026_evidence_review_v1.sql",
+    "backend/migrations/027_evidence_fact_v1.sql",
+    "backend/migrations/051_material_source_authority_quarantine.sql"
+  ],
+  "production_db_writes": 0,
+  "repository_write_paths": [
+    "backend/src/db.js:upsertEvidenceSourceFactsAtomic",
+    "backend/src/db.js:replaceEvidenceSourceFactAtomic"
+  ],
+  "tables": [
+    "company_materials",
+    "material_chunks",
+    "evidence_candidate_reviews",
+    "evidence_source_spans",
+    "evidence_source_facts",
+    "evidence_facts"
+  ]
+}

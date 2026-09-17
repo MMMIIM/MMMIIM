@@ -1,0 +1,76 @@
+{
+  "validation_id": "FIRST_SYNC_VALIDATION_EVIDENCE_V1",
+  "status": "PARTIAL_WITH_EXISTING_REPOSITORY_FAILURES",
+  "provider_calls": 0,
+  "embedding_calls": 0,
+  "llm_calls": 0,
+  "production_database_writes": 0,
+  "commands": [
+    {
+      "command": "npm test",
+      "scope": "root wrapper; backend ran first and stopped the wrapper before frontend",
+      "status": "FAIL",
+      "exit_code": 1,
+      "notes": "Backend full suite contains existing missing-fixture/path failures and existing assertion failures. Representative missing paths include backend/docs/V43_REQUIREMENT_P1_GPT_SEMANTIC_CALIBRATION_PACKET*.json, backend/backend/eval/gold-human-review/v2/... and backend/backend/eval/requirement-evidence-mapping-v2/.... Other observed existing failures include scale hash drift, runtime config guard, writer authorization snapshot, and governance fixture assertions. No production retrieval code was changed by this task."
+    },
+    {
+      "command": "node --test test/retrieval-baseline.test.js test/retrieval-eval.test.js test/retrieval-quality-p0-k0-contract.test.js test/retrieval-substantive-hygiene-offline.test.js test/retrieval-source-eligibility.test.js test/retrieval-runner-binding.test.js test/production-retrieval-contract.test.js test/enterprise-retrieval.test.js",
+      "scope": "backend working directory; retrieval and contract regression slice",
+      "status": "PASS",
+      "exit_code": 0,
+      "tests": 42,
+      "passed": 42,
+      "failed": 0
+    },
+    {
+      "command": "npm test -w services/semantic-gateway",
+      "scope": "semantic gateway",
+      "status": "PASS",
+      "exit_code": 0,
+      "tests": 85,
+      "passed": 85,
+      "failed": 0
+    },
+    {
+      "command": "npm run test -w frontend",
+      "scope": "frontend",
+      "status": "PASS",
+      "exit_code": 0,
+      "test_files": 11,
+      "tests": 52,
+      "passed": 52,
+      "failed": 0
+    },
+    {
+      "command": "npm run build -w frontend",
+      "scope": "frontend production build",
+      "status": "PASS",
+      "exit_code": 0
+    },
+    {
+      "command": "npm run lint",
+      "scope": "root wrapper",
+      "status": "NOOP_NO_LINT_SCRIPT",
+      "exit_code": 0,
+      "notes": "The root wrapper uses --if-present and neither backend nor frontend package.json declares a lint script. This is not reported as a lint pass."
+    },
+    {
+      "command": "git diff --check",
+      "scope": "worktree whitespace check",
+      "status": "PASS_WITH_LINE_ENDING_WARNINGS",
+      "exit_code": 0,
+      "notes": "Git reported LF-to-CRLF normalization warnings for existing files; no diff-check error was returned."
+    }
+  ],
+  "interpretation": {
+    "production_retrieval_change": 0,
+    "production_db_write": 0,
+    "gold_mutation": 0,
+    "corpus_mutation": 0,
+    "remote_write": 0,
+    "full_suite_release_gate": "BLOCKED_BY_EXISTING_REPOSITORY_FAILURES",
+    "targeted_retrieval_gate": "PASS",
+    "frontend_gate": "PASS",
+    "gateway_gate": "PASS"
+  }
+}

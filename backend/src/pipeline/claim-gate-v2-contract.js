@@ -21,6 +21,8 @@ export const CLAIM_GATE_V2_DIMENSIONS = Object.freeze({
 const DECISIONS=new Set(CLAIM_GATE_V2_DECISIONS);
 const REASONS=new Set(CLAIM_GATE_V2_REASON_CODES);
 const object=(value)=>value&&typeof value==='object'&&!Array.isArray(value);
+const optionalHash=(value,name)=>{if(value===null||value===undefined||value==='')return null;const normalized=String(value).trim();if(!/^[a-f0-9]{64}$/i.test(normalized))throw new AppError('CLAIM_GATE_V2_IDENTITY_INVALID',`${name} 必须是 SHA-256。`,422);return normalized.toLowerCase();};
+const identityFields=(input)=>({claim_assertion_hash:optionalHash(input.claim_assertion_hash,'claim_assertion_hash'),gate_result_id:input.gate_result_id?String(input.gate_result_id).trim():null,input_snapshot_hash:optionalHash(input.input_snapshot_hash,'input_snapshot_hash'),source_hashes:strings(input.source_hashes??[],'source_hashes').map((value)=>optionalHash(value,'source_hashes')),lineage_current:input.lineage_current===true});
 const strings=(value,name)=>{
   if(!Array.isArray(value))throw new AppError('CLAIM_GATE_V2_CONTRACT_INVALID',`${name} 必须是数组。`,422);
   return [...new Set(value.map((item)=>String(item||'').trim()).filter(Boolean))];
@@ -67,6 +69,7 @@ export function createClaimGateEvaluationContract(input={}){
     evidence_ids:strings(input.evidence_ids??[],'evidence_ids'),mapping_ids:strings(input.mapping_ids??[],'mapping_ids'),
     rule_version:String(input.rule_version||CLAIM_GATE_V2_RULE_VERSION).trim(),deterministic_checks:structuredClone(deterministicChecks),
     semantic_assessment:semantic===null?null:structuredClone(semantic),semantic_assessment_used:semanticUsed,
-    human_review_required:humanReviewRequired,writer_eligible:decision==='allow',legacy_decision_projection:projectLegacyClaimDecision(decision),evaluated_by:evaluatedBy
+    human_review_required:humanReviewRequired,writer_eligible:decision==='allow',legacy_decision_projection:projectLegacyClaimDecision(decision),evaluated_by:evaluatedBy,
+    ...identityFields(input)
   };
 }

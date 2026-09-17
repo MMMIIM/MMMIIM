@@ -1,0 +1,55 @@
+{
+  "run_id": "fact-candidate-v2-target-live-20260908020847-25ea97d6",
+  "checkpoint": "V43_FACT_CANDIDATE_V2_TARGET_LIVE_GATE",
+  "generated_at": "2026-09-08T02:08:47.973Z",
+  "runtime_preflight": {
+    "gateway_base": "http://127.0.0.1:18082",
+    "ready_status": 200,
+    "info_status": 200,
+    "fact_provider": "deepseek_official",
+    "fact_provider_configured": true,
+    "fact_provider_endpoint": "/responses",
+    "fact_model": "deepseek-v4-pro",
+    "build_revision": "dev-working-tree",
+    "task_types": [
+      "requirement_extraction",
+      "response_planning",
+      "claim_generation",
+      "section_drafting",
+      "targeted_revision",
+      "evidence_fact_extraction",
+      "evidence_fact_candidate_v2",
+      "draft_sections",
+      "evidence_support_assessment",
+      "requirement_evidence_mapping"
+    ]
+  },
+  "contract": {
+    "task_type": "evidence_fact_candidate_v2",
+    "schema_version": "4.3-evidence-fact-candidate-v2",
+    "schema_sha256": "9b40ac9be7d5a262e39d1a142bb5165ba113e213cfa9f56b7888ae241693f834",
+    "prompt_version": "4.3-evidence-fact-candidate-v2-prompt-v1",
+    "prompt_hash": "958f06d4eb3bf07379cffd77bff1ced76e5f778ae6e2967b9c65967ca616591e",
+    "canonicalizer_version": "4.3-evidence-fact-canonicalizer-v2",
+    "grounding_version": "4.3-evidence-fact-grounding-v2"
+  },
+  "planned_executions": 4,
+  "planned_cases": [
+    "COM-01",
+    "COM-06-A",
+    "COM-06-B",
+    "CCV2-U13-01"
+  ],
+  "provider": "deepseek_official",
+  "model": "deepseek-v4-pro",
+  "endpoint": "/responses",
+  "concurrency": 1,
+  "retries_policy": "genuine_transport_transient_only",
+  "total_provider_call_cap": 5,
+  "production_db_writes": 0,
+  "fact_persistence": 0,
+  "gold_mutations": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0
+}

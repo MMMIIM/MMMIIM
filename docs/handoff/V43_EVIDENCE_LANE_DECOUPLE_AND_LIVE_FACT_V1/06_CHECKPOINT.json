@@ -1,0 +1,54 @@
+{
+  "artifact_type": "V43_EVIDENCE_LANE_DECOUPLE_AND_LIVE_FACT_CHECKPOINT_V1",
+  "status": "FACT_LANE_PASS_MAPPING_PENDING",
+  "run_id": "real-e2e-retrieval-fact-20260916095708-3ca473a0",
+  "reference_lane_status": "REFERENCE_LANE_BLOCKED_BASE16_VECTOR_BINDING",
+  "evidence_lane_status": "PASS",
+  "fact": {
+    "materials_attempted": [
+      "COM-02",
+      "COM-03",
+      "COM-04",
+      "COM-06",
+      "COM-07",
+      "COM-08",
+      "COM-13",
+      "COM-14",
+      "COM-15"
+    ],
+    "materials_succeeded": [
+      "COM-02",
+      "COM-06",
+      "COM-13",
+      "COM-03",
+      "COM-04",
+      "COM-07",
+      "COM-08",
+      "COM-14",
+      "COM-15"
+    ],
+    "chunks_processed": 9,
+    "candidate_total": 1,
+    "canonicalized_count": 1,
+    "grounding_accept_count": 1,
+    "grounding_review_count": 0,
+    "grounding_reject_count": 0,
+    "provider_calls": 9,
+    "provider_failures": 0,
+    "com06_positive_result_inference_escape": 0,
+    "reference_to_fact_escape": 0,
+    "cross_enterprise_fact_escape": 0
+  },
+  "next_stage": "MAPPING",
+  "safety": {
+    "provider_calls": 9,
+    "embedding_calls": 0,
+    "production_db_writes": 0,
+    "eval_db_writes": 0,
+    "fact_persistence": 0,
+    "gold_mutations": 0,
+    "mapping_actions": 0,
+    "claim_actions": 0,
+    "writer_actions": 0
+  }
+}

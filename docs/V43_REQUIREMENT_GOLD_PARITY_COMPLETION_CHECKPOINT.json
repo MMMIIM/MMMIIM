@@ -1,0 +1,34 @@
+{
+  "checkpoint": "V43_REQUIREMENT_GOLD_PARITY_COMPLETION_CHECKPOINT",
+  "audit_mode": "READ_ONLY_PREPARATION",
+  "existing_frozen_count": {"tenders": 3, "reviewed_gold_requirements": 162},
+  "candidate_count": 193,
+  "human_review_required_count": 193,
+  "promotion_block_reason": "HUMAN_AUTHORITY_REQUIRED; JY-001 source excerpts and confidence are missing; TB-003 and FAST-04 have no historical packet/source index; no automatic re-extraction or promotion",
+  "six_tender_requirement_gold_parity": "NOT_COMPLETE",
+  "requirement_gold_promotion": "NOT_AUTHORIZED",
+  "existing_frozen_tenders": [
+    {"tender_id": "FAST-01", "gold_requirement_count": 39, "manifest": "backend/eval/requirement-extraction-real-tender-pilot-v1/manifest.json", "status": "GPT_GOLD_REVIEWED_FROZEN"},
+    {"tender_id": "FAST-WATER-01", "gold_requirement_count": 80, "manifest": "backend/eval/requirement-extraction-real-tender-pilot-v1/manifest.json", "status": "GPT_GOLD_REVIEWED_FROZEN"},
+    {"tender_id": "TB-006", "gold_requirement_count": 43, "manifest": "backend/eval/requirement-extraction-real-tender-pilot-v1/manifest.json", "status": "GPT_GOLD_REVIEWED_FROZEN"}
+  ],
+  "candidate_tenders": [
+    {"tender_id": "JY-001", "classification": "B_HUMAN_RECONSTRUCTION_POSSIBLE", "candidate_count": 193, "source_span_count": 193, "source_span_hash_count": 193, "source_excerpt_count": 0, "candidate_confidence_count": 0, "status": "CANDIDATE_PENDING_HUMAN_AUTHORITY", "human_action_required": true},
+    {"tender_id": "TB-003", "classification": "C_REEXTRACTION_REQUIRED", "candidate_count": 0, "source_span_count": 0, "source_excerpt_count": 0, "status": "BLOCKED_RAW_SOURCE_ONLY", "blocker": "NO_HISTORICAL_PACKET_OR_SOURCE_INDEX", "human_action_required": true},
+    {"tender_id": "FAST-04", "classification": "C_REEXTRACTION_REQUIRED", "candidate_count": 0, "source_span_count": 0, "source_excerpt_count": 0, "status": "BLOCKED_RAW_SOURCE_ONLY", "blocker": "NO_HISTORICAL_PACKET_OR_SOURCE_INDEX", "human_action_required": true}
+  ],
+  "human_review_packet": {
+    "json": "docs/V43_REQUIREMENT_GOLD_PARITY_HUMAN_AUTHORITY_REVIEW_PACKET.json",
+    "markdown": "docs/V43_REQUIREMENT_GOLD_PARITY_HUMAN_AUTHORITY_REVIEW_PACKET.md",
+    "authority_status": "NO_AUTHORITATIVE_UPGRADE",
+    "blind": true,
+    "eval_only": true
+  },
+  "side_effects": {
+    "provider_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "production_changes": 0,
+    "formal_req_id_assignments": 0
+  }
+}

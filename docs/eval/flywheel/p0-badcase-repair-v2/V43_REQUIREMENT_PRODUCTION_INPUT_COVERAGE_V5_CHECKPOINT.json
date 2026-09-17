@@ -1,0 +1,84 @@
+{
+  "artifact_type": "V43_REQUIREMENT_PRODUCTION_INPUT_COVERAGE_V5_CHECKPOINT",
+  "artifact_version": "v5",
+  "production_run_id": "V43-CORE6-20260911",
+  "source_truth_id": "GPT_SOURCE_TRUTH_P0_CORE6_V1",
+  "source_truth_sha256": "9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+  "source_fidelity_evidence": {
+    "path": "docs\\eval\\p0-recall\\V43_P0_SOURCE_FIDELITY_EVIDENCE.json",
+    "sha256": "080a2a96a296baa64809a4e00230c1463210fa0ca6b9d672028c07d0bc6e8944",
+    "atom_count": 487,
+    "production_source_text_found": 472,
+    "production_source_text_not_found": 15,
+    "semantic_interpretation": "NOT_PERFORMED"
+  },
+  "production_parse_chunk_unique_count": 197,
+  "hash_comparison_record_count": 197,
+  "duplicate_or_auxiliary_record_count": 0,
+  "reason_for_197_vs_204": "204 is the FAST-01 Requirement candidate/source-verified count recorded by docs/e2e/FAST01_V3/E2E_CHECKPOINT.md and is not a Parse Chunk hash-record count. The frozen Core6 Production run has 197 unique persisted Parse Chunks (28+33+32+26+51+27), with 197 deterministic hash comparisons.",
+  "badcase_31_count": 31,
+  "badcase_31_earliest_loss_counts": {
+    "NONE": 25,
+    "UNRESOLVED": 6
+  },
+  "p0_source_to_provider_input_coverage": {
+    "total_atoms": 487,
+    "source_found_in_full_extraction": 472,
+    "source_covered_by_selected_sections": 472,
+    "source_covered_by_parse_chunks": 472,
+    "source_covered_by_provider_payload": 472,
+    "cross_chunk_semantic_splits": 0,
+    "unresolved": [
+      "FAST-01-P0-0009",
+      "FAST-01-P0-0010",
+      "FAST-01-P0-0011",
+      "FAST-01-P0-0012",
+      "FAST-01-P0-0013",
+      "FAST-01-P0-0014",
+      "FAST-01-P0-0015",
+      "FAST-01-P0-0016",
+      "FAST-01-P0-0017",
+      "FAST-01-P0-0018",
+      "FAST-01-P0-0019",
+      "TB-003-P0-0006",
+      "TB-003-P0-0023",
+      "TB-003-P0-0024",
+      "TB-003-P0-0025"
+    ],
+    "gate": "FAIL"
+  },
+  "systemic_scope_hypothesis": {
+    "status": "OBSERVED_SCOPE_BOUNDARY_RISK",
+    "excluded_section_roles_observed": [
+      "tender_invitation",
+      "compliance_rule_candidate",
+      "scoring_point_candidate",
+      "delivery_constraint_candidate",
+      "word_template_candidate",
+      "requirement_extraction_fallback"
+    ],
+    "hypothesis_targets": [
+      "qualification requirements",
+      "invalidity conditions",
+      "bid document composition",
+      "pricing / quotation constraints",
+      "payment obligations",
+      "procedural conformity obligations"
+    ],
+    "case_specific_keyword_patch_applied": false,
+    "full_tender_to_llm_fallback": false,
+    "semantic_contract_redefined": false,
+    "interpretation": "The current scope routing contract explicitly routes several non-technical sections away from Requirement Extraction. The diagnostic records the observed boundary; it does not promote this observation to a semantic root cause or alter routing."
+  },
+  "provider_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "prompt_changes": 0,
+  "schema_changes": 0,
+  "normalizer_changes": 0,
+  "canonicalizer_changes": 0,
+  "production_repair_applied": false,
+  "semantic_adjudication_performed": false,
+  "final_status": "BLOCKED_PRODUCTION_INPUT_COVERAGE_ROOT_CAUSE_UNRESOLVED"
+}

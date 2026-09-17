@@ -1,0 +1,1128 @@
+{
+  "artifact_type": "V43_P0_UNSAFE_LEDGER",
+  "artifact_version": "v2",
+  "created_at": "2026-09-11",
+  "status": "GPT_SEMANTIC_LEDGER_COMPLETE_HUMAN_FREEZE_PENDING",
+  "authority": {
+    "semantic_label_author": "GPT",
+    "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+    "human_gold_authority": "PENDING_USER_APPROVAL"
+  },
+  "identity": {
+    "source_truth_id": "GPT_SOURCE_TRUTH_P0_CORE6_V1",
+    "source_truth_sha256": "sha256:9337ecac323176ddcdf70a6012f522d24cc7d1930765290300bcc0d1d540cba0",
+    "production_run_id": "V43-CORE6-20260911",
+    "r3_eval_run_id": "V43-FLYWHEEL-P0-487-R3",
+    "review_bundle_sha256": "867965a6f2e0b1568278a62c05316b16bcb1b1dfd09e01705020f4b51d240a2d",
+    "review_bundle_manifest_sha256": "5b62e98429b943e6d5f5848e6b711f0eb826106df3b8c07d3c48c688c36edd42"
+  },
+  "selection_rule": "semantic_label in {PARTIAL, DISTORTED, MISS}",
+  "summary": {
+    "unsafe_count": 44,
+    "PARTIAL": 7,
+    "DISTORTED": 6,
+    "MISS": 31,
+    "by_tender": {
+      "JY-001": {
+        "PARTIAL": 2,
+        "DISTORTED": 0,
+        "MISS": 8
+      },
+      "TB-003": {
+        "PARTIAL": 1,
+        "DISTORTED": 0,
+        "MISS": 5
+      },
+      "TB-006": {
+        "PARTIAL": 1,
+        "DISTORTED": 0,
+        "MISS": 5
+      },
+      "FAST-01": {
+        "PARTIAL": 1,
+        "DISTORTED": 3,
+        "MISS": 3
+      },
+      "FAST-04": {
+        "PARTIAL": 0,
+        "DISTORTED": 2,
+        "MISS": 4
+      },
+      "FAST-WATER-01": {
+        "PARTIAL": 2,
+        "DISTORTED": 1,
+        "MISS": 6
+      }
+    }
+  },
+  "rows": [
+    {
+      "atom_id": "JY-001-P0-0002",
+      "tender_id": "JY-001",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "QUALIFICATION",
+      "source_page": 3,
+      "atomic_requirement": "不得被信用中国或中国政府采购网列入失信被执行人、重大税收违法失信主体、政府采购严重违法失信行为信息记录名单。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production Canonical未保留“信用中国/中国政府采购网”三类失信名单的完整资格排除义务；现有候选仅保留政府采购法第二十二条等其他资格要求。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-002",
+        "REQ-001"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=JY-001-P0-0002",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "JY-001-P0-0007",
+      "tender_id": "JY-001",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "MANDATORY_FILE_COMPONENT",
+      "source_page": 7,
+      "atomic_requirement": "投标文件须包含*报价明细表。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production Canonical列举了开标一览表、配置表、响应偏离表等必备文件，但未形成“投标文件须包含*报价明细表”的独立要求。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-011",
+        "REQ-015",
+        "REQ-012",
+        "REQ-013",
+        "REQ-014"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=JY-001-P0-0007",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "JY-001-P0-0013",
+      "tender_id": "JY-001",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "CONFORMITY",
+      "source_page": 9,
+      "atomic_requirement": "投标文件须按招标文件要求签署、盖章。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production Canonical未形成“投标文件须按招标文件要求签署、盖章”的独立P0要求。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-036",
+        "REQ-035"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=JY-001-P0-0013",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "JY-001-P0-0015",
+      "tender_id": "JY-001",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "CONFORMITY",
+      "source_page": 9,
+      "atomic_requirement": "报价不得超过预算金额或最高限价。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production Canonical未形成“报价不得超过预算金额或最高限价”的独立约束。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-035",
+        "REQ-036"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=JY-001-P0-0015",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "JY-001-P0-0016",
+      "tender_id": "JY-001",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "CONFORMITY",
+      "source_page": 9,
+      "atomic_requirement": "投标文件不得含采购人不能接受的附加条件。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production Canonical未形成“投标文件不得含采购人不能接受的附加条件”的独立符合性约束。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-036",
+        "REQ-035"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=JY-001-P0-0016",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "JY-001-P0-0019",
+      "tender_id": "JY-001",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "CONFORMITY",
+      "source_page": 9,
+      "atomic_requirement": "同一方案有选择性报价时须明确以哪一个为准。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production Canonical未形成“同一方案存在选择性报价时须明确以哪一个为准”的独立报价约束。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-035",
+        "REQ-036"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=JY-001-P0-0019",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "JY-001-P0-0020",
+      "tender_id": "JY-001",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "CONFORMITY",
+      "source_page": 9,
+      "atomic_requirement": "须响应招标文件中的付款方式。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production Canonical未形成可独立判定的“须响应招标文件付款方式”要求；一般性全面响应条款不足以承担该具体义务。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-035",
+        "REQ-036"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=JY-001-P0-0020",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "JY-001-P0-0022",
+      "tender_id": "JY-001",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "CONFORMITY",
+      "source_page": 9,
+      "atomic_requirement": "不得存在招标文件列举的串通投标情形。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production Canonical未形成招标文件列举的串通投标情形的独立禁止性要求。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-036",
+        "REQ-035"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=JY-001-P0-0022",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "JY-001-P0-0023",
+      "tender_id": "JY-001",
+      "p0_basis": "INHERITED_GOVERNING_SUBSTANTIVE",
+      "family": "INHERITED_SUBSTANTIVE",
+      "source_page": 18,
+      "atomic_requirement": "项目系统功能设计/建设方案应遵循招标文件列举的政策文件和技术标准。",
+      "semantic_label": "PARTIAL",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production保留了总体技术方案及一般技术规格/标准约束，但未完整保留“系统功能设计/建设方案应遵循招标文件列举的政策文件和技术标准”这一治理性要求，属于实质元素不完整。",
+      "supporting_requirement_ids": [
+        "REQ-264",
+        "REQ-293"
+      ],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-048",
+        "REQ-049"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=JY-001-P0-0023",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "JY-001-P0-0089",
+      "tender_id": "JY-001",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "MANDATORY_FILE_COMPONENT",
+      "source_page": 60,
+      "atomic_requirement": "资格声明函不得缺失或实质性修改，且投标人须对表中内容作出承诺。",
+      "semantic_label": "PARTIAL",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production保留了资格声明函及对表中内容作出承诺的要求，但未保留“资格声明函不得缺失或实质性修改”的完整限制条件。",
+      "supporting_requirement_ids": [
+        "REQ-016",
+        "REQ-317",
+        "REQ-319"
+      ],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-319",
+        "REQ-318",
+        "REQ-317",
+        "REQ-320"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=JY-001-P0-0089",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "TB-003-P0-0001",
+      "tender_id": "TB-003",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "QUALIFICATION",
+      "source_page": 14,
+      "atomic_requirement": "满足《中华人民共和国政府采购法》第二十二条规定。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production仅保留了信用、行贿、关联关系等部分资格条件，未形成对《中华人民共和国政府采购法》第二十二条规定的完整独立资格要求。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-008",
+        "REQ-006",
+        "REQ-005",
+        "REQ-007"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=TB-003-P0-0001",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "TB-003-P0-0002",
+      "tender_id": "TB-003",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "QUALIFICATION",
+      "source_page": 14,
+      "atomic_requirement": "不得存在投标人行贿犯罪档案记录。",
+      "semantic_label": "PARTIAL",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production仅写为“须满足行贿犯罪档案记录要求”，未保留明确的否定极性“不得存在行贿犯罪档案记录”，因此义务被部分保留但关键极性不足。",
+      "supporting_requirement_ids": [
+        "REQ-005"
+      ],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-005",
+        "REQ-008",
+        "REQ-007",
+        "REQ-006"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=TB-003-P0-0002",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "TB-003-P0-0006",
+      "tender_id": "TB-003",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "QUALIFICATION",
+      "source_page": 15,
+      "atomic_requirement": "须在规定时间内获取并下载招标文件，否则视为无效标。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production未形成“须在规定时间内获取并下载招标文件，否则视为无效标”的独立程序性要求。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-047",
+        "REQ-039",
+        "REQ-244",
+        "REQ-245",
+        "REQ-051",
+        "REQ-024",
+        "REQ-015",
+        "REQ-056"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=TB-003-P0-0006",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "TB-003-P0-0023",
+      "tender_id": "TB-003",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "CONFORMITY",
+      "source_page": 32,
+      "atomic_requirement": "报价修正后须由投标人确认，否则投标无效。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production未形成“报价修正后须由投标人确认，否则投标无效”的独立要求。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-244",
+        "REQ-245",
+        "REQ-051",
+        "REQ-020",
+        "REQ-056",
+        "REQ-039",
+        "REQ-032",
+        "REQ-040"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=TB-003-P0-0023",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "TB-003-P0-0024",
+      "tender_id": "TB-003",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "CONFORMITY",
+      "source_page": 33,
+      "atomic_requirement": "评审委员会要求澄清、说明或补正时不得拒绝；拒不按要求澄清可被拒绝投标。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production未形成“评审委员会要求澄清/说明/补正时不得拒绝，拒不澄清可被拒绝投标”的独立程序性要求。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-039",
+        "REQ-020",
+        "REQ-244",
+        "REQ-245",
+        "REQ-056",
+        "REQ-026",
+        "REQ-204",
+        "REQ-023"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=TB-003-P0-0024",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "TB-003-P0-0025",
+      "tender_id": "TB-003",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "CONFORMITY",
+      "source_page": 33,
+      "atomic_requirement": "异常低价时须证明报价合理性，否则作为无效投标处理。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production未形成“异常低价时须证明报价合理性，否则按无效投标处理”的独立要求。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-056",
+        "REQ-037",
+        "REQ-033",
+        "REQ-244",
+        "REQ-245",
+        "REQ-039",
+        "REQ-020",
+        "REQ-051"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=TB-003-P0-0025",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "TB-006-P0-0005",
+      "tender_id": "TB-006",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "QUALIFICATION",
+      "source_page": 25,
+      "atomic_requirement": "不得属于信用记录认定的失信被执行人、重大税收违法案件当事人或政府采购严重违法失信主体。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production未形成失信被执行人、重大税收违法案件当事人、政府采购严重违法失信主体三类信用排除义务。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-065"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=TB-006-P0-0005",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "TB-006-P0-0010",
+      "tender_id": "TB-006",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "CONFORMITY",
+      "source_page": 28,
+      "atomic_requirement": "投标报价不得超过预算金额或最高限价。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production未形成“投标报价不得超过预算金额或最高限价”的独立约束。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-087",
+        "REQ-083",
+        "REQ-082",
+        "REQ-080",
+        "REQ-084"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=TB-006-P0-0010",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "TB-006-P0-0011",
+      "tender_id": "TB-006",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "CONFORMITY",
+      "source_page": 28,
+      "atomic_requirement": "不得提供可选择性或可调整的报价。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production未形成“不得提供可选择性或可调整报价”的独立约束。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-082",
+        "REQ-083",
+        "REQ-087",
+        "REQ-085",
+        "REQ-086"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=TB-006-P0-0011",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "TB-006-P0-0014",
+      "tender_id": "TB-006",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "CONFORMITY",
+      "source_page": 28,
+      "atomic_requirement": "涉及报价修正时须对修正后的报价予以确认。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production未形成“涉及报价修正时须对修正后的报价予以确认”的独立要求。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-080",
+        "REQ-081",
+        "REQ-082",
+        "REQ-083",
+        "REQ-084"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=TB-006-P0-0014",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "TB-006-P0-0015",
+      "tender_id": "TB-006",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "CONFORMITY",
+      "source_page": 28,
+      "atomic_requirement": "报价异常低时须在规定时间内证明报价合理性。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production未形成“报价异常低时须在规定时间内证明报价合理性”的独立要求。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-087",
+        "REQ-080",
+        "REQ-081",
+        "REQ-082",
+        "REQ-083"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=TB-006-P0-0015",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "TB-006-P0-0019",
+      "tender_id": "TB-006",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "CONFORMITY",
+      "source_page": 20,
+      "atomic_requirement": "须在规定时间内完成电子投标文件解密；因非系统原因导致解密失败视为投标无效。",
+      "semantic_label": "PARTIAL",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production保留了电子交易平台和截止前提交电子投标文件的要求，但未保留“须在规定时间内完成解密，因非系统原因解密失败则投标无效”的完整程序及后果。",
+      "supporting_requirement_ids": [
+        "REQ-059",
+        "REQ-060"
+      ],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-060",
+        "REQ-059",
+        "REQ-061"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=TB-006-P0-0019",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "FAST-01-P0-0001",
+      "tender_id": "FAST-01",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "QUALIFICATION",
+      "source_page": 11,
+      "atomic_requirement": "具有独立承担民事责任的能力并提供相应主体证明资料。",
+      "semantic_label": "PARTIAL",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production保留了政府采购法第二十二条第一款条件，但未完整保留“具有独立承担民事责任能力并提供相应主体证明资料”这一具体资格义务，尤其证明材料要求缺失。",
+      "supporting_requirement_ids": [
+        "REQ-003"
+      ],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-005",
+        "REQ-008",
+        "REQ-004",
+        "REQ-001",
+        "REQ-002"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=FAST-01-P0-0001",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "FAST-01-P0-0005",
+      "tender_id": "FAST-01",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "QUALIFICATION",
+      "source_page": 11,
+      "atomic_requirement": "不得被列入失信被执行人、重大税收违法案件当事人、政府采购严重违法失信行为记录名单。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production保留了深圳市本地供应商信用管理禁止记录，但未保留冻结Source Truth要求的失信被执行人、重大税收违法案件当事人、政府采购严重违法失信行为三类全国信用排除义务。",
+      "supporting_requirement_ids": [
+        "REQ-004"
+      ],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-004",
+        "REQ-003",
+        "REQ-008",
+        "REQ-005",
+        "REQ-007"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=FAST-01-P0-0005",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "FAST-01-P0-0011",
+      "tender_id": "FAST-01",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "CONFORMITY",
+      "source_page": 2,
+      "atomic_requirement": "分项报价或投标总价不得高于预算金额或最高限价。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production未形成“分项报价或投标总价不得高于预算金额或最高限价”的独立约束。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-158",
+        "REQ-194",
+        "REQ-200",
+        "REQ-010",
+        "REQ-195",
+        "REQ-179",
+        "REQ-094",
+        "REQ-165"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=FAST-01-P0-0011",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "FAST-01-P0-0017",
+      "tender_id": "FAST-01",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "CONFORMITY",
+      "source_page": 2,
+      "atomic_requirement": "不同投标供应商投标文件的文件制作机器码不得一致。",
+      "semantic_label": "DISTORTED",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Source Truth要求不同投标供应商的文件制作机器码“不得一致”，Production却生成“文件制作机器码一致”，否定极性被反转。",
+      "supporting_requirement_ids": [
+        "REQ-201"
+      ],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-201",
+        "REQ-202",
+        "REQ-010",
+        "REQ-200",
+        "REQ-090",
+        "REQ-094",
+        "REQ-169",
+        "REQ-183"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=FAST-01-P0-0017",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "FAST-01-P0-0018",
+      "tender_id": "FAST-01",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "CONFORMITY",
+      "source_page": 2,
+      "atomic_requirement": "不同投标供应商投标文件的文件创建标识码不得一致。",
+      "semantic_label": "DISTORTED",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Source Truth要求不同投标供应商的文件创建标识码“不得一致”，Production却生成“文件创建标识码一致”，否定极性被反转。",
+      "supporting_requirement_ids": [
+        "REQ-202"
+      ],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-202",
+        "REQ-201",
+        "REQ-010",
+        "REQ-200",
+        "REQ-090",
+        "REQ-094",
+        "REQ-169",
+        "REQ-183"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=FAST-01-P0-0018",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "FAST-01-P0-0019",
+      "tender_id": "FAST-01",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "CONFORMITY",
+      "source_page": 2,
+      "atomic_requirement": "不得存在法律、法规、规章、规范性文件规定的其他无效情形。",
+      "semantic_label": "DISTORTED",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Source Truth要求“不得存在”其他法定无效情形，Production仅保留“法律、法规、规章、规范性文件规定的其他情形”，丢失无效/禁止治理语境，实质含义发生改变。",
+      "supporting_requirement_ids": [
+        "REQ-203"
+      ],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-203",
+        "REQ-195",
+        "REQ-192",
+        "REQ-169",
+        "REQ-116",
+        "REQ-004",
+        "REQ-125",
+        "REQ-200"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=FAST-01-P0-0019",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "FAST-01-P0-0022",
+      "tender_id": "FAST-01",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "CONFORMITY",
+      "source_page": 12,
+      "atomic_requirement": "投标有效期为120个日历日。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production存在一般投标有效期相关内容，但未保留本条明确的“120个日历日”阈值，因此没有可承担该P0义务的Canonical。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-010",
+        "REQ-009",
+        "REQ-011"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=FAST-01-P0-0022",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "FAST-04-P0-0203",
+      "tender_id": "FAST-04",
+      "p0_basis": "EXPLICIT_STAR_SUBSTANTIVE",
+      "family": "EXPLICIT_SUBSTANTIVE_TECHNICAL_OR_BUSINESS",
+      "source_page": 65,
+      "atomic_requirement": "92 ★ODBC 支持 ODBC 要求 标准兼 兼容 容 93 ★JDBC 支持 JDBC 要求 以光盘、便携式移动设备、镜像",
+      "semantic_label": "DISTORTED",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Source Truth的业务义务是支持ODBC兼容；Production生成“支持ODBC 92兼容”，把表格行号92污染进业务语义。",
+      "supporting_requirement_ids": [
+        "REQ-425"
+      ],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-427",
+        "REQ-426",
+        "REQ-425",
+        "REQ-434",
+        "REQ-428"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=FAST-04-P0-0203",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "FAST-04-P0-0204",
+      "tender_id": "FAST-04",
+      "p0_basis": "EXPLICIT_STAR_SUBSTANTIVE",
+      "family": "EXPLICIT_SUBSTANTIVE_TECHNICAL_OR_BUSINESS",
+      "source_page": 65,
+      "atomic_requirement": "93 ★JDBC 支持 JDBC 要求 以光盘、便携式移动设备、镜像 服务 交付方 94 ★交付方式 文件、在线下载等交付方式提供 要求 式",
+      "semantic_label": "DISTORTED",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Source Truth的业务义务是支持JDBC兼容；Production生成“支持JDBC 93兼容”，把表格行号93污染进业务语义。",
+      "supporting_requirement_ids": [
+        "REQ-426"
+      ],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-427",
+        "REQ-426",
+        "REQ-425",
+        "REQ-434",
+        "REQ-433"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=FAST-04-P0-0204",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "FAST-04-P0-0216",
+      "tender_id": "FAST-04",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "QUALIFICATION",
+      "source_page": 24,
+      "atomic_requirement": "不得属于信用记录中被认定的失信被执行人、重大税收违法案件当事人或政府采购严重违法失信主体。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production未形成失信被执行人、重大税收违法案件当事人、政府采购严重违法失信主体三类信用排除义务。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-050"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=FAST-04-P0-0216",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "FAST-04-P0-0221",
+      "tender_id": "FAST-04",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "CONFORMITY",
+      "source_page": 27,
+      "atomic_requirement": "投标报价不得超过项目/采购包预算金额或最高限价。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production未形成“投标报价不得超过项目/采购包预算金额或最高限价”的独立约束。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-068",
+        "REQ-071",
+        "REQ-073",
+        "REQ-072",
+        "REQ-069"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=FAST-04-P0-0221",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "FAST-04-P0-0222",
+      "tender_id": "FAST-04",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "CONFORMITY",
+      "source_page": 27,
+      "atomic_requirement": "不得提供可选择性或可调整的报价（招标文件另有规定除外）。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production未形成“不得提供可选择性或可调整报价（另有规定除外）”的独立约束。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-067",
+        "REQ-070",
+        "REQ-065",
+        "REQ-069",
+        "REQ-071"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=FAST-04-P0-0222",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "FAST-04-P0-0225",
+      "tender_id": "FAST-04",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "CONFORMITY",
+      "source_page": 27,
+      "atomic_requirement": "涉及报价修正时须对修正后的报价予以确认。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production未形成“涉及报价修正时须对修正后的报价予以确认”的独立要求。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-065",
+        "REQ-066",
+        "REQ-067",
+        "REQ-068",
+        "REQ-069"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=FAST-04-P0-0225",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "FAST-WATER-01-P0-0008",
+      "tender_id": "FAST-WATER-01",
+      "p0_basis": "INHERITED_STAR",
+      "family": "EXPLICIT_OR_INHERITED_SUBSTANTIVE",
+      "source_page": 39,
+      "atomic_requirement": "对项目管理系统实施数据备份、安全加固、功能/流程完善、安全检查、应急故障处理和使用技术咨询。",
+      "semantic_label": "PARTIAL",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production保留了数据备份、安全加固、功能/流程完善、安全检查和应急故障处理，但漏掉“使用技术咨询”，因此为实质内容部分缺失。",
+      "supporting_requirement_ids": [
+        "REQ-087"
+      ],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-087",
+        "REQ-084",
+        "REQ-085",
+        "REQ-089",
+        "REQ-088"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=FAST-WATER-01-P0-0008",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "FAST-WATER-01-P0-0072",
+      "tender_id": "FAST-WATER-01",
+      "p0_basis": "INHERITED_STAR",
+      "family": "EXPLICIT_OR_INHERITED_SUBSTANTIVE",
+      "source_page": 48,
+      "atomic_requirement": "严重故障次数目标0次/年。",
+      "semantic_label": "DISTORTED",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "MEDIUM",
+      "semantic_reason": "Source Truth冻结为“严重故障次数目标0次/年”，Production写成“平均每季度发生严重故障次数，目标0次”，改变了周期/范围。原始表格同时存在“次数/年”与“平均每季度”的内部冲突，需保留Source Internal Conflict复核标记。",
+      "supporting_requirement_ids": [
+        "REQ-155"
+      ],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-155",
+        "REQ-153",
+        "REQ-157",
+        "REQ-156",
+        "REQ-149"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=FAST-WATER-01-P0-0072",
+      "source_internal_conflict": true,
+      "review_notes": [
+        "原始表格同时出现“次数/年”与“平均每季度”的周期冲突；本轮按冻结Source Truth判定，不修改Gold。"
+      ]
+    },
+    {
+      "atom_id": "FAST-WATER-01-P0-0078",
+      "tender_id": "FAST-WATER-01",
+      "p0_basis": "EXPLICIT_STAR",
+      "family": "EXPLICIT_OR_INHERITED_SUBSTANTIVE",
+      "source_page": 53,
+      "atomic_requirement": "合同价款付款进度为生效后10个工作日70%、第5个月后7个工作日20%、2025年12月底前10%。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production未形成合同价款70%/20%/10%的三阶段付款进度要求。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-159",
+        "REQ-161",
+        "REQ-160"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=FAST-WATER-01-P0-0078",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "FAST-WATER-01-P0-0079",
+      "tender_id": "FAST-WATER-01",
+      "p0_basis": "EXPLICIT_STAR",
+      "family": "EXPLICIT_OR_INHERITED_SUBSTANTIVE",
+      "source_page": 53,
+      "atomic_requirement": "付款方式为转账支票或汇款。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production未形成“付款方式为转账支票或汇款”的独立付款方式要求。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-161",
+        "REQ-159",
+        "REQ-160"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=FAST-WATER-01-P0-0079",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "FAST-WATER-01-P0-0080",
+      "tender_id": "FAST-WATER-01",
+      "p0_basis": "EXPLICIT_STAR",
+      "family": "EXPLICIT_OR_INHERITED_SUBSTANTIVE",
+      "source_page": 53,
+      "atomic_requirement": "供应商须在每笔付款前提供合规发票。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production未形成“供应商须在每笔付款前提供合规发票”的独立付款前置要求。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-161",
+        "REQ-159",
+        "REQ-160"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=FAST-WATER-01-P0-0080",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "FAST-WATER-01-P0-0087",
+      "tender_id": "FAST-WATER-01",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "QUALIFICATION",
+      "source_page": 25,
+      "atomic_requirement": "不得属于信用记录认定的失信被执行人、重大税收违法案件当事人或政府采购严重违法失信主体。",
+      "semantic_label": "PARTIAL",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production保留了重大税收违法案件当事人和政府采购严重违法失信记录两类信用排除，但漏掉“失信被执行人”，因此三类资格排除义务不完整。",
+      "supporting_requirement_ids": [
+        "REQ-045"
+      ],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-045",
+        "REQ-047",
+        "REQ-048",
+        "REQ-046"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=FAST-WATER-01-P0-0087",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "FAST-WATER-01-P0-0092",
+      "tender_id": "FAST-WATER-01",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "CONFORMITY",
+      "source_page": 26,
+      "atomic_requirement": "投标报价不得超过预算金额或最高限价。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production未形成“投标报价不得超过预算金额或最高限价”的独立约束。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-050",
+        "REQ-051",
+        "REQ-057",
+        "REQ-054",
+        "REQ-055"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=FAST-WATER-01-P0-0092",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "FAST-WATER-01-P0-0093",
+      "tender_id": "FAST-WATER-01",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "CONFORMITY",
+      "source_page": 26,
+      "atomic_requirement": "不得出现可选择性或可调整报价。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production未形成“不得出现可选择性或可调整报价”的独立约束。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-057",
+        "REQ-049",
+        "REQ-050",
+        "REQ-051",
+        "REQ-052"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=FAST-WATER-01-P0-0093",
+      "source_internal_conflict": false,
+      "review_notes": []
+    },
+    {
+      "atom_id": "FAST-WATER-01-P0-0097",
+      "tender_id": "FAST-WATER-01",
+      "p0_basis": "DIRECT_INVALIDITY_OR_QUALIFICATION",
+      "family": "CONFORMITY",
+      "source_page": 26,
+      "atomic_requirement": "涉及报价修正时须对修正后的报价予以确认。",
+      "semantic_label": "MISS",
+      "semantic_label_author": "GPT",
+      "semantic_label_version": "V43_P0_487_SEMANTIC_ADJUDICATION_V2",
+      "confidence": "HIGH",
+      "semantic_reason": "Production未形成“涉及报价修正时须对修正后的报价予以确认”的独立要求。",
+      "supporting_requirement_ids": [],
+      "candidate_requirement_ids_reviewed": [
+        "REQ-057",
+        "REQ-049",
+        "REQ-050",
+        "REQ-051",
+        "REQ-052"
+      ],
+      "evidence_ref": "P0_487_GPT_REVIEW_BUNDLE.jsonl#atom_id=FAST-WATER-01-P0-0097",
+      "source_internal_conflict": false,
+      "review_notes": []
+    }
+  ]
+}

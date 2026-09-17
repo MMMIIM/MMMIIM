@@ -1,0 +1,51 @@
+{
+  "checkpoint": "V43_OVERNIGHT_REAL_E2E_MASTER_V1_FINAL",
+  "run_id": "V43-OVERNIGHT-REAL-E2E-CASE-01-20260914",
+  "final_status": "READY_FOR_GPT_REAL_E2E_CASE_01_ADJUDICATION",
+  "final_stage_reached": "TENDER_PARSE_SOURCE_SCOPE_VALIDATION",
+  "deepest_safe_endpoint": "Tender upload → parser → section classifier → chunker → Requirement Gateway (partial; fail-closed at source scope validation)",
+  "case_count": 1,
+  "tender": {
+    "tender_id": "TB-006",
+    "source_sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+    "parser": "PASS",
+    "chunk_count": 33,
+    "coverage": "100%"
+  },
+  "enterprise": {
+    "corpus_id": "HUAWEI-PUBLIC-REAL-PDF-PILOT-V1",
+    "source_count": 6,
+    "parsed": true,
+    "indexed": false
+  },
+  "first_unresolved_blocker": {
+    "stage": "SOURCE_SCOPE_VALIDATION",
+    "error_code": "REQUIREMENT_SCOPE_EXCLUDED",
+    "classification": "PRODUCT_GAP_DETERMINISTIC_SCOPE_BOUNDARY"
+  },
+  "provider_calls": 6,
+  "production_db_writes": 0,
+  "production_fact_persistence": 0,
+  "gold_mutations": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "semantic_root_cause": "PENDING_GPT",
+  "next_gate": "GPT adjudication of REAL_E2E_CASE_01 handoff",
+  "baseline_drift": "PRE_EXISTING_UNRELATED_BASELINE_ONLY",
+  "regression_summary": {
+    "focused_unit": "75/76 (one pre-existing path-fixture failure)",
+    "isolated_postgres": "27/27",
+    "build": "PASS",
+    "lint": "PASS",
+    "diff_check": "PASS_WITH_LINE_ENDING_WARNINGS_ONLY"
+  },
+  "git": {
+    "branch": "feat/v4.3-semantic-boundary-routing",
+    "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+    "dirty": true,
+    "status_entries_observed": 677,
+    "modified_entries_observed": 97,
+    "untracked_entries_observed": 580
+  }
+}

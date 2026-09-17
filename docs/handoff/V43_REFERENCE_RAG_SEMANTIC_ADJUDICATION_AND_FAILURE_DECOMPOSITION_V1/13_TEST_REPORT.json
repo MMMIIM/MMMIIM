@@ -1,0 +1,37 @@
+{
+  "artifact_type": "V43_REFERENCE_RAG_SEMANTIC_ADJUDICATION_TEST_REPORT",
+  "focused_tests": {
+    "status": "PASS",
+    "tests": 10,
+    "passed": 10,
+    "failed": 0,
+    "command": "node --test --test-concurrency=1 backend/test/retrieval-chunk-role.test.js backend/test/writer-reference-hygiene.test.js backend/test/retrieval-substantive-hygiene-offline.test.js"
+  },
+  "relevant_regression": {
+    "status": "PASS",
+    "tests": 83,
+    "passed": 83,
+    "failed": 0,
+    "command": "node --test --test-concurrency=1 backend/test/authority-binding-loop.test.js backend/test/retrieval-runner-binding.test.js backend/test/writer-reference-hygiene.test.js backend/test/retrieval-source-eligibility.test.js backend/test/retrieval-substantive-hygiene-offline.test.js backend/test/writer-v2-composition.test.js backend/test/writer-authority-p0.test.js backend/test/material-source-role-gate.test.js backend/test/production-retrieval-contract.test.js backend/test/retrieval-chunk-role.test.js",
+    "note": "Relevant authority/retrieval/writer regression suite passed after the patch; no provider or database write path executed."
+  },
+  "build": {
+    "status": "PASS",
+    "command": "npm run build"
+  },
+  "lint": {
+    "status": "PASS",
+    "command": "npm run lint",
+    "note": "Configured lint scripts are absent; workspace command exited 0."
+  },
+  "diff_check": {
+    "status": "PASS_WITH_PRE_EXISTING_LINE_ENDING_WARNINGS",
+    "command": "git diff --check",
+    "note": "Warnings are existing CRLF normalization notices across the dirty worktree; no whitespace error was reported."
+  },
+  "provider_calls_this_task": 0,
+  "llm_calls_this_task": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "semantic_labels_created_by_codex": 0
+}

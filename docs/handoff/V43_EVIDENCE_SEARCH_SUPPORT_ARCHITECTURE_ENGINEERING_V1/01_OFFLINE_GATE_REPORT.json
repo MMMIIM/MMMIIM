@@ -1,0 +1,32 @@
+{
+  "artifact_type": "V43_EVIDENCE_SEARCH_SUPPORT_OFFLINE_GATE_REPORT_V1",
+  "status": "PASS_OFFLINE_RUNTIME_CONTRACTS",
+  "gates": {
+    "evidence_need_profile": "PASS",
+    "evidence_only_source_filter": "PASS",
+    "reference_cross_enterprise_quarantine_exclusion": "PASS",
+    "k0_no_evidence_semantics": "PASS",
+    "eval_embedding_identity_reuse": "PASS",
+    "canonical_fact_reuse_or_existing_official_path": "PASS",
+    "raw_candidate_no_fact_or_claim_authority": "PASS",
+    "mapping_profile_projection_without_taxonomy_change": "PASS",
+    "mapping_gateway_contract_regression": "PASS",
+    "claim_and_writer_boundary_regression": "PASS"
+  },
+  "focused_test_result": {
+    "pass": 84,
+    "fail": 0,
+    "provider_calls": 0,
+    "embedding_calls": 0,
+    "production_db_writes": 0,
+    "eval_db_writes": 0,
+    "gold_mutations": 0
+  },
+  "runtime_refresh_performed": true,
+  "runtime_refresh_reason": "Semantic Gateway restarted once to load the mounted shared Mapping applicability contract; no configuration, database, deployment, or production data change was made.",
+  "runtime_configuration_presence": {
+    "backend_embedding_configuration": "SET_CONFIRMED_WITHOUT_SECRET_DISCLOSURE",
+    "dedicated_eval_database": "NOT_CONFIGURED",
+    "gateway_contract_mount": "CURRENT_WORKTREE_CONFIRMED"
+  }
+}

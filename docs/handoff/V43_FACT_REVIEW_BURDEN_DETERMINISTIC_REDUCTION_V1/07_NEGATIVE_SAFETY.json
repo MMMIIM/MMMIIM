@@ -1,0 +1,133 @@
+{
+  "artifact_type": "V43_FACT_REVIEW_BURDEN_DETERMINISTIC_REDUCTION_V1_NEGATIVE_SAFETY",
+  "mutations": [
+    {
+      "mutation": "quantity_value_mutation",
+      "grounding_decision": "REJECT",
+      "grounding_reasons": [
+        "quantity.value is not grounded"
+      ],
+      "accepted": false,
+      "fail_closed": true
+    },
+    {
+      "mutation": "quantity_unit_mutation",
+      "grounding_decision": "REJECT",
+      "grounding_reasons": [
+        "quantity.unit is not grounded"
+      ],
+      "accepted": false,
+      "fail_closed": true
+    },
+    {
+      "mutation": "quantity_operator_mutation",
+      "grounding_decision": "REVIEW_REQUIRED",
+      "grounding_reasons": [
+        "STATEMENT_SEMANTIC_GROUNDING_UNRESOLVED"
+      ],
+      "accepted": false,
+      "fail_closed": true
+    },
+    {
+      "mutation": "wrong_certificate",
+      "grounding_decision": "REVIEW_REQUIRED",
+      "grounding_reasons": [
+        "STATEMENT_SEMANTIC_GROUNDING_UNRESOLVED"
+      ],
+      "accepted": false,
+      "fail_closed": true
+    },
+    {
+      "mutation": "unsupported_commitment",
+      "grounding_decision": "REVIEW_REQUIRED",
+      "grounding_reasons": [
+        "STATEMENT_SEMANTIC_GROUNDING_UNRESOLVED"
+      ],
+      "accepted": false,
+      "fail_closed": true
+    },
+    {
+      "mutation": "wrong_product",
+      "grounding_decision": "REJECT",
+      "grounding_reasons": [
+        "subject.name is not grounded",
+        "entity.name is not grounded"
+      ],
+      "accepted": false,
+      "fail_closed": true
+    },
+    {
+      "mutation": "wrong_enterprise",
+      "grounding_decision": "REJECT",
+      "grounding_reasons": [
+        "subject.name is not grounded",
+        "entity.name is not grounded"
+      ],
+      "accepted": false,
+      "fail_closed": true
+    },
+    {
+      "mutation": "negation_mutation",
+      "grounding_decision": "REJECT",
+      "grounding_reasons": [
+        "statement is not grounded",
+        "NEGATED_OR_LIMITED_SCOPE"
+      ],
+      "accepted": false,
+      "fail_closed": true
+    },
+    {
+      "mutation": "expired_status_contradiction",
+      "grounding_decision": "REJECT",
+      "grounding_reasons": [
+        "status_source_text is not grounded"
+      ],
+      "accepted": false,
+      "fail_closed": true
+    },
+    {
+      "mutation": "validity_conflict",
+      "grounding_decision": "REVIEW_REQUIRED",
+      "grounding_reasons": [
+        "TEMPORAL_ROLE_OR_DATE_UNRESOLVED"
+      ],
+      "accepted": false,
+      "fail_closed": true
+    },
+    {
+      "mutation": "unsupported_source_suffix",
+      "grounding_decision": "REVIEW_REQUIRED",
+      "grounding_reasons": [
+        "STATEMENT_SEMANTIC_GROUNDING_UNRESOLVED"
+      ],
+      "accepted": false,
+      "fail_closed": true
+    },
+    {
+      "mutation": "source_ref_mismatch",
+      "accepted": false,
+      "fail_closed": true,
+      "grounding_decision": "REJECT",
+      "grounding_reasons": [
+        "unknown source alias S002 at statement.source_refs"
+      ]
+    }
+  ],
+  "required_mutations": [
+    "quantity_value_mutation",
+    "quantity_unit_mutation",
+    "quantity_operator_mutation",
+    "wrong_certificate",
+    "unsupported_commitment",
+    "wrong_product",
+    "wrong_enterprise",
+    "negation_mutation",
+    "expired_status_contradiction",
+    "validity_conflict",
+    "unsupported_source_suffix",
+    "source_ref_mismatch"
+  ],
+  "unsupported_autoaccept_count": 0,
+  "hard_contradiction_escape_count": 0,
+  "all_fail_closed": true
+}

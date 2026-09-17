@@ -1,0 +1,124 @@
+{
+  "artifact_type": "V43_REQUIREMENT_NUMBER_OMISSION_TRUE_ERROR_CONTROLS_V2",
+  "artifact_version": "v2",
+  "data_classification": "DEVELOPMENT_SAFETY_CONTROL_ONLY",
+  "human_gold": false,
+  "holdout": false,
+  "production_gold": false,
+  "control_count": 4,
+  "detected_count": 4,
+  "accept_escape_count": 0,
+  "controls": [
+    {
+      "control_id": "NUMBER-OMISSION-TRUE-001",
+      "dimension": "same_atomic_response_time",
+      "source_text": "系统应支持数据接口，响应时间不超过3秒。",
+      "candidate_text": "系统应支持数据接口，响应时间不超过秒。",
+      "source_range": {
+        "start_ref": "NUMBER-CONTROL-SOURCE",
+        "end_ref": "NUMBER-CONTROL-SOURCE"
+      },
+      "source_verified": true,
+      "source_hash": "e28e381f7c7bc99568fe5247ef874aaafeb3ef5bb5f5c5e2efc44ea8eedc4904",
+      "candidate_hash": "37548a789e4d812d4784c3a7706a4d6074431aa4d1cf3f2cf0e90ab247c9c3eb",
+      "expected_decision": "REVIEW_REQUIRED",
+      "expected_reason": "NUMBER_OMISSION_REVIEW",
+      "classification": "DEVELOPMENT_SAFETY_CONTROL_ONLY",
+      "human_gold": false,
+      "holdout": false,
+      "provider_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0,
+      "actual_decision": "REVIEW_REQUIRED",
+      "actual_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "detected": true,
+      "accept_escape": false
+    },
+    {
+      "control_id": "NUMBER-OMISSION-TRUE-002",
+      "dimension": "same_atomic_sla",
+      "source_text": "接口服务等级应达到99.9%。",
+      "candidate_text": "接口服务等级应达到%。",
+      "source_range": {
+        "start_ref": "NUMBER-CONTROL-SOURCE",
+        "end_ref": "NUMBER-CONTROL-SOURCE"
+      },
+      "source_verified": true,
+      "source_hash": "55b13d911cbefa7204b4b841b646cc7a9c7c2e0a0d9d5f2e280f34f1ea849860",
+      "candidate_hash": "141692e1846e18a55f957c3081caa57fcabefa44d32008e1550161d2920ddc26",
+      "expected_decision": "REVIEW_REQUIRED",
+      "expected_reason": "NUMBER_OMISSION_REVIEW",
+      "classification": "DEVELOPMENT_SAFETY_CONTROL_ONLY",
+      "human_gold": false,
+      "holdout": false,
+      "provider_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0,
+      "actual_decision": "REVIEW_REQUIRED",
+      "actual_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "detected": true,
+      "accept_escape": false
+    },
+    {
+      "control_id": "NUMBER-OMISSION-TRUE-003",
+      "dimension": "same_atomic_duration",
+      "source_text": "服务期限为3年。",
+      "candidate_text": "服务期限为。",
+      "source_range": {
+        "start_ref": "NUMBER-CONTROL-SOURCE",
+        "end_ref": "NUMBER-CONTROL-SOURCE"
+      },
+      "source_verified": true,
+      "source_hash": "c7b28bd2b5391c48b9df378ad8bf02eba2833cae51bc1527bf942196b4b849cf",
+      "candidate_hash": "68357a4c846bff9d40ac66eb6a6035f38de3b33b7f2617fa991aef4ccb80d101",
+      "expected_decision": "REVIEW_REQUIRED",
+      "expected_reason": "NUMBER_OMISSION_REVIEW",
+      "classification": "DEVELOPMENT_SAFETY_CONTROL_ONLY",
+      "human_gold": false,
+      "holdout": false,
+      "provider_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0,
+      "actual_decision": "REVIEW_REQUIRED",
+      "actual_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "detected": true,
+      "accept_escape": false
+    },
+    {
+      "control_id": "NUMBER-OMISSION-TRUE-004",
+      "dimension": "same_atomic_capacity",
+      "source_text": "系统应支持100个并发用户。",
+      "candidate_text": "系统应支持并发用户。",
+      "source_range": {
+        "start_ref": "NUMBER-CONTROL-SOURCE",
+        "end_ref": "NUMBER-CONTROL-SOURCE"
+      },
+      "source_verified": true,
+      "source_hash": "dea018505fdd72ccda36eaaf648ada3155d069732303aec00b4672edc90f81e0",
+      "candidate_hash": "04b4012436db09e1a4f302988c5b126e48aa160ccc0c8e1004b3e6b4f43d9251",
+      "expected_decision": "REVIEW_REQUIRED",
+      "expected_reason": "NUMBER_OMISSION_REVIEW",
+      "classification": "DEVELOPMENT_SAFETY_CONTROL_ONLY",
+      "human_gold": false,
+      "holdout": false,
+      "provider_calls": 0,
+      "production_db_writes": 0,
+      "gold_mutations": 0,
+      "actual_decision": "REVIEW_REQUIRED",
+      "actual_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "detected": true,
+      "accept_escape": false
+    }
+  ],
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0
+}

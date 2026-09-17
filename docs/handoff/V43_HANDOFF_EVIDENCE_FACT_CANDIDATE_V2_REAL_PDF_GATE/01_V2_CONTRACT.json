@@ -1,0 +1,33 @@
+{
+  "artifact_type": "EVIDENCE_FACT_CANDIDATE_V2_CONTRACT",
+  "task_type": "evidence_fact_candidate_v2",
+  "contract_version": "4.3-evidence-fact-candidate-v2",
+  "prompt_version": "4.3-evidence-fact-candidate-v2-prompt-v2",
+  "prompt_hash": "480ea2763abef430d31cacf0a86c1e067afbd075d6c32ac49528ed655cbadb19",
+  "schema_hash": "3dcece82464fcbd0351fe4444cc66994d36e40ca6ca97a3f2d0ba01e5e44f0b3",
+  "provider": "deepseek_official",
+  "model": "deepseek-v4-pro",
+  "endpoint": "/responses",
+  "model_facing_fields": [
+    "statement",
+    "source_refs",
+    "subject_name",
+    "subject_type_hint",
+    "subject_source_refs",
+    "entity_mentions",
+    "status_text",
+    "status_source_refs",
+    "scope_items",
+    "quantity_items",
+    "temporal_items"
+  ],
+  "source_text_output": false,
+  "authority_fields_excluded": [
+    "domain_metadata",
+    "claim_permission",
+    "human_review_required",
+    "fact_id",
+    "lifecycle"
+  ],
+  "persistence": "EVAL_HANDOFF_ONLY"
+}

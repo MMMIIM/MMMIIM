@@ -1,0 +1,4528 @@
+{
+  "artifact_type": "V43_REQUIREMENT_OUTPUT_P1_QUALITY_GATE_FORENSICS",
+  "run_id": "req-output-p1-audit-20260907163151",
+  "reason_summary": [
+    {
+      "reason_code": "NUMBER_OMISSION_REVIEW",
+      "trigger_count": 543,
+      "unique_requirement_count": 543,
+      "cooccurrence_count": 0
+    },
+    {
+      "reason_code": "MODALITY_OMISSION_REVIEW",
+      "trigger_count": 16,
+      "unique_requirement_count": 16,
+      "cooccurrence_count": 0
+    },
+    {
+      "reason_code": "ENTITY_MISMATCH_REVIEW",
+      "trigger_count": 310,
+      "unique_requirement_count": 310,
+      "cooccurrence_count": 0
+    },
+    {
+      "reason_code": "NEGATION_DISTORTION",
+      "trigger_count": 38,
+      "unique_requirement_count": 38,
+      "cooccurrence_count": 0
+    },
+    {
+      "reason_code": "MODALITY_ADDITION_REVIEW",
+      "trigger_count": 170,
+      "unique_requirement_count": 170,
+      "cooccurrence_count": 0
+    },
+    {
+      "reason_code": "NUMBER_DISTORTION",
+      "trigger_count": 26,
+      "unique_requirement_count": 26,
+      "cooccurrence_count": 0
+    },
+    {
+      "reason_code": "STATUS_DISTORTION",
+      "trigger_count": 5,
+      "unique_requirement_count": 5,
+      "cooccurrence_count": 0
+    },
+    {
+      "reason_code": "SCOPE_EXPANSION_REVIEW",
+      "trigger_count": 5,
+      "unique_requirement_count": 5,
+      "cooccurrence_count": 0
+    },
+    {
+      "reason_code": "OBVIOUS_SEMANTIC_MUTATION",
+      "trigger_count": 1,
+      "unique_requirement_count": 1,
+      "cooccurrence_count": 0
+    }
+  ],
+  "number": {
+    "total": 543,
+    "true_positive": 188,
+    "false_positive": 108,
+    "ambiguous": 247,
+    "false_positive_rate": 0.19889502762430938
+  },
+  "entity": {
+    "total": 310,
+    "true_entity_drift": 0,
+    "false_positive": 32,
+    "ambiguous": 278,
+    "false_positive_rate": 0.1032258064516129
+  },
+  "modality": {
+    "total": 186,
+    "escalation": 164,
+    "rows": [
+      {
+        "req_id": "JY-001:REQ-017",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_OMISSION_REVIEW"
+        ],
+        "classification": "AMBIGUOUS",
+        "source_text": "数据查询：网格、网格要素、网格力量等数据查询时间<1 秒。统计分析类查询响应时间需",
+        "candidate_text": "网格、网格要素、网格力量等数据查询时间<1秒。",
+        "confidence": "LOW"
+      },
+      {
+        "req_id": "JY-001:REQ-056",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "江阴市市域社会治理现代化联勤联动指挥平台主要借助大屏端和 PC 端的 GIS 地图， 掌握具体事件空间位置信息，并结合视频通讯技术和一键建组方法，实现和事件人员的 资源远程调度及群组之间的实时通信。",
+        "candidate_text": "运行指挥监管中心应借助大屏端和PC端的GIS地图,掌握具体事件空间位置信息,并结合视频通讯技术和一键建组方法,实现和事件人员的资源远程调度及群组之间的实时通信。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-058",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "汇聚各信息渠道的实时事件，多渠道事件归一，对归集库内的事件数据按照统一要 求进行治理后，沉淀到事件库。",
+        "candidate_text": "事件汇聚收发网关应汇聚各信息渠道的实时事件,实现多渠道事件归一,对归集库内的事件数据按照统一要求进行治理后,沉淀到事件库。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-060",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "基于省市两级标准，实现实有房屋、人口、单位数据归集及管理，原有智慧城市综 合管理平台业务系统数据抽取，保持无锡市级数据变更与江阴智慧城市综合管理平台数 据同步更新，实现网格数据、采集字段归集。",
+        "candidate_text": "入格采集功能升级应基于省市两级标准,实现实有房屋、人口、单位数据归集及管理,原有智慧城市综合管理平台业务系统数据抽取,保持无锡市级数据变更与江阴智慧城市综合管理平台数据同步更新,实现网格数据、采集字段归集。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-062",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "建立全景网格管理功能和指标监测视图，实现分级下钻功能。对一标多实视图升级， 实现全场景业务及资源调度。",
+        "candidate_text": "网格工作监测屏升级应建立全景网格管理功能和指标监测视图,实现分级下钻功能,对一标多实视图升级,实现全场景业务及资源调度。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-063",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "智慧城市综合管理平台事件模块进行底层数据升级，规范原有事件底层数据格式， 统一规范事件运行主流程，实现事件中心数字化改造。",
+        "candidate_text": "网格业务中台升级应对智慧城市综合管理平台事件模块进行底层数据升级,规范原有事件底层数据格式,统一规范事件运行主流程,实现事件中心数字化改造。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-064",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "构建任务类别、标签体系、任务对象等。对周期性及非周期任务定义，自动实现任 务定义的发布。",
+        "candidate_text": "任务引擎应构建任务类别、标签体系、任务对象等,对周期性及非周期任务定义,自动实现任务定义的发布。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-065",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "根据筛选条件，对事件进行查询、统计，同时完善网格事件市、镇两级审核推送机 制。",
+        "candidate_text": "网格事件管理应根据筛选条件,对事件进行查询、统计,同时完善网格事件市、镇两级审核推送机制。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-066",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "精准掌握网格内基础要素的变化动态，对智慧城市综合管理平台的数据能力进行升 级，实现网格工作数据的高效计算与监测。",
+        "candidate_text": "网格事件管理要素全生命周期管理应精准掌握网格内基础要素的变化动态,对智慧城市综合管理平台的数据能力进行升级,实现网格工作数据的高效计算与监测。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-067",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "完善中心管理机制，对网格员进行量化质化分析，对网格内考核要素调整的审核权 限体系升级。",
+        "candidate_text": "多级网格中心功能完善应完善中心管理机制,对网格员进行量化质化分析,对网格内考核要素调整的审核权限体系升级。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-069",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "建设多元共治力量体系，定义实体组织和虚拟组织进行任务处理，围绕精网微格体 系，将网格化业务向下拓展，真正深入基层。",
+        "candidate_text": "多元共治应建设多元共治力量体系,定义实体组织和虚拟组织进行任务处理,围绕精网微格体系,将网格化业务向下拓展,真正深入基层。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-071",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "构建与公安“一标三实”数据的实时交互机制，结合网格自主发现实现数据的动态 回流，按日归集全量动态数据。构建“民警+网格员”全民反诈长效治理模式。流动人口 完整采集闭环管理，实现流动人口采集信息质量（完整性）自动稽核。",
+        "candidate_text": "警网融合应构建与公安“一标三实”数据的实时交互机制,结合网格自主发现实现数据的动态回流,按日归集全量动态数据,构建“民警+网格员”全民反诈长效治理模式,实现流动人口完整采集闭环管理,实现流动人口采集信息质量(完整性)自动稽核。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-072",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "SAFE_NORMALIZATION",
+        "source_text": "建设月度考核指标监测模型和时序考核指标监测模型，实现对上报考核数据的模拟 打分和实时监测。优化数据报表规则，优化不合格指标项的判别规则。整合现有平台与 监测平台报表，开发监测视图。提供质检平台，网格中心管理人员可以对质量进行评价， 并对下级网格中心及网格进行扣分。",
+        "candidate_text": "考核监测应建设月度考核指标监测模型和时序考核指标监测模型,实现对上报考核数据的模拟打分和实时监测,优化数据报表规则,优化不合格指标项的判别规则,整合现有平台与监测平台报表,开发监测视图,提供质检平台,网格中心管理人员可以对质量进行评价,并对下级网格中心及网格进行扣分。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-073",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "SAFE_NORMALIZATION",
+        "source_text": "网格学院移动端通过微信公众号的形式，以微信小程序为载体，打通江苏省网格化 平台账号体系，方便对学习人员进行有效的管理。管理员可以在网格学院后台对移动端 学习课程进行管理，包含课程分类和课程管理，为后续课程归类做划分。包括不限于考 试增、删、改、查，试题分类、题库管理、试卷分类、考试管理、成绩统计和纠错管理 等。",
+        "candidate_text": "网格学院移动端应通过微信公众号的形式,以微信小程序为载体,打通江苏省网格化平台账号体系,方便对学习人员进行有效的管理;管理员可以在网格学院后台对移动端学习课程进行管理,包含课程分类和课程管理,为后续课程归类做划分,包括不限于考试增、删、改、查,试题分类、题库管理、试卷分类、考试管理、成绩统计和纠错管理等。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-075",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "引入智能化引擎能力，主要包括语音合成引擎能力，语音识别引擎能力、语义理解 引擎能力。",
+        "candidate_text": "12345智能应用应引入智能化引擎能力,主要包括语音合成引擎能力,语音识别引擎能力、语义理解引擎能力。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-076",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "提供全媒体坐席首页门户，能够便于话务人员一览快速直观查看当前个人业务待办及 数据展示。主要包括：话务坐席门户服务、语音渠道软电话服务、来电市民画像服务、 业务配置管理、运营统计报表等。",
+        "candidate_text": "12345业务运营管理系统应提供全媒体坐席首页门户,能够便于话务人员一览快速直观查看当前个人业务待办及数据展示,主要包括话务坐席门户服务、语音渠道软电话服务、来电市民画像服务、业务配置管理、运营统计报表等。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-077",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "进一步对 12345 工单闭环归档的管理升级，提供诉求受理模块，工单业务流程模块、 督办管理模块、工单办理能效分析，提供后台分析统计等功能。",
+        "candidate_text": "12345工单闭环归档系统应进一步对12345工单闭环归档的管理升级,提供诉求受理模块,工单业务流程模块、督办管理模块、工单办理能效分析,提供后台分析统计等功能。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-079",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "优化升级 12345 知识库系统，构建完善、标准的知识辅助服务体系。支持多种格式附 件上传，提供知识库采编、知识检索、知识收藏等。",
+        "candidate_text": "12345智能知识库应优化升级12345知识库系统,构建完善、标准的知识辅助服务体系,支持多种格式附件上传,提供知识库采编、知识检索、知识收藏等。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-081",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "根据标签形态可设置定点标签、矢量 标签、区域标签三大类，支持在高点 视频画面中添加、修改、删除、关注 标签。支持对标签的图标形状修改。 支持对标签的图标颜色修改。",
+        "candidate_text": "AR实景系统标签管理应支持根据标签形态设置定点标签、矢量标签、区域标签三大类,支持在高点视频画面中添加、修改、删除、关注标签,支持对标签的图标形状修改,支持对标签的图标颜色修改。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-082",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "对视频画面中重点位置、区域、设备 进行标签标注，进而直观展示视频画 面区域内有效信息、属性和特征。",
+        "candidate_text": "标签展示应对视频画面中重点位置、区域、设备进行标签标注,进而直观展示视频画面区域内有效信息、属性和特征。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-083",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "支持全景视频画面中添加的所有标 签自动同步至特写球机画面中，同时 也支持特写球机画面中添加的标签 自动同步到全景视频画面中，并且双 向同步的标签依旧保持精准的坐标 位置，可实现远距离精准打标签。",
+        "candidate_text": "标签同步应支持全景视频画面中添加的所有标签自动同步至特写球机画面中,同时也支持特写球机画面中添加的标签自动同步到全景视频画面中,并且双向同步的标签依旧保持精准的坐标位置,可实现远距离精准打标签。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-084",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "支持通过中心平台实现高点实景视 频打标签功能，前端产品 SDK 协议接 入平台，实现标签随动功能；",
+        "candidate_text": "AR算法引擎应支持通过中心平台实现高点实景视频打标签功能,前端产品SDK协议接入平台,实现标签随动功能。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-085",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "视频标签 支持以画中画方式随时调阅、查看任 一标签名称和视频。 1 项",
+        "candidate_text": "视频标签应支持以画中画方式随时调阅、查看任一标签名称和视频。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-086",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "SAFE_NORMALIZATION",
+        "source_text": "在全景视频中标注卡口标签，选择要 添加的监控点名称，标注完成后可以 对标注好的标签查看标签名称、实时 监控视频、车流量统计分析、基本信 息，过车信息可以查看历史抓拍、历 史违章，以画中画方式在全景视频中 显示。",
+        "candidate_text": "卡口标签应在全景视频中标注卡口标签,选择要添加的监控点名称,标注完成后可以对标注好的标签查看标签名称、实时监控视频、车流量统计分析、基本信息,过车信息可以查看历史抓拍、历史违章,以画中画方式在全景视频中显示。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-087",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "SAFE_NORMALIZATION",
+        "source_text": "在全景视频中标注人脸标签，选择要 添加的监控点名称，标注完成后可以 对标注好的标签查看标签名称、实时 监控视频、人脸抓拍统计分析、基本 信息，人员信息可以查看人脸历史抓 拍、人脸历史黑名单报警，以画中画 方式在全景视频中显示。",
+        "candidate_text": "人脸标签应在全景视频中标注人脸标签,选择要添加的监控点名称,标注完成后可以对标注好的标签查看标签名称、实时监控视频、人脸抓拍统计分析、基本信息,人员信息可以查看人脸历史抓拍、人脸历史黑名单报警,以画中画方式在全景视频中显示。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-088",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "支持人流量数据统计标签，在标签上 展示保有量、进客量、出客量、人流 密度数据、人流量数据或人流密度预 警信息等。",
+        "candidate_text": "客流量标签应支持人流量数据统计标签,在标签上展示保有量、进客量、出客量、人流密度数据、人流量数据或人流密度预警信息等。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-089",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "SAFE_NORMALIZATION",
+        "source_text": "在视频画面中可以任意画线做图形 框定和信息标注，并可以添加监控视 频，主要用来标识封闭区间，办公区 域，重点关注区域等",
+        "candidate_text": "区域标签应在视频画面中可以任意画线做图形框定和信息标注,并可以添加监控视频,主要用来标识封闭区间,办公区域,重点关注区域等。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-090",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "支持在全景视频中标注商场标签、酒 店标签、厕所标签、景区标签、公交 站标签、设备配电箱标签、路灯标签、 井盖标签、垃圾桶标签等各类标签。",
+        "candidate_text": "其他标签应支持在全景视频中标注商场标签、酒店标签、厕所标签、景区标签、公交站标签、设备配电箱标签、路灯标签、井盖标签、垃圾桶标签等各类标签。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-091",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "支持对相对位置较高的视频以及视 野范围内的低点视频同步预览，在高 点视频中以画中画形式展示低点视 频画面，支持同时预览多个标签的关 联视频，重点低点视频可进行放大查 看。",
+        "candidate_text": "实时预览应支持对相对位置较高的视频以及视野范围内的低点视频同步预览,在高点视频中以画中画形式展示低点视频画面,支持同时预览多个标签的关联视频,重点低点视频可进行放大查看。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-094",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "支持多个 AR 高点进行联动切换，主 要满足室外大范围视场切换或者室 内室外相互切换的场景",
+        "candidate_text": "高高联动应支持多个AR高点进行联动切换,主要满足室外大范围视场切换或者室内室外相互切换的场景。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-095",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "SAFE_NORMALIZATION",
+        "source_text": "支持通过 AR 高点视频全局俯瞰、低 点视频标签化展示的高低联动模式 进行联动监控，可以通过标记的物联 感知设备、地理要素信息、安保警力 资源等各类标签详细了解细节信息",
+        "candidate_text": "高低联动应支持通过AR高点视频全局俯瞰、低点视频标签化展示的高低联动模式进行联动监控,可以通过标记的物联感知设备、地理要素信息、安保警力资源等各类标签详细了解细节信息。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-096",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "支持在报警列表中选择低点标签的 报警信息切换图标，切换到报警所属 的高点视频画面，球机可自动转向当 前报警画面并放大显示。（需提供第 三方权威机构出具的检测报告扫描 件）",
+        "candidate_text": "低高联动应支持在报警列表中选择低点标签的报警信息切换图标,切换到报警所属的高点视频画面,球机可自动转向当前报警画面并放大显示,需提供第三方权威机构出具的检测报告扫描件。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-097",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "在鹰眼全景视频画面中支持联动调 用细节球机，包括 3D 定位、移动目 标跟踪。在全景画面保持不变动的情 况下，使用球机快速放大相关细节并 跟踪目标",
+        "candidate_text": "鹰眼全景细节联动应在鹰眼全景视频画面中支持联动调用细节球机,包括3D定位、移动目标跟踪,在全景画面保持不变动的情况下,使用球机快速放大相关细节并跟踪目标。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-098",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "支持在 AR 实景地图中展示实时车辆 抓拍信息以及车辆黑名单报警结果， 报警信息包括车辆图片、车牌、车牌 颜色、布控地点、布控时间、布控原 因等",
+        "candidate_text": "车辆布控报警联动应支持在AR实景地图中展示实时车辆抓拍信息以及车辆黑名单报警结果,报警信息包括车辆图片、车牌、车牌颜色、布控地点、布控时间、布控原因等。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-099",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "支持在 AR 实景地图中展示实时人脸 抓拍信息以及人脸黑名单报警结果， 报警信息包括人脸图片、相似度百分 比、姓名、抓拍时间、抓拍地点、布 控信息，布控信息包括人物名称、证 件号码、布控人、布控原因等",
+        "candidate_text": "人脸布控报警联动应支持在AR实景地图中展示实时人脸抓拍信息以及人脸黑名单报警结果,报警信息包括人脸图片、相似度百分比、姓名、抓拍时间、抓拍地点、布控信息,布控信息包括人物名称、证件号码、布控人、布控原因等。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-100",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "支持手动跟踪移动目标功能，用户可 以在全景画面中手动框选一个移动 目标（人、车等），鹰眼的细节球机 会实时对该目标进行跟踪",
+        "candidate_text": "目标跟踪应支持手动跟踪移动目标功能,用户可以在全景画面中手动框选一个移动目标(人、车等),鹰眼的细节球机会实时对该目标进行跟踪。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-101",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "接入 AR 高空摄像机，按照接入路数 收费 8 路",
+        "candidate_text": "AR场景授权应接入AR高空摄像机,按照接入路数收费8路。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-102",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "平台运行环境管理、运行状态管理的 统一入口，提供运行环境管理、运行 状态管理等功能，使安装部署、数据 备份、授权管理、告警信息查看、问 题追溯等",
+        "candidate_text": "运管中心应提供平台运行环境管理、运行状态管理的统一入口,提供运行环境管理、运行状态管理等功能,使安装部署、数据备份、授权管理、告警信息查看、问题追溯等。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-106",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "支持画面按照 1 画面、4 画面、6 画 面、8 画面、9 画面分割，同时支持 画面拼接取消。画面支持开窗与漫 游，并可放大至整个电视墙。",
+        "candidate_text": "电视墙应支持画面按照1画面、4画面、6画面、8画面、9画面分割,同时支持画面拼接取消,画面支持开窗与漫游,并可放大至整个电视墙。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-107",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "可视化展示系统设备运行情况，支持 展示所选区域下监控点总数、监控点 在线率、图像正常率、录像完整率等 数据概况",
+        "candidate_text": "视频运维应可视化展示系统设备运行情况,支持展示所选区域下监控点总数、监控点在线率、图像正常率、录像完整率等数据概况。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-108",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "户端 提供视频预览客户端 1 项",
+        "candidate_text": "视频应用客户端应提供视频预览客户端。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "JY-001:REQ-188",
+        "tender_id": "JY-001",
+        "reason_codes": [
+          "MODALITY_OMISSION_REVIEW"
+        ],
+        "classification": "AMBIGUOUS",
+        "source_text": "三方机构检测通过即可终验。本项目第三方测评机构由采购方另行招标采购，费用不包含在本 次招标中。试运行期间若发生与技术要求不符或与初验记录不一致的情况时，中标人应负责解",
+        "candidate_text": "本项目第三方测评机构由采购方另行招标采购,费用不包含在本次招标中。",
+        "confidence": "LOW"
+      },
+      {
+        "req_id": "TB-003:REQ-005",
+        "tender_id": "TB-003",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "3.1 投标人行贿犯罪档案记录（开标当日中国裁判文书网的信息）；",
+        "candidate_text": "投标人须满足《中华人民共和国政府采购法》第二十二条规定。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "TB-003:REQ-006",
+        "tender_id": "TB-003",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "3.1 投标人行贿犯罪档案记录（开标当日中国裁判文书网的信息）；",
+        "candidate_text": "投标人须提供行贿犯罪档案记录（开标当日中国裁判文书网的信息）。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "TB-003:REQ-008",
+        "tender_id": "TB-003",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "3.3 未被人力资源社会保障主管部门列入拖欠农民工工资失信联合惩 戒名单或无因拖欠农民工工资被县级及以上有关行政主管部门限制投标 资格且在限制期限内（提供承诺函）。",
+        "candidate_text": "投标人须未被人力资源社会保障主管部门列入拖欠农民工工资失信联合惩戒名单或无因拖欠农民工工资被县级及以上有关行政主管部门限制投标资格且在限制期限内，并提供承诺函。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "TB-003:REQ-012",
+        "tender_id": "TB-003",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "4.按要求进行网上获取并下载招标文件,凡未在规定时间内获取招标 文件者视为无效标。",
+        "candidate_text": "投标人须按要求进行网上获取并下载招标文件，凡未在规定时间内获取招标文件者视为无效标。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "TB-003:REQ-036",
+        "tender_id": "TB-003",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "并由法定代表人或其委托代理人签署。",
+        "candidate_text": "投标文件应由法定代表人或其委托代理人签署。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "TB-003:REQ-074",
+        "tender_id": "TB-003",
+        "reason_codes": [
+          "MODALITY_OMISSION_REVIEW"
+        ],
+        "classification": "AMBIGUOUS",
+        "source_text": "1、自 2020 年 1 月 1 日以来投标人或投标人所投产品厂商承担过的 类似项目的业绩（类似项目指合同中至少包含“电子证照”或“电 子材料”或“电子印章”类似内容），每提供一项得３分，最多得 ９分（以采购合同文本为准。业绩以合同签订日期为准，投标文件 中附合同扫描件，否则不得分）",
+        "candidate_text": "自2020年1月1日以来投标人或投标人所投产品厂商承担过的类似项目业绩（类似项目指合同中至少包含“电子证照”或“电子材料”或“电子印章”类似内容），每提供一项得3分，最多得9分；以采购合同文本为准，业绩以合同签订日期为准，投标文件中附合同扫描件。",
+        "confidence": "LOW"
+      },
+      {
+        "req_id": "TB-003:REQ-121",
+        "tender_id": "TB-003",
+        "reason_codes": [
+          "MODALITY_OMISSION_REVIEW"
+        ],
+        "classification": "AMBIGUOUS",
+        "source_text": "7、国产化要求：为了响应国家相关要求，本项目所有设备选型及软 件设备，采用国产主流安全可靠设备，同时适配信创要求及运行环境，确 保系统稳定性、安全性、扩展性与实用性，保障数据安全，实现自主安全、 高效协同为焦作市“四电”业务奠定坚实可靠的基础系统，确保国家秘密 安全。",
+        "candidate_text": "国产化要求：本项目所有设备选型及软件设备，采用国产主流安全可靠设备，同时适配信创要求及运行环境，确保系统稳定性、安全性、扩展性与实用性，保障数据安全，实现自主安全、高效协同，为焦作市“四电”业务奠定坚实可靠的基础系统，确保国家秘密安全。",
+        "confidence": "LOW"
+      },
+      {
+        "req_id": "TB-003:REQ-127",
+        "tender_id": "TB-003",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "3.3 可复用 事项申报所需的各类申请材料，其内容信息除了能够目视之外还要能 够提供给各业务系统进行复用，因此电子材料在设计上还要考虑需能存储 结构化的材料内容信息。",
+        "candidate_text": "电子材料应用系统需满足可复用需求：事项申报所需的各类申请材料，其内容信息除了能够目视之外还要能够提供给各业务系统进行复用，因此电子材料在设计上还要考虑需能存储结构化的材料内容信息。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "TB-003:REQ-141",
+        "tender_id": "TB-003",
+        "reason_codes": [
+          "MODALITY_OMISSION_REVIEW"
+        ],
+        "classification": "AMBIGUOUS",
+        "source_text": "电子签名制作系统实现签名采集、签名上传、签名制作、签名审核、 签名管理及签名信息在线推送等功能；电子签名应用系统实现手动签名、",
+        "candidate_text": "电子签名制作系统实现签名采集、签名上传、签名制作、签名审核、签名管理及签名信息在线推送等功能。",
+        "confidence": "LOW"
+      },
+      {
+        "req_id": "TB-003:REQ-142",
+        "tender_id": "TB-003",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "---------------------------------------------------------------- ---------------------------------------------------------------- 采购代理机构：焦作市公共资源项目服务有限责任公司 项目编号：焦财招标采购-2025-50 41 自动签名和批量签名等，支持业务系统实现电子签名功能；电子签名验证",
+        "candidate_text": "电子签名应用系统实现手动签名、自动签名和批量签名等，支持业务系统实现电子签名功能。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "TB-003:REQ-143",
+        "tender_id": "TB-003",
+        "reason_codes": [
+          "MODALITY_OMISSION_REVIEW"
+        ],
+        "classification": "AMBIGUOUS",
+        "source_text": "自动签名和批量签名等，支持业务系统实现电子签名功能；电子签名验证 系统对签名结果、签名错误列表、版式文件签名信息、签名文件自动验证 信息提供支撑；移动端应用服务以 App 或小程序的形式实现证书及签名申",
+        "candidate_text": "电子签名验证系统对签名结果、签名错误列表、版式文件签名信息、签名文件自动验证信息提供支撑。",
+        "confidence": "LOW"
+      },
+      {
+        "req_id": "TB-003:REQ-192",
+        "tender_id": "TB-003",
+        "reason_codes": [
+          "MODALITY_OMISSION_REVIEW"
+        ],
+        "classification": "AMBIGUOUS",
+        "source_text": "应提供 3 年手写签名证书服务。个人数字证书由权威合法的第三方 CA 机构签发，符合《x.509c 的国内数字证书格式规范》。证书标准遵循 X.509 V3 格式标准；",
+        "candidate_text": "提供3年手写签名证书服务，个人数字证书由权威合法的第三方CA机构签发，符合《x.509c的国内数字证书格式规范》，证书标准遵循X.509 V3格式标准。",
+        "confidence": "LOW"
+      },
+      {
+        "req_id": "TB-003:REQ-193",
+        "tender_id": "TB-003",
+        "reason_codes": [
+          "MODALITY_OMISSION_REVIEW"
+        ],
+        "classification": "AMBIGUOUS",
+        "source_text": "应提供 3 年包含 20 万次人脸核身。自然人三要素核验：人脸、姓名、 身份证号",
+        "candidate_text": "提供3年包含20万次人脸核身服务，自然人三要素核验：人脸、姓名、身份证号。",
+        "confidence": "LOW"
+      },
+      {
+        "req_id": "TB-003:REQ-194",
+        "tender_id": "TB-003",
+        "reason_codes": [
+          "MODALITY_OMISSION_REVIEW"
+        ],
+        "classification": "AMBIGUOUS",
+        "source_text": "应提供 3 年包含 10 万次企业工商四要素核验。企业信息核验：企业 营业执照名称、统一社会信用代码、法定代表人姓名和法定代表人身份证 号。",
+        "candidate_text": "提供3年包含10万次企业工商四要素核验服务，核验企业营业执照名称、统一社会信用代码、法定代表人姓名和法定代表人身份证号。",
+        "confidence": "LOW"
+      },
+      {
+        "req_id": "TB-003:REQ-228",
+        "tender_id": "TB-003",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "投标承诺函 致：（招标人） 根据贵方为 项目的投标邀请（项目编号： ），投 标人委托代理人 全名、职务)代表投标人 (投 标人名称、地址)提交下述文件，并对之负法律责任。 据此函，承诺如下： 按无效投标处理并同意接受相关处罚；若中标之后查出有虚假的，同意被 取消中标资格并同意接受相关处罚； 4、如果我们的投标文件被接受，我们将履行招标文件中规定的每一 项要求，按期、按质、按量履行每项规定； 5、投标人已详细审查全部招标文件，包括修改文件以及全部参考资 料和有关附件。我们完全理",
+        "candidate_text": "投标人须提交投标承诺函，承诺：按无效投标处理并同意接受相关处罚；若中标之后查出有虚假的，同意被取消中标资格并同意接受相关处罚；如果投标文件被接受，将履行招标文件中规定的每一项要求，按期、按质、按量履行每项规定；已详细审查全部招标文件，包括修改文件以及全部参考资料和有关附件，完全理解并同意放弃对这方面有不明及误解的权利；如果在规定的开标时间后至投标有效期满前撤回投标文件，将自愿接受相关处罚；中标后保证在与采购人签订合同之日起1个工作日内将合同向采购代理机构备案，保证项目验收合格",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "TB-003:REQ-229",
+        "tender_id": "TB-003",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "投标人名称：（单位公章） 法定代表人：（电子签章）",
+        "candidate_text": "投标人名称须加盖单位公章，法定代表人须电子签章。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "TB-003:REQ-230",
+        "tender_id": "TB-003",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "投标人名称：（单位公章） 法定代表人：（电子签章） 年 月 日",
+        "candidate_text": "投标人名称须加盖单位公章，法定代表人须电子签章。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "TB-003:REQ-231",
+        "tender_id": "TB-003",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "投标人名称 注册地址 邮政编码 联系方式 联系人 电话 传真 网址 营业执照号 税务登记证号 组织机构代码证号 法定代表人 姓名 职务 电话 注册资金 成立时间 开户银行 账号 经营范围 备注",
+        "candidate_text": "投标人须填写投标人基本情况表，包括投标人名称、注册地址、邮政编码、联系方式、联系人、电话、传真、网址、营业执照号、税务登记证号、组织机构代码证号、法定代表人姓名/职务/电话、注册资金、成立时间、开户银行、账号、经营范围及备注。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "TB-003:REQ-232",
+        "tender_id": "TB-003",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "在 招标活动中，我单位郑重承诺： 一、公平竞争参加本次招标活动。 二、杜绝任何形式的商业贿赂行为。不向国家工作人员、政府采购代 理机构工作人员、评审专家及其亲属提供礼品、有价证券、购物券、回扣、 佣金、咨询费、劳务费、赞助费、宣传费、宴请；不为其报销各种消费凭 证，不支付其旅游、娱乐等费用。 三、若出现上述行为，我单位及参与投标的工作人员愿意接受按照国 家法律法规等有关规定给予的处罚。",
+        "candidate_text": "投标人须提交反商业贿赂承诺书，承诺公平竞争参加本次招标活动，杜绝任何形式的商业贿赂行为，不向国家工作人员、政府采购代理机构工作人员、评审专家及其亲属提供礼品、有价证券、购物券、回扣、佣金、咨询费、劳务费、赞助费、宣传费、宴请，不为其报销各种消费凭证，不支付其旅游、娱乐等费用；若出现上述行为，投标人及参与投标的工作人员愿意接受按照国家法律法规等有关规定给予的处罚。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "TB-006:REQ-001",
+        "tender_id": "TB-006",
+        "reason_codes": [
+          "MODALITY_OMISSION_REVIEW"
+        ],
+        "classification": "AMBIGUOUS",
+        "source_text": "（二）项目背景或概况 根据北京市相关文件要求，北京市应急指挥调度能力提升工程项目购置的大 模型软件需部署至市级政务云平台。",
+        "candidate_text": "大模型软件需部署至市级政务云平台。",
+        "confidence": "LOW"
+      },
+      {
+        "req_id": "TB-006:REQ-006",
+        "tender_id": "TB-006",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "vCPU（vCPU ARM 架构主频 不低于 2.4GHz， C86 和 x86 主频不低于 2.2GHz，平均虚拟化率， 即物理 CPU/虚拟 CPU≥ 1/4，虚拟 CPU 利用率不低 于物理 CPU 的 25% ） 1 CPU 元/ 月 504 10 平台云主机服",
+        "candidate_text": "政务云平台云主机vCPU应满足ARM架构主频不低于2.4GHz、C86和x86主频不低于2.2GHz，物理CPU/虚拟CPU平均虚拟化率不低于1/4，虚拟CPU利用率不低于物理CPU的25%。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "TB-006:REQ-007",
+        "tender_id": "TB-006",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "务（包含 X86、 ARM、C86） 内存 1 GB 元/ 月 1728 10",
+        "candidate_text": "应按采购需求提供平台云主机内存资源，按表列数量和10个月期限提供服务。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "TB-006:REQ-008",
+        "tender_id": "TB-006",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "GPU 显存（需同时租用算 力资源、云主机或物理 服务器资源，联合使用） 1 GB 元/ 月 1024 10",
+        "candidate_text": "应提供GPU显存资源，并与算力资源、云主机或物理服务器资源联合使用，按表列数量和10个月期限提供服务。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "TB-006:REQ-009",
+        "tender_id": "TB-006",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "计算服务 GPU 卡算力服务 （适配 X86、ARM、 C86） 半精度浮点运算能力（需 同时租用 GPU 显存、云主 机或物理服务器资源，联 合使用） 1 TFLOPS 元/ 月 3712 10",
+        "candidate_text": "应提供适配X86、ARM、C86的GPU卡半精度浮点算力服务，并与GPU显存、云主机或物理服务器资源联合使用。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "TB-006:REQ-010",
+        "tender_id": "TB-006",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "普通性能存储 普通存储（单盘技术指标: 单盘 IOPS 2000-5000） 100 GB 元/ 月 68 10",
+        "candidate_text": "应提供普通性能存储服务，单盘IOPS指标为2000-5000，按表列数量和10个月期限提供。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "TB-006:REQ-011",
+        "tender_id": "TB-006",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "高性能存储 高性能存储（单盘技术指 标：单盘 IOPS 10000-25000） 100 GB 元/ 月 259. 72 10",
+        "candidate_text": "应提供高性能存储服务，单盘IOPS指标为10000-25000，按表列数量和10个月期限提供。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "TB-006:REQ-012",
+        "tender_id": "TB-006",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "存储服务（兼 容 X86、ARM、 C86） 本地备份服务 本地备份服务 100 GB 元/ 月 68 10",
+        "candidate_text": "应提供本地备份服务，按表列容量和10个月期限提供。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "TB-006:REQ-013",
+        "tender_id": "TB-006",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "网络服务（兼 容 X86、ARM、 C86） 远程接入服务 远程接入服务 1 账号 元/ 月 4 10",
+        "candidate_text": "应提供远程接入服务账号，按表列数量和10个月期限提供。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "TB-006:REQ-017",
+        "tender_id": "TB-006",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "（三）服务内容 1.计算服务 投标人需根据采购需求，提供计算服务，包括：平台云主机服务（包含 X86、ARM、C86）和 GPU 卡算力服务（适配 X86、ARM、C86），实现合理的计算 资源配置。按照采购人要求对 vCPU 及内存进行动态调整，自接到工单至完成调 整时间不超过 4 小时。",
+        "candidate_text": "应提供平台云主机服务（X86、ARM、C86）和GPU卡算力服务（适配X86、ARM、C86），并按采购人要求动态调整vCPU和内存，工单下达到完成调整不超过4小时。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "TB-006:REQ-018",
+        "tender_id": "TB-006",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "2.存储服务 投标人需根据采购需求，提供存储服务，包括：普通性能存储、高性能存储 和本地备份服务。",
+        "candidate_text": "应提供普通性能存储、高性能存储和本地备份服务。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "TB-006:REQ-019",
+        "tender_id": "TB-006",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "投标人需根据采购需求，提供单盘 IOPS1000-3000 的普通性能存储服务，按 照采购人要求对存储空间和配置进行动态调整。",
+        "candidate_text": "普通性能存储单盘IOPS应为1000-3000，并能按采购人要求动态调整存储空间和配置。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "TB-006:REQ-020",
+        "tender_id": "TB-006",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "投标人需根据采购需求，提供单盘 IOPS 3000-20000 的高性能存储服务，按 照采购人要求对存储空间和配置进行动态调整。",
+        "candidate_text": "高性能存储单盘IOPS应为3000-20000，并能按采购人要求动态调整存储空间和配置。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "TB-006:REQ-021",
+        "tender_id": "TB-006",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "投标人需根据采购需求，提供本地备份服务，通过备份策略实现文件、操作 系统、数据库的本地备份。",
+        "candidate_text": "本地备份服务应通过备份策略实现文件、操作系统和数据库的本地备份。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "TB-006:REQ-026",
+        "tender_id": "TB-006",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "投标人负责设立技术支持热线，并安排专人值守，为运维工作提供 7×24 小 时热线支持服务。投标人针对采购人要求的云平台运维服务相关内容，需指定专 业技术能力较强的工程师，根据采购人要求配合开展相关维护服务。",
+        "candidate_text": "应设立技术支持热线并安排专人7×24值守，指定专业技术能力较强的工程师按采购人要求配合开展维护服务。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "TB-006:REQ-029",
+        "tender_id": "TB-006",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "（5）重点保障要求 为保障业务高峰期内系统平稳运行，缓解系统高峰期内因业务发生量增大而 带来系统压力风险，要求投标人根据业务周期性特点，加大运维保障力度，保证 在业务高峰期内系统平稳运行。",
+        "candidate_text": "业务高峰期应根据业务周期特点加大运维保障力度，保证系统平稳运行。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "TB-006:REQ-030",
+        "tender_id": "TB-006",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "5.迁移服务 由于目前业务系统属于生产系统，保障业务系统正常运行是关键。如涉及跨 云平台迁移，在系统业务正常运行的前提下，自合同生效之日起 7 个工作日内完 成全部系统迁移，投标人需提供迁移服务承诺函，投标人需在迁移服务方案中明",
+        "candidate_text": "如涉及跨云平台迁移，应在保障业务系统正常运行前提下，自合同生效之日起7个工作日内完成全部系统迁移并提供迁移服务承诺函。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-01:REQ-001",
+        "tender_id": "FAST-01",
+        "reason_codes": [
+          "MODALITY_OMISSION_REVIEW"
+        ],
+        "classification": "AMBIGUOUS",
+        "source_text": "★服务期限：本项目服务期限为 1 年，服务时间为 2025 年 12 月 1 日至 2026 年 11 月 30 日。服务期满后，根据中标供应商履约及考核情况确定是否续签，续签不超过 两次（一年一签），长期服务政府采购合同履行期限最长不得超过三十六个月，如 采购方对履约情况不满意，采购方不再续约。",
+        "candidate_text": "本项目服务期限为1年，服务时间为2025年12月1日至2026年11月30日；续签不超过两次且长期服务合同履行期限最长不超过36个月。",
+        "confidence": "LOW"
+      },
+      {
+        "req_id": "FAST-01:REQ-003",
+        "tender_id": "FAST-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "本次项目维护服务内容包括对 HIS 系统、电子病历系统、 PACS-RIS 系统、LIS 系统、体检信息系统、手术麻醉信息系统、 心电管理系统、输血管理系统、院感管理系统、药事管理系统 10 个业务软件系统及相关接口维护，主要服务内容要求如下：",
+        "candidate_text": "维护服务范围应覆盖HIS、电子病历、PACS-RIS、LIS、体检、手术麻醉、心电、输血、院感、药事等10个业务软件系统及相关接口。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-01:REQ-004",
+        "tender_id": "FAST-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "（1）问题处理，及时解决信息系统在使用过程中出现的问题。",
+        "candidate_text": "应及时处理信息系统使用过程中出现的问题。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-01:REQ-005",
+        "tender_id": "FAST-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "（2）性能优化，及时优化处理信息系统操作变慢、性能降低 等问题。",
+        "candidate_text": "应及时优化处理信息系统操作变慢、性能降低等性能问题。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-01:REQ-006",
+        "tender_id": "FAST-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "（3）操作培训，按院方要求指导培训使用人员熟练使用信息 系统。",
+        "candidate_text": "应按院方要求指导培训使用人员熟练使用信息系统。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-01:REQ-007",
+        "tender_id": "FAST-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "（4）数据处理，协助院方按照需求进行相关数据处理。",
+        "candidate_text": "应协助院方按照需求进行相关数据处理。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-01:REQ-009",
+        "tender_id": "FAST-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "（6）系统安全问题处理，配合院方完成系统安全相关工作， 包括但不限于运维相关系统及主机的补丁升级、漏洞修复以及 安全检查的协助等。",
+        "candidate_text": "应配合院方完成系统安全相关工作，包括补丁升级、漏洞修复和安全检查协助等。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-01:REQ-012",
+        "tender_id": "FAST-01",
+        "reason_codes": [
+          "MODALITY_OMISSION_REVIEW"
+        ],
+        "classification": "AMBIGUOUS",
+        "source_text": "人应在工作日提供驻场维护服务，要求按照医院工作日时间为 上午 8：00-下午 17：00，其它时间可远程协助处理，必要时 现场处理，如遇紧急情况或临时工作任务等需要加班时，驻点 人员需积极配合院方。",
+        "candidate_text": "工作日驻场维护时间为8:00-17:00，其他时间可远程协助，必要时现场处理，紧急或临时任务需配合加班。",
+        "confidence": "LOW"
+      },
+      {
+        "req_id": "FAST-01:REQ-015",
+        "tender_id": "FAST-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "（4）驻点服务人员休假和请假期间，投标人需安排临时人员 顶替，保证系统故障及时处理。信息系统发生宕机等意外事件",
+        "candidate_text": "驻点人员休假或请假期间，应安排临时人员顶替以保证系统故障及时处理。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-01:REQ-019",
+        "tender_id": "FAST-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "作报告，要求每周四下 17：00 前递交上周的服务工作周报， 每月 5 号下午 17：00 前递交服务工作月报，季度巡检报告要 求巡检后 15 个工作日内提供，服务到期后递交年度服务整体 报告。",
+        "candidate_text": "应按规定提交服务报告：周报每周四17:00前、月报每月5日17:00前、季度巡检报告巡检后15个工作日内、服务到期后提交年度整体报告。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-01:REQ-023",
+        "tender_id": "FAST-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "三级 信息系统故障， 导致个体工作站 非紧急业务受影 响 ≦10 分 钟 ≦30 分钟 ≦2 小 时",
+        "candidate_text": "三级故障响应时间不超过10分钟、处理时间不超过30分钟、解决时间不超过2小时。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-01:REQ-026",
+        "tender_id": "FAST-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "认后方可进行调整维护。维护内容只限于现有功能模块及政策 类的需求、各类接口优化及数据报表统计处理，不包括新增功 能模块需求。一般需求要求一周内完成，重大需求最长不超过",
+        "candidate_text": "适应性调整维护仅限现有功能模块、政策类需求、接口优化及数据报表统计处理，不包括新增功能模块。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-01:REQ-028",
+        "tender_id": "FAST-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "（2）定期巡检，按时提交巡检报告，巡检服务主要指软件检 查和数据库检查，内容包括：系统性能指标检查、功能正确性 检查、软件可用性与安全性检查、参数的合理性、性能优化等； 巡检过程中发现的问题，依据服务方与院方确认的故障分类标",
+        "candidate_text": "应定期开展软件和数据库巡检并按时提交巡检报告，检查内容包括性能、功能正确性、可用性、安全性、参数合理性和性能优化等。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-01:REQ-032",
+        "tender_id": "FAST-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "（2）与用户运行维护体系其他部门和环节协同工作，密切配 合，共同开展技术支持工作。",
+        "candidate_text": "应与用户运行维护体系其他部门和环节协同配合开展技术支持。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-01:REQ-033",
+        "tender_id": "FAST-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "（3）出现疑难技术、业务问题和重大紧急情况时，及时向负 责人报告。",
+        "candidate_text": "出现疑难技术、业务问题和重大紧急情况时应及时向负责人报告。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-01:REQ-034",
+        "tender_id": "FAST-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "（4）现场技术支持时要精神饱满，穿着得体，谈吐文明，举 止庄重。接听电话时要文明礼貌，语言清晰明了，语气和善。",
+        "candidate_text": "现场技术支持及电话服务应保持规范、文明的职业行为和沟通。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-01:REQ-036",
+        "tender_id": "FAST-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "2 人员要求 投标人为本项目安排不少于 3 人（含项目负责人）的工作团队， 团队成员均为投标人自有员工。其中 1 人为项目负责人，至少",
+        "candidate_text": "项目工作团队不少于3人（含项目负责人），团队成员均应为投标人自有员工。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-04:REQ-001",
+        "tender_id": "FAST-04",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "★注：投标人所投产品符合财政部 工业和信息化部发布的《操作系统政府采购需求 标准（2023 年版）》、《数据库政府采购需求标准（2023 年版）》标准要求，提供中国 信息安全测评中心网站发布的“安全可靠测评结果公告”截图。否则投标无效。",
+        "candidate_text": "投标人所投产品须符合财政部、工业和信息化部发布的《操作系统政府采购需求标准（2023年版）》、《数据库政府采购需求标准（2023年版）》标准要求，并提供中国信息安全测评中心网站发布的“安全可靠测评结果公告”截图，否则投标无效。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-04:REQ-026",
+        "tender_id": "FAST-04",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "式引导；b)支持 bootloader 引导，支持",
+        "candidate_text": "操作系统应支持UEFI2.0及以上规范固件引导，当计算机以UEFI模式启动安装时，安装程序应分配ESP，并在ESP中放置启动引导文件，使系统能以UEFI模式引导；支持bootloader引导，支持MBR及GPT式引导。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-04:REQ-098",
+        "tender_id": "FAST-04",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "平台，并对提供的开源组件进行签名认 证，确保组件的安全性、稳定性、可靠 性",
+        "candidate_text": "供应商可通过安装镜像内置、软件仓库或附加光盘等方式提供开源云计算管理平台，并对提供的开源组件进行签名认证，确保组件的安全性、稳定性、可靠性。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-04:REQ-107",
+        "tender_id": "FAST-04",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "87 易用性",
+        "candidate_text": "操作系统的多文种图形用户界面应支持GB18030规定。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-04:REQ-146",
+        "tender_id": "FAST-04",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "125 兼容性 要求 硬件 兼容 ★部件兼容",
+        "candidate_text": "供应商提供兼容的系统总线、HBA卡、RAID卡、网卡、光纤卡、AI加速卡、GPU、NPU等品牌及型号清单。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-04:REQ-179",
+        "tender_id": "FAST-04",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "156 服务要 求 ★技术服务 时效 操作系统厂商满足同城 4h、异地 12h 响 要求，两个工作日解决问题，对于未能 解决的问题和故障提供可行的升级方案",
+        "candidate_text": "操作系统厂商满足同城4h、异地12h响应要求，两个工作日解决问题，对于未能解决的问题和故障提供可行的升级方案。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-04:REQ-185",
+        "tender_id": "FAST-04",
+        "reason_codes": [
+          "MODALITY_OMISSION_REVIEW"
+        ],
+        "classification": "AMBIGUOUS",
+        "source_text": "162 供应保 障要求 ★数据收集 安全保障 除用户授权采集的信息外不采集其他数 据，相关信息采集无安全风险，相关数 据存储在大陆境内",
+        "candidate_text": "除用户授权采集的信息外不采集其他数据，相关信息采集无安全风险，相关数据存储在大陆境内。",
+        "confidence": "LOW"
+      },
+      {
+        "req_id": "FAST-04:REQ-186",
+        "tender_id": "FAST-04",
+        "reason_codes": [
+          "MODALITY_OMISSION_REVIEW"
+        ],
+        "classification": "AMBIGUOUS",
+        "source_text": "163 供应保 障要求 数据安 全保障 ★数据供给 安全保障 涉及数据下载的线上服务物理服务器不 出境，包括代码仓库、系统补丁、安全 补丁、服务网站等",
+        "candidate_text": "涉及数据下载的线上服务物理服务器不出境，包括代码仓库、系统补丁、安全补丁、服务网站等。",
+        "confidence": "LOW"
+      },
+      {
+        "req_id": "FAST-04:REQ-187",
+        "tender_id": "FAST-04",
+        "reason_codes": [
+          "MODALITY_OMISSION_REVIEW"
+        ],
+        "classification": "AMBIGUOUS",
+        "source_text": "164 供应保 障要求 代码无 风险 ★代码无风 险 操作系统厂商提供源代码，源代码可供 第三方机构审查，开源许可合规，代码 知识产权无风险，无恶意安全漏洞或后 门，代码可追溯、可重构",
+        "candidate_text": "操作系统厂商提供源代码，源代码可供第三方机构审查，开源许可合规，代码知识产权无风险，无恶意安全漏洞或后门，代码可追溯、可重构。",
+        "confidence": "LOW"
+      },
+      {
+        "req_id": "FAST-04:REQ-188",
+        "tender_id": "FAST-04",
+        "reason_codes": [
+          "MODALITY_OMISSION_REVIEW"
+        ],
+        "classification": "AMBIGUOUS",
+        "source_text": "165 供应保 障要求 工程构 建体系 工程构建体 系 操作系统厂商具备统一的工程构建体 系，能用一套操作系统源码构建用于云 侧计算、边侧计算场景中部署运行的操 作系统，降低部署后系统维护、使用复 杂度",
+        "candidate_text": "操作系统厂商具备统一的工程构建体系，能用一套操作系统源码构建用于云侧计算、边侧计算场景中部署运行的操作系统，降低部署后系统维护、使用复杂度。",
+        "confidence": "LOW"
+      },
+      {
+        "req_id": "FAST-04:REQ-227",
+        "tender_id": "FAST-04",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "12 功能 要求 自定义数据类型 具备用户自定义数据类型的能",
+        "candidate_text": "自定义数据类型能力：具备用户自定义数据类型的能力，可支持不同应用场景的数据类型需求。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-04:REQ-252",
+        "tender_id": "FAST-04",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "35 功能 要求 运维 ★运行时统计信",
+        "candidate_text": "数据库慢SQL统计：支持统计SQL语句、用户名、数据库名、执行时长；数据库性能状态统计：支持统计每秒事务数和查询数、SQL平均响应时间、高频SQL。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-04:REQ-266",
+        "tender_id": "FAST-04",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "用户/模式备 份、恢复 a)支持对数据库的所有或指定用 户/模式下的数据进行备份； b)支持对数据库的所有或指定用 户/模式下的数据备份进行恢复",
+        "candidate_text": "用户/模式备份、恢复：支持对数据库的所有或指定用户/模式下的数据进行备份，并支持对相应备份进行恢复。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-04:REQ-341",
+        "tender_id": "FAST-04",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "3.1.2.2. 在满足通用参数基础上集中式数据库2需满足的其他参数要求",
+        "candidate_text": "支持单节点故障容错处理，测试至少3次查询业务故障中断切换平均时间和更新业务中断切换平均时间不高于10s。须提供功能测试截图，并加盖投标人公章。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-002",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "综合信息平台巡检 每天",
+        "candidate_text": "应对综合信息平台提供每日巡检服务。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-003",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "综合信息平台数据备份 每天",
+        "candidate_text": "应对综合信息平台提供每日数据备份服务。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-004",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "综合信息平台数据维护 每天",
+        "candidate_text": "应对综合信息平台提供每日数据维护服务。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-005",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "综合信息平台现场服务 每天",
+        "candidate_text": "应对综合信息平台提供每日现场服务。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-006",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "综合信息平台安全加固",
+        "candidate_text": "应对综合信息平台开展安全加固。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-007",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "综合信息平台功能完善及流程调整",
+        "candidate_text": "应对综合信息平台开展功能完善及流程调整。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-008",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "综合信息平台组织机构信息调整",
+        "candidate_text": "应对综合信息平台开展组织机构信息调整。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-009",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "综合信息平台安全检查",
+        "candidate_text": "应对综合信息平台开展安全检查。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-011",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "共享信息系统巡检 每天",
+        "candidate_text": "应对共享信息系统提供每日巡检服务。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-012",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "共享信息系统数据备份 每天",
+        "candidate_text": "应对共享信息系统提供每日数据备份服务。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-013",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "共享信息系统数据维护 每天",
+        "candidate_text": "应对共享信息系统提供每日数据维护服务。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-014",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "共享信息系统现场服务 每天",
+        "candidate_text": "应对共享信息系统提供每日现场服务。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-015",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "共享信息系统安全加固",
+        "candidate_text": "应对共享信息系统开展安全加固。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-016",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "共享信息系统安全检查",
+        "candidate_text": "应对共享信息系统开展安全检查。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-018",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "外网网站信息维护 每天",
+        "candidate_text": "应对外网门户提供每日信息维护服务。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-019",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "外网网站数据备份 每周",
+        "candidate_text": "应对外网门户提供每周数据备份服务。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-020",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "外网监控预警 每天",
+        "candidate_text": "应对外网门户提供每日监控预警服务。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-021",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "外网磁盘空间整理 季度",
+        "candidate_text": "应对外网门户提供季度磁盘空间整理服务。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-022",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "外网网站模块维护",
+        "candidate_text": "应对外网门户提供网站模块维护服务。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-023",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "项目管理系统数据备份 每天",
+        "candidate_text": "应对项目管理系统提供每日数据备份服务。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-024",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "项目管理系统安全加固",
+        "candidate_text": "应对项目管理系统开展安全加固。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-025",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "项目管理系统功能完善及流程调整",
+        "candidate_text": "应对项目管理系统开展功能完善及流程调整。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-026",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "项目管理系统安全检查",
+        "candidate_text": "应对项目管理系统开展安全检查。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-028",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "使用技术咨询",
+        "candidate_text": "应对项目管理系统提供使用技术咨询。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-029",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "系统巡检",
+        "candidate_text": "应对即时通讯系统提供系统巡检服务。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-030",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "数据备份",
+        "candidate_text": "应对即时通讯系统提供数据备份服务。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-031",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "组织机构信息调整",
+        "candidate_text": "应对即时通讯系统提供组织机构信息调整服务。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-032",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "处理使用中的问题",
+        "candidate_text": "应对即时通讯系统处理使用中的问题。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-033",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "系统版本升级",
+        "candidate_text": "应对即时通讯系统提供系统版本升级服务。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-034",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "档案管理系统数据备份 每天",
+        "candidate_text": "应对档案管理系统提供每日数据备份服务。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-035",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "档案管理统安全加固 6 档案管理系统",
+        "candidate_text": "应对档案管理系统开展安全加固。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-036",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "档案管理系统现有功能完善",
+        "candidate_text": "应对档案管理系统开展现有功能完善。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-038",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "使用技术咨询 故障诊断与处理 7 财务系统、CAD 系 统、专业软件等 系统使用咨询",
+        "candidate_text": "应为财务系统、CAD系统及专业软件等提供使用技术咨询和故障诊断处理。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-039",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "1.1.2 通讯终端及线路维护 对网络线路和通讯终端进行维护，保障网络平稳运行。",
+        "candidate_text": "应对网络线路和通讯终端进行维护，保障网络平稳运行。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-040",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "1.1.3 机房运行环境维护 每天维护机房运行环境，包括服务期维护、UPS、空调/新风系统、环控消防系统、 综合布线等方面。",
+        "candidate_text": "应每天维护机房运行环境，包括服务器、UPS、空调/新风、环控消防和综合布线等。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-041",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "1.1.4 无线网络系统运维服务 运维服务人员为北京市水科学技术研究院的无线网络系统进行定期的现场检查，及 时发现网络系统运行中出现的隐患，通过系统调整等手段，减少系统发生故障的概率， 保证系统稳定、高效运行。",
+        "candidate_text": "应定期现场检查无线网络系统，及时发现隐患并通过系统调整降低故障概率，保证系统稳定高效运行。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-042",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "运维服务人员每日对无线网络系统及设备进行巡检监控，巡检监控内容包括但不限 于：系统连通性、设备运行状态、系统展示内容等；",
+        "candidate_text": "应每日巡检监控无线网络系统及设备，包括系统连通性、设备运行状态和系统展示内容等。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-043",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "每周对无线网络系统提供主动巡检服务，对北京市水科学技术研究院无线网络系统 进行细致全面监视和检查，检查的内容包括但不限于：硬件环境、设备状态、系统配置、 系统日志检查分析等方面的检查。",
+        "candidate_text": "应每周对无线网络系统开展主动巡检，检查硬件环境、设备状态、系统配置和系统日志等。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-045",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "运维服务人员需为北京市水科学技术研究院建立无线网络系统维修档案，并根据系 统运行情况向北京市水科学技术研究院提供系统升级、优化的建议和方案。",
+        "candidate_text": "应建立无线网络系统维修档案，并根据运行情况提供系统升级和优化建议及方案。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-046",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "1.1.5 信息网络运维服务 信息网络运维服务是指对网络系统进行日常管理、运行和维护的工作，其目标是确 保网络系统的稳定性、安全性和可靠性，保证网络服务的正常运行。包括网络设备管理、 网络安全管理、网络性能优化、网络故障处理、数据备份与回复等。",
+        "candidate_text": "信息网络运维应覆盖网络设备管理、网络安全管理、网络性能优化、网络故障处理及数据备份与恢复等，确保网络稳定、安全、可靠运行。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-047",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "1.1.6 投影及多媒体设备维护 39 对会议室中的投影仪、数字电视等等多媒体设备进行维护，保障在会议过程中的正 常使用。",
+        "candidate_text": "应维护会议室投影仪、数字电视等多媒体设备，保障会议正常使用。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-048",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "运行维护服务范围： （1）计算机终端的硬件维护：包括计算机终端各类故障的检修，如无法启动电脑， 硬件配件（CPU、内存、硬盘、主板、光驱、电源、键盘鼠标、显示器等）的维修更换， 对运行速度慢，运行不稳定等进行解决维修，同时对用户提出合理化使用建议。",
+        "candidate_text": "应对计算机终端硬件故障进行检修和维修更换，并处理运行缓慢、不稳定等问题及提供合理使用建议。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-049",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "（2）计算机终端的软件维护：包括操作系统，办公软件，防病毒软件，数字证书 软件，邮件系统、OA 办公自动化系统等。卸载不常用软件，恶意软件，清理系统垃圾。 修复系统漏洞，修复系统缺失功能，数据简单恢复备份等。",
+        "candidate_text": "应维护计算机终端操作系统、办公软件、防病毒、数字证书、邮件和OA等软件，清理不常用/恶意软件和系统垃圾，修复漏洞和缺失功能并提供简单数据恢复备份。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-050",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "（3）计算机终端的外围设备维护：包括各类相关外设，如打印机，传真机，刻录 机，扫描仪，音视频设备等。",
+        "candidate_text": "应维护计算机终端外围设备，包括打印机、传真机、刻录机、扫描仪及音视频设备等。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-052",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "●每月定期对计算机终端进行杀毒软件升级、计算机病毒查杀与系统性能优化处理。 每月进行计算机安全使用风险评估，对查杀病毒的类型、数量等进行统计分析，并制定 终端安全使用防护策略，同时，根据用户需求及实际情况，不定期对终端进行病毒查杀 与安全加固等工作；",
+        "candidate_text": "应每月进行终端杀毒软件升级、病毒查杀和性能优化，并开展安全使用风险评估、病毒统计分析和防护策略制定，必要时进行额外病毒查杀和安全加固。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-053",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "●针对台式、笔记本电脑进行故障问题接收，联系终端用户，确认具体问题故障；电 话指导用户进行简单恢复操作并尝试远程帮助；现场服务及故障诊断；针对台式、笔记 本电脑的故障，联系硬件的售后服务或备件服务公司，并跟踪问题并监督解决；",
+        "candidate_text": "应受理台式机和笔记本故障，确认问题后提供电话、远程或现场诊断支持，并联系售后/备件服务方跟踪监督解决。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-054",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "●对于打印机、复印机、扫描仪等驱动的安装进行指导、辅助或现场服务，对设备进 行配置；每月对打印机、复印机、扫描仪、多功能一体机等进行常规巡检，并负责清理 设备保持清洁；针对打印机、复印机、扫描仪和多功能一体机等及时进行日常维护，如 常见配置的设置、更换卡纸槽、更换硒鼓等；",
+        "candidate_text": "应为打印机、复印机、扫描仪等提供驱动安装和配置支持，每月常规巡检及清洁，并负责日常维护和常见耗材/部件处理。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-055",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "●针对 LED 系统运维服务人员提供定期的现场巡检，及时发现问题并协调解决，保证 LED 大屏稳定、高效运行；以及重大法定节日（五一、汛前、十一等）或特殊时期前后 进行巡检，以保证 LED 显示屏的正常使用。",
+        "candidate_text": "应对LED系统定期现场巡检并在重大节日或特殊时期前后巡检，及时发现并协调解决问题，保证LED大屏稳定运行。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-056",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "●针对视频会议系统运维服务人员提供定期的现场巡检，及时发现问题并协调解决， 保证视频会议系统稳定、高效运行；以及重大法定节日（五一、汛前、十一等）或特殊 时期前后进行巡检，以保证视频会议系统的正常使用。",
+        "candidate_text": "应对视频会议系统定期现场巡检并在重大节日或特殊时期前后巡检，及时发现并协调解决问题，保证系统稳定运行。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-057",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "1.1.8 视频会议设备维护 对视频会议设备进行维护，保障会议正常开展。",
+        "candidate_text": "应维护视频会议设备，保障会议正常开展。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-058",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "1.1.9LED 显示屏维护 对 LED 显示屏进行维护，包括故障维修、显示内容的更新和维护等内容。",
+        "candidate_text": "应维护LED显示屏，包括故障维修、显示内容更新和维护。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-059",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "1.1.10 两个基地网络及计算机设备维护 北京市水科学技术研究院与互联网连接采用防火墙进行边界隔离控制，采用上网行 为设备进行行为审计。两个基地(永乐店及门头沟实验基地)分别通过天融信 VPN 设备远 程接入北京市水科学技术研究院内部网络共有防火墙、上网行为、交换机等 30 余台。 运维服务人员负责所有设备的日常状态监测、策略制定、调整和修改，负责特征库 升级和版本升级等工作，并且可以通过专业的分析系统设备对问题及故障进行辅助定位。 负责机房基础设施的日常状态监测及运行维护",
+        "candidate_text": "应对两个基地网络及计算机设备进行日常状态监测、策略制定调整、特征库及版本升级，并利用分析系统辅助故障定位；同时维护机房基础设施。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-060",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "1.1.11 网络设备及服务器资产一年硬件保修服务 为 20 台网络设备/服务器资产提供为期 1 年的硬件保修服务。",
+        "candidate_text": "应为20台网络设备/服务器资产提供为期1年的硬件保修服务。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-061",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "1.1.12 会议室资产一年硬件保修服务 为 7 台会议室设备资产，提供为期 1 年的硬件保修服务。",
+        "candidate_text": "应为7台会议室设备资产提供为期1年的硬件保修服务。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-063",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "在特殊时期提供更为及时的 7*24 的服务，至少一人 7*24 小时现场值守。具体要求 如下：",
+        "candidate_text": "特殊时期应提供更及时的7×24服务，至少安排1人7×24小时现场值守。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-065",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "备件到场时间 若北京市水科学技术研究院设备硬件损坏需更换硬件 时，从故障定位起到硬件到达现场的时间。 30 分钟",
+        "candidate_text": "硬件损坏定位后备件应在30分钟内到场。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-066",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "故障解决时间 运维服务人员接到北京市水科学技术研究院故障申报 至故障解决系统恢复运行的时间。 1 小时",
+        "candidate_text": "故障应在1小时内解决并恢复系统运行。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-067",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "为 4 台防火墙，3 台上网行为设备提供软硬件维保和特征库升级等服务。",
+        "candidate_text": "应为4台防火墙、3台上网行为设备提供软硬件维保和特征库升级等服务。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-068",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "为 EDR 软件、200PC、30Windows server 提供升级服务。",
+        "candidate_text": "应为EDR软件、200台PC和30台Windows Server提供升级服务。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-070",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "运维服务人员每个季度至少为北京市水科学技术研究院做一次设备清理和保养工 作，以保证硬件运行正常，发现隐患后及时向北京市水科学技术研究院工作人员汇报。",
+        "candidate_text": "每季度至少进行一次设备清理保养，发现隐患应及时报告。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-072",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "1.2.3 特征库升级 为 1 台 WAF、5 台防火墙、4 台上网行为管理、僵木蠕、EDR 等安全设备和软件提供 为期 1 年的特征库升级服务。包含以下内容：",
+        "candidate_text": "应为WAF、防火墙、上网行为管理、僵木蠕、EDR等安全设备和软件提供为期1年的特征库升级服务。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-073",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "分析当前特征库：仔细审查当前特征库的内容和性能，了解每个特征的作用和可能 存在的问题。 准备升级：根据升级内容制定详细的升级计划，包括升级时间、升级方式等，并进 行系统备份以防数据丢失。 执行升级：按照升级计划对特征库进行升级，包括数据库优化、系统架构升级等。 系统验证：升级完成后进行系统验证，检查系统是否正常运行，数据是否准确同步。 上线运行：经过验证无误后，将升级后的特征库系统上线运行。",
+        "candidate_text": "特征库升级应包括现状分析、制定升级计划并备份、执行升级、系统验证和验证无误后上线运行。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-074",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "2.1 驻场服务 42 运维服务商提供不少于 10 人的高水平、稳定的运维团队，其中驻场技术人员不少 于 3 名，提供 5*8 小时驻场运维服务,若遇特殊时期和维护工作繁忙，为了高效完成运 维任务，按需求增加驻场人员 ，保证可以快速处理和解决绝大多数问题。考勤和日常工 作等服从北京市水科学技术研究院安排。",
+        "candidate_text": "应提供不少于10人的稳定运维团队，其中驻场技术人员不少于3名，提供5×8小时驻场服务，并在特殊时期或工作繁忙时按需增加驻场人员。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-076",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "2.2 远程网络支持（远程接入终端） 运维服务人员在征得北京市水科学技术研究院同意后，通过远程终端登录进行技术 支持。 北京市水科学技术研究院负责提供必要的远程技术支持所需局端拨号设备（如电话 线、调制解调器等），负责向运维服务人员提供服务器的登录用户名及密码、远程维护 拨号电话号码、服务器的 IP 地址，并安排维护人员在现场协助。运维服务人员负责提 供远程技术支持所需软件。",
+        "candidate_text": "远程技术支持须征得采购人同意后通过远程终端登录；运维方负责提供远程支持所需软件。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-078",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "解决时间：接到北京市水科学技术研究院服务请求到业务故障基本排除的时间。具 体要求下表。 故障/问题级别 解决时间 重大 小于 2 小时 严重 小于 4 小时 一般 小于 12 小时",
+        "candidate_text": "远程支持重大故障解决时间应小于2小时、严重故障小于4小时、一般故障小于12小时。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-081",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "现场故障处理服务完成后，技术支持人员要向北京市水科学技术研究院提交现场技 术服务报告，北京市水科学技术研究院对现场技术服务报告签字确认，双方各自存档； 针对本次服务的相关内容，技术人员要对北京市水科学技术研究院进行解释和现场培训。",
+        "candidate_text": "现场故障处理完成后应提交现场技术服务报告并双方存档，同时就服务内容进行解释和现场培训。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-085",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "在紧急故障恢复服务过程中，运维服务人员负责记录所有事件的发生时间及所采取 44 的措施；设备故障处理完毕以后，视情况双方协商决定是否安排运维服务人员在现场观 察 1－2 天。在北京市水科学技术研究院同意后，运维服务人员方可离开现场。",
+        "candidate_text": "紧急故障处理过程中应记录事件时间和措施；处理完成后按协商决定是否现场观察1-2天，经采购人同意后方可离场。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-089",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "★3.项目执行的标准和规范 《2006-2020 年国家信息化发展战略》； 《网络安全等级保护制度 2.0 标准》； 《电子政务运维服务支撑系统规范》（DB 11/T 714-2010）",
+        "candidate_text": "项目执行应遵循《2006-2020年国家信息化发展战略》《网络安全等级保护制度2.0标准》《电子政务运维服务支撑系统规范》等标准规范。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-099",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "网 络 运行状态 检查 次数/月 2 1 <1 定时检查网络 系统运行状态 一 般 系统 报告 月",
+        "candidate_text": "网络运行状态检查目标为每月2次，1次可接受，少于1次不可接受。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-100",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "硬件状态 检查 次数/月 2 1 <1 定时检查网络 系统相关设备 指示灯、硬件 状态等 一 般 系统 报告 月",
+        "candidate_text": "硬件状态检查目标为每月2次，1次可接受，少于1次不可接受。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-101",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "日志检查 次数/月 2 1 <1 定时检查网络 系统日志 一 般 系统 报告 月",
+        "candidate_text": "系统日志检查目标为每月2次，1次可接受，少于1次不可接受。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-102",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "系统可用 性 每月系统正 常运行时间 /24 小时*30 天 100 % 99.9% <99% 每月系统正常 运行时间/24 小时*30 天 重 要 系统 报告 月",
+        "candidate_text": "系统可用性目标为100%，99.9%可接受，低于99%不可接受。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-103",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "一般故障 （造成功 能故障等） 次数 次数/月 0 1 >2 平均每月发生 一般故障次数 重 要 系统 报告 月",
+        "candidate_text": "一般故障次数目标为每月0次，1次可接受，超过2次不可接受。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-104",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "一般故障 解决时间 小时 2 4 >6 每次故障发生 到功能恢复的 时间 重 要 系统 报告 月",
+        "candidate_text": "一般故障解决时间目标2小时，4小时可接受，超过6小时不可接受。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-105",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "运 维 严重故障 解决时间 小时 2 6 >6 每次故障发生 到系统恢复的 时间 重 要 系统 报告 月",
+        "candidate_text": "严重故障解决时间目标2小时，6小时可接受，超过6小时不可接受。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-109",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "★4.保密要求 按照《北京市水务信息化项目建设与运行管理办法》要求，对涉及国家秘密技术或 水务敏感数据的内容保密。",
+        "candidate_text": "应按照《北京市水务信息化项目建设与运行管理办法》对涉及国家秘密技术或水务敏感数据的内容保密。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "req_id": "FAST-WATER-01:REQ-113",
+        "tender_id": "FAST-WATER-01",
+        "reason_codes": [
+          "MODALITY_ADDITION_REVIEW"
+        ],
+        "classification": "TRUE_MODALITY_ESCALATION",
+        "source_text": "项目验收材料包括但不限于以下内容：周期报告、日常维护记录、项目服务管理报 告及工作总结报告、验收申请报告等。 采购人检查验收材料，对运维情况进行评价，并出具正式的验收意见。",
+        "candidate_text": "项目验收材料应包括周期报告、日常维护记录、项目服务管理报告及工作总结、验收申请报告等。",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "source_fidelity": [
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-022",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "source_excerpt": "1) 平均响应时间：1-3（秒）； 2) 峰值响应时间：3-5（秒）。",
+      "canonical_text": "交互类业务操作平均响应时间1-3秒,峰值响应时间3-5秒。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-030",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "source_excerpt": "（1） 基于 B/S 结构，提供友好的展示界面。",
+      "canonical_text": "Web端基于B/S结构,提供友好的展示界面。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-031",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "source_excerpt": "（2） 兼容 IE9 以上，360、chrome 等主流浏览器版本。",
+      "canonical_text": "Web端兼容IE9以上,360、chrome等主流浏览器版本。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-032",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "source_excerpt": "（3） 提供强大的图形界面功能，采用树形结构。",
+      "canonical_text": "Web端提供强大的图形界面功能,采用树形结构。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-039",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "source_excerpt": "（5） 严禁刊登商业广告或链接商业广告页面。",
+      "canonical_text": "移动端严禁刊登商业广告或链接商业广告页面。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-057",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "通过提取多渠道事件字段信息，按对应规则匹配实现事件标准化和标准化库。制定 标准的事件联动接口规范，方便各类专业条线业务系统与智慧城市综合管理平台形成事 件联动。",
+      "canonical_text": "事件标准库管理应通过提取多渠道事件字段信息,按对应规则匹配实现事件标准化和标准化库,并制定标准的事件联动接口规范,方便各类专业条线业务系统与智慧城市综合管理平台形成事件联动。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-058",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "汇聚各信息渠道的实时事件，多渠道事件归一，对归集库内的事件数据按照统一要 求进行治理后，沉淀到事件库。",
+      "canonical_text": "事件汇聚收发网关应汇聚各信息渠道的实时事件,实现多渠道事件归一,对归集库内的事件数据按照统一要求进行治理后,沉淀到事件库。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-062",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "建立全景网格管理功能和指标监测视图，实现分级下钻功能。对一标多实视图升级， 实现全场景业务及资源调度。",
+      "canonical_text": "网格工作监测屏升级应建立全景网格管理功能和指标监测视图,实现分级下钻功能,对一标多实视图升级,实现全场景业务及资源调度。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-063",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "智慧城市综合管理平台事件模块进行底层数据升级，规范原有事件底层数据格式， 统一规范事件运行主流程，实现事件中心数字化改造。",
+      "canonical_text": "网格业务中台升级应对智慧城市综合管理平台事件模块进行底层数据升级,规范原有事件底层数据格式,统一规范事件运行主流程,实现事件中心数字化改造。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-064",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "构建任务类别、标签体系、任务对象等。对周期性及非周期任务定义，自动实现任 务定义的发布。",
+      "canonical_text": "任务引擎应构建任务类别、标签体系、任务对象等,对周期性及非周期任务定义,自动实现任务定义的发布。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-065",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "根据筛选条件，对事件进行查询、统计，同时完善网格事件市、镇两级审核推送机 制。",
+      "canonical_text": "网格事件管理应根据筛选条件,对事件进行查询、统计,同时完善网格事件市、镇两级审核推送机制。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-066",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "精准掌握网格内基础要素的变化动态，对智慧城市综合管理平台的数据能力进行升 级，实现网格工作数据的高效计算与监测。",
+      "canonical_text": "网格事件管理要素全生命周期管理应精准掌握网格内基础要素的变化动态,对智慧城市综合管理平台的数据能力进行升级,实现网格工作数据的高效计算与监测。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-067",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "完善中心管理机制，对网格员进行量化质化分析，对网格内考核要素调整的审核权 限体系升级。",
+      "canonical_text": "多级网格中心功能完善应完善中心管理机制,对网格员进行量化质化分析,对网格内考核要素调整的审核权限体系升级。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-068",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "构建平台精网微格体系，推动本地警网融合应用实现数据按需闭环，定制网格考核 机制，开发网格学院应用打造网格学习培训基地。",
+      "canonical_text": "构建样板应用应构建平台精网微格体系,推动本地警网融合应用实现数据按需闭环,定制网格考核机制,开发网格学院应用打造网格学习培训基地。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-070",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "需进一步对网格划分并对微网格要素管理，线上监测各专职网格员和“微网格”联 络员、志愿者配备情况。",
+      "canonical_text": "精微网格管理需进一步对网格划分并对微网格要素管理,线上监测各专职网格员和“微网格”联络员、志愿者配备情况。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-074",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "主要包括：基础话务平台语音软交换改造、语音软交换核心、智能化引擎模块。",
+      "canonical_text": "呼叫中心软交换平台升级主要包括基础话务平台语音软交换改造、语音软交换核心、智能化引擎模块。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-075",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "引入智能化引擎能力，主要包括语音合成引擎能力，语音识别引擎能力、语义理解 引擎能力。",
+      "canonical_text": "12345智能应用应引入智能化引擎能力,主要包括语音合成引擎能力,语音识别引擎能力、语义理解引擎能力。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-076",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_DISTORTION",
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "提供全媒体坐席首页门户，能够便于话务人员一览快速直观查看当前个人业务待办及 数据展示。主要包括：话务坐席门户服务、语音渠道软电话服务、来电市民画像服务、 业务配置管理、运营统计报表等。",
+      "canonical_text": "12345业务运营管理系统应提供全媒体坐席首页门户,能够便于话务人员一览快速直观查看当前个人业务待办及数据展示,主要包括话务坐席门户服务、语音渠道软电话服务、来电市民画像服务、业务配置管理、运营统计报表等。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-077",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "进一步对 12345 工单闭环归档的管理升级，提供诉求受理模块，工单业务流程模块、 督办管理模块、工单办理能效分析，提供后台分析统计等功能。",
+      "canonical_text": "12345工单闭环归档系统应进一步对12345工单闭环归档的管理升级,提供诉求受理模块,工单业务流程模块、督办管理模块、工单办理能效分析,提供后台分析统计等功能。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-078",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "主要包括：移动端通过 H5 页面集成至最江阴 APP，市民最江阴 APP 提诉、市民微信 公众号提诉、省市 12345 及其它渠道对接。对接渠道包括：市网格化、公安 110、数字 城管、省 12345、无锡市 12345 等多个第三方系统。",
+      "canonical_text": "12345省市及其它渠道对接主要包括移动端通过H5页面集成至最江阴APP,市民最江阴APP提诉、市民微信公众号提诉、省市12345及其它渠道对接,对接渠道包括市网格化、公安110、数字城管、省12345、无锡市12345等多个第三方系统。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-079",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "优化升级 12345 知识库系统，构建完善、标准的知识辅助服务体系。支持多种格式附 件上传，提供知识库采编、知识检索、知识收藏等。",
+      "canonical_text": "12345智能知识库应优化升级12345知识库系统,构建完善、标准的知识辅助服务体系,支持多种格式附件上传,提供知识库采编、知识检索、知识收藏等。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-080",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_DISTORTION"
+      ],
+      "source_excerpt": "升级数据库，通过架构升级、数据结构优化、查询性能优化、历史数据迁移，保证业 务连续的基础上，提升数据库整体性能。升级后整体性能应满足一下指标要求： 数据服务类接口响应时间需<=1 秒。常规页面展示响应时间需<=3 秒。 数据查询：事件类数据查询时间<1 秒。统计分析类查询响应时间需<=10 秒。",
+      "canonical_text": "12345数据库升级应通过架构升级、数据结构优化、查询性能优化、历史数据迁移,保证业务连续的基础上,提升数据库整体性能,升级后整体性能应满足以下指标要求:数据服务类接口响应时间需<=1秒,常规页面展示响应时间需<=3秒,事件类数据查询时间<1秒,统计分析类查询响应时间需<=10秒。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-081",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "根据标签形态可设置定点标签、矢量 标签、区域标签三大类，支持在高点 视频画面中添加、修改、删除、关注 标签。支持对标签的图标形状修改。 支持对标签的图标颜色修改。",
+      "canonical_text": "AR实景系统标签管理应支持根据标签形态设置定点标签、矢量标签、区域标签三大类,支持在高点视频画面中添加、修改、删除、关注标签,支持对标签的图标形状修改,支持对标签的图标颜色修改。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-082",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "对视频画面中重点位置、区域、设备 进行标签标注，进而直观展示视频画 面区域内有效信息、属性和特征。",
+      "canonical_text": "标签展示应对视频画面中重点位置、区域、设备进行标签标注,进而直观展示视频画面区域内有效信息、属性和特征。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-084",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "支持通过中心平台实现高点实景视 频打标签功能，前端产品 SDK 协议接 入平台，实现标签随动功能；",
+      "canonical_text": "AR算法引擎应支持通过中心平台实现高点实景视频打标签功能,前端产品SDK协议接入平台,实现标签随动功能。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-088",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "支持人流量数据统计标签，在标签上 展示保有量、进客量、出客量、人流 密度数据、人流量数据或人流密度预 警信息等。",
+      "canonical_text": "客流量标签应支持人流量数据统计标签,在标签上展示保有量、进客量、出客量、人流密度数据、人流量数据或人流密度预警信息等。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-094",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "支持多个 AR 高点进行联动切换，主 要满足室外大范围视场切换或者室 内室外相互切换的场景",
+      "canonical_text": "高高联动应支持多个AR高点进行联动切换,主要满足室外大范围视场切换或者室内室外相互切换的场景。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-097",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "在鹰眼全景视频画面中支持联动调 用细节球机，包括 3D 定位、移动目 标跟踪。在全景画面保持不变动的情 况下，使用球机快速放大相关细节并 跟踪目标",
+      "canonical_text": "鹰眼全景细节联动应在鹰眼全景视频画面中支持联动调用细节球机,包括3D定位、移动目标跟踪,在全景画面保持不变动的情况下,使用球机快速放大相关细节并跟踪目标。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-098",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "支持在 AR 实景地图中展示实时车辆 抓拍信息以及车辆黑名单报警结果， 报警信息包括车辆图片、车牌、车牌 颜色、布控地点、布控时间、布控原 因等",
+      "canonical_text": "车辆布控报警联动应支持在AR实景地图中展示实时车辆抓拍信息以及车辆黑名单报警结果,报警信息包括车辆图片、车牌、车牌颜色、布控地点、布控时间、布控原因等。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-099",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "支持在 AR 实景地图中展示实时人脸 抓拍信息以及人脸黑名单报警结果， 报警信息包括人脸图片、相似度百分 比、姓名、抓拍时间、抓拍地点、布 控信息，布控信息包括人物名称、证 件号码、布控人、布控原因等",
+      "canonical_text": "人脸布控报警联动应支持在AR实景地图中展示实时人脸抓拍信息以及人脸黑名单报警结果,报警信息包括人脸图片、相似度百分比、姓名、抓拍时间、抓拍地点、布控信息,布控信息包括人物名称、证件号码、布控人、布控原因等。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-101",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "接入 AR 高空摄像机，按照接入路数 收费 8 路",
+      "canonical_text": "AR场景授权应接入AR高空摄像机,按照接入路数收费8路。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-102",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "平台运行环境管理、运行状态管理的 统一入口，提供运行环境管理、运行 状态管理等功能，使安装部署、数据 备份、授权管理、告警信息查看、问 题追溯等",
+      "canonical_text": "运管中心应提供平台运行环境管理、运行状态管理的统一入口,提供运行环境管理、运行状态管理等功能,使安装部署、数据备份、授权管理、告警信息查看、问题追溯等。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-107",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "可视化展示系统设备运行情况，支持 展示所选区域下监控点总数、监控点 在线率、图像正常率、录像完整率等 数据概况",
+      "canonical_text": "视频运维应可视化展示系统设备运行情况,支持展示所选区域下监控点总数、监控点在线率、图像正常率、录像完整率等数据概况。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-108",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "户端 提供视频预览客户端 1 项",
+      "canonical_text": "视频应用客户端应提供视频预览客户端。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-109",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "通过视频接入管理服务接入、汇聚各 类视频资源，构建上层的基础应用、 智能分析等视频能力，包含 10 万路 视频接入授权",
+      "canonical_text": "视频接入管理应通过视频接入管理服务接入、汇聚各类视频资源,构建上层的基础应用、智能分析等视频能力,包含10万路视频接入授权。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-110",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "展现视频资源的点位情况、基本能力 及场所位置等，通过视频广场可以了 解平台的城市视频资源基本情况及 分布情况，从而实现快速定位所需要 视频资源。",
+      "canonical_text": "提供视频广场功能,展现视频资源的点位情况、基本能力及场所位置等,通过视频广场可以了解平台的城市视频资源基本情况及分布情况,从而实现快速定位所需要视频资源。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-112",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "为外部用户提供平台智能算法的展 示和查看能力，了解平台的算法内 容，并能结合自身业务需求，选择智 能算法支撑业务开展。",
+      "canonical_text": "提供算法超市功能,为外部用户提供平台智能算法的展示和查看能力,了解平台的算法内容,并能结合自身业务需求,选择智能算法支撑业务开展。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-113",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "通过点位搜索，实现视频资源在多种 筛选条件下的快速搜索，并在电子地 图上展示搜索结果。",
+      "canonical_text": "提供点位搜索功能,通过点位搜索,实现视频资源在多种筛选条件下的快速搜索,并在电子地图上展示搜索结果。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-116",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "提供预警研判处理的工作台，按最新 上报事件处理，核验操作包括正报、 误报，逐一进行事件的研判，对接江 阴市市域社会治理现代化联勤联动 指挥平台",
+      "canonical_text": "提供事件研判功能,提供预警研判处理的工作台,按最新上报事件处理,核验操作包括正报、误报,逐一进行事件的研判,对接江阴市市域社会治理现代化联勤联动指挥平台。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-117",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "提供运行概览能力，帮助运维人员及 管理人员了解平台整体运行情况，包 括点位资源情况、任务执行情况、算 力运行情况、算法使用情况、智能分 析情况、事件输出情况、分析异常情 况等",
+      "canonical_text": "提供运行管理功能,提供运行概览能力,帮助运维人员及管理人员了解平台整体运行情况,包括点位资源情况、任务执行情况、算力运行情况、算法使用情况、智能分析情况、事件输出情况、分析异常情况等。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-118",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "面向管理运维人员提供管理中心能 力，对系统的运行进行管理维护，保 障系统平稳、可靠、稳定的运转。平 台管理包括系统管理和软件管理两 个功能模块。",
+      "canonical_text": "提供平台管理功能,面向管理运维人员提供管理中心能力,对系统的运行进行管理维护,保障系统平稳、可靠、稳定的运转。平台管理包括系统管理和软件管理两个功能模块。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-120",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "主要基于政务数据、视频数据构建起 统一的基础库，并结合上层应用需 要，构建各类主题库、专题库、检索 库、关系库、标签库等内容。",
+      "canonical_text": "构建业务数据资源池,主要基于政务数据、视频数据构建起统一的基础库,并结合上层应用需要,构建各类主题库、专题库、检索库、关系库、标签库等内容。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-122",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "1 视频数据保护一体机 详见主要设备技术参数与性能指标 1 台",
+      "canonical_text": "采购视频数据保护一体机1台,性能指标详见主要设备技术参数与性能指标。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-125",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "source_excerpt": "3 专线链路租赁 5 年 VPN 50M 1 项",
+      "canonical_text": "租赁专线链路1项,租期5年,带宽VPN 50M。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-127",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "5 主干租纤 5 年租纤 2 套",
+      "canonical_text": "租赁主干租纤2套,租期5年。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-128",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "source_excerpt": "6 点位施工服务 点位施工及 5 年运维 8 个",
+      "canonical_text": "提供点位施工服务8个,包括点位施工及5年运维。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-129",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "source_excerpt": "7 辅材 配管、网线、电源线及配电箱 8 套",
+      "canonical_text": "采购辅材8套,包括配管、网线、电源线及配电箱。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-130",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "8 高点安装租用费 铁塔或者高楼顶部，租用费+电费 8 个 五年费用",
+      "canonical_text": "支付高点安装租用费8个,包括铁塔或者高楼顶部租用费及电费,租期五年。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-131",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "source_excerpt": "9 防火墙 详见主要设备技术参数与性能指标 1 台",
+      "canonical_text": "采购防火墙1台,性能指标详见主要设备技术参数与性能指标。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-132",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "source_excerpt": "1、摄像机内置除湿器，可对样机内部进行除湿，除去玻璃罩上的水状附着物。（需 提供第三方权威机构出具的检测报告扫描件）",
+      "canonical_text": "球型鹰眼A摄像机需内置除湿器,可对样机内部进行除湿,除去玻璃罩上的水状附着物,需提供第三方权威机构出具的检测报告扫描件。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-134",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "source_excerpt": "3、传感器类型:【全景】1/1.8＂progressive scan CMOS， 【细节】1/1.8＂progressive scan CMOS。",
+      "canonical_text": "球型鹰眼A传感器类型需为【全景】1/1.8\"progressive scan CMOS,【细节】1/1.8\"progressive scan CMOS。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-136",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "source_excerpt": "5、宽动态: 【全景】不支持，【细节】支持 120 dB 超宽动态",
+      "canonical_text": "球型鹰眼A宽动态需满足:【全景】不支持,【细节】支持120 dB超宽动态。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-137",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "source_excerpt": "8、视场角:水平视场角：60°~1.96°，垂直视场角：35.8°~1.11°，对角线视场 角：67°~2.23°",
+      "canonical_text": "球型鹰眼A视场角需满足:水平视场角60°~1.96°,垂直视场角35.8°~1.11°,对角线视场角67°~2.23°。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-138",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "source_excerpt": "13、水平速度: 水平键控速度：0.1°~210°/s，速度可设；水平预置点速度：240° /s",
+      "canonical_text": "球型鹰眼A水平速度需满足:水平键控速度0.1°~210°/s,速度可设;水平预置点速度240°/s。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-140",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "source_excerpt": "1、全景镜头光圈均不小于 F1.0。（需提供第三方权威机构出具的检测报告扫描件）",
+      "canonical_text": "球型鹰眼B全景镜头光圈均不小于F1.0,需提供第三方权威机构出具的检测报告扫描件。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-143",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "source_excerpt": "4、宽动态: 【全景】不支持，【细节】支持 120 dB 超宽动态",
+      "canonical_text": "球型鹰眼B宽动态需满足:【全景】不支持,【细节】支持120 dB超宽动态。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-144",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "source_excerpt": "5、光学防抖: 支持",
+      "canonical_text": "球型鹰眼B需支持光学防抖。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-145",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "source_excerpt": "8、视场角: 水平视场角：60°~1.96° ; 垂直视场角：35.8°~1.11° ; 对角线视 场角：67°~2.23°",
+      "canonical_text": "球型鹰眼B视场角需满足:水平视场角60°~1.96°,垂直视场角35.8°~1.11°,对角线视场角67°~2.23°。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-146",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "source_excerpt": "13、水平速度: 水平键控速度：0.1°~210°/s，速度可设；水平预置点速度：240° /s",
+      "canonical_text": "球型鹰眼B水平速度需满足:水平键控速度0.1°~210°/s,速度可设;水平预置点速度240°/s。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-149",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "网络吞吐量≥40Gbps，每秒新建连接数≥18 万，最大并发连接数≥1000 万， VPN IPSEC 隧道数≥20000；",
+      "canonical_text": "防火墙网络吞吐量需≥40Gbps,每秒新建连接数需≥18万,最大并发连接数需≥1000万,VPN IPSEC隧道数需≥20000。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-150",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "此次配置 5 年硬件质保和技术支持服务以及 5 年 IPS、AV 特征库升级授权。",
+      "canonical_text": "防火墙此次配置需包含5年硬件质保和技术支持服务以及5年IPS、AV特征库升级授权。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-151",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "设备支持多操作系统（≥3 个），多系统设置可在 Web 界面上完成全部操作",
+      "canonical_text": "防火墙设备需支持多操作系统(≥3个),多系统设置可在Web界面上完成全部操作。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-153",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "支持基于应用的策略路由，可实现为不同的应用类型智能选择相应的链路。",
+      "canonical_text": "防火墙需支持基于应用的策略路由,可实现为不同的应用类型智能选择相应的链路。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-154",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "基于 WEB 地址 URL 的策略路由，可实现将不同类型的网站流量智能分配到 不同的链路。",
+      "canonical_text": "防火墙需支持基于WEB地址URL的策略路由,可实现将不同类型的网站流量智能分配到不同的链路。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-157",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "支持对虚拟环境的数据流进行全策略控制。",
+      "canonical_text": "防火墙需支持对虚拟环境的数据流进行全策略控制。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-161",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "支持针对策略中的源、目的地址进行新建限制，可以针对单 IP(或地址范围) 进行新建控制。",
+      "canonical_text": "防火墙需支持针对策略中的源、目的地址进行新建限制,可以针对单IP(或地址范围)进行新建控制。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-164",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "支持标准 IPSec、GRE、PPTP、L2TP、DMVPN 等形态 VPN。",
+      "canonical_text": "防火墙需支持标准IPSec、GRE、PPTP、L2TP、DMVPN等形态VPN。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-166",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "支持预共享密钥、证书等认证方式且支持 X-Auth 扩展认证",
+      "canonical_text": "防火墙需支持预共享密钥、证书等认证方式且支持X-Auth扩展认证。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-167",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "支持多出口 VPN，且支持双向 NAT（ATT 协议）穿越",
+      "canonical_text": "防火墙需支持多出口VPN,且支持双向NAT(ATT协议)穿越。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-169",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "支持设置中断连接、记录日志，在邮件中标示垃圾邮件等动作。",
+      "canonical_text": "防火墙需支持设置中断连接、记录日志,在邮件中标示垃圾邮件等动作。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-170",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "支持邮件服务器地址黑名单、邮件地址、主题、正文、附件名、附件内容等 进行关键字匹配过滤。",
+      "canonical_text": "防火墙需支持邮件服务器地址黑名单、邮件地址、主题、正文、附件名、附件内容等进行关键字匹配过滤。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-171",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "支持防邮件炸弹功能，即设置 POP3、SMTP 的连接频率。",
+      "canonical_text": "防火墙需支持防邮件炸弹功能,即设置POP3、SMTP的连接频率。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-173",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "可在热备和集群工作模式下支持多台防火墙的会话、配置的实时同步、手动 同步。",
+      "canonical_text": "防火墙需可在热备和集群工作模式下支持多台防火墙的会话、配置的实时同步、手动同步。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-174",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "自动同步、心跳接口多级（≥2 级）物理备份",
+      "canonical_text": "防火墙需支持自动同步、心跳接口多级(≥2级)物理备份。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "JY-001",
+      "req_id": "JY-001:REQ-176",
+      "source_verified": true,
+      "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "江阴市城市运行管理中心（江阴市澄江中路 9 号）。",
+      "canonical_text": "交货(服务)地点为江阴市城市运行管理中心(江阴市澄江中路9号)。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-024",
+      "source_verified": true,
+      "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "NEGATION_DISTORTION",
+        "STATUS_DISTORTION"
+      ],
+      "source_excerpt": "7.4 投标人必须详阅招标文件的所有条款、文件及表格格式等。投标 人若未按招标文件的要求和规范编制、提交投标文件，将有可能导致投标",
+      "canonical_text": "投标人必须详阅招标文件的所有条款、文件及表格格式等。投标人若未按招标文件的要求和规范编制、提交投标文件，将有可能导致投标文件被拒绝接受或被视为无效。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-027",
+      "source_verified": true,
+      "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "的所有来往函电均应使用简体中文书写。",
+      "canonical_text": "投标文件的所有来往函电均应使用简体中文书写。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-036",
+      "source_verified": true,
+      "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "并由法定代表人或其委托代理人签署。",
+      "canonical_text": "投标文件应由法定代表人或其委托代理人签署。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-087",
+      "source_verified": true,
+      "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "1 “四电”应用支撑平台 电子证照系统升级 套 1",
+      "canonical_text": "提供“四电”应用支撑平台中的电子证照系统升级1套。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-094",
+      "source_verified": true,
+      "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "“四电”应用服务专区 “四电”数字空间 套 1",
+      "canonical_text": "提供“四电”应用服务专区中的“四电”数字空间1套。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-095",
+      "source_verified": true,
+      "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "source_excerpt": "9 “四电”服务专区 套 1",
+      "canonical_text": "提供“四电”服务专区1套。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-101",
+      "source_verified": true,
+      "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "密码硬件设备支撑 服务器密码机（政务侧） 台 1",
+      "canonical_text": "提供密码硬件设备支撑中的服务器密码机（政务侧）1台。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-104",
+      "source_verified": true,
+      "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "source_excerpt": "4 时间戳服务器 台 2",
+      "canonical_text": "提供时间戳服务器2台。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-109",
+      "source_verified": true,
+      "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "source_excerpt": "4 人脸核身 套 1",
+      "canonical_text": "提供人脸核身1套。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-125",
+      "source_verified": true,
+      "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "3.1 可验证 电子材料中的内容应保证其真实性和不可篡改性，政务服务实施机构 要能够对收取的电子材料进行验证，能够确认电子材料的来源，确认其内 容是否遭到篡改。",
+      "canonical_text": "电子材料应用系统需满足可验证需求：电子材料中的内容应保证其真实性和不可篡改性，政务服务实施机构要能够对收取的电子材料进行验证，能够确认电子材料的来源，确认其内容是否遭到篡改。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-126",
+      "source_verified": true,
+      "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "3.2 统一格式 电子材料的内容需要采用直观的方式展示给查阅人，统一的电子文件 格式便于阅读、存档与不同单位间相互共享。",
+      "canonical_text": "电子材料应用系统需满足统一格式需求：电子材料的内容需要采用直观的方式展示给查阅人，统一的电子文件格式便于阅读、存档与不同单位间相互共享。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-127",
+      "source_verified": true,
+      "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "3.3 可复用 事项申报所需的各类申请材料，其内容信息除了能够目视之外还要能 够提供给各业务系统进行复用，因此电子材料在设计上还要考虑需能存储 结构化的材料内容信息。",
+      "canonical_text": "电子材料应用系统需满足可复用需求：事项申报所需的各类申请材料，其内容信息除了能够目视之外还要能够提供给各业务系统进行复用，因此电子材料在设计上还要考虑需能存储结构化的材料内容信息。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-134",
+      "source_verified": true,
+      "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "STATUS_DISTORTION",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "1)建设互联网侧企业电子印章申领系统，在对企业的认证基础上，为 实现公安性质备案的企业发放电子印章（包含企业公章、合同章、财务章、 发票章、法人章等）；",
+      "canonical_text": "建设互联网侧企业电子印章申领系统，在对企业的认证基础上，为完成公安性质备案的企业发放电子印章（包含企业公章、合同章、财务章、发票章、法人章等）。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-172",
+      "source_verified": true,
+      "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "source_excerpt": "(2)集成部署 支持 Java 服务端集群部署模式，提供 agent/server 调用模式，agent 包小于 200kb。",
+      "canonical_text": "OFD转换软件集成部署要求：支持Java服务端集群部署模式，提供agent/server调用模式，agent包小于200kb。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-176",
+      "source_verified": true,
+      "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "source_excerpt": "(6)文件压缩 支持图片与 OFD 互转同时可自定义分辨率以控制文件体积和质量，支 持批量文档图片压缩。",
+      "canonical_text": "OFD转换软件文件压缩要求：支持图片与OFD互转同时可自定义分辨率以控制文件体积和质量，支持批量文档图片压缩。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-187",
+      "source_verified": true,
+      "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "易抵赖，为应用系统提供高性能、高可靠的数字签名相关功能服务。应满 足以下性能要求： 标准 2U 设备，支持至少 6 个千兆网口，遵循 GM/T 0010-2012 标准， SM2 签名速率不低于 1900 次/秒，验证不低于 900 次/秒。",
+      "canonical_text": "签名验签服务器主要用于网络用户身份验证、验证系统操作凭证、防止交易抵赖，为应用系统提供高性能、高可靠的数字签名相关功能服务。应满足以下性能要求：标准 2U 设备，支持至少 6 个千兆网口，遵循 GM/T 0010-2012 标准，SM2 签名速率不低于 1900 次/秒，验证不低于 900 次/秒。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-191",
+      "source_verified": true,
+      "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "USBKey：SM4 加密解密大于 110Kbps;SM2 签名:大于 40 次/秒;SM2 认 证:大于 30 次/秒，SM2 密钥生产大于 15 秒/对； 单位和个人数字证书由权威合法的第三方 CA 机构签发，符合《x.509c 的国内数字证书格式规范》，证书标准遵循 X.509 V3 格式标准； 整体打包采购 2 套。互联网侧 1 套：包含 3000 套电子印章+企业证书； 政务侧 1 套：包含 1200 套电子印章+数字证书",
+      "canonical_text": "提供数字证书（含USBKey），USBKey性能要求：SM4加密解密大于110Kbps，SM2签名大于40次/秒，SM2认证大于30次/秒，SM2密钥生产大于15秒/对；单位和个人数字证书由权威合法的第三方CA机构签发，符合《x.509c的国内数字证书格式规范》，证书标准遵循X.509 V3格式标准；整体打包采购2套，互联网侧1套包含3000套电子印章+企业证书，政务侧1套包含1200套电子印章+数字证书。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-214",
+      "source_verified": true,
+      "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "（GB/T22239-2019）等级保护的标准规范要求，结合本项目的具体要求和 特点，焦作市“四电”平台项目建设应满足以下要求： 系统应满足国家安全保密法律法规的规定和信息安全等级保护要求。 在网络安全和数据安全方面，可以防止病毒、黑客等入侵和攻击，还可以 禁止未授权的用户访问系统。",
+      "canonical_text": "按照国家《信息安全技术 网络安全等级保护基本要求》（GB/T22239-2019）等级保护的标准规范要求，结合本项目的具体要求和特点，焦作市“四电”平台项目建设应满足以下要求：系统应满足国家安全保密法律法规的规定和信息安全等级保护要求。在网络安全和数据安全方面，可以防止病毒、黑客等入侵和攻击，还可以禁止未授权的用户访问系统。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-216",
+      "source_verified": true,
+      "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_DISTORTION",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "焦作市政府采购供应商资格信用承诺函 原件 格式 3 2-1 其他资格要求（如有需提供） 扫描件 自拟 2-2 法定代表人身份证明书或授权委托书 原件 格式 4 2-3 未被人力资源社会保障主管部门列入拖欠农 民工工资失信联合惩戒名单或无因拖欠农民 工工资被县级及以上有关行政主管部门限制 投标资格且在限制期限内的承诺函 原件 格式 5 2-4",
+      "canonical_text": "投标文件须包含资格性证明材料，包括焦作市政府采购供应商资格信用承诺函（原件，格式3）、其他资格要求（如有需提供，扫描件，自拟）、法定代表人身份证明书或授权委托书（原件，格式4）、未被人力资源社会保障主管部门列入拖欠农民工工资失信联合惩戒名单或无因拖欠农民工工资被县级及以上有关行政主管部门限制投标资格且在限制期限内的承诺函（原件，格式5）、本次招标中不存在单位负责人为同一人或者直接控股、管理关系的不同供应商的承诺函（原件，自拟）。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-217",
+      "source_verified": true,
+      "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_DISTORTION",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "投标承诺函 原件 格式 6 3-1 投标人公司基本情况简介 原件 格式 7 3-2 反商业贿赂承诺书 原件 格式 8 3-3 开标一览表 原件 格式 9 3-4 报价明细表 原件 格式 10 3-5 服务响应表 原件 格式 11 3-6",
+      "canonical_text": "投标文件须包含符合性证明材料，包括投标承诺函（原件，格式6）、投标人公司基本情况简介（原件，格式7）、反商业贿赂承诺书（原件，格式8）、开标一览表（原件，格式9）、报价明细表（原件，格式10）、服务响应表（原件，格式11）。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-218",
+      "source_verified": true,
+      "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_DISTORTION",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "商务响应表 原件 格式 12 3-7 中小企业声明函（如是需提供） 原件 格式 13 3-8 残疾人福利性单位声明函（如是需提供） 原件 格式 14 3-9 评分标准中要求的各项方案 原件 格式 15 3-10 招标文件要求的必须提供的其他材料 原件/扫描件 自拟 3-11",
+      "canonical_text": "投标文件须包含商务响应表（原件，格式12）、中小企业声明函（如是需提供，原件，格式13）、残疾人福利性单位声明函（如是需提供，原件，格式14）、评分标准中要求的各项方案（原件，格式15）、招标文件要求的必须提供的其他材料（原件/扫描件，自拟）。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-223",
+      "source_verified": true,
+      "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "STATUS_DISTORTION"
+      ],
+      "source_excerpt": "焦作市政府采购供应商资格信用承诺函 致（招标人） ： 供应商名称： 统一社会信用代码： 供应商地址： 我单位自愿参加本次政府采购活动，严格遵守《中华人民共和国政府 采购法》及相关法律法规，依法诚信经营，无条件遵守本次政府采购活动 的各项规定。我单位郑重承诺，本单位符合《中华人民共和国政府采购法》 第二十二条规定的条件： 录的良好记录。 4.我单位具有符合采购文件资格要求履行合同所必需的设备和专业 技术能力。 5.参加政府采购活动前三年内，在经营活动中没有重大违法记录。 若我单位承诺不实，自愿承担提供虚假材料谋取中标、成交的法律责 任。 承诺供应商（全称并加盖公章）： 法定代表人或授权代表(签字或签章)： 日期： 年 月 日 注：1.投标人须在投标文件中按此模板提供承诺函，未提供视为未实",
+      "canonical_text": "投标人须在投标文件中按此模板提供《焦作市政府采购供应商资格信用承诺函》，未提供视为未实质性响应招标文件要求，按无效投标处理。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-229",
+      "source_verified": true,
+      "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "投标人名称：（单位公章） 法定代表人：（电子签章）",
+      "canonical_text": "投标人名称须加盖单位公章，法定代表人须电子签章。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-003",
+      "req_id": "TB-003:REQ-231",
+      "source_verified": true,
+      "source_hash": "bec5b3ea6b0ade5efaecdc6dc4eebe6bd871feaf510d1f78b7faf719fb7147b1",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "投标人名称 注册地址 邮政编码 联系方式 联系人 电话 传真 网址 营业执照号 税务登记证号 组织机构代码证号 法定代表人 姓名 职务 电话 注册资金 成立时间 开户银行 账号 经营范围 备注",
+      "canonical_text": "投标人须填写投标人基本情况表，包括投标人名称、注册地址、邮政编码、联系方式、联系人、电话、传真、网址、营业执照号、税务登记证号、组织机构代码证号、法定代表人姓名/职务/电话、注册资金、成立时间、开户银行、账号、经营范围及备注。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-006",
+      "req_id": "TB-006:REQ-007",
+      "source_verified": true,
+      "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_DISTORTION",
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "务（包含 X86、 ARM、C86） 内存 1 GB 元/ 月 1728 10",
+      "canonical_text": "应按采购需求提供平台云主机内存资源，按表列数量和10个月期限提供服务。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-006",
+      "req_id": "TB-006:REQ-008",
+      "source_verified": true,
+      "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "GPU 显存（需同时租用算 力资源、云主机或物理 服务器资源，联合使用） 1 GB 元/ 月 1024 10",
+      "canonical_text": "应提供GPU显存资源，并与算力资源、云主机或物理服务器资源联合使用，按表列数量和10个月期限提供服务。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-006",
+      "req_id": "TB-006:REQ-010",
+      "source_verified": true,
+      "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "普通性能存储 普通存储（单盘技术指标: 单盘 IOPS 2000-5000） 100 GB 元/ 月 68 10",
+      "canonical_text": "应提供普通性能存储服务，单盘IOPS指标为2000-5000，按表列数量和10个月期限提供。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-006",
+      "req_id": "TB-006:REQ-011",
+      "source_verified": true,
+      "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "高性能存储 高性能存储（单盘技术指 标：单盘 IOPS 10000-25000） 100 GB 元/ 月 259. 72 10",
+      "canonical_text": "应提供高性能存储服务，单盘IOPS指标为10000-25000，按表列数量和10个月期限提供。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-006",
+      "req_id": "TB-006:REQ-012",
+      "source_verified": true,
+      "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "存储服务（兼 容 X86、ARM、 C86） 本地备份服务 本地备份服务 100 GB 元/ 月 68 10",
+      "canonical_text": "应提供本地备份服务，按表列容量和10个月期限提供。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-006",
+      "req_id": "TB-006:REQ-013",
+      "source_verified": true,
+      "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "网络服务（兼 容 X86、ARM、 C86） 远程接入服务 远程接入服务 1 账号 元/ 月 4 10",
+      "canonical_text": "应提供远程接入服务账号，按表列数量和10个月期限提供。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-006",
+      "req_id": "TB-006:REQ-028",
+      "source_verified": true,
+      "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "NEGATION_DISTORTION",
+        "STATUS_DISTORTION"
+      ],
+      "source_excerpt": "（4）响应的及时性 投标人应当提供高效的系统维护服务，有效防范系统风险，系统对应负责人 7×24 小时电话畅通，能够在系统发生除宕机外的其他故障问题时，能够协调人 力资源在 1 小时内到达运维现场提供服务。系统发生宕机问题时，投标人应在 5 分钟内响应，在 1 个小时之内使系统恢复正常。故障处理完毕后提供相关系统宕 机报告。",
+      "canonical_text": "非宕机故障发生时应协调人力在1小时内到达运维现场；系统宕机时5分钟内响应并在1小时内恢复正常，处理完成后提交宕机报告。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-006",
+      "req_id": "TB-006:REQ-043",
+      "source_verified": true,
+      "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "SCOPE_EXPANSION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "4、中标人应保证在向其工作人员披露采购人的保密信息前，认真做好员工 的保密教育工作，明确告知其将知悉的为采购人的保密信息，并明确告知其需承 担的保密义务及泄密所应承担的法律责任，并要求全体参与该项目的人员签署书 面《保密协议》。",
+      "canonical_text": "向工作人员披露保密信息前应开展保密教育，明确保密义务和法律责任，并要求全部项目参与人员签署书面《保密协议》。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "TB-006",
+      "req_id": "TB-006:REQ-044",
+      "source_verified": true,
+      "source_hash": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "SCOPE_EXPANSION_REVIEW"
+      ],
+      "source_excerpt": "5、任何时间内，一经采购人提出要求，中标人应按照采购人指示在收到采 购人书面通知后 5 日内将含有保密信息的所有文件或其他资料归还采购人，且不 得擅自复制留存。",
+      "canonical_text": "采购人要求时，中标人应在收到书面通知后5日内归还含保密信息的全部文件或资料，且不得擅自复制留存。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-001",
+      "source_verified": true,
+      "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_DISTORTION",
+        "NEGATION_DISTORTION",
+        "MODALITY_OMISSION_REVIEW"
+      ],
+      "source_excerpt": "★服务期限：本项目服务期限为 1 年，服务时间为 2025 年 12 月 1 日至 2026 年 11 月 30 日。服务期满后，根据中标供应商履约及考核情况确定是否续签，续签不超过 两次（一年一签），长期服务政府采购合同履行期限最长不得超过三十六个月，如 采购方对履约情况不满意，采购方不再续约。",
+      "canonical_text": "本项目服务期限为1年，服务时间为2025年12月1日至2026年11月30日；续签不超过两次且长期服务合同履行期限最长不超过36个月。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-003",
+      "source_verified": true,
+      "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "SCOPE_EXPANSION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "本次项目维护服务内容包括对 HIS 系统、电子病历系统、 PACS-RIS 系统、LIS 系统、体检信息系统、手术麻醉信息系统、 心电管理系统、输血管理系统、院感管理系统、药事管理系统 10 个业务软件系统及相关接口维护，主要服务内容要求如下：",
+      "canonical_text": "维护服务范围应覆盖HIS、电子病历、PACS-RIS、LIS、体检、手术麻醉、心电、输血、院感、药事等10个业务软件系统及相关接口。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-021",
+      "source_verified": true,
+      "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_DISTORTION"
+      ],
+      "source_excerpt": "一级 数据库、应用信 立即 立即 ≦30 15 / 56 - 16 - 息系统等故障， 造成全院业务整 体受影响 分钟",
+      "canonical_text": "一级故障应立即响应、立即处理，并在30分钟内解决。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-01",
+      "req_id": "FAST-01:REQ-026",
+      "source_verified": true,
+      "source_hash": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "SCOPE_EXPANSION_REVIEW"
+      ],
+      "source_excerpt": "认后方可进行调整维护。维护内容只限于现有功能模块及政策 类的需求、各类接口优化及数据报表统计处理，不包括新增功 能模块需求。一般需求要求一周内完成，重大需求最长不超过",
+      "canonical_text": "适应性调整维护仅限现有功能模块、政策类需求、接口优化及数据报表统计处理，不包括新增功能模块。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-003",
+      "source_verified": true,
+      "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "须满足《关于印发〈商品包装政府采购需求标准（试行）〉、〈快递包装政府采 购需求标准（试行）〉的通知》（财办库﹝2020﹞123 号））。",
+      "canonical_text": "包装和运输须满足《关于印发〈商品包装政府采购需求标准（试行）〉、〈快递包装政府采购需求标准（试行）〉的通知》（财办库﹝2020﹞123号）的要求。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-025",
+      "source_verified": true,
+      "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "source_excerpt": "10 功能要 求 ★系统引导 a)操作系统应支持 UEFI2.0 及以上规范 固件引导，当计算机以 UEFI 模式启动安 装时，安装程序应分配 ESP，并在 ESP 中 放置启动引导文件，使系统能以 UEFI 模",
+      "canonical_text": "操作系统应支持 UEFI2.0 及以上规范固件引导，当计算机以 UEFI 模式启动安装时，安装程序应分配 ESP，并在 ESP 中放置启动引导文件，使系统能以 UEFI 模式引导；支持 bootloader 引导，支持 MBR 及 GPT。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-026",
+      "source_verified": true,
+      "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_DISTORTION",
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "式引导；b)支持 bootloader 引导，支持",
+      "canonical_text": "操作系统应支持UEFI2.0及以上规范固件引导，当计算机以UEFI模式启动安装时，安装程序应分配ESP，并在ESP中放置启动引导文件，使系统能以UEFI模式引导；支持bootloader引导，支持MBR及GPT式引导。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-046",
+      "source_verified": true,
+      "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "态负载均衡",
+      "canonical_text": "操作系统支持存储多路径聚合及I/O动态负载均衡。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-062",
+      "source_verified": true,
+      "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "45 功能要 求 ★开发工具 库 操作系统通过内置、软件仓库或附加光 盘等方式提供开发库，包括 GNUC、 GNUC++、Java、Qt、Gtk+、Cairo、",
+      "canonical_text": "操作系统通过内置、软件仓库或附加光盘等方式提供开发库，包括GNUC、GNUC++、Java、Qt、Gtk+、Cairo、OpenGL、Perl、Python、Ruby、Rust、Golang、JS等。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-063",
+      "source_verified": true,
+      "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "OpenGL、Perl、Python、Ruby、Rust、 Golang、JS 等",
+      "canonical_text": "操作系统通过内置、软件仓库或附加光盘等方式提供开发库，包括GNUC、GNUC++、Java、Qt、Gtk+、Cairo、OpenGL、Perl、Python、Ruby、Rust、Golang、JS等。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-081",
+      "source_verified": true,
+      "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "63 功能要 求 ★数据存储",
+      "canonical_text": "操作系统支持SQL、NoSQL、键值等类型的数据库。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-097",
+      "source_verified": true,
+      "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "78 功能要 求 云计算管理 平台 供应商可通过安装镜像内置、软件仓库 或附加光盘等方式提供开源云计算管理",
+      "canonical_text": "供应商可通过安装镜像内置、软件仓库或附加光盘等方式提供开源云计算管理平台，并对提供的开源组件进行签名认证，确保组件的安全性、稳定性、可靠性。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-098",
+      "source_verified": true,
+      "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "平台，并对提供的开源组件进行签名认 证，确保组件的安全性、稳定性、可靠 性",
+      "canonical_text": "供应商可通过安装镜像内置、软件仓库或附加光盘等方式提供开源云计算管理平台，并对提供的开源组件进行签名认证，确保组件的安全性、稳定性、可靠性。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-107",
+      "source_verified": true,
+      "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_DISTORTION",
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "87 易用性",
+      "canonical_text": "操作系统的多文种图形用户界面应支持GB18030规定。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-146",
+      "source_verified": true,
+      "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "125 兼容性 要求 硬件 兼容 ★部件兼容",
+      "canonical_text": "供应商提供兼容的系统总线、HBA卡、RAID卡、网卡、光纤卡、AI加速卡、GPU、NPU等品牌及型号清单。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-193",
+      "source_verified": true,
+      "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_DISTORTION",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "170 安全要 求 ★密码协议",
+      "canonical_text": "操作系统支持符合GB/T38636—2020的TLCP。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-194",
+      "source_verified": true,
+      "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_DISTORTION",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "实现",
+      "canonical_text": "操作系统支持符合GB/T38636—2020的TLCP实现。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-220",
+      "source_verified": true,
+      "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "支持在不同 CPU 架构的节点上安 装配置、升级，且安装配置、升 级数据库的命令行或图形界面相 同或相似",
+      "canonical_text": "安装和升级的兼容性：支持在不同CPU架构的节点上安装配置、升级，且安装配置、升级数据库的命令行或图形界面相同或相似。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-227",
+      "source_verified": true,
+      "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "12 功能 要求 自定义数据类型 具备用户自定义数据类型的能",
+      "canonical_text": "自定义数据类型能力：具备用户自定义数据类型的能力，可支持不同应用场景的数据类型需求。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-228",
+      "source_verified": true,
+      "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "力，可支持不同应用场景的数据 类型需求",
+      "canonical_text": "具备用户自定义数据类型的能力，可支持不同应用场景的数据类型需求。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-252",
+      "source_verified": true,
+      "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "35 功能 要求 运维 ★运行时统计信",
+      "canonical_text": "数据库慢SQL统计：支持统计SQL语句、用户名、数据库名、执行时长；数据库性能状态统计：支持统计每秒事务数和查询数、SQL平均响应时间、高频SQL。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-253",
+      "source_verified": true,
+      "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "息基础功能 a）数据库慢 SQL 统计： 1）支持统计 SQL 语句； 2）支持统计用户名； 3）支持统计数据库名； 4）支持统计执行时长； b）数据库性能状态统计： 1）支持统计每秒事务数和查询 数； 2）支持统计 SQL 平均响应时间； 3）支持统计高频 SQL",
+      "canonical_text": "提供运行时统计信息基础功能，包括：a)数据库慢SQL统计：1)支持统计SQL语句；2)支持统计用户名；3)支持统计数据库名；4)支持统计执行时长；b)数据库性能状态统计：1)支持统计每秒事务数和查询数；2)支持统计SQL平均响应时间；3)支持统计高频SQL。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-276",
+      "source_verified": true,
+      "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "a)提供客户端、服务器端网络配 置向导； b)支持配置网络连接参数、主 机、端口、协议等内容",
+      "canonical_text": "网络配置工具需提供客户端、服务器端网络配置向导，并支持配置网络连接参数、主机、端口、协议等内容。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-278",
+      "source_verified": true,
+      "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "a)支持创建、修改、删除用户的 功能； b）提供定义用户的功能； c)支持创建、修改、删除角色的 功能，且提供用户自定义角色的 功能",
+      "canonical_text": "用户、角色管理工具需支持创建、修改、删除用户的功能；提供定义用户的功能；支持创建、修改、删除角色的功能，且提供用户自定义角色的功能。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-279",
+      "source_verified": true,
+      "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "a)提供与数据库管理系统进行 SQL 交互的工具，方便运维工 作； b)支持查看 SQL 语句查询执行计 划与统计信息",
+      "canonical_text": "SQL 执行计划查看工具需提供与数据库管理系统进行 SQL 交互的工具，方便运维工作；支持查看 SQL 语句查询执行计划与统计信息。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-282",
+      "source_verified": true,
+      "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "a)支持创建、修改、删除触发器 的功能，支持触发条件、事件的 设置； b)支持创建、修改、删除存储过 程/函数的功能，提供定义存储过 程/函数的工具",
+      "canonical_text": "触发器、存储过程/函数工具需支持创建、修改、删除触发器的功能，支持触发条件、事件的设置；支持创建、修改、删除存储过程/函数的功能，提供定义存储过程/函数的工具。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-284",
+      "source_verified": true,
+      "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [],
+      "source_excerpt": "a)收集和统计数据库某时间段的 运行状态及性能信息，判断该时 间的数据库运行性能瓶颈；",
+      "canonical_text": "监控跟踪工具需收集和统计数据库某时间段的运行状态及性能信息，判断该时间的数据库运行性能瓶颈。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-302",
+      "source_verified": true,
+      "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "source_excerpt": "78 可靠 性要 求",
+      "canonical_text": "★快速切换：支持快速切换，在主数据库出现故障时，能够快速切换到备用数据库，保障业务正常运行。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-341",
+      "source_verified": true,
+      "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "3.1.2.2. 在满足通用参数基础上集中式数据库2需满足的其他参数要求",
+      "canonical_text": "支持单节点故障容错处理，测试至少3次查询业务故障中断切换平均时间和更新业务中断切换平均时间不高于10s。须提供功能测试截图，并加盖投标人公章。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-04",
+      "req_id": "FAST-04:REQ-342",
+      "source_verified": true,
+      "source_hash": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "OBVIOUS_SEMANTIC_MUTATION"
+      ],
+      "source_excerpt": "#支持在国产化平台上进行安装部署，采用一套代码同时兼容多 款 异 构 数 据 库 ， 安 装 过 程 中 可 选 择 Oracle 、 Mysql 、 SQL Server、Postgresql 任意一种模式进行初始化，降低运维管控 成本。数据库管理系统支持采用一套代码同时兼容多款异构数据 库，数据库实例初始化时支持 Oracle、Mysql、SQL Server、 Postgresql 兼容模式选择以体现广泛的应用兼容能力。 (须提供功能截图，并加盖投标人公章)",
+      "canonical_text": "支持在国产化平台上进行安装部署，采用一套代码同时兼容多款异构数据库，安装过程中可选择Oracle、Mysql、SQL Server、Postgresql任意一种模式进行初始化，降低运维管控成本。数据库管理系统支持采用一套代码同时兼容多款异构数据库，数据库实例初始化时支持Oracle、Mysql、SQL Server、Postgresql兼容模式选择以体现广泛的应用兼容能力。须提供功能截图，并加盖投标人公章。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-002",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "综合信息平台巡检 每天",
+      "canonical_text": "应对综合信息平台提供每日巡检服务。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-003",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "综合信息平台数据备份 每天",
+      "canonical_text": "应对综合信息平台提供每日数据备份服务。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-004",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "综合信息平台数据维护 每天",
+      "canonical_text": "应对综合信息平台提供每日数据维护服务。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-005",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "综合信息平台现场服务 每天",
+      "canonical_text": "应对综合信息平台提供每日现场服务。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-006",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "综合信息平台安全加固",
+      "canonical_text": "应对综合信息平台开展安全加固。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-007",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "综合信息平台功能完善及流程调整",
+      "canonical_text": "应对综合信息平台开展功能完善及流程调整。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-008",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "综合信息平台组织机构信息调整",
+      "canonical_text": "应对综合信息平台开展组织机构信息调整。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-009",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "综合信息平台安全检查",
+      "canonical_text": "应对综合信息平台开展安全检查。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-010",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "综合信息平台应急故障处理",
+      "canonical_text": "应对综合信息平台开展应急故障处理。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-011",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "共享信息系统巡检 每天",
+      "canonical_text": "应对共享信息系统提供每日巡检服务。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-012",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "共享信息系统数据备份 每天",
+      "canonical_text": "应对共享信息系统提供每日数据备份服务。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-013",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "共享信息系统数据维护 每天",
+      "canonical_text": "应对共享信息系统提供每日数据维护服务。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-014",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "共享信息系统现场服务 每天",
+      "canonical_text": "应对共享信息系统提供每日现场服务。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-015",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "共享信息系统安全加固",
+      "canonical_text": "应对共享信息系统开展安全加固。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-016",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "共享信息系统安全检查",
+      "canonical_text": "应对共享信息系统开展安全检查。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-017",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "共享信息系统应急故障处理",
+      "canonical_text": "应对共享信息系统开展应急故障处理。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-018",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "外网网站信息维护 每天",
+      "canonical_text": "应对外网门户提供每日信息维护服务。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-019",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "外网网站数据备份 每周",
+      "canonical_text": "应对外网门户提供每周数据备份服务。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-020",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "外网监控预警 每天",
+      "canonical_text": "应对外网门户提供每日监控预警服务。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-021",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "外网磁盘空间整理 季度",
+      "canonical_text": "应对外网门户提供季度磁盘空间整理服务。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-022",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "外网网站模块维护",
+      "canonical_text": "应对外网门户提供网站模块维护服务。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-023",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "项目管理系统数据备份 每天",
+      "canonical_text": "应对项目管理系统提供每日数据备份服务。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-024",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "项目管理系统安全加固",
+      "canonical_text": "应对项目管理系统开展安全加固。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-025",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "项目管理系统功能完善及流程调整",
+      "canonical_text": "应对项目管理系统开展功能完善及流程调整。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-026",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "项目管理系统安全检查",
+      "canonical_text": "应对项目管理系统开展安全检查。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-027",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "项目管理系统应急故障处理",
+      "canonical_text": "应对项目管理系统开展应急故障处理。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-028",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "使用技术咨询",
+      "canonical_text": "应对项目管理系统提供使用技术咨询。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-029",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "系统巡检",
+      "canonical_text": "应对即时通讯系统提供系统巡检服务。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-030",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "数据备份",
+      "canonical_text": "应对即时通讯系统提供数据备份服务。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-031",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "组织机构信息调整",
+      "canonical_text": "应对即时通讯系统提供组织机构信息调整服务。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-032",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "处理使用中的问题",
+      "canonical_text": "应对即时通讯系统处理使用中的问题。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-033",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "系统版本升级",
+      "canonical_text": "应对即时通讯系统提供系统版本升级服务。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-034",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "档案管理系统数据备份 每天",
+      "canonical_text": "应对档案管理系统提供每日数据备份服务。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-036",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW",
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "档案管理系统现有功能完善",
+      "canonical_text": "应对档案管理系统开展现有功能完善。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-037",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "ENTITY_MISMATCH_REVIEW"
+      ],
+      "source_excerpt": "档案管理系统应急故障处理",
+      "canonical_text": "应对档案管理系统开展应急故障处理。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-046",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "MODALITY_ADDITION_REVIEW",
+        "SCOPE_EXPANSION_REVIEW"
+      ],
+      "source_excerpt": "1.1.5 信息网络运维服务 信息网络运维服务是指对网络系统进行日常管理、运行和维护的工作，其目标是确 保网络系统的稳定性、安全性和可靠性，保证网络服务的正常运行。包括网络设备管理、 网络安全管理、网络性能优化、网络故障处理、数据备份与回复等。",
+      "canonical_text": "信息网络运维应覆盖网络设备管理、网络安全管理、网络性能优化、网络故障处理及数据备份与恢复等，确保网络稳定、安全、可靠运行。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-063",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "在特殊时期提供更为及时的 7*24 的服务，至少一人 7*24 小时现场值守。具体要求 如下：",
+      "canonical_text": "特殊时期应提供更及时的7×24服务，至少安排1人7×24小时现场值守。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-068",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "为 EDR 软件、200PC、30Windows server 提供升级服务。",
+      "canonical_text": "应为EDR软件、200台PC和30台Windows Server提供升级服务。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-085",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW",
+        "MODALITY_ADDITION_REVIEW",
+        "STATUS_DISTORTION"
+      ],
+      "source_excerpt": "在紧急故障恢复服务过程中，运维服务人员负责记录所有事件的发生时间及所采取 44 的措施；设备故障处理完毕以后，视情况双方协商决定是否安排运维服务人员在现场观 察 1－2 天。在北京市水科学技术研究院同意后，运维服务人员方可离开现场。",
+      "canonical_text": "紧急故障处理过程中应记录事件时间和措施；处理完成后按协商决定是否现场观察1-2天，经采购人同意后方可离场。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-099",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_DISTORTION",
+        "NEGATION_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "网 络 运行状态 检查 次数/月 2 1 <1 定时检查网络 系统运行状态 一 般 系统 报告 月",
+      "canonical_text": "网络运行状态检查目标为每月2次，1次可接受，少于1次不可接受。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-100",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_DISTORTION",
+        "NEGATION_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "硬件状态 检查 次数/月 2 1 <1 定时检查网络 系统相关设备 指示灯、硬件 状态等 一 般 系统 报告 月",
+      "canonical_text": "硬件状态检查目标为每月2次，1次可接受，少于1次不可接受。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-101",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_DISTORTION",
+        "NEGATION_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "日志检查 次数/月 2 1 <1 定时检查网络 系统日志 一 般 系统 报告 月",
+      "canonical_text": "系统日志检查目标为每月2次，1次可接受，少于1次不可接受。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-103",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_DISTORTION",
+        "NEGATION_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "一般故障 （造成功 能故障等） 次数 次数/月 0 1 >2 平均每月发生 一般故障次数 重 要 系统 报告 月",
+      "canonical_text": "一般故障次数目标为每月0次，1次可接受，超过2次不可接受。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-104",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_DISTORTION",
+        "NEGATION_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "一般故障 解决时间 小时 2 4 >6 每次故障发生 到功能恢复的 时间 重 要 系统 报告 月",
+      "canonical_text": "一般故障解决时间目标2小时，4小时可接受，超过6小时不可接受。",
+      "confidence": "HIGH"
+    },
+    {
+      "tender_id": "FAST-WATER-01",
+      "req_id": "FAST-WATER-01:REQ-105",
+      "source_verified": true,
+      "source_hash": "15f92c3a676269e296295b033da02bdfe448fe6de74d3ac3a98f3cfc9a419535",
+      "fidelity_classification": "HIGH_CONFIDENCE_SOURCE_EXPANSION",
+      "gate_reason_codes": [
+        "NUMBER_DISTORTION",
+        "NEGATION_DISTORTION",
+        "MODALITY_ADDITION_REVIEW"
+      ],
+      "source_excerpt": "运 维 严重故障 解决时间 小时 2 6 >6 每次故障发生 到系统恢复的 时间 重 要 系统 报告 月",
+      "canonical_text": "严重故障解决时间目标2小时，6小时可接受，超过6小时不可接受。",
+      "confidence": "HIGH"
+    }
+  ],
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0
+}

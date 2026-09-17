@@ -1,4 +1,3 @@
-import { createHash } from 'node:crypto';
 import { AppError } from '../errors.js';
 import {
   EVIDENCE_CAPABILITY,
@@ -14,6 +13,7 @@ import {
   MAPPING_RELATIONSHIPS,
   MAPPING_SUPPORT_LEVELS
 } from './requirement-evidence-mapping-contract-v1.js';
+import { hashSource } from './source-location-resolver.js';
 
 export const EVIDENCE_SUPPORT_ASSESSMENT_VERSION = 'evidence-support-assessment-v1';
 export const EVIDENCE_SUPPORT_ADAPTER_VERSION = 'evidence-support-adapter-v1';
@@ -40,9 +40,10 @@ export const EVIDENCE_SUFFICIENCY_STATUSES = Object.freeze([
 ]);
 
 const SHA256 = /^[0-9a-f]{64}$/;
-const hash = value => createHash('sha256').update(String(value)).digest('hex');
+const hash = hashSource;
 const object = value => value && typeof value === 'object' && !Array.isArray(value);
 const clean = value => String(value ?? '').trim();
+const exactText = value => String(value ?? '');
 const unique = values => [...new Set(values)];
 
 function invalid(message, code = 'EVIDENCE_SUPPORT_ASSESSMENT_INVALID') {
@@ -78,7 +79,8 @@ function normalizeRequirement(requirement) {
 }
 
 function normalizeSource({ sourceId, sourceSpanId, sourceText, sourceTextHash, kind, lineage = {}, material = {} }) {
-  const text = required(sourceText, 'source_text');
+  const text = exactText(sourceText);
+  if (!text.trim()) invalid('source_text 不能为空。', 'EVIDENCE_SUPPORT_INPUT_INVALID');
   return {
     source_id: required(sourceId, 'source_id'),
     source_kind: oneOf(kind, ['retrieval_candidate', 'evidence_fact'], 'source_kind'),
@@ -213,6 +215,35 @@ function deriveRelationship({ semanticRelationship, supportLevel, semanticReleva
   return 'unknown';
 }
 
+/**
+ * Shared cross-field rule for the Gateway transport and canonical assessment.
+ * The full rationale is recorded in ADR-020; keep both validation boundaries
+ * behaviorally aligned instead of maintaining two independent rule copies.
+ */
+export function getEvidenceSupportInvariantViolation({
+  semanticRelevance,
+  evidenceCapability,
+  supportLevel,
+  semanticRelationship
+} = {}) {
+  const unknownCore = semanticRelevance === 'unknown'
+    || evidenceCapability === 'unknown'
+    || supportLevel === 'unknown';
+  if (unknownCore && (semanticRelationship === 'direct' || supportLevel === 'full_support')) {
+    return 'unknown core values cannot be paired with direct or full_support';
+  }
+  if (semanticRelationship === 'direct'
+    && (semanticRelevance !== 'relevant'
+      || evidenceCapability !== 'capable'
+      || supportLevel !== 'full_support')) {
+    return 'direct requires relevant/capable/full_support';
+  }
+  if (supportLevel === 'full_support' && semanticRelationship !== 'direct') {
+    return 'full_support requires direct';
+  }
+  return null;
+}
+
 export function createEvidenceSupportAssessment(input, observation = {}, { evaluatorVersion = 'fixture-v1' } = {}) {
   if (!object(input)) invalid('Assessment input 必须是对象。');
   if (!object(observation)) invalid('Assessment observation 必须是对象。', 'EVIDENCE_SUPPORT_OBSERVATION_INVALID');
@@ -249,6 +280,15 @@ export function createEvidenceSupportAssessment(input, observation = {}, { evalu
       supportLevel,
       semanticRelevance
     });
+  // Cross-field business invariant; keep this aligned with the Gateway
+  // validator. See ADR-020.
+  const invariantViolation = getEvidenceSupportInvariantViolation({
+    semanticRelevance,
+    evidenceCapability: capability,
+    supportLevel,
+    semanticRelationship: relationship
+  });
+  if (invariantViolation) invalid(invariantViolation, 'EVIDENCE_SUPPORT_ASSESSMENT_INVALID');
   const assessmentId = `ESA-${hash([
     normalizedInput.requirement.requirement_id,
     source.source_id,

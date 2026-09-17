@@ -1,0 +1,23 @@
+{
+  "artifact_type": "V43_ENGINEERING_AUTHORITY_MATRIX",
+  "audit_id": "V43_PRODUCTION_SHAPED_FLOW_ENGINEERING_QUALITY_AUDIT_V1",
+  "scope": "offline focused code/test evidence; runtime and PostgreSQL not verified",
+  "runtime_verified": false,
+  "controls": [
+    {"control":"LLM_OUTPUT_BECOMES_AUTHORITY","result":"NO","verification_scope":"offline","evidence":["backend/src/pipeline/response-router-service.js","backend/src/pipeline/response-router-service.js","backend/test/flow-completion.test.js"]},
+    {"control":"ROUTER_ADVISORY_BECOMES_AUTHORITY","result":"NO","verification_scope":"offline","evidence":["backend/src/pipeline/response-router-service.js","backend/test/flow-completion.test.js"]},
+    {"control":"UNAPPROVED_FACT_TO_WRITER","result":"NO","verification_scope":"offline","evidence":["backend/src/pipeline/writer-input-authorization-v1.js","backend/test/writer-v2-composition.test.js","backend/test/writer-execution-pre-v1.test.js"]},
+    {"control":"MAPPING_APPROVED_EQUALS_CLAIM_APPROVED","result":"NO","verification_scope":"offline","evidence":["backend/src/db.js","backend/test/mapping-to-claim-canonical.test.js"]},
+    {"control":"CLAIM_ALLOW_EQUALS_WRITER_VISIBILITY","result":"NO","verification_scope":"offline","evidence":["backend/src/pipeline/writer-input-authorization-v1.js","backend/test/writer-v2-composition.test.js"]},
+    {"control":"REFERENCE_EQUALS_ENTERPRISE_ASSERTION","result":"NO","verification_scope":"offline","evidence":["backend/src/pipeline/safe-response-packet-builder.js","backend/test/flow-completion.test.js","backend/test/writer-v2-composition.test.js"]},
+    {"control":"HISTORICAL_FACT_TO_COMMITMENT","result":"NO","verification_scope":"offline","evidence":["backend/src/pipeline/safe-response-packet-builder.js","backend/test/flow-completion.test.js"]},
+    {"control":"PROJECT_DECISION_TO_GLOBAL_FACT","result":"NO","verification_scope":"offline","evidence":["backend/src/pipeline/writer-input-authorization-v1.js","backend/src/pipeline/bid-copilot-orchestrator.js"]},
+    {"control":"BID_PILOT_CREATES_DOMAIN_AUTHORITY","result":"NO","verification_scope":"offline","evidence":["backend/src/pipeline/bid-copilot-orchestrator.js","backend/test/agent-foundation.test.js","backend/test/agent-actions.test.js"]},
+    {"control":"DOWNSTREAM_EXPANDS_UPSTREAM_AUTHORITY","result":"NO","verification_scope":"offline","evidence":["backend/src/pipeline/safe-response-packet-builder.js","backend/src/pipeline/writer-input-authorization-v1.js","backend/test/flow-completion.test.js"]},
+    {"control":"UNKNOWN_BECOMES_CONFIRMED","result":"NO","verification_scope":"offline","evidence":["backend/src/pipeline/final-requirement-reconciliation.js","backend/test/canonical-requirements-v1.test.js"]},
+    {"control":"NEED_REVIEW_AUTO_RESOLVED","result":"NO","verification_scope":"offline","evidence":["backend/src/pipeline/final-requirement-reconciliation.js","backend/src/pipeline/safe-response-packet-builder.js"]},
+    {"control":"CROSS_PROJECT_AUTHORITY_BYPASS","result":"NO","verification_scope":"offline","evidence":["backend/src/pipeline/safe-response-packet-builder.js","backend/src/pipeline/bid-copilot-orchestrator.js","backend/test/flow-completion.test.js","backend/test/agent-foundation.test.js"]}
+  ],
+  "offline_authority_sensitive_fail_open_count": 0,
+  "qualification": "0 observed in tested offline scope; cannot be promoted to full runtime certification without PostgreSQL/runtime evidence."
+}

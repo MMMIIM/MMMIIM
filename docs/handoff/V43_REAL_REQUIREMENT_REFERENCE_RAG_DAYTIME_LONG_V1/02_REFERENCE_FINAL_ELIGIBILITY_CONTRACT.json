@@ -1,0 +1,36 @@
+{
+  "artifact_type": "V43_REFERENCE_FINAL_ELIGIBILITY_CONTRACT",
+  "version": "writer-reference-content-eligibility-v1",
+  "final_count": {
+    "min": 0,
+    "max": 4
+  },
+  "excluded_roles": [
+    "HEADING",
+    "FRONT_MATTER",
+    "METADATA"
+  ],
+  "excluded_shapes": [
+    "NON_SUBSTANTIVE",
+    "CITATION_INDEX_ONLY",
+    "EMPTY_OR_NEAR_EMPTY"
+  ],
+  "retained_fields": [
+    "material_id",
+    "chunk_id",
+    "chunk_hash",
+    "source_text",
+    "source_role",
+    "corpus_scope",
+    "source_document_id",
+    "source_chunk_id",
+    "source_lineage",
+    "source_text_sha256",
+    "original_name",
+    "lifecycle_status",
+    "review_status",
+    "usage_status"
+  ],
+  "authority_owner": "existing retrieval/source-role lifecycle gates",
+  "no_backfill": true
+}

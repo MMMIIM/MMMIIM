@@ -19,11 +19,11 @@ test('gateway:check 只对 /info 发起 GET 并输出脱敏应用摘要', async 
 });
 
 test('smoke:gateway 使用最小 requirement_extraction payload 并验证新契约', async () => {
-  let sentInputs;const envelope={schema_version:'4.3-requirement-extraction-v3',task_type:'requirement_extraction',status:'success',data:{requirements:[]},warnings:[]};
+  let sentInputs;const envelope={schema_version:'4.3-requirement-extraction-v3.1.1',task_type:'requirement_extraction',status:'success',data:{requirements:[]},warnings:[]};
   const client=mockClient(async(_url,options)=>{sentInputs=JSON.parse(options.body).inputs;return gatewayResponse(JSON.stringify(envelope))});const stdout=[];const stderr=[];const times=[2000,2025];
   const code=await runGatewaySmoke({client,stdout:x=>stdout.push(x),stderr:x=>stderr.push(x),now:()=>times.shift()});
   assert.equal(code,0);assert.equal(sentInputs.task_type,'requirement_extraction');assert.deepEqual(JSON.parse(sentInputs.task_payload_json),{project_name:'gateway-contract-smoke',section_name:'契约测试',chunk_index:1,chunk_count:1,chunk_text:'本片段为契约连通性测试，不包含招标需求。'});assert.deepEqual(sentInputs,GATEWAY_SMOKE_REQUEST);assert.equal(stderr.length,0);
-  assert.deepEqual(JSON.parse(stdout[0]),{schema_version:'4.3-requirement-extraction-v3',task_type:'requirement_extraction',status:'success',requirements_count:0,warnings_count:0,elapsed_ms:25});
+  assert.deepEqual(JSON.parse(stdout[0]),{schema_version:'4.3-requirement-extraction-v3.1.1',task_type:'requirement_extraction',status:'success',requirements_count:0,warnings_count:0,elapsed_ms:25});
 });
 
 test('smoke 异常只输出安全错误码且绝不回退 result/text/answer', async () => {

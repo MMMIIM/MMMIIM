@@ -1,0 +1,18 @@
+{
+  "artifact_type": "V43_E2E_ENGINEERING_CONSISTENCY_AUDIT_V1_ARTIFACT_IDENTITY_MATRIX",
+  "inspection_mode": "READ_ONLY",
+  "artifacts": [
+    {"path": "docs/handoff/V43_REAL_E2E_REQUIREMENT_RETRIEVAL_AND_FACT_CANARY_V1/01_REQUIREMENT_CANARY_SELECTION.json", "kind": "Eval-only requirement selection", "authority": "EVAL_ONLY", "contains_expected_project_requirement_rows": false, "identity": "REAL_E2E_CASE_01_REQUIREMENT_RUN_V3; TB-006 post_recert 337; 20 selections", "sha256": "NOT_COMPUTED_IN_THIS_AUDIT"},
+    {"path": "docs/handoff/V43_REAL_E2E_REQUIREMENT_RETRIEVAL_AND_FACT_CANARY_V1/09_TARGETED_FACT_HOST_REPLAY_PLAN.json", "kind": "Eval-only replay plan", "authority": "EVAL_ONLY", "scope": "three unique source chunks; provider_calls_authorized=3", "sha256": "NOT_COMPUTED_IN_THIS_AUDIT"},
+    {"path": "docs/handoff/V43_REAL_E2E_REQUIREMENT_RETRIEVAL_AND_FACT_CANARY_V1/10_FACT_CANARY_TARGETED_CLOSURE_CHECKPOINT.json", "kind": "Eval checkpoint", "authority": "EVAL_ONLY", "status": "READY_FOR_TARGETED_FACT_HOST_REPLAY; provider_calls=0", "sha256": "NOT_COMPUTED_IN_THIS_AUDIT"},
+    {"path": "docs/V43_TARGETED_FACT_HOST_REPLAY_V1_CHECKPOINT.json", "kind": "Targeted replay checkpoint", "authority": "EVAL/DIAGNOSTIC", "status": "BLOCKED_REQUIREMENT_SCOPE_AUTHORITY_PERSISTENCE_UNAVAILABLE", "sha256": "NOT_COMPUTED_IN_THIS_AUDIT"},
+    {"path": "docs/V43_MATERIAL_VERSION_SCHEMA_DIAGNOSIS_CHECKPOINT.json", "kind": "Schema/runtime diagnosis", "authority": "READ_ONLY_DIAGNOSTIC", "status": "BLOCKED_PENDING_GPT_DECISION", "sha256": "NOT_COMPUTED_IN_THIS_AUDIT"},
+    {"path": "backend/eval/real-e2e/run-requirement-retrieval-fact-canary.mjs", "kind": "Current checked-out runner", "authority": "CURRENT_CODE", "identity": "Uses source_version projection; no m.material_version query", "sha256": "cca364e3f24e398676ed6743f752696ff7cc5aafa7ef3ca84233a3d992bbeb23"}
+  ],
+  "identity_rules": {
+    "eval_selection_is_not_canonical_requirement_authority": true,
+    "cross_database_blending_allowed": false,
+    "historical_payloads_reconstructed": false,
+    "source_identity_authority": "Backend source/material/chunk identity, not model/free text"
+  }
+}

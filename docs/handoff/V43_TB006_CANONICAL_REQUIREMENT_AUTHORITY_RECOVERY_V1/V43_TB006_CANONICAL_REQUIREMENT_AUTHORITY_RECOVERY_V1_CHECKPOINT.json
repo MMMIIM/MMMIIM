@@ -1,0 +1,119 @@
+{
+  "checkpoint": "V43_TB006_CANONICAL_REQUIREMENT_AUTHORITY_RECOVERY_V1_CHECKPOINT",
+  "status": "PASS",
+  "authority_packet": {
+    "path": "docs/handoff/V43_OVERNIGHT_REQUIREMENT_SCOPE_RECERT_E2E_FOUNDATION_V1/08_TB006_REQUIREMENT_RUN_V3.json",
+    "sha256": "bd08de5b85747b59bc91a2275d979a0de85b66d5b34e6bfc72f3986a9e5ef54d",
+    "authority": "CURRENT_PRODUCTION_PATH_OUTPUT_ONLY",
+    "run_id": "REAL_E2E_CASE_01_REQUIREMENT_RUN_V3",
+    "project_id": "7a038c5d-38e4-46ae-b24d-39437bb3b545",
+    "parse_job_id": "b8eeef21-f822-4676-afa6-cfec983b3ec7",
+    "candidate_count": 341,
+    "frozen_production_artifact_substituted": false,
+    "source_file": "TB-006-beijing-emergency-model-cloud.pdf",
+    "source_sha256": "b714d521220e367d1a762bc7de0fb7b007ef539105be9a0822af093f02793480",
+    "source_bytes": 806109,
+    "source_pdf_path": "backend/eval/tender-benchmark-v1/sources/TB-006-beijing-emergency-model-cloud.pdf",
+    "contract_evidence": {
+      "requirement_version": "V6.4",
+      "freeze_checkpoint": "docs/V43_REQUIREMENT_V6_4_FREEZE_CHECKPOINT.json",
+      "freeze_checkpoint_sha256": "10df14915f36e7304988f59010b18b20bba9901b47f3d084c46d33891e5fe63b",
+      "canonical_rule_version": "4.3-canonical-requirement-1"
+    }
+  },
+  "frozen_scope_authority": {
+    "path": "docs/handoff/V43_DAYTIME_REAL_E2E_FOUNDATION_AND_HUMAN_GATE_MASTER_V1/01_SCOPE_FINAL_CLOSURE.json",
+    "sha256": "cda50603257c31c1ce349840ea5ba9a60335a602075acc8b33a168ea6f44993a",
+    "decision_authority": "GPT_FINAL_SCOPE_ADJUDICATION",
+    "excluded_req_ids": ["REQ-040", "REQ-043", "REQ-049", "REQ-090"],
+    "excluded_count": 4,
+    "retained_count": 337,
+    "scope_parity": "5/5",
+    "auto_authority_persistence": false
+  },
+  "target": {
+    "database": "bid_platform_flow_audit_test",
+    "schema": "public",
+    "project_id": "7a038c5d-38e4-46ae-b24d-39437bb3b545",
+    "project_status_after": "requirements_confirmed",
+    "tender_file_id": "167ed1f4-bd37-495a-b766-9ff21edb5539",
+    "tender_file_original_name": "TB-006-beijing-emergency-model-cloud.pdf",
+    "tender_file_storage_key": "7a038c5d-38e4-46ae-b24d-39437bb3b545/d8df19fa-04c7-417e-ba32-e59358711410.pdf",
+    "tender_file_size_bytes": 806109,
+    "baseline_id": "80e88ce3-8002-42db-8cca-abf47b3e3949",
+    "baseline_status_after": "confirmed",
+    "parse_job_status": "succeeded",
+    "parse_job_phase": "succeeded",
+    "parse_job_chunk_count": 33,
+    "parse_job_completed_chunks": 33
+  },
+  "counts": {
+    "pre_write_baseline_count": 0,
+    "pre_write_requirement_count": 0,
+    "post_write_baseline_count": 1,
+    "post_write_requirement_count": 337,
+    "post_write_requirement_ids_unique": true,
+    "candidate_rows_confirmed": 341
+  },
+  "lineage": {
+    "retained_rows_checked": 337,
+    "source_verified_rate": 1,
+    "source_status_verified_rate": 1,
+    "source_resolution_status_verified_rate": 1,
+    "source_field_mismatches": 0,
+    "source_chunk_lineage_mismatches": 0,
+    "required_source_chunks_resolved": 30,
+    "required_source_chunks_missing": 0
+  },
+  "formal_persistence_path": {
+    "repository": "backend/src/db.js",
+    "method": "PgRepository.confirmRequirementBaseline",
+    "transactional": true,
+    "actor_validation": "backend/src/request-actor.js:requireFormalActorId",
+    "target_sections": "backend/src/pipeline/chapter-router.js:routeRequirement",
+    "actor_id": "system:v43-tb006-canonical-authority-recovery-v1",
+    "requirements_written": 337,
+    "scope_authority_rows_written": 0,
+    "idempotency_and_duplicate_handling": "project baseline UNIQUE plus REQUIREMENT_BASELINE_FROZEN guard; transaction rolls back on any error"
+  },
+  "spot_check_req_ids": ["REQ-014", "REQ-023", "REQ-041", "REQ-048", "REQ-099", "REQ-139"],
+  "spot_check_confirmed_and_lineage_valid": true,
+  "targeted_fact_replay_precondition": {
+    "status": "PASS",
+    "requirements_resolvable_from_confirmed_baseline": ["REQ-014", "REQ-023", "REQ-041", "REQ-048", "REQ-099", "REQ-139"],
+    "chunk_ids": [
+      "MCH-93D4FDD592216F58BCD0237DDF4F8F0F",
+      "MCH-586AF54E29E13328B1D105D03FF08957",
+      "MCH-CE770B545973FB9CF092951FCDC402B5"
+    ],
+    "chunk_identity_verified": true,
+    "parse_chunk_status": "33/33 succeeded",
+    "fact_replay_executed": false
+  },
+  "downstream_state_after": {
+    "scope_authority_rows_existing": 5,
+    "evidence_source_facts": 0,
+    "requirement_evidence_fact_mappings": 0,
+    "claims": 0,
+    "project_facts": 0,
+    "response_plans": 0
+  },
+  "safety": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "eval_db_writes": 1,
+    "gold_mutations": 0,
+    "fact_persistence": 0,
+    "mapping_actions": 0,
+    "claim_actions": 0,
+    "writer_actions": 0,
+    "migration_executed": 0,
+    "prompt_or_schema_changes": 0,
+    "commit": 0,
+    "push": 0,
+    "merge": 0,
+    "deploy": 0
+  },
+  "next_step": "STOP_BEFORE_TARGETED_FACT_REPLAY"
+}

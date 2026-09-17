@@ -1,0 +1,135 @@
+{
+  "artifact_type": "V43_REAL_REQUIREMENT_REFERENCE_RAG_DAYTIME_LONG_V1_EXECUTION_MANIFEST",
+  "decision": "V43_REAL_REQUIREMENT_REFERENCE_RAG_DAYTIME_LONG_V1",
+  "inputs": {
+    "historical_retrieval_context": {
+      "path": "backend\\eval\\rag-pilot\\results\\overnight\\01_retrieval_context_40case.json",
+      "sha256": "7fde0c5434718a238ba74301dae001ffc82089d3af86f6dba3a017ec68c77d42"
+    },
+    "production_canonical_export": {
+      "path": "docs\\V43_PRODUCTION_CANONICAL_CORE6_REQUIREMENTS_READONLY_EXPORT.json",
+      "sha256": "078357535d7374a0ad3f8c47dde45a94007a2164df94d59069b6d063c4cd305a"
+    }
+  },
+  "implementation": {
+    "selector": "backend/src/pipeline/writer-reference-selector.js",
+    "content_eligibility": "backend/src/pipeline/retrieval-chunk-role.js::isWriterReferenceContentEligible",
+    "production_semantic_changes": 1
+  },
+  "result": {
+    "status": "BLOCKED_REAL_REQUIREMENT_SOURCE_BREADTH",
+    "real_tender_count": 0,
+    "real_requirement_count": 0,
+    "real_eval_case_count": 0,
+    "r2_status": "NOT_EXECUTED"
+  },
+  "safety": {
+    "provider_calls": 0,
+    "generative_provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "eval_db_writes": 0,
+    "gold_mutations": 0,
+    "requirement_mutations": 0,
+    "mapping_mutations": 0,
+    "claim_mutations": 0,
+    "writer_mutations": 0
+  },
+  "artifacts": [
+    {
+      "name": "01_WRITER_REFERENCE_OWNER_AUDIT.json",
+      "bytes": 1523,
+      "sha256": "bfc68ca032fcfe587183db7ed3397ed5f1124030ef6e7e37f25190abc222f0da"
+    },
+    {
+      "name": "02_REFERENCE_FINAL_ELIGIBILITY_CONTRACT.json",
+      "bytes": 769,
+      "sha256": "7476fe02046ce573e10ec6d576cf1393c43bd917adfb373d79fd728a264a79ce"
+    },
+    {
+      "name": "03_OLD_30CASE_REGRESSION.json",
+      "bytes": 441390,
+      "sha256": "ba16302fd799c098e288e9790a0f90066cf110cfb8bd0aac05a4c77b30352bcd"
+    },
+    {
+      "name": "04_REAL_REQUIREMENT_SOURCE_INVENTORY.json",
+      "bytes": 5108,
+      "sha256": "3c7efabfa8c0fe063747bb9252f50fb8a166190b9256a6a085c0bd31e56d2095"
+    },
+    {
+      "name": "05_REAL_REQUIREMENT_EVAL_SET.json",
+      "bytes": 478,
+      "sha256": "90447516332b66a8529602bed8e44428ae4a5e5ad186a29b2189aaa6d3046aec"
+    },
+    {
+      "name": "06_REAL_QUERY_IDENTITY.json",
+      "bytes": 436,
+      "sha256": "087f0447d0dc7310a5bafa4b5ea0625c767a7e29cd81d470a05177a318de617a"
+    },
+    {
+      "name": "07_R0_BASELINE_RESULTS.json",
+      "bytes": 207649,
+      "sha256": "e17f34febef175cdda97a855ab44faaad1ff81fc7c99d3549b85a27d7cbf3955"
+    },
+    {
+      "name": "08_R1_HYGIENE_RESULTS.json",
+      "bytes": 195935,
+      "sha256": "938f6237efb1d2627651932a6443caca6b82ac2f8d7f8e60fc79e0b0b7abf293"
+    },
+    {
+      "name": "09_R2_NOT_EXECUTED.json",
+      "bytes": 232,
+      "sha256": "56fe778b16163d09ab075e6c9bd755a6a8b963d1f76864a8485d752665e11118"
+    },
+    {
+      "name": "10_REAL_STRATEGY_MECHANICAL_COMPARISON.json",
+      "bytes": 1472,
+      "sha256": "e9a61bb2e3959ead3f8082e2271ffa6b0d2bfa6ea185a33000f83ca38e46e348"
+    },
+    {
+      "name": "11_GPT_REAL_REFERENCE_SEMANTIC_REVIEW_PACKET.json",
+      "bytes": 199,
+      "sha256": "621c8150eb960e747fc95aedf0623e1daee414f241da4e222e5842ffe23faf2a"
+    },
+    {
+      "name": "12_FAILURE_FAMILY_PACKET.json",
+      "bytes": 1272,
+      "sha256": "28cc2293c2c367f891cc72d784224b4ce180518b04fc72ee5ba49025bf22f350"
+    },
+    {
+      "name": "13_WRITER_SAFE_CONTEXT_DRY_RUN.json",
+      "bytes": 272,
+      "sha256": "17a0b274e9a4ef25986468d6167ae34ae85e66c12e4a70159eff2fb6cb24b12c"
+    },
+    {
+      "name": "14_REFERENCE_AUTHORITY_NEGATIVE_REGRESSION.json",
+      "bytes": 1976,
+      "sha256": "8431240d21f88ab97e2b060fb67218d3d7c88f09c6b17f165ca95aed32f7e3c8"
+    },
+    {
+      "name": "15_PROVIDER_EMBEDDING_AUDIT.json",
+      "bytes": 310,
+      "sha256": "e038af49f3f602e4e871411ec88ac3b0632daa7867d80236514bef53f014161d"
+    },
+    {
+      "name": "16_TEST_REPORT.json",
+      "bytes": 1190,
+      "sha256": "4f28e63977e56329fbf4ce70f758aac4f4783ae92839054f01b4e467876f6fe5"
+    },
+    {
+      "name": "17_DEBT_REGISTER.json",
+      "bytes": 438,
+      "sha256": "92c48241a1a13e508175697e5e2ab54ca747fdd9a8c575c7067b4e3de9bb4795"
+    },
+    {
+      "name": "18_CHECKPOINT.json",
+      "bytes": 4035,
+      "sha256": "cbccde4e37e69200b0797f8b284ec44c61e9afe884778a43216ffca150c957c9"
+    },
+    {
+      "name": "18_CHECKPOINT.md",
+      "bytes": 2956,
+      "sha256": "5b468495bdbfc63603ff6c2478b9a026b2b47c611d94177060d34ae035b73b38"
+    }
+  ]
+}

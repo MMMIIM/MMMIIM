@@ -1,0 +1,21 @@
+# V43_MATERIAL_SOURCE_ROLE_GATE_V1
+
+- status: READY_FOR_GPT_MATERIAL_SOURCE_ROLE_GATE_REVIEW
+- policy owner: backend/src/pipeline/material-source-authority-policy.js
+- policy version: material-source-role-v1
+- material count: 56
+- source role counts: {"EVIDENCE_CANDIDATE":5,"REFERENCE_ONLY":51}
+- taxonomy sufficient: true
+- reference authority escape: false
+- synthetic escalation: false
+- Huawei role: REFERENCE_ONLY
+- Huawei 31-case fixture: ENGINEERING_FACT_BOUNDARY_REGRESSION_FIXTURE
+- Fact Reference behavior: FACT_SKIPPED_REFERENCE_ONLY
+- Writer Reference behavior: ALLOWED_CONTEXT_ONLY
+- focused tests: PASS
+- provider calls: 0
+- production DB writes: 0
+- Eval DB writes: 0
+- Fact persistence: 0
+- Gold mutations: 0
+- migrations: 0

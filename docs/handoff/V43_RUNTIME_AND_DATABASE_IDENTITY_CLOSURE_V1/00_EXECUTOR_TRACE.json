@@ -1,0 +1,43 @@
+{
+  "artifact_type": "V43_RUNTIME_AND_DATABASE_IDENTITY_CLOSURE_V1_EXECUTOR_TRACE",
+  "runner": "backend/eval/real-e2e/run-requirement-retrieval-fact-canary.mjs",
+  "host_runner": {
+    "execution_mode": "local_node_module",
+    "imports_current_checkout": [
+      "backend/src/backend-runtime.js",
+      "backend/src/db.js",
+      "backend/src/pipeline/embedding-client.js",
+      "backend/src/pipeline/semantic-gateway-evidence-fact-extractor.js",
+      "backend/src/pipeline/evidence-fact-candidate-v2-1.js",
+      "packages/semantic-contracts"
+    ],
+    "does_http_backend_dispatch": false,
+    "does_docker_exec": false,
+    "does_docker_compose_dispatch": false,
+    "spawns_child_process": false,
+    "database_client": "pg.Pool created by runner",
+    "gateway_contact": "HTTP /ready and /info preflight only; no Provider call"
+  },
+  "call_graph": [
+    "runCanary()",
+    "createBackendRuntime({ env: { ...process.env } })",
+    "preserveHostDatabaseUrl({ hostDatabaseUrl: process.env.DATABASE_URL, runtimeEnv: runtime.env })",
+    "new pg.Pool({ connectionString: env.DATABASE_URL })",
+    "verifyCanarySchema(readonlyPool)",
+    "runRetrieval()",
+    "PgRepository.listChunksForRetrieval()",
+    "runner read-only ranking SELECT",
+    "EmbeddingClient (not reached by this closure smoke)",
+    "Fact extraction (not reached by this closure smoke)"
+  ],
+  "actual_code_location": "current local checkout D:/AI工作/AI/标书平台/标书平台",
+  "actual_database_connection_source": "explicit host process DATABASE_URL when supplied; otherwise backend/.env loaded by createBackendRuntime",
+  "runtime_mode_semantics": {
+    "BACKEND_RUNTIME_MODE": "container",
+    "dotenv_override": false,
+    "host_database_url_precedence": "preserveHostDatabaseUrl overwrites dotenv-loaded DATABASE_URL when non-empty",
+    "host_process_database_url_during_prior_diagnostic": "NOT_SET",
+    "prior_dotenv_fallback_database": "bid_platform"
+  },
+  "conclusion": "The canary is a local Node runner, not a backend/container-dispatched runner. An explicit isolated DATABASE_URL is required for the intended canary target."
+}

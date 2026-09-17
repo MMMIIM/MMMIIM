@@ -1,0 +1,129 @@
+{
+  "artifact_type": "V43_FACT_GROUNDING_REVIEW_BOUNDARY_V2_STATEMENT_REVIEW_BOUNDARY",
+  "rule": "A non-empty statement-only literal grounding failure becomes REVIEW_REQUIRED; any hard field, source identity, cross-unit, or polarity contradiction remains REJECT.",
+  "replay_rows": [
+    {
+      "candidate_id": "MCH-CE770B545973FB9CF092951FCDC402B5#candidate-03",
+      "before_grounding_decision": "REJECT",
+      "after_grounding_decision": "REVIEW_REQUIRED",
+      "after_grounding_reasons": [
+        "STATEMENT_SEMANTIC_GROUNDING_UNRESOLVED"
+      ],
+      "gpt_statement_supported": "YES",
+      "auto_accept": false
+    },
+    {
+      "candidate_id": "MCH-CE770B545973FB9CF092951FCDC402B5#candidate-04",
+      "before_grounding_decision": "REJECT",
+      "after_grounding_decision": "REVIEW_REQUIRED",
+      "after_grounding_reasons": [
+        "STATEMENT_SEMANTIC_GROUNDING_UNRESOLVED",
+        "STATUS_ENUM_UNRESOLVED",
+        "QUANTITY_CONDITION_UNRESOLVED",
+        "QUANTITY_VALUE_OR_UNIT_UNRESOLVED",
+        "TEMPORAL_ROLE_OR_DATE_UNRESOLVED"
+      ],
+      "gpt_statement_supported": "YES",
+      "auto_accept": false
+    },
+    {
+      "candidate_id": "MCH-CE770B545973FB9CF092951FCDC402B5#candidate-05",
+      "before_grounding_decision": "REJECT",
+      "after_grounding_decision": "REVIEW_REQUIRED",
+      "after_grounding_reasons": [
+        "STATEMENT_SEMANTIC_GROUNDING_UNRESOLVED",
+        "STATUS_ENUM_UNRESOLVED",
+        "QUANTITY_CONDITION_UNRESOLVED",
+        "QUANTITY_VALUE_OR_UNIT_UNRESOLVED"
+      ],
+      "gpt_statement_supported": "YES",
+      "auto_accept": false
+    },
+    {
+      "candidate_id": "MCH-CE770B545973FB9CF092951FCDC402B5#candidate-07",
+      "before_grounding_decision": "REJECT",
+      "after_grounding_decision": "REVIEW_REQUIRED",
+      "after_grounding_reasons": [
+        "STATEMENT_SEMANTIC_GROUNDING_UNRESOLVED",
+        "STATUS_ENUM_UNRESOLVED",
+        "QUANTITY_CONDITION_UNRESOLVED",
+        "QUANTITY_VALUE_OR_UNIT_UNRESOLVED"
+      ],
+      "gpt_statement_supported": "YES",
+      "auto_accept": false
+    },
+    {
+      "candidate_id": "MCH-CE770B545973FB9CF092951FCDC402B5#candidate-08",
+      "before_grounding_decision": "REJECT",
+      "after_grounding_decision": "REVIEW_REQUIRED",
+      "after_grounding_reasons": [
+        "STATEMENT_SEMANTIC_GROUNDING_UNRESOLVED",
+        "STATUS_ENUM_UNRESOLVED",
+        "QUANTITY_VALUE_OR_UNIT_UNRESOLVED"
+      ],
+      "gpt_statement_supported": "YES",
+      "auto_accept": false
+    },
+    {
+      "candidate_id": "MCH-CE770B545973FB9CF092951FCDC402B5#candidate-09",
+      "before_grounding_decision": "REJECT",
+      "after_grounding_decision": "REVIEW_REQUIRED",
+      "after_grounding_reasons": [
+        "STATEMENT_SEMANTIC_GROUNDING_UNRESOLVED",
+        "QUANTITY_VALUE_OR_UNIT_UNRESOLVED"
+      ],
+      "gpt_statement_supported": "YES",
+      "auto_accept": false
+    }
+  ],
+  "deterministic_cases": [
+    {
+      "name": "statement_only_semantic_mismatch",
+      "grounding_decision": "REVIEW_REQUIRED",
+      "grounding_reasons": [
+        "STATEMENT_SEMANTIC_GROUNDING_UNRESOLVED"
+      ],
+      "accepted": false
+    },
+    {
+      "name": "statement_plus_wrong_number",
+      "grounding_decision": "REJECT",
+      "grounding_reasons": [
+        "statement is not grounded",
+        "quantity.value is not grounded"
+      ],
+      "accepted": false
+    },
+    {
+      "name": "statement_plus_wrong_entity",
+      "grounding_decision": "REJECT",
+      "grounding_reasons": [
+        "statement is not grounded",
+        "subject.name is not grounded",
+        "entity.name is not grounded"
+      ],
+      "accepted": false
+    },
+    {
+      "name": "statement_plus_wrong_subject",
+      "grounding_decision": "REJECT",
+      "grounding_reasons": [
+        "statement is not grounded",
+        "subject.name is not grounded"
+      ],
+      "accepted": false
+    },
+    {
+      "name": "statement_plus_negation_contradiction",
+      "grounding_decision": "REJECT",
+      "grounding_reasons": [
+        "statement is not grounded",
+        "NEGATED_OR_LIMITED_SCOPE"
+      ],
+      "accepted": false
+    }
+  ],
+  "statement_only_review_required_count": 1,
+  "hard_contradiction_reject_count": 4,
+  "unsupported_auto_accept": 0
+}

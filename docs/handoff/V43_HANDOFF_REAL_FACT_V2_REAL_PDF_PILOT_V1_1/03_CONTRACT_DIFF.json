@@ -1,0 +1,15 @@
+{
+  "task_type": "evidence_fact_extraction",
+  "contract_version": "4.3-evidence-fact-extraction-v1",
+  "instruction_hash": "f3e047082cfe0481683e4f766985b6412e4b88e3d0cde9be4a9f0367b8246c0c",
+  "provider_schema_sha256": "322efee1bb0e909e407a668bfef6fdbb0f2c8a4833bac8f511302178acf8b91c",
+  "canonical_schema_unchanged": true,
+  "changes_applied": [
+    "instruction no longer requests nested scopes[*].source_text or quantities[*].source_text",
+    "Gateway removes only those known nested source_text properties",
+    "Gateway losslessly coerces exact decimal strings only",
+    "valid facts=[] is SUCCESS_EMPTY"
+  ],
+  "arbitrary_unknown_fields_fail_closed": true,
+  "prompt_schema_contract_drift_remaining": "qualified numeric values remain invalid by design"
+}

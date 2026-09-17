@@ -1,0 +1,96 @@
+{
+  "checkpoint": "V43_RESPONSE_ROUTER_V2_2_3_FINAL_RESPONSE_AUTHORITY_CLOSURE",
+  "router_version": "v43-response-router-v2.2.3",
+  "implementation_id": "v43-response-router-v2.2.3-response-authority-closure",
+  "reference_v3_sha256": "3c7f151678c8c99aee25ab995d438496b4a0e5fc661386b70204f3be72e2e744",
+  "reference_v3_rows": 2178,
+  "full_replay": {
+    "rows": 2178,
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "status": "PASS"
+  },
+  "metrics": {
+    "overall_primary_mode_agreement": {
+      "matched": 1839,
+      "total": 2178,
+      "rate": 0.844353
+    },
+    "per_cohort": {
+      "CORE6": {
+        "matched": 843,
+        "total": 1009,
+        "rate": 0.835481
+      },
+      "HOLDOUT_V1": {
+        "matched": 292,
+        "total": 397,
+        "rate": 0.735516
+      },
+      "HOLDOUT_V2": {
+        "matched": 704,
+        "total": 772,
+        "rate": 0.911917
+      }
+    },
+    "v222_correct_v223_wrong": 0,
+    "v222_wrong_v223_correct": 39,
+    "gpt_response_required_false_negative": 0,
+    "gpt_response_required_coverage": 1,
+    "gpt_scoring_related_false_negative": 0,
+    "gpt_critical_primary_mode_residual": 0,
+    "gpt_evidence_dependency_false_negative": 0,
+    "future_commitment_as_existing_fact": 0,
+    "high_p0_evidence_false_negative": 0,
+    "p0_commitment_to_solution_escape": 0,
+    "p0_compliance_escape": 0,
+    "critical_p0_gate_missing": 0,
+    "high_safety_gate_missing": 0,
+    "response_required_optional_reference_debt": 0,
+    "need_review_count": 18,
+    "gpt_adjudicated_response_required_universe": 2120
+  },
+  "execution_layer_recert": "PASS",
+  "determinism_recert": "PASS",
+  "static_leakage_audit": "PASS",
+  "frontend": {
+    "tests": "52/52 PASS",
+    "build": "PASS",
+    "lint": "PASS"
+  },
+  "backend": {
+    "tests": "1500/1529 PASS",
+    "failures": 29,
+    "classification": "SET_EQUIVALENT; 23 CONFIRMED_PRE_EXISTING, 6 UNKNOWN_BASELINE_IDENTITY",
+    "new_task_regression": 0,
+    "comparison_artifact": "09_BACKEND_FAILURE_COMPARISON.json"
+  },
+  "postgres_regression": "NOT_RUN_NO_ISOLATED_TEST_DB",
+  "fact_readiness": {
+    "real_fact_v2_eligible_candidates": 0,
+    "blocker": "NO_ELIGIBLE_SOURCE / SOURCE_ROLE_AND_ELIGIBILITY"
+  },
+  "call_count_semantics": {
+    "offline_phase_provider_calls": 0,
+    "final_replay_provider_calls": 0,
+    "task_cumulative_provider_calls": 0,
+    "authoritative_replay_run_provider_calls": 0
+  },
+  "side_effects": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "fact_writes": 0,
+    "gold_mutations": 0,
+    "requirement_mutations": 0,
+    "reference_mutations": 0,
+    "router_mutations": 0,
+    "prompt_changes": 0,
+    "schema_changes": 0,
+    "commit": 0,
+    "push": 0,
+    "merge": 0,
+    "deploy": 0
+  },
+  "final_status": "READY_FOR_GPT_RESPONSE_ROUTER_V2_2_3_FINAL_FREEZE_DECISION"
+}

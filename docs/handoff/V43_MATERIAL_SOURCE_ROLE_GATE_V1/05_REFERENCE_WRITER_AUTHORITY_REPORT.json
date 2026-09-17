@@ -1,0 +1,13 @@
+{
+  "artifact_type": "V43_MATERIAL_SOURCE_ROLE_GATE_V1_REFERENCE_WRITER_AUTHORITY",
+  "selector_owner": "backend/src/pipeline/writer-reference-selector.js",
+  "selector_contract": "WRITER_REFERENCE_MATERIAL_TYPES = technical_solution, technical_whitepaper",
+  "reference_visibility": "allowed as reference_materials/context only",
+  "enterprise_assertion_authority": "not granted by visibility; requires Fact -> Mapping -> Claim -> Writer Authorization",
+  "assertion_lane": "assertable_claims remains separate from reference_materials",
+  "no_source_role_reclassification_by_writer": true,
+  "tests": [
+    "backend/test/writer-v2-composition.test.js",
+    "backend/test/material-source-role-gate.test.js"
+  ]
+}

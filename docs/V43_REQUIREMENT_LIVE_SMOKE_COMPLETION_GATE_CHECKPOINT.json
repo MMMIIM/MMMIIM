@@ -1,0 +1,135 @@
+{
+  "checkpoint": "V43_REQUIREMENT_LIVE_SMOKE_COMPLETION_GATE",
+  "generated_at": "2026-09-07T03:30:00.000Z",
+  "execution_mode": "BOUNDED_TARGETED_LIVE",
+  "provider_calls": 4,
+  "retries": 0,
+  "targeted_diagnostic_invocations": 1,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "production_semantic_changes": 0,
+  "offline_root_cause": {
+    "tender_id": "TB-003",
+    "classification": "SMOKE_CASE_SELECTION_DEFECT",
+    "selected_chunk_before_fix": 1,
+    "selected_chunk_after_fix": 17,
+    "provider_calls": 0,
+    "provider_raw_result_class_before_fix": "VALID_RESPONSE_EMPTY_CANDIDATES",
+    "parsed_candidate_count_before_fix": 0,
+    "filtered_candidate_count_before_fix": 0,
+    "filter_rejection_reasons_before_fix": ["NO_CANDIDATES_RETURNED_BY_PROVIDER"],
+    "eval_fix": "Prefer the explicit （三）采购需求 section for TB-003 smoke selection."
+  },
+  "focused_regression": {
+    "command": "node --test backend/test/requirement-production-readiness-recovery.test.js backend/test/requirement-production-quality-gate.test.js backend/test/requirement-quality-gate.test.js backend/test/requirement-chunker-v2.test.js backend/test/requirement-resilience.test.js backend/test/requirement-extraction-live-harness.test.js",
+    "tests": 69,
+    "passed": 69,
+    "failed": 0,
+    "provider_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0
+  },
+  "tb003_attempts": [
+    {
+      "attempt": 1,
+      "purpose": "post_selector_fix_smoke",
+      "chunk_number": 17,
+      "provider_http_status": 200,
+      "provider_chain_reached": true,
+      "response_shape": "response_payload_json_envelope",
+      "json_parse_success": true,
+      "schema_valid": true,
+      "candidate_count": 6,
+      "source_resolution": "FAIL",
+      "canonicalization": "FAIL",
+      "error_code": "SOURCE_OR_CANONICALIZATION_FAILED",
+      "error_class": "SOURCE_OR_CANONICALIZATION_FAILED",
+      "output_truncated": false,
+      "retries": 0
+    },
+    {
+      "attempt": 2,
+      "purpose": "bounded_structural_diagnostic_same_case",
+      "chunk_number": 17,
+      "provider_http_status": 200,
+      "provider_chain_reached": true,
+      "response_shape": "response_payload_json_envelope",
+      "json_parse_success": true,
+      "schema_valid": true,
+      "candidate_count": 6,
+      "source_resolution": "PASS",
+      "canonicalization": "PASS",
+      "quality_gate": "NOT_RECORDED_BY_DIAGNOSTIC_WRAPPER",
+      "output_truncated": false,
+      "retries": 0,
+      "note": "This was an explicitly bounded diagnostic invocation, not an automatic retry; the earlier failed attempt remains recorded."
+    }
+  ],
+  "continuation_attempts": [
+    {
+      "tender_id": "TB-006",
+      "attempt": 1,
+      "provider_call": true,
+      "result_observed": false,
+      "status": "UNVERIFIED_LOCAL_OBSERVABILITY",
+      "note": "A local wrapper read the wrong return property; no semantic status is inferred and the case was not rerun."
+    },
+    {
+      "tender_id": "FAST-01",
+      "attempt": 1,
+      "chunk_number": 1,
+      "provider_http_status": 200,
+      "provider_chain_reached": true,
+      "response_shape": "response_payload_json_envelope",
+      "json_parse_success": true,
+      "schema_valid": true,
+      "candidate_count": 22,
+      "source_resolution": "FAIL",
+      "canonicalization": "FAIL",
+      "error_code": "SOURCE_OR_CANONICALIZATION_FAILED",
+      "error_class": "SOURCE_OR_CANONICALIZATION_FAILED",
+      "output_truncated": false,
+      "retries": 0,
+      "root_classification": "UNKNOWN",
+      "action": "STOP_NO_PATCH"
+    }
+  ],
+  "six_case_smoke": {
+    "status": "FAIL_STOPPED_FIRST_FAILURE",
+    "verified_pass_count": 0,
+    "tb003_status": "PASS_ON_BOUNDED_DIAGNOSTIC_ONLY_PRIOR_ATTEMPT_FAILED",
+    "jy001_status": "NOT_RERUN_PRIOR_PASS_RETAINED",
+    "tb006_status": "UNVERIFIED_LOCAL_OBSERVABILITY",
+    "fast01_status": "FAIL_SOURCE_RESOLUTION",
+    "fast04_status": "NOT_EXECUTED",
+    "fast_water_01_status": "NOT_EXECUTED",
+    "fixed_48_status": "NOT_EXECUTED",
+    "unexplained_runtime_failure": true
+  },
+  "provider_identity": {
+    "provider_http_statuses_observed": [200, 200, 200],
+    "provider_http_status_unobserved_calls": ["TB-006"],
+    "actual_provider_reached": true,
+    "actual_model_id": "PROVIDER_NOT_EXPOSED",
+    "gateway_http_status": "NOT_CAPTURED_BY_EXISTING_RUNNER",
+    "sensitive_values_logged": false
+  },
+  "final_verdict": {
+    "tb003": "NOT_CERTIFIED_DUE_TO_PRIOR_SOURCE_RESOLUTION_FAILURE",
+    "live_smoke_pass": "NO",
+    "requirement_extraction_production_readiness": "NOT_READY",
+    "requirement_mapping_input_ready": "NO",
+    "root_classification": "UNKNOWN_AFTER_TB003_SELECTOR_REMEDIATION; FAST01_SOURCE_RESOLUTION_FAILURE",
+    "stop_reason": "Six-case smoke failed at FAST-01 after TB-003 had one successful bounded diagnostic; no further calls or patches permitted."
+  },
+  "changed_files": [
+    "backend/eval/requirement-production-quality-gate/recovery.js",
+    "backend/test/requirement-production-readiness-recovery.test.js",
+    "docs/V43_REQUIREMENT_TB003_OFFLINE_ROOT_CAUSE_CHECKPOINT.json",
+    "docs/V43_REQUIREMENT_LIVE_SMOKE_COMPLETION_GATE_CHECKPOINT.json"
+  ],
+  "production_files_changed": 0
+}

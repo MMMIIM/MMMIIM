@@ -1,0 +1,59 @@
+{
+  "checkpoint": "V43_REQUIREMENT_HIGH_DENSITY_OUTPUT_MICRO_LIVE_CHECKPOINT",
+  "generated_at": "2026-09-09T02:34:51.751Z",
+  "run_id": "requirement-high-density-output-micro-2026-09-09T02-34-50-454Z-d3fd5565",
+  "final_status": "BLOCKED_PROVIDER_CONNECTIVITY",
+  "configured_provider": "openai_compatible",
+  "configured_model": "deepseek-ai/DeepSeek-V4-Flash",
+  "production_default_max_output_tokens": 4800,
+  "eval_max_output_tokens": 9600,
+  "target_calls": 3,
+  "provider_calls": 1,
+  "retries": 0,
+  "calls_completed": 1,
+  "call_statuses": [
+    {
+      "chunk_number": 45,
+      "status": "FAILED",
+      "finish_reason": null
+    }
+  ],
+  "first_failure": {
+    "chunk_number": 45,
+    "status": "FAILED",
+    "error": {
+      "name": "SemanticGatewayError",
+      "code": "PROVIDER_UNAVAILABLE",
+      "message": "Semantic Gateway request failed: PROVIDER_UNAVAILABLE."
+    }
+  },
+  "input_parity": {
+    "tender_id": "HOLDOUT-REQ-V2-01",
+    "source_file": "backend/eval/requirement-unseen-holdout-v2/work/HOLDOUT-REQ-V2-01/extracted/2026年网络路由交换和网络安全设备项目招标文件（260601001）.pdf",
+    "source_file_sha256": "f63221be9a38b64bfa6a90a59a428cf15b8211427965adee35967f7f8cd75aa5",
+    "prepared_chunk_count": 45,
+    "target_chunk_hashes": [
+      {
+        "chunk_number": 45,
+        "source_chunk_hash": "4e7b360135fc5e8f998e539c06cf022a7695346a961ba717fb073e8531892697"
+      },
+      {
+        "chunk_number": 6,
+        "source_chunk_hash": "4ca3bf0a278242a152e8318f5ae437f430a5cfd0bcce3514b8aa629978570b77"
+      },
+      {
+        "chunk_number": 14,
+        "source_chunk_hash": "01308fd8a1f60bfa5a679994cea9dae313aa45d79d9b609fcad32ae55e4f99d1"
+      }
+    ],
+    "source_hashes_verified": true
+  },
+  "production_gateway_untouched": true,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "production_routing_change": 0,
+  "provider_calls_capped": true
+}

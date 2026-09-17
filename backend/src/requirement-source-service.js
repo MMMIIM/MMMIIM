@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import { AppError } from './errors.js';
 import { classifyTenderSections } from './pipeline/tender-section-classifier.js';
 import { hashSource, SourceLocationResolver } from './pipeline/source-location-resolver.js';
+import { combineRequirementExtractionSections } from './pipeline/requirement-scope-router.js';
 import { requireFormalActorId } from './request-actor.js';
 
 export const TENDER_EXTRACTOR_VERSION = 'tender-text-extractor/pdf-parse-2.4.5/v1';
@@ -65,18 +66,33 @@ export class RequirementSourceService {
       throw new AppError('SECTION_TEXT_HASH_MISMATCH', '重新提取的技术章节与原归档章节不一致，已停止来源回填。', 409);
     }
     const paragraphs = paragraphsWithOffsets(extraction.text, extraction.paragraphs);
-    const paragraphByNumber = new Map(paragraphs.map((item) => [item.paragraph, item]));
+    const requirementScope = combineRequirementExtractionSections(analysis.sections, { includeNonScoringSections: true })
+      || analysis.technicalSection;
     const chunkById = new Map(context.chunks.map((chunk) => [chunk.id, chunk]));
     const updates = context.candidates.map((candidate) => {
       const chunk = chunkById.get(candidate.source_chunk_id);
+      const scopeParagraphs = requirementScope?.paragraphs || analysis.technicalSection?.paragraphs || paragraphs;
       const scoped = chunk
-        ? paragraphs.filter((item) => item.paragraph >= chunk.source_start_paragraph && item.paragraph <= chunk.source_end_paragraph)
-        : analysis.technicalSection.paragraphs;
+        ? scopeParagraphs.filter((item) => {
+          const hasParagraphBounds = Number.isInteger(chunk.source_start_paragraph)
+            && Number.isInteger(chunk.source_end_paragraph)
+            && Number.isInteger(item.paragraph);
+          const hasOffsets = Number.isInteger(chunk.source_start_offset)
+            && Number.isInteger(chunk.source_end_offset);
+          return hasParagraphBounds
+            ? item.paragraph >= chunk.source_start_paragraph
+              && item.paragraph <= chunk.source_end_paragraph
+            : hasOffsets
+              ? item.source_end_offset > chunk.source_start_offset
+                && item.source_start_offset < chunk.source_end_offset
+              : false;
+        })
+        : analysis.technicalSection?.paragraphs || scopeParagraphs;
       const segments = scoped.map((item, index) => ({
         ...item,
         source_ref: `C${String(chunk?.chunk_number || 1).padStart(3, '0')}-S${String(index + 1).padStart(3, '0')}`,
-        source_section: analysis.technicalSection.title,
-        source_clause_id: analysis.technicalSection.paragraphs.find((value) => value.paragraph === item.paragraph)?.source_clause_id || null
+        source_section: item.source_section || requirementScope?.title || analysis.technicalSection?.title || null,
+        source_clause_id: item.source_clause_id || null
       }));
       const persistedSources = Array.isArray(candidate.sources_json) ? candidate.sources_json : [];
       const sourceRefs = Array.isArray(candidate.source_refs)

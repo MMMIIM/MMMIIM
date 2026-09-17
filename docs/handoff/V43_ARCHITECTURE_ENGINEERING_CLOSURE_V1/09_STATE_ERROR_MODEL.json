@@ -1,0 +1,54 @@
+{
+  "generated_at": "2026-09-16T17:31:38.432Z",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "dirty_worktree": true,
+  "authority": "SYNTHETIC_EVAL_ONLY",
+  "production_authority": "NONE",
+  "schema_version": "v43-state-error-model-v1",
+  "search": [
+    "SEARCH_COMPLETED_WITH_CANDIDATES",
+    "NO_EVIDENCE_FOUND",
+    "SEARCH_FAILED",
+    "SEARCH_BLOCKED_AUTHORITY",
+    "SEARCH_BLOCKED_IDENTITY",
+    "SEARCH_REVIEW_REQUIRED"
+  ],
+  "fact": [
+    "FACT_REUSED",
+    "FACT_REVIEW_REQUIRED",
+    "FACT_SKIPPED_REFERENCE_ONLY",
+    "FACT_SEMANTIC_*"
+  ],
+  "support": [
+    "EVIDENCE_REVIEW_READY",
+    "NO_RELEVANT_EVIDENCE",
+    "INSUFFICIENT_EVIDENCE",
+    "CONFLICTING_EVIDENCE",
+    "ASSESSMENT_UNAVAILABLE"
+  ],
+  "mapping": [
+    "NO_APPROVED_CURRENT_FACTS",
+    "PRODUCED",
+    "IDEMPOTENT_REPLAY",
+    "MAPPING_*"
+  ],
+  "claim": [
+    "allow",
+    "restrict",
+    "reject",
+    "needs_review"
+  ],
+  "safe_response": [
+    "ROUTED",
+    "NEED_REVIEW",
+    "WAITING_FOR_EVIDENCE",
+    "WAITING_FOR_HUMAN_DECISION"
+  ],
+  "fail_closed": [
+    "K=0 is valid",
+    "Unknown is preserved",
+    "technical failure has no authority",
+    "empty candidates skip extraction"
+  ]
+}

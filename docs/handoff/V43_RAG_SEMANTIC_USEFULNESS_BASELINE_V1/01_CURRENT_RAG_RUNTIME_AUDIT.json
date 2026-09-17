@@ -1,0 +1,100 @@
+{
+  "artifact_type": "V43_RAG_CURRENT_RUNTIME_AUDIT",
+  "audit_mode": "READ_ONLY_DIRTY_WORKTREE",
+  "generated_from": {
+    "branch": "feat/v4.3-semantic-boundary-routing",
+    "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+    "dirty": true,
+    "status_entry_count": 696
+  },
+  "production_path": {
+    "material_upload": "backend/src/company-material-service.js::CompanyMaterialService.upload",
+    "material_authority": "backend/src/pipeline/material-source-authority-policy.js::materialAuthorityStatus/isRetrievalEligible",
+    "project_binding": "backend/src/project-material-binding-service.js::ProjectMaterialBindingService.create",
+    "retrieval": "backend/src/pipeline/enterprise-retrieval-service.js::EnterpriseRetrievalService.retrieve",
+    "embedding": "backend/src/pipeline/embedding-client.js::EmbeddingClient.embed",
+    "chunking": "backend/src/pipeline/enterprise-material-chunker.js::chunkEnterpriseMaterial",
+    "repository": "backend/src/db.js::listChunksForRetrieval/prepareRetrievalCandidates",
+    "writer_reference": "backend/src/pipeline/writer-reference-selector.js::WriterReferenceSelector.select",
+    "source_role_routing": "backend/src/pipeline/enterprise-evidence-source-router.js::routeEnterpriseProofCandidates"
+  },
+  "embedding": {
+    "provider": "openai_compatible",
+    "model": "Qwen/Qwen3-Embedding-0.6B",
+    "version": "1",
+    "dimension": 1024,
+    "client_config_source": "backend/src/pipeline/embedding-client.js::parseEmbeddingConfig",
+    "similarity_metric": "cosine distance via pgvector: similarity_score = 1 - (embedding <=> query_vector)",
+    "transport": "EmbeddingClient -> configured gateway/provider endpoint (runtime env supplied)",
+    "candidate_k": 20,
+    "final_k": 8,
+    "request_top_k": "1..50; final selection is min(PRODUCTION_REVIEW_K, request top_k)",
+    "writer_reference_k": 4
+  },
+  "metadata_filters": {
+    "retrieval": [
+      "project ownership or ACTIVE project_material_bindings",
+      "ENTERPRISE_PRIVATE authority eligibility for private materials",
+      "public corpus project + requested corpus_scopes",
+      "lifecycle_status=ACTIVE",
+      "review_status=approved",
+      "usage_status in ACTIVE_FULLTEXT/ACTIVE_EXCERPT",
+      "extraction_status=succeeded",
+      "public index_status=INDEXED",
+      "material_types/material_ids when supplied",
+      "embedding_model/version/dimension identity"
+    ],
+    "source_authority_owner": "backend/src/pipeline/material-source-authority-policy.js"
+  },
+  "ranking_and_hygiene": {
+    "raw_candidate_order": "pgvector cosine similarity, embedding_id tie-break",
+    "production_rerank": {
+      "implemented": true,
+      "version": "4.3-role-need-rerank-v1",
+      "method": "bounded deterministic role/need compatibility rank shift (max shift 4)"
+    },
+    "mmr": {
+      "implemented_in_production": false,
+      "lambda": null,
+      "evidence": "no MMR implementation in current retrieval service/reranker"
+    },
+    "dedup": {
+      "implemented": "partial",
+      "evidence": "WriterReferenceSelector deduplicates by chunk_hash; EnterpriseRetrievalService does not run an MMR/dedup stage before rerank"
+    },
+    "diversity": {
+      "implemented": "bounded role compatibility only",
+      "semantic_diversity": false
+    },
+    "exact_or_lexical": {
+      "implemented_in_production": false,
+      "eval_only_evidence": [
+        "backend/eval/jiangyin-full-requirement-rag-fitness-v1/runner.js lexicalScore/corpusMatch"
+      ]
+    },
+    "hybrid": {
+      "implemented_in_production": false
+    },
+    "reranker": {
+      "implemented": "deterministic bounded reranker",
+      "not_cross_encoder": true,
+      "not_llm": true
+    }
+  },
+  "source_role_boundary": {
+    "policy_version": "material-source-role-v1",
+    "roles": [
+      "REFERENCE_ONLY",
+      "EVIDENCE_CANDIDATE"
+    ],
+    "downstream_rule": "REFERENCE_ONLY is context-only; EVIDENCE_CANDIDATE is still a candidate and cannot become Fact/Mapping/Claim without later authority gates",
+    "no_authority_expansion": true
+  },
+  "eval_boundary": {
+    "provider_calls_added": 0,
+    "llm_calls_added": 0,
+    "db_writes": 0,
+    "production_changes": 0,
+    "semantic_labels_created": 0
+  }
+}

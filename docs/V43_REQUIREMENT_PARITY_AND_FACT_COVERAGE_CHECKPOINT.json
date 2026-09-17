@@ -1,0 +1,43 @@
+{
+  "checkpoint": "V43_REQUIREMENT_PARITY_AND_FACT_COVERAGE_CHECKPOINT",
+  "audit_mode": "READ_ONLY",
+  "constraints": {
+    "new_fact_records": 0,
+    "fact_gold_mutations": 0,
+    "mapping_gold_mutations": 0,
+    "production_changes": 0,
+    "provider_calls": 0,
+    "production_db_writes": 0
+  },
+  "requirement_parity": {
+    "source_artifact": "backend/eval/gold-governance/v43-gold-v2-foundation/REQUIREMENT_SOURCE_RECONSTRUCTION_BLIND_PACKET.json",
+    "tenders": [
+      {"tender_id":"JY-001","extraction_status":"CANDIDATE_PACKET_READY_FOR_HUMAN_AUTHORITY","classification":"B_HUMAN_RECONSTRUCTION_POSSIBLE","candidate_count":193,"source_span_count":193,"source_span_hash_count":193,"source_excerpt_count":0,"authority":"PENDING_HUMAN_AUTHORITY"},
+      {"tender_id":"TB-003","extraction_status":"BLOCKED_RAW_SOURCE_ONLY","classification":"C_REEXTRACTION_REQUIRED","candidate_count":0,"source_span_count":0,"source_excerpt_count":0,"blocker":"NO_HISTORICAL_PACKET_OR_SOURCE_INDEX","authority":"NOT_AVAILABLE"},
+      {"tender_id":"FAST-04","extraction_status":"BLOCKED_RAW_SOURCE_ONLY","classification":"C_REEXTRACTION_REQUIRED","candidate_count":0,"source_span_count":0,"source_excerpt_count":0,"blocker":"NO_HISTORICAL_PACKET_OR_SOURCE_INDEX","authority":"NOT_AVAILABLE"}
+    ],
+    "status": "NOT_COMPLETE",
+    "gold_promotion": "NOT_AUTHORIZED"
+  },
+  "fact_eval_pool": [
+    {"fact_pool":"representative-sme-facts-v1","count":21,"origin":"enterprise_representative_sme","synthetic_flag":true,"allowed_usage":["CATEGORY_EVAL","BOUNDARY","REGRESSION"],"blocked_usage":["REAL_FACT_GOLD","PRODUCTION_AUTHORITY"]},
+    {"fact_pool":"l3-synthetic-enterprise","count":{"controlled_cases":6,"materials_context":17},"origin":"synthetic_enterprise","synthetic_flag":true,"allowed_usage":["BOUNDARY","NEGATIVE","REGRESSION"],"blocked_usage":["REAL_FACT_GOLD","PRODUCTION_AUTHORITY"]},
+    {"fact_pool":"synthetic-boundary-gold-v2","count":29,"origin":"MAPPING_SYNTHETIC_BOUNDARY_GOLD_V2","synthetic_flag":true,"allowed_usage":["MAPPING_SYNTHETIC_SEMANTIC_DENOMINATOR"],"blocked_usage":["REAL_FACT_GOLD","REAL_DERIVED_DENOMINATOR"]},
+    {"fact_pool":"real-derived-gold-v1","count":{"cases":12,"fact_records":14},"origin":"HUMAN_ADJUDICATED_REAL_DERIVED_EVAL","synthetic_flag":false,"allowed_usage":["MAPPING_REAL_DERIVED_SEMANTIC_DENOMINATOR"],"blocked_usage":["REAL_FACT_GOLD","PRODUCTION_IMPORT"]}
+  ],
+  "fact_category_counts": {"company":2,"product":2,"performance":1,"compatibility":4,"qualification":3,"project":4,"personnel":3,"service":2},
+  "requirement_fact_coverage_matrix": [
+    {"requirement_type":"technical","frozen_a_count":7,"jy_candidate_count":151,"fact_pool_categories":["product","compatibility","performance","qualification"],"coverage_status":"PARTIAL","note":"Category presence only; no per-requirement mapping."},
+    {"requirement_type":"implementation","frozen_a_count":23,"jy_candidate_count":9,"fact_pool_categories":["product","compatibility","project","personnel","service"],"coverage_status":"PARTIAL","note":"Candidate support pool only; no automatic approved Fact."},
+    {"requirement_type":"delivery","frozen_a_count":10,"jy_candidate_count":8,"fact_pool_categories":["project","personnel","service"],"coverage_status":"PARTIAL","note":"Service facts are not formal SLA."},
+    {"requirement_type":"performance","frozen_a_count":21,"jy_candidate_count":0,"fact_pool_categories":["performance"],"coverage_status":"LIMITED","note":"One conditional benchmark fact only."},
+    {"requirement_type":"security","frozen_a_count":15,"jy_candidate_count":0,"fact_pool_categories":["qualification"],"coverage_status":"LIMITED","note":"Qualification is not a security test report."},
+    {"requirement_type":"data","frozen_a_count":4,"jy_candidate_count":0,"fact_pool_categories":["product","compatibility"],"coverage_status":"PARTIAL","note":"No dedicated data-governance category."},
+    {"requirement_type":"acceptance","frozen_a_count":12,"jy_candidate_count":0,"fact_pool_categories":["project"],"coverage_status":"LIMITED","note":"No dedicated acceptance evidence pool."},
+    {"requirement_type":"contractual_constraint","frozen_a_count":14,"jy_candidate_count":19,"fact_pool_categories":[],"coverage_status":"MISSING","note":"No dedicated contractual Fact pool."},
+    {"requirement_type":"context","frozen_a_count":0,"jy_candidate_count":6,"fact_pool_categories":[],"coverage_status":"NOT_APPLICABLE","note":"Context excluded from Fact coverage."}
+  ],
+  "missing_fact_categories": ["contractual_constraint","acceptance_verification","security_test_or_assessment","formal_performance_or_sla"],
+  "FACT_COVERAGE_STATUS": "CATEGORY_LEVEL_ONLY",
+  "REQUIREMENT_PARITY_STATUS": "NOT_COMPLETE"
+}

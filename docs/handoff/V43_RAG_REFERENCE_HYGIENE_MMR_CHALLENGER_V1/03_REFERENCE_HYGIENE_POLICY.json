@@ -1,0 +1,20 @@
+{
+  "artifact_type": "V43_REFERENCE_HYGIENE_POLICY",
+  "authority": "Eval-only challenger overlay; production owners remain unchanged",
+  "existing_owners": {
+    "chunk_role": "backend/src/pipeline/retrieval-chunk-role.js::applyRetrievalChunkRole",
+    "substantive": "backend/src/pipeline/retrieval-substantive-candidate.js::classifySubstantiveCandidate",
+    "source_eligibility": "backend/src/pipeline/retrieval-source-eligibility.js::classifyEvidenceSourceEligibility",
+    "source_role": "backend/src/pipeline/material-source-authority-policy.js::resolveMaterialSourceRole"
+  },
+  "challenger_rules": [
+    "Annotate captured raw_top20 candidates with the existing retrieval chunk-role/substantive/source-eligibility functions.",
+    "When substantive candidates exist, exclude standalone HEADING, METADATA, FRONT_MATTER, non-substantive, and deterministic citation/index-shape candidates from the formal Top4 challenger pool while retaining their source lineage in the excluded audit.",
+    "The citation/index-shape overlay is lexical content-shape telemetry only; it is not a semantic classifier and does not change source role or authority.",
+    "Bounded material diversity challenger caps a material at two Top4 entries when alternatives exist; it falls back to the captured rank order to fill K.",
+    "MMR 0.9 challenger uses persisted query similarity plus token-Jaccard redundancy proxy because raw embedding vectors are not present in the captured artifact."
+  ],
+  "production_mutations": 0,
+  "provider_calls": 0,
+  "db_writes": 0
+}

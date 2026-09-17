@@ -1,0 +1,69 @@
+{
+  "checkpoint": "V43_OVERNIGHT_FACT_DETERMINISTIC_STABILIZATION_MASTER_V1",
+  "status": "BLOCKED_QUANTITY_QUALIFIER_REQUIRES_CONTRACT_DECISION",
+  "stop_boundary": "PHASE_A",
+  "first_failure_boundary": "QUANTITY_QUALIFIER_PROJECTION",
+  "source_artifact_sha256": "ee112767f886c308cf92e1c5b805dd7e38a39becb245833e39299ec5e123ea75",
+  "prior_checkpoint_sha256": "6ebd69980ab1c618d0cda668f97b028a02420bef168a158eeee1ab19bf3a1128",
+  "qualifier_projection_closed": false,
+  "qualifier_projection": {
+    "candidate_count": 31,
+    "quantity_item_count": 14,
+    "classification_counts": {
+      "OPERATOR_MAPPED": 0,
+      "COVERED_BY_SCOPE": 6,
+      "COVERED_BY_TEMPORAL": 1,
+      "COVERED_BY_METRIC_NAME": 1,
+      "UNREPRESENTED": 1
+    },
+    "unrepresented_count": 1,
+    "prior_gap_count": 9,
+    "contract_decision_required": true
+  },
+  "current_31_case_deterministic_gate": {
+    "decision_distribution": {
+      "ACCEPT": 19,
+      "REVIEW_REQUIRED": 12
+    },
+    "review_required_rate": 0.3870967741935484,
+    "source_boundary_guard": true,
+    "unsupported_auto_accept": 0,
+    "hard_contradiction_escape": 0,
+    "semantic_root_cause": "PENDING_GPT"
+  },
+  "offline_replayable_candidates": null,
+  "real_current_candidates": null,
+  "real_current_accept": null,
+  "real_current_review": null,
+  "real_current_reject": null,
+  "real_current_review_rate": null,
+  "semantic_quantity_review_count": null,
+  "structured_quantity_review_count": null,
+  "source_boundary_review_count": null,
+  "canonical_identity_instability": null,
+  "source_mutation": null,
+  "phases_b_to_g": "NOT_EXECUTED_PHASE_A_BLOCKED",
+  "side_effects": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "eval_db_writes": 0,
+    "fact_persistence": 0,
+    "gold_mutations": 0,
+    "mapping_actions": 0,
+    "claim_actions": 0,
+    "writer_actions": 0,
+    "prompt_changes": 0,
+    "schema_changes": 0,
+    "canonical_contract_changes": 0
+  },
+  "semantic_root_cause": "PENDING_GPT",
+  "forbidden_statuses_not_declared": [
+    "FACT_GOLD_FROZEN",
+    "FACT_PRODUCTION_CERTIFIED",
+    "MAPPING_READY",
+    "PROMPT_CHANGE_REQUIRED",
+    "FACT_V2_3_REQUIRED"
+  ],
+  "next_decision_required": "BLOCKED_QUANTITY_QUALIFIER_REQUIRES_CONTRACT_DECISION"
+}

@@ -1,0 +1,212 @@
+{
+  "artifact_type": "V43_FACT_SOURCE_MATERIAL_IDENTITY_RECONCILIATION_CHECKPOINT",
+  "task": "V43_FACT_SOURCE_MATERIAL_IDENTITY_RECONCILIATION_V1",
+  "mode": "READ_ONLY",
+  "database_identity": {
+    "database": "bid_platform_flow_audit_test",
+    "schema": "public",
+    "database_url_password_output": false
+  },
+  "target": {
+    "chunk_id": "MCH-586AF54E29E13328B1D105D03FF08957",
+    "source_hash": "beaf393788e406b1728c57531b8c7061a0d51cb910d87df2fc040f1a0d5ff0aa",
+    "requirement_id": "REQ-139"
+  },
+  "historical_material_identity": {
+    "material_id": "2f84fdcc-4f27-4fc6-91a4-746d8a11a6a7",
+    "identity_source": "docs/handoff/V43_REAL_E2E_REQUIREMENT_RETRIEVAL_AND_FACT_CANARY_V1/09_TARGETED_FACT_HOST_REPLAY_PLAN.json",
+    "plan_assignment": true,
+    "db_row_exists": true,
+    "db_row_current_state": {
+      "original_name": "HW-002.pdf",
+      "source_version": "V43_REAL_PDF_PILOT_V1",
+      "file_hash": "736cd73199dd8d89a9897b47dfa5347a3bb952c43491aed84d5aeb4fc94082d6",
+      "storage_key": "5d724373-3d88-41ec-b72d-0d7a01107af7/0fb3e965-c970-4946-b3e3-727a1acc4967.pdf",
+      "source_url": "https://www-file.huawei.com/-/media/corp2020/pdf/giv/2024/data_center_whitepaper_2030_cn.pdf",
+      "material_type": "technical_solution",
+      "source_org": "Huawei",
+      "authority_level": "official",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "lifecycle_status": "ACTIVE",
+      "review_status": "approved",
+      "usage_status": "ACTIVE_FULLTEXT",
+      "synthetic_test_material": false,
+      "created_at": "2026-09-13T08:18:51.059Z",
+      "project_id": "5d724373-3d88-41ec-b72d-0d7a01107af7"
+    },
+    "target_chunk_row_found_under_this_material": false
+  },
+  "current_material_identity": {
+    "material_id": "da4b0715-9d47-4853-ab2f-df5eee22c597",
+    "identity_source": "bid_platform_flow_audit_test.material_chunks JOIN company_materials",
+    "db_row_exists": true,
+    "db_row_current_state": {
+      "original_name": "HW-001.pdf",
+      "source_version": "V43_REAL_PDF_PILOT_V1",
+      "file_hash": "525ba4ed4cb5aabdacb18abf2d8bc3a03ae5808365e1c3b20ab49486d1667d44",
+      "storage_key": "5d724373-3d88-41ec-b72d-0d7a01107af7/061de778-001c-48c7-a30b-ffd2e0a6bfb4.pdf",
+      "source_url": "https://www.huawei.com/minisite/annual-report-download/annual_report_2024_cn.pdf",
+      "material_type": "company_profile",
+      "source_org": "Huawei",
+      "authority_level": "official",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "lifecycle_status": "ACTIVE",
+      "review_status": "approved",
+      "usage_status": "ACTIVE_FULLTEXT",
+      "synthetic_test_material": false,
+      "created_at": "2026-09-13T08:18:49.575Z",
+      "project_id": "5d724373-3d88-41ec-b72d-0d7a01107af7"
+    },
+    "chunk_row": {
+      "chunk_id": "MCH-586AF54E29E13328B1D105D03FF08957",
+      "chunk_index": 200,
+      "chunker_version": "enterprise-material-v1",
+      "char_start": 160967,
+      "char_end": 162040,
+      "chunk_hash": "beaf393788e406b1728c57531b8c7061a0d51cb910d87df2fc040f1a0d5ff0aa",
+      "source_text_sha256": "beaf393788e406b1728c57531b8c7061a0d51cb910d87df2fc040f1a0d5ff0aa",
+      "source_text_length": 1073
+    }
+  },
+  "project_material_binding": {
+    "material_owner_project_id": "5d724373-3d88-41ec-b72d-0d7a01107af7",
+    "active_bindings_for_target_execution_project": [
+      {
+        "binding_id": "3a1544a7-ff7b-48a0-8f62-9fb7a2e2c9ab",
+        "project_id": "7a038c5d-38e4-46ae-b24d-39437bb3b545",
+        "material_id": "2f84fdcc-4f27-4fc6-91a4-746d8a11a6a7",
+        "status": "ACTIVE",
+        "binding_source": "REAL_E2E_CASE_01",
+        "removed_at": null
+      },
+      {
+        "binding_id": "d1697a24-aec3-4793-91da-5e3cc0e55597",
+        "project_id": "7a038c5d-38e4-46ae-b24d-39437bb3b545",
+        "material_id": "da4b0715-9d47-4853-ab2f-df5eee22c597",
+        "status": "ACTIVE",
+        "binding_source": "REAL_E2E_CASE_01",
+        "removed_at": null
+      }
+    ],
+    "binding_result": "both_materials_are_actively_bound_to_the_execution_project"
+  },
+  "source_hash_ownership": {
+    "searched_hash": "beaf393788e406b1728c57531b8c7061a0d51cb910d87df2fc040f1a0d5ff0aa",
+    "current_db_owner_count": 1,
+    "current_db_owners": [
+      {
+        "material_id": "da4b0715-9d47-4853-ab2f-df5eee22c597",
+        "chunk_id": "MCH-586AF54E29E13328B1D105D03FF08957",
+        "chunk_index": 200,
+        "original_name": "HW-001.pdf",
+        "file_hash": "525ba4ed4cb5aabdacb18abf2d8bc3a03ae5808365e1c3b20ab49486d1667d44",
+        "source_version": "V43_REAL_PDF_PILOT_V1",
+        "project_id": "5d724373-3d88-41ec-b72d-0d7a01107af7"
+      }
+    ],
+    "current_ownership_answer": "A_ONLY_DA4B",
+    "historical_direct_report_owner": "da4b0715-9d47-4853-ab2f-df5eee22c597",
+    "replay_plan_owner": "2f84fdcc-4f27-4fc6-91a4-746d8a11a6a7",
+    "chunk_hash_equals_source_text_sha256": true,
+    "source_text_hash_equality_basis": "current material_chunks.source_text SHA-256 equals chunk_hash and equals the frozen source_hash"
+  },
+  "chunk_id_contract": {
+    "implementation_file": "backend/src/pipeline/enterprise-material-chunker.js",
+    "function": "chunkEnterpriseMaterial",
+    "chunker_version_constant": "enterprise-material-v1",
+    "generator_expression": "MCH-${sha(`${materialId}|${chunkerVersion}|${chunkIndex}|${char_start}|${char_end}|${chunkHash}`).slice(0,32).toUpperCase()}",
+    "inputs": ["material_id", "chunker_version", "chunk_index", "char_start", "char_end", "chunk_hash"],
+    "database_contract_file": "backend/migrations/019_enterprise_evidence_contract.sql",
+    "database_constraints": [
+      "material_chunks.chunk_id is PRIMARY KEY",
+      "material_chunks.material_id references company_materials(id)",
+      "UNIQUE(material_id, chunker_version, chunk_index)"
+    ],
+    "observed_current_material_recomputed_id": "MCH-586AF54E29E13328B1D105D03FF08957",
+    "recomputed_historical_material_id": "MCH-19077F33ACD5782CAD8352D74CF9E8BC",
+    "same_chunk_id_across_distinct_material_ids_legitimate": false,
+    "contract_conclusion": "material_id participates in chunk_id generation; the observed MCH-586 id is mechanically generated for da4b, not for 2f84"
+  },
+  "historical_origin": {
+    "direct_retrieval_evidence": {
+      "artifact": "docs/handoff/V43_REAL_E2E_REQUIREMENT_RETRIEVAL_AND_FACT_CANARY_V1/04_REAL_REQUIREMENT_RETRIEVAL_REPORT.json",
+      "case": "REQ-139",
+      "chunk_id": "MCH-586AF54E29E13328B1D105D03FF08957",
+      "recorded_material_id": "da4b0715-9d47-4853-ab2f-df5eee22c597",
+      "recorded_source_hash": "beaf393788e406b1728c57531b8c7061a0d51cb910d87df2fc040f1a0d5ff0aa",
+      "recorded_original_name": "HW-001.pdf",
+      "recorded_file_hash": "525ba4ed4cb5aabdacb18abf2d8bc3a03ae5808365e1c3b20ab49486d1667d44"
+    },
+    "direct_fact_report_evidence": {
+      "artifact": "docs/handoff/V43_REAL_E2E_REQUIREMENT_RETRIEVAL_AND_FACT_CANARY_V1/05_FACT_CANARY_REPORT.json",
+      "case": "REQ-139",
+      "recorded_source_context_key": "da4b0715-9d47-4853-ab2f-df5eee22c597\\u0000MCH-586AF54E29E13328B1D105D03FF08957\\u0000beaf393788e406b1728c57531b8c7061a0d51cb910d87df2fc040f1a0d5ff0aa",
+      "recorded_material_id": "da4b0715-9d47-4853-ab2f-df5eee22c597",
+      "provider_calls_for_case": 3,
+      "status": "FAIL",
+      "failure_code": "FACT_SEMANTIC_EXTRACTION_FAILED"
+    },
+    "replay_plan_evidence": {
+      "artifact": "docs/handoff/V43_REAL_E2E_REQUIREMENT_RETRIEVAL_AND_FACT_CANARY_V1/09_TARGETED_FACT_HOST_REPLAY_PLAN.json",
+      "recorded_material_id": "2f84fdcc-4f27-4fc6-91a4-746d8a11a6a7",
+      "recorded_source_hash": "beaf393788e406b1728c57531b8c7061a0d51cb910d87df2fc040f1a0d5ff0aa",
+      "interpretation": "mechanical replay-plan identity conflicts with both direct current DB ownership and the direct retrieval/Fact report"
+    },
+    "diagnostic_builder_evidence": {
+      "artifact": "backend/eval/real-e2e/build-fact-canary-diagnostics.mjs",
+      "location": "OBSERVED_CASE_SUMMARY entry for REQ-139",
+      "recorded_material_id": "2f84fdcc-4f27-4fc6-91a4-746d8a11a6a7",
+      "interpretation": "the fallback mechanical summary hardcodes the same stale association; it is not a source-of-truth DB row"
+    },
+    "review_packet_evidence": {
+      "artifact": "docs/handoff/V43_REAL_E2E_REQUIREMENT_RETRIEVAL_AND_FACT_CANARY_V1/07_GPT_FACT_CANARY_REVIEW_PACKET.json",
+      "targeted_chunk_filter_contains_target": true,
+      "target_case_identity_record_present": false
+    },
+    "earliest_direct_identity_for_target": "04_REAL_REQUIREMENT_RETRIEVAL_REPORT.json records da4b; 09_TARGETED_FACT_HOST_REPLAY_PLAN.json is the conflicting mechanical plan assignment"
+  },
+  "enterprise_identity_and_authority": {
+    "historical_material_source_org": "Huawei",
+    "current_material_source_org": "Huawei",
+    "historical_material_authority_level": "official",
+    "current_material_authority_level": "official",
+    "historical_material_source_version": "V43_REAL_PDF_PILOT_V1",
+    "current_material_source_version": "V43_REAL_PDF_PILOT_V1",
+    "enterprise_identity_unchanged": true,
+    "document_identity_unchanged": false,
+    "note": "enterprise identity and source-version/authority class match, but the two material rows are different official PDFs with different file hashes"
+  },
+  "classification": {
+    "value": "STALE_ARTIFACT_MATERIAL_ID",
+    "scope": "09 replay-plan assignment for MCH-586 only; material 2f84 remains a valid distinct material for its own chunks",
+    "not_classified_as": ["DUPLICATE_MATERIAL_SAME_FILE", "SAME_TEXT_DIFFERENT_MATERIAL", "CHUNK_IDENTITY_CONTRACT_BREACH"],
+    "basis": [
+      "current source-hash ownership is only da4b",
+      "direct retrieval and direct Fact report both record da4b for this exact chunk",
+      "chunk-id recomputation matches da4b and produces a different id for 2f84",
+      "2f84 and da4b have different original names and file hashes",
+      "the conflicting 2f84 assignment is present in the mechanical replay plan/fallback summary"
+    ]
+  },
+  "decision_gate": {
+    "source_text_hash_exact_same": "PASS",
+    "current_da4_material_active_approved": "PASS",
+    "current_da4_project_binding_active": "PASS",
+    "historical_2f84_assignment_proven_stale_for_target": "PASS",
+    "chunk_identity_contract_intact": "PASS",
+    "enterprise_identity_unchanged": "PASS",
+    "source_version_and_authority_unchanged": "PASS",
+    "REPLAY_PLAN_IDENTITY_REBASE_SAFE": "YES",
+    "scope_of_safety_recommendation": "target chunk MCH-586 only; recommendation only; no automatic plan or DB mutation"
+  },
+  "safety": {
+    "PROVIDER_CALLS": 0,
+    "DB_WRITES": 0,
+    "FACT_WRITES": 0,
+    "GOLD_MUTATIONS": 0,
+    "REPLAY_PLAN_UPDATED": 0,
+    "CHUNKS_REBUILT": 0,
+    "MIGRATIONS_EXECUTED": 0,
+    "PROVIDER_OR_LLM_CALLED": false
+  }
+}

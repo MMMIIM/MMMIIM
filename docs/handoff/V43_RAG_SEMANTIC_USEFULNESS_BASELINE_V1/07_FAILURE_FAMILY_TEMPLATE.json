@@ -1,0 +1,27 @@
+{
+  "artifact_type": "V43_RAG_FAILURE_FAMILY_TEMPLATE",
+  "labels": [
+    "RECALL_MISS",
+    "SEMANTIC_NEAR_MISS",
+    "REDUNDANCY",
+    "EXACT_IDENTIFIER_MISS",
+    "NUMERIC_SIGNAL_MISS",
+    "WRONG_SCOPE",
+    "WEAK_CORPUS",
+    "RANKING_FAILURE",
+    "OTHER"
+  ],
+  "definitions": {
+    "RECALL_MISS": "expected source absent from candidate pool",
+    "SEMANTIC_NEAR_MISS": "similar but business-inapplicable item",
+    "REDUNDANCY": "repeated/near-duplicate Top-K content",
+    "EXACT_IDENTIFIER_MISS": "certificate/model/standard/identifier absent despite source",
+    "NUMERIC_SIGNAL_MISS": "number/unit/operator signal absent despite source",
+    "WRONG_SCOPE": "wrong corpus/industry/project scope",
+    "WEAK_CORPUS": "no suitable source exists in corpus",
+    "RANKING_FAILURE": "correct candidate present but outside final K",
+    "OTHER": "only with explicit evidence"
+  },
+  "authority": "Codex may propose mechanical family; GPT/Human adjudicates semantic membership",
+  "labels_created": 0
+}

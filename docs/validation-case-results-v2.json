@@ -1,0 +1,1312 @@
+{
+  "artifact_type": "V43_REQUIREMENT_POST_FIX_VALIDATION_CASE_RESULTS_V2",
+  "artifact_version": "v2",
+  "data_classification": "VALIDATION_ONLY_NOT_GOLD",
+  "label_source": "GPT_SEMANTIC_ADJUDICATION",
+  "human_gold_promotion": false,
+  "validation_total": 24,
+  "safe_case_count": 24,
+  "safe_accept_count": 24,
+  "safe_review_count": 0,
+  "pre_fix_safe_accept_count": 18,
+  "pre_fix_safe_review_count": 6,
+  "pre_fix_safe_false_positive_count": 6,
+  "cases": [
+    {
+      "validation_case_id": "POST-FIX-VALIDATION-001",
+      "tender_id": "JY-001",
+      "canonical_requirement_id": "JY-001:REQ-001",
+      "label_source": "GPT_SEMANTIC_ADJUDICATION",
+      "expected": {
+        "label": "SAFE_ACCEPT",
+        "criticality": "NONE",
+        "expected_review_behavior": "ACCEPT",
+        "data_classification": "VALIDATION_ONLY_NOT_GOLD",
+        "gold_authority": false
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "676ce166237f9b1e4b6fb0eb32893123b00ddfd973d1d65719055111855110bb",
+        "candidate_text_hash": "caeea8ca1d2b8e2e294b8cad1b3d18db497bedfea93e833f7ab86ccf9e817f22",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      },
+      "pre_fix_observation": {
+        "decision": "PASS",
+        "reason_codes": []
+      },
+      "source_context": {
+        "source_refs": [
+          "C006-S039",
+          "C006-S040",
+          "C006-S041",
+          "C006-S042"
+        ],
+        "source_excerpt": "制定统一的技术标准、数据标准和业务标准，通过“一网统管”核心平台和数字底座，\n实现城市治理一图展现、城市态势一脑分析、处置力量一键点调、城市事件一键流转、\n社会要素一格汇聚、移动应用一端接入、市民热线一呼即通、基层实战统一赋能、开发\n平台统一底座。坚持利旧节约原则，充分利用已有的江阴智慧城市综合管理平台、江阴",
+        "source_span": {
+          "start_ref": "C006-S039",
+          "end_ref": "C006-S042",
+          "page_start": 16,
+          "page_end": 16,
+          "paragraph_start": 441,
+          "paragraph_end": 444,
+          "chunk_number": 6,
+          "source_start_offset": 12412,
+          "source_end_offset": 12567
+        },
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "制定统一的技术标准、数据标准和业务标准,通过“一网统管”核心平台和数字底座,实现城市治理一图展现、城市态势一脑分析、处置力量一键点调、城市事件一键流转、社会要素一格汇聚、移动应用一端接入、市民热线一呼即通、基层实战统一赋能、开发平台统一底座。",
+        "text_hash": "caeea8ca1d2b8e2e294b8cad1b3d18db497bedfea93e833f7ab86ccf9e817f22",
+        "category": "other",
+        "risk_flags": []
+      }
+    },
+    {
+      "validation_case_id": "POST-FIX-VALIDATION-002",
+      "tender_id": "JY-001",
+      "canonical_requirement_id": "JY-001:REQ-002",
+      "label_source": "GPT_SEMANTIC_ADJUDICATION",
+      "expected": {
+        "label": "SAFE_ACCEPT",
+        "criticality": "NONE",
+        "expected_review_behavior": "ACCEPT",
+        "data_classification": "VALIDATION_ONLY_NOT_GOLD",
+        "gold_authority": false
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "b92bcd89589e8d4452f36c0a1d12a68f8092ffb9886f820727670fc9ae947a93",
+        "candidate_text_hash": "ccf2acffdd801fe80085cf064b50ea2e95b3a31dc6c8e45d04fabaf81c424fe7",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      },
+      "pre_fix_observation": {
+        "decision": "PASS",
+        "reason_codes": []
+      },
+      "source_context": {
+        "source_refs": [
+          "C006-S042",
+          "C006-S043",
+          "C006-S044"
+        ],
+        "source_excerpt": "平台统一底座。坚持利旧节约原则，充分利用已有的江阴智慧城市综合管理平台、江阴\n市 \t12345 \t政务服务便民热线平台进行整合对接与提档改造，形成符合我市实际的“一网\n统管”体系。",
+        "source_span": {
+          "start_ref": "C006-S042",
+          "end_ref": "C006-S044",
+          "page_start": 16,
+          "page_end": 16,
+          "paragraph_start": 444,
+          "paragraph_end": 446,
+          "chunk_number": 6,
+          "source_start_offset": 12529,
+          "source_end_offset": 12619
+        },
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "坚持利旧节约原则,充分利用已有的江阴智慧城市综合管理平台、江阴市12345政务服务便民热线平台进行整合对接与提档改造,形成符合我市实际的“一网统管”体系。",
+        "text_hash": "ccf2acffdd801fe80085cf064b50ea2e95b3a31dc6c8e45d04fabaf81c424fe7",
+        "category": "other",
+        "risk_flags": [
+          "INTERFACE_SCOPE_UNSPECIFIED"
+        ]
+      }
+    },
+    {
+      "validation_case_id": "POST-FIX-VALIDATION-003",
+      "tender_id": "JY-001",
+      "canonical_requirement_id": "JY-001:REQ-003",
+      "label_source": "GPT_SEMANTIC_ADJUDICATION",
+      "expected": {
+        "label": "SAFE_ACCEPT",
+        "criticality": "NONE",
+        "expected_review_behavior": "ACCEPT",
+        "data_classification": "VALIDATION_ONLY_NOT_GOLD",
+        "gold_authority": false
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "6aa35f90caabc747867c2aa1ef591ccb677e8ac3bd63138cdb1285946ce85433",
+        "candidate_text_hash": "a36fc0578d62130733d86f4cdf90d2621845e9a4aff2700ff0c04e5fecd95c24",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      },
+      "pre_fix_observation": {
+        "decision": "PASS",
+        "reason_codes": []
+      },
+      "source_context": {
+        "source_refs": [
+          "C006-S047",
+          "C006-S048"
+        ],
+        "source_excerpt": "革的良好成果进行提档升级，同时将视频资源充分联网整合，搭建城市统一的视频“发\n现”能力服务平台，提升城运中心视频融合应用水平，着力构建市域治理“一网统管”",
+        "source_span": {
+          "start_ref": "C006-S047",
+          "end_ref": "C006-S048",
+          "page_start": 16,
+          "page_end": 16,
+          "paragraph_start": 449,
+          "paragraph_end": 450,
+          "chunk_number": 6,
+          "source_start_offset": 12702,
+          "source_end_offset": 12779
+        },
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "将视频资源充分联网整合,搭建城市统一的视频“发现”能力服务平台,提升城运中心视频融合应用水平。",
+        "text_hash": "a36fc0578d62130733d86f4cdf90d2621845e9a4aff2700ff0c04e5fecd95c24",
+        "category": "other",
+        "risk_flags": []
+      }
+    },
+    {
+      "validation_case_id": "POST-FIX-VALIDATION-004",
+      "tender_id": "JY-001",
+      "canonical_requirement_id": "JY-001:REQ-004",
+      "label_source": "GPT_SEMANTIC_ADJUDICATION",
+      "expected": {
+        "label": "SAFE_ACCEPT",
+        "criticality": "NONE",
+        "expected_review_behavior": "ACCEPT",
+        "data_classification": "VALIDATION_ONLY_NOT_GOLD",
+        "gold_authority": false
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "ff0ac8d8f6e4bdfb9cde3e3250e051fb66ee33c53ff0c688f850e58453de1799",
+        "candidate_text_hash": "d2edaf131f15860c35ea7d5a9515aaeae322d1c97f8d5569ea31f0551008c7ee",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      },
+      "pre_fix_observation": {
+        "decision": "PASS",
+        "reason_codes": []
+      },
+      "source_context": {
+        "source_refs": [
+          "C006-S049"
+        ],
+        "source_excerpt": "新体系，实现社会治理事件跨部门、跨层级、跨平台多级联动处置，为社会治理工作的",
+        "source_span": {
+          "start_ref": "C006-S049",
+          "end_ref": "C006-S049",
+          "page_start": 16,
+          "page_end": 16,
+          "paragraph_start": 451,
+          "paragraph_end": 451,
+          "chunk_number": 6,
+          "source_start_offset": 12780,
+          "source_end_offset": 12818
+        },
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "实现社会治理事件跨部门、跨层级、跨平台多级联动处置。",
+        "text_hash": "d2edaf131f15860c35ea7d5a9515aaeae322d1c97f8d5569ea31f0551008c7ee",
+        "category": "other",
+        "risk_flags": []
+      }
+    },
+    {
+      "validation_case_id": "POST-FIX-VALIDATION-005",
+      "tender_id": "JY-001",
+      "canonical_requirement_id": "JY-001:REQ-005",
+      "label_source": "GPT_SEMANTIC_ADJUDICATION",
+      "expected": {
+        "label": "SAFE_ACCEPT",
+        "criticality": "NONE",
+        "expected_review_behavior": "ACCEPT",
+        "data_classification": "VALIDATION_ONLY_NOT_GOLD",
+        "gold_authority": false
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "0931035e0cfa272c82a185e5b82f8c4abd160103fe6022fc87e575aee242d321",
+        "candidate_text_hash": "e506a99d84e8ed8b05704505e3715f5ef65f5072e3b0a14fb0431550b7d2a02d",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": [
+          {
+            "token": "12345",
+            "classification": "SIBLING_ATOMIC_ASSERTION"
+          }
+        ]
+      },
+      "pre_fix_observation": {
+        "decision": "REVIEW_REQUIRED",
+        "reason_codes": [
+          "NUMBER_OMISSION_REVIEW"
+        ]
+      },
+      "source_context": {
+        "source_refs": [
+          "C006-S052",
+          "C006-S053",
+          "C006-S054",
+          "C006-S055"
+        ],
+        "source_excerpt": "围绕江阴市城市治理“一网统管”总体目标，着力构建市域治理“高效处置一件事”\n新体系。打通并梳理 \t12345 \t热线诉求事件、网格化上报事件、“110”非警情事件、“城\n市之眼”视频事件等社会治理事件，实现事件的跨部门、跨层级、跨平台多级联动处置，\n打造高效联动的核心平台。旨在提升江阴市 \t12345 \t政务服务便民热线智能化服务能力、",
+        "source_span": {
+          "start_ref": "C006-S052",
+          "end_ref": "C006-S055",
+          "page_start": 16,
+          "page_end": 16,
+          "paragraph_start": 454,
+          "paragraph_end": 457,
+          "chunk_number": 6,
+          "source_start_offset": 12862,
+          "source_end_offset": 13031
+        },
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "围绕江阴市城市治理“一网统管”总体目标,着力构建市域治理“高效处置一件事”新体系。打通并梳理12345热线诉求事件、网格化上报事件、“110”非警情事件、“城市之眼”视频事件等社会治理事件,实现事件的跨部门、跨层级、跨平台多级联动处置,打造高效联动的核心平台。",
+        "text_hash": "e506a99d84e8ed8b05704505e3715f5ef65f5072e3b0a14fb0431550b7d2a02d",
+        "category": "other",
+        "risk_flags": []
+      }
+    },
+    {
+      "validation_case_id": "POST-FIX-VALIDATION-006",
+      "tender_id": "JY-001",
+      "canonical_requirement_id": "JY-001:REQ-006",
+      "label_source": "GPT_SEMANTIC_ADJUDICATION",
+      "expected": {
+        "label": "SAFE_ACCEPT",
+        "criticality": "NONE",
+        "expected_review_behavior": "ACCEPT",
+        "data_classification": "VALIDATION_ONLY_NOT_GOLD",
+        "gold_authority": false
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "268ce156d4ea42c78c28ee8ffcfc89ba7ae6de5cd3cbe8d93bccee7607ebdf44",
+        "candidate_text_hash": "4cd4a3f6438f429e95fa96e6012faf1a171aa717405a973add285c96b997922b",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      },
+      "pre_fix_observation": {
+        "decision": "PASS",
+        "reason_codes": []
+      },
+      "source_context": {
+        "source_refs": [
+          "C006-S055",
+          "C006-S056",
+          "C006-S057"
+        ],
+        "source_excerpt": "打造高效联动的核心平台。旨在提升江阴市 \t12345 \t政务服务便民热线智能化服务能力、\n城市精细化管理能力、事件监控智能预警能力，构建“上下贯通、左右互联、融合共享”\n的联勤联动指挥平台，感知城市运行综合态势，提高城市治理水平和服务质量。",
+        "source_span": {
+          "start_ref": "C006-S055",
+          "end_ref": "C006-S057",
+          "page_start": 16,
+          "page_end": 16,
+          "paragraph_start": 457,
+          "paragraph_end": 459,
+          "chunk_number": 6,
+          "source_start_offset": 12987,
+          "source_end_offset": 13107
+        },
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "提升江阴市12345政务服务便民热线智能化服务能力、城市精细化管理能力、事件监控智能预警能力,构建“上下贯通、左右互联、融合共享”的联勤联动指挥平台,感知城市运行综合态势,提高城市治理水平和服务质量。",
+        "text_hash": "4cd4a3f6438f429e95fa96e6012faf1a171aa717405a973add285c96b997922b",
+        "category": "other",
+        "risk_flags": []
+      }
+    },
+    {
+      "validation_case_id": "POST-FIX-VALIDATION-007",
+      "tender_id": "JY-001",
+      "canonical_requirement_id": "JY-001:REQ-007",
+      "label_source": "GPT_SEMANTIC_ADJUDICATION",
+      "expected": {
+        "label": "SAFE_ACCEPT",
+        "criticality": "NONE",
+        "expected_review_behavior": "ACCEPT",
+        "data_classification": "VALIDATION_ONLY_NOT_GOLD",
+        "gold_authority": false
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "a6f73984e908d6decbea1fa1218641aa15b2e476b2b0e6466311d096683008cb",
+        "candidate_text_hash": "cd155d8f66840729f1ffdf02405be6a632891d779963a1d3115e8df2d1c1660d",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      },
+      "pre_fix_observation": {
+        "decision": "PASS",
+        "reason_codes": []
+      },
+      "source_context": {
+        "source_refs": [
+          "C007-S003",
+          "C007-S004"
+        ],
+        "source_excerpt": "系统功能设计严格遵循社会治管理要求，以信息化带动管理规范化，建设方案编制遵\n循以下法律法规及相关政策文件。",
+        "source_span": {
+          "start_ref": "C007-S003",
+          "end_ref": "C007-S004",
+          "page_start": 16,
+          "page_end": 16,
+          "paragraph_start": 462,
+          "paragraph_end": 463,
+          "chunk_number": 7,
+          "source_start_offset": 13125,
+          "source_end_offset": 13178
+        },
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "系统功能设计严格遵循社会治管理要求,以信息化带动管理规范化,建设方案编制遵循相关法律法规及政策文件。",
+        "text_hash": "cd155d8f66840729f1ffdf02405be6a632891d779963a1d3115e8df2d1c1660d",
+        "category": "other",
+        "risk_flags": []
+      }
+    },
+    {
+      "validation_case_id": "POST-FIX-VALIDATION-008",
+      "tender_id": "JY-001",
+      "canonical_requirement_id": "JY-001:REQ-008",
+      "label_source": "GPT_SEMANTIC_ADJUDICATION",
+      "expected": {
+        "label": "SAFE_ACCEPT",
+        "criticality": "NONE",
+        "expected_review_behavior": "ACCEPT",
+        "data_classification": "VALIDATION_ONLY_NOT_GOLD",
+        "gold_authority": false
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "894f1249c59528bd73f1f28ce126226abbe36bb4e35e3c13ef196d174a58fb87",
+        "candidate_text_hash": "69d097c37f6ab5aa33db55eea7080e1f7c1742b84538948f0539c94ba19cc409",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      },
+      "pre_fix_observation": {
+        "decision": "PASS",
+        "reason_codes": []
+      },
+      "source_context": {
+        "source_refs": [
+          "C008-S021",
+          "C008-S022"
+        ],
+        "source_excerpt": "挥中心。建设内容包括：江阴市市域社会治理现代化联勤联动指挥平台、智慧城市综合\n管理平台升级、12345 \t语音智能化及业务系统升级、江阴市城市之眼系统平台。",
+        "source_span": {
+          "start_ref": "C008-S021",
+          "end_ref": "C008-S022",
+          "page_start": 18,
+          "page_end": 18,
+          "paragraph_start": 519,
+          "paragraph_end": 520,
+          "chunk_number": 8,
+          "source_start_offset": 14883,
+          "source_end_offset": 14961
+        },
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "建设内容包括:江阴市市域社会治理现代化联勤联动指挥平台、智慧城市综合管理平台升级、12345语音智能化及业务系统升级、江阴市城市之眼系统平台。",
+        "text_hash": "69d097c37f6ab5aa33db55eea7080e1f7c1742b84538948f0539c94ba19cc409",
+        "category": "other",
+        "risk_flags": []
+      }
+    },
+    {
+      "validation_case_id": "POST-FIX-VALIDATION-009",
+      "tender_id": "JY-001",
+      "canonical_requirement_id": "JY-001:REQ-009",
+      "label_source": "GPT_SEMANTIC_ADJUDICATION",
+      "expected": {
+        "label": "SAFE_ACCEPT",
+        "criticality": "NONE",
+        "expected_review_behavior": "ACCEPT",
+        "data_classification": "VALIDATION_ONLY_NOT_GOLD",
+        "gold_authority": false
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "7cdbe80f67feae3b30eba213b263f230377eb50d5cd571226729a168d030b89e",
+        "candidate_text_hash": "ea2884c9e6ca34ef78dbc2c3c2d55f03b6a9229ed38b11b46acd4503b794ab8f",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      },
+      "pre_fix_observation": {
+        "decision": "PASS",
+        "reason_codes": []
+      },
+      "source_context": {
+        "source_refs": [
+          "C008-S034"
+        ],
+        "source_excerpt": "满足全市各专业条线管理人员、网格员使用，同时支持在线用户量>=10000 \t人。满足全市",
+        "source_span": {
+          "start_ref": "C008-S034",
+          "end_ref": "C008-S034",
+          "page_start": 18,
+          "page_end": 18,
+          "paragraph_start": 532,
+          "paragraph_end": 532,
+          "chunk_number": 8,
+          "source_start_offset": 15165,
+          "source_end_offset": 15209
+        },
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "系统需支持在线用户量>=10000人。",
+        "text_hash": "ea2884c9e6ca34ef78dbc2c3c2d55f03b6a9229ed38b11b46acd4503b794ab8f",
+        "category": "technical",
+        "risk_flags": []
+      }
+    },
+    {
+      "validation_case_id": "POST-FIX-VALIDATION-010",
+      "tender_id": "JY-001",
+      "canonical_requirement_id": "JY-001:REQ-010",
+      "label_source": "GPT_SEMANTIC_ADJUDICATION",
+      "expected": {
+        "label": "SAFE_ACCEPT",
+        "criticality": "NONE",
+        "expected_review_behavior": "ACCEPT",
+        "data_classification": "VALIDATION_ONLY_NOT_GOLD",
+        "gold_authority": false
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "5ab0f57bd9fa65d535934e1ff1da171b3c316480af6005608797a48c77327781",
+        "candidate_text_hash": "021feb5cf1e474e535fa8880efba051677c5e516e1f823838a7de88d859e3a8f",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": [
+          {
+            "token": "10000",
+            "classification": "SIBLING_ATOMIC_ASSERTION"
+          },
+          {
+            "token": "98",
+            "classification": "SIBLING_ATOMIC_ASSERTION"
+          }
+        ]
+      },
+      "pre_fix_observation": {
+        "decision": "REVIEW_REQUIRED",
+        "reason_codes": [
+          "NUMBER_OMISSION_REVIEW"
+        ]
+      },
+      "source_context": {
+        "source_refs": [
+          "C008-S034",
+          "C008-S035"
+        ],
+        "source_excerpt": "满足全市各专业条线管理人员、网格员使用，同时支持在线用户量>=10000 \t人。满足全市\n各专业条线管理人员、网格员使用，同时支持并发量 \t100 \t次/秒，普通话智能识别率≥98%；智",
+        "source_span": {
+          "start_ref": "C008-S034",
+          "end_ref": "C008-S035",
+          "page_start": 18,
+          "page_end": 18,
+          "paragraph_start": 532,
+          "paragraph_end": 533,
+          "chunk_number": 8,
+          "source_start_offset": 15165,
+          "source_end_offset": 15258
+        },
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "系统需支持并发量100次/秒。",
+        "text_hash": "021feb5cf1e474e535fa8880efba051677c5e516e1f823838a7de88d859e3a8f",
+        "category": "technical",
+        "risk_flags": []
+      }
+    },
+    {
+      "validation_case_id": "POST-FIX-VALIDATION-011",
+      "tender_id": "JY-001",
+      "canonical_requirement_id": "JY-001:REQ-011",
+      "label_source": "GPT_SEMANTIC_ADJUDICATION",
+      "expected": {
+        "label": "SAFE_ACCEPT",
+        "criticality": "NONE",
+        "expected_review_behavior": "ACCEPT",
+        "data_classification": "VALIDATION_ONLY_NOT_GOLD",
+        "gold_authority": false
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "97a214119c649292748a2f6c777af20e3e136a4637bd31a46ca8d14b5d10db64",
+        "candidate_text_hash": "0f857f7761c2474a4eec9dd6d3c069917b6f274c7feaf78f6d362ec06cc499fd",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": [
+          {
+            "token": "100",
+            "classification": "SIBLING_ATOMIC_ASSERTION"
+          }
+        ]
+      },
+      "pre_fix_observation": {
+        "decision": "REVIEW_REQUIRED",
+        "reason_codes": [
+          "NUMBER_OMISSION_REVIEW"
+        ]
+      },
+      "source_context": {
+        "source_refs": [
+          "C008-S035"
+        ],
+        "source_excerpt": "各专业条线管理人员、网格员使用，同时支持并发量 \t100 \t次/秒，普通话智能识别率≥98%；智",
+        "source_span": {
+          "start_ref": "C008-S035",
+          "end_ref": "C008-S035",
+          "page_start": 18,
+          "page_end": 18,
+          "paragraph_start": 533,
+          "paragraph_end": 533,
+          "chunk_number": 8,
+          "source_start_offset": 15210,
+          "source_end_offset": 15258
+        },
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "普通话智能识别率≥98%。",
+        "text_hash": "0f857f7761c2474a4eec9dd6d3c069917b6f274c7feaf78f6d362ec06cc499fd",
+        "category": "technical",
+        "risk_flags": []
+      }
+    },
+    {
+      "validation_case_id": "POST-FIX-VALIDATION-012",
+      "tender_id": "JY-001",
+      "canonical_requirement_id": "JY-001:REQ-012",
+      "label_source": "GPT_SEMANTIC_ADJUDICATION",
+      "expected": {
+        "label": "SAFE_ACCEPT",
+        "criticality": "NONE",
+        "expected_review_behavior": "ACCEPT",
+        "data_classification": "VALIDATION_ONLY_NOT_GOLD",
+        "gold_authority": false
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "7b5f782b0edce1edb0c14c388f203af1c8abe40ea8113e45d8cdb4c6aca3f2ba",
+        "candidate_text_hash": "b20d5c78c43c29efe18e92cfb6cc9dd59de10e4d3d1b917336dd3856d879a5ef",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      },
+      "pre_fix_observation": {
+        "decision": "PASS",
+        "reason_codes": []
+      },
+      "source_context": {
+        "source_refs": [
+          "C008-S039"
+        ],
+        "source_excerpt": "稳定性要求：系统在常规压力下需保持 \t7*24 \t小时稳定运行，事务成功率需达 \t99.99%。",
+        "source_span": {
+          "start_ref": "C008-S039",
+          "end_ref": "C008-S039",
+          "page_start": 19,
+          "page_end": 19,
+          "paragraph_start": 537,
+          "paragraph_end": 537,
+          "chunk_number": 8,
+          "source_start_offset": 15333,
+          "source_end_offset": 15381
+        },
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "系统在常规压力下需保持7*24小时稳定运行,事务成功率需达99.99%。",
+        "text_hash": "b20d5c78c43c29efe18e92cfb6cc9dd59de10e4d3d1b917336dd3856d879a5ef",
+        "category": "technical",
+        "risk_flags": []
+      }
+    },
+    {
+      "validation_case_id": "POST-FIX-VALIDATION-013",
+      "tender_id": "JY-001",
+      "canonical_requirement_id": "JY-001:REQ-013",
+      "label_source": "GPT_SEMANTIC_ADJUDICATION",
+      "expected": {
+        "label": "SAFE_ACCEPT",
+        "criticality": "NONE",
+        "expected_review_behavior": "ACCEPT",
+        "data_classification": "VALIDATION_ONLY_NOT_GOLD",
+        "gold_authority": false
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "8c7c0f60d3f6c87e0f9f7d9e5fb53498de859ca9a9aae5124573503ebc531008",
+        "candidate_text_hash": "25c939bf7542729a1ac4ffb1d3ce30d963d19cd2d27647c350b0b2cf47a6fe8b",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      },
+      "pre_fix_observation": {
+        "decision": "PASS",
+        "reason_codes": []
+      },
+      "source_context": {
+        "source_refs": [
+          "C008-S040"
+        ],
+        "source_excerpt": "扩展能力要求：系统架构需支持横向扩展能力，可随业务量的增长进行必要的节点扩展。",
+        "source_span": {
+          "start_ref": "C008-S040",
+          "end_ref": "C008-S040",
+          "page_start": 19,
+          "page_end": 19,
+          "paragraph_start": 538,
+          "paragraph_end": 538,
+          "chunk_number": 8,
+          "source_start_offset": 15382,
+          "source_end_offset": 15421
+        },
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "系统架构需支持横向扩展能力,可随业务量的增长进行必要的节点扩展。",
+        "text_hash": "25c939bf7542729a1ac4ffb1d3ce30d963d19cd2d27647c350b0b2cf47a6fe8b",
+        "category": "technical",
+        "risk_flags": [
+          "CAPABILITY_SCOPE_UNSPECIFIED"
+        ]
+      }
+    },
+    {
+      "validation_case_id": "POST-FIX-VALIDATION-014",
+      "tender_id": "JY-001",
+      "canonical_requirement_id": "JY-001:REQ-014",
+      "label_source": "GPT_SEMANTIC_ADJUDICATION",
+      "expected": {
+        "label": "SAFE_ACCEPT",
+        "criticality": "NONE",
+        "expected_review_behavior": "ACCEPT",
+        "data_classification": "VALIDATION_ONLY_NOT_GOLD",
+        "gold_authority": false
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "29d83bc01c49fdd132f3491b85b21694c05c9c4210ab8e7aee91948c38c2eaac",
+        "candidate_text_hash": "c530f1de8acd49b74665837d9750f8865d21d3a2b57a0736020deb7b645d9c58",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      },
+      "pre_fix_observation": {
+        "decision": "PASS",
+        "reason_codes": []
+      },
+      "source_context": {
+        "source_refs": [
+          "C008-S041",
+          "C008-S042"
+        ],
+        "source_excerpt": "兼容性要求：兼容 \tX86 \t架构，配合支持国产化的操作系统和数据库改造，满足多元的资源申请，\n支持业务创新。",
+        "source_span": {
+          "start_ref": "C008-S041",
+          "end_ref": "C008-S042",
+          "page_start": 19,
+          "page_end": 19,
+          "paragraph_start": 539,
+          "paragraph_end": 540,
+          "chunk_number": 8,
+          "source_start_offset": 15422,
+          "source_end_offset": 15477
+        },
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "兼容X86架构,配合支持国产化的操作系统和数据库改造,满足多元的资源申请,支持业务创新。",
+        "text_hash": "c530f1de8acd49b74665837d9750f8865d21d3a2b57a0736020deb7b645d9c58",
+        "category": "technical",
+        "risk_flags": []
+      }
+    },
+    {
+      "validation_case_id": "POST-FIX-VALIDATION-015",
+      "tender_id": "JY-001",
+      "canonical_requirement_id": "JY-001:REQ-015",
+      "label_source": "GPT_SEMANTIC_ADJUDICATION",
+      "expected": {
+        "label": "SAFE_ACCEPT",
+        "criticality": "NONE",
+        "expected_review_behavior": "ACCEPT",
+        "data_classification": "VALIDATION_ONLY_NOT_GOLD",
+        "gold_authority": false
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "41c9bc32fb332039c82adb162ee71e50c6de5a71d248b32ac29bb2b9766a0407",
+        "candidate_text_hash": "5b6b83704b5b495d93de2f899a2d42302cc3b72836bee8c774428f9e88c9e439",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": [
+          {
+            "token": "3",
+            "classification": "SIBLING_ATOMIC_ASSERTION"
+          }
+        ]
+      },
+      "pre_fix_observation": {
+        "decision": "REVIEW_REQUIRED",
+        "reason_codes": [
+          "NUMBER_OMISSION_REVIEW"
+        ]
+      },
+      "source_context": {
+        "source_refs": [
+          "C008-S044"
+        ],
+        "source_excerpt": "数据服务类接口响应时间需<=1 \t秒。常规页面展示响应时间需<=3 \t秒。",
+        "source_span": {
+          "start_ref": "C008-S044",
+          "end_ref": "C008-S044",
+          "page_start": 19,
+          "page_end": 19,
+          "paragraph_start": 542,
+          "paragraph_end": 542,
+          "chunk_number": 8,
+          "source_start_offset": 15488,
+          "source_end_offset": 15525
+        },
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "数据服务类接口响应时间需<=1秒。",
+        "text_hash": "5b6b83704b5b495d93de2f899a2d42302cc3b72836bee8c774428f9e88c9e439",
+        "category": "technical",
+        "risk_flags": [
+          "INTERFACE_SCOPE_UNSPECIFIED"
+        ]
+      }
+    },
+    {
+      "validation_case_id": "POST-FIX-VALIDATION-016",
+      "tender_id": "JY-001",
+      "canonical_requirement_id": "JY-001:REQ-016",
+      "label_source": "GPT_SEMANTIC_ADJUDICATION",
+      "expected": {
+        "label": "SAFE_ACCEPT",
+        "criticality": "NONE",
+        "expected_review_behavior": "ACCEPT",
+        "data_classification": "VALIDATION_ONLY_NOT_GOLD",
+        "gold_authority": false
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "41c9bc32fb332039c82adb162ee71e50c6de5a71d248b32ac29bb2b9766a0407",
+        "candidate_text_hash": "fbe7da16b969d1e3eb62a479ec8dfb6adc02476be4aec8aa369f7714bcf98561",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": [
+          {
+            "token": "1",
+            "classification": "SIBLING_ATOMIC_ASSERTION"
+          }
+        ]
+      },
+      "pre_fix_observation": {
+        "decision": "REVIEW_REQUIRED",
+        "reason_codes": [
+          "NUMBER_OMISSION_REVIEW"
+        ]
+      },
+      "source_context": {
+        "source_refs": [
+          "C008-S044"
+        ],
+        "source_excerpt": "数据服务类接口响应时间需<=1 \t秒。常规页面展示响应时间需<=3 \t秒。",
+        "source_span": {
+          "start_ref": "C008-S044",
+          "end_ref": "C008-S044",
+          "page_start": 19,
+          "page_end": 19,
+          "paragraph_start": 542,
+          "paragraph_end": 542,
+          "chunk_number": 8,
+          "source_start_offset": 15488,
+          "source_end_offset": 15525
+        },
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "常规页面展示响应时间需<=3秒。",
+        "text_hash": "fbe7da16b969d1e3eb62a479ec8dfb6adc02476be4aec8aa369f7714bcf98561",
+        "category": "technical",
+        "risk_flags": [
+          "INTERFACE_SCOPE_UNSPECIFIED"
+        ]
+      }
+    },
+    {
+      "validation_case_id": "POST-FIX-VALIDATION-017",
+      "tender_id": "JY-001",
+      "canonical_requirement_id": "JY-001:REQ-017",
+      "label_source": "GPT_SEMANTIC_ADJUDICATION",
+      "expected": {
+        "label": "SAFE_ACCEPT",
+        "criticality": "NONE",
+        "expected_review_behavior": "ACCEPT",
+        "data_classification": "VALIDATION_ONLY_NOT_GOLD",
+        "gold_authority": false
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "9f3e67110f01357e61ead6b97283f71770bf7bbe0ad2437965e2d8020791b012",
+        "candidate_text_hash": "fe0d14082719a4f66ed699b34d1b308da53332890c7aa6ea2f369aa8333d5b55",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      },
+      "pre_fix_observation": {
+        "decision": "PASS",
+        "reason_codes": []
+      },
+      "source_context": {
+        "source_refs": [
+          "C008-S045"
+        ],
+        "source_excerpt": "数据查询：网格、网格要素、网格力量等数据查询时间<1 \t秒。统计分析类查询响应时间需",
+        "source_span": {
+          "start_ref": "C008-S045",
+          "end_ref": "C008-S045",
+          "page_start": 19,
+          "page_end": 19,
+          "paragraph_start": 543,
+          "paragraph_end": 543,
+          "chunk_number": 8,
+          "source_start_offset": 15526,
+          "source_end_offset": 15568
+        },
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "网格、网格要素、网格力量等数据查询时间<1秒。",
+        "text_hash": "fe0d14082719a4f66ed699b34d1b308da53332890c7aa6ea2f369aa8333d5b55",
+        "category": "technical",
+        "risk_flags": []
+      }
+    },
+    {
+      "validation_case_id": "POST-FIX-VALIDATION-018",
+      "tender_id": "JY-001",
+      "canonical_requirement_id": "JY-001:REQ-018",
+      "label_source": "GPT_SEMANTIC_ADJUDICATION",
+      "expected": {
+        "label": "SAFE_ACCEPT",
+        "criticality": "NONE",
+        "expected_review_behavior": "ACCEPT",
+        "data_classification": "VALIDATION_ONLY_NOT_GOLD",
+        "gold_authority": false
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "472c80253535c94a02dee376c79a50a2085dd5e13d053bd5fcc55dd8cd953cb5",
+        "candidate_text_hash": "2eb62c130fbe692c2b9d79cfc418b3134396557eb891271a79dc2233d06d4c82",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": [
+          {
+            "token": "1",
+            "classification": "SIBLING_ATOMIC_ASSERTION"
+          }
+        ]
+      },
+      "pre_fix_observation": {
+        "decision": "REVIEW_REQUIRED",
+        "reason_codes": [
+          "NUMBER_OMISSION_REVIEW"
+        ]
+      },
+      "source_context": {
+        "source_refs": [
+          "C008-S045",
+          "C008-S046"
+        ],
+        "source_excerpt": "数据查询：网格、网格要素、网格力量等数据查询时间<1 \t秒。统计分析类查询响应时间需\n<=10 \t秒。",
+        "source_span": {
+          "start_ref": "C008-S045",
+          "end_ref": "C008-S046",
+          "page_start": 19,
+          "page_end": 19,
+          "paragraph_start": 543,
+          "paragraph_end": 544,
+          "chunk_number": 8,
+          "source_start_offset": 15526,
+          "source_end_offset": 15577
+        },
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "统计分析类查询响应时间需<=10秒。",
+        "text_hash": "2eb62c130fbe692c2b9d79cfc418b3134396557eb891271a79dc2233d06d4c82",
+        "category": "technical",
+        "risk_flags": []
+      }
+    },
+    {
+      "validation_case_id": "POST-FIX-VALIDATION-019",
+      "tender_id": "JY-001",
+      "canonical_requirement_id": "JY-001:REQ-019",
+      "label_source": "GPT_SEMANTIC_ADJUDICATION",
+      "expected": {
+        "label": "SAFE_ACCEPT",
+        "criticality": "NONE",
+        "expected_review_behavior": "ACCEPT",
+        "data_classification": "VALIDATION_ONLY_NOT_GOLD",
+        "gold_authority": false
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "727864ca4584637efb8c5840388316f39278ea648be484cf9506d67e144161a8",
+        "candidate_text_hash": "727864ca4584637efb8c5840388316f39278ea648be484cf9506d67e144161a8",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      },
+      "pre_fix_observation": {
+        "decision": "PASS",
+        "reason_codes": []
+      },
+      "source_context": {
+        "source_refs": [
+          "C008-S048"
+        ],
+        "source_excerpt": "系统日均处理关键事务需>=10 \t万笔。",
+        "source_span": {
+          "start_ref": "C008-S048",
+          "end_ref": "C008-S048",
+          "page_start": 19,
+          "page_end": 19,
+          "paragraph_start": 546,
+          "paragraph_end": 546,
+          "chunk_number": 8,
+          "source_start_offset": 15590,
+          "source_end_offset": 15610
+        },
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "系统日均处理关键事务需>=10万笔。",
+        "text_hash": "727864ca4584637efb8c5840388316f39278ea648be484cf9506d67e144161a8",
+        "category": "technical",
+        "risk_flags": []
+      }
+    },
+    {
+      "validation_case_id": "POST-FIX-VALIDATION-020",
+      "tender_id": "JY-001",
+      "canonical_requirement_id": "JY-001:REQ-020",
+      "label_source": "GPT_SEMANTIC_ADJUDICATION",
+      "expected": {
+        "label": "SAFE_ACCEPT",
+        "criticality": "NONE",
+        "expected_review_behavior": "ACCEPT",
+        "data_classification": "VALIDATION_ONLY_NOT_GOLD",
+        "gold_authority": false
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "7fad35ec704d9868d671bbfdfb4463573e8b77fca851d643c76671de0b1563b0",
+        "candidate_text_hash": "7fad35ec704d9868d671bbfdfb4463573e8b77fca851d643c76671de0b1563b0",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      },
+      "pre_fix_observation": {
+        "decision": "PASS",
+        "reason_codes": []
+      },
+      "source_context": {
+        "source_refs": [
+          "C008-S049"
+        ],
+        "source_excerpt": "数据服务支持正常 \t100 \t个并发用户情况下的系统响应时间需<1 \t秒。",
+        "source_span": {
+          "start_ref": "C008-S049",
+          "end_ref": "C008-S049",
+          "page_start": 19,
+          "page_end": 19,
+          "paragraph_start": 547,
+          "paragraph_end": 547,
+          "chunk_number": 8,
+          "source_start_offset": 15611,
+          "source_end_offset": 15648
+        },
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "数据服务支持正常100个并发用户情况下的系统响应时间需<1秒。",
+        "text_hash": "7fad35ec704d9868d671bbfdfb4463573e8b77fca851d643c76671de0b1563b0",
+        "category": "technical",
+        "risk_flags": []
+      }
+    },
+    {
+      "validation_case_id": "POST-FIX-VALIDATION-021",
+      "tender_id": "JY-001",
+      "canonical_requirement_id": "JY-001:REQ-022",
+      "label_source": "GPT_SEMANTIC_ADJUDICATION",
+      "expected": {
+        "label": "SAFE_ACCEPT",
+        "criticality": "NONE",
+        "expected_review_behavior": "ACCEPT",
+        "data_classification": "VALIDATION_ONLY_NOT_GOLD",
+        "gold_authority": false
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "b9d0608ccb25dc7f8d412c85411abe5933b2935de8604172c4cb81f2d2d5f827",
+        "candidate_text_hash": "8df95f7559ab0ad863163abf14ca6ab1701464dddc9c3fe216aed884f1ef3fbd",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": [
+          {
+            "token": "1",
+            "classification": "SIBLING_ATOMIC_ASSERTION"
+          },
+          {
+            "token": "3",
+            "classification": "SIBLING_ATOMIC_ASSERTION"
+          },
+          {
+            "token": "3",
+            "classification": "SIBLING_ATOMIC_ASSERTION"
+          },
+          {
+            "token": "5",
+            "classification": "SIBLING_ATOMIC_ASSERTION"
+          },
+          {
+            "token": "2",
+            "classification": "STRUCTURAL_NUMBER"
+          }
+        ]
+      },
+      "pre_fix_observation": {
+        "decision": "PASS",
+        "reason_codes": []
+      },
+      "source_context": {
+        "source_refs": [
+          "C008-S053",
+          "C008-S054"
+        ],
+        "source_excerpt": "1) \t平均响应时间：1-3（秒）；\n2) \t峰值响应时间：3-5（秒）。",
+        "source_span": {
+          "start_ref": "C008-S053",
+          "end_ref": "C008-S054",
+          "page_start": 19,
+          "page_end": 19,
+          "paragraph_start": 551,
+          "paragraph_end": 552,
+          "chunk_number": 8,
+          "source_start_offset": 15744,
+          "source_end_offset": 15781
+        },
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "交互类业务操作平均响应时间1-3秒,峰值响应时间3-5秒。",
+        "text_hash": "8df95f7559ab0ad863163abf14ca6ab1701464dddc9c3fe216aed884f1ef3fbd",
+        "category": "technical",
+        "risk_flags": []
+      }
+    },
+    {
+      "validation_case_id": "POST-FIX-VALIDATION-022",
+      "tender_id": "JY-001",
+      "canonical_requirement_id": "JY-001:REQ-024",
+      "label_source": "GPT_SEMANTIC_ADJUDICATION",
+      "expected": {
+        "label": "SAFE_ACCEPT",
+        "criticality": "NONE",
+        "expected_review_behavior": "ACCEPT",
+        "data_classification": "VALIDATION_ONLY_NOT_GOLD",
+        "gold_authority": false
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "3f3ae1590974b495269c7075f161ca5692b3ddfb099d6ee256958c165a68b1a0",
+        "candidate_text_hash": "3f3ae1590974b495269c7075f161ca5692b3ddfb099d6ee256958c165a68b1a0",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      },
+      "pre_fix_observation": {
+        "decision": "PASS",
+        "reason_codes": []
+      },
+      "source_context": {
+        "source_refs": [
+          "C008-S060",
+          "C008-S061"
+        ],
+        "source_excerpt": "设计开发时应充分考虑软件的可靠性，并合理利用支撑平台的可靠性，应尽可能保证软件在\n极端情况下的正常运行，避免由于模块故障或系统的升级而影响整个系统的正常运行。",
+        "source_span": {
+          "start_ref": "C008-S060",
+          "end_ref": "C008-S061",
+          "page_start": 19,
+          "page_end": 19,
+          "paragraph_start": 558,
+          "paragraph_end": 559,
+          "chunk_number": 8,
+          "source_start_offset": 15922,
+          "source_end_offset": 16001
+        },
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "设计开发时应充分考虑软件的可靠性,并合理利用支撑平台的可靠性,应尽可能保证软件在极端情况下的正常运行,避免由于模块故障或系统的升级而影响整个系统的正常运行。",
+        "text_hash": "3f3ae1590974b495269c7075f161ca5692b3ddfb099d6ee256958c165a68b1a0",
+        "category": "technical",
+        "risk_flags": []
+      }
+    },
+    {
+      "validation_case_id": "POST-FIX-VALIDATION-023",
+      "tender_id": "JY-001",
+      "canonical_requirement_id": "JY-001:REQ-025",
+      "label_source": "GPT_SEMANTIC_ADJUDICATION",
+      "expected": {
+        "label": "SAFE_ACCEPT",
+        "criticality": "NONE",
+        "expected_review_behavior": "ACCEPT",
+        "data_classification": "VALIDATION_ONLY_NOT_GOLD",
+        "gold_authority": false
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "b68f987fa75aac97b1be3a575e74c1a8c82e0d233e4b657f8365fe12e82854ca",
+        "candidate_text_hash": "b68f987fa75aac97b1be3a575e74c1a8c82e0d233e4b657f8365fe12e82854ca",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      },
+      "pre_fix_observation": {
+        "decision": "PASS",
+        "reason_codes": []
+      },
+      "source_context": {
+        "source_refs": [
+          "C008-S062"
+        ],
+        "source_excerpt": "系统提供 \t7×24 \t小时的连续运行，系统故障平均间隔时间≥300 \t天。",
+        "source_span": {
+          "start_ref": "C008-S062",
+          "end_ref": "C008-S062",
+          "page_start": 19,
+          "page_end": 19,
+          "paragraph_start": 560,
+          "paragraph_end": 560,
+          "chunk_number": 8,
+          "source_start_offset": 16002,
+          "source_end_offset": 16040
+        },
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "系统提供7×24小时的连续运行,系统故障平均间隔时间≥300天。",
+        "text_hash": "b68f987fa75aac97b1be3a575e74c1a8c82e0d233e4b657f8365fe12e82854ca",
+        "category": "technical",
+        "risk_flags": []
+      }
+    },
+    {
+      "validation_case_id": "POST-FIX-VALIDATION-024",
+      "tender_id": "JY-001",
+      "canonical_requirement_id": "JY-001:REQ-026",
+      "label_source": "GPT_SEMANTIC_ADJUDICATION",
+      "expected": {
+        "label": "SAFE_ACCEPT",
+        "criticality": "NONE",
+        "expected_review_behavior": "ACCEPT",
+        "data_classification": "VALIDATION_ONLY_NOT_GOLD",
+        "gold_authority": false
+      },
+      "actual": {
+        "decision": "PASS",
+        "reason_codes": [],
+        "source_text_hash": "75bafab24ce3606b801eb1a82fa47b30b59db2cfdf5c0a41c129e2c38a25aaa9",
+        "candidate_text_hash": "75bafab24ce3606b801eb1a82fa47b30b59db2cfdf5c0a41c129e2c38a25aaa9",
+        "semantic_context_sufficient": true,
+        "ignored_structural_numbers": []
+      },
+      "pre_fix_observation": {
+        "decision": "PASS",
+        "reason_codes": []
+      },
+      "source_context": {
+        "source_refs": [
+          "C008-S063"
+        ],
+        "source_excerpt": "系统安全性好，按各用户的实际需求设定其严格安全等级来保证系统的可靠性。",
+        "source_span": {
+          "start_ref": "C008-S063",
+          "end_ref": "C008-S063",
+          "page_start": 19,
+          "page_end": 19,
+          "paragraph_start": 561,
+          "paragraph_end": 561,
+          "chunk_number": 8,
+          "source_start_offset": 16041,
+          "source_end_offset": 16076
+        },
+        "source_hash": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145",
+        "source_verified": true
+      },
+      "canonical_requirement": {
+        "text": "系统安全性好,按各用户的实际需求设定其严格安全等级来保证系统的可靠性。",
+        "text_hash": "75bafab24ce3606b801eb1a82fa47b30b59db2cfdf5c0a41c129e2c38a25aaa9",
+        "category": "technical",
+        "risk_flags": []
+      }
+    }
+  ],
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0
+}

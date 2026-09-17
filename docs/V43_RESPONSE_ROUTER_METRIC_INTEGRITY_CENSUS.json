@@ -1,0 +1,207 @@
+{
+  "artifact_type": "V43_RESPONSE_ROUTER_METRIC_INTEGRITY_CHECKPOINT",
+  "artifact_version": "v2",
+  "generated_at": "2026-09-09T02:09:18.512Z",
+  "projection_version": "v43-response-projection-v1",
+  "metric_policy": {
+    "confirmed_deep_chain_required": "router-declared deep_chain_required=true; development telemetry only pending GPT calibration",
+    "confirmed_deep_chain_avoidable": "non-NEED_REVIEW rows with deep_chain_required=false; development telemetry only",
+    "unresolved_routing": "all NEED_REVIEW rows unless separately resolved by GPT; not human workload",
+    "exact_reduction_percentage": "NOT_REPORTED_PENDING_SEMANTIC_CALIBRATION",
+    "legacy_invalid_headline": "DEEP_CHAIN_AVOIDABLE_RATE from the prior census is retired because NEED_REVIEW was counted as avoidable"
+  },
+  "corpus_counts": {
+    "CORE6": 1009,
+    "HOLDOUT_V1": 397,
+    "HOLDOUT_V2": 772
+  },
+  "cohorts": [
+    {
+      "cohort": "CORE6",
+      "input_file": "docs\\V43_REQUIREMENT_GOLD_V2_SIX_TENDER_CANONICAL_INPUT.json",
+      "input_sha256": "ff07402688a3013af9a9b8be01f613f76848b7ea905208c1955a604432422fe1",
+      "total_requirements": 1009,
+      "response_role_distribution": {
+        "NONE": 486,
+        "TECHNICAL": 292,
+        "CONTRACT": 140,
+        "COMPLIANCE": 87,
+        "SCORING": 4
+      },
+      "response_mode_distribution": {
+        "NEED_REVIEW": 576,
+        "EVIDENCE": 248,
+        "SOLUTION": 73,
+        "COMMITMENT": 25,
+        "COMPLIANCE": 87
+      },
+      "risk_tier_distribution": {
+        "MEDIUM": 553,
+        "HIGH": 378,
+        "LOW": 67,
+        "P0": 11
+      },
+      "scoring_related_count_raw": 13,
+      "p0_count_raw": 11,
+      "need_review_count": 576,
+      "three_way_accounting": {
+        "total": 1009,
+        "confirmed_deep_chain_required_count": 248,
+        "confirmed_deep_chain_required_rate": 0.2458,
+        "confirmed_deep_chain_avoidable_count": 185,
+        "confirmed_deep_chain_avoidable_rate": 0.1833,
+        "unresolved_routing_count": 576,
+        "unresolved_routing_rate": 0.5709,
+        "deep_chain_required_lower_bound": 248,
+        "deep_chain_required_upper_bound": 824
+      }
+    },
+    {
+      "cohort": "HOLDOUT_V1",
+      "input_file": "backend\\eval\\requirement-unseen-holdout-v1\\results\\unseen-holdout-v1-2026-09-08T06-21-08-203Z-5faac1ab\\canonical-requirements.json",
+      "input_sha256": "20bd8af5e9226a70a5ffa2cd3ad0c20b991fe69a452dea9a09a4dc932b326407",
+      "total_requirements": 397,
+      "response_role_distribution": {
+        "NONE": 86,
+        "CONTRACT": 96,
+        "COMPLIANCE": 165,
+        "TECHNICAL": 45,
+        "SCORING": 5
+      },
+      "response_mode_distribution": {
+        "NEED_REVIEW": 144,
+        "SOLUTION": 24,
+        "COMPLIANCE": 165,
+        "EVIDENCE": 42,
+        "COMMITMENT": 22
+      },
+      "risk_tier_distribution": {
+        "MEDIUM": 153,
+        "LOW": 20,
+        "HIGH": 187,
+        "P0": 37
+      },
+      "scoring_related_count_raw": 11,
+      "p0_count_raw": 37,
+      "need_review_count": 144,
+      "three_way_accounting": {
+        "total": 397,
+        "confirmed_deep_chain_required_count": 42,
+        "confirmed_deep_chain_required_rate": 0.1058,
+        "confirmed_deep_chain_avoidable_count": 211,
+        "confirmed_deep_chain_avoidable_rate": 0.5315,
+        "unresolved_routing_count": 144,
+        "unresolved_routing_rate": 0.3627,
+        "deep_chain_required_lower_bound": 42,
+        "deep_chain_required_upper_bound": 186
+      }
+    },
+    {
+      "cohort": "HOLDOUT_V2",
+      "input_file": "backend\\eval\\requirement-unseen-holdout-v2\\results\\unseen-holdout-v2-2026-09-08T16-24-57-426Z-69cf5c50\\canonical-requirements.json",
+      "input_sha256": "afe390510a4700c9d099087ad0143aa0436f7933b1638daff89cc0a292b8cb1e",
+      "total_requirements": 772,
+      "response_role_distribution": {
+        "CONTRACT": 138,
+        "COMPLIANCE": 128,
+        "TECHNICAL": 223,
+        "NONE": 274,
+        "SCORING": 9
+      },
+      "response_mode_distribution": {
+        "SOLUTION": 27,
+        "NEED_REVIEW": 358,
+        "COMPLIANCE": 128,
+        "COMMITMENT": 15,
+        "EVIDENCE": 244
+      },
+      "risk_tier_distribution": {
+        "LOW": 26,
+        "MEDIUM": 318,
+        "P0": 23,
+        "HIGH": 405
+      },
+      "scoring_related_count_raw": 16,
+      "p0_count_raw": 23,
+      "need_review_count": 358,
+      "three_way_accounting": {
+        "total": 772,
+        "confirmed_deep_chain_required_count": 244,
+        "confirmed_deep_chain_required_rate": 0.3161,
+        "confirmed_deep_chain_avoidable_count": 170,
+        "confirmed_deep_chain_avoidable_rate": 0.2202,
+        "unresolved_routing_count": 358,
+        "unresolved_routing_rate": 0.4637,
+        "deep_chain_required_lower_bound": 244,
+        "deep_chain_required_upper_bound": 602
+      }
+    }
+  ],
+  "aggregate_three_way_accounting": {
+    "total": 2178,
+    "confirmed_deep_chain_required_count": 534,
+    "confirmed_deep_chain_required_rate": 0.2452,
+    "confirmed_deep_chain_avoidable_count": 566,
+    "confirmed_deep_chain_avoidable_rate": 0.2599,
+    "unresolved_routing_count": 1078,
+    "unresolved_routing_rate": 0.4949,
+    "deep_chain_required_lower_bound": 534,
+    "deep_chain_required_upper_bound": 1612
+  },
+  "raw_development_telemetry_status": {
+    "SCORING_RELATED_COUNT": "UNCALIBRATED",
+    "P0_COUNT": "UNCALIBRATED",
+    "NEED_REVIEW_COUNT": "ROUTER_OUTPUT_NOT_HUMAN_WORKLOAD",
+    "DEEP_CHAIN_REQUIRED_RATE": "UNCALIBRATED"
+  },
+  "calibration_packet": {
+    "file": "docs/V43_RESPONSE_ROUTER_SEMANTIC_CALIBRATION_V2.json",
+    "case_count": 160,
+    "cohort_counts": {
+      "CORE6": 96,
+      "HOLDOUT_V1": 32,
+      "HOLDOUT_V2": 32
+    },
+    "mode_counts": {
+      "NEED_REVIEW": 88,
+      "COMMITMENT": 15,
+      "COMPLIANCE": 20,
+      "SOLUTION": 15,
+      "EVIDENCE": 22
+    },
+    "strata_counts": {
+      "ROLE_NONE_COLLAPSE": 37,
+      "QUANTITATIVE_PERFORMANCE": 10,
+      "P0 CONSEQUENCE": 5,
+      "FUNCTIONAL_CAPABILITY": 10,
+      "INTERFACE / INTEGRATION": 21,
+      "TECHNICAL_ARCHITECTURE": 29,
+      "CERTIFICATION / QUALIFICATION": 6,
+      "REFERENCE / PROCEDURAL CONSEQUENCE": 3,
+      "MIXED REQUIREMENT": 4,
+      "PROJECT_COMMITMENT": 7,
+      "SCORING + EVIDENCE": 2,
+      "COMPLIANCE": 12,
+      "SCORING + SOLUTION": 2,
+      "NEGATIVE / PROHIBITION": 8,
+      "DELIVERY / ACCEPTANCE": 3,
+      "CUSTOMER / EXPERIENCE": 1
+    },
+    "need_review_count": 88,
+    "no_codex_verdict_or_gold": true
+  },
+  "deterministic_controls": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "fact_persistence": 0,
+    "gold_mutations": 0,
+    "mapping_actions": 0,
+    "claim_actions": 0,
+    "writer_actions": 0,
+    "production_routing_change": 0,
+    "sampling_seed": "V43_RESPONSE_ROUTER_SEMANTIC_CALIBRATION_V2:sha256",
+    "sampling_determinism": "PASS"
+  },
+  "status": "READY_FOR_GPT_RESPONSE_ROUTER_SEMANTIC_CALIBRATION_V2"
+}

@@ -1,0 +1,160 @@
+{
+  "artifact_type": "V43_FACT_CANARY_GPT_REVIEW_PACKET_V1",
+  "run_id": "real-e2e-retrieval-fact-20260916095708-3ca473a0-stage1-canary",
+  "status": "READY_FOR_GPT_REVIEW",
+  "task_type": "evidence_fact_candidate_v2_2",
+  "schema_version": "4.3-evidence-fact-candidate-v2.2",
+  "schema_hash": "3dcece82464fcbd0351fe4444cc66994d36e40ca6ca97a3f2d0ba01e5e44f0b3",
+  "prompt_version": "4.3-evidence-fact-candidate-v2.2-prompt-v1",
+  "prompt_hash": "e4acf5f9f8180bf355ee3c5e5e55852749b51c649e9f8c1d321ee53d048762e7",
+  "source_context_dedup": {
+    "key": "material_id+chunk_id+chunk_hash",
+    "input_requirement_contexts": 3,
+    "unique_contexts": 3,
+    "duplicate_requirement_contexts_removed": 0,
+    "targeted_chunk_filter": [
+      "MCH-369C7BBCDB79203D29F37E8A524E41D5",
+      "MCH-FE0AD69A95643C6E508A4F7E5147D0D3",
+      "MCH-78E4EA708EBC05B9E2731B7736CF9B2E"
+    ],
+    "targeted_unique_contexts": 3
+  },
+  "candidates": [
+    {
+      "candidate_index": 0,
+      "requirement_ids": [
+        "FACT-SOURCE-COM-02"
+      ],
+      "source_material_id": "7dc70fee-13e0-4b7d-b95f-202665c241d0",
+      "source_chunk_id": "MCH-369C7BBCDB79203D29F37E8A524E41D5",
+      "source_hash": "644ec25fde2d5afb4a7d6b59720c4e643f933e9bfa267417a52a565cf998b084",
+      "source_excerpt": "Synthetic产品含组织权限、流程、表单、接口、日志、报表、知识库、RAG和Agent工具管理。",
+      "statement": "Synthetic产品含组织权限、流程、表单、接口、日志、报表、知识库、RAG和Agent工具管理。",
+      "subject_name": "Synthetic产品",
+      "subject_type_hint": "产品",
+      "subject_source_refs": [
+        "S001"
+      ],
+      "entity_mentions": [
+        {
+          "name": "Synthetic产品",
+          "type_hint": "产品",
+          "source_refs": [
+            "S001"
+          ]
+        }
+      ],
+      "status_text": "",
+      "status_source_refs": [],
+      "scope_items": [
+        {
+          "text": "组织权限",
+          "source_refs": [
+            "S001"
+          ]
+        },
+        {
+          "text": "流程",
+          "source_refs": [
+            "S001"
+          ]
+        },
+        {
+          "text": "表单",
+          "source_refs": [
+            "S001"
+          ]
+        },
+        {
+          "text": "接口",
+          "source_refs": [
+            "S001"
+          ]
+        },
+        {
+          "text": "日志",
+          "source_refs": [
+            "S001"
+          ]
+        },
+        {
+          "text": "报表",
+          "source_refs": [
+            "S001"
+          ]
+        },
+        {
+          "text": "知识库",
+          "source_refs": [
+            "S001"
+          ]
+        },
+        {
+          "text": "RAG",
+          "source_refs": [
+            "S001"
+          ]
+        },
+        {
+          "text": "Agent工具管理",
+          "source_refs": [
+            "S001"
+          ]
+        }
+      ],
+      "quantity_items": [],
+      "temporal_items": [],
+      "fact_source_refs": [
+        "S001"
+      ],
+      "canonicalization_status": "CANONICALIZED",
+      "canonical_output": {
+        "subject": {
+          "type": "产品",
+          "name": "Synthetic产品"
+        },
+        "entities": [
+          {
+            "type": "产品",
+            "name": "Synthetic产品"
+          }
+        ],
+        "status": "unknown",
+        "scopes": [
+          "组织权限",
+          "流程",
+          "表单",
+          "接口",
+          "日志",
+          "报表",
+          "知识库",
+          "RAG",
+          "Agent工具管理"
+        ],
+        "scope_source_texts": {
+          "组织权限": "Synthetic产品含组织权限、流程、表单、接口、日志、报表、知识库、RAG和Agent工具管理。",
+          "流程": "Synthetic产品含组织权限、流程、表单、接口、日志、报表、知识库、RAG和Agent工具管理。",
+          "表单": "Synthetic产品含组织权限、流程、表单、接口、日志、报表、知识库、RAG和Agent工具管理。",
+          "接口": "Synthetic产品含组织权限、流程、表单、接口、日志、报表、知识库、RAG和Agent工具管理。",
+          "日志": "Synthetic产品含组织权限、流程、表单、接口、日志、报表、知识库、RAG和Agent工具管理。",
+          "报表": "Synthetic产品含组织权限、流程、表单、接口、日志、报表、知识库、RAG和Agent工具管理。",
+          "知识库": "Synthetic产品含组织权限、流程、表单、接口、日志、报表、知识库、RAG和Agent工具管理。",
+          "RAG": "Synthetic产品含组织权限、流程、表单、接口、日志、报表、知识库、RAG和Agent工具管理。",
+          "Agent工具管理": "Synthetic产品含组织权限、流程、表单、接口、日志、报表、知识库、RAG和Agent工具管理。"
+        },
+        "quantities": [],
+        "validity": {
+          "status": "unknown",
+          "valid_from": null,
+          "valid_until": null
+        },
+        "domain_metadata": {}
+      },
+      "review_reasons": [],
+      "grounding_decision": "ACCEPT",
+      "grounding_reasons": []
+    }
+  ],
+  "semantic_adjudication": "PENDING_GPT",
+  "provider_raw_content_included": false
+}

@@ -1,0 +1,26 @@
+{
+  "artifact_type": "V43_REFERENCE_CORPUS_SPECIFICITY_TEST_REPORT",
+  "status": "PASS_FOCUSED_OFFLINE",
+  "focused_tests": {
+    "executed_command": "node --test --test-concurrency=1 backend/test/retrieval-chunk-role.test.js backend/test/retrieval-source-eligibility.test.js backend/test/writer-reference-hygiene.test.js",
+    "tests": 23,
+    "pass": 23,
+    "fail": 0,
+    "status": "PASS",
+    "prior_r1_offline_replay": {
+      "path": "docs/handoff/V43_REFERENCE_RAG_SEMANTIC_ADJUDICATION_AND_FAILURE_DECOMPOSITION_V1/05_R1_OFFLINE_REPLAY.json",
+      "status": "PASS",
+      "hygiene_escapes": 0
+    },
+    "authority_negative_regression": {
+      "path": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/16_AUTHORITY_NEGATIVE_REGRESSION.json",
+      "status": "PASS"
+    }
+  },
+  "new_code_changes": 0,
+  "b1_b2_tests": "NOT_RUN_BLOCKED_BEFORE_ACTIVATION",
+  "build": "NOT_RUN_NO_CODE_CHANGES",
+  "lint": "NOT_RUN_NO_CODE_CHANGES",
+  "git_diff_check": "NOT_RUN_NO_CODE_CHANGES",
+  "unrelated_baseline_failures": "PRESERVED"
+}

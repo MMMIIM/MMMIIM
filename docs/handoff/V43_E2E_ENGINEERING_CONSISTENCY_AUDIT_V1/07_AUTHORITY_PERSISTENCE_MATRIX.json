@@ -1,0 +1,19 @@
+{
+  "artifact_type": "V43_E2E_ENGINEERING_CONSISTENCY_AUDIT_V1_AUTHORITY_PERSISTENCE_MATRIX",
+  "inspection_mode": "READ_ONLY",
+  "objects": [
+    {"object": "Material", "owner": "CompanyMaterialService + material-source-authority-policy", "table": "company_materials", "authority_bearing": true, "production_bid_platform": "56 rows; target HW absent", "flow_audit_test": "6 HW rows; active/approved/official/non-quarantined", "status": "ENFORCED_ON_INSPECTED_PATH"},
+    {"object": "Project Material Binding", "owner": "ProjectMaterialBindingService", "table": "project_material_bindings", "authority_bearing": true, "production_bid_platform": "RELATION ABSENT", "flow_audit_test": "6 ACTIVE bindings", "status": "TARGET_DB_DEPENDENT"},
+    {"object": "Canonical Requirement", "owner": "RequirementParseService/RequirementSourceService", "table": "requirements + requirement_baselines", "authority_bearing": true, "production_bid_platform": "272 requirements / 8 baselines; expected project absent", "flow_audit_test": "0 for expected project", "status": "EXPECTED_CANARY_AUTHORITY_ABSENT"},
+    {"object": "Requirement Scope Authority", "owner": "RequirementScopeAuthorityService", "table": "requirement_scope_authority_decisions", "authority_bearing": true, "production_bid_platform": "RELATION ABSENT", "flow_audit_test": "5 HUMAN decisions", "status": "PRODUCTION_PERSISTENCE_UNAVAILABLE"},
+    {"object": "Evidence Review", "owner": "EvidenceReviewService", "table": "evidence_candidate_reviews", "authority_bearing": true, "production_bid_platform": "2 approved", "flow_audit_test": "20 approved", "status": "PRESENT_READ_ONLY"},
+    {"object": "Evidence Source Fact", "owner": "EvidenceSourceFactService", "table": "evidence_source_facts", "authority_bearing": true, "production_bid_platform": "0", "flow_audit_test": "4 approved machine facts", "status": "NO_CURRENT_REPLAY_FACT"},
+    {"object": "Canonical Mapping", "owner": "RequirementEvidenceFactMappingService", "table": "requirement_evidence_fact_mappings", "authority_bearing": true, "production_bid_platform": "0", "flow_audit_test": "0", "status": "NO_CURRENT_REPLAY_MAPPING"},
+    {"object": "Legacy Mapping", "owner": "legacy compatibility path", "table": "requirement_evidence_mappings", "authority_bearing": "LEGACY_NON_CANONICAL", "production_bid_platform": "6 approved", "flow_audit_test": "0", "status": "SEPARATE_FROM_CANONICAL"},
+    {"object": "Claim", "owner": "Claim Gate", "table": "claims + claim_decisions", "authority_bearing": true, "production_bid_platform": "202 rows", "flow_audit_test": "0", "status": "NO_CURRENT_REPLAY_CLAIM"},
+    {"object": "Writer Safe Context/Output", "owner": "Writer authorization + document generation", "table": "writer_safe_contexts + writer_outputs", "authority_bearing": true, "production_bid_platform": "0", "flow_audit_test": "0", "status": "NO_CURRENT_REPLAY_WRITER"}
+  ],
+  "persistence_conclusion": "The isolated flow-audit database contains materials/bindings and scope decisions, but lacks canonical requirements for the expected project. The configured bid_platform database contains production records but lacks the expected canary identity and 052 relations.",
+  "production_db_writes": 0,
+  "eval_db_writes": 0
+}

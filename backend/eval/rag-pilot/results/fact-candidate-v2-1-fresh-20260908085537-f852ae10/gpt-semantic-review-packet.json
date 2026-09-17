@@ -1,0 +1,1498 @@
+{
+  "artifact_type": "V43_FACT_CANDIDATE_V2_1_GPT_SEMANTIC_REVIEW_PACKET",
+  "eval_only": true,
+  "semantic_adjudication": "PENDING_GPT",
+  "production_default": "NO",
+  "run_id": "fact-candidate-v2-1-fresh-20260908085537-f852ae10",
+  "contract": {
+    "task_type": "evidence_fact_candidate_v2_1",
+    "schema_version": "4.3-evidence-fact-candidate-v2.1",
+    "schema_sha256": "3dcece82464fcbd0351fe4444cc66994d36e40ca6ca97a3f2d0ba01e5e44f0b3",
+    "prompt_version": "4.3-evidence-fact-candidate-v2-prompt-v2",
+    "prompt_hash": "ba1ab6d2a298176ee27528b0e3d1bfe71f373fa99bb82c06cda780ba4272d642",
+    "canonicalizer_version": "4.3-evidence-fact-canonicalizer-v2.1",
+    "grounding_version": "4.3-evidence-fact-grounding-v2.1",
+    "model_source_text": false,
+    "source_refs_only": true
+  },
+  "provider": "deepseek_official",
+  "configured_model": "deepseek-v4-pro",
+  "requested_model": "deepseek-v4-pro",
+  "endpoint": "/responses",
+  "retries": 0,
+  "provider_calls": 4,
+  "production_db_writes": 0,
+  "fact_persistence": 0,
+  "gold_mutations": 0,
+  "raw_provider_response_retained": false,
+  "raw_provider_response_note": "The safe SemanticGatewayClient exposes parsed candidates and bounded audit metadata only; full HTTP response body is intentionally not retained.",
+  "executions": [
+    {
+      "case_id": "COM-01",
+      "execution_id": "fact-candidate-v2-1-fresh-20260908085537-f852ae10-COM-01",
+      "dispatch_state": "FINALIZED",
+      "configured_provider": "deepseek_official",
+      "configured_model": "deepseek-v4-pro",
+      "requested_model": "deepseek-v4-pro",
+      "response_provider": null,
+      "response_model": "deepseek-v4-pro",
+      "endpoint": "/responses",
+      "provider_audit": {
+        "provider": null,
+        "model": null,
+        "requested_provider": null,
+        "requested_model": null,
+        "response_provider": null,
+        "response_model": "deepseek-v4-pro",
+        "endpoint": null,
+        "provider_http_reached": true,
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "latency_ms": null,
+        "finish_reason": "completed",
+        "response_id": null,
+        "provider_trace_id": null,
+        "json_parse_success": true,
+        "schema_validation_errors": [],
+        "generation_config": null,
+        "semantic_contract_version": null,
+        "instruction_sha256": null
+      },
+      "source_snapshot_id": "EVAL-SNAPSHOT-C7F1A4E58C970A4B",
+      "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document",
+      "source_hash": "c7f1a4e58c970a4b95ae30e8c0e0ff0171c43ddf5b1bd98ac69d15d11026631c",
+      "source_ref_resolution_rate": 1,
+      "source_text_output_bytes": 0,
+      "schema_status": "PASS",
+      "candidate_nonempty": true,
+      "fact_count": 4,
+      "raw_candidate": [
+        {
+          "statement": "澄川数智科技有限公司为虚构测试企业，定位政企与医疗信息化软件服务商。",
+          "source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "subject_name": "澄川数智科技有限公司",
+          "subject_type_hint": "公司",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "澄川数智科技有限公司",
+              "type_hint": "公司",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "虚构测试企业",
+          "status_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "scope_items": [
+            {
+              "text": "政企与医疗信息化软件服务商",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        {
+          "statement": "测试能力包括业务平台、数据治理、接口集成、RAG/Agent、实施与运维。",
+          "source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "subject_name": "测试能力",
+          "subject_type_hint": "能力范围",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "业务平台",
+              "type_hint": "能力项",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "name": "数据治理",
+              "type_hint": "能力项",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "name": "接口集成",
+              "type_hint": "能力项",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "name": "RAG/Agent",
+              "type_hint": "能力项",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "name": "实施与运维",
+              "type_hint": "能力项",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "",
+          "status_source_refs": [],
+          "scope_items": [
+            {
+              "text": "业务平台",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "text": "数据治理",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "text": "接口集成",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "text": "RAG/Agent",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "text": "实施与运维",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        {
+          "statement": "OFF-U01 为政府采购需求管理办法，发布单位为财政部，状态为 CURRENT_NO_REPEAL_FOUND，实施日期为 2021-07-01，最后核验日期为 2026-08-31。",
+          "source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "subject_name": "政府采购需求管理办法",
+          "subject_type_hint": "官方来源",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "财政部",
+              "type_hint": "发布单位",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "CURRENT_NO_REPEAL_FOUND",
+          "status_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": [
+            {
+              "value_text": "2021-07-01",
+              "event_text": "实施",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "value_text": "2026-08-31",
+              "event_text": "最后核验",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ]
+        },
+        {
+          "statement": "OFF-U02 为国家政务信息化项目建设管理办法，发布单位为国务院办公厅，状态为 CURRENT_CONFIRMED，实施日期为 2020-02-01，最后核验日期为 2026-08-31。",
+          "source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "subject_name": "国家政务信息化项目建设管理办法",
+          "subject_type_hint": "官方来源",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "国务院办公厅",
+              "type_hint": "发布单位",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "CURRENT_CONFIRMED",
+          "status_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": [
+            {
+              "value_text": "2020-02-01",
+              "event_text": "实施",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            },
+            {
+              "value_text": "2026-08-31",
+              "event_text": "最后核验",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-01_公司概况与业务范围.md#full-document"
+              ]
+            }
+          ]
+        }
+      ],
+      "canonicalization": [
+        {
+          "status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "decision": "REJECT",
+          "identity": "EFACT-CAND-V2-D4FEEC649901D145848DBBAF8D51360B",
+          "review_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "grounding_reasons": [
+            "statement is not grounded"
+          ]
+        },
+        {
+          "status": "CANONICALIZED",
+          "decision": "ACCEPT",
+          "identity": "EFACT-CAND-V2-1CD7853A89821873F3CB6EE438315158",
+          "review_reasons": [],
+          "grounding_reasons": []
+        },
+        {
+          "status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "decision": "REJECT",
+          "identity": "EFACT-CAND-V2-5D47CEDB62E67C6264FDE63E795FA702",
+          "review_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "grounding_reasons": [
+            "statement is not grounded"
+          ]
+        },
+        {
+          "status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "decision": "REJECT",
+          "identity": "EFACT-CAND-V2-87C90B4F51D701A68938020B763433C9",
+          "review_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "grounding_reasons": [
+            "statement is not grounded"
+          ]
+        }
+      ],
+      "duration_ms": 20775,
+      "grounding": {
+        "accept": 1,
+        "review_required": 0,
+        "reject": 3
+      }
+    },
+    {
+      "case_id": "COM-06-A",
+      "execution_id": "fact-candidate-v2-1-fresh-20260908085537-f852ae10-COM-06-A",
+      "dispatch_state": "FINALIZED",
+      "configured_provider": "deepseek_official",
+      "configured_model": "deepseek-v4-pro",
+      "requested_model": "deepseek-v4-pro",
+      "response_provider": null,
+      "response_model": "deepseek-v4-pro",
+      "endpoint": "/responses",
+      "provider_audit": {
+        "provider": null,
+        "model": null,
+        "requested_provider": null,
+        "requested_model": null,
+        "response_provider": null,
+        "response_model": "deepseek-v4-pro",
+        "endpoint": null,
+        "provider_http_reached": true,
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "latency_ms": null,
+        "finish_reason": "completed",
+        "response_id": null,
+        "provider_trace_id": null,
+        "json_parse_success": true,
+        "schema_validation_errors": [],
+        "generation_config": null,
+        "semantic_contract_version": null,
+        "instruction_sha256": null
+      },
+      "source_snapshot_id": "EVAL-SNAPSHOT-FB76E2F89C72CF3A",
+      "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+      "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+      "source_ref_resolution_rate": 1,
+      "source_text_output_bytes": 0,
+      "schema_status": "PASS",
+      "candidate_nonempty": true,
+      "fact_count": 9,
+      "raw_candidate": [
+        {
+          "statement": "2026-08-01对v3.2测试环境执行账号、角色、最小权限、登录审计、关键操作和数据导出审计。",
+          "source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "subject_name": "v3.2测试环境",
+          "subject_type_hint": "测试环境",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "账号",
+              "type_hint": "审计对象",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "角色",
+              "type_hint": "审计对象",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "最小权限",
+              "type_hint": "审计对象",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "登录审计",
+              "type_hint": "审计对象",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "关键操作",
+              "type_hint": "审计对象",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "数据导出审计",
+              "type_hint": "审计对象",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "",
+          "status_source_refs": [],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": [
+            {
+              "value_text": "2026-08-01",
+              "event_text": "对v3.2测试环境执行账号、角色、最小权限、登录审计、关键操作和数据导出审计",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ]
+        },
+        {
+          "statement": "该测试报告不代表通过等保、密评或第三方认证。",
+          "source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "subject_name": "权限、安全与审计测试报告",
+          "subject_type_hint": "测试报告",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "等保",
+              "type_hint": "认证类型",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "密评",
+              "type_hint": "认证类型",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "第三方认证",
+              "type_hint": "认证类型",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "不代表通过",
+          "status_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        {
+          "statement": "OFF-U05为中华人民共和国网络安全法（2025年修正），状态为CURRENT_CONFIRMED，实施日期为2026-01-01，最后核验日期为2026-08-31。",
+          "source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "subject_name": "OFF-U05",
+          "subject_type_hint": "官方来源",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "中华人民共和国网络安全法（2025年修正）",
+              "type_hint": "法律法规",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "全国人大常委会",
+              "type_hint": "发布机构",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "CURRENT_CONFIRMED",
+          "status_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": [
+            {
+              "value_text": "2026-01-01",
+              "event_text": "OFF-U05实施",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "value_text": "2026-08-31",
+              "event_text": "OFF-U05最后核验",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ]
+        },
+        {
+          "statement": "OFF-U08为GB/T 22239-2019 网络安全等级保护基本要求，状态为CURRENT_CONFIRMED，实施日期为2019-12-01，最后核验日期为2026-08-31。",
+          "source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "subject_name": "OFF-U08",
+          "subject_type_hint": "官方来源",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "GB/T 22239-2019 网络安全等级保护基本要求",
+              "type_hint": "标准",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "国家市场监督管理总局",
+              "type_hint": "发布机构",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "国家标准化管理委员会",
+              "type_hint": "发布机构",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "CURRENT_CONFIRMED",
+          "status_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": [
+            {
+              "value_text": "2019-12-01",
+              "event_text": "OFF-U08实施",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "value_text": "2026-08-31",
+              "event_text": "OFF-U08最后核验",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ]
+        },
+        {
+          "statement": "OFF-U10为GB/T 35273-2020 个人信息安全规范，状态为CURRENT_CONFIRMED，实施日期为2020-10-01，最后核验日期为2026-08-31。",
+          "source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "subject_name": "OFF-U10",
+          "subject_type_hint": "官方来源",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "GB/T 35273-2020 个人信息安全规范",
+              "type_hint": "标准",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "国家市场监督管理总局",
+              "type_hint": "发布机构",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "国家标准化管理委员会",
+              "type_hint": "发布机构",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "CURRENT_CONFIRMED",
+          "status_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": [
+            {
+              "value_text": "2020-10-01",
+              "event_text": "OFF-U10实施",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "value_text": "2026-08-31",
+              "event_text": "OFF-U10最后核验",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ]
+        },
+        {
+          "statement": "召回后同时检查evidence_temporal_status与Source Registry的validity_status。",
+          "source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "subject_name": "evidence_temporal_status",
+          "subject_type_hint": "时效状态",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "Source Registry",
+              "type_hint": "来源注册表",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "validity_status",
+              "type_hint": "有效性状态",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "",
+          "status_source_refs": [],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        {
+          "statement": "HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED不能直接当作当前强制要求。",
+          "source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "subject_name": "HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED",
+          "subject_type_hint": "时效状态",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "entity_mentions": [],
+          "status_text": "不能直接当作当前强制要求",
+          "status_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        {
+          "statement": "到达next_review_at只代表必须重新核验，不等于自动失效。",
+          "source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "subject_name": "next_review_at",
+          "subject_type_hint": "复核时间",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "entity_mentions": [],
+          "status_text": "不等于自动失效",
+          "status_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        {
+          "statement": "公司Evidence的有效期与官方Source的有效期是两个不同维度。",
+          "source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "subject_name": "公司Evidence的有效期",
+          "subject_type_hint": "有效期",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "官方Source的有效期",
+              "type_hint": "有效期",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "两个不同维度",
+          "status_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": []
+        }
+      ],
+      "canonicalization": [
+        {
+          "status": "CANONICALIZED",
+          "decision": "ACCEPT",
+          "identity": "EFACT-CAND-V2-8D1D9F12E71985EFB00C42697F9FDD65",
+          "review_reasons": [],
+          "grounding_reasons": []
+        },
+        {
+          "status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "decision": "REJECT",
+          "identity": "EFACT-CAND-V2-5A621A70B9927E9FD364A9D6515C7B9D",
+          "review_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "grounding_reasons": [
+            "statement is not grounded"
+          ]
+        },
+        {
+          "status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "decision": "REJECT",
+          "identity": "EFACT-CAND-V2-8EE076D5F126FF7A345773F0E63838FD",
+          "review_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "grounding_reasons": [
+            "statement is not grounded"
+          ]
+        },
+        {
+          "status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "decision": "REJECT",
+          "identity": "EFACT-CAND-V2-16C96467364BCD04D6079B49385F62A3",
+          "review_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "grounding_reasons": [
+            "statement is not grounded"
+          ]
+        },
+        {
+          "status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "decision": "REJECT",
+          "identity": "EFACT-CAND-V2-9A394A52AE205ADE3F62A43BA4370EC6",
+          "review_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "grounding_reasons": [
+            "statement is not grounded"
+          ]
+        },
+        {
+          "status": "CANONICALIZED",
+          "decision": "REJECT",
+          "identity": "EFACT-CAND-V2-12318DC10ED8C30BE6B1309D9EBFC1CB",
+          "review_reasons": [],
+          "grounding_reasons": [
+            "statement is not grounded"
+          ]
+        },
+        {
+          "status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "decision": "REJECT",
+          "identity": "EFACT-CAND-V2-2DE2FC7F51E5AA027BDB47011E3A042E",
+          "review_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "grounding_reasons": [
+            "statement is not grounded"
+          ]
+        },
+        {
+          "status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "decision": "REJECT",
+          "identity": "EFACT-CAND-V2-665E5C8407FBBD404D05D0E1DD97FE90",
+          "review_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "grounding_reasons": [
+            "statement is not grounded"
+          ]
+        },
+        {
+          "status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "decision": "REJECT",
+          "identity": "EFACT-CAND-V2-89F99D0A3EBE082562CF8CED1CFC2698",
+          "review_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "grounding_reasons": [
+            "statement is not grounded"
+          ]
+        }
+      ],
+      "duration_ms": 37104,
+      "grounding": {
+        "accept": 1,
+        "review_required": 0,
+        "reject": 8
+      }
+    },
+    {
+      "case_id": "COM-06-B",
+      "execution_id": "fact-candidate-v2-1-fresh-20260908085537-f852ae10-COM-06-B",
+      "dispatch_state": "FINALIZED",
+      "configured_provider": "deepseek_official",
+      "configured_model": "deepseek-v4-pro",
+      "requested_model": "deepseek-v4-pro",
+      "response_provider": null,
+      "response_model": "deepseek-v4-pro",
+      "endpoint": "/responses",
+      "provider_audit": {
+        "provider": null,
+        "model": null,
+        "requested_provider": null,
+        "requested_model": null,
+        "response_provider": null,
+        "response_model": "deepseek-v4-pro",
+        "endpoint": null,
+        "provider_http_reached": true,
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "latency_ms": null,
+        "finish_reason": "completed",
+        "response_id": null,
+        "provider_trace_id": null,
+        "json_parse_success": true,
+        "schema_validation_errors": [],
+        "generation_config": null,
+        "semantic_contract_version": null,
+        "instruction_sha256": null
+      },
+      "source_snapshot_id": "EVAL-SNAPSHOT-FB76E2F89C72CF3A",
+      "source_ref": "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document",
+      "source_hash": "fb76e2f89c72cf3ad441f416b808c6e53d61b7055f0c397fa7160535c7dbb080",
+      "source_ref_resolution_rate": 1,
+      "source_text_output_bytes": 0,
+      "schema_status": "PASS",
+      "candidate_nonempty": true,
+      "fact_count": 9,
+      "raw_candidate": [
+        {
+          "statement": "2026-08-01对v3.2测试环境执行账号、角色、最小权限、登录审计、关键操作和数据导出审计。",
+          "source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "subject_name": "权限、安全与审计测试报告",
+          "subject_type_hint": "测试报告",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "v3.2测试环境",
+              "type_hint": "测试环境",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "",
+          "status_source_refs": [],
+          "scope_items": [
+            {
+              "text": "账号、角色、最小权限、登录审计、关键操作和数据导出审计",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": [
+            {
+              "value_text": "2026-08-01",
+              "event_text": "执行测试",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ]
+        },
+        {
+          "statement": "不代表通过等保、密评或第三方认证。",
+          "source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "subject_name": "权限、安全与审计测试报告",
+          "subject_type_hint": "测试报告",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "entity_mentions": [],
+          "status_text": "不代表通过等保、密评或第三方认证",
+          "status_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        {
+          "statement": "OFF-U05｜中华人民共和国网络安全法（2025年修正）｜全国人大常委会｜状态 CURRENT_CONFIRMED｜实施 2026-01-01｜最后核验 2026-08-31",
+          "source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "subject_name": "中华人民共和国网络安全法（2025年修正）",
+          "subject_type_hint": "法律",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "全国人大常委会",
+              "type_hint": "机构",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "CURRENT_CONFIRMED",
+          "status_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": [
+            {
+              "value_text": "2026-01-01",
+              "event_text": "实施",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "value_text": "2026-08-31",
+              "event_text": "最后核验",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ]
+        },
+        {
+          "statement": "OFF-U08｜GB/T 22239-2019 网络安全等级保护基本要求｜国家市场监督管理总局、国家标准化管理委员会｜状态 CURRENT_CONFIRMED｜实施 2019-12-01｜最后核验 2026-08-31",
+          "source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "subject_name": "GB/T 22239-2019 网络安全等级保护基本要求",
+          "subject_type_hint": "标准",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "国家市场监督管理总局",
+              "type_hint": "机构",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "国家标准化管理委员会",
+              "type_hint": "机构",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "CURRENT_CONFIRMED",
+          "status_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": [
+            {
+              "value_text": "2019-12-01",
+              "event_text": "实施",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "value_text": "2026-08-31",
+              "event_text": "最后核验",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ]
+        },
+        {
+          "statement": "OFF-U10｜GB/T 35273-2020 个人信息安全规范｜国家市场监督管理总局、国家标准化管理委员会｜状态 CURRENT_CONFIRMED｜实施 2020-10-01｜最后核验 2026-08-31",
+          "source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "subject_name": "GB/T 35273-2020 个人信息安全规范",
+          "subject_type_hint": "标准",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "国家市场监督管理总局",
+              "type_hint": "机构",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "国家标准化管理委员会",
+              "type_hint": "机构",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "CURRENT_CONFIRMED",
+          "status_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": [
+            {
+              "value_text": "2020-10-01",
+              "event_text": "实施",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "value_text": "2026-08-31",
+              "event_text": "最后核验",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ]
+        },
+        {
+          "statement": "召回后同时检查 evidence_temporal_status 与 Source Registry 的 validity_status。",
+          "source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "subject_name": "时效使用规则",
+          "subject_type_hint": "规则",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "evidence_temporal_status",
+              "type_hint": "字段",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "Source Registry",
+              "type_hint": "注册表",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            },
+            {
+              "name": "validity_status",
+              "type_hint": "字段",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "",
+          "status_source_refs": [],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        {
+          "statement": "HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED 不能直接当作当前强制要求。",
+          "source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "subject_name": "HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED",
+          "subject_type_hint": "状态",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "entity_mentions": [],
+          "status_text": "不能直接当作当前强制要求",
+          "status_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        {
+          "statement": "到达 next_review_at 只代表必须重新核验，不等于自动失效。",
+          "source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "subject_name": "next_review_at",
+          "subject_type_hint": "时间字段",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "entity_mentions": [],
+          "status_text": "到达只代表必须重新核验，不等于自动失效",
+          "status_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        {
+          "statement": "公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+          "source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "subject_name": "公司 Evidence 的有效期",
+          "subject_type_hint": "有效期",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "官方 Source 的有效期",
+              "type_hint": "有效期",
+              "source_refs": [
+                "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "是两个不同维度",
+          "status_source_refs": [
+            "eval://rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md#full-document"
+          ],
+          "scope_items": [],
+          "quantity_items": [],
+          "temporal_items": []
+        }
+      ],
+      "canonicalization": [
+        {
+          "status": "CANONICALIZED",
+          "decision": "ACCEPT",
+          "identity": "EFACT-CAND-V2-20DD9B64C79F7AC44C57C30C132F638C",
+          "review_reasons": [],
+          "grounding_reasons": []
+        },
+        {
+          "status": "CANONICALIZED",
+          "decision": "ACCEPT",
+          "identity": "EFACT-CAND-V2-E41F7493E81C7B138E2B0175EDFA3D5A",
+          "review_reasons": [],
+          "grounding_reasons": []
+        },
+        {
+          "status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "decision": "REJECT",
+          "identity": "EFACT-CAND-V2-DC79FD9E02B31E78072E797D593E1F6E",
+          "review_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "grounding_reasons": [
+            "statement is not grounded"
+          ]
+        },
+        {
+          "status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "decision": "REJECT",
+          "identity": "EFACT-CAND-V2-F00CCC904F5A4D07D351FF8E47028E2E",
+          "review_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "grounding_reasons": [
+            "statement is not grounded"
+          ]
+        },
+        {
+          "status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "decision": "REJECT",
+          "identity": "EFACT-CAND-V2-B1CD0FC884E1C660F3A68AE411E49A8F",
+          "review_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "grounding_reasons": [
+            "statement is not grounded"
+          ]
+        },
+        {
+          "status": "CANONICALIZED",
+          "decision": "REJECT",
+          "identity": "EFACT-CAND-V2-07CC86CB7BFBEE8FC6339813CC4DE3EF",
+          "review_reasons": [],
+          "grounding_reasons": [
+            "statement is not grounded"
+          ]
+        },
+        {
+          "status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "decision": "REJECT",
+          "identity": "EFACT-CAND-V2-16D0C78AD3DC32061E4D1ADFB6964DC1",
+          "review_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "grounding_reasons": [
+            "statement is not grounded"
+          ]
+        },
+        {
+          "status": "CANONICALIZED",
+          "decision": "REJECT",
+          "identity": "EFACT-CAND-V2-E6193638A9A080EB2176638AB2A520CF",
+          "review_reasons": [],
+          "grounding_reasons": [
+            "statement is not grounded"
+          ]
+        },
+        {
+          "status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "decision": "REVIEW_REQUIRED",
+          "identity": "EFACT-CAND-V2-86C45B32535DF61604EFE45C5C94F50A",
+          "review_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ],
+          "grounding_reasons": [
+            "STATUS_ENUM_UNRESOLVED"
+          ]
+        }
+      ],
+      "duration_ms": 31093,
+      "grounding": {
+        "accept": 2,
+        "review_required": 1,
+        "reject": 6
+      }
+    },
+    {
+      "case_id": "CCV2-U13-01",
+      "execution_id": "fact-candidate-v2-1-fresh-20260908085537-f852ae10-CCV2-U13-01",
+      "dispatch_state": "FINALIZED",
+      "configured_provider": "deepseek_official",
+      "configured_model": "deepseek-v4-pro",
+      "requested_model": "deepseek-v4-pro",
+      "response_provider": null,
+      "response_model": "deepseek-v4-pro",
+      "endpoint": "/responses",
+      "provider_audit": {
+        "provider": null,
+        "model": null,
+        "requested_provider": null,
+        "requested_model": null,
+        "response_provider": null,
+        "response_model": "deepseek-v4-pro",
+        "endpoint": null,
+        "provider_http_reached": true,
+        "provider_http_status": 200,
+        "gateway_http_status": 200,
+        "latency_ms": null,
+        "finish_reason": "completed",
+        "response_id": null,
+        "provider_trace_id": null,
+        "json_parse_success": true,
+        "schema_validation_errors": [],
+        "generation_config": null,
+        "semantic_contract_version": null,
+        "instruction_sha256": null
+      },
+      "source_snapshot_id": "EVAL-SNAPSHOT-9408FC5A50FFCAD2",
+      "source_ref": "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document",
+      "source_hash": "9408fc5a50ffcad28def68d844c2d701405b99655f2d5904aeb89874f55ae575",
+      "source_ref_resolution_rate": 1,
+      "source_text_output_bytes": 0,
+      "schema_status": "PASS",
+      "candidate_nonempty": true,
+      "fact_count": 4,
+      "raw_candidate": [
+        {
+          "statement": "澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。",
+          "source_refs": [
+            "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+          ],
+          "subject_name": "澄川政企数字平台 XDP 5.2 5.2.2",
+          "subject_type_hint": "软件平台",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+          ],
+          "entity_mentions": [
+            {
+              "name": "澄川数智科技有限公司",
+              "type_hint": "企业",
+              "source_refs": [
+                "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+              ]
+            }
+          ],
+          "status_text": "完成性能测试",
+          "status_source_refs": [
+            "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+          ],
+          "scope_items": [
+            {
+              "text": "4个应用节点、每节点8核16GB环境",
+              "source_refs": [
+                "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        {
+          "statement": "标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。",
+          "source_refs": [
+            "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+          ],
+          "subject_name": "标准查询场景",
+          "subject_type_hint": "测试场景",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+          ],
+          "entity_mentions": [],
+          "status_text": "",
+          "status_source_refs": [],
+          "scope_items": [
+            {
+              "text": "8,000并发虚拟用户",
+              "source_refs": [
+                "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+              ]
+            }
+          ],
+          "quantity_items": [
+            {
+              "name": "P95响应时间",
+              "value_text": "820",
+              "unit_text": "毫秒",
+              "condition_text": "标准查询场景在8,000并发虚拟用户下",
+              "source_refs": [
+                "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+              ]
+            }
+          ],
+          "temporal_items": []
+        },
+        {
+          "statement": "混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。",
+          "source_refs": [
+            "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+          ],
+          "subject_name": "混合写入场景",
+          "subject_type_hint": "测试场景",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+          ],
+          "entity_mentions": [],
+          "status_text": "",
+          "status_source_refs": [],
+          "scope_items": [],
+          "quantity_items": [
+            {
+              "name": "稳定吞吐",
+              "value_text": "1,650",
+              "unit_text": "事务/秒",
+              "condition_text": "混合写入场景",
+              "source_refs": [
+                "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+              ]
+            },
+            {
+              "name": "错误率",
+              "value_text": "0.18",
+              "unit_text": "%",
+              "condition_text": "混合写入场景",
+              "source_refs": [
+                "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+              ]
+            }
+          ],
+          "temporal_items": []
+        },
+        {
+          "statement": "测试持续时间为120分钟。",
+          "source_refs": [
+            "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+          ],
+          "subject_name": "测试",
+          "subject_type_hint": "性能测试",
+          "subject_source_refs": [
+            "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+          ],
+          "entity_mentions": [],
+          "status_text": "",
+          "status_source_refs": [],
+          "scope_items": [],
+          "quantity_items": [
+            {
+              "name": "持续时间",
+              "value_text": "120",
+              "unit_text": "分钟",
+              "condition_text": "测试",
+              "source_refs": [
+                "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document"
+              ]
+            }
+          ],
+          "temporal_items": []
+        }
+      ],
+      "canonicalization": [
+        {
+          "status": "CANONICALIZED",
+          "decision": "ACCEPT",
+          "identity": "EFACT-CAND-V2-F1E05886241C434D080398161D3FE403",
+          "review_reasons": [],
+          "grounding_reasons": []
+        },
+        {
+          "status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "decision": "REVIEW_REQUIRED",
+          "identity": "EFACT-CAND-V2-CA37966DECE0E9642A149D276A9B184A",
+          "review_reasons": [
+            "QUANTITY_CONDITION_UNRESOLVED"
+          ],
+          "grounding_reasons": [
+            "QUANTITY_CONDITION_UNRESOLVED"
+          ]
+        },
+        {
+          "status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "decision": "REVIEW_REQUIRED",
+          "identity": "EFACT-CAND-V2-8627245CEDF097DFDBB955F831C6E13A",
+          "review_reasons": [
+            "QUANTITY_CONDITION_UNRESOLVED",
+            "QUANTITY_VALUE_OR_UNIT_UNRESOLVED",
+            "QUANTITY_CONDITION_UNRESOLVED"
+          ],
+          "grounding_reasons": [
+            "QUANTITY_CONDITION_UNRESOLVED",
+            "QUANTITY_VALUE_OR_UNIT_UNRESOLVED",
+            "QUANTITY_CONDITION_UNRESOLVED"
+          ]
+        },
+        {
+          "status": "CANONICALIZATION_REVIEW_REQUIRED",
+          "decision": "REJECT",
+          "identity": "EFACT-CAND-V2-EDA7B3096328426A5D56D9BBB10A7D91",
+          "review_reasons": [
+            "QUANTITY_CONDITION_UNRESOLVED"
+          ],
+          "grounding_reasons": [
+            "quantity.unit is not grounded"
+          ]
+        }
+      ],
+      "duration_ms": 14352,
+      "grounding": {
+        "accept": 1,
+        "review_required": 2,
+        "reject": 1
+      }
+    }
+  ]
+}

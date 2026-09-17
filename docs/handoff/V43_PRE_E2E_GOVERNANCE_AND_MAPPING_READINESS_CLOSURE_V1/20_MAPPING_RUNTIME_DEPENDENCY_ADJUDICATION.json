@@ -1,0 +1,181 @@
+{
+  "artifact_type": "V43_MAPPING_E2E_BLOCKER_FINAL_ADJUDICATION_V1",
+  "generated_at": "2026-09-16",
+  "execution_mode": "READ_ONLY_OFFLINE",
+  "decision": "MAPPING_RUNTIME_READY_FOR_SYNTHETIC_E2E",
+  "successor_activation": {
+    "manifest": "backend/eval/requirement-evidence-mapping-v2/successor-manifest.json",
+    "runtime_hard_dependency": false,
+    "classification": "NON_BLOCKING_EVAL_GOLD_GOVERNANCE_DEBT",
+    "evidence": {
+      "production_source_reference_count": 0,
+      "production_source_scope": [
+        "backend/src",
+        "backend/scripts"
+      ],
+      "eval_only_references": [
+        "backend/eval/real-e2e/build-pre-e2e-offline-closure-v1.mjs",
+        "backend/eval/gold-governance/build-mapping-gold-full-human-review-export.js"
+      ],
+      "manifest_status": "SUCCESSOR_BUILT_NOT_ACTIVATED",
+      "dual_eval": "NOT_EXECUTED",
+      "activation_is_not_runtime_wiring": true
+    }
+  },
+  "runtime_mapping_path": {
+    "entrypoint": "backend/src/app.js:562-563",
+    "composition": "backend/src/server.js:107-113",
+    "owner_service": "backend/src/requirement-evidence-fact-mapping-service.js",
+    "candidate_builder": "backend/src/pipeline/mapping-candidate-builder.js",
+    "semantic_evaluator": "backend/src/pipeline/semantic-gateway-mapping-evaluator.js",
+    "canonical_contract": "backend/src/pipeline/requirement-evidence-mapping-contract-v1.js",
+    "decision_policy": "backend/src/pipeline/mapping-decision-policy-v1.js",
+    "task_type": "requirement_evidence_mapping",
+    "contract_version": "requirement-evidence-mapping-v1.1",
+    "persistence_table": "requirement_evidence_fact_mappings",
+    "persistence_methods": [
+      "replaceRequirementEvidenceFactMappingAtomic",
+      "replaceRequirementEvidenceFactMappingSetAtomic"
+    ],
+    "successor_manifest_read": false
+  },
+  "input_contract_readiness": {
+    "core6_deep_chain_requirements": {
+      "source": "docs/handoff/V43_PRE_E2E_GOVERNANCE_AND_MAPPING_READINESS_CLOSURE_V1/06_DEEP_CHAIN_500_AUDIT.json",
+      "count": 500,
+      "identity_set_recomputed": false,
+      "status": "UNCHANGED_FROZEN_INPUT"
+    },
+    "chengchuan_base16_synthetic_facts": {
+      "source": "docs/handoff/V43_PRE_E2E_GOVERNANCE_AND_MAPPING_READINESS_CLOSURE_V1/02_CHENGCHUAN_BASE16_IDENTITY.json",
+      "material_count": 16,
+      "chunk_count": 160,
+      "embedding_count": 160,
+      "authority_mode": "CONTROLLED_REAL_TEST",
+      "source_role": "SYNTHETIC_ENTERPRISE_EVIDENCE",
+      "production_authority": "NONE",
+      "mapping_contract_status": "ACCEPTS_CANONICAL_FACT_SHAPE_WITH_REQUIRED_IDENTITY_AND_LINEAGE",
+      "production_builder_source_role_result": "REFERENCE_ONLY_AND_FILTERED",
+      "note": "The existing source-role gate intentionally excludes synthetic_test_material from current Mapping authority. This is a source-authority boundary, not a successor-manifest dependency and not a production mutation. Eval synthetic fixtures may exercise the same Mapping contract without claiming Production authority."
+    },
+    "required_fact_boundary": [
+      "approved fact review",
+      "current fact",
+      "source lineage verified",
+      "source span and material identity",
+      "fact payload hash and contract version",
+      "source material authority eligibility",
+      "upstream support level"
+    ],
+    "offline_fixture_probe": {
+      "builder_synthetic_marker_fact_count": 0,
+      "direct_model_input_fact_ref_projection": "PASS",
+      "provider_calls": 0,
+      "db_writes": 0
+    }
+  },
+  "frozen_mapping_taxonomy": {
+    "relationships": [
+      "direct",
+      "partial",
+      "related",
+      "conflict",
+      "unrelated",
+      "unknown"
+    ],
+    "support_levels": [
+      "full_support",
+      "partial_support",
+      "conflict",
+      "insufficient",
+      "reference_only",
+      "unknown"
+    ],
+    "dimensions": [
+      "subject_match",
+      "scope_match",
+      "status_match",
+      "quantitative_match",
+      "entity_match",
+      "validity_match",
+      "support_sufficiency"
+    ],
+    "dimension_values": [
+      "match",
+      "mismatch",
+      "unknown",
+      "not_applicable"
+    ],
+    "transport_decisions": [
+      "direct_full",
+      "partial_support",
+      "related_reference",
+      "related_insufficient",
+      "conflict",
+      "unrelated",
+      "unknown"
+    ],
+    "mapping_reason_codes": [
+      "FACT_NOT_APPROVED",
+      "REQUIREMENT_INVALID",
+      "SUBJECT_MISMATCH",
+      "SCOPE_MISMATCH",
+      "STATUS_MISMATCH",
+      "STATUS_UNKNOWN",
+      "QUANTITATIVE_MISMATCH",
+      "QUANTITATIVE_UNKNOWN",
+      "ENTITY_MISMATCH",
+      "VALIDITY_MISMATCH",
+      "VALIDITY_UNKNOWN",
+      "SUPPORT_PARTIAL",
+      "SUPPORT_INSUFFICIENT",
+      "REFERENCE_ONLY",
+      "RELATIONSHIP_UNKNOWN",
+      "HUMAN_REVIEW_REQUIRED"
+    ],
+    "policy_version": "mapping-decision-policy-v1"
+  },
+  "governance_boundary": {
+    "successor_activation_needed_for_runtime_mapping": false,
+    "real_partition_expansion": 0,
+    "real_gold_creation": 0,
+    "dual_eval_expansion": 0,
+    "taxonomy_changes": 0,
+    "router_v2_2_3_changes": 0,
+    "deep_chain_count_recomputed": 0,
+    "chengchuan_base16_vectors_reembedded": 0
+  },
+  "verification": {
+    "focused_command": "node --test backend/test/mapping-producer-v1.test.js backend/test/mapping-gold-v2-successor.test.js",
+    "focused_tests": 26,
+    "focused_pass": 26,
+    "focused_fail": 0,
+    "e2e_executed": false,
+    "provider_calls_during_verification": 0,
+    "database_writes_during_verification": 0
+  },
+  "evidence_hashes": {
+    "successor_manifest": "13a7b7887987e5bfe1b46a466eaeb6ca43cfc28473e8566739010669eee395fd",
+    "mapping_service": "bc344bef4436c3ae94b02fed3ae710438b89fc3daab41f7fc4ed43e5fe2aa0b4",
+    "mapping_candidate_builder": "be054cede6425924a5c0ed755e92e49e651e60290fc70ff51380af15aec1a677",
+    "semantic_mapping_evaluator": "f5f4f0b1317204caff1e8d6fb42219fb2812f9905e6acf434b7a7901cfbc9b5c",
+    "mapping_contract": "f22362f22a668997fac365e97e12f530957827b97ee4b5cc7ad3c14ad0e4a2c8",
+    "mapping_policy": "9a362f3a5fbc639e9cdbf6fcf6977ac1019f48245d7f800a910952f01defab2d",
+    "base16_identity": "6ed3eab4d0afa1a19b7c80b7c39cd98133affa15cfb711e0e4f51b41a922f32b",
+    "deep_chain_audit": "1b37045651e685a3aad3876570baa2bfe4a80eb2428c63bd84cd15a21349423c"
+  },
+  "safety": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "eval_db_writes": 0,
+    "gold_mutations": 0,
+    "mapping_actions": 0,
+    "claim_actions": 0,
+    "writer_actions": 0,
+    "commit": 0,
+    "push": 0,
+    "merge": 0,
+    "deploy": 0
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "artifact_type": "V43_REAL_E2E_BASELINE_FAST01_V1_RUN_MANIFEST",
+  "run_id": "V43-REAL-E2E-FAST01-20260911-0001",
+  "decision": "V43_REAL_E2E_BASELINE_FAST01_V1",
+  "status": "BLOCKED_REAL_E2E_P0_FLOW",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "project": {
+    "project_id": "0e30c45e-40bf-490e-9784-5a6be9bbfa6b",
+    "name": "E2E-V43-REAL-FAST01-V1",
+    "data_classification": "PUBLIC_EVAL_TENDER",
+    "customer_private_data_observed": false
+  },
+  "tender": {
+    "tender_file_id": "daf726eb-a47c-4a56-ac8d-8c2b94451d7e",
+    "original_name": "FAST-01-dapeng-healthcare.pdf",
+    "source_path": "backend/eval/tender-benchmark-v1/sources/FAST-01-dapeng-healthcare.pdf",
+    "source_sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29",
+    "source_bytes": 1234398
+  },
+  "parse": {
+    "parse_job_id": "5a237389-a59c-462c-b457-e76b1af9e667",
+    "create_path": "POST /api/projects (normal API)",
+    "parse_path": "POST /api/projects/:projectId/tender-parse-jobs (normal API)",
+    "status": "failed",
+    "error_code": "NO_TECHNICAL_REQUIREMENTS_FOUND",
+    "candidate_count": 0,
+    "total_chunks": 0,
+    "provider_reached": false
+  },
+  "runtime": {
+    "backend_url": "http://127.0.0.1:3010",
+    "health": "PASS",
+    "database": "connected",
+    "semantic_gateway_url": "http://127.0.0.1:18082",
+    "semantic_gateway_ready": "PASS",
+    "semantic_gateway_build_revision": "f509514",
+    "fact_provider": "deepseek_official",
+    "fact_provider_endpoint": "/responses",
+    "fact_model": "deepseek-v4-pro"
+  },
+  "execution_policy": {
+    "production_path_required": true,
+    "provider_calls": 0,
+    "provider_call_cap": 1,
+    "retries": 0,
+    "manual_database_writes": 0,
+    "normal_api_business_writes": {
+      "project": 1,
+      "tender_file": 1,
+      "parse_job": 1,
+      "total": 3,
+      "authorized_by_decision": true
+    },
+    "gold_mutations": 0,
+    "router_invoked": false,
+    "safe_packet_invoked": false,
+    "writer_invoked": false
+  },
+  "root_cause": {
+    "class": "P0_FLOW_BLOCKER",
+    "stage": "parse.section_classification",
+    "detail": "Extracted FAST-01 text contains 49 chapter headings and a user-requirements chapter, but no heading matched the frozen technical_requirements classifier; the parser fail-closed before chunking and Gateway invocation.",
+    "code_path": "backend/src/requirement-parse-service.js:167-175",
+    "classifier_path": "backend/src/pipeline/tender-section-classifier.js:7-10,92-123",
+    "retry_attempted": false
+  }
+}

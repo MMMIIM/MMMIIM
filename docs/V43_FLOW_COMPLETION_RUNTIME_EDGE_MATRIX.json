@@ -1,0 +1,93 @@
+{
+  "artifact_type": "V43_FLOW_COMPLETION_RUNTIME_EDGE_MATRIX",
+  "version": "v1",
+  "provider_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "production_cutover_router_v2_1": 0,
+  "edges": [
+    {
+      "from": "canonical_requirement",
+      "to": "response_decision_projection",
+      "entrypoint": "GET /api/projects/:projectId/requirements/:requirementId/response-decision",
+      "owner": "ResponseRouterService",
+      "authority": "ADVISORY_ONLY",
+      "status": "CONNECTED"
+    },
+    {
+      "from": "response_decision_projection",
+      "to": "safe_response_packet",
+      "entrypoint": "SafeResponsePacketBuilder",
+      "owner": "Backend Control Plane",
+      "authority": "PROJECTION_ONLY",
+      "status": "CONNECTED"
+    },
+    {
+      "from": "safe_response_packet",
+      "to": "writer_generation_identity",
+      "entrypoint": "DocumentGenerationService.generateV2",
+      "owner": "DocumentGenerationService",
+      "authority": "EXISTING_WRITER_AUTHORIZATION",
+      "status": "CONNECTED"
+    },
+    {
+      "from": "requirements_and_findings",
+      "to": "final_requirement_reconciliation",
+      "entrypoint": "GET /api/projects/:projectId/final-reconciliation",
+      "owner": "FinalRequirementReconciliationService",
+      "authority": "READ_ONLY",
+      "status": "CONNECTED"
+    },
+    {
+      "from": "review_center_and_reconciliation",
+      "to": "gate_a_tasks",
+      "entrypoint": "GET /api/projects/:projectId/gate-a/tasks",
+      "owner": "FlowProjectionService",
+      "authority": "READ_ONLY",
+      "status": "CONNECTED"
+    },
+    {
+      "from": "requirements_and_response_decisions",
+      "to": "compliance_matrix",
+      "entrypoint": "GET /api/projects/:projectId/compliance-matrix",
+      "owner": "FlowProjectionService",
+      "authority": "READ_ONLY",
+      "status": "CONNECTED"
+    },
+    {
+      "from": "final_requirement_reconciliation",
+      "to": "bid_pilot_context",
+      "entrypoint": "BidCopilotOrchestrator.run",
+      "owner": "BidCopilotOrchestrator",
+      "authority": "ADVISORY_ONLY",
+      "status": "CONNECTED"
+    },
+    {
+      "from": "safe_response_packet",
+      "to": "enterprise_assertion",
+      "entrypoint": "SafeResponsePacketBuilder",
+      "owner": "Existing Claim Gate / Writer Authorization",
+      "authority": "CURRENT_APPROVED_ALLOW_ONLY",
+      "status": "FAIL_CLOSED"
+    }
+  ],
+  "invariants": {
+    "flow_connected": true,
+    "safe_packet_present": true,
+    "router_advisory_only": true,
+    "four_lanes_reach_safe_boundary": true,
+    "writer_core_rewrite": false,
+    "authority_boundary_preserved": true,
+    "authority_sensitive_fail_open_count": 0,
+    "every_written_response_has_requirement_lineage": true,
+    "enterprise_assertion_without_authority_lineage": 0,
+    "final_reconciliation_available": true,
+    "bid_pilot_domain_authority": 0
+  },
+  "runtime_status": {
+    "provider_real_call": "NOT_RUN_BY_DECISION",
+    "production_db_write": "NOT_RUN_BY_PRODUCTION_WRITE_GUARD",
+    "router_v2_1_production_cutover": "NOT_DONE"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "artifact_type": "V43_PROJECT_MATERIAL_BINDING_SCHEMA_OWNER_AUDIT",
+  "migration_file": "backend\\migrations\\052_requirement_scope_authority_and_project_material_bindings.sql",
+  "migration_sha256": "3a2fabb3a709cbb438d2e34c8f0b8828e9528706ec798d744b6e5cd918575d95",
+  "migration_creates_project_material_bindings": true,
+  "migration_creates_other_authority_table": true,
+  "migration_bundle_review": "PRODUCTION_MIGRATION_BUNDLE_REVIEW_REQUIRED",
+  "service_file": "backend\\src\\project-material-binding-service.js",
+  "service_sha256": "f7c8167abf44ae4c729cb06b855d3d247f1a48380ca882840dd5fb66cbac0a52",
+  "service_entry_points": [
+    "ProjectMaterialBindingService.create",
+    "ProjectMaterialBindingService.remove",
+    "ProjectMaterialBindingService.list"
+  ],
+  "selector_file": "backend\\src\\pipeline\\writer-reference-selector.js",
+  "selector_sha256": "1ad5e0aa19bad1dba1023d6bc38a4f34b4fd94cbb5c9f5f42fe0332b7efca875",
+  "retrieval_query_owner": "PgRepository.searchWriterReferenceChunks",
+  "migration_runner_file": "backend/src/migrate.js",
+  "production_migration_executed": false,
+  "production_schema_fingerprint": "4dfe0fc6df04cbc93f7d655898546578d779665273b273da7ed4e4e410e653c3",
+  "test_schema_fingerprint": "e3cacf5f35d28a1620263a04a25629956167c58eb106e02ffcf3ccda89ae161c",
+  "eval_schema_fingerprint": "ae3004bbbfe6c5880b2e8ad27bb5428ade00c7fd2fc6451e36988fd18156c3e7",
+  "migration_contract": [
+    "CREATE TABLE IF NOT EXISTS requirement_scope_authority_decisions (",
+    "source_page_start integer NOT NULL CHECK (source_page_start > 0),",
+    "source_page_end integer NOT NULL CHECK (source_page_end >= source_page_start),",
+    "decision text NOT NULL CHECK (decision IN ('IN_SCOPE', 'OUT_OF_SCOPE')),",
+    "authority_type text NOT NULL DEFAULT 'HUMAN' CHECK (authority_type = 'HUMAN'),",
+    "UNIQUE (project_id, candidate_identity)",
+    "CREATE INDEX IF NOT EXISTS requirement_scope_authority_project_idx",
+    "CREATE TABLE IF NOT EXISTS project_material_bindings (",
+    "status text NOT NULL DEFAULT 'ACTIVE' CHECK (status IN ('ACTIVE', 'REMOVED')),",
+    "UNIQUE (project_id, material_id),",
+    "CHECK ((status = 'ACTIVE' AND removed_at IS NULL) OR (status = 'REMOVED'))",
+    "CREATE INDEX IF NOT EXISTS project_material_bindings_material_idx"
+  ]
+}

@@ -1,0 +1,898 @@
+{
+  "artifact_type": "V43_RAG_HISTORICAL_EXPERIMENT_AUDIT",
+  "audit_mode": "READ_ONLY_REPOSITORY_AND_GIT_HISTORY",
+  "experiments": [
+    {
+      "experiment_id": "retrieval-benchmark-v1",
+      "dataset_identity": {
+        "representative_sme": {
+          "materials": 20,
+          "chunks": 60
+        },
+        "real_public": {
+          "materials": 4,
+          "mode": "qualitative_only"
+        },
+        "cross_subject_stress": {
+          "mode": "isolated_optional"
+        }
+      },
+      "query_count": 26,
+      "corpus_identity": {
+        "materials": 20,
+        "chunks": 60
+      },
+      "algorithm": "dense embedding baselines A/B/C",
+      "parameters": {
+        "provider": "openai_compatible",
+        "model": "Qwen/Qwen3-Embedding-0.6B",
+        "version": "1",
+        "dimension": 1024
+      },
+      "result_summary": {
+        "A": {
+          "3": {
+            "evidence_capable_recall": 0.8571,
+            "best_anchor_recall": 0.8095,
+            "mrr": 0.7381,
+            "wrong_role_rate": 0.3974,
+            "evidence_need_coverage": 0.76,
+            "no_sufficient_behavior": 0.4
+          },
+          "5": {
+            "evidence_capable_recall": 0.9048,
+            "best_anchor_recall": 0.9048,
+            "mrr": 0.7595,
+            "wrong_role_rate": 0.5154,
+            "evidence_need_coverage": 0.88,
+            "no_sufficient_behavior": 0.2
+          },
+          "10": {
+            "evidence_capable_recall": 1,
+            "best_anchor_recall": 1,
+            "mrr": 0.7701,
+            "wrong_role_rate": 0.6346,
+            "evidence_need_coverage": 1,
+            "no_sufficient_behavior": 0
+          },
+          "20": {
+            "evidence_capable_recall": 1,
+            "best_anchor_recall": 1,
+            "mrr": 0.7701,
+            "wrong_role_rate": 0.7788,
+            "evidence_need_coverage": 1,
+            "no_sufficient_behavior": 0
+          }
+        },
+        "B": {
+          "3": {
+            "evidence_capable_recall": 0.619,
+            "best_anchor_recall": 0.5714,
+            "mrr": 0.3492,
+            "wrong_role_rate": 0.4487,
+            "evidence_need_coverage": 0.56,
+            "no_sufficient_behavior": 0.4
+          },
+          "5": {
+            "evidence_capable_recall": 0.6667,
+            "best_anchor_recall": 0.619,
+            "mrr": 0.3587,
+            "wrong_role_rate": 0.5385,
+            "evidence_need_coverage": 0.6,
+            "no_sufficient_behavior": 0.4
+          },
+          "10": {
+            "evidence_capable_recall": 0.8095,
+            "best_anchor_recall": 0.8095,
+            "mrr": 0.3809,
+            "wrong_role_rate": 0.6731,
+            "evidence_need_coverage": 0.8,
+            "no_sufficient_behavior": 0.4
+          },
+          "20": {
+            "evidence_capable_recall": 0.8095,
+            "best_anchor_recall": 0.8095,
+            "mrr": 0.3809,
+            "wrong_role_rate": 0.8019,
+            "evidence_need_coverage": 0.84,
+            "no_sufficient_behavior": 0.4
+          }
+        },
+        "C": {
+          "3": {
+            "evidence_capable_recall": 0.619,
+            "best_anchor_recall": 0.5714,
+            "mrr": 0.3492,
+            "wrong_role_rate": 0.0897,
+            "evidence_need_coverage": 0.56,
+            "no_sufficient_behavior": 0
+          },
+          "5": {
+            "evidence_capable_recall": 1,
+            "best_anchor_recall": 0.9524,
+            "mrr": 0.4397,
+            "wrong_role_rate": 0.2077,
+            "evidence_need_coverage": 0.88,
+            "no_sufficient_behavior": 0
+          },
+          "10": {
+            "evidence_capable_recall": 1,
+            "best_anchor_recall": 1,
+            "mrr": 0.445,
+            "wrong_role_rate": 0.4923,
+            "evidence_need_coverage": 0.96,
+            "no_sufficient_behavior": 0
+          },
+          "20": {
+            "evidence_capable_recall": 1,
+            "best_anchor_recall": 1,
+            "mrr": 0.445,
+            "wrong_role_rate": 0.7308,
+            "evidence_need_coverage": 1,
+            "no_sufficient_behavior": 0
+          }
+        }
+      },
+      "artifact_path": "backend/eval/rag-pilot/retrieval-baseline/retrieval-benchmark-v1.json",
+      "artifact_sha256": "24032233ce519ff319665d10b8881ccd4a9ec12c6c3f94372e238653ac36f1e4",
+      "reproducibility": "ARTIFACT_PRESENT_RESULT_REPLAYABLE_RAW_PROVIDER_RESPONSE_NOT_SAVED"
+    },
+    {
+      "experiment_id": "stage20-retrieval-quality-experiments",
+      "dataset_identity": {
+        "source": "persisted raw Top20",
+        "query_count": 139
+      },
+      "corpus_identity": {
+        "embedding_model": "Qwen/Qwen3-Embedding-0.6B",
+        "dimension": 1024,
+        "candidateK": 20,
+        "topK": 5,
+        "source": "persisted_raw_top20",
+        "external_calls": 0
+      },
+      "algorithm": "BASELINE, MMR lambda 0.7/0.8/0.9, Hybrid RRF k60, coverage soft penalty",
+      "parameters": [
+        {
+          "strategy": "BASELINE",
+          "params": {}
+        },
+        {
+          "strategy": "A_MMR_LAMBDA_0.7",
+          "params": {
+            "lambda": 0.7
+          }
+        },
+        {
+          "strategy": "A_MMR_LAMBDA_0.8",
+          "params": {
+            "lambda": 0.8
+          }
+        },
+        {
+          "strategy": "A_MMR_LAMBDA_0.9",
+          "params": {
+            "lambda": 0.9
+          }
+        },
+        {
+          "strategy": "B_HYBRID_RRF_K60",
+          "params": {
+            "rrf_k": 60,
+            "lexical_scope": "same_raw_top20"
+          }
+        },
+        {
+          "strategy": "C_COVERAGE_SOFT_PENALTY",
+          "params": {
+            "material_penalty": 0.02,
+            "lexical_redundancy_penalty": 0.01
+          }
+        }
+      ],
+      "result_summary": [
+        {
+          "strategy": "BASELINE",
+          "metrics": {
+            "recall_at_5": 0.9421487603305785,
+            "expected_source_recall_at_5": 0.9361702127659575,
+            "mrr": 0.8801652892561983,
+            "multi_source_coverage_at_5": 0.8108108108108109,
+            "multi_source_full_query_rate": 0.7058823529411765,
+            "no_answer_accuracy": 0,
+            "scope_violation": 0,
+            "obsolete_error": 0,
+            "traceability": 1,
+            "recovered": 0,
+            "newly_broken": 0,
+            "net_gain": 0,
+            "recovered_ids": [],
+            "broken_ids": [],
+            "average_latency_ms": 0.00383884892086331,
+            "p95_latency_ms": 0.0056,
+            "candidate_processing_cost": {
+              "queries": 139,
+              "candidates_scored": 2780
+            }
+          }
+        },
+        {
+          "strategy": "A_MMR_LAMBDA_0.7",
+          "metrics": {
+            "recall_at_5": 0.9421487603305785,
+            "expected_source_recall_at_5": 0.9361702127659575,
+            "mrr": 0.8863636363636364,
+            "multi_source_coverage_at_5": 0.7837837837837838,
+            "multi_source_full_query_rate": 0.6470588235294118,
+            "no_answer_accuracy": 0,
+            "scope_violation": 0,
+            "obsolete_error": 0,
+            "traceability": 1,
+            "recovered": 3,
+            "newly_broken": 3,
+            "net_gain": 0,
+            "recovered_ids": [
+              "GOV-005",
+              "GOV-006",
+              "HEALTH-011"
+            ],
+            "broken_ids": [
+              "GOV-012",
+              "GOV-037",
+              "ENT-001"
+            ],
+            "average_latency_ms": 0.7757294964028777,
+            "p95_latency_ms": 1.1845,
+            "candidate_processing_cost": {
+              "queries": 139,
+              "candidates_scored": 2780
+            }
+          }
+        },
+        {
+          "strategy": "A_MMR_LAMBDA_0.8",
+          "metrics": {
+            "recall_at_5": 0.9669421487603306,
+            "expected_source_recall_at_5": 0.9574468085106383,
+            "mrr": 0.8862258953168044,
+            "multi_source_coverage_at_5": 0.8378378378378378,
+            "multi_source_full_query_rate": 0.7647058823529411,
+            "no_answer_accuracy": 0,
+            "scope_violation": 0,
+            "obsolete_error": 0,
+            "traceability": 1,
+            "recovered": 4,
+            "newly_broken": 1,
+            "net_gain": 3,
+            "recovered_ids": [
+              "GOV-005",
+              "GOV-006",
+              "HEALTH-011",
+              "HEALTH-039"
+            ],
+            "broken_ids": [
+              "GOV-037"
+            ],
+            "average_latency_ms": 0.7111870503597121,
+            "p95_latency_ms": 1.0807,
+            "candidate_processing_cost": {
+              "queries": 139,
+              "candidates_scored": 2780
+            }
+          }
+        },
+        {
+          "strategy": "A_MMR_LAMBDA_0.9",
+          "metrics": {
+            "recall_at_5": 0.9669421487603306,
+            "expected_source_recall_at_5": 0.9574468085106383,
+            "mrr": 0.8845730027548209,
+            "multi_source_coverage_at_5": 0.8378378378378378,
+            "multi_source_full_query_rate": 0.7647058823529411,
+            "no_answer_accuracy": 0,
+            "scope_violation": 0,
+            "obsolete_error": 0,
+            "traceability": 1,
+            "recovered": 3,
+            "newly_broken": 0,
+            "net_gain": 3,
+            "recovered_ids": [
+              "GOV-005",
+              "GOV-006",
+              "HEALTH-011"
+            ],
+            "broken_ids": [],
+            "average_latency_ms": 0.6770496402877697,
+            "p95_latency_ms": 0.8959,
+            "candidate_processing_cost": {
+              "queries": 139,
+              "candidates_scored": 2780
+            }
+          }
+        },
+        {
+          "strategy": "B_HYBRID_RRF_K60",
+          "metrics": {
+            "recall_at_5": 0.9173553719008265,
+            "expected_source_recall_at_5": 0.9148936170212766,
+            "mrr": 0.8849862258953167,
+            "multi_source_coverage_at_5": 0.7297297297297297,
+            "multi_source_full_query_rate": 0.5294117647058824,
+            "no_answer_accuracy": 0,
+            "scope_violation": 0,
+            "obsolete_error": 0,
+            "traceability": 1,
+            "recovered": 1,
+            "newly_broken": 4,
+            "net_gain": -3,
+            "recovered_ids": [
+              "GOV-006"
+            ],
+            "broken_ids": [
+              "GOV-012",
+              "GOV-037",
+              "GOV-038",
+              "ENT-019"
+            ],
+            "average_latency_ms": 0.242815107913669,
+            "p95_latency_ms": 0.4395,
+            "candidate_processing_cost": {
+              "queries": 139,
+              "candidates_scored": 2780
+            }
+          }
+        },
+        {
+          "strategy": "C_COVERAGE_SOFT_PENALTY",
+          "metrics": {
+            "recall_at_5": 0.9586776859504132,
+            "expected_source_recall_at_5": 0.950354609929078,
+            "mrr": 0.8836088154269973,
+            "multi_source_coverage_at_5": 0.8378378378378378,
+            "multi_source_full_query_rate": 0.7647058823529411,
+            "no_answer_accuracy": 0,
+            "scope_violation": 0,
+            "obsolete_error": 0,
+            "traceability": 1,
+            "recovered": 2,
+            "newly_broken": 0,
+            "net_gain": 2,
+            "recovered_ids": [
+              "GOV-005",
+              "GOV-006"
+            ],
+            "broken_ids": [],
+            "average_latency_ms": 9.645489928057556,
+            "p95_latency_ms": 14.6871,
+            "candidate_processing_cost": {
+              "queries": 139,
+              "candidates_scored": 2780
+            }
+          }
+        }
+      ],
+      "artifact_path": "backend/eval/reports/stage20-retrieval-quality-experiments.json",
+      "artifact_sha256": "eee9653e5227b4b49a2bff91f88bc3cb3102320e499324afdc7ca58dfe7372f9",
+      "reproducibility": "ARTIFACT_PRESENT_OFFLINE_REPLAY"
+    },
+    {
+      "experiment_id": "candidate-rerank-benchmark-v1",
+      "dataset_identity": {
+        "tiers": [
+          "S",
+          "M",
+          "L"
+        ],
+        "chunk_count": 60
+      },
+      "corpus_identity": {
+        "provider": "openai_compatible",
+        "model": "Qwen/Qwen3-Embedding-0.6B",
+        "version": "1",
+        "dimension": 1024
+      },
+      "algorithm": "deterministic candidate rerank benchmark",
+      "parameters": {
+        "tiers": [
+          "S",
+          "M",
+          "L"
+        ],
+        "configs": "candidate_k 10/20/30/50; review_k 5/8; D0-D3 deterministic variants"
+      },
+      "result_summary": {
+        "report": "see tier/config metrics in source artifact",
+        "provider_audit": {
+          "status": "succeeded",
+          "request_hash": "7625e41827b2194e31fa12a913f50e3013a17892f626d675377274c1c4b926e3",
+          "input_count": 526,
+          "latency_ms": 2192,
+          "raw_response_saved": false,
+          "vectors_saved": false
+        }
+      },
+      "artifact_path": "backend/eval/candidate-rerank/candidate-rerank-benchmark-v1.json",
+      "artifact_sha256": "71da2dee82f8a732c70beb411f7c6ce335475733f6f28208909d0232fca9b45b",
+      "reproducibility": "ARTIFACT_PRESENT_RESULT_ONLY_RAW_TEXT_AND_VECTORS_NOT_SAVED"
+    },
+    {
+      "experiment_id": "stage17-final-live-retrieval-6",
+      "dataset_identity": "4.3-stage17-final-live-retrieval-6-v1",
+      "corpus_identity": {
+        "cases_executed": 6,
+        "embedding_calls": 6,
+        "retries": 0,
+        "llm_calls": 0,
+        "dify_calls": 0,
+        "provider": "SiliconFlow",
+        "model": "Qwen/Qwen3-Embedding-0.6B",
+        "transport": "Stage21-A managed SOCKS path",
+        "embedding_request_payload_leakage": {
+          "gold_material_ids_in_runtime_payload": false,
+          "gold_document_ids_in_runtime_payload": false,
+          "gold_chunk_ids_in_runtime_payload": false,
+          "expected_labels_in_runtime_payload": false,
+          "expected_answer_or_classification_in_runtime_payload": false
+        }
+      },
+      "algorithm": "dense embedding + deterministic hygiene + role/need rerank",
+      "parameters": {
+        "cases_executed": 6,
+        "embedding_calls": 6,
+        "retries": 0,
+        "llm_calls": 0,
+        "dify_calls": 0,
+        "provider": "SiliconFlow",
+        "model": "Qwen/Qwen3-Embedding-0.6B",
+        "transport": "Stage21-A managed SOCKS path",
+        "embedding_request_payload_leakage": {
+          "gold_material_ids_in_runtime_payload": false,
+          "gold_document_ids_in_runtime_payload": false,
+          "gold_chunk_ids_in_runtime_payload": false,
+          "expected_labels_in_runtime_payload": false,
+          "expected_answer_or_classification_in_runtime_payload": false
+        }
+      },
+      "result_summary": {
+        "retrieval": {
+          "decision_hit_at_1": 0.8333333333333334,
+          "decision_hit_at_3": 1,
+          "decision_hit_at_5": 1,
+          "decision_mrr": 0.9166666666666666,
+          "exact_hit_at_1": 0.5,
+          "exact_hit_at_3": 1,
+          "exact_hit_at_5": 1,
+          "exact_mrr": 0.75,
+          "v2r001_first_decision_rank": 4,
+          "v2r006_boundary_status": "PRESERVED",
+          "iso9001_source_status": "SOURCE_ELIGIBLE_NOT_SUPPORTING_ISO27001"
+        },
+        "live_quality": {
+          "metadata_at_5": 0,
+          "non_substantive_at_5": 0,
+          "non_evidence_source_at_5": 0,
+          "derived_artifact_leakage_at_5": 0,
+          "internal_process_artifact_leakage_at_5": 0,
+          "low_specificity_claim_at_5": 0,
+          "scope_violation": 0,
+          "broken_decision_bearing_gold": 0
+        }
+      },
+      "artifact_path": "backend/eval/evidence-support/calibration-v2/GPT_REVIEW_PACKET_STAGE17_FINAL_LIVE_6.json",
+      "artifact_sha256": "f7ea31585a3b7285110d452107e26e93867f531d4cf359d9cd6c578c9f2510a6",
+      "reproducibility": "ARTIFACT_PRESENT_LIVE_RECORDED"
+    },
+    {
+      "experiment_id": "retrieval-hygiene-pre-post",
+      "dataset_identity": {
+        "cases": 6,
+        "source": "GPT_REVIEW_PACKET_LIVE_RETRIEVAL_7.json"
+      },
+      "corpus_identity": "captured candidate pools",
+      "algorithm": "deterministic substantive/chunk-role/source-eligibility hygiene",
+      "parameters": {
+        "pre_post": true
+      },
+      "result_summary": {
+        "metadata_at_5_zero": true,
+        "broken_gold_cases": [],
+        "decision_bearing_hit_at_3": 1,
+        "scope_violation": 0
+      },
+      "artifact_path": "backend/eval/evidence-support/calibration-v2/GPT_REVIEW_PACKET_RETRIEVAL_HYGIENE_PRE_POST.json",
+      "artifact_sha256": "eac47798b1d300c0d7f33904552c2594f6491b0cf3fcc9bb1351e10dad676563",
+      "reproducibility": "ARTIFACT_PRESENT_OFFLINE_REPLAY"
+    },
+    {
+      "experiment_id": "stage20-sufficiency-experiment",
+      "dataset_identity": {
+        "calibration_cases": 10,
+        "validation_cases": 14
+      },
+      "corpus_identity": "fixture-only calibration and no-answer forensics",
+      "algorithm": "score-only/deterministic metadata/fixture semantic/hybrid fixture",
+      "parameters": {
+        "external_model_calls": 0
+      },
+      "result_summary": {
+        "calibration": {
+          "A_SCORE_ONLY": {
+            "accuracy": 0.4,
+            "safe_non_answer_accuracy": 0.8571428571428571,
+            "retrieval_status_accuracy": 0.4,
+            "false_accept_rate": 0.14285714285714285,
+            "false_reject_rate": 0,
+            "conflict_detection_accuracy": 0
+          },
+          "B_DETERMINISTIC_METADATA": {
+            "accuracy": 0.5,
+            "safe_non_answer_accuracy": 0.2857142857142857,
+            "retrieval_status_accuracy": 0.5,
+            "false_accept_rate": 0.7142857142857143,
+            "false_reject_rate": 0,
+            "conflict_detection_accuracy": 1
+          },
+          "C_SEMANTIC_FIXTURE": {
+            "accuracy": 1,
+            "safe_non_answer_accuracy": 1,
+            "retrieval_status_accuracy": 1,
+            "false_accept_rate": 0,
+            "false_reject_rate": 0,
+            "conflict_detection_accuracy": 1
+          },
+          "D_HYBRID_FIXTURE": {
+            "accuracy": 1,
+            "safe_non_answer_accuracy": 1,
+            "retrieval_status_accuracy": 1,
+            "false_accept_rate": 0,
+            "false_reject_rate": 0,
+            "conflict_detection_accuracy": 1
+          }
+        },
+        "validation": {
+          "A_SCORE_ONLY": {
+            "accuracy": 0.07142857142857142,
+            "safe_non_answer_accuracy": 1,
+            "retrieval_status_accuracy": 0.07142857142857142,
+            "false_accept_rate": 0,
+            "false_reject_rate": 0,
+            "conflict_detection_accuracy": 0,
+            "predictions": {
+              "GEN-025": {
+                "expected": "NO_RELEVANT_EVIDENCE",
+                "predicted": "NO_RELEVANT_EVIDENCE"
+              },
+              "GOV-039": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "NO_RELEVANT_EVIDENCE"
+              },
+              "HEALTH-040": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "NO_RELEVANT_EVIDENCE"
+              },
+              "ENT-005": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "NO_RELEVANT_EVIDENCE"
+              },
+              "ENT-012": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "NO_RELEVANT_EVIDENCE"
+              },
+              "ENT-014": {
+                "expected": "CONFLICTING_EVIDENCE",
+                "predicted": "NO_RELEVANT_EVIDENCE"
+              },
+              "ENT-015": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "NO_RELEVANT_EVIDENCE"
+              },
+              "ENT-023": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "NO_RELEVANT_EVIDENCE"
+              },
+              "ENT-024": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "NO_RELEVANT_EVIDENCE"
+              },
+              "ENT-025": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "NO_RELEVANT_EVIDENCE"
+              },
+              "ENT-026": {
+                "expected": "CONFLICTING_EVIDENCE",
+                "predicted": "NO_RELEVANT_EVIDENCE"
+              },
+              "ENT-027": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "NO_RELEVANT_EVIDENCE"
+              },
+              "ENT-028": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "NO_RELEVANT_EVIDENCE"
+              },
+              "ENT-032": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "NO_RELEVANT_EVIDENCE"
+              }
+            }
+          },
+          "B_DETERMINISTIC_METADATA": {
+            "accuracy": 0.9285714285714286,
+            "safe_non_answer_accuracy": 1,
+            "retrieval_status_accuracy": 0.9285714285714286,
+            "false_accept_rate": 0,
+            "false_reject_rate": 0,
+            "conflict_detection_accuracy": 1,
+            "predictions": {
+              "GEN-025": {
+                "expected": "NO_RELEVANT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "GOV-039": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "HEALTH-040": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "ENT-005": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "ENT-012": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "ENT-014": {
+                "expected": "CONFLICTING_EVIDENCE",
+                "predicted": "CONFLICTING_EVIDENCE"
+              },
+              "ENT-015": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "ENT-023": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "ENT-024": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "ENT-025": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "ENT-026": {
+                "expected": "CONFLICTING_EVIDENCE",
+                "predicted": "CONFLICTING_EVIDENCE"
+              },
+              "ENT-027": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "ENT-028": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "ENT-032": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              }
+            }
+          },
+          "C_SEMANTIC_FIXTURE": {
+            "accuracy": 1,
+            "safe_non_answer_accuracy": 1,
+            "retrieval_status_accuracy": 1,
+            "false_accept_rate": 0,
+            "false_reject_rate": 0,
+            "conflict_detection_accuracy": 1,
+            "predictions": {
+              "GEN-025": {
+                "expected": "NO_RELEVANT_EVIDENCE",
+                "predicted": "NO_RELEVANT_EVIDENCE"
+              },
+              "GOV-039": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "HEALTH-040": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "ENT-005": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "ENT-012": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "ENT-014": {
+                "expected": "CONFLICTING_EVIDENCE",
+                "predicted": "CONFLICTING_EVIDENCE"
+              },
+              "ENT-015": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "ENT-023": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "ENT-024": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "ENT-025": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "ENT-026": {
+                "expected": "CONFLICTING_EVIDENCE",
+                "predicted": "CONFLICTING_EVIDENCE"
+              },
+              "ENT-027": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "ENT-028": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "ENT-032": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              }
+            }
+          },
+          "D_HYBRID_FIXTURE": {
+            "accuracy": 1,
+            "safe_non_answer_accuracy": 1,
+            "retrieval_status_accuracy": 1,
+            "false_accept_rate": 0,
+            "false_reject_rate": 0,
+            "conflict_detection_accuracy": 1,
+            "predictions": {
+              "GEN-025": {
+                "expected": "NO_RELEVANT_EVIDENCE",
+                "predicted": "NO_RELEVANT_EVIDENCE"
+              },
+              "GOV-039": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "HEALTH-040": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "ENT-005": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "ENT-012": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "ENT-014": {
+                "expected": "CONFLICTING_EVIDENCE",
+                "predicted": "CONFLICTING_EVIDENCE"
+              },
+              "ENT-015": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "ENT-023": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "ENT-024": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "ENT-025": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "ENT-026": {
+                "expected": "CONFLICTING_EVIDENCE",
+                "predicted": "CONFLICTING_EVIDENCE"
+              },
+              "ENT-027": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "ENT-028": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              },
+              "ENT-032": {
+                "expected": "INSUFFICIENT_EVIDENCE",
+                "predicted": "INSUFFICIENT_EVIDENCE"
+              }
+            }
+          }
+        }
+      },
+      "artifact_path": "backend/eval/reports/stage20-sufficiency-experiment.json",
+      "artifact_sha256": "5dc56a8998d21b0ecd869a38e5f94757d6491ce656edbcad3e4dbf5d95d996a6",
+      "reproducibility": "ARTIFACT_PRESENT_FIXTURE_ONLY_NOT_REAL_RAG_SEMANTIC_PROOF"
+    },
+    {
+      "experiment_id": "overnight-retrieval-context-40case",
+      "dataset_identity": {
+        "fixture_sha256": "6622fa8f47534088cc4d019c89752223c1cb50051f7042dd35f5e991030d9199",
+        "cases": 40
+      },
+      "corpus_identity": {
+        "model": "Qwen/Qwen3-Embedding-0.6B",
+        "version": "1",
+        "dimension": 1024,
+        "timeout_ms": 30000,
+        "provider_host": "api.siliconflow.cn"
+      },
+      "algorithm": "captured dense retrieval Top20 + selected TopK/context recovery",
+      "parameters": {
+        "model": "Qwen/Qwen3-Embedding-0.6B",
+        "version": "1",
+        "dimension": 1024,
+        "timeout_ms": 30000,
+        "provider_host": "api.siliconflow.cn"
+      },
+      "result_summary": {
+        "cases": 40,
+        "expected_doc_hit": 38,
+        "relevant_at_5": 18,
+        "relevant_at_5_rate": 100,
+        "scope_violations": 0,
+        "heading_only_final": 0,
+        "context_failures": 0,
+        "provenance_failures": 0
+      },
+      "artifact_path": "backend/eval/rag-pilot/results/overnight/01_retrieval_context_40case.json",
+      "artifact_sha256": "7fde0c5434718a238ba74301dae001ffc82089d3af86f6dba3a017ec68c77d42",
+      "reproducibility": "ARTIFACT_PRESENT_CAPTURED_RESULTS_NO_NEW_CALL"
+    }
+  ],
+  "git_history_evidence": [
+    {
+      "commit": "20ca35a",
+      "subject": "test: add deterministic candidate rerank benchmark"
+    },
+    {
+      "commit": "d1427f0",
+      "subject": "eval: add retrieval sufficiency architecture experiment"
+    },
+    {
+      "commit": "6649ed9",
+      "subject": "eval: record retrieval hygiene comparison"
+    },
+    {
+      "commit": "7a2b2b0",
+      "subject": "fix: enforce retrieval candidate hygiene"
+    },
+    {
+      "commit": "1528298",
+      "subject": "docs: rebase Stage17 retrieval metrics"
+    },
+    {
+      "commit": "6e074cd",
+      "subject": "eval: capture stage17 final live retrieval"
+    }
+  ],
+  "searched_but_not_found": [
+    {
+      "experiment": "RRF-only independent artifact",
+      "status": "HISTORICAL_RESULT_NOT_REPRODUCIBLE",
+      "note": "RRF appears only as a strategy inside stage20-retrieval-quality-experiments; no separate raw experiment artifact found"
+    },
+    {
+      "experiment": "GPT semantic usefulness labels for Reference Retrieval",
+      "status": "HISTORICAL_RESULT_NOT_REPRODUCIBLE",
+      "note": "Existing packets contain deterministic relevance/context fields but no frozen GPT Useful@K labels"
+    }
+  ],
+  "chat_percentages_used_as_frozen_metrics": false
+}

@@ -1,0 +1,44 @@
+{
+  "task": "HUAWEI_PUBLIC_REAL_PDF_PILOT_V1_EMBEDDING_PREFLIGHT",
+  "provider": "siliconflow",
+  "provider_host": "api.siliconflow.cn",
+  "configured_api_base": "https://api.siliconflow.cn/v1",
+  "configured_proxy": "socks5://127.0.0.1:18081",
+  "production_embedding_transport": "SOCKS5_PROXY",
+  "dns": {
+    "status": "PASS",
+    "addresses": [
+      "47.102.37.23",
+      "139.196.152.242",
+      "101.132.62.140"
+    ]
+  },
+  "tcp_443": {
+    "status": "FAIL",
+    "error": "Test-NetConnection TcpTestSucceeded=false"
+  },
+  "tls": {
+    "status": "FAIL",
+    "error_name": "AggregateError",
+    "error_code": "EACCES"
+  },
+  "node_https": {
+    "status": "FAIL",
+    "error_name": "AggregateError",
+    "error_code": "EACCES"
+  },
+  "proxy_tcp_18081": {
+    "status": "FAIL",
+    "error": "127.0.0.1:18081 unreachable"
+  },
+  "proxy_environment": {
+    "HTTP_PROXY": "UNSET",
+    "HTTPS_PROXY": "UNSET",
+    "NO_PROXY": "UNSET",
+    "ALL_PROXY": "UNSET"
+  },
+  "provider_reached": false,
+  "low_level_reason": "SOCKS5 proxy 127.0.0.1:18081 unreachable; Node transport reported EACCES in the sandbox",
+  "classification": "BLOCKED_ENVIRONMENT_SANDBOX_NETWORK_EACCES",
+  "credentials_logged": false
+}

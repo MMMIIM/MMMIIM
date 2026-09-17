@@ -1,0 +1,230 @@
+{
+  "artifact_type": "V43_OVERNIGHT_FACT_AUTHORITY_REPRO_TO_BOUNDED_E2E_CHECKPOINT",
+  "primary_status": "GATE0_FACT_BOUNDARY_PASS_E2E_CONTINUED",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "dirty_worktree": {
+    "dirty": true,
+    "entries": 717,
+    "modified_entries": 102,
+    "untracked_entries": 615,
+    "note": "Pre-existing dirty worktree preserved; no destructive Git operation performed."
+  },
+  "branch": "A",
+  "fact_path_owners": {
+    "candidate_span": "Evidence Search final candidate/source span projection",
+    "fact_extraction": "backend/src/pipeline/semantic-gateway-evidence-fact-extractor.js (V2.2 opt-in Eval path)",
+    "attribution_validation": "backend/eval/real-enterprise-upload-test-v1/fact-pilot-v1-1-helpers.mjs classifyEnterpriseFactCandidateV22 + backend/src/pipeline/enterprise-evidence-source-router.js",
+    "canonicalization_grounding": "backend/src/pipeline/evidence-fact-candidate-v2-1.js",
+    "canonical_fact_acceptance_rejection": "backend/src/evidence-source-fact-service.js + backend/src/pipeline/evidence-fact-contract-v1.js",
+    "persistence_boundary": "repository.upsertEvidenceSourceFactsAtomic (not invoked in this provider-neutral empty run)"
+  },
+  "gate0": {
+    "inputs": [
+      "A_PURE_NATIONAL_STANDARD",
+      "B_PURE_OFFICIAL_SOURCE_URL",
+      "C_GENERIC_TEMPORAL_SOURCE_REGISTRY",
+      "D_SYNTHETIC_DISCLAIMER_ONLY",
+      "E_ENTERPRISE_ASSERTION_PLUS_CITATION"
+    ],
+    "outputs": [
+      {
+        "case_id": "A_PURE_NATIONAL_STANDARD",
+        "classification": "REFERENCE_KNOWLEDGE_REJECTED",
+        "canonical_enterprise_fact_count": 0,
+        "fail_closed_outcome": "NO_ENTERPRISE_ATTRIBUTION"
+      },
+      {
+        "case_id": "B_PURE_OFFICIAL_SOURCE_URL",
+        "classification": "REFERENCE_KNOWLEDGE_REJECTED",
+        "canonical_enterprise_fact_count": 0,
+        "fail_closed_outcome": "NO_ENTERPRISE_ATTRIBUTION"
+      },
+      {
+        "case_id": "C_GENERIC_TEMPORAL_SOURCE_REGISTRY",
+        "classification": "REFERENCE_KNOWLEDGE_REJECTED",
+        "canonical_enterprise_fact_count": 0,
+        "fail_closed_outcome": "NO_ENTERPRISE_ATTRIBUTION"
+      },
+      {
+        "case_id": "D_SYNTHETIC_DISCLAIMER_ONLY",
+        "classification": "REFERENCE_KNOWLEDGE_REJECTED",
+        "canonical_enterprise_fact_count": 0,
+        "fail_closed_outcome": "NO_ENTERPRISE_ATTRIBUTION"
+      },
+      {
+        "case_id": "E_ENTERPRISE_ASSERTION_PLUS_CITATION",
+        "classification": "REAL_ENTERPRISE_FACT_CANDIDATE",
+        "canonical_enterprise_fact_count": 1,
+        "fail_closed_outcome": null
+      }
+    ],
+    "external_reference_fact_authority_escape_count": 0
+  },
+  "span_gate": {
+    "implemented": "NO",
+    "reason": "Branch A: A-D already fail closed; no new authority layer required."
+  },
+  "files_changed": [
+    "backend/eval/real-e2e/run-overnight-fact-authority-repro-to-bounded-e2e-v2.mjs",
+    "docs/handoff/V43_OVERNIGHT_FACT_AUTHORITY_REPRO_TO_BOUNDED_E2E_V2/"
+  ],
+  "fact": {
+    "requirement_count": 3,
+    "JY": {
+      "requirement_id": "JY-001:REQ-057",
+      "status": "SUCCESS_EMPTY_PROVIDER_NEUTRAL_OFFLINE",
+      "fact_resolution_authority": "CURRENT_EVIDENCE_SOURCE_FACT_SERVICE",
+      "candidate_contract": "evidence_fact_candidate_v2_2",
+      "v22_candidate_count": 0,
+      "canonical_fact_count": 0,
+      "accepted_fact_count": 0,
+      "empty_fact": true,
+      "empty_fact_reason": "Provider calls are frozen at 0 for this decision; no semantic candidate is invented locally.",
+      "provider_calls": 0,
+      "local_v22_client_invocations": 1,
+      "durable_fact_writes": 0,
+      "source": {
+        "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+        "chunk_id": "MCH-0663AA700C01FD958515713C21CF5F5E",
+        "chunk_hash": "4cfeecd92d540c0bb407ae32151d79e6eb9c95c17ff5c8f7fc47ec44a194659a",
+        "source_span": "MCH-0663AA700C01FD958515713C21CF5F5E:FULL",
+        "source_hash": "4cfeecd92d540c0bb407ae32151d79e6eb9c95c17ff5c8f7fc47ec44a194659a",
+        "source_role": "EVIDENCE_CANDIDATE",
+        "enterprise_id": "SYNTH-CHENGCHUAN-001",
+        "authority": "SYNTHETIC_EVAL_ONLY",
+        "production_authority": "NONE"
+      },
+      "lineage_completeness": 1,
+      "authority_escalation": 0,
+      "semantic_labels_assigned": false
+    },
+    "FAST_01": {
+      "requirement_id": "FAST-01:REQ-005",
+      "status": "SUCCESS_EMPTY_PROVIDER_NEUTRAL_OFFLINE",
+      "fact_resolution_authority": "CURRENT_EVIDENCE_SOURCE_FACT_SERVICE",
+      "candidate_contract": "evidence_fact_candidate_v2_2",
+      "v22_candidate_count": 0,
+      "canonical_fact_count": 0,
+      "accepted_fact_count": 0,
+      "empty_fact": true,
+      "empty_fact_reason": "Provider calls are frozen at 0 for this decision; no semantic candidate is invented locally.",
+      "provider_calls": 0,
+      "local_v22_client_invocations": 1,
+      "durable_fact_writes": 0,
+      "source": {
+        "material_id": "42debef7-084f-471c-8fa5-1f9dcbf4c2f7",
+        "chunk_id": "MCH-D09A2FC0D82F6D27ED11B48CBDA4B06C",
+        "chunk_hash": "4bac134942d8a38cf85e971a1f4e206eacbb3dd51410f1b94c15105b0af8b90e",
+        "source_span": "MCH-D09A2FC0D82F6D27ED11B48CBDA4B06C:FULL",
+        "source_hash": "4bac134942d8a38cf85e971a1f4e206eacbb3dd51410f1b94c15105b0af8b90e",
+        "source_role": "EVIDENCE_CANDIDATE",
+        "enterprise_id": "SYNTH-CHENGCHUAN-001",
+        "authority": "SYNTHETIC_EVAL_ONLY",
+        "production_authority": "NONE"
+      },
+      "lineage_completeness": 1,
+      "authority_escalation": 0,
+      "semantic_labels_assigned": false
+    },
+    "FAST_04": {
+      "requirement_id": "FAST-04:REQ-004",
+      "status": "SUCCESS_EMPTY_NO_QUALIFICATION_SOURCE",
+      "canonical_fact_count": 0,
+      "accepted_fact_count": 0,
+      "empty_fact": true,
+      "empty_fact_reason": "No personnel qualification source exists in the frozen Top-K; no Fact derived from standards, dates, or generic certification text.",
+      "provider_calls": 0,
+      "lineage_completeness": 1,
+      "authority_escalation": 0,
+      "semantic_labels_assigned": false
+    },
+    "empty_fact_count": 3,
+    "lineage_completeness": 1,
+    "authority_escalation": 0
+  },
+  "support": {
+    "summary": "2 ASSESSMENT_UNAVAILABLE (provider-neutral) + 1 NO_EVIDENCE",
+    "outcomes": [
+      {
+        "requirement_id": "JY-001:REQ-057",
+        "status": "ASSESSMENT_UNAVAILABLE",
+        "aggregate": "ASSESSMENT_UNAVAILABLE"
+      },
+      {
+        "requirement_id": "FAST-01:REQ-005",
+        "status": "ASSESSMENT_UNAVAILABLE",
+        "aggregate": "ASSESSMENT_UNAVAILABLE"
+      },
+      {
+        "requirement_id": "FAST-04:REQ-004",
+        "status": "NO_EVIDENCE",
+        "aggregate": "NO_RELEVANT_EVIDENCE"
+      }
+    ]
+  },
+  "mapping": {
+    "summary": "3 NO_APPROVED_CURRENT_FACTS",
+    "outcomes": [
+      {
+        "requirement_id": "JY-001:REQ-057",
+        "status": "NO_APPROVED_CURRENT_FACTS",
+        "mapping_count": 0
+      },
+      {
+        "requirement_id": "FAST-01:REQ-005",
+        "status": "NO_APPROVED_CURRENT_FACTS",
+        "mapping_count": 0
+      },
+      {
+        "requirement_id": "FAST-04:REQ-004",
+        "status": "NO_APPROVED_CURRENT_FACTS",
+        "mapping_count": 0
+      }
+    ],
+    "authority_escalation": 0
+  },
+  "claim": {
+    "summary": "PASS_NO_CLAIM_CANDIDATES",
+    "outcomes": [],
+    "authority_escalation": 0
+  },
+  "safe_response": {
+    "status": "PASS_FAIL_CLOSED_NEED_REVIEW",
+    "packet_count": 3
+  },
+  "tests": {
+    "runner_syntax": "PASS",
+    "runner_execution": "PASS",
+    "focused_tests": "151 PASS / 1 PRE-EXISTING FAIL",
+    "build": "PASS",
+    "lint": "PASS",
+    "diff_check": "PASS",
+    "new_failures_introduced": 0,
+    "pre_existing_failure": "backend/test/evidence-fact-execution-observability.test.js: valid empty semantic output remains distinguishable from execution failure expects superseded FACT_SEMANTIC_EMPTY behavior; test file unchanged."
+  },
+  "writer_exposure": {
+    "raw_evidence_to_writer": 0,
+    "fact_candidate_raw_exposure": 0,
+    "mapping_reasoning_exposure": 0,
+    "rejected_claim_as_assertable": 0,
+    "review_claim_as_assertable": 0,
+    "safe_context_lineage_completeness": 1
+  },
+  "side_effects": {
+    "provider_calls": 0,
+    "embedding_calls": 0,
+    "production_db_writes": 0,
+    "eval_db_writes": 0,
+    "gold_mutations": 0,
+    "migration_count": 0,
+    "commit": 0,
+    "push": 0,
+    "merge": 0,
+    "deploy": 0
+  },
+  "current_exact_blocker": null,
+  "current_e2e_gate": "BOUNDED_3_CASE_E2E_COMPLETED_PROVIDER_OFF_FAIL_CLOSED; STOP_BEFORE_WRITER_CANARY",
+  "next_action": "STOP after checkpoint; semantic Fact/Support adjudication or optional Writer canary requires a separate explicit decision.",
+  "stale_but_recent_document_found": false,
+  "note": "File recency was not treated as authority. No material stale-but-recent conflict was found among used sources."
+}

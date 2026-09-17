@@ -1,0 +1,56 @@
+{
+  "artifact_type": "V43_E2E_ENGINEERING_CONSISTENCY_AUDIT_V1_CHECKPOINT",
+  "audit_mode": "READ_ONLY",
+  "ENGINEERING_AUDIT": "PARTIAL_BLOCKED",
+  "FIRST_FAILURE_BOUNDARY": "PRE_PROVIDER / DATABASE_IDENTITY_AND_SCHEMA_QUERY (SQLSTATE 42703)",
+  "P0_E2E_BLOCKER_COUNT": 4,
+  "P0_BLOCKERS": [
+    {"id": "P0-01", "classification": "WRONG_DATABASE_TARGET", "evidence": "backend/.env resolves bid_platform; expected canary project/material snapshot is in bid_platform_flow_audit_test"},
+    {"id": "P0-02", "classification": "PRODUCTION_CANONICAL_REQUIREMENT_ABSENT", "evidence": "expected canary project has zero requirements in both inspected databases; Eval selection is not canonical authority"},
+    {"id": "P0-03", "classification": "REQUIREMENT_SCOPE_AUTHORITY_PERSISTENCE_UNAVAILABLE", "evidence": "requirement_scope_authority_decisions relation is absent in bid_platform; human exceptions are not persisted there"},
+    {"id": "P0-04", "classification": "RUNTIME_SCHEMA_QUERY_IDENTITY_UNVERIFIED", "evidence": "reported m.material_version query fails against both schemas, while current checkout uses source_version; emitting runtime is not identified"}
+  ],
+  "FIRST_FAILURE_DETAILS": {
+    "sqlstate": "42703",
+    "query_fragment": "m.material_version",
+    "alias_m_table": "company_materials",
+    "current_checkout_query": "m.source_version",
+    "provider_reached": false
+  },
+  "TARGETED_FACT_REPLAY_READY": "NO",
+  "readiness": {
+    "runtime_database_identity_aligned": "NO",
+    "expected_project_present_in_configured_db": "NO",
+    "target_materials_present_in_configured_db": "NO",
+    "canonical_requirement_authority_available_for_expected_canary": "NO",
+    "scope_authority_persistence_available_in_configured_db": "NO",
+    "material_lifecycle_gate_on_inspected_current_path": "ENFORCED_ON_INSPECTED_PATH",
+    "provider_preflight": "NOT_REACHED",
+    "fact_replay": "NOT_REACHED"
+  },
+  "RECOMMENDED_MINIMAL_FIX_SEQUENCE": [
+    "Resolve a separately authorized runtime/database identity decision so the canary points to the database containing the intended project/material snapshot; do not blend rows across databases.",
+    "Reconcile canonical Requirement authority for the expected project through the existing formal path; do not substitute the Eval-only 20-row selection packet.",
+    "Prove the executing runtime revision uses company_materials.source_version and does not emit the stale m.material_version query; no compatibility column or fallback is authorized by this audit.",
+    "If human scope exceptions must be persisted, use the existing RequirementScopeAuthorityService only after a separate migration/write authorization; this audit executed neither."
+  ],
+  "side_effects": {
+    "PROVIDER_CALLS": 0,
+    "LLM_CALLS": 0,
+    "PRODUCTION_DB_WRITES": 0,
+    "EVAL_DB_WRITES": 0,
+    "GOLD_MUTATIONS": 0,
+    "MIGRATIONS_EXECUTED": 0,
+    "CODE_MODIFIED": 0,
+    "CONFIG_MODIFIED": 0,
+    "MAPPING_ACTIONS": 0,
+    "CLAIM_ACTIONS": 0,
+    "WRITER_ACTIONS": 0
+  },
+  "baseline_failures": {
+    "classification": "NOT_RUN_IN_THIS_READ_ONLY_AUDIT",
+    "unrelated_baseline_failures_repaired": 0
+  },
+  "final_verdict": "BLOCKED_PRE_PROVIDER_ENGINEERING_CONSISTENCY_GATES",
+  "stop_condition": "STOP; no migration, provider replay, fact persistence, mapping, claim or writer action"
+}

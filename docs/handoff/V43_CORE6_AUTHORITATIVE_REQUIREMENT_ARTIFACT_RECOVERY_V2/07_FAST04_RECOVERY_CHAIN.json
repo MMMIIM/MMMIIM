@@ -1,0 +1,38 @@
+{
+  "tender_id": "FAST-04",
+  "chain": [
+    {
+      "stage": "RAW_TENDER_SOURCE",
+      "path": "backend/eval/tender-benchmark-v1/sources/FAST-04-beijing-software.pdf",
+      "exists": true,
+      "sha256": "7201d965541e111ead082ad335aad1b882037650828478778435454129bcbbce",
+      "status": "SOURCE_IDENTITY_VERIFIED"
+    },
+    {
+      "stage": "RECOVERED_SOURCE_AUTHORITY_PACKET",
+      "path": "backend/eval/requirement-extraction-real-tender-pilot-v1/recovered-source-authority-v1/packets/FAST-04.json",
+      "exists": true,
+      "packet_sha256": "b6f060cdcf8ef263543b90d408f9fe35b8ba92eaa910e867b84631b321dd4b96",
+      "requirement_count": 353,
+      "authority_status": "SOURCE_CANONICAL_AUTHORITY_READY_PENDING_HUMAN_REVIEW",
+      "gold_authority": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "stage": "CURRENT_RUNTIME_EVIDENCE",
+      "manifest": "docs/eval/requirement-production-core6-20260911/CORE6_RUNTIME_MANIFEST.json",
+      "provider_calls": 51,
+      "candidate_count": 606,
+      "canonical_count": 606,
+      "semantic_adjudication": "not performed",
+      "status": "NON_AUTHORITATIVE_RUNTIME_EVIDENCE"
+    },
+    {
+      "stage": "HISTORICAL_HUMAN_ADJUDICATION",
+      "status": "NOT_FOUND_IN_REPOSITORY_ARCHAEOLOGY",
+      "blocker": "ADJUDICATION_IDENTITY_MISSING"
+    }
+  ],
+  "recovery_status": "BLOCKED_ADJUDICATION_IDENTITY_MISSING",
+  "semantic_reconstruction_performed": false,
+  "production_canonical_substitution": false
+}

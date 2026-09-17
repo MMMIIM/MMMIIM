@@ -1,0 +1,72 @@
+{
+  "artifact": "V43_REAL_FACT_V2_CONTRACT_AUDIT",
+  "canonical_fact_contract": {
+    "authority_fields": [
+      "review_status",
+      "extractor_type",
+      "evidence_review_id",
+      "supersedes_fact_id"
+    ],
+    "contract_gap": null,
+    "fields_mechanically_present": [
+      "fact_id",
+      "project_id",
+      "evidence_review_id",
+      "source_span_id",
+      "material_id",
+      "subject",
+      "entities",
+      "status",
+      "scopes",
+      "quantities",
+      "validity",
+      "domain_metadata",
+      "source",
+      "payload_hash",
+      "review_status",
+      "extractor_type",
+      "extractor_version",
+      "contract_version",
+      "version",
+      "supersedes_fact_id",
+      "edited",
+      "edited_by",
+      "edit_note"
+    ],
+    "semantic_dimensions": [
+      "entity",
+      "scope",
+      "quantity",
+      "status",
+      "validity/currentness"
+    ],
+    "source_lineage_fields": [
+      "source_span_id",
+      "material_id",
+      "source_document_id",
+      "anchor_chunk_id",
+      "source_text_hash"
+    ],
+    "sufficient_for_source_first_inventory": true,
+    "version": "evidence-fact-v1"
+  },
+  "contract_sources": [
+    {
+      "bytes": 6528,
+      "path": "backend/src/pipeline/evidence-fact-contract-v1.js",
+      "sha256": "11a98dad7da81321505e3eaaa99c3d9927a1a9da3afd0c647c2af50611826d7d"
+    },
+    {
+      "bytes": 27572,
+      "path": "backend/src/pipeline/semantic-gateway-evidence-fact-extractor.js",
+      "sha256": "1c92aabff888318db114cb2e10568915ccabacf78ca016e7ad420af8d31e0c4e"
+    },
+    {
+      "bytes": 76125,
+      "path": "packages/semantic-contracts/index.js",
+      "sha256": "3b3671c19eb72f84160094a79e1e6dc00292e5324e8cde564981edfc520d9cfa"
+    }
+  ],
+  "current_contract_result": "CURRENT_CONTRACT_SUFFICIENT",
+  "eval_only": true
+}

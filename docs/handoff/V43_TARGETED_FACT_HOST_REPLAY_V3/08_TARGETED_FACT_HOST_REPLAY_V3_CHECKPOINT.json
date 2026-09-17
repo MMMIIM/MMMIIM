@@ -1,0 +1,40 @@
+{
+  "artifact_type": "V43_TARGETED_FACT_HOST_REPLAY_V3_CHECKPOINT",
+  "run_id": "v43-targeted-fact-host-replay-v3-20260914134908-13b290ae",
+  "status": "READY_FOR_GPT_FACT_SEMANTIC_REVIEW",
+  "database": {
+    "requested_database": "bid_platform_flow_audit_test",
+    "actual_database": "bid_platform_flow_audit_test",
+    "actual_schema": "public",
+    "expected_database": "bid_platform_flow_audit_test",
+    "pass": true
+  },
+  "canonical_requirement_count": 337,
+  "unique_chunks": 3,
+  "source_identity_gate": "PASS",
+  "historical_artifact_mutated": false,
+  "provider_calls": 3,
+  "provider_failures": 0,
+  "retries": 0,
+  "concurrency": 1,
+  "fact_persistence": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "gold_mutations": 0,
+  "requirement_mutations": 0,
+  "scope_authority_writes": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "historical_replay_artifact_identity_drift": "NON_BLOCKING_EVAL_ARTIFACT_DEBT",
+  "semantic_adjudication": "PENDING_GPT",
+  "artifacts": [
+    "01_CANONICAL_REPLAY_PLAN.json",
+    "02_PRECONDITION_AND_SOURCE_IDENTITY.json",
+    "03_PROVIDER_EXECUTION_REPORT.json",
+    "04_RAW_FACT_CANDIDATES.json",
+    "05_FACT_VALIDATION_REPORT.json",
+    "06_GPT_FACT_SEMANTIC_REVIEW_PACKET.json",
+    "07_PROVIDER_FAILURE_DIAGNOSTIC.json"
+  ]
+}

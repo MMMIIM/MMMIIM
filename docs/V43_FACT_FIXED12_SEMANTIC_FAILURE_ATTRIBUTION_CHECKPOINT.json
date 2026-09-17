@@ -1,0 +1,322 @@
+{
+  "checkpoint": "V43_FACT_FIXED12_SEMANTIC_FAILURE_ATTRIBUTION_CHECKPOINT",
+  "generated_at": "2026-09-08T12:19:26.520Z",
+  "source_run_id": "fact-v21-fixed12-20260908110957-e4f158f6",
+  "replay_mode": "OFFLINE_DETERMINISTIC",
+  "observation_count": 50,
+  "metrics": {
+    "critical_false_accept_before": 2,
+    "critical_false_accept_after": 0,
+    "false_reject_before": 2,
+    "false_reject_after": 0,
+    "source_role_unknown_before": 8,
+    "source_role_unknown_after": 1,
+    "reference_authority_escape": 0,
+    "governance_authority_escape": 0,
+    "confirmed_false_reject_after": 0,
+    "producer_atomicity_blockers_open": 0
+  },
+  "hard_anchor_checks": {
+    "U17_NEGATED_STATUS": true,
+    "U20_NEGATED_STATUS": true,
+    "U34_NEGATIVE_SCOPE_REVIEW": true,
+    "COM01_COMPOSITIONAL_GROUNDING": true,
+    "U09_STATUS_GROUNDING": true,
+    "COM06_NEGATIVE_CERTIFICATION_REVIEW": true,
+    "U29_NEGATIVE_HIS_REVIEW": true,
+    "U30_EXPIRED_NOT_POSITIVE": true
+  },
+  "track_b_backend": "READY_FOR_GPT_FACT_FIXED12_BACKEND_DELTA_ADJUDICATION",
+  "fact_producer_atomicity": "READY_FOR_GPT_WINDOW_BOUNDARY_ADJUDICATION",
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "fact_persistence": 0,
+  "gold_mutations": 0,
+  "production_semantic_changes": 0,
+  "next_step": "STOP_AND_WAIT_FOR_GPT_BACKEND_DELTA_AND_PRODUCER_ATOMICITY_ADJUDICATION",
+  "output_packet": "docs\\V43_FACT_FIXED12_SEMANTIC_FAILURE_DELTA_GPT_PACKET.json",
+  "final_backend_grounding_packet": "docs\\V43_FACT_FINAL_BACKEND_GROUNDING_AND_PRODUCER_WINDOW_GPT_PACKET.json",
+  "final_backend_grounding_packet_md": "docs\\V43_FACT_FINAL_BACKEND_GROUNDING_AND_PRODUCER_WINDOW_GPT_PACKET.md",
+  "producer_window_manifests": {
+    "COM-07": {
+      "document_id": "COM-07",
+      "source_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f",
+      "source_ref": "eval://chengchuan-fixed12/COM-07#full-document",
+      "windows": [
+        {
+          "window_id": "COM-07-WINDOW-001",
+          "heading_path": [
+            "性能与容量测试报告"
+          ],
+          "heading": "性能与容量测试报告",
+          "heading_level": null,
+          "body": "> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。",
+          "producer_source_text": "性能与容量测试报告\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。",
+          "producer_source_hash": "8cd497a43fb799377252d9dc42393cb7a5ba005f392fd56753a89a6f79f0ec1c",
+          "source_ref": "eval://chengchuan-fixed12/COM-07#full-document",
+          "document_source_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f",
+          "document_metadata": {
+            "source_kind": "synthetic_company_evidence",
+            "evidence_status": "synthetic_pilot_evidence",
+            "synthetic_company_evidence": true,
+            "claim_permission": false,
+            "requirement_blind": false,
+            "doc_id": "COM-07",
+            "source_ref": "eval://chengchuan-fixed12/COM-07#full-document",
+            "source_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f"
+          }
+        },
+        {
+          "window_id": "COM-07-WINDOW-002",
+          "heading_path": [
+            "性能与容量测试报告",
+            "环境"
+          ],
+          "heading": "环境",
+          "heading_level": null,
+          "body": "Synthetic TEST：4 vCPU、16GB RAM、版本v3.2。",
+          "producer_source_text": "性能与容量测试报告 / 环境\nSynthetic TEST：4 vCPU、16GB RAM、版本v3.2。",
+          "producer_source_hash": "ac61395f76765144e56b91510f1b5dd60c2c55ec1002aad91ed73cdc80445f34",
+          "source_ref": "eval://chengchuan-fixed12/COM-07#full-document",
+          "document_source_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f",
+          "document_metadata": {
+            "source_kind": "synthetic_company_evidence",
+            "evidence_status": "synthetic_pilot_evidence",
+            "synthetic_company_evidence": true,
+            "claim_permission": false,
+            "requirement_blind": false,
+            "doc_id": "COM-07",
+            "source_ref": "eval://chengchuan-fixed12/COM-07#full-document",
+            "source_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f"
+          }
+        },
+        {
+          "window_id": "COM-07-WINDOW-003",
+          "heading_path": [
+            "性能与容量测试报告",
+            "结果"
+          ],
+          "heading": "结果",
+          "heading_level": null,
+          "body": "100个虚拟用户标准查询场景P95=1.8秒；导入10000条合成记录耗时42秒。",
+          "producer_source_text": "性能与容量测试报告 / 结果\n100个虚拟用户标准查询场景P95=1.8秒；导入10000条合成记录耗时42秒。",
+          "producer_source_hash": "af6d5d8c9e9f5ae7cbd8ee3e107fd3e4736b69dd7babedc0f5053076533cb291",
+          "source_ref": "eval://chengchuan-fixed12/COM-07#full-document",
+          "document_source_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f",
+          "document_metadata": {
+            "source_kind": "synthetic_company_evidence",
+            "evidence_status": "synthetic_pilot_evidence",
+            "synthetic_company_evidence": true,
+            "claim_permission": false,
+            "requirement_blind": false,
+            "doc_id": "COM-07",
+            "source_ref": "eval://chengchuan-fixed12/COM-07#full-document",
+            "source_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f"
+          }
+        },
+        {
+          "window_id": "COM-07-WINDOW-004",
+          "heading_path": [
+            "性能与容量测试报告",
+            "时效"
+          ],
+          "heading": "时效",
+          "heading_level": null,
+          "body": "2026-11-30后标记STALE_PENDING_RETEST。",
+          "producer_source_text": "性能与容量测试报告 / 时效\n2026-11-30后标记STALE_PENDING_RETEST。",
+          "producer_source_hash": "859c6b070be8a0c30d68161dc9df8ecfde4505bf4db2c097d8010c2ef22639b5",
+          "source_ref": "eval://chengchuan-fixed12/COM-07#full-document",
+          "document_source_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f",
+          "document_metadata": {
+            "source_kind": "synthetic_company_evidence",
+            "evidence_status": "synthetic_pilot_evidence",
+            "synthetic_company_evidence": true,
+            "claim_permission": false,
+            "requirement_blind": false,
+            "doc_id": "COM-07",
+            "source_ref": "eval://chengchuan-fixed12/COM-07#full-document",
+            "source_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f"
+          }
+        },
+        {
+          "window_id": "COM-07-WINDOW-005",
+          "heading_path": [
+            "性能与容量测试报告",
+            "官方来源 / 依据"
+          ],
+          "heading": "官方来源 / 依据",
+          "heading_level": null,
+          "body": "- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm",
+          "producer_source_text": "性能与容量测试报告 / 官方来源 / 依据\n- **OFF-U01｜政府采购需求管理办法**｜财政部｜状态 `CURRENT_NO_REPEAL_FOUND`｜实施 `2021-07-01`｜最后核验 `2026-08-31`｜https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm",
+          "producer_source_hash": "5204be690588383f7c63135198829c1e5700b9c6b04eec2a241108187a70ad07",
+          "source_ref": "eval://chengchuan-fixed12/COM-07#full-document",
+          "document_source_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f",
+          "document_metadata": {
+            "source_kind": "synthetic_company_evidence",
+            "evidence_status": "synthetic_pilot_evidence",
+            "synthetic_company_evidence": true,
+            "claim_permission": false,
+            "requirement_blind": false,
+            "doc_id": "COM-07",
+            "source_ref": "eval://chengchuan-fixed12/COM-07#full-document",
+            "source_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f"
+          }
+        },
+        {
+          "window_id": "COM-07-WINDOW-006",
+          "heading_path": [
+            "性能与容量测试报告",
+            "时效使用规则"
+          ],
+          "heading": "时效使用规则",
+          "heading_level": null,
+          "body": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+          "producer_source_text": "性能与容量测试报告 / 时效使用规则\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+          "producer_source_hash": "e5a8d616daadb1e2a308231026a4f1f9e51e6b9bfe05134137339f498f3465c8",
+          "source_ref": "eval://chengchuan-fixed12/COM-07#full-document",
+          "document_source_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f",
+          "document_metadata": {
+            "source_kind": "synthetic_company_evidence",
+            "evidence_status": "synthetic_pilot_evidence",
+            "synthetic_company_evidence": true,
+            "claim_permission": false,
+            "requirement_blind": false,
+            "doc_id": "COM-07",
+            "source_ref": "eval://chengchuan-fixed12/COM-07#full-document",
+            "source_hash": "f960cf1d01f1fe2218b4377be48e6a9368b6729fb24bec286fbade9ed080193f"
+          }
+        }
+      ],
+      "window_count": 6,
+      "cross_heading_body_leakage": 0
+    },
+    "COM-08": {
+      "document_id": "COM-08",
+      "source_hash": "afd00a30e6a46e9e09d42ac1f7eeae36be26420a40da12a42ecd0cb0d8ba9041",
+      "source_ref": "eval://chengchuan-fixed12/COM-08#full-document",
+      "windows": [
+        {
+          "window_id": "COM-08-WINDOW-001",
+          "heading_path": [
+            "备份恢复与容灾演练记录"
+          ],
+          "heading": "备份恢复与容灾演练记录",
+          "heading_level": null,
+          "body": "> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。",
+          "producer_source_text": "备份恢复与容灾演练记录\n> **Synthetic Company Evidence**：案例数据，仅用于 RAG / Fact / Mapping 测试，不代表真实企业能力。",
+          "producer_source_hash": "af96196a9bc862a360944959c7539c65960c5595bbdb488e900ca478d40e79db",
+          "source_ref": "eval://chengchuan-fixed12/COM-08#full-document",
+          "document_source_hash": "afd00a30e6a46e9e09d42ac1f7eeae36be26420a40da12a42ecd0cb0d8ba9041",
+          "document_metadata": {
+            "source_kind": "synthetic_company_evidence",
+            "evidence_status": "synthetic_pilot_evidence",
+            "synthetic_company_evidence": true,
+            "claim_permission": false,
+            "requirement_blind": false,
+            "doc_id": "COM-08",
+            "source_ref": "eval://chengchuan-fixed12/COM-08#full-document",
+            "source_hash": "afd00a30e6a46e9e09d42ac1f7eeae36be26420a40da12a42ecd0cb0d8ba9041"
+          }
+        },
+        {
+          "window_id": "COM-08-WINDOW-002",
+          "heading_path": [
+            "备份恢复与容灾演练记录",
+            "演练"
+          ],
+          "heading": "演练",
+          "heading_level": null,
+          "body": "2026-07-25完成Synthetic数据库备份恢复和应用节点故障切换。",
+          "producer_source_text": "备份恢复与容灾演练记录 / 演练\n2026-07-25完成Synthetic数据库备份恢复和应用节点故障切换。",
+          "producer_source_hash": "c122e8cbdb20dd92ae254cb1751add7f01132ec5534ad4ec60e48b531934723d",
+          "source_ref": "eval://chengchuan-fixed12/COM-08#full-document",
+          "document_source_hash": "afd00a30e6a46e9e09d42ac1f7eeae36be26420a40da12a42ecd0cb0d8ba9041",
+          "document_metadata": {
+            "source_kind": "synthetic_company_evidence",
+            "evidence_status": "synthetic_pilot_evidence",
+            "synthetic_company_evidence": true,
+            "claim_permission": false,
+            "requirement_blind": false,
+            "doc_id": "COM-08",
+            "source_ref": "eval://chengchuan-fixed12/COM-08#full-document",
+            "source_hash": "afd00a30e6a46e9e09d42ac1f7eeae36be26420a40da12a42ecd0cb0d8ba9041"
+          }
+        },
+        {
+          "window_id": "COM-08-WINDOW-003",
+          "heading_path": [
+            "备份恢复与容灾演练记录",
+            "边界"
+          ],
+          "heading": "边界",
+          "heading_level": null,
+          "body": "未形成真实客户RTO/RPO或可用率承诺。",
+          "producer_source_text": "备份恢复与容灾演练记录 / 边界\n未形成真实客户RTO/RPO或可用率承诺。",
+          "producer_source_hash": "d5edb4f61d57df0fbe95a6368e617eb898732a517a0031722d6b8cffecdcfe21",
+          "source_ref": "eval://chengchuan-fixed12/COM-08#full-document",
+          "document_source_hash": "afd00a30e6a46e9e09d42ac1f7eeae36be26420a40da12a42ecd0cb0d8ba9041",
+          "document_metadata": {
+            "source_kind": "synthetic_company_evidence",
+            "evidence_status": "synthetic_pilot_evidence",
+            "synthetic_company_evidence": true,
+            "claim_permission": false,
+            "requirement_blind": false,
+            "doc_id": "COM-08",
+            "source_ref": "eval://chengchuan-fixed12/COM-08#full-document",
+            "source_hash": "afd00a30e6a46e9e09d42ac1f7eeae36be26420a40da12a42ecd0cb0d8ba9041"
+          }
+        },
+        {
+          "window_id": "COM-08-WINDOW-004",
+          "heading_path": [
+            "备份恢复与容灾演练记录",
+            "官方来源 / 依据"
+          ],
+          "heading": "官方来源 / 依据",
+          "heading_level": null,
+          "body": "- **OFF-U08｜GB/T 22239-2019 网络安全等级保护基本要求**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2019-12-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=BAFB47E8874764186BDB7865E8344DAF\n- **OFF-U09｜GB/T 25070-2019 网络安全等级保护安全设计技术要求**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2019-12-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=9FB6EE8597B21436D0E99BF44FD42C4D",
+          "producer_source_text": "备份恢复与容灾演练记录 / 官方来源 / 依据\n- **OFF-U08｜GB/T 22239-2019 网络安全等级保护基本要求**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2019-12-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=BAFB47E8874764186BDB7865E8344DAF\n- **OFF-U09｜GB/T 25070-2019 网络安全等级保护安全设计技术要求**｜国家市场监督管理总局、国家标准化管理委员会｜状态 `CURRENT_CONFIRMED`｜实施 `2019-12-01`｜最后核验 `2026-08-31`｜https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=9FB6EE8597B21436D0E99BF44FD42C4D",
+          "producer_source_hash": "5d4a89188c78de8f9f9202c6b442f26095b01770d8044b95a2a70da4f3c9fa49",
+          "source_ref": "eval://chengchuan-fixed12/COM-08#full-document",
+          "document_source_hash": "afd00a30e6a46e9e09d42ac1f7eeae36be26420a40da12a42ecd0cb0d8ba9041",
+          "document_metadata": {
+            "source_kind": "synthetic_company_evidence",
+            "evidence_status": "synthetic_pilot_evidence",
+            "synthetic_company_evidence": true,
+            "claim_permission": false,
+            "requirement_blind": false,
+            "doc_id": "COM-08",
+            "source_ref": "eval://chengchuan-fixed12/COM-08#full-document",
+            "source_hash": "afd00a30e6a46e9e09d42ac1f7eeae36be26420a40da12a42ecd0cb0d8ba9041"
+          }
+        },
+        {
+          "window_id": "COM-08-WINDOW-005",
+          "heading_path": [
+            "备份恢复与容灾演练记录",
+            "时效使用规则"
+          ],
+          "heading": "时效使用规则",
+          "heading_level": null,
+          "body": "- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+          "producer_source_text": "备份恢复与容灾演练记录 / 时效使用规则\n- 召回后同时检查 `evidence_temporal_status` 与 Source Registry 的 `validity_status`。\n- `HISTORICAL_REFERENCE / CURRENTNESS_UNCONFIRMED` 不能直接当作当前强制要求。\n- 到达 `next_review_at` 只代表必须重新核验，不等于自动失效。\n- 公司 Evidence 的有效期与官方 Source 的有效期是两个不同维度。",
+          "producer_source_hash": "c5a5b995dfdf2c242260f24b7758861ec28275dfcc5a80626feec87e038be9cd",
+          "source_ref": "eval://chengchuan-fixed12/COM-08#full-document",
+          "document_source_hash": "afd00a30e6a46e9e09d42ac1f7eeae36be26420a40da12a42ecd0cb0d8ba9041",
+          "document_metadata": {
+            "source_kind": "synthetic_company_evidence",
+            "evidence_status": "synthetic_pilot_evidence",
+            "synthetic_company_evidence": true,
+            "claim_permission": false,
+            "requirement_blind": false,
+            "doc_id": "COM-08",
+            "source_ref": "eval://chengchuan-fixed12/COM-08#full-document",
+            "source_hash": "afd00a30e6a46e9e09d42ac1f7eeae36be26420a40da12a42ecd0cb0d8ba9041"
+          }
+        }
+      ],
+      "window_count": 5,
+      "cross_heading_body_leakage": 0
+    }
+  }
+}

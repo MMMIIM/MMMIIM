@@ -22,11 +22,14 @@ import { ConnectivityPreflight } from './runtime/connectivity-preflight.js';
 import { EvidenceReviewService } from './evidence-review-service.js';
 import { EvidenceSupportReviewEvaluator } from './pipeline/evidence-support-review-evaluator.js';
 import { EvidenceSourceFactService } from './evidence-source-fact-service.js';
+import { SemanticGatewayEvidenceFactExtractor } from './pipeline/semantic-gateway-evidence-fact-extractor.js';
 import { ProjectFactControlService } from './project-fact-control-service.js';
 import { ReviewCenterService } from './review-center-service.js';
 import { EvidenceReadinessService } from './evidence-readiness-service.js';
 import { MaterialProcessingCenterService } from './material-processing-center-service.js';
 import { RequirementEvidenceFactMappingService } from './requirement-evidence-fact-mapping-service.js';
+import { MappingCandidateBuilder } from './pipeline/mapping-candidate-builder.js';
+import { SemanticGatewayMappingEvaluator } from './pipeline/semantic-gateway-mapping-evaluator.js';
 import { DocumentDeliveryService } from './pipeline/document-delivery-service.js';
 import { AgentContextResolver } from './pipeline/agent-context-resolver.js';
 import { AgentToolLayer } from './pipeline/agent-tools.js';
@@ -35,6 +38,12 @@ import { AgentActionService } from './pipeline/agent-action-service.js';
 import { AgentActionExecutor } from './pipeline/agent-action-executor.js';
 import { createServerActorResolver } from './request-actor.js';
 import { ProjectAuthorizationService } from './project-authorization-service.js';
+import { ResponseRouterService } from './pipeline/response-router-service.js';
+import { SafeResponsePacketService } from './pipeline/safe-response-packet-builder.js';
+import { FinalRequirementReconciliationService } from './pipeline/final-requirement-reconciliation.js';
+import { FlowProjectionService } from './pipeline/flow-projection-service.js';
+import { RequirementScopeAuthorityService } from './requirement-scope-authority-service.js';
+import { ProjectMaterialBindingService } from './project-material-binding-service.js';
 
 const directory = dirname(fileURLToPath(import.meta.url));
 const runtime = createBackendRuntime();
@@ -60,6 +69,8 @@ const requirementParseService = new RequirementParseService({
 });
 const productionBetaService = new ProductionBetaService({ repository, ordinaryUncoveredSeverity:runtimeEnv.V43_ORDINARY_UNCOVERED_SEVERITY });
 const requirementSourceService = new RequirementSourceService({ repository, storage, textExtractor: extractTenderText });
+const requirementScopeAuthorityService = new RequirementScopeAuthorityService({ repository });
+const projectMaterialBindingService = new ProjectMaterialBindingService({ repository });
 const companyMaterialService = new CompanyMaterialService({ repository, storage, textExtractor: extractTenderText });
 // Production Evidence Review proposals must cross the deterministic
 // Evidence Support boundary.  No semantic adjudicator is configured until
@@ -77,13 +88,31 @@ const connectivityPreflight = new ConnectivityPreflight({
   repository,
   logger: (event) => console.info('[runtime-connectivity]', JSON.stringify(event))
 });
-const documentGenerationService = new DocumentGenerationService({ repository, provider:createWriterProvider({env:runtimeEnv}), concurrency:runtimeEnv.V43_WRITER_CONCURRENCY || 2 });
-const evidenceSourceFactService = new EvidenceSourceFactService({ repository, projectAuthorizationService });
+const responseRouterService = new ResponseRouterService({ repository });
+const documentGenerationService = new DocumentGenerationService({ repository, provider:createWriterProvider({env:runtimeEnv}), embeddingClient, writerV2:true, concurrency:runtimeEnv.V43_WRITER_CONCURRENCY || 2, responseRouterService });
+const evidenceSourceFactService = new EvidenceSourceFactService({
+  repository,
+  projectAuthorizationService,
+  extractor: new SemanticGatewayEvidenceFactExtractor({
+    client: runtime.createSemanticGatewayClient({ taskType: 'evidence_fact_extraction' })
+  })
+});
 const projectFactControlService = new ProjectFactControlService({ repository });
 const reviewCenterService = new ReviewCenterService({ repository });
+const safeResponsePacketService = new SafeResponsePacketService({ repository, responseRouterService });
+const finalRequirementReconciliationService = new FinalRequirementReconciliationService({ repository, responseRouterService, reviewCenterService });
+const flowProjectionService = new FlowProjectionService({ repository, responseRouterService, reviewCenterService, reconciliationService: finalRequirementReconciliationService });
 const evidenceReadinessService = new EvidenceReadinessService({ repository });
 const materialProcessingCenterService = new MaterialProcessingCenterService({ repository, evidenceReadinessService });
-const requirementEvidenceFactMappingService = new RequirementEvidenceFactMappingService({ repository });
+const mappingCandidateBuilder = new MappingCandidateBuilder({ repository });
+const mappingEvaluator = new SemanticGatewayMappingEvaluator({
+  client: runtime.createSemanticGatewayClient({ taskType: 'requirement_evidence_mapping' })
+});
+const requirementEvidenceFactMappingService = new RequirementEvidenceFactMappingService({
+  repository,
+  candidateBuilder: mappingCandidateBuilder,
+  evaluator: mappingEvaluator
+});
 const documentDeliveryService = new DocumentDeliveryService({ repository, storage });
 const agentContextResolver = new AgentContextResolver({ repository });
 const agentTools = new AgentToolLayer({
@@ -97,7 +126,7 @@ const agentTools = new AgentToolLayer({
 });
 const agentActionService = new AgentActionService({ repository, tools: agentTools, evidenceReadinessService, reviewCenterService, productionBetaService, documentGenerationService });
 const agentActionExecutor = new AgentActionExecutor({ actionService: agentActionService, repository });
-const agentOrchestrator = new BidCopilotOrchestrator({ contextResolver: agentContextResolver, tools: agentTools, actionExecutor: agentActionExecutor, auditRepository: repository });
+const agentOrchestrator = new BidCopilotOrchestrator({ contextResolver: agentContextResolver, tools: agentTools, actionExecutor: agentActionExecutor, auditRepository: repository, reconciliationService: finalRequirementReconciliationService });
 const actorResolver = createServerActorResolver({ actorId: runtimeEnv.BACKEND_DEV_ACTOR_ID, actorType: 'development' });
 const app = createApp({
   repository,
@@ -106,6 +135,8 @@ const app = createApp({
   requirementParseService,
   productionBetaService,
   requirementSourceService,
+  requirementScopeAuthorityService,
+  projectMaterialBindingService,
   companyMaterialService,
   evidenceService,
   evidenceFactService,
@@ -120,6 +151,10 @@ const app = createApp({
   projectAuthorizationService,
   projectFactControlService,
   documentDeliveryService,
+  responseRouterService,
+  safeResponsePacketService,
+  finalRequirementReconciliationService,
+  flowProjectionService,
   agentContextResolver,
   agentOrchestrator,
   agentActionExecutor,

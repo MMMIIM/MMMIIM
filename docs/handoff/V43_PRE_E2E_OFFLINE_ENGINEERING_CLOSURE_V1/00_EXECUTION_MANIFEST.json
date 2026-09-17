@@ -1,0 +1,100 @@
+{
+  "artifact_type": "V43_PRE_E2E_OFFLINE_ENGINEERING_CLOSURE_EXECUTION_MANIFEST",
+  "generated_at": "2026-09-16",
+  "execution_mode": "OFFLINE_ONLY",
+  "provider_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "gold_mutations": 0,
+  "production_semantic_changes": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "commit": 0,
+  "push": 0,
+  "merge": 0,
+  "deploy": 0,
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "worktree_status": "DIRTY_PRESERVED",
+  "scope": "offline asset registration, authority/readiness audit, E2E reuse planning",
+  "forbidden_operations": [
+    "provider_or_llm_execution",
+    "embedding_or_reembedding",
+    "fact_extraction",
+    "mapping_claim_writer_execution",
+    "production_database_write",
+    "gold_mutation",
+    "commit_push_merge_deploy"
+  ],
+  "required_source_documents": [
+    {
+      "path": "ARCHITECTURE.md",
+      "exists": true,
+      "bytes": 8952,
+      "sha256": "acc60fc154c77014bedd99611c450757fd3fb6bbae5ca9afa37af531d00159a6",
+      "status": "CURRENT_REUSABLE",
+      "roles": [
+        "PRODUCT_ARCHITECTURE"
+      ],
+      "notes": []
+    },
+    {
+      "path": "docs/CURRENT_STAGE.md",
+      "exists": true,
+      "bytes": 31961,
+      "sha256": "4a3668534ff9c010d9018e43c1840870e77c11be30eee37b6ece8a907a7f048c",
+      "status": "CURRENT_REUSABLE",
+      "roles": [
+        "STAGE_AUTHORITY"
+      ],
+      "notes": []
+    },
+    {
+      "path": "docs/ROADMAP.md",
+      "exists": true,
+      "bytes": 5508,
+      "sha256": "ef7925124bcf409251d6b4fb7f015112681c18a105df78cbeae5e32ad9ddb22f",
+      "status": "CURRENT_REUSABLE",
+      "roles": [
+        "SEQUENCING_ONLY"
+      ],
+      "notes": []
+    },
+    {
+      "path": "docs/EVAL_POLICY.md",
+      "exists": true,
+      "bytes": 6255,
+      "sha256": "07845d012b1d346b222faca510b6d44411a283ba82805456f7e1370d54ff08d3",
+      "status": "CURRENT_REUSABLE",
+      "roles": [
+        "EVAL_POLICY"
+      ],
+      "notes": []
+    },
+    {
+      "path": "docs/v4.3-semantic-architecture.md",
+      "exists": true,
+      "bytes": 2011,
+      "sha256": "c410f3b21240eeb9c036def03332b7730dbed29d7e3f694dd5b27253b3b6b639",
+      "status": "CURRENT_REUSABLE",
+      "roles": [
+        "V43_ARCHITECTURE"
+      ],
+      "notes": []
+    },
+    {
+      "path": "docs/V43_TARGET_ARCHITECTURE_BID_COPILOT_BASELINE.md",
+      "exists": false,
+      "status": "UNKNOWN_REVIEW_REQUIRED",
+      "roles": [
+        "REQUIRED_BASELINE"
+      ],
+      "notes": [
+        "file not present in current checkout"
+      ]
+    }
+  ],
+  "source_of_truth_rule": "artifact-backed status only; no semantic promotion by this task"
+}

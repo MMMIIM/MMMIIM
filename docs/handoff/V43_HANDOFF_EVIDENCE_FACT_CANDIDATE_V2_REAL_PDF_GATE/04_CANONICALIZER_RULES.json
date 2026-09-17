@@ -1,0 +1,11 @@
+{
+  "canonicalizer_version": "4.3-evidence-fact-canonicalizer-v2",
+  "grounding_version": "4.3-evidence-fact-grounding-v2",
+  "deterministic_rules": [
+    "Backend resolves every source_ref before canonicalization.",
+    "No semantic inference, invented unit/operator/validity, or attribution escalation.",
+    "Qualified/range/percentage/distance quantities that are not losslessly canonicalizable become REVIEW_REQUIRED.",
+    "Unknown source refs and invalid structural candidates fail closed.",
+    "Generic technical statements are not enterprise Fact authority without explicit first-party attribution."
+  ]
+}

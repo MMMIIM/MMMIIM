@@ -1,0 +1,27 @@
+{
+  "artifact_type": "V43_ENGINEERING_FAILURE_RECOVERY_MATRIX",
+  "audit_id": "V43_PRODUCTION_SHAPED_FLOW_ENGINEERING_QUALITY_AUDIT_V1",
+  "runtime_verified": false,
+  "rows": [
+    {"scenario":"duplicate HTTP/router read","classification":"IDEMPOTENT","evidence":["backend/src/pipeline/response-router-service.js","backend/test/flow-completion.test.js"],"runtime_verified":false},
+    {"scenario":"duplicate Safe Response Packet build","classification":"IDEMPOTENT","evidence":["backend/src/pipeline/safe-response-packet-builder.js","backend/test/flow-completion.test.js"],"runtime_verified":false},
+    {"scenario":"duplicate generation trigger","classification":"IDEMPOTENT","evidence":["backend/src/db.js","backend/src/pipeline/document-generation-service.js","backend/test/writer-authorization-snapshot.test.js"],"runtime_verified":false},
+    {"scenario":"Writer batch retry","classification":"BOUNDED_DUPLICATION","evidence":["backend/src/pipeline/document-generation-service.js"],"runtime_verified":false},
+    {"scenario":"Provider timeout/network failure simulation","classification":"RECOVERABLE","evidence":["backend/src/pipeline/document-generation-service.js"],"runtime_verified":false},
+    {"scenario":"partial task failure","classification":"RECOVERABLE","evidence":["backend/src/pipeline/document-generation-service.js","backend/src/db.js"],"runtime_verified":false},
+    {"scenario":"retry after partial failure","classification":"BOUNDED_DUPLICATION","evidence":["backend/src/pipeline/document-generation-service.js","backend/test/writer-authorization-snapshot.test.js"],"runtime_verified":false},
+    {"scenario":"retrieval empty","classification":"FAIL_CLOSED","evidence":["backend/src/db.js","backend/src/pipeline/document-generation-service.js"],"runtime_verified":false},
+    {"scenario":"Evidence missing","classification":"FAIL_CLOSED","evidence":["backend/src/pipeline/safe-response-packet-builder.js","backend/test/flow-completion.test.js"],"runtime_verified":false},
+    {"scenario":"Fact pending","classification":"FAIL_CLOSED","evidence":["backend/src/pipeline/writer-input-authorization-v1.js"],"runtime_verified":false},
+    {"scenario":"Mapping pending","classification":"FAIL_CLOSED","evidence":["backend/src/db.js","backend/test/mapping-to-claim-entrypoint.test.js"],"runtime_verified":false},
+    {"scenario":"Claim blocked","classification":"FAIL_CLOSED","evidence":["backend/src/pipeline/writer-input-authorization-v1.js","backend/test/writer-execution-pre-v1.test.js"],"runtime_verified":false},
+    {"scenario":"Commitment missing","classification":"FAIL_CLOSED","evidence":["backend/src/pipeline/safe-response-packet-builder.js","backend/test/flow-completion.test.js"],"runtime_verified":false},
+    {"scenario":"validation failure","classification":"FAIL_CLOSED","evidence":["backend/src/pipeline/document-generation-service.js","backend/test/writer-execution-pre-v1.test.js"],"runtime_verified":false},
+    {"scenario":"Final reconciliation unresolved","classification":"FAIL_CLOSED","evidence":["backend/src/pipeline/final-requirement-reconciliation.js","backend/test/flow-completion.test.js"],"runtime_verified":false},
+    {"scenario":"repeated Human confirmation","classification":"IDEMPOTENT","evidence":["backend/test/agent-actions.test.js"],"runtime_verified":false},
+    {"scenario":"cross-project action","classification":"FAIL_CLOSED","evidence":["backend/src/pipeline/bid-copilot-orchestrator.js","backend/test/agent-foundation.test.js"],"runtime_verified":false},
+    {"scenario":"export/repeated projection","classification":"IDEMPOTENT","evidence":["backend/src/pipeline/flow-projection-service.js"],"runtime_verified":false}
+  ],
+  "idempotency_recovery_defect_count": 0,
+  "qualification": "No unsafe recovery behavior observed in offline code/tests; persistence/runtime replay remains unverified."
+}

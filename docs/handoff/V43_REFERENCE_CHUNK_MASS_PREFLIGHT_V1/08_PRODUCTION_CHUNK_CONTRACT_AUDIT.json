@@ -1,0 +1,24 @@
+{
+  "artifact_type": "V43_PRODUCTION_CHUNK_CONTRACT_AUDIT",
+  "files": {
+    "normalization": {
+      "path": "backend/src/tender-text-extractor.js",
+      "sha256": "f40a9c01b13f7aa6c3e20b76a11a858735b776844928b743e437d6e027188daa"
+    },
+    "chunker": {
+      "path": "backend/src/pipeline/enterprise-material-chunker.js",
+      "sha256": "8edac7316873f3a84b4c6c07e4e70175321b55eed29c1ba50db4699b1309b0fb"
+    },
+    "embedding": {
+      "path": "backend/src/pipeline/embedding-client.js",
+      "sha256": "ff9ae180d1d092bce71b85ef268124fcc4140cf113c5a2a1c6a4664e46155b04"
+    }
+  },
+  "normalization_owner": "extractTenderText",
+  "chunk_size_policy": "MAX_CHARS=1200 per paragraph segment",
+  "overlap_policy": "NONE",
+  "minimum_content_rule": "skip whitespace-only text",
+  "chunk_identity_rule": "MCH- + SHA256(material_id|chunker_version|chunk_index|char_start|char_end|chunk_hash)[0:32].toUpperCase()",
+  "plan_uses_same_post_parse_chunker": true,
+  "chunk_identity_reproducible": true
+}

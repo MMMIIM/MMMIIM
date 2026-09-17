@@ -1,0 +1,61 @@
+{
+  "artifact_type": "V43_R2_ARTIFACT_INTEGRITY_REPORT",
+  "run_id": "V43-CORE6-REAL-REFERENCE-RAG-WRITER-20260915105535",
+  "canonical_authority": {
+    "artifact": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/11_R2_NOT_EXECUTED.json",
+    "sha256": "92c4cd9d30f1a3f36d1e715c7923e9a997bec75017764a8ed88d8d308ddebc1f",
+    "status": "NOT_EXECUTED_VECTOR_UNAVAILABLE_OR_RETRIEVAL_BLOCKED",
+    "reason": "ONE_OR_MORE_CASES_MISSING_VECTOR",
+    "executed_case_count": 0
+  },
+  "observed_non_authoritative_rows": {
+    "artifact": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/14_GPT_SEMANTIC_REVIEW_PACKET.json",
+    "sha256": "357d4102eccac3faeaa3ae06bf896c4ceb9b275b377b12c18acc4865ed80a19e",
+    "case_count": 80,
+    "reference_count": 316,
+    "status_values": {
+      "EXECUTED_TRUE_VECTOR_MMR": 80
+    }
+  },
+  "source_artifacts_with_retained_r2": [
+    {
+      "path": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/09_R0_RESULTS.json",
+      "sha256": "e4514e226a9d72d6ee66a9d08184826582d02b73275261324bbf95c33089cbe6"
+    },
+    {
+      "path": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/10_R1_RESULTS.json",
+      "sha256": "0aaa30b27a93e521209de0227ae8462a23d1f5667a7d9d7fd74d95a9ae401a15"
+    },
+    {
+      "path": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/14_GPT_SEMANTIC_REVIEW_PACKET.json",
+      "sha256": "357d4102eccac3faeaa3ae06bf896c4ceb9b275b377b12c18acc4865ed80a19e"
+    }
+  ],
+  "origin_trace": [
+    {
+      "path": "backend/eval/rag-governance/run-core6-real-reference-rag-writer-context-v1.mjs",
+      "lines": "583-587",
+      "observation": "fetchVectors(annotated embedding IDs) sets per-case vectorComplete and status EXECUTED_TRUE_VECTOR_MMR when that case is complete."
+    },
+    {
+      "path": "backend/eval/rag-governance/run-core6-real-reference-rag-writer-context-v1.mjs",
+      "lines": "599-606",
+      "observation": "The per-case R2 strategy and r2 object are retained in caseRecords."
+    },
+    {
+      "path": "backend/eval/rag-governance/run-core6-real-reference-rag-writer-context-v1.mjs",
+      "lines": "623-627",
+      "observation": "R0/R1 artifacts serialize the full caseRecords; global R2 artifact is written only when every case has status exactly EXECUTED."
+    },
+    {
+      "path": "backend/eval/rag-governance/run-reference-retrieval-schema-parity-core6-replay-v2.mjs",
+      "lines": "359-362",
+      "observation": "The orchestrator copies R0/R1 and emits 11_R2_NOT_EXECUTED when the global all-case R2 artifact is absent."
+    }
+  ],
+  "classification": "PARTIAL_VECTOR_PATH_RETAINED_IN_R0_R1_AND_GPT_PACKET",
+  "lexical_proxy_involved_in_canonical_packet": false,
+  "lexical_proxy_note": "The separate historical challenger script has a lexical MMR proxy, but it is not the source of this canonical packet and was not rerun.",
+  "canonical_interpretation": "R2 remains NOT_EXECUTED; retained per-case rows are non-authoritative and must not be semantically labeled or treated as executed MMR.",
+  "action_taken": "DERIVED_INTEGRITY_REPORT_ONLY_NO_RERUN_NO_DELETE_NO_REWRITE"
+}

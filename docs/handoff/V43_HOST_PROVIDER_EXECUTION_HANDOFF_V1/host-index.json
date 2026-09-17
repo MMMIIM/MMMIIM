@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "database": "bid_platform_flow_audit_test",
+  "corpus_id": "HUAWEI-PUBLIC-REAL-PDF-PILOT-V1",
+  "materials": 6,
+  "total_chunks": 590,
+  "embedded_chunks": 590,
+  "index_coverage_percent": 100,
+  "dimension": 1024,
+  "unknown_material_id": 0,
+  "cross_enterprise_contamination": 0,
+  "source_lineage_complete_percent": 100,
+  "provider_calls": 1,
+  "provider_reached": true,
+  "provider_http_statuses": [
+    200
+  ],
+  "production_db_writes": 0,
+  "eval_db_path": "canonical EnterpriseRetrievalService -> PgRepository",
+  "note": "Only the Eval DB is written; company_materials.index_status is not changed by this existing path."
+}

@@ -1,0 +1,51 @@
+{
+  "artifact_type": "V43_PRE_E2E_DEBT_REGISTER_V1",
+  "execution_mode": "OFFLINE_ONLY",
+  "provider_calls": 0,
+  "embedding_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "gold_mutations": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "commit": 0,
+  "push": 0,
+  "merge": 0,
+  "deploy": 0,
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "debt": [
+    {
+      "id": "HOST-QUERY-001",
+      "class": "B_HOST_LIVE_EXECUTION_BOUNDARY",
+      "item": "Host query embedding / retrieval gate not executed in Codex",
+      "owner": "runtime/provider operations"
+    },
+    {
+      "id": "MAPPING-REAL-001",
+      "class": "C_PRODUCTION_GOLD_GOVERNANCE_ONLY",
+      "item": "Mapping successor built but not activated; real partition gaps and no trusted frozen predictions",
+      "owner": "Mapping/GPT/Human authority"
+    },
+    {
+      "id": "REQ-HUMAN-001",
+      "class": "C_PRODUCTION_GOLD_GOVERNANCE_ONLY",
+      "item": "CORE6 source-derived requirement input is not Human Gold",
+      "owner": "Human/GPT authority"
+    },
+    {
+      "id": "FACT-REAL-001",
+      "class": "C_PRODUCTION_GOLD_GOVERNANCE_ONLY",
+      "item": "Real Fact authority not established; Chengchuan is synthetic development only",
+      "owner": "Fact/Human authority"
+    },
+    {
+      "id": "DOC-BASELINE-001",
+      "class": "D_NON_BLOCKING_DEBT",
+      "item": "Baseline expected path differs from existing docs/architecture path",
+      "owner": "engineering documentation"
+    }
+  ]
+}

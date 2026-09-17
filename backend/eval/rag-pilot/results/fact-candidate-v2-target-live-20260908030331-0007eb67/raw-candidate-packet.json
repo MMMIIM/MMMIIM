@@ -1,0 +1,191 @@
+{
+  "run_id": "fact-candidate-v2-target-live-20260908030331-0007eb67",
+  "packet_type": "RAW_MODEL_CANDIDATE_V2",
+  "eval_only": true,
+  "cases": [
+    {
+      "case_id": "CCV2-U13-01",
+      "execution_id": "fact-candidate-v2-target-live-20260908030331-0007eb67-CCV2-U13-01",
+      "source_snapshot": {
+        "material_id": "CCV2-U13-01",
+        "material_version": "eval-snapshot-v1",
+        "source_hash": "9408fc5a50ffcad28def68d844c2d701405b99655f2d5904aeb89874f55ae575",
+        "chunk_id": "CCV2-U13-01-FULL-CHUNK-001",
+        "chunk_hash": "9408fc5a50ffcad28def68d844c2d701405b99655f2d5904aeb89874f55ae575",
+        "source_span_id": "CCV2-U13-01-FULL-SPAN-001",
+        "source_span_hash": "9408fc5a50ffcad28def68d844c2d701405b99655f2d5904aeb89874f55ae575",
+        "approved_review_identity": null
+      },
+      "source_ref": "eval://rag-pilot/V43_CHENGCHUAN_ENTERPRISE_CORPUS_V2_EXTENSION/materials/CCV2-U13-01_性能与响应_PERFORMANCE_TEST.md#full-document",
+      "source_hash": "9408fc5a50ffcad28def68d844c2d701405b99655f2d5904aeb89874f55ae575",
+      "candidate_schema_version": "4.3-evidence-fact-candidate-v2",
+      "candidate_schema_hash": "9b40ac9be7d5a262e39d1a142bb5165ba113e213cfa9f56b7888ae241693f834",
+      "raw_model_candidate_v2": [
+        {
+          "statement": "澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。",
+          "subject_name": "澄川政企数字平台 XDP 5.2 5.2.2",
+          "subject_type_hint": "software_product",
+          "entity_mentions": [
+            {
+              "value": "澄川政企数字平台 XDP 5.2 5.2.2",
+              "type_hint": "software_product",
+              "provenance": {
+                "source_text": "澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。",
+                "source_refs": [
+                  "CCV2-U13-01"
+                ]
+              }
+            }
+          ],
+          "status_text": "完成性能测试",
+          "scope_items": [
+            {
+              "value": "4个应用节点",
+              "provenance": {
+                "source_text": "澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。",
+                "source_refs": [
+                  "CCV2-U13-01"
+                ]
+              }
+            },
+            {
+              "value": "每节点8核16GB环境",
+              "provenance": {
+                "source_text": "澄川政企数字平台 XDP 5.2 5.2.2在4个应用节点、每节点8核16GB环境下完成性能测试。",
+                "source_refs": [
+                  "CCV2-U13-01"
+                ]
+              }
+            }
+          ],
+          "quantity_items": [],
+          "temporal_items": []
+        },
+        {
+          "statement": "标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。",
+          "subject_name": "标准查询场景",
+          "subject_type_hint": "performance_scenario",
+          "entity_mentions": [
+            {
+              "value": "标准查询场景",
+              "type_hint": "performance_scenario",
+              "provenance": {
+                "source_text": "标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。",
+                "source_refs": [
+                  "CCV2-U13-01"
+                ]
+              }
+            }
+          ],
+          "status_text": null,
+          "scope_items": [
+            {
+              "value": "8,000并发虚拟用户",
+              "provenance": {
+                "source_text": "标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。",
+                "source_refs": [
+                  "CCV2-U13-01"
+                ]
+              }
+            }
+          ],
+          "quantity_items": [
+            {
+              "name": "P95响应时间",
+              "value_text": "820",
+              "unit_text": "毫秒",
+              "condition_text": "8,000并发虚拟用户",
+              "provenance": {
+                "source_text": "标准查询场景在8,000并发虚拟用户下P95响应时间为820毫秒。",
+                "source_refs": [
+                  "CCV2-U13-01"
+                ]
+              }
+            }
+          ],
+          "temporal_items": []
+        },
+        {
+          "statement": "混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。",
+          "subject_name": "混合写入场景",
+          "subject_type_hint": "performance_scenario",
+          "entity_mentions": [
+            {
+              "value": "混合写入场景",
+              "type_hint": "performance_scenario",
+              "provenance": {
+                "source_text": "混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。",
+                "source_refs": [
+                  "CCV2-U13-01"
+                ]
+              }
+            }
+          ],
+          "status_text": null,
+          "scope_items": [],
+          "quantity_items": [
+            {
+              "name": "稳定吞吐",
+              "value_text": "1,650",
+              "unit_text": "事务/秒",
+              "condition_text": null,
+              "provenance": {
+                "source_text": "混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。",
+                "source_refs": [
+                  "CCV2-U13-01"
+                ]
+              }
+            },
+            {
+              "name": "错误率",
+              "value_text": "0.18",
+              "unit_text": "%",
+              "condition_text": null,
+              "provenance": {
+                "source_text": "混合写入场景稳定吞吐为1,650事务/秒，错误率0.18%。",
+                "source_refs": [
+                  "CCV2-U13-01"
+                ]
+              }
+            }
+          ],
+          "temporal_items": []
+        },
+        {
+          "statement": "测试持续时间为120分钟。",
+          "subject_name": "性能测试",
+          "subject_type_hint": "performance_test",
+          "entity_mentions": [
+            {
+              "value": "性能测试",
+              "type_hint": "performance_test",
+              "provenance": {
+                "source_text": "测试持续时间为120分钟。",
+                "source_refs": [
+                  "CCV2-U13-01"
+                ]
+              }
+            }
+          ],
+          "status_text": null,
+          "scope_items": [],
+          "quantity_items": [
+            {
+              "name": "测试持续时间",
+              "value_text": "120",
+              "unit_text": "分钟",
+              "condition_text": null,
+              "provenance": {
+                "source_text": "测试持续时间为120分钟。",
+                "source_refs": [
+                  "CCV2-U13-01"
+                ]
+              }
+            }
+          ],
+          "temporal_items": []
+        }
+      ]
+    }
+  ]
+}

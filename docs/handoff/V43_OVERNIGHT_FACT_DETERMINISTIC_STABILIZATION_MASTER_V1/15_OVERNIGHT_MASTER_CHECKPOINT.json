@@ -1,0 +1,81 @@
+{
+  "checkpoint": "V43_OVERNIGHT_FACT_DETERMINISTIC_STABILIZATION_MASTER_V1",
+  "status": "READY_FOR_GPT_FACT_DETERMINISTIC_CERTIFICATION_REVIEW",
+  "phase_a": "CLOSED_FOR_DETERMINISTIC_LAYER",
+  "qualifier_projection_closed_for_deterministic_layer": true,
+  "qualifier_representation_complete": false,
+  "representation_debt": true,
+  "current_31_case_deterministic_gate": {
+    "artifact_type": "V43_CURRENT_31_CASE_DETERMINISTIC_REGRESSION",
+    "source_artifact": "docs/handoff/V43_FACT_REVIEW_BURDEN_DETERMINISTIC_REDUCTION_V1/06_OFFLINE_BEFORE_AFTER.json",
+    "source_artifact_sha256": "ee112767f886c308cf92e1c5b805dd7e38a39becb245833e39299ec5e123ea75",
+    "candidate_count": 31,
+    "decision_distribution": {
+      "ACCEPT": 19,
+      "REVIEW_REQUIRED": 12
+    },
+    "review_required_rate": 0.3870967741935484,
+    "gpt_supported_hard_reject_count": 0,
+    "candidate_17": {
+      "decision": "REVIEW_REQUIRED",
+      "reason": "SOURCE_BOUNDARY_COMPLETION_UNRESOLVED",
+      "semantic_label": "PENDING_GPT"
+    },
+    "quantity_normalized_count": 14,
+    "quantity_unresolved_count": 0,
+    "quantity_qualifier_contract_gap_count": 9,
+    "source_boundary_guard": true,
+    "unsupported_auto_accept_count": 0,
+    "hard_contradiction_escape_count": 0,
+    "unrepresented_relation_auto_accept_count": 0,
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "canary_db_manual_writes": 0,
+    "eval_db_writes": 0,
+    "fact_persistence": 0,
+    "gold_mutations": 0,
+    "status": "PASS_WITH_NON_BLOCKING_CONTRACT_DEBT"
+  },
+  "offline_replayable_candidates": 39,
+  "real_current_candidates": 31,
+  "real_current_accept": 19,
+  "real_current_review": 12,
+  "real_current_reject": 0,
+  "real_current_review_rate": 0.3870967741935484,
+  "structured_quantity_review_count": 13,
+  "semantic_quantity_review_count": 8,
+  "source_boundary_review_count": 1,
+  "unsupported_auto_accept": 0,
+  "hard_contradiction_escape": 0,
+  "canonical_identity_instability": false,
+  "source_mutation": 0,
+  "negative_mutation_fail_closed": true,
+  "phase_b_to_g": "COMPLETED_OFFLINE",
+  "semantic_root_cause": "PENDING_GPT",
+  "side_effects": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "canary_db_manual_writes": 0,
+    "eval_db_writes": 0,
+    "fact_persistence": 0,
+    "gold_mutations": 0,
+    "mapping_actions": 0,
+    "claim_actions": 0,
+    "writer_actions": 0,
+    "prompt_changes": 0,
+    "schema_changes": 0,
+    "canonical_contract_changes": 0
+  },
+  "readiness": {
+    "ready_for_gpt_fact_deterministic_certification_review": true,
+    "fact_gold_frozen": false,
+    "fact_production_certified": false,
+    "mapping_ready": false
+  },
+  "baseline": {
+    "known_unrelated_failures": 6,
+    "classification": "PRE_EXISTING_UNRELATED_BASELINE_FAILURES"
+  }
+}

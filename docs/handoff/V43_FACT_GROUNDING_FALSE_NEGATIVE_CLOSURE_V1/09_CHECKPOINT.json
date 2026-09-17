@@ -1,0 +1,46 @@
+{
+  "checkpoint": "V43_FACT_GROUNDING_FALSE_NEGATIVE_CLOSURE_V1",
+  "generated_for_source_run": "v43-targeted-fact-host-replay-v3-20260914134908-13b290ae",
+  "input_artifact_sha256": "aa0d6d82632b5563f852454391a783321a2856c461600e83a5a6c36ceeb8328a",
+  "current_code_sha256": {
+    "backend/src/pipeline/evidence-fact-candidate-v2.js": "119c21969600de0e111237a47167a3f48e097f396715f82052031107b33f2563",
+    "backend/src/pipeline/evidence-fact-candidate-v2-1.js": "373f3af06f31027c40f874bc15fd84dd9e58622efe421847f132290bbf879262",
+    "backend/test/evidence-fact-candidate-v2-1.test.js": "5eca82d4c33b020492b6dd4687a8ba3e871ade2d615598ae1cd532407d3aa5e9"
+  },
+  "candidate_count": 31,
+  "before_distribution": {
+    "REJECT": 14,
+    "ACCEPT": 7,
+    "REVIEW_REQUIRED": 10
+  },
+  "after_distribution": {
+    "ACCEPT": 9,
+    "REVIEW_REQUIRED": 22
+  },
+  "gpt_statement_supported_yes_count": 30,
+  "gpt_statement_supported_no_count": 1,
+  "grounding_false_reject_count_before": 14,
+  "line_wrap_false_rejects_closed": 14,
+  "residual_false_rejects": 0,
+  "candidate_17_auto_accept": false,
+  "unsupported_fact_auto_accept": 0,
+  "negative_safety_all_fail_closed": true,
+  "semantic_contract_widened": false,
+  "source_snapshot_mutated": false,
+  "routing_gap_artifact_eval_only": true,
+  "semantic_root_cause": "PENDING_GPT",
+  "safety": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "fact_persistence": 0,
+    "gold_mutations": 0,
+    "mapping_actions": 0,
+    "claim_actions": 0,
+    "writer_actions": 0,
+    "prompt_changes": 0,
+    "schema_changes": 0,
+    "production_semantic_changes": 0
+  },
+  "status": "DETERMINISTIC_GROUNDING_CLOSURE_COMPLETE_PENDING_GPT_REVIEW"
+}

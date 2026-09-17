@@ -1,0 +1,39 @@
+{
+  "artifact_type": "V43_MATERIAL_SOURCE_ROLE_GATE_V1_POLICY",
+  "owner": "backend/src/pipeline/material-source-authority-policy.js",
+  "policy_version": "material-source-role-v1",
+  "roles": [
+    "REFERENCE_ONLY",
+    "EVIDENCE_CANDIDATE"
+  ],
+  "precedence": [
+    "synthetic marker/source type forces REFERENCE_ONLY",
+    "valid explicit human role is honored for non-synthetic material",
+    "known evidence material_type resolves EVIDENCE_CANDIDATE",
+    "known reference material_type resolves REFERENCE_ONLY",
+    "unknown/unmapped material_type defaults REFERENCE_ONLY"
+  ],
+  "authority_chain": [
+    "EVIDENCE_CANDIDATE",
+    "Fact Candidate",
+    "Grounding / Review",
+    "Canonical Fact",
+    "Mapping",
+    "Claim Gate",
+    "Writer Authorization"
+  ],
+  "reference_path": [
+    "Reference Retrieval",
+    "reference_materials",
+    "Writer context only"
+  ],
+  "forbidden_reference_destinations": [
+    "Canonical Fact Authority",
+    "Mapping Authority",
+    "Claim Authority",
+    "assertable_claims"
+  ],
+  "lifecycle_gate_is_separate": true,
+  "lifecycle_owner": "materialAuthorityStatus / isEvidenceSourceEligible in the same module",
+  "no_document_auto_upgrade": true
+}

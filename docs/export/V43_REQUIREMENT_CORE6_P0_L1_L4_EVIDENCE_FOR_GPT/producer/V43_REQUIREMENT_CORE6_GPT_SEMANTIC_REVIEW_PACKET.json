@@ -1,0 +1,1329 @@
+{
+  "checkpoint": "V43_REQUIREMENT_CORE6_GPT_SEMANTIC_REVIEW_PACKET",
+  "artifact_version": "v1",
+  "generated_at": "2026-09-07T14:01:42.742Z",
+  "authority": "GPT_SEMANTIC_ADJUDICATION_REQUIRED",
+  "run_id": "req-core6-fresh-20260907133003259-49044f2a",
+  "source_run_artifacts": [
+    "backend/eval/requirement-production-quality-gate/results/req-core6-fresh-20260907133003259-49044f2a/case-telemetry.jsonl",
+    "backend/eval/requirement-production-quality-gate/results/req-core6-fresh-20260907133003259-49044f2a/checkpoint.json",
+    "backend/eval/requirement-production-quality-gate/results/req-core6-fresh-20260907133003259-49044f2a/preflight.json"
+  ],
+  "no_provider_call": true,
+  "cases": [
+    {
+      "expected_id": "JY-001-BLIND-10-E02",
+      "tender_id": "JY-001",
+      "window_id": "JY-001-BLIND-10",
+      "development_expected_requirement": "功能演示应包含指令功能：市级或街道可关联事件并执行后续下发类操作；原文在“并下”处截断，完整动作需确认。",
+      "development_source_excerpt": "处理操作；③自下而上的事件（包括：街镇二\n级节点、社区/职能部门三级节点）处理操作；\n④指令功能演示：市级或街道可关联事件并下",
+      "source_refs": [
+        "C023-S007",
+        "C023-S008",
+        "C023-S009"
+      ],
+      "current_semantic_window_text": "处理操作；③自下而上的事件（包括：街镇二\n级节点、社区/职能部门三级节点）处理操作；\n④指令功能演示：市级或街道可关联事件并下",
+      "actual_provider_input": "[C023-S007] 处理操作；③自下而上的事件（包括：街镇二\n[C023-S008] 级节点、社区/职能部门三级节点）处理操作；\n[C023-S009] ④指令功能演示：市级或街道可关联事件并下",
+      "heading_visible": false,
+      "table_header_visible": false,
+      "neighbor_context_visible": true,
+      "section_identity": [
+        "评标方法和评标标准"
+      ],
+      "routing_roles": [
+        "UNKNOWN"
+      ],
+      "provider_model": null,
+      "prompt_instruction_hash": "9b8fe6582e774a64f36b2be307274e297fafb309cf17270a4d8fc463da817305",
+      "schema_hash": "1f5bd20f624a34a5f0bfd76e226f24d3595cc8a1e06bdc176c3d40e9694edbba",
+      "task_data_schema_hash": "9ee6ebb2a34e5ff3131d3b0bdbbcee45b1c8c33ac38d8325bd8925836abb7acc",
+      "candidate_schema_hash": "1f5bd20f624a34a5f0bfd76e226f24d3595cc8a1e06bdc176c3d40e9694edbba",
+      "provider_http_status": 200,
+      "gateway_http_status": 200,
+      "finish_reason": "stop",
+      "candidate_outputs": [
+        {
+          "eval_candidate_id": "CAND-01",
+          "text": "系统需支持自下而上的事件处理操作，包括街镇二级节点、社区/职能部门三级节点的事件处理操作。",
+          "category": "functional",
+          "source_range": {
+            "start_ref": "C023-S007",
+            "end_ref": "C023-S008"
+          },
+          "mandatory_observed": false,
+          "requires_confirmation": false,
+          "source_text": null,
+          "source_context_text": null,
+          "source_verified": false
+        },
+        {
+          "eval_candidate_id": "CAND-02",
+          "text": "系统需支持指令功能演示：市级或街道可关联事件并下发指令。",
+          "category": "functional",
+          "source_range": {
+            "start_ref": "C023-S009",
+            "end_ref": "C023-S009"
+          },
+          "mandatory_observed": false,
+          "requires_confirmation": false,
+          "source_text": null,
+          "source_context_text": null,
+          "source_verified": false
+        }
+      ],
+      "canonical_outputs": [
+        {
+          "eval_canonical_id": "CANON-01",
+          "text": "系统需支持自下而上的事件处理操作，包括街镇二级节点、社区/职能部门三级节点的事件处理操作。",
+          "category": "functional",
+          "requirement_category": "technical",
+          "source_excerpt": "处理操作；③自下而上的事件（包括：街镇二\n级节点、社区/职能部门三级节点）处理操作；",
+          "source_hash": "c44ed7aaf53afa880b059da61d603ca1a1844aa6a161f123ebcb79d5b21bdd0f",
+          "source_verified": true,
+          "source_resolution_status": "verified",
+          "source_match_type": "exact_multi_paragraph_span",
+          "mandatory_observed": false,
+          "requires_confirmation": false,
+          "quality_gate_decision": "REVIEW_REQUIRED",
+          "quality_gate_reason_codes": [
+            "NUMBER_OMISSION_REVIEW"
+          ]
+        },
+        {
+          "eval_canonical_id": "CANON-02",
+          "text": "系统需支持指令功能演示：市级或街道可关联事件并下发指令。",
+          "category": "functional",
+          "requirement_category": "technical",
+          "source_excerpt": "④指令功能演示：市级或街道可关联事件并下",
+          "source_hash": "94635f1f6c8f2b13acefa975583b39571384a16c447711f125d8c3b70e30b358",
+          "source_verified": true,
+          "source_resolution_status": "verified",
+          "source_match_type": "exact_single_paragraph",
+          "mandatory_observed": false,
+          "requires_confirmation": false,
+          "quality_gate_decision": "REVIEW_REQUIRED",
+          "quality_gate_reason_codes": [
+            "NUMBER_OMISSION_REVIEW"
+          ]
+        }
+      ],
+      "source_resolution_result": "PASS",
+      "quality_gate_decision": "REVIEW_REQUIRED_OR_BLOCKED",
+      "quality_gate_reason_codes": [
+        "NUMBER_OMISSION_REVIEW"
+      ],
+      "deterministic_bigram_coverage": {
+        "recovered": false,
+        "coverage": 0.4090909090909091,
+        "matched_bigrams": 18,
+        "expected_bigrams": 44,
+        "method": "DETERMINISTIC_CONTENT_BIGRAM_COVERAGE_V1"
+      },
+      "current_provisional_classification": "S2_CURRENT_MODEL_SEMANTIC_MISS",
+      "empty_candidate_on_explicit_scoring_response_obligation": false,
+      "special_case_checks": {
+        "jy_full_action_present_in_natural_source": true,
+        "fast_scoring_obligation_context_present_in_natural_source": null,
+        "fast_scoring_obligation_context_present_in_provider_input": null,
+        "empty_candidate_on_explicit_scoring_response_obligation": false
+      },
+      "natural_router_audit": {
+        "expected_id": "JY-001-BLIND-10-E02",
+        "tender_id": "JY-001",
+        "window_id": "JY-001-BLIND-10",
+        "expected_source_refs": [
+          "C023-S007",
+          "C023-S008",
+          "C023-S009"
+        ],
+        "naturally_routed": "YES",
+        "natural_window_ids": [
+          "JY-001-CHUNK-23"
+        ],
+        "natural_window_source_refs": [
+          {
+            "window_id": "JY-001-CHUNK-23",
+            "source_refs": [
+              "C023-S001",
+              "C023-S002",
+              "C023-S003",
+              "C023-S004",
+              "C023-S005",
+              "C023-S006",
+              "C023-S007",
+              "C023-S008",
+              "C023-S009",
+              "C023-S010",
+              "C023-S011",
+              "C023-S012",
+              "C023-S013",
+              "C023-S014",
+              "C023-S015",
+              "C023-S016",
+              "C023-S017",
+              "C023-S018",
+              "C023-S019",
+              "C023-S020",
+              "C023-S021",
+              "C023-S022",
+              "C023-S023",
+              "C023-S024",
+              "C023-S025",
+              "C023-S026",
+              "C023-S027",
+              "C023-S028",
+              "C023-S029",
+              "C023-S030",
+              "C023-S031",
+              "C023-S032",
+              "C023-S033",
+              "C023-S034",
+              "C023-S035",
+              "C023-S036",
+              "C023-S037",
+              "C023-S038",
+              "C023-S039",
+              "C023-S040",
+              "C023-S041",
+              "C023-S042",
+              "C023-S043",
+              "C023-S044",
+              "C023-S045",
+              "C023-S046",
+              "C023-S047",
+              "C023-S048",
+              "C023-S049",
+              "C023-S050",
+              "C023-S051",
+              "C023-S052",
+              "C023-S053"
+            ]
+          }
+        ],
+        "expected_refs_covered": [
+          "C023-S007",
+          "C023-S008",
+          "C023-S009"
+        ],
+        "expected_text_present": true,
+        "parent_heading_present": true,
+        "table_header_present": false,
+        "necessary_neighbor_present": true,
+        "context_integrity": "PASS",
+        "routing_diagnosis": "ROUTER_CONTEXT_PASS",
+        "natural_window_text": "4.1 \t功能演示一\n演示事件联勤联动中心：①统一派单中心（包\n括：智能派单、事件分类推荐、人工派单）；\n演示江阴市市域社会治理现代化联勤联动指挥\n平台专项督查工作流程，②自上而下的事件（包\n括：街镇二级节点、社区/职能部门三级节点）\n处理操作；③自下而上的事件（包括：街镇二\n级节点、社区/职能部门三级节点）处理操作；\n④指令功能演示：市级或街道可关联事件并下\n发指令，街道和社区可接受指令并反馈内容；\n⑤通知功能演示：上级下发通知，下级可接收\n并确认通知。\n上述系统软件功能全部满足得 \t5 \t分,缺一项或\n单项不完整扣 \t1 \t分，扣完为止。\n5\n4.2 \t功能演示二\n①演示网格业务的统一入口简化，走访入口（包\n括出租房按季走访、群租房按月走访、空巢失\n助老人按周走访、重点人员按月走访）；\n②演示服务入口（人房核实）、任务入口（通\n4\nJYGQ2023G015 \t江阴市城市运营“一网统管”项目一期之联勤联动统一事件 \t江阴市公共资源交易中心\n45\n知、全民反诈）及详细业务子页面；\n③演示人房核实功能，包括：按五步法完成人\n房核实，调用公安接口查询人员数据。\n④演示平台端网格数据管理功能，包括综合网\n格管理（网格、网格要素、网格边界）、微网\n格管理、网格治理力量管理。\n上述系统软件功能全部满足得 \t4 \t分,缺一项或\n单项不完整扣 \t1 \t分，扣完为止。\n4.3 \t功能演示三\n演示 \t12345 \t诉求登记受理功能展示：①来电弹\n屏展示，自动填充市民来电号码信息；②新建\n电话诉求、非电话诉求等渠道登记受理；③来\n电市民画像标签展示，给市民打标签功能。\n上述系统软件功能全部满足得 \t3 \t分,缺一项或\n单项不完整扣 \t1 \t分，扣完为止。\n3\n4.4 \t功能演示四\n演示江阴市城市之眼系统平台功能展示：①演\n示视频广场及点位搜索，完成在地图上展示点\n位信息、多标签组合搜索等功能；②演示资源\n申请管理功能，平台支持提交智能分析资源申\n请，包括分析资源选择、抓拍时段、抓拍周期、\n申请时效、执行周期等配置；③演示事件研判\n功能，展示预警研判处理的工作台，支持对上\n报事件进行核验操作，包括正报、误报。\n上述系统软件功能全部满足得 \t3 \t分，缺一项或\n单项不完整扣 \t1 \t分，扣完为止。\n3\nJYGQ2023G015 \t江阴市城市运营“一网统管”项目一期之联勤联动统一事件 \t江阴市公共资源交易中心\n46",
+        "natural_window_segment_count": 53,
+        "special_case_checks": {
+          "jy_full_action_present": true,
+          "fast_scoring_obligation_context_present": null
+        },
+        "source_sha256": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145"
+      },
+      "source_side_status": "PENDING_BLIND_HUMAN_REVIEW",
+      "source_sha256": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145"
+    },
+    {
+      "expected_id": "FAST-01-BLIND-03-E01",
+      "tender_id": "FAST-01",
+      "window_id": "FAST-01-BLIND-03",
+      "development_expected_requirement": "投标响应应提供项目重点难点分析、应对措施及相关合理化建议。",
+      "development_source_excerpt": "（10）项目重点难点分析、应对措施及相关的合理化建议\n（11）质量保障措施\n（12）拟安排的项目负责人情况（仅限一人）",
+      "source_refs": [
+        "C005-S010",
+        "C005-S011",
+        "C005-S012"
+      ],
+      "current_semantic_window_text": "（10）项目重点难点分析、应对措施及相关的合理化建议\n（11）质量保障措施\n（12）拟安排的项目负责人情况（仅限一人）",
+      "actual_provider_input": "[C005-S010] （10）项目重点难点分析、应对措施及相关的合理化建议\n[C005-S011] （11）质量保障措施\n[C005-S012] （12）拟安排的项目负责人情况（仅限一人）",
+      "heading_visible": true,
+      "table_header_visible": false,
+      "neighbor_context_visible": true,
+      "section_identity": [
+        "投标文件组成要求及格式"
+      ],
+      "routing_roles": [
+        "UNKNOWN"
+      ],
+      "provider_model": null,
+      "prompt_instruction_hash": "9b8fe6582e774a64f36b2be307274e297fafb309cf17270a4d8fc463da817305",
+      "schema_hash": "1f5bd20f624a34a5f0bfd76e226f24d3595cc8a1e06bdc176c3d40e9694edbba",
+      "task_data_schema_hash": "9ee6ebb2a34e5ff3131d3b0bdbbcee45b1c8c33ac38d8325bd8925836abb7acc",
+      "candidate_schema_hash": "1f5bd20f624a34a5f0bfd76e226f24d3595cc8a1e06bdc176c3d40e9694edbba",
+      "provider_http_status": 200,
+      "gateway_http_status": 200,
+      "finish_reason": "stop",
+      "candidate_outputs": [],
+      "canonical_outputs": [],
+      "source_resolution_result": "NOT_APPLICABLE",
+      "quality_gate_decision": "REVIEW_REQUIRED_OR_EMPTY",
+      "quality_gate_reason_codes": [
+        "NO_CANDIDATES_RETURNED_BY_PROVIDER"
+      ],
+      "deterministic_bigram_coverage": {
+        "recovered": false,
+        "coverage": 0,
+        "matched_bigrams": 0,
+        "expected_bigrams": 26,
+        "method": "DETERMINISTIC_CONTENT_BIGRAM_COVERAGE_V1"
+      },
+      "current_provisional_classification": "S2_CURRENT_MODEL_SEMANTIC_MISS",
+      "empty_candidate_on_explicit_scoring_response_obligation": true,
+      "special_case_checks": {
+        "jy_full_action_present_in_natural_source": null,
+        "fast_scoring_obligation_context_present_in_natural_source": true,
+        "fast_scoring_obligation_context_present_in_provider_input": true,
+        "empty_candidate_on_explicit_scoring_response_obligation": true
+      },
+      "natural_router_audit": {
+        "expected_id": "FAST-01-BLIND-03-E01",
+        "tender_id": "FAST-01",
+        "window_id": "FAST-01-BLIND-03",
+        "expected_source_refs": [
+          "C005-S010",
+          "C005-S011",
+          "C005-S012"
+        ],
+        "naturally_routed": "YES",
+        "natural_window_ids": [
+          "FAST-01-CHUNK-05"
+        ],
+        "natural_window_source_refs": [
+          {
+            "window_id": "FAST-01-CHUNK-05",
+            "source_refs": [
+              "C005-S001",
+              "C005-S002",
+              "C005-S003",
+              "C005-S004",
+              "C005-S005",
+              "C005-S006",
+              "C005-S007",
+              "C005-S008",
+              "C005-S009",
+              "C005-S010",
+              "C005-S011",
+              "C005-S012",
+              "C005-S013",
+              "C005-S014",
+              "C005-S015",
+              "C005-S016",
+              "C005-S017",
+              "C005-S018",
+              "C005-S019",
+              "C005-S020",
+              "C005-S021",
+              "C005-S022",
+              "C005-S023",
+              "C005-S024",
+              "C005-S025",
+              "C005-S026",
+              "C005-S027",
+              "C005-S028",
+              "C005-S029",
+              "C005-S030",
+              "C005-S031",
+              "C005-S032",
+              "C005-S033",
+              "C005-S034",
+              "C005-S035",
+              "C005-S036",
+              "C005-S037",
+              "C005-S038",
+              "C005-S039",
+              "C005-S040",
+              "C005-S041",
+              "C005-S042",
+              "C005-S043",
+              "C005-S044",
+              "C005-S045",
+              "C005-S046",
+              "C005-S047",
+              "C005-S048",
+              "C005-S049",
+              "C005-S050",
+              "C005-S051",
+              "C005-S052",
+              "C005-S053",
+              "C005-S054",
+              "C005-S055",
+              "C005-S056",
+              "C005-S057",
+              "C005-S058",
+              "C005-S059",
+              "C005-S060",
+              "C005-S061",
+              "C005-S062",
+              "C005-S063",
+              "C005-S064",
+              "C005-S065",
+              "C005-S066",
+              "C005-S067",
+              "C005-S068",
+              "C005-S069",
+              "C005-S070",
+              "C005-S071",
+              "C005-S072",
+              "C005-S073",
+              "C005-S074",
+              "C005-S075",
+              "C005-S076",
+              "C005-S077"
+            ]
+          }
+        ],
+        "expected_refs_covered": [
+          "C005-S010",
+          "C005-S011",
+          "C005-S012"
+        ],
+        "expected_text_present": true,
+        "parent_heading_present": true,
+        "table_header_present": false,
+        "necessary_neighbor_present": true,
+        "context_integrity": "PASS",
+        "routing_diagnosis": "ROUTER_CONTEXT_PASS",
+        "natural_window_text": "投标文件组成主要包括以下内容：\n（1）投标函\n（2）采购投标及履约承诺函\n（3）投标人情况及资格证明文件\n（5）供应商基本情况表\n（6）法定代表人（负责人）证明书\n（7）投标文件签署授权委托书\n（8）实质性条款响应情况表\n（9）项目服务方案\n（10）项目重点难点分析、应对措施及相关的合理化建议\n（11）质量保障措施\n（12）拟安排的项目负责人情况（仅限一人）\n（13）拟安排的项目团队成员情况（项目负责人除外）\n（14）有效业绩\n（15）资质、资格证书\n（16）服务网点\n（17）投标人认为需要加以说明的其他内容\n备注：\n1.本项目为网上电子投标项目，投标文件不需法人或授权委托人另行签字，无需加盖\n单位公章，招标文件另有规定的除外。\n2.关于填写“开标一览表”的说明：“开标一览表”中除“投标总价”外，其他信息\n19 / 56\n- 20 -\n一、投标函\n致： 深圳公共资源交易中心\n1、根据已收到贵单位的项目编号为 的 （项目名称） 项目的招标文\n件，遵照《深圳经济特区政府采购条例》和《深圳网上政府采购管理暂行办法》等有关规定，\n我单位经研究上述招标文件的专用条款及通用条款后，愿意按照招标文件要求承包上述项目\n并修补其任何缺陷。\n3、如果我单位中标，我单位将按照招标文件的要求足额提交履约担保。\n4、我单位同意所递交的投标文件在“对通用条款的补充内容”中明确的投标有效期内\n有效，在此期间内我单位的投标有可能中标，我方将受此约束。\n5、除非另外达成协议并生效，贵单位的中标通知书和本投标文件将构成合同的重要内\n容。\n7、如我单位提交样品，且未在规定时间内取回样品的，视同放弃取回，同意深圳公共\n资源交易中心对我单位提交的样品进行清理。\n投标人： ； 单位地址： ；\n法定代表人（负责人）或其授权委托代理人： ；\n电话： ；\n日期： 年 月 日\n二、采购投标及履约承诺函\n致：深圳公共资源交易中心\n我单位承诺：\n1.我单位参与本项目所投标（响应）的货物、工程或服务，不存在侵犯知识产权的情况。\n2.我单位参与本项目采购活动时不存在被有关部门禁止参与采购活动且在有效期内的\n情况。\n3.我单位具备《中华人民共和国政府采购法》第二十二条第一款规定的六项条件。\n信行为记录名单。\n5.我单位不存在《深圳市财政局政府采购供应商信用信息管理办法》（深财规〔2023〕\n6.我单位参与该项目投标，严格遵守政府采购相关法律，不造假，不围标、串标、陪标。\n我单位已清楚，如违反上述要求，投标将作无效处理，被列入不良记录名单并在网上曝光，\n同时将被提请政府采购主管部门给予一定年限内禁止参与政府采购活动或其他处罚。\n7.我单位如果中标，做到守信，不偷工减料，依照本项目招标文件需求内容、签署的采\n按照本项目招标文件需求、签署的采购合同及我单位在投标中所作的全部承诺履行。\n单位清楚，本项目将成为重点监管、重点验收项目，我单位将按时保质保量完成，并全力配\n合有关监管、验收工作；若我单位未按上述要求履约，我单位愿意接受主管部门的处理处罚。\n8.我单位已认真核实了投标文件的全部内容，所有资料均为真实资料。我单位对投标文\n件中全部投标资料的真实性负责，如被证实我单位的投标文件中存在虚假资料的，则视为我\n单位隐瞒真实情况、提供虚假资料，我单位愿意接受主管部门作出的行政处罚。\n9.我单位承诺中标后项目不转包，未经采购人同意不进行分包。\n20 / 56\n- 21 -\n10.我单位保证，其所提供的货物通过合法正规渠道供货，在提供给采购人前具有完全\n的所有权，采购人在中华人民共和国使用该货物或货物的任何一部分时，不会产生因第三方\n提出的包括但不限于侵犯其专利权、商标权、工业设计权等知识产权和侵犯其所有权、抵押\n权等物权及其他权利而引发的纠纷；如有纠纷，我单位承担全部责任。\n11.我单位保证，若所投货物涉及《财政部生态环境部关于印发节能产品政府采购品目\n清单的通知》（财库〔2019〕19 号）列明的政府采购强制产品，则所投该产品符合节能产\n品的认证要求。若所投产品包括数据中心相关设备的，应满足《财政部 生态环境部 工业和\n信息化部关于印发<绿色数据中心政府采购需求标准（试行）>的通知》（财库〔2023〕7 号）\n要求。若所投产品涉及国家强制性标准的，所投产品应符合国家强制性标准相关要求。\n12.我单位已知悉并同意中标（成交）结果信息公示（公开）的内容。\n13.我单位保证，符合《中华人民共和国政府采购法实施条例》第十八条规定，与其他\n投标供应商不存在单位负责人为同一人或者存在直接控股、管理关系；不存在为本次采购项\n目提供整体设计、规范编制或者项目管理、监理、检测等服务的情形。若存在“不同供应商\n的董事、股东或其他高级管理人员为同一人的”情形的，我单位保证不存在串通投标、恶意\n串通或者视为串通投标的情形。",
+        "natural_window_segment_count": 77,
+        "special_case_checks": {
+          "jy_full_action_present": null,
+          "fast_scoring_obligation_context_present": true
+        },
+        "source_sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29"
+      },
+      "source_side_status": "PENDING_BLIND_HUMAN_REVIEW",
+      "source_sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29"
+    },
+    {
+      "expected_id": "FAST-01-BLIND-03-E02",
+      "tender_id": "FAST-01",
+      "window_id": "FAST-01-BLIND-03",
+      "development_expected_requirement": "投标响应应提供质量保障措施。",
+      "development_source_excerpt": "（10）项目重点难点分析、应对措施及相关的合理化建议\n（11）质量保障措施\n（12）拟安排的项目负责人情况（仅限一人）",
+      "source_refs": [
+        "C005-S010",
+        "C005-S011",
+        "C005-S012"
+      ],
+      "current_semantic_window_text": "（10）项目重点难点分析、应对措施及相关的合理化建议\n（11）质量保障措施\n（12）拟安排的项目负责人情况（仅限一人）",
+      "actual_provider_input": "[C005-S010] （10）项目重点难点分析、应对措施及相关的合理化建议\n[C005-S011] （11）质量保障措施\n[C005-S012] （12）拟安排的项目负责人情况（仅限一人）",
+      "heading_visible": true,
+      "table_header_visible": false,
+      "neighbor_context_visible": true,
+      "section_identity": [
+        "投标文件组成要求及格式"
+      ],
+      "routing_roles": [
+        "UNKNOWN"
+      ],
+      "provider_model": null,
+      "prompt_instruction_hash": "9b8fe6582e774a64f36b2be307274e297fafb309cf17270a4d8fc463da817305",
+      "schema_hash": "1f5bd20f624a34a5f0bfd76e226f24d3595cc8a1e06bdc176c3d40e9694edbba",
+      "task_data_schema_hash": "9ee6ebb2a34e5ff3131d3b0bdbbcee45b1c8c33ac38d8325bd8925836abb7acc",
+      "candidate_schema_hash": "1f5bd20f624a34a5f0bfd76e226f24d3595cc8a1e06bdc176c3d40e9694edbba",
+      "provider_http_status": 200,
+      "gateway_http_status": 200,
+      "finish_reason": "stop",
+      "candidate_outputs": [],
+      "canonical_outputs": [],
+      "source_resolution_result": "NOT_APPLICABLE",
+      "quality_gate_decision": "REVIEW_REQUIRED_OR_EMPTY",
+      "quality_gate_reason_codes": [
+        "NO_CANDIDATES_RETURNED_BY_PROVIDER"
+      ],
+      "deterministic_bigram_coverage": {
+        "recovered": false,
+        "coverage": 0,
+        "matched_bigrams": 0,
+        "expected_bigrams": 12,
+        "method": "DETERMINISTIC_CONTENT_BIGRAM_COVERAGE_V1"
+      },
+      "current_provisional_classification": "S2_CURRENT_MODEL_SEMANTIC_MISS",
+      "empty_candidate_on_explicit_scoring_response_obligation": true,
+      "special_case_checks": {
+        "jy_full_action_present_in_natural_source": null,
+        "fast_scoring_obligation_context_present_in_natural_source": true,
+        "fast_scoring_obligation_context_present_in_provider_input": true,
+        "empty_candidate_on_explicit_scoring_response_obligation": true
+      },
+      "natural_router_audit": {
+        "expected_id": "FAST-01-BLIND-03-E02",
+        "tender_id": "FAST-01",
+        "window_id": "FAST-01-BLIND-03",
+        "expected_source_refs": [
+          "C005-S010",
+          "C005-S011",
+          "C005-S012"
+        ],
+        "naturally_routed": "YES",
+        "natural_window_ids": [
+          "FAST-01-CHUNK-05"
+        ],
+        "natural_window_source_refs": [
+          {
+            "window_id": "FAST-01-CHUNK-05",
+            "source_refs": [
+              "C005-S001",
+              "C005-S002",
+              "C005-S003",
+              "C005-S004",
+              "C005-S005",
+              "C005-S006",
+              "C005-S007",
+              "C005-S008",
+              "C005-S009",
+              "C005-S010",
+              "C005-S011",
+              "C005-S012",
+              "C005-S013",
+              "C005-S014",
+              "C005-S015",
+              "C005-S016",
+              "C005-S017",
+              "C005-S018",
+              "C005-S019",
+              "C005-S020",
+              "C005-S021",
+              "C005-S022",
+              "C005-S023",
+              "C005-S024",
+              "C005-S025",
+              "C005-S026",
+              "C005-S027",
+              "C005-S028",
+              "C005-S029",
+              "C005-S030",
+              "C005-S031",
+              "C005-S032",
+              "C005-S033",
+              "C005-S034",
+              "C005-S035",
+              "C005-S036",
+              "C005-S037",
+              "C005-S038",
+              "C005-S039",
+              "C005-S040",
+              "C005-S041",
+              "C005-S042",
+              "C005-S043",
+              "C005-S044",
+              "C005-S045",
+              "C005-S046",
+              "C005-S047",
+              "C005-S048",
+              "C005-S049",
+              "C005-S050",
+              "C005-S051",
+              "C005-S052",
+              "C005-S053",
+              "C005-S054",
+              "C005-S055",
+              "C005-S056",
+              "C005-S057",
+              "C005-S058",
+              "C005-S059",
+              "C005-S060",
+              "C005-S061",
+              "C005-S062",
+              "C005-S063",
+              "C005-S064",
+              "C005-S065",
+              "C005-S066",
+              "C005-S067",
+              "C005-S068",
+              "C005-S069",
+              "C005-S070",
+              "C005-S071",
+              "C005-S072",
+              "C005-S073",
+              "C005-S074",
+              "C005-S075",
+              "C005-S076",
+              "C005-S077"
+            ]
+          }
+        ],
+        "expected_refs_covered": [
+          "C005-S010",
+          "C005-S011",
+          "C005-S012"
+        ],
+        "expected_text_present": true,
+        "parent_heading_present": true,
+        "table_header_present": false,
+        "necessary_neighbor_present": true,
+        "context_integrity": "PASS",
+        "routing_diagnosis": "ROUTER_CONTEXT_PASS",
+        "natural_window_text": "投标文件组成主要包括以下内容：\n（1）投标函\n（2）采购投标及履约承诺函\n（3）投标人情况及资格证明文件\n（5）供应商基本情况表\n（6）法定代表人（负责人）证明书\n（7）投标文件签署授权委托书\n（8）实质性条款响应情况表\n（9）项目服务方案\n（10）项目重点难点分析、应对措施及相关的合理化建议\n（11）质量保障措施\n（12）拟安排的项目负责人情况（仅限一人）\n（13）拟安排的项目团队成员情况（项目负责人除外）\n（14）有效业绩\n（15）资质、资格证书\n（16）服务网点\n（17）投标人认为需要加以说明的其他内容\n备注：\n1.本项目为网上电子投标项目，投标文件不需法人或授权委托人另行签字，无需加盖\n单位公章，招标文件另有规定的除外。\n2.关于填写“开标一览表”的说明：“开标一览表”中除“投标总价”外，其他信息\n19 / 56\n- 20 -\n一、投标函\n致： 深圳公共资源交易中心\n1、根据已收到贵单位的项目编号为 的 （项目名称） 项目的招标文\n件，遵照《深圳经济特区政府采购条例》和《深圳网上政府采购管理暂行办法》等有关规定，\n我单位经研究上述招标文件的专用条款及通用条款后，愿意按照招标文件要求承包上述项目\n并修补其任何缺陷。\n3、如果我单位中标，我单位将按照招标文件的要求足额提交履约担保。\n4、我单位同意所递交的投标文件在“对通用条款的补充内容”中明确的投标有效期内\n有效，在此期间内我单位的投标有可能中标，我方将受此约束。\n5、除非另外达成协议并生效，贵单位的中标通知书和本投标文件将构成合同的重要内\n容。\n7、如我单位提交样品，且未在规定时间内取回样品的，视同放弃取回，同意深圳公共\n资源交易中心对我单位提交的样品进行清理。\n投标人： ； 单位地址： ；\n法定代表人（负责人）或其授权委托代理人： ；\n电话： ；\n日期： 年 月 日\n二、采购投标及履约承诺函\n致：深圳公共资源交易中心\n我单位承诺：\n1.我单位参与本项目所投标（响应）的货物、工程或服务，不存在侵犯知识产权的情况。\n2.我单位参与本项目采购活动时不存在被有关部门禁止参与采购活动且在有效期内的\n情况。\n3.我单位具备《中华人民共和国政府采购法》第二十二条第一款规定的六项条件。\n信行为记录名单。\n5.我单位不存在《深圳市财政局政府采购供应商信用信息管理办法》（深财规〔2023〕\n6.我单位参与该项目投标，严格遵守政府采购相关法律，不造假，不围标、串标、陪标。\n我单位已清楚，如违反上述要求，投标将作无效处理，被列入不良记录名单并在网上曝光，\n同时将被提请政府采购主管部门给予一定年限内禁止参与政府采购活动或其他处罚。\n7.我单位如果中标，做到守信，不偷工减料，依照本项目招标文件需求内容、签署的采\n按照本项目招标文件需求、签署的采购合同及我单位在投标中所作的全部承诺履行。\n单位清楚，本项目将成为重点监管、重点验收项目，我单位将按时保质保量完成，并全力配\n合有关监管、验收工作；若我单位未按上述要求履约，我单位愿意接受主管部门的处理处罚。\n8.我单位已认真核实了投标文件的全部内容，所有资料均为真实资料。我单位对投标文\n件中全部投标资料的真实性负责，如被证实我单位的投标文件中存在虚假资料的，则视为我\n单位隐瞒真实情况、提供虚假资料，我单位愿意接受主管部门作出的行政处罚。\n9.我单位承诺中标后项目不转包，未经采购人同意不进行分包。\n20 / 56\n- 21 -\n10.我单位保证，其所提供的货物通过合法正规渠道供货，在提供给采购人前具有完全\n的所有权，采购人在中华人民共和国使用该货物或货物的任何一部分时，不会产生因第三方\n提出的包括但不限于侵犯其专利权、商标权、工业设计权等知识产权和侵犯其所有权、抵押\n权等物权及其他权利而引发的纠纷；如有纠纷，我单位承担全部责任。\n11.我单位保证，若所投货物涉及《财政部生态环境部关于印发节能产品政府采购品目\n清单的通知》（财库〔2019〕19 号）列明的政府采购强制产品，则所投该产品符合节能产\n品的认证要求。若所投产品包括数据中心相关设备的，应满足《财政部 生态环境部 工业和\n信息化部关于印发<绿色数据中心政府采购需求标准（试行）>的通知》（财库〔2023〕7 号）\n要求。若所投产品涉及国家强制性标准的，所投产品应符合国家强制性标准相关要求。\n12.我单位已知悉并同意中标（成交）结果信息公示（公开）的内容。\n13.我单位保证，符合《中华人民共和国政府采购法实施条例》第十八条规定，与其他\n投标供应商不存在单位负责人为同一人或者存在直接控股、管理关系；不存在为本次采购项\n目提供整体设计、规范编制或者项目管理、监理、检测等服务的情形。若存在“不同供应商\n的董事、股东或其他高级管理人员为同一人的”情形的，我单位保证不存在串通投标、恶意\n串通或者视为串通投标的情形。",
+        "natural_window_segment_count": 77,
+        "special_case_checks": {
+          "jy_full_action_present": null,
+          "fast_scoring_obligation_context_present": true
+        },
+        "source_sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29"
+      },
+      "source_side_status": "PENDING_BLIND_HUMAN_REVIEW",
+      "source_sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29"
+    }
+  ],
+  "current_prompt_scope_evidence": {
+    "task_type": "requirement_extraction",
+    "contract_version": "4.3-requirement-extraction-v3.1.1",
+    "instruction_hash": "9b8fe6582e774a64f36b2be307274e297fafb309cf17270a4d8fc463da817305",
+    "clauses": [
+      {
+        "clause_index": 2,
+        "categories": [
+          "bid_response_requirements"
+        ],
+        "text": "你只负责候选需求识别，不负责正式 Requirement 创建、REQ-ID、最终来源定位、最终 mandatory 判定、风险判断、去重或投标响应生成。"
+      },
+      {
+        "clause_index": 7,
+        "categories": [
+          "allowed_extraction"
+        ],
+        "text": "【提取范围】"
+      },
+      {
+        "clause_index": 8,
+        "categories": [
+          "bid_response_requirements",
+          "plans_and_measures",
+          "technical_requirements"
+        ],
+        "text": "提取原文中明确存在的响应义务，包括但不限于：\n- 功能要求\n- 技术要求\n- 性能、容量和量化指标\n- 数据要求\n- 接口与集成要求\n- 部署、环境和兼容性要求\n- 安全要求\n- 实施、交付、测试和验收要求\n- 培训、运维和售后服务要求\n- 人员要求\n- 要求提供的证书、报告、合同、原厂函、承诺或其他证明材料"
+      },
+      {
+        "clause_index": 9,
+        "categories": [
+          "forbidden_extraction",
+          "bid_response_requirements"
+        ],
+        "text": "不要提取：\n- 项目背景、建设意义、现状介绍\n- 单纯章节标题\n- 联系方式和采购流程说明\n- 不构成投标响应义务的说明性文字"
+      },
+      {
+        "clause_index": 10,
+        "categories": [
+          "allowed_extraction",
+          "plans_and_measures"
+        ],
+        "text": "【明确范围定义】\n若原文明确定义本项目需要提供的服务、建设、实施或运维范围，并通过“包括、涵盖、由……组成、服务内容为”等表述列出具体工作内容或技术范围，则该内容属于候选 Requirement；不得仅因该段未使用“须、应、必须、要求”等显式义务词而忽略。仅用于本项目实际履约范围；概念解释、背景介绍、政策说明或一般性定义不得因此提取。"
+      },
+      {
+        "clause_index": 11,
+        "categories": [
+          "allowed_extraction",
+          "plans_and_measures"
+        ],
+        "text": "【背景中的明确项目约束】\n无论明确要求出现于项目背景、项目概况、建设背景、总体说明，只要原文明确定义部署位置/部署方式、运行环境、实施边界、交付边界或必须满足的项目约束，就属于候选 Requirement；不得仅因位于背景/概况章节而忽略。\n普通事实性背景描述仍不提取，必须存在明确的 obligation 或 constraint 含义。"
+      },
+      {
+        "clause_index": 12,
+        "categories": [
+          "forbidden_extraction"
+        ],
+        "text": "【禁止推断】"
+      },
+      {
+        "clause_index": 13,
+        "categories": [
+          "bid_response_requirements",
+          "plans_and_measures"
+        ],
+        "text": "只能提取原文明确存在的内容。\n不得补充或推断原文没有明确写出的：\n- 功能\n- 参数\n- 数值\n- SLA\n- 时限\n- 企业能力\n- 产品能力\n- 接口范围\n- 实施方式\n- 证明材料"
+      },
+      {
+        "clause_index": 15,
+        "categories": [
+          "plans_and_measures"
+        ],
+        "text": "【实质约束完整性】\nCandidate 必须保留原文明示且会改变 Requirement 含义的数量、期限/截止时间、持续时长、频率、SLA/阈值、性能约束、适用条件、前置条件、例外/排除条件、要求交付物和验收条件。\n不得为了简洁删除这些信息；不要求逐字复制原文。"
+      },
+      {
+        "clause_index": 16,
+        "categories": [
+          "forbidden_extraction",
+          "scoring_and_evaluation",
+          "plans_and_measures"
+        ],
+        "text": "【表格需求实质完整性】\n当需求来自表格行时，必须保留会实质影响实施范围、资源规模、性能判断、SLA、验收、成本/投入的关键列；适用时包括数量、单位、服务期限、频率、容量、阈值、性能指标。\n不得只提取“需要提供某服务”而遗漏与该服务绑定的 meaning-critical 数值或约束；不要求机械复制表格所有列。\n价格、单价、评分等非 Requirement 范围字段仍服从现有 Scope 边界。\n对于已经识别为 Requirement 的需求型表格项，Candidate text 必须保留原文中会改变履约范围、资源规模、服务周期、性能或验收条件的 meaning-critical 值，包括数量、容量、期限/服务周期、频率、阈值及明确技术指标。\n如果这些值位于同一表格行、明确属于该项的关联单元格或结构上明确继承的共享/合并单元格，也不得在语义整理时丢失。\n计费周期、价格或相似的商业字段不得替代服务期限等技术/履约约束；仍不得把价格、评分、采购流程或普通说明补入 Requirement。"
+      },
+      {
+        "clause_index": 27,
+        "categories": [
+          "plans_and_measures"
+        ],
+        "text": "以下情况本身不得标记为 true：\n- 描述宽泛\n- 没有量化指标\n- 涉及第三方系统\n- 实施阶段需要细化\n- 企业能力未知"
+      },
+      {
+        "clause_index": 29,
+        "categories": [
+          "plans_and_measures"
+        ],
+        "text": "一个 Requirement 应对应一个相对独立、可响应的义务。\n不同对象、不同指标或独立证明要求可以拆分。\n不要机械按逗号、分号拆分。\n同一完整能力要求的多个描述应尽量保持在同一个 Requirement 中。\n即使文字或参数相同，只要对应不同明确对象，也不得擅自合并。\n同一业务对象、统一响应、共享主要证据和验收的紧密条件可以保持在同一个 Candidate 中。\n如果义务可以分别满足或不满足、需要不同能力、不同证据、不同验收，或承担不同风险，必须分别提取。\n禁止按动词机械拆分。"
+      },
+      {
+        "clause_index": 30,
+        "categories": [
+          "allowed_extraction",
+          "bid_response_requirements"
+        ],
+        "text": "【完整性】\n必须完整检查整个 chunk_text 后再输出。\n不得只提取第一条、前几条或示例性 Requirement。\n所有明确存在且符合提取范围的独立响应义务都应进入 requirements。"
+      }
+    ],
+    "CURRENT_PROMPT_SCOPE_INTERPRETATION": {
+      "allowed": "Prompt explicitly permits extraction of explicit bid-response obligations, including technical, performance, implementation, delivery, acceptance, personnel, and requested proof/document requirements.",
+      "scoring": "Prompt excludes score/price/evaluation-only text, while obligations in a scoring section remain eligible when the text itself states a response obligation.",
+      "plans_and_measures": "Prompt includes implementation/delivery/acceptance and other response obligations; solution-plan or measure wording is not excluded when it is an explicit response requirement.",
+      "technical": "Prompt explicitly includes functional, technical, performance, data, interface/integration, deployment/compatibility, and security requirements.",
+      "boundary": "Prompt forbids background-only text, headings alone, process/contact text, inferred facts, and invented values or conditions."
+    }
+  },
+  "router_reachability_audit": [
+    {
+      "expected_id": "JY-001-BLIND-10-E01",
+      "tender_id": "JY-001",
+      "window_id": "JY-001-BLIND-10",
+      "expected_source_refs": [
+        "C023-S007",
+        "C023-S008",
+        "C023-S009"
+      ],
+      "naturally_routed": "YES",
+      "natural_window_ids": [
+        "JY-001-CHUNK-23"
+      ],
+      "natural_window_source_refs": [
+        {
+          "window_id": "JY-001-CHUNK-23",
+          "source_refs": [
+            "C023-S001",
+            "C023-S002",
+            "C023-S003",
+            "C023-S004",
+            "C023-S005",
+            "C023-S006",
+            "C023-S007",
+            "C023-S008",
+            "C023-S009",
+            "C023-S010",
+            "C023-S011",
+            "C023-S012",
+            "C023-S013",
+            "C023-S014",
+            "C023-S015",
+            "C023-S016",
+            "C023-S017",
+            "C023-S018",
+            "C023-S019",
+            "C023-S020",
+            "C023-S021",
+            "C023-S022",
+            "C023-S023",
+            "C023-S024",
+            "C023-S025",
+            "C023-S026",
+            "C023-S027",
+            "C023-S028",
+            "C023-S029",
+            "C023-S030",
+            "C023-S031",
+            "C023-S032",
+            "C023-S033",
+            "C023-S034",
+            "C023-S035",
+            "C023-S036",
+            "C023-S037",
+            "C023-S038",
+            "C023-S039",
+            "C023-S040",
+            "C023-S041",
+            "C023-S042",
+            "C023-S043",
+            "C023-S044",
+            "C023-S045",
+            "C023-S046",
+            "C023-S047",
+            "C023-S048",
+            "C023-S049",
+            "C023-S050",
+            "C023-S051",
+            "C023-S052",
+            "C023-S053"
+          ]
+        }
+      ],
+      "expected_refs_covered": [
+        "C023-S007",
+        "C023-S008",
+        "C023-S009"
+      ],
+      "expected_text_present": true,
+      "parent_heading_present": true,
+      "table_header_present": false,
+      "necessary_neighbor_present": true,
+      "context_integrity": "PASS",
+      "routing_diagnosis": "ROUTER_CONTEXT_PASS",
+      "natural_window_text": "4.1 \t功能演示一\n演示事件联勤联动中心：①统一派单中心（包\n括：智能派单、事件分类推荐、人工派单）；\n演示江阴市市域社会治理现代化联勤联动指挥\n平台专项督查工作流程，②自上而下的事件（包\n括：街镇二级节点、社区/职能部门三级节点）\n处理操作；③自下而上的事件（包括：街镇二\n级节点、社区/职能部门三级节点）处理操作；\n④指令功能演示：市级或街道可关联事件并下\n发指令，街道和社区可接受指令并反馈内容；\n⑤通知功能演示：上级下发通知，下级可接收\n并确认通知。\n上述系统软件功能全部满足得 \t5 \t分,缺一项或\n单项不完整扣 \t1 \t分，扣完为止。\n5\n4.2 \t功能演示二\n①演示网格业务的统一入口简化，走访入口（包\n括出租房按季走访、群租房按月走访、空巢失\n助老人按周走访、重点人员按月走访）；\n②演示服务入口（人房核实）、任务入口（通\n4\nJYGQ2023G015 \t江阴市城市运营“一网统管”项目一期之联勤联动统一事件 \t江阴市公共资源交易中心\n45\n知、全民反诈）及详细业务子页面；\n③演示人房核实功能，包括：按五步法完成人\n房核实，调用公安接口查询人员数据。\n④演示平台端网格数据管理功能，包括综合网\n格管理（网格、网格要素、网格边界）、微网\n格管理、网格治理力量管理。\n上述系统软件功能全部满足得 \t4 \t分,缺一项或\n单项不完整扣 \t1 \t分，扣完为止。\n4.3 \t功能演示三\n演示 \t12345 \t诉求登记受理功能展示：①来电弹\n屏展示，自动填充市民来电号码信息；②新建\n电话诉求、非电话诉求等渠道登记受理；③来\n电市民画像标签展示，给市民打标签功能。\n上述系统软件功能全部满足得 \t3 \t分,缺一项或\n单项不完整扣 \t1 \t分，扣完为止。\n3\n4.4 \t功能演示四\n演示江阴市城市之眼系统平台功能展示：①演\n示视频广场及点位搜索，完成在地图上展示点\n位信息、多标签组合搜索等功能；②演示资源\n申请管理功能，平台支持提交智能分析资源申\n请，包括分析资源选择、抓拍时段、抓拍周期、\n申请时效、执行周期等配置；③演示事件研判\n功能，展示预警研判处理的工作台，支持对上\n报事件进行核验操作，包括正报、误报。\n上述系统软件功能全部满足得 \t3 \t分，缺一项或\n单项不完整扣 \t1 \t分，扣完为止。\n3\nJYGQ2023G015 \t江阴市城市运营“一网统管”项目一期之联勤联动统一事件 \t江阴市公共资源交易中心\n46",
+      "natural_window_segment_count": 53,
+      "special_case_checks": {
+        "jy_full_action_present": true,
+        "fast_scoring_obligation_context_present": null
+      },
+      "source_sha256": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145"
+    },
+    {
+      "expected_id": "JY-001-BLIND-10-E02",
+      "tender_id": "JY-001",
+      "window_id": "JY-001-BLIND-10",
+      "expected_source_refs": [
+        "C023-S007",
+        "C023-S008",
+        "C023-S009"
+      ],
+      "naturally_routed": "YES",
+      "natural_window_ids": [
+        "JY-001-CHUNK-23"
+      ],
+      "natural_window_source_refs": [
+        {
+          "window_id": "JY-001-CHUNK-23",
+          "source_refs": [
+            "C023-S001",
+            "C023-S002",
+            "C023-S003",
+            "C023-S004",
+            "C023-S005",
+            "C023-S006",
+            "C023-S007",
+            "C023-S008",
+            "C023-S009",
+            "C023-S010",
+            "C023-S011",
+            "C023-S012",
+            "C023-S013",
+            "C023-S014",
+            "C023-S015",
+            "C023-S016",
+            "C023-S017",
+            "C023-S018",
+            "C023-S019",
+            "C023-S020",
+            "C023-S021",
+            "C023-S022",
+            "C023-S023",
+            "C023-S024",
+            "C023-S025",
+            "C023-S026",
+            "C023-S027",
+            "C023-S028",
+            "C023-S029",
+            "C023-S030",
+            "C023-S031",
+            "C023-S032",
+            "C023-S033",
+            "C023-S034",
+            "C023-S035",
+            "C023-S036",
+            "C023-S037",
+            "C023-S038",
+            "C023-S039",
+            "C023-S040",
+            "C023-S041",
+            "C023-S042",
+            "C023-S043",
+            "C023-S044",
+            "C023-S045",
+            "C023-S046",
+            "C023-S047",
+            "C023-S048",
+            "C023-S049",
+            "C023-S050",
+            "C023-S051",
+            "C023-S052",
+            "C023-S053"
+          ]
+        }
+      ],
+      "expected_refs_covered": [
+        "C023-S007",
+        "C023-S008",
+        "C023-S009"
+      ],
+      "expected_text_present": true,
+      "parent_heading_present": true,
+      "table_header_present": false,
+      "necessary_neighbor_present": true,
+      "context_integrity": "PASS",
+      "routing_diagnosis": "ROUTER_CONTEXT_PASS",
+      "natural_window_text": "4.1 \t功能演示一\n演示事件联勤联动中心：①统一派单中心（包\n括：智能派单、事件分类推荐、人工派单）；\n演示江阴市市域社会治理现代化联勤联动指挥\n平台专项督查工作流程，②自上而下的事件（包\n括：街镇二级节点、社区/职能部门三级节点）\n处理操作；③自下而上的事件（包括：街镇二\n级节点、社区/职能部门三级节点）处理操作；\n④指令功能演示：市级或街道可关联事件并下\n发指令，街道和社区可接受指令并反馈内容；\n⑤通知功能演示：上级下发通知，下级可接收\n并确认通知。\n上述系统软件功能全部满足得 \t5 \t分,缺一项或\n单项不完整扣 \t1 \t分，扣完为止。\n5\n4.2 \t功能演示二\n①演示网格业务的统一入口简化，走访入口（包\n括出租房按季走访、群租房按月走访、空巢失\n助老人按周走访、重点人员按月走访）；\n②演示服务入口（人房核实）、任务入口（通\n4\nJYGQ2023G015 \t江阴市城市运营“一网统管”项目一期之联勤联动统一事件 \t江阴市公共资源交易中心\n45\n知、全民反诈）及详细业务子页面；\n③演示人房核实功能，包括：按五步法完成人\n房核实，调用公安接口查询人员数据。\n④演示平台端网格数据管理功能，包括综合网\n格管理（网格、网格要素、网格边界）、微网\n格管理、网格治理力量管理。\n上述系统软件功能全部满足得 \t4 \t分,缺一项或\n单项不完整扣 \t1 \t分，扣完为止。\n4.3 \t功能演示三\n演示 \t12345 \t诉求登记受理功能展示：①来电弹\n屏展示，自动填充市民来电号码信息；②新建\n电话诉求、非电话诉求等渠道登记受理；③来\n电市民画像标签展示，给市民打标签功能。\n上述系统软件功能全部满足得 \t3 \t分,缺一项或\n单项不完整扣 \t1 \t分，扣完为止。\n3\n4.4 \t功能演示四\n演示江阴市城市之眼系统平台功能展示：①演\n示视频广场及点位搜索，完成在地图上展示点\n位信息、多标签组合搜索等功能；②演示资源\n申请管理功能，平台支持提交智能分析资源申\n请，包括分析资源选择、抓拍时段、抓拍周期、\n申请时效、执行周期等配置；③演示事件研判\n功能，展示预警研判处理的工作台，支持对上\n报事件进行核验操作，包括正报、误报。\n上述系统软件功能全部满足得 \t3 \t分，缺一项或\n单项不完整扣 \t1 \t分，扣完为止。\n3\nJYGQ2023G015 \t江阴市城市运营“一网统管”项目一期之联勤联动统一事件 \t江阴市公共资源交易中心\n46",
+      "natural_window_segment_count": 53,
+      "special_case_checks": {
+        "jy_full_action_present": true,
+        "fast_scoring_obligation_context_present": null
+      },
+      "source_sha256": "bd82077bc2f3801e1323c5fb4266169905a95d0ab86448346eabe0b4dd4c3145"
+    },
+    {
+      "expected_id": "FAST-01-BLIND-03-E01",
+      "tender_id": "FAST-01",
+      "window_id": "FAST-01-BLIND-03",
+      "expected_source_refs": [
+        "C005-S010",
+        "C005-S011",
+        "C005-S012"
+      ],
+      "naturally_routed": "YES",
+      "natural_window_ids": [
+        "FAST-01-CHUNK-05"
+      ],
+      "natural_window_source_refs": [
+        {
+          "window_id": "FAST-01-CHUNK-05",
+          "source_refs": [
+            "C005-S001",
+            "C005-S002",
+            "C005-S003",
+            "C005-S004",
+            "C005-S005",
+            "C005-S006",
+            "C005-S007",
+            "C005-S008",
+            "C005-S009",
+            "C005-S010",
+            "C005-S011",
+            "C005-S012",
+            "C005-S013",
+            "C005-S014",
+            "C005-S015",
+            "C005-S016",
+            "C005-S017",
+            "C005-S018",
+            "C005-S019",
+            "C005-S020",
+            "C005-S021",
+            "C005-S022",
+            "C005-S023",
+            "C005-S024",
+            "C005-S025",
+            "C005-S026",
+            "C005-S027",
+            "C005-S028",
+            "C005-S029",
+            "C005-S030",
+            "C005-S031",
+            "C005-S032",
+            "C005-S033",
+            "C005-S034",
+            "C005-S035",
+            "C005-S036",
+            "C005-S037",
+            "C005-S038",
+            "C005-S039",
+            "C005-S040",
+            "C005-S041",
+            "C005-S042",
+            "C005-S043",
+            "C005-S044",
+            "C005-S045",
+            "C005-S046",
+            "C005-S047",
+            "C005-S048",
+            "C005-S049",
+            "C005-S050",
+            "C005-S051",
+            "C005-S052",
+            "C005-S053",
+            "C005-S054",
+            "C005-S055",
+            "C005-S056",
+            "C005-S057",
+            "C005-S058",
+            "C005-S059",
+            "C005-S060",
+            "C005-S061",
+            "C005-S062",
+            "C005-S063",
+            "C005-S064",
+            "C005-S065",
+            "C005-S066",
+            "C005-S067",
+            "C005-S068",
+            "C005-S069",
+            "C005-S070",
+            "C005-S071",
+            "C005-S072",
+            "C005-S073",
+            "C005-S074",
+            "C005-S075",
+            "C005-S076",
+            "C005-S077"
+          ]
+        }
+      ],
+      "expected_refs_covered": [
+        "C005-S010",
+        "C005-S011",
+        "C005-S012"
+      ],
+      "expected_text_present": true,
+      "parent_heading_present": true,
+      "table_header_present": false,
+      "necessary_neighbor_present": true,
+      "context_integrity": "PASS",
+      "routing_diagnosis": "ROUTER_CONTEXT_PASS",
+      "natural_window_text": "投标文件组成主要包括以下内容：\n（1）投标函\n（2）采购投标及履约承诺函\n（3）投标人情况及资格证明文件\n（5）供应商基本情况表\n（6）法定代表人（负责人）证明书\n（7）投标文件签署授权委托书\n（8）实质性条款响应情况表\n（9）项目服务方案\n（10）项目重点难点分析、应对措施及相关的合理化建议\n（11）质量保障措施\n（12）拟安排的项目负责人情况（仅限一人）\n（13）拟安排的项目团队成员情况（项目负责人除外）\n（14）有效业绩\n（15）资质、资格证书\n（16）服务网点\n（17）投标人认为需要加以说明的其他内容\n备注：\n1.本项目为网上电子投标项目，投标文件不需法人或授权委托人另行签字，无需加盖\n单位公章，招标文件另有规定的除外。\n2.关于填写“开标一览表”的说明：“开标一览表”中除“投标总价”外，其他信息\n19 / 56\n- 20 -\n一、投标函\n致： 深圳公共资源交易中心\n1、根据已收到贵单位的项目编号为 的 （项目名称） 项目的招标文\n件，遵照《深圳经济特区政府采购条例》和《深圳网上政府采购管理暂行办法》等有关规定，\n我单位经研究上述招标文件的专用条款及通用条款后，愿意按照招标文件要求承包上述项目\n并修补其任何缺陷。\n3、如果我单位中标，我单位将按照招标文件的要求足额提交履约担保。\n4、我单位同意所递交的投标文件在“对通用条款的补充内容”中明确的投标有效期内\n有效，在此期间内我单位的投标有可能中标，我方将受此约束。\n5、除非另外达成协议并生效，贵单位的中标通知书和本投标文件将构成合同的重要内\n容。\n7、如我单位提交样品，且未在规定时间内取回样品的，视同放弃取回，同意深圳公共\n资源交易中心对我单位提交的样品进行清理。\n投标人： ； 单位地址： ；\n法定代表人（负责人）或其授权委托代理人： ；\n电话： ；\n日期： 年 月 日\n二、采购投标及履约承诺函\n致：深圳公共资源交易中心\n我单位承诺：\n1.我单位参与本项目所投标（响应）的货物、工程或服务，不存在侵犯知识产权的情况。\n2.我单位参与本项目采购活动时不存在被有关部门禁止参与采购活动且在有效期内的\n情况。\n3.我单位具备《中华人民共和国政府采购法》第二十二条第一款规定的六项条件。\n信行为记录名单。\n5.我单位不存在《深圳市财政局政府采购供应商信用信息管理办法》（深财规〔2023〕\n6.我单位参与该项目投标，严格遵守政府采购相关法律，不造假，不围标、串标、陪标。\n我单位已清楚，如违反上述要求，投标将作无效处理，被列入不良记录名单并在网上曝光，\n同时将被提请政府采购主管部门给予一定年限内禁止参与政府采购活动或其他处罚。\n7.我单位如果中标，做到守信，不偷工减料，依照本项目招标文件需求内容、签署的采\n按照本项目招标文件需求、签署的采购合同及我单位在投标中所作的全部承诺履行。\n单位清楚，本项目将成为重点监管、重点验收项目，我单位将按时保质保量完成，并全力配\n合有关监管、验收工作；若我单位未按上述要求履约，我单位愿意接受主管部门的处理处罚。\n8.我单位已认真核实了投标文件的全部内容，所有资料均为真实资料。我单位对投标文\n件中全部投标资料的真实性负责，如被证实我单位的投标文件中存在虚假资料的，则视为我\n单位隐瞒真实情况、提供虚假资料，我单位愿意接受主管部门作出的行政处罚。\n9.我单位承诺中标后项目不转包，未经采购人同意不进行分包。\n20 / 56\n- 21 -\n10.我单位保证，其所提供的货物通过合法正规渠道供货，在提供给采购人前具有完全\n的所有权，采购人在中华人民共和国使用该货物或货物的任何一部分时，不会产生因第三方\n提出的包括但不限于侵犯其专利权、商标权、工业设计权等知识产权和侵犯其所有权、抵押\n权等物权及其他权利而引发的纠纷；如有纠纷，我单位承担全部责任。\n11.我单位保证，若所投货物涉及《财政部生态环境部关于印发节能产品政府采购品目\n清单的通知》（财库〔2019〕19 号）列明的政府采购强制产品，则所投该产品符合节能产\n品的认证要求。若所投产品包括数据中心相关设备的，应满足《财政部 生态环境部 工业和\n信息化部关于印发<绿色数据中心政府采购需求标准（试行）>的通知》（财库〔2023〕7 号）\n要求。若所投产品涉及国家强制性标准的，所投产品应符合国家强制性标准相关要求。\n12.我单位已知悉并同意中标（成交）结果信息公示（公开）的内容。\n13.我单位保证，符合《中华人民共和国政府采购法实施条例》第十八条规定，与其他\n投标供应商不存在单位负责人为同一人或者存在直接控股、管理关系；不存在为本次采购项\n目提供整体设计、规范编制或者项目管理、监理、检测等服务的情形。若存在“不同供应商\n的董事、股东或其他高级管理人员为同一人的”情形的，我单位保证不存在串通投标、恶意\n串通或者视为串通投标的情形。",
+      "natural_window_segment_count": 77,
+      "special_case_checks": {
+        "jy_full_action_present": null,
+        "fast_scoring_obligation_context_present": true
+      },
+      "source_sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29"
+    },
+    {
+      "expected_id": "FAST-01-BLIND-03-E02",
+      "tender_id": "FAST-01",
+      "window_id": "FAST-01-BLIND-03",
+      "expected_source_refs": [
+        "C005-S010",
+        "C005-S011",
+        "C005-S012"
+      ],
+      "naturally_routed": "YES",
+      "natural_window_ids": [
+        "FAST-01-CHUNK-05"
+      ],
+      "natural_window_source_refs": [
+        {
+          "window_id": "FAST-01-CHUNK-05",
+          "source_refs": [
+            "C005-S001",
+            "C005-S002",
+            "C005-S003",
+            "C005-S004",
+            "C005-S005",
+            "C005-S006",
+            "C005-S007",
+            "C005-S008",
+            "C005-S009",
+            "C005-S010",
+            "C005-S011",
+            "C005-S012",
+            "C005-S013",
+            "C005-S014",
+            "C005-S015",
+            "C005-S016",
+            "C005-S017",
+            "C005-S018",
+            "C005-S019",
+            "C005-S020",
+            "C005-S021",
+            "C005-S022",
+            "C005-S023",
+            "C005-S024",
+            "C005-S025",
+            "C005-S026",
+            "C005-S027",
+            "C005-S028",
+            "C005-S029",
+            "C005-S030",
+            "C005-S031",
+            "C005-S032",
+            "C005-S033",
+            "C005-S034",
+            "C005-S035",
+            "C005-S036",
+            "C005-S037",
+            "C005-S038",
+            "C005-S039",
+            "C005-S040",
+            "C005-S041",
+            "C005-S042",
+            "C005-S043",
+            "C005-S044",
+            "C005-S045",
+            "C005-S046",
+            "C005-S047",
+            "C005-S048",
+            "C005-S049",
+            "C005-S050",
+            "C005-S051",
+            "C005-S052",
+            "C005-S053",
+            "C005-S054",
+            "C005-S055",
+            "C005-S056",
+            "C005-S057",
+            "C005-S058",
+            "C005-S059",
+            "C005-S060",
+            "C005-S061",
+            "C005-S062",
+            "C005-S063",
+            "C005-S064",
+            "C005-S065",
+            "C005-S066",
+            "C005-S067",
+            "C005-S068",
+            "C005-S069",
+            "C005-S070",
+            "C005-S071",
+            "C005-S072",
+            "C005-S073",
+            "C005-S074",
+            "C005-S075",
+            "C005-S076",
+            "C005-S077"
+          ]
+        }
+      ],
+      "expected_refs_covered": [
+        "C005-S010",
+        "C005-S011",
+        "C005-S012"
+      ],
+      "expected_text_present": true,
+      "parent_heading_present": true,
+      "table_header_present": false,
+      "necessary_neighbor_present": true,
+      "context_integrity": "PASS",
+      "routing_diagnosis": "ROUTER_CONTEXT_PASS",
+      "natural_window_text": "投标文件组成主要包括以下内容：\n（1）投标函\n（2）采购投标及履约承诺函\n（3）投标人情况及资格证明文件\n（5）供应商基本情况表\n（6）法定代表人（负责人）证明书\n（7）投标文件签署授权委托书\n（8）实质性条款响应情况表\n（9）项目服务方案\n（10）项目重点难点分析、应对措施及相关的合理化建议\n（11）质量保障措施\n（12）拟安排的项目负责人情况（仅限一人）\n（13）拟安排的项目团队成员情况（项目负责人除外）\n（14）有效业绩\n（15）资质、资格证书\n（16）服务网点\n（17）投标人认为需要加以说明的其他内容\n备注：\n1.本项目为网上电子投标项目，投标文件不需法人或授权委托人另行签字，无需加盖\n单位公章，招标文件另有规定的除外。\n2.关于填写“开标一览表”的说明：“开标一览表”中除“投标总价”外，其他信息\n19 / 56\n- 20 -\n一、投标函\n致： 深圳公共资源交易中心\n1、根据已收到贵单位的项目编号为 的 （项目名称） 项目的招标文\n件，遵照《深圳经济特区政府采购条例》和《深圳网上政府采购管理暂行办法》等有关规定，\n我单位经研究上述招标文件的专用条款及通用条款后，愿意按照招标文件要求承包上述项目\n并修补其任何缺陷。\n3、如果我单位中标，我单位将按照招标文件的要求足额提交履约担保。\n4、我单位同意所递交的投标文件在“对通用条款的补充内容”中明确的投标有效期内\n有效，在此期间内我单位的投标有可能中标，我方将受此约束。\n5、除非另外达成协议并生效，贵单位的中标通知书和本投标文件将构成合同的重要内\n容。\n7、如我单位提交样品，且未在规定时间内取回样品的，视同放弃取回，同意深圳公共\n资源交易中心对我单位提交的样品进行清理。\n投标人： ； 单位地址： ；\n法定代表人（负责人）或其授权委托代理人： ；\n电话： ；\n日期： 年 月 日\n二、采购投标及履约承诺函\n致：深圳公共资源交易中心\n我单位承诺：\n1.我单位参与本项目所投标（响应）的货物、工程或服务，不存在侵犯知识产权的情况。\n2.我单位参与本项目采购活动时不存在被有关部门禁止参与采购活动且在有效期内的\n情况。\n3.我单位具备《中华人民共和国政府采购法》第二十二条第一款规定的六项条件。\n信行为记录名单。\n5.我单位不存在《深圳市财政局政府采购供应商信用信息管理办法》（深财规〔2023〕\n6.我单位参与该项目投标，严格遵守政府采购相关法律，不造假，不围标、串标、陪标。\n我单位已清楚，如违反上述要求，投标将作无效处理，被列入不良记录名单并在网上曝光，\n同时将被提请政府采购主管部门给予一定年限内禁止参与政府采购活动或其他处罚。\n7.我单位如果中标，做到守信，不偷工减料，依照本项目招标文件需求内容、签署的采\n按照本项目招标文件需求、签署的采购合同及我单位在投标中所作的全部承诺履行。\n单位清楚，本项目将成为重点监管、重点验收项目，我单位将按时保质保量完成，并全力配\n合有关监管、验收工作；若我单位未按上述要求履约，我单位愿意接受主管部门的处理处罚。\n8.我单位已认真核实了投标文件的全部内容，所有资料均为真实资料。我单位对投标文\n件中全部投标资料的真实性负责，如被证实我单位的投标文件中存在虚假资料的，则视为我\n单位隐瞒真实情况、提供虚假资料，我单位愿意接受主管部门作出的行政处罚。\n9.我单位承诺中标后项目不转包，未经采购人同意不进行分包。\n20 / 56\n- 21 -\n10.我单位保证，其所提供的货物通过合法正规渠道供货，在提供给采购人前具有完全\n的所有权，采购人在中华人民共和国使用该货物或货物的任何一部分时，不会产生因第三方\n提出的包括但不限于侵犯其专利权、商标权、工业设计权等知识产权和侵犯其所有权、抵押\n权等物权及其他权利而引发的纠纷；如有纠纷，我单位承担全部责任。\n11.我单位保证，若所投货物涉及《财政部生态环境部关于印发节能产品政府采购品目\n清单的通知》（财库〔2019〕19 号）列明的政府采购强制产品，则所投该产品符合节能产\n品的认证要求。若所投产品包括数据中心相关设备的，应满足《财政部 生态环境部 工业和\n信息化部关于印发<绿色数据中心政府采购需求标准（试行）>的通知》（财库〔2023〕7 号）\n要求。若所投产品涉及国家强制性标准的，所投产品应符合国家强制性标准相关要求。\n12.我单位已知悉并同意中标（成交）结果信息公示（公开）的内容。\n13.我单位保证，符合《中华人民共和国政府采购法实施条例》第十八条规定，与其他\n投标供应商不存在单位负责人为同一人或者存在直接控股、管理关系；不存在为本次采购项\n目提供整体设计、规范编制或者项目管理、监理、检测等服务的情形。若存在“不同供应商\n的董事、股东或其他高级管理人员为同一人的”情形的，我单位保证不存在串通投标、恶意\n串通或者视为串通投标的情形。",
+      "natural_window_segment_count": 77,
+      "special_case_checks": {
+        "jy_full_action_present": null,
+        "fast_scoring_obligation_context_present": true
+      },
+      "source_sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29"
+    },
+    {
+      "expected_id": "FAST-01-BLIND-08-E01",
+      "tender_id": "FAST-01",
+      "window_id": "FAST-01-BLIND-08",
+      "expected_source_refs": [
+        "C017-S028",
+        "C017-S029",
+        "C017-S030"
+      ],
+      "naturally_routed": "YES",
+      "natural_window_ids": [
+        "FAST-01-CHUNK-17"
+      ],
+      "natural_window_source_refs": [
+        {
+          "window_id": "FAST-01-CHUNK-17",
+          "source_refs": [
+            "C017-S001",
+            "C017-S002",
+            "C017-S003",
+            "C017-S004",
+            "C017-S005",
+            "C017-S006",
+            "C017-S007",
+            "C017-S008",
+            "C017-S009",
+            "C017-S010",
+            "C017-S011",
+            "C017-S012",
+            "C017-S013",
+            "C017-S014",
+            "C017-S015",
+            "C017-S016",
+            "C017-S017",
+            "C017-S018",
+            "C017-S019",
+            "C017-S020",
+            "C017-S021",
+            "C017-S022",
+            "C017-S023",
+            "C017-S024",
+            "C017-S025",
+            "C017-S026",
+            "C017-S027",
+            "C017-S028",
+            "C017-S029",
+            "C017-S030",
+            "C017-S031",
+            "C017-S032",
+            "C017-S033",
+            "C017-S034",
+            "C017-S035",
+            "C017-S036",
+            "C017-S037",
+            "C017-S038",
+            "C017-S039",
+            "C017-S040",
+            "C017-S041",
+            "C017-S042",
+            "C017-S043",
+            "C017-S044",
+            "C017-S045",
+            "C017-S046",
+            "C017-S047",
+            "C017-S048",
+            "C017-S049",
+            "C017-S050",
+            "C017-S051",
+            "C017-S052",
+            "C017-S053",
+            "C017-S054",
+            "C017-S055",
+            "C017-S056",
+            "C017-S057",
+            "C017-S058",
+            "C017-S059",
+            "C017-S060",
+            "C017-S061",
+            "C017-S062",
+            "C017-S063",
+            "C017-S064"
+          ]
+        }
+      ],
+      "expected_refs_covered": [
+        "C017-S028",
+        "C017-S029",
+        "C017-S030"
+      ],
+      "expected_text_present": true,
+      "parent_heading_present": true,
+      "table_header_present": false,
+      "necessary_neighbor_present": true,
+      "context_integrity": "PASS",
+      "routing_diagnosis": "ROUTER_CONTEXT_PASS",
+      "natural_window_text": "13.3 招标文件、招标文件澄清答复内容、招标文件修改补充内容均以书面形式（包括\n网站公开发布方式，如更正公告等）明确的内容为准。当招标文件、修改补充通知、招标文\n件澄清答复内容相互矛盾时，以最后发出的内容为准。\n13.4 政府集中采购机构保证招标文件澄清答复内容和招标文件修改补充内容在投标截\n止时间前以书面形式（包括网站发布方式，如更正公告等）发送给所有投标人。为使投标人\n在编制投标文件时有充分时间对招标文件的修改部分进行研究，政府集中采购机构可以酌情\n14．投标文件的语言及度量单位\n14.1 投标人与政府集中采购机构之间与投标有关的所有往来通知、函件和投标文件均\n用中文表述。投标人随投标文件提供的证明文件和资料可以为其它语言，但必须附中文译文。\n翻译的中文资料与外文资料如果出现差异时，以中文为准。\n14.2 除技术规范另有规定外，投标文件使用的度量单位，均采用中华人民共和国法定\n计量单位。\n15．投标文件的组成\n具体内容在招标文件专用条款中进行规定。\n16．投标文件格式\n投标文件包括本通用条款第 15 条中规定的内容。如招标文件提供了投标文件格式，则\n投标人提交的投标文件应毫无例外地使用招标文件所提供的相应格式（表格均可按同样格\n式扩展）。\n17．投标货币\n本项目的投标报价应以人民币计。\n18．证明投标文件投标技术方案的合格性和符合招标文件规定的文件要求\n18.1 投标人应提交证明文件，证明其投标技术方案项下的货物和服务的合格性符合招\n标文件规定。该投标技术方案及其证明文件均作为投标文件组成部分。\n18.2 投标人提供证明投标技术方案与招标文件的要求相一致的文件，可以是文字资料、\n图纸、数据或数码照片、制造商公布的产品说明书、产品彩页和我国政府机构出具的产品检\n验和核准证件等，提供的文件应符合以下要求：\n18.2.1 主要技术指标和性能的详细说明。\n18.2.2 投标产品从采购人开始使用至招标文件中规定的周期内正常、连续地使用所必\n须的备件和专用工具清单，包括备件和专用工具的货源及现行价格。\n18.2.3 对照招标文件技术规格，逐条说明投标技术方案已对采购人的技术规格做出了\n实质性的响应，或申明与技术规格条文的偏差和例外。投标人应详细说明投标技术方案中产\n品的具体参数，不得不合理照搬照抄招标文件的技术要求。\n18.2.4 产品说明书或彩页应为制造商公布或出具的中文产品说明书或彩页；提供外文\n38 / 56\n- 39 -\n说明书或彩页的，必须同时提供加盖制造商公章的对应中文翻译说明，评标依据以中文翻译\n内容为准，外文说明书或彩页仅供参考；产品说明书或彩页的尺寸和清晰度要求能够使用电\n脑阅读、识别和判断；\n18.2.5 我国政府机构出具的产品检验和核准证件应为证件正面、背面和附件标注的全\n部具体内容；产品检验和核准证件的尺寸和清晰度应该能够在电脑上被阅读、识别和判断，\n提供原件扫描件。\n其相关分数予以扣减或作投标无效处理。\n18.4 投标人在阐述上述第 18.2 时应注意采购人在技术规格中指出的工艺、材料和设备\n的标准以及参照的牌号或分类号仅起说明作用，并没有任何限制性。投标人在投标中可以选\n用替代标准、牌号或分类号，但这些替代要实质上满足招标文件中技术规格的要求，是否满\n18.5 除非另有规定或说明，投标人对同一项目投标时，不得同时提供两套或两套以上\n的投标方案。\n19．投标文件其他证明文件的要求\n社保情况等内容以及《资格性审查表》和《符合性审查表》中涉及的证明材料，投标人应提\n供相关部门出具的证明材料扫描件或照片，原件备查。有关扫描件（或照片）的尺寸和清晰\n度要求能够使用电脑阅读、识别和判断。若投标人未按要求提供证明材料或提供的是部分证\n明材料或提供不清晰的扫描件（或照片）的，采购人、代理机构及评审委员会依据各自审查\n范围，有权认定其投标文件未对招标文件有关需求进行响应，涉及资格性审查或符合性审查\n的予以投标无效处理，涉及《评标信息》打分项的则该项评分予以 0 分处理。对供应商投标\n资料是否异常、是否有效问题进行核查和判定，如认为供应商投标资料有异常或无效的，若\n涉及资格性审查或符合性审查条款的，则应作投标无效处理；若涉及评分的，则作不得分处\n理。\n19.2 本项目涉及提供的有关资质（资格）证书，若原有资质（资格）证书处于年审期\n间，须提供证书颁发部门提供的回执，并且回执须证明该证书依然有效（若在法规范围不需\n提供的，供应商应做书面说明并提供证明文件，否则该证书无效），则该投标人提供年审证\n明的可按原资质（资格）投标；若投标人正在申报上一级别资质（资格），在未获批准之前，\n仍按原级别资质（资格）投标。\n20．投标有效期\n持有效。",
+      "natural_window_segment_count": 64,
+      "special_case_checks": {
+        "jy_full_action_present": null,
+        "fast_scoring_obligation_context_present": null
+      },
+      "source_sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29"
+    },
+    {
+      "expected_id": "FAST-01-BLIND-08-E02",
+      "tender_id": "FAST-01",
+      "window_id": "FAST-01-BLIND-08",
+      "expected_source_refs": [
+        "C017-S028",
+        "C017-S029",
+        "C017-S030"
+      ],
+      "naturally_routed": "YES",
+      "natural_window_ids": [
+        "FAST-01-CHUNK-17"
+      ],
+      "natural_window_source_refs": [
+        {
+          "window_id": "FAST-01-CHUNK-17",
+          "source_refs": [
+            "C017-S001",
+            "C017-S002",
+            "C017-S003",
+            "C017-S004",
+            "C017-S005",
+            "C017-S006",
+            "C017-S007",
+            "C017-S008",
+            "C017-S009",
+            "C017-S010",
+            "C017-S011",
+            "C017-S012",
+            "C017-S013",
+            "C017-S014",
+            "C017-S015",
+            "C017-S016",
+            "C017-S017",
+            "C017-S018",
+            "C017-S019",
+            "C017-S020",
+            "C017-S021",
+            "C017-S022",
+            "C017-S023",
+            "C017-S024",
+            "C017-S025",
+            "C017-S026",
+            "C017-S027",
+            "C017-S028",
+            "C017-S029",
+            "C017-S030",
+            "C017-S031",
+            "C017-S032",
+            "C017-S033",
+            "C017-S034",
+            "C017-S035",
+            "C017-S036",
+            "C017-S037",
+            "C017-S038",
+            "C017-S039",
+            "C017-S040",
+            "C017-S041",
+            "C017-S042",
+            "C017-S043",
+            "C017-S044",
+            "C017-S045",
+            "C017-S046",
+            "C017-S047",
+            "C017-S048",
+            "C017-S049",
+            "C017-S050",
+            "C017-S051",
+            "C017-S052",
+            "C017-S053",
+            "C017-S054",
+            "C017-S055",
+            "C017-S056",
+            "C017-S057",
+            "C017-S058",
+            "C017-S059",
+            "C017-S060",
+            "C017-S061",
+            "C017-S062",
+            "C017-S063",
+            "C017-S064"
+          ]
+        }
+      ],
+      "expected_refs_covered": [
+        "C017-S028",
+        "C017-S029",
+        "C017-S030"
+      ],
+      "expected_text_present": true,
+      "parent_heading_present": true,
+      "table_header_present": false,
+      "necessary_neighbor_present": true,
+      "context_integrity": "PASS",
+      "routing_diagnosis": "ROUTER_CONTEXT_PASS",
+      "natural_window_text": "13.3 招标文件、招标文件澄清答复内容、招标文件修改补充内容均以书面形式（包括\n网站公开发布方式，如更正公告等）明确的内容为准。当招标文件、修改补充通知、招标文\n件澄清答复内容相互矛盾时，以最后发出的内容为准。\n13.4 政府集中采购机构保证招标文件澄清答复内容和招标文件修改补充内容在投标截\n止时间前以书面形式（包括网站发布方式，如更正公告等）发送给所有投标人。为使投标人\n在编制投标文件时有充分时间对招标文件的修改部分进行研究，政府集中采购机构可以酌情\n14．投标文件的语言及度量单位\n14.1 投标人与政府集中采购机构之间与投标有关的所有往来通知、函件和投标文件均\n用中文表述。投标人随投标文件提供的证明文件和资料可以为其它语言，但必须附中文译文。\n翻译的中文资料与外文资料如果出现差异时，以中文为准。\n14.2 除技术规范另有规定外，投标文件使用的度量单位，均采用中华人民共和国法定\n计量单位。\n15．投标文件的组成\n具体内容在招标文件专用条款中进行规定。\n16．投标文件格式\n投标文件包括本通用条款第 15 条中规定的内容。如招标文件提供了投标文件格式，则\n投标人提交的投标文件应毫无例外地使用招标文件所提供的相应格式（表格均可按同样格\n式扩展）。\n17．投标货币\n本项目的投标报价应以人民币计。\n18．证明投标文件投标技术方案的合格性和符合招标文件规定的文件要求\n18.1 投标人应提交证明文件，证明其投标技术方案项下的货物和服务的合格性符合招\n标文件规定。该投标技术方案及其证明文件均作为投标文件组成部分。\n18.2 投标人提供证明投标技术方案与招标文件的要求相一致的文件，可以是文字资料、\n图纸、数据或数码照片、制造商公布的产品说明书、产品彩页和我国政府机构出具的产品检\n验和核准证件等，提供的文件应符合以下要求：\n18.2.1 主要技术指标和性能的详细说明。\n18.2.2 投标产品从采购人开始使用至招标文件中规定的周期内正常、连续地使用所必\n须的备件和专用工具清单，包括备件和专用工具的货源及现行价格。\n18.2.3 对照招标文件技术规格，逐条说明投标技术方案已对采购人的技术规格做出了\n实质性的响应，或申明与技术规格条文的偏差和例外。投标人应详细说明投标技术方案中产\n品的具体参数，不得不合理照搬照抄招标文件的技术要求。\n18.2.4 产品说明书或彩页应为制造商公布或出具的中文产品说明书或彩页；提供外文\n38 / 56\n- 39 -\n说明书或彩页的，必须同时提供加盖制造商公章的对应中文翻译说明，评标依据以中文翻译\n内容为准，外文说明书或彩页仅供参考；产品说明书或彩页的尺寸和清晰度要求能够使用电\n脑阅读、识别和判断；\n18.2.5 我国政府机构出具的产品检验和核准证件应为证件正面、背面和附件标注的全\n部具体内容；产品检验和核准证件的尺寸和清晰度应该能够在电脑上被阅读、识别和判断，\n提供原件扫描件。\n其相关分数予以扣减或作投标无效处理。\n18.4 投标人在阐述上述第 18.2 时应注意采购人在技术规格中指出的工艺、材料和设备\n的标准以及参照的牌号或分类号仅起说明作用，并没有任何限制性。投标人在投标中可以选\n用替代标准、牌号或分类号，但这些替代要实质上满足招标文件中技术规格的要求，是否满\n18.5 除非另有规定或说明，投标人对同一项目投标时，不得同时提供两套或两套以上\n的投标方案。\n19．投标文件其他证明文件的要求\n社保情况等内容以及《资格性审查表》和《符合性审查表》中涉及的证明材料，投标人应提\n供相关部门出具的证明材料扫描件或照片，原件备查。有关扫描件（或照片）的尺寸和清晰\n度要求能够使用电脑阅读、识别和判断。若投标人未按要求提供证明材料或提供的是部分证\n明材料或提供不清晰的扫描件（或照片）的，采购人、代理机构及评审委员会依据各自审查\n范围，有权认定其投标文件未对招标文件有关需求进行响应，涉及资格性审查或符合性审查\n的予以投标无效处理，涉及《评标信息》打分项的则该项评分予以 0 分处理。对供应商投标\n资料是否异常、是否有效问题进行核查和判定，如认为供应商投标资料有异常或无效的，若\n涉及资格性审查或符合性审查条款的，则应作投标无效处理；若涉及评分的，则作不得分处\n理。\n19.2 本项目涉及提供的有关资质（资格）证书，若原有资质（资格）证书处于年审期\n间，须提供证书颁发部门提供的回执，并且回执须证明该证书依然有效（若在法规范围不需\n提供的，供应商应做书面说明并提供证明文件，否则该证书无效），则该投标人提供年审证\n明的可按原资质（资格）投标；若投标人正在申报上一级别资质（资格），在未获批准之前，\n仍按原级别资质（资格）投标。\n20．投标有效期\n持有效。",
+      "natural_window_segment_count": 64,
+      "special_case_checks": {
+        "jy_full_action_present": null,
+        "fast_scoring_obligation_context_present": null
+      },
+      "source_sha256": "8048485301cad27536c6f4a44e355c8ae05a5ded0ebb537ab9d6a61900d92c29"
+    }
+  ],
+  "interpretation": {
+    "CORE6_TARGET_WINDOW_PRODUCER_REPRODUCTION": "COMPLETE",
+    "CORE6_PRODUCTION_ROUTER_COVERAGE": "PASS",
+    "S0_ROUTING_CONFIRMED": [],
+    "S1_CONTEXT_CONFIRMED": [],
+    "S2_REQUIRES_GPT_SEMANTIC_ADJUDICATION": [
+      "JY-001-BLIND-10-E02",
+      "FAST-01-BLIND-03-E01",
+      "FAST-01-BLIND-03-E02"
+    ],
+    "CORE6_DETERMINISTIC_ALIGNMENT_RATE": 0.5,
+    "P0_ESCAPE": "NOT_YET_SEMANTICALLY_ADJUDICATED"
+  },
+  "side_effects": {
+    "PROVIDER_CALLS": 0,
+    "REQUIREMENT_LIVE_CALLS": 0,
+    "PRODUCTION_DB_WRITES": 0,
+    "GOLD_MUTATIONS": 0,
+    "FACT_CALLS": 0,
+    "MAPPING_CALLS": 0,
+    "CLAIM_CALLS": 0,
+    "WRITER_CALLS": 0
+  }
+}

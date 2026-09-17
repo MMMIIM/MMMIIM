@@ -1,0 +1,15 @@
+{
+  "phase": "03",
+  "baseline_fingerprint": "318d53c8a8785952d38a173dc086efd1d044c5871e288e305614e52e14a19641",
+  "confirmed_current": ["quarantine excludes current authority", "requirement/fact/mapping/gate hashes fail closed", "writer snapshot and generation identity change on authorized input mutation"],
+  "historical_fixed": ["fact and mapping atomic replacement", "writer gate identity loss", "generation reuse identity"],
+  "open": ["full-chain eager propagation proof", "universal identity foreign keys"],
+  "conflicting": ["retained invalidated rows are expected for audit but can be mistaken for active state"],
+  "unknown": ["external consumers and cross-service single-transaction behavior"],
+  "risks": ["P1-STALE-001", "P1-LINEAGE-001"],
+  "evidence_refs": ["AUTHORITY_INVALIDATION_MATRIX.md", "backend/integration/deterministic.integration.js", "backend/test/canonical-persistence-atomicity.test.js"],
+  "fact_revisions": ["staleness verdict is AUTHORITY_FAIL_CLOSED_ONLY, not FULLY_PROVEN"],
+  "next_dependencies": ["04_FACT_PRODUCER_READINESS_CHECKPOINT"],
+  "gate": "GENERIC_CLAIM_STALE_PROPAGATION=AUTHORITY_FAIL_CLOSED_ONLY",
+  "safe_to_continue": true
+}

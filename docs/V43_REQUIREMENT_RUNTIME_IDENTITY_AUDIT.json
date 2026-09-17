@@ -1,0 +1,68 @@
+{
+  "artifact_type": "V43_REQUIREMENT_RUNTIME_IDENTITY_AUDIT",
+  "artifact_version": "v1",
+  "task_type": "requirement_extraction",
+  "eval_runner_identity": {
+    "runner": "requirement-production-quality-gate/recovery.js",
+    "runner_version": "v1",
+    "task_contract_version": "4.3-requirement-extraction-v3.1.1",
+    "task_schema_hash": "9ee6ebb2a34e5ff3131d3b0bdbbcee45b1c8c33ac38d8325bd8925836abb7acc",
+    "provider_calls": 0
+  },
+  "backend_runtime_identity": {
+    "provider": "mock",
+    "model": "mock-semantic-v1",
+    "gateway_host": "127.0.0.1",
+    "provider_host": null,
+    "provider_configured": false,
+    "gateway_configured": true,
+    "timeout_ms": 120000
+  },
+  "semantic_gateway_identity": {
+    "ready_http_status": 200,
+    "ready_ok": true,
+    "ready_provider": "openai_compatible",
+    "ready_provider_configured": true,
+    "info_http_status": 200,
+    "info_ok": true,
+    "info": {
+      "available": true,
+      "top_level_keys": [
+        "build_revision",
+        "candidate_schema_contract_version",
+        "candidate_schema_sha256",
+        "commit",
+        "gateway_schema_version",
+        "requirement_extraction_contract_version",
+        "requirement_extraction_instruction_hash",
+        "requirement_extraction_prompt_hash",
+        "requirement_extraction_prompt_version",
+        "semantic_tasks",
+        "service",
+        "service_version",
+        "task_registry_loaded",
+        "task_types",
+        "version",
+        "working_tree_dirty"
+      ],
+      "provider": null,
+      "model": null,
+      "provider_configured": false,
+      "task_registry_loaded": true,
+      "task_contract_version": null,
+      "task_schema_version": null,
+      "task_schema_hash": null,
+      "task_prompt_hash": null
+    }
+  },
+  "actual_request_provider_identity": "provider-reached-identity-unreported",
+  "actual_model_identity": null,
+  "provider_identity_source_of_truth": "actual bounded smoke probe diagnostics",
+  "configuration_identity_mismatch": null,
+  "status": "PRECHECK_PASS",
+  "sensitive_values_logged": false,
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "generated_at": "2026-09-07T02:47:50.059Z"
+}

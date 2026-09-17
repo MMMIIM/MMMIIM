@@ -1,0 +1,23 @@
+{
+  "artifact_type": "V43_V3_TO_V4_BASELINE_CLONE_PLAN",
+  "source_database": "bid_platform",
+  "target_database": "bid_platform_reference_eval_v4",
+  "source_project_id": "00000000-0000-4000-8000-000000000001",
+  "exact_snapshot_manifest": "docs/handoff/V43_ISOLATED_REFERENCE_EVAL_DB_REAL_RETRIEVAL_V1/03_PRODUCTION_CORPUS_SNAPSHOT_MANIFEST.json",
+  "exact_snapshot_manifest_sha256": "c2087cd46a1642452915658ff1e687be27e40e4c674008a85ad63f780b7fcdae",
+  "expected_counts": {
+    "materials": 34,
+    "chunks": 318,
+    "embeddings": 382
+  },
+  "clone_policy": {
+    "exact_material_ids": true,
+    "exact_chunk_ids": true,
+    "exact_embedding_ids": true,
+    "rechunk": false,
+    "reembed": false,
+    "regenerate_identity": false,
+    "copy_vectors": true
+  },
+  "parity_gate": "BLOCKED_V3_TO_V4_BASELINE_PARITY_ON_ANY_MISMATCH"
+}

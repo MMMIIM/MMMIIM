@@ -1,0 +1,26 @@
+{
+  "checkpoint": "V43_REQUIREMENT_REEXTRACTION_CANDIDATE_CHECKPOINT",
+  "audit_mode": "READ_ONLY_CANDIDATE_PREPARATION",
+  "candidate_packet": "docs/V43_REQUIREMENT_REEXTRACTION_CANDIDATE_PACKET.json",
+  "candidate_count": 193,
+  "source_coverage": {
+    "JY-001": {"source_span_count": 193, "source_span_hash_count": 193, "exact_source_excerpt_count": 0, "status": "CANDIDATE_PENDING_HUMAN_AUTHORITY"},
+    "TB-003": {"source_span_count": 0, "source_span_hash_count": 0, "exact_source_excerpt_count": 0, "status": "BLOCKED_RAW_SOURCE_ONLY"},
+    "FAST-04": {"source_span_count": 0, "source_span_hash_count": 0, "exact_source_excerpt_count": 0, "status": "BLOCKED_RAW_SOURCE_ONLY"}
+  },
+  "missing_source_span_count": 0,
+  "blocked_tender_count": 2,
+  "human_review_required_count": 193,
+  "REQUIREMENT_REEXTRACTION_STATUS": "PARTIAL/BLOCKED_FOR_TB003_FAST04_AND_JY_EXCERPT_CAPTURE",
+  "GOLD_PROMOTION": "NOT_AUTHORIZED",
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "gold_mutations": 0,
+  "production_changes": 0,
+  "blockers": [
+    "JY-001 exact source excerpts are absent from the historical artifact; Human must verify PDF spans.",
+    "TB-003 has no historical packet/source index; no candidate exists.",
+    "FAST-04 has no historical packet/source index; no candidate exists.",
+    "No semantic Provider re-extraction was authorized/executed in this run."
+  ]
+}

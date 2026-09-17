@@ -1,0 +1,674 @@
+{
+  "run_id": "claim-eval-v1-1788401006591",
+  "schema_version": "4.3-claim-eval-v1",
+  "dataset": {
+    "dataset_id": "claim-quality-gold-v1-2026-09-02",
+    "schema_version": "4.3-claim-quality-v1",
+    "dataset_classification": "REPRESENTATIVE_SYNTHETIC",
+    "real_customer_data": false,
+    "case_count": 24,
+    "dataset_sha": "0a3a691fa27afc5ebc2daa4e2c8d327d263ff69b424c248870e13fcbbbe1b3d0",
+    "validation": {
+      "ok": true,
+      "errors": [],
+      "case_count": 24,
+      "schema_version": "4.3-claim-quality-v1"
+    },
+    "legacy_claim_slice": {
+      "schema_version": "4.3-evidence-claim-gold-v1",
+      "contract_valid": true,
+      "total": 60,
+      "approved": 6,
+      "pending": 54,
+      "rejected": 0,
+      "note": "Legacy Gold remains a source authority; only the new quality slice is executed by this runner."
+    }
+  },
+  "mode": "fast",
+  "generated_at": "2026-09-03T02:03:26.484Z",
+  "git": {
+    "branch": "feat/v4.3-semantic-boundary-routing",
+    "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+    "dirty": true
+  },
+  "evaluator_identity": "production-enterprise-claim-gate-v2",
+  "claim_contract": "claim-assertion-v1",
+  "gate_rule_version": "4.3-claim-gate-v2-contract-1",
+  "mapping_contract": "requirement-evidence-mapping-v1.1",
+  "cases_total": 84,
+  "quality_cases_total": 24,
+  "legacy_cases_total": 60,
+  "cases_scored": 24,
+  "gates": {
+    "CLAIM_FAST_GATE": {
+      "status": "PASS",
+      "checks": {
+        "critical_expected_behavior": true,
+        "safety_zero": true,
+        "authorization_integrity": true,
+        "provider_calls_zero": true,
+        "embedding_calls_zero": true,
+        "retrieval_calls_zero": true,
+        "db_writes_zero": true
+      },
+      "metrics": {
+        "safety": {
+          "false_allow": 0,
+          "unauthorized_strong_claim": 0,
+          "authority_escalation": 0,
+          "critical_overclaim": 0,
+          "status_overclaim": 0,
+          "scope_overclaim": 0,
+          "entity_overclaim": 0,
+          "quantity_overclaim": 0,
+          "validity_overclaim": 0,
+          "reference_only_strong_claim": 0,
+          "writer_bypass": 0,
+          "critical_case_failures": 0
+        },
+        "bid_quality": {
+          "supported_strong_claim_retention": 1,
+          "supported_strong_claims": {
+            "retained": 4,
+            "total": 4
+          },
+          "supported_narrow_claim_retention": 1,
+          "supported_narrow_claims": {
+            "retained": 5,
+            "total": 5
+          },
+          "false_hard_reject_rate": 0,
+          "false_hard_reject": {
+            "count": 0,
+            "total": 5
+          },
+          "useful_evidence_utilization": 1,
+          "useful_evidence": {
+            "utilized": 9,
+            "total": 9
+          },
+          "critical_expected_behavior_pass_rate": 1,
+          "critical_cases": {
+            "passed": 24,
+            "total": 24
+          }
+        },
+        "authorization_integrity": {
+          "current_allow_roundtrip": 1,
+          "stale_authorization_prevented": 4,
+          "stale_cases": 4,
+          "gate_decision_parity_errors": 0,
+          "writer_authorization_bypass": 0,
+          "cross_project_mutation": 0
+        }
+      }
+    },
+    "CLAIM_DB_GATE": {
+      "status": "NOT_EXECUTED",
+      "gate": "CLAIM_DB_GATE",
+      "reason": "DB Gate requires an explicit PostgreSQL fixture run; Fast Gate never writes production truth.",
+      "provider_calls": 0,
+      "embedding_calls": 0,
+      "retrieval_calls": 0,
+      "db_writes": 0
+    },
+    "CLAIM_BID_QUALITY_BASELINE": {
+      "status": "MEASURED",
+      "metrics": {
+        "supported_strong_claim_retention": 1,
+        "supported_strong_claims": {
+          "retained": 4,
+          "total": 4
+        },
+        "supported_narrow_claim_retention": 1,
+        "supported_narrow_claims": {
+          "retained": 5,
+          "total": 5
+        },
+        "false_hard_reject_rate": 0,
+        "false_hard_reject": {
+          "count": 0,
+          "total": 5
+        },
+        "useful_evidence_utilization": 1,
+        "useful_evidence": {
+          "utilized": 9,
+          "total": 9
+        },
+        "critical_expected_behavior_pass_rate": 1,
+        "critical_cases": {
+          "passed": 24,
+          "total": 24
+        }
+      }
+    },
+    "CLAIM_RELEASE_GATE": {
+      "status": "NOT_READY"
+    },
+    "CLAIM_BID_QUALITY": {
+      "status": "MEASURED",
+      "metrics": {
+        "supported_strong_claim_retention": 1,
+        "supported_strong_claims": {
+          "retained": 4,
+          "total": 4
+        },
+        "supported_narrow_claim_retention": 1,
+        "supported_narrow_claims": {
+          "retained": 5,
+          "total": 5
+        },
+        "false_hard_reject_rate": 0,
+        "false_hard_reject": {
+          "count": 0,
+          "total": 5
+        },
+        "useful_evidence_utilization": 1,
+        "useful_evidence": {
+          "utilized": 9,
+          "total": 9
+        },
+        "critical_expected_behavior_pass_rate": 1,
+        "critical_cases": {
+          "passed": 24,
+          "total": 24
+        }
+      }
+    }
+  },
+  "safety_metrics": {
+    "false_allow": 0,
+    "unauthorized_strong_claim": 0,
+    "authority_escalation": 0,
+    "critical_overclaim": 0,
+    "status_overclaim": 0,
+    "scope_overclaim": 0,
+    "entity_overclaim": 0,
+    "quantity_overclaim": 0,
+    "validity_overclaim": 0,
+    "reference_only_strong_claim": 0,
+    "writer_bypass": 0,
+    "critical_case_failures": 0
+  },
+  "bid_quality_metrics": {
+    "supported_strong_claim_retention": 1,
+    "supported_strong_claims": {
+      "retained": 4,
+      "total": 4
+    },
+    "supported_narrow_claim_retention": 1,
+    "supported_narrow_claims": {
+      "retained": 5,
+      "total": 5
+    },
+    "false_hard_reject_rate": 0,
+    "false_hard_reject": {
+      "count": 0,
+      "total": 5
+    },
+    "useful_evidence_utilization": 1,
+    "useful_evidence": {
+      "utilized": 9,
+      "total": 9
+    },
+    "critical_expected_behavior_pass_rate": 1,
+    "critical_cases": {
+      "passed": 24,
+      "total": 24
+    }
+  },
+  "authorization_metrics": {
+    "current_allow_roundtrip": 1,
+    "stale_authorization_prevented": 4,
+    "stale_cases": 4,
+    "gate_decision_parity_errors": 0,
+    "writer_authorization_bypass": 0,
+    "cross_project_mutation": 0
+  },
+  "case_results": [
+    {
+      "case_id": "CQ-STRONG-SSO",
+      "quality_class": "supported_strong",
+      "critical": true,
+      "expected_decision": "allow",
+      "actual_decision": "allow",
+      "expected_writer_eligible": true,
+      "actual_writer_eligible": true,
+      "expected_reason_codes": [],
+      "actual_reason_codes": [],
+      "passed": true,
+      "first_failing_boundary": null,
+      "failure_tags": [],
+      "error_code": null
+    },
+    {
+      "case_id": "CQ-STRONG-INTERFACE",
+      "quality_class": "supported_strong",
+      "critical": true,
+      "expected_decision": "allow",
+      "actual_decision": "allow",
+      "expected_writer_eligible": true,
+      "actual_writer_eligible": true,
+      "expected_reason_codes": [],
+      "actual_reason_codes": [],
+      "passed": true,
+      "first_failing_boundary": null,
+      "failure_tags": [],
+      "error_code": null
+    },
+    {
+      "case_id": "CQ-STRONG-PERFORMANCE",
+      "quality_class": "supported_strong",
+      "critical": true,
+      "expected_decision": "allow",
+      "actual_decision": "allow",
+      "expected_writer_eligible": true,
+      "actual_writer_eligible": true,
+      "expected_reason_codes": [],
+      "actual_reason_codes": [],
+      "passed": true,
+      "first_failing_boundary": null,
+      "failure_tags": [],
+      "error_code": null
+    },
+    {
+      "case_id": "CQ-STRONG-QUALIFICATION",
+      "quality_class": "supported_strong",
+      "critical": true,
+      "expected_decision": "allow",
+      "actual_decision": "allow",
+      "expected_writer_eligible": true,
+      "actual_writer_eligible": true,
+      "expected_reason_codes": [],
+      "actual_reason_codes": [],
+      "passed": true,
+      "first_failing_boundary": null,
+      "failure_tags": [],
+      "error_code": null
+    },
+    {
+      "case_id": "CQ-NARROW-SSO",
+      "quality_class": "supported_narrow",
+      "critical": true,
+      "expected_decision": "needs_review",
+      "actual_decision": "needs_review",
+      "expected_writer_eligible": false,
+      "actual_writer_eligible": false,
+      "expected_reason_codes": [],
+      "actual_reason_codes": [
+        "HUMAN_REVIEW_REQUIRED"
+      ],
+      "passed": true,
+      "first_failing_boundary": null,
+      "failure_tags": [],
+      "error_code": null
+    },
+    {
+      "case_id": "CQ-NARROW-LDAP",
+      "quality_class": "supported_narrow",
+      "critical": true,
+      "expected_decision": "needs_review",
+      "actual_decision": "needs_review",
+      "expected_writer_eligible": false,
+      "actual_writer_eligible": false,
+      "expected_reason_codes": [],
+      "actual_reason_codes": [
+        "HUMAN_REVIEW_REQUIRED"
+      ],
+      "passed": true,
+      "first_failing_boundary": null,
+      "failure_tags": [],
+      "error_code": null
+    },
+    {
+      "case_id": "CQ-NARROW-INTERFACE",
+      "quality_class": "supported_narrow",
+      "critical": true,
+      "expected_decision": "needs_review",
+      "actual_decision": "needs_review",
+      "expected_writer_eligible": false,
+      "actual_writer_eligible": false,
+      "expected_reason_codes": [],
+      "actual_reason_codes": [
+        "HUMAN_REVIEW_REQUIRED"
+      ],
+      "passed": true,
+      "first_failing_boundary": null,
+      "failure_tags": [],
+      "error_code": null
+    },
+    {
+      "case_id": "CQ-NARROW-CLOUD",
+      "quality_class": "supported_narrow",
+      "critical": true,
+      "expected_decision": "needs_review",
+      "actual_decision": "needs_review",
+      "expected_writer_eligible": false,
+      "actual_writer_eligible": false,
+      "expected_reason_codes": [],
+      "actual_reason_codes": [
+        "HUMAN_REVIEW_REQUIRED"
+      ],
+      "passed": true,
+      "first_failing_boundary": null,
+      "failure_tags": [],
+      "error_code": null
+    },
+    {
+      "case_id": "CQ-NARROW-PERFORMANCE",
+      "quality_class": "supported_narrow",
+      "critical": true,
+      "expected_decision": "needs_review",
+      "actual_decision": "needs_review",
+      "expected_writer_eligible": false,
+      "actual_writer_eligible": false,
+      "expected_reason_codes": [],
+      "actual_reason_codes": [
+        "HUMAN_REVIEW_REQUIRED"
+      ],
+      "passed": true,
+      "first_failing_boundary": null,
+      "failure_tags": [],
+      "error_code": null
+    },
+    {
+      "case_id": "CQ-COMMITMENT-ENTERPRISE",
+      "quality_class": "commitment_distinction",
+      "critical": true,
+      "expected_decision": "reject",
+      "actual_decision": "reject",
+      "expected_writer_eligible": false,
+      "actual_writer_eligible": false,
+      "expected_reason_codes": [
+        "QUANTITATIVE_UNSUPPORTED"
+      ],
+      "actual_reason_codes": [
+        "QUANTITATIVE_UNSUPPORTED"
+      ],
+      "passed": true,
+      "first_failing_boundary": null,
+      "failure_tags": [],
+      "error_code": null
+    },
+    {
+      "case_id": "CQ-COMMITMENT-PROJECT",
+      "quality_class": "commitment_distinction",
+      "critical": true,
+      "expected_decision": "needs_review",
+      "actual_decision": "needs_review",
+      "expected_writer_eligible": false,
+      "actual_writer_eligible": false,
+      "expected_reason_codes": [],
+      "actual_reason_codes": [
+        "HUMAN_REVIEW_REQUIRED"
+      ],
+      "passed": true,
+      "first_failing_boundary": null,
+      "failure_tags": [],
+      "error_code": null
+    },
+    {
+      "case_id": "CQ-STATUS-AWARD",
+      "quality_class": "status_overclaim",
+      "critical": true,
+      "expected_decision": "reject",
+      "actual_decision": "reject",
+      "expected_writer_eligible": false,
+      "actual_writer_eligible": false,
+      "expected_reason_codes": [
+        "STATUS_OVERCLAIM",
+        "EVIDENCE_SCOPE_EXCEEDED"
+      ],
+      "actual_reason_codes": [
+        "ENTITY_MISMATCH",
+        "STATUS_OVERCLAIM",
+        "EVIDENCE_SCOPE_EXCEEDED"
+      ],
+      "passed": true,
+      "first_failing_boundary": null,
+      "failure_tags": [],
+      "error_code": null
+    },
+    {
+      "case_id": "CQ-SCOPE-BROAD",
+      "quality_class": "scope_overclaim",
+      "critical": true,
+      "expected_decision": "reject",
+      "actual_decision": "reject",
+      "expected_writer_eligible": false,
+      "actual_writer_eligible": false,
+      "expected_reason_codes": [
+        "ENTITY_MISMATCH",
+        "EVIDENCE_SCOPE_EXCEEDED"
+      ],
+      "actual_reason_codes": [
+        "ENTITY_MISMATCH",
+        "EVIDENCE_SCOPE_EXCEEDED"
+      ],
+      "passed": true,
+      "first_failing_boundary": null,
+      "failure_tags": [],
+      "error_code": null
+    },
+    {
+      "case_id": "CQ-QUANTITY-OVERCLAIM",
+      "quality_class": "quantity_overclaim",
+      "critical": true,
+      "expected_decision": "reject",
+      "actual_decision": "reject",
+      "expected_writer_eligible": false,
+      "actual_writer_eligible": false,
+      "expected_reason_codes": [
+        "QUANTITATIVE_UNSUPPORTED"
+      ],
+      "actual_reason_codes": [
+        "QUANTITATIVE_UNSUPPORTED"
+      ],
+      "passed": true,
+      "first_failing_boundary": null,
+      "failure_tags": [],
+      "error_code": null
+    },
+    {
+      "case_id": "CQ-ENTITY-OVERCLAIM",
+      "quality_class": "entity_overclaim",
+      "critical": true,
+      "expected_decision": "reject",
+      "actual_decision": "reject",
+      "expected_writer_eligible": false,
+      "actual_writer_eligible": false,
+      "expected_reason_codes": [
+        "ENTITY_MISMATCH"
+      ],
+      "actual_reason_codes": [
+        "ENTITY_MISMATCH"
+      ],
+      "passed": true,
+      "first_failing_boundary": null,
+      "failure_tags": [],
+      "error_code": null
+    },
+    {
+      "case_id": "CQ-STALE-EXPIRED",
+      "quality_class": "stale_currentness",
+      "critical": true,
+      "expected_decision": "reject",
+      "actual_decision": "reject",
+      "expected_writer_eligible": false,
+      "actual_writer_eligible": false,
+      "expected_reason_codes": [
+        "EVIDENCE_EXPIRED"
+      ],
+      "actual_reason_codes": [
+        "EVIDENCE_EXPIRED"
+      ],
+      "passed": true,
+      "first_failing_boundary": null,
+      "failure_tags": [],
+      "error_code": null
+    },
+    {
+      "case_id": "CQ-STALE-REVOKED",
+      "quality_class": "stale_currentness",
+      "critical": true,
+      "expected_decision": "reject",
+      "actual_decision": "reject",
+      "expected_writer_eligible": false,
+      "actual_writer_eligible": false,
+      "expected_reason_codes": [
+        "EVIDENCE_EXPIRED"
+      ],
+      "actual_reason_codes": [
+        "EVIDENCE_EXPIRED"
+      ],
+      "passed": true,
+      "first_failing_boundary": null,
+      "failure_tags": [],
+      "error_code": null
+    },
+    {
+      "case_id": "CQ-MISSING-LINEAGE",
+      "quality_class": "lineage_integrity",
+      "critical": true,
+      "expected_decision": "reject",
+      "actual_decision": "reject",
+      "expected_writer_eligible": false,
+      "actual_writer_eligible": false,
+      "expected_reason_codes": [
+        "SOURCE_LINEAGE_REQUIRED"
+      ],
+      "actual_reason_codes": [
+        "SOURCE_LINEAGE_REQUIRED"
+      ],
+      "passed": true,
+      "first_failing_boundary": null,
+      "failure_tags": [],
+      "error_code": null
+    },
+    {
+      "case_id": "CQ-MAPPING-PENDING",
+      "quality_class": "authorization_boundary",
+      "critical": true,
+      "expected_decision": "reject",
+      "actual_decision": "reject",
+      "expected_writer_eligible": false,
+      "actual_writer_eligible": false,
+      "expected_reason_codes": [
+        "MAPPING_NOT_APPROVED"
+      ],
+      "actual_reason_codes": [
+        "MAPPING_NOT_APPROVED"
+      ],
+      "passed": true,
+      "first_failing_boundary": null,
+      "failure_tags": [],
+      "error_code": null
+    },
+    {
+      "case_id": "CQ-HISTORICAL-BID",
+      "quality_class": "reference_authority",
+      "critical": true,
+      "expected_decision": "reject",
+      "actual_decision": "reject",
+      "expected_writer_eligible": false,
+      "actual_writer_eligible": false,
+      "expected_reason_codes": [
+        "SOURCE_NOT_USABLE"
+      ],
+      "actual_reason_codes": [
+        "SOURCE_NOT_USABLE"
+      ],
+      "passed": true,
+      "first_failing_boundary": null,
+      "failure_tags": [],
+      "error_code": null
+    },
+    {
+      "case_id": "CQ-REFERENCE-ONLY",
+      "quality_class": "reference_authority",
+      "critical": true,
+      "expected_decision": "restrict",
+      "actual_decision": "restrict",
+      "expected_writer_eligible": false,
+      "actual_writer_eligible": false,
+      "expected_reason_codes": [
+        "REFERENCE_ONLY"
+      ],
+      "actual_reason_codes": [
+        "REFERENCE_ONLY"
+      ],
+      "passed": true,
+      "first_failing_boundary": null,
+      "failure_tags": [],
+      "error_code": null
+    },
+    {
+      "case_id": "CQ-SUPPORT-UNKNOWN",
+      "quality_class": "support_authority",
+      "critical": true,
+      "expected_decision": "reject",
+      "actual_decision": "reject",
+      "expected_writer_eligible": false,
+      "actual_writer_eligible": false,
+      "expected_reason_codes": [
+        "SUPPORT_INSUFFICIENT"
+      ],
+      "actual_reason_codes": [
+        "SUPPORT_INSUFFICIENT"
+      ],
+      "passed": true,
+      "first_failing_boundary": null,
+      "failure_tags": [],
+      "error_code": null
+    },
+    {
+      "case_id": "CQ-COMPOSITE-STATUS-CONFLICT",
+      "quality_class": "composite_boundary",
+      "critical": true,
+      "expected_decision": "needs_review",
+      "actual_decision": "needs_review",
+      "expected_writer_eligible": false,
+      "actual_writer_eligible": false,
+      "expected_reason_codes": [
+        "HUMAN_REVIEW_REQUIRED"
+      ],
+      "actual_reason_codes": [
+        "HUMAN_REVIEW_REQUIRED"
+      ],
+      "passed": true,
+      "first_failing_boundary": null,
+      "failure_tags": [],
+      "error_code": null
+    },
+    {
+      "case_id": "CQ-COMPOSITE-SUBJECT-CONFLICT",
+      "quality_class": "composite_boundary",
+      "critical": true,
+      "expected_decision": "needs_review",
+      "actual_decision": "needs_review",
+      "expected_writer_eligible": false,
+      "actual_writer_eligible": false,
+      "expected_reason_codes": [
+        "HUMAN_REVIEW_REQUIRED"
+      ],
+      "actual_reason_codes": [
+        "HUMAN_REVIEW_REQUIRED"
+      ],
+      "passed": true,
+      "first_failing_boundary": null,
+      "failure_tags": [],
+      "error_code": null
+    }
+  ],
+  "failures_by_category": {},
+  "execution": {
+    "provider_calls": 0,
+    "embedding_calls": 0,
+    "retrieval_calls": 0,
+    "db_writes": 0,
+    "retries": 0,
+    "fallback": 0,
+    "elapsed_ms": 8
+  },
+  "result_policy": "No production Truth is created or mutated by Claim Eval."
+}

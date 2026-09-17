@@ -1,0 +1,51 @@
+{
+  "artifact_type": "V43_REFERENCE_FAIL_QUIET_STRATEGY_DECISION_MATRIX",
+  "options": [
+    {
+      "option": "A_R1_HYGIENE_ONLY",
+      "benefit": "Offline replay removes observed heading/front-matter/citation-index/boilerplate/duplicate escapes.",
+      "risk": "GPT R1 semantic useful rate remains 15%; weak corpus, near misses and ranking failures remain.",
+      "engineering_complexity": "LOW; existing chunk-role/substantive owner only.",
+      "current_evidence_strength": "STRONG_ENGINEERING_OFFLINE (10/10 focused; 83/83 relevant regression).",
+      "production_readiness": "NOT_READY_FOR_PRODUCT_FREEZE",
+      "selection_status": "NOT_SELECTED"
+    },
+    {
+      "option": "B_R1_PLUS_GLOBAL_SIMILARITY_FAIL_QUIET_THRESHOLD",
+      "benefit": "Offline sweep shows increased NOT_USEFUL suppression at higher thresholds.",
+      "risk": "Useful/partial retention falls and zero-reference cases rise; no threshold deployment evidence.",
+      "engineering_complexity": "MEDIUM; threshold contract and monitoring would be required.",
+      "current_evidence_strength": "OFFLINE_SCORE_SWEEP_ONLY",
+      "production_readiness": "NOT_READY_NO_THRESHOLD_DEPLOYMENT",
+      "selection_status": "NOT_SELECTED"
+    },
+    {
+      "option": "C_R1_PLUS_DOMAIN_AFFINITY",
+      "benefit": "Existing artifact provides a diagnostic affinity signal by GPT label.",
+      "risk": "No tested rule/weight or wrong-domain safety result supports promotion.",
+      "engineering_complexity": "MEDIUM",
+      "current_evidence_strength": "NO_DOMAIN_AFFINITY_PROMOTION_EVIDENCE",
+      "production_readiness": "NOT_READY",
+      "selection_status": "NOT_SELECTED"
+    },
+    {
+      "option": "D_R1_PLUS_THRESHOLD_PLUS_DOMAIN_AFFINITY",
+      "benefit": "Potential combined fail-quiet filtering is untested.",
+      "risk": "Compounded unmeasured recall, domain, and zero-reference effects.",
+      "engineering_complexity": "HIGH",
+      "current_evidence_strength": "NO_COMBINED_SIMULATION",
+      "production_readiness": "NOT_READY",
+      "selection_status": "NOT_SELECTED"
+    },
+    {
+      "option": "E_R1_NOW_PLUS_CORPUS_ENRICHMENT_THEN_RETEST",
+      "benefit": "Addresses actual WEAK_CORPUS case families before later threshold/ranking testing.",
+      "risk": "Corpus governance and source activation are not part of this task; no ingestion performed.",
+      "engineering_complexity": "HIGH; corpus activation and a new controlled evaluation would be required.",
+      "current_evidence_strength": "ACTUAL_CASE_COVERAGE_DEBT_ONLY",
+      "production_readiness": "NOT_READY_NO_INGESTION_OR_RETEST",
+      "selection_status": "NOT_SELECTED"
+    }
+  ],
+  "winner": "PENDING_GPT"
+}

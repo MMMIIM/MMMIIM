@@ -1,0 +1,112 @@
+{
+  "artifact_type": "V43_CORE6_ARTIFACT_DISCOVERY",
+  "tenders": [
+    "JY-001",
+    "TB-003",
+    "TB-006",
+    "FAST-01",
+    "FAST-04",
+    "FAST-WATER-01"
+  ],
+  "files": [
+    {
+      "path": "docs/eval/requirement-production-core6-20260911/CORE6_RUNTIME_MANIFEST.json",
+      "role": "CURRENT_CORE6_RUNTIME_MANIFEST",
+      "exists": true,
+      "authoritative": false,
+      "reason": "semantic_adjudication=not performed"
+    },
+    {
+      "path": "backend/eval/requirement-extraction-real-tender-pilot-v1/semantic-boundary-v1.1/manifest.json",
+      "role": "FROZEN_SEMANTIC_BOUNDARY_MANIFEST",
+      "exists": true,
+      "authoritative": true,
+      "reason": "gold_frozen=true for three tenders"
+    },
+    {
+      "path": "backend/eval/requirement-extraction-real-tender-pilot-v1/recovered-source-authority-v1/manifest.json",
+      "role": "RECOVERED_SOURCE_AUTHORITY_MANIFEST",
+      "exists": true,
+      "authoritative": false,
+      "reason": "gold_authority=PENDING_HUMAN_REVIEW"
+    },
+    {
+      "path": "backend/eval/reports/reqx-v311-source-ambiguity-gold-audit-v1.json",
+      "role": "SOURCE_AMBIGUITY_AUDIT",
+      "exists": true,
+      "authoritative": false,
+      "reason": "audit evidence only"
+    },
+    {
+      "path": "backend/eval/architecture-assurance/overnight-2026-09-04/V43_TRACK_B_SIX_TENDER_AUTHORITATIVE_ARTIFACT_RECOVERY_MASTER_CHECKPOINT.json",
+      "role": "HISTORICAL_TRACK_B_CHECKPOINT",
+      "exists": true,
+      "authoritative": false,
+      "reason": "historical diagnostic only"
+    },
+    {
+      "path": "backend\\eval\\requirement-extraction-real-tender-pilot-v1\\recovered-source-authority-v1\\packets\\JY-001.json",
+      "role": "RECOVERED_CANDIDATE_PACKET",
+      "exists": true,
+      "authoritative": false,
+      "reason": "pending Human Authority review"
+    },
+    {
+      "path": "backend\\eval\\requirement-extraction-real-tender-pilot-v1\\recovered-source-authority-v1\\packets\\TB-003.json",
+      "role": "RECOVERED_CANDIDATE_PACKET",
+      "exists": true,
+      "authoritative": false,
+      "reason": "pending Human Authority review"
+    },
+    {
+      "path": "backend\\eval\\requirement-extraction-real-tender-pilot-v1\\semantic-boundary-v1.1\\packets\\TB-006.json",
+      "role": "FROZEN_SEMANTIC_PACKET",
+      "exists": true,
+      "authoritative": true,
+      "reason": "frozen semantic boundary packet",
+      "packet_sha256_manifest_field": "gold_requirements_sha256",
+      "packet_sha256_matches_manifest": null,
+      "gold_requirements_sha256": "311f974b754ce0d681698d56f5994b5b7f4939ee4b5266e0dc348825a882db1b",
+      "packet_identity_note": "Manifest does not publish whole-packet SHA; frozen identity is represented by gold_requirements_sha256."
+    },
+    {
+      "path": "backend\\eval\\requirement-extraction-real-tender-pilot-v1\\semantic-boundary-v1.1\\packets\\FAST-01.json",
+      "role": "FROZEN_SEMANTIC_PACKET",
+      "exists": true,
+      "authoritative": true,
+      "reason": "frozen semantic boundary packet",
+      "packet_sha256_manifest_field": "gold_requirements_sha256",
+      "packet_sha256_matches_manifest": null,
+      "gold_requirements_sha256": "b8899d73111ade28e2d5765cc5a10822e4ffb95ee2869d701f83ee099343e576",
+      "packet_identity_note": "Manifest does not publish whole-packet SHA; frozen identity is represented by gold_requirements_sha256."
+    },
+    {
+      "path": "backend\\eval\\requirement-extraction-real-tender-pilot-v1\\recovered-source-authority-v1\\packets\\FAST-04.json",
+      "role": "RECOVERED_CANDIDATE_PACKET",
+      "exists": true,
+      "authoritative": false,
+      "reason": "pending Human Authority review"
+    },
+    {
+      "path": "backend\\eval\\requirement-extraction-real-tender-pilot-v1\\semantic-boundary-v1.1\\packets\\FAST-WATER-01.json",
+      "role": "FROZEN_SEMANTIC_PACKET",
+      "exists": true,
+      "authoritative": true,
+      "reason": "frozen semantic boundary packet",
+      "packet_sha256_manifest_field": "gold_requirements_sha256",
+      "packet_sha256_matches_manifest": null,
+      "gold_requirements_sha256": "036c55e286db072ff73fe92b2ee2d237fb0d460321b7045cd6709f2f3ed589bf",
+      "packet_identity_note": "Manifest does not publish whole-packet SHA; frozen identity is represented by gold_requirements_sha256."
+    }
+  ],
+  "authority_summary": {
+    "resolved_authoritative_packet_count": 3,
+    "total_tenders": 6,
+    "missing_adjudication_identity_tenders": [
+      "JY-001",
+      "TB-003",
+      "FAST-04"
+    ]
+  },
+  "source_identity_verified_count": 6
+}

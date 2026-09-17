@@ -1,0 +1,74 @@
+{
+  "artifact_type": "V43_RAG_RESULT_REGISTRY_V1",
+  "generated_at": "2026-09-16",
+  "execution_mode": "OFFLINE_ONLY",
+  "provider_calls": 0,
+  "llm_calls": 0,
+  "production_db_writes": 0,
+  "eval_db_writes": 0,
+  "gold_mutations": 0,
+  "production_semantic_changes": 0,
+  "mapping_actions": 0,
+  "claim_actions": 0,
+  "writer_actions": 0,
+  "commit": 0,
+  "push": 0,
+  "merge": 0,
+  "deploy": 0,
+  "current_snapshot": {
+    "source": {
+      "path": "backend/eval/rag-governance/11_current_rag_corpus_inventory.json",
+      "exists": true,
+      "bytes": 192532,
+      "sha256": "7ac972492ca6d689209ade0bfd7cd270ef4c98d70aa41a01e69f041f7e9153dd",
+      "status": "CURRENT_PARTIAL_REUSABLE",
+      "roles": [],
+      "notes": []
+    },
+    "totals": {
+      "evidence_facts": 6,
+      "evidence_source_facts": 0,
+      "legacy_mappings": 6,
+      "fact_mappings": 0,
+      "retrieval_runs": 17,
+      "retrieval_results": 129,
+      "materials": 56,
+      "chunks": 561,
+      "embeddings": 625,
+      "active_materials": 56,
+      "active_chunks": 561,
+      "active_embeddings": 625,
+      "retrieval_eligible_materials": 56
+    },
+    "retrieval_runs": 17,
+    "retrieval_results": 129
+  },
+  "huawei": {
+    "source": {
+      "path": "docs/handoff/V43_REAL_E2E_AUTHORITY_AND_PROJECT_MATERIAL_BINDING_IMPLEMENTATION_V1/host-retrieval-utf8.json",
+      "exists": true,
+      "bytes": 52845,
+      "sha256": "6971bded786a21e0f320a3ef6366aa76f812ce4551fdf4a46837250dbdec9209",
+      "status": "CURRENT_REUSABLE",
+      "roles": [],
+      "notes": []
+    },
+    "status": "PASS",
+    "material_count": 6,
+    "chunk_count": 590
+  },
+  "historical_reference_eval": {
+    "source": {
+      "path": "docs/handoff/V43_REFERENCE_RETRIEVAL_SCHEMA_PARITY_CORE6_REPLAY_V2/17_CHECKPOINT.json",
+      "exists": true,
+      "bytes": 5884,
+      "sha256": "a283e47e520aa327ded034fdc4b871d41cf7f03c70763c2288b3c7a7987e1c6b",
+      "status": "HISTORICAL_ARCHIVE_ONLY",
+      "roles": [],
+      "notes": []
+    },
+    "status": "REQUIREMENT_LEVEL_REFERENCE_RETRIEVAL_EVAL_ONLY",
+    "writer_product_fidelity": "NOT_ESTABLISHED"
+  },
+  "no_new_retrieval_executed": true
+}

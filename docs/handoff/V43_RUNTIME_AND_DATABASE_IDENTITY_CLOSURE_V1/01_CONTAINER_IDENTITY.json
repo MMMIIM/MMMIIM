@@ -1,0 +1,55 @@
+{
+  "artifact_type": "V43_RUNTIME_AND_DATABASE_IDENTITY_CLOSURE_V1_CONTAINER_IDENTITY",
+  "inspection_mode": "READ_ONLY",
+  "containers": [
+    {
+      "name": "bid-platform-backend-1",
+      "id": "cbe223e9c4382b6fffdcc83f1a7d13c532194408c51c0c6b61118a4cea2e8712",
+      "image_digest": "sha256:b33d3877d0d7e9526db6dc5b4884b41300ca6dfd9e142dde2df8b58c81897800",
+      "created_at": "2026-09-05T14:42:32.75361824Z",
+      "command": ["node", "scripts/backend-watch.js"],
+      "working_directory": "/app",
+      "processes": ["node scripts/backend-watch.js", "/usr/local/bin/node backend/src/server.js"],
+      "code_source": "BIND_MOUNT_CURRENT_WORKTREE",
+      "bind_mounts": [
+        "/app/backend/src <- D:\\AI工作\\AI\\标书平台\\标书平台\\backend\\src",
+        "/app/packages/semantic-contracts <- D:\\AI工作\\AI\\标书平台\\标书平台\\packages\\semantic-contracts",
+        "/app/scripts <- D:\\AI工作\\AI\\标书平台\\标书平台\\scripts"
+      ],
+      "database_env_value": "not printed; database name separately verified as bid_platform"
+    },
+    {
+      "name": "bid-platform-semantic-gateway-1",
+      "id": "07d2a6e77e7abfb666f9ce5331892b897379b0fe6c1a467854b1e31327a89369",
+      "image_digest": "sha256:4e8decbeddb723ee4a7dfce91f1842b7c9377c5f3842b1af30859e7241b0f4f4",
+      "created_at": "2026-09-13T12:10:26.151587568Z",
+      "command": ["node", "scripts/semantic-gateway-watch.js"],
+      "working_directory": "/app",
+      "processes": ["node scripts/semantic-gateway-watch.js", "/usr/local/bin/node services/semantic-gateway/src/server.js"],
+      "code_source": "BIND_MOUNT_CURRENT_WORKTREE",
+      "bind_mounts": [
+        "/app/services/semantic-gateway/src <- D:\\AI工作\\AI\\标书平台\\标书平台\\services\\semantic-gateway\\src",
+        "/app/packages/semantic-contracts <- D:\\AI工作\\AI\\标书平台\\标书平台\\packages\\semantic-contracts",
+        "/app/scripts <- D:\\AI工作\\AI\\标书平台\\标书平台\\scripts"
+      ],
+      "non_secret_runtime_config": {
+        "deepseek_official_api_key_present": true,
+        "deepseek_official_api_base": "https://api.deepseek.com",
+        "deepseek_official_fact_model": "deepseek-v4-pro",
+        "gateway_commit": "dev-working-tree",
+        "gateway_worktree_dirty": true
+      }
+    },
+    {
+      "name": "bid-platform-postgres-1",
+      "id": "61fe69d931da2ca36175f2d48adc10b6c2906cf63ba2fdd90460770723ee69f5",
+      "image_digest": "sha256:ccc6e83d6e35e931dc7c5def2022729d5a6c370318d099181995567ff1fb4d6b",
+      "created_at": "2026-08-28T03:36:54.584297996Z",
+      "command": ["postgres"],
+      "working_directory": "",
+      "code_source": "DATABASE_VOLUME",
+      "bind_mounts": ["/var/lib/postgresql/data <- bid-platform_bid_postgres_data volume"]
+    }
+  ],
+  "secret_values_output": false
+}

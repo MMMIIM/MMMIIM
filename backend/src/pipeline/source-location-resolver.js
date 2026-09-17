@@ -23,6 +23,10 @@ export function hashSource(value) {
 }
 
 const raw = (value) => String(value || '').replace(/\r\n?/g, '\n').trim();
+const deterministicRef = (value) => {
+  const match = String(value || '').match(/^C(\d{3})-S(\d{3})$/);
+  return match ? { chunk: Number(match[1]), span: Number(match[2]) } : null;
+};
 
 function location(match, chunk, matchType, score = 1, sourceRefs = []) {
   const first = match.segments[0];
@@ -74,6 +78,13 @@ export class SourceLocationResolver {
     }
     const ordered = segments.slice(start.index, end.index + 1);
     const sourceRefs = ordered.map((segment) => segment.source_ref || segment.span_id);
+    const parsedRefs = sourceRefs.map(deterministicRef);
+    const contiguous = parsedRefs.every((value, index) => value
+      && value.chunk === parsedRefs[0]?.chunk
+      && value.span === parsedRefs[0].span + index);
+    if (!contiguous) {
+      throw Object.assign(new Error('来源范围包含不连续的原始 source refs，无法安全定位。'), { code: 'SOURCE_LOCATION_UNRESOLVED' });
+    }
     const match = { segments: ordered };
     const matchType = match.segments.length === 1 ? SOURCE_MATCH_TYPES.EXACT_SINGLE : SOURCE_MATCH_TYPES.EXACT_MULTI;
     return { location: { source_text: match.segments.map((item) => item.text).join('\n'), ...location(match, chunk, matchType, 1, sourceRefs) }, warning: null };

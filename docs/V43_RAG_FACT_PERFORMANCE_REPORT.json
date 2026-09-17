@@ -1,0 +1,11 @@
+{
+  "artifact": "V43_RAG_FACT_PERFORMANCE_REPORT",
+  "status": "BASELINE_ONLY",
+  "source": "docs/V43_CHENGCHUAN_CONTROLLED_REAL_FACT_RAW_RESPONSES.jsonl",
+  "current_run": {"materials":92,"provider_calls":140,"provider_failures_recorded_by_wrapper":120,"latency_ms":{"min":1108,"p50":"NOT_COMPUTED_FROM_SAFE_AGGREGATE","p95":"NOT_COMPUTED_FROM_SAFE_AGGREGATE","max":8128}},
+  "retry": {"existing_service_max_attempts":2,"wrong_shape_retry_count":"present in quality audit; current run did not retain per-attempt diagnostic class","targeted_retry_rate":"NOT_EXECUTED"},
+  "provider_status_note": "The raw artifact field provider_http_status is actually the Gateway response status for this runner; upstream Provider HTTP status is not evidenced for 422 rows.",
+  "targets": {"p95_fact_call_latency_ms":45000,"projected_50_material_build":"NOT_COMPUTED","projected_92_material_build":"NOT_COMPUTED"},
+  "production_db_writes":0,
+  "provider_calls_in_this_audit":0
+}

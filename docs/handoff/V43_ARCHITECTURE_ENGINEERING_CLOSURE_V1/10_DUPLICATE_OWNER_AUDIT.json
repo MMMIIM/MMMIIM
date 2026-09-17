@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-09-16T17:31:38.432Z",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "dirty_worktree": true,
+  "authority": "SYNTHETIC_EVAL_ONLY",
+  "production_authority": "NONE",
+  "schema_version": "v43-duplicate-owner-audit-v1",
+  "duplicate_formal_owners": [],
+  "compatibility": [
+    {
+      "formal": "EnterpriseRetrievalService",
+      "adapter": "EvidenceSearchOrchestrator",
+      "isolation": "Eval only"
+    },
+    {
+      "formal": "enterprise Claim Gate V2",
+      "compatibility": "ClaimGateService legacy route"
+    }
+  ],
+  "closed": "per-slot search_run_id inconsistency fixed at EvidenceSearchOrchestrator owner"
+}

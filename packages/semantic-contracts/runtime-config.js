@@ -7,7 +7,10 @@ export const SEMANTIC_GATEWAY_RUNTIME_ENV_NAMES = Object.freeze([
   'SEMANTIC_GATEWAY_PROVIDER_API_BASE',
   'SEMANTIC_GATEWAY_PROVIDER_API_KEY',
   'SEMANTIC_GATEWAY_MODEL',
-  'SEMANTIC_GATEWAY_TIMEOUT_MS'
+  'SEMANTIC_GATEWAY_TIMEOUT_MS',
+  'DEEPSEEK_OFFICIAL_API_KEY',
+  'DEEPSEEK_OFFICIAL_API_BASE',
+  'DEEPSEEK_OFFICIAL_FACT_MODEL'
 ]);
 
 export const SEMANTIC_GATEWAY_DEFAULT_TIMEOUT_MS = 120_000;
@@ -56,6 +59,9 @@ export function readSemanticGatewayRuntimeConfig(env = {}) {
     providerApiBase: stringValue(env.SEMANTIC_GATEWAY_PROVIDER_API_BASE),
     providerApiKey: stringValue(env.SEMANTIC_GATEWAY_PROVIDER_API_KEY),
     model: stringValue(env.SEMANTIC_GATEWAY_MODEL || 'mock-semantic-v1'),
+    deepseekOfficialApiBase: stringValue(env.DEEPSEEK_OFFICIAL_API_BASE),
+    deepseekOfficialApiKey: stringValue(env.DEEPSEEK_OFFICIAL_API_KEY),
+    deepseekOfficialFactModel: stringValue(env.DEEPSEEK_OFFICIAL_FACT_MODEL),
     timeoutMs: positiveInteger(env.SEMANTIC_GATEWAY_TIMEOUT_MS, SEMANTIC_GATEWAY_DEFAULT_TIMEOUT_MS)
   });
 }
@@ -120,6 +126,9 @@ export function safeSemanticGatewayRuntimeSummary(configOrEnv = {}) {
     model: config.model || null,
     service_key_present: Boolean(config.serviceApiKey),
     provider_key_present: Boolean(config.providerApiKey),
+    deepseek_official_api_base: config.deepseekOfficialApiBase || null,
+    deepseek_official_fact_model: config.deepseekOfficialFactModel || null,
+    deepseek_official_key_present: Boolean(config.deepseekOfficialApiKey),
     timeout_ms: config.timeoutMs
   };
 }

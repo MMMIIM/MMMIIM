@@ -1,0 +1,85 @@
+{
+  "artifact_type": "V43_TARGETED_FACT_HOST_REPLAY_V1_CHECKPOINT",
+  "status": "BLOCKED_REQUIREMENT_SCOPE_AUTHORITY_PERSISTENCE_UNAVAILABLE",
+  "requirement_exception_persistence": {
+    "service_path": "backend/src/requirement-scope-authority-service.js",
+    "repository_path": "backend/src/db.js",
+    "route": "POST /api/projects/:projectId/requirement-scope-authority",
+    "migration_path": "backend/migrations/052_requirement_scope_authority_and_project_material_bindings.sql",
+    "production_relation": "requirement_scope_authority_decisions",
+    "production_relation_present": false,
+    "migration_executed": false,
+    "canonical_tb006_requirements_present": false,
+    "trusted_actor_configured_in_local_runtime": false,
+    "persistence_status": "BLOCKED",
+    "block_reason": "The existing authority service requires requirement_scope_authority_decisions, but that relation is absent in the current bid_platform database. The matching TB-006 canonical requirement rows are also absent from requirements; existing requirement_candidates with REQ-041/REQ-048 have different source text and hashes. Applying migration or writing a stale candidate would violate scope."
+  },
+  "human_requirement_exceptions": [
+    {
+      "tender_id": "TB-006",
+      "requirement_id": "REQ-048",
+      "candidate_identity": "TB-006:REQ-048",
+      "decision": "OUT_OF_SCOPE",
+      "reason_codes": ["BUYER_SIDE_OBLIGATION", "NON_APPLICABLE_BID_BOND"],
+      "canonical_evidence": {
+        "requirement_text": "未中标投标人的投标保证金，自中标通知书发出之日起5个工作日内退还未中标人。",
+        "source_refs": ["C007-S045", "C007-S046"],
+        "source_excerpt": "12.7.3 未中标投标人的投标保证金，自中标通知书发出之日起 5 个工作日内\n退还未中标人；",
+        "source_hash": "fd8795c9b3c993b321b9dec00b4d2f634feb8b5bb22eea0fe0209db9ead8023a",
+        "source_chunk_id": "e625aebe-671e-4b3f-8bea-397c82ae2b7e",
+        "source_page_start": 19,
+        "source_page_end": 19,
+        "source_paragraph_start": 516,
+        "source_paragraph_end": 517
+      },
+      "authority_status": "HUMAN_AUTHORITY_RECEIVED_NOT_PERSISTED",
+      "persistence_block": "REQUIREMENT_SCOPE_AUTHORITY_PERSISTENCE_UNAVAILABLE"
+    },
+    {
+      "tender_id": "TB-006",
+      "requirement_id": "REQ-041",
+      "candidate_identity": "TB-006:REQ-041",
+      "decision": "OUT_OF_SCOPE",
+      "reason_codes": ["NON_APPLICABLE_TEMPLATE"],
+      "canonical_evidence": {
+        "requirement_text": "投标保证金到账（保函提交）截止时间同投标截止时间。以支票、汇票、本票、网上银行支付等形式提交投标保证金的，应在投标截止时间前到账；以金融机构、担保机构出具的纸质保函等形式提交投标保证金的，应在投标截止时间前将原件提交至采购代理机构；以电子保函形式提交投标保证金的，应在投标截止时间前通过北京市政府采购电子交易平台完成电子保函在线办理。未按上述要求缴纳投标保证金的，其投标无效。",
+        "source_refs": ["C007-S025", "C007-S026", "C007-S027", "C007-S028", "C007-S029", "C007-S030"],
+        "source_excerpt": "12.3 投标保证金到账（保函提交）截止时间同投标截止时间。以支票、汇票、本\n票、网上银行支付等形式提交投标保证金的，应在投标截止时间前到账；以\n金融机构、担保机构出具的纸质保函等形式提交投标保证金的，应在投标截\n止时间前将原件提交至采购代理机构；以电子保函形式提交投标保证金的，\n应在投标截止时间前通过北京市政府采购电子交易平台完成电子保函在线办\n理。未按上述要求缴纳投标保证金的，其投标无效。",
+        "source_hash": "f3dea995f0a7ff06996d85226b443aefb87212764f6a470d98d95b7d5ff966b8",
+        "source_chunk_id": "e625aebe-671e-4b3f-8bea-397c82ae2b7e",
+        "source_page_start": 18,
+        "source_page_end": 18,
+        "source_paragraph_start": 496,
+        "source_paragraph_end": 501
+      },
+      "authority_status": "HUMAN_AUTHORITY_RECEIVED_NOT_PERSISTED",
+      "persistence_block": "REQUIREMENT_SCOPE_AUTHORITY_PERSISTENCE_UNAVAILABLE"
+    }
+  ],
+  "eval_only_routing_gap": {
+    "path": "docs/handoff/V43_REAL_E2E_REQUIREMENT_RETRIEVAL_AND_FACT_CANARY_V1/08_EVIDENCE_SOURCE_ROUTING_GAP.json",
+    "updated_requirement_ids": ["REQ-048", "REQ-041"],
+    "status": "GPT/HUMAN_RESOLVED_OUT_OF_SCOPE",
+    "resolution_source": "GPT/HUMAN",
+    "production_authority_implied": false
+  },
+  "downstream_actions": {
+    "retrieval": 0,
+    "fact": 0,
+    "mapping": 0,
+    "claim": 0,
+    "writer": 0,
+    "provider_calls": 0,
+    "llm_calls": 0
+  },
+  "side_effects": {
+    "production_db_writes": 0,
+    "eval_db_writes": 0,
+    "gold_mutations": 0,
+    "production_code_changes": 0,
+    "prompt_changes": 0,
+    "schema_changes": 0,
+    "migration_changes": 0
+  },
+  "final_verdict": "BLOCKED_REQUIREMENT_SCOPE_AUTHORITY_PERSISTENCE_UNAVAILABLE"
+}

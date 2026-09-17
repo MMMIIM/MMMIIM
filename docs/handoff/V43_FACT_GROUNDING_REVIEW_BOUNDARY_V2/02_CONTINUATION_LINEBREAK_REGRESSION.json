@@ -1,0 +1,71 @@
+{
+  "artifact_type": "V43_FACT_GROUNDING_REVIEW_BOUNDARY_V2_CONTINUATION_LINEBREAK_REGRESSION",
+  "function": "normalizeGroundingComparisonText",
+  "rule": "Remove only a single layout LF after explicit continuation punctuation; preserve sentence breaks, blank lines, heading boundaries, and raw source.",
+  "tests": [
+    {
+      "name": "token_soft_lf",
+      "input": "智能汽\n车解决方案业务",
+      "expected": "智能汽车解决方案业务",
+      "actual": "智能汽车解决方案业务",
+      "pass": true
+    },
+    {
+      "name": "continuation_comma_soft_lf",
+      "input": "提升安全意识和能力，\n共同保障客户网络的安全稳定运行",
+      "expected": "提升安全意识和能力,共同保障客户网络的安全稳定运行",
+      "actual": "提升安全意识和能力,共同保障客户网络的安全稳定运行",
+      "pass": true
+    },
+    {
+      "name": "continuation_semicolon_soft_lf",
+      "input": "供应商完成评估；\n随后进入复核流程",
+      "expected": "供应商完成评估;随后进入复核流程",
+      "actual": "供应商完成评估;随后进入复核流程",
+      "pass": true
+    },
+    {
+      "name": "continuation_colon_soft_lf",
+      "input": "结论：\n需要人工复核",
+      "expected": "结论:需要人工复核",
+      "actual": "结论:需要人工复核",
+      "pass": true
+    },
+    {
+      "name": "real_paragraph_boundary",
+      "input": "第一段。\n第二段。",
+      "expected": "第一段。\n第二段。",
+      "actual": "第一段。\n第二段。",
+      "pass": true
+    },
+    {
+      "name": "blank_line_boundary",
+      "input": "第一段。\n\n第二段。",
+      "expected": "第一段。\n\n第二段。",
+      "actual": "第一段。\n\n第二段。",
+      "pass": true
+    },
+    {
+      "name": "heading_boundary",
+      "input": "# 标题\n正文内容",
+      "expected": "# 标题\n正文内容",
+      "actual": "# 标题\n正文内容",
+      "pass": true
+    }
+  ],
+  "candidate_02_replay": {
+    "candidate_id": "MCH-CE770B545973FB9CF092951FCDC402B5#candidate-02",
+    "before_grounding_decision": "REJECT",
+    "after_grounding_decision": "REVIEW_REQUIRED",
+    "after_source_grounding": {
+      "mode": "BOUNDED_COMPOSITIONAL",
+      "unit": {
+        "text": "2024年年度报告\n53\n基础设施领域发布了《作业可信与安全白皮书》，分\n享作业安全可信治理理念和实践。我们向服务伙伴开\n放社区，共享知识经验和工具；携手客户开展460多\n场“网络平安日”主题活动，提升安全意识和能力，\n共同保障客户网络的安全稳定运行。\n我们遵循国际供应链安全标准，保障生产及流通安\n全，并将能力延伸到供应商。数字能源、终端、ICT\n等产业的29个关键供应节点通过ISO 28000:2022标\n准认证。我们注重制造与流通中的安全性，采取技术\n与管理措施防篡改、防植入、防伪造，保障产品生产\n过程中的完整性、真实性；我们与可信的物流供应商\n合作，并依据产业需求，构建差异化追溯能力，及时\n发现产品流通过程中的异常。此外，我们严格管控采\n购件风险，2024年对新引入的150多家供应商物料开\n展严格的准入测试；我们对全球超过3,800家涉及网\n络安全、3,000家涉及隐私保护的供应商进行风险评\n估和管理。我们持续进行网络安全赋能，25门网络安\n全课程覆盖核心供应商2,000多名管理者和工程师；\n我们向供应商开放网络安全工具、测试用例等，帮助\n供应商系统性提升网络安全能力。\n持续建设专业的网络安全与隐私保护队伍，增强全员网\n络安全与隐私保护意识。我们要求员工获取岗位对应的\n任职资格，持证上岗，牵引员工学习与提升。我们系列\n化打造了训战赋能项目，通过角色扮演、实战演练等\n多样化的教学，让员工快速成长。我们建设并优化网络\n安全与隐私保护知识学习平台和精准学习工具，助力专\n业人员一站式学习、知识获取以及能力提升，上线了超\n180门赋能课程，已有超过20万人次参与学习。对全体\n员工，我们持续开展网络安全与隐私保护活动月，持续\n增强全员网络安全与隐私保护意识与认知。\n在第三方独立验证上持续投入。我们持续与业界权威\n认证机构开展合作，基于国际标准验证华为产品的安\n全能力，为客户提供国际认可的安全保障。截至2024\n年底，我们已获得600多张安全与隐私领域的证书，\n其中2024年获得58张，如：鸿蒙内核，HarmonyOS\n分别获得CC EAL6+和中国IT产品信息安全认证EAL5+\n证书；无线基站和微波、数字能源逆变器、光ONT、\n智慧屏IdeaHub、数通WLAN和终端Pura 70等产品\n获得欧盟CE RED网络安全证书；华为硬件可信根和\nHiSec OpenSSL密码模块获得国际权威机构颁发的\nISO 19790证书。\n■ 新技术带来新挑战，我们通过技术创新、安全解决方\n案帮助客户应对新挑战：\n创新应对新技术风险。AI领域，围绕大模型作业流，\n通过基于定向抑制的多模态安全对齐、基于语义理\n解的多模态内容审核、对抗攻击检测等内生安全关\n键技术，构筑数据安全、模型安全、内容安全、应\n用安全、运营运维安全五道护栏，保障大模型安全\n做事。我们打造媒体证真框架与水印等关键",
+        "heading_path": []
+      }
+    },
+    "pass": true
+  },
+  "raw_source_mutated": false,
+  "all_tests_pass": true
+}

@@ -1,0 +1,110 @@
+{
+  "production_chunker_parity": "PASS",
+  "input_unit_parity": "NOT_ESTABLISHED",
+  "non_comparable_source_ids": [
+    "H3C-003",
+    "H3C-004",
+    "H3C-010",
+    "H3C-011",
+    "H3C-012"
+  ],
+  "sources": [
+    {
+      "source_id": "HW-002",
+      "format": "PDF",
+      "input_unit": "SINGLE_FROZEN_PDF_FILE",
+      "parity": "COMPARABLE_FILE_UNIT"
+    },
+    {
+      "source_id": "HW-003",
+      "format": "PDF",
+      "input_unit": "SINGLE_FROZEN_PDF_FILE",
+      "parity": "COMPARABLE_FILE_UNIT"
+    },
+    {
+      "source_id": "HW-004",
+      "format": "PDF",
+      "input_unit": "SINGLE_FROZEN_PDF_FILE",
+      "parity": "COMPARABLE_FILE_UNIT"
+    },
+    {
+      "source_id": "HW-005",
+      "format": "PDF",
+      "input_unit": "SINGLE_FROZEN_PDF_FILE",
+      "parity": "COMPARABLE_FILE_UNIT"
+    },
+    {
+      "source_id": "HW-006",
+      "format": "PDF",
+      "input_unit": "SINGLE_FROZEN_PDF_FILE",
+      "parity": "COMPARABLE_FILE_UNIT"
+    },
+    {
+      "source_id": "H3C-003",
+      "format": "HTML",
+      "input_unit": "MULTI_PAGE_OR_SITE_AGGREGATED_INDICATORS",
+      "parity": "NOT_COMPARABLE_TO_SINGLE_DOCUMENT_UNIT_WITHOUT_REVIEW",
+      "indicators": {
+        "raw_html_anchor_count": 4408,
+        "raw_html_heading_count": 124,
+        "raw_html_navigation_term_count": 42
+      }
+    },
+    {
+      "source_id": "H3C-004",
+      "format": "HTML",
+      "input_unit": "MULTI_PAGE_OR_SITE_AGGREGATED_INDICATORS",
+      "parity": "NOT_COMPARABLE_TO_SINGLE_DOCUMENT_UNIT_WITHOUT_REVIEW",
+      "indicators": {
+        "raw_html_anchor_count": 859,
+        "raw_html_heading_count": 205,
+        "raw_html_navigation_term_count": 65
+      }
+    },
+    {
+      "source_id": "H3C-010",
+      "format": "HTML",
+      "input_unit": "MULTI_PAGE_OR_SITE_AGGREGATED_INDICATORS",
+      "parity": "NOT_COMPARABLE_TO_SINGLE_DOCUMENT_UNIT_WITHOUT_REVIEW",
+      "indicators": {
+        "raw_html_anchor_count": 475,
+        "raw_html_heading_count": 111,
+        "raw_html_navigation_term_count": 33
+      }
+    },
+    {
+      "source_id": "H3C-011",
+      "format": "HTML",
+      "input_unit": "MULTI_PAGE_OR_SITE_AGGREGATED_INDICATORS",
+      "parity": "NOT_COMPARABLE_TO_SINGLE_DOCUMENT_UNIT_WITHOUT_REVIEW",
+      "indicators": {
+        "raw_html_anchor_count": 457,
+        "raw_html_heading_count": 84,
+        "raw_html_navigation_term_count": 33
+      }
+    },
+    {
+      "source_id": "H3C-012",
+      "format": "HTML",
+      "input_unit": "MULTI_PAGE_OR_SITE_AGGREGATED_INDICATORS",
+      "parity": "NOT_COMPARABLE_TO_SINGLE_DOCUMENT_UNIT_WITHOUT_REVIEW",
+      "indicators": {
+        "raw_html_anchor_count": 461,
+        "raw_html_heading_count": 85,
+        "raw_html_navigation_term_count": 15
+      }
+    },
+    {
+      "source_id": "H3C-013",
+      "format": "HTML",
+      "input_unit": "SINGLE_PAGE_OR_LOW_AGGREGATION_INDICATORS",
+      "parity": "NOT_PROVEN_BUT_LOW_AGGREGATION_INDICATORS",
+      "indicators": {
+        "raw_html_anchor_count": 10,
+        "raw_html_heading_count": 1,
+        "raw_html_navigation_term_count": 3
+      }
+    }
+  ],
+  "conclusion": "HTML source shape has multi-page/site-level aggregation indicators; do not equate chunker parity with input-unit parity."
+}

@@ -1,0 +1,87 @@
+{
+  "phase": "TRACK_C_AUTHORITY_RECONCILIATION",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "track_c_status": "DECISION_SUPPORT_COMPLETE_BLOCKED",
+  "baseline_drift": "NO",
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "production_code_changes": 0,
+  "gold_mutations": 0,
+  "worktree_preserved": true,
+  "requirement_authority": {
+    "source_foundation_state": "3_OF_6_CONFIRMED",
+    "source_parity": "FAIL_MISSING_AUTHORITATIVE_PACKETS",
+    "source_verification_gate": "BLOCKED_FOR_MISSING_AUTHORITATIVE_PACKETS",
+    "matrix": [
+      {"tender_id":"FAST-01","source_exists":true,"sha_verified":true,"authoritative_packet":true,"human_authority":"UNKNOWN_NOT_PROVEN","requirement_authority_ready":false,"requirement_count":39},
+      {"tender_id":"TB-006","source_exists":true,"sha_verified":true,"authoritative_packet":true,"human_authority":"UNKNOWN_NOT_PROVEN","requirement_authority_ready":false,"requirement_count":46},
+      {"tender_id":"FAST-WATER-01","source_exists":true,"sha_verified":true,"authoritative_packet":true,"human_authority":"UNKNOWN_NOT_PROVEN","requirement_authority_ready":false,"requirement_count":114},
+      {"tender_id":"JY-001","source_exists":true,"sha_verified":true,"authoritative_packet":false,"human_authority":"NOT_FOUND","requirement_authority_ready":false,"primary_classification":"E_ONLY_NON_AUTHORITATIVE_ARTIFACT_EXISTS"},
+      {"tender_id":"TB-003","source_exists":true,"sha_verified":true,"authoritative_packet":false,"human_authority":"NOT_FOUND","requirement_authority_ready":false,"primary_classification":"E_ONLY_NON_AUTHORITATIVE_ARTIFACT_EXISTS"},
+      {"tender_id":"FAST-04","source_exists":true,"sha_verified":true,"authoritative_packet":false,"human_authority":"NOT_FOUND","requirement_authority_ready":false,"primary_classification":"E_ONLY_NON_AUTHORITATIVE_ARTIFACT_EXISTS"}
+    ],
+    "known_good_tenders":["FAST-01","TB-006","FAST-WATER-01"],
+    "missing_tenders":["JY-001","TB-003","FAST-04"]
+  },
+  "enterprise_evidence_authority": {
+    "ready": false,
+    "real_enterprise_fact_authority_ready": false,
+    "source_role_projection_counts": {
+      "QUARANTINED": 4,
+      "SYNTHETIC_ENTERPRISE_EVIDENCE": 16,
+      "REFERENCE_CONTEXT_ONLY": 34,
+      "UNKNOWN_REVIEW_REQUIRED": 2,
+      "REAL_ENTERPRISE_EVIDENCE_CANDIDATE": 0
+    },
+    "sources": [
+      {"family":"Neusoft public-material rows and derived Facts","classification":"E_QUARANTINED","independent_source":true,"current_authority":"NO","notes":"Current material projection is quarantined; historical Facts remain auditable only."},
+      {"family":"real-derived-gold-v1.json","classification":"E_QUARANTINED","independent_source":"source metadata only","human_adjudicated":"user-provided Eval field","real_authority":"NO","notes":"REAL_DERIVED_EVAL is not production Real Fact authority."},
+      {"family":"Representative SME corpus","classification":"C_SYNTHETIC","independent_source":false,"real_authority":"NO","notes":"REPRESENTATIVE_SYNTHETIC / NOT_REAL_CUSTOMER_DATA."},
+      {"family":"Official/general/industry corpus","classification":"D_REFERENCE_ONLY","independent_source":true,"real_authority":"NO","notes":"Reference context cannot prove bidder capability."},
+      {"family":"Enterprise source candidate manifest","classification":"F_PROVENANCE_INCOMPLETE","independent_source":"unverified","snapshot":"NOT_CAPTURED","hash":null,"real_authority":"NO"},
+      {"family":"UNKNOWN_REVIEW_REQUIRED rows and historical seeds","classification":"G_UNKNOWN","real_authority":"NO","notes":"Remain candidate/unresolved."}
+    ]
+  },
+  "mapping_prerequisites": {
+    "canonical_requirement_identity": "AVAILABLE_IN_EVAL_SOURCE_FOUNDATION",
+    "canonical_fact_identity": "PRESENT_BUT_AUTHORITY_NOT_ESTABLISHED",
+    "mapping_contract": "requirement-evidence-mapping-v1.1",
+    "human_adjudication_capability": "AVAILABLE_BUT_NOT_A_PACKET_AUTHORITY_FIELD",
+    "gold_governance": "PRESENT_BUT_PROMOTION_BLOCKED",
+    "required_missing": ["requirement_human_authority","real_enterprise_fact_authority","transition_quarantine_controls","mapping_gold_promotion_gate"]
+  },
+  "three_tender_path": {
+    "status":"NOT_YET",
+    "tenders":["FAST-01","TB-006","FAST-WATER-01"],
+    "blockers":["human authority not independently proven","Real Enterprise Fact authority not ready","Track A P1 transition controls open","Gold promotion gate not satisfied"]
+  },
+  "six_tender_path": {
+    "status":"NO",
+    "tenders":["FAST-01","TB-006","FAST-WATER-01","JY-001","TB-003","FAST-04"],
+    "blockers":["JY-001/TB-003/FAST-04 authoritative packets missing","human authority not found for missing tenders","re-extraction not authorized"]
+  },
+  "minimal_valid_entry_path":"NEITHER_PATH_CURRENTLY_VALID",
+  "rag_p1_remediation": {
+    "shared_gate":"Material Authority Gate with reload/review/currentness defense-in-depth",
+    "required_before_real_fact_gold":["historical retrieval reload","review context/proposal/decision","canonical Fact draft/edit","legacy evidence_facts writes"],
+    "required_before_real_mapping_gold":["historical retrieval reload","review context/proposal/decision","Fact draft/edit and legacy Fact writes","legacy requirement_evidence_mappings writes","transition tests"],
+    "can_defer":["additional canonical Claim/Writer behavior changes; retain regression tests"],
+    "implementation_performed":false
+  },
+  "human_decisions_required":[
+    "whether to rebuild JY-001 from source",
+    "whether to rebuild TB-003 from source",
+    "whether to rebuild FAST-04 from source",
+    "whether three-Tender Gold may be an interim benchmark after prerequisites",
+    "which enterprise source snapshot and Fact interpretation are authoritative",
+    "which Requirement and Mapping interpretations are Gold",
+    "whether quarantined Neusoft materials may be re-authorized"
+  ],
+  "final_verdict":"NO_REAL_MAPPING_GOLD_PATH_YET",
+  "safe_to_run_p1_rag_remediation":true,
+  "safe_to_qualify_real_facts":false,
+  "safe_to_reopen_real_mapping_gold":false,
+  "safe_to_reextract_missing_tenders":false,
+  "safe_to_create_mapping_gold":false
+}

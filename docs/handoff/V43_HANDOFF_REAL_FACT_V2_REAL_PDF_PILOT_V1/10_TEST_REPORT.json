@@ -1,0 +1,121 @@
+{
+  "run_id": "V43-REAL-PDF-PILOT-20260913082051-7425be6b",
+  "status": "COMPLETE",
+  "provider_calls": 82,
+  "production_db_writes": 0,
+  "eval_db_writes": true,
+  "gold_mutations": 0,
+  "parser": "PASS",
+  "chunker": "PASS",
+  "semantic_window_coverage": "PASS",
+  "lifecycle_gate": "PASS",
+  "source_traceability": "PASS",
+  "enterprise_identity": "PASS",
+  "requirement_blindness": "PASS",
+  "downstream_actions": {
+    "mapping": 0,
+    "claim": 0,
+    "writer": 0
+  },
+  "commands": [
+    {
+      "name": "focused_unit_regression",
+      "command": "node --test backend/test/company-material-evidence.test.js backend/test/evidence-fact-contract-v1.test.js backend/test/evidence-fact-producer-v1.test.js backend/test/evidence-fact-domain-metadata-parity.test.js",
+      "status": "PASS",
+      "tests": 62,
+      "passed": 62,
+      "failed": 0,
+      "provider_calls": 0,
+      "production_db_writes": 0
+    },
+    {
+      "name": "focused_fact_source_role_transport_window_regression",
+      "command": "node --test backend/test/evidence-fact-execution-observability.test.js backend/test/evidence-fact-source-role.test.js backend/test/evidence-fact-transport-v2.test.js backend/test/fact-input-window-selection.test.js",
+      "status": "PASS",
+      "tests": 22,
+      "passed": 22,
+      "failed": 0,
+      "provider_calls": 0,
+      "production_db_writes": 0
+    },
+    {
+      "name": "focused_material_requirement_parse_regression",
+      "command": "node --test backend/test/material-source-authority-policy.test.js backend/test/requirement-chunker-v2.test.js backend/test/tender-parse.test.js backend/test/real-fact-v2-foundation.test.js",
+      "status": "PASS",
+      "tests": 59,
+      "passed": 59,
+      "failed": 0,
+      "provider_calls": 0,
+      "production_db_writes": 0
+    },
+    {
+      "name": "postgres_regression_isolated_eval_db",
+      "command": "DATABASE_URL=postgresql://<redacted>@127.0.0.1:5432/bid_platform_flow_audit_test node --test --test-concurrency=1 integration/postgres.integration.js integration/deterministic.integration.js integration/claim-eval-v1.integration.js integration/track-a-authority-remediation.integration.js",
+      "status": "PASS",
+      "tests": 48,
+      "passed": 48,
+      "failed": 0,
+      "database": "bid_platform_flow_audit_test",
+      "provider_calls": 0,
+      "production_db_writes": 0,
+      "eval_db_writes": true
+    },
+    {
+      "name": "requirement_eval",
+      "command": "node scripts/eval-requirements.js",
+      "status": "PASS",
+      "schema_pass_rate": 1,
+      "expected_requirement_recall": 1,
+      "precision": 1,
+      "source_verified_rate": 1,
+      "provider_calls": 0,
+      "production_db_writes": 0
+    },
+    {
+      "name": "build",
+      "command": "npm run build",
+      "status": "PASS",
+      "provider_calls": 0,
+      "production_db_writes": 0
+    },
+    {
+      "name": "lint",
+      "command": "npm run lint",
+      "status": "PASS",
+      "provider_calls": 0,
+      "production_db_writes": 0
+    },
+    {
+      "name": "diff_check",
+      "command": "git diff --check",
+      "status": "PASS",
+      "notes": "Only pre-existing LF/CRLF normalization warnings were emitted.",
+      "provider_calls": 0,
+      "production_db_writes": 0
+    }
+  ],
+  "focused_tests": {
+    "status": "PASS",
+    "tests": 143,
+    "passed": 143,
+    "failed": 0
+  },
+  "postgres_regression": {
+    "status": "PASS",
+    "tests": 48,
+    "passed": 48,
+    "failed": 0,
+    "database": "bid_platform_flow_audit_test"
+  },
+  "requirement_eval": {
+    "status": "PASS",
+    "schema_pass_rate": 1,
+    "expected_requirement_recall": 1,
+    "precision": 1,
+    "source_verified_rate": 1
+  },
+  "build": "PASS",
+  "lint": "PASS",
+  "diff_check": "PASS",
+  "baseline_drift": "PRE_EXISTING_UNRELATED_BASELINE_NOT_REOBSERVED_IN_REQUESTED_REGRESSIONS"
+}

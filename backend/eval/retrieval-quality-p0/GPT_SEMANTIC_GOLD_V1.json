@@ -1,0 +1,480 @@
+{
+  "artifact_type": "GPT_SEMANTIC_GOLD_V1",
+  "artifact_version": "v1",
+  "status": "FROZEN_DEVELOPMENT_EVAL",
+  "authority": "DEVELOPMENT_EVAL_ONLY",
+  "semantic_authority": "GPT",
+  "human_confirmation": "OPTIONAL_HIGHER_AUTHORITY_OVERLAY",
+  "frozen_at": "2026-09-17",
+  "blindness": {
+    "created_before_baseline_replay": true,
+    "current_topk_visible_to_gold_creator": false,
+    "vector_similarity_visible_to_gold_creator": false,
+    "historical_pass_fail_visible_to_gold_creator": false,
+    "previous_expected_hit_visible_to_gold_creator": false,
+    "selection_from_requirement_pool_used_retrieval_results": false
+  },
+  "corpus": {
+    "enterprise_id": "SYNTH-CHENGCHUAN-001",
+    "authority": "SYNTHETIC_EVAL_ONLY",
+    "production_authority": "NONE",
+    "scope": "ENTERPRISE_PRIVATE",
+    "source_role": "EVIDENCE_CANDIDATE",
+    "material_count": 9,
+    "chunk_count": 94,
+    "chunker_version": "enterprise-material-v1",
+    "chunk_artifact": {
+      "path": "backend/eval/rag-pilot/results/all_package_chunks.jsonl",
+      "sha256": "2382B5206414B697D623DBEC9BABF588E7651D7F73367D5D4270ADDB571C93D4"
+    },
+    "source_role_snapshot": {
+      "path": "docs/handoff/V43_PRE_E2E_GOVERNANCE_AND_MAPPING_READINESS_CLOSURE_V1/21_CHENGCHUAN_SOURCE_ROLE_MODEL_CORRECTED.json",
+      "sha256": "ADFBAFF3E0018DB5F35006AB20325C75C350A5339DA7E4354B8648F130BF86A8"
+    }
+  },
+  "requirement_pool": {
+    "path": "docs/V43_REQUIREMENT_GOLD_V2_SIX_TENDER_CANONICAL_INPUT.json",
+    "sha256": "FF07402688A3013AF9A9B8BE01F613F76848B7EA905208C1955A604432422FE1",
+    "row_count": 1009,
+    "authority": "SOURCE_DERIVED_EVAL_ONLY",
+    "human_evidence_gold": false
+  },
+  "splits": {
+    "calibration_case_ids": [
+      "RAG-P0-CAL-JY-001-REQ-057",
+      "RAG-P0-CAL-FAST-01-REQ-005",
+      "RAG-P0-CAL-FAST-04-REQ-004"
+    ],
+    "holdout_case_ids": [
+      "RAG-P0-HOLD-JY-001-REQ-027",
+      "RAG-P0-HOLD-JY-001-REQ-077",
+      "RAG-P0-HOLD-JY-001-REQ-051",
+      "RAG-P0-HOLD-TB-003-REQ-119",
+      "RAG-P0-HOLD-TB-003-REQ-170",
+      "RAG-P0-HOLD-TB-006-REQ-037",
+      "RAG-P0-HOLD-JY-001-REQ-148"
+    ],
+    "calibration_policy": "The three user-specified known cases are development calibration only.",
+    "holdout_policy": "Selected deterministically from the frozen 1009-row requirement pool by source/theme review, without retrieval output or score inspection."
+  },
+  "matching_contract": {
+    "candidate_matching_unit": "evidence_item",
+    "span_identity": ["material_id", "doc_id", "chunk_id", "chunk_hash", "char_start", "char_end"],
+    "exact_span_rule": "A candidate matches a span only when its source span identity resolves to the same material/document/chunk hash and its source text contains the frozen acceptable span text at the frozen offsets.",
+    "acceptable_alternative_rule": "An alternative span is accepted only when explicitly listed in this artifact; same-material or same-topic similarity is not an acceptable match.",
+    "candidate_precision_relevant_grade": 2,
+    "mrr_evidence_grade": 2,
+    "ndcg_grades": {
+      "EVIDENCE_BEARING_FULL": 3,
+      "EVIDENCE_BEARING_PARTIAL": 2,
+      "RELEVANT_ONLY": 1,
+      "IRRELEVANT": 0
+    },
+    "atom_recall_denominator": "Only atoms with at least one explicitly acceptable source span are included. Missing or unresolvable atoms remain reported as corpus-gap observations, not retrieval misses.",
+    "f1_policy": "No cross-level F1 is produced. Atom recall and candidate precision remain separate. A common-unit F1 is not enabled in V1."
+  },
+  "source_spans": {
+    "SPAN-COM-02-PRODUCT": {
+      "source_file": "backend/eval/rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-02_产品平台能力说明.md",
+      "source_file_sha256": "C9A0C64EF292DC57F753071C362147DD2E50B17BE104815405A8507EEAB3A120",
+      "material_id": "7dc70fee-13e0-4b7d-b95f-202665c241d0",
+      "doc_id": "COM-02",
+      "chunk_id": "MCH-369C7BBCDB79203D29F37E8A524E41D5",
+      "chunk_hash": "644ec25fde2d5afb4a7d6b59720c4e643f933e9bfa267417a52a565cf998b084",
+      "source_role": "EVIDENCE_CANDIDATE",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "project_id": "d22e95d8-3a2e-450d-a5ef-27f83a283aff",
+      "section": "产品",
+      "char_start": 97,
+      "char_end": 147,
+      "paragraph_start": 4,
+      "paragraph_end": 4,
+      "page_start": null,
+      "page_end": null,
+      "source_text": "Synthetic产品含组织权限、流程、表单、接口、日志、报表、知识库、RAG和Agent工具管理。"
+    },
+    "SPAN-COM-03-ADAPT": {
+      "source_file": "backend/eval/rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-03_技术架构与部署适配报告.md",
+      "source_file_sha256": "70197F58823F5C278D54437BBA1F449F6FD926BC236FE94E61F852CF8A5AC5DB",
+      "material_id": "e523330e-a0ff-4928-99ac-8a8206d64dfd",
+      "doc_id": "COM-03",
+      "chunk_id": "MCH-AA94BB7D153A30F95E869D78DC45A0E5",
+      "chunk_hash": "43940169890ecd25f53c7292ad30195c8e1c2b62fa681a23830db7a1c5242802",
+      "source_role": "EVIDENCE_CANDIDATE",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "project_id": "d22e95d8-3a2e-450d-a5ef-27f83a283aff",
+      "section": "适配",
+      "char_start": 140,
+      "char_end": 214,
+      "paragraph_start": 6,
+      "paragraph_end": 6,
+      "page_start": null,
+      "page_end": null,
+      "source_text": "Synthetic记录：Linux x86_64、某国产Linux测试环境、PostgreSQL兼容数据库完成安装与核心功能验证；未列版本不得推断。"
+    },
+    "SPAN-COM-04-INTERFACE": {
+      "source_file": "backend/eval/rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-04_API与系统集成能力报告.md",
+      "source_file_sha256": "8410478E68EFB788EDD72802271D8F38FF6983DEB95F153FE03A9506F4DA3B87",
+      "material_id": "2511c8f9-fff1-489d-b385-2ddc522c548c",
+      "doc_id": "COM-04",
+      "chunk_id": "MCH-0663AA700C01FD958515713C21CF5F5E",
+      "chunk_hash": "4cfeecd92d540c0bb407ae32151d79e6eb9c95c17ff5c8f7fc47ec44a194659a",
+      "source_role": "EVIDENCE_CANDIDATE",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "project_id": "d22e95d8-3a2e-450d-a5ef-27f83a283aff",
+      "section": "接口",
+      "char_start": 101,
+      "char_end": 149,
+      "paragraph_start": 4,
+      "paragraph_end": 4,
+      "page_start": null,
+      "page_end": null,
+      "source_text": "支持REST API、Webhook和批量文件交换；2026-07-12完成12个模拟接口联调。"
+    },
+    "SPAN-COM-06-TEST": {
+      "source_file": "backend/eval/rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-06_权限_安全与审计测试报告.md",
+      "source_file_sha256": "FB76E2F89C72CF3AD441F416B808C6E53D61B7055F0C397FA7160535C7DBB080",
+      "material_id": "3ec066d3-679a-4232-ba6d-364038658c81",
+      "doc_id": "COM-06",
+      "chunk_id": "MCH-FE0AD69A95643C6E508A4F7E5147D0D3",
+      "chunk_hash": "8172afa05be1a2a8801c023b948d6673b68de1cb1414ac008e42d1afa7db4e5e",
+      "source_role": "EVIDENCE_CANDIDATE",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "project_id": "d22e95d8-3a2e-450d-a5ef-27f83a283aff",
+      "section": "测试",
+      "char_start": 101,
+      "char_end": 150,
+      "paragraph_start": 4,
+      "paragraph_end": 4,
+      "page_start": null,
+      "page_end": null,
+      "source_text": "2026-08-01对v3.2测试环境执行账号、角色、最小权限、登录审计、关键操作和数据导出审计。"
+    },
+    "SPAN-COM-07-RESULT": {
+      "source_file": "backend/eval/rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-07_性能与容量测试报告.md",
+      "source_file_sha256": "F960CF1D01F1FE2218B4377BE48E6A9368B6729FB24BEC286FBADE9ED080193F",
+      "material_id": "42debef7-084f-471c-8fa5-1f9dcbf4c2f7",
+      "doc_id": "COM-07",
+      "chunk_id": "MCH-D09A2FC0D82F6D27ED11B48CBDA4B06C",
+      "chunk_hash": "4bac134942d8a38cf85e971a1f4e206eacbb3dd51410f1b94c15105b0af8b90e",
+      "source_role": "EVIDENCE_CANDIDATE",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "project_id": "d22e95d8-3a2e-450d-a5ef-27f83a283aff",
+      "section": "结果",
+      "char_start": 145,
+      "char_end": 186,
+      "paragraph_start": 6,
+      "paragraph_end": 6,
+      "page_start": null,
+      "page_end": null,
+      "source_text": "100个虚拟用户标准查询场景P95=1.8秒；导入10000条合成记录耗时42秒。"
+    },
+    "SPAN-COM-08-DRILL": {
+      "source_file": "backend/eval/rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-08_备份恢复与容灾演练记录.md",
+      "source_file_sha256": "AFD00A30E6A46E9E09D42AC1F7EEAE36BE26420A40DA12A42ECD0CB0D8BA9041",
+      "material_id": "4ba1c701-7c4f-415b-9186-28b25c4472ce",
+      "doc_id": "COM-08",
+      "chunk_id": "MCH-2EEFA4F9B214B94D417935EEB260A88E",
+      "chunk_hash": "d3b24de48283ba5305695df23e8c1182d3120a2f45ab4076e9f86214992d8a30",
+      "source_role": "EVIDENCE_CANDIDATE",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "project_id": "d22e95d8-3a2e-450d-a5ef-27f83a283aff",
+      "section": "演练",
+      "char_start": 100,
+      "char_end": 138,
+      "paragraph_start": 4,
+      "paragraph_end": 4,
+      "page_start": null,
+      "page_end": null,
+      "source_text": "2026-07-25完成Synthetic数据库备份恢复和应用节点故障切换。"
+    },
+    "SPAN-COM-13-CASE": {
+      "source_file": "backend/eval/rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-13_Synthetic政企案例_城市事件协同平台.md",
+      "source_file_sha256": "61C4631F7E6EB283ABCB4A4A67A0C2ADA761EEA796496F39D3C815569C822D75",
+      "material_id": "a5510db7-bb22-46e3-aa7f-13b77f1206a6",
+      "doc_id": "COM-13",
+      "chunk_id": "MCH-78E4EA708EBC05B9E2731B7736CF9B2E",
+      "chunk_hash": "599301a3312c6cda42f0d6ffc1a20c759915ad29da4a9843a6f4e131395eaaaa",
+      "source_role": "EVIDENCE_CANDIDATE",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "project_id": "d22e95d8-3a2e-450d-a5ef-27f83a283aff",
+      "section": "案例",
+      "char_start": 111,
+      "char_end": 148,
+      "paragraph_start": 4,
+      "paragraph_end": 4,
+      "page_start": null,
+      "page_end": null,
+      "source_text": "某虚构市级事件协同平台，包含受理、派单、处置、督办、统计、地图和部门接口。"
+    },
+    "SPAN-COM-15-CERT-CURRENT": {
+      "source_file": "backend/eval/rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-15_Synthetic资质_知识产权与授权索引.md",
+      "source_file_sha256": "988786FBBD8ADAC54E42C86D8DF9C40DAF2D00C39370C31D2C6043E5519962CF",
+      "material_id": "e39ce20c-b73c-4cd2-a965-d8fbad6775e2",
+      "doc_id": "COM-15",
+      "chunk_id": "MCH-1950F3F8D1880A4714E2AE13548431B2",
+      "chunk_hash": "d854093da3c8e573786ede34fd8061199d22d0ddbf3b466513924cc6e2ef09d9",
+      "source_role": "EVIDENCE_CANDIDATE",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "project_id": "d22e95d8-3a2e-450d-a5ef-27f83a283aff",
+      "section": "有效测试证书",
+      "char_start": 114,
+      "char_end": 161,
+      "paragraph_start": 4,
+      "paragraph_end": 4,
+      "page_start": null,
+      "page_end": null,
+      "source_text": "TEST-CERT-2026-A：虚构证书，有效期2026-03-01至2027-02-28。"
+    },
+    "SPAN-COM-15-CERT-EXPIRED": {
+      "source_file": "backend/eval/rag-pilot/V43_RAG_CODEX_HANDOFF_1/03_company_case_rag/COM-15_Synthetic资质_知识产权与授权索引.md",
+      "source_file_sha256": "988786FBBD8ADAC54E42C86D8DF9C40DAF2D00C39370C31D2C6043E5519962CF",
+      "material_id": "e39ce20c-b73c-4cd2-a965-d8fbad6775e2",
+      "doc_id": "COM-15",
+      "chunk_id": "MCH-DB93106BE9B5C221E85E901343C6DE2E",
+      "chunk_hash": "5b4b307751d48a83ce25afc2f0d36b7e2ebbf668efc6569caf1211451fb4f455",
+      "source_role": "EVIDENCE_CANDIDATE",
+      "corpus_scope": "ENTERPRISE_PRIVATE",
+      "project_id": "d22e95d8-3a2e-450d-a5ef-27f83a283aff",
+      "section": "过期测试证书",
+      "char_start": 174,
+      "char_end": 220,
+      "paragraph_start": 6,
+      "paragraph_end": 6,
+      "page_start": null,
+      "page_end": null,
+      "source_text": "TEST-CERT-2024-X：虚构证书，2025-12-31到期，应标记EXPIRED。"
+    }
+  },
+  "cases": [
+    {
+      "case_id": "RAG-P0-CAL-JY-001-REQ-057",
+      "split": "CALIBRATION_SET",
+      "requirement_id": "JY-001:REQ-057",
+      "requirement_hash": "65f70404775be28ecda44960430ee02750bb0298801a6a9b76ef8c82640d7471",
+      "query_hash": "65f70404775be28ecda44960430ee02750bb0298801a6a9b76ef8c82640d7471",
+      "query_text": "事件标准库管理应通过提取多渠道事件字段信息,按对应规则匹配实现事件标准化和标准化库,并制定标准的事件联动接口规范,方便各类专业条线业务系统与智慧城市综合管理平台形成事件联动。",
+      "profile_class": "PRODUCT_CAPABILITY",
+      "case_class": "PARTIAL",
+      "has_sufficient_evidence": false,
+      "expected_k0": true,
+      "corpus_gap": true,
+      "gap_reason": "Corpus contains generic integration and event-platform descriptions, but no exact evidence for multi-channel field extraction, rule-based event standardization, and standard event linkage to the named city platform.",
+      "evidence_items": [
+        {"evidence_item_id":"CAL-JY057-ITEM-01","span_ref":"SPAN-COM-04-INTERFACE","grade":2,"grade_label":"EVIDENCE_BEARING_PARTIAL","supports_atom_ids":["JY057-A3"],"note":"Generic API/Webhook/file exchange and simulated integration; not event-specific."},
+        {"evidence_item_id":"CAL-JY057-ITEM-02","span_ref":"SPAN-COM-13-CASE","grade":2,"grade_label":"EVIDENCE_BEARING_PARTIAL","supports_atom_ids":["JY057-A3"],"note":"Event collaboration platform and department interface are described; extraction and standardization are absent."}
+      ],
+      "evidence_atoms": [
+        {"atom_id":"JY057-A1","text":"多渠道事件字段提取","required":true,"acceptable_span_refs":[],"status":"MISSING"},
+        {"atom_id":"JY057-A2","text":"按规则实现事件标准化和标准化库","required":true,"acceptable_span_refs":[],"status":"MISSING"},
+        {"atom_id":"JY057-A3","text":"标准事件联动接口及跨系统联动","required":true,"acceptable_span_refs":["SPAN-COM-04-INTERFACE","SPAN-COM-13-CASE"],"status":"PARTIAL_ONLY"}
+      ],
+      "adjudication_rationale":"The corpus is topically related but does not provide a complete source-grounded answer to the requirement. Generic integration and broad event-platform descriptions remain partial retrieval evidence, not sufficient evidence."
+    },
+    {
+      "case_id": "RAG-P0-CAL-FAST-01-REQ-005",
+      "split": "CALIBRATION_SET",
+      "requirement_id": "FAST-01:REQ-005",
+      "requirement_hash": "d6d5cdabdf9c6b2d0ea6106e74e56953d476a6269cc7cc92d95fa2d9461cd991",
+      "query_hash": "d6d5cdabdf9c6b2d0ea6106e74e56953d476a6269cc7cc92d95fa2d9461cd991",
+      "query_text": "应及时优化处理信息系统操作变慢、性能降低等性能问题。",
+      "profile_class": "PERFORMANCE",
+      "case_class": "PARTIAL",
+      "has_sufficient_evidence": false,
+      "expected_k0": true,
+      "corpus_gap": true,
+      "gap_reason": "Corpus contains a performance measurement result but no evidence of timely performance-problem optimization or operational remediation.",
+      "evidence_items": [
+        {"evidence_item_id":"CAL-FAST005-ITEM-01","span_ref":"SPAN-COM-07-RESULT","grade":2,"grade_label":"EVIDENCE_BEARING_PARTIAL","supports_atom_ids":["FAST005-A1"],"note":"Provides measured performance observations, not the requested optimization action or service process."}
+      ],
+      "evidence_atoms": [
+        {"atom_id":"FAST005-A1","text":"信息系统操作变慢、性能降低的性能事实或指标","required":true,"acceptable_span_refs":["SPAN-COM-07-RESULT"],"status":"PARTIAL_ONLY"},
+        {"atom_id":"FAST005-A2","text":"及时优化处理性能问题的行动或服务能力","required":true,"acceptable_span_refs":[],"status":"MISSING"}
+      ],
+      "adjudication_rationale":"The performance report is relevant and contains a measurable result, but it does not establish timely optimization of slowdown or degraded performance."
+    },
+    {
+      "case_id": "RAG-P0-CAL-FAST-04-REQ-004",
+      "split": "CALIBRATION_SET",
+      "requirement_id": "FAST-04:REQ-004",
+      "requirement_hash": "cf2862c85169364afb939820d06356a9e8700f378be62eb4ce8ae43b62544e42",
+      "query_hash": "cf2862c85169364afb939820d06356a9e8700f378be62eb4ce8ae43b62544e42",
+      "query_text": "投标人应为本项目组建实施团队，包含一名专职项目经理和一名项目技术负责人。项目经理负责完成人力调度、采购安排、进度控制以及与采购人协调等工作；项目经理需具备本科及以上学历，具有10年（含）以上相关工作经验，并持有下列任意2个证书：信息系统项目管理师、系统集成项目管理工程师、注册信息安全专业人员认证证书（CISP）。技术负责人需具备本科及以上学历，具有5年（含）以上相关工作经验，并持有下列任意1个证书：系统规划与管理师、系统架构设计师、CCRC信息安全保障人员认证证书。",
+      "profile_class": "QUALIFICATION",
+      "case_class": "CORPUS_GAP",
+      "has_sufficient_evidence": false,
+      "expected_k0": true,
+      "corpus_gap": true,
+      "gap_reason": "The corpus has generic test-certificate records but no project team, named personnel roles, education, experience, or required certificate-type evidence.",
+      "evidence_items": [
+        {"evidence_item_id":"CAL-FAST004-ITEM-01","span_ref":"SPAN-COM-15-CERT-CURRENT","grade":1,"grade_label":"RELEVANT_ONLY","supports_atom_ids":[],"note":"A current synthetic certificate index entry without certificate type or personnel binding."},
+        {"evidence_item_id":"CAL-FAST004-ITEM-02","span_ref":"SPAN-COM-15-CERT-EXPIRED","grade":1,"grade_label":"RELEVANT_ONLY","supports_atom_ids":[],"note":"An expired synthetic certificate index entry; it cannot support the requested team qualification."}
+      ],
+      "evidence_atoms": [
+        {"atom_id":"FAST004-A1","text":"专职项目经理和项目技术负责人团队组成","required":true,"acceptable_span_refs":[],"status":"MISSING"},
+        {"atom_id":"FAST004-A2","text":"项目经理学历、10年经验及任意2个指定证书","required":true,"acceptable_span_refs":[],"status":"MISSING"},
+        {"atom_id":"FAST004-A3","text":"技术负责人学历、5年经验及任意1个指定证书","required":true,"acceptable_span_refs":[],"status":"MISSING"}
+      ],
+      "adjudication_rationale":"Certificate-shaped text is only relevant context. It lacks the personnel identity, roles, education, experience, and specified certificate types required by the requirement."
+    },
+    {
+      "case_id": "RAG-P0-HOLD-JY-001-REQ-027",
+      "split": "UNTOUCHED_HOLDOUT_SET",
+      "requirement_id": "JY-001:REQ-027",
+      "requirement_hash": "3725bb402a8891ad9a92c0c395aca577aac6aff21e310b688143d1be92af292b",
+      "query_hash": "3725bb402a8891ad9a92c0c395aca577aac6aff21e310b688143d1be92af292b",
+      "query_text": "具有较强的系统安全性和灾难恢复能力。",
+      "profile_class": "SERVICE",
+      "case_class": "POSITIVE",
+      "has_sufficient_evidence": true,
+      "expected_k0": false,
+      "corpus_gap": false,
+      "evidence_items": [
+        {"evidence_item_id":"HOLD-JY027-ITEM-01","span_ref":"SPAN-COM-06-TEST","grade":3,"grade_label":"EVIDENCE_BEARING_FULL","supports_atom_ids":["JY027-A1"]},
+        {"evidence_item_id":"HOLD-JY027-ITEM-02","span_ref":"SPAN-COM-08-DRILL","grade":3,"grade_label":"EVIDENCE_BEARING_FULL","supports_atom_ids":["JY027-A2"]}
+      ],
+      "evidence_atoms": [
+        {"atom_id":"JY027-A1","text":"系统安全性测试或安全控制证据","required":true,"acceptable_span_refs":["SPAN-COM-06-TEST"],"status":"FULL"},
+        {"atom_id":"JY027-A2","text":"灾难恢复、备份恢复或故障切换证据","required":true,"acceptable_span_refs":["SPAN-COM-08-DRILL"],"status":"FULL"}
+      ],
+      "adjudication_rationale":"The two independent company-evidence spans jointly cover the broad security and disaster-recovery requirement. They remain synthetic evaluation evidence and do not authorize a claim."
+    },
+    {
+      "case_id": "RAG-P0-HOLD-JY-001-REQ-077",
+      "split": "UNTOUCHED_HOLDOUT_SET",
+      "requirement_id": "JY-001:REQ-077",
+      "requirement_hash": "e5bd8b61b921ec1b7e0c8704f3552e4aae4af69fdf89a833f15dc58f23267e1d",
+      "query_hash": "e5bd8b61b921ec1b7e0c8704f3552e4aae4af69fdf89a833f15dc58f23267e1d",
+      "query_text": "12345工单闭环归档系统应进一步对12345工单闭环归档的管理升级,提供诉求受理模块,工单业务流程模块、督办管理模块、工单办理能效分析,提供后台分析统计等功能。",
+      "profile_class": "PRODUCT_CAPABILITY",
+      "case_class": "PARTIAL",
+      "has_sufficient_evidence": false,
+      "expected_k0": true,
+      "corpus_gap": true,
+      "gap_reason": "The case report covers generic workflow components but not the named 12345 closed-loop archive system or the requested efficiency-analysis detail.",
+      "evidence_items": [
+        {"evidence_item_id":"HOLD-JY077-ITEM-01","span_ref":"SPAN-COM-13-CASE","grade":2,"grade_label":"EVIDENCE_BEARING_PARTIAL","supports_atom_ids":["JY077-A1"],"note":"Covers generic receive/dispatch/process/supervise/statistics components."}
+      ],
+      "evidence_atoms": [
+        {"atom_id":"JY077-A1","text":"受理、派单、处置、督办、统计等流程组件","required":true,"acceptable_span_refs":["SPAN-COM-13-CASE"],"status":"PARTIAL_ONLY"},
+        {"atom_id":"JY077-A2","text":"12345工单闭环归档及办理能效分析","required":true,"acceptable_span_refs":[],"status":"MISSING"}
+      ],
+      "adjudication_rationale":"The generic event-platform case is relevant and partially evidence-bearing, but it does not establish the named 12345 closed-loop archive and efficiency-analysis capability."
+    },
+    {
+      "case_id": "RAG-P0-HOLD-JY-001-REQ-051",
+      "split": "UNTOUCHED_HOLDOUT_SET",
+      "requirement_id": "JY-001:REQ-051",
+      "requirement_hash": "d6b00913d2e8eee0f357e4d129d856e4ab785bd122a940f1d77346a22e3abfb2",
+      "query_hash": "d6b00913d2e8eee0f357e4d129d856e4ab785bd122a940f1d77346a22e3abfb2",
+      "query_text": "建设江阴市市域社会治理现代化联勤联动指挥平台,包含事件联勤联动中心、运行指挥监管中心、事件标准库管理、事件汇聚收发网关、联勤联动移动端、通用辅助功能。",
+      "profile_class": "PRODUCT_CAPABILITY",
+      "case_class": "PARTIAL",
+      "has_sufficient_evidence": false,
+      "expected_k0": true,
+      "corpus_gap": true,
+      "gap_reason": "The corpus describes a broad event collaboration platform but not the full named platform component inventory, event standard library, gateway, or mobile component set.",
+      "evidence_items": [
+        {"evidence_item_id":"HOLD-JY051-ITEM-01","span_ref":"SPAN-COM-13-CASE","grade":2,"grade_label":"EVIDENCE_BEARING_PARTIAL","supports_atom_ids":["JY051-A1"]},
+        {"evidence_item_id":"HOLD-JY051-ITEM-02","span_ref":"SPAN-COM-02-PRODUCT","grade":1,"grade_label":"RELEVANT_ONLY","supports_atom_ids":[],"note":"Generic product capability list; no named platform scope."}
+      ],
+      "evidence_atoms": [
+        {"atom_id":"JY051-A1","text":"事件受理、处置、督办、统计和部门接口类平台能力","required":true,"acceptable_span_refs":["SPAN-COM-13-CASE"],"status":"PARTIAL_ONLY"},
+        {"atom_id":"JY051-A2","text":"事件标准库、汇聚收发网关、移动端及指定平台组件","required":true,"acceptable_span_refs":[],"status":"MISSING"}
+      ],
+      "adjudication_rationale":"The event collaboration case is relevant but incomplete for the detailed platform component requirement. The generic product description is context-only for this named platform."
+    },
+    {
+      "case_id": "RAG-P0-HOLD-TB-003-REQ-119",
+      "split": "UNTOUCHED_HOLDOUT_SET",
+      "requirement_id": "TB-003:REQ-119",
+      "requirement_hash": "c84c1275817dab37b80eb9304fc7a2cf5e21d8bef9045169abd9b874126892b7",
+      "query_hash": "c84c1275817dab37b80eb9304fc7a2cf5e21d8bef9045169abd9b874126892b7",
+      "query_text": "可靠性要求：平台应提供适当的容错和备份恢复功能，确保系统的可靠运行。保证在高并发的情况下有高效的性能，保证用户使用。平台具有广泛的兼容性，保证用户的使用体验。",
+      "profile_class": "PERFORMANCE",
+      "case_class": "PARTIAL",
+      "has_sufficient_evidence": false,
+      "expected_k0": true,
+      "corpus_gap": true,
+      "gap_reason": "The corpus has separate recovery, performance, and environment observations, but not the full reliability, high-concurrency, and broad-compatibility requirement as one supported enterprise capability.",
+      "evidence_items": [
+        {"evidence_item_id":"HOLD-TB119-ITEM-01","span_ref":"SPAN-COM-03-ADAPT","grade":2,"grade_label":"EVIDENCE_BEARING_PARTIAL","supports_atom_ids":["TB119-A3"]},
+        {"evidence_item_id":"HOLD-TB119-ITEM-02","span_ref":"SPAN-COM-07-RESULT","grade":2,"grade_label":"EVIDENCE_BEARING_PARTIAL","supports_atom_ids":["TB119-A2"]},
+        {"evidence_item_id":"HOLD-TB119-ITEM-03","span_ref":"SPAN-COM-08-DRILL","grade":2,"grade_label":"EVIDENCE_BEARING_PARTIAL","supports_atom_ids":["TB119-A1"]}
+      ],
+      "evidence_atoms": [
+        {"atom_id":"TB119-A1","text":"容错、备份恢复和可靠运行","required":true,"acceptable_span_refs":["SPAN-COM-08-DRILL"],"status":"PARTIAL_ONLY"},
+        {"atom_id":"TB119-A2","text":"高并发条件下的高效性能","required":true,"acceptable_span_refs":["SPAN-COM-07-RESULT"],"status":"PARTIAL_ONLY"},
+        {"atom_id":"TB119-A3","text":"广泛兼容性和用户体验保障","required":true,"acceptable_span_refs":["SPAN-COM-03-ADAPT"],"status":"PARTIAL_ONLY"}
+      ],
+      "adjudication_rationale":"The three spans provide related observations, but they do not establish the full broad requirement, especially broad compatibility and high-concurrency guarantees."
+    },
+    {
+      "case_id": "RAG-P0-HOLD-TB-003-REQ-170",
+      "split": "UNTOUCHED_HOLDOUT_SET",
+      "requirement_id": "TB-003:REQ-170",
+      "requirement_hash": "c9201ba8c20da08b71197f89755b2cfaa2a36b070f2279937d969f62e5de7812",
+      "query_hash": "c9201ba8c20da08b71197f89755b2cfaa2a36b070f2279937d969f62e5de7812",
+      "query_text": "国产数据库需满足以下需求：(1)具备数据存储、访问控制、身份鉴别、安全审计和数据备份恢复等功能；(2)支持国产化操作系统；(3)满足所有应用系统国产化改造需求；(4)支持同时创建并运行≥20个独立数据库，每个库可独立配置资源配额；(5)提供3年维护期内符合系统需求的免费升级服务。",
+      "profile_class": "QUALIFICATION",
+      "case_class": "PARTIAL",
+      "has_sufficient_evidence": false,
+      "expected_k0": true,
+      "corpus_gap": true,
+      "gap_reason": "The corpus provides a PostgreSQL-compatible installation/core verification and a backup drill, but lacks the required access-control, audit, 20-database quota, and three-year upgrade evidence.",
+      "evidence_items": [
+        {"evidence_item_id":"HOLD-TB170-ITEM-01","span_ref":"SPAN-COM-03-ADAPT","grade":2,"grade_label":"EVIDENCE_BEARING_PARTIAL","supports_atom_ids":["TB170-A1","TB170-A2"]},
+        {"evidence_item_id":"HOLD-TB170-ITEM-02","span_ref":"SPAN-COM-08-DRILL","grade":2,"grade_label":"EVIDENCE_BEARING_PARTIAL","supports_atom_ids":["TB170-A1"]}
+      ],
+      "evidence_atoms": [
+        {"atom_id":"TB170-A1","text":"数据库存储和备份恢复能力","required":true,"acceptable_span_refs":["SPAN-COM-03-ADAPT","SPAN-COM-08-DRILL"],"status":"PARTIAL_ONLY"},
+        {"atom_id":"TB170-A2","text":"国产化环境兼容或数据库安装验证","required":true,"acceptable_span_refs":["SPAN-COM-03-ADAPT"],"status":"PARTIAL_ONLY"},
+        {"atom_id":"TB170-A3","text":"访问控制、身份鉴别、安全审计","required":true,"acceptable_span_refs":[],"status":"MISSING"},
+        {"atom_id":"TB170-A4","text":"同时运行不少于20个独立数据库并独立配置资源配额","required":true,"acceptable_span_refs":[],"status":"MISSING"},
+        {"atom_id":"TB170-A5","text":"三年维护期内免费升级服务","required":true,"acceptable_span_refs":[],"status":"MISSING"}
+      ],
+      "adjudication_rationale":"The two source spans are relevant partial observations only. They cannot establish all five required database capability groups."
+    },
+    {
+      "case_id": "RAG-P0-HOLD-TB-006-REQ-037",
+      "split": "UNTOUCHED_HOLDOUT_SET",
+      "requirement_id": "TB-006:REQ-037",
+      "requirement_hash": "c7e0097cd71887f92eb71f2dafdc57b3058d267ac6900b9be363b82f561d268f",
+      "query_hash": "c7e0097cd71887f92eb71f2dafdc57b3058d267ac6900b9be363b82f561d268f",
+      "query_text": "项目经理具有信息系统项目管理师（高级）证书。",
+      "profile_class": "QUALIFICATION",
+      "case_class": "CORPUS_GAP",
+      "has_sufficient_evidence": false,
+      "expected_k0": true,
+      "corpus_gap": true,
+      "gap_reason": "The corpus contains no project-manager identity or information-systems-project-manager certificate; generic synthetic certificate records are insufficient.",
+      "evidence_items": [
+        {"evidence_item_id":"HOLD-TB006-ITEM-01","span_ref":"SPAN-COM-15-CERT-CURRENT","grade":1,"grade_label":"RELEVANT_ONLY","supports_atom_ids":[],"note":"Generic synthetic certificate record without certificate type or personnel binding."}
+      ],
+      "evidence_atoms": [
+        {"atom_id":"TB006-A1","text":"项目经理身份绑定","required":true,"acceptable_span_refs":[],"status":"MISSING"},
+        {"atom_id":"TB006-A2","text":"信息系统项目管理师（高级）证书","required":true,"acceptable_span_refs":[],"status":"MISSING"}
+      ],
+      "adjudication_rationale":"The certificate index is only topic-related and does not identify the required certificate type or project-manager holder."
+    },
+    {
+      "case_id": "RAG-P0-HOLD-JY-001-REQ-148",
+      "split": "UNTOUCHED_HOLDOUT_SET",
+      "requirement_id": "JY-001:REQ-148",
+      "requirement_hash": "08621828acd4d077bd2307309edefdbf057f0b64df07da92343827c6f1a8e3f4",
+      "query_hash": "08621828acd4d077bd2307309edefdbf057f0b64df07da92343827c6f1a8e3f4",
+      "query_text": "防火墙需为2U标准机架设备,设备具有冗余电源,设备配置8个千兆自适应电口、4个千兆光口、4个万兆光口、2个扩展槽位、2个USB接口、1个RJ45 Console口。",
+      "profile_class": "PRODUCT_CAPABILITY",
+      "case_class": "NEGATIVE",
+      "has_sufficient_evidence": false,
+      "expected_k0": true,
+      "corpus_gap": false,
+      "gap_reason": null,
+      "evidence_items": [],
+      "evidence_atoms": [
+        {"atom_id":"JY148-A1","text":"防火墙设备规格与端口数量","required":true,"acceptable_span_refs":[],"status":"NO_RELEVANT_SOURCE"}
+      ],
+      "adjudication_rationale":"The frozen Evidence Candidate corpus contains no firewall equipment material. This is a negative retrieval control, not an enterprise evidence gap to be filled by nearest-topic matching."
+    }
+  ]
+}

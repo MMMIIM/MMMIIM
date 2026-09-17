@@ -1,0 +1,41 @@
+# V43_MAPPING_GOLD_FULL_HUMAN_REVIEW_EXPORT_CHECKPOINT
+
+- CHECKPOINT: V43_MAPPING_GOLD_FULL_HUMAN_REVIEW_EXPORT_CHECKPOINT
+- TASK: V43_MAPPING_GOLD_FULL_HUMAN_REVIEW_EXPORT
+- BRANCH: feat/v4.3-semantic-boundary-routing
+- HEAD: f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e
+- REAL_REVIEW_PACKET_READY: true
+- REAL_REVIEW_CASE_COUNT: 27
+- REAL_PARENT_CASE_COUNT: 24
+- REAL_SUPPLEMENTAL_UNIQUE_REVIEW_COUNT: 3
+- REAL_TOTAL_HUMAN_REVIEW_COUNT: 27
+- REAL_DUPLICATE_EXCLUDED_COUNT: 7
+- SYNTHETIC_REVIEW_PACKET_READY: true
+- SYNTHETIC_REVIEW_CASE_COUNT: 29
+- ENGINEERING_DISPUTED_PACKET_READY: true
+- ENGINEERING_COUNT: 6
+- DISPUTED_COUNT: 1
+- REAL_RENDER_PARITY: PASS
+- REAL_RENDER_PARITY_DETAILS: {"candidate_identity":true,"requirement_identity_hash":true,"sorted_fact_ids":true,"sorted_fact_refs":true,"sorted_fact_source_hashes":true,"fact_counts":true,"source_excerpts":true}
+- SYNTHETIC_RENDER_PARITY: PASS
+- EXPECTED_LABEL_LEAKAGE_IN_BLIND_PACKETS: NONE
+- OLD_GOLD_SHA_BEFORE: 5a6d9eb7c4e7b23f347da111b5276060375b3de2e07716b9cee88d15d5431707
+- OLD_GOLD_SHA_AFTER: 5a6d9eb7c4e7b23f347da111b5276060375b3de2e07716b9cee88d15d5431707
+- OLD_GOLD_SHA_PARITY: PASS
+- ACTIVE_GOLD_CHANGED: 0
+- PRODUCTION_FILES_CHANGED: 0
+- PROVIDER_CALLS: 0
+- DIFY_CALLS: 0
+- EMBEDDING_CALLS: 0
+- DB_WRITES: 0
+- FOCUSED_TESTS: 7/7 PASS
+- LINT: PASS
+- GIT_DIFF_CHECK: PASS
+- IMMUTABLE_INPUT_HASHES: {"parent_packet":"5ca994228f7d4bfedb61aed0c0aac5ef5cf0b284aa573c7732ce4383ecde4acb","supplemental_packet":"a3a0c1abb4f98eef4d77fd120f4d4e47639fa1680a1a17139c65077756032bd0","active_mapping_gold":"5a6d9eb7c4e7b23f347da111b5276060375b3de2e07716b9cee88d15d5431707"}
+- DUPLICATE_RELATIONSHIPS: [{"candidate_id":"REAL-MAP-SUPP-001","parent_candidate_id":"REAL-MAP-CAND-015","identity_hash":"299819db6f8816fa084db836078b1d2120fde9ecb52c4321aba939962f3823a5"},{"candidate_id":"REAL-MAP-SUPP-002","parent_candidate_id":"REAL-MAP-CAND-008","identity_hash":"867b3569b884f0300c7f5721c03414d6e09229d1c61a98f6a1ba4a58025fe187"},{"candidate_id":"REAL-MAP-SUPP-003","parent_candidate_id":"REAL-MAP-CAND-017","identity_hash":"3d9460de460e1225dde7aeba9751b4fa457545c21485835b47a338e237c8e74c"},{"candidate_id":"REAL-MAP-SUPP-004","parent_candidate_id":"REAL-MAP-CAND-012","identity_hash":"82bd1e1a9fe6e3705485e07cf9131313ec2c4f472f629aacb22e0d89326c9ff7"},{"candidate_id":"REAL-MAP-SUPP-005","parent_candidate_id":"REAL-MAP-CAND-013","identity_hash":"e1713adaf00e248c1618d1e1cbbacc2e38248002fba0a64389ccc40897cd2ef5"},{"candidate_id":"REAL-MAP-SUPP-006","parent_candidate_id":"REAL-MAP-CAND-018","identity_hash":"5f681b77f8f2e3adeaa2d7fae0a998784d5bfd7d73cd52ce37cc49dc5d1b382d"},{"candidate_id":"REAL-MAP-SUPP-008","parent_candidate_id":"REAL-MAP-CAND-023","identity_hash":"0fa22f9ab6f05439823d79949f79b96c51e8b8dc1257340ab086ac6d6dbf9858"}]
+- OUTPUT_FILES: ["backend/eval/gold-human-review/v2/11_mapping_real_full_human_review_blind.json","backend/eval/gold-human-review/v2/11_mapping_real_full_human_review_blind.md","backend/eval/gold-human-review/v2/11b_mapping_real_current_authority_overlay.md","backend/eval/gold-human-review/v2/12_mapping_synthetic_boundary_human_review_blind.json","backend/eval/gold-human-review/v2/12_mapping_synthetic_boundary_human_review_blind.md","backend/eval/gold-human-review/v2/12b_mapping_synthetic_current_expected_overlay.md","backend/eval/gold-human-review/v2/13_mapping_engineering_disputed_review.md","backend/eval/gold-human-review/v2/10_mapping_full_human_review_index.md","backend/eval/gold-governance/11_mapping_gold_full_human_review_export_checkpoint.json","backend/eval/gold-governance/11_mapping_gold_full_human_review_export_checkpoint.md"]
+- GATES: {"HUMAN_REVIEW_EXPORT_PARITY_GATE":"PASS","blind_contamination":"PASS","production_import_guard":"PASS","side_effect_gate":"PASS"}
+- FINAL_VERDICT: MAPPING_FULL_HUMAN_REVIEW_PACKETS_READY
+- NOT_CLAIMED: ["MAPPING_GOLD_V2_FROZEN","MAPPING_SEMANTIC_LIVE_PASS","MAPPING_PRODUCTION_READY"]
+
+Blind packets contain no expected/provider/production answers. Authority overlays are separate by design.

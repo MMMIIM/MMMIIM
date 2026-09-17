@@ -1,0 +1,34 @@
+{
+  "artifact": "V43_RAG_RETRIEVAL_CURRENTNESS_AUDIT",
+  "status": "BLOCKED_NOT_EXECUTED",
+  "reason": "A current 24-case expected material/chunk-family packet was not found; running EnterpriseRetrievalService against production would write retrieval audit rows and violate this audit's production-write=0 boundary.",
+  "historical_reference": {
+    "overnight_cases": 40,
+    "overnight_expected_doc_hit": "38/40",
+    "overnight_relevant_at_5": "100%",
+    "historical_live_7_hit_at_5": "85.71%",
+    "historical_live_status": "PENDING_REVIEW_NOT_CURRENT_CERTIFICATION"
+  },
+  "read_only_production_snapshot": {
+    "materials": 56,
+    "chunks": 561,
+    "embeddings": 625,
+    "retrieval_runs": 17,
+    "retrieval_results": 129,
+    "quarantined_materials": 4,
+    "current_runs_after_quarantine_with_quarantined_results": 0,
+    "historical_quarantined_result_rows": 55
+  },
+  "gates": {
+    "expected_source_recall_at_5": "NOT_EXECUTED",
+    "critical_expected_source_recall": "NOT_EXECUTED",
+    "cross_enterprise_escape": "NOT_EXECUTED",
+    "quarantine_escape_current_queries": "NOT_OBSERVED_IN_READ_ONLY_SNAPSHOT",
+    "reference_authority_escape": "NOT_EXECUTED",
+    "source_identity_mismatch": "NOT_EXECUTED",
+    "latency": "NOT_EXECUTED"
+  },
+  "provider_calls": 0,
+  "production_db_writes": 0,
+  "conclusion": "Historical rows are retained for audit; they do not prove current 24-case Retrieval quality. No Retrieval tuning is authorized from this blocked check."
+}

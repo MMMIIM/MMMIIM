@@ -1,0 +1,71 @@
+{
+  "artifact_type": "V43_HANDOFF_RESPONSE_ROUTER_V2_1_CORE6_HARD_SAFETY_V1_MANIFEST",
+  "artifact_version": "v1",
+  "reference_v3_sha256": "3c7f151678c8c99aee25ab995d438496b4a0e5fc661386b70204f3be72e2e744",
+  "reference_v3_rows": 2178,
+  "replay_run_id": "V43-RR-V2_1-V3-REPLAY-c7184cd488d85c64",
+  "router_v2_1_identity": {
+    "path": "backend\\src\\pipeline\\requirement-response-router-v2-1.js",
+    "sha256": "d8a2cd54a6949d0e0ee6312a2e7592d7ae169a2e40f01807df47488a79449b73",
+    "projection_version": "v43-response-router-v2.1",
+    "implementation_id": "v43-response-router-v2.1-systematic-boundary-repair"
+  },
+  "core6_rows": 1009,
+  "unsafe_metrics": {
+    "high_risk_evidence_false_negative": 31,
+    "future_commitment_as_existing_fact": 45,
+    "unsafe_union_unique_rows": 76
+  },
+  "baseline_identity": {
+    "CONFIRMED_PRE_EXISTING": 23,
+    "NEW_TASK_REGRESSION": 0,
+    "UNKNOWN_BASELINE_IDENTITY": 6
+  },
+  "files": [
+    {
+      "original_path": "docs/handoff/V43_RESPONSE_ROUTER_V2_1_CORE6_HARD_SAFETY_V1/00_GPT_README.md",
+      "export_path": "docs/handoff/V43_RESPONSE_ROUTER_V2_1_CORE6_HARD_SAFETY_V1/00_GPT_README.md",
+      "bytes": 1316,
+      "sha256": "91f27199a3c393c1a720f05e4368e86702b06447598d6f548207d3cc52e3f935"
+    },
+    {
+      "original_path": "docs/handoff/V43_RESPONSE_ROUTER_V2_1_CORE6_HARD_SAFETY_V1/02_GPT_DECISION_PACKET.json",
+      "export_path": "docs/handoff/V43_RESPONSE_ROUTER_V2_1_CORE6_HARD_SAFETY_V1/02_GPT_DECISION_PACKET.json",
+      "bytes": 376786,
+      "sha256": "2240347038ba510ddeecc802f17edefc94f6232627ad2db3ce9eff94ddd47b58"
+    },
+    {
+      "original_path": "docs/handoff/V43_RESPONSE_ROUTER_V2_1_CORE6_HARD_SAFETY_V1/03_RECERT_CHECKPOINT.json",
+      "export_path": "docs/handoff/V43_RESPONSE_ROUTER_V2_1_CORE6_HARD_SAFETY_V1/03_RECERT_CHECKPOINT.json",
+      "bytes": 1796,
+      "sha256": "60470819ae190d6e08d1e0d6c82271cfffb840298a3d4a3fa04a9ec5e1054873"
+    },
+    {
+      "original_path": "docs/handoff/V43_RESPONSE_ROUTER_V2_1_CORE6_HARD_SAFETY_V1/04_METRIC_CONTRACT.json",
+      "export_path": "docs/handoff/V43_RESPONSE_ROUTER_V2_1_CORE6_HARD_SAFETY_V1/04_METRIC_CONTRACT.json",
+      "bytes": 2002,
+      "sha256": "d27dff6db13506736e3108cde9d0c74aa70ecff053ab5722a97652b17edce757"
+    },
+    {
+      "original_path": "docs/handoff/V43_RESPONSE_ROUTER_V2_1_CORE6_HARD_SAFETY_V1/05_BASELINE_FAILURE_SET.json",
+      "export_path": "docs/handoff/V43_RESPONSE_ROUTER_V2_1_CORE6_HARD_SAFETY_V1/05_BASELINE_FAILURE_SET.json",
+      "bytes": 24154,
+      "sha256": "820b3bddd237ed69f60a7ec3d47d2f403d2de3b51a61b6f03f319f499a6425e6"
+    }
+  ],
+  "side_effects": {
+    "provider_calls": 0,
+    "llm_calls": 0,
+    "production_db_writes": 0,
+    "gold_mutations": 0,
+    "requirement_mutations": 0,
+    "reference_mutations": 0,
+    "router_mutations": 0,
+    "prompt_changes": 0,
+    "schema_changes": 0,
+    "commit": 0,
+    "push": 0,
+    "merge": 0,
+    "deploy": 0
+  }
+}

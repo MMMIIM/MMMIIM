@@ -1,0 +1,37 @@
+{
+  "status": "CLOSED",
+  "branch": "feat/v4.3-semantic-boundary-routing",
+  "head": "f5095148b1f2ed2a3ac139c418f3aa7fba03dc3e",
+  "BASELINE_DRIFT": "PRE_EXISTING_UNRELATED_UNIT_FAILURES",
+  "PRODUCTION_WRITES": 0,
+  "PROVIDER_CALLS": 0,
+  "GOLD_MUTATIONS": 0,
+  "NC02": "PASS",
+  "NC03": "PASS",
+  "NC04": "PASS",
+  "NC05": "PASS",
+  "HISTORICAL_RETRIEVAL_GATE": "ENFORCED",
+  "REVIEW_AUTHORITY_GATE": "ENFORCED",
+  "CANONICAL_FACT_DRAFT_EDIT_GATE": "ENFORCED",
+  "LEGACY_FACT_AUTHORITY": "ENFORCED_FAIL_CLOSED",
+  "LEGACY_MAPPING_AUTHORITY": "ENFORCED_FAIL_CLOSED",
+  "CANONICAL_MAPPING_REGRESSION": "PASS",
+  "CANONICAL_CLAIM_REGRESSION": "PASS",
+  "WRITER_AUTHORIZATION_REGRESSION": "PASS",
+  "TRACK_A_REMEDIATION": "CLOSED",
+  "SAFE_TO_START_REAL_GOLD_V2": "NO",
+  "SAFE_TO_START_BID_PILOT_HITL": "NO",
+  "verification": {
+    "track_a_postgres": "PASS 61/61",
+    "targeted_canonical_fact_and_downstream_unit": "PASS 69/69",
+    "frontend_unit": "PASS 51/51",
+    "requirement_eval": "PASS",
+    "build": "PASS",
+    "lint": "PASS",
+    "diff_check": "PASS",
+    "backend_unit_full": "FAIL 14 pre-existing unrelated governance/path/fixture assertions"
+  },
+  "remaining_blockers": [
+    "14 unrelated dirty-worktree unit failures remain: governance wording, missing or relocated Gold/source-packet fixtures, extraction-audit baseline expectations, and DS Flash/runtime decision assertions; no remediation attempted."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "phase": "12",
+  "baseline_fingerprint": "318d53c8a8785952d38a173dc086efd1d044c5871e288e305614e52e14a19641",
+  "confirmed_current": ["authoritative packets located for TB-006/FAST-01/FAST-WATER-01", "raw PDFs only for JY-001/TB-003/FAST-04", "six-tender parity blocked", "no re-extraction or Gold writes"],
+  "historical_fixed": ["source identity and mutation gates"],
+  "open": ["authoritative packet recovery for three tenders", "source verification gate"],
+  "conflicting": ["historical readiness labels versus current missing-packet status"],
+  "unknown": ["external artifact availability"],
+  "risks": ["P0-REQ-001", "P1-REQ-001"],
+  "evidence_refs": ["backend/eval/gold-human-review/v2/mapping-real-rebuild/12_real_source_ingestion_harness_checkpoint.json", "backend/eval/tender-benchmark-v1/sources/JY-001-jiangyin.pdf", "backend/eval/tender-benchmark-v1/sources/TB-003-jiaozuo-sidian.pdf", "backend/eval/tender-benchmark-v1/sources/FAST-04-beijing-software.pdf"],
+  "fact_revisions": ["JY-001/TB-003/FAST-04 remain E-only-non-authoritative"],
+  "next_dependencies": ["13_RAG_AUTHORITY_REGRESSION_CHECKPOINT"],
+  "gate": "SIX_TENDER_SOURCE_PARITY=FAIL_MISSING_AUTHORITATIVE_PACKETS",
+  "safe_to_continue": true
+}
